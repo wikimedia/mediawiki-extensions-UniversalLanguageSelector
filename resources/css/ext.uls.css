@@ -1,0 +1,49 @@
+.uls-trigger {
+	/* @embed */
+	background: url('../images/icon-language.png') no-repeat scroll left center transparent;
+	padding-left: 36px;
+}
+
+.uls-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 400px;
+	min-height: 400px;
+	padding: 4px 0;
+	margin: 1px 0 0;
+	list-style: none;
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	*border-right-width: 2px;
+	*border-bottom-width: 2px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+	width: 50%
+}
+.uls-menu h2 {
+	float:left;
+}
+a.close{
+	float: right;
+	padding: 10px;
+}
+
+div#worldmap {
+	/* @embed */
+	background: url('../images/world_map.png') no-repeat scroll left center transparent;
+	float: right;
+	width: 400px;
+	height: 200px;
+}

@@ -1,0 +1,12 @@
+== Copying ==
+See http://www.gnu.org/licenses/gpl2.html
+
+== Installation ==
+For very very quick start add the following to LocalSettings.php:
+
+include("$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php");
+
+More documenation is at
+ http://www.mediawiki.org/wiki/Universal_Language_Selector
+
+== Change log ==
