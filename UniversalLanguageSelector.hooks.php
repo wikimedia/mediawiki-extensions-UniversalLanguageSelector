@@ -48,5 +48,50 @@ class UniversalLanguageSelectorHooks {
 				) ) + $personal_urls;
 		return true;
 	}
-
+	/**
+	 * Add the template for the ULS to the body.
+	 * Hooks: SkinAfterContent
+	 * TODO: move to JavaScript side
+	 * TODO: hardcoded English
+	 */
+	public static function addTemplate( &$data, $skin ) {
+		global $wgContLang;
+		$languages = Language::fetchLanguageNames( $wgContLang->getCode() );
+		$languageData = htmlspecialchars( FormatJSON::encode( $languages ) );
+		$data .= "
+		<div class=\"uls-menu\">
+			<span class=\"icon-close\"></span>
+			<div class=\"uls-menu-header\">
+				<div class=\"uls-menu-header-left\">
+					<h1>" . wfMsgHtml( 'uls-select-content-language' ) . "</h1>
+				</div>
+				<div class=\"uls-menu-header-right\">
+					<div class='uls-worldmap'>
+						 <div class='uls-region' id='uls-region-1'>
+							<a>North America<br>Latin America<br>South America</a>
+						 </div>
+						 <div class='uls-region' id='uls-region-2'>
+							<a>Europe<br>Middle East<br>Africa</a>
+						 </div>
+						 <div class='uls-region' id='uls-region-3'>
+							<a>Asia<br>Australia<br>Pacific</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style=\"clear: both\"></div>
+			<div class=\"uls-lang-selector\">
+				<form action=\"#\" class=\"filterform\">
+					<input type=\"text\" placeholder=\"Language search\" id=\"languagefilter\"
+						class=\"filterinput\" data-languages=\"" . $languageData . "\">
+					<span class=\"search-button\"></span>
+				</form>
+				<div class=\"uls-language-list\" >
+					<ul class=\"uls-language-filter-result\" >
+					</ul>
+				</div>
+			</div>
+		</div>";
+		return true;
+	}
 }
