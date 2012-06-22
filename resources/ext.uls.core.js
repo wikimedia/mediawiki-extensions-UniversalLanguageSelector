@@ -25,6 +25,7 @@
 			this.$menu.show();
 			this.shown = true;
 
+			$( 'input#languagefilter' ).focus();
 			return this;
 		},
 		hide: function() {
