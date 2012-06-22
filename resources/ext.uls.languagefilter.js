@@ -58,17 +58,34 @@ jQuery( function( $ ) {
 				}
 			} ); // /autocomplete
 
-			$( self ).data( "autocomplete" )._renderItem = function ( ul, item ) {
-				var $target = ul;
-				if ( options.$target ) {
-					$target = options.$target;
-				} else {
+			$( self ).data( "autocomplete" )._renderItem = function ( $target, item ) {
+				var activeregion, classes, region, i, regionlist;
+
+				$target = options.$target;
+				if ( !$target ) {
 					return;
 				}
+
+				regionlist = langdb.languages[item.value] || ["unknown", ["unknown"]];
+				regionlist = regionlist[1];
+				for ( i = 0; i < regionlist.length; i++ ) {
+					region = langdb.regiongroups[regionlist[i]]
+					if ( region ) {
+						classes = classes + " uls-region-" + region;
+					}
+				}
 				var $li = $( "<li>" )
+					.data( "code", item.value )
+					.addClass( classes )
 					.data( "item.autocomplete", item )
 					.append( $( "<a>" ).prop( 'href', '#' ). html( item.label ) )
 					.appendTo( $target );
+
+				activeregion = $( '.uls-region.active'  ).attr( 'id' );
+				if ( activeregion && !$li.hasClass( activeregion ) ) {
+					$li.hide();
+				}
+
 				if ( options.clickhandler ) {
 					$li.click( function() {
 						options.clickhandler.call( this, item );

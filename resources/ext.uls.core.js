@@ -49,9 +49,17 @@
 					window.location.href = uri.toString();
 				}
 			} );
-			$( '.uls-region' ).live( 'click', function () {
+			$( '.uls-region' ).live( 'click', function ( e ) {
+				var id = $( this ).attr( 'id' );
+				var active = $( this ).hasClass( 'active' );
 				$( this ).parent().find( '.uls-region' ).removeClass( 'active' );
-				$( this ).addClass( 'active' );
+				if ( active ) {
+					$( '.uls-language-list li' ).show();
+				} else {
+					$( this ).addClass( 'active' );
+					$( '.uls-language-list li' ).not( '.' + id ).hide();
+					$( '.uls-language-list li.' + id ).show();
+				}
 			} );
 			// trigger a search for all languages.
 			$( "#languagefilter" ).autocomplete( "search" );

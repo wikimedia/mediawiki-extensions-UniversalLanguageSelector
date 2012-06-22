@@ -45,7 +45,7 @@ $wgResourceModules['ext.uls.init'] = array(
 );
 
 $wgResourceModules['ext.uls.core'] = array(
-	'scripts' => array( 'resources/ext.uls.core.js', 'resources/ext.uls.languagefilter.js' ),
+	'scripts' => array( 'resources/ext.uls.core.js', 'resources/ext.uls.languagefilter.js', 'data/langdb.js' ),
 	'styles' => 'resources/css/ext.uls.css',
 	'localBasePath' => $dir,
 	'remoteExtPath' => 'UniversalLanguageSelector',
