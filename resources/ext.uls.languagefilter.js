@@ -35,6 +35,9 @@ jQuery( function( $ ) {
 					}
 
 					response( $.map( languages, function ( name, code ) {
+						if ( term === "" ) {
+							return { label: name, value: code };
+						}
 						if ( matcher.test( name ) ) {
 							return {
 								label: name.replace(
