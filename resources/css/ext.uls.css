@@ -64,11 +64,16 @@
 .uls-region {
 	float: left;
 	cursor: pointer;
-	text-align: center;
 	width: 133px;
 	padding: 0;
 	margin: 0;
 	height: 197px;
+	position: relative;
+}
+
+.uls-region a {
+	position: absolute;
+	bottom: 0;
 }
 
 .uls-region:hover {
