@@ -6,18 +6,14 @@
  * the data is in the format of languagecode:languagename format.
  * Credits: http://jqueryui.com/demos/autocomplete
  */
-jQuery( function( $ ) {
+(function ( $ ) {
 	"use strict";
 
-	$.widget( "ui.languagefilter", {
-		options: {
-			$target: null, // where to append the results
-			languages: null, // languages as code:name format. default values is from data-languages
-			clickhandler: null
-		},
+	var LanguageFilter = {
 		_create: function() {
-			var self = this.element,
-			options = this.options;
+			var that = this;
+			var self = that.element,
+			options = that.options;
 			$( self ).autocomplete( {
 				delay: 0,
 				minLength: 0,
@@ -26,7 +22,6 @@ jQuery( function( $ ) {
 				position: { offset: "-10000 -10000" },
 				source:  function( request, response ) {
 					var term = request.term;
-					var matcher = new RegExp( $.ui.autocomplete.escapeRegex( term ), 'i' );
 					var languages = options.languages;
 
 					if ( languages === null ) {
@@ -38,7 +33,7 @@ jQuery( function( $ ) {
 						if ( term === "" ) {
 							return { label: name, value: code };
 						}
-						if ( matcher.test( name ) ) {
+						if ( that.filter.call( this, name, term ) ) {
 							return {
 								label: name.replace(
 									new RegExp(
@@ -59,45 +54,140 @@ jQuery( function( $ ) {
 			} ); // /autocomplete
 
 			$( self ).data( "autocomplete" )._renderItem = function ( $target, item ) {
-				var activeregion, classes, region, i, regionlist;
-
 				$target = options.$target;
 				if ( !$target ) {
 					return;
 				}
-
-				regionlist = langdb.languages[item.value] || ["unknown", ["unknown"]];
-				regionlist = regionlist[1];
-				for ( i = 0; i < regionlist.length; i++ ) {
-					region = langdb.regiongroups[regionlist[i]]
-					if ( region ) {
-						classes = classes + " uls-region-" + region;
-					}
-				}
 				var $li = $( "<li>" )
 					.data( "code", item.value )
-					.addClass( classes )
 					.data( "item.autocomplete", item )
 					.append( $( "<a>" ).prop( 'href', '#' ). html( item.label ) )
 					.appendTo( $target );
 
-				activeregion = $( '.uls-region.active'  ).attr( 'id' );
-				if ( activeregion && !$li.hasClass( activeregion ) ) {
-					$li.hide();
-				}
-
 				if ( options.clickhandler ) {
 					$li.click( function() {
-						options.clickhandler.call( this, item );
+						options.clickhandler.call( this, item.value );
 					} );
 				}
 				return $li;
-
 			};
 		}, // End of _create
 
 		destroy: function() {
 			$.Widget.prototype.destroy.call( this );
+		},
+
+		filter: function( langName, searchTerm ) {
+			var matcher = new RegExp( $.ui.autocomplete.escapeRegex( searchTerm ), 'i' );
+			return matcher.test( langName );
+		},
+
+		options: {
+			$target: null, // where to append the results
+			languages: null, // languages as code:name format. default values is from data-languages
+			clickhandler: null,
 		}
-	} );
-} );
+	};
+
+	$.widget( "ui.languagefilter", LanguageFilter );
+
+
+	/*
+	 * Region selector is a language selector based on regions.
+	 * Usage: $( 'jqueryselector' ).regionselector(options);
+	 * The attached element should have data-region attribute
+	 * that defines the region for the selector.
+	 */
+	var RegionSelector = function( element, options ) {
+		this.$element = $( element );
+		this.options = $.extend( {}, $.fn.regionselector.defaults, options );
+		this.$element.addClass( 'regionselector' );
+		this.listen();
+		this.region = this.$element.data( 'region' );
+	};
+
+	RegionSelector.prototype = {
+		constructor: RegionSelector,
+		test: function( langCode ) {
+			var that = this;
+			var languages = that.options.source.languages;
+			var regionGroups = that.options.source.regiongroups;
+			var regions = languages[langCode][1];
+			// 1. loop over all regions - like {EU: 2, AF: 2, AS: 3 ...}
+			// 2. check that the region matches the active region group
+			// 3. if this language is included in that region, show it
+			// 4. if none of the conditions match, the language is not shown
+			$.each( regionGroups, function( regionGroup, groupId ) {
+				if ( groupId === that.region && $.inArray( regionGroup, regions ) >= 0 ) {
+					that.render( langCode );
+					return true;
+				}
+			} );
+			return false;
+		},
+		show: function() {
+			var that = this;
+			var languages = that.options.source.languages;
+			// Make the selected region (and it only) active
+			$( '.regionselector' ).removeClass( 'active' );
+			that.$element.addClass( 'active' );
+			// Repopulate the list of languages
+			that.options.$target.empty();
+			$.each( languages, function( langCode, langDef ) {
+				that.test( langCode );
+			} );
+			if ( that.options.callback ) {
+				that.options.callback.call();
+			}
+		},
+		render: function( langCode ) {
+			var that = this;
+			var langName = that.options.languages[langCode] || langCode;
+			var $li = $( "<li>" )
+					.data( "code", langCode )
+					.append( $( "<a>" ).prop( 'href', '#' ).html( langName ) )
+					.appendTo( this.options.$target );
+
+			if ( that.options.clickhandler ) {
+				$li.click( function() {
+					that.options.clickhandler.call( this, langCode );
+				} );
+			}
+		},
+		listen: function(){
+			this.$element.on( 'click', $.proxy( this.click, this ) );
+		},
+		click: function( e ) {
+			e.stopPropagation();
+			e.preventDefault();
+			this.show();
+		}
+	};
+	/* RegionSelector Plugin Definition */
+
+	$.fn.regionselector = function( option ) {
+		return this.each( function() {
+			var $this = $( this ),
+				data = $this.data( 'regionselector' ),
+				options = typeof option == 'object' && option;
+			if ( !data ) {
+				$this.data( 'regionselector', ( data = new RegionSelector( this, options ) ) );
+			}
+			if ( typeof option === 'string' ) {
+				data[option]();
+			}
+		} );
+	};
+
+	$.fn.regionselector.defaults = {
+		$target: null, // Where to render the results. Must be a ul element
+		clickhandler: null, // Click handler to handle click events on results
+		source: null, // The language database
+		languages:null, // Language names for the current UI language
+		callback: null // Callback - will be called after results are displayed.
+	};
+
+	$.fn.regionselector.Constructor = RegionSelector;
+
+
+} )( jQuery );

@@ -1,10 +1,11 @@
-(function ( $, mw ) {
+(function ( $ ) {
 	"use strict";
 
 	var ULS = function( element, options ) {
 		this.$element = $( element );
 		this.options = $.extend( {}, $.fn.uls.defaults, options );
 		this.$menu = $( this.options.menu );
+		this.languages = this.$menu.data( 'languages' );
 		this.shown = false;
 		this.render();
 		this.listen();
@@ -36,29 +37,36 @@
 		render: function() {
 			// Rendering stuff here
 		},
+		setLang: function( langCode ) {
+			// TODO: dependency on MediaWiki
+			var uri = new mw.Uri( window.location.href );
+			uri.extend( { setlang: langCode } );
+			window.location.href = uri.toString();
+		},
 		listen: function() {
+			var that = this;
 			// Register all event listeners to the ULS here.
-			this.$element.on( 'click', $.proxy( this.click, this ) );
-			$( ".icon-close" ).on( 'click', $.proxy( this.click, this ) );
+			that.$element.on( 'click', $.proxy( that.click, that ) );
+			$( ".icon-close" ).on( 'click', $.proxy( that.click, that ) );
 			$( "#languagefilter" ).languagefilter( {
 				$target: $( 'ul.uls-language-filter-result' ),
-				clickhandler: function( item ) {
-					// TODO: dependency on MediaWiki
-					var uri = new mw.Uri( window.location.href );
-					uri.extend( { setlang: item.value } );
-					window.location.href = uri.toString();
-				}
+				clickhandler: function( langCode ) {
+					that.setLang( langCode );
+				},
+				languages: that.languages
 			} );
-			$( '.uls-region' ).live( 'click', function ( e ) {
-				var id = $( this ).attr( 'id' );
-				var active = $( this ).hasClass( 'active' );
-				$( this ).parent().find( '.uls-region' ).removeClass( 'active' );
-				if ( active ) {
-					$( '.uls-language-list li' ).show();
-				} else {
-					$( this ).addClass( 'active' );
-					$( '.uls-language-list li' ).not( '.' + id ).hide();
-					$( '.uls-language-list li.' + id ).show();
+			// Create region selectors, one per region
+			$( '.uls-region' ).regionselector( {
+				$target: $( 'ul.uls-language-filter-result' ),
+				clickhandler: function( langCode ) {
+					that.setLang( langCode );
+				},
+				//FIXME This is confusing: languages and source are acturally data for ULS.
+				languages: that.languages,
+				source: langdb,
+				callback: function () {
+					// clear the search field.
+					$( "#languagefilter" ).val( "" );
 				}
 			} );
 			// trigger a search for all languages.
@@ -97,7 +105,8 @@
 			} else {
 				this.hide();
 			}
-		},
+		}
+
 	};
 
 	/* ULS PLUGIN DEFINITION
@@ -121,4 +130,4 @@
 
 	$.fn.uls.Constructor = ULS;
 
-} )( jQuery, mediaWiki );
+} )( jQuery );

@@ -59,7 +59,7 @@ class UniversalLanguageSelectorHooks {
 		$languages = Language::fetchLanguageNames( $wgContLang->getCode() );
 		$languageData = htmlspecialchars( FormatJSON::encode( $languages ) );
 		$data .= "
-		<div class=\"uls-menu\">
+		<div class=\"uls-menu\" data-languages=\"" . $languageData . "\">
 			<span class=\"icon-close\"></span>
 			<div class=\"uls-menu-header\">
 				<div class=\"uls-menu-header-left\">
@@ -67,13 +67,13 @@ class UniversalLanguageSelectorHooks {
 				</div>
 				<div class=\"uls-menu-header-right\">
 					<div class='uls-worldmap'>
-						 <div class='uls-region' id='uls-region-1'>
+						 <div class='uls-region' id='uls-region-1' data-region='1'>
 							<a>North America<br>Latin America<br>South America</a>
 						 </div>
-						 <div class='uls-region' id='uls-region-2'>
+						 <div class='uls-region' id='uls-region-2' data-region='2'>
 							<a>Europe<br>Middle East<br>Africa</a>
 						 </div>
-						 <div class='uls-region' id='uls-region-3'>
+						 <div class='uls-region' id='uls-region-3' data-region='3'>
 							<a>Asia<br>Australia<br>Pacific</a>
 						</div>
 					</div>
@@ -83,7 +83,7 @@ class UniversalLanguageSelectorHooks {
 			<div class=\"uls-lang-selector\">
 				<form action=\"#\" class=\"filterform\">
 					<input type=\"text\" placeholder=\"Language search\" id=\"languagefilter\"
-						class=\"filterinput\" data-languages=\"" . $languageData . "\">
+						class=\"filterinput\">
 					<span class=\"search-button\"></span>
 				</form>
 				<div class=\"uls-language-list\" >
