@@ -48,6 +48,8 @@
 			// Register all event listeners to the ULS here.
 			that.$element.on( 'click', $.proxy( that.click, that ) );
 			$( ".icon-close" ).on( 'click', $.proxy( that.click, that ) );
+
+			// The search input box
 			$( "#languagefilter" ).languagefilter( {
 				$target: $( 'ul.uls-language-filter-result' ),
 				clickhandler: function( langCode ) {
@@ -55,6 +57,7 @@
 				},
 				languages: that.languages
 			} );
+
 			// Create region selectors, one per region
 			$( '.uls-region' ).regionselector( {
 				$target: $( 'ul.uls-language-filter-result' ),
