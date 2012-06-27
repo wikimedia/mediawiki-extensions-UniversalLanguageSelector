@@ -28,7 +28,7 @@ class UniversalLanguageSelectorHooks {
 		$testModules['qunit']['ext.uls.tests'] = array(
 			'scripts' => array( 'tests/qunit/ext.uls.tests.js' ),
 			'dependencies' => array( 'ext.uls.init' ),
-			'localBasePath' => dirname( __FILE__ ),
+			'localBasePath' => __DIR__,
 			'remoteExtPath' => 'UniversalLanguageSelector',
 		);
 		return true;

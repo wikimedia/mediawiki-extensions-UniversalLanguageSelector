@@ -63,7 +63,7 @@
 				},
 				//FIXME This is confusing: languages and source are acturally data for ULS.
 				languages: that.languages,
-				source: langdb,
+				source: $.uls.data,
 				callback: function () {
 					// clear the search field.
 					$( "#languagefilter" ).val( "" );

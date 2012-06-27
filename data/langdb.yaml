@@ -196,7 +196,9 @@ languages:
   kw: [Latn, [EU]]
   ky: [Cyrl, [AS]]
   la: [Latn, [EU]]
- # Most identified with Turkey, Bulgaria, Greece, Spain and Israel, but also spoken in Latin America and elsewhere. Wikipedia is mostly in Latn, but also in Hebr. (comparable to az.)
+ # Most identified with Turkey, Bulgaria, Greece, Spain and Israel,
+ # but also spoken in Latin America and elsewhere.
+ # Wikipedia is mostly in Latn, but also in Hebr. (Comparable to az.)
   lad: [Latn, [ME, EU, LA]]
   lb: [Latn, [EU]]
   lbe: [Cyrl, [EU]]
@@ -207,7 +209,7 @@ languages:
   lij: [Latn, [EU]]
   liv: [Latn, [EU]]
   lmo: [Latn, [EU]]
-  ln: [Lath, [AF]]
+  ln: [Latn, [AF]]
   lo: [Laoo, [AS]]
   loz: [Latn, [AF]]
   lt: [Latn, [EU]]
@@ -406,11 +408,39 @@ languages:
   zh-yue: [Hans, [AS]]
   zu: [Latn, [AF]]
 
- # http://unicode.org/iso15924/iso15924-codes.html
+ # The codes are taken from http://unicode.org/iso15924/iso15924-codes.html .
+ #
+ # The classification is roughly based on http://www.unicode.org/charts/
+ # with some practical corrections.
 scriptgroups:
-  Latn: 1
-  Cyrl: 2
-  Arab: 3
+ # Other is reserved
+ # Large groups, one script in each
+  Cyrillic: [Cyrl]
+  Arabic: [Arab]
+ # It's probalby different enough from Latin and Cyrillic, but user testing
+ # may prove otherwise.
+  Greek: [Grek]
+ # Couldn't find a better place for Goth.
+  Latin: [Latn, Goth]
+  WestCaucasian: [Armn, Geor]
+ # Maybe it can be unified with Arabic.
+ # Maybe Thaana can be moved here from SouthAsian.
+ # Maybe it can be unified with African.
+  MiddleEastern: [Hebr, Syrc]
+  African: [Ethi, Tfng]
+ # India, Nepal, Bangladesh, Sri-Lanka, Bhutan, Maldives.
+ #
+ # Thaana (Thaa, the script of Maldives) is here, even though it's RTL,
+ # because it's closer geographically to India. Maybe it should be moved
+ # to MiddleEastern or to Arabic, if that would be easier to users.
+ #
+ # Tibetan (Tibt) is here, even though it's classified as "Central Asian" by
+ # Unicode, because linguistically and geographically it's closely related to
+ # the Brahmic family.
+  SouthAsian: [Beng, Deva, Gujr, Guru, Knda, Mlym, Orya, Sinh, Taml, Telu, Tibt, Thaa]
+  SouthEastAsian: [Bugi, Java, Khmr, Laoo, Mymr, Thai]
+  CJK: [Hans, Hant, Kore, Jpan, Yiii]
+  NativeAmerican: [Cher, Cans]
 
 regiongroups:
  # north-america

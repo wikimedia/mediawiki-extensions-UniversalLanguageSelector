@@ -45,15 +45,25 @@ $wgResourceModules['ext.uls.init'] = array(
 	'position' => 'top',
 );
 
+$wgResourceModules['ext.uls.data'] = array(
+	'scripts' => 'data/ext.uls.data.js',
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'UniversalLanguageSelector',
+);
+
 $wgResourceModules['ext.uls.core'] = array(
-	'scripts' => array( 'resources/ext.uls.core.js', 'resources/ext.uls.languagefilter.js', 'data/langdb.js' ),
+	'scripts' => array(
+		'resources/ext.uls.core.js',
+		'resources/ext.uls.languagefilter.js',
+		'resources/ext.uls.data.utils.js',
+	),
 	'styles' => 'resources/css/ext.uls.css',
 	'localBasePath' => $dir,
 	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
-		'mediawiki.util',
 		'mediawiki.Uri',
-		'jquery.ui.autocomplete'
+		'jquery.ui.autocomplete',
+		'ext.uls.data',
 	),
 	'position' => 'top',
 );
