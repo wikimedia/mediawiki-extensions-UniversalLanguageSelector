@@ -19,7 +19,8 @@ languages:
   av: [Cyrl, [EU]]
   avk: [Latn, [WW]]
   ay: [Latn, [SA]]
-  az: [Latn, [EU, ME]] # also Arab, and in the past - Cyrl
+ # also Arab, and in the past - Cyrl
+  az: [Latn, [EU, ME]]
   ba: [Cyrl, [EU]]
   bar: [Latn, [EU]]
   bcc: [Arab, [AS, ME]]
@@ -54,8 +55,10 @@ languages:
   ckb: [Arab, [ME]]
   co: [Latn, [EU]]
   cps: [Latn, [AS]]
-  cr: [Cans, [NA]] # Also Latn
-  crh: [Latn, [EU]] # Latn is default, Cyrl is common IRL
+ # Also Latn
+  cr: [Cans, [NA]]
+ # Latn is default, Cyrl is common IRL
+  crh: [Latn, [EU]]
   crh-latn: [Latn, [EU]]
   crh-cyrl: [Cyrl, [EU]]
   cs: [Latn, [EU]]
@@ -76,11 +79,13 @@ languages:
   ee: [Latn, [AF]]
   el: [Grek, [EU]]
   eml: [Latn, [EU]]
-  en: [Latn, [EU, NA, AU, AF, ME, AS, PA, WW]] # world?
+ # world?
+  en: [Latn, [EU, NA, AU, AF, ME, AS, PA, WW]]
   en-ca: [Latn, [NA]]
   en-gb: [Latn, [EU, AS, AU]]
   eo: [Latn, [WW]]
-  es: [Latn, [EU, NA, LA, SA, AF, WW]] # world?
+ # world?
+  es: [Latn, [EU, NA, LA, SA, AF, WW]]
   et: [Latn, [EU]]
   eu: [Latn, [EU]]
   ext: [Latn, [EU]]
@@ -105,23 +110,27 @@ languages:
   gl: [Latn, [EU]]
   glk: [Arab, [ME]]
   gn: [Latn, [LA]]
-  got: [Goth, [EU]] # hmph
+ # hmph
+  got: [Goth, [EU]]
   grc: [Grek, [EU]]
   gsw: [Latn, [EU]]
   gu: [Gujr, [AS]]
   gv: [Latn, [EU]]
-  ha: [Latn, [AF]] # The name in Names.php is Arabic, but everything else is Latn
+ # The name in Names.php is Arabic, but everything else is Latn
+  ha: [Latn, [AF]]
   hak: [Latn, [AS]]
   haw: [Latn, [NA, PA]]
   he: [Hebr, [ME]]
-  hi: [Deva, [AS]] # Or maybe world?
+ # Or maybe world?
+  hi: [Deva, [AS]]
   hif: [Latn, [PA, AU, AS]]
   hif-latn: [Latn, [PA, AU, AS]]
   hil: [Latn, [AS]]
   ho: [Latn, [PA]]
   hr: [Latn, [EU]]
   hsb: [Latn, [EU]]
-  ht: [Latn, [NA]] # Haitian Creole. North America, right?
+ # Haitian Creole. North America, right?
+  ht: [Latn, [NA]]
   hu: [Latn, [EU]]
   hy: [Armn, [EU, ME]]
   hz: [Latn, [AF]]
@@ -143,10 +152,12 @@ languages:
   jam: [Latn, [NA]]
   jbo: [Latn, [WW]]
   jut: [Latn, [EU]]
-  jv: [Latn, [AS, NA]] # also in Java script, but the Wikipedia is in Latn
+ # also in the Javanese script (Java), but the Wikipedia is in Latn
+  jv: [Latn, [AS, PA]]
   ka: [Geor, [EU]]
   kaa: [Latn, [AS]]
-  kab: [Latn, [AF, EU]] # Can also be Tfng, but the Wikipedia is mostly Latn
+ # Can also be Tfng, but the Wikipedia is mostly Latn
+  kab: [Latn, [AF, EU]]
   kbd: [Cyrl, [EU, ME]]
   kbd-cyrl: [Cyrl, [EU, ME]]
   kg: [Latn, [AF]]
@@ -164,14 +175,17 @@ languages:
   kl: [Latn, [NA, EU]]
   km: [Khmr, [AS]]
   kn: [Knda, [AS]]
-  ko: [Kore, [AS]] # Kore is an alias for Hangul+Han. Maybe Hang is more appropriate?
-  ko-kp: [Kore, [AS]] # Here Hang may be even more appropriate, because kp has more resistance to Han
+ # Kore is an alias for Hangul+Han. Maybe Hang is more appropriate?
+  ko: [Kore, [AS]]
+ # Here Hang may be even more appropriate, because kp has more resistance to Han
+  ko-kp: [Kore, [AS]]
   koi: [Cyrl, [EU]]
   kr: [Latn, [AF]]
   krc: [Cyrl, [EU]]
   kri: [Latn, [AF]]
   krj: [Latn, [ME, EU]]
-  ks: [Arab, [AS]] # Just because it's the current default in the Wikipedia. Deva may be needed, too.
+ # Just because it's the current default in the Wikipedia. Deva may be needed, too.
+  ks: [Arab, [AS]]
   ks-arab: [Arab, [AS]]
   ks-deva: [Deva, [AS]]
   ksh: [Latn, [EU]]
@@ -182,7 +196,8 @@ languages:
   kw: [Latn, [EU]]
   ky: [Cyrl, [AS]]
   la: [Latn, [EU]]
-  lad: [Latn, [ME, EU, LA]] # Most identified with Turkey, Bulgaria, Greece, Spain and Israel, but also spoken in Latin America and elsewhere. Wikipedia is mostly in Latn, but also in Hebr. (comparable to az.)
+ # Most identified with Turkey, Bulgaria, Greece, Spain and Israel, but also spoken in Latin America and elsewhere. Wikipedia is mostly in Latn, but also in Hebr. (comparable to az.)
+  lad: [Latn, [ME, EU, LA]]
   lb: [Latn, [EU]]
   lbe: [Cyrl, [EU]]
   lez: [Cyrl, [EU]]
@@ -211,7 +226,8 @@ languages:
   min: [Latn, [AS]]
   mk: [Cyrl, [EU]]
   ml: [Mlym, [AS, ME]]
-  mn: [Cyrl, [AS]] # Hmm, can also have Mong some day in some way
+ # Hmm, can also have Mong some day in some way
+  mn: [Cyrl, [AS]]
   mo: [Cyrl, [EU]]
   mr: [Deva, [AS, ME]]
   mrj: [Cyrl, [EU]]
@@ -262,7 +278,8 @@ languages:
   pnt: [Grek, [EU]]
   prg: [Latn, [EU]]
   ps: [Arab, [AS, ME]]
-  pt: [Latn, [EU, LA, AS, PA, AF]] # world?
+ # world?
+  pt: [Latn, [EU, LA, AS, PA, AF]]
   pt-br: [Latn, [SA, LA]]
   qu: [Latn, [SA]]
   qug: [Latn, [SA]]
@@ -274,13 +291,14 @@ languages:
   ro: [Latn, [EU]]
   roa-rup: [Latn, [EU]]
   roa-tara: [Latn, [EU]]
-  ru: [Cyrl, [EU, AS, ME]] # World?
+ # World?
+  ru: [Cyrl, [EU, AS, ME]]
   rue: [Cyrl, [EU, NA]]
   rup: [Latn, [EU]]
-#  ruq: [, []]
-#  ruq-cyrl: [, []]
+ #  ruq: [, []]
+ #  ruq-cyrl: [, []]
  ## 'ruq-grek' => 'Î’Î»Î±ÎµÏƒÏ„Îµ',  # Megleno-Romanian (Greek script)
-#  ruq-latn: [, []]
+ #  ruq-latn: [, []]
   rw: [Latn, [AF]]
   sa: [Deva, [AS]]
   sah: [Cyrl, [EU, AS]] # Russian Far East - Europe, Asia, or both?
@@ -299,7 +317,7 @@ languages:
   shi-tfng: [Tfng, [AF]]
   shi-latn: [Latn, [AF]]
   si: [Sinh, [AS]]
-#  simple: [, []] # Latn, WW?
+  simple: [Latn, [WW]]
   sk: [Latn, [EU]]
   sl: [Latn, [EU]]
   sli: [Latn, [EU]]
@@ -330,7 +348,8 @@ languages:
   ti: [Ethi, [AF]]
   tk: [Latn, [AS]]
   tl: [Latn, [AS]]
-  tly: [Cyrl, [EU, AS, ME]] # A very complicated case. Names.php is Cyrl. In TWN they argue about Cyrl, Latn, and Arab. I can't find reliable external sources. --Amir
+ # A very complicated case. Names.php is Cyrl. In TWN they argue about Cyrl, Latn, and Arab. I can't find reliable external sources. --Amir
+  tly: [Cyrl, [EU, AS, ME]]
   tn: [Latn, [AF]]
   to: [Latn, [PA]]
   tokipona: [Latn, [WW]]
@@ -369,7 +388,8 @@ languages:
   xmf: [Geor, [EU]]
   yi: [Hebr, [ME, EU, NA, SA]]
   yo: [Latn, [AF]]
-  yue: [Hant, [AS]] # World?
+ # World?
+  yue: [Hant, [AS]]
   za: [Latn, [AS]]
   zea: [Latn, [EU]]
   zh: [Hans, [AS]]
@@ -380,31 +400,41 @@ languages:
   zh-hk: [Hant, [AS]]
   zh-min-nan: [Latn, [AS]]
   zh-mo: [Hant, [AS]]
-#  zh-my: [, [AS]] # What is it, Myanmar?
+ #  zh-my: [, [AS]] # What is it, Myanmar?
   zh-sg: [Hans, [AS]]
   zh-tw: [Hant, [AS]]
   zh-yue: [Hans, [AS]]
   zu: [Latn, [AF]]
 
-# http://unicode.org/iso15924/iso15924-codes.html
+ # http://unicode.org/iso15924/iso15924-codes.html
 scriptgroups:
   Latn: 1
   Cyrl: 2
   Arab: 3
 
 regiongroups:
-  NA: 1 # north-america
-  LA: 1 # latin-america
-  SA: 1 # south-america
-  ME: 2 # middle-east
-  AF: 2 # africa
-  EU: 2 # europe
-  AS: 3 # asia
-  AU: 3 # australia
-  PA: 3 # pacific
-  WW: 4 # world wide, international
+ # north-america
+  NA: 1
+ # latin-america
+  LA: 1
+ # south-america
+  SA: 1
+ # middle-east
+  ME: 2
+ # africa
+  AF: 2
+ # europe
+  EU: 2
+ # asia
+  AS: 3
+ # australia
+  AU: 3
+ # pacific
+  PA: 3
+ # world wide, international
+  WW: 4
 
-# Importance in the region, 100 = official language or everybody knows it
+ # Importance in the region, 100 = official language or everybody knows it
 regions:
   fi: { FI: 100, SE: 10 }
   ru: { RU: 100, FI: 40 }
