@@ -35,6 +35,7 @@ $wgAutoloadClasses['UniversalLanguageSelectorHooks'] = "$dir/UniversalLanguageSe
 $wgHooks['BeforePageDisplay'][] = 'UniversalLanguageSelectorHooks::addModules';
 $wgHooks['PersonalUrls'][] = 'UniversalLanguageSelectorHooks::addTrigger';
 $wgHooks['SkinAfterContent'][] = 'UniversalLanguageSelectorHooks::addTemplate';
+$wgHooks['ResourceLoaderTestModules'][] = 'UniversalLanguageSelectorHooks::addTestModules';
 
 $wgResourceModules['ext.uls.init'] = array(
 	'scripts' => 'resources/ext.uls.init.js',
