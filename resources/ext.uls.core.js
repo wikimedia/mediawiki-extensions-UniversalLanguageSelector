@@ -49,24 +49,22 @@
 			that.$element.on( 'click', $.proxy( that.click, that ) );
 			$( ".icon-close" ).on( 'click', $.proxy( that.click, that ) );
 
-			// The search input box
-			$( "#languagefilter" ).languagefilter( {
-				$target: $( 'ul.uls-language-filter-result' ),
+			var $lcd = $( "div.uls-language-list" ).lcd( {
+				languages: that.languages,
 				clickhandler: function( langCode ) {
 					that.setLang( langCode );
-				},
+				}
+			}).data( "lcd" );
+			$( "#languagefilter" ).languagefilter( {
+				$target: $lcd, //$( 'ul.uls-language-filter-result' ),
 				languages: that.languages
 			} );
 
 			// Create region selectors, one per region
 			$( '.uls-region' ).regionselector( {
-				$target: $( 'ul.uls-language-filter-result' ),
-				clickhandler: function( langCode ) {
-					that.setLang( langCode );
-				},
-				//FIXME This is confusing: languages and source are acturally data for ULS.
+				$target: $lcd,
+				//FIXME This is confusing: languages and source are actually data for ULS.
 				languages: that.languages,
-				source: $.uls.data,
 				callback: function () {
 					// clear the search field.
 					$( "#languagefilter" ).val( "" );
@@ -75,10 +73,9 @@
 			// trigger a search for all languages.
 			$( "#languagefilter" ).languagefilter( "search" );
 		},
-		keyup : function(e) {
-			switch(e.keyCode) {
-				case 27:
-					// escape
+		keyup: function( e ) {
+			switch( e.keyCode ) {
+				case 27: // escape
 					if (!this.shown ) {
 						return this.hide();
 					}
@@ -93,8 +90,7 @@
 			}
 
 			switch( e.keyCode ) {
-				case 27:
-					// escape
+				case 27: // escape
 					e.preventDefault();
 					break;
 			}
@@ -117,7 +113,10 @@
 
 	$.fn.uls = function( option ) {
 		return this.each( function() {
-			var $this = $( this ), data = $this.data( 'uls' ), options = typeof option == 'object' && option;
+			var $this = $( this ),
+				data = $this.data( 'uls' ),
+				options = typeof option === 'object' && option;
+
 			if ( !data ) {
 				$this.data( 'uls', ( data = new ULS( this, options ) ) );
 			}
@@ -128,7 +127,7 @@
 	};
 
 	$.fn.uls.defaults = {
-		menu : '.uls-menu',
+		menu: '.uls-menu'
 	};
 
 	$.fn.uls.Constructor = ULS;

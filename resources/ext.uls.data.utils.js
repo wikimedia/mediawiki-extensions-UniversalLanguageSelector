@@ -5,9 +5,32 @@
 (function ( $ ) {
 	"use strict";
 
-	// Constants
-	var scriptIndex = 0,
-		regionsIndex = 1;
+	/*
+	 * Returns the script of the language.
+	 * @param string language code
+	 * @return string
+	 */
+	$.uls.data.script = function( language ) {
+		return $.uls.data.languages[language][0];
+	};
+
+	/*
+	 * Returns the regions in which a language is spoken.
+	 * @param string language code
+	 * @return array of strings
+	 */
+	$.uls.data.regions = function( language ) {
+		return $.uls.data.languages[language][1];
+	};
+
+	/*
+	 * Returns the autonym of the language.
+	 * @param string language code
+	 * @return string
+	 */
+	$.uls.data.autonym = function( language ) {
+		return $.uls.data.autonyms[language];
+	};
 
 	/*
 	 * Returns all languages written in script.
@@ -16,7 +39,7 @@
 	 */
 	$.uls.data.languagesInScript = function( script ) {
 		return $.uls.data.languagesInScripts( [ script ] );
-	}
+	};
 
 	/*
 	 * Returns all languages written in the given scripts.
@@ -28,7 +51,7 @@
 
 		for ( var language in $.uls.data.languages ) {
 			for ( var i = 0; i < scripts.length; i++ ) {
-				if ( scripts[i] === $.uls.data.languages[language][scriptIndex] ) {
+				if ( scripts[i] === $.uls.data.script(language) ) {
 					languagesInScripts.push( language );
 					break;
 				}
@@ -36,7 +59,7 @@
 		}
 
 		return languagesInScripts;
-	}
+	};
 
 	/*
 	 * Returns all languages in a given region.
@@ -45,7 +68,7 @@
 	 */
 	$.uls.data.languagesInRegion = function( region ) {
 		return $.uls.data.languagesInRegions( [ region ] );
-	}
+	};
 
 	/*
 	 * Returns all languages in given regions.
@@ -57,7 +80,7 @@
 
 		for ( var language in $.uls.data.languages ) {
 			for ( var i = 0; i < regions.length; i++ ) {
-				if ( $.inArray( regions[i], $.uls.data.languages[language][regionsIndex] ) != -1 ) {
+				if ( $.inArray( regions[i], $.uls.data.regions( language ) ) !== -1 ) {
 					languagesInRegions.push( language );
 					break;
 				}
@@ -65,7 +88,7 @@
 		}
 
 		return languagesInRegions;
-	}
+	};
 
 	/*
 	 * Returns an associative array of languages in a region,
@@ -77,8 +100,8 @@
 		var languagesByScriptInRegion = {};
 
 		for ( var language in $.uls.data.languages ) {
-			if ( $.inArray( region, $.uls.data.languages[language][regionsIndex] ) != -1 ) {
-				var script = $.uls.data.languages[language][scriptIndex];
+			if ( $.inArray( region, $.uls.data.regions( language ) ) !== -1 ) {
+				var script = $.uls.data.script( language );
 				if ( languagesByScriptInRegion[script] === undefined ) {
 					languagesByScriptInRegion[script] = [];
 				}
@@ -87,7 +110,7 @@
 		}
 
 		return languagesByScriptInRegion;
-	}
+	};
 
 	/*
 	 * Returns all regions in a region group.
@@ -104,20 +127,27 @@
 		}
 
 		return regionsInGroup;
-	}
+	};
 
 	/*
 	 * Returns the script group of a script or 'Other' if it doesn't
 	 * belong to any group.
+	 * @param string script code
+	 * @return string script group name
 	 */
 	$.uls.data.groupOfScript = function( script ) {
 		for ( var group in $.uls.data.scriptgroups ) {
-			if ( $.inArray( script, $.uls.data.scriptgroups[group] ) != -1 ) {
+			if ( $.inArray( script, $.uls.data.scriptgroups[group] ) !== -1 ) {
 				return group;
 			}
 		}
 
 		return 'Other';
-	}
+	};
+
+	$.uls.data.sortByScriptGroup = function( languages ) {
+		// FIXME sort it.
+		return languages;
+	};
 
 } )( jQuery );

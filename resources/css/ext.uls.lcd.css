@@ -1,0 +1,16 @@
+.uls-lcd-region-section h3 {
+	color: #999999;
+}
+
+.uls-lcd-region-section ul {
+	list-style: none;
+	margin-left: 0;
+	float: left;
+	width: 150px;
+	padding: 10px;
+	clear: right;
+}
+
+.uls-lcd-region-section {
+	clear: both;
+}

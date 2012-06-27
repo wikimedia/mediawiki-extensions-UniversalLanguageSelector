@@ -87,8 +87,6 @@ class UniversalLanguageSelectorHooks {
 					<span class=\"search-button\"></span>
 				</form>
 				<div class=\"uls-language-list\" >
-					<ul class=\"uls-language-filter-result\" >
-					</ul>
 				</div>
 			</div>
 		</div>";

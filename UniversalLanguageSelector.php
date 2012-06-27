@@ -51,6 +51,22 @@ $wgResourceModules['ext.uls.data'] = array(
 	'remoteExtPath' => 'UniversalLanguageSelector',
 );
 
+$wgResourceModules['ext.uls.lcd'] = array(
+	'scripts' => 'resources/ext.uls.lcd.js',
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'UniversalLanguageSelector',
+	'styles' => 'resources/css/ext.uls.lcd.css',
+	'dependencies' => array(
+		'jquery.viewport',
+	),
+);
+
+$wgResourceModules['jquery.viewport'] = array(
+	'scripts' => 'resources/jquery.viewport.js',
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'UniversalLanguageSelector',
+);
+
 $wgResourceModules['ext.uls.core'] = array(
 	'scripts' => array(
 		'resources/ext.uls.core.js',
@@ -63,6 +79,7 @@ $wgResourceModules['ext.uls.core'] = array(
 	'dependencies' => array(
 		'mediawiki.Uri',
 		'ext.uls.data',
+		'ext.uls.lcd',
 	),
 	'position' => 'top',
 );

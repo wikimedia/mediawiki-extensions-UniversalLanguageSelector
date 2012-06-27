@@ -1,9 +1,10 @@
 /**
  * @author Santhosh Thottingal
  * jQuery language filter plugin
- * Usage: $('inputbox').languagefilter();
+ *
+ * Usage: $( 'inputbox' ).languagefilter();
  * The values for autocompletion is from the options.languages.
- * the data is in the format of languagecode:languagename format.
+ * The data is in the format of languagecode:languagename.
  */
 (function ( $ ) {
 	"use strict";
@@ -33,7 +34,7 @@
 			var that = this;
 			var languages = this.options.languages;
 			var query = this.$element.val();
-			$.each( languages, function ( name, code ) {
+			$.each( languages, function ( code, name ) {
 				if ( query === "" ) {
 					that.render(code);
 				}
@@ -49,16 +50,7 @@
 			if ( !$target ) {
 				return;
 			}
-			var $li = $( "<li>" )
-				.data( "code", code )
-				.append( $( "<a>" ).prop( 'href', '#' ). html( this.options.languages[code] || code ) )
-				.appendTo( $target );
-
-			if ( this.options.clickhandler ) {
-				$li.click( function() {
-					that.options.clickhandler.call( this, code );
-				} );
-			}
+			$target.append(code);
 		},
 
 		escapeRegex: function( value ) {
@@ -74,13 +66,12 @@
 		 * d) ISO 15924 code for the script match the search string.
 		 */
 		filter: function( code, searchTerm ) {
-			var languages = this.options.languages;
-			var langName = languages[code];
-			var autonym = $.uls.data.autonyms[code];
-			var script =  $.uls.data.languages[code]? $.uls.data.languages[code][0]: "unknown";
 			// FIXME script is ISO 15924 code. We might need actual name of script.
 			var matcher = new RegExp( this.escapeRegex( searchTerm ), 'i' );
-			return matcher.test( langName ) || matcher.test( autonym ) || matcher.test( code ) || matcher.test( script );
+			return matcher.test( this.options.languages[code] ) ||
+				matcher.test( $.uls.data.autonym( code ) ) ||
+				matcher.test( code ) ||
+				matcher.test( $.uls.data.script( code ) );
 		}
 
 	};
@@ -112,7 +103,7 @@
 
 	/*
 	 * Region selector is a language selector based on regions.
-	 * Usage: $( 'jqueryselector' ).regionselector(options);
+	 * Usage: $( 'jqueryselector' ).regionselector( options );
 	 * The attached element should have data-region attribute
 	 * that defines the region for the selector.
 	 */
@@ -128,8 +119,8 @@
 		constructor: RegionSelector,
 		test: function( langCode ) {
 			var that = this;
-			var languages = that.options.source.languages;
-			var regionGroups = that.options.source.regiongroups;
+			var languages = $.uls.data.languages;
+			var regionGroups = $.uls.data.regiongroups;
 			var regions = languages[langCode][1];
 			// 1. loop over all regions - like {EU: 2, AF: 2, AS: 3 ...}
 			// 2. check that the region matches the active region group
@@ -137,18 +128,21 @@
 			// 4. if none of the conditions match, the language is not shown
 			$.each( regionGroups, function( regionGroup, groupId ) {
 				if ( groupId === that.region && $.inArray( regionGroup, regions ) >= 0 ) {
-					that.render( langCode );
-					return true;
+					that.render( langCode, regionGroup );
+					return;
 				}
 			} );
-			return false;
 		},
 		show: function() {
-			var that = this;
-			var languages = that.options.source.languages;
+			var that = this,
+				languages = $.uls.data.languages;
+
+			languages = $.uls.data.sortByScriptGroup( languages );
+
 			// Make the selected region (and it only) active
 			$( '.regionselector' ).removeClass( 'active' );
 			that.$element.addClass( 'active' );
+
 			// Repopulate the list of languages
 			that.options.$target.empty();
 			$.each( languages, function( langCode, langDef ) {
@@ -158,19 +152,12 @@
 				that.options.callback.call();
 			}
 		},
-		render: function( langCode ) {
-			var that = this;
-			var langName = that.options.languages[langCode] || langCode;
-			var $li = $( "<li>" )
-					.data( "code", langCode )
-					.append( $( "<a>" ).prop( 'href', '#' ).html( langName ) )
-					.appendTo( this.options.$target );
-
-			if ( that.options.clickhandler ) {
-				$li.click( function() {
-					that.options.clickhandler.call( this, langCode );
-				} );
+		render: function( langCode, regionGroup) {
+			var $target = this.options.$target;
+			if ( !$target ) {
+				return;
 			}
+			$target.append( langCode, regionGroup );
 		},
 		listen: function(){
 			this.$element.on( 'click', $.proxy( this.click, this ) );
@@ -187,7 +174,7 @@
 		return this.each( function() {
 			var $this = $( this ),
 				data = $this.data( 'regionselector' ),
-				options = typeof option == 'object' && option;
+				options = typeof option === 'object' && option;
 			if ( !data ) {
 				$this.data( 'regionselector', ( data = new RegionSelector( this, options ) ) );
 			}
@@ -199,9 +186,6 @@
 
 	$.fn.regionselector.defaults = {
 		$target: null, // Where to render the results. Must be a ul element
-		clickhandler: null, // Click handler to handle click events on results
-		source: null, // The language database
-		languages:null, // Language names for the current UI language
 		callback: null // Callback - will be called after results are displayed.
 	};
 

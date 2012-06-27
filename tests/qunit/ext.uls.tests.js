@@ -23,7 +23,7 @@ var orphanScript = function () {
 	}
 
 	return '';
-}
+};
 
 test( "-- Initial check", function() {
 	expect( 1 );
@@ -31,10 +31,15 @@ test( "-- Initial check", function() {
 } );
 
 test( "-- $.uls.data testing", function() {
-	expect( 8 );
+	expect( 12 );
 
-	// Unless we actually want some scripts to be in the 'Other' group.
+	// This test assumes that we don't want any scripts to be in the 'Other'
+	// group. Actually, this may become wrong some day.
 	strictEqual( orphanScript(), '', 'No orphan scripts found.' );
+	strictEqual( $.uls.data.groupOfScript( 'Beng' ), 'SouthAsian', 'Bengali script belongs to the SouthAsian group.' );
+
+	strictEqual( $.uls.data.script( 'ii' ), 'Yiii', 'Correct script of the Yi language was selected' );
+	deepEqual( $.uls.data.regions( 'lzz' ), [ 'EU', 'ME' ], 'Correct regions of the Laz language were selected' );
 
 	deepEqual( $.uls.data.languagesInRegion( 'AU' ), ["en", "en-gb", "hif", "hif-latn", "mi", "na"], "languages of region AU are selected correctly" );
 	deepEqual( $.uls.data.languagesInRegions( ['NA', 'WW'] ),
@@ -42,8 +47,8 @@ test( "-- $.uls.data testing", function() {
 			"avk", "cho", "chr", "chy", "cr", "en", "en-ca", "eo", "es",
 			"haw", "ht", "ia", "ie", "ik", "ike-cans", "ike-latn", "io",
 			"iu", "jam", "jbo", "kl", "lfn", "mus", "nah", "nov", "nv",
-			"pdc", "pdt", "rue", "sei", "simple", "srn", "tokipona",
-			"uk", "vo", "yi"
+			"pdc", "pdt", "sei", "simple", "srn", "tokipona",
+			"vo", "yi"
 		],
 		"languages of regions NA and WW are selected correctly"
 	);
@@ -59,6 +64,8 @@ test( "-- $.uls.data testing", function() {
 
 	languagesByScriptInNA = $.uls.data.languagesByScriptInRegion( 'NA' );
 	deepEqual( languagesByScriptInNA['Cans'], ["cr", "ike-cans", "iu"], "correct languages in Cans in NA selected" );
+
+	strictEqual( $.uls.data.autonym( 'pa' ), 'ਪੰਜਾਬੀ', 'Correct autonym of the Punjabi language was selected' );
 } );
 
 }() );
