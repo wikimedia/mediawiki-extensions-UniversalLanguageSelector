@@ -11,7 +11,7 @@
 module( "ext.uls", QUnit.newMwEnvironment() );
 
 test( "-- Initial check", function() {
-	expect( 2 );
+	expect( 1 );
 	ok( $.fn.uls, "$.fn.uls is defined" );
 } );
 
