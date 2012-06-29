@@ -23,19 +23,13 @@
 				source:  function( request, response ) {
 					var term = request.term;
 					var languages = options.languages;
-
-					if ( languages === null ) {
-						// Apparently .data automatically parses valid looking JSON
-						languages = $( self ).data( 'languages' );
-					}
-
-					response( $.map( languages, function ( name, code ) {
+					response( $.map( $.uls.data.languages, function ( languageDef, code ) {
 						if ( term === "" ) {
-							return { label: name, value: code };
+							return { label: languages[code], value: code };
 						}
-						if ( that.filter.call( this, name, term ) ) {
+						if ( that.filter( code, term ) ) {
 							return {
-								label: name.replace(
+								label: languages[code].replace(
 									new RegExp(
 									"(?![^&;]+;)(?!<[^<>]*)(" +
 									$.ui.autocomplete.escapeRegex( term ) +
@@ -76,16 +70,28 @@
 		destroy: function() {
 			$.Widget.prototype.destroy.call( this );
 		},
-
-		filter: function( langName, searchTerm ) {
+		/**
+		 * A search match happens if any of the following passes:
+		 * a) Language name in current user interface language
+		 * 'starts with' or 'contains' search string.
+		 * b) Language autonym 'starts with' or 'contains' search string.
+		 * c) ISO 639 code match with search string.
+		 * d) ISO 15924 code for the script match the search string.
+		 */
+		filter: function( code, searchTerm ) {
+			var languages = this.options.languages;
+			var langName = languages[code];
+			var autonym = $.uls.data.autonyms[code];
+			var script = $.uls.data.languages[code][0];
+			// FIXME script is ISO 15924 code. We might need actual name of script.
 			var matcher = new RegExp( $.ui.autocomplete.escapeRegex( searchTerm ), 'i' );
-			return matcher.test( langName );
+			return matcher.test( langName ) || matcher.test( autonym ) || matcher.test( code ) || matcher.test( script );
 		},
 
 		options: {
 			$target: null, // where to append the results
 			languages: null, // languages as code:name format. default values is from data-languages
-			clickhandler: null,
+			clickhandler: null
 		}
 	};
 
