@@ -295,7 +295,7 @@ languages:
   roa-tara: [Latn, [EU]]
  # World?
   ru: [Cyrl, [EU, AS, ME]]
-  rue: [Cyrl, [EU, NA]]
+  rue: [Cyrl, [EU]]
   rup: [Latn, [EU]]
  #  ruq: [, []]
  #  ruq-cyrl: [, []]
@@ -369,7 +369,7 @@ languages:
   ug: [Arab, [AS]]
   ug-arab: [Arab, [AS]]
   ug-latn: [Latn, [AS]]
-  uk: [Cyrl, [EU, NA]]
+  uk: [Cyrl, [EU]]
   ur: [Arab, [AS, ME]]
   uz: [Latn, [AS]]
   ve: [Latn, [AF]]
