@@ -62,7 +62,6 @@ $wgResourceModules['ext.uls.core'] = array(
 	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
 		'mediawiki.Uri',
-		'jquery.ui.autocomplete',
 		'ext.uls.data',
 	),
 	'position' => 'top',

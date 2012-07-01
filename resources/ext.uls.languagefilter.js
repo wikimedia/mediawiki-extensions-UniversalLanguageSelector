@@ -1,75 +1,70 @@
-/*
+/**
  * @author Santhosh Thottingal
- * jQuery autocomplete based language filter widget
+ * jQuery language filter plugin
  * Usage: $('inputbox').languagefilter();
- * The values for autocompletion is from the data-languages of the element.
+ * The values for autocompletion is from the options.languages.
  * the data is in the format of languagecode:languagename format.
- * Credits: http://jqueryui.com/demos/autocomplete
  */
 (function ( $ ) {
 	"use strict";
 
-	var LanguageFilter = {
-		_create: function() {
-			var that = this;
-			var self = that.element,
-			options = that.options;
-			$( self ).autocomplete( {
-				delay: 0,
-				minLength: 0,
-				// Move the default dropdown for suggestions to somewhere
-				// where it is not visible, since we don't use it.
-				position: { offset: "-10000 -10000" },
-				source:  function( request, response ) {
-					var term = request.term;
-					var languages = options.languages;
-					response( $.map( $.uls.data.languages, function ( languageDef, code ) {
-						if ( term === "" ) {
-							return { label: languages[code], value: code };
-						}
-						if ( that.filter( code, term ) ) {
-							return {
-								label: languages[code].replace(
-									new RegExp(
-									"(?![^&;]+;)(?!<[^<>]*)(" +
-									$.ui.autocomplete.escapeRegex( term ) +
-									")(?![^<>]*>)(?![^&;]+;)", "gi"
-									), "<strong>$1</strong>" ),
-								value: code
-							};
-						}
-					} ) );
-				},
-				search: function ( event, ui ) {
-					if ( options.$target ){
-						options.$target.empty();
-					}
-				}
-			} ); // /autocomplete
+	var LanguageFilter = function( element, options ) {
+		this.$element = $( element );
+		this.options = $.extend( {}, $.fn.regionselector.defaults, options );
+		this.$element.addClass( 'languagefilter' );
+		this.listen();
+	};
 
-			$( self ).data( "autocomplete" )._renderItem = function ( $target, item ) {
-				$target = options.$target;
-				if ( !$target ) {
-					return;
-				}
-				var $li = $( "<li>" )
-					.data( "code", item.value )
-					.data( "item.autocomplete", item )
-					.append( $( "<a>" ).prop( 'href', '#' ). html( item.label ) )
-					.appendTo( $target );
+	LanguageFilter.prototype = {
 
-				if ( options.clickhandler ) {
-					$li.click( function() {
-						options.clickhandler.call( this, item.value );
-					} );
-				}
-				return $li;
+		listen: function() {
+			this.$element.on( 'keyup', $.proxy( this.keyup, this ));
+			if ( $.browser.webkit || $.browser.msie ) {
+				this.$element.on( 'keydown', $.proxy( this.keyup, this ) )
 			};
-		}, // End of _create
-
-		destroy: function() {
-			$.Widget.prototype.destroy.call( this );
 		},
+
+		keyup: function( e ) {
+			this.options.$target.empty();
+			this.search();
+		},
+
+		search: function() {
+			var that = this;
+			var languages = this.options.languages;
+			var query = this.$element.val();
+			$.each( languages, function ( name, code ) {
+				if ( query === "" ) {
+					that.render(code);
+				}
+				else if ( that.filter( code, query ) ) {
+					that.render(code);
+				}
+			} ) ;
+		},
+
+		render : function( code ) {
+			var that = this;
+			var $target = this.options.$target;
+			if ( !$target ) {
+				return;
+			}
+			var $li = $( "<li>" )
+				.data( "code", code )
+				.append( $( "<a>" ).prop( 'href', '#' ). html( this.options.languages[code] || code ) )
+				.appendTo( $target );
+
+			if ( this.options.clickhandler ) {
+				$li.click( function() {
+					that.options.clickhandler.call( this, code );
+				} );
+			}
+		},
+
+		escapeRegex: function( value ) {
+			return value.replace( /[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&" );
+		},
+
 		/**
 		 * A search match happens if any of the following passes:
 		 * a) Language name in current user interface language
@@ -82,21 +77,38 @@
 			var languages = this.options.languages;
 			var langName = languages[code];
 			var autonym = $.uls.data.autonyms[code];
-			var script = $.uls.data.languages[code][0];
+			var script =  $.uls.data.languages[code]? $.uls.data.languages[code][0]: "unknown";
 			// FIXME script is ISO 15924 code. We might need actual name of script.
-			var matcher = new RegExp( $.ui.autocomplete.escapeRegex( searchTerm ), 'i' );
+			var matcher = new RegExp( this.escapeRegex( searchTerm ), 'i' );
 			return matcher.test( langName ) || matcher.test( autonym ) || matcher.test( code ) || matcher.test( script );
-		},
-
-		options: {
-			$target: null, // where to append the results
-			languages: null, // languages as code:name format. default values is from data-languages
-			clickhandler: null
 		}
+
 	};
 
-	$.widget( "ui.languagefilter", LanguageFilter );
+	$.fn.languagefilter = function( option ) {
+		return this.each( function() {
+			var $this = $( this ),
+				data = $this.data( 'languagefilter' ),
+				options = typeof option == 'object' && option;
+			if ( !data ) {
+				$this.data( 'languagefilter', ( data = new LanguageFilter( this, options ) ) );
+			}
+			if ( typeof option === 'string' ) {
+				data[option]();
+			}
+		} );
+	};
 
+	$.fn.languagefilter.defaults = {
+			$target: null, // where to append the results
+			languages: null, // languages as code:name format. default values is from data-languages
+			clickhandler: null,
+	};
+
+	$.fn.languagefilter.Constructor = LanguageFilter;
+
+
+	/* RegionSelector Plugin Definition */
 
 	/*
 	 * Region selector is a language selector based on regions.

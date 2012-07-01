@@ -73,7 +73,7 @@
 				}
 			} );
 			// trigger a search for all languages.
-			$( "#languagefilter" ).autocomplete( "search" );
+			$( "#languagefilter" ).languagefilter( "search" );
 		},
 		keyup : function(e) {
 			switch(e.keyCode) {
