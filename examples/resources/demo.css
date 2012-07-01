@@ -1,0 +1,18 @@
+body{
+	width: 80%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+div.navbar {
+	background-color: #333;
+	color: #FFFFFF;
+	padding: 20px;
+}
+span.uls-trigger {
+	float: right;
+}
+span.uls-trigger a {
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: none;
+}
