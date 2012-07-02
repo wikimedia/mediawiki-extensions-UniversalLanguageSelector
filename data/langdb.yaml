@@ -465,6 +465,6 @@ regiongroups:
   WW: 4
 
  # Importance in the region, 100 = official language or everybody knows it
-regions:
+importanceInRegions:
   fi: { FI: 100, SE: 10 }
   ru: { RU: 100, FI: 40 }
