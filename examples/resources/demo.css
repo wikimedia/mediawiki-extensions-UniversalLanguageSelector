@@ -1,7 +1,10 @@
-body{
+body {
 	width: 80%;
 	padding-left: 10%;
 	padding-right: 10%;
+}
+a {
+	text-decoration: none;
 }
 div.navbar {
 	background-color: #333;
@@ -14,5 +17,4 @@ span.uls-trigger {
 span.uls-trigger a {
 	color: #FFFFFF;
 	font-weight: bold;
-	text-decoration: none;
 }
