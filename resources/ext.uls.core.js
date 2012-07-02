@@ -13,6 +13,7 @@
 
 	ULS.prototype = {
 		constructor: ULS,
+
 		show: function() {
 			var pos = $.extend( {}, this.$element.offset(), {
 				height: this.$element[0].offsetHeight
@@ -29,20 +30,24 @@
 			$( 'input#languagefilter' ).focus();
 			return this;
 		},
+
 		hide: function() {
 			this.$menu.hide();
 			this.shown = false;
 			return this;
 		},
+
 		render: function() {
 			// Rendering stuff here
 		},
+
 		setLang: function( langCode ) {
 			// TODO: dependency on MediaWiki
 			var uri = new mw.Uri( window.location.href );
 			uri.extend( { setlang: langCode } );
 			window.location.href = uri.toString();
 		},
+
 		listen: function() {
 			var that = this;
 			// Register all event listeners to the ULS here.
@@ -54,7 +59,7 @@
 				clickhandler: function( langCode ) {
 					that.setLang( langCode );
 				}
-			}).data( "lcd" );
+			} ).data( "lcd" );
 			$( "#languagefilter" ).languagefilter( {
 				$target: $lcd, //$( 'ul.uls-language-filter-result' ),
 				languages: that.languages
@@ -63,7 +68,7 @@
 			// Create region selectors, one per region
 			$( '.uls-region' ).regionselector( {
 				$target: $lcd,
-				//FIXME This is confusing: languages and source are actually data for ULS.
+				// FIXME This is confusing: languages and source are actually data for ULS.
 				languages: that.languages,
 				callback: function () {
 					// clear the search field.
@@ -73,6 +78,7 @@
 			// trigger a search for all languages.
 			$( "#languagefilter" ).languagefilter( "search" );
 		},
+
 		keyup: function( e ) {
 			switch( e.keyCode ) {
 				case 27: // escape
@@ -84,6 +90,7 @@
 			e.stopPropagation();
 			e.preventDefault();
 		},
+
 		keypress: function( e ) {
 			if ( !this.shown ) {
 				return;
@@ -96,6 +103,7 @@
 			}
 			e.stopPropagation();
 		},
+
 		click: function( e ) {
 			e.stopPropagation();
 			e.preventDefault();

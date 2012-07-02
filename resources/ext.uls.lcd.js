@@ -16,6 +16,7 @@
 			var that = this;
 			this.addToRegion( langCode, regionCode );
 		},
+
 		/**
 		 * Add the language to a region.
 		 * If the region parameter is given , add to that region alone
@@ -27,6 +28,10 @@
 			var that = this,
 				language = $.uls.data.languages[langCode];
 
+			// TODO: This shouldn't happen.
+			// This currently happens with some special cases, such as qqq and
+			// some codes that are incorrectly used in Wikimedia projects for
+			// historical reasons.
 			if ( !language ) {
 				console.log( "Definition for " + langCode + " was not found in the language database." );
 				return;
@@ -37,7 +42,7 @@
 			var regions = [];
 			if ( region ) {
 				regions.push( region );
-			} else{
+			} else {
 				regions = $.uls.data.regions( langCode );
 			}
 
@@ -49,7 +54,10 @@
 					.append(
 						$( '<a>' ).prop( 'href', '#' ).html( langName )
 					);
-				that.getColumn( regionCode ).append( $li );
+
+				// Append the element to the column in the list
+				var column = that.getColumn( regionCode );
+				column.append( $li );
 
 				if ( that.options.clickhandler ) {
 					$li.click( function() {
@@ -60,12 +68,16 @@
 		},
 
 		getColumn: function( regionCode ) {
-			var $ul = $( "div#" + regionCode ).find( 'ul:last' );
-			if ( $ul.length === 0 || $ul.find( 'li' ).length >= 10) {
+			var $divRegionCode = $( 'div#' + regionCode );
+
+			var $ul = $divRegionCode.find( 'ul:last' );
+			if ( $ul.length === 0 || $ul.find( 'li' ).length >= 10 ) {
 				$ul = $( '<ul>' );
-				$( 'div#' + regionCode ).append( $ul );
+				$divRegionCode.append( $ul );
 			}
-			$( 'div#' + regionCode ).show();
+
+			$divRegionCode.show();
+
 			return $ul;
 		},
 
@@ -85,12 +97,12 @@
 			this.$element.find( 'div' ).hide();
 		},
 
-		listen: function(){
+		listen: function() {
 			this.$element.scroll( function() {
 				var inviewRegion = $( 'div.uls-lcd-region-section:in-viewport:first' ).attr( 'id' );
 				var inview = $.uls.data.regiongroups[inviewRegion];
 				$( 'div.uls-region' ).removeClass( 'active' );
-				$( 'div#uls-region-' + inview).addClass( 'active' );
+				$( 'div#uls-region-' + inview ).addClass( 'active' );
 			});
 		}
 

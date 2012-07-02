@@ -21,8 +21,8 @@
 		listen: function() {
 			this.$element.on( 'keyup', $.proxy( this.keyup, this ));
 			if ( $.browser.webkit || $.browser.msie ) {
-				this.$element.on( 'keydown', $.proxy( this.keyup, this ) )
-			};
+				this.$element.on( 'keydown', $.proxy( this.keyup, this ) );
+			}
 		},
 
 		keyup: function( e ) {
@@ -34,23 +34,24 @@
 			var that = this;
 			var languages = this.options.languages;
 			var query = this.$element.val();
-			$.each( languages, function ( code, name ) {
+
+			$.each( languages, function ( langCode, name ) {
 				if ( query === "" ) {
-					that.render(code);
+					that.render( langCode );
 				}
-				else if ( that.filter( code, query ) ) {
-					that.render(code);
+				else if ( that.filter( langCode, query ) ) {
+					that.render( langCode );
 				}
 			} ) ;
 		},
 
-		render : function( code ) {
+		render: function( langCode ) {
 			var that = this;
 			var $target = this.options.$target;
 			if ( !$target ) {
 				return;
 			}
-			$target.append(code);
+			$target.append( langCode );
 		},
 
 		escapeRegex: function( value ) {
@@ -65,13 +66,14 @@
 		 * c) ISO 639 code match with search string.
 		 * d) ISO 15924 code for the script match the search string.
 		 */
-		filter: function( code, searchTerm ) {
+		filter: function( langCode, searchTerm ) {
 			// FIXME script is ISO 15924 code. We might need actual name of script.
 			var matcher = new RegExp( this.escapeRegex( searchTerm ), 'i' );
-			return matcher.test( this.options.languages[code] ) ||
-				matcher.test( $.uls.data.autonym( code ) ) ||
-				matcher.test( code ) ||
-				matcher.test( $.uls.data.script( code ) );
+
+			return matcher.test( this.options.languages[langCode] ) ||
+				matcher.test( $.uls.data.autonym( langCode ) ) ||
+				matcher.test( langCode ) ||
+				matcher.test( $.uls.data.script( langCode ) );
 		}
 
 	};
@@ -80,7 +82,7 @@
 		return this.each( function() {
 			var $this = $( this ),
 				data = $this.data( 'languagefilter' ),
-				options = typeof option == 'object' && option;
+				options = typeof option === 'object' && option;
 			if ( !data ) {
 				$this.data( 'languagefilter', ( data = new LanguageFilter( this, options ) ) );
 			}
@@ -91,17 +93,16 @@
 	};
 
 	$.fn.languagefilter.defaults = {
-			$target: null, // where to append the results
-			languages: null, // languages as code:name format. default values is from data-languages
-			clickhandler: null,
+		$target: null, // Where to append the results
+		languages: null, // Languages as code:name format. Default values come from data.languages.
+		clickhandler: null
 	};
 
 	$.fn.languagefilter.Constructor = LanguageFilter;
 
-
 	/* RegionSelector Plugin Definition */
 
-	/*
+	/**
 	 * Region selector is a language selector based on regions.
 	 * Usage: $( 'jqueryselector' ).regionselector( options );
 	 * The attached element should have data-regiongroup attribute
@@ -117,11 +118,11 @@
 
 	RegionSelector.prototype = {
 		constructor: RegionSelector,
+
 		test: function( langCode ) {
-			var that = this;
-			var languages = $.uls.data.languages;
-			var regionGroups = $.uls.data.regiongroups;
-			var regions = languages[langCode][1];
+			var that = this,
+				regionGroups = $.uls.data.regiongroups,
+				regions = $.uls.data.regions( langCode );
 			// 1. loop over all regiongroups - like {EU: 2, AF: 2, AS: 3 ...}
 			// 2. check that the region matches the active region group
 			// 3. if this language is included in that region, show it
@@ -133,11 +134,9 @@
 				}
 			} );
 		},
-		show: function() {
-			var that = this,
-				languages = $.uls.data.languages;
 
-			languages = $.uls.data.sortByScriptGroup( languages );
+		show: function() {
+			var that = this;
 
 			// Make the selected region (and it only) active
 			$( '.regionselector' ).removeClass( 'active' );
@@ -145,29 +144,39 @@
 
 			// Repopulate the list of languages
 			that.options.$target.empty();
-			$.each( languages, function( langCode, langDef ) {
-				that.test( langCode );
-			} );
+
+			var regions = $.uls.data.regionsInGroup( that.regionGroup );
+			var languagesInRegion = $.uls.data.languagesByScriptGroupInRegions( regions );
+			for ( var scriptGroup in languagesInRegion ) {
+				for ( var langNum = 0; langNum < languagesInRegion[scriptGroup].length; langNum++ ) {
+					that.test( languagesInRegion[scriptGroup][langNum] );
+				}
+			}
+
 			if ( that.options.callback ) {
 				that.options.callback.call();
 			}
 		},
-		render: function( langCode, region) {
+
+		render: function( langCode, region ) {
 			var $target = this.options.$target;
 			if ( !$target ) {
 				return;
 			}
 			$target.append( langCode, region );
 		},
-		listen: function(){
+
+		listen: function() {
 			this.$element.on( 'click', $.proxy( this.click, this ) );
 		},
+
 		click: function( e ) {
 			e.stopPropagation();
 			e.preventDefault();
 			this.show();
 		}
 	};
+
 	/* RegionSelector Plugin Definition */
 
 	$.fn.regionselector = function( option ) {
@@ -175,6 +184,7 @@
 			var $this = $( this ),
 				data = $this.data( 'regionselector' ),
 				options = typeof option === 'object' && option;
+
 			if ( !data ) {
 				$this.data( 'regionselector', ( data = new RegionSelector( this, options ) ) );
 			}
@@ -190,6 +200,5 @@
 	};
 
 	$.fn.regionselector.Constructor = RegionSelector;
-
 
 } )( jQuery );
