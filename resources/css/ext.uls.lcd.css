@@ -1,16 +1,47 @@
 .uls-lcd-region-section h3 {
 	color: #999999;
 }
-
 .uls-lcd-region-section ul {
 	list-style: none;
-	margin-left: 0;
 	float: left;
-	width: 150px;
-	padding: 10px;
-	clear: right;
+	width: 140px;
+	margin-left: 5px;
+	padding: 0;
+	display: block;
 }
-
+.uls-lcd-region-section ul li:hover {
+	background-color: #BFBFBF;
+}
 .uls-lcd-region-section {
 	clear: both;
+}
+/* Language list */
+.uls-language-list {
+	height: 300px;
+	overflow: auto;
+	margin-top: 2%;
+}
+.uls-language-list ul li {
+	font-weight: normal;
+	/* TODO: maybe not the best way */
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.uls-language-list strong {
+	text-decoration: underline;
+}
+.uls-language-list a {
+	font-weight: normal;
+	color: #0088CC;
+}
+div.uls-lcd-row:after {
+	clear: both;
+}
+div.uls-lcd-row:before, div.uls-lcd-row:after {
+	content: "";
+	display: table;
+}
+div.uls-lcd-row {
+	padding-bottom: 10px;
 }

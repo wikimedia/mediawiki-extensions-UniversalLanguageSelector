@@ -69,11 +69,18 @@
 
 		getColumn: function( regionCode ) {
 			var $divRegionCode = $( 'div#' + regionCode );
+			var $rowDiv = $divRegionCode.find( 'div.uls-lcd-row:last' );
 
 			var $ul = $divRegionCode.find( 'ul:last' );
+			// Each column can have maximum 10 languages.
 			if ( $ul.length === 0 || $ul.find( 'li' ).length >= 10 ) {
+				// Each row can have 4 columns with 10 languages.
+				if ( $rowDiv.length === 0 || $rowDiv.find( 'ul' ).length >= 4 ) {
+					$rowDiv = $( '<div>' ).addClass( 'uls-lcd-row' );
+					$divRegionCode.append( $rowDiv );
+				}
 				$ul = $( '<ul>' );
-				$divRegionCode.append( $ul );
+				$rowDiv.append( $ul );
 			}
 
 			$divRegionCode.show();
@@ -87,13 +94,12 @@
 				var $section = $( '<div>' ).addClass( 'uls-lcd-region-section' ).prop( 'id', regionCode );
 				$section.append( $( '<h3>' ).html( regionCode ) );
 				// FIXME this is regioncode(NA, EU etc). Should be Proper localized region name.
-				$section.append( $( '<ul>' ) );
 				that.$element.append( $section );
 			} );
 		},
 
 		empty: function() {
-			this.$element.find( 'div ul' ).remove();
+			this.$element.find( 'div.uls-lcd-row' ).remove();
 			this.$element.find( 'div' ).hide();
 		},
 

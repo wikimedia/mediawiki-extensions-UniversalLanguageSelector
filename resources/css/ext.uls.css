@@ -30,6 +30,11 @@
 	background-clip: padding-box;
 }
 
+.uls-menu a {
+	font-weight: normal;
+	color: #0088CC;
+}
+
 .uls-menu-header {
 	margin: 2%;
 	margin-top: 20px;
@@ -44,7 +49,7 @@
 }
 
 .uls-menu-header-left h1 {
-	font-weight: bold;
+	font-weight: normal;
 	padding-top: 12px;
 	border:none;
 	padding-bottom: 3px;
@@ -91,25 +96,6 @@
 	float: right;
 	padding: 10px;
 	cursor: pointer;
-}
-
-/* Language list */
-.uls-language-list {
-	height: 300px;
-	overflow: auto;
-	margin-top: 2%;
-}
-
-.uls-language-list ul li {
-	font-weight: bold;
-}
-
-.uls-language-list strong {
-	text-decoration: underline;
-}
-
-.uls-language-list a {
-	color: #0645AD;
 }
 
 input#languagefilter {
