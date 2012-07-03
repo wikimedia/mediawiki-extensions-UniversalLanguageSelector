@@ -104,15 +104,15 @@
 	/*
 	 * Region selector is a language selector based on regions.
 	 * Usage: $( 'jqueryselector' ).regionselector( options );
-	 * The attached element should have data-region attribute
-	 * that defines the region for the selector.
+	 * The attached element should have data-regiongroup attribute
+	 * that defines the regiongroup for the selector.
 	 */
 	var RegionSelector = function( element, options ) {
 		this.$element = $( element );
 		this.options = $.extend( {}, $.fn.regionselector.defaults, options );
 		this.$element.addClass( 'regionselector' );
 		this.listen();
-		this.region = this.$element.data( 'region' );
+		this.regionGroup = this.$element.data( 'regiongroup' );
 	};
 
 	RegionSelector.prototype = {
@@ -122,13 +122,13 @@
 			var languages = $.uls.data.languages;
 			var regionGroups = $.uls.data.regiongroups;
 			var regions = languages[langCode][1];
-			// 1. loop over all regions - like {EU: 2, AF: 2, AS: 3 ...}
+			// 1. loop over all regiongroups - like {EU: 2, AF: 2, AS: 3 ...}
 			// 2. check that the region matches the active region group
 			// 3. if this language is included in that region, show it
 			// 4. if none of the conditions match, the language is not shown
-			$.each( regionGroups, function( regionGroup, groupId ) {
-				if ( groupId === that.region && $.inArray( regionGroup, regions ) >= 0 ) {
-					that.render( langCode, regionGroup );
+			$.each( regionGroups, function( region, regionGroup) {
+				if ( regionGroup === that.regionGroup && $.inArray( region, regions ) >= 0 ) {
+					that.render( langCode, region );
 					return;
 				}
 			} );
@@ -152,12 +152,12 @@
 				that.options.callback.call();
 			}
 		},
-		render: function( langCode, regionGroup) {
+		render: function( langCode, region) {
 			var $target = this.options.$target;
 			if ( !$target ) {
 				return;
 			}
-			$target.append( langCode, regionGroup );
+			$target.append( langCode, region );
 		},
 		listen: function(){
 			this.$element.on( 'click', $.proxy( this.click, this ) );

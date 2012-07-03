@@ -12,12 +12,18 @@
 	LanguageCategoryDisplay.prototype = {
 		constructor: LanguageCategoryDisplay,
 
-		append: function( langCode, regionGroup ) {
+		append: function( langCode, regionCode ) {
 			var that = this;
-			this.addToRegion( langCode, regionGroup );
+			this.addToRegion( langCode, regionCode );
 		},
-
-		addToRegion: function( langCode, regionGroup ) {
+		/**
+		 * Add the language to a region.
+		 * If the region parameter is given , add to that region alone
+		 * Otherwise to all regions that this language belongs.
+		 * @param langCode
+		 * @param region
+		 */
+		addToRegion: function( langCode, region ) {
 			var that = this,
 				language = $.uls.data.languages[langCode];
 
@@ -28,13 +34,15 @@
 
 			var langName = that.options.languages[langCode];
 
-			var regions = $.uls.data.regions( langCode );
+			var regions = [];
+			if ( region ) {
+				regions.push( region );
+			} else{
+				regions = $.uls.data.regions( langCode );
+			}
+
 			for ( var i = 0; i < regions.length; i++ ) {
 				var regionCode = regions[i];
-
-				if ( regionGroup && regionCode !== regionGroup ) {
-					continue;
-				}
 
 				var $li = $( '<li>' )
 					.data( 'code', langCode )
@@ -42,6 +50,7 @@
 						$( '<a>' ).prop( 'href', '#' ).html( langName )
 					);
 				that.getColumn( regionCode ).append( $li );
+
 				if ( that.options.clickhandler ) {
 					$li.click( function() {
 						that.options.clickhandler.call( this, langCode );
