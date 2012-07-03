@@ -1,7 +1,7 @@
 languages:
   aa: [Latn, [AF]]
-  ab: [Cyrl, [EU, AS]]
-  ace: [Latn, [PA]]
+  ab: [Cyrl, [EU]]
+  ace: [Latn, [AS, PA]]
   af: [Latn, [AF]]
   ak: [Latn, [AF]]
   aln: [Latn, [EU]]
