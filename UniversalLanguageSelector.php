@@ -56,15 +56,6 @@ $wgResourceModules['ext.uls.lcd'] = array(
 	'localBasePath' => $dir,
 	'remoteExtPath' => 'UniversalLanguageSelector',
 	'styles' => 'resources/css/ext.uls.lcd.css',
-	'dependencies' => array(
-		'jquery.viewport',
-	),
-);
-
-$wgResourceModules['jquery.viewport'] = array(
-	'scripts' => 'resources/jquery.viewport.js',
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
 );
 
 $wgResourceModules['ext.uls.core'] = array(

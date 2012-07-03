@@ -98,12 +98,24 @@
 		},
 
 		listen: function() {
-			this.$element.scroll( function() {
-				var inviewRegion = $( 'div.uls-lcd-region-section:in-viewport:first' ).attr( 'id' );
+			var that = this;
+			// The region section need to be in sync with the map filter.
+			that.$element.scroll( function () {
+				var inviewRegion = $( 'div.uls-lcd-region-section:first' ).attr( 'id' );
+				var listtop = that.$element.position().top;
+				$( 'div.uls-lcd-region-section' ).each( function () {
+					var offset = $( this ).position().top - listtop;
+					if ( offset < 0 ) {
+						inviewRegion = $( this ).attr( 'id' );
+					} else {
+						return false;
+					}
+				} );
+
 				var inview = $.uls.data.regiongroups[inviewRegion];
 				$( 'div.uls-region' ).removeClass( 'active' );
 				$( 'div#uls-region-' + inview ).addClass( 'active' );
-			});
+			} );
 		}
 
 	};
