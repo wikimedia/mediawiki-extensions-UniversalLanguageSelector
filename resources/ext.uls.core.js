@@ -6,6 +6,12 @@
 		this.options = $.extend( {}, $.fn.uls.defaults, options );
 		this.$menu = $( this.options.menu );
 		this.languages = this.$menu.data( 'languages' );
+		for ( var code in this.languages ) {
+			if ( $.uls.data.languages[code] === undefined ) {
+				console && console.log && console.log( "ULS: Unknown language " + code + "." );
+				delete this.languages[code];
+			}
+		}
 		this.shown = false;
 		this.render();
 		this.listen();

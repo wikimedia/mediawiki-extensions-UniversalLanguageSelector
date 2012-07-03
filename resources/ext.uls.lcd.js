@@ -28,15 +28,6 @@
 			var that = this,
 				language = $.uls.data.languages[langCode];
 
-			// TODO: This shouldn't happen.
-			// This currently happens with some special cases, such as qqq and
-			// some codes that are incorrectly used in Wikimedia projects for
-			// historical reasons.
-			if ( !language ) {
-				console.log( "Definition for " + langCode + " was not found in the language database." );
-				return;
-			}
-
 			var langName = that.options.languages[langCode];
 
 			var regions = [];
