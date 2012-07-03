@@ -55,14 +55,14 @@ test( "-- $.uls.data testing", function() {
 	var allLanguagesByRegionAndScript = $.uls.data.allLanguagesByRegionAndScript();
 	deepEqual( allLanguagesByRegionAndScript['3']['AS']['SouthEastAsian']['Bugi'], ['bug'], 'All languages in the Buginese script in Asia were selected' );
 
-	deepEqual( $.uls.data.languagesInRegion( 'AU' ), ["en", "en-gb", "hif", "hif-latn", "mi", "na"], "languages of region AU are selected correctly" );
+	deepEqual( $.uls.data.languagesInRegion( 'AU' ), ["en-gb", "en", "hif-latn", "hif", "mi", "na"], "languages of region AU are selected correctly" );
 	deepEqual( $.uls.data.languagesInRegions( ['NA', 'WW'] ),
 		[
-			"avk", "cho", "chr", "chy", "cr", "en", "en-ca", "eo", "es",
-			"haw", "ht", "ia", "ie", "ik", "ike-cans", "ike-latn", "io",
-			"iu", "jam", "jbo", "kl", "lfn", "mus", "nah", "nov", "nv",
+			"akz", "ase", "avk", "cho", "chr", "chy", "cr", "en-ca", "en", "eo", "es-formal", "es", "esu",
+			"haw", "ht", "ia", "ie", "ik", "ike-cans", "ike-latn", "ike", "io",
+			"iu", "jam", "jbo", "kl", "lfn", "mic", "mus", "nah", "nov", "nv",
 			"pdc", "pdt", "sei", "simple", "srn", "tokipona",
-			"vo", "yi"
+			"vo", "yi", "yua"
 		],
 		"languages of regions NA and WW are selected correctly"
 	);
