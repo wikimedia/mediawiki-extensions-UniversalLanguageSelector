@@ -33,6 +33,20 @@
 	};
 
 	/**
+	 * Returns an array of all region codes.
+	 * @return array
+	 */
+	$.uls.data.allRegions = function() {
+		var allRegions = [];
+
+		for( var region in $.uls.data.regiongroups ) {
+			allRegions.push( region );
+		}
+
+		return allRegions;
+	};
+
+	/**
 	 * Returns all languages written in script.
 	 * @param script string
 	 * @return array of strings (languages codes)
@@ -129,6 +143,15 @@
 	 */
 	$.uls.data.languagesByScriptGroupInRegion = function( region ) {
 		return $.uls.data.languagesByScriptGroupInRegions( [ region ] );
+	};
+
+	/**
+	 * Returns an associative array of all languages,
+	 * grouped by script group.
+	 * @return associative array
+	 */
+	$.uls.data.allLanguagesByScriptGroup = function() {
+		return $.uls.data.languagesByScriptGroupInRegions( $.uls.data.allRegions() );
 	};
 
 	/**

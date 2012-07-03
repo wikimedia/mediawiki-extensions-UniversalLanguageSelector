@@ -35,14 +35,16 @@
 			var languages = this.options.languages;
 			var query = this.$element.val();
 
-			$.each( languages, function ( langCode, name ) {
-				if ( query === "" ) {
-					that.render( langCode );
+			var allLanguages = $.uls.data.allLanguagesByScriptGroup();
+			for ( var scriptGroup in allLanguages ) {
+				for ( var langNum = 0; langNum < allLanguages[scriptGroup].length; langNum++ ) {
+					var langCode = allLanguages[scriptGroup][langNum];
+					if ( languages[langCode] !== undefined && ( query === "" || that.filter( langCode, query ) ) )
+					{
+						that.render( langCode );
+					}
 				}
-				else if ( that.filter( langCode, query ) ) {
-					that.render( langCode );
-				}
-			} ) ;
+			}
 		},
 
 		render: function( langCode ) {

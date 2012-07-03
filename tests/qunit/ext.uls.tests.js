@@ -33,7 +33,7 @@ test( "-- Initial check", function() {
 } );
 
 test( "-- $.uls.data testing", function() {
-	expect( 15 );
+	expect( 17 );
 
 	// This test assumes that we don't want any scripts to be in the 'Other'
 	// group. Actually, this may become wrong some day.
@@ -83,6 +83,11 @@ test( "-- $.uls.data testing", function() {
 
 	var languagesByScriptGroupInEMEA = $.uls.data.languagesByScriptGroupInRegions( $.uls.data.regionsInGroup( 2 ) );
 	deepEqual( languagesByScriptGroupInEMEA['WestCaucasian'], ['hy', 'ka', 'xmf'], 'Correct languages in WestCaucasian script group selected' );
+
+	var allLanguagesByScriptGroup = $.uls.data.allLanguagesByScriptGroup();
+	strictEqual( allLanguagesByScriptGroup['Greek'], ['el', 'grc', 'pnt'], 'All languages in the Greek script found' );
+
+	deepEqual( $.uls.data.allRegions(), ['NA', 'LA', 'SA', 'ME', 'AF', 'EU', 'AS', 'AU', 'PA', 'WW'], 'All regions found' );
 } );
 
 }() );
