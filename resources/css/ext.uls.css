@@ -101,8 +101,8 @@
 input#languagefilter {
 	height: 20px;
 	border: 1px solid #0E90D2;
-	border-right: none;
 	width: 95%;
+	padding-right: 20px;
 }
 
 span.search-button {
@@ -110,8 +110,7 @@ span.search-button {
 	background: url('../images/search.png') no-repeat scroll left center transparent;
 	cursor: pointer;
 	height: 22px;
-	border: 1px solid #0E90D2;
 	position: absolute;
 	width: 20px;
-	border-left: none;
+	margin-left: -20px;
 }
