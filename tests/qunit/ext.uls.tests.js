@@ -85,7 +85,7 @@ test( "-- $.uls.data testing", function() {
 	deepEqual( languagesByScriptGroupInEMEA['WestCaucasian'], ['hy', 'ka', 'xmf'], 'Correct languages in WestCaucasian script group selected' );
 
 	var allLanguagesByScriptGroup = $.uls.data.allLanguagesByScriptGroup();
-	strictEqual( allLanguagesByScriptGroup['Greek'], ['el', 'grc', 'pnt'], 'All languages in the Greek script found' );
+	deepEqual( allLanguagesByScriptGroup['Greek'], ['el', 'grc', 'pnt', 'ruq-grek', 'tsd'], 'All languages in the Greek script found' );
 
 	deepEqual( $.uls.data.allRegions(), ['NA', 'LA', 'SA', 'ME', 'AF', 'EU', 'AS', 'AU', 'PA', 'WW'], 'All regions found' );
 } );
