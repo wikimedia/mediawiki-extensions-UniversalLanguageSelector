@@ -87,7 +87,7 @@ test( "-- $.uls.data testing", function() {
 	var allLanguagesByScriptGroup = $.uls.data.allLanguagesByScriptGroup();
 	deepEqual( allLanguagesByScriptGroup['Greek'], ['el', 'grc', 'pnt', 'ruq-grek', 'tsd'], 'All languages in the Greek script found' );
 
-	deepEqual( $.uls.data.allRegions(), ['NA', 'LA', 'SA', 'ME', 'AF', 'EU', 'AS', 'AU', 'PA', 'WW'], 'All regions found' );
+	deepEqual( $.uls.data.allRegions(), ['NA', 'LA', 'SA', 'EU', 'ME', 'AF', 'AS', 'PA', 'AU', 'WW'], 'All regions found' );
 } );
 
 }() );
