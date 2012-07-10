@@ -527,18 +527,18 @@ regiongroups:
   LA: 1
  # south-america
   SA: 1
+ # europe
+  EU: 2
  # middle-east
   ME: 2
  # africa
   AF: 2
- # europe
-  EU: 2
  # asia
   AS: 3
- # australia
-  AU: 3
  # pacific
   PA: 3
+ # australia
+  AU: 3
  # world wide, international
   WW: 4
 
