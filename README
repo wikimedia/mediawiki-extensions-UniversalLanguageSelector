@@ -7,6 +7,6 @@ For very very quick start add the following to LocalSettings.php:
 include("$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php");
 
 More documenation is at
- http://www.mediawiki.org/wiki/Universal_Language_Selector
+ http://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector
 
 == Change log ==
