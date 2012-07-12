@@ -1,12 +1,17 @@
 == Copying ==
-See http://www.gnu.org/licenses/gpl2.html
+
+In short: You may use any Project Milkshake product, including the Universal
+Language Selector, under the terms of either the MIT License or the GNU General
+Public License (GPL) Version 2 or later.
+
+See GPL-LICENSE and MIT-LICENSE for details.
 
 == Installation ==
-For very very quick start add the following to LocalSettings.php:
+For a very, very quick start add the following to LocalSettings.php:
 
 include("$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php");
 
 More documenation is at
- http://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector
+ https://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector
 
 == Change log ==
