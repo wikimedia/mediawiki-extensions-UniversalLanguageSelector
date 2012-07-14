@@ -8,7 +8,7 @@
 		this.languages = this.$menu.data( 'languages' );
 		for ( var code in this.languages ) {
 			if ( $.uls.data.languages[code] === undefined ) {
-				console && console.log && console.log( "ULS: Unknown language " + code + "." );
+				window.console && console.log && console.log( "ULS: Unknown language " + code + "." );
 				delete this.languages[code];
 			}
 		}
