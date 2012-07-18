@@ -51,7 +51,6 @@
 			var that = this;
 			var languages = this.options.languages;
 			var query = this.$element.val();
-
 			var allLanguages = $.uls.data.allLanguagesByScriptGroup();
 			for ( var scriptGroup in allLanguages ) {
 				for ( var langNum = 0; langNum < allLanguages[scriptGroup].length; langNum++ ) {
@@ -88,8 +87,8 @@
 		filter: function( langCode, searchTerm ) {
 			// FIXME script is ISO 15924 code. We might need actual name of script.
 			var matcher = new RegExp( this.escapeRegex( searchTerm ), 'i' );
-
-			return matcher.test( this.options.languages[langCode] ) ||
+			var languageName = this.options.languages[langCode];
+			return matcher.test( languageName ) ||
 				matcher.test( $.uls.data.autonym( langCode ) ) ||
 				matcher.test( langCode ) ||
 				matcher.test( $.uls.data.script( langCode ) );

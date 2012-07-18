@@ -71,36 +71,48 @@ class UniversalLanguageSelectorHooks {
 		$languages = Language::fetchLanguageNames( $wgContLang->getCode() );
 		$languageData = htmlspecialchars( FormatJSON::encode( $languages ) );
 		$data .= "
-		<div class=\"uls-menu\" data-languages=\"" . $languageData . "\">
-			<span class=\"icon-close\"></span>
-			<div class=\"uls-menu-header\">
-				<div class=\"uls-menu-header-left\">
+		<div class='uls-menu' data-languages=\"" . $languageData . "\">
+			<div class='row'>
+				<span class='icon-close'></span>
+			</div>
+			<div class='row'>
+				<div class='four columns'>
 					<h1>" . wfMsgHtml( 'uls-select-content-language' ) . "</h1>
 				</div>
-				<div class=\"uls-menu-header-right\">
-					<div class='uls-worldmap'>
-						 <div class='uls-region' id='uls-region-1' data-regiongroup='1'>
-							<a>America</a>
-						 </div>
-						 <div class='uls-region' id='uls-region-2' data-regiongroup='2'>
-							<a>Europe<br>Middle East<br>Africa</a>
-						 </div>
-						 <div class='uls-region' id='uls-region-3' data-regiongroup='3'>
-							<a>Asia<br>Australia<br>Pacific</a>
+				<div class='three columns' id='settings-block'></div>
+				<div class='five columns' id='map-block'>
+					<div class='row'>
+						<div class='three columns uls-region' id='uls-region-4' data-regiongroup='4'>
+								<a>Worldwide</a>
+						</div>
+						<div class='nine columns'>
+							<div class='row uls-worldmap'>
+								 <div class='four columns uls-region' id='uls-region-1' data-regiongroup='1'>
+									<a>America</a>
+								 </div>
+								 <div class='four columns uls-region' id='uls-region-2' data-regiongroup='2'>
+									<a>Europe<br>Middle East<br>Africa</a>
+								 </div>
+								 <div class='four columns uls-region' id='uls-region-3' data-regiongroup='3'>
+									<a>Asia<br>Australia<br>Pacific</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div style=\"clear: both\"></div>
-			<div class=\"uls-lang-selector\">
-				<form action=\"#\" class=\"filterform\">
-					<input type=\"text\" placeholder=\"Language search\" id=\"languagefilter\"
-						class=\"filterinput\">
-					<span class=\"search-button\"></span>
-				</form>
-				<div class=\"uls-language-list\" >
+			<div id='search' class='row'>
+					<div class='one column'>
+						<span class='search-label'></span>
+					</div>
+					<div class='ten columns'>
+						<input type='text' class='filterinput' id='languagefilter' placeholder='Language search' bound='true'/>
+					</div>
+					<div class='one column'>
+						<span class='clear-button'></span>
+					</div>
 				</div>
-			</div>
+			<div class='row uls-language-list'></div>
 		</div>";
 		return true;
 	}

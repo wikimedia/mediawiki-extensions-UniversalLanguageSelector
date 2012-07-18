@@ -47,7 +47,7 @@
 			var that = this,
 				language = $.uls.data.languages[langCode];
 
-			var langName = that.options.languages[langCode];
+			var langName = that.options.languages[langCode] || langCode;
 
 			var regions = [];
 			if ( region ) {
@@ -79,37 +79,35 @@
 
 		getColumn: function( regionCode ) {
 			var $divRegionCode = $( 'div#' + regionCode );
-			var $rowDiv = $divRegionCode.find( 'div.uls-lcd-row:last' );
-
+			var $rowDiv = $divRegionCode.find( 'div.row:last' );
 			var $ul = $divRegionCode.find( 'ul:last' );
 			// Each column can have maximum 10 languages.
 			if ( $ul.length === 0 || $ul.find( 'li' ).length >= 10 ) {
 				// Each row can have 4 columns with 10 languages.
+				$ul = $( '<ul>' ).addClass( 'three columns end' );
 				if ( $rowDiv.length === 0 || $rowDiv.find( 'ul' ).length >= 4 ) {
-					$rowDiv = $( '<div>' ).addClass( 'uls-lcd-row' );
+					$rowDiv = $( '<div>' ).addClass( 'row uls-language-block' );
 					$divRegionCode.append( $rowDiv );
+					$ul.addClass('offset-by-one');
 				}
-				$ul = $( '<ul>' );
 				$rowDiv.append( $ul );
 			}
-
 			$divRegionCode.show();
-
 			return $ul;
 		},
 
 		show: function() {
 			var that = this;
 			$.each( $.uls.data.regiongroups, function( regionCode, regionIndex ) {
-				var $section = $( '<div>' ).addClass( 'uls-lcd-region-section' ).prop( 'id', regionCode );
-				$section.append( $( '<h3>' ).html( regionCode ) );
-				// FIXME this is regioncode(NA, EU etc). Should be Proper localized region name.
+				var $section = $( '<div>' ).addClass( 'twelve columns uls-lcd-region-section' ).prop( 'id', regionCode );
+				$section.append( $( '<h3>' ).addClass( 'eleven columns uls-lcd-region-section offset-by-one' ).html( regionCode ) );
+				// FIXME this is regioncode(NA, EU etc). Should be proper localized region name.
 				that.$element.append( $section );
 			} );
 		},
 
 		empty: function() {
-			this.$element.find( 'div.uls-lcd-row' ).remove();
+			this.$element.find( 'div.row' ).remove();
 			this.$element.find( 'div' ).hide();
 		},
 

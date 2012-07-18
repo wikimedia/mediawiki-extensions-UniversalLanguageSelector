@@ -1,29 +1,23 @@
 .uls-lcd-region-section h3 {
 	color: #999999;
 }
-.uls-lcd-region-section ul {
-	list-style: none;
-	float: left;
-	width: 140px;
-	margin-left: 5px;
-	padding: 0;
-	display: block;
-}
 .uls-lcd-region-section ul li:hover {
-	background-color: #BFBFBF;
-}
-.uls-lcd-region-section {
-	clear: both;
+	background-color: #eaeff7;
 }
 /* Language list */
 .uls-language-list {
-	height: 300px;
+	height: 21.5em;
 	overflow: auto;
-	margin-top: 2%;
+	margin: 10px;
+	width: auto;
+}
+
+.uls-language-block ul {
+	margin: 0px;
+	margin-bottom: 1.6em;
 }
 .uls-language-list ul li {
 	font-weight: normal;
-	/* TODO: maybe not the best way */
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -34,14 +28,21 @@
 .uls-language-list a {
 	font-weight: normal;
 	color: #0088CC;
+	font-size: 14px;
+	line-height: 1.6em;
 }
-div.uls-lcd-row:after {
-	clear: both;
+
+.uls-language-block .three.columns {
+	width: 22%;
+
 }
-div.uls-lcd-row:before, div.uls-lcd-row:after {
-	content: "";
-	display: table;
+
+.uls-language-list-footer  .three.columns {
+	width: 22%;
+	
 }
-div.uls-lcd-row {
-	padding-bottom: 10px;
+
+
+.uls-language-block{
+	width:100%;
 }

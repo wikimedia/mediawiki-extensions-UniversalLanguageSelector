@@ -277,5 +277,4 @@
 	$.uls.data.scriptGroupOfLanguage = function( language ) {
 		return $.uls.data.groupOfScript( $.uls.data.script( language ) );
 	};
-
 } )( jQuery );
