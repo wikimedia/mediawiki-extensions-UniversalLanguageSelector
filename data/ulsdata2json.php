@@ -31,12 +31,12 @@ $data = file_get_contents( 'langdb.yaml' );
 $parsed = spyc_load( $data );
 $json = json_encode( $parsed );
 $languageNames = FormatJSON::encode( Language::fetchLanguageNames() );
-$js = <<<EOD
+$js = <<<JAVASCRIPT
 ( function ( $ ) {
 	$.uls = {};
 	$.uls.data = $json;
 	$.uls.data.autonyms = $languageNames;
 } )( jQuery );
 
-EOD;
+JAVASCRIPT;
 file_put_contents( 'ext.uls.data.js', $js );
