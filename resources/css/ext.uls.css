@@ -67,6 +67,8 @@
 }
 
 .uls-region {
+	/* The map doesn't flip */
+	/* @noflip */
 	float: left;
 	cursor: pointer;
 	width: 133px;
