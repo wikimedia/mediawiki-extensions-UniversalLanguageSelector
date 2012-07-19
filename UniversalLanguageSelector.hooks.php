@@ -80,7 +80,7 @@ class UniversalLanguageSelectorHooks {
 				<div class=\"uls-menu-header-right\">
 					<div class='uls-worldmap'>
 						 <div class='uls-region' id='uls-region-1' data-regiongroup='1'>
-							<a>North America<br>Latin America<br>South America</a>
+							<a>America</a>
 						 </div>
 						 <div class='uls-region' id='uls-region-2' data-regiongroup='2'>
 							<a>Europe<br>Middle East<br>Africa</a>
