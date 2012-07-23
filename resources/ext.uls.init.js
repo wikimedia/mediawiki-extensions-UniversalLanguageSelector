@@ -19,6 +19,14 @@
 
 ( function( $ ) {
 	$( document ).ready( function() {
-		$( '.uls-trigger' ).uls();
+		$( '.uls-trigger' ).uls( {
+			onSelect : function( language ) {
+				var uri = new mw.Uri( window.location.href );
+				uri.extend( {
+					setlang : language
+				} );
+				window.location.href = uri.toString();
+			}
+		} );
 	} );
 } )( jQuery );

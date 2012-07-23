@@ -49,7 +49,10 @@ $wgResourceModules['ext.uls.init'] = array(
 	'scripts' => 'resources/ext.uls.init.js',
 	'localBasePath' => $dir,
 	'remoteExtPath' => 'UniversalLanguageSelector',
-	'dependencies' => 'ext.uls.core',
+	'dependencies' => array(
+		'mediawiki.Uri',
+		'ext.uls.core',
+	),
 	'position' => 'top',
 );
 
@@ -79,7 +82,6 @@ $wgResourceModules['ext.uls.core'] = array(
 	'localBasePath' => $dir,
 	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
-		'mediawiki.Uri',
 		'ext.uls.data',
 		'ext.uls.lcd',
 	),

@@ -22,17 +22,26 @@
 		<script src="../resources/ext.uls.lcd.js"></script>
 		<script src="../resources/ext.uls.languagefilter.js"></script>
 		<script src="../resources/ext.uls.core.js"></script>
-		<script src="../resources/ext.uls.init.js"></script>
 		<link href="../resources/css/ext.uls.css" rel="stylesheet"/>
 		<link href="../resources/css/ext.uls.grid.css" rel="stylesheet"/>
 		<link href="../resources/css/ext.uls.lcd.css" rel="stylesheet"/>
 		<!-- demo -->
 		<link href="resources/demo.css" rel="stylesheet"/>
+		<script>
+			$( document ).ready( function() {
+				$( '.uls-trigger' ).uls( {
+					onSelect : function( language ) {
+						var languageName = $.uls.data.autonym( language );
+						$('a#pageLanguage').text( languageName );
+					}
+				} );
+			} );
+		</script>
 	</head>
 
 	<body>
 		<div class="navbar navbar-fixed-top">
-			<span class="active uls-trigger"> <a href="#">Select Language</a> </span>
+			<span class="active uls-trigger"> <a id="pageLanguage" href="#">Select Language</a> </span>
 			<h1>Universal Language Selector</h1>
 			<p>
 				Demonstration of jquery plugin
@@ -47,8 +56,7 @@
 					<div class="four columns">
 						<h1> Select language </h1>
 					</div>
-					<div class="three columns" id="settings-block">
-					</div>
+					<div class="three columns" id="settings-block"></div>
 					<div class="five columns" id="map-block">
 						<div class="row">
 							<div data-regiongroup="4" id="uls-region-4" class="three columns uls-region">
@@ -92,8 +100,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="row uls-language-list">
-				</div>
+				<div class="row uls-language-list"></div>
 			</div>
 		</div>
 		</div>

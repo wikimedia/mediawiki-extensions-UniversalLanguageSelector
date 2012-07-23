@@ -66,23 +66,18 @@
 			// Rendering stuff here
 		},
 
-		setLang: function( langCode ) {
-			// TODO: dependency on MediaWiki
-			var uri = new mw.Uri( window.location.href );
-			uri.extend( { setlang: langCode } );
-			window.location.href = uri.toString();
-		},
-
 		listen: function() {
-			var that = this;
+			var that = this, $lcd;
 			// Register all event listeners to the ULS here.
 			that.$element.on( 'click', $.proxy( that.click, that ) );
 			$( ".icon-close" ).on( 'click', $.proxy( that.click, that ) );
 
-			var $lcd = $( "div.uls-language-list" ).lcd( {
+			$lcd = $( "div.uls-language-list" ).lcd( {
 				languages: that.languages,
 				clickhandler: function( langCode ) {
-					that.setLang( langCode );
+					if ( that.options.onSelect ) {
+						that.options.onSelect.call( this, langCode );
+					}
 				}
 			} ).data( "lcd" );
 			$( "#languagefilter" ).languagefilter( {
@@ -160,7 +155,8 @@
 	};
 
 	$.fn.uls.defaults = {
-		menu: '.uls-menu'
+		menu: '.uls-menu',
+		onSelect: null // Callback function to be called when a language is selected
 	};
 
 	$.fn.uls.Constructor = ULS;
