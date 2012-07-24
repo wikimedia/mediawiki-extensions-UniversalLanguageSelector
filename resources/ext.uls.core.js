@@ -32,27 +32,31 @@
 			}
 		}
 		this.shown = false;
+		this.$languageFilter = $( 'input#languagefilter' );
 		this.render();
 		this.listen();
+		this.ready();
 	};
 
 	ULS.prototype = {
 		constructor: ULS,
-
+		ready: function() {
+			// Initialize with a full search.
+			this.$languageFilter.val( "" ).languagefilter( "search" );
+		},
 		show: function() {
 			var pos = $.extend( {}, this.$element.offset(), {
 				height: this.$element[0].offsetHeight
 			} );
-
 			this.$menu.css( {
 				top: pos.top + pos.height,
-				left: '25%' //pos.left // FIXME
+				left: '25%'
 			} );
 
 			this.$menu.show();
 			this.shown = true;
 
-			$( 'input#languagefilter' ).focus();
+			this.$languageFilter.focus();
 			return this;
 		},
 
@@ -70,9 +74,18 @@
 			var that = this, $lcd;
 			// Register all event listeners to the ULS here.
 			that.$element.on( 'click', $.proxy( that.click, that ) );
+
+			// Handle click on close button
 			$( ".icon-close" ).on( 'click', $.proxy( that.click, that ) );
 
-			$lcd = $( "div.uls-language-list" ).lcd( {
+			// Handle key press events on the menu
+			that.$menu.on('keypress', $.proxy(this.keypress, this) )
+				.on('keyup', $.proxy(this.keyup, this) );
+			if ( $.browser.webkit || $.browser.msie ) {
+				this.$menu.on( 'keydown', $.proxy( this.keypress, this ) )
+			}
+
+			$lcd = $( 'div.uls-language-list' ).lcd( {
 				languages: that.languages,
 				clickhandler: function( langCode ) {
 					if ( that.options.onSelect ) {
@@ -80,7 +93,8 @@
 					}
 				}
 			} ).data( "lcd" );
-			$( "#languagefilter" ).languagefilter( {
+
+			that.$languageFilter.languagefilter( {
 				$target: $lcd, //$( 'ul.uls-language-filter-result' ),
 				languages: that.languages
 			} );
@@ -92,32 +106,36 @@
 				languages: that.languages,
 				callback: function () {
 					// clear the search field.
-					$( "#languagefilter" ).val( "" );
+					that.$languageFilter.val( "" );
 				}
 			} );
-			// trigger a search for all languages.
-			$( "#languagefilter" ).languagefilter( "search" );
+
+			$( '.clear-button' ).on( 'click', function() {
+				// go to the ready state.
+				that.ready();
+			} );
 		},
 
 		keyup: function( e ) {
+			if ( !this.shown ) {
+				return;
+			}
 			switch( e.keyCode ) {
 				case 27: // escape
-					if (!this.shown ) {
-						return this.hide();
-					}
+					this.hide();
+					e.preventDefault();
 					break;
 			}
 			e.stopPropagation();
-			e.preventDefault();
 		},
 
 		keypress: function( e ) {
 			if ( !this.shown ) {
 				return;
 			}
-
 			switch( e.keyCode ) {
 				case 27: // escape
+					this.hide();
 					e.preventDefault();
 					break;
 			}
