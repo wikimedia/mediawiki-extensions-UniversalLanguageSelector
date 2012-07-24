@@ -96,7 +96,8 @@
 
 			that.$languageFilter.languagefilter( {
 				$target: $lcd, //$( 'ul.uls-language-filter-result' ),
-				languages: that.languages
+				languages: that.languages,
+				searchAPI: that.options.searchAPI
 			} );
 
 			// Create region selectors, one per region
@@ -174,7 +175,8 @@
 
 	$.fn.uls.defaults = {
 		menu: '.uls-menu',
-		onSelect: null // Callback function to be called when a language is selected
+		onSelect: null, // Callback function to be called when a language is selected
+		searchAPI: null // Language search API
 	};
 
 	$.fn.uls.Constructor = ULS;

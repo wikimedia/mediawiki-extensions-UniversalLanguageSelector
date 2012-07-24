@@ -22,6 +22,10 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	echo( "This file is an extension to the MediaWiki software and cannot be used standalone.\n" );
 	die( -1 );
 }
+/**
+ * Version number used in extension credits and in other placed where needed.
+ */
+define( 'ULS_VERSION', '2012-07-20' );
 
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
@@ -48,11 +52,14 @@ $wgExtensionMessagesFiles['UniversalLanguageSelector'] = "$dir/UniversalLanguage
 
 // Register auto load for the page class
 $wgAutoloadClasses['UniversalLanguageSelectorHooks'] = "$dir/UniversalLanguageSelector.hooks.php";
+$wgAutoloadClasses['ApiLanguageSearch'] = "$dir/api/ApiLanguageSearch.php";
+$wgAutoloadClasses['LanguageNameSearch'] = "$dir/data/LanguageNameSearch.php";
 
 $wgHooks['BeforePageDisplay'][] = 'UniversalLanguageSelectorHooks::addModules';
 $wgHooks['PersonalUrls'][] = 'UniversalLanguageSelectorHooks::addTrigger';
 $wgHooks['SkinAfterContent'][] = 'UniversalLanguageSelectorHooks::addTemplate';
 $wgHooks['ResourceLoaderTestModules'][] = 'UniversalLanguageSelectorHooks::addTestModules';
+$wgAPIModules['languagesearch'] = 'ApiLanguageSearch';
 
 $wgResourceModules['ext.uls.init'] = array(
 	'scripts' => 'resources/ext.uls.init.js',

@@ -26,7 +26,8 @@
 					setlang : language
 				} );
 				window.location.href = uri.toString();
-			}
+			},
+			searchAPI: mw.util.wikiScript( 'api' ) + "?action=languagesearch"
 		} );
 	} );
 } )( jQuery );

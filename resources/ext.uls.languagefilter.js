@@ -59,14 +59,27 @@
 					}
 				}
 			}
+			// Also do a search to search API
+			if( this.options.searchAPI && query){
+				this.searchAPI( query );
+			}
 		},
 
-		render: function( langCode ) {
+		searchAPI: function( query ) {
+			var that = this;
+			$.get( that.options.searchAPI, { search: query }, function( result ) {
+				$.each( result['languagesearch'], function( code, name ) {
+					that.render( code, name );
+				} );
+			} );
+		},
+
+		render: function( langCode, languageName ) {
 			var $target = this.options.$target;
 			if ( !$target ) {
 				return;
 			}
-			$target.append( langCode );
+			$target.append( langCode, null, languageName );
 		},
 
 		escapeRegex: function( value ) {
@@ -110,7 +123,8 @@
 	$.fn.languagefilter.defaults = {
 		$target: null, // Where to append the results
 		languages: null, // Languages as code:name format. Default values come from data.languages.
-		clickhandler: null
+		clickhandler: null,
+		searchAPI: null
 	};
 
 	$.fn.languagefilter.Constructor = LanguageFilter;

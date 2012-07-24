@@ -31,27 +31,39 @@
 	LanguageCategoryDisplay.prototype = {
 		constructor: LanguageCategoryDisplay,
 
-		append: function( langCode, regionCode ) {
+		append: function( langCode, regionCode, languageName ) {
 			var that = this;
-			this.addToRegion( langCode, regionCode );
+			this.addToRegion( langCode, regionCode, languageName );
 		},
-
+		/**
+		 * Check whether a language code is already displayed or not.
+		 * @param langCode
+		 * @return boolean
+		 */
+		exists: function( langCode ) {
+			return this.$element.find( 'li' ).filter(function() {
+					return $(this).data('code')  === langCode;
+				} ).length > 0;
+		},
 		/**
 		 * Add the language to a region.
 		 * If the region parameter is given , add to that region alone
 		 * Otherwise to all regions that this language belongs.
 		 * @param langCode
-		 * @param region
+		 * @param region Optional region
+		 * @param languageName Optional languageName
 		 */
-		addToRegion: function( langCode, region ) {
-			var that = this,
-				language = that.options.languages[langCode];
-
-			var langName = $.uls.data.autonym( langCode )
-				|| that.options.languages[langCode]
-				|| langCode;
-
-			var regions = [];
+		addToRegion: function( langCode, region, languageName) {
+			var that = this;
+			if ( that.exists( langCode ) ) {
+				return;
+			}
+			var language = $.uls.data.languages[langCode],
+				langName = languageName
+					|| $.uls.data.autonym( langCode )
+					|| that.options.languages[langCode]
+					|| langCode,
+				regions = [];
 			if ( region ) {
 				regions.push( region );
 			} else {
