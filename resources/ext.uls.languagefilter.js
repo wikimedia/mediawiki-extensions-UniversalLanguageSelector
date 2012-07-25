@@ -31,21 +31,35 @@
 		this.options = $.extend( {}, $.fn.regionselector.defaults, options );
 		this.$element.addClass( 'languagefilter' );
 		this.resultCount = 0;
+		this.$suggestion = $( '#' + this.$element.data( 'suggestion' ) );
 		this.listen();
 	};
 
 	LanguageFilter.prototype = {
 
 		listen: function() {
-			this.$element.on( 'keyup', $.proxy( this.keyup, this ));
+			this.$element.on( 'keypress', $.proxy( this.keyup, this ) )
+				.on( 'keyup', $.proxy( this.keyup, this ) );
 			if ( $.browser.webkit || $.browser.msie ) {
 				this.$element.on( 'keydown', $.proxy( this.keyup, this ) );
 			}
 		},
 
 		keyup: function( e ) {
-			this.options.$target.empty();
-			this.search();
+			switch( e.keyCode ) {
+				case 9: // Tab -> Autocomplete
+					var suggestion = this.$suggestion.val();
+					if ( suggestion && suggestion !== this.$element.val() ) {
+						this.$element.val( suggestion );
+						e.preventDefault();
+						e.stopPropagation();
+					} else {
+					 	this.options.$target.focus();
+					}
+				default:
+					this.options.$target.empty();
+					this.search();
+			}
 		},
 
 		search: function() {
@@ -57,6 +71,10 @@
 				for ( langNum = 0; langNum < languages[scriptGroup].length; langNum++ ) {
 					langCode = languages[scriptGroup][langNum];
 					if ( query === "" || this.filter( langCode, query ) ) {
+						if ( this.resultCount === 0 ) {
+							// Autofill the first result.
+							this.autofill( langCode );
+						}
 						this.render( langCode );
 						this.resultCount++;
 					}
@@ -94,6 +112,30 @@
 			}
 		},
 
+		autofill: function( langCode ) {
+			if ( !this.$suggestion.length ) {
+				return;
+			}
+			if ( !this.$element.val() ) {
+				this.$suggestion.val( '' );
+				return;
+			}
+			var autonym,
+				languageName = this.options.languages[langCode],
+				userInput = this.$element.val(),
+				suggestion = userInput + languageName.substring( userInput.length, languageName.length );
+			if ( suggestion !== languageName ) {
+				// see if it was autonym match
+				autonym = $.uls.data.autonym( langCode );
+				suggestion = userInput + autonym.substring( userInput.length, autonym.length );
+				if ( suggestion !== autonym ) {
+					// Give up. It may be iso/script code match.
+					suggestion = "";
+				}
+			}
+			this.$suggestion.val( suggestion );
+		},
+
 		render: function( langCode, languageName ) {
 			var $target = this.options.$target;
 			if ( !$target ) {
@@ -103,14 +145,15 @@
 		},
 
 		escapeRegex: function( value ) {
-			return value.replace( /[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&" );
+			// This is a prefix search.
+			return value.replace( /^[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&" );
 		},
 
 		/**
 		 * A search match happens if any of the following passes:
 		 * a) Language name in current user interface language
-		 * 'starts with' or 'contains' search string.
-		 * b) Language autonym 'starts with' or 'contains' search string.
+		 * 'starts with' search string.
+		 * b) Language autonym 'starts with' search string.
 		 * c) ISO 639 code match with search string.
 		 * d) ISO 15924 code for the script match the search string.
 		 */
