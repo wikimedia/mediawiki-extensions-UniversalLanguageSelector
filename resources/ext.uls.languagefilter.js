@@ -32,6 +32,7 @@
 		this.$element.addClass( 'languagefilter' );
 		this.resultCount = 0;
 		this.$suggestion = $( '#' + this.$element.data( 'suggestion' ) );
+		this.$clear = $( '#'+ this.$element.data( 'clear' ) );
 		this.listen();
 	};
 
@@ -51,6 +52,10 @@
 			if ( $.browser.webkit || $.browser.msie ) {
 				this.$element.on( 'keydown', $.proxy( this.keyup, this ) );
 			}
+			if ( this.$clear.length ) {
+				this.$clear.on( 'click' , $.proxy( this.clear, this ) );
+			}
+			this.toggleClear();
 		},
 
 		keyup: function( e ) {
@@ -70,6 +75,23 @@
 						that.options.$target.empty();
 						that.search();
 					}, 500 );
+					this.toggleClear();
+			}
+		},
+
+		clear: function() {
+			this.$element.val( '' );
+			this.$element.focus();
+			this.toggleClear();
+			this.search();
+		},
+
+		toggleClear: function() {
+			if ( !this.$clear.length ) return;
+			if ( this.$element.val() ) {
+				this.$clear.show();
+			} else {
+				this.$clear.hide();
 			}
 		},
 

@@ -108,11 +108,11 @@ class UniversalLanguageSelectorHooks {
 					<div class='ten columns'>
 						<div id='search-input-block'>
 							<input type='text' class='filterinput' id='filtersuggestion' disabled='true' autocomplete='off' role='textbox'  bound='true'/>
-							<input type='text' class='filterinput' data-suggestion='filtersuggestion' id='languagefilter' placeholder='Language search' bound='true'/>
+							<input type='text' class='filterinput' data-clear='languagefilter-clear' data-suggestion='filtersuggestion' id='languagefilter' placeholder='Language search' bound='true'/>
 						</div>
 					</div>
 					<div class='one column'>
-						<span class='clear-button'></span>
+						<span id='languagefilter-clear'></span>
 					</div>
 				</div>
 			<div class='row uls-language-list'></div>

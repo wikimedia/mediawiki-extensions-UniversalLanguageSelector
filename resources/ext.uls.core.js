@@ -123,15 +123,11 @@
 				languages: that.languages,
 				success: function() {
 					// clear the search field.
-					that.$languageFilter.val( '' );
+					that.$languageFilter.languagefilter( 'clear' );
 					that.success();
 				}
 			} );
 
-			$( '.clear-button' ).on( 'click', function() {
-				// go to the ready state.
-				that.ready();
-			} );
 		},
 
 		keyup: function( e ) {

@@ -144,7 +144,7 @@ input:focus#languagefilter {
 	display: inline-block;
 	float: right;
 }
-span.clear-button {
+span#languagefilter-clear {
 	/* @embed */
 	background: url('../images/clear.png') no-repeat scroll left center transparent;
 	cursor: pointer;
