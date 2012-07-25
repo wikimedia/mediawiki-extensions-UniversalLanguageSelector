@@ -48,23 +48,20 @@
 		},
 
 		search: function() {
-			var that = this;
-			var languages = this.options.languages;
-			var query = this.$element.val();
-			var allLanguages = $.uls.data.allLanguagesByScriptGroup();
-			for ( var scriptGroup in allLanguages ) {
-				for ( var langNum = 0; langNum < allLanguages[scriptGroup].length; langNum++ ) {
-					var langCode = allLanguages[scriptGroup][langNum];
-					if ( languages[langCode] !== undefined && ( query === "" || that.filter( langCode, query ) ) )
-					{
-						that.render( langCode );
+			var query = $.trim( this.$element.val() ),
+				languages = $.uls.data.languagesByScriptGroup( this.options.languages ),
+				scriptGroup, langNum, langCode;
+			for ( scriptGroup in languages ) {
+				for ( langNum = 0; langNum < languages[scriptGroup].length; langNum++ ) {
+					langCode = languages[scriptGroup][langNum];
+					if ( query === "" || this.filter( langCode, query ) ) {
+						this.render( langCode );
 					}
 				}
 			}
 		},
 
 		render: function( langCode ) {
-			var that = this;
 			var $target = this.options.$target;
 			if ( !$target ) {
 				return;
@@ -86,8 +83,8 @@
 		 */
 		filter: function( langCode, searchTerm ) {
 			// FIXME script is ISO 15924 code. We might need actual name of script.
-			var matcher = new RegExp( this.escapeRegex( searchTerm ), 'i' );
-			var languageName = this.options.languages[langCode];
+			var matcher = new RegExp( this.escapeRegex( searchTerm ), 'i' ),
+				languageName = this.options.languages[langCode];
 			return matcher.test( languageName ) ||
 				matcher.test( $.uls.data.autonym( langCode ) ) ||
 				matcher.test( langCode ) ||
@@ -138,41 +135,38 @@
 		constructor: RegionSelector,
 
 		test: function( langCode ) {
-			var that = this,
-				regionGroups = $.uls.data.regiongroups,
-				regions = $.uls.data.regions( langCode );
-			// 1. loop over all regiongroups - like {EU: 2, AF: 2, AS: 3 ...}
-			// 2. check that the region matches the active region group
-			// 3. if this language is included in that region, show it
-			// 4. if none of the conditions match, the language is not shown
-			$.each( regionGroups, function( region, regionGroup) {
-				if ( regionGroup === that.regionGroup && $.inArray( region, regions ) >= 0 ) {
-					that.render( langCode, region );
+			var regions = $.uls.data.regionsInGroup( this.regionGroup ),
+				langRegions = $.uls.data.regions( langCode ),
+				region;
+			for ( var i = 0; i < regions.length; i++ ) {
+				region = regions[i];
+				if ( $.inArray( region, langRegions ) >= 0 ) {
+					this.render( langCode, region );
 					return;
 				}
-			} );
+			}
 		},
 
 		show: function() {
-			var that = this;
-
+			var i, regions, language, languagesByScriptGroup, scriptGroup, languages;
 			// Make the selected region (and it only) active
 			$( '.regionselector' ).removeClass( 'active' );
-			that.$element.addClass( 'active' );
+			this.$element.addClass( 'active' );
 
-			// Repopulate the list of languages
-			that.options.$target.empty();
-
-			var regions = $.uls.data.regionsInGroup( that.regionGroup );
-			var languagesInRegion = $.uls.data.languagesByScriptGroupInRegions( regions );
-			for ( var scriptGroup in languagesInRegion ) {
-				for ( var langNum = 0; langNum < languagesInRegion[scriptGroup].length; langNum++ ) {
-					that.test( languagesInRegion[scriptGroup][langNum] );
+			// Re-populate the list of languages
+			this.options.$target.empty();
+			regions = $.uls.data.regionsInGroup( this.regionGroup );
+			languagesByScriptGroup = $.uls.data.languagesByScriptGroup( this.options.languages );
+			for ( scriptGroup in languagesByScriptGroup ) {
+				languages = languagesByScriptGroup[scriptGroup];
+				for ( i = 0; i < languages.length; i++) {
+					language = languages[i];
+					this.test( language );
 				}
 			}
 
-			if ( that.options.callback ) {
-				that.options.callback.call();
+			if ( this.options.callback ) {
+				this.options.callback.call();
 			}
 		},
 
@@ -214,7 +208,8 @@
 
 	$.fn.regionselector.defaults = {
 		$target: null, // Where to render the results. Must be a ul element
-		callback: null // Callback - will be called after results are displayed.
+		callback: null, // Callback - will be called after results are displayed.
+		languages: null
 	};
 
 	$.fn.regionselector.Constructor = RegionSelector;

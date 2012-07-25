@@ -35,7 +35,7 @@
 	 * @return array of strings
 	 */
 	$.uls.data.regions = function( language ) {
-		return $.uls.data.languages[language][1];
+		return ( $.uls.data.languages[language] && $.uls.data.languages[language][1] ) || 'UNKNOWN';
 	};
 
 	/**
@@ -169,6 +169,27 @@
 		return $.uls.data.languagesByScriptGroupInRegions( $.uls.data.allRegions() );
 	};
 
+	/**
+	 * Get the given list of languages sorted by script.
+	 * @param languages Array of language codes
+	 * @return {Object} Array of languages indexed by script codes
+	 */
+	$.uls.data.languagesByScriptGroup = function( languages ) {
+		var languagesByScriptGroup = {}, scriptGroup, language, langScriptGroup;
+		for ( scriptGroup in $.uls.data.scriptgroups ) {
+			for ( language in languages ) {
+				langScriptGroup = $.uls.data.scriptGroupOfLanguage( language );
+				if( langScriptGroup !== scriptGroup ){
+					continue;
+				}
+				if ( !languagesByScriptGroup[scriptGroup] ) {
+					languagesByScriptGroup[scriptGroup] = [];
+				}
+				languagesByScriptGroup[scriptGroup].push( language );
+			}
+		}
+		return languagesByScriptGroup;
+	};
 	/**
 	 * Returns an associative array of languages in several regions,
 	 * grouped by script group.

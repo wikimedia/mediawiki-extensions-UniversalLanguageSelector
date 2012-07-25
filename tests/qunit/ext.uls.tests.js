@@ -43,7 +43,7 @@ test( "-- Initial check", function() {
 } );
 
 test( "-- $.uls.data testing", function() {
-	expect( 17 );
+	expect( 18 );
 
 	// This test assumes that we don't want any scripts to be in the 'Other'
 	// group. Actually, this may become wrong some day.
@@ -61,6 +61,7 @@ test( "-- $.uls.data testing", function() {
 
 	strictEqual( $.uls.data.script( 'ii' ), 'Yiii', 'Correct script of the Yi language was selected' );
 	deepEqual( $.uls.data.regions( 'lzz' ), [ 'EU', 'ME' ], 'Correct regions of the Laz language were selected' );
+	strictEqual( $.uls.data.regions( 'no-such-language' ), 'UNKNOWN', "The region of an invalid language is 'UNKNOWN'" );
 
 	var allLanguagesByRegionAndScript = $.uls.data.allLanguagesByRegionAndScript();
 	deepEqual( allLanguagesByRegionAndScript['3']['AS']['SouthEastAsian']['Bugi'], ['bug'], 'All languages in the Buginese script in Asia were selected' );
