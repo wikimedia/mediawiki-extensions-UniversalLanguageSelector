@@ -30,6 +30,7 @@
 		this.$element = $( element );
 		this.options = $.extend( {}, $.fn.regionselector.defaults, options );
 		this.$element.addClass( 'languagefilter' );
+		this.resultCount = 0;
 		this.listen();
 	};
 
@@ -51,17 +52,21 @@
 			var query = $.trim( this.$element.val() ),
 				languages = $.uls.data.languagesByScriptGroup( this.options.languages ),
 				scriptGroup, langNum, langCode;
+			this.resultCount = 0;
 			for ( scriptGroup in languages ) {
 				for ( langNum = 0; langNum < languages[scriptGroup].length; langNum++ ) {
 					langCode = languages[scriptGroup][langNum];
 					if ( query === "" || this.filter( langCode, query ) ) {
 						this.render( langCode );
+						this.resultCount++;
 					}
 				}
 			}
-			// Also do a search to search API
-			if( this.options.searchAPI && query){
+			// Also do a search by search API
+			if( this.options.searchAPI && query ) {
 				this.searchAPI( query );
+			} else {
+				this.resultHandler( query );
 			}
 		},
 
@@ -70,8 +75,23 @@
 			$.get( that.options.searchAPI, { search: query }, function( result ) {
 				$.each( result['languagesearch'], function( code, name ) {
 					that.render( code, name );
+					that.resultCount++;
 				} );
+				that.resultHandler( query );
 			} );
+		},
+
+		/**
+		 * Handler method to be called once search is over.
+		 * Based on search result call success or noresults callbacks
+		 * @param String query
+		 */
+		resultHandler: function( query ) {
+			if ( this.resultCount === 0 && this.options.noresults ) {
+				this.options.noresults.call( this, query );
+			} else if ( this.options.success ) {
+				this.options.success( this, query, this.resultCount );
+			}
 		},
 
 		render: function( langCode, languageName ) {
@@ -122,14 +142,15 @@
 
 	$.fn.languagefilter.defaults = {
 		$target: null, // Where to append the results
-		languages: null, // Languages as code:name format. Default values come from data.languages.
-		clickhandler: null,
-		searchAPI: null
+		searchAPI: null,
+		languages: null, // Languages as code:name format.
+		noresults: null, // callback for no results found case
+		success: null // callback if any results found.
 	};
 
 	$.fn.languagefilter.Constructor = LanguageFilter;
 
-	/* RegionSelector Plugin Definition */
+	/* RegionSelector plugin definition */
 
 	/**
 	 * Region selector is a language selector based on regions.
@@ -141,19 +162,28 @@
 		this.$element = $( element );
 		this.options = $.extend( {}, $.fn.regionselector.defaults, options );
 		this.$element.addClass( 'regionselector' );
-		this.listen();
+		this.regions = [];
 		this.regionGroup = this.$element.data( 'regiongroup' );
+		this.init();
+		this.listen();
 	};
 
 	RegionSelector.prototype = {
 		constructor: RegionSelector,
 
+		init: function() {
+			var region =  this.$element.data( 'region' );
+			this.regions = $.uls.data.regionsInGroup( this.regionGroup );
+			if ( region ) {
+				this.regions.push( region );
+			}
+		},
+
 		test: function( langCode ) {
-			var regions = $.uls.data.regionsInGroup( this.regionGroup ),
-				langRegions = $.uls.data.regions( langCode ),
+			var langRegions = $.uls.data.regions( langCode ),
 				region;
-			for ( var i = 0; i < regions.length; i++ ) {
-				region = regions[i];
+			for ( var i = 0; i < this.regions.length; i++ ) {
+				region = this.regions[i];
 				if ( $.inArray( region, langRegions ) >= 0 ) {
 					this.render( langCode, region );
 					return;
@@ -165,11 +195,12 @@
 			var i, regions, language, languagesByScriptGroup, scriptGroup, languages;
 			// Make the selected region (and it only) active
 			$( '.regionselector' ).removeClass( 'active' );
-			this.$element.addClass( 'active' );
-
+			if( this.regionGroup ) {
+				// if there is a region group, make it active.
+				this.$element.addClass( 'active' );
+			}
 			// Re-populate the list of languages
 			this.options.$target.empty();
-			regions = $.uls.data.regionsInGroup( this.regionGroup );
 			languagesByScriptGroup = $.uls.data.languagesByScriptGroup( this.options.languages );
 			for ( scriptGroup in languagesByScriptGroup ) {
 				languages = languagesByScriptGroup[scriptGroup];
@@ -179,8 +210,8 @@
 				}
 			}
 
-			if ( this.options.callback ) {
-				this.options.callback.call();
+			if ( this.options.success ) {
+				this.options.success.call();
 			}
 		},
 
@@ -203,7 +234,7 @@
 		}
 	};
 
-	/* RegionSelector Plugin Definition */
+	/* RegionSelector plugin definition */
 
 	$.fn.regionselector = function( option ) {
 		return this.each( function() {
@@ -221,8 +252,8 @@
 	};
 
 	$.fn.regionselector.defaults = {
-		$target: null, // Where to render the results. Must be a ul element
-		callback: null, // Callback - will be called after results are displayed.
+		$target: null, // Where to render the results
+		success: null, // callback if any results found.
 		languages: null
 	};
 

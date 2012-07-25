@@ -34,15 +34,25 @@
 
 .uls-language-block .three.columns {
 	width: 22%;
-
 }
 
 .uls-language-list-footer  .three.columns {
 	width: 22%;
-	
 }
 
+.uls-language-block {
+	width: 100%;
+}
 
-.uls-language-block{
-	width:100%;
+.uls-no-results-view {
+	color: #777;
+}
+
+#uls-no-found-more {
+	font-size: 0.9em;
+	background: #F8F8F8;
+	display: inline-block;
+	width: 100%;
+	margin-top: 1.6em;
+	line-height: 1.6em;
 }

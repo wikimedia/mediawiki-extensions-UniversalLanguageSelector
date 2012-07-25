@@ -33,6 +33,9 @@
 		}
 		this.shown = false;
 		this.$languageFilter = $( 'input#languagefilter' );
+		this.$noResultsView = $( 'div.uls-no-results-view' );
+		this.$resultsView = $( 'div.uls-language-list' );
+		this.$noResultsView.hide();
 		this.render();
 		this.listen();
 		this.ready();
@@ -70,8 +73,20 @@
 			// Rendering stuff here
 		},
 
+		noresults: function( search ) {
+			this.$noResultsView.show();
+			// FIXME i18n
+			this.$noResultsView.find( 'span#uls-no-found-search-term' ).text( search );
+			this.$resultsView.hide();
+		},
+
+		success: function() {
+			this.$noResultsView.hide();
+			this.$resultsView.show();
+		},
+
 		listen: function() {
-			var that = this, $lcd;
+			var that = this, lcd;
 			// Register all event listeners to the ULS here.
 			that.$element.on( 'click', $.proxy( that.click, that ) );
 
@@ -85,7 +100,7 @@
 				this.$menu.on( 'keydown', $.proxy( this.keypress, this ) )
 			}
 
-			$lcd = $( 'div.uls-language-list' ).lcd( {
+			lcd = that.$resultsView.lcd( {
 				languages: that.languages,
 				clickhandler: function( langCode ) {
 					if ( that.options.onSelect ) {
@@ -95,19 +110,21 @@
 			} ).data( "lcd" );
 
 			that.$languageFilter.languagefilter( {
-				$target: $lcd, //$( 'ul.uls-language-filter-result' ),
+				$target: lcd,
 				languages: that.languages,
+				success: $.proxy( that.success, that ),
+				noresults: $.proxy( that.noresults, that ),
 				searchAPI: that.options.searchAPI
 			} );
 
 			// Create region selectors, one per region
-			$( '.uls-region' ).regionselector( {
-				$target: $lcd,
-				// FIXME This is confusing: languages and source are actually data for ULS.
+			$( '.uls-region, .uls-region-link' ).regionselector( {
+				$target: lcd,
 				languages: that.languages,
-				callback: function () {
+				success: function() {
 					// clear the search field.
-					that.$languageFilter.val( "" );
+					that.$languageFilter.val( '' );
+					that.success();
 				}
 			} );
 

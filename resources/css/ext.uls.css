@@ -42,10 +42,18 @@
 	padding-left: 15px;
 	color: #777;
 }
+.uls-menu h2 {
+	padding-left: 6px;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	border-bottom: none;
+	color: #777;
+}
 .uls-menu h3 {
 	padding-left: 0px;
 	margin-top: 0px;
 	margin-bottom: 15px;
+	border-bottom: none;
 }
 .uls-worldmap {
 	/* @embed */
