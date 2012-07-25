@@ -24,11 +24,20 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 $wgExtensionCredits['other'][] = array(
-	'path'           => __FILE__,
-	'name'           => 'UniversalLanguageSelector',
-	'version'        => '0.1',
-	'author'         => array( 'Santhosh Thottingal' ),
-	'url'            => 'https://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector',
+	'path' => __FILE__,
+	'name' => 'UniversalLanguageSelector',
+	'version' => '0.1',
+	'author' => array(
+		'Alolita Sharma',
+		'Amir Aharoni',
+		'Arun Ganesh',
+		'Brandon Harris',
+		'Niklas Laxström',
+		'Pau Giner',
+		'Santhosh Thottingal',
+		'Siebrand Mazeland'
+	),
+	'url' => 'https://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector',
 	'descriptionmsg' => 'uls-desc',
 );
 
