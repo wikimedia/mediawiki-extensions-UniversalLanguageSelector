@@ -45,9 +45,11 @@
 		 */
 		addToRegion: function( langCode, region ) {
 			var that = this,
-				language = $.uls.data.languages[langCode];
+				language = that.options.languages[langCode];
 
-			var langName = that.options.languages[langCode] || langCode;
+			var langName = $.uls.data.autonym( langCode )
+				|| that.options.languages[langCode]
+				|| langCode;
 
 			var regions = [];
 			if ( region ) {
@@ -62,7 +64,7 @@
 				var $li = $( '<li>' )
 					.data( 'code', langCode )
 					.append(
-						$( '<a>' ).prop( 'href', '#' ).html( langName )
+						$( '<a>' ).prop( 'href', '#' ).prop( 'title', language ).html( langName )
 					);
 
 				// Append the element to the column in the list
