@@ -35,6 +35,14 @@
 		this.listen();
 	};
 
+	var delay = function() {
+		var timer = 0;
+		return ( function( callback, milliseconds ) {
+			clearTimeout( timer );
+			timer = setTimeout( callback, milliseconds );
+		} );
+	}();
+
 	LanguageFilter.prototype = {
 
 		listen: function() {
@@ -57,8 +65,11 @@
 					 	this.options.$target.focus();
 					}
 				default:
-					this.options.$target.empty();
-					this.search();
+					var that = this;
+					delay( function() {
+						that.options.$target.empty();
+						that.search();
+					}, 500 );
 			}
 		},
 
