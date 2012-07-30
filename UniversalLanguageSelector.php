@@ -60,6 +60,7 @@ $wgHooks['PersonalUrls'][] = 'UniversalLanguageSelectorHooks::addTrigger';
 $wgHooks['SkinAfterContent'][] = 'UniversalLanguageSelectorHooks::addTemplate';
 $wgHooks['ResourceLoaderTestModules'][] = 'UniversalLanguageSelectorHooks::addTestModules';
 $wgAPIModules['languagesearch'] = 'ApiLanguageSearch';
+$wgHooks['UserGetLanguageObject'][] = 'UniversalLanguageSelectorHooks::getLanguage';
 
 $wgResourceModules['ext.uls.init'] = array(
 	'scripts' => 'resources/ext.uls.init.js',

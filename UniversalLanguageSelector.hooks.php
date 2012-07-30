@@ -60,6 +60,39 @@ class UniversalLanguageSelectorHooks {
 				) ) + $personal_urls;
 		return true;
 	}
+
+	/**
+	 * Hook to UserGetLanguageObject
+	 * @param  $user User
+	 * @param  $code String
+	 * @return bool
+	 */
+	public static function getLanguage( $user, &$code ) {
+		global $wgRequest;
+		if ( $wgRequest->getVal( 'uselang' ) ) {
+			// uselang can be used for temporary override of language preference
+			return true;
+		}
+		$setlang = $wgRequest->getVal( 'setlang' );
+		if ( $setlang ) {
+			if ( $user->isAnon() ) {
+				$wgRequest->response()->setcookie( 'language', $setlang );
+			} else {
+				$user->setOption( 'language', $setlang );
+				$user->saveSettings();
+			}
+			$code = $setlang;
+		} else {
+			if ( $user->isAnon() ) {
+				$code = $wgRequest->getCookie( 'language' );
+			} else {
+				$code = $user->getOption( 'language' );
+			}
+		}
+		$code = RequestContext::sanitizeLangCode( $code );
+		return true;
+	}
+
 	/**
 	 * Add the template for the ULS to the body.
 	 * Hooks: SkinAfterContent
