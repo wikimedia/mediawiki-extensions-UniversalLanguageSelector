@@ -19,16 +19,19 @@
  */
 class LanguageNameSearch {
 	static $languagenames;
-	public function init() {
+	public static function init() {
 		self::$languagenames = unserialize( file_get_contents( __DIR__ . '/langnames.ser' ) );
 	}
 
 	public static function search( $searchKey ) {
-		$results = array();
 		if ( self::$languagenames === null ) {
 			self::init();
 		}
 		$bucket = self::$languagenames[self::getIndex( $searchKey )];
+		if ( !$bucket ) {
+			return array();
+		}
+		$results = array();
 		foreach ( $bucket as $name => $code ) {
 			// Prefix search
 			if ( strpos( $name, $searchKey, 0 ) === 0 ) {
