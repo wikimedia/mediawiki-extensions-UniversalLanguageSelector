@@ -68,6 +68,7 @@ $wgResourceModules['ext.uls.init'] = array(
 	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
 		'mediawiki.Uri',
+		'jquery.tipsy',
 		'ext.uls.core',
 	),
 	'position' => 'top',
