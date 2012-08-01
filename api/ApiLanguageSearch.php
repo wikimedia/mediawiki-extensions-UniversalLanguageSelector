@@ -30,7 +30,8 @@ class ApiLanguageSearch extends ApiBase {
 	public function execute() {
 		$params = $this->extractRequestParams();
 		$search = $params['search'];
-		$searches = LanguageNameSearch::search( $search );
+		$typos = $params['typos'];
+		$searches = LanguageNameSearch::search( $search, $typos );
 		$result = $this->getResult();
 		$result->addValue( null, $this->getModuleName(), $searches );
 	}
@@ -40,12 +41,18 @@ class ApiLanguageSearch extends ApiBase {
 			'search' => array(
 				ApiBase::PARAM_REQUIRED => true
 			),
+			'typos' => array(
+				ApiBase::PARAM_REQUIRED => false,
+				ApiBase::PARAM_TYPE => 'integer',
+				ApiBase::PARAM_DFLT => 1
+			),
 		);
 	}
 
 	public function getParamDescription() {
 		return array(
 			'search' => 'Search string',
+			'typos' => 'Number of spelling mistakes allowed in the search string',
 		);
 	}
 
@@ -57,6 +64,7 @@ class ApiLanguageSearch extends ApiBase {
 		return array(
 			'api.php?action=languagesearch&search=Te',
 			'api.php?action=languagesearch&search=ഫി',
+			'api.php?action=languagesearch&search=ഫി&typos=1',
 		);
 	}
 	public function getVersion() {

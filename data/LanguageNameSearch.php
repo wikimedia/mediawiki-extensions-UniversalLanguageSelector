@@ -22,11 +22,11 @@ class LanguageNameSearch {
 	public static function init() {
 		self::$languagenames = unserialize( file_get_contents( __DIR__ . '/langnames.ser' ) );
 	}
-
-	public static function search( $searchKey ) {
+	public static function search( $searchKey, $typos = 0 ) {
 		if ( self::$languagenames === null ) {
 			self::init();
 		}
+		$searchKey = strtolower( $searchKey );
 		$bucket = self::$languagenames[self::getIndex( $searchKey )];
 		if ( !$bucket ) {
 			return array();
@@ -36,10 +36,15 @@ class LanguageNameSearch {
 			// Prefix search
 			if ( strpos( $name, $searchKey, 0 ) === 0 ) {
 				$results[$code] = $name;
+				continue;
+			}
+			if ( $typos > 0 && self::levenshteinDistance( $name, $searchKey ) === $typos ) {
+				$results[$code] = $name;
 			}
 		}
 		return $results;
 	}
+
 	public static function getIndex( $name ) {
 		$codepoint = self::getCodepoint( $name );
 		if ( $codepoint < 1000 ) {
@@ -52,6 +57,7 @@ class LanguageNameSearch {
 		}
 		return $bucket;
 	}
+
 	/**
 	 * Get the code point of first letter of string
 	 *
@@ -65,7 +71,7 @@ class LanguageNameSearch {
 			$thisValue = ord( $str[$i] );
 			if ( $thisValue < 128 ) {
 				return $thisValue;
-			} else { // Codepoints larger than 127 are represented by multi-byte sequences,
+			} else {// Codepoints larger than 127 are represented by multi-byte sequences,
 				if ( count( $values ) === 0 ) {
 					// 224 is the lowest non-overlong-encoded codepoint.
 					$lookingFor = ( $thisValue < 224 ) ? 2 : 3;
@@ -73,11 +79,46 @@ class LanguageNameSearch {
 				$values[] = $thisValue;
 				if ( count( $values ) === $lookingFor ) {
 					// Refer http://en.wikipedia.org/wiki/UTF-8#Description
-					$number = ( $lookingFor === 3 ) ? ( ( $values[0] % 16 ) * 4096 ) + ( ( $values[1] % 64 ) * 64 ) + ( $values[2] % 64 ) : ( ( $values[0] % 32 ) * 64 ) + ( $values[
-1] % 64 );
+					$number = ( $lookingFor === 3 ) ? ( ( $values[0] % 16 ) * 4096 ) + ( ( $values[1] % 64 ) * 64 ) + ( $values[2] % 64 ) : ( ( $values[0] % 32 ) * 64 ) + ( $values[1] % 64 );
 					return $number;
 				}
 			}
 		}
 	}
+	/**
+	 * Calculate the Levenshtein distance between two strings
+	 * @param $str1
+	 * @param $str2
+	 * @return integer
+	 */
+	static function levenshteinDistance( $str1, $str2 ) {
+		$length1 = mb_strlen( $str1, 'UTF-8' );
+		$length2 = mb_strlen( $str2, 'UTF-8' );
+		if ( $length1 < $length2 ) {
+			return self::levenshteinDistance( $str2, $str1 );
+		}
+		if ( $length1 === 0 ) {
+			return $length2;
+		}
+		if ( $str1 === $str2 ) {
+			return 0;
+		}
+		$prevRow = range( 0, $length2 );
+		$currentRow = array();
+		for ( $i = 0; $i < $length1; $i++ ) {
+			$currentRow = array();
+			$currentRow[0] = $i + 1;
+			$c1 = mb_substr( $str1, $i, 1, 'UTF-8' );
+			for ( $j = 0; $j < $length2; $j++ ) {
+				$c2 = mb_substr( $str2, $j, 1, 'UTF-8' );
+				$insertions = $prevRow[$j + 1] + 1;
+				$deletions = $currentRow[$j] + 1;
+				$substitutions = $prevRow[$j] + ( ( $c1 !== $c2 ) ? 1 : 0 );
+				$currentRow[] = min( $insertions, $deletions, $substitutions );
+			}
+			$prevRow = $currentRow;
+		}
+		return $prevRow[$length2];
+	}
+
 }

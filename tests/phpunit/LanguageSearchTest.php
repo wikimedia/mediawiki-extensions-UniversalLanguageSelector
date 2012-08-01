@@ -54,6 +54,14 @@ class LanguageSearchTest extends PHPUnit_Framework_TestCase {
 				'fro' => 'الفرنسية القديمة',
 				)
 			),
+			array( "മലയളം", array(
+				'ml' => "മലയാളം",
+				)
+			),
+			array( "finish", array(
+				'fi' => 'finnish'
+				)
+			),
 		);
 	}
 }
