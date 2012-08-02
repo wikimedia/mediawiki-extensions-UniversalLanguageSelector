@@ -1,7 +1,7 @@
 .uls-trigger {
 	/* @embed */
 	background: url('../images/icon-language.png') no-repeat scroll left center transparent;
-	padding-left: 36px;
+	padding-left: 30px;
 }
 .uls-menu {
 	position: fixed;
