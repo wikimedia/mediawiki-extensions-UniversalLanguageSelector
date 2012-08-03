@@ -69,39 +69,35 @@ $wgResourceModules['ext.uls.init'] = array(
 	'dependencies' => array(
 		'mediawiki.Uri',
 		'jquery.tipsy',
-		'ext.uls.core',
+		'jquery.uls',
 	),
 	'position' => 'top',
 );
 
-$wgResourceModules['ext.uls.data'] = array(
-	'scripts' => 'data/ext.uls.data.js',
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
-);
-
-$wgResourceModules['ext.uls.lcd'] = array(
-	'scripts' => 'resources/ext.uls.lcd.js',
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
-	'styles' => 'resources/css/ext.uls.lcd.css',
-);
-
-$wgResourceModules['ext.uls.core'] = array(
+$wgResourceModules['jquery.uls'] = array(
 	'scripts' => array(
-		'resources/ext.uls.core.js',
-		'resources/ext.uls.languagefilter.js',
-		'resources/ext.uls.data.utils.js',
+		'lib/jquery.uls/src/jquery.uls.core.js',
+		'lib/jquery.uls/src/jquery.uls.languagefilter.js',
+		'lib/jquery.uls/src/jquery.uls.lcd.js',
 	),
 	'styles' => array(
-		'resources/css/ext.uls.css',
-		'resources/css/ext.uls.grid.css',
+		'lib/jquery.uls/css/jquery.uls.css',
+		'lib/jquery.uls/css/jquery.uls.grid.css',
+		'lib/jquery.uls/css/jquery.uls.lcd.css',
 	),
 	'localBasePath' => $dir,
 	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
-		'ext.uls.data',
-		'ext.uls.lcd',
+		'jquery.uls.data',
 	),
 	'position' => 'top',
+);
+
+$wgResourceModules['jquery.uls.data'] = array(
+	'scripts' => array(
+		'lib/jquery.uls/data/jquery.uls.data.js',
+		'lib/jquery.uls/src/jquery.uls.data.utils.js',
+	),
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'UniversalLanguageSelector',
 );
