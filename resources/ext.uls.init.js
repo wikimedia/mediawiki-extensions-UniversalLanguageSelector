@@ -21,13 +21,15 @@
 	"use strict";
 
 	$( document ).ready( function( ) {
-		var $ulsTrigger = $( '.uls-trigger' );
+		var $ulsTrigger = $( '.uls-trigger' ),
+			previousLang = $.cookie( 'uls-previous-language' ),
+			currentLang = mw.config.get( 'wgUserLanguage' );
 		/**
 		 * Change the language of wiki using setlang URL parameter
 		 * @param {String} language
 		 */
 		var changeLanguage = function( language ) {
-			$.cookie( 'uls-previous-language', mw.config.get( 'wgUserLanguage' ) );
+			$.cookie( 'uls-previous-language', currentLang );
 			var uri = new mw.Uri( window.location.href );
 			uri.extend( {
 				setlang: language
@@ -42,6 +44,14 @@
 			searchAPI: mw.util.wikiScript( 'api' ) + "?action=languagesearch"
 		} );
 
+		if ( !previousLang || previousLang === currentLang ) {
+			// Do not show tooltip.
+			return true;
+		}
+
+		var tipsyTimer;
+		// Current language is the cookie value for 'uls-previous-language'
+		$.cookie( 'uls-previous-language', currentLang );
 		// Attach a tipsy tooltip to the trigger
 		$ulsTrigger.tipsy( {
 			gravity: 'n',
@@ -50,23 +60,14 @@
 			fade: true,
 			trigger: 'manual',
 			title: function() {
-				var prevLang = $.cookie( 'uls-previous-language' );
-				if ( !prevLang ) {
-					return '';
-				}
-				var prevLangName = $.uls.data.autonym( prevLang ),
+				var prevLangName = $.uls.data.autonym( previousLang ),
 					linkClass = 'uls-lang-link',
 					title = "Language changed from <a href='#' lang = '" +
-						prevLang + "' class = '" + linkClass + "' >" +
-						prevLangName + "</a>",
-					currentLang = mw.config.get( 'wgUserLanguage' );
-				if ( !prevLang && prevLang === currentLang ) {
-					return '';
-				}
+						previousLang + "' class = '" + linkClass + "' >" +
+						prevLangName + "</a>";
 				return title;
 			}
 		} );
-		var tipsyTimer;
 		// Show the tipsy tooltip on page load.
 		$ulsTrigger.tipsy( 'show' );
 		tipsyTimer = setTimeout( function() {
