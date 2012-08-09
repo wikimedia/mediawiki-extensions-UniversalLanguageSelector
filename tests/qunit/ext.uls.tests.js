@@ -26,15 +26,33 @@ module( "ext.uls", QUnit.newMwEnvironment() );
  * Runs over all script codes mentioned in langdb and checks whether
  * they belong to the 'Other' group.
  */
-var orphanScript = function () {
+var orphanScripts = function () {
+	var result = [];
+
 	for ( var language in $.uls.data.languages ) {
 		var script = $.uls.data.script( language );
 		if ( $.uls.data.groupOfScript( script ) === 'Other' ) {
-			return script;
+			result.push( script );
 		}
 	}
 
-	return '';
+	return result;
+};
+
+/*
+ * Runs over all script codes mentioned in langdb and checks whether
+ * they have something that looks like an autonym.
+ */
+var languagesWithoutAutonym = function () {
+	var result = [];
+
+	for ( var language in $.uls.data.languages ) {
+		if ( typeof $.uls.data.autonym( language ) !== 'string' ) {
+			result.push( language );
+		}
+	}
+
+	return result;
 };
 
 test( "-- Initial check", function() {
@@ -43,11 +61,13 @@ test( "-- Initial check", function() {
 } );
 
 test( "-- $.uls.data testing", function() {
-	expect( 19 );
+	expect( 20 );
 
 	// This test assumes that we don't want any scripts to be in the 'Other'
 	// group. Actually, this may become wrong some day.
-	strictEqual( orphanScript(), '', 'No orphan scripts found.' );
+	deepEqual( orphanScripts(), [], 'All scripts belong to script groups.' );
+	deepEqual( languagesWithoutAutonym(), [], 'All languages have autonyms.' );
+
 	strictEqual(
 		$.uls.data.groupOfScript( 'Beng' ),
 		'SouthAsian',
