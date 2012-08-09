@@ -1,0 +1,19 @@
+div#settings-block {
+	border-left: 1px solid #C9C9C9;
+	padding-left: 10px;
+}
+div#display-settings-block {
+	/* @embed */
+	background: url('../images/display.png');
+	background-repeat: no-repeat;
+	background-size: 20px auto;
+	padding-left: 25px;
+	cursor: pointer;
+}
+.settings-title {
+	font-size: 11pt;
+}
+.settings-text {
+	color: #555555;
+	font-size: 9pt;
+}

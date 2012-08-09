@@ -17,25 +17,52 @@
  * @licence MIT License
  */
 
-( function( $ ) {
+( function( $, mw ) {
 	"use strict";
 
 	$( document ).ready( function( ) {
 		var $ulsTrigger = $( '.uls-trigger' ),
 			previousLang = $.cookie( 'uls-previous-language' ),
 			currentLang = mw.config.get( 'wgUserLanguage' );
+
 		/**
 		 * Change the language of wiki using setlang URL parameter
 		 * @param {String} language
 		 */
-		var changeLanguage = function( language ) {
+		function changeLanguage( language ) {
 			$.cookie( 'uls-previous-language', currentLang );
 			var uri = new mw.Uri( window.location.href );
 			uri.extend( {
 				setlang: language
 			} );
 			window.location.href = uri.toString();
-		};
+		}
+
+		function displaySettings() {
+			var $displaySettingsTitle = $( '<div>' )
+					.addClass( 'settings-title' )
+					.text( 'Display settings' ),
+				$displaySettingsText = $( '<span>' )
+					.addClass( 'settings-text' )
+					.text( 'Set language for menus and fonts.' ),
+				$displaySettings = $( '<div>' )
+					.addClass( 'display-settings-block' )
+					.prop( 'id', 'display-settings-block' )
+					.append( $displaySettingsTitle )
+					.append( $displaySettingsText );
+			$displaySettings.on( 'click', function() {
+				// TODO: Show language settings window with display settings highlighted
+			} );
+			return $displaySettings;
+		}
+
+		// Extend the render api of ULS to add display and input settings.
+		$.fn.uls.Constructor.prototype = $.extend( {}, $.fn.uls.Constructor.prototype, {
+			render: function() {
+				var $displaySettings = displaySettings();
+				this.$menu.find("div#settings-block").append($displaySettings);
+			}
+		} );
 
 		$ulsTrigger.uls( {
 			onSelect: function( language ) {
@@ -101,4 +128,4 @@
 			changeLanguage( $(this).attr( 'lang' ) );
 		} );
 	} );
-} )( jQuery );
+} )( jQuery, mediaWiki );

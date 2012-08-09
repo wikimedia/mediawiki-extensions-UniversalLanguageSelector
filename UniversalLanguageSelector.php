@@ -63,7 +63,8 @@ $wgAPIModules['languagesearch'] = 'ApiLanguageSearch';
 $wgHooks['UserGetLanguageObject'][] = 'UniversalLanguageSelectorHooks::getLanguage';
 
 $wgResourceModules['ext.uls.init'] = array(
-	'scripts' => 'resources/ext.uls.init.js',
+	'scripts' => 'resources/js/ext.uls.init.js',
+	'styles' => 'resources/css/ext.uls.css',
 	'localBasePath' => $dir,
 	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
