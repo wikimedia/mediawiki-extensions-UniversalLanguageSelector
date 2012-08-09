@@ -43,7 +43,7 @@ test( "-- Initial check", function() {
 } );
 
 test( "-- $.uls.data testing", function() {
-	expect( 18 );
+	expect( 19 );
 
 	// This test assumes that we don't want any scripts to be in the 'Other'
 	// group. Actually, this may become wrong some day.
@@ -99,6 +99,9 @@ test( "-- $.uls.data testing", function() {
 	deepEqual( allLanguagesByScriptGroup['Greek'], ['el', 'grc', 'pnt', 'ruq-grek', 'tsd'], 'All languages in the Greek script found' );
 
 	deepEqual( $.uls.data.allRegions(), ['NA', 'LA', 'SA', 'EU', 'ME', 'AF', 'AS', 'PA', 'AU', 'WW'], 'All regions found' );
+
+	// autonyms: gn: avañe'ẽ, de: deutsch, hu: magyar, fi: suomi
+	deepEqual( ['de', 'fi', 'gn', 'hu'].sort( $.uls.data.sortByAutonym ), ['gn', 'de', 'hu', 'fi'], 'Languages are correctly sorted by autonym' );
 } );
 
 }() );
