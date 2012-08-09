@@ -60,7 +60,7 @@
 		$.fn.uls.Constructor.prototype = $.extend( {}, $.fn.uls.Constructor.prototype, {
 			render: function() {
 				var $displaySettings = displaySettings();
-				this.$menu.find("div#settings-block").append($displaySettings);
+				this.$menu.find( "div#settings-block" ).append( $displaySettings );
 			}
 		} );
 
