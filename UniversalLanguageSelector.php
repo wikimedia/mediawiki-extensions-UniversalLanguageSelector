@@ -75,6 +75,22 @@ $wgResourceModules['ext.uls.init'] = array(
 	'position' => 'top',
 );
 
+$wgResourceModules['ext.uls.languagesettings'] = array(
+	'scripts' => 'resources/js/ext.uls.languagesettings.js',
+	'styles' => 'resources/css/ext.languagesettings.css',
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'UniversalLanguageSelector',
+);
+
+$wgResourceModules['ext.uls.displaysettings'] = array(
+	'scripts' => 'resources/js/ext.uls.displaysettings.js',
+	'localBasePath' => $dir,
+	'dependencies' => array(
+		'ext.uls.languagesettings',
+	),
+	'remoteExtPath' => 'UniversalLanguageSelector',
+);
+
 $wgResourceModules['jquery.uls'] = array(
 	'scripts' => array(
 		'lib/jquery.uls/src/jquery.uls.core.js',

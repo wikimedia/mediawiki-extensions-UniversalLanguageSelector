@@ -28,6 +28,8 @@ class UniversalLanguageSelectorHooks {
 	 */
 	public static function addModules( $out, $skin ) {
 		$out->addModules( 'ext.uls.init' );
+		$out->addModules( 'ext.uls.languagesettings' );
+		$out->addModules( 'ext.uls.displaysettings' );
 		return true;
 	}
 	/**
