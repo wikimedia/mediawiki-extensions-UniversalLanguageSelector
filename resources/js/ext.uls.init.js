@@ -68,6 +68,7 @@
 			onSelect: function( language ) {
 				changeLanguage( language );
 			},
+			//languages: {'en':'', 'ml':''},// mw.config.get( 'wgULSLanguages' ),
 			searchAPI: mw.util.wikiScript( 'api' ) + "?action=languagesearch"
 		} );
 

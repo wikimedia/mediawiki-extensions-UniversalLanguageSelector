@@ -92,6 +92,18 @@ class UniversalLanguageSelectorHooks {
 		$code = RequestContext::sanitizeLangCode( $code );
 		return true;
 	}
+	/**
+	 * Hook: ResourceLoaderGetConfigVars
+	 * @param $vars Array
+	 * @return bool
+	  */
+	public static function addConfig( &$vars ) {
+		global $wgContLang;
+		$languages = Language::fetchLanguageNames( $wgContLang->getCode() );
+		$languageData = htmlspecialchars( FormatJSON::encode( $languages ) );
+		$vars['wgULSLanguages'] = $languageData;
+		return true;
+	}
 
 	/**
 	 * Add the template for the ULS to the body.
@@ -100,11 +112,8 @@ class UniversalLanguageSelectorHooks {
 	 * TODO: hardcoded English
 	 */
 	public static function addTemplate( &$data, $skin ) {
-		global $wgContLang;
-		$languages = Language::fetchLanguageNames( $wgContLang->getCode() );
-		$languageData = htmlspecialchars( FormatJSON::encode( $languages ) );
 		$data .= "
-		<div class='uls-menu' data-languages=\"" . $languageData . "\">
+		<div class='uls-menu'>
 			<div class='row'>
 				<span class='icon-close'></span>
 			</div>
