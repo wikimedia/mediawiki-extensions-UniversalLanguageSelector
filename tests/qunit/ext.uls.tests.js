@@ -61,7 +61,9 @@ test( "-- Initial check", function() {
 } );
 
 test( "-- $.uls.data testing", function() {
-	expect( 20 );
+	expect( 21 );
+
+	strictEqual( $.uls.data.autonyms()['he'], 'עברית', 'Correct autonym is returned for Hebrew using autonyms().' );
 
 	// This test assumes that we don't want any scripts to be in the 'Other'
 	// group. Actually, this may become wrong some day.
