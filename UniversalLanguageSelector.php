@@ -113,7 +113,7 @@ $wgResourceModules['jquery.uls'] = array(
 
 $wgResourceModules['jquery.uls.data'] = array(
 	'scripts' => array(
-		'lib/jquery.uls/data/jquery.uls.data.js',
+		'lib/jquery.uls/src/jquery.uls.data.js',
 		'lib/jquery.uls/src/jquery.uls.data.utils.js',
 	),
 	'localBasePath' => $dir,
