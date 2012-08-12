@@ -32,6 +32,7 @@ $parsed = spyc_load( $data );
 $json = json_encode( $parsed );
 $languageNames = FormatJSON::encode( Language::fetchLanguageNames() );
 $js = <<<JAVASCRIPT
+// This file is generated from data/langdb.yaml by ulsdata2json.php
 ( function ( $ ) {
 	$.uls = {};
 	$.uls.data = $json;
