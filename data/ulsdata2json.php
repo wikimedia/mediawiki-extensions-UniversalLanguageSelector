@@ -29,8 +29,8 @@ include __DIR__ . '/spyc.php';
 
 $data = file_get_contents( 'langdb.yaml' );
 $parsed = spyc_load( $data );
-$json = json_encode( $parsed );
-$languageNames = FormatJSON::encode( Language::fetchLanguageNames() );
+$json = FormatJSON::encode( $parsed, true );
+$languageNames = FormatJSON::encode( Language::fetchLanguageNames(), true );
 $js = <<<JAVASCRIPT
 ( function ( $ ) {
 	$.uls = {};
