@@ -102,3 +102,9 @@ $wgResourceModules['jquery.uls.data'] = array(
 	'localBasePath' => $dir,
 	'remoteExtPath' => 'UniversalLanguageSelector',
 );
+
+$wgResourceModules['jquery.webfonts'] = array(
+		'scripts' => 'lib/jquery.webfonts.js',
+		'localBasePath' => $dir,
+		'remoteExtPath' => 'UniversalLanguageSelector',
+);
