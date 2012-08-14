@@ -50,9 +50,6 @@
 					.prop( 'id', 'display-settings-block' )
 					.append( $displaySettingsTitle )
 					.append( $displaySettingsText );
-			$displaySettings.on( 'click', function() {
-				// TODO: Show language settings window with display settings highlighted
-			} );
 			return $displaySettings;
 		}
 
@@ -61,6 +58,7 @@
 			render: function() {
 				var $displaySettings = displaySettings();
 				this.$menu.find( "div#settings-block" ).append( $displaySettings );
+				$displaySettings.languagesettings();
 			}
 		} );
 

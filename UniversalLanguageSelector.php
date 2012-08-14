@@ -87,6 +87,7 @@ $wgResourceModules['ext.uls.displaysettings'] = array(
 	'localBasePath' => $dir,
 	'dependencies' => array(
 		'ext.uls.languagesettings',
+		'jquery.webfonts'
 	),
 	'remoteExtPath' => 'UniversalLanguageSelector',
 );
