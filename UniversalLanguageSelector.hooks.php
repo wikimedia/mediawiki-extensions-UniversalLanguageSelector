@@ -108,7 +108,7 @@ class UniversalLanguageSelectorHooks {
 		$data .= "
 		<div class='uls-menu' data-languages=\"" . $languageData . "\">
 			<div class='row'>
-				<span class='icon-close'></span>
+				<span id='uls-close' class='icon-close'></span>
 			</div>
 			<div class='row'>
 				<div class='four columns'>
