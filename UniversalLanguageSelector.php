@@ -71,6 +71,7 @@ $wgResourceModules['ext.uls.init'] = array(
 		'mediawiki.Uri',
 		'jquery.tipsy',
 		'jquery.uls',
+		'ext.uls.languagesettings',
 	),
 	'position' => 'top',
 );
