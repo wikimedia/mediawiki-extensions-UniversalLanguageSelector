@@ -89,7 +89,8 @@ $wgResourceModules['ext.uls.webfonts'] = array(
 	'localBasePath' => $dir,
 	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
-		'jquery.webfonts'
+		'jquery.webfonts',
+		'ext.uls.webfonts.repository',
 	),
 );
 
@@ -138,7 +139,7 @@ $wgResourceModules['jquery.webfonts'] = array(
 );
 
 $wgResourceModules['ext.uls.webfonts.repository'] = array(
-	'scripts' => 'resources/js/jquery.webfonts.repository.js',
+	'scripts' => 'resources/js/ext.uls.webfonts.repository.js',
 	'localBasePath' => $dir,
 	'remoteExtPath' => 'UniversalLanguageSelector',
 );

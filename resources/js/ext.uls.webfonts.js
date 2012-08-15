@@ -19,15 +19,11 @@
 ( function($, mw) {
 	"use strict";
 	$( document ).ready( function() {
-		// FIXME Dummy repository
+		var mediawikiFontRepository = $.webfonts.repository;
+		mediawikiFontRepository.base = mw.config.get( 'wgExtensionAssetsPath' )
+			+ '/UniversalLanguageSelector/data/fontrepo/fonts/';
 		$( 'body' ).webfonts( {
-			repository : {
-				base : '../data/fonts/',
-				fonts : {},
-				languages : {
-					'en' : [ 'Sans', 'Serif' ]
-				}
-			}
+			repository: mediawikiFontRepository
 		} );
 	} );
-} )( jQuery );
+} )( jQuery, mediaWiki );
