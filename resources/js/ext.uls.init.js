@@ -20,7 +20,7 @@
 ( function( $, mw ) {
 	"use strict";
 
-	$( document ).ready( function( ) {
+	$( document ).ready( function() {
 		var $ulsTrigger = $( '.uls-trigger' ),
 			previousLang = $.cookie( 'uls-previous-language' ),
 			currentLang = mw.config.get( 'wgUserLanguage' );

@@ -23,7 +23,7 @@
 	var closeRow = '<div class="row" id="languagesettings-close">' +
 		'<span id="languagesettings-close" class="icon-close"></span>' +
 		'</div>';
-	var settingsMenu = '<div class="four columns">' +
+	var settingsMenu = '<div class="four columns languagesettings-menu">' +
 		'<h1>Language settings</h1>' + // TODO i18n
 		'<div class="settings-menu-items">' +
 		'</div>' +
@@ -59,9 +59,10 @@
 
 		listen: function() {
 			var that = this;
-			// Register all event listeners to the ULS here.
+			// Register all event listeners to the ULS language settings here.
 			that.$element.on( "click", $.proxy( that.click, that ) );
-			$( "#languagesettings-close" ).on( "click", $.proxy( that.click, that ) );
+			$( '#languagesettings-close' ).on( "click", $.proxy( that.click, that ) );
+			$( '.uls-settings-close' ).on( "click", $.proxy( that.click, that ) );
 		},
 
 		render: function() {
@@ -79,13 +80,12 @@
 			}
 
 			// Show the default module
-			$( "#languagesettings-settings-panel" ).html( firstModule.render() );
-			firstModule.listen();
+			firstModule.render( $( "#languagesettings-settings-panel" ) );
 		},
 
 		renderModule: function( moduleName ) {
+			var that = this;
 			var $settingsMenuItems = this.$window.find( ".settings-menu-items" );
-			var $settingsPanel = this.$window.find( "#languagesettings-settings-panel" );
 			var module = $.fn.languagesettings.modules[moduleName];
 			var $settingsTitle = $( "<div>" )
 				.addClass( "settings-title" )
@@ -104,8 +104,8 @@
 
 			$settingsLink.on( "click", function() {
 				var module = $( this ).data( "module" );
-				$settingsPanel.html( module.render() );
-				module.listen();
+				var $settingsPanel = that.$window.find( "#languagesettings-settings-panel" );
+				module.render( $settingsPanel );
 				$( this ).addClass( 'active' );
 			} );
 		},
