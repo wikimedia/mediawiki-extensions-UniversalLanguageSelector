@@ -1,0 +1,18 @@
+.uls-font-label,.uls-font-select {
+	font-size: 10pt;
+	line-height: 16pt;
+}
+
+.uls-font-select {
+	height: 16pt;
+}
+
+.uls-ui-languages button {
+	width: 23%;
+	text-overflow: ellipsis;
+	margin-right: 15px;
+}
+
+.uls-ui-languages button#uls-more-languages {
+	width: auto;
+}

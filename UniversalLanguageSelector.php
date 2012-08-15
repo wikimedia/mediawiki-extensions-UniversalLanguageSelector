@@ -79,7 +79,7 @@ $wgResourceModules['ext.uls.init'] = array(
 
 $wgResourceModules['ext.uls.languagesettings'] = array(
 	'scripts' => 'resources/js/ext.uls.languagesettings.js',
-	'styles' => 'resources/css/ext.languagesettings.css',
+	'styles' => 'resources/css/ext.uls.languagesettings.css',
 	'localBasePath' => $dir,
 	'remoteExtPath' => 'UniversalLanguageSelector',
 );
@@ -96,6 +96,7 @@ $wgResourceModules['ext.uls.webfonts'] = array(
 
 $wgResourceModules['ext.uls.displaysettings'] = array(
 	'scripts' => 'resources/js/ext.uls.displaysettings.js',
+	'styles' => 'resources/css/ext.uls.displaysettings.css',
 	'localBasePath' => $dir,
 	'dependencies' => array(
 		'ext.uls.languagesettings',

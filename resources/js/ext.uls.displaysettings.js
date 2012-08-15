@@ -34,7 +34,7 @@
 			+ '</div>'
 			+ '<div class="row"><h5>Set your preferred fonts to use</h5></div>'
 			+ '<div class="row">'
-			+ '<div class="six columns"><label id="font-selector"></label></div>'
+			+ '<div class="six columns"><label class="uls-font-label" id="font-selector"></label></div>'
 			+ '<select class="three columns end uls-font-select"></select></div>'
 			+ '</div>'
 			+ '<div class="row"></div>'
