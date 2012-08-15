@@ -92,7 +92,7 @@ test( "-- $.uls.data testing", function() {
 	deepEqual( $.uls.data.languagesInRegions( ['NA', 'WW'] ),
 		[
 			"akz", "ase", "avk", "cho", "chr", "chy", "cr-cans", "cr-latn", "cr",
-			"en-ca", "en", "eo", "es-formal", "es", "esu",
+			"en-ca", "en", "eo", "es-formal", "es", "esu", "fr",
 			"haw", "ht", "ia", "ie", "ik", "ike-cans", "ike-latn", "io",
 			"iu", "jam", "jbo", "kl", "lfn", "mic", "mus", "nah", "nov", "nv",
 			"pdc", "pdt", "sei", "simple", "srn", "tokipona",
