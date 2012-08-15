@@ -30,7 +30,7 @@ define( 'ULS_VERSION', '2012-07-20' );
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'UniversalLanguageSelector',
-	'version' => '0.1',
+	'version' => ULS_VERSION,
 	'author' => array(
 		'Alolita Sharma',
 		'Amir Aharoni',
