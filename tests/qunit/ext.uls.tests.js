@@ -89,8 +89,9 @@ test( "-- $.uls.data testing", function() {
 	deepEqual( $.uls.data.languagesInRegion( 'AU' ), ["en-gb", "en", "hif-latn", "hif", "mi", "na"], "languages of region AU are selected correctly" );
 	deepEqual( $.uls.data.languagesInRegions( ['NA', 'WW'] ),
 		[
-			"akz", "ase", "avk", "cho", "chr", "chy", "cr", "en-ca", "en", "eo", "es-formal", "es", "esu",
-			"haw", "ht", "ia", "ie", "ik", "ike-cans", "ike-latn", "ike", "io",
+			"akz", "ase", "avk", "cho", "chr", "chy", "cr-cans", "cr-latn", "cr",
+			"en-ca", "en", "eo", "es-formal", "es", "esu",
+			"haw", "ht", "ia", "ie", "ik", "ike-cans", "ike-latn", "io",
 			"iu", "jam", "jbo", "kl", "lfn", "mic", "mus", "nah", "nov", "nv",
 			"pdc", "pdt", "sei", "simple", "srn", "tokipona",
 			"vo", "yi", "yua"
@@ -108,7 +109,7 @@ test( "-- $.uls.data testing", function() {
 	deepEqual( $.uls.data.regionsInGroup( 4 ), ["WW"], "regions in group 4 are selected correctly" );
 
 	var languagesByScriptInNA = $.uls.data.languagesByScriptInRegion( 'NA' );
-	deepEqual( languagesByScriptInNA['Cans'], ["cr", "ike-cans", "iu"], "correct languages in Cans in NA selected" );
+	deepEqual( languagesByScriptInNA['Cans'], ["cr-cans", "cr", "ike-cans", "iu"], "correct languages in Cans in NA selected" );
 
 	strictEqual( $.uls.data.autonym( 'pa' ), 'ਪੰਜਾਬੀ', 'Correct autonym of the Punjabi language was selected' );
 
