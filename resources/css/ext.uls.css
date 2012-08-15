@@ -5,12 +5,10 @@ div#settings-block {
 
 div#display-settings-block { 
 	/* @embed */
-	background: url('../images/display.png');
-	background-repeat: no-repeat;
+	background: #F6F6F6 url('../images/display.png') no-repeat;
 	background-size: 20px auto;
 	padding-left: 25px;
 	cursor: pointer;
-	background-color: #F6F6F6;
 }
 
 .settings-title {

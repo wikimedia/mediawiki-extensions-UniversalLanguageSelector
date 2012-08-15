@@ -64,7 +64,6 @@ class LanguageNameSearch {
 	 * @return integer Code point of first letter of string
 	 */
 	static function getCodepoint( $str ) {
-		$unicode = array();
 		$values = array();
 		$lookingFor = 1;
 		for ( $i = 0; $i < strlen( $str ); $i++ ) {
@@ -104,7 +103,6 @@ class LanguageNameSearch {
 			return 0;
 		}
 		$prevRow = range( 0, $length2 );
-		$currentRow = array();
 		for ( $i = 0; $i < $length1; $i++ ) {
 			$currentRow = array();
 			$currentRow[0] = $i + 1;

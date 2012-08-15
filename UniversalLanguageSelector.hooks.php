@@ -53,7 +53,6 @@ class UniversalLanguageSelectorHooks {
 	 */
 	static function addTrigger( array &$personal_urls, &$title ) {
 		global $wgLang;
-		$tabindex = 2;
 		$personal_urls = array( 'uls'=> array(
 					'text' =>  $wgLang->getLanguageName( $wgLang->getCode() ),
 					'href' => '#',
@@ -119,7 +118,7 @@ class UniversalLanguageSelectorHooks {
 			</div>
 			<div class='row'>
 				<div class='four columns'>
-					<h1>" . wfMsgHtml( 'uls-select-content-language' ) . "</h1>
+					<h1>" . $skin->msg( 'uls-select-content-language' )->escaped() . "</h1>
 				</div>
 				<div class='three columns' id='settings-block'></div>
 				<div class='five columns' id='map-block'>

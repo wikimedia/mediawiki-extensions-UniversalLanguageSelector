@@ -30,7 +30,7 @@
 			+ '<div class="row"><h4>Font Settings</h4></div>'
 			+ '<div  class="row">'
 			+ '<label class="checkbox"><input type="checkbox" checked id="webfonts-enable-checkbox" />'
-			+ '<b>Download fonts automatically when needed</b> '
+			+ '<strong>Download fonts automatically when needed</strong> '
 			+ 'Web fonts will be downloaded when text in special scripts is displayed. '
 			+ '<a href="#">More Information</a>'
 			+ '</span></label>'
