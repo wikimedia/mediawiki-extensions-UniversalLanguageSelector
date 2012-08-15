@@ -117,11 +117,13 @@
 				var pos = $.extend( {}, this.$element.offset(), {
 					height: this.$element[0].offsetHeight
 				} );
+				var top = this.options.top || pos.top + pos.height;
+				var left = this.options.left || '25%';
 				// FIXME this is not exactly correct. position may not
 				// be relative to the trigger.
 				this.$window.css( {
-					top: pos.top + pos.height,
-					left: '25%'
+					top: top,
+					left: left
 				} );
 			}
 
@@ -165,7 +167,9 @@
 		settings: {},
 		template: windowTemplate,
 		modules: {},
-		defaultModule: false
+		defaultModule: false,
+		top: null,
+		left: null
 	};
 
 	$.fn.languagesettings.Constructor = LanguageSettings;

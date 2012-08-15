@@ -59,7 +59,11 @@
 				var $displaySettings = displaySettings();
 				var that = this;
 				this.$menu.find( "div#settings-block" ).append( $displaySettings );
-				$displaySettings.languagesettings();
+				var position = this.position();
+				$displaySettings.languagesettings( {
+					top: position.top,
+					left: position.left
+				} );
 				$displaySettings.on( 'click', function() {
 					that.hide();
 				} );
