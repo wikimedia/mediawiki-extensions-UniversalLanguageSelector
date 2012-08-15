@@ -1,44 +1,14 @@
-#uls-current-language-nav {
-	/* @embed */
-	background: url('../images/cog-16x16-ltr.png') no-repeat scroll right top transparent;
+#uls-current-language-nav { /* @embed */
+	background: url('../images/cog-16x16-ltr.png') no-repeat scroll right
+		top transparent;
 	cursor: pointer;
-}
-
-#language-settings-dialog {
-	display: none; /* hidden initially */
-
-	/* XXX pretty random position values, just to make it visible */
-	bottom: 100px;
-	left: 200px;
-
-	/* From here on - from .uls-menu */
-	position: fixed;
-	z-index: 1000;
-	display: none;
-	min-width: 800px; /* changed */
-	margin-top: 1px;
-	width: 45%;
-	/* Styling */
-	background-color: #ffffff;
-	border: 1px solid #ccc;
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	*border-right-width: 2px;
-	*border-bottom-width: 2px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding;
-	background-clip: padding-box;
 }
 
 /* From uls-menu, unchanged */
 #uls-current-language-nav a {
 	color: #0088CC;
 }
+
 #uls-current-language-nav h1 {
 	font-weight: normal;
 	padding-top: 1.25em;
@@ -49,6 +19,7 @@
 	padding-left: 15px;
 	color: #777;
 }
+
 #uls-current-language-nav h2 {
 	font-size: 16pt;
 	line-height: 1.5em;
@@ -58,6 +29,7 @@
 	border-bottom: none;
 	color: #777;
 }
+
 .uls-menu h3 {
 	font-size: 14pt;
 	line-height: 1.5em;
@@ -78,12 +50,45 @@
 	border-left: 3px solid transparent;
 	display: block;
 	font-size: 12pt;
-	background: url(http://dl.dropbox.com/u/30377416/i18n/icons/WMF-Agora-Display_settings-grey.png) no-repeat scroll 15px center transparent;
 }
 
-.menu-section.active{
+.menu-section.active {
 	color: black;
 	background-color: #F6F6F6;
 	border-left-color: #3366BB;
-	background-image: url(http://dl.dropbox.com/u/30377416/i18n/icons/WMF-Agora-Display_settings-blue.svg);
+}
+
+button.toggle.button {
+	background: #eee;
+	color: black;
+	cursor: pointer;
+	border-top: solid 2px #eaeaea;
+	border-left: solid 2px #eaeaea;
+	border-bottom: solid 2px #777;
+	border-right: solid 2px #777;
+	padding: 5px 5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-align: center;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+button.toggle.button.down {
+	background: #bbb;
+	border-top: solid 2px #777;
+	border-left: solid 2px #777;
+	border-bottom: solid 2px #eaeaea;
+	border-right: solid 2px #eaeaea;
+}
+
+.language-settings-buttons {
+	border-top: solid 2px #aaa;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+label.checkbox input[type="checkbox"] {
+	padding-left: -20px;
+	float: left;
 }

@@ -72,7 +72,7 @@ $wgResourceModules['ext.uls.init'] = array(
 		'mediawiki.Uri',
 		'jquery.tipsy',
 		'jquery.uls',
-		'ext.uls.languagesettings',
+		'ext.uls.displaysettings',
 	),
 	'position' => 'top',
 );
@@ -84,12 +84,21 @@ $wgResourceModules['ext.uls.languagesettings'] = array(
 	'remoteExtPath' => 'UniversalLanguageSelector',
 );
 
+$wgResourceModules['ext.uls.webfonts'] = array(
+	'scripts' => 'resources/js/ext.uls.webfonts.js',
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'UniversalLanguageSelector',
+	'dependencies' => array(
+		'jquery.webfonts'
+	),
+);
+
 $wgResourceModules['ext.uls.displaysettings'] = array(
 	'scripts' => 'resources/js/ext.uls.displaysettings.js',
 	'localBasePath' => $dir,
 	'dependencies' => array(
 		'ext.uls.languagesettings',
-		'jquery.webfonts'
+		'ext.uls.webfonts'
 	),
 	'remoteExtPath' => 'UniversalLanguageSelector',
 );
@@ -129,7 +138,7 @@ $wgResourceModules['jquery.webfonts'] = array(
 );
 
 $wgResourceModules['ext.uls.webfonts.repository'] = array(
-		'scripts' => 'resources/js/jquery.webfonts.repository.js',
-		'localBasePath' => $dir,
-		'remoteExtPath' => 'UniversalLanguageSelector',
+	'scripts' => 'resources/js/jquery.webfonts.repository.js',
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'UniversalLanguageSelector',
 );

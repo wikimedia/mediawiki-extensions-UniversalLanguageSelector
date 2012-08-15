@@ -21,7 +21,7 @@
 	"use strict";
 
 	var closeRow = '<div class="row" id="languagesettings-close">' +
-		'<span class="icon-close"></span>' +
+		'<span id="languagesettings-close" class="icon-close"></span>' +
 		'</div>';
 	var settingsMenu = '<div class="four columns">' +
 		'<h1>Language settings</h1>' + // TODO i18n
@@ -61,17 +61,17 @@
 			var that = this;
 			// Register all event listeners to the ULS here.
 			that.$element.on( "click", $.proxy( that.click, that ) );
-			$( ".icon-close" ).on( "click", $.proxy( that.click, that ) );
+			$( "#languagesettings-close" ).on( "click", $.proxy( that.click, that ) );
 		},
 
 		render: function() {
 			// Get the name of all registered modules and list them in left side menu.
 			var modules = $.fn.languagesettings.modules;
-			var firstModuleName = this.options.defaultModule;
+			var firstModule = modules[this.options.defaultModule];
 			for ( var moduleName in modules ) {
 				if ( modules.hasOwnProperty( moduleName ) ) {
-					if ( !firstModuleName ) {
-						firstModuleName = moduleName;
+					if ( !firstModule ) {
+						firstModule = modules[moduleName];
 					}
 					// Call render function on the current setting module.
 					this.renderModule( moduleName );
@@ -79,9 +79,8 @@
 			}
 
 			// Show the default module
-			$( "#languagesettings-settings-panel" ).html(
-				$.fn.languagesettings.modules[firstModuleName].render()
-			);
+			$( "#languagesettings-settings-panel" ).html( firstModule.render() );
+			firstModule.listen();
 		},
 
 		renderModule: function( moduleName ) {
@@ -95,7 +94,7 @@
 				.addClass( "settings-text" )
 				.text( module.description );
 			var $settingsLink = $( "<div>" )
-				.addClass( moduleName + "-settings-block" )
+				.addClass( moduleName + "-settings-block menu-section" )
 				.prop( "id", moduleName + "-settings-block" )
 				.data( "module", module )
 				.append( $settingsTitle )
@@ -104,7 +103,10 @@
 			$settingsMenuItems.append( $settingsLink );
 
 			$settingsLink.on( "click", function() {
-				$settingsPanel.html( $( this ).data( "module" ).render() );
+				var module = $( this ).data( "module" );
+				$settingsPanel.html( module.render() );
+				module.listen();
+				$( this ).addClass( 'active' );
 			} );
 		},
 
@@ -112,7 +114,17 @@
 			if ( !this.initialized ) {
 				this.render();
 				this.initialized = true;
+				var pos = $.extend( {}, this.$element.offset(), {
+					height: this.$element[0].offsetHeight
+				} );
+				// FIXME this is not exactly correct. position may not
+				// be relative to the trigger.
+				this.$window.css( {
+					top: pos.top + pos.height,
+					left: '25%'
+				} );
 			}
+
 			this.shown = true;
 			this.$window.show();
 		},
