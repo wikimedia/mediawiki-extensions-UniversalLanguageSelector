@@ -18,16 +18,21 @@
  */
 ( function ( $, mw ) {
 	"use strict";
+
 	$( document ).ready( function() {
 		var mediawikiFontRepository = $.webfonts.repository;
+
 		mediawikiFontRepository.base = mw.config.get( 'wgExtensionAssetsPath' )
 			+ '/UniversalLanguageSelector/data/fontrepo/fonts/';
+
 		$( 'body' ).webfonts( {
 			repository: mediawikiFontRepository
 		} );
+
 		var $webfonts = $( 'body' ).data( 'webfonts' );
 		var webfontPreferences = new $.fn.uls.preferences( 'webfonts' );
 		var rememberedFont = webfontPreferences.get( mw.config.get( 'wgUserLanguage' ) );
+
 		if ( rememberedFont === 'system' ) {
 			$webfonts.reset();
 		} else {

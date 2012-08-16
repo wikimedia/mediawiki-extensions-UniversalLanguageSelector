@@ -27,7 +27,7 @@
 			+ '<div class="row"><div class="twelve columns"><h4>Font Settings</h4></div></div>'
 			+ '<div class="row">'
 			+ '<div class="eleven columns">'
-			+ '<label class="checkbox"><input type="checkbox" checked id="webfonts-enable-checkbox" />'
+			+ '<label class="checkbox"><input type="checkbox" id="webfonts-enable-checkbox" />'
 			+ '<strong>Download fonts automatically when needed</strong> '
 			+ 'Web fonts will be downloaded when text in special scripts is displayed. '
 			+ '<a href="#">More Information</a>'
@@ -64,17 +64,30 @@
 		/**
 		 * Render the module into a given target
 		 */
-		render: function ( ) {
+		render: function () {
 			this.$parent.$settingsPanel.empty();
 			this.$webfonts = $( 'body' ).data( 'webfonts' );
 			this.$parent.$settingsPanel.append( this.$template );
+			$( 'select.uls-font-select' ).val(  );
 			this.prepareLanguages();
 			this.prepareFonts();
+			this.prepareWebfontsCheckbox();
+
 			this.listen();
 		},
 
+		prepareWebfontsCheckbox: function () {
+			var enable = this.webfontPreferences.get( 'webfontsEnabled' );
+			// If the user didn't use the checkbox, the preference will be undefined.
+			// The default for now is to enable webfonts if the user didn't select anything.
+			if ( enable === undefined ) {
+				enable = true;
+			}
+			$( '#webfonts-enable-checkbox' ).prop( 'checked', enable );
+		},
+
 		/**
-		 * Prepare the UI language chooser
+		 * Prepare the UI language selector
 		 */
 		prepareLanguages: function () {
 			var $languages = $( 'div.uls-ui-languages' );
@@ -83,6 +96,7 @@
 			var languages = [this.language];
 			$.merge( languages, previousLanguages);
 			$.unique( languages );
+
 			for ( var i = 0; i < 3; i++ ) {
 				var language = languages[i];
 				var $button = $( '<button>' )
@@ -125,13 +139,15 @@
 		},
 
 		/**
-		 * Prepare the font chooser.
+		 * Prepare the font selector.
 		 */
 		prepareFonts: function () {
 			var fonts = this.$webfonts.list( this.language );
 			var $fontSelector = $( 'select.uls-font-select' );
+
 			$fontSelector.find( 'option' ).remove();
 			var savedFont = this.webfontPreferences.get( this.language );
+
 			if( fonts && fonts.length ) {
 				$.each( fonts, function ( key, font ) {
 					var $fontOption = $( "<option>" )
@@ -140,11 +156,16 @@
 					$fontOption.attr( 'selected', savedFont === font );
 				} );
 			}
+
 			var $systemFont = $( "<option>" ).val( 'system' ).text( 'System font' );
 			$fontSelector.append( $systemFont );
-			$systemFont.attr( 'selected', savedFont === 'system' );
+			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
 			var $fontLabel = $( 'label#font-selector' );
 			$fontLabel.text( "Select font for " + $.uls.data.autonym( this.language ) );
+		},
+
+		selectedFont: function () {
+			return $( 'select.uls-font-select' ).find( 'option:selected' ).val();
 		},
 
 		/**
@@ -152,14 +173,24 @@
 		 */
 		listen: function () {
 			var that = this;
+
 			$( "div.uls-ui-languages button.button" ).click( function () {
 				$( "button.button" ).removeClass( "down" );
 				$( this ).addClass( "down" );
 				that.language = $( this ).data( 'language' ) || that.language;
 				that.prepareFonts();
 			} );
+
 			$( '#uls-displaysettings-apply' ).on( 'click', function () {
 				that.apply();
+			} );
+
+			$( '#webfonts-enable-checkbox' ).on( 'click', function () {
+				if ( this.checked ) {
+					that.$webfonts.apply( that.selectedFont() );
+				} else {
+					that.$webfonts.reset();
+				}
 			} );
 		},
 
@@ -195,9 +226,9 @@
 		 * Handle the apply button press
 		 */
 		apply: function () {
-			var that = this;
-			var $fontSelector = $( 'select.uls-font-select' );
-			var font = $fontSelector.find( 'option:selected' ).val();
+			var that = this,
+				font = this.selectedFont();
+
 			// Live font update if current UI language match with language selection
 			if ( this.language === this.currentLanguage() ) {
 				if ( font === 'system' ) {
@@ -206,8 +237,11 @@
 					this.$webfonts.apply( font );
 				}
 			}
+
 			// Save the preferences
 			this.webfontPreferences.set( this.language, font );
+			this.webfontPreferences.set( 'webfontsEnabled',
+				$( '#webfonts-enable-checkbox' ).prop( 'checked' ) ? true : false );
 			this.webfontPreferences.save( function ( result ) {
 				// closure for not losing the scope
 				that.onSave( result );

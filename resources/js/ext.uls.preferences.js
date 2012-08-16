@@ -18,7 +18,7 @@
  * @licence MIT License
  */
 
-(function( $, mw ) {
+( function( $, mw ) {
 	"use strict";
 
 	var ULSPreferences = function ( group ) {
