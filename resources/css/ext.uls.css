@@ -8,8 +8,12 @@ div#display-settings-block {
 	/* @embed */
 	background: #F6F6F6 url('../images/display.png') no-repeat;
 	background-size: 20px auto;
+	/* This is only few pixels off from the below */
+	background-position: 10% 5px;
+	/* Does not work for RTL
 	background-position-x: 15px;
 	background-position-y: 5px;
+	*/
 	padding-left: 40px;
 	cursor: pointer;
 }
