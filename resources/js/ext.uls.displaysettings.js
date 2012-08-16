@@ -136,7 +136,7 @@
 					var $fontOption = $( "<option>" )
 					.attr( "value", font ).text( font );
 					$fontSelector.append( $fontOption );
-					$fontOption.attr( 'selected',  savedFont === font );
+					$fontOption.attr( 'selected', savedFont === font );
 				} );
 			}
 			var $systemFont = $( "<option>" ).val( 'system' ).text( 'System font' );
@@ -216,6 +216,6 @@
 
 	// Register this module to language settings modules
 	$.fn.languagesettings.modules = $.extend( $.fn.languagesettings.modules, {
-		display:  DisplaySettings
+		display: DisplaySettings
 	} );
 } ) ( jQuery );
