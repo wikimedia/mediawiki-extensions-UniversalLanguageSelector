@@ -38,3 +38,33 @@ $messages['qqq'] = array(
 	'uls-desc' => 'Extension description',
 	'uls-select-content-language' => 'Main heading in the language selector popup.',
 );
+
+/** German (Deutsch)
+ * @author Kghbln
+ * @author MF-Warburg
+ * @author Metalhead64
+ */
+$messages['de'] = array(
+	'UniversalLanguageSelector' => 'Universelle Sprachauswahl',
+	'uls-desc' => 'Ermöglicht verschiedene Wege, eine Sprache auszuwählen und Spracheinstellungen anzupassen',
+	'uls-select-content-language' => 'Sprache auswählen',
+);
+
+/** Upper Sorbian (hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'UniversalLanguageSelector' => 'Uniwersalny wuběr rěčow',
+	'uls-desc' => 'Dawa wužiwarjej wšelake metody, zo by rěč wubrał a rěčne nastajenja přiměrił',
+	'uls-select-content-language' => 'Rěč wubrać',
+);
+
+/** Tagalog (Tagalog)
+ * @author AnakngAraw
+ */
+$messages['tl'] = array(
+	'UniversalLanguageSelector' => 'Pandaigdig na Pampili ng Wika',
+	'uls-desc' => 'Nagbibigay sa tagagamit ng ilang mga paraan upang makapili ng isang wika at upang mabago ang mga katakdaan ng wika',
+	'uls-select-content-language' => 'Piliin ang wika',
+);
+
