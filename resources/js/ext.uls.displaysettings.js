@@ -20,27 +20,31 @@
 ( function( $ ) {
 	"use strict";
 
-	var template = '<div class="row"><h3>Display Settings</h3></div>'
-			+ '<div><h4>Language used for menus</h4></div>'
-			+ '<div class="uls-ui-languages row">'
-			+ '</div>'
-			+ '<div class="row"><h4>Font Settings</h4></div>'
+	var template = '<div class="row"><div class="twelve columns"><h3>Display Settings</h3></div></div>'
+			+ '<div class="row"><div class="eleven columns"><h4>Select Language</h4></div></div>'
+			+ '<div class="row"><div class="uls-ui-languages eleven columns">'
+			+ '</div></div>'
+			+ '<div class="row"><div class="twelve columns"><h4>Font Settings</h4></div></div>'
 			+ '<div class="row">'
+			+ '<div class="eleven columns">'
 			+ '<label class="checkbox"><input type="checkbox" checked id="webfonts-enable-checkbox" />'
 			+ '<strong>Download fonts automatically when needed</strong> '
 			+ 'Web fonts will be downloaded when text in special scripts is displayed. '
 			+ '<a href="#">More Information</a>'
 			+ '</span></label>'
 			+ '</div>'
-			+ '<div class="row"><h5>Set your preferred fonts to use</h5></div>'
+			+ '</div>'
+			+ '<div class="row"><h5 class="twelve columns">Select your preferred fonts</h5></div>'
 			+ '<div class="row">'
 			+ '<div class="six columns"><label class="uls-font-label" id="font-selector"></label></div>'
 			+ '<select class="three columns end uls-font-select"></select></div>'
 			+ '</div>'
 			+ '<div class="row"></div>'
 			+ '<div class="row language-settings-buttons">'
-			+ '<button class="three columns offset-by-three button uls-settings-close">Cancel</button>'
-			+ '<button id="uls-displaysettings-apply" class="four columns offset-by-one active blue button">Apply changes</button>'
+			+ '<div class="eleven columns">'
+			+ '<button class="button uls-settings-close">Cancel</button>'
+			+ '<button id="uls-displaysettings-apply" class="active blue button">Apply changes</button>'
+			+ '</div>'
 			+ '</div>'; // FIXME i18n and too much hardcoding.
 
 	var DisplaySettings = function ( $parent ) {
@@ -82,13 +86,10 @@
 			for ( var i = 0; i < 3; i++ ) {
 				var language = languages[i];
 				var $button = $( '<button>' )
-					.addClass( 'two columns button' )
+					.addClass( 'button' )
 					.text( $.uls.data.autonym( language ) );
 				if ( language === this.language ) {
 					$button.addClass( 'down' );
-				}
-				if ( i > 0 ) {
-					$button.addClass( 'offset-by-one' );
 				}
 				$button.data( 'language', language );
 				$languages.append( $button );
@@ -98,7 +99,7 @@
 			}
 			var $moreLanguagesButton = $( '<button>' )
 				.prop( 'id', 'uls-more-languages' )
-				.addClass( 'two columns offset-by-one button' )
+				.addClass( 'button' )
 				.text( '...' );
 			$languages.append( $moreLanguagesButton );
 		},

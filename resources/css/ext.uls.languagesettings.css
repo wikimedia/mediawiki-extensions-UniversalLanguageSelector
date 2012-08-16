@@ -87,15 +87,33 @@
 	font-size: 12pt;
 }
 
-.menu-section.active {
+#languagesettings-panels .menu-section.active {
 	color: black;
 	background-color: #F6F6F6;
 	border-left-color: #3366BB;
 }
 
-.language-settings-buttons {
+
+#languagesettings-panels div#settings-block {
+	border-left: 1px solid #C9C9C9;
+	padding-left: 10px;
+	background-color: #F6F6F6;
+	line-height: 1.2em;
+}
+
+#languagesettings-panels div#display-settings-block {
+	background-position: 6% 6px;
+	padding-left: 40px;
+	cursor: pointer;
+}
+
+#languagesettings-panels div#display-settings-block:hover {
+	background-color: #F6F6F6;
+}
+
+#languagesettings-settings-panel .language-settings-buttons {
 	border-top: 1px solid #F0F0F0;
-	margin-top: 15px;
+	margin-top: 25px;
 	padding: 15px;
 	width: auto;
 }
@@ -113,7 +131,7 @@
 	margin-left: 0;
 }
 
-.checkbox b {
+.checkbox strong {
 	color: #252525;
 }
 

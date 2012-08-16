@@ -1,25 +1,36 @@
 div#settings-block {
 	border-left: 1px solid #C9C9C9;
-	padding-left: 10px;
-	background-color: #F6F6F6;
+	padding-left: 4px;
+	line-height: 1.2em;
 }
 
-div#display-settings-block { 
+div.display-settings-block {
 	/* @embed */
-	background: #F6F6F6 url('../images/display.png') no-repeat;
+	background: transparent url('../images/display.png') no-repeat;
 	background-size: 20px auto;
 	/* This is only few pixels off from the below */
-	background-position: 10% 5px;
+	background-position: 4.5% 0;
 	/* Does not work for RTL
 	background-position-x: 15px;
 	background-position-y: 5px;
 	*/
-	padding-left: 40px;
+	color: #252525;
+	padding-left: 32px;
 	cursor: pointer;
 }
 
-div#display-settings-block:hover {
-	background-color: #F6F6F6;
+div.display-settings-block:hover {
+	color: black;
+}
+
+.uls-ui-languages button{
+	width:23%;
+	text-overflow: ellipsis;
+	margin-right:15px;
+}
+
+.uls-ui-languages button#uls-more-languages {
+	width: auto;
 }
 
 .settings-title {
@@ -29,6 +40,10 @@ div#display-settings-block:hover {
 .settings-text {
 	color: #555555;
 	font-size: 9pt;
+}
+
+div.display-settings-block:hover .settings-text {
+	color: #252525;
 }
 
 button.button {
@@ -51,14 +66,17 @@ button.button:hover {
 	border-color: #C9C9C9;
 }
 
-button.button:active,button.button.down {
+button.button:active,
+button.button.down {
 	background-color: #D8D8D8;
 	background-image: -moz-linear-gradient(center top, #D3D3D3, #D8D8D8);
 	border-color: #C9C9C9;
 }
 
-button.button:disabled,button.button.hover:disabled,button.button.disabled,button.button.disabled:hover
-	{
+button.button:disabled,
+button.button.hover:disabled,
+button.button.disabled,
+button.button.disabled:hover {
 	background-color: #F0F0F0;
 	background-image: -moz-linear-gradient(center top, #F0F0F0, #F0F0F0);
 	border-color: #E3E3E3;
@@ -79,12 +97,16 @@ button.button.blue:hover {
 	background-image: -moz-linear-gradient(center top, #4C84DA, #3F77D7);
 }
 
-button.button.blue:active,button.button.blue.down:active {
+button.button.blue:active,
+button.button.blue.down:active {
 	background-color: #2A549C;
 	background-image: -moz-linear-gradient(center top, #2D5EA9, #2A549C);
 }
 
-button.button.blue:disabled,button.button.blue.hover:disabled,button.button.blue.disabled,button.button.blue.disabled:hover {
+button.button.blue:disabled,
+button.button.blue.hover:disabled,
+button.button.blue.disabled,
+button.button.blue.disabled:hover {
 	background-color: #7297D7;
 	background-image: -moz-linear-gradient(center top, #7297D7, #7297D7);
 	border-color: #5E89D1;
