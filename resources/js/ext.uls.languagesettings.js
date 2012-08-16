@@ -45,6 +45,7 @@
 		this.$window = $( this.options.template );
 		this.shown = false;
 		this.initialized = false;
+		this.$settingsPanel = this.$window.find( "#languagesettings-settings-panel" );
 		this.init();
 		this.listen();
 	};
@@ -72,7 +73,7 @@
 			for ( var moduleName in modules ) {
 				if ( modules.hasOwnProperty( moduleName ) ) {
 					if ( !firstModule ) {
-						firstModule = modules[moduleName];
+						firstModule = new modules[moduleName]( this );
 					}
 					// Call render function on the current setting module.
 					this.renderModule( moduleName );
@@ -80,13 +81,12 @@
 			}
 
 			// Show the default module
-			firstModule.render( $( "#languagesettings-settings-panel" ) );
+			firstModule.render();
 		},
 
 		renderModule: function( moduleName ) {
-			var that = this;
 			var $settingsMenuItems = this.$window.find( ".settings-menu-items" );
-			var module = $.fn.languagesettings.modules[moduleName];
+			var module = new $.fn.languagesettings.modules[moduleName]( this );
 			var $settingsTitle = $( "<div>" )
 				.addClass( "settings-title" )
 				.text( module.name );
@@ -104,8 +104,7 @@
 
 			$settingsLink.on( "click", function() {
 				var module = $( this ).data( "module" );
-				var $settingsPanel = that.$window.find( "#languagesettings-settings-panel" );
-				module.render( $settingsPanel );
+				module.render();
 				$( this ).addClass( 'active' );
 			} );
 		},

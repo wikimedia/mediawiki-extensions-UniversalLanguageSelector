@@ -40,15 +40,17 @@
 			+ '<div class="row"></div>'
 			+ '<div class="row language-settings-buttons">'
 			+ '<button class="three columns offset-by-three button uls-settings-close">Cancel</button>'
-			+ '<button class="four columns offset-by-one active blue button">Apply changes</button>'
+			+ '<button id="uls-displaysettings-apply" class="four columns offset-by-one active blue button">Apply changes</button>'
 			+ '</div>'; // FIXME i18n and too much hardcoding.
 
-	var DisplaySettings = function () {
+	var DisplaySettings = function ( $parent ) {
 		this.name = "Display";
 		this.description = "Set the languages of menus and fonts";
 		this.$template = $( template );
 		this.language = this.currentLanguage();
 		this.$webfonts = null;
+		this.$parent = $parent;
+		this.webfontPreferences = new $.fn.uls.preferences( 'webfonts' );
 	};
 
 	DisplaySettings.prototype = {
@@ -57,12 +59,11 @@
 
 		/**
 		 * Render the module into a given target
-		 * @param $target
 		 */
-		render: function ( $target ) {
-			$target.empty();
+		render: function ( ) {
+			this.$parent.$settingsPanel.empty();
 			this.$webfonts = $( 'body' ).data( 'webfonts' );
-			$target.append( this.$template );
+			this.$parent.$settingsPanel.append( this.$template );
 			this.prepareLanguages();
 			this.prepareFonts();
 			this.listen();
@@ -84,10 +85,10 @@
 					.addClass( 'two columns button' )
 					.text( $.uls.data.autonym( language ) );
 				if ( language === this.language ) {
-					 $button.addClass( 'down' );
+					$button.addClass( 'down' );
 				}
 				if ( i > 0 ) {
-					 $button.addClass( 'offset-by-one' );
+					$button.addClass( 'offset-by-one' );
 				}
 				$button.data( 'language', language );
 				$languages.append( $button );
@@ -129,10 +130,18 @@
 			var fonts = this.$webfonts.list( this.language );
 			var $fontSelector = $( 'select.uls-font-select' );
 			$fontSelector.find( 'option' ).remove();
-			$.each( fonts, function ( key, font ) {
-				$fontSelector.append( $( "<option></option>" )
-					.attr( "value", font ).text( font ) );
-			} );
+			var savedFont = this.webfontPreferences.get( this.language );
+			if( fonts && fonts.length ) {
+				$.each( fonts, function ( key, font ) {
+					var $fontOption = $( "<option>" )
+					.attr( "value", font ).text( font );
+					$fontSelector.append( $fontOption );
+					$fontOption.attr( 'selected',  savedFont === font );
+				} );
+			}
+			var $systemFont = $( "<option>" ).val( 'system' ).text( 'System font' );
+			$fontSelector.append( $systemFont );
+			$systemFont.attr( 'selected', savedFont === 'system' );
 			var $fontLabel = $( 'label#font-selector' );
 			$fontLabel.text( "Select font for " + $.uls.data.autonym( this.language ) );
 		},
@@ -142,11 +151,14 @@
 		 */
 		listen: function () {
 			var that = this;
-			$( "button.button" ).click( function () {
+			$( "div.uls-ui-languages button.button" ).click( function () {
 				$( "button.button" ).removeClass( "down" );
 				$( this ).addClass( "down" );
 				that.language = $( this ).data( 'language' ) || that.language;
 				that.prepareFonts();
+			} );
+			$( '#uls-displaysettings-apply' ).on( 'click', function () {
+				that.apply();
 			} );
 		},
 
@@ -164,19 +176,46 @@
 		},
 
 		/**
+		 * Callback for save preferences
+		 */
+		onSave: function ( success ) {
+			if ( success ) {
+				this.$parent.hide();
+				// we delay change UI language to here, because it causes a page refresh
+				if ( this.language !== this.currentLanguage() ) {
+					this.changeLanguage( this.language );
+				}
+			} else {
+				// FIXME failure. what to do?!
+			}
+		},
+
+		/**
 		 * Handle the apply button press
 		 */
 		apply: function () {
+			var that = this;
 			var $fontSelector = $( 'select.uls-font-select' );
 			var font = $fontSelector.find( 'option:selected' ).val();
-			this.$webfonts.apply( font );
-			if ( this.language !== this.currentLanguage() ) {
-				this.changeLanguage( this.language );
+			// Live font update if current UI language match with language selection
+			if ( this.language === this.currentLanguage() ) {
+				if ( font === 'system' ) {
+					this.$webfonts.reset();
+				} else {
+					this.$webfonts.apply( font );
+				}
 			}
+			// Save the preferences
+			this.webfontPreferences.set( this.language, font );
+			this.webfontPreferences.save( function ( result ) {
+				// closure for not losing the scope
+				that.onSave( result );
+			} );
 		}
 	};
 
+	// Register this module to language settings modules
 	$.fn.languagesettings.modules = $.extend( $.fn.languagesettings.modules, {
-		display: new DisplaySettings()
+		display:  DisplaySettings
 	} );
 } ) ( jQuery );

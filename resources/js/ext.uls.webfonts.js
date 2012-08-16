@@ -16,7 +16,7 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
-( function($, mw) {
+( function ( $, mw ) {
 	"use strict";
 	$( document ).ready( function() {
 		var mediawikiFontRepository = $.webfonts.repository;
@@ -25,5 +25,14 @@
 		$( 'body' ).webfonts( {
 			repository: mediawikiFontRepository
 		} );
+		var $webfonts = $( 'body' ).data( 'webfonts' );
+		var webfontPreferences = new $.fn.uls.preferences( 'webfonts' );
+		var rememberedFont = webfontPreferences.get( mw.config.get( 'wgUserLanguage' ) );
+		if ( rememberedFont === 'system' ) {
+			$webfonts.reset();
+		} else {
+			// FIXME: jquery.webfonts should have an option to specify default font to use.
+			$webfonts.apply( rememberedFont );
+		}
 	} );
 } )( jQuery, mediaWiki );

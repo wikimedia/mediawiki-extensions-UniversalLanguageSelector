@@ -77,11 +77,24 @@ $wgResourceModules['ext.uls.init'] = array(
 	'position' => 'top',
 );
 
+$wgResourceModules['ext.uls.preferences'] = array(
+	'scripts' => 'resources/js/ext.uls.preferences.js',
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'UniversalLanguageSelector',
+	'dependencies' => array(
+		'mediawiki.user',
+		'jquery.json',
+	),
+);
+
 $wgResourceModules['ext.uls.languagesettings'] = array(
 	'scripts' => 'resources/js/ext.uls.languagesettings.js',
 	'styles' => 'resources/css/ext.uls.languagesettings.css',
 	'localBasePath' => $dir,
 	'remoteExtPath' => 'UniversalLanguageSelector',
+		'dependencies' => array(
+		'ext.uls.preferences',
+	),
 );
 
 $wgResourceModules['ext.uls.webfonts'] = array(
