@@ -76,13 +76,18 @@
 		},
 
 		prepareWebfontsCheckbox: function () {
-			var enable = this.webfontPreferences.get( 'webfontsEnabled' );
+			$( '#webfonts-enable-checkbox' ).prop( 'checked', this.isWebFontsEnabled() );
+		},
+
+		isWebFontsEnabled: function () {
+			var enable = this.webfontPreferences.get( 'webfonts-enabled' );
+
 			// If the user didn't use the checkbox, the preference will be undefined.
 			// The default for now is to enable webfonts if the user didn't select anything.
 			if ( enable === undefined ) {
 				enable = true;
 			}
-			this.$template.find( '#webfonts-enable-checkbox' ).prop( 'checked', enable );
+			return enable;
 		},
 
 		/**
@@ -127,6 +132,7 @@
 			var $moreLanguagesButton = $( '<button>' )
 				.prop( 'id', 'uls-more-languages' )
 				.addClass( 'button' ).text( '...' );
+
 			$languages.append( $moreLanguagesButton );
 			// Show the long language list to select a language for display settings
 			$moreLanguagesButton.uls( {
@@ -193,6 +199,8 @@
 				} );
 			}
 
+			$fontSelector.prop( "disabled", !this.isWebFontsEnabled() );
+
 			var $systemFont = $( "<option>" ).val( 'system' ).text( 'System font' );
 			$fontSelector.append( $systemFont );
 			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
@@ -212,12 +220,13 @@
 		 * Register general event listeners
 		 */
 		listen: function () {
-			var that = this;
+			var that = this,
+				$fontSelector = $( "select.uls-font-select" );
 
 			this.$template.find( "div.uls-ui-languages button.button" ).click( function () {
 				$( "div.uls-ui-languages button.button" ).removeClass( "down" );
 				$( this ).addClass( "down" );
-				that.language = $( this ).data( 'language' ) || that.language;
+				that.language = $( this ).data( "language" ) || that.language;
 				that.prepareFonts();
 			} );
 
@@ -227,18 +236,33 @@
 
 			this.$template.find( '#webfonts-enable-checkbox' ).on( 'click', function () {
 				if ( this.checked ) {
+					$fontSelector.prop( "disabled", false );
 					that.$webfonts.apply( that.selectedFont() );
 				} else {
+					$fontSelector.prop( "disabled", true );
 					that.$webfonts.reset();
 				}
 			} );
-
 			this.$template.find( 'button#uls-more-languages').on( 'click', function () {
 				that.$parent.hide();
 			} );
 
-		},
+			$fontSelector.on( "change", function () {
+				var font = that.selectedFont();
 
+				// Update the font of the current display settings window
+				// if the current UI language match with language selection,
+				// or reset it if the system font was selected.
+				if ( that.language === that.currentLanguage() ) {
+					if ( font === 'system' ) {
+						that.$webfonts.reset();
+					} else {
+						that.$webfonts.apply( font, that.$template );
+					}
+				}
+			} );
+
+		},
 		/**
 		 * Change the language of wiki using setlang URL parameter
 		 * @param {String} language
@@ -285,7 +309,7 @@
 
 			// Save the preferences
 			this.webfontPreferences.set( this.language, font );
-			this.webfontPreferences.set( 'webfontsEnabled',
+			this.webfontPreferences.set( 'webfonts-enabled',
 				this.$template.find( '#webfonts-enable-checkbox' ).prop( 'checked' ) ? true : false );
 			this.webfontPreferences.save( function ( result ) {
 				// closure for not losing the scope
