@@ -23,10 +23,10 @@ div.display-settings-block:hover {
 	color: black;
 }
 
-.uls-ui-languages button{
-	width:23%;
+.uls-ui-languages button {
+	width: 23%;
 	text-overflow: ellipsis;
-	margin-right:15px;
+	margin-right: 15px;
 }
 
 .uls-ui-languages button#uls-more-languages {
@@ -48,7 +48,9 @@ div.display-settings-block:hover .settings-text {
 
 button.button {
 	background-color: #E6E6E6;
+	background-image: -webkit-linear-gradient(top, #f0f0f0, #e6e6e6);
 	background-image: -moz-linear-gradient(center top, #F0F0F0, #E6E6E6);
+	background-image: linear-gradient(#F0F0F0, #E6E6E6);
 	border: 1px solid #C9C9C9;
 	border-radius: 3px 3px 3px 3px;
 	color: #252525;
@@ -62,23 +64,30 @@ button.button {
 
 button.button:hover {
 	background-color: #F0F0F0;
+	background-image: -webkit-linear-gradient(top, #f8f8f8, #f0f0f0);
 	background-image: -moz-linear-gradient(center top, #F8F8F8, #F0F0F0);
+	background-image: linear-gradient(#F8F8F8, #F0F0F0);
 	border-color: #C9C9C9;
 }
 
 button.button:active,
 button.button.down {
 	background-color: #D8D8D8;
+	background-image: -webkit-linear-gradient(top, #d3d3d3, #d8d8d8);
 	background-image: -moz-linear-gradient(center top, #D3D3D3, #D8D8D8);
+	background-image: linear-gradient(#D3D3D3, #D8D8D8);
 	border-color: #C9C9C9;
 }
 
 button.button:disabled,
 button.button.hover:disabled,
 button.button.disabled,
-button.button.disabled:hover {
+button.button.disabled:hover
+	{
 	background-color: #F0F0F0;
+	background-image: -webkit-linear-gradient(top, #f0f0f0, #f0f0f0);
 	background-image: -moz-linear-gradient(center top, #F0F0F0, #F0F0F0);
+	background-image: linear-gradient(#F0F0F0, #F0F0F0);
 	border-color: #E3E3E3;
 	color: #C9C9C9;
 	cursor: default;
@@ -86,7 +95,9 @@ button.button.disabled:hover {
 
 button.button.blue {
 	background-color: #3366BB;
+	background-image: -webkit-linear-gradient(top, #3670c8, #3366bb);
 	background-image: -moz-linear-gradient(center top, #3670C8, #3366BB);
+	background-image: -moz-linear-gradient(#3670C8, #3366BB);
 	border: 1px solid #33589F;
 	color: #FFFFFF;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -94,13 +105,17 @@ button.button.blue {
 
 button.button.blue:hover {
 	background-color: #3F77D7;
+	background-image: -webkit-linear-gradient(top, #4c84da, #3f77d7);
 	background-image: -moz-linear-gradient(center top, #4C84DA, #3F77D7);
+	background-image: -moz-linear-gradient(#4C84DA, #3F77D7);
 }
 
 button.button.blue:active,
 button.button.blue.down:active {
 	background-color: #2A549C;
+	background-image: -webkit-linear-gradient(top, #2d5ea9, #2a549c);
 	background-image: -moz-linear-gradient(center top, #2D5EA9, #2A549C);
+	background-image: linear-gradient(#2D5EA9, #2A549C);
 }
 
 button.button.blue:disabled,
@@ -108,7 +123,9 @@ button.button.blue.hover:disabled,
 button.button.blue.disabled,
 button.button.blue.disabled:hover {
 	background-color: #7297D7;
+	background-image: -webkit-linear-gradient(top, #7297d7, #7297d7);
 	background-image: -moz-linear-gradient(center top, #7297D7, #7297D7);
+	background-image: linear-gradient(#7297D7, #7297D7);
 	border-color: #5E89D1;
 	color: white;
 	cursor: default;
