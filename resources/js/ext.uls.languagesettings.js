@@ -45,6 +45,8 @@
 		this.$window = $( this.options.template );
 		this.shown = false;
 		this.initialized = false;
+		this.left = this.options.left;
+		this.top = this.options.top;
 		this.$settingsPanel = this.$window.find( "#languagesettings-settings-panel" );
 		this.init();
 		this.listen();
@@ -61,9 +63,9 @@
 		listen: function() {
 			var that = this;
 			// Register all event listeners to the ULS language settings here.
-			that.$element.on( "click", $.proxy( that.click, that ) );
-			$( '#languagesettings-close' ).on( "click", $.proxy( that.click, that ) );
-			$( '.uls-settings-close' ).on( "click", $.proxy( that.click, that ) );
+			that.$element.on( "click", $.proxy( that.show, that ) );
+			$( '#languagesettings-close' ).on( "click", $.proxy( that.hide, that ) );
+			$( '.uls-settings-close' ).on( "click", $.proxy( that.hide, that ) );
 		},
 
 		render: function() {
@@ -116,8 +118,8 @@
 				var pos = $.extend( {}, this.$element.offset(), {
 					height: this.$element[0].offsetHeight
 				} );
-				var top = this.options.top || pos.top + pos.height;
-				var left = this.options.left || '25%';
+				var top = this.top || pos.top + pos.height;
+				var left = this.left || '25%';
 				// FIXME this is not exactly correct. position may not
 				// be relative to the trigger.
 				this.$window.css( {
@@ -140,8 +142,6 @@
 			e.preventDefault();
 			if ( !this.shown ) {
 				this.show();
-			} else {
-				this.hide();
 			}
 		}
 	};

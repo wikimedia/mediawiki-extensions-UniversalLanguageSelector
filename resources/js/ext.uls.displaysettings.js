@@ -68,7 +68,6 @@
 			this.$parent.$settingsPanel.empty();
 			this.$webfonts = $( 'body' ).data( 'webfonts' );
 			this.$parent.$settingsPanel.append( this.$template );
-			$( 'select.uls-font-select' ).val(  );
 			this.prepareLanguages();
 			this.prepareFonts();
 			this.prepareWebfontsCheckbox();
@@ -83,19 +82,23 @@
 			if ( enable === undefined ) {
 				enable = true;
 			}
-			$( '#webfonts-enable-checkbox' ).prop( 'checked', enable );
+			this.$template.find( '#webfonts-enable-checkbox' ).prop( 'checked', enable );
 		},
 
 		/**
 		 * Prepare the UI language selector
 		 */
 		prepareLanguages: function () {
-			var $languages = $( 'div.uls-ui-languages' );
+			var $languages = this.$template.find( 'div.uls-ui-languages' );
 			$languages.empty();
 			var previousLanguages = this.previousLanguages();
 			var languages = [this.language];
-			$.merge( languages, previousLanguages);
-			$.unique( languages );
+			for ( var lang in previousLanguages ) {
+				if ( previousLanguages[lang] === this.language ) {
+					continue;
+				}
+				languages.push( previousLanguages[lang] );
+			}
 
 			for ( var i = 0; i < 3; i++ ) {
 				var language = languages[i];
@@ -143,7 +146,7 @@
 		 */
 		prepareFonts: function () {
 			var fonts = this.$webfonts.list( this.language );
-			var $fontSelector = $( 'select.uls-font-select' );
+			var $fontSelector = this.$template.find( 'select.uls-font-select' );
 
 			$fontSelector.find( 'option' ).remove();
 			var savedFont = this.webfontPreferences.get( this.language );
@@ -165,7 +168,7 @@
 		},
 
 		selectedFont: function () {
-			return $( 'select.uls-font-select' ).find( 'option:selected' ).val();
+			return this.$template.find( 'select.uls-font-select' ).find( 'option:selected' ).val();
 		},
 
 		/**
@@ -174,22 +177,53 @@
 		listen: function () {
 			var that = this;
 
-			$( "div.uls-ui-languages button.button" ).click( function () {
-				$( "button.button" ).removeClass( "down" );
+			this.$template.find( "div.uls-ui-languages button.button" ).click( function () {
+				$( "div.uls-ui-languages button.button" ).removeClass( "down" );
 				$( this ).addClass( "down" );
 				that.language = $( this ).data( 'language' ) || that.language;
 				that.prepareFonts();
 			} );
 
-			$( '#uls-displaysettings-apply' ).on( 'click', function () {
+			this.$template.find( '#uls-displaysettings-apply' ).on( 'click', function () {
 				that.apply();
 			} );
 
-			$( '#webfonts-enable-checkbox' ).on( 'click', function () {
+			this.$template.find( '#webfonts-enable-checkbox' ).on( 'click', function () {
 				if ( this.checked ) {
 					that.$webfonts.apply( that.selectedFont() );
 				} else {
 					that.$webfonts.reset();
+				}
+			} );
+
+			this.$template.find( 'button#uls-more-languages').on( 'click', function () {
+				that.$parent.hide();
+			} );
+
+			// Show the long language list to select a language for display settings
+			this.$template.find( 'button#uls-more-languages').uls( {
+				left: that.$parent.left,
+				top: that.$parent.top,
+
+				onReady: function( uls ) {
+					var $back = $( '<a>' )
+						.prop( 'href', '#' )
+						.prop( 'title', 'Back to display settings' )
+						.text( '← Back to display settings' );
+
+					$back.click( function() {
+						uls.hide();
+						that.$parent.show();
+					} );
+
+					uls.$menu.find( 'div.uls-title' ).append( $back );
+					uls.show();
+				},
+
+				onSelect: function( langCode ) {
+					that.language = langCode;
+					that.$parent.show();
+					that.prepareFonts();
 				}
 			} );
 		},
@@ -241,7 +275,7 @@
 			// Save the preferences
 			this.webfontPreferences.set( this.language, font );
 			this.webfontPreferences.set( 'webfontsEnabled',
-				$( '#webfonts-enable-checkbox' ).prop( 'checked' ) ? true : false );
+				this.$template.find( '#webfonts-enable-checkbox' ).prop( 'checked' ) ? true : false );
 			this.webfontPreferences.save( function ( result ) {
 				// closure for not losing the scope
 				that.onSave( result );

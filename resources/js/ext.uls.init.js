@@ -53,24 +53,23 @@
 			return $displaySettings;
 		}
 
-		// Extend the render api of ULS to add display and input settings.
-		$.fn.uls.Constructor.prototype = $.extend( {}, $.fn.uls.Constructor.prototype, {
-			render: function() {
-				var $displaySettings = displaySettings();
-				var that = this;
-				this.$menu.find( "div#settings-block" ).append( $displaySettings );
-				var position = this.position();
-				$displaySettings.languagesettings( {
-					top: position.top,
-					left: position.left
-				} );
-				$displaySettings.on( 'click', function() {
-					that.hide();
-				} );
-			}
-		} );
+		function addDisplaySettings( uls ) {
+			var $displaySettings = displaySettings();
+			uls.$menu.find( "div#settings-block" ).append( $displaySettings );
+			var position = uls.position();
+			$displaySettings.languagesettings( {
+				top: position.top,
+				left: position.left
+			} );
+			$displaySettings.on( 'click', function() {
+				uls.hide();
+			} );
+		}
 
 		$ulsTrigger.uls( {
+			onReady: function ( uls ) {
+				addDisplaySettings( uls );
+			},
 			onSelect: function( language ) {
 				changeLanguage( language );
 			},
