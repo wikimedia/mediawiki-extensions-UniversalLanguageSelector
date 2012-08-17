@@ -57,7 +57,6 @@ $wgAutoloadClasses['LanguageNameSearch'] = "$dir/data/LanguageNameSearch.php";
 
 $wgHooks['BeforePageDisplay'][] = 'UniversalLanguageSelectorHooks::addModules';
 $wgHooks['PersonalUrls'][] = 'UniversalLanguageSelectorHooks::addTrigger';
-$wgHooks['SkinAfterContent'][] = 'UniversalLanguageSelectorHooks::addTemplate';
 $wgHooks['ResourceLoaderTestModules'][] = 'UniversalLanguageSelectorHooks::addTestModules';
 $wgHooks['ResourceLoaderGetConfigVars'][] = 'UniversalLanguageSelectorHooks::addConfig';
 $wgAPIModules['languagesearch'] = 'ApiLanguageSearch';
