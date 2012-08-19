@@ -32,10 +32,11 @@ class UniversalLanguageSelectorHooks {
 		$out->addModules( 'ext.uls.displaysettings' );
 		return true;
 	}
+
 	/**
 	 * ResourceLoaderTestModules hook handler.
-	 * @param $testModules: array of javascript testing modules. 'qunit' is fed using tests/qunit/QUnitTestResources.php.
-	 * @param $resourceLoader object
+	 * @param $testModules array of javascript testing modules. 'qunit' is fed using tests/qunit/QUnitTestResources.php.
+	 * @param $resourceLoader ResourceLoader
 	 * @return bool
 	 */
 	public static function addTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
@@ -47,6 +48,7 @@ class UniversalLanguageSelectorHooks {
 		);
 		return true;
 	}
+
 	/**
 	 * Add some tabs for navigation for users who do not use Ajax interface.
 	 * Hooks: SkinTemplateNavigation, SkinTemplateTabs
@@ -93,6 +95,7 @@ class UniversalLanguageSelectorHooks {
 		$code = RequestContext::sanitizeLangCode( $code );
 		return true;
 	}
+
 	/**
 	 * Hook: ResourceLoaderGetConfigVars
 	 * @param $vars Array
@@ -107,6 +110,9 @@ class UniversalLanguageSelectorHooks {
 	/**
 	 * Add the template for the ULS to the body.
 	 * Hooks: SkinAfterContent
+	 * @param $data string
+	 * @param $skin Skin
+	 * @return bool
 	 * TODO: move to JavaScript side
 	 * TODO: hardcoded English
 	 */

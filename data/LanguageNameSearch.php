@@ -19,9 +19,11 @@
  */
 class LanguageNameSearch {
 	static $languagenames;
+
 	public static function init() {
 		self::$languagenames = unserialize( file_get_contents( __DIR__ . '/langnames.ser' ) );
 	}
+
 	public static function search( $searchKey, $typos = 0 ) {
 		if ( self::$languagenames === null ) {
 			self::init();
@@ -61,6 +63,7 @@ class LanguageNameSearch {
 	/**
 	 * Get the code point of first letter of string
 	 *
+	 * @param $str string
 	 * @return integer Code point of first letter of string
 	 */
 	static function getCodepoint( $str ) {
@@ -84,6 +87,7 @@ class LanguageNameSearch {
 			}
 		}
 	}
+
 	/**
 	 * Calculate the Levenshtein distance between two strings
 	 * @param $str1
