@@ -39,6 +39,13 @@ $messages['qqq'] = array(
 	'uls-select-content-language' => 'Main heading in the language selector popup.',
 );
 
+/** Message documentation (Message documentation) */
+$messages['qqq'] = array(
+	'UniversalLanguageSelector' => 'Extension name',
+	'uls-desc' => 'Extension description',
+	'uls-select-content-language' => 'Main heading in the language selector popup.',
+);
+
 /** Asturian (asturianu)
  * @author Xuacu
  */
@@ -46,6 +53,13 @@ $messages['ast'] = array(
 	'UniversalLanguageSelector' => 'Selector universal de llingua',
 	'uls-desc' => 'Ufre al usuariu delles maneres pa seleicionar una llingua y axustar la configuración de llingua',
 	'uls-select-content-language' => 'Escueyi llingua',
+);
+
+/** Breton (brezhoneg)
+ * @author Y-M D
+ */
+$messages['br'] = array(
+	'uls-select-content-language' => 'Dibab ar yezh',
 );
 
 /** German (Deutsch)
@@ -66,6 +80,31 @@ $messages['dsb'] = array(
 	'UniversalLanguageSelector' => 'Uniwersalny wuběrk rěcow',
 	'uls-desc' => 'Dawa wužywarjeju wšake metody, aby rěc wubrał a rěcne nastajenja pśiměrił',
 	'uls-select-content-language' => 'Rěc wubraś',
+);
+
+/** Estonian (eesti)
+ * @author Pikne
+ */
+$messages['et'] = array(
+	'UniversalLanguageSelector' => 'Universaalne keelevalija',
+	'uls-desc' => 'Võimaldab kasutajal mitmel viisil keelt valida ja keelesätteid kohandada.',
+	'uls-select-content-language' => 'Keele valimine',
+);
+
+/** French (français)
+ * @author Tititou36
+ */
+$messages['fr'] = array(
+	'uls-desc' => "Donne à l'utilisateur plusieurs manières de sélectionner une langue et d'ajuster les paramètres de langue",
+);
+
+/** Galician (galego)
+ * @author Toliño
+ */
+$messages['gl'] = array(
+	'UniversalLanguageSelector' => 'Selector universal de linguas',
+	'uls-desc' => 'Dá ao usuario varios xeitos de seleccionar unha lingua e de axustar as preferencias da mesma',
+	'uls-select-content-language' => 'Seleccionar a lingua',
 );
 
 /** Hebrew (עברית)
@@ -118,6 +157,23 @@ $messages['mk'] = array(
 	'UniversalLanguageSelector' => 'Универзален избор на јазици',
 	'uls-desc' => 'Му дава на корисникот неколку начини за избор на јазик и прилагодување на јазичните поставки',
 	'uls-select-content-language' => 'Одберете јазик',
+);
+
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'UniversalLanguageSelector' => 'Universele taalkiezer',
+	'uls-desc' => 'Biedt gebruikers verschillende mogelijkheden om een taal te kiezen en bijbehorende instellingen aan te passen',
+	'uls-select-content-language' => 'Taal selecteren',
+);
+
+/** Romanian (română)
+ * @author Minisarm
+ */
+$messages['ro'] = array(
+	'uls-desc' => 'Oferă utilizatorului mai multe modalități de a selecta o limbă și de a modifica setările de limbă',
+	'uls-select-content-language' => 'Selectare limbă',
 );
 
 /** Russian (русский)
