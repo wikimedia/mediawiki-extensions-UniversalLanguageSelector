@@ -89,6 +89,7 @@
 		 * Prepare the UI language selector
 		 */
 		prepareLanguages: function () {
+			var that = this;
 			var $languages = this.$template.find( 'div.uls-ui-languages' );
 			$languages.empty();
 			var previousLanguages = this.previousLanguages();
@@ -103,7 +104,7 @@
 			for ( var i = 0; i < 3; i++ ) {
 				var language = languages[i];
 				var $button = $( '<button>' )
-					.addClass( 'button' )
+					.addClass( 'button uls-language-button' )
 					.text( $.uls.data.autonym( language ) );
 				if ( language === this.language ) {
 					$button.addClass( 'down' );
@@ -111,14 +112,46 @@
 				$button.data( 'language', language );
 				$languages.append( $button );
 				$button.on ( 'click', function () {
-					this.language = $( this ).data( 'language' );
+					that.language = $( this ).data( 'language' );
 				} );
 			}
+			this.prepareMoreLanguages();
+		},
+
+		/**
+		 * Prepare the more languages button. It is a ULS trigger
+		 */
+		prepareMoreLanguages: function () {
+			var that = this;
+			var $languages = this.$template.find( 'div.uls-ui-languages' );
 			var $moreLanguagesButton = $( '<button>' )
 				.prop( 'id', 'uls-more-languages' )
-				.addClass( 'button' )
-				.text( '...' );
+				.addClass( 'button' ).text( '...' );
 			$languages.append( $moreLanguagesButton );
+			// Show the long language list to select a language for display settings
+			$moreLanguagesButton.uls( {
+				left: that.$parent.left,
+				top: that.$parent.top,
+				onReady: function( uls ) {
+					var $back = $( '<a>' )
+						.prop( 'href', '#' )
+						.prop( 'title', 'Back to display settings' )
+						.text( '← Back to display settings' ); // FIXME i18n
+
+					$back.click( function() {
+						uls.hide();
+						that.$parent.show();
+					} );
+
+					uls.$menu.find( 'div.uls-title' ).append( $back );
+				},
+				onSelect: function( langCode ) {
+					that.language = langCode;
+					that.$parent.show();
+					that.prepareFonts();
+					that.prepareLanguages();
+				}
+			} );
 		},
 
 		/**
@@ -167,6 +200,10 @@
 			$fontLabel.text( "Select font for " + $.uls.data.autonym( this.language ) );
 		},
 
+		/**
+		 * Get the selected font.
+		 * @returns String
+		 */
 		selectedFont: function () {
 			return this.$template.find( 'select.uls-font-select' ).find( 'option:selected' ).val();
 		},
@@ -200,31 +237,6 @@
 				that.$parent.hide();
 			} );
 
-			// Show the long language list to select a language for display settings
-			this.$template.find( 'button#uls-more-languages').uls( {
-				left: that.$parent.left,
-				top: that.$parent.top,
-
-				onReady: function( uls ) {
-					var $back = $( '<a>' )
-						.prop( 'href', '#' )
-						.prop( 'title', 'Back to display settings' )
-						.text( '← Back to display settings' ); // FIXME i18n
-
-					$back.click( function() {
-						uls.hide();
-						that.$parent.show();
-					} );
-
-					uls.$menu.find( 'div.uls-title' ).append( $back );
-				},
-
-				onSelect: function( langCode ) {
-					that.language = langCode;
-					that.$parent.show();
-					that.prepareFonts();
-				}
-			} );
 		},
 
 		/**
