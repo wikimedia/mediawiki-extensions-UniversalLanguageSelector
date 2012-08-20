@@ -138,8 +138,6 @@
 		},
 
 		click: function( e ) {
-			e.stopPropagation();
-			e.preventDefault();
 			if ( !this.shown ) {
 				this.show();
 			}

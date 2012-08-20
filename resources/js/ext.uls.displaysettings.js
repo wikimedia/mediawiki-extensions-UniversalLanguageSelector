@@ -209,7 +209,7 @@
 					var $back = $( '<a>' )
 						.prop( 'href', '#' )
 						.prop( 'title', 'Back to display settings' )
-						.text( '← Back to display settings' );
+						.text( '← Back to display settings' ); // FIXME i18n
 
 					$back.click( function() {
 						uls.hide();
@@ -217,7 +217,6 @@
 					} );
 
 					uls.$menu.find( 'div.uls-title' ).append( $back );
-					uls.show();
 				},
 
 				onSelect: function( langCode ) {
