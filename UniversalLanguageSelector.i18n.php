@@ -55,6 +55,15 @@ $messages['ast'] = array(
 	'uls-select-content-language' => 'Escueyi llingua',
 );
 
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+ * @author Wizardist
+ */
+$messages['be-tarask'] = array(
+	'UniversalLanguageSelector' => 'Унівэрсальны пераключальнік моваў',
+	'uls-desc' => 'Дае карыстальніку некалькі спосабаў выбраць мову і зьмяніць моўныя налады',
+	'uls-select-content-language' => 'Выбар мовы',
+);
+
 /** Breton (brezhoneg)
  * @author Y-M D
  */
@@ -148,6 +157,15 @@ $messages['ja'] = array(
  */
 $messages['ko'] = array(
 	'uls-select-content-language' => '언어 선택',
+);
+
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'UniversalLanguageSelector' => 'Universell Auswiel vun der Sprooch',
+	'uls-desc' => "Gëtt dem Benotzer verschidde Méiglechkeete fir eng Sprooch erauszesichen an d'Parameter vun der Sprooch festzeleeën",
+	'uls-select-content-language' => 'Sprooch eraussichen',
 );
 
 /** Macedonian (македонски)
