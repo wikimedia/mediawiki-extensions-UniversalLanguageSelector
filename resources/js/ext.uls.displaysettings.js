@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function( $ ) {
+( function( $, mw ) {
 	"use strict";
 
 	var template = '<div class="row"><div class="twelve columns"><h3>Display Settings</h3></div></div>'
@@ -138,6 +138,8 @@
 			$moreLanguagesButton.uls( {
 				left: that.$parent.left,
 				top: that.$parent.top,
+				languages: mw.config.get( 'wgULSLanguages' ),
+				searchAPI: mw.util.wikiScript( 'api' ) + "?action=languagesearch",
 				onReady: function( uls ) {
 					var $back = $( '<a>' )
 						.prop( 'href', '#' )
@@ -322,4 +324,4 @@
 	$.fn.languagesettings.modules = $.extend( $.fn.languagesettings.modules, {
 		display: DisplaySettings
 	} );
-} ) ( jQuery );
+} ) ( jQuery, mediaWiki );
