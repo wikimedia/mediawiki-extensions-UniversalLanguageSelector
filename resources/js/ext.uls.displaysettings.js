@@ -35,9 +35,13 @@
 			+ '</div>'
 			+ '</div>'
 			+ '<div class="row"><h5 class="twelve columns">Select your preferred fonts</h5></div>'
-			+ '<div class="row">'
-			+ '<div class="six columns"><label class="uls-font-label" id="font-selector"></label></div>'
-			+ '<select class="four columns end uls-font-select"></select></div>'
+			+ '<div class="row uls-content-fonts">'
+			+ '<div class="six columns"><label class="uls-font-label" id="content-font-selector-label"></label></div>'
+			+ '<select id="content-font-selector" class="four columns end uls-font-select"></select>'
+			+ '</div>'
+			+ '<div class="row uls-ui-fonts">'
+			+ '<div class="six columns"><label class="uls-font-label" id="ui-font-selector-label"></label></div>'
+			+ '<select id="ui-font-selector" class="four columns end uls-font-select"></select>'
 			+ '</div>'
 			+ '<div class="row"></div>'
 			+ '<div class="row language-settings-buttons">'
@@ -51,7 +55,8 @@
 		this.name = "Display";
 		this.description = "Set the languages of menus and fonts";
 		this.$template = $( template );
-		this.language = this.currentLanguage();
+		this.uiLanguage = this.getUILanguage();
+		this.contentLanguage = this.getContentLanguage();
 		this.$webfonts = null;
 		this.$parent = $parent;
 		this.webfontPreferences = new $.fn.uls.preferences( 'webfonts' );
@@ -69,7 +74,8 @@
 			this.$webfonts = $( 'body' ).data( 'webfonts' );
 			this.$parent.$settingsPanel.append( this.$template );
 			this.prepareLanguages();
-			this.prepareFonts();
+			this.prepareUIFonts();
+			this.prepareContentFonts();
 			this.prepareWebfontsCheckbox();
 
 			this.listen();
@@ -98,9 +104,9 @@
 			var $languages = this.$template.find( 'div.uls-ui-languages' );
 			$languages.empty();
 			var previousLanguages = this.previousLanguages();
-			var languages = [this.language];
+			var languages = [this.uiLanguage];
 			for ( var lang in previousLanguages ) {
-				if ( previousLanguages[lang] === this.language ) {
+				if ( previousLanguages[lang] === this.uiLanguage ) {
 					continue;
 				}
 				languages.push( previousLanguages[lang] );
@@ -111,13 +117,16 @@
 				var $button = $( '<button>' )
 					.addClass( 'button uls-language-button' )
 					.text( $.uls.data.autonym( language ) );
-				if ( language === this.language ) {
+				if ( language === this.uiLanguage ) {
 					$button.addClass( 'down' );
 				}
 				$button.data( 'language', language );
 				$languages.append( $button );
 				$button.on ( 'click', function () {
-					that.language = $( this ).data( 'language' );
+					that.uiLanguage = $( this ).data( "language" ) || that.uiLanguage;
+					$( "div.uls-ui-languages button.button" ).removeClass( "down" );
+					$( this ).addClass( "down" );
+					that.prepareUIFonts();
 				} );
 			}
 			this.prepareMoreLanguages();
@@ -154,11 +163,15 @@
 					uls.$menu.find( 'div.uls-title' ).append( $back );
 				},
 				onSelect: function( langCode ) {
-					that.language = langCode;
+					that.uiLanguage = langCode;
 					that.$parent.show();
-					that.prepareFonts();
+					that.prepareUIFonts();
 					that.prepareLanguages();
 				}
+			} );
+
+			$moreLanguagesButton.on( 'click', function () {
+				that.$parent.hide();
 			} );
 		},
 
@@ -172,10 +185,10 @@
 		},
 
 		/**
-		 * Get the current language.
-		 * @returns String Current language
+		 * Get the current user interface language.
+		 * @returns String Current UI language
 		 */
-		currentLanguage: function () {
+		getUILanguage: function () {
 			if ( !window.mw ) {
 				return navigator.language || navigator.userLanguage;
 			}
@@ -183,14 +196,29 @@
 		},
 
 		/**
-		 * Prepare the font selector.
+		 * Get the current content language.
+		 * @returns String Current content language
 		 */
-		prepareFonts: function () {
-			var fonts = this.$webfonts.list( this.language );
-			var $fontSelector = this.$template.find( 'select.uls-font-select' );
+		getContentLanguage: function () {
+			return mw.config.get( 'wgContentLanguage' );
+		},
+
+		/**
+		 * Prepare the font selector for UI language.
+		 * TODO Can this be merged with prepareContentLanguages?
+		 */
+		prepareUIFonts: function () {
+			if ( this.uiLanguage === this.contentLanguage ) {
+				$( 'div.uls-ui-fonts' ).hide();
+				return;
+			} else {
+				$( 'div.uls-ui-fonts' ).show();
+			}
+			var fonts = this.$webfonts.list( this.uiLanguage );
+			var $fontSelector = this.$template.find( 'select#ui-font-selector' );
 
 			$fontSelector.find( 'option' ).remove();
-			var savedFont = this.webfontPreferences.get( this.language );
+			var savedFont = this.webfontPreferences.get( this.uiLanguage );
 
 			if( fonts && fonts.length ) {
 				$.each( fonts, function ( key, font ) {
@@ -206,16 +234,38 @@
 			var $systemFont = $( "<option>" ).val( 'system' ).text( 'System font' );
 			$fontSelector.append( $systemFont );
 			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
-			var $fontLabel = $( 'label#font-selector' );
-			$fontLabel.text( "Select font for " + $.uls.data.autonym( this.language ) );
+			var $fontLabel = this.$template.find( 'label#ui-font-selector-label' );
+			$fontLabel.html( "<strong>Select font for " + $.uls.data.autonym( this.uiLanguage )
+					+ "</strong><div>Used for menus</div>");
 		},
 
 		/**
-		 * Get the selected font.
-		 * @returns String
+		 * Prepare the font selector for UI language.
 		 */
-		selectedFont: function () {
-			return this.$template.find( 'select.uls-font-select' ).find( 'option:selected' ).val();
+		prepareContentFonts: function () {
+			var fonts = this.$webfonts.list( this.contentLanguage );
+			var $fontSelector = this.$template.find( 'select#content-font-selector' );
+
+			$fontSelector.find( 'option' ).remove();
+			var savedFont = this.webfontPreferences.get( this.contentLanguage );
+
+			if( fonts && fonts.length ) {
+				$.each( fonts, function ( key, font ) {
+					var $fontOption = $( "<option>" )
+					.attr( "value", font ).text( font );
+					$fontSelector.append( $fontOption );
+					$fontOption.attr( 'selected', savedFont === font );
+				} );
+			}
+
+			$fontSelector.prop( "disabled", !this.isWebFontsEnabled() );
+
+			var $systemFont = $( "<option>" ).val( 'system' ).text( 'System font' );
+			$fontSelector.append( $systemFont );
+			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
+			var $fontLabel =this.$template.find( 'label#content-font-selector-label' );
+			$fontLabel.html( "<strong>Select font for " + $.uls.data.autonym( this.contentLanguage )
+					+ "</strong><div>Used for content</div>" );
 		},
 
 		/**
@@ -223,14 +273,9 @@
 		 */
 		listen: function () {
 			var that = this,
-				$fontSelector = $( "select.uls-font-select" );
-
-			this.$template.find( "div.uls-ui-languages button.button" ).click( function () {
-				$( "div.uls-ui-languages button.button" ).removeClass( "down" );
-				$( this ).addClass( "down" );
-				that.language = $( this ).data( "language" ) || that.language;
-				that.prepareFonts();
-			} );
+				$contentFontSelector = this.$template.find( "select#content-font-selector" ),
+				$uiFontSelector = this.$template.find( "select#ui-font-selector" );
+			// TODO all these repeated selectors can be placed in object constructor.
 
 			this.$template.find( '#uls-displaysettings-apply' ).on( 'click', function () {
 				that.apply();
@@ -238,29 +283,33 @@
 
 			this.$template.find( '#webfonts-enable-checkbox' ).on( 'click', function () {
 				if ( this.checked ) {
-					$fontSelector.prop( "disabled", false );
-					that.$webfonts.apply( that.selectedFont() );
+					$contentFontSelector.prop( "disabled", false );
+					$uiFontSelector.prop( "disabled", false );
+					that.$webfonts.apply( $uiFontSelector.find( 'option:selected' ) );
 				} else {
-					$fontSelector.prop( "disabled", true );
+					$contentFontSelector.prop( "disabled", true );
+					$uiFontSelector.prop( "disabled", true );
 					that.$webfonts.reset();
 				}
 			} );
-			this.$template.find( 'button#uls-more-languages').on( 'click', function () {
-				that.$parent.hide();
-			} );
 
-			$fontSelector.on( "change", function () {
-				var font = that.selectedFont();
+			$uiFontSelector.on( "change", function () {
+				var font = $( this ).find( 'option:selected' ).val();
 
-				// Update the font of the current display settings window
-				// if the current UI language match with language selection,
-				// or reset it if the system font was selected.
-				if ( that.language === that.currentLanguage() ) {
+				if ( that.uiLanguage === that.getUILanguage() ) {
 					if ( font === 'system' ) {
 						that.$webfonts.reset();
 					} else {
-						that.$webfonts.apply( font, that.$template );
+						that.$webfonts.apply( font );
 					}
+				}
+			} );
+			$contentFontSelector.on( "change", function () {
+				var font = $( this ).find( 'option:selected' ).val();
+				if ( font === 'system' ) {
+					that.$webfonts.reset();
+				} else {
+					that.$webfonts.apply( font );
 				}
 			} );
 
@@ -270,7 +319,7 @@
 		 * @param {String} language
 		 */
 		changeLanguage: function ( language ) {
-			$.cookie( 'uls-previous-language', this.currentLanguage() );
+			$.cookie( 'uls-previous-language', this.getUILanguage() );
 			var uri = new mw.Uri( window.location.href );
 			uri.extend( {
 				setlang: language
@@ -285,8 +334,8 @@
 			if ( success ) {
 				this.$parent.hide();
 				// we delay change UI language to here, because it causes a page refresh
-				if ( this.language !== this.currentLanguage() ) {
-					this.changeLanguage( this.language );
+				if ( this.uiLanguage !== this.getUILanguage() ) {
+					this.changeLanguage( this.uiLanguage );
 				}
 			} else {
 				// FIXME failure. what to do?!
@@ -297,22 +346,27 @@
 		 * Handle the apply button press
 		 */
 		apply: function () {
-			var that = this,
-				font = this.selectedFont();
+			var that = this;
+			var uiFont = this.$template.find( "select#ui-font-selector" )
+				.find( 'option:selected' ).val();
+			var contentFont = this.$template.find( "select#content-font-selector" )
+				.find( 'option:selected' ).val();
+			var webfontEnabled = this.$template.find( '#webfonts-enable-checkbox' )
+				.prop( 'checked' ) ? true : false;
 
 			// Live font update if current UI language match with language selection
-			if ( this.language === this.currentLanguage() ) {
-				if ( font === 'system' ) {
+			if ( ( this.uiLanguage === this.getUILanguage() ) && webfontEnabled ) {
+				if ( uiFont === 'system' ) {
 					this.$webfonts.reset();
 				} else {
-					this.$webfonts.apply( font );
+					this.$webfonts.apply( uiFont );
 				}
 			}
 
 			// Save the preferences
-			this.webfontPreferences.set( this.language, font );
-			this.webfontPreferences.set( 'webfonts-enabled',
-				this.$template.find( '#webfonts-enable-checkbox' ).prop( 'checked' ) ? true : false );
+			this.webfontPreferences.set( this.uiLanguage, uiFont );
+			this.webfontPreferences.set( this.contentLanguage, contentFont );
+			this.webfontPreferences.set( 'webfonts-enabled', webfontEnabled );
 			this.webfontPreferences.save( function ( result ) {
 				// closure for not losing the scope
 				that.onSave( result );

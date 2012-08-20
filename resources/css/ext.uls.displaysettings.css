@@ -16,3 +16,20 @@
 .uls-ui-languages button#uls-more-languages {
 	width: auto;
 }
+
+.uls-content-fonts,.uls-ui-fonts {
+	padding-top: 10px;
+}
+
+.uls-content-fonts:hover,.uls-ui-fonts:hover {
+	background-color: #F6F6F6;
+}
+
+.uls-font-label strong {
+	color: #252525;
+}
+
+.uls-font-label {
+	color: #555555;
+	font-size: 10pt;
+}
