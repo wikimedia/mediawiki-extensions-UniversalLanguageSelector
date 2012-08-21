@@ -121,6 +121,7 @@ $wgResourceModules['jquery.uls'] = array(
 	'scripts' => array(
 		'lib/jquery.uls/src/jquery.uls.core.js',
 		'lib/jquery.uls/src/jquery.uls.languagefilter.js',
+		'lib/jquery.uls/src/jquery.uls.regionfilter.js',
 		'lib/jquery.uls/src/jquery.uls.lcd.js',
 	),
 	'styles' => array(
