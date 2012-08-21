@@ -16,7 +16,7 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
-( function ( $, mw ) {
+( function ( $, mw, document, undefined ) {
 	"use strict";
 
 	$( document ).ready( function() {
@@ -39,4 +39,4 @@
 			}
 		} );
 	} );
-} )( jQuery, mediaWiki );
+} )( jQuery, mediaWiki, document );

@@ -32,7 +32,7 @@
 
 	ULSPreferences.prototype = {
 		/**
-		 * Initalize
+		 * Initialize
 		 */
 		init: function () {
 			if ( this.isAnon ) {
@@ -88,8 +88,8 @@
 				api.post( {
 					action: 'tokens',
 					type: 'options'
-				} ).done( function ( result ) {
-					var token = result.tokens.optionstoken;
+				} ).done( function ( tokenresult ) {
+					var token = tokenresult.tokens.optionstoken;
 					api.post( {
 						action: 'options',
 						change: 'hideminor=1',
@@ -109,7 +109,7 @@
 	};
 
 	mw.uls = mw.uls || {};
-	mw.uls.preferences  = function( option ) {
+	mw.uls.preferences = function( option ) {
 		var data = $( 'body' ).data( "preferences" ),
 			options = typeof option === "object" && option;
 
@@ -117,7 +117,7 @@
 			$( 'body' ).data( "preferences", ( data = new ULSPreferences( options ) ) );
 		}
 		if ( typeof option === "string" ) {
-			data.get(option);
+			data.get( option );
 		}
 		return data;
 	};
