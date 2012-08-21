@@ -108,6 +108,18 @@
 		}
 	};
 
-	$.fn.uls.preferences = ULSPreferences;
+	mw.uls = mw.uls || {};
+	mw.uls.preferences  = function( option ) {
+		var data = $( 'body' ).data( "preferences" ),
+			options = typeof option === "object" && option;
+
+		if ( !data ) {
+			$( 'body' ).data( "preferences", ( data = new ULSPreferences( options ) ) );
+		}
+		if ( typeof option === "string" ) {
+			data.get(option);
+		}
+		return data;
+	};
 
 }( jQuery, mediaWiki ) );
