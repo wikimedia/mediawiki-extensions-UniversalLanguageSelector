@@ -20,7 +20,7 @@
 ( function( $ ) {
 	"use strict";
 
-	var closeRow = '<div class="row" id="languagesettings-close">' +
+	var closeRow = '<div class="row">' +
 		'<span id="languagesettings-close" class="icon-close"></span>' +
 		'</div>';
 	var settingsMenu = '<div class="four columns languagesettings-menu">' +
@@ -64,8 +64,7 @@
 			var that = this;
 			// Register all event listeners to the ULS language settings here.
 			that.$element.on( "click", $.proxy( that.show, that ) );
-			$( '#languagesettings-close' ).on( "click", $.proxy( that.hide, that ) );
-			$( '.uls-settings-close' ).on( "click", $.proxy( that.hide, that ) );
+			that.$window.find( 'span#languagesettings-close' ).on( "click", $.proxy( that.hide, that ) );
 		},
 
 		render: function() {

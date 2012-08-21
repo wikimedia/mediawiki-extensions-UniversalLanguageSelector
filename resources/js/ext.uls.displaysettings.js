@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function( $, mw ) {
+( function( $, mw, window, undefined ) {
 	"use strict";
 
 	var template = '<div class="row"><div class="twelve columns"><h3>Display Settings</h3></div></div>'
@@ -112,6 +112,15 @@
 				languages.push( previousLanguages[lang] );
 			}
 
+			function buttonHandler( button ) {
+				return function () {
+					that.uiLanguage = button.data( "language" ) || that.uiLanguage;
+					$( "div.uls-ui-languages button.button" ).removeClass( "down" );
+					button.addClass( "down" );
+					that.prepareUIFonts();
+				};
+			}
+
 			for ( var i = 0; i < 3; i++ ) {
 				var language = languages[i];
 				var $button = $( '<button>' )
@@ -122,12 +131,7 @@
 				}
 				$button.data( 'language', language );
 				$languages.append( $button );
-				$button.on ( 'click', function () {
-					that.uiLanguage = $( this ).data( "language" ) || that.uiLanguage;
-					$( "div.uls-ui-languages button.button" ).removeClass( "down" );
-					$( this ).addClass( "down" );
-					that.prepareUIFonts();
-				} );
+				$button.on ( 'click', buttonHandler( $button ) );
 			}
 			this.prepareMoreLanguages();
 		},
@@ -190,7 +194,7 @@
 		 */
 		getUILanguage: function () {
 			if ( !window.mw ) {
-				return navigator.language || navigator.userLanguage;
+				return window.navigator.language || window.navigator.userLanguage;
 			}
 			return mw.config.get( 'wgUserLanguage' );
 		},
@@ -277,8 +281,13 @@
 				$uiFontSelector = this.$template.find( "select#ui-font-selector" );
 			// TODO all these repeated selectors can be placed in object constructor.
 
-			this.$template.find( '#uls-displaysettings-apply' ).on( 'click', function () {
+			this.$template.find( 'button#uls-displaysettings-apply' ).on( 'click', function () {
 				that.apply();
+			} );
+
+			this.$template.find( 'button.uls-settings-close' ).on( 'click', function () {
+				// FIXME This should actually go to the previous context than just hiding.
+				that.hide();
 			} );
 
 			this.$template.find( '#webfonts-enable-checkbox' ).on( 'click', function () {
@@ -308,6 +317,14 @@
 			} );
 
 		},
+
+		/**
+		 * Hide this window.2
+		 */
+		hide: function () {
+			this.$parent.hide();
+		},
+
 		/**
 		 * Change the language of wiki using setlang URL parameter
 		 * @param {String} language
@@ -356,4 +373,4 @@
 	$.fn.languagesettings.modules = $.extend( $.fn.languagesettings.modules, {
 		display: DisplaySettings
 	} );
-} ) ( jQuery, mediaWiki );
+} ) ( jQuery, mediaWiki, window );
