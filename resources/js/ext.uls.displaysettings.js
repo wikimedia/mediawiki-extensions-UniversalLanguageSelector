@@ -59,7 +59,7 @@
 		this.contentLanguage = this.getContentLanguage();
 		this.$webfonts = null;
 		this.$parent = $parent;
-		this.webfontPreferences = new $.fn.uls.preferences( 'webfonts' );
+		this.webfontPreferences = mw.uls.preferences( 'webfonts' );
 	};
 
 	DisplaySettings.prototype = {
@@ -283,10 +283,12 @@
 
 			this.$template.find( '#webfonts-enable-checkbox' ).on( 'click', function () {
 				if ( this.checked ) {
+					that.webfontPreferences.set( 'webfonts-enabled', true );
 					$contentFontSelector.prop( "disabled", false );
 					$uiFontSelector.prop( "disabled", false );
 					that.$webfonts.apply( $uiFontSelector.find( 'option:selected' ) );
 				} else {
+					that.webfontPreferences.set( 'webfonts-enabled', false );
 					$contentFontSelector.prop( "disabled", true );
 					$uiFontSelector.prop( "disabled", true );
 					that.$webfonts.reset();
@@ -295,22 +297,14 @@
 
 			$uiFontSelector.on( "change", function () {
 				var font = $( this ).find( 'option:selected' ).val();
-
-				if ( that.uiLanguage === that.getUILanguage() ) {
-					if ( font === 'system' ) {
-						that.$webfonts.reset();
-					} else {
-						that.$webfonts.apply( font );
-					}
-				}
+				that.webfontPreferences.set( that.uiLanguage, font );
+				that.$webfonts.refresh();
 			} );
+
 			$contentFontSelector.on( "change", function () {
 				var font = $( this ).find( 'option:selected' ).val();
-				if ( font === 'system' ) {
-					that.$webfonts.reset();
-				} else {
-					that.$webfonts.apply( font );
-				}
+				that.webfontPreferences.set( that.contentLanguage, font );
+				that.$webfonts.refresh();
 			} );
 
 		},
@@ -332,6 +326,8 @@
 		 */
 		onSave: function ( success ) {
 			if ( success ) {
+				// Live font update
+				this.$webfonts.refresh();
 				this.$parent.hide();
 				// we delay change UI language to here, because it causes a page refresh
 				if ( this.uiLanguage !== this.getUILanguage() ) {
@@ -347,26 +343,8 @@
 		 */
 		apply: function () {
 			var that = this;
-			var uiFont = this.$template.find( "select#ui-font-selector" )
-				.find( 'option:selected' ).val();
-			var contentFont = this.$template.find( "select#content-font-selector" )
-				.find( 'option:selected' ).val();
-			var webfontEnabled = this.$template.find( '#webfonts-enable-checkbox' )
-				.prop( 'checked' ) ? true : false;
-
-			// Live font update if current UI language match with language selection
-			if ( ( this.uiLanguage === this.getUILanguage() ) && webfontEnabled ) {
-				if ( uiFont === 'system' ) {
-					this.$webfonts.reset();
-				} else {
-					this.$webfonts.apply( uiFont );
-				}
-			}
 
 			// Save the preferences
-			this.webfontPreferences.set( this.uiLanguage, uiFont );
-			this.webfontPreferences.set( this.contentLanguage, contentFont );
-			this.webfontPreferences.set( 'webfonts-enabled', webfontEnabled );
 			this.webfontPreferences.save( function ( result ) {
 				// closure for not losing the scope
 				that.onSave( result );

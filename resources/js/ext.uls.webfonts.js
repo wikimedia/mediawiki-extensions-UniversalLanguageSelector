@@ -21,23 +21,22 @@
 
 	$( document ).ready( function() {
 		var mediawikiFontRepository = $.webfonts.repository;
-
+		var webfontsPreferences = mw.uls.preferences( 'webfonts' );
 		mediawikiFontRepository.base = mw.config.get( 'wgExtensionAssetsPath' )
 			+ '/UniversalLanguageSelector/data/fontrepo/fonts/';
-
+		// Initialize webfonts
 		$( 'body' ).webfonts( {
-			repository: mediawikiFontRepository
+			repository: mediawikiFontRepository,
+			fontSelector: function ( repository, language ) {
+				var font = webfontsPreferences.get( language );
+				if ( !font ) {
+					font = repository.defaultFont(language);
+				}
+				if ( font === 'system' ) {
+					font = null;
+				}
+				return font;
+			}
 		} );
-
-		var $webfonts = $( 'body' ).data( 'webfonts' );
-		var webfontPreferences = new $.fn.uls.preferences( 'webfonts' );
-		var rememberedFont = webfontPreferences.get( mw.config.get( 'wgUserLanguage' ) );
-
-		if ( rememberedFont === 'system' ) {
-			$webfonts.reset();
-		} else {
-			// FIXME: jquery.webfonts should have an option to specify default font to use.
-			$webfonts.apply( rememberedFont );
-		}
 	} );
 } )( jQuery, mediaWiki );
