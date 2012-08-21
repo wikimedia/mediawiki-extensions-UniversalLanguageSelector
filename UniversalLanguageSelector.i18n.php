@@ -91,6 +91,15 @@ $messages['dsb'] = array(
 	'uls-select-content-language' => 'Rěc wubraś',
 );
 
+/** Spanish (español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'UniversalLanguageSelector' => 'Selector universal de idiomas',
+	'uls-desc' => 'Ofrece al usuario varias formas para seleccionar un idioma y ajustar su configuración',
+	'uls-select-content-language' => 'Seleccionar idioma',
+);
+
 /** Estonian (eesti)
  * @author Pikne
  */
@@ -150,6 +159,15 @@ $messages['ja'] = array(
 	'UniversalLanguageSelector' => 'ユニバーサル言語選択',
 	'uls-desc' => '言語を選択するため/言語設定を調整するための、いくつかの方法を利用者に提供する',
 	'uls-select-content-language' => '言語を選択',
+);
+
+/** Georgian (ქართული)
+ * @author გიორგიმელა
+ */
+$messages['ka'] = array(
+	'UniversalLanguageSelector' => 'ენების უნივერსალური გადამრთველი',
+	'uls-desc' => 'აძლევს მომხმარებელს ენის არჩევისა და კონფიგურაციის საშუალებას',
+	'uls-select-content-language' => 'ენის არჩევა',
 );
 
 /** Korean (한국어)
