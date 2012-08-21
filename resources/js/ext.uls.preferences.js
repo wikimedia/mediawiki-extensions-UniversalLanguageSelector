@@ -109,15 +109,14 @@
 	};
 
 	mw.uls = mw.uls || {};
-	mw.uls.preferences = function( option ) {
-		var data = $( 'body' ).data( "preferences" ),
-			options = typeof option === "object" && option;
+	mw.uls.preferences = function( group ) {
+		var data = $( 'body' ).data( "preferences" );
 
 		if ( !data ) {
-			$( 'body' ).data( "preferences", ( data = new ULSPreferences( options ) ) );
+			$( 'body' ).data( "preferences", ( data = new ULSPreferences( group ) ) );
 		}
-		if ( typeof option === "string" ) {
-			data.get( option );
+		if ( typeof group === "string" ) {
+			data.get( group );
 		}
 		return data;
 	};
