@@ -324,19 +324,6 @@
 		},
 
 		/**
-		 * Change the language of wiki using setlang URL parameter
-		 * @param {String} language
-		 */
-		changeLanguage: function ( language ) {
-			$.cookie( 'uls-previous-language', this.getUILanguage() );
-			var uri = new mw.Uri( window.location.href );
-			uri.extend( {
-				setlang: language
-			} );
-			window.location.href = uri.toString();
-		},
-
-		/**
 		 * Callback for save preferences
 		 */
 		onSave: function ( success ) {
@@ -346,7 +333,7 @@
 				this.$parent.hide();
 				// we delay change UI language to here, because it causes a page refresh
 				if ( this.uiLanguage !== this.getUILanguage() ) {
-					this.changeLanguage( this.uiLanguage );
+					mw.uls.changeLanguage( this.uiLanguage );
 				}
 			} else {
 				// FIXME failure. what to do?!

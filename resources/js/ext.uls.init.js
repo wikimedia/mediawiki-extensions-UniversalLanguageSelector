@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function( $, mw ) {
+( function( $, mw, window, document, undefined ) {
 	"use strict";
 
 	// MediaWiki override for ULS defaults.
@@ -26,23 +26,43 @@
 		searchAPI: mw.util.wikiScript( 'api' ) + "?action=languagesearch"
 	} );
 
+
+	var currentLang = mw.config.get( 'wgUserLanguage' );
+	mw.uls = mw.uls || {};
+	mw.uls.previousLanguagesCookie = 'uls-previous-languages';
+	/**
+	 * Change the language of wiki using setlang URL parameter
+	 * @param {String} language
+	 */
+	mw.uls.changeLanguage = function( language ) {
+		var uri = new mw.Uri( window.location.href );
+		uri.extend( {
+			setlang: language
+		} );
+		window.location.href = uri.toString();
+	};
+
+	mw.uls.setPreviousLanguages = function( previousLanguages ) {
+		$.cookie( mw.uls.previousLanguagesCookie, $.toJSON( previousLanguages ) );
+	};
+
+	mw.uls.getPreviousLanguages = function() {
+		var previousLanguages = $.cookie( mw.uls.previousLanguagesCookie );
+		if ( !previousLanguages ) {
+			return [];
+		}
+		// return last 5 language changes
+		return $.parseJSON( previousLanguages ).slice( -5 );
+	};
+
+	mw.uls.getBrowserLanguage = function() {
+		return ( window.navigator.language || window.navigator.userLanguage ).split( '-' )[0];
+	};
+
 	$( document ).ready( function() {
 		var $ulsTrigger = $( '.uls-trigger' ),
-			previousLang = $.cookie( 'uls-previous-language' ),
-			currentLang = mw.config.get( 'wgUserLanguage' );
-
-		/**
-		 * Change the language of wiki using setlang URL parameter
-		 * @param {String} language
-		 */
-		function changeLanguage( language ) {
-			$.cookie( 'uls-previous-language', currentLang );
-			var uri = new mw.Uri( window.location.href );
-			uri.extend( {
-				setlang: language
-			} );
-			window.location.href = uri.toString();
-		}
+			previousLanguages = mw.uls.getPreviousLanguages() || [],
+			previousLang = previousLanguages.slice( -1 )[0];
 
 		function displaySettings() {
 			var $displaySettingsTitle = $( '<div>' )
@@ -77,18 +97,34 @@
 				addDisplaySettings( uls );
 			},
 			onSelect: function( language ) {
-				changeLanguage( language );
-			}
+				mw.uls.changeLanguage( language );
+			},
+			languages: mw.config.get( 'wgULSLanguages' ),
+			searchAPI: mw.util.wikiScript( 'api' ) + "?action=languagesearch",
+			quickList :  $.unique( [
+					mw.config.get( 'wgUserLanguage' ),
+					mw.config.get( 'wgContentLanguage' ),
+					mw.uls.getBrowserLanguage()
+					].concat( mw.uls.getPreviousLanguages() ) )
+
 		} );
 
-		if ( !previousLang || previousLang === currentLang ) {
+
+		if( !previousLang ) {
+			previousLanguages.push( currentLang );
+			mw.uls.setPreviousLanguages( previousLanguages );
+			// Do not show tooltip.
+			return true;
+		}
+
+		if ( previousLang === currentLang ) {
 			// Do not show tooltip.
 			return true;
 		}
 
 		var tipsyTimer;
-		// Current language is the cookie value for 'uls-previous-language'
-		$.cookie( 'uls-previous-language', currentLang );
+		previousLanguages.push( currentLang );
+		mw.uls.setPreviousLanguages( previousLanguages );
 		// Attach a tipsy tooltip to the trigger
 		$ulsTrigger.tipsy( {
 			gravity: 'n',
@@ -107,7 +143,7 @@
 		} );
 		// Show the tipsy tooltip on page load.
 		$ulsTrigger.tipsy( 'show' );
-		tipsyTimer = setTimeout( function() {
+		tipsyTimer = window.setTimeout( function() {
 				$ulsTrigger.tipsy('hide');
 			},
 			// The timeout after page reloading is longer,
@@ -115,7 +151,7 @@
 			6000
 		);
 		$( '.tipsy' ).live( 'mouseout', function( e ) {
-			tipsyTimer = setTimeout( function() {
+			tipsyTimer = window.setTimeout( function() {
 				$ulsTrigger.tipsy('hide');
 				},
 				3000 // hide the link in 3 seconds
@@ -123,7 +159,7 @@
 		} );
 		// if the mouse is over the tooltip, do not hide
 		$( '.tipsy' ).live( 'mouseover', function( e ) {
-			clearTimeout( tipsyTimer );
+			window.clearTimeout( tipsyTimer );
 		} );
 		// manually show the tooltip
 		$ulsTrigger.bind( 'mouseover', function( e ) {
@@ -135,7 +171,7 @@
 		} );
 		// Event handler for links in the tooltip
 		$( 'a.uls-lang-link' ).live( 'click', function() {
-			changeLanguage( $(this).attr( 'lang' ) );
+			mw.uls.changeLanguage( $(this).attr( 'lang' ) );
 		} );
 	} );
-} )( jQuery, mediaWiki );
+} )( jQuery, mediaWiki, window, document );
