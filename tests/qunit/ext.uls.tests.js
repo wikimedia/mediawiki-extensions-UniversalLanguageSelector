@@ -61,7 +61,7 @@ test( "-- Initial check", function() {
 } );
 
 test( "-- $.uls.data testing", function() {
-	expect( 21 );
+	expect( 23 );
 
 	strictEqual( $.uls.data.autonyms()['he'], 'עברית', 'Correct autonym is returned for Hebrew using autonyms().' );
 
@@ -125,6 +125,9 @@ test( "-- $.uls.data testing", function() {
 
 	// autonyms: gn: avañe'ẽ, de: deutsch, hu: magyar, fi: suomi
 	deepEqual( ['de', 'fi', 'gn', 'hu'].sort( $.uls.data.sortByAutonym ), ['gn', 'de', 'hu', 'fi'], 'Languages are correctly sorted by autonym' );
+
+	strictEqual( $.uls.data.isRtl( "te" ), false, "Telugu language is not RTL" );
+	strictEqual( $.uls.data.isRtl( "dv" ), true, "Divehi language is RTL" );
 } );
 
 }() );
