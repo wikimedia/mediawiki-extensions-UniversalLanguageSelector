@@ -151,8 +151,6 @@
 			$moreLanguagesButton.uls( {
 				left: that.$parent.left,
 				top: that.$parent.top,
-				languages: mw.config.get( 'wgULSLanguages' ),
-				searchAPI: mw.util.wikiScript( 'api' ) + "?action=languagesearch",
 				onReady: function( uls ) {
 					var $back = $( '<a>' )
 						.prop( 'href', '#' )

@@ -20,6 +20,12 @@
 ( function( $, mw ) {
 	"use strict";
 
+	// MediaWiki override for ULS defaults.
+	$.fn.uls.defaults = $.extend( $.fn.uls.defaults, {
+		languages: mw.config.get( 'wgULSLanguages' ),
+		searchAPI: mw.util.wikiScript( 'api' ) + "?action=languagesearch"
+	} );
+
 	$( document ).ready( function() {
 		var $ulsTrigger = $( '.uls-trigger' ),
 			previousLang = $.cookie( 'uls-previous-language' ),
@@ -72,9 +78,7 @@
 			},
 			onSelect: function( language ) {
 				changeLanguage( language );
-			},
-			languages: mw.config.get( 'wgULSLanguages' ),
-			searchAPI: mw.util.wikiScript( 'api' ) + "?action=languagesearch"
+			}
 		} );
 
 		if ( !previousLang || previousLang === currentLang ) {
