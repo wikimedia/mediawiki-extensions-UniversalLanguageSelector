@@ -61,7 +61,7 @@ test( "-- Initial check", function() {
 } );
 
 test( "-- $.uls.data testing", function() {
-	expect( 23 );
+	expect( 24 );
 
 	strictEqual( $.uls.data.autonyms()['he'], 'עברית', 'Correct autonym is returned for Hebrew using autonyms().' );
 
@@ -128,6 +128,8 @@ test( "-- $.uls.data testing", function() {
 
 	strictEqual( $.uls.data.isRtl( "te" ), false, "Telugu language is not RTL" );
 	strictEqual( $.uls.data.isRtl( "dv" ), true, "Divehi language is RTL" );
+
+	ok( $.inArray( "sah", $.uls.data.languagesInTerritory( "RU" ) ) > -1, "Sakha language is spoken in Russia" );
 } );
 
 }() );
