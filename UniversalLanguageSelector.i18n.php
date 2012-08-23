@@ -109,6 +109,13 @@ $messages['et'] = array(
 	'uls-select-content-language' => 'Keele valimine',
 );
 
+/** Basque (euskara)
+ * @author An13sa
+ */
+$messages['eu'] = array(
+	'uls-select-content-language' => 'Hizkuntza aukeratu',
+);
+
 /** French (français)
  * @author Tititou36
  */
