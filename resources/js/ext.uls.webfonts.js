@@ -24,9 +24,15 @@
 		var webfontsPreferences = mw.uls.preferences( 'webfonts' );
 		mediawikiFontRepository.base = mw.config.get( 'wgExtensionAssetsPath' )
 			+ '/UniversalLanguageSelector/data/fontrepo/fonts/';
+
+		// MediaWiki specific overrides for jquery.webfonts
+		$.extend( $.fn.webfonts.defaults, {
+			repository: mediawikiFontRepository,
+			fontStack: ['sans-serif'] // MediaWiki default font as per screen.css
+		} );
+
 		// Initialize webfonts
 		$( 'body' ).webfonts( {
-			repository: mediawikiFontRepository,
 			fontSelector: function ( repository, language ) {
 				var font = webfontsPreferences.get( language );
 				if ( !font ) {
