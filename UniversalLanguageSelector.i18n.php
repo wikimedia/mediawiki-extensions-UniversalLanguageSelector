@@ -118,9 +118,12 @@ $messages['eu'] = array(
 
 /** French (français)
  * @author Tititou36
+ * @author Wyz
  */
 $messages['fr'] = array(
+	'UniversalLanguageSelector' => 'Sélecteur de Langue Universel',
 	'uls-desc' => "Donne à l'utilisateur plusieurs manières de sélectionner une langue et d'ajuster les paramètres de langue",
+	'uls-select-content-language' => 'Sélectionner la langue',
 );
 
 /** Galician (galego)
