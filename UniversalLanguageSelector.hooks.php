@@ -53,7 +53,7 @@ class UniversalLanguageSelectorHooks {
 	 */
 	static function addTrigger( array &$personal_urls, &$title ) {
 		global $wgLang;
-		$personal_urls = array( 'uls'=> array(
+		$personal_urls = array( 'uls' => array(
 					'text' =>  $wgLang->getLanguageName( $wgLang->getCode() ),
 					'href' => '#',
 					'class' => 'uls-trigger',
@@ -69,12 +69,18 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function getLanguage( $user, &$code ) {
-		global $wgRequest;
+		global $wgRequest, $wgLanguageCode;
 		if ( $wgRequest->getVal( 'uselang' ) ) {
 			// uselang can be used for temporary override of language preference
 			return true;
 		}
 		$setlang = $wgRequest->getVal( 'setlang' );
+		$setlang = RequestContext::sanitizeLangCode( $setlang );
+		$validMWLanguages = Language::fetchLanguageNames( $wgLanguageCode, null, 'mwfile' );
+		if ( !array_key_exists( $setlang, $validLanguages ) ) {
+			wfDebug( "Invalid user language code\n" );
+			return true;
+		}
 		if ( $setlang ) {
 			if ( $user->isAnon() ) {
 				$wgRequest->response()->setcookie( 'language', $setlang );
@@ -90,7 +96,6 @@ class UniversalLanguageSelectorHooks {
 				$code = $user->getOption( 'language' );
 			}
 		}
-		$code = RequestContext::sanitizeLangCode( $code );
 		return true;
 	}
 
@@ -101,7 +106,7 @@ class UniversalLanguageSelectorHooks {
 	  */
 	public static function addConfig( &$vars ) {
 		global $wgContLang;
-		$vars['wgULSLanguages'] = Language::fetchLanguageNames( $wgContLang->getCode() );
+		$vars['wgULSLanguages'] = Language::fetchLanguageNames( $wgContLang->getCode(), null, 'mwfile' );
 		return true;
 	}
 }
