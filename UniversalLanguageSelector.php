@@ -59,6 +59,7 @@ $wgHooks['BeforePageDisplay'][] = 'UniversalLanguageSelectorHooks::addModules';
 $wgHooks['PersonalUrls'][] = 'UniversalLanguageSelectorHooks::addTrigger';
 $wgHooks['ResourceLoaderTestModules'][] = 'UniversalLanguageSelectorHooks::addTestModules';
 $wgHooks['ResourceLoaderGetConfigVars'][] = 'UniversalLanguageSelectorHooks::addConfig';
+$wgHooks['MakeGlobalVariablesScript'][] = 'UniversalLanguageSelectorHooks::addVariables';
 $wgAPIModules['languagesearch'] = 'ApiLanguageSearch';
 $wgHooks['UserGetLanguageObject'][] = 'UniversalLanguageSelectorHooks::getLanguage';
 

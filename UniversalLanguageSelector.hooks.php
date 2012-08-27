@@ -104,10 +104,20 @@ class UniversalLanguageSelectorHooks {
 	 * Hook: ResourceLoaderGetConfigVars
 	 * @param $vars Array
 	 * @return bool
-	  */
+	 */
 	public static function addConfig( &$vars ) {
 		global $wgContLang;
 		$vars['wgULSLanguages'] = Language::fetchLanguageNames( $wgContLang->getCode(), 'mwfile' );
+		return true;
+	}
+
+	/**
+	 * Hook: MakeGlobalVariablesScript
+	 * @param $vars Array
+	 * @return bool
+	 */
+	public static function addVariables( &$vars, OutputPage $out ) {
+		$vars['wgULSAcceptLanguageList'] = array_keys( $out->getRequest()->getAcceptLang() );
 		return true;
 	}
 }
