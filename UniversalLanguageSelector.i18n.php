@@ -205,6 +205,15 @@ $messages['mk'] = array(
 	'uls-select-content-language' => 'Одберете јазик',
 );
 
+/** Malayalam (മലയാളം)
+ * @author Santhosh.thottingal
+ */
+$messages['ml'] = array(
+	'UniversalLanguageSelector' => 'ആഗോള ഭാഷാസഹായി',
+	'uls-desc' => 'ഭാഷ തിരഞ്ഞെടുക്കുന്നതിനും സജ്ജീകരിക്കുന്നതിനുമുള്ള സംവിധാനം',
+	'uls-select-content-language' => 'ഭാഷ തിരഞ്ഞെടുക്കുക',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
