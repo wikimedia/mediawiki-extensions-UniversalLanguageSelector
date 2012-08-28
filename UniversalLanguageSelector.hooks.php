@@ -74,15 +74,16 @@ class UniversalLanguageSelectorHooks {
 			// uselang can be used for temporary override of language preference
 			return true;
 		}
+
 		$setlang = $wgRequest->getVal( 'setlang' );
-		$setlang = RequestContext::sanitizeLangCode( $setlang );
-		// TODO: replace with core method once one exists
-		$supported = Language::fetchLanguageNames( null, 'mwfile' );
-		if ( !array_key_exists( $setlang, $supported ) ) {
-			wfDebug( "Invalid user language code\n" );
-			return true;
-		}
 		if ( $setlang ) {
+			// TODO: replace with core method once one exists
+			$supported = Language::fetchLanguageNames( null, 'mwfile' );
+			if ( !isset( $supported[$setlang] ) ) {
+				wfDebug( "Invalid user language code\n" );
+				return true;
+			}
+
 			if ( $user->isAnon() ) {
 				$wgRequest->response()->setcookie( 'language', $setlang );
 			} else {
