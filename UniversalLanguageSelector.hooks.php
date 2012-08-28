@@ -62,6 +62,11 @@ class UniversalLanguageSelectorHooks {
 		return true;
 	}
 
+	protected static function isSupportedLanguage( $language ) {
+		$supported = Language::fetchLanguageNames( null, 'mwfile' );
+		return isset( $supported[$language] );
+	}
+
 	/**
 	 * Hook to UserGetLanguageObject
 	 * @param  $user User
@@ -75,29 +80,29 @@ class UniversalLanguageSelectorHooks {
 			return true;
 		}
 
-		$setlang = $wgRequest->getVal( 'setlang' );
-		if ( $setlang ) {
-			// TODO: replace with core method once one exists
-			$supported = Language::fetchLanguageNames( null, 'mwfile' );
-			if ( !isset( $supported[$setlang] ) ) {
-				wfDebug( "Invalid user language code\n" );
-				return true;
-			}
-
+		$languageToUse = null;
+		$languageToSave = $wgRequest->getVal( 'setlang' );
+		if ( self::isSupportedLanguage( $languageToSave ) ) {
 			if ( $user->isAnon() ) {
-				$wgRequest->response()->setcookie( 'language', $setlang );
+				$wgRequest->response()->setcookie( 'language', $languageToSave );
 			} else {
-				$user->setOption( 'language', $setlang );
+				$user->setOption( 'language', $languageToSave );
 				$user->saveSettings();
 			}
-			$code = $setlang;
-		} else {
-			if ( $user->isAnon() ) {
-				$code = $wgRequest->getCookie( 'language' );
-			} else {
-				$code = $user->getOption( 'language' );
-			}
+			$languageToUse = $languageToSave;
 		}
+
+		// Load from cookie unless overriden
+		if ( $languageToUse === null && $user->isAnon() ) {
+			$languageToUse = $wgRequest->getCookie( 'language' );
+		}
+
+		// Let the normal language loading mechanism decide if
+		// there is no cookie or setlang override.
+		if ( self::isSupportedLanguage( $languageToUse ) ) {
+			$code = $languageToUse;
+		}
+
 		return true;
 	}
 
