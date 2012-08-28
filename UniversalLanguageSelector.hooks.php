@@ -69,15 +69,16 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function getLanguage( $user, &$code ) {
-		global $wgRequest, $wgLanguageCode;
+		global $wgRequest;
 		if ( $wgRequest->getVal( 'uselang' ) ) {
 			// uselang can be used for temporary override of language preference
 			return true;
 		}
 		$setlang = $wgRequest->getVal( 'setlang' );
 		$setlang = RequestContext::sanitizeLangCode( $setlang );
-		$validMWLanguages = Language::fetchLanguageNames( $wgLanguageCode, null, 'mwfile' );
-		if ( !array_key_exists( $setlang, $validLanguages ) ) {
+		// TODO: replace with core method once one exists
+		$supported = Language::fetchLanguageNames( null, 'mwfile' );
+		if ( !array_key_exists( $setlang, $supported ) ) {
 			wfDebug( "Invalid user language code\n" );
 			return true;
 		}
@@ -106,7 +107,7 @@ class UniversalLanguageSelectorHooks {
 	  */
 	public static function addConfig( &$vars ) {
 		global $wgContLang;
-		$vars['wgULSLanguages'] = Language::fetchLanguageNames( $wgContLang->getCode(), null, 'mwfile' );
+		$vars['wgULSLanguages'] = Language::fetchLanguageNames( $wgContLang->getCode(), 'mwfile' );
 		return true;
 	}
 }
