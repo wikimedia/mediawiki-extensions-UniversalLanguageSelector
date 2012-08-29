@@ -31,21 +31,22 @@
 				var fonts = $webfonts.list();
 				var languages = $webfonts.languages();
 				// Also test system fonts.
-				$.merge( fonts, [ 'Sans', 'Serif' ] );
 				var $fontSelector = $( 'select#fontselector' );
 				var $langselector = $( 'select#language' );
 
 				function listFonts(fonts) {
+					$.merge( fonts, [ 'Sans', 'Serif' ] );
 					$fontSelector.find('option').remove();
 					$.each( fonts, function(key, font) {
 						$fontSelector.append( $( "<option></option>" ).attr(
 								"value", font ).text( font ) );
 					} );
+					$fontSelector.trigger( 'change' );
 				}
 				listFonts(fonts);
 				$.each( languages, function(lang, language) {
 					$langselector.append( $( "<option></option>" ).attr(
-							"value", language ).text(
+							"value", language ).text(language+ " - "+
 							$.uls.data.autonym( language ) ) );
 				} );
 				$fontSelector.on( 'change', function() {
@@ -56,6 +57,7 @@
 					var language = $langselector.find( 'option:selected' )
 							.val();
 					listFonts($webfonts.list(language));
+					$( '#webfonts-preview-area' ).text( $.uls.data.autonym( language ) );
 				} );
 			} )
 </script>
@@ -77,6 +79,12 @@ div#webfonts-preview-area {
 	overflow: auto;
 	padding: 10px 5px;
 	text-align: left;
+	font-size: 16px;
+}
+
+select {
+	width: 200px;
+	height: 25px;
 }
 
 .langselector,.fontselector {
@@ -94,11 +102,11 @@ div#webfonts-preview-area {
 		<div id='container'>
 			<div id="webfonts-preview-toolbar">
 				<div class='langselector'>
-					Select Language: <select name="language" id="language">
+					Language: <select name="language" id="language">
 					</select>
 				</div>
 				<div class='fontselector'>
-					Select Font : <select id="fontselector"></select>
+					Font : <select id="fontselector"></select>
 				</div>
 			</div>
 			<div contenteditable="true" id="webfonts-preview-area">The quick brown fox jumps over the
