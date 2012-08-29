@@ -184,6 +184,8 @@ $messages['ka'] = array(
  * @author 아라
  */
 $messages['ko'] = array(
+	'UniversalLanguageSelector' => '범용 언어 선택기',
+	'uls-desc' => '사용자에게 언어를 선택하고 언어 설정을 바꾸는 몇 가지 방법을 제공',
 	'uls-select-content-language' => '언어 선택',
 );
 
