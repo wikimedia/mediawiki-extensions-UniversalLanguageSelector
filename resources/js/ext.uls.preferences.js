@@ -1,6 +1,6 @@
 /**
  * ULS preferences system for MediaWiki.
- * Cookies for anonymous users, preferences for logged in users.
+ * Local storage for anonymous users, preferences for logged in users.
  *
  * Copyright (C) 2012 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
  * Niklas Laxström, Pau Giner, Santhosh Thottingal, Siebrand Mazeland and other
@@ -22,7 +22,7 @@
 	"use strict";
 
 	var ULSPreferences = function ( group ) {
-		this.cookieName = this.preferenceName = 'uls-preferences';
+		this.preferenceName = 'uls-preferences';
 		this.username = mw.user.getName();
 		this.isAnon = mw.user.isAnon();
 		this.preferences = null;
@@ -36,8 +36,7 @@
 		 */
 		init: function () {
 			if ( this.isAnon ) {
-				this.cookie = $.cookie( this.cookieName );
-				this.preferences = $.parseJSON( this.cookie );
+				this.preferences = $.jStorage.get( this.preferenceName );
 			} else {
 				var options = mw.user.options.get( this.preferenceName );
 				this.preferences = $.parseJSON( options );
@@ -75,12 +74,8 @@
 			var that = this;
 			callback = callback || $.noop();
 			if ( this.isAnon ) {
-				// Anonymous user- Save preferences in cookie
-				$.cookie( this.cookieName, $.toJSON( this.preferences ), {
-					expires: 30,
-					HttpOnly: true,
-					path: '/'
-				} );
+				// Anonymous user- Save preferences in local storage
+				$.jStorage.set( this.preferenceName, this.preferences );
 				callback.call( this, true );
 			} else {
 				// Logged in user. Use MW apis to change preferences
