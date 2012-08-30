@@ -86,7 +86,7 @@ test( "-- $.uls.data testing", function() {
 	strictEqual( $.uls.data.regions( 'no-such-language' ), 'UNKNOWN', "The region of an invalid language is 'UNKNOWN'" );
 
 	var allLanguagesByRegionAndScript = $.uls.data.allLanguagesByRegionAndScript();
-	deepEqual( allLanguagesByRegionAndScript['3']['AS']['SouthEastAsian']['Bugi'], ['bug'], 'All languages in the Buginese script in Asia were selected' );
+	deepEqual( allLanguagesByRegionAndScript['4']['AS']['SouthEastAsian']['Bugi'], ['bug'], 'All languages in the Buginese script in Asia were selected' );
 
 	deepEqual( $.uls.data.languagesInRegion( 'AU' ), ["en-gb", "en", "hif-latn", "hif", "mi", "na"], "languages of region AU are selected correctly" );
 	deepEqual( $.uls.data.languagesInRegions( ['NA', 'WW'] ),
@@ -107,21 +107,21 @@ test( "-- $.uls.data testing", function() {
 		"languages in scripts Geor and Armn are selected correctly"
 	);
 
-	deepEqual( $.uls.data.regionsInGroup( 1 ), ["NA", "LA", "SA"], "regions in group 1 are selected correctly" );
-	deepEqual( $.uls.data.regionsInGroup( 4 ), ["WW"], "regions in group 4 are selected correctly" );
+	deepEqual( $.uls.data.regionsInGroup( 2 ), ["NA", "LA", "SA"], "regions in group 2 are selected correctly" );
+	deepEqual( $.uls.data.regionsInGroup( 1 ), ["WW"], "regions in group 1 are selected correctly" );
 
 	var languagesByScriptInNA = $.uls.data.languagesByScriptInRegion( 'NA' );
 	deepEqual( languagesByScriptInNA['Cans'], ["cr-cans", "cr", "ike-cans", "iu"], "correct languages in Cans in NA selected" );
 
 	strictEqual( $.uls.data.autonym( 'pa' ), 'ਪੰਜਾਬੀ', 'Correct autonym of the Punjabi language was selected' );
 
-	var languagesByScriptGroupInEMEA = $.uls.data.languagesByScriptGroupInRegions( $.uls.data.regionsInGroup( 2 ) );
-	deepEqual( languagesByScriptGroupInEMEA['WestCaucasian'], ['hy', 'ka', 'xmf'], 'Correct languages in WestCaucasian script group selected' );
+	var languagesByScriptGroupInEMEA = $.uls.data.languagesByScriptGroupInRegions( $.uls.data.regionsInGroup( 3 ) );
+	deepEqual( languagesByScriptGroupInEMEA['WestCaucasian'], ['hy', 'ka', 'xmf'], 'Correct languages in WestCaucasian script group in EMEA selected' );
 
 	var allLanguagesByScriptGroup = $.uls.data.allLanguagesByScriptGroup();
 	deepEqual( allLanguagesByScriptGroup['Greek'], ['el', 'grc', 'pnt', 'ruq-grek', 'tsd'], 'All languages in the Greek script found' );
 
-	deepEqual( $.uls.data.allRegions(), ['NA', 'LA', 'SA', 'EU', 'ME', 'AF', 'AS', 'PA', 'AU', 'WW'], 'All regions found' );
+	deepEqual( $.uls.data.allRegions(), ['WW', 'NA', 'LA', 'SA', 'EU', 'ME', 'AF', 'AS', 'PA', 'AU'], 'All regions found' );
 
 	// autonyms: gn: avañe'ẽ, de: deutsch, hu: magyar, fi: suomi
 	deepEqual( ['de', 'fi', 'gn', 'hu'].sort( $.uls.data.sortByAutonym ), ['gn', 'de', 'hu', 'fi'], 'Languages are correctly sorted by autonym' );
