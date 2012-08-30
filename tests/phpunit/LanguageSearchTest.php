@@ -24,7 +24,7 @@ class LanguageSearchTest extends PHPUnit_Framework_TestCase {
 	 * @dataProvider searchDataProvider
 	 */
 	public function testSearch( $searchKey, $result ) {
-			$this->assertEquals( $result, LanguageNameSearch::search( $searchKey ) );
+			$this->assertEquals( $result, LanguageNameSearch::search( $searchKey, 1 ) );
 	}
 
 	public function searchDataProvider() {
