@@ -1,13 +1,14 @@
 ( function( mw, $ ) {
 	"use strict";
 
-	window.setGeo = function ( data ) {
+	mw.uls.setGeo = function ( data ) {
 		window.GEO = data;
-	}
+	};
+
 	var settings = {
 		cache: true,
 		dataType: "jsonp",
-		jsonpCallback: "setGeo"
+		jsonpCallback: "mw.uls.setGeo"
 	};
 	$.ajax( mw.config.get( 'wgULSGeoService' ), settings );
 

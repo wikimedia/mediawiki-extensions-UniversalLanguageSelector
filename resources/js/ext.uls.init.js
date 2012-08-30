@@ -115,7 +115,6 @@
 					.concat( mw.uls.getPreviousLanguages() )
 					.concat( mw.uls.getAcceptLanguageList() );
 				if ( window.GEO ) {
-					console.log( $.uls.data.languagesInTerritory( window.GEO.country_code ) );
 					list = list.concat( $.uls.data.languagesInTerritory( window.GEO.country_code ) );
 				}
 				$.each( list, function ( i, v ) {
