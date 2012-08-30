@@ -27,7 +27,11 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function addModules( $out, $skin ) {
+		global $wgULSGeoService;
 		$out->addModules( 'ext.uls.init' );
+		if ( $wgULSGeoService ) {
+			$out->addModules( 'ext.uls.geoclient' );
+		}
 		return true;
 	}
 
@@ -112,8 +116,9 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function addConfig( &$vars ) {
-		global $wgContLang;
+		global $wgContLang, $wgULSGeoService;
 		$vars['wgULSLanguages'] = Language::fetchLanguageNames( $wgContLang->getCode(), 'mwfile' );
+		$vars['wgULSGeoService'] = $wgULSGeoService;
 		return true;
 	}
 

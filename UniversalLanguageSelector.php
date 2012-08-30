@@ -25,7 +25,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 /**
  * Version number used in extension credits and in other placed where needed.
  */
-define( 'ULS_VERSION', '2012-07-20' );
+define( 'ULS_VERSION', '2012-08-30' );
 
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
@@ -44,6 +44,17 @@ $wgExtensionCredits['other'][] = array(
 	'url' => 'https://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector',
 	'descriptionmsg' => 'uls-desc',
 );
+
+/**
+ * ULS can use geolocation services to suggest languages based on the
+ * country the user is vising from. Setting this to false will prevent
+ * builtin geolocation from being used. You can provide your own geolocation
+ * by setting window.GEO to object which has key country_code. This is what
+ * Wikipedia does.
+ *
+ * The service should return jsonp that uses the supplied callback parameter.
+ */
+$wgULSGeoService = 'http://freegeoip.net/json/';
 
 $dir = __DIR__ ;
 
@@ -75,6 +86,12 @@ $wgResourceModules['ext.uls.init'] = array(
 		'ext.uls.displaysettings',
 	),
 	'position' => 'top',
+);
+
+$wgResourceModules['ext.uls.geoclient'] = array(
+	'scripts' => 'resources/js/ext.uls.geoclient.js',
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'UniversalLanguageSelector',
 );
 
 $wgResourceModules['ext.uls.preferences'] = array(

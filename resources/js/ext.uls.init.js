@@ -101,12 +101,25 @@
 			},
 			languages: mw.config.get( 'wgULSLanguages' ),
 			searchAPI: mw.util.wikiScript( 'api' ) + "?action=languagesearch",
-			quickList :  $.unique( [
-					mw.config.get( 'wgUserLanguage' ),
-					mw.config.get( 'wgContentLanguage' ),
-					mw.uls.getBrowserLanguage()
-					].concat( mw.uls.getPreviousLanguages() ) )
-
+			quickList: function() {
+				var unique = [],
+					list = [
+						mw.config.get( 'wgUserLanguage' ),
+						mw.config.get( 'wgContentLanguage' ),
+						mw.uls.getBrowserLanguage()
+					];
+				list = list.concat( mw.uls.getPreviousLanguages() );
+				if ( window.GEO ) {
+					console.log( $.uls.data.languagesInTerritory( window.GEO.country_code ) );
+					list = list.concat( $.uls.data.languagesInTerritory( window.GEO.country_code ) );
+				}
+				$.each( list, function ( i, v ) {
+					if ( $.inArray( v, unique ) === -1 ) {
+						unique.push( v );
+					}
+				} );
+				return unique;
+			}
 		} );
 
 
