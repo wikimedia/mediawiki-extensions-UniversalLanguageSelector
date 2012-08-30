@@ -72,13 +72,38 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	/**
+	 * @return string
+	 */
+	protected static function getDefaultLanguage( array $preferred ) {
+		$supported = Language::fetchLanguageNames( null, 'mwfile' );
+		// look for a language that is acceptable to the client
+		// and known to the wiki.
+		foreach ( $preferred as $code => $weight ) {
+			if ( isset( $supported[$code] ) ) {
+				return $code;
+			}
+		}
+
+		// Some browsers might only send codes like de-de.
+		// Try with bare code.
+		foreach ( $preferred as $code => $weight ) {
+			$parts = explode( '-', $code, 2 );
+			$code = $parts[0];
+			if ( isset( $supported[$code] ) ) {
+				return $code;
+			}
+		}
+		return "";
+	}
+
+	/**
 	 * Hook to UserGetLanguageObject
 	 * @param  $user User
 	 * @param  $code String
 	 * @return bool
 	 */
 	public static function getLanguage( $user, &$code ) {
-		global $wgRequest;
+		global $wgRequest, $wgULSLanguageDetection;
 		if ( $wgRequest->getVal( 'uselang' ) ) {
 			// uselang can be used for temporary override of language preference
 			return true;
@@ -101,12 +126,19 @@ class UniversalLanguageSelectorHooks {
 			$languageToUse = $wgRequest->getCookie( 'language' );
 		}
 
-		// Let the normal language loading mechanism decide if
-		// there is no cookie or setlang override.
+		// Check whether we got valid language from store or
+		// explicit language change.
 		if ( self::isSupportedLanguage( $languageToUse ) ) {
 			$code = $languageToUse;
+		} elseif ( $wgULSLanguageDetection ) {
+			$preferred = $wgRequest->getAcceptLang();
+			$default = self::getDefaultLanguage( $preferred );
+			if ( $default !== '' ) {
+				$code = $default;
+			}
 		}
 
+		// Fall back to content language
 		return true;
 	}
 

@@ -56,6 +56,13 @@ $wgExtensionCredits['other'][] = array(
  */
 $wgULSGeoService = 'http://freegeoip.net/json/';
 
+/**
+ * Try to use preferred interface language for anonymous users.
+ * Do not use if you are caching anonymous page views without
+ * taking Accept-Language into account.
+ */
+$wgULSLanguageDetection = true;
+
 $dir = __DIR__ ;
 
 // Internationalization
