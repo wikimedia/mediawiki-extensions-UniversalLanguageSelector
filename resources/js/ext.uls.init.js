@@ -59,6 +59,10 @@
 		return ( window.navigator.language || window.navigator.userLanguage ).split( '-' )[0];
 	};
 
+	mw.uls.getAcceptLanguageList = function() {
+		return mw.config.get( "wgULSAcceptLanguageList" );
+	};
+
 	$( document ).ready( function() {
 		var $ulsTrigger = $( '.uls-trigger' ),
 			previousLanguages = mw.uls.getPreviousLanguages() || [],
@@ -107,8 +111,9 @@
 						mw.config.get( 'wgUserLanguage' ),
 						mw.config.get( 'wgContentLanguage' ),
 						mw.uls.getBrowserLanguage()
-					];
-				list = list.concat( mw.uls.getPreviousLanguages() );
+					]
+					.concat( mw.uls.getPreviousLanguages() )
+					.concat( mw.uls.getAcceptLanguageList() );
 				if ( window.GEO ) {
 					console.log( $.uls.data.languagesInTerritory( window.GEO.country_code ) );
 					list = list.concat( $.uls.data.languagesInTerritory( window.GEO.country_code ) );
