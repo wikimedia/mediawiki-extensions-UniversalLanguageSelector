@@ -100,6 +100,7 @@ $wgResourceModules['ext.uls.preferences'] = array(
 	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
 		'mediawiki.user',
+		'mediawiki.api',
 		'jquery.jStorage',
 	),
 );
