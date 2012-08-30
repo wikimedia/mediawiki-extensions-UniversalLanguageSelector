@@ -116,8 +116,7 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function addConfig( &$vars ) {
-		global $wgContLang, $wgULSGeoService;
-		$vars['wgULSLanguages'] = Language::fetchLanguageNames( $wgContLang->getCode(), 'mwfile' );
+		global $wgULSGeoService;
 		$vars['wgULSGeoService'] = $wgULSGeoService;
 		return true;
 	}
@@ -128,6 +127,7 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function addVariables( &$vars, OutputPage $out ) {
+		$vars['wgULSLanguages'] = Language::fetchLanguageNames( $out->getLanguage()->getCode(), 'mwfile' );
 		$vars['wgULSAcceptLanguageList'] = array_keys( $out->getRequest()->getAcceptLang() );
 		return true;
 	}
