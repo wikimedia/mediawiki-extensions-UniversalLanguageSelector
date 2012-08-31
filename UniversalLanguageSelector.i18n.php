@@ -71,6 +71,13 @@ $messages['br'] = array(
 	'uls-select-content-language' => 'Dibab ar yezh',
 );
 
+/** Danish (dansk)
+ * @author Peter Alberti
+ */
+$messages['da'] = array(
+	'uls-select-content-language' => 'Vælg sprog',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  * @author MF-Warburg
