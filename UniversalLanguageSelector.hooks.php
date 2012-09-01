@@ -130,7 +130,7 @@ class UniversalLanguageSelectorHooks {
 		// explicit language change.
 		if ( self::isSupportedLanguage( $languageToUse ) ) {
 			$code = $languageToUse;
-		} elseif ( $wgULSLanguageDetection ) {
+		} elseif ( $user->isAnon() && $wgULSLanguageDetection ) {
 			$preferred = $wgRequest->getAcceptLang();
 			$default = self::getDefaultLanguage( $preferred );
 			if ( $default !== '' ) {
