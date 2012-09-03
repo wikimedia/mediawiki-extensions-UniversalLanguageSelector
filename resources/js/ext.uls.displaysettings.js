@@ -20,17 +20,17 @@
 ( function( $, mw, window, undefined ) {
 	"use strict";
 
-	var template = '<div class="row"><div class="twelve columns"><h3>Display Settings</h3></div></div>'
+	var template = '<div class="row"><div class="twelve columns"><h3>Display settings</h3></div></div>'
 			+ '<div class="row"><div class="eleven columns"><h4>Language used for menus</h4></div></div>'
 			+ '<div class="row"><div class="uls-ui-languages eleven columns">'
 			+ '</div></div>'
-			+ '<div class="row"><div class="twelve columns"><h4>Font Settings</h4></div></div>'
+			+ '<div class="row"><div class="twelve columns"><h4>Font settings</h4></div></div>'
 			+ '<div class="row">'
 			+ '<div class="eleven columns">'
 			+ '<label class="checkbox"><input type="checkbox" id="webfonts-enable-checkbox" />'
 			+ '<strong>Download fonts automatically when needed</strong> '
 			+ 'Web fonts will be downloaded when text in special scripts is displayed. '
-			+ '<a target="_blank" href="//www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:WebFonts">More Information</a>'
+			+ '<a target="_blank" href="//www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:WebFonts">More information</a>'
 			+ '</span></label>'
 			+ '</div>'
 			+ '</div>'
@@ -53,7 +53,7 @@
 
 	var DisplaySettings = function ( $parent ) {
 		this.name = "Display";
-		this.description = "Set the languages of menus and fonts";
+		this.description = "Set language used for menus and fonts";
 		this.$template = $( template );
 		this.uiLanguage = this.getUILanguage();
 		this.contentLanguage = this.getContentLanguage();

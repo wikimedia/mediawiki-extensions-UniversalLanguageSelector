@@ -96,7 +96,7 @@
 					.text( 'Display settings' ),
 				$displaySettingsText = $( '<span>' )
 					.addClass( 'settings-text' )
-					.text( 'Set language for menus and fonts.' ),
+					.text( 'Set language used for menus and fonts.' ),
 				$displaySettings = $( '<div>' )
 					.addClass( 'display-settings-block' )
 					.prop( 'id', 'display-settings-block' )
