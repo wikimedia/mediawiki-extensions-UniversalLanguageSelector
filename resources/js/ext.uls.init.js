@@ -63,6 +63,28 @@
 		return mw.config.get( "wgULSAcceptLanguageList" );
 	};
 
+	mw.uls.getFrequentLanguageList = function() {
+		var unique = [],
+			list = [ mw.config.get( 'wgUserLanguage' ),
+				mw.config.get( 'wgContentLanguage' ),
+				mw.uls.getBrowserLanguage() ]
+				.concat( mw.uls.getPreviousLanguages() )
+				.concat( mw.uls.getAcceptLanguageList() );
+		if ( window.GEO ) {
+			list = list.concat( $.uls.data.languagesInTerritory( window.GEO.country_code ) );
+		}
+		$.each( list, function( i, v ) {
+			if ( $.inArray( v, unique ) === -1 ) {
+				unique.push( v );
+			}
+		} );
+		// Filter out unknown and unsupported languages
+		unique = $.grep( unique, function( langCode, index ) {
+			return $.fn.uls.defaults.languages[langCode];
+		} );
+		return unique;
+	};
+
 	$( document ).ready( function() {
 		var $ulsTrigger = $( '.uls-trigger' ),
 			previousLanguages = mw.uls.getPreviousLanguages() || [],
@@ -106,23 +128,7 @@
 			languages: mw.config.get( 'wgULSLanguages' ),
 			searchAPI: mw.util.wikiScript( 'api' ) + "?action=languagesearch",
 			quickList: function() {
-				var unique = [],
-					list = [
-						mw.config.get( 'wgUserLanguage' ),
-						mw.config.get( 'wgContentLanguage' ),
-						mw.uls.getBrowserLanguage()
-					]
-					.concat( mw.uls.getPreviousLanguages() )
-					.concat( mw.uls.getAcceptLanguageList() );
-				if ( window.GEO ) {
-					list = list.concat( $.uls.data.languagesInTerritory( window.GEO.country_code ) );
-				}
-				$.each( list, function ( i, v ) {
-					if ( $.inArray( v, unique ) === -1 ) {
-						unique.push( v );
-					}
-				} );
-				return unique;
+				return mw.uls.getFrequentLanguageList();
 			}
 		} );
 

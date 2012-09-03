@@ -103,7 +103,7 @@
 			var that = this;
 			var $languages = this.$template.find( 'div.uls-ui-languages' );
 			$languages.empty();
-			var previousLanguages = this.previousLanguages();
+			var previousLanguages = this.frequentLanguageList();
 			var languages = [this.uiLanguage];
 			for ( var lang in previousLanguages ) {
 				if ( previousLanguages[lang] === this.uiLanguage ) {
@@ -169,6 +169,9 @@
 					that.$parent.show();
 					that.prepareUIFonts();
 					that.prepareLanguages();
+				},
+				quickList: function() {
+					return mw.uls.getFrequentLanguageList();
 				}
 			} );
 
@@ -181,9 +184,8 @@
 		 * Get previous languages
 		 * @returns {Array}
 		 */
-		previousLanguages: function () {
-			// FIXME
-			return [ $.cookie( 'uls-previous-language' ) || 'he', 'hi', 'ml', 'ta'];
+		frequentLanguageList: function () {
+			return mw.uls.getFrequentLanguageList();
 		},
 
 		/**
