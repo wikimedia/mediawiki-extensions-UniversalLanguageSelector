@@ -163,6 +163,7 @@
 					} );
 
 					uls.$menu.find( 'div.uls-title' ).append( $back );
+					uls.$menu.find( 'div.uls-title h1' ).text( 'Select display language' );
 				},
 				onSelect: function( langCode ) {
 					that.uiLanguage = langCode;
