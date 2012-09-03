@@ -104,8 +104,9 @@ class UniversalLanguageSelectorHooks {
 	 */
 	public static function getLanguage( $user, &$code ) {
 		global $wgRequest, $wgULSLanguageDetection;
-		if ( $wgRequest->getVal( 'uselang' ) ) {
+		if ( $wgRequest->getVal( 'uselang' ) && !$wgRequest->getVal( 'setlang' ) ) {
 			// uselang can be used for temporary override of language preference
+			// when setlang is not provided
 			return true;
 		}
 
