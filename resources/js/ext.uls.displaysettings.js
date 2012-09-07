@@ -247,7 +247,7 @@
 		 */
 		prepareContentFonts: function () {
 			var fonts = this.$webfonts.list( this.contentLanguage );
-			var $fontSelector = this.$template.find( 'select#content-font-selector' );
+			var $fontSelector = this.$template.find( '#content-font-selector' );
 
 			$fontSelector.find( 'option' ).remove();
 			var savedFont = this.webfontPreferences.get( this.contentLanguage );
@@ -265,7 +265,7 @@
 			var $systemFont = $( "<option>" ).val( 'system' ).text( 'System font' );
 			$fontSelector.append( $systemFont );
 			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
-			var $fontLabel = this.$template.find( 'label#content-font-selector-label' );
+			var $fontLabel = this.$template.find( '#content-font-selector-label' );
 			$fontLabel.html( "<strong>Select font for " + $.uls.data.autonym( this.contentLanguage )
 					+ "</strong><div>Used for content</div>" );
 		},
@@ -276,11 +276,12 @@
 		listen: function () {
 			var that = this;
 			var $contentFontSelector = this.$template
-				.find( "select#content-font-selector" ), $uiFontSelector = this.$template
+				.find( "#content-font-selector" );
+			var $uiFontSelector = this.$template
 				.find( "select#ui-font-selector" );
 			// TODO all these repeated selectors can be placed in object constructor.
 
-			this.$template.find( 'button#uls-displaysettings-apply' ).on( 'click', function () {
+			this.$template.find( '#uls-displaysettings-apply' ).on( 'click', function () {
 				that.apply();
 			} );
 
