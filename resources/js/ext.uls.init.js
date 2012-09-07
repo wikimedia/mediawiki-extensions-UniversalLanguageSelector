@@ -197,4 +197,4 @@
 			mw.uls.changeLanguage( $(this).attr( 'lang' ) );
 		} );
 	} );
-} )( jQuery, mediaWiki, window, document );
+}( jQuery, mediaWiki, window, document ) );

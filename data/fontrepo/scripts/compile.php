@@ -39,6 +39,6 @@ $js = <<<JAVASCRIPT
 ( function ( $ ) {
 	$.webfonts = $.webfonts || {};
 	$.webfonts.repository = $json;
-} )( jQuery );
+}( jQuery ) );
 JAVASCRIPT;
 file_put_contents( '../../../resources/js/ext.uls.webfonts.repository.js', $js );
