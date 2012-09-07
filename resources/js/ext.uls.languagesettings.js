@@ -71,22 +71,24 @@
 		render: function () {
 			// Get the name of all registered modules and list them in left side menu.
 			var modules = $.fn.languagesettings.modules;
-			var firstModule = modules[this.options.defaultModule];
+			var defaultModule = this.options.defaultModule;
 			for ( var moduleName in modules ) {
 				if ( modules.hasOwnProperty( moduleName ) ) {
-					if ( !firstModule ) {
-						firstModule = new modules[moduleName]( this );
+					if ( !defaultModule ) {
+						defaultModule = moduleName;
 					}
 					// Call render function on the current setting module.
-					this.renderModule( moduleName );
+					this.renderModule( moduleName, defaultModule === moduleName );
 				}
 			}
-
-			// Show the default module
-			firstModule.render();
 		},
 
-		renderModule: function ( moduleName ) {
+		/**
+		 * Render the link and settings area for a language setting module.
+		 * @param moduleName String Name of the setting module
+		 * @param active boolean Make this module active and show by default
+		 */
+		renderModule: function ( moduleName, active ) {
 			var $settingsMenuItems = this.$window.find( ".settings-menu-items" );
 			var module = new $.fn.languagesettings.modules[moduleName]( this );
 			var $settingsTitle = $( "<div>" )
@@ -109,6 +111,11 @@
 				module.render();
 				$( this ).addClass( 'active' );
 			} );
+
+			if ( active ) {
+				module.render();
+				$settingsLink.addClass( 'active' );
+			}
 		},
 
 		show: function () {
