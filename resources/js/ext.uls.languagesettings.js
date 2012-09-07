@@ -55,19 +55,20 @@
 	LanguageSettings.prototype = {
 		constructor: LanguageSettings,
 
-		init: function(){
+		init: function () {
 			$( "body" ).append( this.$window );
 			this.hide();
 		},
 
-		listen: function() {
+		listen: function () {
 			var that = this;
 			// Register all event listeners to the ULS language settings here.
 			that.$element.on( "click", $.proxy( that.show, that ) );
-			that.$window.find( 'span#languagesettings-close' ).on( "click", $.proxy( that.hide, that ) );
+			that.$window.find( 'languagesettings-close' )
+				.on( "click", $.proxy( that.hide, that ) );
 		},
 
-		render: function() {
+		render: function () {
 			// Get the name of all registered modules and list them in left side menu.
 			var modules = $.fn.languagesettings.modules;
 			var firstModule = modules[this.options.defaultModule];
@@ -85,7 +86,7 @@
 			firstModule.render();
 		},
 
-		renderModule: function( moduleName ) {
+		renderModule: function ( moduleName ) {
 			var $settingsMenuItems = this.$window.find( ".settings-menu-items" );
 			var module = new $.fn.languagesettings.modules[moduleName]( this );
 			var $settingsTitle = $( "<div>" )
@@ -103,14 +104,14 @@
 
 			$settingsMenuItems.append( $settingsLink );
 
-			$settingsLink.on( "click", function() {
+			$settingsLink.on( "click", function () {
 				var module = $( this ).data( "module" );
 				module.render();
 				$( this ).addClass( 'active' );
 			} );
 		},
 
-		show: function() {
+		show: function () {
 			if ( !this.initialized ) {
 				this.render();
 				this.initialized = true;
@@ -136,15 +137,15 @@
 			this.$window.hide();
 		},
 
-		click: function( e ) {
+		click: function ( e ) {
 			if ( !this.shown ) {
 				this.show();
 			}
 		}
 	};
 
-	$.fn.languagesettings = function( option ) {
-		return this.each( function() {
+	$.fn.languagesettings = function ( option ) {
+		return this.each( function () {
 			var $this = $( this ),
 				data = $this.data( "languagesettings" ),
 				options = typeof option === "object" && option;

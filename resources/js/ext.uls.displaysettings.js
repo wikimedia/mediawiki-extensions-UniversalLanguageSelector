@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function( $, mw, window, undefined ) {
+( function ( $, mw, window, undefined ) {
 	"use strict";
 
 	var template = '<div class="row"><div class="twelve columns"><h3>Display settings</h3></div></div>'
@@ -112,7 +112,7 @@
 				languages.push( previousLanguages[lang] );
 			}
 
-			function buttonHandler( button ) {
+			function buttonHandler ( button ) {
 				return function () {
 					that.uiLanguage = button.data( "language" ) || that.uiLanguage;
 					$( "div.uls-ui-languages button.button" ).removeClass( "down" );
@@ -131,7 +131,7 @@
 				}
 				$button.data( 'language', language );
 				$languages.append( $button );
-				$button.on ( 'click', buttonHandler( $button ) );
+				$button.on( 'click', buttonHandler( $button ) );
 			}
 			this.prepareMoreLanguages();
 		},
@@ -151,13 +151,12 @@
 			$moreLanguagesButton.uls( {
 				left: that.$parent.left,
 				top: that.$parent.top,
-				onReady: function( uls ) {
-					var $back = $( '<a>' )
-						.prop( 'href', '#' )
+				onReady: function ( uls ) {
+					var $back = $( '<a>' ).prop( 'href', '#' )
 						.prop( 'title', 'Back to display settings' )
 						.text( '← Back to display settings' ); // FIXME i18n
 
-					$back.click( function() {
+					$back.click( function () {
 						uls.hide();
 						that.$parent.show();
 					} );
@@ -165,13 +164,13 @@
 					uls.$menu.find( 'div.uls-title' ).append( $back );
 					uls.$menu.find( 'div.uls-title h1' ).text( 'Select display language' );
 				},
-				onSelect: function( langCode ) {
+				onSelect: function ( langCode ) {
 					that.uiLanguage = langCode;
 					that.$parent.show();
 					that.prepareUIFonts();
 					that.prepareLanguages();
 				},
-				quickList: function() {
+				quickList: function () {
 					return mw.uls.getFrequentLanguageList();
 				}
 			} );
@@ -225,10 +224,9 @@
 			$fontSelector.find( 'option' ).remove();
 			var savedFont = this.webfontPreferences.get( this.uiLanguage );
 
-			if( fonts && fonts.length ) {
+			if ( fonts && fonts.length ) {
 				$.each( fonts, function ( key, font ) {
-					var $fontOption = $( "<option>" )
-					.attr( "value", font ).text( font );
+					var $fontOption = $( "<option>" ).attr( "value", font ).text( font );
 					$fontSelector.append( $fontOption );
 					$fontOption.attr( 'selected', savedFont === font );
 				} );
@@ -241,7 +239,7 @@
 			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
 			var $fontLabel = this.$template.find( 'label#ui-font-selector-label' );
 			$fontLabel.html( "<strong>Select font for " + $.uls.data.autonym( this.uiLanguage )
-					+ "</strong><div>Used for menus</div>");
+					+ "</strong><div>Used for menus</div>" );
 		},
 
 		/**
@@ -254,10 +252,9 @@
 			$fontSelector.find( 'option' ).remove();
 			var savedFont = this.webfontPreferences.get( this.contentLanguage );
 
-			if( fonts && fonts.length ) {
+			if ( fonts && fonts.length ) {
 				$.each( fonts, function ( key, font ) {
-					var $fontOption = $( "<option>" )
-					.attr( "value", font ).text( font );
+					var $fontOption = $( "<option>" ).attr( "value", font ).text( font );
 					$fontSelector.append( $fontOption );
 					$fontOption.attr( 'selected', savedFont === font );
 				} );
@@ -268,7 +265,7 @@
 			var $systemFont = $( "<option>" ).val( 'system' ).text( 'System font' );
 			$fontSelector.append( $systemFont );
 			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
-			var $fontLabel =this.$template.find( 'label#content-font-selector-label' );
+			var $fontLabel = this.$template.find( 'label#content-font-selector-label' );
 			$fontLabel.html( "<strong>Select font for " + $.uls.data.autonym( this.contentLanguage )
 					+ "</strong><div>Used for content</div>" );
 		},
@@ -277,9 +274,10 @@
 		 * Register general event listeners
 		 */
 		listen: function () {
-			var that = this,
-				$contentFontSelector = this.$template.find( "select#content-font-selector" ),
-				$uiFontSelector = this.$template.find( "select#ui-font-selector" );
+			var that = this;
+			var $contentFontSelector = this.$template
+				.find( "select#content-font-selector" ), $uiFontSelector = this.$template
+				.find( "select#ui-font-selector" );
 			// TODO all these repeated selectors can be placed in object constructor.
 
 			this.$template.find( 'button#uls-displaysettings-apply' ).on( 'click', function () {
@@ -361,4 +359,6 @@
 	$.fn.languagesettings.modules = $.extend( $.fn.languagesettings.modules, {
 		display: DisplaySettings
 	} );
+
 }( jQuery, mediaWiki, window ) );
+

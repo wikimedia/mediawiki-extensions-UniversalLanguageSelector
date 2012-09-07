@@ -18,7 +18,7 @@
  * @licence MIT License
  */
 
-( function( $, mw ) {
+( function ( $, mw, undefined ) {
 	"use strict";
 
 	var ULSPreferences = function ( group ) {
@@ -46,6 +46,7 @@
 
 		/**
 		 * Set the preference
+		 *
 		 * @param {String} key
 		 * @param value
 		 */
@@ -58,6 +59,7 @@
 
 		/**
 		 * Get a preference value for the given preference name
+		 *
 		 * @param key
 		 * @returns
 		 */
@@ -104,7 +106,7 @@
 	};
 
 	mw.uls = mw.uls || {};
-	mw.uls.preferences = function( group ) {
+	mw.uls.preferences = function ( group ) {
 		var data = $( 'body' ).data( "preferences" );
 
 		if ( !data ) {

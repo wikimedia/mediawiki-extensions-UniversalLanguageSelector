@@ -36,7 +36,7 @@
 			fontSelector: function ( repository, language ) {
 				var font = webfontsPreferences.get( language );
 				if ( !font ) {
-					font = repository.defaultFont(language);
+					font = repository.defaultFont( language );
 				}
 				if ( font === 'system' ) {
 					font = null;

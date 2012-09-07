@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function( $, mw, window, document, undefined ) {
+( function ( $, mw, window, document, undefined ) {
 	"use strict";
 
 	// MediaWiki override for ULS defaults.
@@ -34,7 +34,7 @@
 	 * Change the language of wiki using setlang URL parameter
 	 * @param {String} language
 	 */
-	mw.uls.changeLanguage = function( language ) {
+	mw.uls.changeLanguage = function ( language ) {
 		var uri = new mw.Uri( window.location.href );
 		uri.extend( {
 			setlang: language
@@ -42,11 +42,11 @@
 		window.location.href = uri.toString();
 	};
 
-	mw.uls.setPreviousLanguages = function( previousLanguages ) {
+	mw.uls.setPreviousLanguages = function ( previousLanguages ) {
 		$.cookie( mw.uls.previousLanguagesCookie, $.toJSON( previousLanguages ) );
 	};
 
-	mw.uls.getPreviousLanguages = function() {
+	mw.uls.getPreviousLanguages = function () {
 		var previousLanguages = $.cookie( mw.uls.previousLanguagesCookie );
 		if ( !previousLanguages ) {
 			return [];
@@ -55,15 +55,15 @@
 		return $.parseJSON( previousLanguages ).slice( -5 );
 	};
 
-	mw.uls.getBrowserLanguage = function() {
+	mw.uls.getBrowserLanguage = function () {
 		return ( window.navigator.language || window.navigator.userLanguage ).split( '-' )[0];
 	};
 
-	mw.uls.getAcceptLanguageList = function() {
+	mw.uls.getAcceptLanguageList = function () {
 		return mw.config.get( "wgULSAcceptLanguageList" );
 	};
 
-	mw.uls.getFrequentLanguageList = function() {
+	mw.uls.getFrequentLanguageList = function () {
 		var unique = [],
 			list = [ mw.config.get( 'wgUserLanguage' ),
 				mw.config.get( 'wgContentLanguage' ),
@@ -73,13 +73,13 @@
 		if ( window.GEO ) {
 			list = list.concat( $.uls.data.languagesInTerritory( window.GEO.country_code ) );
 		}
-		$.each( list, function( i, v ) {
+		$.each( list, function ( i, v ) {
 			if ( $.inArray( v, unique ) === -1 ) {
 				unique.push( v );
 			}
 		} );
 		// Filter out unknown and unsupported languages
-		unique = $.grep( unique, function( langCode, index ) {
+		unique = $.grep( unique, function ( langCode, index ) {
 			return $.fn.uls.defaults.languages[langCode];
 		} );
 		return unique;
@@ -113,7 +113,7 @@
 				top: position.top,
 				left: position.left
 			} );
-			$displaySettings.on( 'click', function() {
+			$displaySettings.on( 'click', function () {
 				uls.hide();
 			} );
 		}
@@ -122,18 +122,18 @@
 			onReady: function ( uls ) {
 				addDisplaySettings( uls );
 			},
-			onSelect: function( language ) {
+			onSelect: function ( language ) {
 				mw.uls.changeLanguage( language );
 			},
 			languages: mw.config.get( 'wgULSLanguages' ),
 			searchAPI: mw.util.wikiScript( 'api' ) + "?action=languagesearch",
-			quickList: function() {
+			quickList: function () {
 				return mw.uls.getFrequentLanguageList();
 			}
 		} );
 
 
-		if( !previousLang ) {
+		if ( !previousLang ) {
 			previousLanguages.push( currentLang );
 			mw.uls.setPreviousLanguages( previousLanguages );
 			// Do not show tooltip.
@@ -155,7 +155,7 @@
 			html: true,
 			fade: true,
 			trigger: 'manual',
-			title: function() {
+			title: function () {
 				var prevLangName = $.uls.data.autonym( previousLang ),
 					linkClass = 'uls-lang-link',
 					title = "Language changed from <a href='#' lang = '" +
@@ -166,35 +166,35 @@
 		} );
 		// Show the tipsy tooltip on page load.
 		$ulsTrigger.tipsy( 'show' );
-		tipsyTimer = window.setTimeout( function() {
+		tipsyTimer = window.setTimeout( function () {
 				$ulsTrigger.tipsy('hide');
 			},
 			// The timeout after page reloading is longer,
 			// to give the user a better chance to see it.
 			6000
 		);
-		$( '.tipsy' ).live( 'mouseout', function( e ) {
-			tipsyTimer = window.setTimeout( function() {
-				$ulsTrigger.tipsy('hide');
-				},
-				3000 // hide the link in 3 seconds
-			);
-		} );
-		// if the mouse is over the tooltip, do not hide
-		$( '.tipsy' ).live( 'mouseover', function( e ) {
-			window.clearTimeout( tipsyTimer );
-		} );
+
 		// manually show the tooltip
-		$ulsTrigger.bind( 'mouseover', function( e ) {
+		$ulsTrigger.on( 'mouseover', function ( e ) {
 			$( this ).tipsy( 'show' );
+			// if the mouse is over the tooltip, do not hide
+			$( '.tipsy' ).on( 'mouseover', function ( e ) {
+				window.clearTimeout( tipsyTimer );
+			} );
+			$( '.tipsy' ).on( 'mouseout', function ( e ) {
+				tipsyTimer = window.setTimeout( function () {
+					$ulsTrigger.tipsy( 'hide' );
+				}, 3000 // hide the link in 3 seconds
+				);
+			} );
 		} );
 		// hide the tooltip when clicked on uls trigger
-		$ulsTrigger.bind( 'click', function( e ) {
+		$ulsTrigger.on( 'click', function ( e ) {
 			$( this ).tipsy( 'hide' );
 		} );
 		// Event handler for links in the tooltip
-		$( 'a.uls-lang-link' ).live( 'click', function() {
-			mw.uls.changeLanguage( $(this).attr( 'lang' ) );
+		$( 'a.uls-lang-link' ).on( 'click', function () {
+			mw.uls.changeLanguage( $( this ).attr( 'lang' ) );
 		} );
 	} );
 }( jQuery, mediaWiki, window, document ) );
