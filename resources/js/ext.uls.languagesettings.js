@@ -170,4 +170,4 @@
 
 	$.fn.languagesettings.Constructor = LanguageSettings;
 
-} )( jQuery );
+}( jQuery ) );
