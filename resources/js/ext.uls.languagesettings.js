@@ -139,12 +139,28 @@
 			this.$window.show();
 		},
 
+		/**
+		 * Hide this window.
+		 * Will be used when moving to a different context and
+		 * need coming back.
+		 */
 		hide: function() {
 			this.shown = false;
 			this.$window.hide();
 		},
 
-		click: function ( e ) {
+		/**
+		 * Close this language settings window, and
+		 * call onClose if defined from the previous context.
+		 */
+		close: function() {
+			this.hide();
+			if ( this.options.onClose ) {
+				this.options.onClose();
+			}
+		},
+
+		click: function( e ) {
 			if ( !this.shown ) {
 				this.show();
 			}
@@ -168,12 +184,11 @@
 
 	$.fn.languagesettings.modules = {};
 	$.fn.languagesettings.defaults = {
-		settings: {},
 		template: windowTemplate,
-		modules: {},
 		defaultModule: false,
-		top: null,
-		left: null
+		onClose: null, // An onClose event handler.
+		top: null, // Top position of this window
+		left: null // Left position of this window
 	};
 
 	$.fn.languagesettings.Constructor = LanguageSettings;

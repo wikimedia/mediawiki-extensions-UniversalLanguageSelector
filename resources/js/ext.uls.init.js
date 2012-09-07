@@ -110,6 +110,10 @@
 			uls.$menu.find( "div#settings-block" ).append( $displaySettings );
 			var position = uls.position();
 			$displaySettings.languagesettings( {
+				defaultModule: $.fn.languagesettings.modules['display'],
+				onClose: function () {
+					uls.show();
+				},
 				top: position.top,
 				left: position.left
 			} );

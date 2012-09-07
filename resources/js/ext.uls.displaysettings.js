@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function ( $, mw, window, undefined ) {
+( function( $, mw, undefined ) {
 	"use strict";
 
 	var template = '<div class="row"><div class="twelve columns"><h3>Display settings</h3></div></div>'
@@ -193,9 +193,6 @@
 		 * @returns String Current UI language
 		 */
 		getUILanguage: function () {
-			if ( !window.mw ) {
-				return window.navigator.language || window.navigator.userLanguage;
-			}
 			return mw.config.get( 'wgUserLanguage' );
 		},
 
@@ -286,8 +283,7 @@
 			} );
 
 			this.$template.find( 'button.uls-settings-close' ).on( 'click', function () {
-				// FIXME This should actually go to the previous context than just hiding.
-				that.hide();
+				that.close();
 			} );
 
 			this.$template.find( '#webfonts-enable-checkbox' ).on( 'click', function () {
@@ -319,10 +315,19 @@
 		},
 
 		/**
-		 * Hide this window.2
+		 * Hide this window.
+		 * Used while navigating to language selector and need coming back
 		 */
 		hide: function () {
 			this.$parent.hide();
+		},
+
+		/**
+		 * Close the language settings window.
+		 * Depending on the context, actions vary.
+		 */
+		close:  function () {
+			this.$parent.close();
 		},
 
 		/**
@@ -360,6 +365,5 @@
 	$.fn.languagesettings.modules = $.extend( $.fn.languagesettings.modules, {
 		display: DisplaySettings
 	} );
-
-}( jQuery, mediaWiki, window ) );
+} ) ( jQuery, mediaWiki );
 
