@@ -20,6 +20,7 @@
 ( function( mw, $ ) {
 	"use strict";
 
+	mw.uls = mw.uls || {};
 	mw.uls.setGeo = function ( data ) {
 		window.GEO = data;
 	};
