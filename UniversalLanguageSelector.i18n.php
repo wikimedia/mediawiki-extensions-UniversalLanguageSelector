@@ -236,6 +236,7 @@ $messages['nl'] = array(
  * @author Minisarm
  */
 $messages['ro'] = array(
+	'UniversalLanguageSelector' => 'Selector universal de limbi',
 	'uls-desc' => 'Oferă utilizatorului mai multe modalități de a selecta o limbă și de a modifica setările de limbă',
 	'uls-select-content-language' => 'Selectare limbă',
 );
