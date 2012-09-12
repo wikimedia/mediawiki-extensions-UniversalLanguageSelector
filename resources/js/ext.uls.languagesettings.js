@@ -185,7 +185,7 @@
 	$.fn.languagesettings.modules = {};
 	$.fn.languagesettings.defaults = {
 		template: windowTemplate,
-		defaultModule: false,
+		defaultModule: false, // Name of the default module
 		onClose: null, // An onClose event handler.
 		top: null, // Top position of this window
 		left: null // Left position of this window
