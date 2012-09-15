@@ -88,7 +88,11 @@ test( "-- $.uls.data testing", function() {
 	var allLanguagesByRegionAndScript = $.uls.data.allLanguagesByRegionAndScript();
 	deepEqual( allLanguagesByRegionAndScript['4']['AS']['SouthEastAsian']['Bugi'], ['bug'], 'All languages in the Buginese script in Asia were selected' );
 
-	deepEqual( $.uls.data.languagesInRegion( "AU" ), ["en-gb", "en", "hif-latn", "hif", "mi", "na"], "languages of region AU are selected correctly" );
+	deepEqual( $.uls.data.languagesInRegion( "PA" ),
+			["ace", "bi", "ch", "en-gb", "en", "fj", "haw", "hif-latn", "hif", "ho", "jv",
+			"mh", "mi", "na", "niu", "pih", "pis", "pt", "rtm", "sm", "tet",
+			"to", "tpi", "ty", "wls"],
+			"languages of region PA are selected correctly" );
 	deepEqual( $.uls.data.languagesInRegions( ["AM", "WW"] ),
 		[
 			"akz", "arn", "aro", "ase", "avk", "ay", "cho", "chr", "chy", "cr-cans", "cr-latn", "cr",
@@ -122,7 +126,7 @@ test( "-- $.uls.data testing", function() {
 	var allLanguagesByScriptGroup = $.uls.data.allLanguagesByScriptGroup();
 	deepEqual( allLanguagesByScriptGroup['Greek'], ['el', 'grc', 'pnt', 'ruq-grek', 'tsd'], 'All languages in the Greek script found' );
 
-	deepEqual( $.uls.data.allRegions(), ["WW", "AM", "EU", "ME", "AF", "AS", "PA", "AU"], "All regions found" );
+	deepEqual( $.uls.data.allRegions(), ["WW", "AM", "EU", "ME", "AF", "AS", "PA"], "All regions found" );
 
 	// autonyms: gn: avañe'ẽ, de: deutsch, hu: magyar, fi: suomi
 	deepEqual( ['de', 'fi', 'gn', 'hu'].sort( $.uls.data.sortByAutonym ), ['gn', 'de', 'hu', 'fi'], 'Languages are correctly sorted by autonym' );
