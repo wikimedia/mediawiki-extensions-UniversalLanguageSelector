@@ -196,6 +196,15 @@ $messages['ko'] = array(
 	'uls-select-content-language' => '언어 선택',
 );
 
+/** Colognian (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'UniversalLanguageSelector' => 'Alljemein Schproochewahl',
+	'uls-desc' => 'Jit dä Metmaachere ongerscheidlejje Müjjeleschkeite, en Schprooch ußzewähle un Enschtällonge für Schprooche ze maache.',
+	'uls-select-content-language' => 'En Schprooch ußwähle',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
@@ -221,6 +230,15 @@ $messages['ml'] = array(
 	'UniversalLanguageSelector' => 'ആഗോള ഭാഷാസഹായി',
 	'uls-desc' => 'ഭാഷ തിരഞ്ഞെടുക്കുന്നതിനും സജ്ജീകരിക്കുന്നതിനുമുള്ള സംവിധാനം',
 	'uls-select-content-language' => 'ഭാഷ തിരഞ്ഞെടുക്കുക',
+);
+
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'UniversalLanguageSelector' => 'Pemilih Bahasa Sejagat',
+	'uls-desc' => 'Membolehkan pengguna memilih bahasa dan mengubah tetapan bahasa dengan pelbagai cara',
+	'uls-select-content-language' => 'Pilih bahasa',
 );
 
 /** Dutch (Nederlands)
