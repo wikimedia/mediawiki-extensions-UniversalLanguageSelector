@@ -160,7 +160,6 @@
 			return true;
 		}
 
-		var tipsyTimer;
 		previousLanguages.push( currentLang );
 		mw.uls.setPreviousLanguages( previousLanguages );
 		// Attach a tipsy tooltip to the trigger
@@ -172,7 +171,7 @@
 			trigger: 'manual',
 			title: function () {
 				var prevLangName = $.uls.data.autonym( previousLang );
-				var linkClass = 'uls-lang-link';
+				var linkClass = 'uls-prevlang-link';
 				var prevLangLink = "<a href='#' lang = '" +
 					previousLang + "' class = '" + linkClass + "' >" +
 					prevLangName + "</a>";
@@ -180,37 +179,42 @@
 				return title;
 			}
 		} );
-		// Show the tipsy tooltip on page load.
-		$ulsTrigger.tipsy( 'show' );
-		tipsyTimer = window.setTimeout( function () {
-				$ulsTrigger.tipsy( 'hide' );
-			},
-			// The timeout after page reloading is longer,
-			// to give the user a better chance to see it.
-			6000
-		);
 
-		// manually show the tooltip
-		$ulsTrigger.on( 'mouseover', function ( e ) {
-			$( this ).tipsy( 'show' );
+		function showTipsy( timeout ) {
+			var tipsyTimer;
+			$ulsTrigger.tipsy( 'show' );
 			// if the mouse is over the tooltip, do not hide
 			$( '.tipsy' ).on( 'mouseover', function ( e ) {
 				window.clearTimeout( tipsyTimer );
 			} );
 			$( '.tipsy' ).on( 'mouseout', function ( e ) {
 				tipsyTimer = window.setTimeout( function () {
-					$ulsTrigger.tipsy( 'hide' );
-				}, 3000 // hide the link in 3 seconds
-				);
+					hideTipsy();
+				}, timeout );
 			} );
+			// Event handler for links in the tooltip
+			$( 'a.uls-prevlang-link' ).on( 'click', function () {
+				mw.uls.changeLanguage( $( this ).attr( 'lang' ) );
+			} );
+			tipsyTimer = window.setTimeout( function () {
+				hideTipsy();
+			}, timeout );
+		}
+
+		function hideTipsy() {
+			$ulsTrigger.tipsy( 'hide' );
+		}
+
+		// Show the tipsy tooltip on page load.
+		showTipsy( 6000 );
+
+		// manually show the tooltip
+		$ulsTrigger.on( 'mouseover', function ( e ) {
+			showTipsy( 3000 );
 		} );
 		// hide the tooltip when clicked on uls trigger
 		$ulsTrigger.on( 'click', function ( e ) {
-			$( this ).tipsy( 'hide' );
-		} );
-		// Event handler for links in the tooltip
-		$( 'a.uls-lang-link' ).on( 'click', function () {
-			mw.uls.changeLanguage( $( this ).attr( 'lang' ) );
+			hideTipsy();
 		} );
 	} );
 }( jQuery, mediaWiki, window, document ) );
