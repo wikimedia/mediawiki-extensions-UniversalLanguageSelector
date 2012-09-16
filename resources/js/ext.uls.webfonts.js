@@ -42,7 +42,15 @@
 					font = null;
 				}
 				return font;
-			}
+			},
+			exclude: function() {
+				if ( mw.user.options.get( 'editfont' ) ) {
+					// Exclude textboxes from webfonts if user has edit area font option
+					// set using 'Preferences' page
+					return 'textbox';
+				}
+				return $.fn.webfonts.defaults.exclude;
+			} ()
 		} );
 	} );
-} )( jQuery, mediaWiki, document );
+} ( jQuery, mediaWiki, document ) );
