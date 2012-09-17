@@ -47,7 +47,7 @@
 				if ( mw.user.options.get( 'editfont' ) ) {
 					// Exclude textboxes from webfonts if user has edit area font option
 					// set using 'Preferences' page
-					return 'textbox';
+					return 'textarea';
 				}
 				return $.fn.webfonts.defaults.exclude;
 			} ()
