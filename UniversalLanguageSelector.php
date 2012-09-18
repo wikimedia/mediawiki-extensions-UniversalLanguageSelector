@@ -63,7 +63,7 @@ $wgULSGeoService = 'http://freegeoip.net/json/';
  */
 $wgULSLanguageDetection = true;
 
-$dir = __DIR__ ;
+$dir = __DIR__;
 
 // Internationalization
 $wgExtensionMessagesFiles['UniversalLanguageSelector'] = "$dir/UniversalLanguageSelector.i18n.php";

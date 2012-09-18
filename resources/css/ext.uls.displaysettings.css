@@ -1,4 +1,4 @@
-.uls-font-label,.uls-font-select {
+.uls-font-label, .uls-font-select {
 	font-size: 10pt;
 	line-height: 16pt;
 }
@@ -17,11 +17,11 @@
 	width: auto;
 }
 
-.uls-content-fonts,.uls-ui-fonts {
+.uls-content-fonts, .uls-ui-fonts {
 	padding-top: 10px;
 }
 
-.uls-content-fonts:hover,.uls-ui-fonts:hover {
+.uls-content-fonts:hover, .uls-ui-fonts:hover {
 	background-color: #F6F6F6;
 }
 

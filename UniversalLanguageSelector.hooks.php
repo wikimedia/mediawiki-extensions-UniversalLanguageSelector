@@ -32,6 +32,7 @@ class UniversalLanguageSelectorHooks {
 		if ( $wgULSGeoService ) {
 			$out->addModules( 'ext.uls.geoclient' );
 		}
+
 		return true;
 	}
 
@@ -48,6 +49,7 @@ class UniversalLanguageSelectorHooks {
 			'localBasePath' => __DIR__,
 			'remoteExtPath' => 'UniversalLanguageSelector',
 		);
+
 		return true;
 	}
 
@@ -57,17 +59,21 @@ class UniversalLanguageSelectorHooks {
 	 */
 	static function addTrigger( array &$personal_urls, &$title ) {
 		global $wgLang;
-		$personal_urls = array( 'uls' => array(
-					'text' =>  $wgLang->getLanguageName( $wgLang->getCode() ),
-					'href' => '#',
-					'class' => 'uls-trigger',
-					'active' => true
-				) ) + $personal_urls;
+		$personal_urls = array(
+			'uls' => array(
+				'text' => $wgLang->getLanguageName( $wgLang->getCode() ),
+				'href' => '#',
+				'class' => 'uls-trigger',
+				'active' => true
+			)
+		) + $personal_urls;
+
 		return true;
 	}
 
 	protected static function isSupportedLanguage( $language ) {
 		$supported = Language::fetchLanguageNames( null, 'mwfile' );
+
 		return isset( $supported[$language] );
 	}
 
@@ -93,6 +99,7 @@ class UniversalLanguageSelectorHooks {
 				return $code;
 			}
 		}
+
 		return "";
 	}
 
@@ -151,6 +158,7 @@ class UniversalLanguageSelectorHooks {
 	public static function addConfig( &$vars ) {
 		global $wgULSGeoService;
 		$vars['wgULSGeoService'] = $wgULSGeoService;
+
 		return true;
 	}
 
@@ -160,8 +168,11 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function addVariables( &$vars, OutputPage $out ) {
-		$vars['wgULSLanguages'] = Language::fetchLanguageNames( $out->getLanguage()->getCode(), 'mwfile' );
+		$vars['wgULSLanguages'] = Language::fetchLanguageNames(
+			$out->getLanguage()->getCode(), 'mwfile'
+		);
 		$vars['wgULSAcceptLanguageList'] = array_keys( $out->getRequest()->getAcceptLang() );
+
 		return true;
 	}
 }

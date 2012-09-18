@@ -1,6 +1,5 @@
 #uls-current-language-nav { /* @embed */
-	background: url('../images/cog-16x16-ltr.png') no-repeat scroll right
-		top transparent;
+	background: url('../images/cog-16x16-ltr.png') no-repeat scroll right top transparent;
 	cursor: pointer;
 }
 
@@ -92,7 +91,6 @@
 	background-color: #F6F6F6;
 	border-left-color: #3366BB;
 }
-
 
 #languagesettings-panels div#settings-block {
 	border-left: 1px solid #C9C9C9;

@@ -82,8 +82,7 @@ button.button.down {
 button.button:disabled,
 button.button.hover:disabled,
 button.button.disabled,
-button.button.disabled:hover
-	{
+button.button.disabled:hover {
 	background-color: #F0F0F0;
 	background-image: -webkit-linear-gradient(top, #f0f0f0, #f0f0f0);
 	background-image: -moz-linear-gradient(center top, #F0F0F0, #F0F0F0);

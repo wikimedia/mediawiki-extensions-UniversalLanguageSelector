@@ -31,7 +31,7 @@ $messages['en'] = array(
 );
 /**
  * Message documentation
- *  @author santhosh
+ * @author santhosh
  */
 $messages['qqq'] = array(
 	'UniversalLanguageSelector' => 'Extension name',

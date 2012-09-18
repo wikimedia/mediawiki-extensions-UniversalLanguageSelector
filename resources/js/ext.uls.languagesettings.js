@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function( $ ) {
+( function ( $ ) {
 	"use strict";
 
 	var closeRow = '<div class="row">' +
@@ -34,10 +34,10 @@
 		settingsMenu +
 		settingsPanel +
 		'</div>';
-	var windowTemplate = '<div style="display: block;" id="language-settings-dialog" class="uls-menu">' +
-		closeRow +
-		panelsRow +
-		'</div>';
+	var windowTemplate = '<div style="display: block;" id="language-settings-dialog" class="uls-menu">'
+		+ closeRow
+		+ panelsRow
+		+ '</div>';
 
 	var LanguageSettings = function ( element, options ) {
 		this.$element = $( element );
@@ -144,7 +144,7 @@
 		 * Will be used when moving to a different context and
 		 * need coming back.
 		 */
-		hide: function() {
+		hide: function () {
 			this.shown = false;
 			this.$window.hide();
 		},
@@ -153,14 +153,14 @@
 		 * Close this language settings window, and
 		 * call onClose if defined from the previous context.
 		 */
-		close: function() {
+		close: function () {
 			this.hide();
 			if ( this.options.onClose ) {
 				this.options.onClose();
 			}
 		},
 
-		click: function( e ) {
+		click: function ( e ) {
 			if ( !this.shown ) {
 				this.show();
 			}

@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function( mw, $ ) {
+( function ( mw, $ ) {
 	"use strict";
 
 	mw.uls = mw.uls || {};

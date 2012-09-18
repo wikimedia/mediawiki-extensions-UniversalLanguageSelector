@@ -26,7 +26,6 @@
 		searchAPI: mw.util.wikiScript( 'api' ) + "?action=languagesearch"
 	} );
 
-
 	var currentLang = mw.config.get( 'wgUserLanguage' );
 	mw.uls = mw.uls || {};
 	mw.uls.previousLanguagesCookie = 'uls-previous-languages';
@@ -65,9 +64,11 @@
 
 	mw.uls.getFrequentLanguageList = function () {
 		var unique = [],
-			list = [ mw.config.get( 'wgUserLanguage' ),
+			list = [
+				mw.config.get( 'wgUserLanguage' ),
 				mw.config.get( 'wgContentLanguage' ),
-				mw.uls.getBrowserLanguage() ]
+				mw.uls.getBrowserLanguage()
+			]
 				.concat( mw.uls.getPreviousLanguages() )
 				.concat( mw.uls.getAcceptLanguageList() );
 		if ( window.GEO ) {
@@ -85,12 +86,12 @@
 		return unique;
 	};
 
-	$( document ).ready( function() {
+	$( document ).ready( function () {
 		var $ulsTrigger = $( '.uls-trigger' ),
 			previousLanguages = mw.uls.getPreviousLanguages() || [],
 			previousLang = previousLanguages.slice( -1 )[0];
 
-		function displaySettings() {
+		function displaySettings () {
 			var $displaySettingsTitle = $( '<div>' )
 					.addClass( 'settings-title' )
 					.text( 'Display settings' ),
@@ -105,7 +106,7 @@
 			return $displaySettings;
 		}
 
-		function addDisplaySettings( uls ) {
+		function addDisplaySettings ( uls ) {
 			var $displaySettings = displaySettings();
 			uls.$menu.find( "div#settings-block" ).append( $displaySettings );
 			var position = uls.position();
@@ -135,7 +136,6 @@
 				return mw.uls.getFrequentLanguageList();
 			}
 		} );
-
 
 		if ( !previousLang ) {
 			previousLanguages.push( currentLang );
@@ -171,7 +171,7 @@
 		// Show the tipsy tooltip on page load.
 		$ulsTrigger.tipsy( 'show' );
 		tipsyTimer = window.setTimeout( function () {
-				$ulsTrigger.tipsy('hide');
+				$ulsTrigger.tipsy( 'hide' );
 			},
 			// The timeout after page reloading is longer,
 			// to give the user a better chance to see it.

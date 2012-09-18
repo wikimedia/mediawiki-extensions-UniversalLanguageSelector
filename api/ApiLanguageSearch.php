@@ -67,8 +67,8 @@ class ApiLanguageSearch extends ApiBase {
 			'api.php?action=languagesearch&search=ഫി&typos=1',
 		);
 	}
+
 	public function getVersion() {
 		return __CLASS__ . ': ' . ULS_VERSION;
 	}
-
 }

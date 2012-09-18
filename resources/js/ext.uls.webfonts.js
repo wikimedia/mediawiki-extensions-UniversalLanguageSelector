@@ -19,7 +19,7 @@
 ( function ( $, mw, document, undefined ) {
 	"use strict";
 
-	$( document ).ready( function() {
+	$( document ).ready( function () {
 		var mediawikiFontRepository = $.webfonts.repository;
 		var webfontsPreferences = mw.uls.preferences( 'webfonts' );
 		mediawikiFontRepository.base = mw.config.get( 'wgExtensionAssetsPath' )
@@ -43,7 +43,7 @@
 				}
 				return font;
 			},
-			exclude: function() {
+			exclude: function () {
 				if ( mw.user.options.get( 'editfont' ) ) {
 					// Exclude textboxes from webfonts if user has edit area font option
 					// set using 'Preferences' page
