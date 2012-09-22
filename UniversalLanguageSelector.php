@@ -90,6 +90,7 @@ $wgResourceModules['ext.uls.init'] = array(
 		'mediawiki.Uri',
 		'jquery.tipsy',
 		'jquery.uls',
+		'jquery.i18n',
 		'ext.uls.displaysettings',
 	),
 	'position' => 'top',
@@ -138,38 +139,25 @@ $wgResourceModules['ext.uls.displaysettings'] = array(
 	'localBasePath' => $dir,
 	'dependencies' => array(
 		'ext.uls.languagesettings',
-		'ext.uls.webfonts'
+		'ext.uls.webfonts',
+		'jquery.i18n',
 	),
 	'remoteExtPath' => 'UniversalLanguageSelector',
 );
 
 $wgResourceModules['jquery.uls'] = array(
 	'scripts' => array(
-		'lib/jquery.uls/src/jquery.uls.core.js',
-		'lib/jquery.uls/src/jquery.uls.languagefilter.js',
-		'lib/jquery.uls/src/jquery.uls.regionfilter.js',
-		'lib/jquery.uls/src/jquery.uls.lcd.js',
+		'lib/jquery.uls/jquery.uls.js',
 	),
 	'styles' => array(
 		'lib/jquery.uls/css/jquery.uls.css',
-		'lib/jquery.uls/css/jquery.uls.grid.css',
-		'lib/jquery.uls/css/jquery.uls.lcd.css',
 	),
 	'localBasePath' => $dir,
 	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
-		'jquery.uls.data',
+		'jquery.i18n',
 	),
 	'position' => 'top',
-);
-
-$wgResourceModules['jquery.uls.data'] = array(
-	'scripts' => array(
-		'lib/jquery.uls/src/jquery.uls.data.js',
-		'lib/jquery.uls/src/jquery.uls.data.utils.js',
-	),
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
 );
 
 $wgResourceModules['jquery.webfonts'] = array(
@@ -182,4 +170,10 @@ $wgResourceModules['ext.uls.webfonts.repository'] = array(
 	'scripts' => 'resources/js/ext.uls.webfonts.repository.js',
 	'localBasePath' => $dir,
 	'remoteExtPath' => 'UniversalLanguageSelector',
+);
+
+$wgResourceModules['jquery.i18n'] = array(
+		'scripts' => 'lib/jquery.i18n.js',
+		'localBasePath' => $dir,
+		'remoteExtPath' => 'UniversalLanguageSelector',
 );

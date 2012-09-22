@@ -87,6 +87,14 @@
 	};
 
 	$( document ).ready( function () {
+		// i18n initialization
+		var i18n = $.i18n( {
+			locale: currentLang
+		} );
+		var extensionPath = mw.config.get( 'wgExtensionAssetsPath' ) +
+			'/UniversalLanguageSelector/';
+		i18n.load( extensionPath + 'lib/jquery.uls/i18n/' + currentLang + ".json", currentLang );
+
 		var $ulsTrigger = $( '.uls-trigger' ),
 			previousLanguages = mw.uls.getPreviousLanguages() || [],
 			previousLang = previousLanguages.slice( -1 )[0];
