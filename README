@@ -11,6 +11,11 @@ For a very, very quick start add the following to LocalSettings.php:
 
 include("$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php");
 
+== For Developers ==
+The MediaWiki Universal Language Selector project uses jquery.uls(https://github.com/wikimedia/jquery.uls).
+Its development is at wikimedia github account. So any fixes to lib/jquery.uls should happen at github. 
+Follow the build instructions of jquery.uls to create jquery.uls.js.
+
 More documenation is at
  https://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector
 
