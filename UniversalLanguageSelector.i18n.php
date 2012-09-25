@@ -250,6 +250,15 @@ $messages['nl'] = array(
 	'uls-select-content-language' => 'Taal selecteren',
 );
 
+/** Polish (polski)
+ * @author BeginaFelicysym
+ */
+$messages['pl'] = array(
+	'UniversalLanguageSelector' => 'Uniwersalny Selektor Języka',
+	'uls-desc' => 'Daje użytkownikowi kilka sposobów, aby wybrać język i dostosować ustawienia języka',
+	'uls-select-content-language' => 'Wybierz język',
+);
+
 /** Romanian (română)
  * @author Minisarm
  */
