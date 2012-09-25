@@ -20,21 +20,24 @@
 ( function ( $, mw, undefined ) {
 	"use strict";
 
-	var template = '<div class="row"><div class="twelve columns"><h3>Display settings</h3></div></div>'
-		+ '<div class="row"><div class="eleven columns"><h4>Language used for menus</h4></div></div>'
+	var template = '<div class="row"><div class="twelve columns">'
+		+ '<h3 data-i18n="ext-uls-display-settings-title"></h3></div></div>'
+		+ '<div class="row"><div class="eleven columns">'
+		+ '<h4 data-i18n="ext-uls-display-settings-ui-language"></h4></div></div>'
 		+ '<div class="row"><div class="uls-ui-languages eleven columns">'
 		+ '</div></div>'
-		+ '<div class="row"><div class="twelve columns"><h4>Font settings</h4></div></div>'
+		+ '<div class="row"><div class="twelve columns">'
+		+ '<h4 data-i18n="ext-uls-display-settings-font-settings"></h4></div></div>'
 		+ '<div class="row">'
 		+ '<div class="eleven columns">'
 		+ '<label class="checkbox"><input type="checkbox" id="webfonts-enable-checkbox" />'
-		+ '<strong>Download fonts automatically when needed</strong> '
-		+ 'Web fonts will be downloaded when text in special scripts is displayed. '
-		+ '<a target="_blank" href="//www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:WebFonts">More information</a>'
+		+ '<strong data-i18n="ext-uls-webfonts-settings-title"></strong> '
+		+ '<span data-i18n="ext-uls-webfonts-settings-info"></span> '
+		+ '<a target="_blank" href="//www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:WebFonts" data-i18n="ext-uls-webfonts-settings-info-link"></a>'
 		+ '</span></label>'
 		+ '</div>'
 		+ '</div>'
-		+ '<div class="row"><h5 class="twelve columns">Select your preferred fonts</h5></div>'
+		+ '<div class="row"><h5 class="twelve columns" data-i18n="ext-uls-webfonts-select"></h5></div>'
 		+ '<div class="row uls-content-fonts">'
 		+ '<div class="six columns"><label class="uls-font-label" id="content-font-selector-label"></label></div>'
 		+ '<select id="content-font-selector" class="four columns end uls-font-select"></select>'
@@ -46,14 +49,15 @@
 		+ '<div class="row"></div>'
 		+ '<div class="row language-settings-buttons">'
 		+ '<div class="eleven columns">'
-		+ '<button class="button uls-settings-close">Cancel</button>'
-		+ '<button id="uls-displaysettings-apply" class="active blue button">Apply changes</button>'
+		+ '<button class="button uls-settings-close" data-i18n="ext-uls-language-settings-cancel"></button>'
+		+ '<button id="uls-displaysettings-apply" class="active blue button" data-i18n="ext-uls-language-settings-apply">'
+		+ '</button>'
 		+ '</div>'
 		+ '</div>'; // FIXME i18n and too much hardcoding.
 
 	var DisplaySettings = function ( $parent ) {
-		this.name = "Display";
-		this.description = "Set language used for menus and fonts";
+		this.name = $.i18n( "ext-uls-display-settings-title-short" );
+		this.description = $.i18n( "ext-uls-display-settings-desc" );
 		this.$template = $( template );
 		this.uiLanguage = this.getUILanguage();
 		this.contentLanguage = this.getContentLanguage();
@@ -153,8 +157,8 @@
 				top: that.$parent.top,
 				onReady: function ( uls ) {
 					var $back = $( '<a>' ).prop( 'href', '#' )
-						.prop( 'title', 'Back to display settings' )
-						.text( '← Back to display settings' ); // FIXME i18n
+						.data( 'i18n','ext-uls-back-to-display-settings' )
+						.i18n();
 
 					$back.click( function () {
 						uls.hide();
@@ -162,7 +166,9 @@
 					} );
 
 					uls.$menu.find( 'div.uls-title' ).append( $back );
-					uls.$menu.find( 'div.uls-title h1' ).text( 'Select display language' );
+					uls.$menu.find( 'div.uls-title h1' )
+						.data( 'i18n','ext-uls-display-settings-ui-language' )
+						.i18n();
 				},
 				onSelect: function ( langCode ) {
 					that.uiLanguage = langCode;
@@ -235,8 +241,12 @@
 			$fontSelector.append( $systemFont );
 			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
 			var $fontLabel = this.$template.find( 'label#ui-font-selector-label' );
-			$fontLabel.html( "<strong>Select font for " + $.uls.data.autonym( this.uiLanguage )
-				+ "</strong><div>Used for menus</div>" );
+			$fontLabel.html( '<strong>'
+				+ $.i18n( 'ext-uls-webfonts-select-for', $.uls.data.autonym( this.uiLanguage ) )
+				+ '</strong>'
+				+ '<div>'
+				+ $.i18n( 'ext-uls-webfonts-select-for-ui-info' )
+				+ '</div>' );
 		},
 
 		/**
@@ -263,8 +273,13 @@
 			$fontSelector.append( $systemFont );
 			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
 			var $fontLabel = this.$template.find( '#content-font-selector-label' );
-			$fontLabel.html( "<strong>Select font for " + $.uls.data.autonym( this.contentLanguage )
-				+ "</strong><div>Used for content</div>" );
+			$fontLabel.html( '<strong>'
+				+ $.i18n( 'ext-uls-webfonts-select-for',
+					$.uls.data.autonym( this.contentLanguage ) )
+				+ '</strong>'
+				+ '<div>'
+				+ $.i18n( 'ext-uls-webfonts-select-for-content-info' )
+				+ '</div>' );
 		},
 
 		/**

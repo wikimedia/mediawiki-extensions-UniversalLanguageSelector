@@ -24,7 +24,7 @@
 		'<span id="languagesettings-close" class="icon-close"></span>' +
 		'</div>';
 	var settingsMenu = '<div class="four columns languagesettings-menu">' +
-		'<h1>Language settings</h1>' + // TODO i18n
+		'<h1 data-i18n="ext-uls-language-settings-title"></h1>' +
 		'<div class="settings-menu-items">' +
 		'</div>' +
 		'</div>';
@@ -135,6 +135,7 @@
 				} );
 			}
 
+			this.$window.i18n();
 			this.shown = true;
 			this.$window.show();
 		},

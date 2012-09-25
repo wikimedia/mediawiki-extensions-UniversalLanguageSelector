@@ -1,0 +1,24 @@
+{
+"@metadata": {
+	"authors": [
+		"Santhosh Thottingal"
+		]
+},
+"ext-uls-display-settings-title": "പ്രദർശന ക്രമീകരണങ്ങൾ",
+"ext-uls-display-settings-title-short": "പ്രദർശനം",
+"ext-uls-display-settings-desc": "ഫോണ്ടുകളും സമ്പർക്കമുഖത്തിന്റെ ഭാഷയും ക്രമീകരിക്കുക.",
+"ext-uls-undo-language-tooltip-text": "ഭാഷ മാറിയിരിക്കുന്നു. പഴയ ഭാഷ: $1",
+"ext-uls-language-settings-title": "ഭാഷാ ക്രമീകരണങ്ങൾ",
+"ext-uls-language-settings-apply": "ശരി",
+"ext-uls-language-settings-cancel": "വേണ്ട",
+"ext-uls-display-settings-ui-language": "സമ്പർക്കമുഖത്തിന്റെ ഭാഷ",
+"ext-uls-display-settings-font-settings": "ഫോണ്ടു് ക്രമീകരണങ്ങൾ",
+"ext-uls-webfonts-settings-title": "ആവശ്യമുള്ളപ്പോൾ ഫോണ്ടു് ഡൌൺലോഡ് ചെയ്യുക",
+"ext-uls-webfonts-settings-info": "പ്രത്യേക ലിപികളിലെ ഉള്ളടക്കം പ്രദർശിപ്പിക്കാനായി വെബ്ഫോണ്ടുകൾ ഡൌൺലോഡ് ചെയ്യും",
+"ext-uls-webfonts-settings-info-link": "കൂടുതൽ വിവരങ്ങൾ",
+"ext-uls-webfonts-select": "ഇഷ്ടമുള്ള ഫോണ്ടുകൾ തിരഞ്ഞെടുക്കുക",
+"ext-uls-webfonts-select-for": "$1 ഭാഷയ്ക്കുള്ള ഫോണ്ടു്",
+"ext-uls-webfonts-select-for-ui-info": "സമ്പർക്കമുഖത്തിനുള്ള ഫോണ്ടു്",
+"ext-uls-webfonts-select-for-content-info": "ഉള്ളടക്കത്തിനുള്ള ഫോണ്ടു്",
+"ext-uls-back-to-display-settings": "പ്രദർശന ക്രമീകരണങ്ങളിലേയ്ക്ക് മടങ്ങുക"
+}

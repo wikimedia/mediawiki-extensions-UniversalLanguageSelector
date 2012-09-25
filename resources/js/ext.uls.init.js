@@ -87,30 +87,33 @@
 	};
 
 	$( document ).ready( function () {
+		var extensionPath = mw.config.get( 'wgExtensionAssetsPath' ) +
+		'/UniversalLanguageSelector/';
 		// i18n initialization
 		var i18n = $.i18n( {
-			locale: currentLang
+			locale: currentLang,
+			messageLocationResolver: function ( locale ) {
+				return extensionPath + 'i18n/' + locale + '.json';
+			}
 		} );
-		var extensionPath = mw.config.get( 'wgExtensionAssetsPath' ) +
-			'/UniversalLanguageSelector/';
+		// localization for jquery.uls
 		i18n.load( extensionPath + 'lib/jquery.uls/i18n/' + currentLang + ".json", currentLang );
-
+		// localization for mediaWiki ULS
+		i18n.load( extensionPath + 'i18n/' + currentLang + ".json", currentLang );
 		var $ulsTrigger = $( '.uls-trigger' ),
 			previousLanguages = mw.uls.getPreviousLanguages() || [],
 			previousLang = previousLanguages.slice( -1 )[0];
 
 		function displaySettings () {
-			var $displaySettingsTitle = $( '<div>' )
-					.addClass( 'settings-title' )
-					.text( 'Display settings' ),
-				$displaySettingsText = $( '<span>' )
-					.addClass( 'settings-text' )
-					.text( 'Set language used for menus and fonts.' ),
-				$displaySettings = $( '<div>' )
-					.addClass( 'display-settings-block' )
-					.prop( 'id', 'display-settings-block' )
-					.append( $displaySettingsTitle )
-					.append( $displaySettingsText );
+			var $displaySettingsTitle = $( '<div data-i18n="ext-uls-display-settings-title">' )
+				.addClass( 'settings-title' );
+			var $displaySettingsText = $( '<span data-i18n="ext-uls-display-settings-desc">' )
+				.addClass( 'settings-text' );
+			var $displaySettings = $( '<div>' )
+				.addClass( 'display-settings-block' )
+				.prop( 'id', 'display-settings-block' )
+				.append( $displaySettingsTitle )
+				.append( $displaySettingsText );
 			return $displaySettings;
 		}
 
@@ -168,11 +171,12 @@
 			fade: true,
 			trigger: 'manual',
 			title: function () {
-				var prevLangName = $.uls.data.autonym( previousLang ),
-					linkClass = 'uls-lang-link',
-					title = "Language changed from <a href='#' lang = '" +
-						previousLang + "' class = '" + linkClass + "' >" +
-						prevLangName + "</a>";
+				var prevLangName = $.uls.data.autonym( previousLang );
+				var linkClass = 'uls-lang-link';
+				var prevLangLink = "<a href='#' lang = '" +
+					previousLang + "' class = '" + linkClass + "' >" +
+					prevLangName + "</a>";
+				var title = $.i18n( "ext-uls-undo-language-tooltip-text", prevLangLink );
 				return title;
 			}
 		} );
