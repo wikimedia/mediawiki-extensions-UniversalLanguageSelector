@@ -9,9 +9,10 @@ foreach ( glob( '../fonts/*/font.ini' ) as $inifile ) {
 			$rcode = trim( $rcode );
 			$code = str_replace( '*', '', $rcode );
 			if ( !isset( $list['languages'][$code] ) ) {
-				$list['languages'][$code] = array();
+				$list['languages'][$code] = array( 'system' );
 			}
 			if ( strpos( $rcode, '*' ) !== false ) {
+				unset( $list['languages'][$code][0] );
 				array_unshift( $list['languages'][$code], $fontname );
 			} else {
 				$list['languages'][$code][] = $fontname;
