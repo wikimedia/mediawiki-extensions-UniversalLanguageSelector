@@ -19,7 +19,6 @@
  */
 
 class UniversalLanguageSelectorHooks {
-
 	/**
 	 * BeforePageDisplay hook handler.
 	 * @param $out OutputPage
@@ -106,7 +105,7 @@ class UniversalLanguageSelectorHooks {
 		}
 
 		wfProfileOut( __METHOD__ );
-		return "";
+		return '';
 	}
 
 	/**
@@ -117,14 +116,15 @@ class UniversalLanguageSelectorHooks {
 	 */
 	public static function getLanguage( $user, &$code ) {
 		global $wgRequest, $wgULSLanguageDetection;
-		if ( $wgRequest->getVal( 'uselang' ) && !$wgRequest->getVal( 'setlang' ) ) {
+
+		$languageToSave = $wgRequest->getVal( 'setlang' );
+		if ( $wgRequest->getVal( 'uselang' ) && !$languageToSave ) {
 			// uselang can be used for temporary override of language preference
 			// when setlang is not provided
 			return true;
 		}
 
 		$languageToUse = null;
-		$languageToSave = $wgRequest->getVal( 'setlang' );
 		if ( self::isSupportedLanguage( $languageToSave ) ) {
 			if ( $user->isAnon() ) {
 				$wgRequest->response()->setcookie( 'language', $languageToSave );
