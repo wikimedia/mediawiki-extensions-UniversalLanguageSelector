@@ -229,9 +229,11 @@
 
 			if ( fonts && fonts.length ) {
 				$.each( fonts, function ( key, font ) {
-					var $fontOption = $( "<option>" ).attr( "value", font ).text( font );
-					$fontSelector.append( $fontOption );
-					$fontOption.attr( 'selected', savedFont === font );
+					if ( font !==  'system' ) {
+						var $fontOption = $( "<option>" ).attr( "value", font ).text( font );
+						$fontSelector.append( $fontOption );
+						$fontOption.attr( 'selected', savedFont === font );
+					}
 				} );
 			}
 
@@ -261,9 +263,11 @@
 
 			if ( fonts && fonts.length ) {
 				$.each( fonts, function ( key, font ) {
-					var $fontOption = $( "<option>" ).attr( "value", font ).text( font );
-					$fontSelector.append( $fontOption );
-					$fontOption.attr( 'selected', savedFont === font );
+					if ( font !==  'system' ) {
+						var $fontOption = $( "<option>" ).attr( "value", font ).text( font );
+						$fontSelector.append( $fontOption );
+						$fontOption.attr( 'selected', savedFont === font );
+					}
 				} );
 			}
 
