@@ -55,7 +55,7 @@ $messages['ast'] = array(
 	'uls-select-content-language' => 'Escueyi llingua',
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Wizardist
  */
 $messages['be-tarask'] = array(
