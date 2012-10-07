@@ -37,7 +37,7 @@
 		$.each( languages, function ( lang, language ) {
 			$langselector.append( $( "<option></option>" )
 				.attr( "value", language )
-				.text( language + " - " + $.uls.data.autonym( language ) ) );
+				.text( language + " - " + $.uls.data.getAutonym( language ) ) );
 		} );
 		$fontSelector.on( 'change', function () {
 			var font = $fontSelector.find( 'option:selected' ).val();
@@ -46,7 +46,7 @@
 		$langselector.on( 'change', function () {
 			var language = $langselector.find( 'option:selected' ).val();
 			listFonts( $webfonts.list( language ) );
-			$( '#webfonts-preview-area' ).text( $.uls.data.autonym( language ) );
+			$( '#webfonts-preview-area' ).text( $.uls.data.getAutonym( language ) );
 		} );
 	} )
 </script>

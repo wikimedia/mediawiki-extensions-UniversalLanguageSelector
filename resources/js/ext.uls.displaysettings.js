@@ -129,7 +129,7 @@
 				var language = languages[i];
 				var $button = $( '<button>' )
 					.addClass( 'button uls-language-button' )
-					.text( $.uls.data.autonym( language ) );
+					.text( $.uls.data.getAutonym( language ) );
 				if ( language === this.uiLanguage ) {
 					$button.addClass( 'down' );
 				}
@@ -244,7 +244,7 @@
 			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
 			var $fontLabel = this.$template.find( 'label#ui-font-selector-label' );
 			$fontLabel.html( '<strong>'
-				+ $.i18n( 'ext-uls-webfonts-select-for', $.uls.data.autonym( this.uiLanguage ) )
+				+ $.i18n( 'ext-uls-webfonts-select-for', $.uls.data.getAutonym( this.uiLanguage ) )
 				+ '</strong>'
 				+ '<div>'
 				+ $.i18n( 'ext-uls-webfonts-select-for-ui-info' )
@@ -279,7 +279,7 @@
 			var $fontLabel = this.$template.find( '#content-font-selector-label' );
 			$fontLabel.html( '<strong>'
 				+ $.i18n( 'ext-uls-webfonts-select-for',
-					$.uls.data.autonym( this.contentLanguage ) )
+					$.uls.data.getAutonym( this.contentLanguage ) )
 				+ '</strong>'
 				+ '<div>'
 				+ $.i18n( 'ext-uls-webfonts-select-for-content-info' )

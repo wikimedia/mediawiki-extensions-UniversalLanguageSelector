@@ -71,18 +71,22 @@
 			]
 				.concat( mw.uls.getPreviousLanguages() )
 				.concat( mw.uls.getAcceptLanguageList() );
+
 		if ( window.GEO ) {
-			list = list.concat( $.uls.data.languagesInTerritory( window.GEO.country_code ) );
+			list = list.concat( $.uls.data.getLanguagesInTerritory( window.GEO.country_code ) );
 		}
+
 		$.each( list, function ( i, v ) {
 			if ( $.inArray( v, unique ) === -1 ) {
 				unique.push( v );
 			}
 		} );
+
 		// Filter out unknown and unsupported languages
 		unique = $.grep( unique, function ( langCode, index ) {
 			return $.fn.uls.defaults.languages[langCode];
 		} );
+
 		return unique;
 	};
 
@@ -170,7 +174,7 @@
 			fade: true,
 			trigger: 'manual',
 			title: function () {
-				var prevLangName = $.uls.data.autonym( previousLang );
+				var prevLangName = $.uls.data.getAutonym( previousLang );
 				var linkClass = 'uls-prevlang-link';
 				var prevLangLink = "<a href='#' lang = '" +
 					previousLang + "' class = '" + linkClass + "' >" +
