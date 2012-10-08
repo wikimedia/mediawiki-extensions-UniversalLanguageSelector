@@ -20,38 +20,72 @@
 ( function ( $, mw, undefined ) {
 	"use strict";
 
-	var template = '<div class="row"><div class="twelve columns">'
-		+ '<h3 data-i18n="ext-uls-display-settings-title"></h3></div></div>'
-		+ '<div class="row"><div class="eleven columns">'
-		+ '<h4 data-i18n="ext-uls-display-settings-ui-language"></h4></div></div>'
-		+ '<div class="row"><div class="uls-ui-languages eleven columns">'
-		+ '</div></div>'
-		+ '<div class="row"><div class="twelve columns">'
-		+ '<h4 data-i18n="ext-uls-display-settings-font-settings"></h4></div></div>'
+	var template = '<div class="row">' // Top "Display settings" title
+		+ '<div class="twelve columns">'
+		+ '<h3 data-i18n="ext-uls-display-settings-title"></h3>'
+		+ '</div>'
+		+ '</div>'
+
+		// "Language for display", title above the buttons row
 		+ '<div class="row">'
 		+ '<div class="eleven columns">'
-		+ '<label class="checkbox"><input type="checkbox" id="webfonts-enable-checkbox" />'
+		+ '<h4 data-i18n="ext-uls-display-settings-ui-language"></h4>'
+		+ '</div>'
+		+ '</div>'
+
+		// UI languages buttons row
+		+ '<div class="row">'
+		+ '<div class="uls-ui-languages eleven columns"></div>'
+		+ '</div>'
+
+		// "Font settings" title
+		+ '<div class="row">'
+		+ '<div class="twelve columns">'
+		+ '<h4 data-i18n="ext-uls-display-settings-font-settings"></h4>'
+		+ '</div>'
+		+ '</div>'
+
+		// Webfonts enabling chechbox with label
+		+ '<div class="row">'
+		+ '<div class="eleven columns">'
+		+ '<label class="checkbox">'
+		+ '<input type="checkbox" id="webfonts-enable-checkbox" />'
 		+ '<strong data-i18n="ext-uls-webfonts-settings-title"></strong> '
 		+ '<span data-i18n="ext-uls-webfonts-settings-info"></span> '
 		+ '<a target="_blank" href="//www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:WebFonts" data-i18n="ext-uls-webfonts-settings-info-link"></a>'
-		+ '</span></label>'
+		+ '</label>'
 		+ '</div>'
 		+ '</div>'
-		+ '<div class="row"><h5 class="twelve columns" data-i18n="ext-uls-webfonts-select"></h5></div>'
+
+		// Font selection title
+		+ '<div class="row">'
+		+ '<h5 class="twelve columns" data-i18n="ext-uls-webfonts-select"></h5>'
+		+ '</div>'
+
+		// Menus font selection dropdown with label
 		+ '<div class="row uls-content-fonts">'
-		+ '<div class="six columns"><label class="uls-font-label" id="content-font-selector-label"></label></div>'
+		+ '<div class="six columns">'
+		+ '<label class="uls-font-label" id="content-font-selector-label"></label>'
+		+ '</div>'
 		+ '<select id="content-font-selector" class="four columns end uls-font-select"></select>'
 		+ '</div>'
+
+		// Content font selection dropdown with label
 		+ '<div class="row uls-ui-fonts">'
-		+ '<div class="six columns"><label class="uls-font-label" id="ui-font-selector-label"></label></div>'
+		+ '<div class="six columns">'
+		+ '<label class="uls-font-label" id="ui-font-selector-label"></label>'
+		+ '</div>'
 		+ '<select id="ui-font-selector" class="four columns end uls-font-select"></select>'
 		+ '</div>'
+
+		// Separator
 		+ '<div class="row"></div>'
+
+		// Apply and Cancel buttons
 		+ '<div class="row language-settings-buttons">'
 		+ '<div class="eleven columns">'
 		+ '<button class="button uls-settings-close" data-i18n="ext-uls-language-settings-cancel"></button>'
-		+ '<button id="uls-displaysettings-apply" class="active blue button" data-i18n="ext-uls-language-settings-apply">'
-		+ '</button>'
+		+ '<button id="uls-displaysettings-apply" class="active blue button" data-i18n="ext-uls-language-settings-apply"></button>'
 		+ '</div>'
 		+ '</div>'; // FIXME i18n and too much hardcoding.
 
@@ -242,13 +276,15 @@
 			var $systemFont = $( "<option>" ).val( 'system' ).text( 'System font' );
 			$fontSelector.append( $systemFont );
 			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
+
 			var $fontLabel = this.$template.find( 'label#ui-font-selector-label' );
 			$fontLabel.html( '<strong>'
 				+ $.i18n( 'ext-uls-webfonts-select-for', $.uls.data.getAutonym( this.uiLanguage ) )
 				+ '</strong>'
 				+ '<div>'
 				+ $.i18n( 'ext-uls-webfonts-select-for-ui-info' )
-				+ '</div>' );
+				+ '</div>'
+			);
 		},
 
 		/**
@@ -276,14 +312,15 @@
 			var $systemFont = $( "<option>" ).val( 'system' ).text( 'System font' );
 			$fontSelector.append( $systemFont );
 			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
+
 			var $fontLabel = this.$template.find( '#content-font-selector-label' );
 			$fontLabel.html( '<strong>'
-				+ $.i18n( 'ext-uls-webfonts-select-for',
-					$.uls.data.getAutonym( this.contentLanguage ) )
+				+ $.i18n( 'ext-uls-webfonts-select-for', $.uls.data.getAutonym( this.contentLanguage ) )
 				+ '</strong>'
 				+ '<div>'
 				+ $.i18n( 'ext-uls-webfonts-select-for-content-info' )
-				+ '</div>' );
+				+ '</div>'
+			);
 		},
 
 		/**
