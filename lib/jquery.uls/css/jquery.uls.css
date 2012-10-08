@@ -180,7 +180,7 @@ input:focus#languagefilter {
 	float: right;
 }
 
-span#languagefilter-clear {
+#languagefilter-clear {
 	/* @embed */
 	background: url('../images/clear.png') no-repeat scroll left center
 		transparent;
@@ -553,7 +553,7 @@ img {
 }
 
 .uls-language-block ul {
-	margin: 0px 0px 1.6em;
+	margin: 0 0 1.6em;
 }
 
 .uls-language-list ul li {
