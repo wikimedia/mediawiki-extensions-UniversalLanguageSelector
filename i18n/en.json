@@ -17,7 +17,6 @@
 "ext-uls-webfonts-settings-title": "Download font when needed",
 "ext-uls-webfonts-settings-info": "Webfonts will be downloaded for displaying text in special scripts.",
 "ext-uls-webfonts-settings-info-link": "More information",
-"ext-uls-webfonts-select": "Select prefered font",
 "ext-uls-webfonts-select-for": "Select font for $1",
 "ext-uls-webfonts-select-for-ui-info": "Font used for user interface",
 "ext-uls-webfonts-select-for-content-info": "Font used for content",
