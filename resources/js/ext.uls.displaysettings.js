@@ -104,39 +104,69 @@
 		 * Prepare the UI language selector
 		 */
 		prepareLanguages: function () {
-			var that = this;
-			var $languages = this.$template.find( 'div.uls-ui-languages' );
+			var displaySettings = this,
+				$languages = this.$template.find( 'div.uls-ui-languages' ),
+				suggestedLanguages = this.frequentLanguageList()
+					// Common world languages, for the case that there are
+					// too few suggested languages
+					.concat( ['en', 'zh', 'fr'] ),
+
+				// Content language is always on the first button
+				languagesForButtons = [this.contentLanguage],
+				SUGGESTED_LANGUAGES_NUMBER = 3;
+
+			// This is needed when drawing the panel for the second time
+			// after selecting a different language
 			$languages.empty();
-			var previousLanguages = this.frequentLanguageList();
-			var languages = [this.uiLanguage];
-			for ( var lang in previousLanguages ) {
-				if ( previousLanguages[lang] === this.uiLanguage ) {
-					continue;
-				}
-				languages.push( previousLanguages[lang] );
+
+			// UI language must always be present
+			if ( this.uiLanguage !== this.contentLanguage ) {
+				languagesForButtons.push( this.uiLanguage );
 			}
 
-			function buttonHandler ( button ) {
+			for ( var lang in suggestedLanguages ) {
+				// Skip already found languages
+				if ( $.inArray( suggestedLanguages[lang], languagesForButtons ) > -1 ) {
+					continue;
+				}
+
+				languagesForButtons.push( suggestedLanguages[lang] );
+
+				// No need to add more languages than buttons
+				if ( languagesForButtons.length === SUGGESTED_LANGUAGES_NUMBER ) {
+					break;
+				}
+			}
+
+			function buttonHandler( button ) {
 				return function () {
-					that.uiLanguage = button.data( "language" ) || that.uiLanguage;
+					displaySettings.uiLanguage = button.data( "language" ) || displaySettings.uiLanguage;
 					$( "div.uls-ui-languages button.button" ).removeClass( "down" );
 					button.addClass( "down" );
-					that.prepareUIFonts();
+					displaySettings.prepareUIFonts();
 				};
 			}
 
-			for ( var i = 0; i < 3; i++ ) {
-				var language = languages[i];
-				var $button = $( '<button>' )
-					.addClass( 'button uls-language-button' )
-					.text( $.uls.data.getAutonym( language ) );
+			// Add the buttons for the most likely languages
+			for ( var i = 0; i < SUGGESTED_LANGUAGES_NUMBER; i++ ) {
+				var language = languagesForButtons[i],
+					$button = $( '<button>' )
+						.addClass( 'button uls-language-button' )
+						.text( $.uls.data.getAutonym( language ) )
+						.prop({
+							lang: language,
+							dir: $.uls.data.getDir( language )
+						});
+
 				if ( language === this.uiLanguage ) {
 					$button.addClass( 'down' );
 				}
+
 				$button.data( 'language', language );
 				$languages.append( $button );
 				$button.on( 'click', buttonHandler( $button ) );
 			}
+
 			this.prepareMoreLanguages();
 		},
 
