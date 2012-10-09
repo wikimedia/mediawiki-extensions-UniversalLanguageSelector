@@ -155,8 +155,9 @@
 			$moreLanguagesButton.uls( {
 				left: that.$parent.left,
 				top: that.$parent.top,
-				onReady: function ( uls ) {
-					var $back = $( '<a>' ).prop( 'href', '#' )
+				onReady: function ( ) {
+					var uls = this,
+						$back = $( '<a>' ).prop( 'href', '#' )
 						.data( 'i18n','ext-uls-back-to-display-settings' )
 						.i18n();
 

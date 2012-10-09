@@ -139,8 +139,8 @@
 		}
 
 		$ulsTrigger.uls( {
-			onReady: function ( uls ) {
-				addDisplaySettings( uls );
+			onReady: function () {
+				addDisplaySettings( this );
 			},
 			onSelect: function ( language ) {
 				mw.uls.changeLanguage( language );
