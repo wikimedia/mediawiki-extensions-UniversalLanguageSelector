@@ -57,11 +57,6 @@
 		+ '</div>'
 		+ '</div>'
 
-		// Font selection title
-		+ '<div class="row">'
-		+ '<h5 class="twelve columns" data-i18n="ext-uls-webfonts-select"></h5>'
-		+ '</div>'
-
 		// Menus font selection dropdown with label
 		+ '<div class="row uls-content-fonts">'
 		+ '<div class="six columns">'
