@@ -25,6 +25,10 @@
 		window.GEO = data;
 	};
 
+	mw.uls.getCountryCode = function () {
+		return window.GEO.country || window.GEO.country_code;
+	};
+
 	var settings = {
 		cache: true,
 		dataType: "jsonp",

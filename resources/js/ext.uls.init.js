@@ -73,7 +73,7 @@
 				.concat( mw.uls.getAcceptLanguageList() );
 
 		if ( window.GEO ) {
-			list = list.concat( $.uls.data.getLanguagesInTerritory( window.GEO.country_code ) );
+			list = list.concat( $.uls.data.getLanguagesInTerritory( mw.uls.getCountryCode() ) );
 		}
 
 		$.each( list, function ( i, v ) {
