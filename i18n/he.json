@@ -8,7 +8,7 @@
 "ext-uls-display-settings-title": "הגדרות תצוגה",
 "ext-uls-display-settings-title-short": "תצוגה",
 "ext-uls-display-settings-desc": "בחירת שפה לתפריטים.",
-"ext-uls-undo-language-tooltip-text": "השפה השתנתה מ{{GRAMMAR:תחילית$1}}",
+"ext-uls-undo-language-tooltip-text": "השפה השתנתה מ{{GRAMMAR:תחילית|$1}}",
 "ext-uls-language-settings-title": "הגדרות שפה",
 "ext-uls-language-settings-apply": "החלת שינויי",
 "ext-uls-language-settings-cancel": "ביטול",
