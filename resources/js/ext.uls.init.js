@@ -91,8 +91,8 @@
 	};
 
 	$( document ).ready( function () {
-		var extensionPath = mw.config.get( 'wgExtensionAssetsPath' ) +
-		'/UniversalLanguageSelector/';
+		var extensionPath = mw.config.get( 'wgExtensionAssetsPath' )
+			+ '/UniversalLanguageSelector/';
 		// i18n initialization
 		var i18n = $.i18n( {
 			locale: currentLang,
@@ -102,8 +102,13 @@
 		} );
 		// localization for jquery.uls
 		i18n.load( extensionPath + 'lib/jquery.uls/i18n/' + currentLang + ".json", currentLang );
+		// localization for jquery.uls- fallback locale
+		i18n.load( extensionPath + 'lib/jquery.uls/i18n/en.json', 'en' );
 		// localization for mediaWiki ULS
 		i18n.load( extensionPath + 'i18n/' + currentLang + ".json", currentLang );
+		// localization for mediaWiki ULS- fallback locale
+		i18n.load( extensionPath + 'i18n/en.json', 'en'  );
+
 		var $ulsTrigger = $( '.uls-trigger' ),
 			previousLanguages = mw.uls.getPreviousLanguages() || [],
 			previousLang = previousLanguages.slice( -1 )[0];
