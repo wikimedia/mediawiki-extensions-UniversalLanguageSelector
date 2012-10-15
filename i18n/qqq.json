@@ -1,24 +1,23 @@
 {
-"@metadata": {
-	"authors": [
-		"Santhosh Thottingal"
+	"@metadata": {
+		"authors": [
+			"Santhosh Thottingal"
 		]
-},
-"ext-uls-display-settings-title": "Display settings title text",
-"ext-uls-display-settings-title-short": "A short name for display settings screen. Can be a translation for 'Display'",
-"ext-uls-display-settings-desc": "Short description about display settings.",
-"ext-uls-undo-language-tooltip-text": "Text for the tooltip appearing when language is changed. $1 is the previous language acronym.",
-"ext-uls-language-settings-title": "Title text for language settings screen",
-"ext-uls-language-settings-apply": "Label for apply settings button in language settings screen",
-"ext-uls-language-settings-cancel": "Lable for cancel buton in language settings screen",
-"ext-uls-display-settings-font-settings": "Subsection title for font settings",
-"ext-uls-display-settings-ui-language": "Sub section title for selecting UI language",
-"ext-uls-webfonts-settings-title": "Short title for enabling webfonts",
-"ext-uls-webfonts-settings-info": "Webfonts will be downloaded for displaying text in special scripts.",
-"ext-uls-webfonts-settings-info-link": "More information link text for webfonts",
-"ext-uls-webfonts-select": "Title for selecting fonts",
-"ext-uls-webfonts-select-for": "Label for font selector dropdown. $1 is a language name",
-"ext-uls-webfonts-select-for-ui-info": "Information displayed under font selector",
-"ext-uls-webfonts-select-for-content-info": "Information displayed under font selector",
-"ext-uls-back-to-display-settings": "Text for the link shown when language selector is accessed from language settings."
+	},
+	"ext-uls-display-settings-title": "Display settings title text",
+	"ext-uls-display-settings-title-short": "A short name for display settings screen. Can be a translation for 'Display'",
+	"ext-uls-display-settings-desc": "Short description about display settings.",
+	"ext-uls-undo-language-tooltip-text": "Text for the tooltip appearing when language is changed. $1 is the previous language acronym.",
+	"ext-uls-language-settings-title": "Title text for language settings screen",
+	"ext-uls-language-settings-apply": "Label for apply settings button in language settings screen",
+	"ext-uls-language-settings-cancel": "Lable for cancel buton in language settings screen",
+	"ext-uls-display-settings-font-settings": "Subsection title for font settings",
+	"ext-uls-display-settings-ui-language": "Sub section title for selecting UI language",
+	"ext-uls-webfonts-settings-title": "Short title for enabling webfonts",
+	"ext-uls-webfonts-settings-info": "Webfonts will be downloaded for displaying text in special scripts.",
+	"ext-uls-webfonts-settings-info-link": "More information link text for webfonts",
+	"ext-uls-webfonts-select-for": "Label for font selector dropdown. $1 is a language name",
+	"ext-uls-webfonts-select-for-ui-info": "Information displayed under font selector",
+	"ext-uls-webfonts-select-for-content-info": "Information displayed under font selector",
+	"ext-uls-back-to-display-settings": "Text for the link shown when language selector is accessed from language settings."
 }
