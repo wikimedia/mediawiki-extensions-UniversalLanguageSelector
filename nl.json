@@ -1,0 +1,23 @@
+{
+	"ext-uls-display-settings-title": "Weergaveinstellingen",
+	"ext-uls-display-settings-title-short": "Weergave",
+	"ext-uls-display-settings-desc": "Taal instellen voor menu's en lettertypen.",
+	"ext-uls-undo-language-tooltip-text": "Taal gewijzigd van $1",
+	"ext-uls-language-settings-title": "Taalinstellingen",
+	"ext-uls-language-settings-apply": "Instellingen toepassen",
+	"ext-uls-language-settings-cancel": "Annuleren",
+	"ext-uls-display-settings-font-settings": "Lettertypeinstellingen",
+	"ext-uls-display-settings-ui-language": "Taal voor weergave",
+	"ext-uls-webfonts-settings-title": "Lettertype downloaden als nodig",
+	"ext-uls-webfonts-settings-info": "Webfonts worden gedownload voor de weergave van tekst in speciale schriften.",
+	"ext-uls-webfonts-settings-info-link": "Meer informatie",
+	"ext-uls-webfonts-select-for": "Lettertype selecteren voor $1",
+	"ext-uls-webfonts-select-for-ui-info": "Lettertype voor gebruikersinterface",
+	"ext-uls-webfonts-select-for-content-info": "Lettertype voor inhoud",
+	"ext-uls-back-to-display-settings": "Terug naar weergaveinstellingen",
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	}
+}
