@@ -26,7 +26,7 @@
 	};
 
 	mw.uls.getCountryCode = function () {
-		return window.GEO.country || window.GEO.country_code;
+		return window.GEO && ( window.GEO.country || window.GEO.country_code );
 	};
 
 	var settings = {
