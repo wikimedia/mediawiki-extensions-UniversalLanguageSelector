@@ -20,7 +20,8 @@
 ( function ( $, mw, undefined ) {
 	"use strict";
 
-	var template = '<div class="row">' // Top "Display settings" title
+	var template = '<div class="uls-display-settings">'
+		+ '<div class="row">' // Top "Display settings" title
 		+ '<div class="twelve columns">'
 		+ '<h3 data-i18n="ext-uls-display-settings-title"></h3>'
 		+ '</div>'
@@ -81,6 +82,7 @@
 		+ '<div class="eleven columns">'
 		+ '<button class="button uls-settings-close" data-i18n="ext-uls-language-settings-cancel"></button>'
 		+ '<button id="uls-displaysettings-apply" class="active blue button" data-i18n="ext-uls-language-settings-apply"></button>'
+		+ '</div>'
 		+ '</div>'
 		+ '</div>'; // FIXME i18n and too much hardcoding.
 
@@ -275,13 +277,15 @@
 		 * TODO Can this be merged with prepareContentLanguages?
 		 */
 		prepareUIFonts: function () {
-			if ( this.uiLanguage === this.contentLanguage ) {
-				$( 'div.uls-ui-fonts' ).hide();
+			var fonts = this.$webfonts.list( this.uiLanguage ),
+				$uiFonts = this.$template.find( 'div.uls-ui-fonts' );
+
+			if ( this.uiLanguage === this.contentLanguage || fonts.length === 0 ) {
+				$uiFonts.hide();
 				return;
 			} else {
-				$( 'div.uls-ui-fonts' ).show();
+				$uiFonts.show();
 			}
-			var fonts = this.$webfonts.list( this.uiLanguage );
 			var $fontSelector = this.$template.find( 'select#ui-font-selector' );
 
 			$fontSelector.find( 'option' ).remove();
@@ -317,7 +321,16 @@
 		 * Prepare the font selector for UI language.
 		 */
 		prepareContentFonts: function () {
-			var fonts = this.$webfonts.list( this.contentLanguage );
+			var fonts = this.$webfonts.list( this.contentLanguage ),
+				$contentFonts = this.$template.find( 'div.uls-content-fonts' );
+
+			if ( fonts.length === 0 ) {
+				$contentFonts.hide();
+				return;
+			} else {
+				$contentFonts.show();
+			}
+
 			var $fontSelector = this.$template.find( '#content-font-selector' );
 
 			$fontSelector.find( 'option' ).remove();
