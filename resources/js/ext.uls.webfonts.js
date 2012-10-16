@@ -17,11 +17,13 @@
  * @licence MIT License
  */
 ( function ( $, mw, document, undefined ) {
-	"use strict";
+	'use strict';
 
 	$( document ).ready( function () {
-		var mediawikiFontRepository = $.webfonts.repository;
-		var webfontsPreferences = mw.uls.preferences( 'webfonts' );
+		var mediawikiFontRepository, webfontsPreferences;
+
+		mediawikiFontRepository = $.webfonts.repository;
+		webfontsPreferences = mw.uls.preferences( 'webfonts' );
 		mediawikiFontRepository.base = mw.config.get( 'wgExtensionAssetsPath' )
 			+ '/UniversalLanguageSelector/data/fontrepo/fonts/';
 
@@ -34,23 +36,35 @@
 		// Initialize webfonts
 		$( 'body' ).webfonts( {
 			fontSelector: function ( repository, language ) {
-				var font = webfontsPreferences.get( language );
+				var font, enabled;
+
+				font = webfontsPreferences.get( language );
+				enabled = webfontsPreferences.get( 'webfonts-enabled' );
+				// If the user didn't set anything, the preference will be undefined.
+				// The default for now is to enable webfonts if the user didn't select anything.
+				if ( enabled === undefined ) {
+					enabled = true;
+				}
+
 				if ( !font ) {
 					font = repository.defaultFont( language );
 				}
-				if ( font === 'system' ) {
+
+				if ( font === 'system' || !enabled ) {
 					font = null;
 				}
+
 				return font;
 			},
-			exclude: function () {
+			exclude: ( function () {
 				if ( mw.user.options.get( 'editfont' ) ) {
 					// Exclude textboxes from webfonts if user has edit area font option
 					// set using 'Preferences' page
 					return 'textarea';
 				}
+
 				return $.fn.webfonts.defaults.exclude;
-			} ()
+			}() )
 		} );
 	} );
-} ( jQuery, mediaWiki, document ) );
+}( jQuery, mediaWiki, document ) );
