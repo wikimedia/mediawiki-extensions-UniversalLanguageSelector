@@ -18,12 +18,12 @@
  */
 
 ( function ( $, mw, window, document, undefined ) {
-	"use strict";
+	'use strict';
 
 	// MediaWiki override for ULS defaults.
 	$.fn.uls.defaults = $.extend( $.fn.uls.defaults, {
 		languages: mw.config.get( 'wgULSLanguages' ),
-		searchAPI: mw.util.wikiScript( 'api' ) + "?action=languagesearch"
+		searchAPI: mw.util.wikiScript( 'api' ) + '?action=languagesearch'
 	} );
 
 	var currentLang = mw.config.get( 'wgUserLanguage' );
@@ -59,7 +59,7 @@
 	};
 
 	mw.uls.getAcceptLanguageList = function () {
-		return mw.config.get( "wgULSAcceptLanguageList" );
+		return mw.config.get( 'wgULSAcceptLanguageList' );
 	};
 
 	mw.uls.getFrequentLanguageList = function () {
@@ -83,7 +83,7 @@
 		} );
 
 		// Filter out unknown and unsupported languages
-		unique = $.grep( unique, function ( langCode, index ) {
+		unique = $.grep( unique, function ( langCode ) {
 			return $.fn.uls.defaults.languages[langCode];
 		} );
 
@@ -91,34 +91,38 @@
 	};
 
 	$( document ).ready( function () {
-		var extensionPath = mw.config.get( 'wgExtensionAssetsPath' )
+		var extensionPath, i18n, $ulsTrigger, previousLanguages, previousLang;
+
+		extensionPath = mw.config.get( 'wgExtensionAssetsPath' )
 			+ '/UniversalLanguageSelector/';
 		// i18n initialization
-		var i18n = $.i18n( {
+		i18n = $.i18n( {
 			locale: currentLang,
 			messageLocationResolver: function ( locale ) {
 				return extensionPath + 'i18n/' + locale + '.json';
 			}
 		} );
 		// localization for jquery.uls
-		i18n.load( extensionPath + 'lib/jquery.uls/i18n/' + currentLang + ".json", currentLang );
+		i18n.load( extensionPath + 'lib/jquery.uls/i18n/' + currentLang + '.json', currentLang );
 		// localization for jquery.uls- fallback locale
 		i18n.load( extensionPath + 'lib/jquery.uls/i18n/en.json', 'en' );
 		// localization for mediaWiki ULS
-		i18n.load( extensionPath + 'i18n/' + currentLang + ".json", currentLang );
+		i18n.load( extensionPath + 'i18n/' + currentLang + '.json', currentLang );
 		// localization for mediaWiki ULS- fallback locale
 		i18n.load( extensionPath + 'i18n/en.json', 'en'  );
 
-		var $ulsTrigger = $( '.uls-trigger' ),
-			previousLanguages = mw.uls.getPreviousLanguages() || [],
-			previousLang = previousLanguages.slice( -1 )[0];
+		$ulsTrigger = $( '.uls-trigger' );
+		previousLanguages = mw.uls.getPreviousLanguages() || [];
+		previousLang = previousLanguages.slice( -1 )[0];
 
 		function displaySettings () {
-			var $displaySettingsTitle = $( '<div data-i18n="ext-uls-display-settings-title">' )
+			var $displaySettingsTitle, $displaySettingsText, $displaySettings;
+
+			$displaySettingsTitle = $( '<div data-i18n="ext-uls-display-settings-title">' )
 				.addClass( 'settings-title' );
-			var $displaySettingsText = $( '<span data-i18n="ext-uls-display-settings-desc">' )
+			$displaySettingsText = $( '<span data-i18n="ext-uls-display-settings-desc">' )
 				.addClass( 'settings-text' );
-			var $displaySettings = $( '<div>' )
+			$displaySettings = $( '<div>' )
 				.addClass( 'display-settings-block' )
 				.prop( 'id', 'display-settings-block' )
 				.append( $displaySettingsTitle )
@@ -127,9 +131,12 @@
 		}
 
 		function addDisplaySettings ( uls ) {
-			var $displaySettings = displaySettings();
-			uls.$menu.find( "div#settings-block" ).append( $displaySettings );
-			var position = uls.position();
+			var $displaySettings, position;
+
+			$displaySettings = displaySettings();
+			uls.$menu.find( 'div#settings-block' ).append( $displaySettings );
+			position = uls.position();
+
 			$displaySettings.languagesettings( {
 				defaultModule: 'display',
 				onClose: function () {
@@ -138,6 +145,7 @@
 				top: position.top,
 				left: position.left
 			} );
+
 			$displaySettings.on( 'click', function () {
 				uls.hide();
 			} );
@@ -151,7 +159,7 @@
 				mw.uls.changeLanguage( language );
 			},
 			languages: mw.config.get( 'wgULSLanguages' ),
-			searchAPI: mw.util.wikiScript( 'api' ) + "?action=languagesearch",
+			searchAPI: mw.util.wikiScript( 'api' ) + '?action=languagesearch',
 			quickList: function () {
 				return mw.uls.getFrequentLanguageList();
 			}
@@ -171,6 +179,7 @@
 
 		previousLanguages.push( currentLang );
 		mw.uls.setPreviousLanguages( previousLanguages );
+
 		// Attach a tipsy tooltip to the trigger
 		$ulsTrigger.tipsy( {
 			gravity: 'n',
@@ -179,24 +188,27 @@
 			fade: true,
 			trigger: 'manual',
 			title: function () {
-				var prevLangName = $.uls.data.getAutonym( previousLang );
-				var linkClass = 'uls-prevlang-link';
-				var prevLangLink = "<a href='#' lang = '" +
-					previousLang + "' class = '" + linkClass + "' >" +
-					prevLangName + "</a>";
-				var title = $.i18n( "ext-uls-undo-language-tooltip-text", prevLangLink );
+				var prevLangName, linkClass, prevLangLink, title;
+
+				prevLangName = $.uls.data.getAutonym( previousLang );
+				linkClass = 'uls-prevlang-link';
+				prevLangLink = '<a href="#" lang = "' +
+					previousLang + '" class = "' + linkClass + '" >' +
+					prevLangName + '</a>';
+				title = $.i18n( 'ext-uls-undo-language-tooltip-text', prevLangLink );
 				return title;
 			}
 		} );
 
 		function showTipsy( timeout ) {
-			var tipsyTimer;
+			var tipsyTimer = 0;
+
 			$ulsTrigger.tipsy( 'show' );
 			// if the mouse is over the tooltip, do not hide
-			$( '.tipsy' ).on( 'mouseover', function ( e ) {
+			$( '.tipsy' ).on( 'mouseover', function () {
 				window.clearTimeout( tipsyTimer );
 			} );
-			$( '.tipsy' ).on( 'mouseout', function ( e ) {
+			$( '.tipsy' ).on( 'mouseout', function () {
 				tipsyTimer = window.setTimeout( function () {
 					hideTipsy();
 				}, timeout );
@@ -218,11 +230,11 @@
 		showTipsy( 6000 );
 
 		// manually show the tooltip
-		$ulsTrigger.on( 'mouseover', function ( e ) {
+		$ulsTrigger.on( 'mouseover', function () {
 			showTipsy( 3000 );
 		} );
 		// hide the tooltip when clicked on uls trigger
-		$ulsTrigger.on( 'click', function ( e ) {
+		$ulsTrigger.on( 'click', function () {
 			hideTipsy();
 		} );
 	} );

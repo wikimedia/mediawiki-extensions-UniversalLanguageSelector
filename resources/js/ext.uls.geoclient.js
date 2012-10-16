@@ -18,7 +18,7 @@
  */
 
 ( function ( mw, $ ) {
-	"use strict";
+	'use strict';
 
 	mw.uls = mw.uls || {};
 	mw.uls.setGeo = function ( data ) {
@@ -26,13 +26,14 @@
 	};
 
 	mw.uls.getCountryCode = function () {
+		/*jshint camelcase: false*/
 		return window.GEO && ( window.GEO.country || window.GEO.country_code );
 	};
 
 	var settings = {
 		cache: true,
-		dataType: "jsonp",
-		jsonpCallback: "mw.uls.setGeo"
+		dataType: 'jsonp',
+		jsonpCallback: 'mw.uls.setGeo'
 	};
 	$.ajax( mw.config.get( 'wgULSGeoService' ), settings );
 
