@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Shirayuki"
+		]
+	},
 	"ext-uls-display-settings-title": "\u8868\u793a\u8a2d\u5b9a",
 	"ext-uls-display-settings-title-short": "\u8868\u793a",
 	"ext-uls-display-settings-desc": "\u30e1\u30cb\u30e5\u30fc\u3067\u4f7f\u7528\u3059\u308b\u8a00\u8a9e\u3084\u30d5\u30a9\u30f3\u30c8\u3092\u8a2d\u5b9a\u3057\u307e\u3059\u3002",
@@ -14,10 +19,5 @@
 	"ext-uls-webfonts-select-for": "$1\u7528\u306e\u30d5\u30a9\u30f3\u30c8\u306e\u9078\u629e",
 	"ext-uls-webfonts-select-for-ui-info": "\u30e6\u30fc\u30b6\u30fc \u30a4\u30f3\u30bf\u30fc\u30d5\u30a7\u30a4\u30b9\u306b\u4f7f\u7528\u3059\u308b\u30d5\u30a9\u30f3\u30c8",
 	"ext-uls-webfonts-select-for-content-info": "\u672c\u6587\u306b\u4f7f\u7528\u3059\u308b\u30d5\u30a9\u30f3\u30c8",
-	"ext-uls-back-to-display-settings": "\u8868\u793a\u8a2d\u5b9a\u306b\u623b\u308b",
-	"@metadata": {
-		"authors": [
-			"Shirayuki"
-		]
-	}
+	"ext-uls-back-to-display-settings": "\u8868\u793a\u8a2d\u5b9a\u306b\u623b\u308b"
 }

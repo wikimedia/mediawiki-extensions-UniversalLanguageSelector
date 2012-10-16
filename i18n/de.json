@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
 	"ext-uls-display-settings-title": "Anzeigeeinstellungen",
 	"ext-uls-display-settings-title-short": "Anzeige",
 	"ext-uls-display-settings-desc": "Sprache, die f\u00fcr Men\u00fcs und Schriftarten verwendet wird.",
@@ -14,10 +19,5 @@
 	"ext-uls-webfonts-select-for": "Schriftart f\u00fcr $1 ausw\u00e4hlen",
 	"ext-uls-webfonts-select-for-ui-info": "Schriftart f\u00fcr die Benutzeroberfl\u00e4che",
 	"ext-uls-webfonts-select-for-content-info": "Schriftart f\u00fcr den Inhalt",
-	"ext-uls-back-to-display-settings": "Zur\u00fcck zu den Anzeigeeinstellungen",
-	"@metadata": {
-		"authors": [
-			"Metalhead64"
-		]
-	}
+	"ext-uls-back-to-display-settings": "Zur\u00fcck zu den Anzeigeeinstellungen"
 }
