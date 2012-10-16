@@ -19,7 +19,7 @@
  */
 
 ( function ( $, mw, undefined ) {
-	"use strict";
+	'use strict';
 
 	var ULSPreferences = function ( group ) {
 		this.preferenceName = 'uls-preferences';
@@ -73,7 +73,7 @@
 		 * @param callback
 		 */
 		save: function ( callback ) {
-			var that = this;
+			var that = this, api;
 			callback = callback || $.noop();
 			if ( this.isAnon ) {
 				// Anonymous user- Save preferences in local storage
@@ -81,7 +81,7 @@
 				callback.call( this, true );
 			} else {
 				// Logged in user. Use MW apis to change preferences
-				var api = new mw.Api();
+				api = new mw.Api();
 				api.post( {
 					action: 'tokens',
 					type: 'options'
@@ -93,12 +93,12 @@
 						optionname: that.preferenceName,
 						optionvalue: $.toJSON( that.preferences ),
 						token: token
-					} ).done( function ( result ) {
+					} ).done( function () {
 						callback.call( this, true );
 					} ).fail( function () {
 						callback.call( this, false );
 					} );
-				} ).fail( function ( xhr, textStatus, exception ) {
+				} ).fail( function () {
 					callback.call( this, false );
 				} );
 			}
@@ -107,12 +107,12 @@
 
 	mw.uls = mw.uls || {};
 	mw.uls.preferences = function ( group ) {
-		var data = $( 'body' ).data( "preferences" );
+		var data = $( 'body' ).data( 'preferences' );
 
 		if ( !data ) {
-			$( 'body' ).data( "preferences", ( data = new ULSPreferences( group ) ) );
+			$( 'body' ).data( 'preferences', ( data = new ULSPreferences( group ) ) );
 		}
-		if ( typeof group === "string" ) {
+		if ( typeof group === 'string' ) {
 			data.get( group );
 		}
 		return data;

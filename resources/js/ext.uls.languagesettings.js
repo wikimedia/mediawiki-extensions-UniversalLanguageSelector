@@ -18,28 +18,30 @@
  */
 
 ( function ( $ ) {
-	"use strict";
+	'use strict';
 
-	var closeRow = '<div class="row">' +
+	var closeRow, settingsMenu, settingsPanel, windowTemplate, panelsRow;
+
+	closeRow = '<div class="row">' +
 		'<span id="languagesettings-close" class="icon-close"></span>' +
 		'</div>';
-	var settingsMenu = '<div class="four columns languagesettings-menu">' +
+	settingsMenu = '<div class="four columns languagesettings-menu">' +
 		'<h1 data-i18n="ext-uls-language-settings-title"></h1>' +
 		'<div class="settings-menu-items">' +
 		'</div>' +
 		'</div>';
-	var settingsPanel = '<div id="languagesettings-settings-panel" class="eight columns">' +
+	settingsPanel = '<div id="languagesettings-settings-panel" class="eight columns">' +
 		'</div>';
-	var panelsRow = '<div class="row" id="languagesettings-panels">' +
+	panelsRow = '<div class="row" id="languagesettings-panels">' +
 		settingsMenu +
 		settingsPanel +
 		'</div>';
-	var windowTemplate = '<div style="display: block;" id="language-settings-dialog" class="uls-menu">'
+	windowTemplate = '<div style="display: block;" id="language-settings-dialog" class="uls-menu">'
 		+ closeRow
 		+ panelsRow
 		+ '</div>';
 
-	var LanguageSettings = function ( element, options ) {
+	function LanguageSettings( element, options ) {
 		this.$element = $( element );
 		this.options = $.extend( {}, $.fn.languagesettings.defaults, options );
 		this.$window = $( this.options.template );
@@ -47,32 +49,34 @@
 		this.initialized = false;
 		this.left = this.options.left;
 		this.top = this.options.top;
-		this.$settingsPanel = this.$window.find( "#languagesettings-settings-panel" );
+		this.$settingsPanel = this.$window.find( '#languagesettings-settings-panel' );
 		this.init();
 		this.listen();
-	};
+	}
 
 	LanguageSettings.prototype = {
 		constructor: LanguageSettings,
 
 		init: function () {
-			$( "body" ).append( this.$window );
+			$( 'body' ).append( this.$window );
 			this.hide();
 		},
 
 		listen: function () {
 			var that = this;
 			// Register all event listeners to the ULS language settings here.
-			that.$element.on( "click", $.proxy( that.show, that ) );
+			that.$element.on( 'click', $.proxy( that.show, that ) );
 			that.$window.find( '#languagesettings-close' )
-				.on( "click", $.proxy( that.hide, that ) );
+				.on( 'click', $.proxy( that.hide, that ) );
 		},
 
 		render: function () {
+			var modules, defaultModule, moduleName;
+
 			// Get the name of all registered modules and list them in left side menu.
-			var modules = $.fn.languagesettings.modules;
-			var defaultModule = this.options.defaultModule;
-			for ( var moduleName in modules ) {
+			modules = $.fn.languagesettings.modules;
+			defaultModule = this.options.defaultModule;
+			for ( moduleName in modules ) {
 				if ( modules.hasOwnProperty( moduleName ) ) {
 					if ( !defaultModule ) {
 						defaultModule = moduleName;
@@ -89,25 +93,27 @@
 		 * @param active boolean Make this module active and show by default
 		 */
 		renderModule: function ( moduleName, active ) {
-			var $settingsMenuItems = this.$window.find( ".settings-menu-items" );
-			var module = new $.fn.languagesettings.modules[moduleName]( this );
-			var $settingsTitle = $( "<div>" )
-				.addClass( "settings-title" )
+			var $settingsMenuItems, module, $settingsText, $settingsTitle, $settingsLink;
+
+			$settingsMenuItems = this.$window.find( '.settings-menu-items' );
+			module = new $.fn.languagesettings.modules[moduleName]( this );
+			$settingsTitle = $( '<div>' )
+				.addClass( 'settings-title' )
 				.text( module.name );
-			var $settingsText = $( "<span>" )
-				.addClass( "settings-text" )
+			$settingsText = $( '<span>' )
+				.addClass( 'settings-text' )
 				.text( module.description );
-			var $settingsLink = $( "<div>" )
-				.addClass( moduleName + "-settings-block menu-section" )
-				.prop( "id", moduleName + "-settings-block" )
-				.data( "module", module )
+			$settingsLink = $( '<div>' )
+				.addClass( moduleName + '-settings-block menu-section' )
+				.prop( 'id', moduleName + '-settings-block' )
+				.data( 'module', module )
 				.append( $settingsTitle )
 				.append( $settingsText );
 
 			$settingsMenuItems.append( $settingsLink );
 
-			$settingsLink.on( "click", function () {
-				var module = $( this ).data( "module" );
+			$settingsLink.on( 'click', function () {
+				var module = $( this ).data( 'module' );
 				module.render();
 				$( this ).addClass( 'active' );
 			} );
@@ -120,13 +126,15 @@
 
 		show: function () {
 			if ( !this.initialized ) {
+				var top, pos, left;
+
 				this.render();
 				this.initialized = true;
-				var pos = $.extend( {}, this.$element.offset(), {
+				pos = $.extend( {}, this.$element.offset(), {
 					height: this.$element[0].offsetHeight
 				} );
-				var top = this.top || pos.top + pos.height;
-				var left = this.left || '25%';
+				top = this.top || pos.top + pos.height;
+				left = this.left || '25%';
 				// FIXME this is not exactly correct. position may not
 				// be relative to the trigger.
 				this.$window.css( {
@@ -161,7 +169,7 @@
 			}
 		},
 
-		click: function ( e ) {
+		click: function () {
 			if ( !this.shown ) {
 				this.show();
 			}
@@ -171,13 +179,13 @@
 	$.fn.languagesettings = function ( option ) {
 		return this.each( function () {
 			var $this = $( this ),
-				data = $this.data( "languagesettings" ),
-				options = typeof option === "object" && option;
+				data = $this.data( 'languagesettings' ),
+				options = typeof option === 'object' && option;
 
 			if ( !data ) {
-				$this.data( "languagesettings", ( data = new LanguageSettings( this, options ) ) );
+				$this.data( 'languagesettings', ( data = new LanguageSettings( this, options ) ) );
 			}
-			if ( typeof option === "string" ) {
+			if ( typeof option === 'string' ) {
 				data[option]();
 			}
 		} );
