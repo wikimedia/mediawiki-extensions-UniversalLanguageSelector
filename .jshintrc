@@ -2,7 +2,8 @@
 	"predef": [
 		"jQuery",
 		"QUnit",
-		"_"
+		"_",
+		"mediaWiki"
 	],
 
 	"camelcase": true,

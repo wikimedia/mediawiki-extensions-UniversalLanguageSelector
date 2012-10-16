@@ -18,7 +18,7 @@
  */
 
 ( function ( $, mw, undefined ) {
-	"use strict";
+	'use strict';
 
 	var template = '<div class="uls-display-settings">'
 		+ '<div class="row">' // Top "Display settings" title
@@ -86,16 +86,16 @@
 		+ '</div>'
 		+ '</div>'; // FIXME i18n and too much hardcoding.
 
-	var DisplaySettings = function ( $parent ) {
-		this.name = $.i18n( "ext-uls-display-settings-title-short" );
-		this.description = $.i18n( "ext-uls-display-settings-desc" );
+	function DisplaySettings( $parent ) {
+		this.name = $.i18n( 'ext-uls-display-settings-title-short' );
+		this.description = $.i18n( 'ext-uls-display-settings-desc' );
 		this.$template = $( template );
 		this.uiLanguage = this.getUILanguage();
 		this.contentLanguage = this.getContentLanguage();
 		this.$webfonts = null;
 		this.$parent = $parent;
 		this.webfontPreferences = mw.uls.preferences( 'webfonts' );
-	};
+	}
 
 	DisplaySettings.prototype = {
 
@@ -135,16 +135,19 @@
 		 * Prepare the UI language selector
 		 */
 		prepareLanguages: function () {
-			var displaySettings = this,
-				$languages = this.$template.find( 'div.uls-ui-languages' ),
-				suggestedLanguages = this.frequentLanguageList()
-					// Common world languages, for the case that there are
-					// too few suggested languages
-					.concat( ['en', 'zh', 'fr'] ),
+			var displaySettings = this, languagesForButtons, $languages, suggestedLanguages,
+				SUGGESTED_LANGUAGES_NUMBER, lang, i, language, $button;
 
-				// Content language is always on the first button
-				languagesForButtons = [this.contentLanguage],
-				SUGGESTED_LANGUAGES_NUMBER = 3;
+			SUGGESTED_LANGUAGES_NUMBER = 3;
+			displaySettings = this;
+			$languages = this.$template.find( 'div.uls-ui-languages' );
+			suggestedLanguages = this.frequentLanguageList()
+				// Common world languages, for the case that there are
+				// too few suggested languages
+				.concat( [ 'en', 'zh', 'fr' ] );
+
+			// Content language is always on the first button
+			languagesForButtons = [ this.contentLanguage ];
 
 			// This is needed when drawing the panel for the second time
 			// after selecting a different language
@@ -155,7 +158,7 @@
 				languagesForButtons.push( this.uiLanguage );
 			}
 
-			for ( var lang in suggestedLanguages ) {
+			for ( lang in suggestedLanguages ) {
 				// Skip already found languages
 				if ( $.inArray( suggestedLanguages[lang], languagesForButtons ) > -1 ) {
 					continue;
@@ -171,23 +174,23 @@
 
 			function buttonHandler( button ) {
 				return function () {
-					displaySettings.uiLanguage = button.data( "language" ) || displaySettings.uiLanguage;
-					$( "div.uls-ui-languages button.button" ).removeClass( "down" );
-					button.addClass( "down" );
+					displaySettings.uiLanguage = button.data( 'language' ) || displaySettings.uiLanguage;
+					$( 'div.uls-ui-languages button.button' ).removeClass( 'down' );
+					button.addClass( 'down' );
 					displaySettings.prepareUIFonts();
 				};
 			}
 
 			// Add the buttons for the most likely languages
-			for ( var i = 0; i < SUGGESTED_LANGUAGES_NUMBER; i++ ) {
-				var language = languagesForButtons[i],
-					$button = $( '<button>' )
-						.addClass( 'button uls-language-button' )
-						.text( $.uls.data.getAutonym( language ) )
-						.prop({
-							lang: language,
-							dir: $.uls.data.getDir( language )
-						});
+			for ( i = 0; i < SUGGESTED_LANGUAGES_NUMBER; i++ ) {
+				language = languagesForButtons[i];
+				$button = $( '<button>' )
+					.addClass( 'button uls-language-button' )
+					.text( $.uls.data.getAutonym( language ) )
+					.prop({
+						lang: language,
+						dir: $.uls.data.getDir( language )
+					});
 
 				if ( language === this.uiLanguage ) {
 					$button.addClass( 'down' );
@@ -205,9 +208,11 @@
 		 * Prepare the more languages button. It is a ULS trigger
 		 */
 		prepareMoreLanguages: function () {
-			var that = this;
-			var $languages = this.$template.find( 'div.uls-ui-languages' );
-			var $moreLanguagesButton = $( '<button>' )
+			var that, $languages, $moreLanguagesButton;
+
+			that = this;
+			$languages = this.$template.find( 'div.uls-ui-languages' );
+			$moreLanguagesButton = $( '<button>' )
 				.prop( 'id', 'uls-more-languages' )
 				.addClass( 'button' ).text( '...' );
 
@@ -277,8 +282,10 @@
 		 * TODO Can this be merged with prepareContentLanguages?
 		 */
 		prepareUIFonts: function () {
-			var fonts = this.$webfonts.list( this.uiLanguage ),
-				$uiFonts = this.$template.find( 'div.uls-ui-fonts' );
+			var fonts, $fontSelector, savedFont, $systemFont, $fontLabel, $uiFonts;
+
+			fonts = this.$webfonts.list( this.uiLanguage );
+			$uiFonts = this.$template.find( 'div.uls-ui-fonts' );
 
 			if ( this.uiLanguage === this.contentLanguage || fonts.length === 0 ) {
 				$uiFonts.hide();
@@ -286,28 +293,29 @@
 			} else {
 				$uiFonts.show();
 			}
-			var $fontSelector = this.$template.find( 'select#ui-font-selector' );
+
+			$fontSelector = this.$template.find( 'select#ui-font-selector' );
 
 			$fontSelector.find( 'option' ).remove();
-			var savedFont = this.webfontPreferences.get( this.uiLanguage );
+			savedFont = this.webfontPreferences.get( this.uiLanguage );
 
 			if ( fonts && fonts.length ) {
 				$.each( fonts, function ( key, font ) {
 					if ( font !==  'system' ) {
-						var $fontOption = $( "<option>" ).attr( "value", font ).text( font );
+						var $fontOption = $( '<option>' ).attr( 'value', font ).text( font );
 						$fontSelector.append( $fontOption );
 						$fontOption.attr( 'selected', savedFont === font );
 					}
 				} );
 			}
 
-			$fontSelector.prop( "disabled", !this.isWebFontsEnabled() );
+			$fontSelector.prop( 'disabled', !this.isWebFontsEnabled() );
 
-			var $systemFont = $( "<option>" ).val( 'system' ).text( 'System font' );
+			$systemFont = $( '<option>' ).val( 'system' ).text( 'System font' );
 			$fontSelector.append( $systemFont );
 			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
 
-			var $fontLabel = this.$template.find( 'label#ui-font-selector-label' );
+			$fontLabel = this.$template.find( 'label#ui-font-selector-label' );
 			$fontLabel.html( '<strong>'
 				+ $.i18n( 'ext-uls-webfonts-select-for', $.uls.data.getAutonym( this.uiLanguage ) )
 				+ '</strong>'
@@ -321,8 +329,10 @@
 		 * Prepare the font selector for UI language.
 		 */
 		prepareContentFonts: function () {
-			var fonts = this.$webfonts.list( this.contentLanguage ),
-				$contentFonts = this.$template.find( 'div.uls-content-fonts' );
+			var fonts, $fontSelector, savedFont, $systemFont, $contentFonts, $fontLabel;
+
+			fonts = this.$webfonts.list( this.contentLanguage );
+			$contentFonts = this.$template.find( 'div.uls-content-fonts' );
 
 			if ( fonts.length === 0 ) {
 				$contentFonts.hide();
@@ -331,28 +341,31 @@
 				$contentFonts.show();
 			}
 
-			var $fontSelector = this.$template.find( '#content-font-selector' );
+			$fontSelector = this.$template.find( '#content-font-selector' );
+
+			fonts = this.$webfonts.list( this.contentLanguage );
+			$fontSelector = this.$template.find( '#content-font-selector' );
 
 			$fontSelector.find( 'option' ).remove();
-			var savedFont = this.webfontPreferences.get( this.contentLanguage );
+			savedFont = this.webfontPreferences.get( this.contentLanguage );
 
 			if ( fonts && fonts.length ) {
 				$.each( fonts, function ( key, font ) {
 					if ( font !==  'system' ) {
-						var $fontOption = $( "<option>" ).attr( "value", font ).text( font );
+						var $fontOption = $( '<option>' ).attr( 'value', font ).text( font );
 						$fontSelector.append( $fontOption );
 						$fontOption.attr( 'selected', savedFont === font );
 					}
 				} );
 			}
 
-			$fontSelector.prop( "disabled", !this.isWebFontsEnabled() );
+			$fontSelector.prop( 'disabled', !this.isWebFontsEnabled() );
 
-			var $systemFont = $( "<option>" ).val( 'system' ).text( 'System font' );
+			$systemFont = $( '<option>' ).val( 'system' ).text( 'System font' );
 			$fontSelector.append( $systemFont );
 			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
 
-			var $fontLabel = this.$template.find( '#content-font-selector-label' );
+			$fontLabel = this.$template.find( '#content-font-selector-label' );
 			$fontLabel.html( '<strong>'
 				+ $.i18n( 'ext-uls-webfonts-select-for', $.uls.data.getAutonym( this.contentLanguage ) )
 				+ '</strong>'
@@ -366,11 +379,12 @@
 		 * Register general event listeners
 		 */
 		listen: function () {
-			var that = this;
-			var $contentFontSelector = this.$template
-				.find( "#content-font-selector" );
-			var $uiFontSelector = this.$template
-				.find( "select#ui-font-selector" );
+			var that = this, $contentFontSelector, $uiFontSelector;
+
+			$contentFontSelector = this.$template
+				.find( '#content-font-selector' );
+			$uiFontSelector = this.$template
+				.find( 'select#ui-font-selector' );
 			// TODO all these repeated selectors can be placed in object constructor.
 
 			this.$template.find( '#uls-displaysettings-apply' ).on( 'click', function () {
@@ -384,24 +398,24 @@
 			this.$template.find( '#webfonts-enable-checkbox' ).on( 'click', function () {
 				if ( this.checked ) {
 					that.webfontPreferences.set( 'webfonts-enabled', true );
-					$contentFontSelector.prop( "disabled", false );
-					$uiFontSelector.prop( "disabled", false );
+					$contentFontSelector.prop( 'disabled', false );
+					$uiFontSelector.prop( 'disabled', false );
 					that.$webfonts.apply( $uiFontSelector.find( 'option:selected' ) );
 				} else {
 					that.webfontPreferences.set( 'webfonts-enabled', false );
-					$contentFontSelector.prop( "disabled", true );
-					$uiFontSelector.prop( "disabled", true );
+					$contentFontSelector.prop( 'disabled', true );
+					$uiFontSelector.prop( 'disabled', true );
 					that.$webfonts.reset();
 				}
 			} );
 
-			$uiFontSelector.on( "change", function () {
+			$uiFontSelector.on( 'change', function () {
 				var font = $( this ).find( 'option:selected' ).val();
 				that.webfontPreferences.set( that.uiLanguage, font );
 				that.$webfonts.refresh();
 			} );
 
-			$contentFontSelector.on( "change", function () {
+			$contentFontSelector.on( 'change', function () {
 				var font = $( this ).find( 'option:selected' ).val();
 				that.webfontPreferences.set( that.contentLanguage, font );
 				that.$webfonts.refresh();
