@@ -115,6 +115,7 @@
 			$settingsLink.on( 'click', function () {
 				var module = $( this ).data( 'module' );
 				module.render();
+				$settingsMenuItems.find( '.menu-section' ).removeClass( 'active' );
 				$( this ).addClass( 'active' );
 			} );
 
