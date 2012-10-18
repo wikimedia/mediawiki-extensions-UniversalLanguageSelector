@@ -1,3 +1,19 @@
+
+div.display-settings-block {
+	/* @embed */
+	background: transparent url('../images/display.png') no-repeat;
+	background-size: 20px auto;
+	/* This is only few pixels off from the below */
+	background-position: 4.5% 0;
+	/* Does not work for RTL
+	background-position-x: 15px;
+	background-position-y: 5px;
+	*/
+	color: #252525;
+	padding-left: 32px;
+	cursor: pointer;
+}
+
 .uls-font-label, .uls-font-select {
 	font-size: 10pt;
 	line-height: 16pt;

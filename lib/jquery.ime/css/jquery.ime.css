@@ -1,0 +1,186 @@
+div.imeselector {
+	position: absolute;
+	background: url('../images/ime-active.svg') no-repeat scroll left center
+		transparent;
+	background-size: 15px;
+	cursor: pointer;
+	height: 15px;
+	margin: 1px 0 0;
+	font-size: small;
+	padding-left: 20px;
+	margin-top: 0;
+	text-align: left;
+	font-family: 'sans';
+	white-space: nowrap;
+}
+
+div.imeselector a {
+	text-decoration: none;
+	outline: none;
+	color: #222222;
+	line-height: 1em;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.ime-disable-link span {
+	text-align: right;
+	margin-left: 10px;
+	color: #888;
+	font-size: smaller;
+}
+
+.ime-disable-link:hover span {
+	color: #eee;
+}
+
+.ime-list-title,
+.ime-lang-title {
+	color: #39d;
+	border-bottom: solid 1px #39d;
+	text-align: left;
+	font-size: larger;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-top: 9px;
+	margin-bottom: 1px;
+	cursor: default;
+}
+
+.imeselector .caret {
+	margin-left: 2px;
+	margin-top: 8px;
+}
+
+.caret {
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid #000000;
+	content: "";
+	display: inline-block;
+	height: 0;
+	vertical-align: top;
+	width: 0;
+}
+
+.imeselector-menu .sub-menu {
+	left: 100%;
+	position: absolute;
+	top: 0;
+	visibility: hidden;
+	margin-top: -1px;
+}
+
+.imeselector-menu li:hover .sub-menu {
+	visibility: visible;
+	display: block;
+}
+
+.imeselector-menu .checked a {
+	background: url(../images/tick.svg) 4px no-repeat;
+	background-size: 12px 12px;
+}
+
+ul.ime-language-list {
+	overflow: auto;
+	max-height: 150px;
+	width: 300px;
+	list-style: none;
+	padding: 0 0;
+}
+
+div.ime-language-list {
+	overflow: hidden;
+	width: 250px;
+	padding: 0 0;
+}
+
+.ime-language-list {
+	margin: 0;
+}
+
+.imeselector-menu {
+	position: absolute;
+	top: 14px;
+	right: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 160px;
+	padding: 0;
+	list-style: none;
+	border: 1px solid #888;
+	background-color: #FFFFFF;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+	text-align: left;
+}
+
+/* The triangle shaped callout */
+.imeselector-menu:before {
+	border-bottom: 7px solid #888;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	content: "";
+	display: inline-block;
+	right: 9px;
+	position: absolute;
+	top: -7px;
+}
+
+.imeselector-menu:after {
+	border-bottom: 6px solid #FFFFFF;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	content: "";
+	display: inline-block;
+	right: 10px;
+	position: absolute;
+	top: -6px;
+}
+
+.imeselector-menu .ime-help-link {
+	background-color: #f0f0f0;
+	border-radius: 0 0 5px 5px;
+	border-top: 1px solid #ddd;
+	margin-top: 6px;
+	padding: 2px 0 2px 0;
+	color: #444;
+}
+
+.imeselector-menu .ime-help-link>a:hover {
+	background-color: #f0f0f0;
+	color: #000;
+}
+
+.imeselector-menu a {
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	font-weight: normal;
+	color: #333333;
+	outline: none;
+	white-space: nowrap;
+}
+
+.imeselector-menu li>a:hover {
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #5089e8;
+}
+
+.open {
+	*z-index: 1000;
+	display: block;
+}
+
+.imeselector-menu li {
+	position: relative;
+}

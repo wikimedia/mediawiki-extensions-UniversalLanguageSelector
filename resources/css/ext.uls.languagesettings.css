@@ -92,20 +92,22 @@
 	border-left-color: #3366BB;
 }
 
-#languagesettings-panels div#settings-block {
+#settings-block {
 	border-left: 1px solid #C9C9C9;
 	padding-left: 10px;
 	background-color: #F6F6F6;
 	line-height: 1.2em;
 }
 
-#languagesettings-panels div#display-settings-block {
+#input-settings-block,
+#display-settings-block {
 	background-position: 6% 6px;
 	padding-left: 40px;
 	cursor: pointer;
 }
 
-#languagesettings-panels div#display-settings-block:hover {
+#input-settings-block:hover,
+#display-settings-block:hover {
 	background-color: #F6F6F6;
 }
 

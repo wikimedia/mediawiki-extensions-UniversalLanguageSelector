@@ -130,11 +130,26 @@
 			return $displaySettings;
 		}
 
+		function inputSettings () {
+			var $inputSettingsTitle, $inputSettingsText, $inputSettings;
+
+			$inputSettingsTitle = $( '<div data-i18n="ext-uls-input-settings-title">' )
+				.addClass( 'settings-title' );
+			$inputSettingsText = $( '<span data-i18n="ext-uls-input-settings-desc">' )
+				.addClass( 'settings-text' );
+			$inputSettings = $( '<div>' )
+				.addClass( 'input-settings-block' )
+				.prop( 'id', 'input-settings-block' )
+				.append( $inputSettingsTitle )
+				.append( $inputSettingsText );
+			return $inputSettings;
+		}
+
 		function addDisplaySettings ( uls ) {
 			var $displaySettings, position;
 
 			$displaySettings = displaySettings();
-			uls.$menu.find( 'div#settings-block' ).append( $displaySettings );
+			uls.$menu.find( '#settings-block' ).append( $displaySettings );
 			position = uls.position();
 
 			$displaySettings.languagesettings( {
@@ -151,9 +166,31 @@
 			} );
 		}
 
+		function addInputSettings ( uls ) {
+			var $inputSettings, position;
+
+			$inputSettings = inputSettings();
+			uls.$menu.find( '#settings-block' ).append( $inputSettings );
+			position = uls.position();
+
+			$inputSettings.languagesettings( {
+				defaultModule: 'input',
+				onClose: function () {
+					uls.show();
+				},
+				top: position.top,
+				left: position.left
+			} );
+
+			$inputSettings.on( 'click', function () {
+				uls.hide();
+			} );
+		}
+
 		$ulsTrigger.uls( {
 			onReady: function () {
 				addDisplaySettings( this );
+				addInputSettings( this );
 			},
 			onSelect: function ( language ) {
 				mw.uls.changeLanguage( language );

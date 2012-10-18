@@ -92,6 +92,7 @@ $wgResourceModules['ext.uls.init'] = array(
 		'jquery.uls',
 		'jquery.i18n',
 		'ext.uls.displaysettings',
+		'ext.uls.inputsettings',
 	),
 	'position' => 'top',
 );
@@ -118,7 +119,7 @@ $wgResourceModules['ext.uls.languagesettings'] = array(
 	'styles' => 'resources/css/ext.uls.languagesettings.css',
 	'localBasePath' => $dir,
 	'remoteExtPath' => 'UniversalLanguageSelector',
-		'dependencies' => array(
+	'dependencies' => array(
 		'ext.uls.preferences',
 	),
 );
@@ -130,8 +131,19 @@ $wgResourceModules['ext.uls.webfonts'] = array(
 	'dependencies' => array(
 		'jquery.webfonts',
 		'ext.uls.webfonts.repository',
+		'ext.uls.preferences',
 	),
 );
+$wgResourceModules['ext.uls.ime'] = array(
+		'scripts' => 'resources/js/ext.uls.ime.js',
+		'localBasePath' => $dir,
+		'remoteExtPath' => 'UniversalLanguageSelector',
+		'dependencies' => array(
+			'jquery.ime',
+			'ext.uls.preferences',
+		),
+);
+
 
 $wgResourceModules['ext.uls.displaysettings'] = array(
 	'scripts' => 'resources/js/ext.uls.displaysettings.js',
@@ -143,6 +155,18 @@ $wgResourceModules['ext.uls.displaysettings'] = array(
 		'jquery.i18n',
 	),
 	'remoteExtPath' => 'UniversalLanguageSelector',
+);
+
+$wgResourceModules['ext.uls.inputsettings'] = array(
+		'scripts' => 'resources/js/ext.uls.inputsettings.js',
+		'styles' => 'resources/css/ext.uls.inputsettings.css',
+		'localBasePath' => $dir,
+		'dependencies' => array(
+			'ext.uls.languagesettings',
+			'ext.uls.ime',
+			'jquery.i18n',
+		),
+		'remoteExtPath' => 'UniversalLanguageSelector',
 );
 
 $wgResourceModules['jquery.uls'] = array(
@@ -174,6 +198,15 @@ $wgResourceModules['ext.uls.webfonts.repository'] = array(
 
 $wgResourceModules['jquery.i18n'] = array(
 		'scripts' => 'lib/jquery.i18n.js',
+		'localBasePath' => $dir,
+		'remoteExtPath' => 'UniversalLanguageSelector',
+);
+
+$wgResourceModules['jquery.ime'] = array(
+		'scripts' => 'lib/jquery.ime/jquery.ime.js',
+		'styles' => array(
+			'lib/jquery.ime/css/jquery.ime.css',
+		),
 		'localBasePath' => $dir,
 		'remoteExtPath' => 'UniversalLanguageSelector',
 );
