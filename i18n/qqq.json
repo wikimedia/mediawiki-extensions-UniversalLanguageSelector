@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Hyperborean",
 			"Santhosh Thottingal"
 		]
 	},
@@ -10,7 +11,7 @@
 	"ext-uls-undo-language-tooltip-text": "Text for the tooltip appearing when language is changed. $1 is the previous language acronym.",
 	"ext-uls-language-settings-title": "Title text for language settings screen",
 	"ext-uls-language-settings-apply": "Label for apply settings button in language settings screen",
-	"ext-uls-language-settings-cancel": "Lable for cancel buton in language settings screen",
+	"ext-uls-language-settings-cancel": "Label for cancel button in language settings screen",
 	"ext-uls-display-settings-font-settings": "Subsection title for font settings",
 	"ext-uls-display-settings-ui-language": "Sub section title for selecting UI language",
 	"ext-uls-webfonts-settings-title": "Short title for enabling webfonts",
