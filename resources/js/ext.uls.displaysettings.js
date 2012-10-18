@@ -277,49 +277,64 @@
 		},
 
 		/**
-		 * Prepare the font selector for UI language.
-		 * TODO Can this be merged with prepareContentLanguages?
+		 * Prepare a font selector section with a label and a selector element.
+		 *
+		 * @param target String 'ui' or 'content'
 		 */
-		prepareUIFonts: function () {
-			var fonts, $fontSelector, savedFont, $systemFont, $fontLabel, $uiFonts;
+		prepareFontSelector: function ( target ) {
+			var language, fonts, $fontSelector, savedFont, $systemFont, $fontLabel, $fontsSection;
 
-			fonts = this.$webfonts.list( this.uiLanguage );
-			$uiFonts = this.$template.find( 'div.uls-ui-fonts' );
+			// Get the language code from the right property -
+			// uiLanguage or contentLanguage
+			language = this[ target + 'Language' ];
+			fonts = this.$webfonts.list( language );
+			// Possible classes:
+			// uls-ui-fonts
+			// uls-content-fonts
+			$fontsSection = this.$template.find( 'div.uls-' + target + '-fonts' );
 
-			if ( this.uiLanguage === this.contentLanguage || fonts.length === 0 ) {
-				$uiFonts.hide();
+			// The section may be visible from the previous time
+			// the user opened the dialog, so we need to hide it.
+			if ( fonts.length === 0 ) {
+				$fontsSection.hide();
 				return;
-			} else {
-				$uiFonts.show();
 			}
 
-			$fontSelector = this.$template.find( 'select#ui-font-selector' );
+			$fontsSection.show();
+			// Possible ids:
+			// uls-ui-font-selector
+			// uls-content-font-selector
+			$fontSelector = this.$template.find( '#' + target + '-font-selector' );
 
+			// Remove all current fonts
 			$fontSelector.find( 'option' ).remove();
-			savedFont = mw.webfonts.preferences.getFont( this.uiLanguage );
 
-			if ( fonts && fonts.length ) {
-				$.each( fonts, function ( key, font ) {
-					if ( font !==  'system' ) {
-						var $fontOption = $( '<option>' ).attr( 'value', font ).text( font );
-						$fontSelector.append( $fontOption );
-						$fontOption.attr( 'selected', savedFont === font );
-					}
-				} );
-			}
+			savedFont = mw.webfonts.preferences.getFont( this.uiLanguage );
+			$.each( fonts, function ( key, font ) {
+				if ( font !== 'system' ) {
+					var $fontOption = $( '<option>' ).attr( 'value', font ).text( font );
+					$fontSelector.append( $fontOption );
+					$fontOption.attr( 'selected', savedFont === font );
+				}
+			} );
 
 			$fontSelector.prop( 'disabled', !this.isWebFontsEnabled() );
-
 			$systemFont = $( '<option>' ).val( 'system' ).text( 'System font' );
 			$fontSelector.append( $systemFont );
 			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
 
-			$fontLabel = this.$template.find( 'label#ui-font-selector-label' );
+			// Possible ids:
+			// uls-ui-font-selector-label
+			// uls-content-font-selector-label
+			$fontLabel = this.$template.find( '#' + target + '-font-selector-label' );
 			$fontLabel.html( '<strong>'
-				+ $.i18n( 'ext-uls-webfonts-select-for', $.uls.data.getAutonym( this.uiLanguage ) )
+				+ $.i18n( 'ext-uls-webfonts-select-for', $.uls.data.getAutonym( language ) )
 				+ '</strong>'
 				+ '<div>'
-				+ $.i18n( 'ext-uls-webfonts-select-for-ui-info' )
+				// Possible messages:
+				// ext-uls-webfonts-select-for-ui-info
+				// ext-uls-webfonts-select-for-content-info
+				+ $.i18n( 'ext-uls-webfonts-select-for-' + target + '-info' )
 				+ '</div>'
 			);
 		},
@@ -327,51 +342,20 @@
 		/**
 		 * Prepare the font selector for UI language.
 		 */
-		prepareContentFonts: function () {
-			var fonts, $fontSelector, savedFont, $systemFont, $contentFonts, $fontLabel;
-
-			fonts = this.$webfonts.list( this.contentLanguage );
-			$contentFonts = this.$template.find( 'div.uls-content-fonts' );
-
-			if ( fonts.length === 0 ) {
-				$contentFonts.hide();
+		prepareUIFonts: function () {
+			if ( this.uiLanguage === this.contentLanguage ) {
+				this.$template.find( 'div.uls-ui-fonts' ).hide();
 				return;
-			} else {
-				$contentFonts.show();
 			}
 
-			$fontSelector = this.$template.find( '#content-font-selector' );
+			this.prepareFontSelector( 'ui' );
+		},
 
-			fonts = this.$webfonts.list( this.contentLanguage );
-			$fontSelector = this.$template.find( '#content-font-selector' );
-
-			$fontSelector.find( 'option' ).remove();
-			savedFont = mw.webfonts.preferences.getFont( this.contentLanguage );
-
-			if ( fonts && fonts.length ) {
-				$.each( fonts, function ( key, font ) {
-					if ( font !==  'system' ) {
-						var $fontOption = $( '<option>' ).attr( 'value', font ).text( font );
-						$fontSelector.append( $fontOption );
-						$fontOption.attr( 'selected', savedFont === font );
-					}
-				} );
-			}
-
-			$fontSelector.prop( 'disabled', !this.isWebFontsEnabled() );
-
-			$systemFont = $( '<option>' ).val( 'system' ).text( 'System font' );
-			$fontSelector.append( $systemFont );
-			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
-
-			$fontLabel = this.$template.find( '#content-font-selector-label' );
-			$fontLabel.html( '<strong>'
-				+ $.i18n( 'ext-uls-webfonts-select-for', $.uls.data.getAutonym( this.contentLanguage ) )
-				+ '</strong>'
-				+ '<div>'
-				+ $.i18n( 'ext-uls-webfonts-select-for-content-info' )
-				+ '</div>'
-			);
+		/**
+		 * Prepare the font selector for UI language.
+		 */
+		prepareContentFonts: function () {
+			this.prepareFontSelector( 'content' );
 		},
 
 		/**
