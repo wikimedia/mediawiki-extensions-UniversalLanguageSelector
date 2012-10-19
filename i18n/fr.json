@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Hyperborean"
+		]
+	},
 	"ext-uls-display-settings-title": "Afficher les param\u00e8tres",
 	"ext-uls-language-settings-title": "Param\u00e8tres de langue",
 	"ext-uls-language-settings-apply": "Appliquer les param\u00e8tres",
@@ -8,10 +13,5 @@
 	"ext-uls-webfonts-settings-title": "T\u00e9l\u00e9charger la fonte lorsque cela est n\u00e9cessaire",
 	"ext-uls-webfonts-settings-info-link": "Plus d'informations",
 	"ext-uls-webfonts-select-for": "S\u00e9lectionner la police pour $1",
-	"ext-uls-back-to-display-settings": "Retour aux param\u00e8tres d'affichage",
-	"@metadata": {
-		"authors": [
-			"Hyperborean"
-		]
-	}
+	"ext-uls-back-to-display-settings": "Retour aux param\u00e8tres d'affichage"
 }

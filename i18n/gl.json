@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Toli\u00f1o"
+		]
+	},
 	"ext-uls-display-settings-title": "Opci\u00f3ns de visualizaci\u00f3n",
 	"ext-uls-display-settings-title-short": "Visualizaci\u00f3n",
 	"ext-uls-display-settings-desc": "Establecer a lingua usada nos men\u00fas e tipos de letra.",
@@ -14,10 +19,5 @@
 	"ext-uls-webfonts-select-for": "Seleccione o tipo de letra para o $1",
 	"ext-uls-webfonts-select-for-ui-info": "Tipo de letra usado para a interface de usuario",
 	"ext-uls-webfonts-select-for-content-info": "Tipo de letra usado para o contido",
-	"ext-uls-back-to-display-settings": "Volver \u00e1s opci\u00f3ns de visualizaci\u00f3n",
-	"@metadata": {
-		"authors": [
-			"Toli\u00f1o"
-		]
-	}
+	"ext-uls-back-to-display-settings": "Volver \u00e1s opci\u00f3ns de visualizaci\u00f3n"
 }
