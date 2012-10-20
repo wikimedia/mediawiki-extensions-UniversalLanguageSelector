@@ -29,6 +29,7 @@ $messages['en'] = array(
 	'uls-desc' => 'Gives the user several ways to select a language and to adjust language settings',
 	'uls-select-content-language' => 'Select language',
 );
+
 /**
  * Message documentation
  * @author santhosh
