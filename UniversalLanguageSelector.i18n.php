@@ -30,17 +30,8 @@ $messages['en'] = array(
 	'uls-select-content-language' => 'Select language',
 );
 
-/**
- * Message documentation
- * @author santhosh
+/** Message documentation (Message documentation)
  */
-$messages['qqq'] = array(
-	'UniversalLanguageSelector' => 'Extension name',
-	'uls-desc' => 'Extension description',
-	'uls-select-content-language' => 'Main heading in the language selector popup.',
-);
-
-/** Message documentation (Message documentation) */
 $messages['qqq'] = array(
 	'UniversalLanguageSelector' => 'Extension name',
 	'uls-desc' => 'Extension description',
@@ -304,4 +295,3 @@ $messages['vi'] = array(
 	'uls-desc' => 'Trình bày giao diện để lựa chọn ngôn ngữ và điều chỉnh các tùy chọn ngôn ngữ',
 	'uls-select-content-language' => 'Chọn ngôn ngữ',
 );
-
