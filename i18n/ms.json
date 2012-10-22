@@ -1,0 +1,23 @@
+{
+	"ext-uls-display-settings-title": "Tetapan paparan",
+	"ext-uls-display-settings-title-short": "Paparan",
+	"ext-uls-display-settings-desc": "Tetapkan bahasa yang digunakan untuk menu dan rupa huruf.",
+	"ext-uls-undo-language-tooltip-text": "Bahasa ditukar dari $1",
+	"ext-uls-language-settings-title": "Tetapan bahasa",
+	"ext-uls-language-settings-apply": "Gunakan tetapan",
+	"ext-uls-language-settings-cancel": "Batalkan",
+	"ext-uls-display-settings-font-settings": "Tetapan rupa huruf",
+	"ext-uls-display-settings-ui-language": "Bahasa paparan",
+	"ext-uls-webfonts-settings-title": "Muat turun rupa huruf apabila diperlukan",
+	"ext-uls-webfonts-settings-info": "Webfont akan dimuat turun untuk memaparkan teks dalam tulisan khas.",
+	"ext-uls-webfonts-settings-info-link": "Maklumat lanjut",
+	"ext-uls-webfonts-select-for": "Pilih rupa huruf untuk $1",
+	"ext-uls-webfonts-select-for-ui-info": "Rupa huruf yang digunakan untuk antaramuka pengguna",
+	"ext-uls-webfonts-select-for-content-info": "Rupa huruf yang digunakan untuk isi kandungan",
+	"ext-uls-back-to-display-settings": "Kembali ke tetapan paparan",
+	"@metadata": {
+		"authors": [
+			"Anakmalaysia"
+		]
+	}
+}

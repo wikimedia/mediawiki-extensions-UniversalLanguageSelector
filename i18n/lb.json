@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
 	"ext-uls-display-settings-title": "Astellunge weisen",
 	"ext-uls-display-settings-title-short": "Weisen",
 	"ext-uls-display-settings-desc": "Sprooch astellen d\u00e9i fir d'Men\u00fcen a Buschtawe benotzt g\u00ebtt",
@@ -7,10 +12,5 @@
 	"ext-uls-language-settings-apply": "Astellungen uwenden",
 	"ext-uls-language-settings-cancel": "Ofbriechen",
 	"ext-uls-webfonts-settings-info-link": "M\u00e9i Informatiounen",
-	"ext-uls-back-to-display-settings": "Zr\u00e9ck op d'Astellunge vum Weisen",
-	"@metadata": {
-		"authors": [
-			"Robby"
-		]
-	}
+	"ext-uls-back-to-display-settings": "Zr\u00e9ck op d'Astellunge vum Weisen"
 }

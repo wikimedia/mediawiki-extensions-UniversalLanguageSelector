@@ -1,0 +1,23 @@
+{
+	"ext-uls-display-settings-title": "\ubcf4\uae30 \uc124\uc815",
+	"ext-uls-display-settings-title-short": "\ubcf4\uae30",
+	"ext-uls-display-settings-desc": "\uba54\ub274\uc640 \uae00\uaf34\uc5d0 \uc0ac\uc6a9\ud558\ub294 \uc5b8\uc5b4\ub97c \uc124\uc815\ud569\ub2c8\ub2e4.",
+	"ext-uls-undo-language-tooltip-text": "$1\uc5d0\uc11c \uc5b8\uc5b4\uac00 \ubc14\ub00c\uc5c8\uc2b5\ub2c8\ub2e4",
+	"ext-uls-language-settings-title": "\uc5b8\uc5b4 \uc124\uc815",
+	"ext-uls-language-settings-apply": "\uc124\uc815 \uc801\uc6a9",
+	"ext-uls-language-settings-cancel": "\ucde8\uc18c",
+	"ext-uls-display-settings-font-settings": "\uae00\uaf34 \uc124\uc815",
+	"ext-uls-display-settings-ui-language": "\ubcf4\uc77c \uc5b8\uc5b4",
+	"ext-uls-webfonts-settings-title": "\ud544\uc694\ud560 \ub54c \uae00\uaf34 \ub2e4\uc6b4\ub85c\ub4dc",
+	"ext-uls-webfonts-settings-info": "\uc6f9\uae00\uaf34\uc740 \ud2b9\uc218\ud55c \uc2a4\ud06c\ub9bd\ud2b8\ub85c \ud14d\uc2a4\ud2b8\ub97c \ubcf4\uc774\uae30 \uc704\ud574 \ub2e4\uc6b4\ub85c\ub4dc\ud569\ub2c8\ub2e4.",
+	"ext-uls-webfonts-settings-info-link": "\uc790\uc138\ud55c \uc815\ubcf4",
+	"ext-uls-webfonts-select-for": "$1\uc5d0 \ub300\ud55c \uae00\uaf34 \uc120\ud0dd",
+	"ext-uls-webfonts-select-for-ui-info": "\uc0ac\uc6a9\uc790 \uc778\ud130\ud398\uc774\uc2a4\uc5d0 \uc0ac\uc6a9\ud560 \uae00\uaf34",
+	"ext-uls-webfonts-select-for-content-info": "\ub0b4\uc6a9\uc5d0 \uc0ac\uc6a9\ud560 \uae00\uaf34",
+	"ext-uls-back-to-display-settings": "\ubcf4\uae30 \uc124\uc815\uc73c\ub85c \ub3cc\uc544\uac00\uae30",
+	"@metadata": {
+		"authors": [
+			"\uc544\ub77c"
+		]
+	}
+}
