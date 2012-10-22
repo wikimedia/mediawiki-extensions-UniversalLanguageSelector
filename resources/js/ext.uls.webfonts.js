@@ -20,10 +20,10 @@
 	'use strict';
 
 	$( document ).ready( function () {
-		var mediawikiFontRepository, webfontsPreferences;
+		var mediawikiFontRepository, ulsPreferences;
 
 		mediawikiFontRepository = $.webfonts.repository;
-		webfontsPreferences = mw.uls.preferences( 'webfonts' );
+		ulsPreferences = mw.uls.preferences();
 		mediawikiFontRepository.base = mw.config.get( 'wgExtensionAssetsPath' )
 			+ '/UniversalLanguageSelector/data/fontrepo/fonts/';
 
@@ -33,13 +33,54 @@
 			fontStack: ['sans-serif'] // MediaWiki default font as per screen.css
 		} );
 
+		mw.webfonts = mw.webfonts || {};
+
+		mw.webfonts.preferences = {
+			registry: {
+				'fonts': {},
+				'webfonts-enabled': true
+			},
+
+			isEnabled: function () {
+				return this.registry['webfonts-enabled'];
+			},
+
+			enable: function () {
+				this.registry['webfonts-enabled'] = true;
+			},
+
+			disable: function () {
+				this.registry['webfonts-enabled'] = false;
+			},
+
+			setFont: function ( language, font ) {
+				this.registry.fonts[language] = font;
+			},
+
+			getFont: function ( language ) {
+				return this.registry.fonts[language];
+			},
+
+			save: function ( callback ) {
+				ulsPreferences.set( 'webfonts', this.registry );
+				ulsPreferences.save( callback );
+			},
+
+			load: function () {
+				mw.webfonts.preferences.registry = $.extend( this.registry,
+					ulsPreferences.get( 'webfonts' ) );
+			}
+		};
+
+		mw.webfonts.preferences.load();
+
 		// Initialize webfonts
 		$( 'body' ).webfonts( {
 			fontSelector: function ( repository, language ) {
 				var font, enabled;
 
-				font = webfontsPreferences.get( language );
-				enabled = webfontsPreferences.get( 'webfonts-enabled' );
+				font = mw.webfonts.preferences.getFont( language );
+				enabled = mw.webfonts.preferences.isEnabled();
 				// If the user didn't set anything, the preference will be undefined.
 				// The default for now is to enable webfonts if the user didn't select anything.
 				if ( enabled === undefined ) {

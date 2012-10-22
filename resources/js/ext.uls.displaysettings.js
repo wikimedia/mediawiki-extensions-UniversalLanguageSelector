@@ -94,7 +94,6 @@
 		this.contentLanguage = this.getContentLanguage();
 		this.$webfonts = null;
 		this.$parent = $parent;
-		this.webfontPreferences = mw.uls.preferences( 'webfonts' );
 	}
 
 	DisplaySettings.prototype = {
@@ -121,7 +120,7 @@
 		},
 
 		isWebFontsEnabled: function () {
-			var enable = this.webfontPreferences.get( 'webfonts-enabled' );
+			var enable = mw.webfonts.preferences.isEnabled();
 
 			// If the user didn't use the checkbox, the preference will be undefined.
 			// The default for now is to enable webfonts if the user didn't select anything.
@@ -297,7 +296,7 @@
 			$fontSelector = this.$template.find( 'select#ui-font-selector' );
 
 			$fontSelector.find( 'option' ).remove();
-			savedFont = this.webfontPreferences.get( this.uiLanguage );
+			savedFont = mw.webfonts.preferences.getFont( this.uiLanguage );
 
 			if ( fonts && fonts.length ) {
 				$.each( fonts, function ( key, font ) {
@@ -347,7 +346,7 @@
 			$fontSelector = this.$template.find( '#content-font-selector' );
 
 			$fontSelector.find( 'option' ).remove();
-			savedFont = this.webfontPreferences.get( this.contentLanguage );
+			savedFont = mw.webfonts.preferences.getFont( this.contentLanguage );
 
 			if ( fonts && fonts.length ) {
 				$.each( fonts, function ( key, font ) {
@@ -397,12 +396,12 @@
 
 			this.$template.find( '#webfonts-enable-checkbox' ).on( 'click', function () {
 				if ( this.checked ) {
-					that.webfontPreferences.set( 'webfonts-enabled', true );
+					mw.webfonts.preferences.enable();
 					$contentFontSelector.prop( 'disabled', false );
 					$uiFontSelector.prop( 'disabled', false );
 					that.$webfonts.apply( $uiFontSelector.find( 'option:selected' ) );
 				} else {
-					that.webfontPreferences.set( 'webfonts-enabled', false );
+					mw.webfonts.preferences.disable();
 					$contentFontSelector.prop( 'disabled', true );
 					$uiFontSelector.prop( 'disabled', true );
 					that.$webfonts.reset();
@@ -411,13 +410,13 @@
 
 			$uiFontSelector.on( 'change', function () {
 				var font = $( this ).find( 'option:selected' ).val();
-				that.webfontPreferences.set( that.uiLanguage, font );
+				mw.webfonts.preferences.setFont( that.uiLanguage, font );
 				that.$webfonts.refresh();
 			} );
 
 			$contentFontSelector.on( 'change', function () {
 				var font = $( this ).find( 'option:selected' ).val();
-				that.webfontPreferences.set( that.contentLanguage, font );
+				mw.webfonts.preferences.setFont( that.contentLanguage, font );
 				that.$webfonts.refresh();
 			} );
 
@@ -463,7 +462,7 @@
 			var that = this;
 
 			// Save the preferences
-			this.webfontPreferences.save( function ( result ) {
+			mw.webfonts.preferences.save( function ( result ) {
 				// closure for not losing the scope
 				that.onSave( result );
 			} );
