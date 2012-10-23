@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"\uc544\ub77c"
+		]
+	},
 	"ext-uls-display-settings-title": "\ubcf4\uae30 \uc124\uc815",
 	"ext-uls-display-settings-title-short": "\ubcf4\uae30",
 	"ext-uls-display-settings-desc": "\uba54\ub274\uc640 \uae00\uaf34\uc5d0 \uc0ac\uc6a9\ud558\ub294 \uc5b8\uc5b4\ub97c \uc124\uc815\ud569\ub2c8\ub2e4.",
@@ -14,10 +19,5 @@
 	"ext-uls-webfonts-select-for": "$1\uc5d0 \ub300\ud55c \uae00\uaf34 \uc120\ud0dd",
 	"ext-uls-webfonts-select-for-ui-info": "\uc0ac\uc6a9\uc790 \uc778\ud130\ud398\uc774\uc2a4\uc5d0 \uc0ac\uc6a9\ud560 \uae00\uaf34",
 	"ext-uls-webfonts-select-for-content-info": "\ub0b4\uc6a9\uc5d0 \uc0ac\uc6a9\ud560 \uae00\uaf34",
-	"ext-uls-back-to-display-settings": "\ubcf4\uae30 \uc124\uc815\uc73c\ub85c \ub3cc\uc544\uac00\uae30",
-	"@metadata": {
-		"authors": [
-			"\uc544\ub77c"
-		]
-	}
+	"ext-uls-back-to-display-settings": "\ubcf4\uae30 \uc124\uc815\uc73c\ub85c \ub3cc\uc544\uac00\uae30"
 }

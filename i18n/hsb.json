@@ -1,0 +1,23 @@
+{
+	"ext-uls-display-settings-title": "Nastajenja za zwobraznjenje",
+	"ext-uls-display-settings-title-short": "Zwobrazni\u0107",
+	"ext-uls-display-settings-desc": "R\u011b\u010d za menije a pisma postaji\u0107",
+	"ext-uls-undo-language-tooltip-text": "R\u011b\u010d $1 zm\u011bnjena",
+	"ext-uls-language-settings-title": "R\u011b\u010dne nastajenja",
+	"ext-uls-language-settings-apply": "Nastajenja na\u0142o\u017ei\u0107",
+	"ext-uls-language-settings-cancel": "P\u0159etorhny\u0107",
+	"ext-uls-display-settings-font-settings": "Pismowe nastajenja",
+	"ext-uls-display-settings-ui-language": "R\u011b\u010d za zwobraznjenje",
+	"ext-uls-webfonts-settings-title": "Pismo s\u0107ahny\u0107, jeli tr\u011bbne",
+	"ext-uls-webfonts-settings-info": "Webpisma so s\u0107ahnu, zo bychu tekst w specialnych skriptach zwobraznili.",
+	"ext-uls-webfonts-settings-info-link": "Dal\u0161e informacije",
+	"ext-uls-webfonts-select-for": "Wubjer pismo za $1",
+	"ext-uls-webfonts-select-for-ui-info": "Pismo za wu\u017eiwarski powjerch",
+	"ext-uls-webfonts-select-for-content-info": "Pismo za wobsah",
+	"ext-uls-back-to-display-settings": "Wr\u00f3\u0107o k nastajenjam zwobraznjenja",
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	}
+}
