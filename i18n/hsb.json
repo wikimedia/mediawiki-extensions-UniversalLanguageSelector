@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
 	"ext-uls-display-settings-title": "Nastajenja za zwobraznjenje",
 	"ext-uls-display-settings-title-short": "Zwobrazni\u0107",
 	"ext-uls-display-settings-desc": "R\u011b\u010d za menije a pisma postaji\u0107",
@@ -14,10 +19,5 @@
 	"ext-uls-webfonts-select-for": "Wubjer pismo za $1",
 	"ext-uls-webfonts-select-for-ui-info": "Pismo za wu\u017eiwarski powjerch",
 	"ext-uls-webfonts-select-for-content-info": "Pismo za wobsah",
-	"ext-uls-back-to-display-settings": "Wr\u00f3\u0107o k nastajenjam zwobraznjenja",
-	"@metadata": {
-		"authors": [
-			"Michawiki"
-		]
-	}
+	"ext-uls-back-to-display-settings": "Wr\u00f3\u0107o k nastajenjam zwobraznjenja"
 }
