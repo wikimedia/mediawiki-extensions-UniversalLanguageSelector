@@ -21,12 +21,11 @@
 ( function ( $, mw, undefined ) {
 	'use strict';
 
-	var ULSPreferences = function ( group ) {
+	var ULSPreferences = function () {
 		this.preferenceName = 'uls-preferences';
 		this.username = mw.user.getName();
 		this.isAnon = mw.user.isAnon();
 		this.preferences = null;
-		this.group = group;
 		this.init();
 	};
 
@@ -51,10 +50,7 @@
 		 * @param value
 		 */
 		set: function ( key, value ) {
-			if ( !this.preferences[this.group] ) {
-				this.preferences[this.group] = {};
-			}
-			this.preferences[this.group][key] = value;
+			this.preferences[key] = value;
 		},
 
 		/**
@@ -64,7 +60,7 @@
 		 * @returns
 		 */
 		get: function ( key ) {
-			return this.preferences[this.group] && this.preferences[this.group][key];
+			return this.preferences[key];
 		},
 
 		/**
@@ -106,14 +102,11 @@
 	};
 
 	mw.uls = mw.uls || {};
-	mw.uls.preferences = function ( group ) {
+	mw.uls.preferences = function () {
 		var data = $( 'body' ).data( 'preferences' );
 
 		if ( !data ) {
-			$( 'body' ).data( 'preferences', ( data = new ULSPreferences( group ) ) );
-		}
-		if ( typeof group === 'string' ) {
-			data.get( group );
+			$( 'body' ).data( 'preferences', ( data = new ULSPreferences() ) );
 		}
 		return data;
 	};
