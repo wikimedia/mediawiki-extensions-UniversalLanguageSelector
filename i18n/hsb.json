@@ -19,5 +19,14 @@
 	"ext-uls-webfonts-select-for": "Wubjer pismo za $1",
 	"ext-uls-webfonts-select-for-ui-info": "Pismo za wu\u017eiwarski powjerch",
 	"ext-uls-webfonts-select-for-content-info": "Pismo za wobsah",
-	"ext-uls-back-to-display-settings": "Wr\u00f3\u0107o k nastajenjam zwobraznjenja"
+	"ext-uls-back-to-display-settings": "Wr\u00f3\u0107o k nastajenjam zwobraznjenja",
+	"ext-uls-input-settings-title": "Nastajenja za zapoda\u0107e",
+	"ext-uls-input-settings-title-short": "Zapoda\u0107e",
+	"ext-uls-input-settings-desc": "W druhej r\u011b\u010di pisa\u0107?",
+	"ext-uls-input-settings-ime-settings": "Zapodawanske metody za $1",
+	"ext-uls-input-settings-ui-language": "R\u011b\u010d, kotra\u017e so za pisanje wu\u017eiwa",
+	"ext-uls-back-to-input-settings": "Wr\u00f3\u0107o k nastajenjam za zapoda\u0107e",
+	"ext-uls-disable-input-method": "Zapodawansku metodu znjem\u00f3\u017eni\u0107",
+	"ext-uls-disable-input-method-desc": "Normalnu tastaturu wu\u017eiwa\u0107",
+	"ext-uls-input-settings-more-languages-tooltip": "Dal\u0161e r\u011b\u010de"
 }

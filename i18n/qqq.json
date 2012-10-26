@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Hyperborean",
-			"Santhosh Thottingal"
+			"Santhosh Thottingal",
+			"Shirayuki"
 		]
 	},
 	"ext-uls-display-settings-title": "Display settings title text",
@@ -21,5 +22,11 @@
 	"ext-uls-webfonts-select-for-ui-info": "Information displayed under font selector",
 	"ext-uls-webfonts-select-for-content-info": "Information displayed under font selector",
 	"ext-uls-back-to-display-settings": "Text for the link shown when language selector is accessed from language settings.",
+	"ext-uls-input-settings-title": "Title text for input settings screen",
+	"ext-uls-input-settings-title-short": "Short title for input settings screen",
+	"ext-uls-input-settings-desc": "Short description about input settings.",
+	"ext-uls-input-settings-ime-settings": "*$1 - language name",
+	"ext-uls-input-settings-ui-language": "Sub section title for input settings screen",
+	"ext-uls-disable-input-method": "Probably used as label of radio button",
 	"ext-uls-input-settings-more-languages-tooltip": "Tool tip text for the '...' selector to select more languages"
 }

@@ -14,5 +14,9 @@
 	"ext-uls-display-settings-ui-language": "Sprooch fir ze weisen",
 	"ext-uls-webfonts-settings-title": "Font erofluede wann dat n\u00e9ideg ass",
 	"ext-uls-webfonts-settings-info-link": "M\u00e9i Informatiounen",
-	"ext-uls-back-to-display-settings": "Zr\u00e9ck op d'Astellunge vum Weisen"
+	"ext-uls-back-to-display-settings": "Zr\u00e9ck op d'Astellunge vum Weisen",
+	"ext-uls-input-settings-desc": "An enger anerer Sprooch schreiwen?",
+	"ext-uls-input-settings-ui-language": "Sprooch d\u00e9i fir d'Schreiwe benotzt g\u00ebtt",
+	"ext-uls-disable-input-method-desc": "Eng normal Tastatur benotzen",
+	"ext-uls-input-settings-more-languages-tooltip": "M\u00e9i Sproochen"
 }

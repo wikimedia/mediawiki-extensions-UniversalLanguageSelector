@@ -19,5 +19,14 @@
 	"ext-uls-webfonts-select-for": "Seleccione o tipo de letra para o $1",
 	"ext-uls-webfonts-select-for-ui-info": "Tipo de letra usado para a interface de usuario",
 	"ext-uls-webfonts-select-for-content-info": "Tipo de letra usado para o contido",
-	"ext-uls-back-to-display-settings": "Volver \u00e1s opci\u00f3ns de visualizaci\u00f3n"
+	"ext-uls-back-to-display-settings": "Volver \u00e1s opci\u00f3ns de visualizaci\u00f3n",
+	"ext-uls-input-settings-title": "Opci\u00f3ns de entrada",
+	"ext-uls-input-settings-title-short": "Entrada",
+	"ext-uls-input-settings-desc": "Escribe nunha lingua diferente?",
+	"ext-uls-input-settings-ime-settings": "M\u00e9todos de entrada para o $1",
+	"ext-uls-input-settings-ui-language": "Lingua usada para escribir",
+	"ext-uls-back-to-input-settings": "Volver \u00e1s opci\u00f3ns de entrada",
+	"ext-uls-disable-input-method": "Desactivar o m\u00e9todo de entrada",
+	"ext-uls-disable-input-method-desc": "Usar un teclado convencional",
+	"ext-uls-input-settings-more-languages-tooltip": "M\u00e1is linguas"
 }

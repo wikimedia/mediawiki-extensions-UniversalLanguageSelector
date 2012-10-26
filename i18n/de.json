@@ -19,5 +19,14 @@
 	"ext-uls-webfonts-select-for": "Schriftart f\u00fcr $1 ausw\u00e4hlen",
 	"ext-uls-webfonts-select-for-ui-info": "Schriftart f\u00fcr die Benutzeroberfl\u00e4che",
 	"ext-uls-webfonts-select-for-content-info": "Schriftart f\u00fcr den Inhalt",
-	"ext-uls-back-to-display-settings": "Zur\u00fcck zu den Anzeigeeinstellungen"
+	"ext-uls-back-to-display-settings": "Zur\u00fcck zu den Anzeigeeinstellungen",
+	"ext-uls-input-settings-title": "Eingabeeinstellungen",
+	"ext-uls-input-settings-title-short": "Eingabe",
+	"ext-uls-input-settings-desc": "In einer anderen Sprache schreiben?",
+	"ext-uls-input-settings-ime-settings": "Eingabemethoden f\u00fcr $1",
+	"ext-uls-input-settings-ui-language": "Verwendete Sprache zum Schreiben",
+	"ext-uls-back-to-input-settings": "Zur\u00fcck zu den Eingabeeinstellungen",
+	"ext-uls-disable-input-method": "Eingabemethode deaktivieren",
+	"ext-uls-disable-input-method-desc": "Normale Tastatur verwenden",
+	"ext-uls-input-settings-more-languages-tooltip": "Mehr Sprachen"
 }
