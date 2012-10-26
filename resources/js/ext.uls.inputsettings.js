@@ -271,9 +271,8 @@
 					that.prepareLanguages();
 					that.prepareInputmethods( langCode );
 				},
-				quickList: function () {
-					return mw.uls.getFrequentLanguageList();
-				}
+				languages: mw.ime.getLanguagesWithIME(),
+				lazyload: false
 			} );
 
 			$moreLanguagesButton.on( 'click', function () {

@@ -27,7 +27,9 @@
 
 	inputPreferences = mw.uls.preferences();
 
-	function getLanguagesWithIME () {
+	mw.ime = mw.ime || {};
+
+	mw.ime.getLanguagesWithIME = function () {
 		var language,
 			availableLanguages = {};
 
@@ -36,9 +38,9 @@
 		}
 
 		return availableLanguages;
-	}
+	};
 
-	function getIMELanguageList () {
+	mw.ime.getIMELanguageList = function  () {
 		var unique = [],
 			imeLanguageList,
 			previousIMELanguages;
@@ -53,7 +55,7 @@
 		} );
 
 		return unique.slice( 0, 6 );
-	}
+	};
 
 	$( document ).ready( function () {
 		// MediaWiki specific overrides for jquery.webfonts
@@ -65,7 +67,7 @@
 			var $input = $( this );
 
 			$input.ime( {
-				languages: getIMELanguageList(),
+				languages: mw.ime.getIMELanguageList(),
 				languageSelector: function () {
 					var $ulsTrigger;
 
@@ -79,7 +81,7 @@
 							$input.data( 'ime' ).setLanguage( language );
 						},
 						lazyload: false,
-						languages: getLanguagesWithIME(),
+						languages: mw.ime.getLanguagesWithIME(),
 						top: $input.offset().top,
 						left: $input.offset().left
 					} );
