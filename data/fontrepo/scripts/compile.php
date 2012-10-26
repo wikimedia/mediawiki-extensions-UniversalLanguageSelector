@@ -1,5 +1,9 @@
 <?php
 
+if ( isset( $_SERVER['REQUEST_METHOD'] ) ) {
+  exit();
+}
+
 $list = array();
 $list['base'] = '../data/fontrepo/fonts/';
 foreach ( glob( '../fonts/*/font.ini' ) as $inifile ) {
