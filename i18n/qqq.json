@@ -20,5 +20,6 @@
 	"ext-uls-webfonts-select-for": "Label for font selector dropdown. $1 is a language name",
 	"ext-uls-webfonts-select-for-ui-info": "Information displayed under font selector",
 	"ext-uls-webfonts-select-for-content-info": "Information displayed under font selector",
-	"ext-uls-back-to-display-settings": "Text for the link shown when language selector is accessed from language settings."
+	"ext-uls-back-to-display-settings": "Text for the link shown when language selector is accessed from language settings.",
+	"ext-uls-input-settings-more-languages-tooltip": "Tool tip text for the '...' selector to select more languages"
 }

@@ -27,3 +27,9 @@ div.input-settings-block {
 .imelabel input {
 	float: left;
 }
+
+.ime-selector-more-languages:hover {
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #5089e8;
+}

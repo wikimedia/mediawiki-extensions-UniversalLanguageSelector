@@ -69,7 +69,11 @@
 				languageSelector: function () {
 					var $ulsTrigger;
 
-					$ulsTrigger = $( '<a>' ).text( '...' );
+					$ulsTrigger = $( '<a>' ).text( '...' )
+						.addClass( 'ime-selector-more-languages' )
+						.attr( {
+							title: $.i18n( 'ext-uls-input-settings-more-languages-tooltip' )
+						} );
 					$ulsTrigger.uls( {
 						onSelect: function ( language ) {
 							$input.data( 'ime' ).setLanguage( language );
@@ -79,6 +83,7 @@
 						top: $input.offset().top,
 						left: $input.offset().left
 					} );
+
 					return $ulsTrigger;
 				}
 			} );
