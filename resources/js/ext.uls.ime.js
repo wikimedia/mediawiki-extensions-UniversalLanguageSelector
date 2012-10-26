@@ -74,6 +74,7 @@
 						onSelect: function ( language ) {
 							$input.data( 'ime' ).setLanguage( language );
 						},
+						lazyload: false,
 						languages: getLanguagesWithIME(),
 						top: $input.offset().top,
 						left: $input.offset().left
