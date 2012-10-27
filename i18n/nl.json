@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Siebrand"
+			"Siebrand",
+			"Wiki13"
 		]
 	},
 	"ext-uls-display-settings-title": "Weergaveinstellingen",
@@ -19,5 +20,14 @@
 	"ext-uls-webfonts-select-for": "Lettertype selecteren voor $1",
 	"ext-uls-webfonts-select-for-ui-info": "Lettertype voor gebruikersinterface",
 	"ext-uls-webfonts-select-for-content-info": "Lettertype voor inhoud",
-	"ext-uls-back-to-display-settings": "Terug naar weergaveinstellingen"
+	"ext-uls-back-to-display-settings": "Terug naar weergaveinstellingen",
+	"ext-uls-input-settings-title": "Invoerinstellingen",
+	"ext-uls-input-settings-title-short": "Invoer",
+	"ext-uls-input-settings-desc": "Schrijven in een andere taal?",
+	"ext-uls-input-settings-ime-settings": "Invoermethoden voor $1",
+	"ext-uls-input-settings-ui-language": "Taal voor invoer",
+	"ext-uls-back-to-input-settings": "Terug naar invoerinstellingen",
+	"ext-uls-disable-input-method": "Invoermethode uitschakelen",
+	"ext-uls-disable-input-method-desc": "Gebruik een normaal toetsenbord",
+	"ext-uls-input-settings-more-languages-tooltip": "Meer talen"
 }
