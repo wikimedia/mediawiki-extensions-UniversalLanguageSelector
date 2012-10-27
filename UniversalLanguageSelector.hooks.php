@@ -165,6 +165,39 @@ class UniversalLanguageSelectorHooks {
 		global $wgULSGeoService;
 		$vars['wgULSGeoService'] = $wgULSGeoService;
 
+		// ULS is localized using jquery.i18n library. Unless it knows
+		// the localized locales, it can create 404 response. To avoid that,
+		// send the locales available at server. Also avoid directory scanning
+		// in each request by putting the locale list in cache.
+		$cache = wfGetCache( CACHE_ANYTHING );
+		$key = wfMemcKey( 'uls', 'i18n', 'locales' );
+		$result = $cache->get( $key );
+
+		if ( $result ) {
+			$vars['wgULSi18nLocales'] = $result;
+		} else {
+			$mwULSL10nFiles = glob( __DIR__ . '/i18n/*.json' );
+
+			foreach ( $mwULSL10nFiles as $localeFile ) {
+				$mwULSL10nLocales[] = basename( $localeFile, '.json' );
+			}
+
+			$mwULSL10nFiles = glob( __DIR__ . '/lib/jquery.uls/i18n/*.json' );
+
+			foreach ( $mwULSL10nFiles as $localeFile ) {
+				$jqueryULSL10nLocales[] = basename( $localeFile, '.json' );
+			}
+
+			$vars['wgULSi18nLocales'] = array(
+				// Locales to which jQuery ULS is localized.
+				'uls' => $jqueryULSL10nLocales,
+				// Locales to which Mediawiki ULS is localized.
+				'ext-uls' => $mwULSL10nLocales,
+			);
+
+			// Cache it for 1 hour
+			$cache->set( $key, $vars['wgULSi18nLocales'], 3600 );
+		}
 		return true;
 	}
 

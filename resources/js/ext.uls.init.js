@@ -90,26 +90,49 @@
 		return unique;
 	};
 
-	$( document ).ready( function () {
-		var extensionPath, i18n, $ulsTrigger, previousLanguages, previousLang;
+	/**
+	 * i18n initialization
+	 */
+	function i18nInit () {
+		var extensionPath, locales, i18n;
 
 		extensionPath = mw.config.get( 'wgExtensionAssetsPath' )
-			+ '/UniversalLanguageSelector/';
-		// i18n initialization
+		+ '/UniversalLanguageSelector/';
+
+		locales = mw.config.get( 'wgULSi18nLocales' );
 		i18n = $.i18n( {
 			locale: currentLang,
-			messageLocationResolver: function ( locale ) {
-				return extensionPath + 'i18n/' + locale + '.json';
+			messageLocationResolver: function ( locale, messageKey ) {
+				// Namespaces are not available in jquery.i18n yet. Developers prefix
+				// the message key with a unique namespace like ext-uls-*
+
+				if ( messageKey.indexOf( 'uls' ) === 0 ) {
+					if ( $.inArray( locale, locales['uls'] ) >= 0 ) {
+						return extensionPath + 'lib/jquery.uls/i18n/' + locale + '.json';
+					}
+
+					return false;
+				}
+
+				if ( messageKey.indexOf( 'ext-uls' ) === 0 ) {
+					if ( $.inArray( locale, locales['ext-uls'] ) >= 0 ) {
+						return extensionPath + 'i18n/' + locale + '.json';
+					}
+
+					return false;
+				}
 			}
 		} );
-		// localization for jquery.uls
-		i18n.load( extensionPath + 'lib/jquery.uls/i18n/' + currentLang + '.json', currentLang );
-		// localization for jquery.uls- fallback locale
-		i18n.load( extensionPath + 'lib/jquery.uls/i18n/en.json', 'en' );
-		// localization for mediaWiki ULS
-		i18n.load( extensionPath + 'i18n/' + currentLang + '.json', currentLang );
-		// localization for mediaWiki ULS- fallback locale
+
+		// localization for mediaWiki ULS - fallback locale
 		i18n.load( extensionPath + 'i18n/en.json', 'en'  );
+	}
+
+	$( document ).ready( function () {
+		var $ulsTrigger, previousLanguages, previousLang;
+
+		// JavaScript side i18n initialization
+		i18nInit();
 
 		$ulsTrigger = $( '.uls-trigger' );
 		previousLanguages = mw.uls.getPreviousLanguages() || [];
