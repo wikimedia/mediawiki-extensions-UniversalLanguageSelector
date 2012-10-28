@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Beta16"
+			"Beta16",
+			"Raoli"
 		]
 	},
 	"ext-uls-display-settings-title": "Impostazioni di visualizzazione",
-	"ext-uls-display-settings-title-short": "Aspetto",
+	"ext-uls-display-settings-title-short": "Lettura",
 	"ext-uls-display-settings-desc": "Imposta la lingua usata per men\u00f9 e caratteri.",
 	"ext-uls-undo-language-tooltip-text": "Lingua modificata da $1",
 	"ext-uls-language-settings-title": "Impostazioni per la lingua",
@@ -19,5 +20,14 @@
 	"ext-uls-webfonts-select-for": "Seleziona tipo di carattere per $1",
 	"ext-uls-webfonts-select-for-ui-info": "Tipo di carattere usato per l'interfaccia utente",
 	"ext-uls-webfonts-select-for-content-info": "Tipo di carattere usato per il contenuto",
-	"ext-uls-back-to-display-settings": "Ritorna alle impostazioni di visualizzazione"
+	"ext-uls-back-to-display-settings": "Ritorna alle impostazioni di visualizzazione",
+	"ext-uls-input-settings-title": "Impostazioni di scrittura",
+	"ext-uls-input-settings-title-short": "Scrittura",
+	"ext-uls-input-settings-desc": "Scrivi in una lingua diversa?",
+	"ext-uls-input-settings-ime-settings": "Metodi di scrittura per $1",
+	"ext-uls-input-settings-ui-language": "Lingua usata per la scrittura",
+	"ext-uls-back-to-input-settings": "Ritorna alle impostazioni di scrittura",
+	"ext-uls-disable-input-method": "Disabilita il metodo di scrittura",
+	"ext-uls-disable-input-method-desc": "Usa una tastiera normale",
+	"ext-uls-input-settings-more-languages-tooltip": "Altre lingue"
 }
