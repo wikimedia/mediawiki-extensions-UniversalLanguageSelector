@@ -33,3 +33,19 @@ div.input-settings-block {
 	color: #ffffff;
 	background-color: #5089e8;
 }
+
+.uls-ime-more-settings-link {
+	/* @embed */
+	background: transparent url('../images/cog-16x16-ltr.png') right center no-repeat;
+	background-color: #f0f0f0;
+	border-radius: 0 0 5px 5px;
+	border-top: 1px solid #ddd;
+	margin-top: 6px;
+	padding: 2px 0 2px 0;
+	color: #444;
+}
+
+.uls-ime-more-settings-link > a:hover {
+	background-color: #f0f0f0;
+	color: #000;
+}
