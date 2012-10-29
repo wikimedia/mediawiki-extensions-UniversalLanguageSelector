@@ -70,7 +70,7 @@
 		 */
 		save: function ( callback ) {
 			var that = this, api;
-			callback = callback || $.noop();
+			callback = callback || $.noop;
 			if ( this.isAnon ) {
 				// Anonymous user- Save preferences in local storage
 				$.jStorage.set( this.preferenceName, this.preferences );
