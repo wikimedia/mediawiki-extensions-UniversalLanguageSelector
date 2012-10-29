@@ -19,5 +19,14 @@
 	"ext-uls-webfonts-select-for": "$1\uc5d0 \ub300\ud55c \uae00\uaf34 \uc120\ud0dd",
 	"ext-uls-webfonts-select-for-ui-info": "\uc0ac\uc6a9\uc790 \uc778\ud130\ud398\uc774\uc2a4\uc5d0 \uc0ac\uc6a9\ud560 \uae00\uaf34",
 	"ext-uls-webfonts-select-for-content-info": "\ub0b4\uc6a9\uc5d0 \uc0ac\uc6a9\ud560 \uae00\uaf34",
-	"ext-uls-back-to-display-settings": "\ubcf4\uae30 \uc124\uc815\uc73c\ub85c \ub3cc\uc544\uac00\uae30"
+	"ext-uls-back-to-display-settings": "\ubcf4\uae30 \uc124\uc815\uc73c\ub85c \ub3cc\uc544\uac00\uae30",
+	"ext-uls-input-settings-title": "\uc785\ub825 \uc124\uc815",
+	"ext-uls-input-settings-title-short": "\uc785\ub825",
+	"ext-uls-input-settings-desc": "\ub2e4\ub978 \uc5b8\uc5b4\ub85c \uc785\ub825\ud558\uaca0\uc2b5\ub2c8\uae4c?",
+	"ext-uls-input-settings-ime-settings": "$1\uc5d0 \ub300\ud55c \uc785\ub825 \ubc29\uc2dd",
+	"ext-uls-input-settings-ui-language": "\uc785\ub825\uc5d0 \uc0ac\uc6a9\ud560 \uc5b8\uc5b4",
+	"ext-uls-back-to-input-settings": "\uc785\ub825 \uc124\uc815\uc73c\ub85c \ub3cc\uc544\uac00\uae30",
+	"ext-uls-disable-input-method": "\uc785\ub825 \ubc29\uc2dd \ube44\ud65c\uc131\ud654",
+	"ext-uls-disable-input-method-desc": "\uc77c\ubc18 \ud0a4\ubcf4\ub4dc \uc0ac\uc6a9",
+	"ext-uls-input-settings-more-languages-tooltip": "\uae30\ud0c0 \uc5b8\uc5b4"
 }
