@@ -57,11 +57,25 @@
 		return unique.slice( 0, 6 );
 	};
 
+	// Extend the ime preference system
+	$.extend( $.ime.preferences, {
+
+		save: function ( callback ) {
+			inputPreferences.set( 'ime', this.registry );
+			inputPreferences.save( callback );
+		},
+
+		load: function () {
+			this.registry = inputPreferences.get( 'ime' ) || this.registry;
+		}
+	} );
+
+	// MediaWiki specific overrides for jquery.ime
+	$.extend( $.ime.defaults, {
+		imePath: mwImeRulesPath
+	} );
+
 	$( document ).ready( function () {
-		// MediaWiki specific overrides for jquery.webfonts
-		$.extend( $.ime.defaults, {
-			imePath: mwImeRulesPath
-		} );
 
 		$( 'body' ).on( 'focus', inputSelector, function () {
 			var $input = $( this );
@@ -91,18 +105,7 @@
 			} );
 		} );
 
-		$.extend( $.ime.preferences, {
-
-			save: function ( callback ) {
-				inputPreferences.set( 'ime', this.registry );
-				inputPreferences.save( callback );
-			},
-
-			load: function () {
-				this.registry = inputPreferences.get( 'ime' ) || this.registry;
-			}
-		} );
-
+		// Load the ime preferences
 		$.ime.preferences.load();
 	} );
 
