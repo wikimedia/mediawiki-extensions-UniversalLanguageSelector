@@ -129,11 +129,9 @@
 				'class': 'imelabel'
 			} );
 
-			// TODO Niklas: Was there some problems with IE needing the type=foo immediately?
-			$inputMethodItem = $( '<input>' ).attr( {
+			$inputMethodItem = $( '<input type="radio">' ).attr( {
 				name: 'ime',
 				id: imeId,
-				type: 'radio',
 				value: imeId,
 				checked: selected
 			} );
@@ -322,7 +320,7 @@
 				that.close();
 			} );
 
-			$imeListContainer.on( 'change', 'input:radio[name=ime]:checked',  function () {
+			$imeListContainer.on( 'change', 'input:radio[name=ime]:checked', function () {
 				var ime = $( this ).val();
 
 				$.ime.preferences.setLanguage( that.imeLanguage );

@@ -84,7 +84,7 @@
 		+ '<button id="uls-displaysettings-apply" class="active blue button" data-i18n="ext-uls-language-settings-apply"></button>'
 		+ '</div>'
 		+ '</div>'
-		+ '</div>'; // FIXME i18n and too much hardcoding.
+		+ '</div>';
 
 	function DisplaySettings( $parent ) {
 		this.name = $.i18n( 'ext-uls-display-settings-title-short' );

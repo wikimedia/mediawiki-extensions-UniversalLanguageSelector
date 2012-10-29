@@ -1,5 +1,5 @@
 /**
- * ULS-Webfonts integration
+ * ULS - jQuery IME integration
  *
  * Copyright (C) 2012 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
  * Niklas Laxström, Pau Giner, Santhosh Thottingal, Siebrand Mazeland and other
@@ -40,7 +40,7 @@
 		return availableLanguages;
 	};
 
-	mw.ime.getIMELanguageList = function  () {
+	mw.ime.getIMELanguageList = function () {
 		var unique = [],
 			imeLanguageList,
 			previousIMELanguages;
@@ -103,7 +103,7 @@
 			}
 		} );
 
-		 $.ime.preferences.load();
+		$.ime.preferences.load();
 	} );
 
 
