@@ -83,7 +83,7 @@
 
 		$moreSettingsLink = $( '<a>' ).text( 'More settings' )
 			.addClass( 'uls-ime-more-settings-link' )
-			.attr( 'data-i18n', 'ext-uls-ime-more-settings' );
+			.attr( 'data-i18n', 'ext-uls-input-more-settings' );
 
 		$moreSettingsLink.languagesettings( {
 			defaultModule: 'input',
@@ -99,6 +99,8 @@
 			imeselector.$menu.removeClass( 'open' );
 			e.stopPropagation();
 		} );
+
+		$moreSettingsLink.i18n();
 
 		return $moreSettingsLink;
 	};
