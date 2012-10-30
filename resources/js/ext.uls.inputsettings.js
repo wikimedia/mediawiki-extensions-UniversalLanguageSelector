@@ -351,7 +351,7 @@
 		onSave: function ( success ) {
 			if ( success ) {
 				// Live ime update
-				this.$parent.hide();
+				this.$parent.close();
 			} else {
 				// FIXME failure. what to do?!
 			}

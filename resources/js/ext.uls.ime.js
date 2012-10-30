@@ -75,6 +75,34 @@
 		imePath: mwImeRulesPath
 	} );
 
+	// Add a 'more setttings' link that takes to input settings of ULS
+	$.fn.imeselector.Constructor.prototype.helpLink = function () {
+		var $moreSettingsLink, imeselector;
+
+		imeselector = this;
+
+		$moreSettingsLink = $( '<a>' ).text( 'More settings' )
+			.addClass( 'uls-ime-more-settings-link' )
+			.attr( 'data-i18n', 'ext-uls-ime-more-settings' );
+
+		$moreSettingsLink.languagesettings( {
+			defaultModule: 'input',
+			onClose: function () {
+				// on close of input settings, keep focus in input area.
+				imeselector.$element.focus();
+			},
+			top: imeselector.$element.offset().top
+		} );
+
+		// Hide the menu.
+		$moreSettingsLink.on( 'click', function (e) {
+			imeselector.$menu.removeClass( 'open' );
+			e.stopPropagation();
+		} );
+
+		return $moreSettingsLink;
+	};
+
 	$( document ).ready( function () {
 
 		$( 'body' ).on( 'focus', inputSelector, function () {
