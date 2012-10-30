@@ -28,6 +28,10 @@
 	"ext-uls-input-settings-ui-language": "Taal voor invoer",
 	"ext-uls-back-to-input-settings": "Terug naar invoerinstellingen",
 	"ext-uls-disable-input-method": "Invoermethode uitschakelen",
-	"ext-uls-disable-input-method-desc": "Gebruik een normaal toetsenbord",
-	"ext-uls-input-settings-more-languages-tooltip": "Meer talen"
+	"ext-uls-disable-input-method-desc": "Normaal toetsenbord gebruiken",
+	"ext-uls-input-settings-more-languages-tooltip": "Meer talen",
+	"ext-uls-input-more-settings": "Meer instellingen",
+	"jquery-ime-other-languages": "Andere talen",
+	"jquery-ime-disable-text": "Invoermethode uitschakelen",
+	"jquery-ime-help": "Hulp"
 }

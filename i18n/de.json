@@ -28,5 +28,9 @@
 	"ext-uls-back-to-input-settings": "Zur\u00fcck zu den Eingabeeinstellungen",
 	"ext-uls-disable-input-method": "Eingabemethode deaktivieren",
 	"ext-uls-disable-input-method-desc": "Normale Tastatur verwenden",
-	"ext-uls-input-settings-more-languages-tooltip": "Mehr Sprachen"
+	"ext-uls-input-settings-more-languages-tooltip": "Mehr Sprachen",
+	"ext-uls-input-more-settings": "Mehr Einstellungen",
+	"jquery-ime-other-languages": "Andere Sprachen",
+	"jquery-ime-disable-text": "Eingabemethode deaktivieren",
+	"jquery-ime-help": "Hilfe"
 }

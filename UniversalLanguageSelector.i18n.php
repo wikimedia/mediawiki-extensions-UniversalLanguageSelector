@@ -115,6 +115,15 @@ $messages['eu'] = array(
 	'uls-select-content-language' => 'Hizkuntza aukeratu',
 );
 
+/** Finnish (suomi)
+ * @author Nike
+ */
+$messages['fi'] = array(
+	'UniversalLanguageSelector' => 'Suuri kielenvalitsin',
+	'uls-desc' => 'Tarjoaa useita tapoja valita kieli ja asettaa kieliasetukset',
+	'uls-select-content-language' => 'Valitse kieli',
+);
+
 /** French (français)
  * @author Tititou36
  * @author Wyz

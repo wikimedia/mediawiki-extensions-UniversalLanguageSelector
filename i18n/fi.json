@@ -1,0 +1,32 @@
+{
+	"ext-uls-display-settings-title": "N\u00e4ytt\u00f6asetukset",
+	"ext-uls-display-settings-title-short": "N\u00e4ytt\u00f6",
+	"ext-uls-display-settings-desc": "Aseta k\u00e4ytt\u00f6liittym\u00e4n kieli ja kirjasimet.",
+	"ext-uls-undo-language-tooltip-text": "Kieli vaihdettu kielest\u00e4 $1",
+	"ext-uls-language-settings-title": "Kieliasetukset",
+	"ext-uls-language-settings-apply": "K\u00e4yt\u00e4",
+	"ext-uls-language-settings-cancel": "Peru",
+	"ext-uls-display-settings-font-settings": "Kirjasinasetukset",
+	"ext-uls-display-settings-ui-language": "K\u00e4ytt\u00f6liittym\u00e4n kieli",
+	"ext-uls-webfonts-settings-title": "Lataa tarvittaessa",
+	"ext-uls-webfonts-settings-info": "Verkkokirjasimet ladataan, jos sivulla on teksti\u00e4 eri kirjoitusj\u00e4rjestelmill\u00e4.",
+	"ext-uls-webfonts-settings-info-link": "Lis\u00e4tietoja",
+	"ext-uls-webfonts-select-for": "Kirjasin kielelle $1",
+	"ext-uls-webfonts-select-for-ui-info": "K\u00e4ytt\u00f6liittym\u00e4n kirjasin",
+	"ext-uls-webfonts-select-for-content-info": "Sis\u00e4ll\u00f6n kirjasin",
+	"ext-uls-back-to-display-settings": "Takaisin n\u00e4ytt\u00f6asetuksiin",
+	"ext-uls-input-settings-title": "Kirjoitusasetukset",
+	"ext-uls-input-settings-title-short": "Kirjoitus",
+	"ext-uls-input-settings-desc": "Kirjoittamassa toisella kielell\u00e4?",
+	"ext-uls-input-settings-ime-settings": "Sy\u00f6tt\u00f6tavat kielelle $1",
+	"ext-uls-input-settings-ui-language": "Kirjoituksen kieli",
+	"ext-uls-back-to-input-settings": "Takaisin kirjoitusasetuksiin",
+	"ext-uls-disable-input-method": "\u00c4l\u00e4 k\u00e4yt\u00e4 sy\u00f6tt\u00f6tapoja",
+	"ext-uls-disable-input-method-desc": "K\u00e4yt\u00e4 tavallista n\u00e4pp\u00e4imist\u00f6\u00e4",
+	"ext-uls-input-settings-more-languages-tooltip": "Lis\u00e4\u00e4 kieli\u00e4",
+	"@metadata": {
+		"authors": [
+			"Nike"
+		]
+	}
+}
