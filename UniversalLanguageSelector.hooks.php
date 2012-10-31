@@ -162,10 +162,10 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function addConfig( &$vars ) {
-		global $wgULSGeoService;
+		global $wgULSGeoService, $wgULSIMEEnabled;
 		$vars['wgULSGeoService'] = $wgULSGeoService;
 
-		$vars['wgULSIMEEnabled']= wgULSIMEEnabled;
+		$vars['wgULSIMEEnabled'] = $wgULSIMEEnabled;
 
 		// ULS is localized using jquery.i18n library. Unless it knows
 		// the localized locales, it can create 404 response. To avoid that,
