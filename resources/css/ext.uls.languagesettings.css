@@ -92,22 +92,15 @@
 	border-left-color: #3366BB;
 }
 
-#settings-block {
-	border-left: 1px solid #C9C9C9;
-	padding-left: 10px;
-	background-color: #F6F6F6;
-	line-height: 1.2em;
-}
-
-#input-settings-block,
-#display-settings-block {
+#input-settings-block.menu-section,
+#display-settings-block.menu-section {
 	background-position: 6% 6px;
 	padding-left: 40px;
 	cursor: pointer;
 }
 
-#input-settings-block:hover,
-#display-settings-block:hover {
+#input-settings-block.menu-section:hover,
+#display-settings-block.menu-section:hover {
 	background-color: #F6F6F6;
 }
 
