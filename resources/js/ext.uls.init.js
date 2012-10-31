@@ -139,32 +139,30 @@
 		previousLang = previousLanguages.slice( -1 )[0];
 
 		function displaySettings () {
-			var $displaySettingsTitle, $displaySettingsText, $displaySettings;
+			var $displaySettingsTitle, displaySettingsText, $displaySettings;
 
+			displaySettingsText = $.i18n( 'ext-uls-display-settings-desc' );
 			$displaySettingsTitle = $( '<div data-i18n="ext-uls-display-settings-title">' )
-				.addClass( 'settings-title' );
-			$displaySettingsText = $( '<span data-i18n="ext-uls-display-settings-desc">' )
-				.addClass( 'settings-text' );
+				.addClass( 'settings-title' )
+				.attr( 'title', displaySettingsText );
 			$displaySettings = $( '<div>' )
 				.addClass( 'display-settings-block' )
 				.prop( 'id', 'display-settings-block' )
-				.append( $displaySettingsTitle )
-				.append( $displaySettingsText );
+				.append( $displaySettingsTitle );
 			return $displaySettings;
 		}
 
 		function inputSettings () {
-			var $inputSettingsTitle, $inputSettingsText, $inputSettings;
+			var $inputSettingsTitle, inputSettingsText, $inputSettings;
 
+			inputSettingsText = $.i18n( 'ext-uls-input-settings-desc' );
 			$inputSettingsTitle = $( '<div data-i18n="ext-uls-input-settings-title">' )
-				.addClass( 'settings-title' );
-			$inputSettingsText = $( '<span data-i18n="ext-uls-input-settings-desc">' )
-				.addClass( 'settings-text' );
+				.addClass( 'settings-title' )
+				.attr( 'title', inputSettingsText );
 			$inputSettings = $( '<div>' )
 				.addClass( 'input-settings-block' )
 				.prop( 'id', 'input-settings-block' )
-				.append( $inputSettingsTitle )
-				.append( $inputSettingsText );
+				.append( $inputSettingsTitle );
 			return $inputSettings;
 		}
 

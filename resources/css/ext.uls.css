@@ -4,8 +4,15 @@ div#settings-block {
 	line-height: 1.2em;
 }
 
-div.display-settings-block:hover {
-	color: black;
+#settings-block div.display-settings-block,
+#settings-block div.input-settings-block {
+	margin: 8px 0;
+	color: #565656;
+}
+
+#settings-block div.display-settings-block:hover,
+#settings-block div.input-settings-block:hover {
+	color: #252525;
 }
 
 .uls-ui-languages button {
