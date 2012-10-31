@@ -57,6 +57,11 @@ $wgExtensionCredits['other'][] = array(
 $wgULSGeoService = 'http://freegeoip.net/json/';
 
 /**
+ * IME system of ULS can be disabled by setting this value false;
+ */
+$wgULSIMEEnabled = true;
+
+/**
  * Try to use preferred interface language for anonymous users.
  * Do not use if you are caching anonymous page views without
  * taking Accept-Language into account.

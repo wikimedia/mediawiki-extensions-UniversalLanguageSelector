@@ -111,7 +111,7 @@
 			this.prepareUIFonts();
 			this.prepareContentFonts();
 			this.prepareWebfontsCheckbox();
-
+			this.$template.i18n();
 			this.listen();
 		},
 

@@ -34,5 +34,9 @@
 	"ext-uls-input-more-settings": "Menu item lable displayed in the input method selector menu",
 	"jquery-ime-other-languages": "Title text used for language list in the input method selector menu",
 	"jquery-ime-disable-text": "Label used for disabling input method from input method selector menu",
-	"jquery-ime-help": "Text for help link"
+	"jquery-ime-help": "Text for help link",
+	"ext-uls-input-disable": "Label for disable input tools button",
+	"ext-uls-input-enable": "Label for enable input tools button",
+	"ext-uls-input-disable-info": "Info text for disable input tools button",
+	"ext-uls-input-enable-info": "Info text for  disable input tools button"
 }

@@ -67,7 +67,29 @@
 
 		load: function () {
 			this.registry = inputPreferences.get( 'ime' ) || this.registry;
+		},
+
+		disable: function () {
+			this.registry['enable'] = false;
+		},
+
+		enable: function () {
+			this.registry['enable'] = true;
+		},
+
+		isEnabled: function () {
+
+			if ( this.registry['enable'] === false ){
+				return false;
+			}
+
+			if ( mw.config.get( 'wgULSIMEEnabled' ) === false ){
+				return false;
+			}
+
+			return true;
 		}
+
 	} );
 
 	// MediaWiki specific overrides for jquery.ime
@@ -105,9 +127,13 @@
 		return $moreSettingsLink;
 	};
 
-	$( document ).ready( function () {
+	mw.ime.disable = function () {
+		$( inputSelector ).unbind( '.ime' );
+	};
 
-		$( 'body' ).on( 'focus', inputSelector, function () {
+	mw.ime.setup = function () {
+
+		$( 'body' ).on( 'focus.ime', inputSelector, function () {
 			var $input = $( this );
 
 			$input.ime( {
@@ -135,8 +161,17 @@
 			} );
 		} );
 
+	};
+
+	$( document ).ready( function () {
+
 		// Load the ime preferences
 		$.ime.preferences.load();
+
+		if ( $.ime.preferences.isEnabled() ) {
+			mw.ime.setup();
+		}
+
 	} );
 
 

@@ -33,5 +33,10 @@
 "ext-uls-input-more-settings" : "More settings",
 "jquery-ime-other-languages": "Other languages",
 "jquery-ime-disable-text": "Disable input method",
-"jquery-ime-help": "Help"
+"jquery-ime-help": "Help",
+"ext-uls-input-disable": "Disable input method tools",
+"ext-uls-input-enable": "Enable input method tools",
+"ext-uls-input-disable-info": "Input method tools are disabled.",
+"ext-uls-input-enable-info": "Input method tools are enabled."
 }
+

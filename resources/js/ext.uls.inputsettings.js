@@ -47,6 +47,14 @@
 		+ '</div>'
 		+ '</div>'
 
+		// Disable IME system button
+		+ '<div class="row">'
+		+ '<div class="eleven columns button uls-input-settings-disable-info"></div>'
+		+ '<div class="six columns button uls-input-settings-toggle">'
+		+ '<button class="active green button uls-input-toggle-button"></button>'
+		+ '</div>'
+		+ '</div>'
+
 		// Separator
 		+ '<div class="row"></div>'
 
@@ -82,6 +90,7 @@
 			this.$parent.$settingsPanel.append( this.$template );
 			this.prepareLanguages();
 			this.prepareInputmethods( this.imeLanguage );
+			this.prepareToggleButton();
 			this.$template.i18n();
 			this.listen();
 		},
@@ -278,6 +287,29 @@
 			} );
 		},
 
+		prepareToggleButton: function () {
+			var inputsettings, $toggleButton, $toggleButtonDesc ;
+
+			inputsettings = this;
+
+			$toggleButton = inputsettings.$template
+				.find( 'button.uls-input-toggle-button' );
+
+			$toggleButtonDesc = inputsettings.$template
+				.find( 'div.uls-input-settings-disable-info' );
+
+			if ( $.ime.preferences.isEnabled() ) {
+				$toggleButton.data( 'i18n', 'ext-uls-input-disable' );
+				$toggleButtonDesc.data( 'i18n', 'ext-uls-input-enable-info' );
+			} else {
+				$toggleButton.data( 'i18n', 'ext-uls-input-enable' );
+				$toggleButtonDesc.data( 'i18n', 'ext-uls-input-disable-info' );
+			}
+
+			$toggleButton.i18n();
+			$toggleButtonDesc.i18n();
+		},
+
 		/**
 		 * Get previous languages
 		 * @returns {Array}
@@ -307,24 +339,61 @@
 		 * Register general event listeners
 		 */
 		listen: function () {
-			var that = this, $imeListContainer;
+			var inputSettings = this, $imeListContainer;
 
 			$imeListContainer = this.$template.find( '.uls-input-settings-inputmethods-list' );
 
 			// Apply and close buttons
-			this.$template.find( 'button.uls-input-settings-apply' ).on( 'click', function () {
-				that.apply();
+			inputSettings.$template.find( 'button.uls-input-settings-apply' ).on( 'click', function () {
+				inputSettings.apply();
 			} );
 
-			this.$template.find( 'button.uls-input-settings-close' ).on( 'click', function () {
-				that.close();
+			inputSettings.$template.find( 'button.uls-input-settings-close' ).on( 'click', function () {
+				inputSettings.close();
 			} );
 
 			$imeListContainer.on( 'change', 'input:radio[name=ime]:checked', function () {
 				var ime = $( this ).val();
 
-				$.ime.preferences.setLanguage( that.imeLanguage );
+				$.ime.preferences.setLanguage( inputSettings.imeLanguage );
 				$.ime.preferences.setIM( ime );
+			} );
+
+			inputSettings.$template.find( 'button.uls-input-toggle-button' )
+				.on( 'click', function () {
+					if ( $.ime.preferences.isEnabled() ) {
+						inputSettings.disableInputTools();
+					} else {
+						inputSettings.enableInputTools();
+					}
+				} );
+		},
+
+		/**
+		 * Disable input tools
+		 */
+		disableInputTools: function () {
+			var inputSettings = this;
+
+			$.ime.preferences.disable();
+			$.ime.preferences.save( function() {
+				// Update the toggle button
+				inputSettings.prepareToggleButton();
+				mw.ime.disable();
+			} );
+		},
+
+		/**
+		 * Enable input tools
+		 */
+		enableInputTools: function () {
+			var inputSettings = this;
+
+			$.ime.preferences.enable();
+			$.ime.preferences.save( function() {
+				// Update the toggle button
+				inputSettings.prepareToggleButton();
+				mw.ime.setup();
 			} );
 
 		},
