@@ -79,15 +79,11 @@
 
 		isEnabled: function () {
 
-			if ( this.registry['enable'] === false ){
-				return false;
+			if ( this.registry['enable'] === undefined ) {
+				return mw.config.get( 'wgULSIMEEnabled' );
+			} else {
+				return this.registry['enable'];
 			}
-
-			if ( mw.config.get( 'wgULSIMEEnabled' ) === false ){
-				return false;
-			}
-
-			return true;
 		}
 
 	} );
