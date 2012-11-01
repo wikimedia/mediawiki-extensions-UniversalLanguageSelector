@@ -124,8 +124,6 @@
 			}
 		} );
 
-		// localization for mediaWiki ULS - fallback locale
-		i18n.load( extensionPath + 'i18n/en.json', 'en'  );
 	}
 
 	$( document ).ready( function () {
