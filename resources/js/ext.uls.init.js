@@ -246,15 +246,18 @@
 			fade: true,
 			trigger: 'manual',
 			title: function () {
-				var prevLangName, linkClass, prevLangLink, title;
+				var link;
 
-				prevLangName = $.uls.data.getAutonym( previousLang );
-				linkClass = 'uls-prevlang-link';
-				prevLangLink = '<a href="#" lang = "' +
-					previousLang + '" class = "' + linkClass + '" >' +
-					prevLangName + '</a>';
-				title = $.i18n( 'ext-uls-undo-language-tooltip-text', prevLangLink );
-				return title;
+				link = $( '<a>' ).text( $.uls.data.getAutonym( previousLang ) )
+					.attr( {
+						href: '#',
+						class: 'uls-prevlang-link',
+						lang: previousLang,
+						dir: $.uls.data.getDir( previousLang )
+					} );
+				// Get the html of the link by wrapping it in div first
+				link = $( '<div>' ).html( link ).html();
+				return $.i18n( 'ext-uls-undo-language-tooltip-text', link );
 			}
 		} );
 
