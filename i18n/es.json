@@ -29,5 +29,13 @@
 	"ext-uls-back-to-input-settings": "Volver a la configuraci\u00f3n de entrada",
 	"ext-uls-disable-input-method": "Deshabilitar el m\u00e9todo de entrada",
 	"ext-uls-disable-input-method-desc": "Usar un teclado convencional",
-	"ext-uls-input-settings-more-languages-tooltip": "M\u00e1s idiomas"
+	"ext-uls-input-settings-more-languages-tooltip": "M\u00e1s idiomas",
+	"ext-uls-input-more-settings": "M\u00e1s opciones",
+	"jquery-ime-other-languages": "Otros idiomas",
+	"jquery-ime-disable-text": "Deshabilitar el m\u00e9todo de entrada",
+	"jquery-ime-help": "Ayuda",
+	"ext-uls-input-disable": "Desactivar las herramientas del m\u00e9todo de entrada",
+	"ext-uls-input-enable": "Activar las herramientas del m\u00e9todo de entrada",
+	"ext-uls-input-disable-info": "Las herramientas del m\u00e9todo de entrada est\u00e1n desactivadas.",
+	"ext-uls-input-enable-info": "Las herramientas del m\u00e9todo de entrada est\u00e1n activadas."
 }

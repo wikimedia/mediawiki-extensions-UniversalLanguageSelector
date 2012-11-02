@@ -28,5 +28,13 @@
 	"ext-uls-back-to-input-settings": "\uc785\ub825 \uc124\uc815\uc73c\ub85c \ub3cc\uc544\uac00\uae30",
 	"ext-uls-disable-input-method": "\uc785\ub825 \ubc29\uc2dd \ube44\ud65c\uc131\ud654",
 	"ext-uls-disable-input-method-desc": "\uc77c\ubc18 \ud0a4\ubcf4\ub4dc \uc0ac\uc6a9",
-	"ext-uls-input-settings-more-languages-tooltip": "\uae30\ud0c0 \uc5b8\uc5b4"
+	"ext-uls-input-settings-more-languages-tooltip": "\uae30\ud0c0 \uc5b8\uc5b4",
+	"ext-uls-input-more-settings": "\uc790\uc138\ud55c \uc124\uc815",
+	"jquery-ime-other-languages": "\ub2e4\ub978 \uc5b8\uc5b4",
+	"jquery-ime-disable-text": "\uc785\ub825 \ubc29\uc2dd \ube44\ud65c\uc131\ud654",
+	"jquery-ime-help": "\ub3c4\uc6c0\ub9d0",
+	"ext-uls-input-disable": "\uc785\ub825 \ubc29\uc2dd \ub3c4\uad6c \ube44\ud65c\uc131\ud654",
+	"ext-uls-input-enable": "\uc785\ub825 \ubc29\uc2dd \ub3c4\uad6c \ud65c\uc131\ud654",
+	"ext-uls-input-disable-info": "\uc785\ub825 \ubc29\uc2dd \ub3c4\uad6c\uac00 \ube44\ud65c\uc131\ud654\ub418\uc5b4 \uc788\uc2b5\ub2c8\ub2e4.",
+	"ext-uls-input-enable-info": "\uc785\ub825 \ubc29\uc2dd \ub3c4\uad6c\uac00 \ud65c\uc131\ud654\ub418\uc5b4 \uc788\uc2b5\ub2c8\ub2e4."
 }

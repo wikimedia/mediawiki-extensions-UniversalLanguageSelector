@@ -29,5 +29,13 @@
 	"ext-uls-back-to-input-settings": "Ritorna alle impostazioni di scrittura",
 	"ext-uls-disable-input-method": "Disabilita il metodo di scrittura",
 	"ext-uls-disable-input-method-desc": "Usa una tastiera normale",
-	"ext-uls-input-settings-more-languages-tooltip": "Altre lingue"
+	"ext-uls-input-settings-more-languages-tooltip": "Altre lingue",
+	"ext-uls-input-more-settings": "Ulteriori impostazioni",
+	"jquery-ime-other-languages": "Altre lingue",
+	"jquery-ime-disable-text": "Disabilita il metodo di scrittura",
+	"jquery-ime-help": "Aiuto",
+	"ext-uls-input-disable": "Disabilita gli strumenti di scrittura",
+	"ext-uls-input-enable": "Abilita gli strumenti di scrittura",
+	"ext-uls-input-disable-info": "Gli strumenti di scrittura sono disabilitati.",
+	"ext-uls-input-enable-info": "Gli strumenti di scrittura sono abilitati."
 }

@@ -32,5 +32,9 @@
 	"ext-uls-input-more-settings": "Mehr Einstellungen",
 	"jquery-ime-other-languages": "Andere Sprachen",
 	"jquery-ime-disable-text": "Eingabemethode deaktivieren",
-	"jquery-ime-help": "Hilfe"
+	"jquery-ime-help": "Hilfe",
+	"ext-uls-input-disable": "Eingabemethodenwerkzeuge deaktivieren",
+	"ext-uls-input-enable": "Eingabemethodenwerkzeuge aktivieren",
+	"ext-uls-input-disable-info": "Eingabemethodenwerkzeuge sind deaktiviert.",
+	"ext-uls-input-enable-info": "Eingabemethodenwerkzeuge sind aktiviert."
 }

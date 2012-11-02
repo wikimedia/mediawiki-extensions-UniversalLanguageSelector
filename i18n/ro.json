@@ -1,0 +1,36 @@
+{
+	"ext-uls-display-settings-title": "Set\u0103ri afi\u0219are",
+	"ext-uls-display-settings-title-short": "Afi\u0219are",
+	"ext-uls-display-settings-desc": "Seta\u021bi limba utilizat\u0103 pentru meniuri \u0219i fonturi.",
+	"ext-uls-undo-language-tooltip-text": "Limba schimbat\u0103 din $1",
+	"ext-uls-language-settings-title": "Set\u0103ri limb\u0103",
+	"ext-uls-language-settings-apply": "Aplic\u0103 set\u0103rile",
+	"ext-uls-language-settings-cancel": "Revocare",
+	"ext-uls-display-settings-font-settings": "Set\u0103ri font",
+	"ext-uls-display-settings-ui-language": "Limb\u0103 afi\u0219are",
+	"ext-uls-webfonts-settings-title": "Descarc\u0103 fontul atunci c\u00e2nd este necesar",
+	"ext-uls-webfonts-settings-info": "Fonturile web vor fi desc\u0103rcate pentru a afi\u0219a textele cu cerin\u021be speciale.",
+	"ext-uls-webfonts-settings-info-link": "Mai multe informa\u021bii",
+	"ext-uls-webfonts-select-for": "Selecta\u021bi fontul pentru $1",
+	"ext-uls-webfonts-select-for-ui-info": "Font utilizat pentru interfa\u021b\u0103",
+	"ext-uls-webfonts-select-for-content-info": "Font utilizat pentru con\u021binut",
+	"ext-uls-back-to-display-settings": "\u00cenapoi la set\u0103rile de afi\u0219are",
+	"ext-uls-input-settings-title": "Set\u0103ri introducere",
+	"ext-uls-input-settings-title-short": "Introducere",
+	"ext-uls-input-settings-desc": "Scrie\u021bi \u00een alt\u0103 limb\u0103?",
+	"ext-uls-input-settings-ime-settings": "Metode de introducere pentru $1",
+	"ext-uls-input-settings-ui-language": "Limb\u0103 utilizat\u0103 pentru scriere",
+	"ext-uls-back-to-input-settings": "\u00cenapoi la set\u0103rile de introducere",
+	"ext-uls-disable-input-method": "Dezactiveaz\u0103 metoda de introducere",
+	"ext-uls-disable-input-method-desc": "Utilizeaz\u0103 o tastatur\u0103 normal\u0103",
+	"ext-uls-input-settings-more-languages-tooltip": "Mai multe limbi",
+	"ext-uls-input-more-settings": "Mai multe set\u0103ri",
+	"jquery-ime-other-languages": "Alte limbi",
+	"jquery-ime-disable-text": "Dezactiveaz\u0103 metoda de introducere",
+	"jquery-ime-help": "Ajutor",
+	"@metadata": {
+		"authors": [
+			"Minisarm"
+		]
+	}
+}
