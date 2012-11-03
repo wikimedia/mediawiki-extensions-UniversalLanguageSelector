@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Minisarm"
+		]
+	},
 	"ext-uls-display-settings-title": "Set\u0103ri afi\u0219are",
 	"ext-uls-display-settings-title-short": "Afi\u0219are",
 	"ext-uls-display-settings-desc": "Seta\u021bi limba utilizat\u0103 pentru meniuri \u0219i fonturi.",
@@ -27,10 +32,5 @@
 	"ext-uls-input-more-settings": "Mai multe set\u0103ri",
 	"jquery-ime-other-languages": "Alte limbi",
 	"jquery-ime-disable-text": "Dezactiveaz\u0103 metoda de introducere",
-	"jquery-ime-help": "Ajutor",
-	"@metadata": {
-		"authors": [
-			"Minisarm"
-		]
-	}
+	"jquery-ime-help": "Ajutor"
 }

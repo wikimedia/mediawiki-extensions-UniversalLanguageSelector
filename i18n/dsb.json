@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
 	"ext-uls-display-settings-title": "Nastajenja za zwobraznjenje",
 	"ext-uls-display-settings-title-short": "Zwobraznjenje",
 	"ext-uls-display-settings-desc": "R\u011bc za menije a pisma p\u00f3staji\u015b",
@@ -31,10 +36,5 @@
 	"ext-uls-input-disable": "R\u011bdy zap\u00f3dawa\u0144skich metodow znjem\u00f3\u017eni\u015b",
 	"ext-uls-input-enable": "R\u011bdy zap\u00f3dawa\u0144skich metodow zm\u00f3\u017eni\u015b",
 	"ext-uls-input-disable-info": "R\u011bdy zap\u00f3dawa\u0144skich metodow su znjem\u00f3\u017enjone.",
-	"ext-uls-input-enable-info": "R\u011bdy zap\u00f3dawa\u0144skich metodow su zm\u00f3\u017enjone.",
-	"@metadata": {
-		"authors": [
-			"Michawiki"
-		]
-	}
+	"ext-uls-input-enable-info": "R\u011bdy zap\u00f3dawa\u0144skich metodow su zm\u00f3\u017enjone."
 }

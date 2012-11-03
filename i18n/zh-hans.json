@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Yfdyh000"
+		]
+	},
 	"ext-uls-display-settings-title": "\u663e\u793a\u8bbe\u7f6e",
 	"ext-uls-display-settings-title-short": "\u663e\u793a",
 	"ext-uls-display-settings-desc": "\u8bbe\u7f6e\u83dc\u5355\u548c\u5b57\u4f53\u4f7f\u7528\u7684\u8bed\u8a00\u3002",
@@ -30,10 +35,5 @@
 	"ext-uls-input-disable": "\u7981\u7528\u8f93\u5165\u6cd5\u5de5\u5177",
 	"ext-uls-input-enable": "\u542f\u7528\u8f93\u5165\u6cd5\u5de5\u5177",
 	"ext-uls-input-disable-info": "\u8f93\u5165\u6cd5\u5de5\u5177\u5df2\u7981\u7528\u3002",
-	"ext-uls-input-enable-info": "\u8f93\u5165\u6cd5\u5de5\u5177\u5df2\u542f\u7528\u3002",
-	"@metadata": {
-		"authors": [
-			"Yfdyh000"
-		]
-	}
+	"ext-uls-input-enable-info": "\u8f93\u5165\u6cd5\u5de5\u5177\u5df2\u542f\u7528\u3002"
 }
