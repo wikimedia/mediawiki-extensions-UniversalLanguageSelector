@@ -22,19 +22,31 @@
 
 	mw.uls = mw.uls || {};
 	mw.uls.setGeo = function ( data ) {
-		window.GEO = data;
+		window.Geo = data;
 	};
 
 	mw.uls.getCountryCode = function () {
-		/*jshint camelcase: false*/
-		return window.GEO && ( window.GEO.country || window.GEO.country_code );
+		return window.Geo && ( window.Geo.country || window.Geo.country_code );
 	};
 
-	var settings = {
-		cache: true,
-		dataType: 'jsonp',
-		jsonpCallback: 'mw.uls.setGeo'
-	};
-	$.ajax( mw.config.get( 'wgULSGeoService' ), settings );
+	var currentProto, httpOnly,
+		service = mw.config.get( 'wgULSGeoService' );
+
+	// Call the service only if defined, and if the current
+	// protocol is https, only if the service is not configured
+	// with http:// as the protocol
+	if ( service ) {
+		httpOnly = service.substring(0, 7) === 'http://';
+		currentProto = document.location.protocol;
+		if ( !httpOnly || currentProto  === 'http:' ) {
+			var settings = {
+				cache: true,
+				dataType: 'jsonp',
+				jsonpCallback: 'mw.uls.setGeo'
+			};
+
+			$.ajax( service, settings );
+		}
+	}
 
 }( mediaWiki, jQuery ) );

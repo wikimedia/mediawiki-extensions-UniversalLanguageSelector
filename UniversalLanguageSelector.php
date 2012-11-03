@@ -49,7 +49,7 @@ $wgExtensionCredits['other'][] = array(
  * ULS can use geolocation services to suggest languages based on the
  * country the user is vising from. Setting this to false will prevent
  * builtin geolocation from being used. You can provide your own geolocation
- * by setting window.GEO to object which has key 'country_code' or 'country'.
+ * by setting window.Geo to object which has key 'country_code' or 'country'.
  * This is what Wikipedia does.
  *
  * The service should return jsonp that uses the supplied callback parameter.

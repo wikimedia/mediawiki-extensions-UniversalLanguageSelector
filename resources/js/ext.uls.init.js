@@ -63,7 +63,8 @@
 	};
 
 	mw.uls.getFrequentLanguageList = function () {
-		var unique = [],
+		var countryCode,
+			unique = [],
 			list = [
 				mw.config.get( 'wgUserLanguage' ),
 				mw.config.get( 'wgContentLanguage' ),
@@ -72,8 +73,9 @@
 				.concat( mw.uls.getPreviousLanguages() )
 				.concat( mw.uls.getAcceptLanguageList() );
 
-		if ( window.GEO ) {
-			list = list.concat( $.uls.data.getLanguagesInTerritory( mw.uls.getCountryCode() ) );
+		countryCode = mw.uls.getCountryCode()
+		if ( countryCode ) {
+			list = list.concat( $.uls.data.getLanguagesInTerritory( countryCode ) );
 		}
 
 		$.each( list, function ( i, v ) {
