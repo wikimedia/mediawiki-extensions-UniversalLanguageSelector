@@ -327,16 +327,14 @@
 			// uls-ui-font-selector-label
 			// uls-content-font-selector-label
 			$fontLabel = this.$template.find( '#' + target + '-font-selector-label' );
-			$fontLabel.html( '<strong>'
-				+ $.i18n( 'ext-uls-webfonts-select-for', $.uls.data.getAutonym( language ) )
-				+ '</strong>'
-				+ '<div>'
-				// Possible messages:
-				// ext-uls-webfonts-select-for-ui-info
-				// ext-uls-webfonts-select-for-content-info
-				+ $.i18n( 'ext-uls-webfonts-select-for-' + target + '-info' )
-				+ '</div>'
-			);
+			$fontLabel.append( $( '<strong>' ).text(
+				$.i18n( 'ext-uls-webfonts-select-for', $.uls.data.getAutonym( language ) ) ) );
+
+			// Possible messages:
+			// ext-uls-webfonts-select-for-ui-info
+			// ext-uls-webfonts-select-for-content-info
+			$fontLabel.append( $( '<div>' ).text(
+				$.i18n( 'ext-uls-webfonts-select-for-' + target + '-info' ) ) );
 		},
 
 		/**
