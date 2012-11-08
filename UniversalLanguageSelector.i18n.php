@@ -278,6 +278,15 @@ $messages['ru'] = array(
 	'uls-select-content-language' => 'Выбор языка',
 );
 
+/** Tamil (தமிழ்)
+ * @author Logicwiki
+ */
+$messages['ta'] = array(
+	'UniversalLanguageSelector' => 'உலகளாவிய மொழி தேர்வுக் கருவி',
+	'uls-desc' => 'பயனருக்கு மொழியை மாற்றவும் மொழி அமைப்புகளை மாற்றவும் செய்ய பல வழிகளை தருகின்றது',
+	'uls-select-content-language' => 'மொழியைத் தேர்ந்தெடு',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  * @author Sky Harbor
