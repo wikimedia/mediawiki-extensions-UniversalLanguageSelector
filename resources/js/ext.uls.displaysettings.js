@@ -327,6 +327,7 @@
 			// uls-ui-font-selector-label
 			// uls-content-font-selector-label
 			$fontLabel = this.$template.find( '#' + target + '-font-selector-label' );
+			$fontLabel.empty();
 			$fontLabel.append( $( '<strong>' ).text(
 				$.i18n( 'ext-uls-webfonts-select-for', $.uls.data.getAutonym( language ) ) ) );
 
