@@ -1,10 +1,19 @@
 {
-	"ext-uls-display-settings-title": "Ekran ayarlar\u0131",
-	"ext-uls-display-settings-title-short": "Ekran",
-	"ext-uls-display-settings-desc": "Men\u00fcler ve yaz\u0131 tipleri i\u00e7in kullan\u0131lan dili ayarlay\u0131n.",
 	"@metadata": {
 		"authors": [
 			"Emperyan"
 		]
-	}
+	},
+	"ext-uls-display-settings-title": "Ekran ayarlar\u0131",
+	"ext-uls-display-settings-title-short": "Ekran",
+	"ext-uls-display-settings-desc": "Men\u00fcler ve yaz\u0131 tipleri i\u00e7in kullan\u0131lan dili ayarlay\u0131n.",
+	"ext-uls-undo-language-tooltip-text": "Dil, $1 dilinden de\u011fi\u015ftirildi.",
+	"ext-uls-language-settings-title": "Dil ayarlar\u0131",
+	"ext-uls-language-settings-apply": "Ayarlar\u0131 uygula",
+	"ext-uls-language-settings-cancel": "\u0130ptal",
+	"ext-uls-display-settings-font-settings": "Yaz\u0131 tipi ayarlar\u0131",
+	"ext-uls-display-settings-ui-language": "Ekran dili",
+	"ext-uls-webfonts-settings-title": "Gerekti\u011finde yaz\u0131 tipi indir",
+	"ext-uls-webfonts-settings-info-link": "Daha fazla bilgi",
+	"ext-uls-input-settings-title": "Giri\u015f ayarlar\u0131"
 }
