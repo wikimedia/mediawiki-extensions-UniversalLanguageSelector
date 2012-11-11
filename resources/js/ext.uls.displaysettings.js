@@ -361,12 +361,16 @@
 		 * Register general event listeners
 		 */
 		listen: function () {
-			var that = this, $contentFontSelector, $uiFontSelector;
+			var that = this, $contentFontSelector, $uiFontSelector, oldFont;
+			
 
 			$contentFontSelector = this.$template
 				.find( '#content-font-selector' );
 			$uiFontSelector = this.$template
 				.find( 'select#ui-font-selector' );
+
+			oldFont = $uiFontSelector.find( 'option:selected' ).val();
+			
 			// TODO all these repeated selectors can be placed in object constructor.
 
 			this.$template.find( '#uls-displaysettings-apply' ).on( 'click', function () {
@@ -374,6 +378,8 @@
 			} );
 
 			this.$template.find( 'button.uls-settings-close' ).on( 'click', function () {
+				mw.webfonts.preferences.setFont( that.contentLanguage, oldFont );
+				that.$webfonts.refresh();
 				that.close();
 			} );
 
