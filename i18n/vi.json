@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen"
+		]
+	},
 	"ext-uls-display-settings-title": "T\u00f9y ch\u1ecdn tr\u00ecnh b\u00e0y",
 	"ext-uls-display-settings-title-short": "Tr\u00ecnh b\u00e0y",
 	"ext-uls-display-settings-desc": "\u0110\u1eb7t ng\u00f4n ng\u1eef c\u1ee7a c\u00e1c tr\u00ecnh \u0111\u01a1n v\u00e0 ph\u00f4ng ch\u1eef.",
@@ -31,10 +36,5 @@
 	"ext-uls-input-disable": "T\u1eaft c\u00f4ng c\u1ee5 b\u1ed9 g\u00f5",
 	"ext-uls-input-enable": "B\u1eadt c\u00f4ng c\u1ee5 b\u1ed9 g\u00f5",
 	"ext-uls-input-disable-info": "C\u00f4ng c\u1ee5 b\u1ed9 g\u00f5 \u0111ang t\u1eaft.",
-	"ext-uls-input-enable-info": "C\u00f4ng c\u1ee5 b\u1ed9 g\u00f5 \u0111ang b\u1eadt.",
-	"@metadata": {
-		"authors": [
-			"Minh Nguyen"
-		]
-	}
+	"ext-uls-input-enable-info": "C\u00f4ng c\u1ee5 b\u1ed9 g\u00f5 \u0111ang b\u1eadt."
 }

@@ -19,5 +19,8 @@
 	"ext-uls-input-settings-desc": "An enger anerer Sprooch schreiwen?",
 	"ext-uls-input-settings-ui-language": "Sprooch d\u00e9i fir d'Schreiwe benotzt g\u00ebtt",
 	"ext-uls-disable-input-method-desc": "Eng normal Tastatur benotzen",
-	"ext-uls-input-settings-more-languages-tooltip": "M\u00e9i Sproochen"
+	"ext-uls-input-settings-more-languages-tooltip": "M\u00e9i Sproochen",
+	"ext-uls-input-more-settings": "M\u00e9i Astellungen",
+	"jquery-ime-other-languages": "Aner Sproochen",
+	"jquery-ime-help": "H\u00ebllef"
 }
