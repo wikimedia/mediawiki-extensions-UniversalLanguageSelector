@@ -29,18 +29,18 @@
 	background-clip: padding-box;
 }
 
-.uls-menu a {
-	color: #3366bb;
+.uls-title a {
+	padding-left: 15px;
 }
 
 .uls-menu h1 {
 	font-weight: normal;
-	padding-top: 1.25em;
 	border: none;
+	padding-top: 1.25em;
+	padding-left: 15px;
 	padding-bottom: 3px;
 	font-size: 18pt;
 	line-height: 1.25em;
-	padding-left: 15px;
 	color: #555;
 }
 
@@ -75,9 +75,9 @@ div.uls-region {
 	padding: 0;
 	margin: 0;
 	height: 125px;
-	border-bottom-color: #555;
+	border-bottom-color: transparent;
 	border-bottom-style: solid;
-	border-bottom-width: 3px;
+	border-bottom-width: 2px;
 }
 
 .uls-worldmap .uls-region { /* The map doesn't flip */
@@ -105,18 +105,9 @@ div.uls-region {
 		endColorstr=#253366bb );
 	-ms-filter:
 		"progid:DXImageTransform.Microsoft.gradient(startColorstr=#253366bb, endColorstr=#253366bb)";
-	border-bottom-color: #3366bb;
-	border-bottom-style: solid;
 }
 
 .regionselector.active {
-	/*Cross-browser background transparency*/
-	background: #3366bb;
-	background: rgba(51, 102, 187, 0.2);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#253366bb,
-		endColorstr=#253366bb );
-	-ms-filter:
-		"progid:DXImageTransform.Microsoft.gradient(startColorstr=#253366bb, endColorstr=#253366bb)";
 	border-bottom-color: #3366bb;
 	border-bottom-style: solid;
 }
@@ -127,14 +118,27 @@ div.uls-region {
 	padding-right: 0;
 	float: right;
 	overflow: hidden;
+	color: rgba(0,0,0,0);
+	opacity: 0.7;
+	transition: color 0.15s linear;
+	-moz-transition: color 0.15s linear;
+	-webkit-transition: color 0.15s linear;
 }
 
-#map-block a {
-	color: #444;
+#map-block:hover {
+	opacity: 1;
+	color: #333;
+}
+
+#map-block #uls-region-1 {
+	border-color: transparent;
+}
+
+#map-block:hover #uls-region-1.active {
+	border-color: #3366bb;
 }
 
 #map-block .active a {
-	color: #252525;
 	font-weight: bold;
 }
 
@@ -161,12 +165,19 @@ input:focus#languagefilter {
 	border: 1px solid #3366bb;
 }
 
-#search {
-	background-color: #f8f8f8;
-	border-top-color: #aaaaaa;
+#search{
+	position: relative;
+	background: #f8f8f8;
+	background: linear-gradient(#F0F0F0, #FBFBFB);
+	background: -webkit-gradient(linear, left top, left bottom, from(#F0F0F0), to(#FBFBFB));
+	background: -moz-linear-gradient(top, #F0F0F0, #FBFBFB);
+	border-top-color: #AAA;
 	border-top-style: solid;
 	border-top-width: 1px;
 	padding: 0.8em 0;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #EEE;
 }
 
 .search-label {
@@ -548,7 +559,7 @@ img {
 .uls-language-list {
 	height: 22em;
 	overflow: auto;
-	margin: 10px;
+	padding: 10px;
 	width: auto;
 }
 
