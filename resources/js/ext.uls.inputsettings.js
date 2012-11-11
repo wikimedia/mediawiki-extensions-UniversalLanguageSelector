@@ -121,8 +121,8 @@
 				imeId = imes.inputmethods[index];
 				selected = defaultInputmethod === imeId;
 				//$.ime.load( imeId, function () {
-					$imeListContainer.append( inputsettings.renderInputmethodOption( imeId,
-						selected ) );
+				$imeListContainer.append( inputsettings.renderInputmethodOption( imeId,
+					selected ) );
 				//} );
 			}
 
@@ -226,10 +226,10 @@
 				$button = $( '<button>' )
 					.addClass( 'button uls-language-button' )
 					.text( $.uls.data.getAutonym( language ) )
-					.prop({
+					.prop( {
 						lang: language,
 						dir: $.uls.data.getDir( language )
-					});
+					} );
 
 				if ( language === this.imeLanguage ) {
 					$button.addClass( 'down' );
@@ -263,7 +263,7 @@
 				onReady: function () {
 					var uls = this,
 						$back = $( '<a>' ).prop( 'href', '#' )
-						.text( $.i18n( 'ext-uls-back-to-input-settings' ) );
+							.text( $.i18n( 'ext-uls-back-to-input-settings' ) );
 
 					$back.click( function () {
 						uls.hide();
@@ -288,7 +288,7 @@
 		},
 
 		prepareToggleButton: function () {
-			var inputsettings, $toggleButton, $toggleButtonDesc ;
+			var inputsettings, $toggleButton, $toggleButtonDesc;
 
 			inputsettings = this;
 
@@ -376,7 +376,7 @@
 			var inputSettings = this;
 
 			$.ime.preferences.disable();
-			$.ime.preferences.save( function() {
+			$.ime.preferences.save( function () {
 				// Update the toggle button
 				inputSettings.prepareToggleButton();
 				mw.ime.disable();
@@ -390,7 +390,7 @@
 			var inputSettings = this;
 
 			$.ime.preferences.enable();
-			$.ime.preferences.save( function() {
+			$.ime.preferences.save( function () {
 				// Update the toggle button
 				inputSettings.prepareToggleButton();
 				mw.ime.setup();

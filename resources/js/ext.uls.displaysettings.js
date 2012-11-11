@@ -186,10 +186,10 @@
 				$button = $( '<button>' )
 					.addClass( 'button uls-language-button' )
 					.text( $.uls.data.getAutonym( language ) )
-					.prop({
+					.prop( {
 						lang: language,
 						dir: $.uls.data.getDir( language )
-					});
+					} );
 
 				if ( language === this.uiLanguage ) {
 					$button.addClass( 'down' );
@@ -220,11 +220,11 @@
 			$moreLanguagesButton.uls( {
 				left: that.$parent.left,
 				top: that.$parent.top,
-				onReady: function ( ) {
+				onReady: function () {
 					var uls = this,
 						$back = $( '<a>' ).prop( 'href', '#' )
-						.data( 'i18n','ext-uls-back-to-display-settings' )
-						.i18n();
+							.data( 'i18n', 'ext-uls-back-to-display-settings' )
+							.i18n();
 
 					$back.click( function () {
 						uls.hide();
@@ -233,7 +233,7 @@
 
 					uls.$menu.find( 'div.uls-title' ).append( $back );
 					uls.$menu.find( 'div.uls-title h1' )
-						.data( 'i18n','ext-uls-display-settings-ui-language' )
+						.data( 'i18n', 'ext-uls-display-settings-ui-language' )
 						.i18n();
 				},
 				onSelect: function ( langCode ) {
@@ -362,7 +362,6 @@
 		 */
 		listen: function () {
 			var that = this, $contentFontSelector, $uiFontSelector, oldFont;
-			
 
 			$contentFontSelector = this.$template
 				.find( '#content-font-selector' );
@@ -370,7 +369,7 @@
 				.find( 'select#ui-font-selector' );
 
 			oldFont = $uiFontSelector.find( 'option:selected' ).val();
-			
+
 			// TODO all these repeated selectors can be placed in object constructor.
 
 			this.$template.find( '#uls-displaysettings-apply' ).on( 'click', function () {
@@ -462,5 +461,5 @@
 	$.fn.languagesettings.modules = $.extend( $.fn.languagesettings.modules, {
 		display: DisplaySettings
 	} );
-} ) ( jQuery, mediaWiki );
+})( jQuery, mediaWiki );
 

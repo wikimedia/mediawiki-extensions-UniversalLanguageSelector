@@ -99,7 +99,7 @@
 		var extensionPath, locales, i18n;
 
 		extensionPath = mw.config.get( 'wgExtensionAssetsPath' )
-		+ '/UniversalLanguageSelector/';
+			+ '/UniversalLanguageSelector/';
 
 		locales = mw.config.get( 'wgULSi18nLocales' );
 		i18n = $.i18n( {

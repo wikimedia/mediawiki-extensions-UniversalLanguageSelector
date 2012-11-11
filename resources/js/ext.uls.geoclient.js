@@ -36,9 +36,9 @@
 	// protocol is https, only if the service is not configured
 	// with http:// as the protocol
 	if ( service ) {
-		httpOnly = service.substring(0, 7) === 'http://';
+		httpOnly = service.substring( 0, 7 ) === 'http://';
 		currentProto = document.location.protocol;
-		if ( !httpOnly || currentProto  === 'http:' ) {
+		if ( !httpOnly || currentProto === 'http:' ) {
 			var settings = {
 				cache: true,
 				dataType: 'jsonp',
