@@ -1,0 +1,16 @@
+{
+	"ext-uls-undo-language-tooltip-text": "Spr\u00e5k endra fr\u00e5 $1",
+	"ext-uls-language-settings-title": "Spr\u00e5kinnstillingar",
+	"ext-uls-language-settings-cancel": "Bryt av",
+	"ext-uls-input-settings-title": "Innstillingar for inndata",
+	"ext-uls-input-settings-title-short": "Inndata",
+	"ext-uls-input-settings-ime-settings": "Metodar for inndata for $1",
+	"ext-uls-input-settings-more-languages-tooltip": "Fleire spr\u00e5k",
+	"ext-uls-input-more-settings": "Fleire innstillingar",
+	"jquery-ime-help": "Hjelp",
+	"@metadata": {
+		"authors": [
+			"Njardarlogar"
+		]
+	}
+}
