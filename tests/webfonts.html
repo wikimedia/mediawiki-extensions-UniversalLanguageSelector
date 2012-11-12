@@ -11,17 +11,20 @@
 <script src="../resources/js/ext.uls.webfonts.repository.js"></script>
 <script>
 	$( document ).ready( function () {
+		var $webfonts, fonts, languages, $fontSelector, $langselector;
+
 		$( 'div#webfonts-preview-area' ).webfonts( {
 			repository: $.webfonts.repository
 		} );
+
 		// get an instance of WebFonts
-		var $webfonts = $( 'div#webfonts-preview-area' ).data( 'webfonts' );
+		$webfonts = $( 'div#webfonts-preview-area' ).data( 'webfonts' );
 		// Get a list of all fonts provided by WebFonts
-		var fonts = $webfonts.list();
-		var languages = $webfonts.languages();
+		fonts = $webfonts.list();
+		languages = $webfonts.languages();
 		// Also test system fonts.
-		var $fontSelector = $( 'select#fontselector' );
-		var $langselector = $( 'select#language' );
+		$fontSelector = $( 'select#fontselector' );
+		$langselector = $( 'select#language' );
 
 		function listFonts ( fonts ) {
 			$.merge( fonts, [ 'Sans', 'Serif' ] );
@@ -36,7 +39,7 @@
 		listFonts( fonts );
 		$.each( languages, function ( lang, language ) {
 			$langselector.append( $( "<option></option>" )
-				.attr( "value", language )
+				.attr( 'value', language )
 				.text( language + " - " + $.uls.data.getAutonym( language ) ) );
 		} );
 		$fontSelector.on( 'change', function () {
