@@ -57,7 +57,6 @@
 		 * Get a preference value for the given preference name
 		 *
 		 * @param key
-		 * @returns
 		 */
 		get: function ( key ) {
 			return this.preferences[key];
