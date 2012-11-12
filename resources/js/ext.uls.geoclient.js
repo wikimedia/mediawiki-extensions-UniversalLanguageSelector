@@ -29,7 +29,7 @@
 		return window.Geo && ( window.Geo.country || window.Geo.country_code );
 	};
 
-	var currentProto, httpOnly,
+	var currentProto, httpOnly, settings,
 		service = mw.config.get( 'wgULSGeoService' );
 
 	// Call the service only if defined, and if the current
@@ -39,7 +39,7 @@
 		httpOnly = service.substring( 0, 7 ) === 'http://';
 		currentProto = document.location.protocol;
 		if ( !httpOnly || currentProto === 'http:' ) {
-			var settings = {
+			settings = {
 				cache: true,
 				dataType: 'jsonp',
 				jsonpCallback: 'mw.uls.setGeo'
