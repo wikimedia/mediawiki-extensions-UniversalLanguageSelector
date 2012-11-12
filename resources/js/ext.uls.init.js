@@ -73,7 +73,7 @@
 				.concat( mw.uls.getPreviousLanguages() )
 				.concat( mw.uls.getAcceptLanguageList() );
 
-		countryCode = mw.uls.getCountryCode()
+		countryCode = mw.uls.getCountryCode();
 		if ( countryCode ) {
 			list = list.concat( $.uls.data.getLanguagesInTerritory( countryCode ) );
 		}
