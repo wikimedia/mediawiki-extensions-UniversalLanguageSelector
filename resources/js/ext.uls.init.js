@@ -251,7 +251,7 @@
 				link = $( '<a>' ).text( $.uls.data.getAutonym( previousLang ) )
 					.attr( {
 						href: '#',
-						class: 'uls-prevlang-link',
+						'class': 'uls-prevlang-link',
 						lang: previousLang,
 						dir: $.uls.data.getDir( previousLang )
 					} );
