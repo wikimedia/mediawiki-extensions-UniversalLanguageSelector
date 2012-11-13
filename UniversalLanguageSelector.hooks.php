@@ -76,6 +76,7 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	/**
+	 * @param array $preferred
 	 * @return string
 	 */
 	protected static function getDefaultLanguage( array $preferred ) {
@@ -202,7 +203,8 @@ class UniversalLanguageSelectorHooks {
 
 	/**
 	 * Hook: MakeGlobalVariablesScript
-	 * @param $vars Array
+	 * @param array $vars
+	 * @param OutputPage $out
 	 * @return bool
 	 */
 	public static function addVariables( &$vars, OutputPage $out ) {
