@@ -222,7 +222,7 @@
 				top: that.$parent.top,
 				onReady: function () {
 					var uls = this,
-						$back = $( '<a>' ).prop( 'href', '#' )
+						$back = $( '<a>' )
 							.data( 'i18n', 'ext-uls-back-to-display-settings' )
 							.i18n();
 

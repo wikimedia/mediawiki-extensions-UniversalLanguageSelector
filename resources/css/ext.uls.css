@@ -4,6 +4,10 @@ div#settings-block {
 	line-height: 1.2em;
 }
 
+.uls-menu a {
+	cursor: pointer;
+}
+
 #settings-block div.display-settings-block,
 #settings-block div.input-settings-block {
 	margin: 8px 0;

@@ -262,7 +262,7 @@
 				top: that.$parent.top,
 				onReady: function () {
 					var uls = this,
-						$back = $( '<a>' ).prop( 'href', '#' )
+						$back = $( '<a>' )
 							.text( $.i18n( 'ext-uls-back-to-input-settings' ) );
 
 					$back.click( function () {
