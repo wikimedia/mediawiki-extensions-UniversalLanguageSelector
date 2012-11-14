@@ -39,8 +39,8 @@ class LanguageNameIndexer extends Maintenance {
 		foreach ( $languages as $code => $name ) {
 			$all[$code][strtolower( $name )] = true;
 			$langnames = LanguageNames::getNames( $code, 0, 2 );
-			foreach ( $langnames as $code => $name ) { // FIXME: Variable pollution
-				$all[$code][] = strtolower( $name );
+			foreach ( $langnames as $langCode => $langName ) {
+				$all[$langCode][] = strtolower( $langName );
 			}
 		}
 
