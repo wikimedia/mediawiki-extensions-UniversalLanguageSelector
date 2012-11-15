@@ -26,6 +26,11 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function addModules( $out, $skin ) {
+		global $wgULSEnable;
+		if ( !$wgULSEnable ) {
+			return true;
+		}
+
 		$out->addModules( 'ext.uls.init' );
 		$out->addModules( 'ext.uls.geoclient' );
 
@@ -54,7 +59,11 @@ class UniversalLanguageSelectorHooks {
 	 * Hooks: SkinTemplateNavigation, SkinTemplateTabs
 	 */
 	static function addTrigger( array &$personal_urls, &$title ) {
-		global $wgLang;
+		global $wgULSEnable, $wgLang;
+		if ( !$wgULSEnable ) {
+			return true;
+		}
+
 		$personal_urls = array(
 			'uls' => array(
 				'text' => $wgLang->getLanguageName( $wgLang->getCode() ),
@@ -113,7 +122,11 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function getLanguage( $user, &$code ) {
-		global $wgRequest, $wgULSLanguageDetection;
+		global $wgULSEnable, $wgRequest, $wgULSLanguageDetection;
+
+		if ( !$wgULSEnable ) {
+			return true;
+		}
 
 		$languageToSave = $wgRequest->getVal( 'setlang' );
 		if ( $wgRequest->getVal( 'uselang' ) && !$languageToSave ) {

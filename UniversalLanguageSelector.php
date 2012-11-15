@@ -68,6 +68,14 @@ $wgULSIMEEnabled = true;
  */
 $wgULSLanguageDetection = true;
 
+/**
+ * Enable language selection. If language selection is disabled, the classes
+ * and RL modules are registered for the use of other extensions, but no
+ * language selection toolbar is shown, and it will not be possible to change 
+ * the interface language using a cookie.
+ */
+$wgULSEnable = true;
+
 $dir = __DIR__;
 
 // Internationalization
