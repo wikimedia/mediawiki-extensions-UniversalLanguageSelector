@@ -76,6 +76,13 @@ $wgULSLanguageDetection = true;
  */
 $wgULSEnable = true;
 
+/**
+ * Enable ULS language selection for anonymous users. Equivalent to $wgULSEnable
+ * except that it only applies to anonymous users. Setting this to false will 
+ * avoid breaking Squid caches (see bug 41451).
+ */
+$wgULSEnableAnon = true;
+
 $dir = __DIR__;
 
 // Internationalization

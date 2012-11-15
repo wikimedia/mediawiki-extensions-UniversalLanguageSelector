@@ -19,6 +19,20 @@
  */
 
 class UniversalLanguageSelectorHooks {
+	public static function isToolbarEnabled() {
+		global $wgULSEnable, $wgULSEnableAnon;
+		if ( !$wgULSEnable ) {
+			return false;
+		}
+		if ( !$wgULSEnableAnon ) {
+			$user = RequestContext::getMain()->getUser();
+			if ( $user->isAnon() ) {
+				return false;
+			}
+		}
+		return true;
+	}
+
 	/**
 	 * BeforePageDisplay hook handler.
 	 * @param $out OutputPage
@@ -26,8 +40,7 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function addModules( $out, $skin ) {
-		global $wgULSEnable;
-		if ( !$wgULSEnable ) {
+		if ( !self::isToolbarEnabled() ) {
 			return true;
 		}
 
@@ -59,8 +72,8 @@ class UniversalLanguageSelectorHooks {
 	 * Hooks: SkinTemplateNavigation, SkinTemplateTabs
 	 */
 	static function addTrigger( array &$personal_urls, &$title ) {
-		global $wgULSEnable, $wgLang;
-		if ( !$wgULSEnable ) {
+		global $wgLang;
+		if ( !self::isToolbarEnabled() ) {
 			return true;
 		}
 
@@ -122,9 +135,8 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function getLanguage( $user, &$code ) {
-		global $wgULSEnable, $wgRequest, $wgULSLanguageDetection;
-
-		if ( !$wgULSEnable ) {
+		global $wgRequest, $wgULSLanguageDetection;
+		if ( !self::isToolbarEnabled() ) {
 			return true;
 		}
 
