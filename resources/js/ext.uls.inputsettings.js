@@ -28,7 +28,7 @@
 		+ '</div>'
 
 		// "Language for ime", title above the buttons row
-		+ '<div class="row">'
+		+ '<div class="row uls-input-settings-languages-title">'
 		+ '<div class="eleven columns">'
 		+ '<h4 data-i18n="ext-uls-input-settings-ui-language"></h4>'
 		+ '</div>'
@@ -88,8 +88,18 @@
 			this.$parent.$settingsPanel.empty();
 			this.$imes = $( 'body' ).data( 'ime' );
 			this.$parent.$settingsPanel.append( this.$template );
-			this.prepareLanguages();
-			this.prepareInputmethods( this.imeLanguage );
+			if ( $.ime.preferences.isEnabled() ) {
+				this.prepareLanguages();
+				this.prepareInputmethods( this.imeLanguage );
+			} else {
+
+				// Hide the language list
+				this.$template.find( 'div.uls-input-settings-languages-title' ).hide();
+				this.$template.find( 'div.uls-ui-languages' ).hide();
+
+				//  Hide input methods
+				this.$template.find( 'div.uls-input-settings-inputmethods-list' ).hide();
+			}
 			this.prepareToggleButton();
 			this.$template.i18n();
 			this.listen();
@@ -101,8 +111,11 @@
 
 			imes = $.ime.languages[language];
 			this.imeLanguage = language;
+
 			$imeListTitle = this.$template.find( '.ext-uls-input-settings-imes-title' );
+
 			$imeListContainer = this.$template.find( '.uls-input-settings-inputmethods-list' );
+			$imeListContainer.show();
 			$imeListContainer.find( 'label' ).remove();
 
 			if ( !imes ) {
@@ -178,6 +191,9 @@
 			SUGGESTED_LANGUAGES_NUMBER = 3;
 			imeSettings = this;
 			$languages = this.$template.find( 'div.uls-ui-languages' );
+			this.$template.find( 'div.uls-ui-languages' ).show();
+			this.$template.find( 'div.uls-input-settings-languages-title' ).show();
+
 			suggestedLanguages = this.frequentLanguageList()
 				// Common world languages, for the case that there are
 				// too few suggested languages
@@ -300,10 +316,10 @@
 
 			if ( $.ime.preferences.isEnabled() ) {
 				$toggleButton.data( 'i18n', 'ext-uls-input-disable' );
-				$toggleButtonDesc.data( 'i18n', 'ext-uls-input-enable-info' );
+				$toggleButtonDesc.hide();
 			} else {
 				$toggleButton.data( 'i18n', 'ext-uls-input-enable' );
-				$toggleButtonDesc.data( 'i18n', 'ext-uls-input-disable-info' );
+				$toggleButtonDesc.data( 'i18n', 'ext-uls-input-disable-info' ).show();
 			}
 
 			$toggleButton.i18n();
@@ -377,9 +393,9 @@
 
 			$.ime.preferences.disable();
 			$.ime.preferences.save( function () {
-				// Update the toggle button
-				inputSettings.prepareToggleButton();
 				mw.ime.disable();
+				// render this again.
+				inputSettings.render();
 			} );
 		},
 
@@ -391,9 +407,9 @@
 
 			$.ime.preferences.enable();
 			$.ime.preferences.save( function () {
-				// Update the toggle button
-				inputSettings.prepareToggleButton();
 				mw.ime.setup();
+				// render this again.
+				inputSettings.render();
 			} );
 
 		},
