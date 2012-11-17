@@ -219,7 +219,7 @@ $messages['lb'] = array(
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
-	'UniversalLanguageSelector' => 'Универзален избор на јазици',
+	'UniversalLanguageSelector' => 'Универзален избирач на јазици',
 	'uls-desc' => 'Му дава на корисникот неколку начини за избор на јазик и прилагодување на јазичните поставки',
 	'uls-select-content-language' => 'Одберете јазик',
 );
