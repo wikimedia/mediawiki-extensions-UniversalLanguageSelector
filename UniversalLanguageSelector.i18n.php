@@ -63,6 +63,15 @@ $messages['br'] = array(
 	'uls-select-content-language' => 'Dibab ar yezh',
 );
 
+/** Czech (česky)
+ * @author Mormegil
+ */
+$messages['cs'] = array(
+	'UniversalLanguageSelector' => 'Univerzální výběr jazyka',
+	'uls-desc' => 'Nabízí uživateli několik způsobů volby jazyka a úpravy jazykových nastavení',
+	'uls-select-content-language' => 'Vyberte jazyk',
+);
+
 /** Danish (dansk)
  * @author Peter Alberti
  */
