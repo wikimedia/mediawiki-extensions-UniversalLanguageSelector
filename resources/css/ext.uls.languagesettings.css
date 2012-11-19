@@ -50,7 +50,10 @@
 	font-size: 16pt;
 	line-height: 20pt;
 	margin-top: 0;
-	padding-top: 15px;
+	font-weight: normal;
+	border: none;
+	padding: 15px 0 3px 15px;
+	color: #555;
 }
 
 .language-settings-buttons {

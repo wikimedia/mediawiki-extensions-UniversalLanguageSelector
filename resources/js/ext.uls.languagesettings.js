@@ -36,7 +36,7 @@
 		settingsMenu +
 		settingsPanel +
 		'</div>';
-	windowTemplate = '<div style="display: block;" id="language-settings-dialog" class="uls-menu">'
+	windowTemplate = '<div style="display: block;" id="language-settings-dialog" class="uls-menu uls-wide">'
 		+ closeRow
 		+ panelsRow
 		+ '</div>';
