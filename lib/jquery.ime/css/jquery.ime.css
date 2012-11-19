@@ -1,17 +1,26 @@
 .imeselector {
 	position: absolute;
 	/* @embed */
-	background: url('../images/ime-active.png') no-repeat left center;
+	background: url('../images/ime-active.png') no-repeat 3px center rgba(255,255,255,0.75);
 	cursor: pointer;
 	height: 15px;
-	margin: 1px 0 0;
 	font-size: small;
-	padding-left: 20px;
+	padding: 2px 2px 1px 20px;
+	box-shadow: 0 1px 3px 0 #777;
 	margin-top: 0;
+	-webkit-transition: opacity 0.24s ease, margin-top 0.24s ease;
+	-moz-transition: opacity 0.24s ease, margin-top 0.24s ease;
+	-o-transition: opacity 0.24s ease, margin-top 0.24s ease;
 	text-align: left;
 	font-family: 'sans';
 	white-space: nowrap;
 	z-index: 9999;
+}
+
+div.imeselector:hover {
+	box-shadow: 0 1px 3px 0 #565656;
+	border-top: none;
+	background-color: rgba(255,255,255,0.85);
 }
 
 .imeselector a {
@@ -23,20 +32,18 @@
 	padding-bottom: 4px;
 }
 
-.imeselector .caret {
+.ime-setting-caret {
 	margin-left: 2px;
 	margin-top: 8px;
-}
-
-.caret {
 	border-left: 4px solid transparent;
 	border-right: 4px solid transparent;
-	border-top: 4px solid #000000;
+	border-top: 4px solid #565656;
 	content: "";
 	display: inline-block;
 	height: 0;
 	vertical-align: top;
 	width: 0;
+
 }
 
 span.ime-disable-link {
