@@ -111,7 +111,7 @@
 			this.prepareUIFonts();
 			this.prepareContentFonts();
 			this.prepareWebfontsCheckbox();
-			this.$template.i18n();
+			this.i18n();
 			this.listen();
 		},
 
@@ -178,6 +178,8 @@
 					$( 'div.uls-ui-languages button.button' ).removeClass( 'down' );
 					button.addClass( 'down' );
 					displaySettings.prepareUIFonts();
+					$.i18n().locale = displaySettings.uiLanguage;
+					displaySettings.i18n();
 				};
 			}
 
@@ -243,6 +245,8 @@
 					that.$parent.show();
 					that.prepareUIFonts();
 					that.prepareLanguages();
+					$.i18n().locale = langCode;
+					that.i18n();
 				},
 				quickList: function () {
 					return mw.uls.getFrequentLanguageList();
@@ -330,14 +334,25 @@
 			// uls-content-font-selector-label
 			$fontLabel = this.$template.find( '#' + target + '-font-selector-label' );
 			$fontLabel.empty();
-			$fontLabel.append( $( '<strong>' ).text(
-				$.i18n( 'ext-uls-webfonts-select-for', $.uls.data.getAutonym( language ) ) ) );
+			$fontLabel.append( $( '<strong>' ) );
 
 			// Possible messages:
 			// ext-uls-webfonts-select-for-ui-info
 			// ext-uls-webfonts-select-for-content-info
-			$fontLabel.append( $( '<div>' ).text(
-				$.i18n( 'ext-uls-webfonts-select-for-' + target + '-info' ) ) );
+			$fontLabel.append( $( '<div>' )
+				.attr( 'data-i18n', 'ext-uls-webfonts-select-for-' + target + '-info' ) );
+		},
+
+		/**
+		 * i18n this settings panel
+		 */
+		i18n: function () {
+			this.$template.i18n();
+
+			this.$template.find( '#ui-font-selector-label strong' )
+				.text( $.i18n( 'ext-uls-webfonts-select-for', $.uls.data.getAutonym( this.uiLanguage ) ) );
+			this.$template.find( '#content-font-selector-label strong' )
+				.text( $.i18n( 'ext-uls-webfonts-select-for', $.uls.data.getAutonym( this.contentLanguage ) ) );
 		},
 
 		/**
@@ -439,6 +454,13 @@
 		 * Depending on the context, actions vary.
 		 */
 		close: function () {
+			var origUILanguage = this.getUILanguage();
+
+			if ( $.i18n().locale !== origUILanguage ) {
+				// restore UI localization for display settings panel
+				$.i18n().locale = origUILanguage;
+				this.i18n();
+			}
 			this.$parent.close();
 		},
 
