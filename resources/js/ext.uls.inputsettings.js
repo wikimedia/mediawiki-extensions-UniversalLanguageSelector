@@ -97,7 +97,7 @@
 				this.$template.find( 'div.uls-input-settings-languages-title' ).hide();
 				this.$template.find( 'div.uls-ui-languages' ).hide();
 
-				//  Hide input methods
+				// Hide input methods
 				this.$template.find( 'div.uls-input-settings-inputmethods-list' ).hide();
 			}
 			this.prepareToggleButton();
@@ -121,6 +121,7 @@
 
 			if ( !imes ) {
 				$imeListTitle.text( '' );
+				$imeListContainer.hide();
 				return;
 			}
 
@@ -188,7 +189,7 @@
 		prepareLanguages: function () {
 			var inputSettings = this,
 				languagesForButtons, $languages, suggestedLanguages,
-				SUGGESTED_LANGUAGES_NUMBER, lang, i, language, $button;
+				SUGGESTED_LANGUAGES_NUMBER, lang, i, language, $button, $caret;
 
 			SUGGESTED_LANGUAGES_NUMBER = 3;
 			$languages = this.$template.find( 'div.uls-ui-languages' );
@@ -254,6 +255,12 @@
 
 				$button.data( 'language', language );
 				$languages.append( $button );
+
+				if ( $.ime.languages[language] && $.ime.languages[language].inputmethods ) {
+					$caret = $( '<span>' ).addClass( 'uls-input-settings-caret' );
+					$languages.append( $caret );
+				}
+
 				$button.on( 'click', buttonHandler( $button ) );
 			}
 

@@ -56,3 +56,29 @@ div.input-settings-block {
 	padding-bottom: 15px;
 	font-size: 11pt;
 }
+
+.down+.uls-input-settings-caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-top: none;
+	border-right: 8px solid transparent;
+	border-left: 8px solid transparent;
+	border-bottom: 8px solid #f0f0f0;
+	content: "";
+	position: relative;
+	vertical-align: bottom;
+	top: 12px;
+	left: -16%;
+	margin: 0 -8px;
+}
+
+.uls-input-settings-toggle {
+	padding-top: 10px;
+}
+
+.uls-input-settings-inputmethods-list {
+	margin: 12px 0;
+	padding: 6px 10px;
+	background: #f0f0f0;
+}
