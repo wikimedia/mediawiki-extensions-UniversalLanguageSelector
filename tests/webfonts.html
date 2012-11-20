@@ -17,6 +17,18 @@
 			repository: $.webfonts.repository
 		} );
 
+		$( 'button#webfonts-preview-bold' ).click( function () {
+			document.execCommand( 'bold', false, null );
+		} );
+
+		$( 'button#webfonts-preview-italic' ).click( function () {
+			document.execCommand( 'italic', false, null );
+		} );
+
+		$( 'button#webfonts-preview-underline' ).click( function () {
+			document.execCommand( 'underline', false, null );
+		} );
+
 		// get an instance of WebFonts
 		$webfonts = $( 'div#webfonts-preview-area' ).data( 'webfonts' );
 		// Get a list of all fonts provided by WebFonts
@@ -83,6 +95,21 @@ select {
 	float: left;
 	display: block;
 }
+
+#webfonts-preview-bold {
+	font-weight: bold;
+}
+
+#webfonts-preview-italic {
+	font-style: italic;
+	font-weight: bold;
+}
+
+#webfonts-preview-underline {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
 </style>
 </head>
 
@@ -100,6 +127,9 @@ select {
 				<div class='fontselector'>
 					Font : <select id="fontselector"></select>
 				</div>
+				<button id='webfonts-preview-bold'>B</button>
+				<button id='webfonts-preview-italic'>I</button>
+				<button id='webfonts-preview-underline'>U</button>
 			</div>
 			<div contenteditable="true" id="webfonts-preview-area"></div>
 		</div>
