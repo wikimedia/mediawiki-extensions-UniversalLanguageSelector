@@ -66,6 +66,7 @@
 }
 
 #languagesettings-settings-panel h3 {
+	color: #252525;
 	padding-top: 15px;
 	margin-top: 1pt;
 	line-height: 20pt;
@@ -73,10 +74,12 @@
 }
 
 #languagesettings-settings-panel h4 {
+	color: #252525;
 	font-size: 12pt;
 }
 
 #languagesettings-settings-panel h5 {
+	color: #252525;
 	font-size: 10pt;
 }
 

@@ -49,3 +49,10 @@ div.input-settings-block {
 	background-color: #f0f0f0;
 	color: #000;
 }
+
+.uls-input-settings-disable-info {
+	color: #565656;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	font-size: 11pt;
+}
