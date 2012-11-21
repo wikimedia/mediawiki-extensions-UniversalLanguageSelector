@@ -69,9 +69,6 @@
 			langSettings.$window.find( '#languagesettings-close' )
 				.on( 'click', $.proxy( langSettings.hide, langSettings ) );
 
-			// hide this window if clicking elsewhere
-			$( document ).on( 'click', $.proxy(  langSettings.hide, langSettings ) );
-
 		},
 
 		render: function () {
