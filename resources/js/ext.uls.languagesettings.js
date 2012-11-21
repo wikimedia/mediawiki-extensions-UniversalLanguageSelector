@@ -63,11 +63,15 @@
 		},
 
 		listen: function () {
-			var that = this;
+			var langSettings = this;
 			// Register all event listeners to the ULS language settings here.
-			that.$element.on( 'click', $.proxy( that.show, that ) );
-			that.$window.find( '#languagesettings-close' )
-				.on( 'click', $.proxy( that.hide, that ) );
+			langSettings.$element.on( 'click', $.proxy( langSettings.show, langSettings ) );
+			langSettings.$window.find( '#languagesettings-close' )
+				.on( 'click', $.proxy( langSettings.hide, langSettings ) );
+
+			// hide this window if clicking elsewhere
+			$( document ).on( 'click', $.proxy(  langSettings.hide, langSettings ) );
+
 		},
 
 		render: function () {
