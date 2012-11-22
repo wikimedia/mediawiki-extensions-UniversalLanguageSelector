@@ -26,6 +26,11 @@
 		searchAPI: mw.util.wikiScript( 'api' ) + '?action=languagesearch'
 	} );
 
+	// No need of IME in language search bar of ULS
+	$.fn.uls.Constructor.prototype.render = function () {
+		this.$languageFilter.addClass( 'noime' );
+	};
+
 	var currentLang = mw.config.get( 'wgUserLanguage' );
 	mw.uls = mw.uls || {};
 	mw.uls.previousLanguagesCookie = 'uls-previous-languages';
