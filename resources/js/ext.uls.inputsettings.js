@@ -106,8 +106,9 @@
 		},
 
 		prepareInputmethods: function ( language ) {
-			var inputsettings, $imeListContainer, defaultInputmethod, imes, selected, imeId,
-				index = 0, $imeListTitle;
+			var index = 0,
+				inputSettings, $imeListContainer, defaultInputmethod, imes, selected, imeId,
+				$imeListTitle;
 
 			imes = $.ime.languages[language];
 			this.imeLanguage = language;
@@ -123,7 +124,7 @@
 				return;
 			}
 
-			inputsettings = this;
+			inputSettings = this;
 
 			$imeListTitle.text( $.i18n( 'ext-uls-input-settings-ime-settings',
 				$.uls.data.getAutonym( language ) ) );
@@ -134,12 +135,12 @@
 				imeId = imes.inputmethods[index];
 				selected = defaultInputmethod === imeId;
 				//$.ime.load( imeId, function () {
-				$imeListContainer.append( inputsettings.renderInputmethodOption( imeId,
+				$imeListContainer.append( inputSettings.renderInputmethodOption( imeId,
 					selected ) );
 				//} );
 			}
 
-			$imeListContainer.append( inputsettings.renderInputmethodOption( 'system',
+			$imeListContainer.append( inputSettings.renderInputmethodOption( 'system',
 				defaultInputmethod === 'system' ) );
 		},
 
@@ -185,11 +186,11 @@
 		 * Prepare the UI language selector
 		 */
 		prepareLanguages: function () {
-			var imeSettings = this, languagesForButtons, $languages, suggestedLanguages,
+			var inputSettings = this,
+				languagesForButtons, $languages, suggestedLanguages,
 				SUGGESTED_LANGUAGES_NUMBER, lang, i, language, $button;
 
 			SUGGESTED_LANGUAGES_NUMBER = 3;
-			imeSettings = this;
 			$languages = this.$template.find( 'div.uls-ui-languages' );
 			this.$template.find( 'div.uls-ui-languages' ).show();
 			this.$template.find( 'div.uls-input-settings-languages-title' ).show();
@@ -227,12 +228,12 @@
 
 			function buttonHandler( button ) {
 				return function () {
-					var selectedLanguage = button.data( 'language' ) || imeSettings.imeLanguage;
+					var selectedLanguage = button.data( 'language' ) || inputSettings.imeLanguage;
 
 					$.ime.preferences.setLanguage( selectedLanguage );
 					$( 'div.uls-ui-languages button.button' ).removeClass( 'down' );
 					button.addClass( 'down' );
-					imeSettings.prepareInputmethods( selectedLanguage );
+					inputSettings.prepareInputmethods( selectedLanguage );
 				};
 			}
 
@@ -263,9 +264,9 @@
 		 * Prepare the more languages button. It is a ULS trigger
 		 */
 		prepareMoreLanguages: function () {
-			var that, $languages, $moreLanguagesButton;
+			var inputSettings = this,
+				$languages, $moreLanguagesButton;
 
-			that = this;
 			$languages = this.$template.find( 'div.uls-ui-languages' );
 			$moreLanguagesButton = $( '<button>' )
 				.prop( 'id', 'uls-more-languages' )
@@ -274,8 +275,8 @@
 			$languages.append( $moreLanguagesButton );
 			// Show the long language list to select a language for ime settings
 			$moreLanguagesButton.uls( {
-				left: that.$parent.left,
-				top: that.$parent.top,
+				left: inputSettings.$parent.left,
+				top: inputSettings.$parent.top,
 				onReady: function () {
 					var uls = this,
 						$back = $( '<a>' )
@@ -283,35 +284,35 @@
 
 					$back.click( function () {
 						uls.hide();
-						that.$parent.show();
+						inputSettings.$parent.show();
 					} );
 
 					uls.$menu.find( 'div.uls-title' ).append( $back );
 				},
 				onSelect: function ( langCode ) {
-					that.imeLanguage = langCode;
-					that.$parent.show();
-					that.prepareLanguages();
-					that.prepareInputmethods( langCode );
+					inputSettings.imeLanguage = langCode;
+					inputSettings.$parent.show();
+					inputSettings.prepareLanguages();
+					inputSettings.prepareInputmethods( langCode );
 				},
 				languages: mw.ime.getLanguagesWithIME(),
 				lazyload: false
 			} );
 
 			$moreLanguagesButton.on( 'click', function () {
-				that.$parent.hide();
+				inputSettings.$parent.hide();
 			} );
 		},
 
 		prepareToggleButton: function () {
-			var inputsettings, $toggleButton, $toggleButtonDesc;
+			var inputSettings, $toggleButton, $toggleButtonDesc;
 
-			inputsettings = this;
+			inputSettings = this;
 
-			$toggleButton = inputsettings.$template
+			$toggleButton = inputSettings.$template
 				.find( 'button.uls-input-toggle-button' );
 
-			$toggleButtonDesc = inputsettings.$template
+			$toggleButtonDesc = inputSettings.$template
 				.find( 'div.uls-input-settings-disable-info' );
 
 			if ( $.ime.preferences.isEnabled() ) {
@@ -355,7 +356,8 @@
 		 * Register general event listeners
 		 */
 		listen: function () {
-			var inputSettings = this, $imeListContainer;
+			var inputSettings = this,
+				$imeListContainer;
 
 			$imeListContainer = this.$template.find( '.uls-input-settings-inputmethods-list' );
 
@@ -446,12 +448,12 @@
 		 * Handle the apply button press
 		 */
 		apply: function () {
-			var that = this;
+			var inputSettings = this;
 
 			// Save the preferences
 			$.ime.preferences.save( function ( result ) {
 				// closure for not losing the scope
-				that.onSave( result );
+				inputSettings.onSave( result );
 			} );
 		}
 	};
