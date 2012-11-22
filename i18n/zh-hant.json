@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Justincheng12345"
+		]
+	},
 	"ext-uls-display-settings-title": "\u986f\u793a\u8a2d\u5b9a",
 	"ext-uls-display-settings-title-short": "\u986f\u793a",
 	"ext-uls-display-settings-desc": "\u8a2d\u7f6e\u529f\u80fd\u8868\u53ca\u5b57\u9ad4\u4f7f\u7528\u7684\u8a9e\u8a00\u3002",
@@ -30,10 +35,5 @@
 	"jquery-ime-help": "\u8aaa\u660e",
 	"ext-uls-input-disable": "\u7981\u7528\u8f38\u5165\u6cd5\u5de5\u5177",
 	"ext-uls-input-enable": "\u555f\u7528\u8f38\u5165\u6cd5\u5de5\u5177",
-	"ext-uls-input-disable-info": "\u8f38\u5165\u6cd5\u5de5\u5177\u5df2\u7981\u7528\u3002",
-	"@metadata": {
-		"authors": [
-			"Justincheng12345"
-		]
-	}
+	"ext-uls-input-disable-info": "\u8f38\u5165\u6cd5\u5de5\u5177\u5df2\u7981\u7528\u3002"
 }
