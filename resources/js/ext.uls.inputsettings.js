@@ -62,7 +62,7 @@
 		+ '<div class="row language-settings-buttons">'
 		+ '<div class="eleven columns">'
 		+ '<button class="button uls-input-settings-close" data-i18n="ext-uls-language-settings-cancel"></button>'
-		+ '<button class="active blue button uls-input-settings-apply" data-i18n="ext-uls-language-settings-apply"></button>'
+		+ '<button class="active blue button uls-input-settings-apply" data-i18n="ext-uls-language-settings-apply" disabled></button>'
 		+ '</div>'
 		+ '</div>'
 		+ '</div>';
@@ -103,6 +103,14 @@
 			this.prepareToggleButton();
 			this.$template.i18n();
 			this.listen();
+		},
+
+		/**
+		 * Enable the apply button.
+		 * Useful in many places when something changes.
+		 */
+		enableApplyButton: function () {
+			this.$template.find( 'button.uls-input-settings-apply' ).removeAttr( 'disabled' );
 		},
 
 		prepareInputmethods: function ( language ) {
@@ -177,8 +185,9 @@
 				}
 			}
 
-			$imeLabel.append( $( '<strong>' ).text( name ) ).append(
-				$( '<span>' ).text( description ) );
+			$imeLabel
+				.append( $( '<strong>' ).text( name ) )
+				.append( $( '<span>' ).text( description ) );
 
 			return $imeLabel;
 		},
@@ -231,6 +240,7 @@
 				return function () {
 					var selectedLanguage = button.data( 'language' ) || inputSettings.imeLanguage;
 
+					inputSettings.enableApplyButton();
 					$.ime.preferences.setLanguage( selectedLanguage );
 					$( 'div.uls-ui-languages button.button' ).removeClass( 'down' );
 					button.addClass( 'down' );
@@ -297,6 +307,7 @@
 					uls.$menu.find( 'div.uls-title' ).append( $back );
 				},
 				onSelect: function ( langCode ) {
+					inputSettings.enableApplyButton();
 					inputSettings.imeLanguage = langCode;
 					inputSettings.$parent.show();
 					inputSettings.prepareLanguages();
@@ -378,14 +389,14 @@
 			} );
 
 			$imeListContainer.on( 'change', 'input:radio[name=ime]:checked', function () {
-				var ime = $( this ).val();
-
+				inputSettings.enableApplyButton();
 				$.ime.preferences.setLanguage( inputSettings.imeLanguage );
-				$.ime.preferences.setIM( ime );
+				$.ime.preferences.setIM( $( this ).val() );
 			} );
 
 			inputSettings.$template.find( 'button.uls-input-toggle-button' )
 				.on( 'click', function () {
+					inputSettings.enableApplyButton();
 					if ( $.ime.preferences.isEnabled() ) {
 						inputSettings.disableInputTools();
 					} else {
