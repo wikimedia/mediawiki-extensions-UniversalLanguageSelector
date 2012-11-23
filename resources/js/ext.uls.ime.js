@@ -144,7 +144,8 @@
 						} );
 					$ulsTrigger.uls( {
 						onSelect: function ( language ) {
-							$input.data( 'ime' ).setLanguage( language );
+							$input.data( 'imeselector' ).selectLanguage( language );
+							$input.focus();
 						},
 						lazyload: false,
 						languages: mw.ime.getLanguagesWithIME(),
