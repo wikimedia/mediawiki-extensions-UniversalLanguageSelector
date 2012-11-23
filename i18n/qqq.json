@@ -37,5 +37,6 @@
 	"jquery-ime-help": "Text for help link",
 	"ext-uls-input-disable": "Label for disable input tools button",
 	"ext-uls-input-enable": "Label for enable input tools button",
-	"ext-uls-input-disable-info": "Info text for the disable input tools button"
+	"ext-uls-input-disable-info": "Info text for the disable input tools button",
+	"ext-uls-input-settings-noime": "Text to be shown when no input methods are available for a selected language"
 }

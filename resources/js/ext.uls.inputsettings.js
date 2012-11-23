@@ -125,18 +125,21 @@
 
 			$imeListContainer = this.$template.find( '.uls-input-settings-inputmethods-list' );
 			$imeListContainer.show();
+
 			$imeListContainer.find( 'label' ).remove();
 
 			if ( !imes ) {
+				$imeListContainer.append( $( '<label>' )
+					.addClass( 'uls-input-settings-no-inputmethods' )
+					.text( $.i18n( 'ext-uls-input-settings-noime' ) ) );
 				$imeListTitle.text( '' );
-				$imeListContainer.hide();
 				return;
 			}
 
-			inputSettings = this;
-
 			$imeListTitle.text( $.i18n( 'ext-uls-input-settings-ime-settings',
 				$.uls.data.getAutonym( language ) ) );
+
+			inputSettings = this;
 
 			defaultInputmethod = $.ime.preferences.getIM( language ) || imes.inputmethods[0];
 
@@ -264,12 +267,9 @@
 				}
 
 				$button.data( 'language', language );
-				$languages.append( $button );
+				$caret = $( '<span>' ).addClass( 'uls-input-settings-caret' );
 
-				if ( $.ime.languages[language] && $.ime.languages[language].inputmethods ) {
-					$caret = $( '<span>' ).addClass( 'uls-input-settings-caret' );
-					$languages.append( $caret );
-				}
+				$languages.append( $button ).append( $caret );
 
 				$button.on( 'click', buttonHandler( $button ) );
 			}
