@@ -30,7 +30,7 @@
 		// MediaWiki specific overrides for jquery.webfonts
 		$.extend( $.fn.webfonts.defaults, {
 			repository: mediawikiFontRepository,
-			fontStack: ['sans-serif'] // MediaWiki default font as per screen.css
+			fontStack: new Array( $( 'body' ).css( 'font-family' ) )
 		} );
 
 		mw.webfonts = mw.webfonts || {};
