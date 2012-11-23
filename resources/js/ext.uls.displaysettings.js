@@ -81,7 +81,7 @@
 		+ '<div class="row language-settings-buttons">'
 		+ '<div class="eleven columns">'
 		+ '<button class="button uls-settings-close" data-i18n="ext-uls-language-settings-cancel"></button>'
-		+ '<button id="uls-displaysettings-apply" class="active blue button" data-i18n="ext-uls-language-settings-apply"></button>'
+		+ '<button class="button active blue" id="uls-displaysettings-apply" data-i18n="ext-uls-language-settings-apply" disabled></button>'
 		+ '</div>'
 		+ '</div>'
 		+ '</div>';
@@ -173,6 +173,7 @@
 
 			function buttonHandler( button ) {
 				return function () {
+					displaySettings.enableApplyButton();
 					displaySettings.uiLanguage = button.data( 'language' ) || displaySettings.uiLanguage;
 					$( 'div.uls-ui-languages button.button' ).removeClass( 'down' );
 					button.addClass( 'down' );
@@ -237,6 +238,7 @@
 						.i18n();
 				},
 				onSelect: function ( langCode ) {
+					that.enableApplyButton();
 					that.uiLanguage = langCode;
 					that.$parent.show();
 					that.prepareUIFonts();
@@ -358,15 +360,25 @@
 		},
 
 		/**
+		 * Enable the apply button.
+		 * Useful in many places when something changes.
+		 */
+		enableApplyButton: function () {
+			this.$template.find( '#uls-displaysettings-apply' ).removeAttr( 'disabled' );
+		},
+
+		/**
 		 * Register general event listeners
 		 */
 		listen: function () {
-			var that = this, $contentFontSelector, $uiFontSelector, oldFont;
+			var that = this,
+				$contentFontSelector, $uiFontSelector,
+				oldFont;
 
 			$contentFontSelector = this.$template
 				.find( '#content-font-selector' );
 			$uiFontSelector = this.$template
-				.find( 'select#ui-font-selector' );
+				.find( '#ui-font-selector' );
 
 			oldFont = $uiFontSelector.find( 'option:selected' ).val();
 
@@ -383,6 +395,8 @@
 			} );
 
 			this.$template.find( '#webfonts-enable-checkbox' ).on( 'click', function () {
+				that.enableApplyButton();
+
 				if ( this.checked ) {
 					mw.webfonts.preferences.enable();
 					$contentFontSelector.prop( 'disabled', false );
@@ -397,12 +411,14 @@
 			} );
 
 			$uiFontSelector.on( 'change', function () {
+				that.enableApplyButton();
 				var font = $( this ).find( 'option:selected' ).val();
 				mw.webfonts.preferences.setFont( that.uiLanguage, font );
 				that.$webfonts.refresh();
 			} );
 
 			$contentFontSelector.on( 'change', function () {
+				that.enableApplyButton();
 				var font = $( this ).find( 'option:selected' ).val();
 				mw.webfonts.preferences.setFont( that.contentLanguage, font );
 				that.$webfonts.refresh();
