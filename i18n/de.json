@@ -36,5 +36,5 @@
 	"ext-uls-input-disable": "Eingabemethodenwerkzeuge deaktivieren",
 	"ext-uls-input-enable": "Eingabemethodenwerkzeuge aktivieren",
 	"ext-uls-input-disable-info": "Eingabemethodenwerkzeuge sind deaktiviert.",
-	"ext-uls-input-enable-info": "Eingabemethodenwerkzeuge sind aktiviert."
+	"ext-uls-input-settings-noime": "F\u00fcr diese Sprache sind keine Eingabemethoden verf\u00fcgbar."
 }

@@ -37,5 +37,5 @@
 	"ext-uls-input-disable": "Desactivar las herramientas del m\u00e9todo de entrada",
 	"ext-uls-input-enable": "Activar las herramientas del m\u00e9todo de entrada",
 	"ext-uls-input-disable-info": "Las herramientas del m\u00e9todo de entrada est\u00e1n desactivadas.",
-	"ext-uls-input-enable-info": "Las herramientas del m\u00e9todo de entrada est\u00e1n activadas."
+	"ext-uls-input-settings-noime": "No hay m\u00e9todos de entrada disponibles para este idioma."
 }

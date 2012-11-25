@@ -37,5 +37,5 @@
 	"ext-uls-input-disable": "Disabilita gli strumenti di scrittura",
 	"ext-uls-input-enable": "Abilita gli strumenti di scrittura",
 	"ext-uls-input-disable-info": "Gli strumenti di scrittura sono disabilitati.",
-	"ext-uls-input-enable-info": "Gli strumenti di scrittura sono abilitati."
+	"ext-uls-input-settings-noime": "Nessun metodo di scrittura \u00e8 disponibile per questa lingua."
 }
