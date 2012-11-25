@@ -50,7 +50,12 @@ div.input-settings-block {
 	color: #000;
 }
 
-.uls-input-settings-disable-info {
+.ext-uls-input-settings-imes-title:empty {
+	display:none;
+}
+
+.uls-input-settings-disable-info,
+.uls-input-settings-no-inputmethods {
 	color: #565656;
 	padding-top: 10px;
 	padding-bottom: 15px;
