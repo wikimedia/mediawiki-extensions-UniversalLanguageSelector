@@ -113,6 +113,7 @@ $wgResourceModules['ext.uls.init'] = array(
 		'jquery.i18n',
 		'ext.uls.displaysettings',
 		'ext.uls.inputsettings',
+		'ext.uls.geoclient'
 	),
 	'position' => 'top',
 );
