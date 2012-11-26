@@ -61,6 +61,14 @@
 	$.extend( $.ime.preferences, {
 
 		save: function ( callback ) {
+			if ( !this.registry.isDirty ) {
+				if ( callback ) {
+					callback.call( this );
+				}
+
+				return;
+			}
+
 			inputPreferences.set( 'ime', this.registry );
 			inputPreferences.save( callback );
 		},
