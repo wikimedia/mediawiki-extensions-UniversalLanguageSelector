@@ -18,80 +18,64 @@
  */
 ( function ( $, mw, document, undefined ) {
 	'use strict';
+	var mediawikiFontRepository, ulsPreferences;
 
-	$( document ).ready( function () {
-		var mediawikiFontRepository, ulsPreferences;
+	mw.webfonts = mw.webfonts || {};
+	ulsPreferences = mw.uls.preferences();
+	mw.webfonts.preferences = {
+		registry: {
+			'fonts': {},
+			'webfonts-enabled': true
+		},
 
-		mediawikiFontRepository = $.webfonts.repository;
-		ulsPreferences = mw.uls.preferences();
-		mediawikiFontRepository.base = mw.config.get( 'wgExtensionAssetsPath' )
-			+ '/UniversalLanguageSelector/data/fontrepo/fonts/';
+		isEnabled: function () {
+			return this.registry['webfonts-enabled'];
+		},
 
-		// MediaWiki specific overrides for jquery.webfonts
-		$.extend( $.fn.webfonts.defaults, {
-			repository: mediawikiFontRepository,
-			fontStack: new Array( $( 'body' ).css( 'font-family' ) )
-		} );
+		enable: function () {
+			this.registry['webfonts-enabled'] = true;
+		},
 
-		mw.webfonts = mw.webfonts || {};
+		disable: function () {
+			this.registry['webfonts-enabled'] = false;
+		},
 
-		mw.webfonts.preferences = {
-			registry: {
-				'fonts': {},
-				'webfonts-enabled': true
-			},
+		setFont: function ( language, font ) {
+			this.registry.fonts[language] = font;
+		},
 
-			isEnabled: function () {
-				return this.registry['webfonts-enabled'];
-			},
+		getFont: function ( language ) {
+			return this.registry.fonts[language];
+		},
 
-			enable: function () {
-				this.registry['webfonts-enabled'] = true;
-			},
+		save: function ( callback ) {
+			ulsPreferences.set( 'webfonts', this.registry );
+			ulsPreferences.save( callback );
+		},
 
-			disable: function () {
-				this.registry['webfonts-enabled'] = false;
-			},
+		load: function () {
+			mw.webfonts.preferences.registry = $.extend( this.registry,
+				ulsPreferences.get( 'webfonts' ) );
+		}
+	};
 
-			setFont: function ( language, font ) {
-				this.registry.fonts[language] = font;
-			},
+	mediawikiFontRepository = $.webfonts.repository;
+	mediawikiFontRepository.base = mw.config.get( 'wgExtensionAssetsPath' )
+		+ '/UniversalLanguageSelector/data/fontrepo/fonts/';
 
-			getFont: function ( language ) {
-				return this.registry.fonts[language];
-			},
-
-			save: function ( callback ) {
-				ulsPreferences.set( 'webfonts', this.registry );
-				ulsPreferences.save( callback );
-			},
-
-			load: function () {
-				mw.webfonts.preferences.registry = $.extend( this.registry,
-					ulsPreferences.get( 'webfonts' ) );
-			}
-		};
-
-		mw.webfonts.preferences.load();
-
+	mw.webfonts.setup = function () {
 		// Initialize webfonts
 		$( 'body' ).webfonts( {
 			fontSelector: function ( repository, language ) {
-				var font, enabled;
+				var font;
 
 				font = mw.webfonts.preferences.getFont( language );
-				enabled = mw.webfonts.preferences.isEnabled();
-				// If the user didn't set anything, the preference will be undefined.
-				// The default for now is to enable webfonts if the user didn't select anything.
-				if ( enabled === undefined ) {
-					enabled = true;
-				}
 
 				if ( !font ) {
 					font = repository.defaultFont( language );
 				}
 
-				if ( font === 'system' || !enabled ) {
+				if ( font === 'system' ) {
 					font = null;
 				}
 
@@ -107,5 +91,30 @@
 				return $.fn.webfonts.defaults.exclude;
 			}() )
 		} );
+	};
+
+	$( document ).ready( function () {
+		var webfontsEnabled;
+
+		// MediaWiki specific overrides for jquery.webfonts
+		$.extend( $.fn.webfonts.defaults, {
+			repository: mediawikiFontRepository,
+			fontStack: new Array( $( 'body' ).css( 'font-family' ) )
+		} );
+
+		mw.webfonts.preferences.load();
+
+		webfontsEnabled = mw.webfonts.preferences.isEnabled();
+
+		// If the user didn't set anything, the preference will be undefined.
+		// The default for now is to enable webfonts if the user didn't select anything.
+		if ( webfontsEnabled === undefined ) {
+			webfontsEnabled = true;
+		}
+
+		if ( webfontsEnabled ) {
+			mw.webfonts.setup();
+		}
 	} );
+
 }( jQuery, mediaWiki, document ) );
