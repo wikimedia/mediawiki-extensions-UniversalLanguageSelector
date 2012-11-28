@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Nedergard",
 			"Nike"
 		]
 	},
@@ -28,5 +29,8 @@
 	"ext-uls-back-to-input-settings": "Takaisin kirjoitusasetuksiin",
 	"ext-uls-disable-input-method": "\u00c4l\u00e4 k\u00e4yt\u00e4 sy\u00f6tt\u00f6tapoja",
 	"ext-uls-disable-input-method-desc": "K\u00e4yt\u00e4 tavallista n\u00e4pp\u00e4imist\u00f6\u00e4",
-	"ext-uls-input-settings-more-languages-tooltip": "Lis\u00e4\u00e4 kieli\u00e4"
+	"ext-uls-input-settings-more-languages-tooltip": "Lis\u00e4\u00e4 kieli\u00e4",
+	"ext-uls-input-more-settings": "Lis\u00e4asetukset",
+	"jquery-ime-other-languages": "Muut kielet",
+	"jquery-ime-help": "Ohje"
 }
