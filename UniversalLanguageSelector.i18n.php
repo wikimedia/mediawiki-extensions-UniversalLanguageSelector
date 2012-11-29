@@ -38,6 +38,14 @@ $messages['qqq'] = array(
 	'uls-select-content-language' => 'Main heading in the language selector popup.',
 );
 
+/** Assamese (অসমীয়া)
+ * @author Bishnu Saikia
+ */
+$messages['as'] = array(
+	'UniversalLanguageSelector' => 'গোলকীয় ভাষা নিৰ্বাচক',
+	'uls-select-content-language' => 'ভাষা নির্বাচন:',
+);
+
 /** Asturian (asturianu)
  * @author Xuacu
  */
@@ -267,6 +275,15 @@ $messages['pl'] = array(
 	'UniversalLanguageSelector' => 'Uniwersalny Selektor Języka',
 	'uls-desc' => 'Daje użytkownikowi kilka sposobów, aby wybrać język i dostosować ustawienia języka',
 	'uls-select-content-language' => 'Wybierz język',
+);
+
+/** Brazilian Portuguese (português do Brasil)
+ * @author Jaideraf
+ */
+$messages['pt-br'] = array(
+	'UniversalLanguageSelector' => 'Seletor universal de idiomas',
+	'uls-desc' => 'Oferece ao usuário várias maneiras para selecionar um idioma e ajustar as configurações de idioma',
+	'uls-select-content-language' => 'Selecionar idioma',
 );
 
 /** Romanian (română)
