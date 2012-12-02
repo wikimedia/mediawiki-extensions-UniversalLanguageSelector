@@ -339,3 +339,10 @@ $messages['vi'] = array(
 	'uls-desc' => 'Trình bày giao diện để lựa chọn ngôn ngữ và điều chỉnh các tùy chọn ngôn ngữ',
 	'uls-select-content-language' => 'Chọn ngôn ngữ',
 );
+
+/** Traditional Chinese (中文（繁體）‎)
+ * @author Justincheng12345
+ */
+$messages['zh-hant'] = array(
+	'uls-select-content-language' => '選擇語言',
+);
