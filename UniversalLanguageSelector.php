@@ -71,14 +71,14 @@ $wgULSLanguageDetection = true;
 /**
  * Enable language selection. If language selection is disabled, the classes
  * and RL modules are registered for the use of other extensions, but no
- * language selection toolbar is shown, and it will not be possible to change 
+ * language selection toolbar is shown, and it will not be possible to change
  * the interface language using a cookie.
  */
 $wgULSEnable = true;
 
 /**
  * Enable ULS language selection for anonymous users. Equivalent to $wgULSEnable
- * except that it only applies to anonymous users. Setting this to false will 
+ * except that it only applies to anonymous users. Setting this to false will
  * avoid breaking Squid caches (see bug 41451).
  */
 $wgULSEnableAnon = true;
@@ -100,6 +100,9 @@ $wgHooks['ResourceLoaderGetConfigVars'][] = 'UniversalLanguageSelectorHooks::add
 $wgHooks['MakeGlobalVariablesScript'][] = 'UniversalLanguageSelectorHooks::addVariables';
 $wgAPIModules['languagesearch'] = 'ApiLanguageSearch';
 $wgHooks['UserGetLanguageObject'][] = 'UniversalLanguageSelectorHooks::getLanguage';
+
+$wgDefaultUserOptions['uls-preferences'] = '';
+$wgHooks['GetPreferences'][] = 'UniversalLanguageSelectorHooks::onGetPreferences';
 
 $wgResourceModules['ext.uls.init'] = array(
 	'scripts' => 'resources/js/ext.uls.init.js',

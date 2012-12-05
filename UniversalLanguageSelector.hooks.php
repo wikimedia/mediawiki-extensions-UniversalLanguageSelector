@@ -240,4 +240,12 @@ class UniversalLanguageSelectorHooks {
 
 		return true;
 	}
+
+	public static function onGetPreferences( $user, &$preferences ) {
+		$preferences['uls-preferences'] = array(
+			'type' => 'api',
+		);
+
+		return true;
+	}
 }

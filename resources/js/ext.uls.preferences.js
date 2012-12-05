@@ -68,7 +68,9 @@
 		 * @param callback
 		 */
 		save: function ( callback ) {
-			var that = this, api;
+			var ulsPreferences = this,
+				api;
+
 			callback = callback || $.noop;
 			if ( this.isAnon ) {
 				// Anonymous user- Save preferences in local storage
@@ -77,20 +79,21 @@
 			} else {
 				// Logged in user. Use MW apis to change preferences
 				api = new mw.Api();
+
 				api.post( {
 					action: 'tokens',
 					type: 'options'
 				} ).done( function ( tokenresult ) {
 					var token = tokenresult.tokens.optionstoken;
+
 					api.post( {
 						action: 'options',
-						change: 'hideminor=1',
-						optionname: that.preferenceName,
-						optionvalue: $.toJSON( that.preferences ),
+						optionname: ulsPreferences.preferenceName,
+						optionvalue: $.toJSON( ulsPreferences.preferences ),
 						token: token
-					} ).done( function () {
+					} ).done( function ( data ) {
 						callback.call( this, true );
-					} ).fail( function () {
+					} ).fail( function ( data ) {
 						callback.call( this, false );
 					} );
 				} ).fail( function () {
