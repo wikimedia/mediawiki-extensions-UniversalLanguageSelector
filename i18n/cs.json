@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Mormegil"
+		]
+	},
 	"ext-uls-display-settings-title": "Nastaven\u00ed zobrazen\u00ed",
 	"ext-uls-display-settings-title-short": "Zobrazen\u00ed",
 	"ext-uls-display-settings-desc": "Nastavit jazyk pou\u017e\u00edvan\u00fd pro menu a p\u00edsma.",
@@ -18,9 +23,18 @@
 	"ext-uls-input-settings-title": "Nastaven\u00ed vstupu",
 	"ext-uls-input-settings-title-short": "Vstup",
 	"ext-uls-input-settings-desc": "P\u00ed\u0161ete jin\u00fdm jazykem?",
-	"@metadata": {
-		"authors": [
-			"Mormegil"
-		]
-	}
+	"ext-uls-input-settings-ime-settings": "Metody zad\u00e1v\u00e1n\u00ed znak\u016f pro jazyk $1",
+	"ext-uls-input-settings-ui-language": "Jazyk, kter\u00fdm p\u00ed\u0161ete",
+	"ext-uls-back-to-input-settings": "Zp\u011bt na nastaven\u00ed vstupu",
+	"ext-uls-disable-input-method": "Vypnout metodu zad\u00e1v\u00e1n\u00ed znak\u016f",
+	"ext-uls-disable-input-method-desc": "Pou\u017e\u00edvat b\u011b\u017enou kl\u00e1vesnici",
+	"ext-uls-input-settings-more-languages-tooltip": "Dal\u0161\u00ed jazyky",
+	"ext-uls-input-more-settings": "Dal\u0161\u00ed nastaven\u00ed",
+	"jquery-ime-other-languages": "Jin\u00e9 jazyky",
+	"jquery-ime-disable-text": "Vypnout metodu zad\u00e1v\u00e1n\u00ed znak\u016f",
+	"jquery-ime-help": "N\u00e1pov\u011bda",
+	"ext-uls-input-disable": "Vypnout n\u00e1stroje pro metody zad\u00e1v\u00e1n\u00ed znak\u016f",
+	"ext-uls-input-enable": "Zapnout n\u00e1stroje pro metody zad\u00e1v\u00e1n\u00ed znak\u016f",
+	"ext-uls-input-disable-info": "N\u00e1stroje pro metody zad\u00e1v\u00e1n\u00ed znak\u016f jsou vypnuty.",
+	"ext-uls-input-settings-noime": "Pro tento jazyk nejsou k dispozici \u017e\u00e1dn\u00e9 metody zad\u00e1v\u00e1n\u00ed znak\u016f."
 }
