@@ -1,3 +1,7 @@
+li#pt-uls a.uls-trigger {
+	padding-left: 30px;
+}
+
 div#settings-block {
 	border-left: 1px solid #C9C9C9;
 	padding-left: 4px;
