@@ -36,5 +36,6 @@
 	"jquery-ime-help": "Hulp",
 	"ext-uls-input-disable": "Invoermethoden uitschakelen",
 	"ext-uls-input-enable": "Invoermethoden inschakelen",
-	"ext-uls-input-disable-info": "Invoermethoden zijn uitgeschakeld."
+	"ext-uls-input-disable-info": "Invoermethoden zijn uitgeschakeld.",
+	"ext-uls-input-settings-noime": "Er zijn geen invoermethoden beschikbaar voor deze taal."
 }
