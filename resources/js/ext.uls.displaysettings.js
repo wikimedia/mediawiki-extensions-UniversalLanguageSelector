@@ -134,11 +134,11 @@
 		 * Prepare the UI language selector
 		 */
 		prepareLanguages: function () {
-			var displaySettings = this, languagesForButtons, $languages, suggestedLanguages,
-				SUGGESTED_LANGUAGES_NUMBER, lang, i, language, $button;
+			var displaySettings = this,
+				SUGGESTED_LANGUAGES_NUMBER = 3,
+				languagesForButtons, $languages, suggestedLanguages,
+				lang, i, language, $button;
 
-			SUGGESTED_LANGUAGES_NUMBER = 3;
-			displaySettings = this;
 			$languages = this.$template.find( 'div.uls-ui-languages' );
 			suggestedLanguages = this.frequentLanguageList()
 				// Common world languages, for the case that there are
@@ -210,9 +210,9 @@
 		 * Prepare the more languages button. It is a ULS trigger
 		 */
 		prepareMoreLanguages: function () {
-			var that, $languages, $moreLanguagesButton;
+			var displaySettings = this,
+				$languages, $moreLanguagesButton;
 
-			that = this;
 			$languages = this.$template.find( 'div.uls-ui-languages' );
 			$moreLanguagesButton = $( '<button>' )
 				.prop( 'id', 'uls-more-languages' )
@@ -221,8 +221,8 @@
 			$languages.append( $moreLanguagesButton );
 			// Show the long language list to select a language for display settings
 			$moreLanguagesButton.uls( {
-				left: that.$parent.left,
-				top: that.$parent.top,
+				left: displaySettings.$parent.left,
+				top: displaySettings.$parent.top,
 				onReady: function () {
 					var uls = this,
 						$back = $( '<a>' )
@@ -231,7 +231,7 @@
 
 					$back.click( function () {
 						uls.hide();
-						that.$parent.show();
+						displaySettings.$parent.show();
 					} );
 
 					uls.$menu.find( 'div.uls-title' ).append( $back );
@@ -240,13 +240,13 @@
 						.i18n();
 				},
 				onSelect: function ( langCode ) {
-					that.enableApplyButton();
-					that.uiLanguage = langCode;
-					that.$parent.show();
-					that.prepareUIFonts();
-					that.prepareLanguages();
+					displaySettings.enableApplyButton();
+					displaySettings.uiLanguage = langCode;
+					displaySettings.$parent.show();
+					displaySettings.prepareUIFonts();
+					displaySettings.prepareLanguages();
 					$.i18n().locale = langCode;
-					that.i18n();
+					displaySettings.i18n();
 				},
 				quickList: function () {
 					return mw.uls.getFrequentLanguageList();
@@ -254,7 +254,7 @@
 			} );
 
 			$moreLanguagesButton.on( 'click', function () {
-				that.$parent.hide();
+				displaySettings.$parent.hide();
 			} );
 		},
 
@@ -386,7 +386,7 @@
 		 * Register general event listeners
 		 */
 		listen: function () {
-			var that = this,
+			var displaySettings = this,
 				$contentFontSelector, $uiFontSelector,
 				oldFont;
 
@@ -400,43 +400,43 @@
 			// TODO all these repeated selectors can be placed in object constructor.
 
 			this.$template.find( '#uls-displaysettings-apply' ).on( 'click', function () {
-				that.apply();
+				displaySettings.apply();
 			} );
 
 			this.$template.find( 'button.uls-settings-close' ).on( 'click', function () {
-				mw.webfonts.preferences.setFont( that.contentLanguage, oldFont );
-				that.$webfonts.refresh();
-				that.close();
+				mw.webfonts.preferences.setFont( displaySettings.contentLanguage, oldFont );
+				displaySettings.$webfonts.refresh();
+				displaySettings.close();
 			} );
 
 			this.$template.find( '#webfonts-enable-checkbox' ).on( 'click', function () {
-				that.enableApplyButton();
+				displaySettings.enableApplyButton();
 
 				if ( this.checked ) {
 					mw.webfonts.preferences.enable();
 					$contentFontSelector.prop( 'disabled', false );
 					$uiFontSelector.prop( 'disabled', false );
-					that.$webfonts.apply( $uiFontSelector.find( 'option:selected' ) );
+					displaySettings.$webfonts.apply( $uiFontSelector.find( 'option:selected' ) );
 				} else {
 					mw.webfonts.preferences.disable();
 					$contentFontSelector.prop( 'disabled', true );
 					$uiFontSelector.prop( 'disabled', true );
-					that.$webfonts.reset();
+					displaySettings.$webfonts.reset();
 				}
 			} );
 
 			$uiFontSelector.on( 'change', function () {
-				that.enableApplyButton();
+				displaySettings.enableApplyButton();
 				var font = $( this ).find( 'option:selected' ).val();
-				mw.webfonts.preferences.setFont( that.uiLanguage, font );
-				that.$webfonts.refresh();
+				mw.webfonts.preferences.setFont( displaySettings.uiLanguage, font );
+				displaySettings.$webfonts.refresh();
 			} );
 
 			$contentFontSelector.on( 'change', function () {
-				that.enableApplyButton();
+				displaySettings.enableApplyButton();
 				var font = $( this ).find( 'option:selected' ).val();
-				mw.webfonts.preferences.setFont( that.contentLanguage, font );
-				that.$webfonts.refresh();
+				mw.webfonts.preferences.setFont( displaySettings.contentLanguage, font );
+				displaySettings.$webfonts.refresh();
 			} );
 
 		},
@@ -485,12 +485,12 @@
 		 * Handle the apply button press
 		 */
 		apply: function () {
-			var that = this;
+			var displaySettings = this;
 
 			// Save the preferences
 			mw.webfonts.preferences.save( function ( result ) {
 				// closure for not losing the scope
-				that.onSave( result );
+				displaySettings.onSave( result );
 			} );
 		}
 	};
