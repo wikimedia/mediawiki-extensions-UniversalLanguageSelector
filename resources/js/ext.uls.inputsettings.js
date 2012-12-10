@@ -297,14 +297,18 @@
 				onReady: function () {
 					var uls = this,
 						$back = $( '<a>' )
-							.text( $.i18n( 'ext-uls-back-to-input-settings' ) );
+							.data( 'i18n', 'ext-uls-back-to-input-settings' )
+							.i18n();
 
 					$back.click( function () {
 						uls.hide();
 						inputSettings.$parent.show();
 					} );
 
-					uls.$menu.find( 'div.uls-title' ).append( $back );
+					uls.$menu.find( 'div.uls-title-region' ).append( $back );
+					uls.$menu.find( 'h1.uls-title' )
+						.data( 'i18n', 'ext-uls-input-settings-ui-language' )
+						.i18n();
 				},
 				onSelect: function ( langCode ) {
 					inputSettings.enableApplyButton();

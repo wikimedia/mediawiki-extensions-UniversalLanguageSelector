@@ -234,8 +234,8 @@
 						displaySettings.$parent.show();
 					} );
 
-					uls.$menu.find( 'div.uls-title' ).append( $back );
-					uls.$menu.find( 'div.uls-title h1' )
+					uls.$menu.find( 'div.uls-title-region' ).append( $back );
+					uls.$menu.find( 'h1.uls-title' )
 						.data( 'i18n', 'ext-uls-display-settings-ui-language' )
 						.i18n();
 				},
