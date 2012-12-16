@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"David1010"
+		]
+	},
 	"ext-uls-language-settings-title": "\u10d4\u10dc\u10d8\u10e1 \u10de\u10d0\u10e0\u10d0\u10db\u10d4\u10e2\u10e0\u10d4\u10d1\u10d8",
 	"ext-uls-language-settings-apply": "\u10de\u10d0\u10e0\u10d0\u10db\u10d4\u10e2\u10e0\u10d4\u10d1\u10d8\u10e1 \u10d2\u10d0\u10db\u10dd\u10e7\u10d4\u10dc\u10d4\u10d1\u10d0",
 	"ext-uls-language-settings-cancel": "\u10d2\u10d0\u10e3\u10e5\u10db\u10d4\u10d1\u10d0",
@@ -7,10 +12,5 @@
 	"ext-uls-input-settings-more-languages-tooltip": "\u10db\u10d4\u10e2\u10d8 \u10d4\u10dc\u10d0",
 	"ext-uls-input-more-settings": "\u10db\u10d4\u10e2\u10d8 \u10de\u10d0\u10e0\u10d0\u10db\u10d4\u10e2\u10e0\u10d4\u10d1\u10d8",
 	"jquery-ime-other-languages": "\u10e1\u10ee\u10d5\u10d0 \u10d4\u10dc\u10d4\u10d1\u10d8",
-	"jquery-ime-help": "\u10d3\u10d0\u10ee\u10db\u10d0\u10e0\u10d4\u10d1\u10d0",
-	"@metadata": {
-		"authors": [
-			"David1010"
-		]
-	}
+	"jquery-ime-help": "\u10d3\u10d0\u10ee\u10db\u10d0\u10e0\u10d4\u10d1\u10d0"
 }
