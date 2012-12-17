@@ -19,5 +19,22 @@
 	"ext-uls-webfonts-select-for": "Pilih rupa huruf untuk $1",
 	"ext-uls-webfonts-select-for-ui-info": "Rupa huruf yang digunakan untuk antaramuka pengguna",
 	"ext-uls-webfonts-select-for-content-info": "Rupa huruf yang digunakan untuk isi kandungan",
-	"ext-uls-back-to-display-settings": "Kembali ke tetapan paparan"
+	"ext-uls-back-to-display-settings": "Kembali ke tetapan paparan",
+	"ext-uls-input-settings-title": "Tetapan input",
+	"ext-uls-input-settings-title-short": "Input",
+	"ext-uls-input-settings-desc": "Menulis dalam bahasa lain?",
+	"ext-uls-input-settings-ime-settings": "Kaedah input untuk $1",
+	"ext-uls-input-settings-ui-language": "Bahasa yang digunakan untuk menulis",
+	"ext-uls-back-to-input-settings": "Kembali ke tetapan input",
+	"ext-uls-disable-input-method": "Matikan kaedah input",
+	"ext-uls-disable-input-method-desc": "Gunakan papan kekunci biasa",
+	"ext-uls-input-settings-more-languages-tooltip": "Bahasa lain",
+	"ext-uls-input-more-settings": "Tetapan lain",
+	"jquery-ime-other-languages": "Bahasa-bahasa lain",
+	"jquery-ime-disable-text": "Matikan kaedah input",
+	"jquery-ime-help": "Bantuan",
+	"ext-uls-input-disable": "Matikan peralatan kaedah input",
+	"ext-uls-input-enable": "Hidupkan peralatan kaedah input",
+	"ext-uls-input-disable-info": "Peralatan kaedah input dimatikan.",
+	"ext-uls-input-settings-noime": "Tiada kaedah input untuk bahasa ini."
 }
