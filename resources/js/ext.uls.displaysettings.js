@@ -80,7 +80,7 @@
 		// Apply and Cancel buttons
 		+ '<div class="row language-settings-buttons">'
 		+ '<div class="eleven columns">'
-		+ '<button class="button uls-settings-close" data-i18n="ext-uls-language-settings-cancel"></button>'
+		+ '<button class="button uls-display-settings-cancel" data-i18n="ext-uls-language-settings-cancel"></button>'
 		+ '<button class="button active blue" id="uls-displaysettings-apply" data-i18n="ext-uls-language-settings-apply" disabled></button>'
 		+ '</div>'
 		+ '</div>'
@@ -403,9 +403,20 @@
 				displaySettings.apply();
 			} );
 
-			this.$template.find( 'button.uls-settings-close' ).on( 'click', function () {
+			this.$template.find( 'button.uls-display-settings-cancel' ).on( 'click', function () {
 				mw.webfonts.preferences.setFont( displaySettings.contentLanguage, oldFont );
 				displaySettings.$webfonts.refresh();
+
+				displaySettings.$template.find( 'div.uls-ui-languages button.button' ).each( function () {
+					var $button = $( this );
+
+					if ( $button.attr( 'lang' ) === displaySettings.contentLanguage ) {
+						$button.addClass( 'down' );
+					} else {
+						$button.removeClass( 'down' );
+					}
+				} );
+
 				displaySettings.close();
 			} );
 

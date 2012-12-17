@@ -61,7 +61,7 @@
 		// Apply and Cancel buttons
 		+ '<div class="row language-settings-buttons">'
 		+ '<div class="eleven columns">'
-		+ '<button class="button uls-input-settings-close" data-i18n="ext-uls-language-settings-cancel"></button>'
+		+ '<button class="button uls-input-settings-cancel" data-i18n="ext-uls-language-settings-cancel"></button>'
 		+ '<button class="active blue button uls-input-settings-apply" data-i18n="ext-uls-language-settings-apply" disabled></button>'
 		+ '</div>'
 		+ '</div>'
@@ -388,7 +388,7 @@
 				inputSettings.apply();
 			} );
 
-			inputSettings.$template.find( 'button.uls-input-settings-close' ).on( 'click', function () {
+			inputSettings.$template.find( 'button.uls-input-settings-cancel' ).on( 'click', function () {
 				inputSettings.close();
 			} );
 
