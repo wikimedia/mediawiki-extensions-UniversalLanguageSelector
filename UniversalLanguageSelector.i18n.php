@@ -342,7 +342,10 @@ $messages['vi'] = array(
 
 /** Traditional Chinese (中文（繁體）‎)
  * @author Justincheng12345
+ * @author Simon Shek
  */
 $messages['zh-hant'] = array(
+	'UniversalLanguageSelector' => '通用語言選擇器',
+	'uls-desc' => '為用戶提供多種方法來選擇語言和調整語言設置',
 	'uls-select-content-language' => '選擇語言',
 );
