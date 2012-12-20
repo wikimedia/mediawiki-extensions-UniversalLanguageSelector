@@ -1,0 +1,6 @@
+== UniversalLanguageSelector 2012.12 ==
+Released at 2012-12-20.
+
+* Fixed a display issue in the Modern skin.
+* (bug 42382) Indicate context in input settings/more languages
+* Code maintenance and translation updates.
