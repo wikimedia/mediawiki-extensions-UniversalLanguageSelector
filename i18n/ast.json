@@ -1,0 +1,40 @@
+{
+	"ext-uls-display-settings-title": "Opciones de presentaci\u00f3n",
+	"ext-uls-display-settings-title-short": "Presentaci\u00f3n",
+	"ext-uls-display-settings-desc": "Configurar la llingua pa los men\u00fas y les fontes.",
+	"ext-uls-undo-language-tooltip-text": "La llingua camud\u00f3 dende $1",
+	"ext-uls-language-settings-title": "Preferencies de llingua",
+	"ext-uls-language-settings-apply": "Aplicar la configuraci\u00f3n",
+	"ext-uls-language-settings-cancel": "Encaboxar",
+	"ext-uls-display-settings-font-settings": "Preferencies de tipograf\u00eda",
+	"ext-uls-display-settings-ui-language": "Llingua de la interfaz",
+	"ext-uls-webfonts-settings-title": "Descargar tipograf\u00eda cuando seya necesario",
+	"ext-uls-webfonts-settings-info": "Se descargar\u00e1n tipograf\u00edes web p'amosar testu en alfabetos especiales.",
+	"ext-uls-webfonts-settings-info-link": "M\u00e1s informaci\u00f3n",
+	"ext-uls-webfonts-select-for": "Seleiciona la tipograf\u00eda pal $1",
+	"ext-uls-webfonts-select-for-ui-info": "Tipograf\u00eda usada pa la interfaz d'usuariu",
+	"ext-uls-webfonts-select-for-content-info": "Tipograf\u00eda usada pal conten\u00edu",
+	"ext-uls-back-to-display-settings": "Volver a les opciones de presentaci\u00f3n",
+	"ext-uls-input-settings-title": "Opciones d'entrada",
+	"ext-uls-input-settings-title-short": "Entrada",
+	"ext-uls-input-settings-desc": "\u00bfEscribes n'una llingua diferente?",
+	"ext-uls-input-settings-ime-settings": "M\u00e9todos d'entrada pal $1",
+	"ext-uls-input-settings-ui-language": "Llingua usada pa escribir",
+	"ext-uls-back-to-input-settings": "Volver a les opciones d'entrada",
+	"ext-uls-disable-input-method": "Desactivar m\u00e9todu d'entrada",
+	"ext-uls-disable-input-method-desc": "Usar un tecl\u00e1u convencional",
+	"ext-uls-input-settings-more-languages-tooltip": "M\u00e1s lling\u00fces",
+	"ext-uls-input-more-settings": "M\u00e1s opciones",
+	"jquery-ime-other-languages": "Otres lling\u00fces",
+	"jquery-ime-disable-text": "Desactivar m\u00e9todu d'entrada",
+	"jquery-ime-help": "Ayuda",
+	"ext-uls-input-disable": "Desactivar les ferramientes de m\u00e9todu d'entrada",
+	"ext-uls-input-enable": "Activar les ferramientes de m\u00e9todu d'entrada",
+	"ext-uls-input-disable-info": "Les ferramientes de m\u00e9todu d'entrada tan desactivaes.",
+	"ext-uls-input-settings-noime": "Nun hai m\u00e9todos d'entrada disponibles pa esta llingua.",
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	}
+}

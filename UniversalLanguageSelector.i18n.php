@@ -132,6 +132,13 @@ $messages['eu'] = array(
 	'uls-select-content-language' => 'Hizkuntza aukeratu',
 );
 
+/** Persian (فارسی)
+ * @author Mjbmr
+ */
+$messages['fa'] = array(
+	'uls-select-content-language' => 'انتخاب زبان',
+);
+
 /** Finnish (suomi)
  * @author Nike
  */

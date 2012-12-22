@@ -1,0 +1,21 @@
+{
+	"ext-uls-display-settings-title": "\u062a\u0646\u0638\u06cc\u0645\u0627\u062a \u0646\u0645\u0627\u06cc\u0634",
+	"ext-uls-display-settings-title-short": "\u0646\u0645\u0627\u06cc\u0634",
+	"ext-uls-language-settings-title": "\u062a\u0646\u0638\u06cc\u0645\u0627\u062a \u0632\u0628\u0627\u0646",
+	"ext-uls-language-settings-apply": "\u0627\u0639\u0645\u0627\u0644 \u062a\u0646\u0638\u06cc\u0645\u0627\u062a",
+	"ext-uls-language-settings-cancel": "\u0644\u063a\u0648",
+	"ext-uls-display-settings-font-settings": "\u062a\u0646\u0638\u06cc\u0645\u0627\u062a \u0642\u0644\u0645",
+	"ext-uls-webfonts-settings-info-link": "\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0628\u06cc\u0634\u062a\u0631",
+	"ext-uls-input-settings-title": "\u062a\u0646\u0638\u06cc\u0645\u0627\u062a \u0648\u0631\u0648\u062f\u06cc",
+	"ext-uls-input-settings-title-short": "\u0648\u0631\u0648\u062f\u06cc",
+	"ext-uls-input-settings-desc": "\u0628\u0627 \u0632\u0628\u0627\u0646 \u0645\u062a\u0641\u0627\u0648\u062a\u06cc \u0645\u06cc\u200c\u0646\u0648\u06cc\u0633\u06cc\u062f\u061f",
+	"ext-uls-input-settings-more-languages-tooltip": "\u0632\u0628\u0627\u0646\u200c\u0647\u0627\u06cc \u0628\u06cc\u0634\u062a\u0631",
+	"ext-uls-input-more-settings": "\u0630\u062e\u06cc\u0631\u0647\u0654 \u062a\u0646\u0638\u06cc\u0645\u0627\u062a",
+	"jquery-ime-other-languages": "\u0632\u0628\u0627\u0646\u200c\u0647\u0627\u06cc \u062f\u06cc\u06af\u0631",
+	"jquery-ime-help": "\u0631\u0627\u0647\u0646\u0645\u0627",
+	"@metadata": {
+		"authors": [
+			"Mjbmr"
+		]
+	}
+}
