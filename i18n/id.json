@@ -1,8 +1,13 @@
 {
-	"ext-uls-display-settings-title": "Setelan tampilan",
 	"@metadata": {
 		"authors": [
-			"Farras"
+			"Farras",
+			"\u0db4\u0dc3\u0dd2\u0db3\u0dd4 \u0d9a\u0dcf\u0dc0\u0dd2\u0db1\u0dca\u0daf"
 		]
-	}
+	},
+	"ext-uls-display-settings-title": "Setelan tampilan",
+	"ext-uls-display-settings-title-short": "Tampilan",
+	"ext-uls-language-settings-cancel": "Batalkan",
+	"ext-uls-input-settings-title-short": "Masukan",
+	"jquery-ime-help": "Bantuan"
 }

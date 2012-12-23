@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
 	"ext-uls-display-settings-title": "Opciones de presentaci\u00f3n",
 	"ext-uls-display-settings-title-short": "Presentaci\u00f3n",
 	"ext-uls-display-settings-desc": "Configurar la llingua pa los men\u00fas y les fontes.",
@@ -31,10 +36,5 @@
 	"ext-uls-input-disable": "Desactivar les ferramientes de m\u00e9todu d'entrada",
 	"ext-uls-input-enable": "Activar les ferramientes de m\u00e9todu d'entrada",
 	"ext-uls-input-disable-info": "Les ferramientes de m\u00e9todu d'entrada tan desactivaes.",
-	"ext-uls-input-settings-noime": "Nun hai m\u00e9todos d'entrada disponibles pa esta llingua.",
-	"@metadata": {
-		"authors": [
-			"Xuacu"
-		]
-	}
+	"ext-uls-input-settings-noime": "Nun hai m\u00e9todos d'entrada disponibles pa esta llingua."
 }

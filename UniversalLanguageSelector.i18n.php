@@ -107,6 +107,13 @@ $messages['dsb'] = array(
 	'uls-select-content-language' => 'Rěc wubraś',
 );
 
+/** Esperanto (Esperanto)
+ * @author Yekrats
+ */
+$messages['eo'] = array(
+	'uls-select-content-language' => 'Elekti lingvon',
+);
+
 /** Spanish (español)
  * @author Armando-Martin
  */
@@ -345,6 +352,15 @@ $messages['vi'] = array(
 	'UniversalLanguageSelector' => 'Bộ lựa chọn Ngôn ngữ Toàn thế giới',
 	'uls-desc' => 'Trình bày giao diện để lựa chọn ngôn ngữ và điều chỉnh các tùy chọn ngôn ngữ',
 	'uls-select-content-language' => 'Chọn ngôn ngữ',
+);
+
+/** Simplified Chinese (中文（简体）‎)
+ * @author Shirayuki
+ */
+$messages['zh-hans'] = array(
+	'UniversalLanguageSelector' => '通用语言选择器',
+	'uls-desc' => '为用户提供多种方法来选择语言和调整语言设置',
+	'uls-select-content-language' => '选择语言',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
