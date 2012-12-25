@@ -1,8 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
-			"Avjoska"
+			"Avjoska",
+			"Pikne"
 		]
 	},
-	"ext-uls-input-settings-more-languages-tooltip": "Rohkem keeli"
+	"ext-uls-display-settings-title": "Kuvas\u00e4tted",
+	"ext-uls-display-settings-title-short": "Kuva",
+	"ext-uls-language-settings-title": "Keeles\u00e4tted",
+	"ext-uls-language-settings-apply": "Rakenda s\u00e4tted",
+	"ext-uls-language-settings-cancel": "Loobu",
+	"ext-uls-webfonts-settings-info-link": "Lisateave",
+	"ext-uls-back-to-display-settings": "Naase kuvas\u00e4tete juurde",
+	"ext-uls-input-settings-more-languages-tooltip": "Rohkem keeli",
+	"ext-uls-input-more-settings": "Veel s\u00e4tteid",
+	"jquery-ime-other-languages": "Teised keeled"
 }

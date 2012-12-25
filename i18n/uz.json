@@ -1,0 +1,16 @@
+{
+	"ext-uls-display-settings-title": "Ko\u02bbrsatish moslamalari",
+	"ext-uls-display-settings-title-short": "Ko'rsatish",
+	"ext-uls-language-settings-title": "Til moslamalari",
+	"ext-uls-language-settings-cancel": "Bekor qilish",
+	"ext-uls-display-settings-ui-language": "Ko'rinish uchun til",
+	"ext-uls-input-more-settings": "Ko'p moslamalar",
+	"jquery-ime-other-languages": "Boshqa tillarda",
+	"jquery-ime-help": "Yordam",
+	"@metadata": {
+		"authors": [
+			"Akmalzhon",
+			"CoderSI"
+		]
+	}
+}
