@@ -1,0 +1,40 @@
+{
+	"ext-uls-display-settings-title": "Ampostassion \u00ebd visualisassion",
+	"ext-uls-display-settings-title-short": "Visualisa",
+	"ext-uls-display-settings-desc": "Amp\u00f2sta la lenga dovr\u00e0 p\u00ebr men\u00f9 e car\u00e0ter.",
+	"ext-uls-undo-language-tooltip-text": "Lenga cangi\u00e0 da $1",
+	"ext-uls-language-settings-title": "Ampostassion \u00ebd lenga",
+	"ext-uls-language-settings-apply": "\u00c0plica ampostassion",
+	"ext-uls-language-settings-cancel": "Scancela",
+	"ext-uls-display-settings-font-settings": "Ampostassion \u00ebd car\u00e0ter",
+	"ext-uls-display-settings-ui-language": "Lenga p\u00ebr visualisassion",
+	"ext-uls-webfonts-settings-title": "D\u00ebscaria car\u00e0ter quand dabz\u00f2gn",
+	"ext-uls-webfonts-settings-info": "Car\u00e0ter web a saran d\u00ebscari\u00e0 p\u00ebr test da visualis\u00e9 an script speciaj.",
+	"ext-uls-webfonts-settings-info-link": "Pi d'anformassion",
+	"ext-uls-webfonts-select-for": "Selession-a car\u00e0ter p\u00ebr $1",
+	"ext-uls-webfonts-select-for-ui-info": "Car\u00e0ter dovr\u00e0 p\u00ebr ant\u00ebrfacia utent",
+	"ext-uls-webfonts-select-for-content-info": "Car\u00e0ter dovr\u00e0 p\u00ebr contn\u00f9",
+	"ext-uls-back-to-display-settings": "Andr\u00e9 p\u00ebr visualis\u00e9 ampostassion",
+	"ext-uls-input-settings-title": "Ampostassion d'anseriment",
+	"ext-uls-input-settings-title-short": "Anseriment",
+	"ext-uls-input-settings-desc": "It scriv\u00ebs-to ant na lenga diferenta?",
+	"ext-uls-input-settings-ime-settings": "M\u00e9tod d'anseriment p\u00ebr $1",
+	"ext-uls-input-settings-ui-language": "Lenga dovr\u00e0 p\u00ebr scrive",
+	"ext-uls-back-to-input-settings": "Andr\u00e9 p\u00ebr ampostassion d'anseriment",
+	"ext-uls-disable-input-method": "Disabilit\u00e9 \u00ebl m\u00e9tod d'imission",
+	"ext-uls-disable-input-method-desc": "Dovra na tastera regolar",
+	"ext-uls-input-settings-more-languages-tooltip": "P\u00ec 'd lenghe",
+	"ext-uls-input-more-settings": "Pi d'ampostassion",
+	"jquery-ime-other-languages": "\u00c0utre lenghe",
+	"jquery-ime-disable-text": "Disabilit\u00e9 \u00ebl m\u00e9tod d'imission",
+	"jquery-ime-help": "Agiut",
+	"ext-uls-input-disable": "Disab\u00eclita j'utiss d\u00ebl m\u00e9tod d'imission",
+	"ext-uls-input-enable": "Ab\u00eclita j'utiss d\u00ebl m\u00e9tod d'imission",
+	"ext-uls-input-disable-info": "J'utiss d\u00ebl m\u00e9tod d'imission a son disabilit\u00e0.",
+	"ext-uls-input-settings-noime": "Pa gnun m\u00e9tod d'imission a son dispon\u00ecbij p\u00ebr sta lenga.",
+	"@metadata": {
+		"authors": [
+			"Dragon\u00f2t"
+		]
+	}
+}

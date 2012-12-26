@@ -318,6 +318,13 @@ $messages['ru'] = array(
 	'uls-select-content-language' => 'Выбор языка',
 );
 
+/** Sinhala (සිංහල)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['si'] = array(
+	'uls-select-content-language' => 'භාෂාව තෝරන්න',
+);
+
 /** Tamil (தமிழ்)
  * @author Logicwiki
  */

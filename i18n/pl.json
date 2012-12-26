@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Matma Rex"
+		]
+	},
 	"ext-uls-display-settings-title": "Ustawienia wy\u015bwietlania",
 	"ext-uls-display-settings-title-short": "Wy\u015bwietlanie",
 	"ext-uls-display-settings-desc": "Wybierz j\u0119zyk interfejsu oraz czcionki.",
@@ -31,10 +36,5 @@
 	"ext-uls-input-disable": "Wy\u0142\u0105cz specjalne metody wprowadzania",
 	"ext-uls-input-enable": "W\u0142\u0105cz specjalne metody wprowadzania",
 	"ext-uls-input-disable-info": "Specjalne metody wprowadzania s\u0105 wy\u0142\u0105czone.",
-	"ext-uls-input-settings-noime": "Dla tego j\u0119zyka nie ma specjalnych metod wprowadzania tekstu.",
-	"@metadata": {
-		"authors": [
-			"Matma Rex"
-		]
-	}
+	"ext-uls-input-settings-noime": "Dla tego j\u0119zyka nie ma specjalnych metod wprowadzania tekstu."
 }

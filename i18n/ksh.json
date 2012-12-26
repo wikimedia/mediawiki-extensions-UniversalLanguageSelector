@@ -1,0 +1,34 @@
+{
+	"ext-uls-display-settings-title": "Enscht\u00e4llonge f\u00f6r et Aanzeije",
+	"ext-uls-display-settings-title-short": "Aanzeije",
+	"ext-uls-display-settings-desc": "Donn de Schprooch f\u00f6r de Men\u00fcs un de Schreff-Zoote enscht\u00e4lle.",
+	"ext-uls-undo-language-tooltip-text": "De Sprooch es von v\u00f6rher $1 \u00f6mjeschtallt.",
+	"ext-uls-language-settings-title": "Schprooche-Enscht\u00e4llonge",
+	"ext-uls-language-settings-apply": "Loh\u00df Jonn!",
+	"ext-uls-language-settings-cancel": "Oph\u00fcre",
+	"ext-uls-display-settings-font-settings": "Enscht\u00e4llonge f\u00f6r Schreff",
+	"ext-uls-display-settings-ui-language": "Schprooch f\u00f6r de Bedeenung un de Bovverfl\u00e4sch",
+	"ext-uls-webfonts-settings-title": "Donn di Schreff eronge laade, wann n\u00fc\u00fcdesch",
+	"ext-uls-webfonts-settings-info": "Schrefte ussem W\u00e4b w\u00e4\u00e4de eronge jelaade, \u00f6m T\u00e4xte en bes\u00f6ndere Schreff-Zoote aanzezeije.",
+	"ext-uls-webfonts-settings-info-link": "Mieh Aanjaabe",
+	"ext-uls-webfonts-select-for": "De Schreff f\u00f6r $1 u\u00dfs\u00f6hke",
+	"ext-uls-webfonts-select-for-ui-info": "De Schreff f\u00f6r et Bedeene un de Bovverfl\u00e4sch",
+	"ext-uls-webfonts-select-for-content-info": "De Schreff f\u00f6r der Enhalld",
+	"ext-uls-back-to-display-settings": "Retuur noh de Enscht\u00e4llonge",
+	"ext-uls-input-settings-title": "Enscht\u00e4llonge f\u00f6r Enjaabe",
+	"ext-uls-input-settings-title-short": "Enjaabe",
+	"ext-uls-input-settings-desc": "Schriive en en ander Schprooch?",
+	"ext-uls-input-settings-ime-settings": "Enjaabe-Metoode f\u00f6r $1",
+	"ext-uls-input-settings-ui-language": "De Schprooch, di f\u00f6r et Schriive jebruch weed",
+	"ext-uls-back-to-input-settings": "Retuur noh de Enscht\u00e4llonge f\u00f6r et Enj\u00e4vve",
+	"ext-uls-disable-input-method-desc": "Donn en Schtandatt-Ta\u00dftatuur n\u00e4mme",
+	"ext-uls-input-settings-more-languages-tooltip": "Mieh Shprooche",
+	"ext-uls-input-more-settings": "Mieh Enscht\u00e4llonge",
+	"jquery-ime-other-languages": "Ander Schprooche",
+	"jquery-ime-help": "H\u00f6lp",
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	}
+}
