@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"ChrisPtDe"
+		]
+	},
 	"ext-uls-display-settings-title": "Configuracion de visualisacion",
 	"ext-uls-display-settings-title-short": "Visualisacion",
 	"ext-uls-display-settings-desc": "D\u00e8fenir la lengoua empley\u00eaye por los menus et les polices.",
@@ -30,10 +35,5 @@
 	"ext-uls-input-disable": "D\u00e8sactivar los outils de m\u00e8toda d\u2019entr\u00e2",
 	"ext-uls-input-enable": "Activar los outils de m\u00e8toda d\u2019entr\u00e2",
 	"ext-uls-input-disable-info": "Los outils de m\u00e8toda d\u2019entr\u00e2 sont d\u00e8sactiv\u00e2s.",
-	"ext-uls-input-settings-noime": "Niona m\u00e8toda d\u2019entr\u00e2 est disponibla por ceta lengoua.",
-	"@metadata": {
-		"authors": [
-			"ChrisPtDe"
-		]
-	}
+	"ext-uls-input-settings-noime": "Niona m\u00e8toda d\u2019entr\u00e2 est disponibla por ceta lengoua."
 }

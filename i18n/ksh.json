@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
 	"ext-uls-display-settings-title": "Enscht\u00e4llonge f\u00f6r et Aanzeije",
 	"ext-uls-display-settings-title-short": "Aanzeije",
 	"ext-uls-display-settings-desc": "Donn de Schprooch f\u00f6r de Men\u00fcs un de Schreff-Zoote enscht\u00e4lle.",
@@ -21,14 +26,15 @@
 	"ext-uls-input-settings-ime-settings": "Enjaabe-Metoode f\u00f6r $1",
 	"ext-uls-input-settings-ui-language": "De Schprooch, di f\u00f6r et Schriive jebruch weed",
 	"ext-uls-back-to-input-settings": "Retuur noh de Enscht\u00e4llonge f\u00f6r et Enj\u00e4vve",
+	"ext-uls-disable-input-method": "Ennjaabe-Aat affschallde",
 	"ext-uls-disable-input-method-desc": "Donn en Schtandatt-Ta\u00dftatuur n\u00e4mme",
 	"ext-uls-input-settings-more-languages-tooltip": "Mieh Shprooche",
 	"ext-uls-input-more-settings": "Mieh Enscht\u00e4llonge",
 	"jquery-ime-other-languages": "Ander Schprooche",
+	"jquery-ime-disable-text": "Ennjaabe-Aat affschallde",
 	"jquery-ime-help": "H\u00f6lp",
-	"@metadata": {
-		"authors": [
-			"Purodha"
-		]
-	}
+	"ext-uls-input-disable": "W\u00e4rkz\u00fcsch f\u00f6r de Ennjaabe-Aat affschallde",
+	"ext-uls-input-enable": "W\u00e4rkz\u00fcsch f\u00f6r de Ennjaabe-Aat enschallde",
+	"ext-uls-input-disable-info": "W\u00e4rkz\u00fcsch f\u00f6r de Ennjaabe-Aat sin affjeschalldt",
+	"ext-uls-input-settings-noime": "Mer han kein Ennjaabe-Aate f\u00f6r di Schprooch."
 }

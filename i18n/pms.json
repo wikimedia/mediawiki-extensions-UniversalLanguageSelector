@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Dragon\u00f2t"
+		]
+	},
 	"ext-uls-display-settings-title": "Ampostassion \u00ebd visualisassion",
 	"ext-uls-display-settings-title-short": "Visualisa",
 	"ext-uls-display-settings-desc": "Amp\u00f2sta la lenga dovr\u00e0 p\u00ebr men\u00f9 e car\u00e0ter.",
@@ -31,10 +36,5 @@
 	"ext-uls-input-disable": "Disab\u00eclita j'utiss d\u00ebl m\u00e9tod d'imission",
 	"ext-uls-input-enable": "Ab\u00eclita j'utiss d\u00ebl m\u00e9tod d'imission",
 	"ext-uls-input-disable-info": "J'utiss d\u00ebl m\u00e9tod d'imission a son disabilit\u00e0.",
-	"ext-uls-input-settings-noime": "Pa gnun m\u00e9tod d'imission a son dispon\u00ecbij p\u00ebr sta lenga.",
-	"@metadata": {
-		"authors": [
-			"Dragon\u00f2t"
-		]
-	}
+	"ext-uls-input-settings-noime": "Pa gnun m\u00e9tod d'imission a son dispon\u00ecbij p\u00ebr sta lenga."
 }

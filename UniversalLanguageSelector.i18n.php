@@ -322,6 +322,7 @@ $messages['ru'] = array(
  * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
+	'UniversalLanguageSelector' => 'විශ්ව භාෂා වරකය',
 	'uls-select-content-language' => 'භාෂාව තෝරන්න',
 );
 
@@ -342,6 +343,15 @@ $messages['tl'] = array(
 	'UniversalLanguageSelector' => 'Unibersal na Pampili ng Wika',
 	'uls-desc' => 'Nagbibigay sa tagagamit ng ilang mga paraan upang makapili ng isang wika at upang mabago ang mga katakdaan ng wika',
 	'uls-select-content-language' => 'Piliin ang wika',
+);
+
+/** Ukrainian (українська)
+ * @author Steve.rusyn
+ */
+$messages['uk'] = array(
+	'UniversalLanguageSelector' => 'Універсальний вибір мови',
+	'uls-desc' => 'Надає користувачу декілька способів вибрати мову та налаштувати мовні параметри.',
+	'uls-select-content-language' => 'Оберіть мову',
 );
 
 /** Urdu (اردو)
