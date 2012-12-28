@@ -291,6 +291,15 @@ $messages['pl'] = array(
 	'uls-select-content-language' => 'Wybierz język',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'UniversalLanguageSelector' => 'Seletor Universal ëd Lenga',
+	'uls-desc' => "A dà a l'utent vàire manere ëd selessioné na lenga e ëd sistemé j'ampostassion ëd lenga",
+	'uls-select-content-language' => 'Serne la lenga',
+);
+
 /** Brazilian Portuguese (português do Brasil)
  * @author Jaideraf
  */
