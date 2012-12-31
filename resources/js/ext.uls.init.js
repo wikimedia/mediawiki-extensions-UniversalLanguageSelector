@@ -297,8 +297,12 @@
 
 		// manually show the tooltip
 		$ulsTrigger.on( 'mouseover', function () {
-			showTipsy( 3000 );
+			// show only if the ULS panel is not shown
+			if ( !$ulsTrigger.data( 'uls' ).shown ) {
+				showTipsy( 3000 );
+			}
 		} );
+
 		// hide the tooltip when clicked on uls trigger
 		$ulsTrigger.on( 'click', function () {
 			hideTipsy();
