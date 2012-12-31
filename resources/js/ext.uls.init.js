@@ -40,6 +40,7 @@
 	 */
 	mw.uls.changeLanguage = function ( language ) {
 		var uri = new mw.Uri( window.location.href );
+
 		uri.extend( {
 			setlang: language
 		} );
@@ -52,9 +53,11 @@
 
 	mw.uls.getPreviousLanguages = function () {
 		var previousLanguages = $.cookie( mw.uls.previousLanguagesCookie );
+
 		if ( !previousLanguages ) {
 			return [];
 		}
+
 		// return last 5 language changes
 		return $.parseJSON( previousLanguages ).slice( -5 );
 	};
@@ -79,6 +82,7 @@
 				.concat( mw.uls.getAcceptLanguageList() );
 
 		countryCode = mw.uls.getCountryCode();
+
 		if ( countryCode ) {
 			list = list.concat( $.uls.data.getLanguagesInTerritory( countryCode ) );
 		}
@@ -100,7 +104,7 @@
 	/**
 	 * i18n initialization
 	 */
-	function i18nInit () {
+	function i18nInit() {
 		var extensionPath, locales, i18n;
 
 		extensionPath = mw.config.get( 'wgExtensionAssetsPath' )
@@ -130,7 +134,6 @@
 				}
 			}
 		} );
-
 	}
 
 	$( document ).ready( function () {
@@ -143,7 +146,7 @@
 		previousLanguages = mw.uls.getPreviousLanguages() || [];
 		previousLang = previousLanguages.slice( -1 )[0];
 
-		function displaySettings () {
+		function displaySettings() {
 			var $displaySettingsTitle, displaySettingsText, $displaySettings;
 
 			displaySettingsText = $.i18n( 'ext-uls-display-settings-desc' );
@@ -154,10 +157,11 @@
 				.addClass( 'display-settings-block' )
 				.prop( 'id', 'display-settings-block' )
 				.append( $displaySettingsTitle );
+
 			return $displaySettings;
 		}
 
-		function inputSettings () {
+		function inputSettings() {
 			var $inputSettingsTitle, inputSettingsText, $inputSettings;
 
 			inputSettingsText = $.i18n( 'ext-uls-input-settings-desc' );
@@ -168,10 +172,11 @@
 				.addClass( 'input-settings-block' )
 				.prop( 'id', 'input-settings-block' )
 				.append( $inputSettingsTitle );
+
 			return $inputSettings;
 		}
 
-		function addDisplaySettings ( uls ) {
+		function addDisplaySettings( uls ) {
 			var $displaySettings, position;
 
 			$displaySettings = displaySettings();
@@ -192,7 +197,7 @@
 			} );
 		}
 
-		function addInputSettings ( uls ) {
+		function addInputSettings( uls ) {
 			var $inputSettings, position;
 
 			$inputSettings = inputSettings();
@@ -231,6 +236,7 @@
 		if ( !previousLang ) {
 			previousLanguages.push( currentLang );
 			mw.uls.setPreviousLanguages( previousLanguages );
+
 			// Do not show tooltip.
 			return true;
 		}
@@ -260,8 +266,10 @@
 						lang: previousLang,
 						dir: $.uls.data.getDir( previousLang )
 					} );
+
 				// Get the html of the link by wrapping it in div first
 				link = $( '<div>' ).html( link ).html();
+
 				return $.i18n( 'ext-uls-undo-language-tooltip-text', link );
 			}
 		} );
