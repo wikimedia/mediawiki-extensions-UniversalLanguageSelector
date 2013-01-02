@@ -293,7 +293,11 @@
 			// Get the language code from the right property -
 			// uiLanguage or contentLanguage
 			language = this[ target + 'Language' ];
-			fonts = this.$webfonts.list( language );
+			if ( this.isWebFontsEnabled() ) {
+				fonts = this.$webfonts.list( language );
+			} else {
+				fonts = [];
+			}
 			// Possible classes:
 			// uls-ui-fonts
 			// uls-content-fonts
@@ -425,11 +429,19 @@
 
 				if ( this.checked ) {
 					mw.webfonts.preferences.enable();
-					$contentFontSelector.prop( 'disabled', false );
+					mw.webfonts.setup();
+					that.$webfonts = $( 'body' ).data( 'webfonts' );
+					$contentFontSelector.removeAttr( 'disabled' );
 					$uiFontSelector.prop( 'disabled', false );
+					displaySettings.prepareContentFonts();
+					displaySettings.prepareUIFonts();
+					displaySettings.i18n();
 					displaySettings.$webfonts.apply( $uiFontSelector.find( 'option:selected' ) );
+					displaySettings.$webfonts.refresh();
 				} else {
 					mw.webfonts.preferences.disable();
+					mw.webfonts.preferences.setFont( that.uiLanguage, 'system' );
+					that.$webfonts.refresh();
 					$contentFontSelector.prop( 'disabled', true );
 					$uiFontSelector.prop( 'disabled', true );
 					displaySettings.$webfonts.reset();
