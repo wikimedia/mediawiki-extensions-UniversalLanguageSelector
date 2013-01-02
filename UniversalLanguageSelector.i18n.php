@@ -81,9 +81,12 @@ $messages['cs'] = array(
 );
 
 /** Danish (dansk)
+ * @author Christian List
  * @author Peter Alberti
  */
 $messages['da'] = array(
+	'UniversalLanguageSelector' => 'Universal sprogvælger',
+	'uls-desc' => 'Giver brugeren forskellige måder at vælge et sprog, og at justere indstillingerne for sproget',
 	'uls-select-content-language' => 'Vælg sprog',
 );
 
