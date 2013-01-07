@@ -45,7 +45,7 @@
 	color: #555;
 }
 
-.uls-menu .uls-no-results-found-title{
+.uls-menu .uls-no-results-found-title {
 	font-size: 16pt;
 	font-weight: bold;
 	line-height: 1.5em;
@@ -139,7 +139,7 @@ div.uls-region {
 	transition: opacity 0.15s linear;
 }
 
-.uls-menu .map-block:hover, 
+.uls-menu .map-block:hover,
 .uls-menu .map-block:hover a {
 	opacity: 1;
 	color: #333;
@@ -184,13 +184,13 @@ div.uls-region {
 	border: 1px solid #3366bb;
 }
 
-.uls-menu .search{
+.uls-menu .search {
 	position: relative;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F0F0F0', endColorstr='#FBFBFB');
 	background: #f8f8f8;
 	background: -webkit-gradient(linear, left top, left bottom, from(#F0F0F0), to(#FBFBFB));
 	background: -webkit-linear-gradient(top, #F0F0F0, #FBFBFB);
-	background: -moz-linear-gradient(top,  #F0F0F0,  #FBFBFB);
+	background: -moz-linear-gradient(top, #F0F0F0, #FBFBFB);
 	background: -ms-linear-gradient(top, #F0F0F0, #FBFBFB);
 	background: -o-linear-gradient(top, #F0F0F0, #FBFBFB);
 	background: linear-gradient(#F0F0F0, #FBFBFB);
@@ -316,7 +316,7 @@ div.uls-region {
 	margin: 0;
 }
 
-.grid .column, .grid  .columns {
+.grid .column, .grid .columns {
 	float: left;
 	min-height: 1px;
 	padding: 0 5px;
@@ -534,7 +534,7 @@ div.uls-region {
 	padding: 0 15px 15px;
 }
 
-/*  .block-grid.two-up>li:nth-child(2n+1) {clear: left;} */
+/* .block-grid.two-up>li:nth-child(2n+1) {clear: left;} */
 .grid .block-grid.three-up {
 	margin: 0 -12px;
 }
@@ -544,7 +544,7 @@ div.uls-region {
 	padding: 0 12px 12px;
 }
 
-/*  .block-grid.three-up>li:nth-child(3n+1) {clear: left;} */
+/* .block-grid.three-up>li:nth-child(3n+1) {clear: left;} */
 .grid .block-grid.four-up {
 	margin: 0 -10px;
 }
@@ -554,7 +554,7 @@ div.uls-region {
 	padding: 0 10px 10px;
 }
 
-/*  .block-grid.four-up>li:nth-child(4n+1) {clear: left;} */
+/* .block-grid.four-up>li:nth-child(4n+1) {clear: left;} */
 .grid .block-grid.five-up {
 	margin: 0 -8px;
 }
@@ -649,8 +649,8 @@ div.uls-region {
 	bottom:0;
 	left:0;
 	-webkit-border-radius: 0 0 5px 5px;
-	-moz-border-radius:  0 0 5px 5px;
-	border-radius:  0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
 }
 
 .uls-no-found-more a {
