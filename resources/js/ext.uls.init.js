@@ -139,6 +139,16 @@
 	$( document ).ready( function () {
 		var $ulsTrigger, previousLanguages, previousLang;
 
+		/*
+		 * The 'als' is used in a non-standard way in MediaWiki -
+		 * it may be used to represent the Allemanic language,
+		 * the standard code of which is 'gsw', while 'als'
+		 * is ISO 639 3 refers to Tosk Albanian, which is
+		 * not currently used in any way in MediaWiki.
+		 * This local fix adds a redirect for it.
+		 */
+		$.uls.data.addLanguage( 'als', { target: 'gsw' } );
+
 		// JavaScript side i18n initialization
 		i18nInit();
 
