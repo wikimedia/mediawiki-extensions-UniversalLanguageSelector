@@ -90,7 +90,7 @@
 			this.$parent.$settingsPanel.append( this.$template );
 			if ( $.ime.preferences.isEnabled() ) {
 				this.prepareLanguages();
-				this.prepareInputmethods( this.imeLanguage );
+				this.prepareInputmethods( $.ime.preferences.getLanguage() );
 			} else {
 
 				// Hide the language list
@@ -200,10 +200,11 @@
 		 */
 		prepareLanguages: function () {
 			var inputSettings = this,
+				SUGGESTED_LANGUAGES_NUMBER = 3,
+				selectedImeLanguage = $.ime.preferences.getLanguage(),
 				languagesForButtons, $languages, suggestedLanguages,
-				SUGGESTED_LANGUAGES_NUMBER, lang, i, language, $button, $caret;
+				firstLanguage, lang, i, language, $button, $caret;
 
-			SUGGESTED_LANGUAGES_NUMBER = 3;
 			$languages = this.$template.find( 'div.uls-ui-languages' );
 			this.$template.find( 'div.uls-ui-languages' ).show();
 			this.$template.find( 'div.uls-input-settings-languages-title' ).show();
@@ -214,6 +215,7 @@
 				.concat( [ 'en', 'zh', 'fr' ] );
 
 			// Content language is always on the first button
+
 			languagesForButtons = [ this.contentLanguage ];
 
 			// This is needed when drawing the panel for the second time
@@ -223,6 +225,14 @@
 			// UI language must always be present
 			if ( this.imeLanguage !== this.contentLanguage ) {
 				languagesForButtons.push( this.imeLanguage );
+				firstLanguage = this.imeLanguage;
+			}
+
+			// Selected IME language may be different, and it must
+			// be present, too
+			if ( $.inArray( selectedImeLanguage, languagesForButtons ) === -1 ) {
+				languagesForButtons.push( selectedImeLanguage );
+				firstLanguage = selectedImeLanguage;
 			}
 
 			for ( lang in suggestedLanguages ) {
@@ -262,7 +272,7 @@
 						dir: $.uls.data.getDir( language )
 					} );
 
-				if ( language === this.imeLanguage ) {
+				if ( language === firstLanguage ) {
 					$button.addClass( 'down' );
 				}
 
