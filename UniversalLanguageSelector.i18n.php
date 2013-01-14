@@ -276,6 +276,14 @@ $messages['ms'] = array(
 	'uls-select-content-language' => 'Pilih bahasa',
 );
 
+/** Norwegian Bokmål (norsk (bokmål)‎)
+ */
+$messages['nb'] = array(
+	'UniversalLanguageSelector' => 'Universal språkvelger',
+	'uls-desc' => 'Gir brukeren flere måter å velge språk på og endre språkinnstillinger',
+	'uls-select-content-language' => 'Velg språk',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
