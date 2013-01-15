@@ -430,7 +430,7 @@
 				if ( this.checked ) {
 					mw.webfonts.preferences.enable();
 					mw.webfonts.setup();
-					that.$webfonts = $( 'body' ).data( 'webfonts' );
+					displaySettings.$webfonts = $( 'body' ).data( 'webfonts' );
 					$contentFontSelector.removeAttr( 'disabled' );
 					$uiFontSelector.prop( 'disabled', false );
 					displaySettings.prepareContentFonts();
@@ -440,8 +440,8 @@
 					displaySettings.$webfonts.refresh();
 				} else {
 					mw.webfonts.preferences.disable();
-					mw.webfonts.preferences.setFont( that.uiLanguage, 'system' );
-					that.$webfonts.refresh();
+					mw.webfonts.preferences.setFont( displaySettings.uiLanguage, 'system' );
+					displaySettings.$webfonts.refresh();
 					$contentFontSelector.prop( 'disabled', true );
 					$uiFontSelector.prop( 'disabled', true );
 					displaySettings.$webfonts.reset();
