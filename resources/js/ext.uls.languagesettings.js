@@ -36,10 +36,10 @@
 		settingsMenu +
 		settingsPanel +
 		'</div>';
-	windowTemplate = '<div style="display: block;" id="language-settings-dialog" class="grid uls-menu uls-wide">'
-		+ closeRow
-		+ panelsRow
-		+ '</div>';
+	windowTemplate = '<div style="display: block;" id="language-settings-dialog" class="grid uls-menu uls-wide">' +
+		closeRow +
+		panelsRow +
+		'</div>';
 
 	function LanguageSettings( element, options ) {
 		this.$element = $( element );

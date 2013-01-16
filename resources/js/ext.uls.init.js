@@ -107,8 +107,8 @@
 	function i18nInit() {
 		var extensionPath, locales, i18n;
 
-		extensionPath = mw.config.get( 'wgExtensionAssetsPath' )
-			+ '/UniversalLanguageSelector/';
+		extensionPath = mw.config.get( 'wgExtensionAssetsPath' ) +
+			'/UniversalLanguageSelector/';
 
 		locales = mw.config.get( 'wgULSi18nLocales' );
 		i18n = $.i18n( {
@@ -118,7 +118,7 @@
 				// the message key with a unique namespace like ext-uls-*
 
 				if ( messageKey.indexOf( 'uls' ) === 0 ) {
-					if ( $.inArray( locale, locales['uls'] ) >= 0 ) {
+					if ( $.inArray( locale, locales.uls ) >= 0 ) {
 						return extensionPath + 'lib/jquery.uls/i18n/' + locale + '.json';
 					}
 

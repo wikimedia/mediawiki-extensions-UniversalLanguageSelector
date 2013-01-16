@@ -21,8 +21,8 @@
 
 	var mwImeRulesPath, inputSelector, inputPreferences;
 
-	mwImeRulesPath = mw.config.get( 'wgExtensionAssetsPath' )
-		+ '/UniversalLanguageSelector/lib/jquery.ime/';
+	mwImeRulesPath = mw.config.get( 'wgExtensionAssetsPath' ) +
+		'/UniversalLanguageSelector/lib/jquery.ime/';
 	inputSelector = 'input:not([type]), input[type=text], input[type=search], textarea';
 
 	inputPreferences = mw.uls.preferences();
