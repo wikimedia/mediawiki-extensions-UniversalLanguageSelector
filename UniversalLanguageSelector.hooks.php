@@ -19,13 +19,12 @@
  */
 
 class UniversalLanguageSelectorHooks {
-	public static function isToolbarEnabled() {
+	public static function isToolbarEnabled( $user ) {
 		global $wgULSEnable, $wgULSEnableAnon;
 		if ( !$wgULSEnable ) {
 			return false;
 		}
 		if ( !$wgULSEnableAnon ) {
-			$user = RequestContext::getMain()->getUser();
 			if ( $user->isAnon() ) {
 				return false;
 			}
@@ -40,7 +39,7 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function addModules( $out, $skin ) {
-		if ( !self::isToolbarEnabled() ) {
+		if ( !self::isToolbarEnabled( $out->getUser() ) ) {
 			return true;
 		}
 
@@ -72,8 +71,8 @@ class UniversalLanguageSelectorHooks {
 	 * Hooks: SkinTemplateNavigation, SkinTemplateTabs
 	 */
 	static function addTrigger( array &$personal_urls, &$title ) {
-		global $wgLang;
-		if ( !self::isToolbarEnabled() ) {
+		global $wgLang, $wgUser;
+		if ( !self::isToolbarEnabled( $wgUser ) ) {
 			return true;
 		}
 
@@ -134,14 +133,26 @@ class UniversalLanguageSelectorHooks {
 	 * @param  $code String
 	 * @return bool
 	 */
-	public static function getLanguage( $user, &$code ) {
-		global $wgRequest, $wgULSLanguageDetection;
-		if ( !self::isToolbarEnabled() ) {
+	public static function getLanguage( $user, &$code, $request = null ) {
+		global $wgUser, $wgRequest, $wgULSLanguageDetection;
+		if ( !self::isToolbarEnabled( $user ) ) {
 			return true;
 		}
 
-		$languageToSave = $wgRequest->getVal( 'setlang' );
-		if ( $wgRequest->getVal( 'uselang' ) && !$languageToSave ) {
+		/* Before $request is passed to this, check if the given user
+		 * name matches the current user name to detect if we are not
+		 * running in the primary request context. See bug 44010 */
+		if ( $request === null ) {
+			if ( $wgUser->getName() !== $user->getName() ) {
+				return true;
+			}
+
+			// Should be safe to use the global request now
+			$request = $wgRequest;
+		}
+
+		$languageToSave = $request->getVal( 'setlang' );
+		if ( $request->getVal( 'uselang' ) && !$languageToSave ) {
 			// uselang can be used for temporary override of language preference
 			// when setlang is not provided
 			return true;
@@ -150,7 +161,7 @@ class UniversalLanguageSelectorHooks {
 		$languageToUse = null;
 		if ( self::isSupportedLanguage( $languageToSave ) ) {
 			if ( $user->isAnon() ) {
-				$wgRequest->response()->setcookie( 'language', $languageToSave );
+				$request->response()->setcookie( 'language', $languageToSave );
 			} else {
 				$user->setOption( 'language', $languageToSave );
 				$user->saveSettings();
@@ -160,7 +171,7 @@ class UniversalLanguageSelectorHooks {
 
 		// Load from cookie unless overriden
 		if ( $languageToUse === null && $user->isAnon() ) {
-			$languageToUse = $wgRequest->getCookie( 'language' );
+			$languageToUse = $request->getCookie( 'language' );
 		}
 
 		// Check whether we got valid language from store or
@@ -168,7 +179,7 @@ class UniversalLanguageSelectorHooks {
 		if ( self::isSupportedLanguage( $languageToUse ) ) {
 			$code = $languageToUse;
 		} elseif ( $user->isAnon() && $wgULSLanguageDetection ) {
-			$preferred = $wgRequest->getAcceptLang();
+			$preferred = $request->getAcceptLang();
 			$default = self::getDefaultLanguage( $preferred );
 			if ( $default !== '' ) {
 				$code = $default;
