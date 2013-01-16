@@ -1,5 +1,8 @@
 .imeselector {
 	position: absolute;
+	/* Fix rgba fallback bug - http://css-tricks.com/ie-background-rgb-bug */
+	/* @embed */
+	background: url('../images/ime-active.png') no-repeat 3px center #fff;
 	/* @embed */
 	background: url('../images/ime-active.png') no-repeat 3px center rgba(255,255,255,0.75);
 	cursor: pointer;
@@ -9,7 +12,7 @@
 	box-shadow: 0 1px 3px 0 #777;
 	margin-top: 0;
 	text-align: left;
-	font-family: 'sans';
+	font-family: sans-serif;
 	white-space: nowrap;
 	z-index: 9999;
 }
@@ -137,6 +140,20 @@ span.ime-disable-shortcut {
 	right: 10px;
 	position: absolute;
 	top: -6px;
+}
+
+.imeselector-menu.position-top:before {
+	border-bottom: 0 none;
+	border-top: 7px solid #888;
+	top: auto;
+	bottom: -7px;
+}
+
+.imeselector-menu.position-top:after {
+	border-bottom: 0 none;
+	border-top: 6px solid #FFFFFF;
+	top: auto;
+	bottom: -6px;
 }
 
 .imeselector-menu .checked {
