@@ -293,6 +293,15 @@ $messages['nl'] = array(
 	'uls-select-content-language' => 'Taal selecteren',
 );
 
+/** Ossetic (Ирон)
+ * @author Bouron
+ */
+$messages['os'] = array(
+	'UniversalLanguageSelector' => 'Универсалон æвзагæвзарæн',
+	'uls-desc' => 'Архайæгæн дæтты цалдæр фадат æвзаг равзарынæн æмæ йын уаг сæвæрынæн',
+	'uls-select-content-language' => 'Æвзагæвзарæн',
+);
+
 /** Polish (polski)
  * @author BeginaFelicysym
  */
