@@ -411,6 +411,7 @@
 			inputSettings.$template.find( 'button.uls-input-toggle-button' )
 				.on( 'click', function () {
 					inputSettings.enableApplyButton();
+
 					if ( $.ime.preferences.isEnabled() ) {
 						inputSettings.disableInputTools();
 					} else {

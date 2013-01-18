@@ -78,19 +78,20 @@
 		},
 
 		disable: function () {
-			this.registry['enable'] = false;
+			this.registry.isDirty = true;
+			this.registry.enable = false;
 		},
 
 		enable: function () {
-			this.registry['enable'] = true;
+			this.registry.isDirty = true;
+			this.registry.enable = true;
 		},
 
 		isEnabled: function () {
-
-			if ( this.registry['enable'] === undefined ) {
+			if ( this.registry.enable === undefined ) {
 				return mw.config.get( 'wgULSIMEEnabled' );
 			} else {
-				return this.registry['enable'];
+				return this.registry.enable;
 			}
 		}
 
