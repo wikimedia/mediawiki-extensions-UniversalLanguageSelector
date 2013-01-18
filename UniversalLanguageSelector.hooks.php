@@ -133,7 +133,7 @@ class UniversalLanguageSelectorHooks {
 	 * @param  $code String
 	 * @return bool
 	 */
-	public static function getLanguage( $user, &$code, $request = null ) {
+	public static function getLanguage( $user, &$code, $context = null ) {
 		global $wgUser, $wgRequest, $wgULSLanguageDetection;
 		if ( !self::isToolbarEnabled( $user ) ) {
 			return true;
@@ -142,13 +142,15 @@ class UniversalLanguageSelectorHooks {
 		/* Before $request is passed to this, check if the given user
 		 * name matches the current user name to detect if we are not
 		 * running in the primary request context. See bug 44010 */
-		if ( $request === null ) {
+		if ( !$context instanceof RequestContext ) {
 			if ( $wgUser->getName() !== $user->getName() ) {
 				return true;
 			}
 
 			// Should be safe to use the global request now
 			$request = $wgRequest;
+		} else {
+			$request = $context->getRequest();
 		}
 
 		$languageToSave = $request->getVal( 'setlang' );
