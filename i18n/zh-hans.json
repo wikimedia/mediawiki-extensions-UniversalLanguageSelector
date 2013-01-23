@@ -14,6 +14,7 @@
 	"ext-uls-display-settings-font-settings": "\u5b57\u4f53\u8bbe\u7f6e",
 	"ext-uls-display-settings-ui-language": "\u663e\u793a\u8bed\u8a00",
 	"ext-uls-webfonts-settings-title": "\u9700\u8981\u65f6\u4e0b\u8f7d\u5b57\u4f53",
+	"ext-uls-webfonts-settings-info": "\u5c06\u4e0b\u8f7dWebfont\u4ee5\u663e\u793a\u7279\u6b8a\u811a\u672c\u4e2d\u7684\u6587\u5b57\u3002",
 	"ext-uls-webfonts-settings-info-link": "\u66f4\u591a\u4fe1\u606f",
 	"ext-uls-webfonts-select-for": "\u4e3a $1 \u9009\u62e9\u5b57\u4f53",
 	"ext-uls-webfonts-select-for-ui-info": "\u7528\u4e8e\u7528\u6237\u754c\u9762\u7684\u5b57\u4f53",
@@ -35,5 +36,5 @@
 	"ext-uls-input-disable": "\u7981\u7528\u8f93\u5165\u6cd5\u5de5\u5177",
 	"ext-uls-input-enable": "\u542f\u7528\u8f93\u5165\u6cd5\u5de5\u5177",
 	"ext-uls-input-disable-info": "\u8f93\u5165\u6cd5\u5de5\u5177\u5df2\u7981\u7528\u3002",
-	"ext-uls-input-enable-info": "\u8f93\u5165\u6cd5\u5de5\u5177\u5df2\u542f\u7528\u3002"
+	"ext-uls-input-settings-noime": "\u5bf9\u6b64\u8bed\u8a00\u6ca1\u6709\u53ef\u7528\u7684\u8f93\u5165\u6cd5\u3002"
 }

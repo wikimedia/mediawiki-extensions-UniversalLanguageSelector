@@ -31,11 +31,13 @@ $messages['en'] = array(
 );
 
 /** Message documentation (Message documentation)
+ * @author Shirayuki
  */
 $messages['qqq'] = array(
 	'UniversalLanguageSelector' => 'Extension name',
 	'uls-desc' => 'Extension description',
-	'uls-select-content-language' => 'Main heading in the language selector popup.',
+	'uls-select-content-language' => 'Main heading in the language selector popup.
+{{Identical|Select language}}',
 );
 
 /** Assamese (অসমীয়া)
