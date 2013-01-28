@@ -25,7 +25,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 /**
  * Version number used in extension credits and in other placed where needed.
  */
-define( 'ULS_VERSION', '2013-01-16' );
+define( 'ULS_VERSION', '2013-01-28' );
 
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
@@ -159,13 +159,13 @@ $wgResourceModules['ext.uls.webfonts'] = array(
 	),
 );
 $wgResourceModules['ext.uls.ime'] = array(
-		'scripts' => 'resources/js/ext.uls.ime.js',
-		'localBasePath' => $dir,
-		'remoteExtPath' => 'UniversalLanguageSelector',
-		'dependencies' => array(
-			'jquery.ime',
-			'ext.uls.preferences',
-		),
+	'scripts' => 'resources/js/ext.uls.ime.js',
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'UniversalLanguageSelector',
+	'dependencies' => array(
+		'jquery.ime',
+		'ext.uls.preferences',
+	),
 );
 
 
@@ -182,15 +182,15 @@ $wgResourceModules['ext.uls.displaysettings'] = array(
 );
 
 $wgResourceModules['ext.uls.inputsettings'] = array(
-		'scripts' => 'resources/js/ext.uls.inputsettings.js',
-		'styles' => 'resources/css/ext.uls.inputsettings.css',
-		'localBasePath' => $dir,
-		'dependencies' => array(
-			'ext.uls.languagesettings',
-			'ext.uls.ime',
-			'jquery.i18n',
-		),
-		'remoteExtPath' => 'UniversalLanguageSelector',
+	'scripts' => 'resources/js/ext.uls.inputsettings.js',
+	'styles' => 'resources/css/ext.uls.inputsettings.css',
+	'localBasePath' => $dir,
+	'dependencies' => array(
+		'ext.uls.languagesettings',
+		'ext.uls.ime',
+		'jquery.i18n',
+	),
+	'remoteExtPath' => 'UniversalLanguageSelector',
 );
 
 $wgResourceModules['jquery.uls'] = array(
@@ -221,16 +221,16 @@ $wgResourceModules['ext.uls.webfonts.repository'] = array(
 );
 
 $wgResourceModules['jquery.i18n'] = array(
-		'scripts' => 'lib/jquery.i18n.js',
-		'localBasePath' => $dir,
-		'remoteExtPath' => 'UniversalLanguageSelector',
+	'scripts' => 'lib/jquery.i18n.js',
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'UniversalLanguageSelector',
 );
 
 $wgResourceModules['jquery.ime'] = array(
-		'scripts' => 'lib/jquery.ime/jquery.ime.js',
-		'styles' => array(
-			'lib/jquery.ime/css/jquery.ime.css',
-		),
-		'localBasePath' => $dir,
-		'remoteExtPath' => 'UniversalLanguageSelector',
+	'scripts' => 'lib/jquery.ime/jquery.ime.js',
+	'styles' => array(
+		'lib/jquery.ime/css/jquery.ime.css',
+	),
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'UniversalLanguageSelector',
 );
