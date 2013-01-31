@@ -1,0 +1,21 @@
+== UniversalLanguageSelector 2013.01 ==
+Released at 2013-01-31.
+
+== Known issues ==
+We fixed an issue where ULS preferences for logged in users were not
+saved between different pages. This depends on a fix on MediaWiki core
+which is not yet in any released MediaWiki version. It is on a queue to
+be backported to 1.19, 1.20.
+
+=== Noteworthy changes ===
+* More unit tests were added
+* Used upstream libraries jquery.ime, jquery.webfonts and jqeury.uls were updated.
+* A "Special" region is now supported for custom languages that don't fit into any region.
+* An alias for the non-standard language code 'als' was added, redirecting to 'gsw'.
+
+== Bug fixes ==
+* (bug 42384) Don't show the "previous language" tooltip when
+  the ULS panel is shown
+* (bug 42440) Incorrect language was shown as selected in display setttings
+* (bug 42375) Show current IME language in ULS input settings
+* (bug 44010) ULS could make log entries appear in wrong language
