@@ -26,6 +26,7 @@ div.display-settings-block {
 	width: 23%;
 	text-overflow: ellipsis;
 	margin-right: 15px;
+	vertical-align: middle;
 }
 
 .uls-ui-languages button#uls-more-languages {
