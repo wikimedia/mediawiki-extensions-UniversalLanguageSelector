@@ -1,9 +1,9 @@
 {
-	"ext-uls-display-settings-title": "Gosodiadau'r golwg",
-	"ext-uls-display-settings-title-short": "Golwg",
 	"@metadata": {
 		"authors": [
 			"Lloffiwr"
 		]
-	}
+	},
+	"ext-uls-display-settings-title": "Gosodiadau'r golwg",
+	"ext-uls-display-settings-title-short": "Golwg"
 }
