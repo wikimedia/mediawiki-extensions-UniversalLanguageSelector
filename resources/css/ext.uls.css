@@ -3,9 +3,19 @@ li#pt-uls a.uls-trigger {
 }
 
 div#settings-block {
-	border-left: 1px solid #C9C9C9;
+	border-top: 1px solid #C9C9C9;
+	background: #f8f8f8;
+	background: -webkit-gradient(linear, left top, left bottom, from(#FBFBFB), to(#F0F0F0));
+	background: -webkit-linear-gradient(top, #FBFBFB, #F0F0F0);
+	background: -moz-linear-gradient(top, #FBFBFB, #F0F0F0);
+	background: -ms-linear-gradient(top, #FBFBFB, #F0F0F0);
+	background: -o-linear-gradient(top, #FBFBFB, #F0F0F0);
+	background: linear-gradient(#FBFBFB, #F0F0F0);
 	padding-left: 4px;
 	line-height: 1.2em;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
 }
 
 .uls-menu a {
@@ -14,7 +24,8 @@ div#settings-block {
 
 #settings-block div.display-settings-block,
 #settings-block div.input-settings-block {
-	margin: 8px 0;
+	display: inline-block;
+	margin: 8px;
 	color: #565656;
 }
 
