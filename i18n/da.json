@@ -35,5 +35,6 @@
 	"jquery-ime-help": "Hj\u00e6lp",
 	"ext-uls-input-disable": "Sl\u00e5 v\u00e6rkt\u00f8jer til indtastning fra",
 	"ext-uls-input-enable": "Sl\u00e5 v\u00e6rkt\u00f8jer til indtastning til",
-	"ext-uls-input-disable-info": "V\u00e6rkt\u00f8jer til indtastning er sl\u00e5et fra."
+	"ext-uls-input-disable-info": "V\u00e6rkt\u00f8jer til indtastning er sl\u00e5et fra.",
+	"ext-uls-input-settings-noime": "Der er ingen indtastningsmetoder for dette sprog."
 }

@@ -5,5 +5,15 @@
 		]
 	},
 	"ext-uls-display-settings-title": "Gosodiadau'r golwg",
-	"ext-uls-display-settings-title-short": "Golwg"
+	"ext-uls-display-settings-title-short": "Golwg",
+	"ext-uls-undo-language-tooltip-text": "Newidiwyd yr iaith o $1",
+	"ext-uls-language-settings-title": "Gosodiadau iaith",
+	"ext-uls-language-settings-apply": "Rhodder y gosodiadau ar waith",
+	"ext-uls-webfonts-settings-info-link": "Rhagor o wybodaeth",
+	"ext-uls-input-settings-title": "Gosodiadau mewnbynnu",
+	"ext-uls-input-settings-title-short": "Mewnbwn",
+	"ext-uls-input-settings-more-languages-tooltip": "Rhagor o ieithoedd",
+	"ext-uls-input-more-settings": "Rhagor o osodiadau",
+	"jquery-ime-other-languages": "Ieithoedd eraill",
+	"jquery-ime-help": "Cymorth"
 }

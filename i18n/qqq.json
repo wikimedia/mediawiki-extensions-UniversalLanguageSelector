@@ -2,13 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Hyperborean",
+			"Lloffiwr",
 			"Santhosh Thottingal",
 			"Shirayuki"
 		]
 	},
 	"ext-uls-display-settings-title": "Display settings title text",
 	"ext-uls-display-settings-title-short": "A short name for display settings screen. Can be a translation for 'Display'",
-	"ext-uls-display-settings-desc": "Short description about display settings.",
+	"ext-uls-display-settings-desc": "Short description about display settings.  'Set language used for menus and set fonts' is equivalent in meaning to the source message.",
 	"ext-uls-undo-language-tooltip-text": "Text for the tooltip appearing when language is changed. $1 is the previous language acronym.",
 	"ext-uls-language-settings-title": "Title text for language settings screen",
 	"ext-uls-language-settings-apply": "Label for apply settings button in language settings screen",
