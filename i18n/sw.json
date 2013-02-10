@@ -1,4 +1,10 @@
 {
+	"@metadata": {
+		"authors": [
+			"Lloffiwr",
+			"Muddyb Blast Producer"
+		]
+	},
 	"ext-uls-display-settings-title": "Mipangilio ya kusano",
 	"ext-uls-display-settings-title-short": "Kusano",
 	"ext-uls-display-settings-desc": "Weka lugha inayotumika kwa ajili ya menyu na herufi.",
@@ -31,11 +37,5 @@
 	"ext-uls-input-disable": "Lemaza zana za njia za kuingiza",
 	"ext-uls-input-enable": "Wezesha zana za njia za kuingiza",
 	"ext-uls-input-disable-info": "Zana za njia za kuingiza zimelemazwa.",
-	"ext-uls-input-settings-noime": "Njia za kuingiza hazipatikani kwa ajili ya lugha hii.",
-	"@metadata": {
-		"authors": [
-			"Lloffiwr",
-			"Muddyb Blast Producer"
-		]
-	}
+	"ext-uls-input-settings-noime": "Njia za kuingiza hazipatikani kwa ajili ya lugha hii."
 }
