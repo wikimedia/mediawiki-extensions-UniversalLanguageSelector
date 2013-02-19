@@ -40,6 +40,15 @@ $messages['qqq'] = array(
 {{Identical|Select language}}',
 );
 
+/** Arabic (العربية)
+ * @author Tarawneh
+ */
+$messages['ar'] = array(
+	'UniversalLanguageSelector' => 'محدد لغة عابر للمشاريع',
+	'uls-desc' => 'يمنح المستخدم عدة طرق لاختيار لغة، وضبط إعدادات اللغة',
+	'uls-select-content-language' => 'حدد اللغة',
+);
+
 /** Assamese (অসমীয়া)
  * @author Bishnu Saikia
  */
