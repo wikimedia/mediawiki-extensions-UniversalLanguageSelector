@@ -11,7 +11,7 @@ div#settings-block {
 	background: -ms-linear-gradient(top, #FBFBFB, #F0F0F0);
 	background: -o-linear-gradient(top, #FBFBFB, #F0F0F0);
 	background: linear-gradient(#FBFBFB, #F0F0F0);
-	padding-left: 4px;
+	padding-left: 10px;
 	line-height: 1.2em;
 	-webkit-border-radius: 0 0 5px 5px;
 	-moz-border-radius: 0 0 5px 5px;
@@ -25,7 +25,7 @@ div#settings-block {
 #settings-block div.display-settings-block,
 #settings-block div.input-settings-block {
 	display: inline-block;
-	margin: 8px;
+	margin: 8px 15px;
 	color: #565656;
 }
 

@@ -1,15 +1,12 @@
 div.display-settings-block {
 	/* @embed */
-	background: transparent url('../images/display.png') no-repeat;
+	background: transparent url('../images/display.png') left top no-repeat;
+	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/display.svg');
+	background-image: -moz-linear-gradient(transparent, transparent), url('../images/display.svg');
+	background-image: linear-gradient(transparent, transparent), url('../images/display.svg');
 	background-size: 20px auto;
-	/* This is only few pixels off from the below */
-	background-position: 4.5% 0;
-	/* Does not work for RTL
-	background-position-x: 15px;
-	background-position-y: 5px;
-	*/
 	color: #252525;
-	padding-left: 32px;
+	padding-left: 26px;
 	cursor: pointer;
 }
 
