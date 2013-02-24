@@ -2,6 +2,14 @@ li#pt-uls a.uls-trigger {
 	padding-left: 30px;
 }
 
+/* Opera for some inexplicable reason confuses right and left padding with */
+/* RTL text direction here (bug 45142). x:-o-prefocus won't match anything, */
+/* but will make other browsers ignore this rule. */
+x:-o-prefocus, body.rtl li#pt-uls {
+  /* @noflip */
+  direction: ltr;
+}
+
 div#settings-block {
 	border-top: 1px solid #C9C9C9;
 	background: #f8f8f8;
