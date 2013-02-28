@@ -1,0 +1,6 @@
+== UniversalLanguageSelector 2013.02 ==
+Released at 2013-02-28.
+
+The UniversalLanguageSelector extension is rolled back in this release
+to the 2012.12 version. The latest versions are not backwards compatible
+with the released 1.19 and 1.20 MediaWiki versions.
