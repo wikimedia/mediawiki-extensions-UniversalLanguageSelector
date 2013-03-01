@@ -352,6 +352,15 @@ $messages['ro'] = array(
 	'uls-select-content-language' => 'Selectare limbă',
 );
 
+/** tarandíne (tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'UniversalLanguageSelector' => 'Scacchiatore Universale de Lènghe',
+	'uls-desc' => "Dèje diverse mode a l'utende de scacchià 'na lènghe e de consiglià le 'mbostaziune d'a lènghe",
+	'uls-select-content-language' => "Scacchie 'a lènghe",
+);
+
 /** Russian (русский)
  * @author Amire80
  */
