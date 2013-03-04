@@ -165,6 +165,9 @@
 					return $ulsTrigger;
 				}
 			} );
+
+			$input.data( 'imeselector' )
+				.selectLanguage( $.ime.preferences.getLanguage() );
 		} );
 
 	};
