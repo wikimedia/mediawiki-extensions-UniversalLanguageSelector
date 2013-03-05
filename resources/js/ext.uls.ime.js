@@ -139,7 +139,8 @@
 	mw.ime.setup = function () {
 
 		$( 'body' ).on( 'focus.ime', inputSelector, function () {
-			var $input = $( this );
+			var imeselector,
+				$input = $( this );
 
 			$input.ime( {
 				languages: mw.ime.getIMELanguageList(),
@@ -166,8 +167,11 @@
 				}
 			} );
 
-			$input.data( 'imeselector' )
-				.selectLanguage( $.ime.preferences.getLanguage() );
+			// Some fields may be uninitialized
+			imeselector = $input.data( 'imeselector' );
+			if ( imeselector ) {
+				imeselector.selectLanguage( $.ime.preferences.getLanguage() );
+			}
 		} );
 
 	};
