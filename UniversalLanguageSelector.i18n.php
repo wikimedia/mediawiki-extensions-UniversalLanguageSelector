@@ -209,6 +209,15 @@ $messages['hsb'] = array(
 	'uls-select-content-language' => 'Rěč wubrać',
 );
 
+/** Iloko (Ilokano)
+ * @author Lam-ang
+ */
+$messages['ilo'] = array(
+	'UniversalLanguageSelector' => 'Unibersal a Pagpilian ti Pagsasao',
+	'uls-desc' => 'Mangited ti agar-aramat kadagiti nadumaduma a pamay-an ti panagpili ti maysa a pagsasao ken ti panagbaliw kadagiti pannakaidisso ti pagsasao',
+	'uls-select-content-language' => 'Agpili ti pagsasao',
+);
+
 /** Italian (italiano)
  * @author Darth Kule
  */
