@@ -27,39 +27,40 @@
 	/**
 	 * Post to options API with correct token.
 	 * If we have no token, get one and try to post.
-	 * If we have a cached token try using that, and if it fails, blank out the
-	 * cached token and start over.
+	 * If we have a cached token try using that,
+	 * and if it fails, blank out the cached token and start over.
 	 *
 	 * @param params {Object} API parameters
 	 * @param ok {Function} callback for success
 	 * @param err {Function} [optional] error callback
 	 * @return {jqXHR}
 	 */
-	function saveOptionsWithToken ( params, ok, err ) {
-		var useTokenToPost, getTokenIfBad;
+	function saveOptionsWithToken( params, ok, err ) {
 		if ( cachedOptionsToken === null ) {
 			// We don't have a valid cached token, so get a fresh one and try posting.
 			// We do not trap any 'badtoken' or 'notoken' errors, because we don't want
 			// an infinite loop. If this fresh token is bad, something else is very wrong.
-			useTokenToPost = function ( token ) {
+			return getOptionsToken( function ( token ) {
 				params.token = token;
 				new mw.Api().post( params, ok, err );
-			};
-			return getOptionToken( useTokenToPost, err );
+			}, err );
 		} else {
-			// We do have a token, but it might be expired. So if it is 'bad' then
-			// start over with a new token.
 			params.token = cachedOptionsToken;
-			getTokenIfBad = function ( code, result ) {
-				if ( code === 'badtoken' ) {
-					// force a new token, clear any old one
-					cachedOptionsToken = null;
-					saveOptionsWithToken( params, ok, err );
-				} else {
-					err( code, result );
+
+			return new mw.Api().post( params, {
+				ok: ok,
+				err: function ( code, result ) {
+					// We do have a token, but it might be expired.
+					// So if it is 'bad', then start over with a new token.
+					if ( code === 'badtoken' ) {
+						// force a new token, clear any old one
+						cachedOptionsToken = null;
+						saveOptionsWithToken( params, ok, err );
+					} else {
+						err( code, result );
+					}
 				}
-			};
-			return new mw.Api().post( params, { ok : ok, err : getTokenIfBad });
+			} );
 		}
 	}
 
@@ -75,13 +76,14 @@
 	 * @param err {Function} error callback
 	 * @return {jqXHR}
 	 */
-	function getOptionToken ( tokenCallback, err ) {
-		var parameters = {
-				action: 'tokens',
-				type: 'options'
-			},
-			ok = function ( data ) {
+	function getOptionsToken( tokenCallback, err ) {
+		return new mw.Api().get( {
+			action: 'tokens',
+			type: 'options'
+		}, {
+			ok: function ( data ) {
 				var token;
+
 				// If token type is not available for this user,
 				// key 'translationreviewtoken' is missing or can contain Boolean false
 				if ( data.tokens && data.tokens.optionstoken ) {
@@ -92,16 +94,12 @@
 					err( 'token-missing', data );
 				}
 			},
-			ajaxOptions = {
-				ok: ok,
-				err: err,
-				// Due to the API assuming we're logged out if we pass the callback-parameter,
-				// we have to disable jQuery's callback system, and instead parse JSON string,
-				// by setting 'jsonp' to false.
-				jsonp: false
-			};
-
-		return new mw.Api().get( parameters, ajaxOptions );
+			err: err,
+			// Due to the API assuming we're logged out if we pass the callback-parameter,
+			// we have to disable jQuery's callback system, and instead parse JSON string,
+			// by setting 'jsonp' to false.
+			jsonp: false
+		} );
 	}
 
 	ULSPreferences = function () {
@@ -155,11 +153,11 @@
 
 			callback = callback || $.noop;
 			if ( this.isAnon ) {
-				// Anonymous user- Save preferences in local storage
+				// Anonymous user. Save preferences in local storage
 				$.jStorage.set( this.preferenceName, this.preferences );
 				callback.call( this, true );
 			} else {
-				// Logged in user. Use MW apis to change preferences
+				// Logged in user. Use MW APIs to change preferences
 				saveOptionsWithToken( {
 					action: 'options',
 					optionname: ulsPreferences.preferenceName,
