@@ -133,7 +133,7 @@
 	};
 
 	mw.ime.disable = function () {
-		$( inputSelector ).unbind( '.ime' );
+		$( inputSelector ).trigger( 'destroy.ime' );
 	};
 
 	mw.ime.setup = function () {
