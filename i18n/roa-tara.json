@@ -4,6 +4,14 @@
 			"Joetaras"
 		]
 	},
+	"ext-uls-display-settings-title": "F\u00e0 ved\u00e8 le 'mbostaziune",
+	"ext-uls-display-settings-title-short": "F\u00e0 ved\u00e8",
+	"ext-uls-display-settings-desc": "'Mboste 'a l\u00e8nghe ausate pe menu e carattere.",
+	"ext-uls-undo-language-tooltip-text": "L\u00e8nghe cangiate da $1",
+	"ext-uls-language-settings-title": "'Mbostaziune d'a l\u00e8nghe",
+	"ext-uls-language-settings-apply": "Appliche le 'mbostaziune",
 	"ext-uls-language-settings-cancel": "Annulle",
+	"ext-uls-display-settings-font-settings": "'Mbostaziune d'u carattere",
+	"ext-uls-display-settings-ui-language": "L\u00e8nghe da f\u00e0 ved\u00e8",
 	"jquery-ime-help": "Ajiute"
 }
