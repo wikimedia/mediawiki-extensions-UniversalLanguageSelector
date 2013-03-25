@@ -19,17 +19,17 @@
 	"ext-uls-webfonts-settings-info-link": "Maelezo zaidi",
 	"ext-uls-webfonts-select-for": "Chagua mtindo wa herufi kwa ajili ya $1",
 	"ext-uls-webfonts-select-for-ui-info": "Mtindo wa herufi wa kusano",
-	"ext-uls-webfonts-select-for-content-info": "Mtindo wa herufi wa ujazo",
+	"ext-uls-webfonts-select-for-content-info": "Mtindo wa herufi kwa ajili ya yaliyomo",
 	"ext-uls-back-to-display-settings": "Rudi kwa mipangilio ya kusano",
 	"ext-uls-input-settings-title": "Mipangilio ya kuingiza",
 	"ext-uls-input-settings-title-short": "Ingizo",
-	"ext-uls-input-settings-desc": "Je, unaandika katika lugha nyingine?",
+	"ext-uls-input-settings-desc": "Unaandika kwa lugha tofauti?",
 	"ext-uls-input-settings-ime-settings": "Njia za kuingiza kwa ajili ya $1",
-	"ext-uls-input-settings-ui-language": "Lugha ya kuandika",
+	"ext-uls-input-settings-ui-language": "Lugha inayotumiwa kwa ajili ya kuandikia",
 	"ext-uls-back-to-input-settings": "Rudi kwa njia za kuingiza",
 	"ext-uls-disable-input-method": "Lemaza njia ya kuingiza",
 	"ext-uls-disable-input-method-desc": "Tumia baobonye ya kawaida",
-	"ext-uls-input-settings-more-languages-tooltip": "Lugha zingine",
+	"ext-uls-input-settings-more-languages-tooltip": "Lugha nyingine zaidi",
 	"ext-uls-input-more-settings": "Mipangilio mingine",
 	"jquery-ime-other-languages": "Lugha zingine",
 	"jquery-ime-disable-text": "Lemaza njia ya kuingiza",
@@ -37,5 +37,5 @@
 	"ext-uls-input-disable": "Lemaza zana za njia za kuingiza",
 	"ext-uls-input-enable": "Wezesha zana za njia za kuingiza",
 	"ext-uls-input-disable-info": "Zana za njia za kuingiza zimelemazwa.",
-	"ext-uls-input-settings-noime": "Njia za kuingiza hazipatikani kwa ajili ya lugha hii."
+	"ext-uls-input-settings-noime": "Hakuna njia za kuingiza zinazopatikana kwa ajili ya lugha hii."
 }
