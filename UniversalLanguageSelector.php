@@ -195,16 +195,55 @@ $wgResourceModules['ext.uls.inputsettings'] = array(
 
 $wgResourceModules['jquery.uls'] = array(
 	'scripts' => array(
-		'lib/jquery.uls/jquery.uls.js',
+		'lib/jquery.uls/src/jquery.uls.core.js',
+		'lib/jquery.uls/src/jquery.uls.lcd.js',
+		'lib/jquery.uls/src/jquery.uls.languagefilter.js',
+		'lib/jquery.uls/src/jquery.uls.regionfilter.js',
 	),
 	'styles' => array(
 		'lib/jquery.uls/css/jquery.uls.css',
+		'lib/jquery.uls/css/jquery.uls.lcd.css',
 	),
 	'localBasePath' => $dir,
 	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
 		'jquery.i18n',
+		'jquery.uls.grid',
+		'jquery.uls.data',
 	),
+	'position' => 'top',
+);
+
+
+$wgResourceModules['jquery.uls.grid'] = array(
+	'styles' => array(
+		'lib/jquery.uls/css/jquery.uls.grid.css',
+	),
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'UniversalLanguageSelector',
+	'position' => 'top',
+);
+
+
+$wgResourceModules['jquery.uls.compact'] = array(
+	'styles' => array(
+		'lib/jquery.uls/css/jquery.uls.compact.css',
+	),
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'UniversalLanguageSelector',
+	'dependencies' => array(
+		'jquery.uls',
+	),
+	'position' => 'top',
+);
+
+$wgResourceModules['jquery.uls.data'] = array(
+	'scripts' => array(
+		'lib/jquery.uls/src/jquery.uls.data.js',
+		'lib/jquery.uls/src/jquery.uls.data.utils.js',
+	),
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'UniversalLanguageSelector',
 	'position' => 'top',
 );
 
