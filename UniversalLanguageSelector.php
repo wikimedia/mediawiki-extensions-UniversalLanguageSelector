@@ -104,6 +104,7 @@ $wgHooks['UserGetLanguageObject'][] = 'UniversalLanguageSelectorHooks::getLangua
 $wgDefaultUserOptions['uls-preferences'] = '';
 $wgHooks['GetPreferences'][] = 'UniversalLanguageSelectorHooks::onGetPreferences';
 
+/* Base ULS module */
 $wgResourceModules['ext.uls.init'] = array(
 	'scripts' => 'resources/js/ext.uls.init.js',
 	'styles' => 'resources/css/ext.uls.css',
@@ -111,12 +112,24 @@ $wgResourceModules['ext.uls.init'] = array(
 	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
 		'mediawiki.Uri',
-		'jquery.tipsy',
+		'mediawiki.util',
+		'jquery.json',
 		'jquery.uls',
 		'jquery.i18n',
+	),
+	'position' => 'top',
+);
+
+/* Interface language selection module */
+$wgResourceModules['ext.uls.interface'] = array(
+	'scripts' => 'resources/js/ext.uls.interface.js',
+	'localBasePath' => $dir,
+	'remoteExtPath' => 'UniversalLanguageSelector',
+	'dependencies' => array(
+		'ext.uls.init',
+		'jquery.tipsy',
 		'ext.uls.displaysettings',
 		'ext.uls.inputsettings',
-		'ext.uls.geoclient'
 	),
 	'position' => 'top',
 );

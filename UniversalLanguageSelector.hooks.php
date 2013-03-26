@@ -39,12 +39,13 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function addModules( $out, $skin ) {
-		if ( !self::isToolbarEnabled( $out->getUser() ) ) {
-			return true;
-		}
-
+		// If extension is enabled, basic features(API, language data) available.
 		$out->addModules( 'ext.uls.init' );
 		$out->addModules( 'ext.uls.geoclient' );
+		if ( self::isToolbarEnabled( $out->getUser() ) ) {
+			// Enable UI language selection for the user.
+			$out->addModules( 'ext.uls.interface' );
+		}
 
 		return true;
 	}
@@ -58,7 +59,7 @@ class UniversalLanguageSelectorHooks {
 	public static function addTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
 		$testModules['qunit']['ext.uls.tests'] = array(
 			'scripts' => array( 'tests/qunit/ext.uls.tests.js' ),
-			'dependencies' => array( 'ext.uls.init' ),
+			'dependencies' => array( 'ext.uls.init', 'ext.uls.interface' ),
 			'localBasePath' => __DIR__,
 			'remoteExtPath' => 'UniversalLanguageSelector',
 		);
