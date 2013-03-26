@@ -42,9 +42,10 @@ $messages['qqq'] = array(
 
 /** Arabic (العربية)
  * @author Tarawneh
+ * @author ترجمان05
  */
 $messages['ar'] = array(
-	'UniversalLanguageSelector' => 'محدد لغة عابر للمشاريع',
+	'UniversalLanguageSelector' => 'محدد لغة عالمية',
 	'uls-desc' => 'يمنح المستخدم عدة طرق لاختيار لغة، وضبط إعدادات اللغة',
 	'uls-select-content-language' => 'حدد اللغة',
 );
