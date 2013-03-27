@@ -43,7 +43,8 @@
 }
 
 #languagesettings-panels .languagesettings-menu {
-	padding-left: 0px;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .languagesettings-menu .settings-title {
@@ -67,6 +68,8 @@
 #languagesettings-settings-panel {
 	padding-left: 5%;
 	color: #252525;
+	background: #FFFFFF;
+	border-bottom-right-radius: 5px;
 }
 
 #languagesettings-settings-panel h3 {
@@ -96,9 +99,19 @@
 	font-size: 12pt;
 }
 
-#languagesettings-panels .menu-section.active {
+#language-settings-dialog {
+	background: #FBFBFB;
+}
+
+.uls-language-settings-close-block {
+	background: #FFFFFF;
+	border-top-right-radius: 5px;
+}
+
+#languagesettings-panels .menu-section.active,
+#languagesettings-panels .menu-section.active:hover {
 	color: black;
-	background-color: #F6F6F6;
+	background-color: #F0F0F0;
 	border-left-color: #3366BB;
 }
 
@@ -111,7 +124,7 @@
 
 #input-settings-block.menu-section:hover,
 #display-settings-block.menu-section:hover {
-	background-color: #F6F6F6;
+	background-color: #F5F5F5;
 }
 
 #languagesettings-settings-panel .language-settings-buttons {
