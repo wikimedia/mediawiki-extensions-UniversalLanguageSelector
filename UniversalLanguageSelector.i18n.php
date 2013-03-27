@@ -122,6 +122,13 @@ $messages['dsb'] = array(
 	'uls-select-content-language' => 'Rěc wubraś',
 );
 
+/** Divehi (ދިވެހިބަސް)
+ * @author Ushau97
+ */
+$messages['dv'] = array(
+	'UniversalLanguageSelector' => 'ޔުނިވާސަލް ލޭންގުއޭޖް ސިލެކްޓަރ',
+);
+
 /** Esperanto (Esperanto)
  * @author Yekrats
  */
