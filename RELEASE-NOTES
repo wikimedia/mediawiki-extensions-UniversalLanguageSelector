@@ -1,0 +1,27 @@
+== UniversalLanguageSelector 2013.03 ==
+Released at 2013-03-29.
+
+=== Highlights ===
+UniversalLanguageSelector is updated to the latest version. The latest
+release of MediaWiki 1.20 supports the recent updates for the preferences
+handling, and this allows users properly save their ULS preferences.
+
+=== Noteworthy changes ===
+==== Display and design ====
+* (bug 42384) Don't show the tooltip if the ULS panel is on
+  (preventing the overlap)
+* (bug 42440) Fix button state when canceling
+* Styling of settings to fit the botom of the ULS
+* (bug 43568) Languages are shown multiple times
+* (Bug 42439) Incorrect vertical alignment for Telugu web font
+
+==== Webfonts ====
+* Support for the Amiri webfont in the standard Arabic language (ar).
+* Added the Alef font for Hebrew.
+* Add Tuladha Jejeg font for Javanese
+
+==== Other ====
+* (Bug 42378) Make "disable IME tools" effects immediate as a preview
+* Update jquery.uls and make it more modular
+* Provide a base ULS RL module and seperate UI language selection
+* The non-standard language code als now redirects to the standard code gsw.
