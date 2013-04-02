@@ -39,6 +39,9 @@ $wgResourceModules['ext.uls.ime'] = array(
 $wgResourceModules['ext.uls.init'] = array(
 	'scripts' => 'resources/js/ext.uls.init.js',
 	'styles' => 'resources/css/ext.uls.css',
+	'skinStyles' => array(
+		'monobook' => 'resources/css/ext.uls-monobook.css',
+	),
 	'localBasePath' => $dir,
 	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
