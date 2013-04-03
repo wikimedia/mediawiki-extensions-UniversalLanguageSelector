@@ -6,34 +6,32 @@
  * @license GPL2+
  */
 
-/* Base ULS module */
+$resourcePaths = array(
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'UniversalLanguageSelector'
+) + $resourcePaths;
+
 $wgResourceModules['ext.uls.displaysettings'] = array(
 	'scripts' => 'resources/js/ext.uls.displaysettings.js',
 	'styles' => 'resources/css/ext.uls.displaysettings.css',
-	'localBasePath' => $dir,
 	'dependencies' => array(
 		'ext.uls.languagesettings',
 		'ext.uls.webfonts',
 		'jquery.i18n',
 	),
-	'remoteExtPath' => 'UniversalLanguageSelector',
-);
+) + $resourcePaths;
 
 $wgResourceModules['ext.uls.geoclient'] = array(
 	'scripts' => 'resources/js/ext.uls.geoclient.js',
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
-);
+) + $resourcePaths;
 
 $wgResourceModules['ext.uls.ime'] = array(
 	'scripts' => 'resources/js/ext.uls.ime.js',
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
 		'jquery.ime',
 		'ext.uls.preferences',
 	),
-);
+) + $resourcePaths;
 
 // Base ULS module
 $wgResourceModules['ext.uls.init'] = array(
@@ -42,8 +40,6 @@ $wgResourceModules['ext.uls.init'] = array(
 	'skinStyles' => array(
 		'monobook' => 'resources/css/ext.uls-monobook.css',
 	),
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
 		'mediawiki.Uri',
 		'mediawiki.util',
@@ -52,26 +48,21 @@ $wgResourceModules['ext.uls.init'] = array(
 		'jquery.i18n',
 	),
 	'position' => 'top',
-);
-
+) + $resourcePaths;
 
 $wgResourceModules['ext.uls.inputsettings'] = array(
 	'scripts' => 'resources/js/ext.uls.inputsettings.js',
 	'styles' => 'resources/css/ext.uls.inputsettings.css',
-	'localBasePath' => $dir,
 	'dependencies' => array(
 		'ext.uls.languagesettings',
 		'ext.uls.ime',
 		'jquery.i18n',
 	),
-	'remoteExtPath' => 'UniversalLanguageSelector',
-);
+) + $resourcePaths;
 
 // Interface language selection module
 $wgResourceModules['ext.uls.interface'] = array(
 	'scripts' => 'resources/js/ext.uls.interface.js',
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
 		'ext.uls.init',
 		'jquery.tipsy',
@@ -80,61 +71,49 @@ $wgResourceModules['ext.uls.interface'] = array(
 		'ext.uls.geoclient',
 	),
 	'position' => 'top',
-);
+) + $resourcePaths;
 
 $wgResourceModules['ext.uls.languagesettings'] = array(
 	'scripts' => 'resources/js/ext.uls.languagesettings.js',
 	'styles' => 'resources/css/ext.uls.languagesettings.css',
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
 		'ext.uls.preferences',
 	),
-);
+) + $resourcePaths;
 
 $wgResourceModules['ext.uls.preferences'] = array(
 	'scripts' => 'resources/js/ext.uls.preferences.js',
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
 		'mediawiki.user',
 		'mediawiki.api',
 		'jquery.jStorage',
 	),
-);
+) + $resourcePaths;
 
 $wgResourceModules['ext.uls.webfonts'] = array(
 	'scripts' => 'resources/js/ext.uls.webfonts.js',
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
 		'jquery.webfonts',
 		'ext.uls.webfonts.repository',
 		'ext.uls.preferences',
 	),
-);
+) + $resourcePaths;
 
 $wgResourceModules['ext.uls.webfonts.repository'] = array(
 	'scripts' => 'resources/js/ext.uls.webfonts.repository.js',
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
-);
+) + $resourcePaths;
 
 
 $wgResourceModules['jquery.i18n'] = array(
 	'scripts' => 'lib/jquery.i18n.js',
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
-);
+) + $resourcePaths;
 
 $wgResourceModules['jquery.ime'] = array(
 	'scripts' => 'lib/jquery.ime/jquery.ime.js',
 	'styles' => array(
 		'lib/jquery.ime/css/jquery.ime.css',
 	),
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
-);
+) + $resourcePaths;
 
 $wgResourceModules['jquery.uls'] = array(
 	'scripts' => array(
@@ -147,49 +126,39 @@ $wgResourceModules['jquery.uls'] = array(
 		'lib/jquery.uls/css/jquery.uls.css',
 		'lib/jquery.uls/css/jquery.uls.lcd.css',
 	),
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
 		'jquery.i18n',
 		'jquery.uls.grid',
 		'jquery.uls.data',
 	),
 	'position' => 'top',
-);
+) + $resourcePaths;
 
 $wgResourceModules['jquery.uls.compact'] = array(
 	'styles' => array(
 		'lib/jquery.uls/css/jquery.uls.compact.css',
 	),
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
 	'dependencies' => array(
 		'jquery.uls',
 	),
 	'position' => 'top',
-);
+) + $resourcePaths;
 
 $wgResourceModules['jquery.uls.data'] = array(
 	'scripts' => array(
 		'lib/jquery.uls/src/jquery.uls.data.js',
 		'lib/jquery.uls/src/jquery.uls.data.utils.js',
 	),
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
 	'position' => 'top',
-);
+) + $resourcePaths;
 
 $wgResourceModules['jquery.uls.grid'] = array(
 	'styles' => array(
 		'lib/jquery.uls/css/jquery.uls.grid.css',
 	),
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
 	'position' => 'top',
-);
+) + $resourcePaths;
 
 $wgResourceModules['jquery.webfonts'] = array(
 	'scripts' => 'lib/jquery.webfonts.js',
-	'localBasePath' => $dir,
-	'remoteExtPath' => 'UniversalLanguageSelector',
-);
+) + $resourcePaths;
