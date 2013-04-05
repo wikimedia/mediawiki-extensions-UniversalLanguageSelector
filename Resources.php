@@ -9,7 +9,7 @@
 $resourcePaths = array(
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'UniversalLanguageSelector'
-) + $resourcePaths;
+);
 
 $wgResourceModules['ext.uls.displaysettings'] = array(
 	'scripts' => 'resources/js/ext.uls.displaysettings.js',
