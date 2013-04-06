@@ -433,9 +433,10 @@ $messages['ur'] = array(
 
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
+ * @author Vinhtantran
  */
 $messages['vi'] = array(
-	'UniversalLanguageSelector' => 'Bộ lựa chọn Ngôn ngữ Toàn thế giới',
+	'UniversalLanguageSelector' => 'Bộ lựa chọn Ngôn ngữ Phổ quát',
 	'uls-desc' => 'Trình bày giao diện để lựa chọn ngôn ngữ và điều chỉnh các tùy chọn ngôn ngữ',
 	'uls-select-content-language' => 'Chọn ngôn ngữ',
 );
