@@ -395,6 +395,14 @@ $messages['si'] = array(
 	'uls-select-content-language' => 'භාෂාව තෝරන්න',
 );
 
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
+ * @author Милан Јелисавчић
+ */
+$messages['sr-ec'] = array(
+	'UniversalLanguageSelector' => 'Универзални језички изборник',
+	'uls-select-content-language' => 'Избор језика',
+);
+
 /** Tamil (தமிழ்)
  * @author Logicwiki
  */
