@@ -76,9 +76,7 @@ $wgResourceModules['ext.uls.interface'] = array(
 $wgResourceModules['ext.uls.languagesettings'] = array(
 	'scripts' => 'resources/js/ext.uls.languagesettings.js',
 	'styles' => 'resources/css/ext.uls.languagesettings.css',
-	'dependencies' => array(
-		'ext.uls.preferences',
-	),
+	'dependencies' => 'ext.uls.preferences',
 ) + $resourcePaths;
 
 $wgResourceModules['ext.uls.preferences'] = array(
@@ -110,9 +108,7 @@ $wgResourceModules['jquery.i18n'] = array(
 
 $wgResourceModules['jquery.ime'] = array(
 	'scripts' => 'lib/jquery.ime/jquery.ime.js',
-	'styles' => array(
-		'lib/jquery.ime/css/jquery.ime.css',
-	),
+	'styles' => 'lib/jquery.ime/css/jquery.ime.css',
 ) + $resourcePaths;
 
 $wgResourceModules['jquery.uls'] = array(
@@ -135,12 +131,8 @@ $wgResourceModules['jquery.uls'] = array(
 ) + $resourcePaths;
 
 $wgResourceModules['jquery.uls.compact'] = array(
-	'styles' => array(
-		'lib/jquery.uls/css/jquery.uls.compact.css',
-	),
-	'dependencies' => array(
-		'jquery.uls',
-	),
+	'styles' => 'lib/jquery.uls/css/jquery.uls.compact.css',
+	'dependencies' => 'jquery.uls',
 	'position' => 'top',
 ) + $resourcePaths;
 
@@ -153,9 +145,7 @@ $wgResourceModules['jquery.uls.data'] = array(
 ) + $resourcePaths;
 
 $wgResourceModules['jquery.uls.grid'] = array(
-	'styles' => array(
-		'lib/jquery.uls/css/jquery.uls.grid.css',
-	),
+	'styles' => 'lib/jquery.uls/css/jquery.uls.grid.css',
 	'position' => 'top',
 ) + $resourcePaths;
 
