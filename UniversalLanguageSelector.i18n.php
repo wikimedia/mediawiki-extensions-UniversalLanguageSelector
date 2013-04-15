@@ -190,6 +190,13 @@ $messages['fr'] = array(
 	'uls-select-content-language' => 'Sélectionner la langue',
 );
 
+/** Friulian (furlan)
+ * @author Klenje
+ */
+$messages['fur'] = array(
+	'uls-select-content-language' => 'Sielç la lenghe',
+);
+
 /** Galician (galego)
  * @author Toliño
  */
