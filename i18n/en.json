@@ -1,6 +1,7 @@
 {
 "@metadata": {
 	"authors": [
+		"Amire80",
 		"Santhosh Thottingal"
 	],
 	"message-documentation": "qqq"
@@ -8,6 +9,7 @@
 "ext-uls-display-settings-title": "Display settings",
 "ext-uls-display-settings-title-short": "Display",
 "ext-uls-display-settings-desc": "Set language used for menus and fonts.",
+"ext-uls-select-language-settings-icon-tooltip": "Language settings",
 "ext-uls-undo-language-tooltip-text": "Language changed from $1",
 "ext-uls-language-settings-title": "Language settings",
 "ext-uls-language-settings-apply": "Apply settings",

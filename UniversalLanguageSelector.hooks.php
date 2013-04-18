@@ -71,12 +71,18 @@ class UniversalLanguageSelectorHooks {
 	 * Add some tabs for navigation for users who do not use Ajax interface.
 	 * Hooks: SkinTemplateNavigation, SkinTemplateTabs
 	 */
-	static function addTrigger( array &$personal_urls, &$title ) {
-		global $wgLang, $wgUser;
+	static function addPersonalBarTrigger( array &$personal_urls, &$title ) {
+		global $wgLang, $wgUser, $wgULSPosition;
+
+		if ( $wgULSPosition !== 'personal' ) {
+			return true;
+		}
+
 		if ( !self::isToolbarEnabled( $wgUser ) ) {
 			return true;
 		}
 
+		// The element id will be 'pt-uls'
 		$personal_urls = array(
 			'uls' => array(
 				'text' => $wgLang->getLanguageName( $wgLang->getCode() ),
@@ -251,6 +257,8 @@ class UniversalLanguageSelectorHooks {
 			$out->getLanguage()->getCode(), 'mwfile'
 		);
 		$vars['wgULSAcceptLanguageList'] = array_keys( $out->getRequest()->getAcceptLang() );
+		global $wgULSPosition;
+		$vars['wgULSPosition'] = $wgULSPosition;
 
 		return true;
 	}
@@ -258,6 +266,29 @@ class UniversalLanguageSelectorHooks {
 	public static function onGetPreferences( $user, &$preferences ) {
 		$preferences['uls-preferences'] = array(
 			'type' => 'api',
+		);
+
+		return true;
+	}
+
+	/**
+	 * Hook: SkinTemplateOutputPageBeforeExec
+	 * @param Skin $skin
+	 * @param QuickTemplate $template
+	 * @return bool
+	 */
+	public static function onSkinTemplateOutputPageBeforeExec( Skin &$skin, QuickTemplate &$template ) {
+		global $wgULSPosition;
+
+		if ( $wgULSPosition !== 'interlanguage' ) {
+			return true;
+		}
+
+		// A dummy link, just to make sure that the section appears
+		$template->data['language_urls'][] = array(
+			'href' => '#',
+			'text' => '',
+			'class' => 'uls-p-lang-dummy',
 		);
 
 		return true;

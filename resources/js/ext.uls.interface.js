@@ -21,8 +21,26 @@
 	'use strict';
 
 	$( document ).ready( function () {
-		var $ulsTrigger, previousLanguages, previousLang,
+		var $ulsTrigger, $pLang,
+			previousLanguages, previousLang,
+			ulsPosition = mw.config.get( 'wgULSPosition' ),
+			tipsyGravity = {
+				personal: 'n',
+				interlanguage: $( 'body' ).hasClass( 'rtl' ) ? 'e' : 'w'
+			},
 			currentLang = mw.config.get( 'wgUserLanguage' );
+
+		if ( ulsPosition === 'interlanguage' ) {
+			// The interlanguage links section
+			$pLang = $( '#p-lang' );
+			// Add an element near the interlanguage links header
+			$pLang.prepend( $( '<span>' )
+				.addClass( 'uls-trigger' )
+				.attr( 'title', $.i18n( 'ext-uls-language-settings-title' ) )
+			);
+			// Remove the dummy link that was added to make sure that the section appears
+			$pLang.find( '.uls-p-lang-dummy' ).remove();
+		}
 
 		$ulsTrigger = $( '.uls-trigger' );
 		previousLanguages = mw.uls.getPreviousLanguages() || [];
@@ -117,6 +135,10 @@
 			}
 		} );
 
+		if ( ulsPosition === 'interlanguage' ) {
+			$ulsTrigger.attr( 'title', $.i18n( 'ext-uls-select-language-settings-icon-tooltip' ) );
+		}
+
 		if ( !previousLang ) {
 			previousLanguages.push( currentLang );
 			mw.uls.setPreviousLanguages( previousLanguages );
@@ -135,7 +157,7 @@
 
 		// Attach a tipsy tooltip to the trigger
 		$ulsTrigger.tipsy( {
-			gravity: 'n',
+			gravity: tipsyGravity[ulsPosition],
 			delayOut: 3000,
 			html: true,
 			fade: true,

@@ -83,6 +83,18 @@ $wgULSEnable = true;
  */
 $wgULSEnableAnon = true;
 
+/**
+ * The location and the form of the language selection trigger.
+ * The possible values are:
+ * 'personal': as a link near the username or the log in link in
+ * the personal toolbar (default).
+ * 'interlanguage': as an icon near the header of the list of interlanguage
+ * links in the sidebar.
+ *
+ * @since 2013.04
+ */
+$wgULSPosition = 'personal';
+
 $dir = __DIR__;
 
 // Internationalization
@@ -94,12 +106,13 @@ $wgAutoloadClasses['ApiLanguageSearch'] = "$dir/api/ApiLanguageSearch.php";
 $wgAutoloadClasses['LanguageNameSearch'] = "$dir/data/LanguageNameSearch.php";
 
 $wgHooks['BeforePageDisplay'][] = 'UniversalLanguageSelectorHooks::addModules';
-$wgHooks['PersonalUrls'][] = 'UniversalLanguageSelectorHooks::addTrigger';
+$wgHooks['PersonalUrls'][] = 'UniversalLanguageSelectorHooks::addPersonalBarTrigger';
 $wgHooks['ResourceLoaderTestModules'][] = 'UniversalLanguageSelectorHooks::addTestModules';
 $wgHooks['ResourceLoaderGetConfigVars'][] = 'UniversalLanguageSelectorHooks::addConfig';
 $wgHooks['MakeGlobalVariablesScript'][] = 'UniversalLanguageSelectorHooks::addVariables';
 $wgAPIModules['languagesearch'] = 'ApiLanguageSearch';
 $wgHooks['UserGetLanguageObject'][] = 'UniversalLanguageSelectorHooks::getLanguage';
+$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'UniversalLanguageSelectorHooks::onSkinTemplateOutputPageBeforeExec';
 
 $wgDefaultUserOptions['uls-preferences'] = '';
 $wgHooks['GetPreferences'][] = 'UniversalLanguageSelectorHooks::onGetPreferences';
