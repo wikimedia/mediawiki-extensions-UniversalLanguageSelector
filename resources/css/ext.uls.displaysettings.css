@@ -10,6 +10,56 @@ div.display-settings-block {
 	cursor: pointer;
 }
 
+.uls-display-settings-tab-switcher {
+	text-align: center;
+}
+
+.uls-button-group {
+	display: inline-block;
+	position: relative;
+	padding: 0 0 0 0;
+	left: -20px;
+	z-index: 1;
+}
+
+.uls-button-group > button.button {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+	border-radius: 0;
+	float: left;
+	padding: 8px 10px;
+	min-width: 80px;
+	margin: 0;
+}
+
+.uls-button-group > button.button:first-child {
+	-moz-border-radius-topleft: 3px;
+	-webkit-border-top-left-radius: 3px;
+	border-top-left-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.uls-button-group > button.button:last-child {
+	-moz-border-radius-topright: 3px;
+	-webkit-border-top-right-radius: 3px;
+	border-top-right-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.ext-uls-sub-panel {
+	border-top: 1px solid #EEEEEE;
+	padding-top: 25px;
+	top: -20px;
+	position:relative;
+	min-height: 150px;
+}
+
 .uls-font-label,
 .uls-font-select {
 	font-size: 10pt;

@@ -9,6 +9,8 @@
 		]
 	},
 	"ext-uls-display-settings-title": "Display settings title text",
+	"ext-uls-display-settings-language-tab": "A button label, which shows the language selection buttons",
+	"ext-uls-display-settings-fonts-tab": "A button label, which shows the fonts settings",
 	"ext-uls-display-settings-title-short": "A short name for display settings screen. Can be a translation for 'Display'",
 	"ext-uls-display-settings-desc": "Short description about display settings.  'Set language used for menus and set fonts' is equivalent in meaning to the source message.",
 	"ext-uls-select-language-settings-icon-tooltip": "A tooltip for the icon that shows the language selector.",

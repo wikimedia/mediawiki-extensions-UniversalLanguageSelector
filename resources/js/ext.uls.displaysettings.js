@@ -21,13 +21,19 @@
 	'use strict';
 
 	var template = '<div class="uls-display-settings">'
-		+ '<div class="row">' // Top "Display settings" title
-		+ '<div class="twelve columns">'
-		+ '<h3 data-i18n="ext-uls-display-settings-title"></h3>'
+
+		+ '<div class="row">' // Tab switcher buttons
+		+ '<div class="twelve columns uls-display-settings-tab-switcher">'
+		+ '<div class="uls-button-group">'
+		+ '<button id="uls-display-settings-language-tab" class="button down" data-i18n="ext-uls-display-settings-language-tab"></button>'
+		+ '<button id="uls-display-settings-fonts-tab" class="button" data-i18n="ext-uls-display-settings-fonts-tab"></button>'
+		+ '</div>'
 		+ '</div>'
 		+ '</div>'
 
-		// "Language for display", title above the buttons row
+		+ '<div class="ext-uls-sub-panel uls-display-settings-language-tab">' // Begin display language sub-panel
+
+		// "Display language", title above the buttons row
 		+ '<div class="row">'
 		+ '<div class="eleven columns">'
 		+ '<h4 data-i18n="ext-uls-display-settings-ui-language"></h4>'
@@ -38,6 +44,10 @@
 		+ '<div class="row">'
 		+ '<div class="uls-ui-languages eleven columns"></div>'
 		+ '</div>'
+
+		+ '</div>' // End display language section
+
+		+ '<div class="ext-uls-sub-panel uls-display-settings-fonts-tab hide">' // Begin font settings section, hidden by default
 
 		// "Font settings" title
 		+ '<div class="row">'
@@ -73,6 +83,8 @@
 		+ '</div>'
 		+ '<select id="ui-font-selector" class="four columns end uls-font-select"></select>'
 		+ '</div>'
+
+		+ '</div>' // End font settings section
 
 		// Separator
 		+ '<div class="row"></div>'
@@ -391,23 +403,18 @@
 		 */
 		listen: function () {
 			var displaySettings = this,
-				$contentFontSelector, $uiFontSelector,
-				oldFont;
-
-			$contentFontSelector = this.$template
-				.find( '#content-font-selector' );
-			$uiFontSelector = this.$template
-				.find( '#ui-font-selector' );
-
-			oldFont = $uiFontSelector.find( 'option:selected' ).val();
+				$contentFontSelector = this.$template.find( '#content-font-selector' ),
+				$uiFontSelector = this.$template.find( '#ui-font-selector' ),
+				oldFont = $uiFontSelector.find( 'option:selected' ).val(),
+				$tabButtons = displaySettings.$template.find( '.uls-display-settings-tab-switcher button' );
 
 			// TODO all these repeated selectors can be placed in object constructor.
 
-			this.$template.find( '#uls-displaysettings-apply' ).on( 'click', function () {
+			displaySettings.$template.find( '#uls-displaysettings-apply' ).on( 'click', function () {
 				displaySettings.apply();
 			} );
 
-			this.$template.find( 'button.uls-display-settings-cancel' ).on( 'click', function () {
+			displaySettings.$template.find( 'button.uls-display-settings-cancel' ).on( 'click', function () {
 				mw.webfonts.preferences.setFont( displaySettings.contentLanguage, oldFont );
 				displaySettings.$webfonts.refresh();
 
@@ -424,7 +431,7 @@
 				displaySettings.close();
 			} );
 
-			this.$template.find( '#webfonts-enable-checkbox' ).on( 'click', function () {
+			displaySettings.$template.find( '#webfonts-enable-checkbox' ).on( 'click', function () {
 				displaySettings.enableApplyButton();
 
 				if ( this.checked ) {
@@ -462,6 +469,27 @@
 				displaySettings.$webfonts.refresh();
 			} );
 
+			$tabButtons.on( 'click', function () {
+				var $subPanels,
+					$button = $( this );
+
+				if ( $button.hasClass( 'down' ) ) {
+					return;
+				}
+
+				displaySettings.$template.find( '.ext-uls-sub-panel' ).each( function () {
+					var $subPanel = $( this );
+
+					if ( $subPanel.hasClass( $button.attr( 'id' ) ) ) {
+						$subPanel.removeClass( 'hide' );
+					} else {
+						$subPanel.addClass( 'hide' );
+					}
+				} );
+
+				$tabButtons.filter( '.down' ).removeClass( 'down');
+				$button.addClass( 'down' );
+			} );
 		},
 
 		/**
