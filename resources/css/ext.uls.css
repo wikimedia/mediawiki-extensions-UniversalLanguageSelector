@@ -1,4 +1,4 @@
-li#pt-uls a.uls-trigger {
+#pt-uls a.uls-trigger {
 	padding-left: 30px;
 }
 
@@ -10,7 +10,7 @@ x:-o-prefocus, body.rtl li#pt-uls {
   direction: ltr;
 }
 
-div#settings-block {
+#settings-block {
 	border-top: 1px solid #C9C9C9;
 	background: #f8f8f8;
 	background: -webkit-gradient(linear, left top, left bottom, from(#FBFBFB), to(#F0F0F0));
@@ -48,7 +48,7 @@ div#settings-block {
 	margin-right: 4%;
 }
 
-.uls-ui-languages button#uls-more-languages {
+#uls-more-languages {
 	width: auto;
 }
 
