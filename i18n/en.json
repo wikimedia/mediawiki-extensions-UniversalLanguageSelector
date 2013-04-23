@@ -16,6 +16,7 @@
 "ext-uls-language-settings-title": "Language settings",
 "ext-uls-language-settings-apply": "Apply settings",
 "ext-uls-language-settings-cancel": "Cancel",
+"ext-uls-language-buttons-help": "Change the language of menus. Content language will not be affected.",
 "ext-uls-display-settings-font-settings": "Font settings",
 "ext-uls-display-settings-ui-language": "Display language",
 "ext-uls-webfonts-settings-title": "Download font when needed",
