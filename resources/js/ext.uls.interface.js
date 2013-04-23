@@ -22,6 +22,7 @@
 
 	$( document ).ready( function () {
 		var $ulsTrigger, $pLang,
+			uls, ulsOptions,
 			previousLanguages, previousLang,
 			ulsPosition = mw.config.get( 'wgULSPosition' ),
 			tipsyGravity = {
@@ -118,7 +119,7 @@
 			} );
 		}
 
-		$ulsTrigger.uls( {
+		ulsOptions = {
 			onReady: function () {
 				if ( $.fn.languagesettings ) {
 					addDisplaySettings( this );
@@ -133,11 +134,42 @@
 			quickList: function () {
 				return mw.uls.getFrequentLanguageList();
 			}
-		} );
+		};
 
 		if ( ulsPosition === 'interlanguage' ) {
 			$ulsTrigger.attr( 'title', $.i18n( 'ext-uls-select-language-settings-icon-tooltip' ) );
+
+			// This is a hook that runs in the ULS scope
+			ulsOptions.onVisible = function () {
+				var scrollPosition,
+					padding = 10,
+					$window = $( window ),
+					windowHeight = $window.height(),
+					windowScrollTop = $window.scrollTop(),
+					windowBottom = windowScrollTop + windowHeight,
+					ulsHeight = this.$menu.height(),
+					ulsTop = this.$menu.offset().top,
+					ulsBottom = ulsTop + ulsHeight;
+
+				if ( ( ulsTop < windowScrollTop ) || ( ulsBottom > windowBottom ) ) {
+					if ( ulsHeight > windowHeight ) {
+						// Scroll to show as much of the upper
+						// side of ULS as possible
+						scrollPosition = ulsTop - padding;
+					} else {
+						scrollPosition = ulsBottom - windowHeight + padding;
+					}
+
+					$( 'html, body' ).stop().animate( {
+						scrollTop: scrollPosition
+					}, 500 );
+				}
+			}
 		}
+
+		$ulsTrigger.uls( ulsOptions );
+
+		uls = $ulsTrigger.data( 'uls' );
 
 		if ( !previousLang ) {
 			previousLanguages.push( currentLang );
@@ -212,7 +244,7 @@
 		// manually show the tooltip
 		$ulsTrigger.on( 'mouseover', function () {
 			// show only if the ULS panel is not shown
-			if ( !$ulsTrigger.data( 'uls' ).shown ) {
+			if ( !uls.shown ) {
 				showTipsy( 3000 );
 			}
 		} );
