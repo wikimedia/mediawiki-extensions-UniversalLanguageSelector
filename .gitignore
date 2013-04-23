@@ -3,6 +3,4 @@
 *.kate-swp
 .*.swp
 .idea
-lib/jquery.uls/css/jquery.uls.min.css
-lib/jquery.uls/jquery.uls.min.js
 
