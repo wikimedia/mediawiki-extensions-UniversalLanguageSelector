@@ -42,7 +42,9 @@
 
 		// UI languages buttons row
 		+ '<div class="row">'
-		+ '<div class="uls-ui-languages eleven columns"></div>'
+		+ '<div class="uls-ui-languages eleven columns">'
+		+ '<p data-i18n="ext-uls-language-buttons-help"></p>'
+		+ '</div>'
 		+ '</div>'
 
 		+ '</div>' // End display language section
@@ -174,7 +176,7 @@
 
 			// This is needed when drawing the panel for the second time
 			// after selecting a different language
-			$languages.empty();
+			$languages.find( 'button' ).remove();
 
 			// UI language must always be present
 			if ( this.uiLanguage !== this.contentLanguage ) {
