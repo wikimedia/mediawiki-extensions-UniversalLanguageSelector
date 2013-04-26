@@ -406,7 +406,6 @@ $messages['si'] = array(
  */
 $messages['sr-ec'] = array(
 	'UniversalLanguageSelector' => 'Универзални језички изборник',
-	'uls-select-content-language' => 'Избор језика',
 );
 
 /** Tamil (தமிழ்)
