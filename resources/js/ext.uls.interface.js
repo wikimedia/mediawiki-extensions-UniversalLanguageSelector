@@ -179,7 +179,7 @@
 			return true;
 		}
 
-		if ( previousLang === currentLang ) {
+		if ( previousLang === currentLang || !$.uls.data.languages[previousLang] ) {
 			// Do not show tooltip.
 			return true;
 		}
