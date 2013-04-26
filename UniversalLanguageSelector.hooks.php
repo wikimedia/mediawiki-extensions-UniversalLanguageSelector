@@ -281,9 +281,6 @@ class UniversalLanguageSelectorHooks {
 	 */
 	public static function addVariables( &$vars, OutputPage $out ) {
 		// Place request context dependent stuff here
-		$vars['wgULSLanguages'] = Language::fetchLanguageNames(
-			$out->getLanguage()->getCode(), 'mwfile'
-		);
 		$vars['wgULSAcceptLanguageList'] = array_keys( $out->getRequest()->getAcceptLang() );
 
 		return true;

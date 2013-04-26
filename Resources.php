@@ -11,6 +11,10 @@ $resourcePaths = array(
 	'remoteExtPath' => 'UniversalLanguageSelector'
 );
 
+$wgResourceModules['ext.uls.languagenames'] = array(
+	'class' => 'ResourceLoaderULSModule'
+);
+
 $wgResourceModules['ext.uls.displaysettings'] = array(
 	'scripts' => 'resources/js/ext.uls.displaysettings.js',
 	'styles' => 'resources/css/ext.uls.displaysettings.css',
@@ -41,6 +45,7 @@ $wgResourceModules['ext.uls.init'] = array(
 		'monobook' => 'resources/css/ext.uls-monobook.css',
 	),
 	'dependencies' => array(
+		'ext.uls.languagenames',
 		'mediawiki.Uri',
 		'mediawiki.util',
 		'jquery.json',

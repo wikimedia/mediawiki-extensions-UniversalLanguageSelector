@@ -123,6 +123,7 @@ $wgExtensionMessagesFiles['UniversalLanguageSelector'] = "$dir/UniversalLanguage
 
 // Register auto load for the page class
 $wgAutoloadClasses['UniversalLanguageSelectorHooks'] = "$dir/UniversalLanguageSelector.hooks.php";
+$wgAutoloadClasses['ResourceLoaderULSModule'] = "$dir/ResourceLoaderULSModule.php";
 $wgAutoloadClasses['ApiLanguageSearch'] = "$dir/api/ApiLanguageSearch.php";
 $wgAutoloadClasses['LanguageNameSearch'] = "$dir/data/LanguageNameSearch.php";
 
