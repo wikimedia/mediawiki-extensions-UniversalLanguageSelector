@@ -68,7 +68,6 @@ $wgResourceModules['ext.uls.interface'] = array(
 		'jquery.tipsy',
 		'ext.uls.displaysettings',
 		'ext.uls.inputsettings',
-		'ext.uls.geoclient',
 	),
 	'position' => 'top',
 ) + $resourcePaths;

@@ -41,9 +41,15 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function addModules( $out, $skin ) {
+		global $wgULSGeoService;
+
 		// If extension is enabled, basic features(API, language data) available.
 		$out->addModules( 'ext.uls.init' );
-		$out->addModules( 'ext.uls.geoclient' );
+
+		if ( is_string( $wgULSGeoService ) ) {
+			$out->addModules( 'ext.uls.geoclient' );
+		}
+
 		if ( self::isToolbarEnabled( $out->getUser() ) ) {
 			// Enable UI language selection for the user.
 			$out->addModules( 'ext.uls.interface' );
@@ -224,7 +230,9 @@ class UniversalLanguageSelectorHooks {
 			$wgULSAnonCanChangeLanguage;
 
 		// Place constant stuff here (not depending on request context)
-		$vars['wgULSGeoService'] = $wgULSGeoService;
+		if ( is_string( $wgULSGeoService ) ) {
+			$vars['wgULSGeoService'] = $wgULSGeoService;
+		}
 		$vars['wgULSIMEEnabled'] = $wgULSIMEEnabled;
 		$vars['wgULSPosition'] = $wgULSPosition;
 		$vars['wgULSAnonCanChangeLanguage'] = $wgULSAnonCanChangeLanguage;

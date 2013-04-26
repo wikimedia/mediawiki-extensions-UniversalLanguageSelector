@@ -66,6 +66,10 @@
 		return ( window.navigator.language || window.navigator.userLanguage ).split( '-' )[0];
 	};
 
+	mw.uls.getCountryCode = function () {
+		return window.Geo && ( window.Geo.country || window.Geo.country_code );
+	};
+
 	mw.uls.getAcceptLanguageList = function () {
 		return mw.config.get( 'wgULSAcceptLanguageList' );
 	};

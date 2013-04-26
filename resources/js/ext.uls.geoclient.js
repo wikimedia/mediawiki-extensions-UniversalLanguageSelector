@@ -25,10 +25,6 @@
 		window.Geo = data;
 	};
 
-	mw.uls.getCountryCode = function () {
-		return window.Geo && ( window.Geo.country || window.Geo.country_code );
-	};
-
 	var currentProto, httpOnly, settings,
 		service = mw.config.get( 'wgULSGeoService' );
 

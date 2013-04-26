@@ -50,11 +50,11 @@ $wgExtensionCredits['other'][] = array(
  * country the user is vising from. Setting this to false will prevent
  * builtin geolocation from being used. You can provide your own geolocation
  * by setting window.Geo to object which has key 'country_code' or 'country'.
- * This is what Wikipedia does.
+ * If set to true, it will query Wikimedia's geoip service.
  *
  * The service should return jsonp that uses the supplied callback parameter.
  */
-$wgULSGeoService = 'http://freegeoip.net/json/';
+$wgULSGeoService = true;
 
 /**
  * Enable language selection, input methods and webfonts for everyone, unless
@@ -137,5 +137,18 @@ $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'UniversalLanguageSelectorHooks
 
 $wgDefaultUserOptions['uls-preferences'] = '';
 $wgHooks['GetPreferences'][] = 'UniversalLanguageSelectorHooks::onGetPreferences';
+
+$wgExtensionFunctions[] = function() {
+	global $wgHooks, $wgULSGeoService;
+
+	if ( $wgULSGeoService === true ) {
+		$wgHooks['BeforePageDisplay'][] = function( &$out ) {
+			$out->addScript( '<script src="//bits.wikimedia.org/geoiplookup"></script>' );
+			return true;
+		};
+	}
+
+	return true;
+};
 
 require( "$dir/Resources.php" );
