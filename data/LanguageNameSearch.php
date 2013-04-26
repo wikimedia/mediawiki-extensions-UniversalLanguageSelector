@@ -28,11 +28,17 @@ class LanguageNameSearch {
 		if ( self::$languagenames === null ) {
 			self::init();
 		}
+
+		// @todo: Shouldn't this be unicode aware?
 		$searchKey = strtolower( $searchKey );
-		$bucket = self::$languagenames[self::getIndex( $searchKey )];
-		if ( !$bucket ) {
+		$index = self::getIndex( $searchKey );
+
+		if ( !isset( self::$languagenames[$index] ) ) {
 			return array();
 		}
+
+		$bucket = self::$languagenames[$index];
+
 		$results = array();
 		foreach ( $bucket as $name => $code ) {
 			// Prefix search
@@ -54,9 +60,6 @@ class LanguageNameSearch {
 			$bucket = $codepoint;
 		} else {
 			$bucket = $codepoint % 1000;
-		}
-		if ( !isset( $buckets[$bucket] ) ) {
-			$buckets[$bucket] = array();
 		}
 
 		return $bucket;
