@@ -83,7 +83,7 @@ div.input-settings-block {
 	padding-top: 10px;
 }
 
-.uls-input-settings-inputmethods-list {
+.uls-input-settings .uls-input-settings-inputmethods-list {
 	margin: 12px 0;
 	padding: 6px 10px;
 	background: #f0f0f0;

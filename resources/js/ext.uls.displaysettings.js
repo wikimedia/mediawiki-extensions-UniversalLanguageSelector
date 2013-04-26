@@ -58,10 +58,10 @@
 		+ '</div>'
 		+ '</div>'
 
-		+ '<div id="uls-display-settings-font-selectors">'
+		+ '<div id="uls-display-settings-font-selectors" class="uls-display-settings-font-selectors">'
 
 		// Menus font selection dropdown with label
-		+ '<div class="row uls-content-fonts">'
+		+ '<div class="row uls-font-item uls-content-fonts">'
 		+ '<div class="six columns">'
 		+ '<label class="uls-font-label" id="content-font-selector-label"></label>'
 		+ '</div>'
@@ -69,7 +69,7 @@
 		+ '</div>'
 
 		// Content font selection dropdown with label
-		+ '<div class="row uls-ui-fonts">'
+		+ '<div class="row uls-font-item uls-ui-fonts">'
 		+ '<div class="six columns">'
 		+ '<label class="uls-font-label" id="ui-font-selector-label"></label>'
 		+ '</div>'

@@ -59,11 +59,21 @@ div.display-settings-block {
 	position:relative;
 	min-height: 150px;
 }
+.uls-display-settings-font-selectors {
+	margin: 5px 0 15px 0;
+	border-top: 1px solid #EEEEEE;
+}
+
+.uls-font-item {
+	border-bottom: 1px solid #EEEEEE;
+	background: #FBFBFB;
+	margin: 0 ;
+	padding: 10px 0;
+}
 
 .uls-font-label,
 .uls-font-select {
 	font-size: 10pt;
-	line-height: 16pt;
 }
 
 .uls-font-select {
@@ -75,11 +85,6 @@ div.display-settings-block {
 	text-overflow: ellipsis;
 	margin-right: 15px;
 	vertical-align: middle;
-}
-
-.uls-content-fonts,
-.uls-ui-fonts {
-	padding-top: 10px;
 }
 
 .uls-content-fonts:hover,
