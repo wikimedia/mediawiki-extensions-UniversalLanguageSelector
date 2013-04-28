@@ -314,7 +314,8 @@
 		 * @param target String 'ui' or 'content'
 		 */
 		prepareFontSelector: function ( target ) {
-			var language, fonts, $fontSelector, savedFont, $systemFont, $fontLabel, $fontsSection;
+			var language, fonts, $fontSelector, savedFont,
+				$systemFont, $fontLabel, $fontsSection;
 
 			// Get the language code from the right property -
 			// uiLanguage or contentLanguage
@@ -347,8 +348,10 @@
 
 			savedFont = mw.webfonts.preferences.getFont( this.uiLanguage );
 			$.each( fonts, function ( key, font ) {
+				var $fontOption;
+
 				if ( font !== 'system' ) {
-					var $fontOption = $( '<option>' ).attr( 'value', font ).text( font );
+					$fontOption = $( '<option>' ).attr( 'value', font ).text( font );
 					$fontSelector.append( $fontOption );
 					$fontOption.attr( 'selected', savedFont === font );
 				}
@@ -477,21 +480,24 @@
 
 			$uiFontSelector.on( 'change', function () {
 				displaySettings.enableApplyButton();
-				var font = $( this ).find( 'option:selected' ).val();
-				mw.webfonts.preferences.setFont( displaySettings.uiLanguage, font );
+
+				mw.webfonts.preferences.setFont( displaySettings.uiLanguage,
+					$( this ).find( 'option:selected' ).val()
+				);
 				displaySettings.$webfonts.refresh();
 			} );
 
 			$contentFontSelector.on( 'change', function () {
 				displaySettings.enableApplyButton();
-				var font = $( this ).find( 'option:selected' ).val();
-				mw.webfonts.preferences.setFont( displaySettings.contentLanguage, font );
+
+				mw.webfonts.preferences.setFont( displaySettings.contentLanguage,
+					$( this ).find( 'option:selected' ).val()
+				);
 				displaySettings.$webfonts.refresh();
 			} );
 
 			$tabButtons.on( 'click', function () {
-				var $subPanels,
-					$button = $( this );
+				var $button = $( this );
 
 				if ( $button.hasClass( 'down' ) ) {
 					return;
@@ -547,9 +553,7 @@
 				if ( this.uiLanguage !== this.getUILanguage() ) {
 					mw.uls.changeLanguage( this.uiLanguage );
 				}
-			} else {
-				// FIXME failure. what to do?!
-			}
+			} // @todo What to do in case of failure?
 		},
 
 		/**
