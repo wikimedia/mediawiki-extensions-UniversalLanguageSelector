@@ -1,4 +1,9 @@
 {
+    "@metadata": {
+        "authors": [
+            "Klenje"
+        ]
+    },
     "ext-uls-display-settings-language-tab": "Lenghe",
     "ext-uls-display-settings-fonts-tab": "Caratars",
     "ext-uls-select-language-settings-icon-tooltip": "Impuestazions de lenghe",
@@ -10,10 +15,5 @@
     "ext-uls-input-settings-more-languages-tooltip": "Altris lenghis",
     "ext-uls-input-more-settings": "Altris impuestazions",
     "jquery-ime-other-languages": "Altris lenghis",
-    "jquery-ime-help": "Jutori",
-    "@metadata": {
-        "authors": [
-            "Klenje"
-        ]
-    }
+    "jquery-ime-help": "Jutori"
 }
