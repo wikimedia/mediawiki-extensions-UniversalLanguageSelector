@@ -22,6 +22,7 @@ $wgResourceModules['ext.uls.displaysettings'] = array(
 		'ext.uls.languagesettings',
 		'ext.uls.webfonts',
 		'jquery.i18n',
+		'mediawiki.api.parse',
 	),
 ) + $resourcePaths;
 

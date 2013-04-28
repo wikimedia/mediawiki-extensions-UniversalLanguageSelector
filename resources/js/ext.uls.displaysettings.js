@@ -160,10 +160,42 @@
 		 * Prepare the UI language selector
 		 */
 		prepareLanguages: function () {
-			var displaySettings = this,
+			var loginUri, $loginCta,
+				displaySettings = this,
 				SUGGESTED_LANGUAGES_NUMBER = 3,
+				anonsAllowed = mw.config.get( 'wgULSAnonCanChangeLanguage' ),
 				languagesForButtons, $languages, suggestedLanguages,
 				lang, i, language, $button;
+
+			// Don't let anonymous users change interface language
+			if ( !anonsAllowed && mw.user.isAnon() ) {
+				loginUri = new mw.Uri();
+				loginUri.query = {
+					title: 'Special:UserLogin'
+				};
+				$loginCta = $( '<p>' )
+					.attr( 'id', 'uls-display-settings-anon-log-in-cta' );
+
+				this.$template.find( '.uls-display-settings-language-tab' )
+					.empty()
+					.append(
+						$( '<p>' ).append(
+							$( '<span>' )
+								.addClass( 'uls-display-settings-anon-label' )
+								.html( $.i18n( 'ext-uls-display-settings-anon-label' ) + '&#160;' ),
+							$( '<span>' )
+								.text( $.i18n( 'ext-uls-display-settings-anon-same-as-content' ) )
+						),
+						$loginCta
+					);
+
+				new mw.Api().parse( $.i18n( 'ext-uls-display-settings-anon-log-in-cta' ) )
+					.done( function ( parsedCta ) {
+						$loginCta.html( parsedCta );
+					} );
+
+				return;
+			}
 
 			$languages = this.$template.find( 'div.uls-ui-languages' );
 			suggestedLanguages = this.frequentLanguageList()
