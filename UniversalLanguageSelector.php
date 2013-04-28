@@ -25,7 +25,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 /**
  * Version number used in extension credits and in other placed where needed.
  */
-define( 'ULS_VERSION', '2013-04-01' );
+define( 'ULS_VERSION', '2013-04-27' );
 
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
@@ -57,31 +57,52 @@ $wgExtensionCredits['other'][] = array(
 $wgULSGeoService = 'http://freegeoip.net/json/';
 
 /**
- * IME system of ULS can be disabled by setting this value false;
- */
-$wgULSIMEEnabled = true;
-
-/**
- * Try to use preferred interface language for anonymous users.
- * Do not use if you are caching anonymous page views without
- * taking Accept-Language into account.
- */
-$wgULSLanguageDetection = true;
-
-/**
- * Enable language selection. If language selection is disabled, the classes
- * and RL modules are registered for the use of other extensions, but no
- * language selection toolbar is shown, and it will not be possible to change
- * the interface language using a cookie.
+ * Enable language selection, input methods and webfonts for everyone, unless
+ * the behavior is overridden by the configuration variables below.
+ *
+ * Even if false the classes and resource loader modules are registered for the
+ * use of other extensions. Language changing via cookie or setlang query
+ * parameter is not possible.
  */
 $wgULSEnable = true;
 
 /**
- * Enable ULS language selection for anonymous users. Equivalent to $wgULSEnable
- * except that it only applies to anonymous users. Setting this to false will
- * avoid breaking Squid caches (see bug 41451).
+ * Equivalent to $wgULSEnable for anonymous users only.
+ *
+ * Does not have any effect if $wgULSEnable is false.
  */
 $wgULSEnableAnon = true;
+
+/**
+ * Allow anonymous users to change language with cookie and setlang
+ * query param.
+
+ * Do not use if you are caching anonymous page views without
+ * taking cookies into account.
+ *
+ * Does not have any effect if either of $wgULSEnable or
+ * $wgULSEnableAnon is set to false.
+ *
+ * @since 2013.04
+ */
+$wgULSAnonCanChangeLanguage = true;
+
+/**
+ * Try to use preferred interface language for anonymous users.
+ *
+ * Do not use if you are caching anonymous page views without
+ * taking Accept-Language into account.
+ *
+ * Does not have any effect if any of $wgULSEnable, $wgULSEnableAnon
+ * or $wgULSAnonCanChangeLanguage is set to false.
+ */
+$wgULSLanguageDetection = true;
+
+/**
+ * Disable the input methods feature for all users by default. Can still
+ * be enabled manually by the user.
+ */
+$wgULSIMEEnabled = true;
 
 /**
  * The location and the form of the language selection trigger.

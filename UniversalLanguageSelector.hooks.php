@@ -19,15 +19,17 @@
  */
 
 class UniversalLanguageSelectorHooks {
+	/**
+	 * Whether ULS user toolbar (language selection and settings) is enabled.
+	 * @return bool
+	 */
 	public static function isToolbarEnabled( $user ) {
 		global $wgULSEnable, $wgULSEnableAnon;
 		if ( !$wgULSEnable ) {
 			return false;
 		}
-		if ( !$wgULSEnableAnon ) {
-			if ( $user->isAnon() ) {
-				return false;
-			}
+		if ( !$wgULSEnableAnon && $user->isAnon() ) {
+			return false;
 		}
 		return true;
 	}
@@ -141,7 +143,7 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function getLanguage( $user, &$code, $context = null ) {
-		global $wgUser, $wgRequest, $wgULSLanguageDetection;
+		global $wgUser, $wgRequest, $wgULSAnonCanChangeLanguage, $wgULSLanguageDetection;
 		if ( !self::isToolbarEnabled( $user ) ) {
 			return true;
 		}
@@ -167,27 +169,40 @@ class UniversalLanguageSelectorHooks {
 			return true;
 		}
 
-		$languageToUse = null;
-		if ( self::isSupportedLanguage( $languageToSave ) ) {
-			if ( $user->isAnon() ) {
-				$request->response()->setcookie( 'language', $languageToSave );
-			} else {
+		// Registered users - simple
+		if ( !$user->isAnon() ) {
+			// Language change
+			if ( self::isSupportedLanguage( $languageToSave ) ) {
 				$user->setOption( 'language', $languageToSave );
 				$user->saveSettings();
+				// Apply immediately
+				$code = $languageToSave;
 			}
-			$languageToUse = $languageToSave;
+			// Otherwise just use what is stored in preferences
+			return true;
 		}
 
-		// Load from cookie unless overriden
-		if ( $languageToUse === null && $user->isAnon() ) {
-			$languageToUse = $request->getCookie( 'language' );
+		// Logged out users - less simple
+		if ( !$wgULSAnonCanChangeLanguage ) {
+			return true;
 		}
 
-		// Check whether we got valid language from store or
-		// explicit language change.
+		// Language change
+		if ( self::isSupportedLanguage( $languageToSave ) ) {
+			$request->response()->setcookie( 'language', $languageToSave );
+			$code = $languageToSave;
+			return true;
+		}
+
+		// Try cookie
+		$languageToUse = $request->getCookie( 'language' );
 		if ( self::isSupportedLanguage( $languageToUse ) ) {
 			$code = $languageToUse;
-		} elseif ( $user->isAnon() && $wgULSLanguageDetection ) {
+			return true;
+		}
+
+		// As last resort, try Accept-Language headers if allowed
+		if ( $wgULSLanguageDetection ) {
 			$preferred = $request->getAcceptLang();
 			$default = self::getDefaultLanguage( $preferred );
 			if ( $default !== '' ) {
@@ -195,7 +210,7 @@ class UniversalLanguageSelectorHooks {
 			}
 		}
 
-		// Fall back to content language
+		// Fall back to other hooks or content language
 		return true;
 	}
 
@@ -205,10 +220,14 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function addConfig( &$vars ) {
-		global $wgULSGeoService, $wgULSIMEEnabled;
-		$vars['wgULSGeoService'] = $wgULSGeoService;
+		global $wgULSGeoService, $wgULSIMEEnabled, $wgULSPosition,
+			$wgULSAnonCanChangeLanguage;
 
+		// Place constant stuff here (not depending on request context)
+		$vars['wgULSGeoService'] = $wgULSGeoService;
 		$vars['wgULSIMEEnabled'] = $wgULSIMEEnabled;
+		$vars['wgULSPosition'] = $wgULSPosition;
+		$vars['wgULSAnonCanChangeLanguage'] = $wgULSAnonCanChangeLanguage;
 
 		// ULS is localized using jquery.i18n library. Unless it knows
 		// the localized locales, it can create 404 response. To avoid that,
@@ -253,12 +272,11 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function addVariables( &$vars, OutputPage $out ) {
+		// Place request context dependent stuff here
 		$vars['wgULSLanguages'] = Language::fetchLanguageNames(
 			$out->getLanguage()->getCode(), 'mwfile'
 		);
 		$vars['wgULSAcceptLanguageList'] = array_keys( $out->getRequest()->getAcceptLang() );
-		global $wgULSPosition;
-		$vars['wgULSPosition'] = $wgULSPosition;
 
 		return true;
 	}
@@ -281,6 +299,10 @@ class UniversalLanguageSelectorHooks {
 		global $wgULSPosition;
 
 		if ( $wgULSPosition !== 'interlanguage' ) {
+			return true;
+		}
+
+		if ( !self::isToolbarEnabled( $skin->getUser() ) ) {
 			return true;
 		}
 
