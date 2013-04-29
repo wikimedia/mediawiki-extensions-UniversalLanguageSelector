@@ -164,7 +164,7 @@
 						scrollTop: scrollPosition
 					}, 500 );
 				}
-			}
+			};
 		}
 
 		$ulsTrigger.uls( ulsOptions );

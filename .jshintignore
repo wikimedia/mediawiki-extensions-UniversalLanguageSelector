@@ -1,2 +1,4 @@
 # upstream libs
 lib/*
+# Generated file that contains JSON. Would fail "Strings must use singlequote."
+resources/js/ext.uls.webfonts.repository.js
