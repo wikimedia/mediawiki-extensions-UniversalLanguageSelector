@@ -201,9 +201,10 @@
 		prepareLanguages: function () {
 			var inputSettings = this,
 				SUGGESTED_LANGUAGES_NUMBER = 3,
+				firstLanguage = this.contentLanguage,
 				selectedImeLanguage = $.ime.preferences.getLanguage(),
 				languagesForButtons, $languages, suggestedLanguages,
-				firstLanguage, lang, i, language, $button, $caret;
+				lang, i, language, $button, $caret;
 
 			$languages = this.$template.find( 'div.uls-ui-languages' );
 			this.$template.find( 'div.uls-ui-languages' ).show();
@@ -223,14 +224,18 @@
 			$languages.empty();
 
 			// UI language must always be present
-			if ( this.imeLanguage !== this.contentLanguage ) {
+			if ( this.imeLanguage !== this.contentLanguage &&
+				$.uls.data.languages[this.imeLanguage]
+			) {
 				languagesForButtons.push( this.imeLanguage );
 				firstLanguage = this.imeLanguage;
 			}
 
 			// Selected IME language may be different, and it must
 			// be present, too
-			if ( $.inArray( selectedImeLanguage, languagesForButtons ) === -1 ) {
+			if ( $.inArray( selectedImeLanguage, languagesForButtons ) === -1 &&
+				$.uls.data.languages[selectedImeLanguage]
+			) {
 				languagesForButtons.push( selectedImeLanguage );
 				firstLanguage = selectedImeLanguage;
 			}
