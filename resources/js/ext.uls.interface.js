@@ -171,21 +171,18 @@
 
 		uls = $ulsTrigger.data( 'uls' );
 
-		if ( !previousLang ) {
-			previousLanguages.push( currentLang );
-			mw.uls.setPreviousLanguages( previousLanguages );
-
-			// Do not show tooltip.
-			return true;
-		}
-
-		if ( previousLang === currentLang || !$.uls.data.languages[previousLang] ) {
-			// Do not show tooltip.
+		if ( previousLang === currentLang  ) {
+			// Do not show tooltip nor update language list
 			return true;
 		}
 
 		previousLanguages.push( currentLang );
 		mw.uls.setPreviousLanguages( previousLanguages );
+
+		if ( !previousLang || !$.uls.data.languages[previousLang] ) {
+			// Do not show tooltip
+			return true;
+		}
 
 		// Attach a tipsy tooltip to the trigger
 		$ulsTrigger.tipsy( {
@@ -238,8 +235,11 @@
 			$ulsTrigger.tipsy( 'hide' );
 		}
 
-		// Show the tipsy tooltip on page load.
-		showTipsy( 6000 );
+		// The interlanguage position needs some time to settle down
+		window.setTimeout( function() {
+			// Show the tipsy tooltip on page load.
+			showTipsy( 6000 );
+		}, 500 );
 
 		// manually show the tooltip
 		$ulsTrigger.on( 'mouseover', function () {
