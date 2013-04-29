@@ -71,7 +71,7 @@
 		this.name = $.i18n( 'ext-uls-input-settings-title-short' );
 		this.description = $.i18n( 'ext-uls-input-settings-desc' );
 		this.$template = $( template );
-		this.imeLanguage = this.getImeLanguage();
+		this.imeLanguage = this.getInterfaceLanguage();
 		this.contentLanguage = this.getContentLanguage();
 		this.$imes = null;
 		this.$parent = $parent;
@@ -376,8 +376,7 @@
 		 * Get the current user interface language.
 		 * @returns String Current UI language
 		 */
-		// XXX: Probably bad name
-		getImeLanguage: function () {
+		getInterfaceLanguage: function () {
 			return mw.config.get( 'wgUserLanguage' );
 		},
 
