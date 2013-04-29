@@ -28,19 +28,19 @@
 		+ '</div>'
 
 		// "Language for ime", title above the buttons row
-		+ '<div class="row uls-input-settings-languages-title">'
+		+ '<div class="row enabled-only uls-input-settings-languages-title">'
 		+ '<div class="eleven columns">'
 		+ '<h4 data-i18n="ext-uls-input-settings-ui-language"></h4>'
 		+ '</div>'
 		+ '</div>'
 
 		// UI languages buttons row
-		+ '<div class="row">'
+		+ '<div class="row enabled-only">'
 		+ '<div class="uls-ui-languages eleven columns"></div>'
 		+ '</div>'
 
 		// Web IMEs enabling chechbox with label
-		+ '<div class="row">'
+		+ '<div class="row enabled-only">'
 		+ '<div class="eleven columns uls-input-settings-inputmethods-list">'
 		// "Input settings for language xyz" title
 		+ '<h4 class="ext-uls-input-settings-imes-title"></h4>'
@@ -89,17 +89,13 @@
 			this.$imes = $( 'body' ).data( 'ime' );
 			this.$parent.$settingsPanel.append( this.$template );
 			if ( $.ime.preferences.isEnabled() ) {
-				this.prepareLanguages();
-				this.prepareInputmethods( $.ime.preferences.getLanguage() );
+				this.$template.find( '.enabled-only' ).removeClass( 'hide' );
 			} else {
-
-				// Hide the language list
-				this.$template.find( 'div.uls-input-settings-languages-title' ).hide();
-				this.$template.find( 'div.uls-ui-languages' ).hide();
-
-				// Hide input methods
-				this.$template.find( 'div.uls-input-settings-inputmethods-list' ).hide();
+				// Hide the language list and ime selector
+				this.$template.find( '.enabled-only' ).addClass( 'hide' );
 			}
+			this.prepareLanguages();
+			this.prepareInputmethods( $.ime.preferences.getLanguage() );
 			this.prepareToggleButton();
 			this.$template.i18n();
 			this.listen();
@@ -122,9 +118,7 @@
 			this.imeLanguage = language;
 
 			$imeListTitle = this.$template.find( '.ext-uls-input-settings-imes-title' );
-
 			$imeListContainer = this.$template.find( '.uls-input-settings-inputmethods-list' );
-			$imeListContainer.show();
 
 			$imeListContainer.find( 'label' ).remove();
 
@@ -207,9 +201,7 @@
 				languagesForButtons, $languages, suggestedLanguages,
 				lang, i, language, $button, $caret;
 
-			$languages = this.$template.find( 'div.uls-ui-languages' );
-			this.$template.find( 'div.uls-ui-languages' ).show();
-			this.$template.find( 'div.uls-input-settings-languages-title' ).show();
+			$languages = this.$template.find( '.uls-ui-languages' );
 
 			suggestedLanguages = this.frequentLanguageList()
 				// Common world languages, for the case that there are
@@ -261,7 +253,7 @@
 
 					inputSettings.enableApplyButton();
 					$.ime.preferences.setLanguage( selectedLanguage );
-					$( 'div.uls-ui-languages button.button' ).removeClass( 'down' );
+					$( '.uls-ui-languages .button' ).removeClass( 'down' );
 					button.addClass( 'down' );
 					inputSettings.prepareInputmethods( selectedLanguage );
 				};
@@ -300,7 +292,7 @@
 			var inputSettings = this,
 				$languages, $moreLanguagesButton;
 
-			$languages = this.$template.find( 'div.uls-ui-languages' );
+			$languages = this.$template.find( '.uls-ui-languages' );
 			$moreLanguagesButton = $( '<button>' )
 				.prop( 'id', 'uls-more-languages' )
 				.addClass( 'button' ).text( '...' );
@@ -343,15 +335,11 @@
 		},
 
 		prepareToggleButton: function () {
-			var inputSettings, $toggleButton, $toggleButtonDesc;
+			var $toggleButton, $toggleButtonDesc;
 
-			inputSettings = this;
-
-			$toggleButton = inputSettings.$template
-				.find( 'button.uls-input-toggle-button' );
-
-			$toggleButtonDesc = inputSettings.$template
-				.find( 'div.uls-input-settings-disable-info' );
+			$toggleButton = this.$template.find( '.uls-input-toggle-button' );
+			$toggleButtonDesc = this.$template
+				.find( '.uls-input-settings-disable-info' );
 
 			if ( $.ime.preferences.isEnabled() ) {
 				$toggleButton.data( 'i18n', 'ext-uls-input-disable' );
@@ -429,29 +417,24 @@
 		 * Disable input tools
 		 */
 		disableInputTools: function () {
-			var inputSettings = this;
-
 			$.ime.preferences.disable();
 			$.ime.preferences.save( function () {
 				mw.ime.disable();
-				// render this again.
-				inputSettings.render();
 			} );
+			this.$template.find( '.enabled-only' ).addClass( 'hide' );
+			this.prepareToggleButton();
 		},
 
 		/**
 		 * Enable input tools
 		 */
 		enableInputTools: function () {
-			var inputSettings = this;
-
 			$.ime.preferences.enable();
 			$.ime.preferences.save( function () {
 				mw.ime.setup();
-				// render this again.
-				inputSettings.render();
 			} );
-
+			this.$template.find( '.enabled-only' ).removeClass( 'hide' );
+			this.prepareToggleButton();
 		},
 
 		/**
