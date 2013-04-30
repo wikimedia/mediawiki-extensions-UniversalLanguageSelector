@@ -188,9 +188,10 @@
 				}
 			}
 
-			$imeLabel
-				.append( $( '<strong>' ).text( name ) )
-				.append( $( '<span>' ).text( description ) );
+			$imeLabel.append(
+				$( '<strong>' ).text( name ),
+				$( '<span>' ).text( description )
+			);
 
 			return $imeLabel;
 		},
@@ -284,7 +285,7 @@
 				$button.data( 'language', language );
 				$caret = $( '<span>' ).addClass( 'uls-input-settings-caret' );
 
-				$languages.append( $button ).append( $caret );
+				$languages.append( $button, $caret );
 
 				$button.on( 'click', buttonHandler( $button ) );
 			}
