@@ -1,0 +1,9 @@
+== UniversalLanguageSelector 2013.04 ==
+Released at 2013-04-30.
+
+=== Highlights ===
+Work began on making the ULS appear in the sidebar rather than at the top of the page near the personal links menu. This is an incomplete and experimental feature. It can be tested by setting the variable $wgULSPosition to 'interlanguage'.
+
+=== Noteworthy changes ===
+* Wikimedia Foundation's GeoIP service is now used by default for detecting the user's location and guessing the suggested language.
+* A web font for the Divehi language was added.
