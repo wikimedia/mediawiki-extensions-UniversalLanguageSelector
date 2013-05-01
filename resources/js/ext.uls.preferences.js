@@ -104,6 +104,7 @@
 
 	ULSPreferences = function () {
 		this.preferenceName = 'uls-preferences';
+		this.imeEnablePreferenceName = 'uls-ime-enable',
 		this.username = mw.user.getName();
 		this.isAnon = mw.user.isAnon();
 		this.preferences = null;
@@ -115,13 +116,30 @@
 		 * Initialize
 		 */
 		init: function () {
+			var options,
+				ulsImeEnable = mw.user.options.get( this.imeEnablePreferenceName );
+
 			if ( this.isAnon ) {
 				this.preferences = $.jStorage.get( this.preferenceName );
 			} else {
-				var options = mw.user.options.get( this.preferenceName );
+				options = mw.user.options.get( this.preferenceName );
 				this.preferences = $.parseJSON( options );
+
 			}
+
 			this.preferences = this.preferences || {};
+
+			if ( this.preferences.ime === undefined ) {
+				this.preferences.ime = {};
+			}
+
+			if ( ulsImeEnable === undefined ) {
+				this.preferences.ime.enable = mw.config.get( 'wgULSIMEEnabled' );
+			} else if ( ulsImeEnable === 1 || ulsImeEnable === '1' ) {
+				this.preferences.ime.enable = true;
+			} else {
+				this.preferences.ime.enable = false;
+			}
 		},
 
 		/**
@@ -151,22 +169,45 @@
 		save: function ( callback ) {
 			var ulsPreferences = this;
 
+
 			callback = callback || $.noop;
 			if ( this.isAnon ) {
 				// Anonymous user. Save preferences in local storage
 				$.jStorage.set( this.preferenceName, this.preferences );
 				callback.call( this, true );
 			} else {
+				var successFunction, failFunction;
+
+				successFunction = function () {
+					callback.call( this, true );
+				};
+				failFunction = function () {
+					callback.call( this, false );
+				};
+
 				// Logged in user. Use MW APIs to change preferences
 				saveOptionsWithToken( {
 					action: 'options',
 					optionname: ulsPreferences.preferenceName,
 					optionvalue: $.toJSON( ulsPreferences.preferences )
-				}, function () {
-					callback.call( this, true );
-				}, function () {
-					callback.call( this, false );
-				} );
+				},
+					successFunction,
+					failFunction
+				);
+
+				if ( ulsPreferences.preferences.ime !== undefined &&
+					ulsPreferences.preferences.ime.enable !== undefined
+				) {
+					// Logged in user. Use MW APIs to change preferences
+					saveOptionsWithToken( {
+						action: 'options',
+						optionname: ulsPreferences.imeEnablePreferenceName,
+						optionvalue: ulsPreferences.preferences.ime.enable ? '1' : ''
+					},
+						successFunction,
+						failFunction
+					);
+				}
 			}
 		}
 	};

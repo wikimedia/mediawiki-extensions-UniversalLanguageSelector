@@ -137,6 +137,7 @@ $wgHooks['UserGetLanguageObject'][] = 'UniversalLanguageSelectorHooks::getLangua
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'UniversalLanguageSelectorHooks::onSkinTemplateOutputPageBeforeExec';
 
 $wgDefaultUserOptions['uls-preferences'] = '';
+$wgDefaultUserOptions['uls-ime-enable'] = 1;
 $wgHooks['GetPreferences'][] = 'UniversalLanguageSelectorHooks::onGetPreferences';
 
 $wgExtensionFunctions[] = function() {
