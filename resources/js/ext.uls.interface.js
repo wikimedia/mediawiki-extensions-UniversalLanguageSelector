@@ -22,12 +22,13 @@
 
 	$( document ).ready( function () {
 		var $ulsTrigger, $pLang,
-			uls, ulsOptions,
+			ulsOptions,
 			previousLanguages, previousLang,
+			rtlPage = $( 'body' ).hasClass( 'rtl' ),
 			ulsPosition = mw.config.get( 'wgULSPosition' ),
 			tipsyGravity = {
 				personal: 'n',
-				interlanguage: $( 'body' ).hasClass( 'rtl' ) ? 'e' : 'w'
+				interlanguage: rtlPage ? 'e' : 'w'
 			},
 			currentLang = mw.config.get( 'wgUserLanguage' );
 
@@ -78,21 +79,23 @@
 		}
 
 		function addDisplaySettings( uls ) {
-			var $displaySettings, position;
+			var $displaySettings = displaySettings(),
+				displaySettingsOptions = {
+					defaultModule: 'display'
+				};
 
-			$displaySettings = displaySettings();
-			uls.$menu.find( '#settings-block' ).append( $displaySettings );
-			position = uls.position();
-
-			$displaySettings.languagesettings( {
-				defaultModule: 'display',
-				onClose: function () {
+			// If the ULS trigger is shown in the top personal menu,
+			// closing the display settings must show the main ULS
+			// languages list
+			if ( ulsPosition === 'personal' ) {
+				displaySettingsOptions.onClose = function () {
 					uls.show();
-				},
-				top: position.top,
-				left: position.left
-			} );
+				};
+			}
+			$.extend( displaySettingsOptions, uls.position() );
 
+			uls.$menu.find( '#settings-block' ).append( $displaySettings );
+			$displaySettings.languagesettings( displaySettingsOptions );
 			$displaySettings.on( 'click', function () {
 				uls.hide();
 			} );
@@ -119,6 +122,7 @@
 			} );
 		}
 
+		// ULS options that are common to all modes of showing
 		ulsOptions = {
 			onReady: function () {
 				if ( $.fn.languagesettings ) {
@@ -142,21 +146,45 @@
 			// This is a hook that runs in the ULS scope
 			ulsOptions.onVisible = function () {
 				var scrollPosition,
+					$currentMenu,
+					ulsHeight, ulsTop, ulsBottom,
+					$languageSettingsTrigger = this.$menu.find( '#display-settings-block' ),
 					padding = 10,
 					$window = $( window ),
 					windowHeight = $window.height(),
 					windowScrollTop = $window.scrollTop(),
 					windowBottom = windowScrollTop + windowHeight,
-					ulsHeight = this.$menu.height(),
-					ulsTop = this.$menu.offset().top,
-					ulsBottom = ulsTop + ulsHeight;
+					ulsTriggerOffset = this.$element.offset();
 
+				// Reposition the element -
+				// the sidebar elements may have changed
+				this.top = ulsTriggerOffset.top - 45;
+				this.left = rtlPage ?
+					ulsTriggerOffset.left - 22 - this.$menu.width() :
+					ulsTriggerOffset.left + 50;
+				this.$menu.css( this.position() );
+
+				// Show the Display settings panel:
+				// We are using the ULS trigger in the sidebar,
+				// so we don't want to switch the language, but
+				// to change the settings.
+				$languageSettingsTrigger.click();
+
+				$currentMenu = $( '.uls-menu:visible' );
+				$currentMenu.css( this.position() );
+				ulsHeight = $currentMenu.height();
+				ulsTop = $currentMenu.offset().top;
+				ulsBottom = ulsTop + ulsHeight;
+
+				// If the ULS panel is out of the viewport,
+				// scroll the window to show it
 				if ( ( ulsTop < windowScrollTop ) || ( ulsBottom > windowBottom ) ) {
 					if ( ulsHeight > windowHeight ) {
 						// Scroll to show as much of the upper
-						// side of ULS as possible
+						// part of ULS as possible
 						scrollPosition = ulsTop - padding;
 					} else {
+						// Scroll just enough to show the ULS panel
 						scrollPosition = ulsBottom - windowHeight + padding;
 					}
 
@@ -164,12 +192,26 @@
 						scrollTop: scrollPosition
 					}, 500 );
 				}
+
+				// Set the position of the caret according to the height
+				// of the top row of the menu
+				$currentMenu.find( '.caret-before, .caret-after' ).css( 'top',
+					$currentMenu.find( '.row' ).height()
+				);
+
 			};
 		}
 
 		$ulsTrigger.uls( ulsOptions );
 
-		uls = $ulsTrigger.data( 'uls' );
+		if ( ulsPosition === 'interlanguage' ) {
+			$( '.uls-menu' ).each( function () {
+				$( this ).prepend(
+					$( '<span>' ).addClass( 'caret-before' ),
+					$( '<span>' ).addClass( 'caret-after' )
+				);
+			} );
+		}
 
 		if ( previousLang === currentLang  ) {
 			// Do not show tooltip nor update language list
@@ -244,7 +286,7 @@
 		// manually show the tooltip
 		$ulsTrigger.on( 'mouseover', function () {
 			// show only if the ULS panel is not shown
-			if ( !uls.shown ) {
+			if ( !$ulsTrigger.data( 'uls' ).shown ) {
 				showTipsy( 3000 );
 			}
 		} );

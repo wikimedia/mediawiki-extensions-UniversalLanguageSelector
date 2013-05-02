@@ -67,7 +67,7 @@
 			// Register all event listeners to the ULS language settings here.
 			langSettings.$element.on( 'click', $.proxy( langSettings.show, langSettings ) );
 			langSettings.$window.find( '#languagesettings-close' )
-				.on( 'click', $.proxy( langSettings.hide, langSettings ) );
+				.on( 'click', $.proxy( langSettings.close, langSettings ) );
 
 		},
 

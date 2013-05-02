@@ -465,7 +465,10 @@
 
 			displaySettings.$template.find( 'button.uls-display-settings-cancel' ).on( 'click', function () {
 				mw.webfonts.preferences.setFont( displaySettings.contentLanguage, oldFont );
-				displaySettings.$webfonts.refresh();
+
+				if ( displaySettings.$webfonts ) {
+					displaySettings.$webfonts.refresh();
+				}
 
 				displaySettings.$template.find( 'div.uls-ui-languages button.button' ).each( function () {
 					var $button = $( this );
@@ -578,8 +581,11 @@
 		 */
 		onSave: function ( success ) {
 			if ( success ) {
-				// Live font update
-				this.$webfonts.refresh();
+				if ( this.$webfonts !== undefined ) {
+					// Live font update
+					this.$webfonts.refresh();
+				}
+
 				this.$parent.hide();
 				// we delay change UI language to here, because it causes a page refresh
 				if ( this.uiLanguage !== this.getUILanguage() ) {
