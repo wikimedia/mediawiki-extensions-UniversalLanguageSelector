@@ -28,6 +28,7 @@
 "ext-uls-webfonts-select-for": "Select font for $1",
 "ext-uls-webfonts-select-for-ui-info": "Font used for user interface",
 "ext-uls-webfonts-select-for-content-info": "Font used for content",
+"ext-uls-webfonts-system-font": "System font",
 "ext-uls-back-to-display-settings": "Back to display settings",
 "ext-uls-input-settings-title": "Input settings",
 "ext-uls-input-settings-title-short": "Input",

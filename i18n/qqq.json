@@ -30,6 +30,7 @@
     "ext-uls-webfonts-select-for": "Label for font selector dropdown. $1 is a language name",
     "ext-uls-webfonts-select-for-ui-info": "Information displayed under font selector",
     "ext-uls-webfonts-select-for-content-info": "Information displayed under font selector",
+    "ext-uls-webfonts-system-font": "Value in a dropdown. System font means that instead of using a specific font provided by this extension, the default font defined in the browser or operating system is used.",
     "ext-uls-back-to-display-settings": "Text for the link shown when language selector is accessed from language settings.",
     "ext-uls-input-settings-title": "Title text for input settings screen",
     "ext-uls-input-settings-title-short": "Short title for input settings screen",

@@ -390,7 +390,7 @@
 			} );
 
 			$fontSelector.prop( 'disabled', !this.isWebFontsEnabled() );
-			$systemFont = $( '<option>' ).val( 'system' ).text( 'System font' );
+			$systemFont = $( '<option>' ).val( 'system' ).text( $.i18n( 'ext-uls-webfonts-system-font' ) );
 			$fontSelector.append( $systemFont );
 			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
 
