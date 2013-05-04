@@ -1,29 +1,36 @@
 {
-	"@metadata": {
-		"authors": [
-			"Robby"
-		]
-	},
-	"ext-uls-display-settings-title": "Astellunge weisen",
-	"ext-uls-display-settings-title-short": "Weisen",
-	"ext-uls-display-settings-desc": "Sprooch astellen d\u00e9i fir d'Men\u00fcen a Buschtawe benotzt g\u00ebtt",
-	"ext-uls-undo-language-tooltip-text": "Sprooch ge\u00e4nnert vu(n) $1",
-	"ext-uls-language-settings-title": "Sproochastellungen",
-	"ext-uls-language-settings-apply": "Astellungen uwenden",
-	"ext-uls-language-settings-cancel": "Ofbriechen",
-	"ext-uls-display-settings-font-settings": "Astellunge vun de Schr\u00ebften",
-	"ext-uls-display-settings-ui-language": "Sprooch fir ze weisen",
-	"ext-uls-webfonts-settings-title": "Font erofluede wann dat n\u00e9ideg ass",
-	"ext-uls-webfonts-settings-info-link": "M\u00e9i Informatiounen",
-	"ext-uls-webfonts-select-for": "Schr\u00ebftzort fir $1 eraussichen",
-	"ext-uls-webfonts-select-for-ui-info": "Schr\u00ebft d\u00e9i fir de Benotzer-Interface benotzt g\u00ebtt",
-	"ext-uls-webfonts-select-for-content-info": "Schr\u00ebft d\u00e9i fir den Inhalt benotzt g\u00ebtt",
-	"ext-uls-back-to-display-settings": "Zr\u00e9ck op d'Astellunge vum Weisen",
-	"ext-uls-input-settings-desc": "An enger anerer Sprooch schreiwen?",
-	"ext-uls-input-settings-ui-language": "Sprooch d\u00e9i fir d'Schreiwe benotzt g\u00ebtt",
-	"ext-uls-disable-input-method-desc": "Eng normal Tastatur benotzen",
-	"ext-uls-input-settings-more-languages-tooltip": "M\u00e9i Sproochen",
-	"ext-uls-input-more-settings": "M\u00e9i Astellungen",
-	"jquery-ime-other-languages": "Aner Sproochen",
-	"jquery-ime-help": "H\u00ebllef"
+    "@metadata": {
+        "authors": [
+            "Robby"
+        ]
+    },
+    "ext-uls-display-settings-title": "Astellunge weisen",
+    "ext-uls-display-settings-language-tab": "Sprooch",
+    "ext-uls-display-settings-fonts-tab": "Schr\u00ebftarten",
+    "ext-uls-display-settings-title-short": "Weisen",
+    "ext-uls-display-settings-desc": "Sprooch astellen d\u00e9i fir d'Men\u00fcen a Buschtawe benotzt g\u00ebtt",
+    "ext-uls-select-language-settings-icon-tooltip": "Sproochastellungen",
+    "ext-uls-undo-language-tooltip-text": "Sprooch ge\u00e4nnert vu(n) $1",
+    "ext-uls-language-settings-title": "Sproochastellungen",
+    "ext-uls-language-settings-apply": "Astellungen uwenden",
+    "ext-uls-language-settings-cancel": "Ofbriechen",
+    "ext-uls-language-buttons-help": "\u00c4nnert d'Sprooch vun de Men\u00fcen. D'Sprooch vum Inhalt g\u00ebtt net ge\u00e4nnert.",
+    "ext-uls-display-settings-font-settings": "Astellunge vun de Schr\u00ebften",
+    "ext-uls-display-settings-ui-language": "Sprooch fir ze weisen",
+    "ext-uls-display-settings-anon-label": "Sprooch fir ze weisen:",
+    "ext-uls-display-settings-anon-same-as-content": "L\u00ebtzebuergesch (esou w\u00e9i den Inhalt)",
+    "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Loggt Iech a]] fir eng aner Sprooch fir d'Men\u00fcen ze wielen.",
+    "ext-uls-webfonts-settings-title": "Font erofluede wann dat n\u00e9ideg ass",
+    "ext-uls-webfonts-settings-info-link": "M\u00e9i Informatiounen",
+    "ext-uls-webfonts-select-for": "Schr\u00ebftzort fir $1 eraussichen",
+    "ext-uls-webfonts-select-for-ui-info": "Schr\u00ebft d\u00e9i fir de Benotzer-Interface benotzt g\u00ebtt",
+    "ext-uls-webfonts-select-for-content-info": "Schr\u00ebft d\u00e9i fir den Inhalt benotzt g\u00ebtt",
+    "ext-uls-back-to-display-settings": "Zr\u00e9ck op d'Astellunge vum Weisen",
+    "ext-uls-input-settings-desc": "An enger anerer Sprooch schreiwen?",
+    "ext-uls-input-settings-ui-language": "Sprooch d\u00e9i fir d'Schreiwe benotzt g\u00ebtt",
+    "ext-uls-disable-input-method-desc": "Eng normal Tastatur benotzen",
+    "ext-uls-input-settings-more-languages-tooltip": "M\u00e9i Sproochen",
+    "ext-uls-input-more-settings": "M\u00e9i Astellungen",
+    "jquery-ime-other-languages": "Aner Sproochen",
+    "jquery-ime-help": "H\u00ebllef"
 }
