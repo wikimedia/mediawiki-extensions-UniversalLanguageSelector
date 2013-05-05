@@ -75,6 +75,9 @@ $wgResourceModules['ext.uls.interface'] = array(
 		'ext.uls.displaysettings',
 		'ext.uls.inputsettings',
 	),
+	'messages' => array(
+		'uls-plang-title-languages',
+	),
 	'position' => 'top',
 ) + $resourcePaths;
 
