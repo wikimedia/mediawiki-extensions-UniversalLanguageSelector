@@ -23,18 +23,24 @@ $messages = array();
 /**
  * English
  * @author santhosh
+ * @author Amire80
  */
 $messages['en'] = array(
 	'UniversalLanguageSelector' => 'Universal Language Selector',
 	'uls-desc' => 'Gives the user several ways to select a language and to adjust language settings',
+
+	'uls-plang-title-languages' => 'Languages',
 );
 
 /** Message documentation (Message documentation)
  * @author Shirayuki
+ * @author Amire80
  */
 $messages['qqq'] = array(
 	'UniversalLanguageSelector' => 'Extension name',
 	'uls-desc' => 'Extension description',
+	'uls-plang-title-languages' => 'A title for the are in the sidebar in which the interlanguage links are supposed to appear.
+This title is shown when there are no interlanguage links there, but an icon that enables the ULS is shown.',
 	'uls-select-content-language' => 'Main heading in the language selector popup.
 {{Identical|Select language}}',
 );

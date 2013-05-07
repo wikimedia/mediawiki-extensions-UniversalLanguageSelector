@@ -44,8 +44,21 @@
 				.addClass( 'uls-trigger' )
 				.attr( 'title', $.i18n( 'ext-uls-language-settings-title' ) )
 			);
+
 			// Remove the dummy link that was added to make sure that the section appears
 			$pLang.find( '.uls-p-lang-dummy' ).remove();
+
+			if ( !$pLang.find( 'div ul' ).children().length ) {
+				// Replace the title of the interlanguage links
+				// area if there are no interlanguage links
+				$pLang.find( 'h3' )
+					.text( mw.msg( 'uls-plang-title-languages' ) );
+
+				// Remove the empty box that appears in the monobook skin
+				if ( mw.config.get( 'skin' ) === 'monobook' ) {
+					$pLang.find( 'div.pBody' ).remove();
+				}
+			}
 		}
 
 		$ulsTrigger = $( '.uls-trigger' );
