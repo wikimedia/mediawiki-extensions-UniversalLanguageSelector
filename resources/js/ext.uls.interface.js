@@ -24,6 +24,7 @@
 		var $ulsTrigger, $pLang,
 			ulsOptions,
 			previousLanguages, previousLang,
+			anonMode,
 			rtlPage = $( 'body' ).hasClass( 'rtl' ),
 			ulsPosition = mw.config.get( 'wgULSPosition' ),
 			tipsyGravity = {
@@ -31,6 +32,9 @@
 				interlanguage: rtlPage ? 'e' : 'w'
 			},
 			currentLang = mw.config.get( 'wgUserLanguage' );
+
+		anonMode = ( mw.user.isAnon() &&
+			!mw.config.get( 'wgULSAnonCanChangeLanguage' ) );
 
 		if ( ulsPosition === 'interlanguage' ) {
 			// The interlanguage links section
@@ -86,8 +90,9 @@
 
 			// If the ULS trigger is shown in the top personal menu,
 			// closing the display settings must show the main ULS
-			// languages list
-			if ( ulsPosition === 'personal' ) {
+			// languages list, unless we are in anon mode and thus
+			// cannot show the language list
+			if ( ulsPosition === 'personal' && !anonMode ) {
 				displaySettingsOptions.onClose = function () {
 					uls.show();
 				};
@@ -199,6 +204,10 @@
 					$currentMenu.find( '.row' ).height()
 				);
 
+			};
+		} else if ( anonMode ) {
+			ulsOptions.onVisible = function () {
+				this.$menu.find( '#display-settings-block' ).click();
 			};
 		}
 
