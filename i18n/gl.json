@@ -26,6 +26,7 @@
     "ext-uls-webfonts-select-for": "Seleccione o tipo de letra para o $1",
     "ext-uls-webfonts-select-for-ui-info": "Tipo de letra usado para a interface de usuario",
     "ext-uls-webfonts-select-for-content-info": "Tipo de letra usado para o contido",
+    "ext-uls-webfonts-system-font": "Tipo de letra do sistema",
     "ext-uls-back-to-display-settings": "Volver \u00e1s opci\u00f3ns de visualizaci\u00f3n",
     "ext-uls-input-settings-title": "Opci\u00f3ns de entrada",
     "ext-uls-input-settings-title-short": "Entrada",

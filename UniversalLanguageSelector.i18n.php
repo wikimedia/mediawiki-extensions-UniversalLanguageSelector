@@ -40,7 +40,8 @@ $messages['qqq'] = array(
 	'UniversalLanguageSelector' => 'Extension name',
 	'uls-desc' => 'Extension description',
 	'uls-plang-title-languages' => 'A title for the are in the sidebar in which the interlanguage links are supposed to appear.
-This title is shown when there are no interlanguage links there, but an icon that enables the ULS is shown.',
+This title is shown when there are no interlanguage links there, but an icon that enables the ULS is shown.
+{{Identical|Language}}',
 );
 
 /** Arabic (العربية)
@@ -79,6 +80,15 @@ $messages['be-tarask'] = array(
 	'uls-select-content-language' => 'Выбар мовы',
 );
 
+/** Bengali (বাংলা)
+ * @author Bellayet
+ */
+$messages['bn'] = array(
+	'UniversalLanguageSelector' => 'ইউনিভার্সাল ল্যাঙ্গুয়েজ সিলেকটর',
+	'uls-desc' => 'ব্যবহারকারীকে ভাষা নির্বাচন এবং ভাষা সম্পর্কিত সেটিং সমন্বয়ের বিভিন্ন উপায় দেয়',
+	'uls-plang-title-languages' => 'ভাষা',
+);
+
 /** Breton (brezhoneg)
  * @author Y-M D
  */
@@ -113,7 +123,7 @@ $messages['da'] = array(
 $messages['de'] = array(
 	'UniversalLanguageSelector' => 'Universelle Sprachauswahl',
 	'uls-desc' => 'Ermöglicht verschiedene Wege, eine Sprache auszuwählen und Spracheinstellungen anzupassen',
-	'uls-select-content-language' => 'Sprache auswählen',
+	'uls-plang-title-languages' => 'Sprachen',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -206,7 +216,7 @@ $messages['fur'] = array(
 $messages['gl'] = array(
 	'UniversalLanguageSelector' => 'Selector universal de linguas',
 	'uls-desc' => 'Dá ao usuario varios xeitos de seleccionar unha lingua e de axustar as preferencias da mesma',
-	'uls-select-content-language' => 'Seleccionar a lingua',
+	'uls-plang-title-languages' => 'Linguas',
 );
 
 /** Hebrew (עברית)
@@ -237,12 +247,13 @@ $messages['ilo'] = array(
 );
 
 /** Italian (italiano)
+ * @author Beta16
  * @author Darth Kule
  */
 $messages['it'] = array(
 	'UniversalLanguageSelector' => 'Selettore universale della lingua',
 	'uls-desc' => 'Fornisce agli utenti diversi modi di selezionare una lingua e sistemare le impostazioni della lingua',
-	'uls-select-content-language' => 'Seleziona lingua',
+	'uls-plang-title-languages' => 'Lingue',
 );
 
 /** Japanese (日本語)
@@ -251,7 +262,7 @@ $messages['it'] = array(
 $messages['ja'] = array(
 	'UniversalLanguageSelector' => 'ユニバーサル言語選択',
 	'uls-desc' => '言語を選択するため/言語設定を調整するための、いくつかの方法を利用者に提供する',
-	'uls-select-content-language' => '言語を選択',
+	'uls-plang-title-languages' => '言語',
 );
 
 /** Georgian (ქართული)
@@ -296,7 +307,7 @@ $messages['lb'] = array(
 $messages['mk'] = array(
 	'UniversalLanguageSelector' => 'Универзален избирач на јазици',
 	'uls-desc' => 'Му дава на корисникот неколку начини за избор на јазик и прилагодување на јазичните поставки',
-	'uls-select-content-language' => 'Одберете јазик',
+	'uls-plang-title-languages' => 'Јазици',
 );
 
 /** Malayalam (മലയാളം)
@@ -331,7 +342,7 @@ $messages['nb'] = array(
 $messages['nl'] = array(
 	'UniversalLanguageSelector' => 'Universele taalkiezer',
 	'uls-desc' => 'Biedt gebruikers verschillende mogelijkheden om een taal te kiezen en bijbehorende instellingen aan te passen',
-	'uls-select-content-language' => 'Taal selecteren',
+	'uls-plang-title-languages' => 'Talen',
 );
 
 /** Ossetic (Ирон)
@@ -385,7 +396,7 @@ $messages['ro'] = array(
 $messages['roa-tara'] = array(
 	'UniversalLanguageSelector' => 'Scacchiatore Universale de Lènghe',
 	'uls-desc' => "Dèje diverse mode a l'utende de scacchià 'na lènghe e de consiglià le 'mbostaziune d'a lènghe",
-	'uls-select-content-language' => "Scacchie 'a lènghe",
+	'uls-plang-title-languages' => 'Lènghe',
 );
 
 /** Russian (русский)

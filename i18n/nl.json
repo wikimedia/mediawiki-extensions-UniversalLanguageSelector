@@ -27,6 +27,7 @@
     "ext-uls-webfonts-select-for": "Lettertype selecteren voor $1",
     "ext-uls-webfonts-select-for-ui-info": "Lettertype voor gebruikersinterface",
     "ext-uls-webfonts-select-for-content-info": "Lettertype voor inhoud",
+    "ext-uls-webfonts-system-font": "Systeemlettertype",
     "ext-uls-back-to-display-settings": "Terug naar weergaveinstellingen",
     "ext-uls-input-settings-title": "Invoerinstellingen",
     "ext-uls-input-settings-title-short": "Invoer",
