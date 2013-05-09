@@ -194,13 +194,14 @@ $messages['fi'] = array(
 );
 
 /** French (français)
+ * @author Ltrlg
  * @author Tititou36
  * @author Wyz
  */
 $messages['fr'] = array(
 	'UniversalLanguageSelector' => 'Sélecteur de Langue Universel',
 	'uls-desc' => "Donne à l'utilisateur plusieurs manières de sélectionner une langue et d'ajuster les paramètres de langue",
-	'uls-select-content-language' => 'Sélectionner la langue',
+	'uls-plang-title-languages' => 'Langues',
 );
 
 /** Friulian (furlan)
@@ -466,7 +467,7 @@ $messages['ur'] = array(
 $messages['vi'] = array(
 	'UniversalLanguageSelector' => 'Bộ lựa chọn Ngôn ngữ Phổ quát',
 	'uls-desc' => 'Trình bày giao diện để lựa chọn ngôn ngữ và điều chỉnh các tùy chọn ngôn ngữ',
-	'uls-select-content-language' => 'Chọn ngôn ngữ',
+	'uls-plang-title-languages' => 'Ngôn ngữ',
 );
 
 /** Simplified Chinese (中文（简体）‎)
@@ -485,5 +486,5 @@ $messages['zh-hans'] = array(
 $messages['zh-hant'] = array(
 	'UniversalLanguageSelector' => '通用語言選擇器',
 	'uls-desc' => '為用戶提供多種方法來選擇語言和調整語言設置',
-	'uls-select-content-language' => '選擇語言',
+	'uls-plang-title-languages' => '語言',
 );
