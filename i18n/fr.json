@@ -3,6 +3,7 @@
         "authors": [
             "Gomoko",
             "Hyperborean",
+            "Ltrlg",
             "Metroitendo"
         ]
     },
@@ -43,8 +44,8 @@
     "jquery-ime-other-languages": "Autres langues",
     "jquery-ime-disable-text": "D\u00e9sactiver la m\u00e9thode de saisie",
     "jquery-ime-help": "Aide",
-    "ext-uls-input-disable": "D\u00e9sactiver les outils de m\u00e9thode de saisie",
-    "ext-uls-input-enable": "Activer les outils de m\u00e9thode de saisie",
-    "ext-uls-input-disable-info": "Les outils de m\u00e9thode de saisie sont d\u00e9sactiv\u00e9s.",
+    "ext-uls-input-disable": "D\u00e9sactiver la m\u00e9thode de saisie",
+    "ext-uls-input-enable": "Activer la m\u00e9thode de saisie",
+    "ext-uls-input-disable-info": "Les m\u00e9thode de saisie sont d\u00e9sactiv\u00e9s.",
     "ext-uls-input-settings-noime": "Aucune m\u00e9thode de saisie n'est disponible pour cette langue."
 }
