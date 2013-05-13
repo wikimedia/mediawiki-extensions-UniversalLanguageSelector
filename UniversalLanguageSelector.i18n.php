@@ -190,7 +190,7 @@ $messages['fa'] = array(
 $messages['fi'] = array(
 	'UniversalLanguageSelector' => 'Suuri kielenvalitsin',
 	'uls-desc' => 'Tarjoaa useita tapoja valita kieli ja asettaa kieliasetukset',
-	'uls-select-content-language' => 'Valitse kieli',
+	'uls-plang-title-languages' => 'Kielet',
 );
 
 /** French (français)

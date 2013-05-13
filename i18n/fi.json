@@ -6,14 +6,21 @@
         ]
     },
     "ext-uls-display-settings-title": "N\u00e4ytt\u00f6asetukset",
+    "ext-uls-display-settings-language-tab": "Kieli",
+    "ext-uls-display-settings-fonts-tab": "Kirjasimet",
     "ext-uls-display-settings-title-short": "N\u00e4ytt\u00f6",
     "ext-uls-display-settings-desc": "Aseta k\u00e4ytt\u00f6liittym\u00e4n kieli ja kirjasimet.",
+    "ext-uls-select-language-settings-icon-tooltip": "Kieliasetukset",
     "ext-uls-undo-language-tooltip-text": "Kieli vaihdettu kielest\u00e4 $1",
     "ext-uls-language-settings-title": "Kieliasetukset",
     "ext-uls-language-settings-apply": "K\u00e4yt\u00e4",
     "ext-uls-language-settings-cancel": "Peru",
+    "ext-uls-language-buttons-help": "Vaihda valikkojen kieli. Sis\u00e4ll\u00f6n kieli ei muutu.",
     "ext-uls-display-settings-font-settings": "Kirjasinasetukset",
     "ext-uls-display-settings-ui-language": "K\u00e4ytt\u00f6liittym\u00e4n kieli",
+    "ext-uls-display-settings-anon-label": "K\u00e4ytt\u00f6liittym\u00e4n kieli:",
+    "ext-uls-display-settings-anon-same-as-content": "suomi (sama kuin sis\u00e4ll\u00f6n)",
+    "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Kirjaudu sis\u00e4\u00e4n]], jos haluat valita eri kielen valikoille.",
     "ext-uls-webfonts-settings-title": "Lataa tarvittaessa",
     "ext-uls-webfonts-settings-info": "Verkkokirjasimet ladataan, jos sivulla on teksti\u00e4 eri kirjoitusj\u00e4rjestelmill\u00e4.",
     "ext-uls-webfonts-settings-info-link": "Lis\u00e4tietoja",
@@ -33,5 +40,10 @@
     "ext-uls-input-settings-more-languages-tooltip": "Lis\u00e4\u00e4 kieli\u00e4",
     "ext-uls-input-more-settings": "Lis\u00e4asetukset",
     "jquery-ime-other-languages": "Muut kielet",
-    "jquery-ime-help": "Ohje"
+    "jquery-ime-disable-text": "\u00c4l\u00e4 k\u00e4yt\u00e4 sy\u00f6tt\u00f6tapoja",
+    "jquery-ime-help": "Ohje",
+    "ext-uls-input-disable": "\u00c4l\u00e4 k\u00e4yt\u00e4 sy\u00f6tt\u00f6tapoja",
+    "ext-uls-input-enable": "K\u00e4yt\u00e4 sy\u00f6tt\u00f6tapoja",
+    "ext-uls-input-disable-info": "Sy\u00f6tt\u00f6tavat eiv\u00e4t ole k\u00e4yt\u00f6ss\u00e4.",
+    "ext-uls-input-settings-noime": "T\u00e4lle kielelle ei ole sy\u00f6tt\u00f6tapoja."
 }

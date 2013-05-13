@@ -26,7 +26,7 @@
     "ext-uls-display-settings-anon-log-in-cta": "A call to action for an anonymous user to log in.",
     "ext-uls-webfonts-settings-title": "Short title for enabling webfonts",
     "ext-uls-webfonts-settings-info": "Webfonts will be downloaded for displaying text in special scripts.",
-    "ext-uls-webfonts-settings-info-link": "More information link text for webfonts",
+    "ext-uls-webfonts-settings-info-link": "More information link text for webfonts\n{{Identical|More information}}",
     "ext-uls-webfonts-select-for": "Label for font selector dropdown. $1 is a language name",
     "ext-uls-webfonts-select-for-ui-info": "Information displayed under font selector",
     "ext-uls-webfonts-select-for-content-info": "Information displayed under font selector",
