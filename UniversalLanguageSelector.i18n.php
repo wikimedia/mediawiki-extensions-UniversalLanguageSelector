@@ -317,7 +317,7 @@ $messages['mk'] = array(
 $messages['ml'] = array(
 	'UniversalLanguageSelector' => 'ആഗോള ഭാഷാസഹായി',
 	'uls-desc' => 'ഭാഷ തിരഞ്ഞെടുക്കുന്നതിനും സജ്ജീകരിക്കുന്നതിനുമുള്ള സംവിധാനം',
-	'uls-select-content-language' => 'ഭാഷ തിരഞ്ഞെടുക്കുക',
+	'uls-plang-title-languages' => 'ഭാഷകൾ',
 );
 
 /** Malay (Bahasa Melayu)
