@@ -318,6 +318,18 @@
 						.data( 'i18n', 'ext-uls-input-settings-ui-language' )
 						.i18n();
 				},
+				onVisible: function () {
+					var $parent = $( '#language-settings-dialog' );
+
+					// Re-position the element according to the window that called it
+					this.top = $parent.css( 'top' );
+					this.left = $parent.css( 'left' );
+					this.$menu.css( this.position() );
+
+					this.$menu.find( '.caret-before, .caret-after' ).css( 'top',
+						this.$menu.find( '.row' ).height()
+					);
+				},
 				onSelect: function ( langCode ) {
 					inputSettings.enableApplyButton();
 					inputSettings.imeLanguage = langCode;
@@ -328,6 +340,13 @@
 				languages: mw.ime.getLanguagesWithIME(),
 				lazyload: false
 			} );
+
+			if ( mw.config.get( 'wgULSPosition' ) === 'interlanguage' ) {
+				$moreLanguagesButton.data( 'uls' ).$menu.prepend(
+					$( '<span>' ).addClass( 'caret-before' ),
+					$( '<span>' ).addClass( 'caret-after' )
+				);
+			}
 
 			$moreLanguagesButton.on( 'click', function () {
 				inputSettings.$parent.hide();

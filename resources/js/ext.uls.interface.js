@@ -166,6 +166,7 @@
 				var scrollPosition,
 					$currentMenu,
 					ulsHeight, ulsTop, ulsBottom,
+					correctedPosition,
 					$languageSettingsTrigger = this.$menu.find( '#display-settings-block' ),
 					padding = 10,
 					$window = $( window ),
@@ -180,7 +181,9 @@
 				this.left = rtlPage ?
 					ulsTriggerOffset.left - 22 - this.$menu.width() :
 					ulsTriggerOffset.left + 50;
-				this.$menu.css( this.position() );
+
+				correctedPosition = this.position();
+				this.$menu.css( correctedPosition );
 
 				// Show the Display settings panel:
 				// We are using the ULS trigger in the sidebar,
@@ -189,7 +192,7 @@
 				$languageSettingsTrigger.click();
 
 				$currentMenu = $( '.uls-menu:visible' );
-				$currentMenu.css( this.position() );
+				$currentMenu.css( correctedPosition );
 				ulsHeight = $currentMenu.height();
 				ulsTop = $currentMenu.offset().top;
 				ulsBottom = ulsTop + ulsHeight;
@@ -216,7 +219,6 @@
 				$currentMenu.find( '.caret-before, .caret-after' ).css( 'top',
 					$currentMenu.find( '.row' ).height()
 				);
-
 			};
 		} else if ( anonMode ) {
 			ulsOptions.onVisible = function () {
