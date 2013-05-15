@@ -273,7 +273,7 @@
 
 			$languages = this.$template.find( 'div.uls-ui-languages' );
 			$moreLanguagesButton = $( '<button>' )
-				.prop( 'id', 'uls-more-languages' )
+				.prop( 'class', 'uls-more-languages' )
 				.addClass( 'button' ).text( '...' );
 
 			$languages.append( $moreLanguagesButton );
