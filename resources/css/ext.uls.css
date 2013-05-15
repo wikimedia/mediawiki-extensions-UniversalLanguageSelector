@@ -20,6 +20,11 @@
 	cursor: pointer;
 }
 
+.skin-vector #p-lang .uls-trigger {
+	/* Put it in the middle of the first row of the section title */
+	margin-top: 4px;
+}
+
 #p-lang .uls-trigger:hover {
 	background-position: right -18px;
 }
