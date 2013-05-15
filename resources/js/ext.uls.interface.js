@@ -21,7 +21,9 @@
 	'use strict';
 
 	$( document ).ready( function () {
-		var $ulsTrigger, $pLang,
+		var $ulsTrigger,
+			$ulsSettingsTrigger,
+			$pLang,
 			ulsOptions,
 			previousLanguages, previousLang,
 			anonMode,
@@ -40,10 +42,10 @@
 			// The interlanguage links section
 			$pLang = $( '#p-lang' );
 			// Add an element near the interlanguage links header
-			$pLang.prepend( $( '<span>' )
-				.addClass( 'uls-trigger' )
-				.attr( 'title', $.i18n( 'ext-uls-language-settings-title' ) )
-			);
+			$ulsSettingsTrigger = $( '<span>' )
+				.addClass( 'uls-settings-trigger' )
+				.attr( 'title', $.i18n( 'ext-uls-language-settings-title' ) );
+			$pLang.prepend( $ulsSettingsTrigger );
 
 			// Remove the dummy link that was added to make sure that the section appears
 			$pLang.find( '.uls-p-lang-dummy' ).remove();
@@ -159,82 +161,26 @@
 		};
 
 		if ( ulsPosition === 'interlanguage' ) {
-			$ulsTrigger.attr( 'title', $.i18n( 'ext-uls-select-language-settings-icon-tooltip' ) );
-
-			// This is a hook that runs in the ULS scope
-			ulsOptions.onVisible = function () {
-				var scrollPosition,
-					$currentMenu,
-					ulsHeight, ulsTop, ulsBottom,
-					correctedPosition,
-					$languageSettingsTrigger = this.$menu.find( '#display-settings-block' ),
-					padding = 10,
-					$window = $( window ),
-					windowHeight = $window.height(),
-					windowScrollTop = $window.scrollTop(),
-					windowBottom = windowScrollTop + windowHeight,
-					ulsTriggerOffset = this.$element.offset();
-
-				// Reposition the element -
-				// the sidebar elements may have changed
-				this.top = ulsTriggerOffset.top - 45;
-				this.left = rtlPage ?
-					ulsTriggerOffset.left - 22 - this.$menu.width() :
-					ulsTriggerOffset.left + 50;
-
-				correctedPosition = this.position();
-				this.$menu.css( correctedPosition );
-
-				// Show the Display settings panel:
-				// We are using the ULS trigger in the sidebar,
-				// so we don't want to switch the language, but
-				// to change the settings.
-				$languageSettingsTrigger.click();
-
-				$currentMenu = $( '.uls-menu:visible' );
-				$currentMenu.css( correctedPosition );
-				ulsHeight = $currentMenu.height();
-				ulsTop = $currentMenu.offset().top;
-				ulsBottom = ulsTop + ulsHeight;
-
-				// If the ULS panel is out of the viewport,
-				// scroll the window to show it
-				if ( ( ulsTop < windowScrollTop ) || ( ulsBottom > windowBottom ) ) {
-					if ( ulsHeight > windowHeight ) {
-						// Scroll to show as much of the upper
-						// part of ULS as possible
-						scrollPosition = ulsTop - padding;
-					} else {
-						// Scroll just enough to show the ULS panel
-						scrollPosition = ulsBottom - windowHeight + padding;
-					}
-
-					$( 'html, body' ).stop().animate( {
-						scrollTop: scrollPosition
-					}, 500 );
+			$ulsSettingsTrigger.attr( 'title', $.i18n( 'ext-uls-select-language-settings-icon-tooltip' ) );
+			$ulsSettingsTrigger.languagesettings( {
+				onVisible: function () {
+					var ulsTriggerOffset = $ulsSettingsTrigger.offset();
+					this.left = rtlPage ? ulsTriggerOffset.left - 30
+						:ulsTriggerOffset.left + 30;
+					this.top = ulsTriggerOffset.top - 50;
+					this.position();
 				}
-
-				// Set the position of the caret according to the height
-				// of the top row of the menu
-				$currentMenu.find( '.caret-before, .caret-after' ).css( 'top',
-					$currentMenu.find( '.row' ).height()
-				);
-			};
-		} else if ( anonMode ) {
-			ulsOptions.onVisible = function () {
-				this.$menu.find( '#display-settings-block' ).click();
-			};
-		}
-
-		$ulsTrigger.uls( ulsOptions );
-
-		if ( ulsPosition === 'interlanguage' ) {
+			} );
 			$( '.uls-menu' ).each( function () {
 				$( this ).prepend(
 					$( '<span>' ).addClass( 'caret-before' ),
 					$( '<span>' ).addClass( 'caret-after' )
 				);
 			} );
+		} else if ( anonMode ) {
+			$ulsTrigger.languagesettings();
+		} else {
+			$ulsTrigger.uls( ulsOptions );
 		}
 
 		if ( previousLang === currentLang  ) {

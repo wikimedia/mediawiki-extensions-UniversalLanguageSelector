@@ -7,7 +7,7 @@
 	padding-left: 30px;
 }
 
-#p-lang .uls-trigger {
+#p-lang .uls-settings-trigger {
 	/* @embed */
 	background: transparent url('../images/cog-sprite.png') right top no-repeat;
 	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/cog-sprite.svg');
@@ -16,16 +16,17 @@
 	background-size: 14px auto;
 	border-radius: 0 0 5px 5px;
 	height: 14px;
+	width: 14px;
 	float: right;
 	cursor: pointer;
 }
 
-.skin-vector #p-lang .uls-trigger {
+.skin-vector #p-lang .uls-settings-trigger {
 	/* Put it in the middle of the first row of the section title */
 	margin-top: 4px;
 }
 
-#p-lang .uls-trigger:hover {
+#p-lang .uls-settings-trigger:hover {
 	background-position: right -18px;
 }
 
@@ -63,6 +64,7 @@ x:-o-prefocus, body.rtl li#pt-uls {
 	border-bottom: 20px solid transparent;
 	display: inline-block;
 	left: -21px;
+	top: 30px;
 	position: absolute;
 }
 
@@ -72,6 +74,7 @@ x:-o-prefocus, body.rtl li#pt-uls {
 	border-bottom: 20px solid transparent;
 	display: inline-block;
 	left: -20px;
+	top: 30px;
 	position: absolute;
 }
 

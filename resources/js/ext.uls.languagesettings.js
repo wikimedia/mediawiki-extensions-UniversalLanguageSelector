@@ -157,28 +157,44 @@
 			}
 		},
 
-		show: function () {
-			if ( !this.initialized ) {
-				var top, pos, left;
-
-				this.render();
-				this.initialized = true;
-				pos = $.extend( {}, this.$element.offset(), {
+		position: function () {
+			var top, pos, left;
+			pos = $.extend( {}, this.$element.offset(), {
 					height: this.$element[0].offsetHeight
 				} );
-				top = this.top || pos.top + pos.height;
-				left = this.left || '25%';
-				// FIXME this is not exactly correct. position may not
-				// be relative to the trigger.
-				this.$window.css( {
-					top: top,
-					left: left
-				} );
-			}
+			top = this.top || pos.top + pos.height;
+			left = this.left || '25%';
+			// FIXME this is not exactly correct. position may not
+			// be relative to the trigger.
+			this.$window.css( {
+				top: top,
+				left: left
+			} );
+		},
 
+		show: function () {
+			if ( !this.initialized ) {
+				this.render();
+				this.initialized = true;
+			}
 			this.$window.i18n();
 			this.shown = true;
 			this.$window.show();
+			this.position();
+			this.visible();
+		},
+
+		/**
+		 * A "hook" that runs after the ULS panel becomes visible
+		 * by using the show method.
+		 *
+		 * To use it, pass a function as the onVisible parameter
+		 * in the options when initializing ULS.
+		 */
+		visible: function () {
+			if ( this.options.onVisible ) {
+				this.options.onVisible.call( this );
+			}
 		},
 
 		/**
@@ -230,7 +246,8 @@
 		defaultModule: false, // Name of the default module
 		onClose: null, // An onClose event handler.
 		top: null, // Top position of this window
-		left: null // Left position of this window
+		left: null, // Left position of this window
+		onVisible: null // A callback that runs after the ULS panel becomes visible
 	};
 
 	$.fn.languagesettings.Constructor = LanguageSettings;

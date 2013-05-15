@@ -299,15 +299,13 @@
 				},
 				onVisible: function () {
 					var $parent = $( '#language-settings-dialog' );
-
 					// Re-position the element according to the window that called it
-					this.top = $parent.css( 'top' );
-					this.left = $parent.css( 'left' );
-					this.$menu.css( this.position() );
-
-					this.$menu.find( '.caret-before, .caret-after' ).css( 'top',
-						this.$menu.find( '.row' ).height()
-					);
+					if ( parseInt( $parent.css( 'left' ), 10 ) ) {
+						 this.$menu.css( 'left', $parent.css( 'left' ) );
+					}
+					if ( parseInt( $parent.css( 'top' ), 10 ) ) {
+						this.$menu.css( 'top', $parent.css( 'top' ) );
+					}
 				},
 				onSelect: function ( langCode ) {
 					displaySettings.enableApplyButton();
