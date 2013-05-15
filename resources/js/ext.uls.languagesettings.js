@@ -58,9 +58,7 @@
 		constructor: LanguageSettings,
 
 		init: function () {
-			if ( $( 'body' ).find( '#language-settings-dialog' ).length === 0 ) {
-				$( 'body' ).append( this.$window );
-			}
+			$( 'body' ).append( this.$window );
 			this.hide();
 		},
 
