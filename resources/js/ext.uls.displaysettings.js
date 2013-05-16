@@ -297,6 +297,18 @@
 						.data( 'i18n', 'ext-uls-display-settings-ui-language' )
 						.i18n();
 				},
+				onVisible: function () {
+					var $parent = $( '#language-settings-dialog' );
+
+					// Re-position the element according to the window that called it
+					this.top = $parent.css( 'top' );
+					this.left = $parent.css( 'left' );
+					this.$menu.css( this.position() );
+
+					this.$menu.find( '.caret-before, .caret-after' ).css( 'top',
+						this.$menu.find( '.row' ).height()
+					);
+				},
 				onSelect: function ( langCode ) {
 					displaySettings.enableApplyButton();
 					displaySettings.uiLanguage = langCode;
@@ -310,6 +322,15 @@
 					return mw.uls.getFrequentLanguageList();
 				}
 			} );
+
+			// If the ULS is shown in the the sidebar,
+			// add a caret pointing to the icon
+			if ( mw.config.get( 'wgULSPosition' ) === 'interlanguage' ) {
+				$moreLanguagesButton.data( 'uls' ).$menu.prepend(
+					$( '<span>' ).addClass( 'caret-before' ),
+					$( '<span>' ).addClass( 'caret-after' )
+				);
+			}
 
 			$moreLanguagesButton.on( 'click', function () {
 				displaySettings.$parent.hide();
