@@ -295,8 +295,18 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	public static function onGetPreferences( $user, &$preferences ) {
+		// The detailed preferences for different layouts.
+		// Saved as JSON and modifiable through the ULS screens.
 		$preferences['uls-preferences'] = array(
 			'type' => 'api',
+		);
+
+		// A checkbox in the general MediaWiki preferences screen
+		// to enable or disable IME in ULS
+		$preferences['uls-ime-enable'] = array(
+			'type' => 'toggle',
+			'label-message' => 'uls-ime-enable-preferences-label',
+			'section' => 'editing/advancedediting', // under 'Advanced options' section of 'Editing' tab
 		);
 
 		return true;
