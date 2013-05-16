@@ -42,8 +42,8 @@
     "jquery-ime-other-languages": "Altre lingue",
     "jquery-ime-disable-text": "Disabilita il metodo di scrittura",
     "jquery-ime-help": "Aiuto",
-    "ext-uls-input-disable": "Disabilita gli strumenti di scrittura",
-    "ext-uls-input-enable": "Abilita gli strumenti di scrittura",
-    "ext-uls-input-disable-info": "Gli strumenti di scrittura sono disabilitati.",
+    "ext-uls-input-disable": "Disabilita i metodi di scrittura",
+    "ext-uls-input-enable": "Abilita i metodi di scrittura",
+    "ext-uls-input-disable-info": "I metodi di scrittura sono disabilitati.",
     "ext-uls-input-settings-noime": "Nessun metodo di scrittura \u00e8 disponibile per questa lingua."
 }

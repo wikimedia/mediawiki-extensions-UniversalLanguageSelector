@@ -43,10 +43,7 @@ $messages['qqq'] = array(
 	'uls-plang-title-languages' => 'A title for the are in the sidebar in which the interlanguage links are supposed to appear.
 This title is shown when there are no interlanguage links there, but an icon that enables the ULS is shown.
 {{Identical|Language}}',
-	'uls-ime-enable-preferences-label' => 'A label for a user preference.',
-
-	'uls-select-content-language' => 'Main heading in the language selector popup.
-{{Identical|Select language}}',
+	'uls-ime-enable-preferences-label' => 'Used as a label for the checkbox in {{msg-mw|Preferences}} page.',
 );
 
 /** Arabic (العربية)
@@ -73,7 +70,7 @@ $messages['as'] = array(
 $messages['ast'] = array(
 	'UniversalLanguageSelector' => 'Selector universal de llingua',
 	'uls-desc' => 'Ufre al usuariu delles maneres pa seleicionar una llingua y axustar la configuración de llingua',
-	'uls-select-content-language' => 'Escueyi llingua',
+	'uls-plang-title-languages' => 'Llingües',
 );
 
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
@@ -129,6 +126,7 @@ $messages['de'] = array(
 	'UniversalLanguageSelector' => 'Universelle Sprachauswahl',
 	'uls-desc' => 'Ermöglicht verschiedene Wege, eine Sprache auszuwählen und Spracheinstellungen anzupassen',
 	'uls-plang-title-languages' => 'Sprachen',
+	'uls-ime-enable-preferences-label' => 'Eingabemethoden aktivieren',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -200,6 +198,7 @@ $messages['fi'] = array(
 
 /** French (français)
  * @author Ltrlg
+ * @author Metroitendo
  * @author Tititou36
  * @author Wyz
  */
@@ -207,6 +206,7 @@ $messages['fr'] = array(
 	'UniversalLanguageSelector' => 'Sélecteur de Langue Universel',
 	'uls-desc' => "Donne à l'utilisateur plusieurs manières de sélectionner une langue et d'ajuster les paramètres de langue",
 	'uls-plang-title-languages' => 'Langues',
+	'uls-ime-enable-preferences-label' => 'Activer la méthode de saisie',
 );
 
 /** Friulian (furlan)
@@ -269,6 +269,7 @@ $messages['ja'] = array(
 	'UniversalLanguageSelector' => 'ユニバーサル言語選択',
 	'uls-desc' => '言語を選択するため/言語設定を調整するための、いくつかの方法を利用者に提供する',
 	'uls-plang-title-languages' => '言語',
+	'uls-ime-enable-preferences-label' => '入力メソッドを有効化',
 );
 
 /** Georgian (ქართული)
@@ -403,6 +404,7 @@ $messages['roa-tara'] = array(
 	'UniversalLanguageSelector' => 'Scacchiatore Universale de Lènghe',
 	'uls-desc' => "Dèje diverse mode a l'utende de scacchià 'na lènghe e de consiglià le 'mbostaziune d'a lènghe",
 	'uls-plang-title-languages' => 'Lènghe',
+	'uls-ime-enable-preferences-label' => 'Abbilite le metode de inserimende',
 );
 
 /** Russian (русский)
