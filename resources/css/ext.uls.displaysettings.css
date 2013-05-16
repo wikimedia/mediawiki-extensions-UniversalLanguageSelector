@@ -77,7 +77,7 @@ div.display-settings-block {
 }
 
 .uls-font-select {
-	height: 16pt;
+	min-height: 16pt;
 }
 
 .uls-ui-languages button {
