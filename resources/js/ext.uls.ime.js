@@ -104,13 +104,16 @@
 
 	// Add a 'more setttings' link that takes to input settings of ULS
 	$.fn.imeselector.Constructor.prototype.helpLink = function () {
-		var $moreSettingsLink, imeselector;
+		var $disableInputToolsLink, $moreSettingsLink, imeselector;
 
 		imeselector = this;
 
-		$moreSettingsLink = $( '<a>' ).text( 'More settings' )
-			.addClass( 'uls-ime-more-settings-link' )
-			.attr( 'data-i18n', 'ext-uls-input-more-settings' );
+		$disableInputToolsLink = $( '<span>' )
+			.addClass( 'uls-ime-disable-link' )
+			.attr( 'data-i18n', 'ext-uls-input-disable' );
+
+		$moreSettingsLink = $( '<span>' )
+			.addClass( 'uls-ime-more-settings-link' );
 
 		$moreSettingsLink.languagesettings( {
 			defaultModule: 'input',
@@ -127,9 +130,21 @@
 			e.stopPropagation();
 		} );
 
-		$moreSettingsLink.i18n();
+		$disableInputToolsLink.i18n();
 
-		return $moreSettingsLink;
+		$disableInputToolsLink.on( 'click', function (e) {
+			$.ime.preferences.disable();
+			imeselector.hide();
+			imeselector.$menu.removeClass( 'open' );
+			$.ime.preferences.save( function () {
+				mw.ime.disable();
+			} );
+			e.stopPropagation();
+		} );
+
+		return $( '<div>' )
+			.addClass( 'uls-ime-menu-settings-item' )
+			.append( $disableInputToolsLink, $moreSettingsLink );
 	};
 
 	mw.ime.disable = function () {
