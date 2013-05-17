@@ -45,5 +45,9 @@
 "ext-uls-input-disable": "Disable input methods",
 "ext-uls-input-enable": "Enable input methods",
 "ext-uls-input-disable-info": "Input methods are disabled.",
-"ext-uls-input-settings-noime": "No input methods are available for this language."
+"ext-uls-input-settings-noime": "No input methods are available for this language.",
+"ext-uls-input-disable-notification": "Input tools have been disabled",
+"ext-uls-input-disable-notification-undo": "Undo",
+"ext-uls-input-disable-notification-info-personal": "You can enable the input tools at any time from the language settings.",
+"ext-uls-input-disable-notification-info-interlanguage": "You can enable the input tools at any time from the language settings next to the language list."
 }
