@@ -260,6 +260,7 @@ $messages['it'] = array(
 	'UniversalLanguageSelector' => 'Selettore universale della lingua',
 	'uls-desc' => 'Fornisce agli utenti diversi modi di selezionare una lingua e sistemare le impostazioni della lingua',
 	'uls-plang-title-languages' => 'Lingue',
+	'uls-ime-enable-preferences-label' => 'Abilita i metodi di scrittura',
 );
 
 /** Japanese (日本語)
@@ -315,6 +316,7 @@ $messages['mk'] = array(
 	'UniversalLanguageSelector' => 'Универзален избирач на јазици',
 	'uls-desc' => 'Му дава на корисникот неколку начини за избор на јазик и прилагодување на јазичните поставки',
 	'uls-plang-title-languages' => 'Јазици',
+	'uls-ime-enable-preferences-label' => 'Вклучи вносни алатки',
 );
 
 /** Malayalam (മലയാളം)
@@ -478,12 +480,14 @@ $messages['vi'] = array(
 );
 
 /** Simplified Chinese (中文（简体）‎)
+ * @author Li3939108
  * @author Shirayuki
  */
 $messages['zh-hans'] = array(
 	'UniversalLanguageSelector' => '通用语言选择器',
 	'uls-desc' => '为用户提供多种方法来选择语言和调整语言设置',
-	'uls-select-content-language' => '选择语言',
+	'uls-plang-title-languages' => '语言',
+	'uls-ime-enable-preferences-label' => '启用输入法',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
