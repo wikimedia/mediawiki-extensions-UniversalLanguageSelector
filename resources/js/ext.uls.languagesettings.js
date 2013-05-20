@@ -158,18 +158,38 @@
 		},
 
 		position: function () {
-			var top, pos, left;
+			var top, pos, left, bottom, height,
+				$window = $( window ),
+				windowHeight = $window.height(),
+				windowScrollTop = $window.scrollTop(),
+				windowBottom = windowScrollTop + windowHeight,
+				scrollPosition;
 			pos = $.extend( {}, this.$element.offset(), {
 					height: this.$element[0].offsetHeight
 				} );
 			top = this.top || pos.top + pos.height;
 			left = this.left || '25%';
-			// FIXME this is not exactly correct. position may not
-			// be relative to the trigger.
 			this.$window.css( {
 				top: top,
 				left: left
 			} );
+
+			height = this.$window.height();
+			bottom = top + height;
+			// If the language settings windpw is out of the viewport,
+			// scroll the window to show it
+			if ( ( top < windowScrollTop ) || ( bottom > windowBottom ) ) {
+				if ( height > windowHeight ) {
+					// Scroll to show as much of the upper part of window as possible
+					scrollPosition = top;
+				} else {
+					// Scroll just enough to show the language settings window.
+					scrollPosition = bottom - windowHeight;
+				}
+				$( 'html, body' ).stop().animate( {
+					scrollTop: scrollPosition
+				}, 500 );
+			}
 		},
 
 		show: function () {
