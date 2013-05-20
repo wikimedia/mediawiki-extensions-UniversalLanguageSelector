@@ -35,15 +35,6 @@
 	"predef": [
 		"mediaWiki",
 		"jQuery",
-
-		/* Qunit specific rules */
-		"QUnit",
-		"module",
-		"expect",
-		"start",
-		"stop",
-		"ok",
-		"test",
-		"strictEqual"
+		"QUnit"
 	]
 }

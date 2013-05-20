@@ -20,25 +20,20 @@
 ( function ( $, mw ) {
 	'use strict';
 
-	module( 'ext.uls', QUnit.newMwEnvironment() );
+	QUnit.module( 'ext.uls', QUnit.newMwEnvironment() );
 
-	test( '-- Initial check', function () {
-		expect( 1 );
-		ok( $.fn.uls, '$.fn.uls is defined' );
+	QUnit.test( '-- Initial check', 1, function ( assert ) {
+		assert.ok( $.fn.uls, '$.fn.uls is defined' );
 	} );
 
-	test( '-- Custom langdb', function () {
-		expect( 1 );
-
+	QUnit.test( '-- Custom langdb', 1, function ( assert ) {
 		// This is a custom non-standard language code used in MW.
 		// If it's not defined, then, for example,
 		// its direction cannot be acquired using the langdb utils.
-		strictEqual( $.uls.data.getDir( 'als' ), 'ltr', 'The direction of custom MW language als is ltr.' );
+		assert.strictEqual( $.uls.data.getDir( 'als' ), 'ltr', 'The direction of custom MW language als is ltr.' );
 	} );
 
-	test( '-- User preferences', function () {
-		expect( 2 );
-
+	QUnit.asyncTest( '-- User preferences', 2, function ( assert ) {
 		// 'gofanim' means "fonts" in Hebrew.
 		// Here it's used as a meaningless word, to test
 		// the preferences without changing anything useful.
@@ -55,14 +50,14 @@
 		};
 
 		prefs.set( prefName, prefsToSave );
-		stop();
+		QUnit.stop();
 		prefs.save( function ( successSave ) {
-			start();
-			ok( successSave, 'Options saving API did not produce an error.' );
+			QUnit.start();
+			assert.ok( successSave, 'Options saving API did not produce an error.' );
 		} );
 
 		readPrefs = prefs.get( prefName );
-		strictEqual( readPrefs[prefName].fonts.qqy, 'Megafont', 'Correct value for the font name' );
+		assert.strictEqual( readPrefs[prefName].fonts.qqy, 'Megafont', 'Correct value for the font name' );
 
 		// Delete old options
 		prefs.set( prefName, undefined );
