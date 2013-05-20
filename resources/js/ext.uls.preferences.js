@@ -167,8 +167,9 @@
 		 * @param callback
 		 */
 		save: function ( callback ) {
-			var ulsPreferences = this;
-
+			var ulsPreferences = this,
+				successFunction,
+				failFunction;
 
 			callback = callback || $.noop;
 			if ( this.isAnon ) {
@@ -176,7 +177,6 @@
 				$.jStorage.set( this.preferenceName, this.preferences );
 				callback.call( this, true );
 			} else {
-				var successFunction, failFunction;
 
 				successFunction = function () {
 					callback.call( this, true );

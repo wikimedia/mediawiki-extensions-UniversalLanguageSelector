@@ -477,9 +477,8 @@
 			if ( success ) {
 				// Live ime update
 				this.$parent.hide();
-			} else {
-				// FIXME failure. what to do?!
 			}
+			// FIXME in case of failure. what to do?!
 		},
 
 		/**

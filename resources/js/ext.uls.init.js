@@ -66,6 +66,7 @@
 		return ( window.navigator.language || window.navigator.userLanguage ).split( '-' )[0];
 	};
 
+	/*jshint camelcase:false*/
 	mw.uls.getCountryCode = function () {
 		return window.Geo && ( window.Geo.country || window.Geo.country_code );
 	};

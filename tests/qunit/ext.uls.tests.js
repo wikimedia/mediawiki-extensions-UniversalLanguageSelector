@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function ( $ ) {
+( function ( $, mw ) {
 	'use strict';
 
 	module( 'ext.uls', QUnit.newMwEnvironment() );
@@ -68,4 +68,4 @@
 		prefs.set( prefName, undefined );
 		prefs.save();
 	} );
-}( jQuery ) );
+}( jQuery, mediaWiki ) );
