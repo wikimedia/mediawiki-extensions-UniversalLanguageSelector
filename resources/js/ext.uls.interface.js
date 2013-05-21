@@ -248,6 +248,7 @@
 				}
 			}
 		}
+
 		// ULS options that are common to all modes of showing
 		ulsOptions = {
 			onReady: function () {
@@ -288,6 +289,18 @@
 		} else {
 			$ulsTrigger.uls( ulsOptions );
 		}
+
+		// Bind language settings to preferences page link
+		$( '#uls-preferences-link' )
+			.text( $.i18n( 'ext-uls-language-settings-preferences-link' ) )
+			.click( function () {
+				if ( $ulsTrigger.length ) {
+					$ulsTrigger.click();
+				} else {
+					$( '.uls-settings-trigger' ).click();
+				}
+				return false;
+			} );
 
 		showULSTooltip();
 	} );

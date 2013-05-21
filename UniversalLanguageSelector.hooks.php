@@ -308,6 +308,16 @@ class UniversalLanguageSelectorHooks {
 			'type' => 'api',
 		);
 
+		// A link shown for accessing ULS language settings from preferences screen
+		$preferences['languagesettings'] = array(
+			'type' => 'info',
+			'raw' => true,
+			'section' => 'personal/i18n',
+			'default' => "<a id='uls-preferences-link' href='#'></a>",
+			// The above link will have text set from javascript. Just to avoid
+			// showing the link when javascript is disabled.
+		);
+
 		return true;
 	}
 
