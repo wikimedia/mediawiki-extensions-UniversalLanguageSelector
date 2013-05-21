@@ -41,8 +41,8 @@
     "jquery-ime-other-languages": "Outras linguas",
     "jquery-ime-disable-text": "Desactivar o m\u00e9todo de entrada",
     "jquery-ime-help": "Axuda",
-    "ext-uls-input-disable": "Desactivar as ferramentas do m\u00e9todo de entrada",
-    "ext-uls-input-enable": "Activar as ferramentas do m\u00e9todo de entrada",
-    "ext-uls-input-disable-info": "As ferramentas do m\u00e9todo de entrada est\u00e1n desactivadas.",
+    "ext-uls-input-disable": "Desactivar os m\u00e9todos de entrada",
+    "ext-uls-input-enable": "Activar os m\u00e9todos de entrada",
+    "ext-uls-input-disable-info": "Os m\u00e9todos de entrada est\u00e1n desactivados.",
     "ext-uls-input-settings-noime": "Non hai ning\u00fan m\u00e9todo de entrada para esta lingua."
 }
