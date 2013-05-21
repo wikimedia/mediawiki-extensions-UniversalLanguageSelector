@@ -1,0 +1,4 @@
+/* Don't show it to users who disabled JS */
+.client-nojs #pt-uls {
+	visibility: hidden;
+}

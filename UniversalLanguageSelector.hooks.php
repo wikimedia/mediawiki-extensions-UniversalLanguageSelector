@@ -43,7 +43,10 @@ class UniversalLanguageSelectorHooks {
 	public static function addModules( $out, $skin ) {
 		global $wgULSGeoService;
 
-		// If extension is enabled, basic features(API, language data) available.
+		// Load the style for users without JS, to hide the useless links
+		$out->addModuleStyles( 'ext.uls.nojs' );
+
+		// If the extension is enabled, basic features (API, language data) available.
 		$out->addModules( 'ext.uls.init' );
 
 		if ( is_string( $wgULSGeoService ) ) {
