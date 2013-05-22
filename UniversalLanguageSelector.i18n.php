@@ -30,7 +30,6 @@ $messages['en'] = array(
 	'uls-desc' => 'Gives the user several ways to select a language and to adjust language settings',
 
 	'uls-plang-title-languages' => 'Languages',
-	'uls-ime-enable-preferences-label' => 'Enable input methods',
 );
 
 /** Message documentation (Message documentation)
@@ -43,7 +42,6 @@ $messages['qqq'] = array(
 	'uls-plang-title-languages' => 'A title for the are in the sidebar in which the interlanguage links are supposed to appear.
 This title is shown when there are no interlanguage links there, but an icon that enables the ULS is shown.
 {{Identical|Language}}',
-	'uls-ime-enable-preferences-label' => 'Used as a label for the checkbox in {{msg-mw|Preferences}} page.',
 );
 
 /** Arabic (العربية)
