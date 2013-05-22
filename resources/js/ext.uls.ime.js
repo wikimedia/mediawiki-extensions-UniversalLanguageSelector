@@ -173,9 +173,7 @@
 							$input.focus();
 						},
 						lazyload: false,
-						languages: mw.ime.getLanguagesWithIME(),
-						top: $input.offset().top,
-						left: $input.offset().left
+						languages: mw.ime.getLanguagesWithIME()
 					} );
 
 					return $ulsTrigger;
