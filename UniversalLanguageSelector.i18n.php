@@ -69,7 +69,6 @@ $messages['ast'] = array(
 	'UniversalLanguageSelector' => 'Selector universal de llingua',
 	'uls-desc' => 'Ufre al usuariu delles maneres pa seleicionar una llingua y axustar la configuración de llingua',
 	'uls-plang-title-languages' => 'Llingües',
-	'uls-ime-enable-preferences-label' => "Activar los métodos d'entrada",
 );
 
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
@@ -89,7 +88,6 @@ $messages['bn'] = array(
 	'UniversalLanguageSelector' => 'ইউনিভার্সাল ল্যাঙ্গুয়েজ সিলেক্টর',
 	'uls-desc' => 'ব্যবহারকারীকে ভাষা নির্বাচন এবং ভাষা সম্পর্কিত সেটিং সমন্বয়ের বিভিন্ন উপায় দেয়',
 	'uls-plang-title-languages' => 'ভাষা',
-	'uls-ime-enable-preferences-label' => 'ইনপুট পদ্ধতি সক্রিয়',
 );
 
 /** Breton (brezhoneg)
@@ -234,7 +232,6 @@ $messages['he'] = array(
 	'UniversalLanguageSelector' => 'בורר השפות העולמי',
 	'uls-desc' => 'נותן למשתמשים מספר דרכים לבחור שפה ולכוונן את הגדרות השפה',
 	'uls-plang-title-languages' => 'שפות',
-	'uls-ime-enable-preferences-label' => 'הפעלת פריסות מקלדת',
 );
 
 /** Upper Sorbian (hornjoserbsce)
@@ -494,7 +491,6 @@ $messages['zh-hans'] = array(
 	'UniversalLanguageSelector' => '全球语言选择器',
 	'uls-desc' => '为用户提供多种方法来选择语言和调整语言设置',
 	'uls-plang-title-languages' => '语言',
-	'uls-ime-enable-preferences-label' => '启用输入法',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
