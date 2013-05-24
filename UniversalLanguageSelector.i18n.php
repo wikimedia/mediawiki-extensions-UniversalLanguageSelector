@@ -243,6 +243,15 @@ $messages['hsb'] = array(
 	'uls-select-content-language' => 'Rěč wubrać',
 );
 
+/** Indonesian (Bahasa Indonesia)
+ * @author Iwan Novirion
+ */
+$messages['id'] = array(
+	'UniversalLanguageSelector' => 'Pilihan Bahasa Universal',
+	'uls-desc' => 'Memberikan pengguna beberapa cara untuk memilih bahasa dan menyesuaikan pengaturan bahasa',
+	'uls-plang-title-languages' => 'Bahasa',
+);
+
 /** Iloko (Ilokano)
  * @author Lam-ang
  */
@@ -429,10 +438,12 @@ $messages['si'] = array(
 );
 
 /** Serbian (Cyrillic script) (српски (ћирилица)‎)
+ * @author Milicevic01
  * @author Милан Јелисавчић
  */
 $messages['sr-ec'] = array(
 	'UniversalLanguageSelector' => 'Универзални језички изборник',
+	'uls-plang-title-languages' => 'Језици',
 );
 
 /** Tamil (தமிழ்)

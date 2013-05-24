@@ -1,13 +1,49 @@
 {
-	"@metadata": {
-		"authors": [
-			"Farras",
-			"\u0db4\u0dc3\u0dd2\u0db3\u0dd4 \u0d9a\u0dcf\u0dc0\u0dd2\u0db1\u0dca\u0daf"
-		]
-	},
-	"ext-uls-display-settings-title": "Setelan tampilan",
-	"ext-uls-display-settings-title-short": "Tampilan",
-	"ext-uls-language-settings-cancel": "Batalkan",
-	"ext-uls-input-settings-title-short": "Masukan",
-	"jquery-ime-help": "Bantuan"
+    "@metadata": {
+        "authors": [
+            "Farras",
+            "Iwan Novirion",
+            "\u0db4\u0dc3\u0dd2\u0db3\u0dd4 \u0d9a\u0dcf\u0dc0\u0dd2\u0db1\u0dca\u0daf"
+        ]
+    },
+    "ext-uls-display-settings-title": "Setelan tampilan",
+    "ext-uls-display-settings-language-tab": "Bahasa",
+    "ext-uls-display-settings-fonts-tab": "Huruf",
+    "ext-uls-display-settings-title-short": "Tampilan",
+    "ext-uls-display-settings-desc": "Pengaturan bahasa untuk menu dan huruf",
+    "ext-uls-select-language-settings-icon-tooltip": "Setelan bahasa",
+    "ext-uls-undo-language-tooltip-text": "Bahasa berubah dari $1",
+    "ext-uls-language-settings-title": "Setelan bahasa",
+    "ext-uls-language-settings-apply": "Terapkan setelan",
+    "ext-uls-language-settings-cancel": "Batalkan",
+    "ext-uls-language-buttons-help": "Mengubah bahasa menu. Bahasa konten tidak akan terpengaruh.",
+    "ext-uls-display-settings-font-settings": "Setelan huruf",
+    "ext-uls-display-settings-ui-language": "Tampilan bahasa",
+    "ext-uls-display-settings-anon-label": "Tampilan bahasa:",
+    "ext-uls-display-settings-anon-same-as-content": "Inggris (sama seperti konten)",
+    "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Masuk log]] guna memilih bahasa yang berbeda untuk menu.",
+    "ext-uls-webfonts-settings-title": "Unduh huruf bila diperlukan.",
+    "ext-uls-webfonts-settings-info": "Huruf web akan diunduh untuk menampilkan teks pada skrip khusus.",
+    "ext-uls-webfonts-settings-info-link": "Informasi lebih lanjut",
+    "ext-uls-webfonts-select-for": "Pilih huruf untuk $1",
+    "ext-uls-webfonts-select-for-ui-info": "Huruf yang digunakan untuk antarmuka pengguna",
+    "ext-uls-webfonts-select-for-content-info": "Huruf yang digunakan untuk konten",
+    "ext-uls-webfonts-system-font": "Huruf sistem",
+    "ext-uls-back-to-display-settings": "Kembali ke setelan tampilan",
+    "ext-uls-input-settings-title": "Setelan masukan",
+    "ext-uls-input-settings-title-short": "Masukan",
+    "ext-uls-input-settings-desc": "Menulis dalam bahasa yang berbeda?",
+    "ext-uls-input-settings-ime-settings": "Metode masukan untuk $1",
+    "ext-uls-input-settings-ui-language": "Bahasa yang digunakan untuk menulis",
+    "ext-uls-back-to-input-settings": "Kembali ke setelan masukan",
+    "ext-uls-disable-input-method": "Nonaktifkan metode masukan.",
+    "ext-uls-disable-input-method-desc": "Gunakan keyboard biasa",
+    "ext-uls-input-settings-more-languages-tooltip": "Lebih banyak bahasa",
+    "jquery-ime-other-languages": "Bahasa-bahasa lain",
+    "jquery-ime-disable-text": "Nonaktifkan metode masukan",
+    "jquery-ime-help": "Bantuan",
+    "ext-uls-input-disable": "Nonaktifkan metode masukan",
+    "ext-uls-input-enable": "Aktifkan metode masukan",
+    "ext-uls-input-disable-info": "Metode masukan dinonaktifkan.",
+    "ext-uls-input-settings-noime": "Metode masukan tidak tersedia untuk bahasa ini."
 }
