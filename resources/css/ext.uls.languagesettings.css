@@ -1,38 +1,3 @@
-#uls-current-language-nav { /* @embed */
-	background: url('../images/cog-16x16-ltr.png') no-repeat scroll right top transparent;
-	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/cog.svg');
-	background-image: -moz-linear-gradient(transparent, transparent), url('../images/cog.svg');
-	background-image: linear-gradient(transparent, transparent), url('../images/cog.svg');
-
-	cursor: pointer;
-}
-
-/* From uls-menu, unchanged */
-#uls-current-language-nav a {
-	color: #0088CC;
-}
-
-#uls-current-language-nav h1 {
-	font-weight: normal;
-	padding-top: 1.25em;
-	border: none;
-	padding-bottom: 3px;
-	font-size: 18pt;
-	line-height: 1.25em;
-	padding-left: 15px;
-	color: #777;
-}
-
-#uls-current-language-nav h2 {
-	font-size: 16pt;
-	line-height: 1.5em;
-	padding-left: 6px;
-	margin-top: 0;
-	margin-bottom: 15px;
-	border-bottom: none;
-	color: #777;
-}
-
 .uls-menu h3 {
 	border-bottom: medium none;
 	font-size: 14pt;
