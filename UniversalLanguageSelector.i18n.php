@@ -315,7 +315,16 @@ $messages['ksh'] = array(
 $messages['lb'] = array(
 	'UniversalLanguageSelector' => 'Universell Auswiel vun der Sprooch',
 	'uls-desc' => "Gëtt dem Benotzer verschidde Méiglechkeete fir eng Sprooch erauszesichen an d'Parameter vun der Sprooch festzeleeën",
-	'uls-select-content-language' => 'Sprooch eraussichen',
+	'uls-plang-title-languages' => 'Sproochen',
+);
+
+/** Minangkabau (Baso Minangkabau)
+ * @author Iwan Novirion
+ */
+$messages['min'] = array(
+	'UniversalLanguageSelector' => 'Piliahan Bahaso Universal',
+	'uls-desc' => 'Mangagiah pangguno caro untuak mamiliah bahaso dan manyasuaian pangaturannyo',
+	'uls-plang-title-languages' => 'Bahaso',
 );
 
 /** Macedonian (македонски)
