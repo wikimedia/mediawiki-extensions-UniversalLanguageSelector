@@ -1,4 +1,9 @@
 {
+    "@metadata": {
+        "authors": [
+            "Iwan Novirion"
+        ]
+    },
     "ext-uls-display-settings-title": "Pangaturan tampilan",
     "ext-uls-display-settings-language-tab": "Bahaso",
     "ext-uls-display-settings-fonts-tab": "Hurup",
@@ -38,10 +43,5 @@
     "ext-uls-input-disable": "Nonaktipan metode masuakan",
     "ext-uls-input-enable": "Aktipan metode masuakan",
     "ext-uls-input-disable-info": "Metode masuakan dinonaktipan.",
-    "ext-uls-input-settings-noime": "Metode masuakan indak tasadio untuak bahaso iko.",
-    "@metadata": {
-        "authors": [
-            "Iwan Novirion"
-        ]
-    }
+    "ext-uls-input-settings-noime": "Metode masuakan indak tasadio untuak bahaso iko."
 }

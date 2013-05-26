@@ -385,11 +385,12 @@ $messages['os'] = array(
 
 /** Polish (polski)
  * @author BeginaFelicysym
+ * @author WTM
  */
 $messages['pl'] = array(
 	'UniversalLanguageSelector' => 'Uniwersalny Selektor Języka',
 	'uls-desc' => 'Daje użytkownikowi kilka sposobów, aby wybrać język i dostosować ustawienia języka',
-	'uls-select-content-language' => 'Wybierz język',
+	'uls-plang-title-languages' => 'Języki',
 );
 
 /** Piedmontese (Piemontèis)
