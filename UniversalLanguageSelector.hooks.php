@@ -62,7 +62,8 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	/**
-	 * @param $testModules array of javascript testing modules. 'qunit' is fed using tests/qunit/QUnitTestResources.php.
+	 * @param $testModules array of javascript testing modules. 'qunit' is fed
+	 * using tests/qunit/QUnitTestResources.php.
 	 * @param $resourceLoader ResourceLoader
 	 * @return bool
 	 * Hook: ResourceLoaderTestModules
@@ -311,7 +312,9 @@ class UniversalLanguageSelectorHooks {
 	 * @param QuickTemplate $template
 	 * @return bool
 	 */
-	public static function onSkinTemplateOutputPageBeforeExec( Skin &$skin, QuickTemplate &$template ) {
+	public static function onSkinTemplateOutputPageBeforeExec( Skin &$skin,
+		QuickTemplate &$template
+	) {
 		global $wgULSPosition;
 
 		if ( $wgULSPosition !== 'interlanguage' ) {
