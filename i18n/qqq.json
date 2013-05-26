@@ -47,5 +47,9 @@
     "ext-uls-input-disable": "Label for disable input tools submit button",
     "ext-uls-input-enable": "Label for enable input tools button",
     "ext-uls-input-disable-info": "Info text for the disable input tools button",
-    "ext-uls-input-settings-noime": "Text to be shown when no input methods are available for a selected language"
+    "ext-uls-input-settings-noime": "Text to be shown when no input methods are available for a selected language",
+    "ext-uls-input-disable-notification": "Notification bubble text when input methods are disabled",
+    "ext-uls-input-disable-notification-undo": "Undo link text in the input method disable notification bubble",
+    "ext-uls-input-disable-notification-info-personal": "Notification bubble text when input methods are disabled, appears if the ULS is at personal toolbar",
+    "ext-uls-input-disable-notification-info-interlanguage": "Notification bubble text when input methods are disabled, appears if the ULS is at interlanguage toolbar",
 }

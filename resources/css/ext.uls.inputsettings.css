@@ -106,3 +106,8 @@ div.input-settings-block {
 	padding: 6px 10px;
 	background: #f0f0f0;
 }
+
+.uls-ime-notification-bubble .link {
+	color: #0645AD;
+	cursor: pointer;
+}
