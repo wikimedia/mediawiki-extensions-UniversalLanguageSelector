@@ -84,20 +84,22 @@ class UniversalLanguageSelectorHooks {
 	 * Hook: PersonalUrls
 	 */
 	static function addPersonalBarTrigger( array &$personal_urls, &$title ) {
-		global $wgLang, $wgUser, $wgULSPosition;
+		global $wgULSPosition;
 
 		if ( $wgULSPosition !== 'personal' ) {
 			return true;
 		}
 
-		if ( !self::isToolbarEnabled( $wgUser ) ) {
+		$context = RequestContext::getMain();
+		if ( !self::isToolbarEnabled( $context->getUser() ) ) {
 			return true;
 		}
 
 		// The element id will be 'pt-uls'
+		$lang = $context->getLanguage();
 		$personal_urls = array(
 			'uls' => array(
-				'text' => $wgLang->getLanguageName( $wgLang->getCode() ),
+				'text' => $lang->getLanguageName( $lang->getCode() ),
 				'href' => '#',
 				'class' => 'uls-trigger',
 				'active' => true
@@ -161,7 +163,8 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function getLanguage( $user, &$code, $context = null ) {
-		global $wgUser, $wgRequest, $wgULSAnonCanChangeLanguage, $wgULSLanguageDetection;
+		global $wgULSAnonCanChangeLanguage, $wgULSLanguageDetection;
+
 		if ( !self::isToolbarEnabled( $user ) ) {
 			return true;
 		}
@@ -170,6 +173,8 @@ class UniversalLanguageSelectorHooks {
 		 * name matches the current user name to detect if we are not
 		 * running in the primary request context. See bug 44010 */
 		if ( !$context instanceof RequestContext ) {
+			global $wgUser, $wgRequest;
+
 			if ( $wgUser->getName() !== $user->getName() ) {
 				return true;
 			}
