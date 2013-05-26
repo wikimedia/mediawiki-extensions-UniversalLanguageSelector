@@ -71,6 +71,8 @@
 
 			inputPreferences.set( 'ime', this.registry );
 			inputPreferences.save( callback );
+			// reset the dirty bit
+			this.registry.isDirty = false;
 		},
 
 		load: function () {
