@@ -95,7 +95,6 @@
 				this.$template.find( '.enabled-only' ).addClass( 'hide' );
 			}
 			this.prepareLanguages();
-			this.prepareInputmethods( $.ime.preferences.getLanguage() );
 			this.prepareToggleButton();
 			this.$template.i18n();
 			this.listen();
@@ -196,7 +195,7 @@
 		prepareLanguages: function () {
 			var inputSettings = this,
 				SUGGESTED_LANGUAGES_NUMBER = 3,
-				firstLanguage = this.contentLanguage,
+				currentLanguage = this.contentLanguage,
 				selectedImeLanguage = $.ime.preferences.getLanguage(),
 				languagesForButtons, $languages, suggestedLanguages,
 				lang, i, language, $button, $caret;
@@ -216,21 +215,21 @@
 			// after selecting a different language
 			$languages.empty();
 
-			// UI language must always be present
-			if ( this.imeLanguage !== this.contentLanguage &&
-				$.uls.data.languages[this.imeLanguage]
-			) {
-				languagesForButtons.push( this.imeLanguage );
-				firstLanguage = this.imeLanguage;
-			}
-
 			// Selected IME language may be different, and it must
 			// be present, too
 			if ( $.inArray( selectedImeLanguage, languagesForButtons ) === -1 &&
 				$.uls.data.languages[selectedImeLanguage]
 			) {
 				languagesForButtons.push( selectedImeLanguage );
-				firstLanguage = selectedImeLanguage;
+				currentLanguage = selectedImeLanguage;
+			}
+
+			// UI language must always be present
+			if ( this.imeLanguage !== this.contentLanguage &&
+				$.uls.data.languages[this.imeLanguage]
+			) {
+				languagesForButtons.push( this.imeLanguage );
+				currentLanguage = this.imeLanguage;
 			}
 
 			for ( lang in suggestedLanguages ) {
@@ -251,7 +250,10 @@
 				return function () {
 					var selectedLanguage = button.data( 'language' ) || inputSettings.imeLanguage;
 
-					inputSettings.enableApplyButton();
+					if ( selectedLanguage !== inputSettings.imeLanguage ) {
+						inputSettings.enableApplyButton();
+					}
+
 					$.ime.preferences.setLanguage( selectedLanguage );
 					$( '.uls-ui-languages .button' ).removeClass( 'down' );
 					button.addClass( 'down' );
@@ -270,16 +272,16 @@
 						dir: $.uls.data.getDir( language )
 					} );
 
-				if ( language === firstLanguage ) {
-					$button.addClass( 'down' );
-				}
-
 				$button.data( 'language', language );
 				$caret = $( '<span>' ).addClass( 'uls-input-settings-caret' );
 
 				$languages.append( $button, $caret );
 
 				$button.on( 'click', buttonHandler( $button ) );
+
+				if ( language === currentLanguage ) {
+					$button.click();
+				}
 			}
 
 			this.prepareMoreLanguages();
@@ -333,7 +335,6 @@
 					inputSettings.imeLanguage = langCode;
 					inputSettings.$parent.show();
 					inputSettings.prepareLanguages();
-					inputSettings.prepareInputmethods( langCode );
 				},
 				languages: mw.ime.getLanguagesWithIME(),
 				lazyload: false
