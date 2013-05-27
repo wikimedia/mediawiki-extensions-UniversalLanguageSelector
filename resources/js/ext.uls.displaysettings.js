@@ -78,18 +78,6 @@
 
 		+ '</div>' // End font selectors
 
-		// Webfonts enabling chechbox with label
-		+ '<div class="row">'
-		+ '<div class="eleven columns">'
-		+ '<label class="checkbox">'
-		+ '<input type="checkbox" id="webfonts-enable-checkbox" />'
-		+ '<strong data-i18n="ext-uls-webfonts-settings-title"></strong> '
-		+ '<span data-i18n="ext-uls-webfonts-settings-info"></span> '
-		+ '<a target="_blank" href="//www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:WebFonts" data-i18n="ext-uls-webfonts-settings-info-link"></a>'
-		+ '</label>'
-		+ '</div>'
-		+ '</div>'
-
 		+ '</div>' // End font settings section
 
 		// Separator
@@ -128,32 +116,8 @@
 			this.prepareLanguages();
 			this.prepareUIFonts();
 			this.prepareContentFonts();
-			this.prepareWebfontsCheckbox();
 			this.i18n();
 			this.listen();
-		},
-
-		prepareWebfontsCheckbox: function () {
-			var webFontsEnabled = this.isWebFontsEnabled();
-
-			if ( !webFontsEnabled ) {
-				this.$template.find(
-					'#uls-display-settings-font-selectors'
-				).addClass( 'hide' );
-			}
-
-			$( '#webfonts-enable-checkbox' ).prop( 'checked', webFontsEnabled );
-		},
-
-		isWebFontsEnabled: function () {
-			var enable = mw.webfonts.preferences.isEnabled();
-
-			// If the user didn't use the checkbox, the preference will be undefined.
-			// The default for now is to enable webfonts if the user didn't select anything.
-			if ( enable === undefined ) {
-				enable = true;
-			}
-			return enable;
 		},
 
 		/**
@@ -371,11 +335,8 @@
 			// Get the language code from the right property -
 			// uiLanguage or contentLanguage
 			language = this[ target + 'Language' ];
-			if ( this.isWebFontsEnabled() ) {
-				fonts = this.$webfonts.list( language );
-			} else {
-				fonts = [];
-			}
+			fonts = this.$webfonts.list( language );
+
 			// Possible classes:
 			// uls-ui-fonts
 			// uls-content-fonts
@@ -408,7 +369,6 @@
 				}
 			} );
 
-			$fontSelector.prop( 'disabled', !this.isWebFontsEnabled() );
 			$systemFont = $( '<option>' ).val( 'system' ).text( $.i18n( 'ext-uls-webfonts-system-font' ) );
 			$fontSelector.append( $systemFont );
 			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
@@ -500,36 +460,6 @@
 				} );
 
 				displaySettings.close();
-			} );
-
-			displaySettings.$template.find( '#webfonts-enable-checkbox' ).on( 'click', function () {
-				var $fontSelectors = displaySettings.$template.find(
-					'#uls-display-settings-font-selectors'
-				);
-
-				displaySettings.enableApplyButton();
-
-				if ( this.checked ) {
-					$fontSelectors.removeClass( 'hide' );
-					mw.webfonts.preferences.enable();
-					mw.webfonts.setup();
-					displaySettings.$webfonts = $( 'body' ).data( 'webfonts' );
-					$contentFontSelector.removeAttr( 'disabled' );
-					$uiFontSelector.prop( 'disabled', false );
-					displaySettings.prepareContentFonts();
-					displaySettings.prepareUIFonts();
-					displaySettings.i18n();
-					displaySettings.$webfonts.apply( $uiFontSelector.find( 'option:selected' ) );
-					displaySettings.$webfonts.refresh();
-				} else {
-					$fontSelectors.addClass( 'hide' );
-					mw.webfonts.preferences.disable();
-					mw.webfonts.preferences.setFont( displaySettings.uiLanguage, 'system' );
-					displaySettings.$webfonts.refresh();
-					$contentFontSelector.prop( 'disabled', true );
-					$uiFontSelector.prop( 'disabled', true );
-					displaySettings.$webfonts.reset();
-				}
 			} );
 
 			$uiFontSelector.on( 'change', function () {
