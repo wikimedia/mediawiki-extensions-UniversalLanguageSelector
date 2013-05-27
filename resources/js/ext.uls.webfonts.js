@@ -16,7 +16,7 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
-( function ( $, mw, document, undefined ) {
+( function ( $, mw, undefined ) {
 	'use strict';
 	var mediawikiFontRepository, ulsPreferences;
 
@@ -91,4 +91,4 @@
 		mw.webfonts.setup();
 	} );
 
-}( jQuery, mediaWiki, document ) );
+}( jQuery, mediaWiki ) );
