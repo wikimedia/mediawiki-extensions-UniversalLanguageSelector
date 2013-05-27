@@ -434,7 +434,8 @@
 			var displaySettings = this,
 				$contentFontSelector = this.$template.find( '#content-font-selector' ),
 				$uiFontSelector = this.$template.find( '#ui-font-selector' ),
-				oldFont = $uiFontSelector.find( 'option:selected' ).val(),
+				oldUIFont = $uiFontSelector.find( 'option:selected' ).val(),
+				oldContentFont = $contentFontSelector.find( 'option:selected' ).val(),
 				$tabButtons = displaySettings.$template.find( '.uls-display-settings-tab-switcher button' );
 
 			// TODO all these repeated selectors can be placed in object constructor.
@@ -444,7 +445,8 @@
 			} );
 
 			displaySettings.$template.find( 'button.uls-display-settings-cancel' ).on( 'click', function () {
-				mw.webfonts.preferences.setFont( displaySettings.contentLanguage, oldFont );
+				mw.webfonts.preferences.setFont( displaySettings.contentLanguage, oldContentFont );
+				mw.webfonts.preferences.setFont( displaySettings.uiLanguage, oldUIFont );
 
 				if ( displaySettings.$webfonts ) {
 					displaySettings.$webfonts.refresh();
@@ -459,7 +461,8 @@
 						$button.removeClass( 'down' );
 					}
 				} );
-
+				displaySettings.prepareUIFonts();
+				displaySettings.prepareContentFonts();
 				displaySettings.close();
 			} );
 
