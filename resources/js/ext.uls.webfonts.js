@@ -62,10 +62,6 @@
 					font = repository.defaultFont( language );
 				}
 
-				if ( font === 'system' ) {
-					font = null;
-				}
-
 				return font;
 			},
 			exclude: ( function () {

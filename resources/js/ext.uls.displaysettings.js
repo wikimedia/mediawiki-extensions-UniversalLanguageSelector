@@ -358,7 +358,8 @@
 			// Remove all current fonts
 			$fontSelector.find( 'option' ).remove();
 
-			savedFont = mw.webfonts.preferences.getFont( this.uiLanguage );
+			// Get the saved font using the fontSelector defined in mw.webfonts.setup
+			savedFont = this.$webfonts.getFont( language );
 			$.each( fonts, function ( key, font ) {
 				var $fontOption;
 
