@@ -169,7 +169,7 @@
 
 			if ( imeId === 'system' ) {
 				name = $.i18n( 'ext-uls-disable-input-method' );
-				description = $.i18n( 'ext-uls-disable-input-method-desc' );
+				description = '';
 			} else {
 				inputmethod = $.ime.inputmethods[imeId];
 				if ( !inputmethod ) {
