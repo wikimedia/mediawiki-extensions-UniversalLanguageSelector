@@ -117,10 +117,11 @@
 	 * It also allows to undo the language selection.
 	 */
 	function showULSTooltip() {
-		var $ulsTrigger = $( '.uls-trigger' ),
-			ulsPosition = mw.config.get( 'wgULSPosition' ),
+		var ulsPosition = mw.config.get( 'wgULSPosition' ),
 			currentLang = mw.config.get( 'wgUserLanguage' ),
 			previousLang,
+			$ulsTrigger,
+			anonMode,
 			rtlPage = $( 'body' ).hasClass( 'rtl' ),
 			tipsyGravity = {
 				personal: 'n',
@@ -135,10 +136,17 @@
 			return true;
 		}
 
+		$ulsTrigger = ( ulsPosition === 'interlanguage' ) ?
+			$( '.uls-settings-trigger' ) :
+			$( '.uls-trigger' );
+
 		previousLanguages.push( currentLang );
 		mw.uls.setPreviousLanguages( previousLanguages );
 
-		if ( !previousLang || !$.uls.data.languages[previousLang] ) {
+		anonMode = ( mw.user.isAnon() &&
+				!mw.config.get( 'wgULSAnonCanChangeLanguage' ) );
+
+		if ( anonMode || !previousLang || !$.uls.data.languages[previousLang] ) {
 			// Do not show tooltip
 			return true;
 		}
