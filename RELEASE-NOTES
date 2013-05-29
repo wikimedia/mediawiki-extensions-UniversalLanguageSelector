@@ -1,0 +1,22 @@
+== UniversalLanguageSelector 2013.05-rc ==
+Released at 2013-05-29.
+
+The last month saw significant changes in the Universal Language Selector extension: many bugs were fixed and some design changes were introduced.
+
+The functionality of the cog icon to be shown in the sidebar was improved, but this is still an experimental feature.
+
+Notable bug fixes:
+* Major bugs in the IME functionality on Microsoft Internet Explorer 8, 9 and 10 were fixed.
+* IME selector positioning is now more consistent: always under the input box, and matching the direction.
+* Anonymous users cannot change the language in any mode if $wgULSAnonCanChangeLanguage is set to false.
+* A link to open the ULS is added near the language selector on Special:Preferences.
+* The positioning of the ULS windows was cleaned up so that the appear in more predictable places on the screen.
+* ULS triggers are not shown to users who disabled JavaScript.
+* The checkbox that enables and disables webfonts was removed. The feature is now always on.
+* The title 'System font' is now translatable.
+* Fonts for the Syriac alphabet and support for the 'syc' language code were added.
+* Webfonts test page was updated.
+* A "stroked keyboard" icon was added to the IME selector to disable the IME feature per user. When this is done, a notification bubble is shown saying how to restore it.
+* The bubble for restoring the previous language is not shown to anonymous users if they can't change the language.
+* Webfonts are loaded correctly from the preferences.
+* jquery.i18n files can be loaded from the same domain to fix an issue with old Microsoft Internet Explorer versions.
