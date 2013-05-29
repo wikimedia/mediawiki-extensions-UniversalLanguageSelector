@@ -70,12 +70,11 @@
 				return font;
 			},
 			exclude: ( function () {
-				if ( mw.user.options.get( 'editfont' ) ) {
+				if ( mw.user.options.get( 'editfont' ) !== 'default' ) {
 					// Exclude textboxes from webfonts if user has edit area font option
 					// set using 'Preferences' page
 					return 'textarea';
 				}
-
 				return $.fn.webfonts.defaults.exclude;
 			}() )
 		} );
