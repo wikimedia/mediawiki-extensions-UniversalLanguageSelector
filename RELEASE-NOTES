@@ -1,0 +1,20 @@
+== UniversalLanguageSelector 2013.05 ==
+Released at 2013-05-29.
+
+The last month saw significant changes in the Universal Language Selector extension: many bugs were fixed and some design changes were introduced.
+
+The default location of the language selectors is in the personal toolbar. For projects like Wikipedia, with interlanguage links, separating interwiki links from user interface language could cause confusion for users. It is now also possible to use a cog icon in the area for interlanguage links using $wgULSPosition = 'interlanguage' in LocalSettings.php, though this feature is still experimental.
+
+Notable bug fixes:
+* Major bugs in the input methods functionality for Microsoft Internet Explorer 8, 9 and 10 were fixed.
+* IME selector positioning is now more consistent: always under the input box, and matching the direction.
+* Anonymous users cannot change the user interface language if $wgULSAnonCanChangeLanguage is set to false. This may help avoid cache pollution in certain MediaWiki setups, while input methods and web fonts still remain available.
+* A link to open the ULS was added near the language selector on Special:Preferences.
+* The positioning of the ULS windows was cleaned up so that the appear in more predictable places on the screen.
+* ULS triggers are not displayed to users who disabled JavaScript or if the site has fatal JavaScript errors.
+* The checkbox that enables and disables webfonts was removed. The feature is now always on.
+* Any untranslatable elements have been made translatable. Please contribute to translations at https://translatewiki.net/wiki/Special:Translate/ext-jquery-uls and https://translatewiki.net/wiki/Special:Translate/ext-universallanguageselector.
+* Fonts for the Syriac alphabet and support for the 'syc' language code were added.
+* Completely disabling input method tools and reenabling immediately was made easier.
+* The bubble for restoring the previous language is not displayed to anonymous users if they can't change the language.
+* jquery.i18n files can be loaded from the same domain to fix an issue with old Microsoft Internet Explorer versions. This is only relevant if resources are served from a different domain.
