@@ -502,4 +502,3 @@
 	} );
 
 } ( jQuery, mediaWiki ) );
-

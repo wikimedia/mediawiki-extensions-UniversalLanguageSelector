@@ -115,38 +115,11 @@
 			$settingsMenuItems.append( $settingsLink );
 
 			$settingsLink.on( 'click', function () {
-				var scrollPosition,
-					panelHeight, panelTop, panelBottom,
-					padding = 10,
-					$window = $( window ),
-					windowHeight = $window.height(),
-					windowScrollTop = $window.scrollTop(),
-					windowBottom = windowScrollTop + windowHeight,
-					module = $( this ).data( 'module' );
+				var module = $( this ).data( 'module' );
 
 				module.render();
-
-				panelHeight = languageSettings.$window.height();
-				panelTop = languageSettings.$window.offset().top;
-				panelBottom = panelTop + panelHeight;
-
-				// If the ULS panel is out of the viewport,
-				// scroll the window to show it
-				if ( ( panelTop < windowScrollTop ) || ( panelBottom > windowBottom ) ) {
-					if ( panelHeight > windowHeight ) {
-						// Scroll to show as much of the upper
-						// part of ULS as possible
-						scrollPosition = panelTop - padding;
-					} else {
-						// Scroll just enough to show the ULS panel
-						scrollPosition = panelBottom - windowHeight + padding;
-					}
-
-					$( 'html, body' ).stop().animate( {
-						scrollTop: scrollPosition
-					}, 500 );
-				}
-
+				// re-position the window and scroll in to view if required.
+				languageSettings.position();
 				$settingsMenuItems.find( '.menu-section' ).removeClass( 'active' );
 				$( this ).addClass( 'active' );
 			} );
@@ -158,12 +131,8 @@
 		},
 
 		position: function () {
-			var top, pos, left, bottom, height,
-				$window = $( window ),
-				windowHeight = $window.height(),
-				windowScrollTop = $window.scrollTop(),
-				windowBottom = windowScrollTop + windowHeight,
-				scrollPosition;
+			var top, pos, left;
+
 			pos = $.extend( {}, this.$element.offset(), {
 					height: this.$element[0].offsetHeight
 				} );
@@ -173,23 +142,7 @@
 				top: top,
 				left: left
 			} );
-
-			height = this.$window.height();
-			bottom = top + height;
-			// If the language settings windpw is out of the viewport,
-			// scroll the window to show it
-			if ( ( top < windowScrollTop ) || ( bottom > windowBottom ) ) {
-				if ( height > windowHeight ) {
-					// Scroll to show as much of the upper part of window as possible
-					scrollPosition = top;
-				} else {
-					// Scroll just enough to show the language settings window.
-					scrollPosition = bottom - windowHeight;
-				}
-				$( 'html, body' ).stop().animate( {
-					scrollTop: scrollPosition
-				}, 500 );
-			}
+			this.$window[0].scrollIntoView();
 		},
 
 		show: function () {
