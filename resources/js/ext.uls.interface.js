@@ -277,15 +277,24 @@
 
 		if ( ulsPosition === 'interlanguage' ) {
 			$ulsSettingsTrigger.attr( 'title', $.i18n( 'ext-uls-select-language-settings-icon-tooltip' ) );
+
 			$ulsSettingsTrigger.languagesettings( {
 				onVisible: function () {
-					var ulsTriggerOffset = $ulsSettingsTrigger.offset();
-					this.left = rtlPage ? ulsTriggerOffset.left - 30
-						:ulsTriggerOffset.left + 30;
+					var left,
+						ulsTriggerOffset = $ulsSettingsTrigger.offset();
+
+					if ( rtlPage ) {
+						left = ulsTriggerOffset.left - this.$window.width() - 30;
+					} else {
+						left = ulsTriggerOffset.left + 30;
+					}
+
+					this.left = left;
 					this.top = ulsTriggerOffset.top - 50;
 					this.position();
 				}
 			} );
+
 			$( '.uls-menu' ).each( function () {
 				$( this ).prepend(
 					$( '<span>' ).addClass( 'caret-before' ),
