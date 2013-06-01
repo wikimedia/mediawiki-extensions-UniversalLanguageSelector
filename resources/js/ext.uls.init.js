@@ -107,6 +107,18 @@
 	};
 
 	/**
+	 * Checks whether the browser is supported.
+	 * Browse support policy: http://www.mediawiki.org/wiki/Browser_support#Grade_A
+	 * @return boolean
+	 */
+	mw.uls.isBrowserSupported = function () {
+		// boxModel is not supported in IE versions under 8.
+		// We are checking for boxModel here because without that features
+		// our grid system fails and it makes the ULS non-functional.
+		return $.support.boxModel;
+	};
+
+	/**
 	 * i18n initialization
 	 */
 	function i18nInit() {
@@ -147,6 +159,10 @@
 	}
 
 	$( document ).ready( function () {
+		if ( !mw.uls.isBrowserSupported() ) {
+			return;
+		}
+
 		/*
 		 * The 'als' is used in a non-standard way in MediaWiki -
 		 * it may be used to represent the Allemanic language,
@@ -159,6 +175,5 @@
 
 		// JavaScript side i18n initialization
 		i18nInit();
-
 	} );
 }( jQuery, mediaWiki, window, document ) );

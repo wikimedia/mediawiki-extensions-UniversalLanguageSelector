@@ -232,6 +232,10 @@
 				!mw.config.get( 'wgULSAnonCanChangeLanguage' ) ),
 			ulsPosition = mw.config.get( 'wgULSPosition' );
 
+		if ( !mw.uls.isBrowserSupported() ) {
+			return;
+		}
+
 		if ( ulsPosition === 'interlanguage' ) {
 			// The interlanguage links section
 			$pLang = $( '#p-lang' );
