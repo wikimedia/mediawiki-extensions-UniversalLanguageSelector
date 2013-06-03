@@ -157,9 +157,16 @@
 	mw.ime.setup = function () {
 
 		$( 'body' ).on( 'focus.ime', inputSelector, function () {
-			var imeselector,
-				$input = $( this );
+			var imeselector, $input;
 
+			// It's possible to disable IME through the settings
+			// panels before it was initialized, so we need to check
+			// that it's supposed to be initialized
+			if ( !$.ime.preferences.isEnabled() ) {
+				return;
+			}
+
+			$input = $( this );
 			$input.ime( {
 				languages: mw.ime.getIMELanguageList(),
 				languageSelector: function () {

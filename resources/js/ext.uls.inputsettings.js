@@ -75,6 +75,7 @@
 		this.contentLanguage = this.getContentLanguage();
 		this.$imes = null;
 		this.$parent = $parent;
+		this.savedRegistry = $.extend( true, {}, $.ime.preferences.registry );
 	}
 
 	InputSettings.prototype = {
@@ -85,15 +86,21 @@
 		 * Render the module into a given target
 		 */
 		render: function () {
+			var $enabledOnly;
+
 			this.$parent.$settingsPanel.empty();
 			this.$imes = $( 'body' ).data( 'ime' );
 			this.$parent.$settingsPanel.append( this.$template );
+
+			$enabledOnly = this.$template.find( '.enabled-only' );
+
 			if ( $.ime.preferences.isEnabled() ) {
-				this.$template.find( '.enabled-only' ).removeClass( 'hide' );
+				$enabledOnly.removeClass( 'hide' );
 			} else {
 				// Hide the language list and ime selector
-				this.$template.find( '.enabled-only' ).addClass( 'hide' );
+				$enabledOnly.addClass( 'hide' );
 			}
+
 			this.prepareLanguages();
 			this.prepareToggleButton();
 			this.$template.i18n();
@@ -105,7 +112,11 @@
 		 * Useful in many places when something changes.
 		 */
 		enableApplyButton: function () {
-			this.$template.find( 'button.uls-input-settings-apply' ).removeAttr( 'disabled' );
+			this.$template.find( 'button.uls-input-settings-apply' ).prop( 'disabled', false );
+		},
+
+		disableApplyButton: function () {
+			this.$template.find( 'button.uls-input-settings-apply' ).prop( 'disabled', true );
 		},
 
 		prepareInputmethods: function ( language ) {
@@ -410,7 +421,22 @@
 			} );
 
 			inputSettings.$template.find( 'button.uls-input-settings-cancel' ).on( 'click', function () {
+				inputSettings.disableApplyButton();
+
 				inputSettings.close();
+
+				// Reload preferences
+				$.ime.preferences.registry = $.extend( true, {}, inputSettings.savedRegistry );
+
+				// Restore the state of IME
+				if ( $.ime.preferences.isEnabled() ) {
+					mw.ime.setup();
+				} else {
+					mw.ime.disable();
+				}
+
+				// Redraw the panel according to the state
+				inputSettings.render();
 			} );
 
 			$imeListContainer.on( 'change', 'input:radio[name=ime]:checked', function () {
@@ -436,9 +462,7 @@
 		 */
 		disableInputTools: function () {
 			$.ime.preferences.disable();
-			$.ime.preferences.save( function () {
-				mw.ime.disable();
-			} );
+			mw.ime.disable();
 			this.$template.find( '.enabled-only' ).addClass( 'hide' );
 			this.prepareToggleButton();
 		},
@@ -448,10 +472,9 @@
 		 */
 		enableInputTools: function () {
 			$.ime.preferences.enable();
-			$.ime.preferences.save( function () {
-				mw.ime.setup();
-			} );
+			mw.ime.setup();
 			this.$template.find( '.enabled-only' ).removeClass( 'hide' );
+			this.$template[0].scrollIntoView();
 			this.prepareToggleButton();
 		},
 
