@@ -353,7 +353,7 @@ $messages['ml'] = array(
 $messages['ms'] = array(
 	'UniversalLanguageSelector' => 'Pemilih Bahasa Sejagat',
 	'uls-desc' => 'Membolehkan pengguna memilih bahasa dan mengubah tetapan bahasa dengan pelbagai cara',
-	'uls-select-content-language' => 'Pilih bahasa',
+	'uls-plang-title-languages' => 'Bahasa',
 );
 
 /** Norwegian Bokmål (norsk (bokmål)‎)
@@ -408,7 +408,7 @@ $messages['pms'] = array(
 $messages['pt-br'] = array(
 	'UniversalLanguageSelector' => 'Seletor universal de idiomas',
 	'uls-desc' => 'Oferece ao usuário várias maneiras para selecionar um idioma e ajustar as configurações de idioma',
-	'uls-select-content-language' => 'Selecionar idioma',
+	'uls-plang-title-languages' => 'Idiomas',
 );
 
 /** Romanian (română)
