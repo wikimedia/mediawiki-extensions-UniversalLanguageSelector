@@ -1,4 +1,10 @@
 {
+    "@metadata": {
+        "authors": [
+            "Jaideraf",
+            "Luckas"
+        ]
+    },
     "ext-uls-display-settings-title": "Exibir configura\u00e7\u00f5es",
     "ext-uls-display-settings-language-tab": "Idioma",
     "ext-uls-display-settings-fonts-tab": "Fontes",
@@ -39,11 +45,5 @@
     "ext-uls-input-disable-notification-undo": "Desfazer",
     "ext-uls-input-disable-notification-info-personal": "Voc\u00ea pode habilitar as ferramentas de entrada de texto a qualquer momento a partir das configura\u00e7\u00f5es de idioma.",
     "ext-uls-input-disable-notification-info-interlanguage": "Voc\u00ea pode habilitar as ferramentas de entrada de texto a qualquer momento a partir das configura\u00e7\u00f5es de idioma pr\u00f3ximo da lista de idiomas,",
-    "ext-uls-language-settings-preferences-link": "Mais configura\u00e7\u00f5es de idioma",
-    "@metadata": {
-        "authors": [
-            "Jaideraf",
-            "Luckas"
-        ]
-    }
+    "ext-uls-language-settings-preferences-link": "Mais configura\u00e7\u00f5es de idioma"
 }
