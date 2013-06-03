@@ -1,17 +1,13 @@
 {
-	"@metadata": {
-		"authors": [
-			"Fohanno"
-		]
-	},
-	"ext-uls-language-settings-title": "Arventenno\u00f9 ar yezh",
-	"ext-uls-language-settings-cancel": "Nulla\u00f1",
-	"ext-uls-display-settings-font-settings": "Arventenno\u00f9 ar font",
-	"ext-uls-webfonts-settings-title": "Pellgarga\u00f1 ar font pa vez ezhomm",
-	"ext-uls-webfonts-settings-info-link": "Muioc'h a ditouro\u00f9",
-	"ext-uls-disable-input-method-desc": "Implijout ur c'hlavier ordinal",
-	"ext-uls-input-settings-more-languages-tooltip": "Muioc'h a yezho\u00f9",
-	"ext-uls-input-more-settings": "Muioc'h a arventenno\u00f9",
-	"jquery-ime-other-languages": "Yezho\u00f9 all",
-	"jquery-ime-help": "Skoazell"
+    "@metadata": {
+        "authors": [
+            "Fohanno"
+        ]
+    },
+    "ext-uls-language-settings-title": "Arventenno\u00f9 ar yezh",
+    "ext-uls-language-settings-cancel": "Nulla\u00f1",
+    "ext-uls-display-settings-font-settings": "Arventenno\u00f9 ar font",
+    "ext-uls-input-settings-more-languages-tooltip": "Muioc'h a yezho\u00f9",
+    "jquery-ime-other-languages": "Yezho\u00f9 all",
+    "jquery-ime-help": "Skoazell"
 }

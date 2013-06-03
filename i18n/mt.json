@@ -1,9 +1,9 @@
 {
-    "ext-uls-display-settings-desc": "Iddefenixxi l-lingwa w\u017cata g\u0127all-menus u t-tipi",
-    "ext-uls-input-disable": "Iddi\u017cattiva l-istrumenti tal-kitba",
     "@metadata": {
         "authors": [
             "Chrisportelli"
         ]
-    }
+    },
+    "ext-uls-display-settings-desc": "Iddefenixxi l-lingwa w\u017cata g\u0127all-menus u t-tipi",
+    "ext-uls-input-disable": "Iddi\u017cattiva l-istrumenti tal-kitba"
 }

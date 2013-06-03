@@ -51,15 +51,13 @@ This title is shown when there are no interlanguage links there, but an icon tha
 $messages['ar'] = array(
 	'UniversalLanguageSelector' => 'محدد لغة عالمية',
 	'uls-desc' => 'يمنح المستخدم عدة طرق لاختيار لغة، وضبط إعدادات اللغة',
-	'uls-select-content-language' => 'حدد اللغة',
 );
 
-/** Assamese (অসমীয়া)
+/** Assamese (অসমীয়া)
  * @author Bishnu Saikia
  */
 $messages['as'] = array(
 	'UniversalLanguageSelector' => 'গোলকীয় ভাষা নিৰ্বাচক',
-	'uls-select-content-language' => 'ভাষা নির্বাচন:',
 );
 
 /** Asturian (asturianu)
@@ -77,7 +75,6 @@ $messages['ast'] = array(
 $messages['be-tarask'] = array(
 	'UniversalLanguageSelector' => 'Унівэрсальны пераключальнік моваў',
 	'uls-desc' => 'Дае карыстальніку некалькі спосабаў выбраць мову і зьмяніць моўныя налады',
-	'uls-select-content-language' => 'Выбар мовы',
 );
 
 /** Bengali (বাংলা)
@@ -103,7 +100,6 @@ $messages['br'] = array(
 $messages['cs'] = array(
 	'UniversalLanguageSelector' => 'Univerzální výběr jazyka',
 	'uls-desc' => 'Nabízí uživateli několik způsobů volby jazyka a úpravy jazykových nastavení',
-	'uls-select-content-language' => 'Vyberte jazyk',
 );
 
 /** Danish (dansk)
@@ -113,7 +109,6 @@ $messages['cs'] = array(
 $messages['da'] = array(
 	'UniversalLanguageSelector' => 'Universal sprogvælger',
 	'uls-desc' => 'Giver brugeren forskellige måder at vælge et sprog, og at justere indstillingerne for sproget',
-	'uls-select-content-language' => 'Vælg sprog',
 );
 
 /** German (Deutsch)
@@ -125,7 +120,6 @@ $messages['de'] = array(
 	'UniversalLanguageSelector' => 'Universelle Sprachauswahl',
 	'uls-desc' => 'Ermöglicht verschiedene Wege, eine Sprache auszuwählen und Spracheinstellungen anzupassen',
 	'uls-plang-title-languages' => 'Sprachen',
-	'uls-ime-enable-preferences-label' => 'Eingabemethoden aktivieren',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -134,7 +128,6 @@ $messages['de'] = array(
 $messages['dsb'] = array(
 	'UniversalLanguageSelector' => 'Uniwersalny wuběrk rěcow',
 	'uls-desc' => 'Dawa wužywarjeju wšake metody, aby rěc wubrał a rěcne nastajenja pśiměrił',
-	'uls-select-content-language' => 'Rěc wubraś',
 );
 
 /** Divehi (ދިވެހިބަސް)
@@ -157,7 +150,6 @@ $messages['eo'] = array(
 $messages['es'] = array(
 	'UniversalLanguageSelector' => 'Selector universal de idiomas',
 	'uls-desc' => 'Ofrece al usuario varias formas para seleccionar un idioma y ajustar su configuración',
-	'uls-select-content-language' => 'Seleccionar idioma',
 );
 
 /** Estonian (eesti)
@@ -166,7 +158,6 @@ $messages['es'] = array(
 $messages['et'] = array(
 	'UniversalLanguageSelector' => 'Universaalne keelevalija',
 	'uls-desc' => 'Võimaldab kasutajal mitmel viisil keelt valida ja keelesätteid kohandada.',
-	'uls-select-content-language' => 'Keele valimine',
 );
 
 /** Basque (euskara)
@@ -183,7 +174,6 @@ $messages['eu'] = array(
 $messages['fa'] = array(
 	'UniversalLanguageSelector' => 'انتخاب زبان جهانی',
 	'uls-desc' => 'به کاربر راه‌های مختلفی برای انتخاب زبان و تنظیم تنظیمات زبان  می‌دهد',
-	'uls-select-content-language' => 'انتخاب زبان',
 );
 
 /** Finnish (suomi)
@@ -205,7 +195,6 @@ $messages['fr'] = array(
 	'UniversalLanguageSelector' => 'Sélecteur de Langue Universel',
 	'uls-desc' => "Donne à l'utilisateur plusieurs manières de sélectionner une langue et d'ajuster les paramètres de langue",
 	'uls-plang-title-languages' => 'Langues',
-	'uls-ime-enable-preferences-label' => 'Activer la méthode de saisie',
 );
 
 /** Friulian (furlan)
@@ -222,7 +211,6 @@ $messages['gl'] = array(
 	'UniversalLanguageSelector' => 'Selector universal de linguas',
 	'uls-desc' => 'Dá ao usuario varios xeitos de seleccionar unha lingua e de axustar as preferencias da mesma',
 	'uls-plang-title-languages' => 'Linguas',
-	'uls-ime-enable-preferences-label' => 'Activar os métodos de entrada',
 );
 
 /** Hebrew (עברית)
@@ -240,7 +228,6 @@ $messages['he'] = array(
 $messages['hsb'] = array(
 	'UniversalLanguageSelector' => 'Uniwersalny wuběr rěčow',
 	'uls-desc' => 'Dawa wužiwarjej wšelake metody, zo by rěč wubrał a rěčne nastajenja přiměrił',
-	'uls-select-content-language' => 'Rěč wubrać',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -258,7 +245,6 @@ $messages['id'] = array(
 $messages['ilo'] = array(
 	'UniversalLanguageSelector' => 'Unibersal a Pagpilian ti Pagsasao',
 	'uls-desc' => 'Mangited ti agar-aramat kadagiti nadumaduma a pamay-an ti panagpili ti maysa a pagsasao ken ti panagbaliw kadagiti pannakaidisso ti pagsasao',
-	'uls-select-content-language' => 'Agpili ti pagsasao',
 );
 
 /** Italian (italiano)
@@ -269,7 +255,6 @@ $messages['it'] = array(
 	'UniversalLanguageSelector' => 'Selettore universale della lingua',
 	'uls-desc' => 'Fornisce agli utenti diversi modi di selezionare una lingua e sistemare le impostazioni della lingua',
 	'uls-plang-title-languages' => 'Lingue',
-	'uls-ime-enable-preferences-label' => 'Abilita i metodi di scrittura',
 );
 
 /** Japanese (日本語)
@@ -279,7 +264,6 @@ $messages['ja'] = array(
 	'UniversalLanguageSelector' => 'ユニバーサル言語選択',
 	'uls-desc' => '言語を選択するため/言語設定を調整するための、いくつかの方法を利用者に提供する',
 	'uls-plang-title-languages' => '言語',
-	'uls-ime-enable-preferences-label' => '入力メソッドを有効化',
 );
 
 /** Georgian (ქართული)
@@ -288,7 +272,6 @@ $messages['ja'] = array(
 $messages['ka'] = array(
 	'UniversalLanguageSelector' => 'ენების უნივერსალური გადამრთველი',
 	'uls-desc' => 'აძლევს მომხმარებელს ენის არჩევისა და კონფიგურაციის საშუალებას',
-	'uls-select-content-language' => 'ენის არჩევა',
 );
 
 /** Korean (한국어)
@@ -297,7 +280,6 @@ $messages['ka'] = array(
 $messages['ko'] = array(
 	'UniversalLanguageSelector' => '범용 언어 선택기',
 	'uls-desc' => '사용자에게 언어를 선택하고 언어 설정을 바꾸는 몇 가지 방법을 제공',
-	'uls-select-content-language' => '언어 선택',
 );
 
 /** Colognian (Ripoarisch)
@@ -306,7 +288,6 @@ $messages['ko'] = array(
 $messages['ksh'] = array(
 	'UniversalLanguageSelector' => 'Alljemein Schproochewahl',
 	'uls-desc' => 'Jit dä Metmaachere ongerscheidlejje Müjjeleschkeite, en Schprooch ußzewähle un Enschtällonge für Schprooche ze maache.',
-	'uls-select-content-language' => 'En Schprooch ußwähle',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -334,7 +315,6 @@ $messages['mk'] = array(
 	'UniversalLanguageSelector' => 'Универзален избирач на јазици',
 	'uls-desc' => 'Му дава на корисникот неколку начини за избор на јазик и прилагодување на јазичните поставки',
 	'uls-plang-title-languages' => 'Јазици',
-	'uls-ime-enable-preferences-label' => 'Вклучи вносни алатки',
 );
 
 /** Malayalam (മലയാളം)
@@ -344,7 +324,6 @@ $messages['ml'] = array(
 	'UniversalLanguageSelector' => 'ആഗോള ഭാഷാസഹായി',
 	'uls-desc' => 'ഭാഷ തിരഞ്ഞെടുക്കുന്നതിനും സജ്ജീകരിക്കുന്നതിനുമുള്ള സംവിധാനം',
 	'uls-plang-title-languages' => 'ഭാഷകൾ',
-	'uls-ime-enable-preferences-label' => 'എഴുത്തുപകരണം സജ്ജമാക്കുക',
 );
 
 /** Malay (Bahasa Melayu)
@@ -356,12 +335,11 @@ $messages['ms'] = array(
 	'uls-plang-title-languages' => 'Bahasa',
 );
 
-/** Norwegian Bokmål (norsk (bokmål)‎)
+/** Norwegian Bokmål (norsk bokmål)
  */
 $messages['nb'] = array(
 	'UniversalLanguageSelector' => 'Universal språkvelger',
 	'uls-desc' => 'Gir brukeren flere måter å velge språk på og endre språkinnstillinger',
-	'uls-select-content-language' => 'Velg språk',
 );
 
 /** Dutch (Nederlands)
@@ -371,7 +349,6 @@ $messages['nl'] = array(
 	'UniversalLanguageSelector' => 'Universele taalkiezer',
 	'uls-desc' => 'Biedt gebruikers verschillende mogelijkheden om een taal te kiezen en bijbehorende instellingen aan te passen',
 	'uls-plang-title-languages' => 'Talen',
-	'uls-ime-enable-preferences-label' => 'Invoermethoden inschakelen',
 );
 
 /** Ossetic (Ирон)
@@ -380,7 +357,6 @@ $messages['nl'] = array(
 $messages['os'] = array(
 	'UniversalLanguageSelector' => 'Универсалон æвзагæвзарæн',
 	'uls-desc' => 'Архайæгæн дæтты цалдæр фадат æвзаг равзарынæн æмæ йын уаг сæвæрынæн',
-	'uls-select-content-language' => 'Æвзагæвзарæн',
 );
 
 /** Polish (polski)
@@ -399,7 +375,6 @@ $messages['pl'] = array(
 $messages['pms'] = array(
 	'UniversalLanguageSelector' => 'Seletor Universal ëd Lenga',
 	'uls-desc' => "A dà a l'utent vàire manere ëd selessioné na lenga e ëd sistemé j'ampostassion ëd lenga",
-	'uls-select-content-language' => 'Serne la lenga',
 );
 
 /** Brazilian Portuguese (português do Brasil)
@@ -417,7 +392,6 @@ $messages['pt-br'] = array(
 $messages['ro'] = array(
 	'UniversalLanguageSelector' => 'Selector universal de limbi',
 	'uls-desc' => 'Oferă utilizatorului mai multe modalități de a selecta o limbă și de a modifica setările de limbă',
-	'uls-select-content-language' => 'Selectare limbă',
 );
 
 /** tarandíne (tarandíne)
@@ -427,7 +401,6 @@ $messages['roa-tara'] = array(
 	'UniversalLanguageSelector' => 'Scacchiatore Universale de Lènghe',
 	'uls-desc' => "Dèje diverse mode a l'utende de scacchià 'na lènghe e de consiglià le 'mbostaziune d'a lènghe",
 	'uls-plang-title-languages' => 'Lènghe',
-	'uls-ime-enable-preferences-label' => 'Abbilite le metode de inserimende',
 );
 
 /** Russian (русский)
@@ -436,7 +409,6 @@ $messages['roa-tara'] = array(
 $messages['ru'] = array(
 	'UniversalLanguageSelector' => 'Универсальный переключатель языков',
 	'uls-desc' => 'Даёт пользователю несколько способов выбрать язык и произвести установки языка',
-	'uls-select-content-language' => 'Выбор языка',
 );
 
 /** Sinhala (සිංහල)
@@ -444,7 +416,6 @@ $messages['ru'] = array(
  */
 $messages['si'] = array(
 	'UniversalLanguageSelector' => 'විශ්ව භාෂා වරකය',
-	'uls-select-content-language' => 'භාෂාව තෝරන්න',
 );
 
 /** Serbian (Cyrillic script) (српски (ћирилица)‎)
@@ -462,7 +433,6 @@ $messages['sr-ec'] = array(
 $messages['ta'] = array(
 	'UniversalLanguageSelector' => 'உலகளாவிய மொழி தேர்வுக் கருவி',
 	'uls-desc' => 'பயனருக்கு மொழியை மாற்றவும் மொழி அமைப்புகளை மாற்றவும் செய்ய பல வழிகளை தருகின்றது',
-	'uls-select-content-language' => 'மொழியைத் தேர்ந்தெடு',
 );
 
 /** Tagalog (Tagalog)
@@ -472,7 +442,6 @@ $messages['ta'] = array(
 $messages['tl'] = array(
 	'UniversalLanguageSelector' => 'Unibersal na Pampili ng Wika',
 	'uls-desc' => 'Nagbibigay sa tagagamit ng ilang mga paraan upang makapili ng isang wika at upang mabago ang mga katakdaan ng wika',
-	'uls-select-content-language' => 'Piliin ang wika',
 );
 
 /** Ukrainian (українська)
@@ -481,7 +450,6 @@ $messages['tl'] = array(
 $messages['uk'] = array(
 	'UniversalLanguageSelector' => 'Універсальний вибір мови',
 	'uls-desc' => 'Надає користувачу декілька способів вибрати мову та налаштувати мовні параметри.',
-	'uls-select-content-language' => 'Оберіть мову',
 );
 
 /** Urdu (اردو)
@@ -489,7 +457,6 @@ $messages['uk'] = array(
  */
 $messages['ur'] = array(
 	'UniversalLanguageSelector' => 'عالمگیر زبان منتخب',
-	'uls-select-content-language' => 'زبان کا انتخاب کریں',
 );
 
 /** Vietnamese (Tiếng Việt)
@@ -500,7 +467,6 @@ $messages['vi'] = array(
 	'UniversalLanguageSelector' => 'Bộ lựa chọn Ngôn ngữ Phổ quát',
 	'uls-desc' => 'Trình bày giao diện để lựa chọn ngôn ngữ và điều chỉnh các tùy chọn ngôn ngữ',
 	'uls-plang-title-languages' => 'Ngôn ngữ',
-	'uls-ime-enable-preferences-label' => 'Bật bộ gõ',
 );
 
 /** Simplified Chinese (中文（简体）‎)
@@ -522,5 +488,4 @@ $messages['zh-hant'] = array(
 	'UniversalLanguageSelector' => '通用語言選擇器',
 	'uls-desc' => '為用戶提供多種方法來選擇語言和調整語言設置',
 	'uls-plang-title-languages' => '語言',
-	'uls-ime-enable-preferences-label' => '啟用輸入法',
 );

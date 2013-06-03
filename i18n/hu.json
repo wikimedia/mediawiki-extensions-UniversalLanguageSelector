@@ -1,14 +1,13 @@
 {
-	"@metadata": {
-		"authors": [
-			"R-Joe"
-		]
-	},
-	"ext-uls-language-settings-apply": "Be\u00e1ll\u00edt\u00e1sok alkalmaz\u00e1sa",
-	"ext-uls-display-settings-font-settings": "Bet\u0171t\u00edpus be\u00e1ll\u00edt\u00e1sok",
-	"ext-uls-display-settings-ui-language": "Megjelen\u00edt\u00e9si nyelv",
-	"ext-uls-input-more-settings": "Tov\u00e1bbi be\u00e1ll\u00edt\u00e1sok",
-	"jquery-ime-other-languages": "Tov\u00e1bbi nyelvek",
-	"jquery-ime-help": "S\u00fag\u00f3",
-	"ext-uls-input-settings-noime": "Beviteli m\u00f3dszerek nem \u00e1llnak rendelkez\u00e9sre ezen a nyelven."
+    "@metadata": {
+        "authors": [
+            "R-Joe"
+        ]
+    },
+    "ext-uls-language-settings-apply": "Be\u00e1ll\u00edt\u00e1sok alkalmaz\u00e1sa",
+    "ext-uls-display-settings-font-settings": "Bet\u0171t\u00edpus be\u00e1ll\u00edt\u00e1sok",
+    "ext-uls-display-settings-ui-language": "Megjelen\u00edt\u00e9si nyelv",
+    "jquery-ime-other-languages": "Tov\u00e1bbi nyelvek",
+    "jquery-ime-help": "S\u00fag\u00f3",
+    "ext-uls-input-settings-noime": "Beviteli m\u00f3dszerek nem \u00e1llnak rendelkez\u00e9sre ezen a nyelven."
 }
