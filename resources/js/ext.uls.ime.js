@@ -63,7 +63,7 @@
 		save: function ( callback ) {
 			if ( !this.registry.isDirty ) {
 				if ( callback ) {
-					callback.call( this );
+					callback.call( this, true );
 				}
 
 				return;
