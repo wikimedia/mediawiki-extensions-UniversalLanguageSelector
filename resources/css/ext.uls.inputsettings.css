@@ -33,6 +33,8 @@ div.input-settings-block {
 
 .uls-ime-menu-settings-item {
 	background-color: #f0f0f0;
+	/* Workaround for bug https://bugzilla.wikimedia.org/49074 */
+	/* @noflip */
 	border-radius: 0 0 5px 5px;
 	border-top: 1px solid #ddd;
 	margin-top: 6px;
