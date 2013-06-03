@@ -243,7 +243,8 @@
 			$ulsSettingsTrigger = $( '<span>' )
 				.addClass( 'uls-settings-trigger' )
 				.attr( 'title', $.i18n( 'ext-uls-language-settings-title' ) );
-			$pLang.prepend( $ulsSettingsTrigger );
+			// Append ULS cog to languages section. But make sure it is visible.
+			$pLang.show().prepend( $ulsSettingsTrigger );
 
 			// Remove the dummy link that was added to make sure that the section appears
 			$pLang.find( '.uls-p-lang-dummy' ).remove();
