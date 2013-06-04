@@ -405,10 +405,12 @@ $messages['roa-tara'] = array(
 
 /** Russian (русский)
  * @author Amire80
+ * @author Putnik
  */
 $messages['ru'] = array(
 	'UniversalLanguageSelector' => 'Универсальный переключатель языков',
 	'uls-desc' => 'Даёт пользователю несколько способов выбрать язык и произвести установки языка',
+	'uls-plang-title-languages' => 'Языки',
 );
 
 /** Sinhala (සිංහල)
