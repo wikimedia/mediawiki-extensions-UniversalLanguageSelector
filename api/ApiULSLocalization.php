@@ -43,12 +43,12 @@ class ApiULSLocalization extends ApiBase {
 		$localPath = __DIR__ . "/../$filename";
 		if ( !file_exists( $localPath ) ) {
 			$this->getResult()->addValue( null, 'text', '{}' );
-			$this->getResult()->addValue( null, 'mime', 'text/json' );
+			$this->getResult()->addValue( null, 'mime', 'application/json' );
 		} else {
 			$contents = file_get_contents( $localPath );
 			// Output the file's contents raw
 			$this->getResult()->addValue( null, 'text', $contents );
-			$this->getResult()->addValue( null, 'mime', 'text/json' );
+			$this->getResult()->addValue( null, 'mime', 'application/json' );
 		}
 	}
 
