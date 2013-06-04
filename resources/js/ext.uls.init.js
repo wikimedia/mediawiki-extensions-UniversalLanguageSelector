@@ -122,34 +122,25 @@
 	 * i18n initialization
 	 */
 	function i18nInit() {
-		var extensionPath, locales, i18n;
-		if ( window.XDomainRequest ) {
-			// IE8 and IE9 does not support ajax with CORS. So make sure they
-			// load json files from same domain ( http://bugs.jquery.com/ticket/8283 )
-			extensionPath = mw.config.get( 'wgScriptPath' ) +
-				'/extensions/UniversalLanguageSelector/';
-		} else {
-			extensionPath = mw.config.get( 'wgExtensionAssetsPath' ) +
-				'/UniversalLanguageSelector/';
-		}
+		var jsonLoader, locales, i18n;
+
+		jsonLoader = mw.util.wikiScript( 'api' ) + '?action=ulslocalization&language=';
 		locales = mw.config.get( 'wgULSi18nLocales' );
 		i18n = $.i18n( {
 			locale: currentLang,
 			messageLocationResolver: function ( locale, messageKey ) {
 				// Namespaces are not available in jquery.i18n yet. Developers prefix
 				// the message key with a unique namespace like ext-uls-*
-
 				if ( messageKey.indexOf( 'uls' ) === 0 ) {
 					if ( $.inArray( locale, locales.uls ) >= 0 ) {
-						return extensionPath + 'lib/jquery.uls/i18n/' + locale + '.json';
+						return jsonLoader + locale + '&namespace=uls';
 					}
 
 					return false;
 				}
-
 				if ( messageKey.indexOf( 'ext-uls' ) === 0 ) {
 					if ( $.inArray( locale, locales['ext-uls'] ) >= 0 ) {
-						return extensionPath + 'i18n/' + locale + '.json';
+						return jsonLoader + locale + '&namespace=ext-uls';
 					}
 
 					return false;
