@@ -112,10 +112,13 @@
 	 * @return boolean
 	 */
 	mw.uls.isBrowserSupported = function () {
-		// boxModel is not supported in IE versions under 8.
-		// We are checking for boxModel here because without that features
-		// our grid system fails and it makes the ULS non-functional.
-		return $.support.boxModel;
+		// Blacklist Grade B browsers IE 6, 7 and IE60-IE79
+		var ua = navigator.userAgent;
+		if ( /MSIE [67]/i.test( ua ) ) {
+			return false;
+		}
+
+		return true;
 	};
 
 	/**
@@ -151,6 +154,7 @@
 
 	$( document ).ready( function () {
 		if ( !mw.uls.isBrowserSupported() ) {
+			$( '#pt-uls' ).hide();
 			return;
 		}
 
