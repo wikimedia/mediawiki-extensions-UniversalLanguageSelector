@@ -19,7 +19,7 @@
  */
 
 if ( !defined( 'MEDIAWIKI' ) ) {
-	echo( "This file is an extension to the MediaWiki software and cannot be used standalone.\n" );
+	echo "This file is an extension to the MediaWiki software and cannot be used standalone.\n";
 	die( -1 );
 }
 /**
@@ -125,6 +125,7 @@ $wgExtensionMessagesFiles['UniversalLanguageSelector'] = "$dir/UniversalLanguage
 $wgAutoloadClasses['UniversalLanguageSelectorHooks'] = "$dir/UniversalLanguageSelector.hooks.php";
 $wgAutoloadClasses['ResourceLoaderULSModule'] = "$dir/ResourceLoaderULSModule.php";
 $wgAutoloadClasses['ApiLanguageSearch'] = "$dir/api/ApiLanguageSearch.php";
+$wgAutoloadClasses['ApiULSLocalization'] = "$dir/api/ApiULSLocalization.php";
 $wgAutoloadClasses['LanguageNameSearch'] = "$dir/data/LanguageNameSearch.php";
 
 $wgHooks['BeforePageDisplay'][] = 'UniversalLanguageSelectorHooks::addModules';
@@ -133,6 +134,7 @@ $wgHooks['ResourceLoaderTestModules'][] = 'UniversalLanguageSelectorHooks::addTe
 $wgHooks['ResourceLoaderGetConfigVars'][] = 'UniversalLanguageSelectorHooks::addConfig';
 $wgHooks['MakeGlobalVariablesScript'][] = 'UniversalLanguageSelectorHooks::addVariables';
 $wgAPIModules['languagesearch'] = 'ApiLanguageSearch';
+$wgAPIModules['ulslocalization'] = 'ApiULSLocalization';
 $wgHooks['UserGetLanguageObject'][] = 'UniversalLanguageSelectorHooks::getLanguage';
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'UniversalLanguageSelectorHooks::onSkinTemplateOutputPageBeforeExec';
 
@@ -152,4 +154,4 @@ $wgExtensionFunctions[] = function() {
 	return true;
 };
 
-require( "$dir/Resources.php" );
+require "$dir/Resources.php";
