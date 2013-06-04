@@ -38,6 +38,7 @@ div.input-settings-block {
 	margin-top: 6px;
 	padding: 4px 2px;
 	color: #444;
+	position: relative;
 }
 
 .uls-ime-disable-link {
@@ -48,12 +49,13 @@ div.input-settings-block {
 	background-image: linear-gradient(transparent, transparent), url('../images/remove-input.svg');
 	background-size: auto 16px;
 	padding-left: 22px;
+	padding-right: 26px;
 	padding-bottom: 10px;
 }
 
 .uls-ime-more-settings-link {
 	/* @embed */
-	background: transparent url('../images/cog.png') right top no-repeat;
+	background: transparent url('../images/cog.png') center top no-repeat;
 	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/cog.svg');
 	background-image: -moz-linear-gradient(transparent, transparent), url('../images/cog.svg');
 	background-image: linear-gradient(transparent, transparent), url('../images/cog.svg');
@@ -61,8 +63,9 @@ div.input-settings-block {
 	border-left: 1px solid #CCCCCC;
 	width: 22px;
 	height: 14px;
-	float: right;
-}
+	position: absolute;
+	right: 0;
+	}
 
 .uls-ime-menu-settings-item > a:hover {
 	background-color: #f0f0f0;
