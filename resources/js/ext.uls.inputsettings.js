@@ -516,6 +516,9 @@
 				// closure for not losing the scope
 				inputSettings.onSave( result );
 			} );
+
+			// Update the back-up preferences for the case of canceling
+			this.savedRegistry = $.extend( true, {}, $.ime.preferences.registry );
 		}
 	};
 
