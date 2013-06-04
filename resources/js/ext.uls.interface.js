@@ -211,7 +211,7 @@
 		// manually show the tooltip
 		$ulsTrigger.on( 'mouseover', function () {
 			// show only if the ULS panel is not shown
-			if ( !$ulsTrigger.data( 'uls' ).shown ) {
+			if ( !$( '.uls-menu:visible' ).length ) {
 				showTipsy( 3000 );
 			}
 		} );
