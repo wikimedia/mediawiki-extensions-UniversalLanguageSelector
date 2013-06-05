@@ -330,8 +330,17 @@
 					uls.$menu.find( 'h1.uls-title' )
 						.data( 'i18n', 'ext-uls-input-settings-ui-language' )
 						.i18n();
+					uls.$menu.prepend(
+						$( '<span>' ).addClass( 'caret-before' ),
+						$( '<span>' ).addClass( 'caret-after' )
+					);
 				},
 				onVisible: function () {
+					if ( !inputSettings.$parent.$window.hasClass( 'callout' ) ) {
+						// callout menus will have position rules. others use
+						// default position
+						return;
+					}
 					var $parent = $( '#language-settings-dialog' );
 					// Re-position the element according to the window that called it
 					if ( parseInt( $parent.css( 'left' ), 10 ) ) {
@@ -339,6 +348,12 @@
 					}
 					if ( parseInt( $parent.css( 'top' ), 10 ) ) {
 						this.$menu.css( 'top', $parent.css( 'top' ) );
+					}
+
+					if ( inputSettings.$parent.$window.hasClass( 'callout' ) ) {
+						this.$menu.addClass( 'callout' );
+					} else {
+						this.$menu.removeClass( 'callout' );
 					}
 				},
 				onSelect: function ( langCode ) {
@@ -350,13 +365,6 @@
 				languages: mw.ime.getLanguagesWithIME(),
 				lazyload: false
 			} );
-
-			if ( mw.config.get( 'wgULSPosition' ) === 'interlanguage' ) {
-				$moreLanguagesButton.data( 'uls' ).$menu.prepend(
-					$( '<span>' ).addClass( 'caret-before' ),
-					$( '<span>' ).addClass( 'caret-after' )
-				);
-			}
 
 			$moreLanguagesButton.on( 'click', function () {
 				inputSettings.$parent.hide();

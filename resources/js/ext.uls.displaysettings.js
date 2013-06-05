@@ -260,8 +260,17 @@
 					uls.$menu.find( 'h1.uls-title' )
 						.data( 'i18n', 'ext-uls-display-settings-ui-language' )
 						.i18n();
+					uls.$menu.prepend(
+						$( '<span>' ).addClass( 'caret-before' ),
+						$( '<span>' ).addClass( 'caret-after' )
+					);
 				},
 				onVisible: function () {
+					if ( !displaySettings.$parent.$window.hasClass( 'callout' ) ) {
+						// callout menus will have position rules. others use
+						// default position
+						return;
+					}
 					var $parent = $( '#language-settings-dialog' );
 					// Re-position the element according to the window that called it
 					if ( parseInt( $parent.css( 'left' ), 10 ) ) {
@@ -269,6 +278,13 @@
 					}
 					if ( parseInt( $parent.css( 'top' ), 10 ) ) {
 						this.$menu.css( 'top', $parent.css( 'top' ) );
+					}
+					// If the ULS is shown in the the sidebar,
+					// add a caret pointing to the icon
+					if ( displaySettings.$parent.$window.hasClass( 'callout' ) ) {
+						this.$menu.addClass( 'callout' );
+					} else {
+						this.$menu.removeClass( 'callout' );
 					}
 				},
 				onSelect: function ( langCode ) {
@@ -284,15 +300,6 @@
 					return mw.uls.getFrequentLanguageList();
 				}
 			} );
-
-			// If the ULS is shown in the the sidebar,
-			// add a caret pointing to the icon
-			if ( mw.config.get( 'wgULSPosition' ) === 'interlanguage' ) {
-				$moreLanguagesButton.data( 'uls' ).$menu.prepend(
-					$( '<span>' ).addClass( 'caret-before' ),
-					$( '<span>' ).addClass( 'caret-after' )
-				);
-			}
 
 			$moreLanguagesButton.on( 'click', function () {
 				displaySettings.$parent.hide();

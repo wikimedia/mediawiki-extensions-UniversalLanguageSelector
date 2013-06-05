@@ -288,6 +288,7 @@
 					var left,
 						ulsTriggerOffset = $ulsSettingsTrigger.offset();
 
+					this.$window.addClass( 'callout' );
 					if ( rtlPage ) {
 						left = ulsTriggerOffset.left - this.$window.width() - 30;
 					} else {
@@ -297,14 +298,11 @@
 					this.left = left;
 					this.top = ulsTriggerOffset.top - 50;
 					this.position();
+					this.$window.prepend(
+						$( '<span>' ).addClass( 'caret-before' ),
+						$( '<span>' ).addClass( 'caret-after' )
+					);
 				}
-			} );
-
-			$( '.uls-menu' ).each( function () {
-				$( this ).prepend(
-					$( '<span>' ).addClass( 'caret-before' ),
-					$( '<span>' ).addClass( 'caret-after' )
-				);
 			} );
 		} else if ( anonMode ) {
 			$ulsTrigger.languagesettings();
