@@ -153,6 +153,9 @@
 			this.$window.i18n();
 			this.shown = true;
 			this.$window.show();
+			// Every time we show this window, make sure the current
+			// settings panels is upto date. So just click on active menu item.
+			this.$window.find( '.input-settings-block.active' ).click();
 			this.position();
 			this.visible();
 		},
