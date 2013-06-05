@@ -142,7 +142,7 @@
 				top: top,
 				left: left
 			} );
-			this.$window[0].scrollIntoView();
+			this.$window.scrollIntoView();
 		},
 
 		show: function () {

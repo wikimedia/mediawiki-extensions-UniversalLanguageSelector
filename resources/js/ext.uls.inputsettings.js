@@ -474,7 +474,7 @@
 			$.ime.preferences.enable();
 			mw.ime.setup();
 			this.$template.find( '.enabled-only' ).removeClass( 'hide' );
-			this.$template[0].scrollIntoView();
+			this.$template.scrollIntoView();
 			this.prepareToggleButton();
 		},
 
