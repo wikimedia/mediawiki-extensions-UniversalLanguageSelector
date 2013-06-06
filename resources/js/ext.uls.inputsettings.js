@@ -206,7 +206,6 @@
 		prepareLanguages: function () {
 			var inputSettings = this,
 				SUGGESTED_LANGUAGES_NUMBER = 3,
-				currentLanguage = this.contentLanguage,
 				selectedImeLanguage = $.ime.preferences.getLanguage(),
 				languagesForButtons, $languages, suggestedLanguages,
 				lang, i, language, $button, $caret;
@@ -228,19 +227,16 @@
 
 			// Selected IME language may be different, and it must
 			// be present, too
-			if ( $.inArray( selectedImeLanguage, languagesForButtons ) === -1 &&
-				$.uls.data.languages[selectedImeLanguage]
-			) {
+			if ( $.uls.data.languages[selectedImeLanguage] &&
+				$.inArray( selectedImeLanguage, languagesForButtons ) === -1 ) {
 				languagesForButtons.push( selectedImeLanguage );
-				currentLanguage = selectedImeLanguage;
 			}
 
 			// UI language must always be present
 			if ( this.imeLanguage !== this.contentLanguage &&
-				$.uls.data.languages[this.imeLanguage]
-			) {
+				$.uls.data.languages[this.imeLanguage] &&
+				$.inArray( this.imeLanguage, languagesForButtons ) === -1 ) {
 				languagesForButtons.push( this.imeLanguage );
-				currentLanguage = this.imeLanguage;
 			}
 
 			for ( lang in suggestedLanguages ) {
@@ -272,6 +268,8 @@
 				};
 			}
 
+			// In case no preference exist for IME, selected language is contentLanguage
+			selectedImeLanguage = selectedImeLanguage || this.contentLanguage;
 			// Add the buttons for the most likely languages
 			for ( i = 0; i < SUGGESTED_LANGUAGES_NUMBER; i++ ) {
 				language = languagesForButtons[i];
@@ -290,7 +288,7 @@
 
 				$button.on( 'click', buttonHandler( $button ) );
 
-				if ( language === currentLanguage ) {
+				if ( language === selectedImeLanguage ) {
 					$button.click();
 				}
 			}
