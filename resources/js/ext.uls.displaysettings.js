@@ -188,7 +188,7 @@
 				languagesForButtons.push( suggestedLanguages[lang] );
 
 				// No need to add more languages than buttons
-				if ( languagesForButtons.length === SUGGESTED_LANGUAGES_NUMBER ) {
+				if ( languagesForButtons.length >= SUGGESTED_LANGUAGES_NUMBER ) {
 					break;
 				}
 			}
