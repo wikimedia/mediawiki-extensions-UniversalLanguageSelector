@@ -2,11 +2,12 @@
     "@metadata": {
         "authors": [
             "Akmalzhon",
-            "CoderSI"
+            "CoderSI",
+            "Sociologist"
         ]
     },
     "ext-uls-display-settings-title": "Ko\u02bbrsatish moslamalari",
-    "ext-uls-display-settings-title-short": "Ko'rsatish",
+    "ext-uls-display-settings-title-short": "Ko\u02bbrsatish",
     "ext-uls-language-settings-title": "Til moslamalari",
     "ext-uls-language-settings-cancel": "Bekor qilish",
     "ext-uls-display-settings-ui-language": "Ko'rinish uchun til",
