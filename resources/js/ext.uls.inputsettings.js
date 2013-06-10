@@ -237,6 +237,7 @@
 				$.uls.data.languages[this.imeLanguage] &&
 				$.inArray( this.imeLanguage, languagesForButtons ) === -1 ) {
 				languagesForButtons.push( this.imeLanguage );
+				selectedImeLanguage = this.imeLanguage;
 			}
 
 			for ( lang in suggestedLanguages ) {
