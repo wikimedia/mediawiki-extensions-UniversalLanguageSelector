@@ -94,6 +94,15 @@ $messages['br'] = array(
 	'uls-select-content-language' => 'Dibab ar yezh',
 );
 
+/** Catalan (català)
+ * @author Vriullop
+ */
+$messages['ca'] = array(
+	'UniversalLanguageSelector' => 'Selector universal de llengua',
+	'uls-desc' => "Dóna a l'usuari diverses maneres per seleccionar una llengua i ajustar la seva configuració",
+	'uls-plang-title-languages' => 'Llengües',
+);
+
 /** Czech (česky)
  * @author Mormegil
  */
@@ -103,12 +112,14 @@ $messages['cs'] = array(
 );
 
 /** Danish (dansk)
+ * @author Byrial
  * @author Christian List
  * @author Peter Alberti
  */
 $messages['da'] = array(
-	'UniversalLanguageSelector' => 'Universal sprogvælger',
+	'UniversalLanguageSelector' => 'Universel sprogvælger',
 	'uls-desc' => 'Giver brugeren forskellige måder at vælge et sprog, og at justere indstillingerne for sproget',
+	'uls-plang-title-languages' => 'Sprog',
 );
 
 /** German (Deutsch)
@@ -392,6 +403,7 @@ $messages['pt-br'] = array(
 $messages['ro'] = array(
 	'UniversalLanguageSelector' => 'Selector universal de limbi',
 	'uls-desc' => 'Oferă utilizatorului mai multe modalități de a selecta o limbă și de a modifica setările de limbă',
+	'uls-plang-title-languages' => 'Limbi',
 );
 
 /** tarandíne (tarandíne)

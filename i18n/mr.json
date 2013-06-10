@@ -1,0 +1,18 @@
+{
+    "ext-uls-display-settings-language-tab": "\u092d\u093e\u0937\u093e",
+    "ext-uls-display-settings-fonts-tab": "\u091f\u0902\u0915 (\u092b\u093e\u0901\u091f)",
+    "ext-uls-display-settings-title-short": "\u0926\u0930\u094d\u0936\u0935\u093e",
+    "ext-uls-language-settings-cancel": "\u0930\u0926\u094d\u0926 \u0915\u0930\u093e",
+    "ext-uls-display-settings-anon-same-as-content": "\u092e\u0930\u093e\u0920\u0940 (\u092e\u091c\u0915\u0941\u0930\u093e\u091a\u094d\u092f\u093e \u092d\u093e\u0937\u0947\u0928\u0941\u0938\u093e\u0930)",
+    "ext-uls-display-settings-anon-log-in-cta": "\u0926\u0941\u0938\u0931\u094d\u092f\u093e \u0915\u094b\u0923\u0924\u094d\u092f\u093e\u0939\u0940 \u092d\u093e\u0937\u0947\u091a\u093e \u0909\u092a\u092f\u094b\u0917 \u0915\u0930\u0923\u094d\u092f\u093e\u0938\u093e\u0920\u0940 [[Special:UserLogin|\u092a\u094d\u0930\u0935\u0947\u0936]] \u0915\u0930\u093e",
+    "ext-uls-webfonts-select-for": "$1 \u0915\u0930\u093f\u0924\u093e \u091f\u0902\u0915(\u092b\u093e\u0901\u091f) \u0928\u093f\u0935\u0921\u093e",
+    "ext-uls-input-settings-ui-language": "\u0932\u093f\u0939\u093f\u0923\u094d\u092f\u093e\u0938\u093e\u0920\u0940 \u0935\u093e\u092a\u0930\u0932\u0947\u0932\u0940 \u092d\u093e\u0937\u093e",
+    "ext-uls-input-settings-more-languages-tooltip": "\u0905\u0927\u093f\u0915 \u092d\u093e\u0937\u093e",
+    "jquery-ime-other-languages": "\u0907\u0924\u0930 \u092d\u093e\u0937\u093e",
+    "jquery-ime-help": "\u0938\u093e\u0939\u093e\u092f\u094d\u092f",
+    "@metadata": {
+        "authors": [
+            "Mahitgar"
+        ]
+    }
+}

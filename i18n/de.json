@@ -1,7 +1,8 @@
 {
     "@metadata": {
         "authors": [
-            "Metalhead64"
+            "Metalhead64",
+            "Se4598"
         ]
     },
     "ext-uls-display-settings-title": "Anzeigeeinstellungen",
@@ -10,7 +11,7 @@
     "ext-uls-display-settings-title-short": "Anzeige",
     "ext-uls-display-settings-desc": "Sprache, die f\u00fcr Men\u00fcs und Schriftarten verwendet wird.",
     "ext-uls-select-language-settings-icon-tooltip": "Spracheinstellungen",
-    "ext-uls-undo-language-tooltip-text": "Sprache $1 ge\u00e4ndert",
+    "ext-uls-undo-language-tooltip-text": "Sprache ge\u00e4ndert von $1",
     "ext-uls-language-settings-title": "Spracheinstellungen",
     "ext-uls-language-settings-apply": "Einstellungen anwenden",
     "ext-uls-language-settings-cancel": "Abbrechen",
