@@ -200,6 +200,9 @@
 					$( 'div.uls-ui-languages button.button' ).removeClass( 'down' );
 					button.addClass( 'down' );
 					displaySettings.prepareUIFonts();
+					// set the language for the settings panel so that webfonts
+					// are correctly applied.
+					displaySettings.$template.attr( 'lang', displaySettings.uiLanguage );
 					$.i18n().locale = displaySettings.uiLanguage;
 					displaySettings.i18n();
 				};
@@ -293,6 +296,9 @@
 					displaySettings.$parent.show();
 					displaySettings.prepareUIFonts();
 					displaySettings.prepareLanguages();
+					// set the language for the settings panel so that webfonts
+					// are correctly applied.
+					displaySettings.$template.attr( 'lang', langCode );
 					$.i18n().locale = langCode;
 					displaySettings.i18n();
 				},
