@@ -39,5 +39,10 @@
     "ext-uls-input-disable": "Nonaktipan metode masuakan",
     "ext-uls-input-enable": "Aktipan metode masuakan",
     "ext-uls-input-disable-info": "Metode masuakan dinonaktipan.",
-    "ext-uls-input-settings-noime": "Metode masuakan indak tasadio untuak bahaso iko."
+    "ext-uls-input-settings-noime": "Metode masuakan indak tasadio untuak bahaso iko.",
+    "ext-uls-input-disable-notification": "Parangkaik input dinonaktipan",
+    "ext-uls-input-disable-notification-undo": "Ulang",
+    "ext-uls-input-disable-notification-info-personal": "Sanak dapek mangaktipan parangkaik input tiok saaik dari pangaturan bahaso.",
+    "ext-uls-input-disable-notification-info-interlanguage": "Sanak dapek mangaktipan parangkaik input tiok saaik dari pangaturan bahaso di sabalah daftar bahaso.",
+    "ext-uls-language-settings-preferences-link": "Pangaturan bahaso lanjutan"
 }

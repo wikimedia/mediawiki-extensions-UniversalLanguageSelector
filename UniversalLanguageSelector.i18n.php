@@ -111,6 +111,15 @@ $messages['cs'] = array(
 	'uls-desc' => 'Nabízí uživateli několik způsobů volby jazyka a úpravy jazykových nastavení',
 );
 
+/** Welsh (Cymraeg)
+ * @author Lloffiwr
+ */
+$messages['cy'] = array(
+	'UniversalLanguageSelector' => 'Cyfun-ddewisydd Iaith',
+	'uls-desc' => "Yn cynnig sawl ffordd i'r defnyddiwr allu dewis iaith a newid gosodiadau iaith",
+	'uls-plang-title-languages' => 'Ieithoedd',
+);
+
 /** Danish (dansk)
  * @author Byrial
  * @author Christian List

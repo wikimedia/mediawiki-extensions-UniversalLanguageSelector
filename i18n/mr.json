@@ -1,4 +1,9 @@
 {
+    "@metadata": {
+        "authors": [
+            "Mahitgar"
+        ]
+    },
     "ext-uls-display-settings-language-tab": "\u092d\u093e\u0937\u093e",
     "ext-uls-display-settings-fonts-tab": "\u091f\u0902\u0915 (\u092b\u093e\u0901\u091f)",
     "ext-uls-display-settings-title-short": "\u0926\u0930\u094d\u0936\u0935\u093e",
@@ -9,10 +14,5 @@
     "ext-uls-input-settings-ui-language": "\u0932\u093f\u0939\u093f\u0923\u094d\u092f\u093e\u0938\u093e\u0920\u0940 \u0935\u093e\u092a\u0930\u0932\u0947\u0932\u0940 \u092d\u093e\u0937\u093e",
     "ext-uls-input-settings-more-languages-tooltip": "\u0905\u0927\u093f\u0915 \u092d\u093e\u0937\u093e",
     "jquery-ime-other-languages": "\u0907\u0924\u0930 \u092d\u093e\u0937\u093e",
-    "jquery-ime-help": "\u0938\u093e\u0939\u093e\u092f\u094d\u092f",
-    "@metadata": {
-        "authors": [
-            "Mahitgar"
-        ]
-    }
+    "jquery-ime-help": "\u0938\u093e\u0939\u093e\u092f\u094d\u092f"
 }

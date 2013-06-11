@@ -31,13 +31,13 @@
     "ext-uls-input-settings-ime-settings": "Dulliau ysgrifennu yn $1",
     "ext-uls-input-settings-ui-language": "Iaith ysgrifennu",
     "ext-uls-back-to-input-settings": "Yn \u00f4l i osodiadau mewnbynnu",
-    "ext-uls-disable-input-method": "Analluogi'r modd mewnbynnu",
+    "ext-uls-disable-input-method": "Defnyddio bysellfwrdd gwreiddiol y peiriant",
     "ext-uls-input-settings-more-languages-tooltip": "Rhagor o ieithoedd",
     "jquery-ime-other-languages": "Ieithoedd eraill",
-    "jquery-ime-disable-text": "Analluogi'r modd mewnbynnu",
+    "jquery-ime-disable-text": "Defnyddio bysellfwrdd gwreiddiol y peiriant",
     "jquery-ime-help": "Cymorth",
-    "ext-uls-input-disable": "Analluoger y moddau mewnbynnu",
-    "ext-uls-input-enable": "Galluoger y moddau mewnbynnu",
-    "ext-uls-input-disable-info": "Analluogu'r moddau mewnbynnu.",
+    "ext-uls-input-disable": "Analluoger yr offer mewnbynnu",
+    "ext-uls-input-enable": "Galluoger yr offer mewnbynnu",
+    "ext-uls-input-disable-info": "Analluogwyd yr offer mewnbynnu.",
     "ext-uls-input-settings-noime": "Nid oes moddau arbennig o fewnbynnu'r iaith hon ar gael."
 }

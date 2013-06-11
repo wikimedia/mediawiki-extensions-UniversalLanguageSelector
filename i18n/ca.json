@@ -1,8 +1,8 @@
 {
-    "ext-uls-display-settings-language-tab": "Idioma",
     "@metadata": {
         "authors": [
             "Pginer"
         ]
-    }
+    },
+    "ext-uls-display-settings-language-tab": "Idioma"
 }
