@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function ( $, mw, window, document, undefined ) {
+( function ( $, mw, undefined ) {
 	'use strict';
 
 	// MediaWiki override for ULS defaults.
@@ -171,4 +171,4 @@
 		// JavaScript side i18n initialization
 		i18nInit();
 	} );
-}( jQuery, mediaWiki, window, document ) );
+}( jQuery, mediaWiki ) );

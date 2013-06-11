@@ -574,4 +574,4 @@
 	$.fn.languagesettings.modules = $.extend( $.fn.languagesettings.modules, {
 		display: DisplaySettings
 	} );
-})( jQuery, mediaWiki );
+}( jQuery, mediaWiki ) );

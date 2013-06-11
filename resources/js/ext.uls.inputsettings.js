@@ -534,4 +534,4 @@
 		input: InputSettings
 	} );
 
-} ( jQuery, mediaWiki ) );
+}( jQuery, mediaWiki ) );
