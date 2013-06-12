@@ -158,6 +158,10 @@
 
 			$imeListContainer.append( inputSettings.renderInputmethodOption( 'system',
 				defaultInputmethod === 'system' ) );
+
+			// Added input methods may increase the height of window. Make sure
+			// the entire window is in view port
+			this.$parent.position();
 		},
 
 		renderInputmethodOption: function ( imeId, selected ) {
