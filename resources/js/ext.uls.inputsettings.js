@@ -71,7 +71,7 @@
 		this.name = $.i18n( 'ext-uls-input-settings-title-short' );
 		this.description = $.i18n( 'ext-uls-input-settings-desc' );
 		this.$template = $( template );
-		this.imeLanguage = this.getInterfaceLanguage();
+		this.uiLanguage = this.getInterfaceLanguage();
 		this.contentLanguage = this.getContentLanguage();
 		this.$imes = null;
 		this.$parent = $parent;
@@ -125,7 +125,6 @@
 				$imeListTitle;
 
 			imes = $.ime.languages[language];
-			this.imeLanguage = language;
 
 			$imeListTitle = this.$template.find( '.ext-uls-input-settings-imes-title' );
 			$imeListContainer = this.$template.find( '.uls-input-settings-inputmethods-list' );
@@ -150,10 +149,8 @@
 			for ( index in imes.inputmethods ) {
 				imeId = imes.inputmethods[index];
 				selected = defaultInputmethod === imeId;
-				//$.ime.load( imeId, function () {
 				$imeListContainer.append( inputSettings.renderInputmethodOption( imeId,
 					selected ) );
-				//} );
 			}
 
 			$imeListContainer.append( inputSettings.renderInputmethodOption( 'system',
@@ -233,11 +230,10 @@
 			}
 
 			// UI language must always be present
-			if ( this.imeLanguage !== this.contentLanguage &&
-				$.uls.data.languages[this.imeLanguage] &&
-				$.inArray( this.imeLanguage, languagesForButtons ) === -1 ) {
-				languagesForButtons.push( this.imeLanguage );
-				selectedImeLanguage = this.imeLanguage;
+			if ( this.uiLanguage !== this.contentLanguage &&
+				$.uls.data.languages[this.uiLanguage] &&
+				$.inArray( this.uiLanguage, languagesForButtons ) === -1 ) {
+				languagesForButtons.push( this.uiLanguage );
 			}
 
 			for ( lang in suggestedLanguages ) {
@@ -256,16 +252,14 @@
 
 			function buttonHandler( button ) {
 				return function () {
-					var selectedLanguage = button.data( 'language' ) || inputSettings.imeLanguage;
+					var language = button.data( 'language' );
 
-					if ( selectedLanguage !== inputSettings.imeLanguage ) {
-						inputSettings.enableApplyButton();
-					}
-
-					$.ime.preferences.setLanguage( selectedLanguage );
+					inputSettings.enableApplyButton();
+					$.ime.preferences.setLanguage( language );
+					// Mark the button selected
 					$( '.uls-ui-languages .button' ).removeClass( 'down' );
 					button.addClass( 'down' );
-					inputSettings.prepareInputmethods( selectedLanguage );
+					inputSettings.prepareInputmethods( language );
 				};
 			}
 
@@ -357,7 +351,7 @@
 				},
 				onSelect: function ( langCode ) {
 					inputSettings.enableApplyButton();
-					inputSettings.imeLanguage = langCode;
+					$.ime.preferences.setLanguage( langCode );
 					inputSettings.$parent.show();
 					inputSettings.prepareLanguages();
 				},
@@ -448,7 +442,6 @@
 
 			$imeListContainer.on( 'change', 'input:radio[name=ime]:checked', function () {
 				inputSettings.enableApplyButton();
-				$.ime.preferences.setLanguage( inputSettings.imeLanguage );
 				$.ime.preferences.setIM( $( this ).val() );
 			} );
 
