@@ -151,6 +151,8 @@
 			return true;
 		}
 
+		// Remove existing tipsy tooltip
+		$ulsTrigger.removeData( 'tipsy' );
 		// Attach a tipsy tooltip to the trigger
 		$ulsTrigger.tipsy( {
 			gravity: tipsyGravity[ulsPosition],
@@ -242,7 +244,8 @@
 			// Add an element near the interlanguage links header
 			$ulsSettingsTrigger = $( '<span>' )
 				.addClass( 'uls-settings-trigger' )
-				.attr( 'title', $.i18n( 'ext-uls-language-settings-title' ) );
+				.attr( 'title', $.i18n( 'ext-uls-language-settings-title' ) )
+				.tipsy( { gravity: rtlPage ? 'e' : 'w' } );
 			// Append ULS cog to languages section. But make sure it is visible.
 			$pLang.show().prepend( $ulsSettingsTrigger );
 
