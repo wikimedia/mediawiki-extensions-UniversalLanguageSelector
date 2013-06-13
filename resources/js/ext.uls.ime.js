@@ -160,7 +160,7 @@
 	mw.ime.setup = function () {
 
 		$( 'body' ).on( 'focus.ime', inputSelector, function () {
-			var imeselector, $input;
+			var imeselector, $input, noImeSelector;
 
 			// It's possible to disable IME through the settings
 			// panels before it was initialized, so we need to check
@@ -170,6 +170,12 @@
 			}
 
 			$input = $( this );
+			noImeSelector = mw.config.get( 'wgULSNoImeSelectors' ).join( ', ' );
+
+			if ( noImeSelector.length && $input.is( noImeSelector ) ) {
+				$input.addClass( 'noime' );
+			}
+
 			$input.ime( {
 				languages: mw.ime.getIMELanguageList(),
 				languageSelector: function () {

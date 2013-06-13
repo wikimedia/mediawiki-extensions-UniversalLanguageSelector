@@ -245,7 +245,7 @@ class UniversalLanguageSelectorHooks {
 	 */
 	public static function addConfig( &$vars ) {
 		global $wgULSGeoService, $wgULSIMEEnabled, $wgULSPosition,
-			$wgULSAnonCanChangeLanguage, $wgULSEventLogging;
+			$wgULSAnonCanChangeLanguage, $wgULSEventLogging, $wgULSNoImeSelectors;
 
 		// Place constant stuff here (not depending on request context)
 		if ( is_string( $wgULSGeoService ) ) {
@@ -255,6 +255,7 @@ class UniversalLanguageSelectorHooks {
 		$vars['wgULSPosition'] = $wgULSPosition;
 		$vars['wgULSAnonCanChangeLanguage'] = $wgULSAnonCanChangeLanguage;
 		$vars['wgULSEventLogging'] = $wgULSEventLogging;
+		$vars['wgULSNoImeSelectors'] = $wgULSNoImeSelectors;
 
 		return true;
 	}
