@@ -47,10 +47,12 @@ This title is shown when there are no interlanguage links there, but an icon tha
 /** Arabic (العربية)
  * @author Tarawneh
  * @author ترجمان05
+ * @author زكريا
  */
 $messages['ar'] = array(
-	'UniversalLanguageSelector' => 'محدد لغة عالمية',
+	'UniversalLanguageSelector' => 'محدد اللغات الشامل',
 	'uls-desc' => 'يمنح المستخدم عدة طرق لاختيار لغة، وضبط إعدادات اللغة',
+	'uls-plang-title-languages' => 'لغات',
 );
 
 /** Assamese (অসমীয়া)
@@ -178,6 +180,7 @@ $messages['es'] = array(
 $messages['et'] = array(
 	'UniversalLanguageSelector' => 'Universaalne keelevalija',
 	'uls-desc' => 'Võimaldab kasutajal mitmel viisil keelt valida ja keelesätteid kohandada.',
+	'uls-plang-title-languages' => 'Keeled',
 );
 
 /** Basque (euskara)
