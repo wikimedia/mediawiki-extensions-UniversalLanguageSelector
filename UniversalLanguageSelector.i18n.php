@@ -298,11 +298,13 @@ $messages['ka'] = array(
 );
 
 /** Korean (한국어)
+ * @author Kwj2772
  * @author 아라
  */
 $messages['ko'] = array(
 	'UniversalLanguageSelector' => '범용 언어 선택기',
 	'uls-desc' => '사용자에게 언어를 선택하고 언어 설정을 바꾸는 몇 가지 방법을 제공',
+	'uls-plang-title-languages' => '언어',
 );
 
 /** Colognian (Ripoarisch)
@@ -450,6 +452,7 @@ $messages['si'] = array(
  */
 $messages['sr-ec'] = array(
 	'UniversalLanguageSelector' => 'Универзални језички изборник',
+	'uls-desc' => 'Даје кориснику неколико начина да изабере језик и да прилагоди поставке језика',
 	'uls-plang-title-languages' => 'Језици',
 );
 
@@ -459,6 +462,13 @@ $messages['sr-ec'] = array(
 $messages['ta'] = array(
 	'UniversalLanguageSelector' => 'உலகளாவிய மொழி தேர்வுக் கருவி',
 	'uls-desc' => 'பயனருக்கு மொழியை மாற்றவும் மொழி அமைப்புகளை மாற்றவும் செய்ய பல வழிகளை தருகின்றது',
+);
+
+/** Telugu (తెలుగు)
+ * @author Arjunaraoc
+ */
+$messages['te'] = array(
+	'uls-plang-title-languages' => 'భాషలు',
 );
 
 /** Tagalog (Tagalog)

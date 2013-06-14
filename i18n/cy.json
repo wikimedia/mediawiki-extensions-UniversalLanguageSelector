@@ -39,5 +39,8 @@
     "ext-uls-input-disable": "Analluoger yr offer mewnbynnu",
     "ext-uls-input-enable": "Galluoger yr offer mewnbynnu",
     "ext-uls-input-disable-info": "Analluogwyd yr offer mewnbynnu.",
-    "ext-uls-input-settings-noime": "Nid oes moddau arbennig o fewnbynnu'r iaith hon ar gael."
+    "ext-uls-input-settings-noime": "Nid oes moddau arbennig o fewnbynnu'r iaith hon ar gael.",
+    "ext-uls-input-disable-notification": "Analluogwyd yr offer mewnbynnu",
+    "ext-uls-input-disable-notification-undo": "Dadwneud",
+    "ext-uls-language-settings-preferences-link": "Rhagor o osodiadau iaith"
 }
