@@ -117,6 +117,33 @@
 	};
 
 	/**
+	 * Local wrapper for 'mw.eventLog.logEvent' which handles default params
+	 * and ensures the correct schema is loaded.
+	 *
+	 * @param {Object} data Event action and optional fields
+	 * @since 2013.07
+	 * @see https://meta.wikimedia.org/wiki/Schema:UniversalLanguageSelector
+	 */
+	mw.uls.logEvent = $.noop;
+
+	// If EventLogging integration is enabled, set event defaults and make the
+	// the function call event logging with correct schema.
+	if ( mw.config.get( 'wgULSEventLogging' ) ) {
+		mw.loader.using( 'schema.UniversalLanguageSelector', function () {
+			mw.eventLog.setDefaults( 'UniversalLanguageSelector', {
+				version: 1,
+				token: mw.user.id(),
+				contentLanguage: mw.config.get( 'wgContentLanguage' ),
+				interfaceLanguage: currentLang
+			} );
+
+			mw.uls.logEvent = function ( event ) {
+				mw.eventLog.logEvent( 'UniversalLanguageSelector', event );
+			};
+		} );
+	}
+
+	/**
 	 * i18n initialization
 	 */
 	function i18nInit() {

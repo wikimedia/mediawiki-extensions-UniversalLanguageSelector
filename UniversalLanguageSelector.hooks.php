@@ -43,10 +43,15 @@ class UniversalLanguageSelectorHooks {
 	 * Hook: BeforePageDisplay
 	 */
 	public static function addModules( $out, $skin ) {
-		global $wgULSGeoService;
+		global $wgULSGeoService, $wgULSEventLogging;
 
 		// Load the style for users without JS, to hide the useless links
 		$out->addModuleStyles( 'ext.uls.nojs' );
+
+		// If EventLogging integration is enabled, load the schema module.
+		if ( $wgULSEventLogging ) {
+			$out->addModules( 'schema.UniversalLanguageSelector' );
+		}
 
 		// If the extension is enabled, basic features (API, language data) available.
 		$out->addModules( 'ext.uls.init' );
@@ -240,7 +245,7 @@ class UniversalLanguageSelectorHooks {
 	 */
 	public static function addConfig( &$vars ) {
 		global $wgULSGeoService, $wgULSIMEEnabled, $wgULSPosition,
-			$wgULSAnonCanChangeLanguage;
+			$wgULSAnonCanChangeLanguage, $wgULSEventLogging;
 
 		// Place constant stuff here (not depending on request context)
 		if ( is_string( $wgULSGeoService ) ) {
@@ -249,6 +254,7 @@ class UniversalLanguageSelectorHooks {
 		$vars['wgULSIMEEnabled'] = $wgULSIMEEnabled;
 		$vars['wgULSPosition'] = $wgULSPosition;
 		$vars['wgULSAnonCanChangeLanguage'] = $wgULSAnonCanChangeLanguage;
+		$vars['wgULSEventLogging'] = $wgULSEventLogging;
 
 		// ULS is localized using jquery.i18n library. Unless it knows
 		// the localized locales, it can create 404 response. To avoid that,
