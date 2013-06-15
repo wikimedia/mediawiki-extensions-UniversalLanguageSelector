@@ -62,26 +62,24 @@
 			this.hide();
 		},
 
+		// Register all event listeners to the ULS language settings here.
 		listen: function () {
-			var langSettings = this;
-			// Register all event listeners to the ULS language settings here.
-			langSettings.$element.on( 'click', $.proxy( langSettings.click, langSettings ) );
-			langSettings.$window.find( '#languagesettings-close' )
-				.on( 'click', $.proxy( langSettings.close, langSettings ) );
-
+			this.$element.on( 'click', $.proxy( this.click, this ) );
+			this.$window.find( '#languagesettings-close' )
+				.on( 'click', $.proxy( this.close, this ) );
 		},
 
 		render: function () {
-			var modules, defaultModule, moduleName;
+			var moduleName,
+				defaultModule = this.options.defaultModule;
 
 			// Get the name of all registered modules and list them in left side menu.
-			modules = $.fn.languagesettings.modules;
-			defaultModule = this.options.defaultModule;
-			for ( moduleName in modules ) {
-				if ( modules.hasOwnProperty( moduleName ) ) {
+			for ( moduleName in $.fn.languagesettings.modules ) {
+				if ( $.fn.languagesettings.modules.hasOwnProperty( moduleName ) ) {
 					if ( !defaultModule ) {
 						defaultModule = moduleName;
 					}
+
 					// Call render function on the current setting module.
 					this.renderModule( moduleName, defaultModule === moduleName );
 				}
@@ -94,11 +92,11 @@
 		 * @param active boolean Make this module active and show by default
 		 */
 		renderModule: function ( moduleName, active ) {
-			var $settingsMenuItems, module, $settingsText, $settingsTitle, $settingsLink,
-				languageSettings = this;
+			var $settingsTitle, $settingsText, $settingsLink,
+				languageSettings = this,
+				module = new $.fn.languagesettings.modules[moduleName]( languageSettings ),
+				$settingsMenuItems = languageSettings.$window.find( '.settings-menu-items' );
 
-			$settingsMenuItems = languageSettings.$window.find( '.settings-menu-items' );
-			module = new $.fn.languagesettings.modules[moduleName]( languageSettings );
 			$settingsTitle = $( '<div>' )
 				.addClass( 'settings-title' )
 				.text( module.name );
@@ -109,19 +107,21 @@
 				.addClass( moduleName + '-settings-block menu-section' )
 				.prop( 'id', moduleName + '-settings-block' )
 				.data( 'module', module )
-				.append( $settingsTitle )
-				.append( $settingsText );
+				.append(
+					$settingsTitle,
+					$settingsText
+				);
 
 			$settingsMenuItems.append( $settingsLink );
 
 			$settingsLink.on( 'click', function () {
-				var module = $( this ).data( 'module' );
+				var $this = $( this );
 
-				module.render();
+				$this.data( 'module' ).render();
 				// re-position the window and scroll in to view if required.
 				languageSettings.position();
 				$settingsMenuItems.find( '.menu-section' ).removeClass( 'active' );
-				$( this ).addClass( 'active' );
+				$this.addClass( 'active' );
 			} );
 
 			if ( active ) {
@@ -150,9 +150,11 @@
 				this.render();
 				this.initialized = true;
 			}
+
 			this.$window.i18n();
 			this.shown = true;
 			this.$window.show();
+
 			// Every time we show this window, make sure the current
 			// settings panels is upto date. So just click on active menu item.
 			this.$window.find( '.input-settings-block.active' ).click();
@@ -189,6 +191,7 @@
 		 */
 		close: function () {
 			this.hide();
+
 			if ( this.options.onClose ) {
 				this.options.onClose();
 			}
@@ -212,6 +215,7 @@
 			if ( !data ) {
 				$this.data( 'languagesettings', ( data = new LanguageSettings( this, options ) ) );
 			}
+
 			if ( typeof option === 'string' ) {
 				data[option]();
 			}
@@ -229,5 +233,4 @@
 	};
 
 	$.fn.languagesettings.Constructor = LanguageSettings;
-
 }( jQuery ) );
