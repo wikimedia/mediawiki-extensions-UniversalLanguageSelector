@@ -25,10 +25,14 @@
     "ext-uls-webfonts-select-for-content-info": "Schr\u00ebft d\u00e9i fir den Inhalt benotzt g\u00ebtt",
     "ext-uls-back-to-display-settings": "Zr\u00e9ck op d'Astellunge vum Weisen",
     "ext-uls-input-settings-desc": "An enger anerer Sprooch schreiwen?",
+    "ext-uls-input-settings-ime-settings": "Input-Methode fir $1",
     "ext-uls-input-settings-ui-language": "Sprooch d\u00e9i fir d'Schreiwe benotzt g\u00ebtt",
+    "ext-uls-disable-input-method": "\u00c4r Tastatur benotzen",
     "ext-uls-input-settings-more-languages-tooltip": "M\u00e9i Sproochen",
     "jquery-ime-other-languages": "Aner Sproochen",
+    "jquery-ime-disable-text": "\u00c4r Tastatur benotzen",
     "jquery-ime-help": "H\u00ebllef",
+    "ext-uls-input-settings-noime": "Fir d\u00ebs Sprooch si keng Input-Methoden disponibel.",
     "ext-uls-input-disable-notification-undo": "R\u00e9ckg\u00e4ngeg maachen",
     "ext-uls-language-settings-preferences-link": "M\u00e9i Sproochastellungen"
 }
