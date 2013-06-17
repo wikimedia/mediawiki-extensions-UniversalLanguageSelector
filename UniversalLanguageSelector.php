@@ -136,7 +136,8 @@ $wgHooks['MakeGlobalVariablesScript'][] = 'UniversalLanguageSelectorHooks::addVa
 $wgAPIModules['languagesearch'] = 'ApiLanguageSearch';
 $wgAPIModules['ulslocalization'] = 'ApiULSLocalization';
 $wgHooks['UserGetLanguageObject'][] = 'UniversalLanguageSelectorHooks::getLanguage';
-$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'UniversalLanguageSelectorHooks::onSkinTemplateOutputPageBeforeExec';
+$wgHooks['SkinTemplateOutputPageBeforeExec'][] =
+	'UniversalLanguageSelectorHooks::onSkinTemplateOutputPageBeforeExec';
 
 $wgDefaultUserOptions['uls-preferences'] = '';
 $wgHooks['GetPreferences'][] = 'UniversalLanguageSelectorHooks::onGetPreferences';
