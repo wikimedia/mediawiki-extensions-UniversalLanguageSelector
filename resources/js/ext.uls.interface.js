@@ -284,6 +284,7 @@
 			$ulsSettingsTrigger.attr( 'title', $.i18n( 'ext-uls-select-language-settings-icon-tooltip' ) );
 
 			$ulsSettingsTrigger.languagesettings( {
+				defaultModule: 'display',
 				onVisible: function () {
 					var left,
 						ulsTriggerOffset = $ulsSettingsTrigger.offset();
