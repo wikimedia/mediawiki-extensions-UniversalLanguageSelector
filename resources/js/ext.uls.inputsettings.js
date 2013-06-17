@@ -161,8 +161,21 @@
 			this.$parent.position();
 		},
 
+		/*
+		 * For the given input method id, render the selection option.
+		 *
+		 * @param {string} imeId Input method id
+		 * @param {boolean} selected Whether the input is the currently selected one.
+		 * @return {Object} jQuery object corresponding to the input method item.
+		 */
 		renderInputmethodOption: function ( imeId, selected ) {
 			var $imeLabel, name, description, inputmethod, $inputMethodItem;
+
+			if ( imeId !== 'system' && !$.ime.sources[imeId] ) {
+				// imeId not known for jquery.ime.
+				// It is very rare, but still validate it.
+				return $();
+			}
 
 			$imeLabel = $( '<label>' ).attr( {
 				'for': imeId,
@@ -184,7 +197,8 @@
 			} else {
 				inputmethod = $.ime.inputmethods[imeId];
 				if ( !inputmethod ) {
-					// Delay in registration?
+					// The input method definition(rules) not loaded.
+					// We will show the name from $.ime.sources
 					name = $.ime.sources[imeId].name;
 					description = '';
 				} else {
