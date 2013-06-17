@@ -355,7 +355,7 @@
 					var $parent = $( '#language-settings-dialog' );
 					// Re-position the element according to the window that called it
 					if ( parseInt( $parent.css( 'left' ), 10 ) ) {
-						 this.$menu.css( 'left', $parent.css( 'left' ) );
+						this.$menu.css( 'left', $parent.css( 'left' ) );
 					}
 					if ( parseInt( $parent.css( 'top' ), 10 ) ) {
 						this.$menu.css( 'top', $parent.css( 'top' ) );

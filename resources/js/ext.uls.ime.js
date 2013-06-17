@@ -96,7 +96,6 @@
 				return this.registry.enable;
 			}
 		}
-
 	} );
 
 	// MediaWiki specific overrides for jquery.ime
