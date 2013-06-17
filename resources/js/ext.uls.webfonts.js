@@ -81,6 +81,9 @@
 	};
 
 	$( document ).ready( function () {
+		if ( !mw.uls.isBrowserSupported() ) {
+			return;
+		}
 		// MediaWiki specific overrides for jquery.webfonts
 		$.extend( $.fn.webfonts.defaults, {
 			repository: mediawikiFontRepository,
