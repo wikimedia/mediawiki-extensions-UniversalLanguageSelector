@@ -200,6 +200,9 @@
 	};
 
 	$( document ).ready( function () {
+		if ( !mw.uls.isBrowserSupported() ) {
+			return;
+		}
 
 		// Load the ime preferences
 		$.ime.preferences.load();

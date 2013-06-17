@@ -34,6 +34,7 @@ $wgResourceModules['ext.uls.ime'] = array(
 	'scripts' => 'resources/js/ext.uls.ime.js',
 	'dependencies' => array(
 		'jquery.ime',
+		'ext.uls.init',
 		'ext.uls.preferences',
 	),
 ) + $resourcePaths;
