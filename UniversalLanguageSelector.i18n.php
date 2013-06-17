@@ -77,6 +77,7 @@ $messages['ast'] = array(
 $messages['be-tarask'] = array(
 	'UniversalLanguageSelector' => 'Унівэрсальны пераключальнік моваў',
 	'uls-desc' => 'Дае карыстальніку некалькі спосабаў выбраць мову і зьмяніць моўныя налады',
+	'uls-plang-title-languages' => 'Мовы',
 );
 
 /** Bengali (বাংলা)
