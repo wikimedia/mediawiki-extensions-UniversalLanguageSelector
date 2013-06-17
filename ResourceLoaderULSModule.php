@@ -23,6 +23,9 @@
  * Resource loader module for providing MediaWiki language names.
  */
 class ResourceLoaderULSModule extends ResourceLoaderModule {
+	/**
+	 * @var Language
+	 */
 	protected $language;
 	protected $targets = array( 'desktop', 'mobile' );
 

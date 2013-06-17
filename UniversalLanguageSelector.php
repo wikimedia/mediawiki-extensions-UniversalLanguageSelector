@@ -146,6 +146,7 @@ $wgExtensionFunctions[] = function() {
 
 	if ( $wgULSGeoService === true ) {
 		$wgHooks['BeforePageDisplay'][] = function( &$out ) {
+			/** @var OutputPage $out */
 			$out->addScript( '<script src="//bits.wikimedia.org/geoiplookup"></script>' );
 			return true;
 		};

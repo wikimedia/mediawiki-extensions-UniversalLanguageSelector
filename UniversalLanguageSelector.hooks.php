@@ -21,6 +21,8 @@
 class UniversalLanguageSelectorHooks {
 	/**
 	 * Whether ULS user toolbar (language selection and settings) is enabled.
+	 *
+	 * @param User $user
 	 * @return bool
 	 */
 	public static function isToolbarEnabled( $user ) {
@@ -35,8 +37,8 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	/**
-	 * @param $out OutputPage
-	 * @param $skin Skin
+	 * @param OutputPage $out
+	 * @param Skin $skin
 	 * @return bool
 	 * Hook: BeforePageDisplay
 	 */
@@ -64,7 +66,7 @@ class UniversalLanguageSelectorHooks {
 	/**
 	 * @param $testModules array of javascript testing modules. 'qunit' is fed
 	 * using tests/qunit/QUnitTestResources.php.
-	 * @param $resourceLoader ResourceLoader
+	 * @param ResourceLoader $resourceLoader
 	 * @return bool
 	 * Hook: ResourceLoaderTestModules
 	 */
@@ -158,8 +160,9 @@ class UniversalLanguageSelectorHooks {
 
 	/**
 	 * Hook to UserGetLanguageObject
-	 * @param  $user User
-	 * @param  $code String
+	 * @param User $user
+	 * @param string $code
+	 * @param RequestContext $context Optional RequestContext
 	 * @return bool
 	 */
 	public static function getLanguage( $user, &$code, $context = null ) {
@@ -239,7 +242,7 @@ class UniversalLanguageSelectorHooks {
 
 	/**
 	 * Hook: ResourceLoaderGetConfigVars
-	 * @param $vars Array
+	 * @param array $vars
 	 * @return bool
 	 */
 	public static function addConfig( &$vars ) {
