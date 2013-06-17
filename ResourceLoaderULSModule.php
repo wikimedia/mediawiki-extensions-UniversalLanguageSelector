@@ -36,14 +36,9 @@ class ResourceLoaderULSModule extends ResourceLoaderModule {
 	 */
 	protected function getData() {
 		$vars = array();
-		if ( method_exists( 'Language', 'fetchLanguageNames' ) ) {
-			// since 1.20
-			$vars['wgULSLanguages'] = Language::fetchLanguageNames(
-				$this->language->getCode(), 'mwfile'
-			);
-		} else {
-			$vars['wgULSLanguages'] = Language::getLanguageNames( false );
-		}
+		$vars['wgULSLanguages'] = Language::fetchLanguageNames(
+			$this->language->getCode(), 'mwfile'
+		);
 
 		return $vars;
 	}

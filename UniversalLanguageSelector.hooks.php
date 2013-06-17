@@ -101,7 +101,7 @@ class UniversalLanguageSelectorHooks {
 		$lang = $context->getLanguage();
 		$personal_urls = array(
 			'uls' => array(
-				'text' => $lang->getLanguageName( $lang->getCode() ),
+				'text' => $lang->fetchLanguageName( $lang->getCode() ),
 				'href' => '#',
 				'class' => 'uls-trigger',
 				'active' => true
@@ -113,11 +113,7 @@ class UniversalLanguageSelectorHooks {
 
 	protected static function isSupportedLanguage( $language ) {
 		wfProfileIn( __METHOD__ );
-		if ( method_exists( 'Language', 'fetchLanguageNames' ) ) {
-			$supported = Language::fetchLanguageNames( null, 'mwfile' ); // since 1.20
-		} else {
-			$supported = Language::getLanguageNames( false );
-		}
+		$supported = Language::fetchLanguageNames( null, 'mwfile' ); // since 1.20
 		wfProfileOut( __METHOD__ );
 
 		return isset( $supported[$language] );
@@ -129,11 +125,8 @@ class UniversalLanguageSelectorHooks {
 	 */
 	protected static function getDefaultLanguage( array $preferred ) {
 		wfProfileIn( __METHOD__ );
-		if ( method_exists( 'Language', 'fetchLanguageNames' ) ) {
-			$supported = Language::fetchLanguageNames( null, 'mwfile' ); // since 1.20
-		} else {
-			$supported = Language::getLanguageNames( false );
-		}
+		$supported = Language::fetchLanguageNames( null, 'mwfile' ); // since 1.20
+
 		// look for a language that is acceptable to the client
 		// and known to the wiki.
 		foreach ( $preferred as $code => $weight ) {
