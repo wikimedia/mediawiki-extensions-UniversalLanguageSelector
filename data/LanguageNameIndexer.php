@@ -50,7 +50,7 @@ class LanguageNameIndexer extends Maintenance {
 		}
 
 		foreach ( $all as $code => $names ) {
-			foreach ( $names as $index => $name ) {
+			foreach ( $names as $name ) {
 				$bucket = LanguageNameSearch::getIndex( $name );
 				$buckets[$bucket][$name] = $code;
 			}
