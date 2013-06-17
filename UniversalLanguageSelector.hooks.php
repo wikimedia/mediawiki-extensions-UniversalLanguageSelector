@@ -267,12 +267,14 @@ class UniversalLanguageSelectorHooks {
 		} else {
 			$mwULSL10nFiles = glob( __DIR__ . '/i18n/*.json' );
 
+			$mwULSL10nLocales = array();
 			foreach ( $mwULSL10nFiles as $localeFile ) {
 				$mwULSL10nLocales[] = basename( $localeFile, '.json' );
 			}
 
 			$mwULSL10nFiles = glob( __DIR__ . '/lib/jquery.uls/i18n/*.json' );
 
+			$jqueryULSL10nLocales = array();
 			foreach ( $mwULSL10nFiles as $localeFile ) {
 				$jqueryULSL10nLocales[] = basename( $localeFile, '.json' );
 			}
