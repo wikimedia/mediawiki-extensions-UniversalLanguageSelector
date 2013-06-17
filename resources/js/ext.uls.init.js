@@ -113,12 +113,7 @@
 	 */
 	mw.uls.isBrowserSupported = function () {
 		// Blacklist Grade B browsers IE 6, 7 and IE60-IE79
-		var ua = navigator.userAgent;
-		if ( /MSIE [67]/i.test( ua ) ) {
-			return false;
-		}
-
-		return true;
+		return !/MSIE [67]/i.test( navigator.userAgent );
 	};
 
 	/**
