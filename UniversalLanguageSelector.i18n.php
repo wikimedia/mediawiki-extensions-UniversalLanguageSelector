@@ -482,11 +482,13 @@ $messages['tl'] = array(
 );
 
 /** Ukrainian (українська)
+ * @author RLuts
  * @author Steve.rusyn
  */
 $messages['uk'] = array(
 	'UniversalLanguageSelector' => 'Універсальний вибір мови',
 	'uls-desc' => 'Надає користувачу декілька способів вибрати мову та налаштувати мовні параметри.',
+	'uls-plang-title-languages' => 'Мови',
 );
 
 /** Urdu (اردو)

@@ -2,7 +2,8 @@
     "@metadata": {
         "authors": [
             "Nedergard",
-            "Nike"
+            "Nike",
+            "Olli"
         ]
     },
     "ext-uls-display-settings-title": "N\u00e4ytt\u00f6asetukset",
@@ -37,8 +38,8 @@
     "jquery-ime-other-languages": "Muut kielet",
     "jquery-ime-disable-text": "K\u00e4yt\u00e4 j\u00e4rjestelm\u00e4n n\u00e4pp\u00e4imist\u00f6\u00e4",
     "jquery-ime-help": "Ohje",
-    "ext-uls-input-disable": "\u00c4l\u00e4 k\u00e4yt\u00e4 sy\u00f6tt\u00f6tapoja",
-    "ext-uls-input-enable": "K\u00e4yt\u00e4 sy\u00f6tt\u00f6tapoja",
+    "ext-uls-input-disable": "Poista sy\u00f6tt\u00f6tavat k\u00e4yt\u00f6st\u00e4",
+    "ext-uls-input-enable": "Ota sy\u00f6tt\u00f6tavat k\u00e4ytt\u00f6\u00f6n",
     "ext-uls-input-disable-info": "Sy\u00f6tt\u00f6tavat eiv\u00e4t ole k\u00e4yt\u00f6ss\u00e4.",
     "ext-uls-input-settings-noime": "T\u00e4lle kielelle ei ole sy\u00f6tt\u00f6tapoja.",
     "ext-uls-input-disable-notification": "Sy\u00f6tt\u00f6tavat ovat poistettu k\u00e4yt\u00f6st\u00e4.",
