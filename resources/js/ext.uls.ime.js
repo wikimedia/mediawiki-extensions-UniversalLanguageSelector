@@ -95,7 +95,11 @@
 			} else {
 				return this.registry.enable;
 			}
-		}
+		},
+
+		getDefaultLanguage: function () {
+			return mw.config.get( 'wgContentLanguage' );
+		},
 	} );
 
 	// MediaWiki specific overrides for jquery.ime
