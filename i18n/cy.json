@@ -1,7 +1,8 @@
 {
     "@metadata": {
         "authors": [
-            "Lloffiwr"
+            "Lloffiwr",
+            "Robin Owain"
         ]
     },
     "ext-uls-display-settings-title": "Gosodiadau'r golwg",
@@ -42,7 +43,7 @@
     "ext-uls-input-settings-noime": "Nid oes moddau arbennig o fewnbynnu'r iaith hon ar gael.",
     "ext-uls-input-disable-notification": "Analluogwyd yr offer mewnbynnu",
     "ext-uls-input-disable-notification-undo": "Dadwneud",
-    "ext-uls-input-disable-notification-info-personal": "Gallwch alluogi'r offer mewnbynnu unrhywbryd, drwy'r gosodiadau iaith.",
-    "ext-uls-input-disable-notification-info-interlanguage": "Gallwch alluogi'r offer mewnbynnu unrhywbryd drwy'r gosodiadau iaith, wrth ymyl rhestr yr ieithoedd.",
+    "ext-uls-input-disable-notification-info-personal": "Gallwch alluogi'r offer mewnbynnu unrhyw bryd, drwy'r gosodiadau iaith.",
+    "ext-uls-input-disable-notification-info-interlanguage": "Gallwch alluogi'r offer mewnbynnu unrhyw bryd drwy'r gosodiadau iaith, wrth ymyl rhestr yr ieithoedd.",
     "ext-uls-language-settings-preferences-link": "Rhagor o osodiadau iaith"
 }

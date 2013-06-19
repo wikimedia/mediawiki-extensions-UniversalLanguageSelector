@@ -194,10 +194,12 @@ $messages['eu'] = array(
 /** Persian (فارسی)
  * @author Calak
  * @author Mjbmr
+ * @author Reza1615
  */
 $messages['fa'] = array(
 	'UniversalLanguageSelector' => 'انتخاب زبان جهانی',
 	'uls-desc' => 'به کاربر راه‌های مختلفی برای انتخاب زبان و تنظیم تنظیمات زبان  می‌دهد',
+	'uls-plang-title-languages' => 'زبان‌ها',
 );
 
 /** Finnish (suomi)
