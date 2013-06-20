@@ -63,4 +63,26 @@
 		prefs.set( prefName, undefined );
 		prefs.save();
 	} );
+
+	QUnit.test( '-- Common languages', 1, function ( assert ) {
+		var i, foundTagalog, languagesInPH;
+
+		// Bug 49847
+		foundTagalog = false;
+		languagesInPH = mw.uls.getFrequentLanguageList( 'PH' );
+
+		for ( i = 0; i < languagesInPH.length; i++ ) {
+			if ( $.uls.data.isRedirect( languagesInPH[i] ) === 'tl' ||
+				languagesInPH[i] === 'tl'
+			) {
+				foundTagalog = true;
+
+				break;
+			}
+		}
+		assert.ok(
+			foundTagalog,
+			'Tagalog is one of the languages presented to users in the Philippines.'
+		);
+	} );
 }( jQuery, mediaWiki ) );

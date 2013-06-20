@@ -75,9 +75,20 @@
 		return mw.config.get( 'wgULSAcceptLanguageList' );
 	};
 
-	mw.uls.getFrequentLanguageList = function () {
-		var countryCode,
-			unique = [],
+	/**
+	 * Get a list of codes for languages to show in
+	 * the "Common languages" section of the ULS.
+	 * The list consists of the user's current selected language,
+	 * the wiki's content language, the browser' UI language
+	 * and Accept-Language, user's previous selected languages
+	 * and finally, the languages of countryCode taken from the CLDR,
+	 * taken by default from the user's geolocation.
+	 *
+	 * @param {String} [countryCode] Uppercase country code.
+	 * @return {Array} List of language codes without duplicates.
+	 */
+	mw.uls.getFrequentLanguageList = function ( countryCode ) {
+		var unique = [],
 			list = [
 				mw.config.get( 'wgUserLanguage' ),
 				mw.config.get( 'wgContentLanguage' ),
@@ -86,7 +97,7 @@
 				.concat( mw.uls.getPreviousLanguages() )
 				.concat( mw.uls.getAcceptLanguageList() );
 
-		countryCode = mw.uls.getCountryCode();
+		countryCode = countryCode || mw.uls.getCountryCode();
 
 		if ( countryCode ) {
 			list = list.concat( $.uls.data.getLanguagesInTerritory( countryCode ) );
@@ -100,7 +111,24 @@
 
 		// Filter out unknown and unsupported languages
 		unique = $.grep( unique, function ( langCode ) {
-			return $.fn.uls.defaults.languages[langCode];
+			var target;
+
+			// If the language is already known and defined, just use it
+			if ( $.fn.uls.defaults.languages[langCode] !== undefined ) {
+				return true;
+			}
+
+			// If the language is not immediately known,
+			// try to check is as a redirect
+			target = $.uls.data.isRedirect( langCode );
+
+			if ( target ) {
+				// Check that the redirect's target is known
+				// to this instance of ULS
+				return $.fn.uls.defaults.languages[target] !== undefined;
+			}
+
+			return false;
 		} );
 
 		return unique;
