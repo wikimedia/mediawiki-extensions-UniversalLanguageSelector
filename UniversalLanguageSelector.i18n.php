@@ -354,6 +354,13 @@ $messages['ml'] = array(
 	'uls-plang-title-languages' => 'ഭാഷകൾ',
 );
 
+/** Marathi (मराठी)
+ * @author Mahitgar
+ */
+$messages['mr'] = array(
+	'uls-desc' => 'भाषा निवडण्याचे आणि सेटींग ॲड्जस्ट करण्याचे अनेक मार्ग उपलब्ध करते',
+);
+
 /** Malay (Bahasa Melayu)
  * @author Anakmalaysia
  */
