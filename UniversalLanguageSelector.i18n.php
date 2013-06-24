@@ -293,11 +293,13 @@ $messages['ja'] = array(
 );
 
 /** Georgian (ქართული)
+ * @author David1010
  * @author გიორგიმელა
  */
 $messages['ka'] = array(
 	'UniversalLanguageSelector' => 'ენების უნივერსალური გადამრთველი',
 	'uls-desc' => 'აძლევს მომხმარებელს ენის არჩევისა და კონფიგურაციის საშუალებას',
+	'uls-plang-title-languages' => 'ენები',
 );
 
 /** Korean (한국어)

@@ -39,5 +39,7 @@
     "ext-uls-input-disable": "Wy\u0142\u0105cz specjalne metody wprowadzania",
     "ext-uls-input-enable": "W\u0142\u0105cz specjalne metody wprowadzania",
     "ext-uls-input-disable-info": "Specjalne metody wprowadzania s\u0105 wy\u0142\u0105czone.",
-    "ext-uls-input-settings-noime": "Dla tego j\u0119zyka nie ma specjalnych metod wprowadzania tekstu."
+    "ext-uls-input-settings-noime": "Dla tego j\u0119zyka nie ma specjalnych metod wprowadzania tekstu.",
+    "ext-uls-input-disable-notification-undo": "Cofnij",
+    "ext-uls-language-settings-preferences-link": "Wi\u0119cej ustawie\u0144 j\u0119zyka"
 }
