@@ -70,20 +70,25 @@
 		},
 
 		render: function () {
-			var moduleName,
+			var modules,
+				languageSettings = this,
 				defaultModule = this.options.defaultModule;
 
 			// Get the name of all registered modules and list them in left side menu.
-			for ( moduleName in $.fn.languagesettings.modules ) {
+			// Sort the modules based on id
+			modules = $.map( $.fn.languagesettings.modules, function( element, index ) {
+				return index;
+			} ).sort();
+			$.each( modules, function( index, moduleName ) {
 				if ( $.fn.languagesettings.modules.hasOwnProperty( moduleName ) ) {
 					if ( !defaultModule ) {
 						defaultModule = moduleName;
 					}
 
 					// Call render function on the current setting module.
-					this.renderModule( moduleName, defaultModule === moduleName );
+					languageSettings.renderModule( moduleName, defaultModule === moduleName );
 				}
-			}
+			} );
 		},
 
 		/**
