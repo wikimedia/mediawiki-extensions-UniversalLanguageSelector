@@ -82,11 +82,13 @@
 		disable: function () {
 			this.registry.isDirty = true;
 			this.registry.enable = false;
+			mw.uls.logEvent( { action: 'ime-disable' } );
 		},
 
 		enable: function () {
 			this.registry.isDirty = true;
 			this.registry.enable = true;
+			mw.uls.logEvent( { action: 'ime-enable' } );
 		},
 
 		isEnabled: function () {
