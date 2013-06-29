@@ -1,0 +1,24 @@
+== UniversalLanguageSelector 2013.06 ==
+Released at 2013-06-29.
+
+== Highlights ==
+The feature of showing the ULS trigger as a cog icon in the sidebar
+was completed. Many other bugs were fixed.
+Internet Explorer 6 and 7 (and newer if they are in compatibility mode) are explicitly not supported.
+
+== Notable feature changes ==
+* ULS is completely disabled in browsers that don't run JavaScript.
+* Several bugs in the font and language selection panels were fixed.
+* The functionality of the Cancel and Apply buttons in the keyboard selection panel were clarified: Apply saves the settings and closes the panel and Cancel undoes the changes.
+* The wiki content language is now the default language for input methods
+* Bugs in several input methods were fixed.
+
+== Font changes ==
+* Added: UnifrakturMaguntia, Linux Libertine, Charis SIL, Doulos SIL
+* Lohit Tamil is updated to 2.5.3
+* System font is now the default font for Tamil
+
+== Notable design changes ==
+* Button style is updated according to the MediaWiki Agora style.
+* Smooth scrolling is used on every change in display.
+* A floating tooltip ("Tipsy") in used on the "Language settings" trigger
