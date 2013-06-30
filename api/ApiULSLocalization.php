@@ -34,22 +34,25 @@ class ApiULSLocalization extends ApiBase {
 			$this->dieUsage( 'Invalid language', 'invalidlanguage' );
 		}
 
-		if ( $namespace === 'uls' ) {
-			$filename = "lib/jquery.uls/i18n/$language.json";
-		} else {
-			$filename = "i18n/$language.json";
+		$contents = array();
+		// jQuery.uls localization
+		if ( !$namespace || $namespace === 'uls' ) {
+			$filename = __DIR__ . "/../lib/jquery.uls/i18n/$language.json";
+			if ( file_exists( $filename ) ) {
+				$contents += json_decode( file_get_contents( $filename ), true );
+			}
 		}
+		// mediaWiki.uls localization
+		if ( !$namespace || $namespace === 'ext-uls' ) {
+			$filename = __DIR__ . "/../i18n/$language.json";
+			if ( file_exists( $filename ) ) {
+				$contents += json_decode( file_get_contents( $filename ), true );
+			}
+		}
+		// Output the file's contents raw
+		$this->getResult()->addValue( null, 'text', json_encode( $contents  ) );
+		$this->getResult()->addValue( null, 'mime', 'application/json' );
 
-		$localPath = __DIR__ . "/../$filename";
-		if ( !file_exists( $localPath ) ) {
-			$this->getResult()->addValue( null, 'text', '{}' );
-			$this->getResult()->addValue( null, 'mime', 'application/json' );
-		} else {
-			$contents = file_get_contents( $localPath );
-			// Output the file's contents raw
-			$this->getResult()->addValue( null, 'text', $contents );
-			$this->getResult()->addValue( null, 'mime', 'application/json' );
-		}
 	}
 
 	public function getCustomPrinter() {
@@ -68,7 +71,6 @@ class ApiULSLocalization extends ApiBase {
 			'namespace' => array(
 				ApiBase::PARAM_TYPE => 'string',
 				ApiBase::PARAM_REQUIRED => false,
-				ApiBase::PARAM_DFLT => 'ext-uls',
 			),
 		);
 	}
@@ -76,7 +78,7 @@ class ApiULSLocalization extends ApiBase {
 	public function getParamDescription() {
 		return array(
 			'language' => 'Language string',
-			'namespace' => 'Namespace string.',
+			'namespace' => 'Namespace string. If not given loads messages for all namespaces known',
 		);
 	}
 
