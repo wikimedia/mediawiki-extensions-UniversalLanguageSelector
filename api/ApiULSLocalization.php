@@ -29,28 +29,23 @@ class ApiULSLocalization extends ApiBase {
 
 		$params = $this->extractRequestParams();
 		$language = $params['language'];
-		$namespace = $params['namespace'];
 		if ( !Language::isValidCode( $language ) )  {
 			$this->dieUsage( 'Invalid language', 'invalidlanguage' );
 		}
 
 		$contents = array();
 		// jQuery.uls localization
-		if ( !$namespace || $namespace === 'uls' ) {
-			$filename = __DIR__ . "/../lib/jquery.uls/i18n/$language.json";
-			if ( file_exists( $filename ) ) {
-				$contents += json_decode( file_get_contents( $filename ), true );
-			}
+		$filename = __DIR__ . "/../lib/jquery.uls/i18n/$language.json";
+		if ( file_exists( $filename ) ) {
+			$contents += json_decode( file_get_contents( $filename ), true );
 		}
 		// mediaWiki.uls localization
-		if ( !$namespace || $namespace === 'ext-uls' ) {
-			$filename = __DIR__ . "/../i18n/$language.json";
-			if ( file_exists( $filename ) ) {
-				$contents += json_decode( file_get_contents( $filename ), true );
-			}
+		$filename = __DIR__ . "/../i18n/$language.json";
+		if ( file_exists( $filename ) ) {
+			$contents += json_decode( file_get_contents( $filename ), true );
 		}
 		// Output the file's contents raw
-		$this->getResult()->addValue( null, 'text', json_encode( $contents  ) );
+		$this->getResult()->addValue( null, 'text', json_encode( $contents ) );
 		$this->getResult()->addValue( null, 'mime', 'application/json' );
 
 	}
@@ -68,17 +63,12 @@ class ApiULSLocalization extends ApiBase {
 				ApiBase::PARAM_REQUIRED => true,
 				ApiBase::PARAM_TYPE => 'string',
 			),
-			'namespace' => array(
-				ApiBase::PARAM_TYPE => 'string',
-				ApiBase::PARAM_REQUIRED => false,
-			),
 		);
 	}
 
 	public function getParamDescription() {
 		return array(
 			'language' => 'Language string',
-			'namespace' => 'Namespace string. If not given loads messages for all namespaces known',
 		);
 	}
 
@@ -90,7 +80,6 @@ class ApiULSLocalization extends ApiBase {
 		return array(
 			'api.php?action=ulslocalization&language=ta',
 			'api.php?action=ulslocalization&language=hi',
-			'api.php?action=ulslocalization&language=or&namespace=ext-uls',
 		);
 	}
 
