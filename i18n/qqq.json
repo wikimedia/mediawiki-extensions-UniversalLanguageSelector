@@ -17,7 +17,7 @@
     "ext-uls-undo-language-tooltip-text": "Text for the tooltip appearing when language is changed. Parameters:\n* $1 - the previous language acronym",
     "ext-uls-language-settings-title": "Title text for language settings screen.\n{{Identical|Language settings}}",
     "ext-uls-language-settings-apply": "Label for apply settings button in language settings screen",
-    "ext-uls-language-settings-cancel": "Label for cancel button in language settings screen",
+    "ext-uls-language-settings-cancel": "Label for cancel button in language settings screen.\n{{Identical|Cancel}}",
     "ext-uls-language-buttons-help": "Help text that appears above the language selection buttons in the Display settings panel.",
     "ext-uls-display-settings-font-settings": "Subsection title for font settings",
     "ext-uls-display-settings-ui-language": "Sub section title for selecting UI language.\n{{Identical|Display language}}",

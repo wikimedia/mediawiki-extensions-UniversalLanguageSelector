@@ -2,6 +2,7 @@
     "@metadata": {
         "authors": [
             "Matma Rex",
+            "Rezonansowy",
             "WTM"
         ]
     },
@@ -19,6 +20,7 @@
     "ext-uls-display-settings-font-settings": "Ustawienia czcionek",
     "ext-uls-display-settings-ui-language": "J\u0119zyk wy\u015bwietlania",
     "ext-uls-display-settings-anon-label": "J\u0119zyk wy\u015bwietlania:",
+    "ext-uls-display-settings-anon-same-as-content": "Polski (tak samo, jak w tre\u015bci)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Zaloguj si\u0119]] aby wybra\u0107 inny j\u0119zyk interfejsu.",
     "ext-uls-webfonts-select-for": "Czcionka dla j\u0119zyka: $1",
     "ext-uls-webfonts-select-for-ui-info": "Czcionka interfejsu u\u017cytkownika",
@@ -34,12 +36,13 @@
     "ext-uls-disable-input-method": "Brak",
     "ext-uls-input-settings-more-languages-tooltip": "Wi\u0119cej j\u0119zyk\u00f3w",
     "jquery-ime-other-languages": "Inne j\u0119zyki",
-    "jquery-ime-disable-text": "Wy\u0142\u0105cz specjalne metody wprowadzania",
+    "jquery-ime-disable-text": "U\u017cyj swojej klawiatury",
     "jquery-ime-help": "Pomoc",
-    "ext-uls-input-disable": "Wy\u0142\u0105cz specjalne metody wprowadzania",
-    "ext-uls-input-enable": "W\u0142\u0105cz specjalne metody wprowadzania",
-    "ext-uls-input-disable-info": "Specjalne metody wprowadzania s\u0105 wy\u0142\u0105czone.",
+    "ext-uls-input-disable": "Wy\u0142\u0105cz narz\u0119dzia wej\u015bcia",
+    "ext-uls-input-enable": "W\u0142\u0105cz narz\u0119dzia wej\u015bcia",
+    "ext-uls-input-disable-info": "Narz\u0119dzia wej\u015bcia s\u0105 wy\u0142\u0105czone.",
     "ext-uls-input-settings-noime": "Dla tego j\u0119zyka nie ma specjalnych metod wprowadzania tekstu.",
+    "ext-uls-input-disable-notification": "Narz\u0119dzia wej\u015bcia zosta\u0142y wy\u0142\u0105czone",
     "ext-uls-input-disable-notification-undo": "Cofnij",
     "ext-uls-language-settings-preferences-link": "Wi\u0119cej ustawie\u0144 j\u0119zyka"
 }

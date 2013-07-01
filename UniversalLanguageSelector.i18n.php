@@ -329,6 +329,15 @@ $messages['lb'] = array(
 	'uls-plang-title-languages' => 'Sproochen',
 );
 
+/** Lithuanian (lietuvių)
+ * @author Mantak111
+ */
+$messages['lt'] = array(
+	'UniversalLanguageSelector' => 'Universalus kalbų rinkiklis',
+	'uls-desc' => 'Suteikia vartotojui keliais būdais, pasirinkti kalbą ir sureguliuoti kalbos parametrus.',
+	'uls-plang-title-languages' => 'Kalbos',
+);
+
 /** Minangkabau (Baso Minangkabau)
  * @author Iwan Novirion
  */
@@ -414,6 +423,14 @@ $messages['pms'] = array(
 	'uls-desc' => "A dà a l'utent vàire manere ëd selessioné na lenga e ëd sistemé j'ampostassion ëd lenga",
 );
 
+/** Pashto (پښتو)
+ * @author Ahmed-Najib-Biabani-Ibrahimkhel
+ */
+$messages['ps'] = array(
+	'UniversalLanguageSelector' => 'نړېوال ژبټاکونکی',
+	'uls-plang-title-languages' => 'ژبې',
+);
+
 /** Brazilian Portuguese (português do Brasil)
  * @author Jaideraf
  */
@@ -456,6 +473,7 @@ $messages['ru'] = array(
  */
 $messages['si'] = array(
 	'UniversalLanguageSelector' => 'විශ්ව භාෂා වරකය',
+	'uls-plang-title-languages' => 'භාෂාවන්',
 );
 
 /** Serbian (Cyrillic script) (српски (ћирилица)‎)
@@ -517,6 +535,15 @@ $messages['vi'] = array(
 	'UniversalLanguageSelector' => 'Bộ lựa chọn Ngôn ngữ Phổ quát',
 	'uls-desc' => 'Trình bày giao diện để lựa chọn ngôn ngữ và điều chỉnh các tùy chọn ngôn ngữ',
 	'uls-plang-title-languages' => 'Ngôn ngữ',
+);
+
+/** Yiddish (ייִדיש)
+ * @author פוילישער
+ */
+$messages['yi'] = array(
+	'UniversalLanguageSelector' => 'אוניווערסאלע שפראך־אויסוואל',
+	'uls-desc' => 'גיט דעם באניצער עטלעכע וועגן אויסצוקלויבן א שפראך און אנצופאסן שפראך־איינשטעלונגען',
+	'uls-plang-title-languages' => 'שפּראַכן',
 );
 
 /** Simplified Chinese (中文（简体）‎)
