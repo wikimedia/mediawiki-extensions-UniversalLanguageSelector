@@ -104,6 +104,7 @@
 			this.prepareLanguages();
 			this.prepareToggleButton();
 			this.$template.i18n();
+			$( 'body' ).data( 'webfonts' ).refresh();
 			this.listen();
 		},
 

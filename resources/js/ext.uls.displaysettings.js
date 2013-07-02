@@ -117,6 +117,7 @@
 			this.prepareUIFonts();
 			this.prepareContentFonts();
 			this.i18n();
+			this.$webfonts.refresh();
 			this.listen();
 		},
 
