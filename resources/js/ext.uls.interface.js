@@ -113,6 +113,44 @@
 	}
 
 	/**
+	 * Helper function to make the uls triggers accessible with the keyboard.
+	 * @param {jQuery} $target One or more jQuery elements.
+	 * @since 2013.07
+	 */
+	function addAccessibilityFeatures( $target ) {
+		// tabindex=0 makes it appear when tabbing targets.
+		// See also http://www.w3.org/TR/wai-aria/roles#button
+		$target.attr( {
+			tabIndex: 0,
+			role: 'button',
+			'aria-haspopup': true
+		} );
+		// TODO:
+		// * aria-pressed true/false when popup is open
+		// * aria-controls to reference to the popup
+
+		// Remove outline when clicking
+		$target.click( function () {
+			$( this ).css( 'outline', 'none' );
+		} );
+		// Allow outline to appear again if keyboard activated
+		$target.blur( function () {
+			$( this ).css( 'outline', '' );
+		} );
+
+		// Make Enter act the same as clicking. This has the unfortunate side
+		// effect of removing the outline.
+		$target.keydown( function ( event ) {
+			// Enter
+			if ( event.keyCode === 13 ) {
+				$( this ).click();
+				event.preventDefault();
+				event.stopPropagation();
+			}
+		} );
+	}
+
+	/**
 	 * The tooltip to be shown when language changed using ULS
 	 * It also allows to undo the language selection.
 	 */
@@ -226,6 +264,7 @@
 	$( document ).ready( function () {
 		mw.uls.init( function () {
 			var $ulsSettingsTrigger,
+				$triggers,
 				$pLang,
 				ulsOptions,
 				$ulsTrigger = $( '.uls-trigger' ),
@@ -319,6 +358,10 @@
 			} else {
 				$ulsTrigger.uls( ulsOptions );
 			}
+
+			// At this point we don't care which kind of trigger it is
+			$triggers = $( '.uls-settings-trigger, .uls-trigger' );
+			addAccessibilityFeatures( $triggers );
 
 			// Bind language settings to preferences page link
 			$( '#uls-preferences-link' )
