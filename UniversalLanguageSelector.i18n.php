@@ -55,6 +55,15 @@ $messages['ar'] = array(
 	'uls-plang-title-languages' => 'لغات',
 );
 
+/** Algerian Spoken Arabic (جزائري)
+ * @author Bachounda
+ */
+$messages['arq'] = array(
+	'UniversalLanguageSelector' => 'محدد اللوغات الشامل',
+	'uls-desc' => 'يجيب للمستخدم بزاف الطرق لتخيار لوغه، و تستاف باراميترات اللوغه',
+	'uls-plang-title-languages' => 'لوغات',
+);
+
 /** Assamese (অসমীয়া)
  * @author Bishnu Saikia
  */

@@ -2,7 +2,8 @@
     "@metadata": {
         "authors": [
             "Xiaomingyan",
-            "Yfdyh000"
+            "Yfdyh000",
+            "Zhangjintao"
         ]
     },
     "ext-uls-display-settings-title": "\u663e\u793a\u8bbe\u7f6e",
@@ -32,13 +33,18 @@
     "ext-uls-input-settings-ime-settings": "$1\u8f93\u5165\u6cd5",
     "ext-uls-input-settings-ui-language": "\u8f93\u5165\u8bed\u8a00",
     "ext-uls-back-to-input-settings": "\u8fd4\u56de\u8f93\u5165\u8bbe\u7f6e",
-    "ext-uls-disable-input-method": "\u505c\u7528\u8f93\u5165\u6cd5",
+    "ext-uls-disable-input-method": "\u4f7f\u7528\u672c\u673a\u952e\u76d8",
     "ext-uls-input-settings-more-languages-tooltip": "\u66f4\u591a\u8bed\u8a00",
     "jquery-ime-other-languages": "\u5176\u4ed6\u8bed\u8a00",
-    "jquery-ime-disable-text": "\u505c\u7528\u8f93\u5165\u6cd5",
+    "jquery-ime-disable-text": "\u4f7f\u7528\u672c\u673a\u952e\u76d8",
     "jquery-ime-help": "\u5e2e\u52a9",
-    "ext-uls-input-disable": "\u505c\u7528\u8f93\u5165\u6cd5",
-    "ext-uls-input-enable": "\u542f\u7528\u8f93\u5165\u6cd5",
-    "ext-uls-input-disable-info": "\u8f93\u5165\u6cd5\u5df2\u505c\u7528\u3002",
-    "ext-uls-input-settings-noime": "\u6ca1\u6709\u8be5\u8bed\u8a00\u7684\u8f93\u5165\u6cd5\u3002"
+    "ext-uls-input-disable": "\u505c\u7528\u8f93\u5165\u5de5\u5177",
+    "ext-uls-input-enable": "\u542f\u7528\u8f93\u5165\u5de5\u5177",
+    "ext-uls-input-disable-info": "\u8f93\u5165\u5de5\u5177\u5df2\u505c\u7528\u3002",
+    "ext-uls-input-settings-noime": "\u6ca1\u6709\u8be5\u8bed\u8a00\u7684\u8f93\u5165\u6cd5\u3002",
+    "ext-uls-input-disable-notification": "\u8f93\u5165\u5de5\u5177\u88ab\u7981\u7528",
+    "ext-uls-input-disable-notification-undo": "\u64a4\u9500",
+    "ext-uls-input-disable-notification-info-personal": "\u4f60\u53ef\u4ee5\u5728\u4efb\u4f55\u65f6\u5019\u4ece\u8bed\u8a00\u8bbe\u5b9a\u4e2d\u542f\u7528\u8f93\u5165\u5de5\u5177",
+    "ext-uls-input-disable-notification-info-interlanguage": "\u4f60\u53ef\u4ee5\u5728\u4efb\u4f55\u65f6\u5019\u4ece\u8bed\u8a00\u6e05\u5355\u65c1\u8fb9\u7684\u8bed\u8a00\u8bbe\u5b9a\u4e2d\u542f\u7528\u8f93\u5165\u5de5\u5177\u3002",
+    "ext-uls-language-settings-preferences-link": "\u66f4\u591a\u8bed\u8a00\u8bbe\u7f6e"
 }
