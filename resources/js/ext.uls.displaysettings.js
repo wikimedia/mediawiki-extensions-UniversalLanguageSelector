@@ -204,8 +204,7 @@
 					// set the language for the settings panel so that webfonts
 					// are correctly applied.
 					displaySettings.$template.attr( 'lang', displaySettings.uiLanguage );
-					$.i18n().locale = displaySettings.uiLanguage;
-					displaySettings.i18n();
+					displaySettings.preview( displaySettings.uiLanguage );
 				};
 			}
 
@@ -300,8 +299,7 @@
 					// set the language for the settings panel so that webfonts
 					// are correctly applied.
 					displaySettings.$template.attr( 'lang', langCode );
-					$.i18n().locale = langCode;
-					displaySettings.i18n();
+					displaySettings.preview( langCode );
 				},
 				quickList: function () {
 					return mw.uls.getFrequentLanguageList();
@@ -310,6 +308,20 @@
 
 			$moreLanguagesButton.on( 'click', function () {
 				displaySettings.$parent.hide();
+			} );
+		},
+
+		/**
+		 * Preview the settings panel in the given language
+		 * @param {String} language Language code
+		 */
+		preview: function ( language ) {
+			var displaySettings = this,
+				i18n = $.i18n();
+
+			i18n.locale = language;
+			i18n.messageStore.load( i18n.locale ).done( function () {
+				displaySettings.i18n();
 			} );
 		},
 
