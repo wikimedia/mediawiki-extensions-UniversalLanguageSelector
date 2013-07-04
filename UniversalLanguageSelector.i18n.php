@@ -121,6 +121,7 @@ $messages['ca'] = array(
 $messages['cs'] = array(
 	'UniversalLanguageSelector' => 'Univerzální výběr jazyka',
 	'uls-desc' => 'Nabízí uživateli několik způsobů volby jazyka a úpravy jazykových nastavení',
+	'uls-plang-title-languages' => 'Jazyky',
 );
 
 /** Welsh (Cymraeg)
