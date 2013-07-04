@@ -286,23 +286,28 @@
 			$ulsSettingsTrigger.languagesettings( {
 				defaultModule: 'display',
 				onVisible: function () {
-					var left,
+					var topRowHeight, caretHeight, caretWidth,
+						$caretBefore = $( '<span>' ).addClass( 'caret-before' ),
+						$caretAfter = $( '<span>' ).addClass( 'caret-after' ),
+						ulsTriggerWidth = $ulsSettingsTrigger.width(),
 						ulsTriggerOffset = $ulsSettingsTrigger.offset();
 
 					this.$window.addClass( 'callout' );
+					this.$window.prepend( $caretBefore, $caretAfter );
+
 					if ( rtlPage ) {
-						left = ulsTriggerOffset.left - this.$window.width() - 30;
+						caretWidth = parseInt( $caretBefore.css( 'border-left-width' ), '10' );
+						this.left = ulsTriggerOffset.left - this.$window.width() - caretWidth;
 					} else {
-						left = ulsTriggerOffset.left + 30;
+						caretWidth = parseInt( $caretBefore.css( 'border-right-width' ), '10' );
+						this.left = ulsTriggerOffset.left + ulsTriggerWidth + caretWidth;
 					}
 
-					this.left = left;
-					this.top = ulsTriggerOffset.top - 50;
+					topRowHeight = this.$window.find( '.row' ).height();
+					caretHeight = parseInt( $caretBefore.css( 'top' ), '10' );
+					this.top = ulsTriggerOffset.top - topRowHeight - caretHeight / 2;
+
 					this.position();
-					this.$window.prepend(
-						$( '<span>' ).addClass( 'caret-before' ),
-						$( '<span>' ).addClass( 'caret-after' )
-					);
 				}
 			} );
 		} else if ( anonMode ) {
