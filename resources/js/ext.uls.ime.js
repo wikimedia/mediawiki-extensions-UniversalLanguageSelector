@@ -203,17 +203,14 @@
 	};
 
 	$( document ).ready( function () {
-		if ( !mw.uls.isBrowserSupported() ) {
-			return;
-		}
+		mw.uls.init( function () {
+			// Load the ime preferences
+			$.ime.preferences.load();
 
-		// Load the ime preferences
-		$.ime.preferences.load();
-
-		if ( $.ime.preferences.isEnabled() ) {
-			mw.ime.setup();
-		}
-
+			if ( $.ime.preferences.isEnabled() ) {
+				mw.ime.setup();
+			}
+		} );
 	} );
 
 	function imeNotification () {

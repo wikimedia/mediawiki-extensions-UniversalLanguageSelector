@@ -223,6 +223,7 @@
 	}
 
 	$( document ).ready( function () {
+		mw.uls.init( function () {
 		var $ulsTrigger = $( '.uls-trigger' ),
 			$ulsSettingsTrigger,
 			$pLang,
@@ -231,10 +232,6 @@
 			anonMode = ( mw.user.isAnon() &&
 				!mw.config.get( 'wgULSAnonCanChangeLanguage' ) ),
 			ulsPosition = mw.config.get( 'wgULSPosition' );
-
-		if ( !mw.uls.isBrowserSupported() ) {
-			return;
-		}
 
 		if ( ulsPosition === 'interlanguage' ) {
 			// The interlanguage links section
@@ -329,5 +326,6 @@
 			} );
 
 		showULSTooltip();
+	} );
 	} );
 }( jQuery, mediaWiki ) );

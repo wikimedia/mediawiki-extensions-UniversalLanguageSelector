@@ -31,7 +31,8 @@
 		this.$languageFilter.addClass( 'noime' );
 	};
 
-	var currentLang = mw.config.get( 'wgUserLanguage' );
+	var initialized = false,
+		currentLang = mw.config.get( 'wgUserLanguage' );
 	mw.uls = mw.uls || {};
 	mw.uls.previousLanguagesCookie = 'uls-previous-languages';
 	/**
@@ -139,10 +140,10 @@
 	 * Browse support policy: http://www.mediawiki.org/wiki/Browser_support#Grade_A
 	 * @return boolean
 	 */
-	mw.uls.isBrowserSupported = function () {
+	function isBrowserSupported() {
 		// Blacklist Grade B browsers IE 6, 7 and IE60-IE79
 		return !/MSIE [67]/i.test( navigator.userAgent );
-	};
+	}
 
 	/**
 	 * Local wrapper for 'mw.eventLog.logEvent' which handles default params
@@ -187,8 +188,14 @@
 			.load( jsonLoader + currentLang, currentLang );
 	}
 
-	$( document ).ready( function () {
-		if ( !mw.uls.isBrowserSupported() ) {
+	mw.uls.init = function( callback ) {
+		callback = callback || $.noop;
+
+		if ( initialized ) {
+			callback.call( this, false );
+			return;
+		}
+		if ( !isBrowserSupported() ) {
 			$( '#pt-uls' ).hide();
 			return;
 		}
@@ -205,5 +212,11 @@
 
 		// JavaScript side i18n initialization
 		i18nInit();
+		initialized = true;
+		callback.call( this, true );
+	};
+
+	$( document ).ready( function () {
+		mw.uls.init();
 	} );
 }( jQuery, mediaWiki ) );
