@@ -415,6 +415,15 @@ $messages['os'] = array(
 	'uls-desc' => 'Архайæгæн дæтты цалдæр фадат æвзаг равзарынæн æмæ йын уаг сæвæрынæн',
 );
 
+/** Punjabi (ਪੰਜਾਬੀ)
+ * @author Babanwalia
+ */
+$messages['pa'] = array(
+	'UniversalLanguageSelector' => 'ਵਿਸ਼ਵ-ਵਿਆਪੀ ਭਾਸ਼ਾ ਚੋਣਕਾਰ',
+	'uls-desc' => 'ਵਰਤੋਂਕਾਰ ਨੂੰ ਭਾਸ਼ਾਂ ਚੁਣਨ ਅਤੇ ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ ਠੀਕ ਕਰਨ ਲਈ ਕਈ ਤਰੀਕੇ ਸੌਂਪਦਾ ਹੈ',
+	'uls-plang-title-languages' => 'ਭਾਸ਼ਾਵਾਂ',
+);
+
 /** Polish (polski)
  * @author BeginaFelicysym
  * @author WTM
