@@ -243,7 +243,8 @@
 					.attr( 'title', $.i18n( 'ext-uls-language-settings-title' ) );
 				// Append ULS cog to languages section, but make sure it is visible.
 				$pLang.show().prepend( $ulsSettingsTrigger );
-
+				// Take care of any other elements with this class.
+				$ulsSettingsTrigger = $( '.uls-settings-trigger' );
 				// Remove the dummy link, which was added to make sure that the section appears
 				$pLang.find( '.uls-p-lang-dummy' ).remove();
 
@@ -289,8 +290,8 @@
 						var topRowHeight, caretHeight, caretWidth,
 							$caretBefore = $( '<span>' ).addClass( 'caret-before' ),
 							$caretAfter = $( '<span>' ).addClass( 'caret-after' ),
-							ulsTriggerWidth = $ulsSettingsTrigger.width(),
-							ulsTriggerOffset = $ulsSettingsTrigger.offset();
+							ulsTriggerWidth = this.$element.width(),
+							ulsTriggerOffset = this.$element.offset();
 
 						// Add the callout caret triangle
 						// pointing to the trigger icon
