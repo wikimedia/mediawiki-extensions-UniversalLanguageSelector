@@ -52,7 +52,7 @@
 
 	mw.webfonts.setup = function () {
 		// Initialize webfonts
-		$( 'body' ).webfonts( {
+		$.fn.webfonts.defaults = $.extend( $.fn.webfonts.defaults, {
 			fontSelector: function ( repository, language ) {
 				var font;
 
@@ -78,6 +78,7 @@
 				return $.fn.webfonts.defaults.exclude;
 			}() )
 		} );
+		$( 'body' ).webfonts();
 	};
 
 	$( document ).ready( function () {

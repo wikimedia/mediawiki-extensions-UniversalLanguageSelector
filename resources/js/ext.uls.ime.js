@@ -150,6 +150,8 @@
 			e.stopPropagation();
 		} );
 
+		// apply fonts to this
+		imeselector.$menu.webfonts();
 		return $( '<div>' )
 			.addClass( 'uls-ime-menu-settings-item' )
 			.append( $disableInputToolsLink, $moreSettingsLink );
