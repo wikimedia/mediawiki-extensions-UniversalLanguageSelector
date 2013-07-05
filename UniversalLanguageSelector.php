@@ -123,6 +123,13 @@ $wgULSPosition = 'personal';
  */
 $wgULSEventLogging = false;
 
+/**
+ * Array of jQuery selectors of elements on which IME must not be enabled.
+ *
+ * @since 2013.07
+ */
+$wgULSNoImeSelectors = array( '#wpCaptchaWord' );
+
 $dir = __DIR__;
 
 // Internationalization
