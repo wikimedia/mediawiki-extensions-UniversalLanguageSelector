@@ -20,7 +20,7 @@
 ( function ( $, mw ) {
 	'use strict';
 
-	/*
+	/**
 	 * Construct the display settings link
 	 */
 	function displaySettings() {
@@ -38,7 +38,7 @@
 		return $displaySettings;
 	}
 
-	/*
+	/**
 	 * Construct the input settings link
 	 */
 	function inputSettings() {
@@ -56,7 +56,7 @@
 		return $inputSettings;
 	}
 
-	/*
+	/**
 	 * Add display settings link to the settings bar in ULS
 	 * @param {Object} uls The ULS object
 	 */
@@ -87,7 +87,7 @@
 		} );
 	}
 
-	/*
+	/**
 	 * Add input settings link to the settings bar in ULS
 	 * @param {Object} uls The ULS object
 	 */
@@ -112,7 +112,7 @@
 		} );
 	}
 
-	/*
+	/**
 	 * The tooltip to be shown when language changed using ULS
 	 * It also allows to undo the language selection.
 	 */

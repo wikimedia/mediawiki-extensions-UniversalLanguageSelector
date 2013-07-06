@@ -162,7 +162,7 @@
 			this.$parent.position();
 		},
 
-		/*
+		/**
 		 * For the given input method id, render the selection option.
 		 *
 		 * @param {string} imeId Input method id
