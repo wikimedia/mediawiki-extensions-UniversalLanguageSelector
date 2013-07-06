@@ -266,6 +266,15 @@ $messages['hsb'] = array(
 	'uls-desc' => 'Dawa wužiwarjej wšelake metody, zo by rěč wubrał a rěčne nastajenja přiměrił',
 );
 
+/** Armenian (Հայերեն)
+ * @author Xelgen
+ */
+$messages['hy'] = array(
+	'UniversalLanguageSelector' => 'Լեզվական նախընտրանքներ',
+	'uls-desc' => 'Օգտագործողին թույլ է տալիս մի քանի եղանակաով ընտրել լեզուներ և լեզվական կարգավորումներ',
+	'uls-plang-title-languages' => 'Լեզուներ',
+);
+
 /** Indonesian (Bahasa Indonesia)
  * @author Iwan Novirion
  */
@@ -317,8 +326,8 @@ $messages['ka'] = array(
  * @author 아라
  */
 $messages['ko'] = array(
-	'UniversalLanguageSelector' => '범용 언어 선택기',
-	'uls-desc' => '사용자에게 언어를 선택하고 언어 설정을 바꾸는 몇 가지 방법을 제공',
+	'UniversalLanguageSelector' => '일반 언어 선택기',
+	'uls-desc' => '사용자에게 언어를 선택하고 언어 설정을 바꾸는 몇 가지 방법을 제공합니다',
 	'uls-plang-title-languages' => '언어',
 );
 
@@ -503,6 +512,15 @@ $messages['sr-ec'] = array(
 	'UniversalLanguageSelector' => 'Универзални језички изборник',
 	'uls-desc' => 'Даје кориснику неколико начина да изабере језик и да прилагоди поставке језика',
 	'uls-plang-title-languages' => 'Језици',
+);
+
+/** Swedish (svenska)
+ * @author WikiPhoenix
+ */
+$messages['sv'] = array(
+	'UniversalLanguageSelector' => 'Universal språkväljare',
+	'uls-desc' => 'Ger användaren flera sätt att välja ett språk på och justera språkinställningar',
+	'uls-plang-title-languages' => 'Språk',
 );
 
 /** Tamil (தமிழ்)
