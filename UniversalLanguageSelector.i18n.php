@@ -170,6 +170,15 @@ $messages['dv'] = array(
 	'UniversalLanguageSelector' => 'ޔުނިވާސަލް ލޭންގުއޭޖް ސިލެކްޓަރ',
 );
 
+/** Greek (Ελληνικά)
+ * @author Glavkos
+ */
+$messages['el'] = array(
+	'UniversalLanguageSelector' => 'Καθολικός Επιλέκτης Γλώσσας',
+	'uls-desc' => 'Προσφέρει στο χρήστη μια σειρά από τρόπους να επιλέξει γλώσσα και να προσαρμόσεις τις γλωσσικές ρυθμίσεις',
+	'uls-plang-title-languages' => 'Γλώσσες',
+);
+
 /** Esperanto (Esperanto)
  * @author Yekrats
  */
