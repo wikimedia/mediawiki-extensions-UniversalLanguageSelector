@@ -217,17 +217,22 @@
 			} ).fail( function ( jqxhr, settings, exception ) {
 				mw.log( 'Error in loading messages from ' + url + ' Exception: ' + exception );
 			} );
-			 return deferred.promise();
+			return deferred.promise();
 		}
 	};
 
+	/**
+	 * Initialize ULS front-end and its i18n.
+	 *
+	 * @param {Function} callback callback function to be called after initialization.
+	 */
 	mw.uls.init = function ( callback ) {
 		var messageStore = new MWMessageStore();
 
 		callback = callback || $.noop;
 
 		if ( initialized ) {
-			callback.call( this, false );
+			callback.call( this );
 
 			return;
 		}
