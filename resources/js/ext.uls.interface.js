@@ -340,15 +340,15 @@
 						// Calculate the positioning of the panel
 						// according to the position of the trigger icon
 						if ( rtlPage ) {
-							caretWidth = parseInt( $caretBefore.css( 'border-left-width' ), '10' );
+							caretWidth = parseInt( $caretBefore.css( 'border-left-width' ), 10 );
 							this.left = ulsTriggerOffset.left - this.$window.width() - caretWidth;
 						} else {
-							caretWidth = parseInt( $caretBefore.css( 'border-right-width' ), '10' );
+							caretWidth = parseInt( $caretBefore.css( 'border-right-width' ), 10 );
 							this.left = ulsTriggerOffset.left + ulsTriggerWidth + caretWidth;
 						}
 
 						topRowHeight = this.$window.find( '.row' ).height();
-						caretHeight = parseInt( $caretBefore.css( 'top' ), '10' );
+						caretHeight = parseInt( $caretBefore.css( 'top' ), 10 );
 						this.top = ulsTriggerOffset.top - topRowHeight - caretHeight / 2;
 
 						this.position();
