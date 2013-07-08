@@ -330,6 +330,14 @@ $messages['ka'] = array(
 	'uls-plang-title-languages' => 'ენები',
 );
 
+/** Kannada (ಕನ್ನಡ)
+ * @author Akoppad
+ */
+$messages['kn'] = array(
+	'uls-desc' => 'ಬಳಕೆದಾರರಿಗೆ ಭಾಷೆಯನ್ನು ಆರಿಸಲು ಮತ್ತು ಭಾಷೆಯ ವ್ಯವಸ್ಥೆಗಳನ್ನು ಹೊಂದಿಸಲು ಹಲವಾರು ಮಾರ್ಗಗಳನ್ನು ನೀಡುತ್ತದೆ',
+	'uls-plang-title-languages' => 'ಭಾಷೆಗಳು',
+);
+
 /** Korean (한국어)
  * @author Kwj2772
  * @author 아라
@@ -346,6 +354,15 @@ $messages['ko'] = array(
 $messages['ksh'] = array(
 	'UniversalLanguageSelector' => 'Alljemein Schproochewahl',
 	'uls-desc' => 'Jit dä Metmaachere ongerscheidlejje Müjjeleschkeite, en Schprooch ußzewähle un Enschtällonge für Schprooche ze maache.',
+);
+
+/** Kirghiz (Кыргызча)
+ * @author Викиней
+ */
+$messages['ky'] = array(
+	'UniversalLanguageSelector' => 'Универсалдуу тил тандагычтар',
+	'uls-desc' => 'Колдонуучуга тил тандоонун бир нече жолун берип, тил ырастоолорду аткарууга мүмкүн кылат.',
+	'uls-plang-title-languages' => 'Тилдер',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
