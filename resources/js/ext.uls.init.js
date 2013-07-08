@@ -34,7 +34,8 @@
 	var MWMessageStore,
 		jsonLoader,
 		initialized = false,
-		currentLang = mw.config.get( 'wgUserLanguage' );
+		currentLang = mw.config.get( 'wgUserLanguage' ),
+		logEventQueue = $.Callbacks( 'memory once' );
 
 	mw.uls = mw.uls || {};
 	mw.uls.previousLanguagesCookie = 'uls-previous-languages';
@@ -156,24 +157,11 @@
 	 * @since 2013.07
 	 * @see https://meta.wikimedia.org/wiki/Schema:UniversalLanguageSelector
 	 */
-	mw.uls.logEvent = $.noop;
-
-	// If EventLogging integration is enabled, set event defaults and make the
-	// the function call event logging with correct schema.
-	if ( mw.config.get( 'wgULSEventLogging' ) ) {
-		mw.loader.using( 'schema.UniversalLanguageSelector', function () {
-			mw.eventLog.setDefaults( 'UniversalLanguageSelector', {
-				version: 1,
-				token: mw.user.id(),
-				contentLanguage: mw.config.get( 'wgContentLanguage' ),
-				interfaceLanguage: currentLang
-			} );
-
-			mw.uls.logEvent = function ( event ) {
-				mw.eventLog.logEvent( 'UniversalLanguageSelector', event );
-			};
+	mw.uls.logEvent = function ( event ) {
+		logEventQueue.add( function () {
+			mw.eventLog.logEvent( 'UniversalLanguageSelector', event );
 		} );
-	}
+	};
 
 	/**
 	 * jquery.i18n message store for MediaWiki
@@ -237,6 +225,20 @@
 			$( '#pt-uls' ).hide();
 
 			return;
+		}
+
+		// If EventLogging integration is enabled, set event defaults and make the
+		// the function call event logging with correct schema.
+		if ( mw.config.get( 'wgULSEventLogging' ) ) {
+			mw.loader.using( 'schema.UniversalLanguageSelector', function () {
+				mw.eventLog.setDefaults( 'UniversalLanguageSelector', {
+					version: 1,
+					token: mw.user.id(),
+					contentLanguage: mw.config.get( 'wgContentLanguage' ),
+					interfaceLanguage: currentLang
+				} );
+				logEventQueue.fire();
+			} );
 		}
 
 		/*
