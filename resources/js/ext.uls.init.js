@@ -196,11 +196,7 @@
 		},
 
 		isLoaded: function ( locale ) {
-			if ( this.messages[locale] ) {
-				return true;
-			}
-
-			return false;
+			return this.messages[locale];
 		},
 
 		load: function ( locale ) {
