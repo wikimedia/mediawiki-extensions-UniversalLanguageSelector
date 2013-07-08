@@ -121,9 +121,8 @@
 		},
 
 		prepareInputmethods: function ( language ) {
-			var index = 0,
-				inputSettings, $imeListContainer, defaultInputmethod, imes, selected, imeId,
-				$imeListTitle;
+			var index, inputSettings, $imeListContainer, defaultInputmethod,
+				imes, selected, imeId, $imeListTitle;
 
 			imes = $.ime.languages[language];
 
