@@ -31,8 +31,11 @@
 		this.$languageFilter.addClass( 'noime' );
 	};
 
-	var initialized = false,
+	var MWMessageStore,
+		jsonLoader,
+		initialized = false,
 		currentLang = mw.config.get( 'wgUserLanguage' );
+
 	mw.uls = mw.uls || {};
 	mw.uls.previousLanguagesCookie = 'uls-previous-languages';
 	/**
@@ -173,30 +176,65 @@
 	}
 
 	/**
-	 * i18n initialization
+	 * jquery.i18n message store for MediaWiki
+	 *
 	 */
-	function i18nInit() {
-		var jsonLoader = mw.util.wikiScript( 'api' ) + '?action=ulslocalization&language=';
+	MWMessageStore = function () {
+		this.messages = {};
+	};
 
-		$.i18n( {
-			locale: currentLang,
-			messageLocationResolver: function ( locale ) {
-				return jsonLoader + locale;
+	MWMessageStore.prototype = {
+		init: function () {},
+
+		get: function ( locale, messageKey ) {
+			return ( this.isLoaded( locale ) && this.messages[locale][messageKey] ) ||
+				'<' + messageKey + '>';
+		},
+
+		set: function( locale, messages ) {
+			this.messages[locale] = messages;
+		},
+
+		isLoaded: function ( locale ) {
+			if ( this.messages[locale] ) {
+				return true;
 			}
-		} )
-			// Preload i18n for current language.
-			.load( jsonLoader + currentLang, currentLang );
-	}
 
-	mw.uls.init = function( callback ) {
+			return false;
+		},
+
+		load: function ( locale ) {
+			var store = this,
+				deferred = $.Deferred(),
+				url = mw.util.wikiScript( 'api' ) + '?action=ulslocalization&language=';
+
+			if ( store.isLoaded( locale ) ) {
+				return deferred.resolve();
+			}
+
+			deferred = $.getJSON( url + locale ).done( function ( data ) {
+				store.set( locale, data );
+			} ).fail( function ( jqxhr, settings, exception ) {
+				mw.log( 'Error in loading messages from ' + url + ' Exception: ' + exception );
+			} );
+			 return deferred.promise();
+		}
+	};
+
+	mw.uls.init = function ( callback ) {
+		var messageStore = new MWMessageStore();
+
 		callback = callback || $.noop;
 
 		if ( initialized ) {
 			callback.call( this, false );
+
 			return;
 		}
+
 		if ( !isBrowserSupported() ) {
 			$( '#pt-uls' ).hide();
+
 			return;
 		}
 
@@ -211,9 +249,19 @@
 		$.uls.data.addLanguage( 'als', { target: 'gsw' } );
 
 		// JavaScript side i18n initialization
-		i18nInit();
-		initialized = true;
-		callback.call( this, true );
+		$.i18n( {
+			locale: currentLang,
+			messageStore: messageStore
+		} );
+
+		if ( !jsonLoader ) {
+			jsonLoader = messageStore.load( currentLang );
+		} else {
+			jsonLoader.done( function () {
+				initialized = true;
+			} );
+			jsonLoader.done( callback );
+		}
 	};
 
 	$( document ).ready( function () {
