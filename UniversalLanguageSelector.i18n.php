@@ -135,12 +135,13 @@ $messages['cy'] = array(
 
 /** Danish (dansk)
  * @author Byrial
+ * @author Cgtdk
  * @author Christian List
  * @author Peter Alberti
  */
 $messages['da'] = array(
 	'UniversalLanguageSelector' => 'Universel sprogvælger',
-	'uls-desc' => 'Giver brugeren forskellige måder at vælge et sprog, og at justere indstillingerne for sproget',
+	'uls-desc' => 'Giver brugeren forskellige måder at vælge et sprog og at justere indstillingerne for sproget',
 	'uls-plang-title-languages' => 'Sprog',
 );
 
@@ -180,10 +181,13 @@ $messages['el'] = array(
 );
 
 /** Esperanto (Esperanto)
+ * @author KuboF
  * @author Yekrats
  */
 $messages['eo'] = array(
-	'uls-select-content-language' => 'Elekti lingvon',
+	'UniversalLanguageSelector' => 'Universala lingvo-elektilo',
+	'uls-desc' => 'Proponas al uzanto kelkajn manierojn por elekti lingvon kaj modifi lingvajn agordojn',
+	'uls-plang-title-languages' => 'Lingvoj',
 );
 
 /** Spanish (español)
@@ -265,6 +269,13 @@ $messages['he'] = array(
 	'UniversalLanguageSelector' => 'בורר השפות העולמי',
 	'uls-desc' => 'נותן למשתמשים מספר דרכים לבחור שפה ולכוונן את הגדרות השפה',
 	'uls-plang-title-languages' => 'שפות',
+);
+
+/** Croatian (hrvatski)
+ * @author SpeedyGonsales
+ */
+$messages['hr'] = array(
+	'uls-plang-title-languages' => 'jezične postavke',
 );
 
 /** Upper Sorbian (hornjoserbsce)
@@ -354,6 +365,13 @@ $messages['ko'] = array(
 $messages['ksh'] = array(
 	'UniversalLanguageSelector' => 'Alljemein Schproochewahl',
 	'uls-desc' => 'Jit dä Metmaachere ongerscheidlejje Müjjeleschkeite, en Schprooch ußzewähle un Enschtällonge für Schprooche ze maache.',
+);
+
+/** Kurdish (Latin script) (Kurdî (latînî)‎)
+ * @author Ghybu
+ */
+$messages['ku-latn'] = array(
+	'uls-plang-title-languages' => 'Ziman',
 );
 
 /** Kirghiz (Кыргызча)
@@ -571,6 +589,14 @@ $messages['te'] = array(
 $messages['tl'] = array(
 	'UniversalLanguageSelector' => 'Unibersal na Pampili ng Wika',
 	'uls-desc' => 'Nagbibigay sa tagagamit ng ilang mga paraan upang makapili ng isang wika at upang mabago ang mga katakdaan ng wika',
+);
+
+/** Turkish (Türkçe)
+ * @author Emperyan
+ */
+$messages['tr'] = array(
+	'UniversalLanguageSelector' => 'Evrensel Dil Seçimi',
+	'uls-plang-title-languages' => 'Diller',
 );
 
 /** Ukrainian (українська)
