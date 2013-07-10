@@ -19,7 +19,14 @@
     "ext-uls-display-settings-font-settings": "Postavke fonta (ili fontova)",
     "ext-uls-display-settings-ui-language": "Prika\u017ei jezik",
     "ext-uls-display-settings-anon-label": "Prika\u017ei jezik:",
+    "ext-uls-webfonts-select-for": "Odaberi font za $1",
+    "ext-uls-webfonts-select-for-ui-info": "Odabrani font za suradni\u010dko su\u010delje",
+    "ext-uls-back-to-display-settings": "Povratak na prikaz postavki",
+    "ext-uls-input-settings-title": "Upis postavki",
+    "ext-uls-input-settings-title-short": "Unos",
     "ext-uls-input-settings-more-languages-tooltip": "Vi\u0161e jezika",
     "jquery-ime-other-languages": "Drugi jezici",
-    "jquery-ime-help": "Pomo\u0107"
+    "jquery-ime-help": "Pomo\u0107",
+    "ext-uls-input-disable-notification-undo": "Vrati",
+    "ext-uls-language-settings-preferences-link": "Vi\u0161e jezi\u010dnih postavki"
 }

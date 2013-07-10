@@ -1,0 +1,40 @@
+{
+    "@metadata": {
+        "authors": [
+            "Sudo77(new)"
+        ]
+    },
+    "ext-uls-display-settings-title": "Nastavenia zobrazenia",
+    "ext-uls-display-settings-language-tab": "Jazyk",
+    "ext-uls-display-settings-fonts-tab": "P\u00edsma",
+    "ext-uls-display-settings-title-short": "Zobrazenie",
+    "ext-uls-display-settings-desc": "Nastavi\u0165 jazyk pou\u017e\u00edvan\u00fd pre menu a p\u00edsma.",
+    "ext-uls-select-language-settings-icon-tooltip": "Jazykov\u00e9 nastavenia",
+    "ext-uls-undo-language-tooltip-text": "Jazyk zmenen\u00fd z $1",
+    "ext-uls-language-settings-title": "Jazykov\u00e9 nastavenia",
+    "ext-uls-language-settings-apply": "Pou\u017ei\u0165 nastavenia",
+    "ext-uls-language-settings-cancel": "Zru\u0161i\u0165",
+    "ext-uls-language-buttons-help": "Zmen\u00ed jazyk menu. Neovplyvn\u00ed to jazyk obsahu.",
+    "ext-uls-display-settings-font-settings": "Nastavenia p\u00edsma",
+    "ext-uls-display-settings-ui-language": "Jazyk rozhrania",
+    "ext-uls-display-settings-anon-label": "Jazyk rozhrania",
+    "ext-uls-display-settings-anon-same-as-content": "sloven\u010dina (rovnako ako obsah)",
+    "ext-uls-display-settings-anon-log-in-cta": "In\u00fd jazyk pre ponuky si m\u00f4\u017eete zvoli\u0165 po [[Special:UserLogin|prihl\u00e1sen\u00ed]].",
+    "ext-uls-webfonts-select-for": "Vyberte p\u00edsmo pre $1",
+    "ext-uls-webfonts-select-for-ui-info": "P\u00edsmo pou\u017eit\u00e9 pre pou\u017e\u00edvate\u013esk\u00e9 rozhranie",
+    "ext-uls-webfonts-select-for-content-info": "P\u00edsmo pou\u017eit\u00e9 pre obsah",
+    "ext-uls-webfonts-system-font": "Syst\u00e9mov\u00e9 p\u00edsmo",
+    "ext-uls-back-to-display-settings": "Sp\u00e4\u0165 na nastavenia zobrazenia",
+    "ext-uls-input-settings-title": "Nastavenia vstupu",
+    "ext-uls-input-settings-title-short": "Vstup",
+    "ext-uls-input-settings-desc": "P\u00ed\u0161ete in\u00fdm jazykom?",
+    "ext-uls-input-settings-ime-settings": "Met\u00f3dy vstupu pre $1",
+    "ext-uls-input-settings-ui-language": "Jazyk pou\u017e\u00edvan\u00fd pre p\u00edsanie",
+    "ext-uls-back-to-input-settings": "Sp\u00e4\u0165 na nastavenia vstupu",
+    "ext-uls-input-settings-more-languages-tooltip": "\u010eal\u0161ie jazyky",
+    "jquery-ime-other-languages": "In\u00e9 jazyky",
+    "jquery-ime-help": "Pomoc",
+    "ext-uls-input-disable-notification-undo": "Vr\u00e1ti\u0165",
+    "ext-uls-input-disable-notification-info-personal": "N\u00e1stroje pre vstup m\u00f4\u017eete kedyko\u013evek zapn\u00fa\u0165 v jazykov\u00fdch nastaveniach.",
+    "ext-uls-language-settings-preferences-link": "Dal\u0161ie jazykov\u00e9 nastavenia"
+}

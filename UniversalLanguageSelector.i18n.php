@@ -124,6 +124,15 @@ $messages['cs'] = array(
 	'uls-plang-title-languages' => 'Jazyky',
 );
 
+/** Church Slavic (словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
+ * @author ОйЛ
+ */
+$messages['cu'] = array(
+	'UniversalLanguageSelector' => 'вьсѥобьщии ѩꙁꙑчьнъ иꙁборъ',
+	'uls-desc' => 'Срѣдьство дѣлꙗ польꙃєватєльска оустроѥниꙗ ѩꙁꙑка и съвѧꙁанъ вєщии',
+	'uls-plang-title-languages' => 'ѩꙁꙑци',
+);
+
 /** Welsh (Cymraeg)
  * @author Lloffiwr
  */
@@ -444,6 +453,14 @@ $messages['ms'] = array(
 	'uls-plang-title-languages' => 'Bahasa',
 );
 
+/** Neapolitan (Nnapulitano)
+ * @author Chelin
+ */
+$messages['nap'] = array(
+	'UniversalLanguageSelector' => 'Selettore annevierziale d"a lengua',
+	'uls-plang-title-languages' => 'Lengue',
+);
+
 /** Norwegian Bokmål (norsk bokmål)
  */
 $messages['nb'] = array(
@@ -593,9 +610,11 @@ $messages['tl'] = array(
 
 /** Turkish (Türkçe)
  * @author Emperyan
+ * @author Incelemeelemani
  */
 $messages['tr'] = array(
 	'UniversalLanguageSelector' => 'Evrensel Dil Seçimi',
+	'uls-desc' => 'Kullanıcının bir dil seçmesi ve dil ayarlarını değiştirmesi için seçenekler sağlar.',
 	'uls-plang-title-languages' => 'Diller',
 );
 
