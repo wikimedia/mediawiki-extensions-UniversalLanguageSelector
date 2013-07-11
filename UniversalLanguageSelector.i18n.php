@@ -115,6 +115,23 @@ $messages['ca'] = array(
 	'uls-plang-title-languages' => 'Llengües',
 );
 
+/** Chechen (нохчийн)
+ * @author Умар
+ */
+$messages['ce'] = array(
+	'uls-desc' => 'Декъашхойн таро хуьлуьйту масийтта кепара мотт харжа а мотт дIахIотто а',
+	'uls-plang-title-languages' => 'Меттанаш',
+);
+
+/** Sorani Kurdish (کوردی)
+ * @author Calak
+ */
+$messages['ckb'] = array(
+	'UniversalLanguageSelector' => 'ھەڵبژاردنی زمانی گەردوونی',
+	'uls-desc' => 'ڕێگای جۆربەجۆر بۆ بەکارھێنەر بۆ ھەڵبژاردنی زمان و جێبەجێکردنی ڕێکخستنەکانی زمان دخاتە ڕوو.',
+	'uls-plang-title-languages' => 'زمانەکان',
+);
+
 /** Czech (česky)
  * @author Mormegil
  */
