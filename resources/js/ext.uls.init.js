@@ -53,7 +53,8 @@
 	};
 
 	mw.uls.setPreviousLanguages = function ( previousLanguages ) {
-		$.cookie( mw.uls.previousLanguagesCookie, $.toJSON( previousLanguages ) );
+		$.cookie( mw.uls.previousLanguagesCookie, $.toJSON( previousLanguages ),
+			{ path: '/' } );
 	};
 
 	mw.uls.getPreviousLanguages = function () {
