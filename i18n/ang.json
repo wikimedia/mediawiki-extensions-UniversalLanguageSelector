@@ -1,0 +1,33 @@
+{
+    "@metadata": {
+        "authors": [
+            "Gott wisst"
+        ]
+    },
+    "ext-uls-display-settings-title": "\u012awunge setednessa",
+    "ext-uls-display-settings-language-tab": "Spr\u01e3c",
+    "ext-uls-display-settings-fonts-tab": "St\u00e6fcynn",
+    "ext-uls-display-settings-title-short": "\u012awung",
+    "ext-uls-display-settings-desc": "C\u0113osan \u00fe\u0101 spr\u01e3ce \u00fee b\u0113o gebrocen on getalum and st\u00e6fcynnum.",
+    "ext-uls-select-language-settings-icon-tooltip": "Spr\u01e3ce setednessa",
+    "ext-uls-undo-language-tooltip-text": "Spr\u01e3c w\u00e6s andwended fram $1",
+    "ext-uls-language-settings-title": "Spr\u01e3ce setednessa",
+    "ext-uls-language-settings-apply": "Astellan setednessa",
+    "ext-uls-language-buttons-help": "Andwendan \u00fe\u0101 spr\u01e3ce getala. S\u0113o spr\u01e3c \u00fe\u01e3re innunge ne bi\u00fe n\u0101 gehrinen.",
+    "ext-uls-display-settings-font-settings": "St\u00e6fcynna setednessa",
+    "ext-uls-display-settings-ui-language": "\u012awunge spr\u01e3c",
+    "ext-uls-display-settings-anon-label": "\u012awunge spr\u01e3c:",
+    "ext-uls-display-settings-anon-same-as-content": "Englisc (gel\u012bc \u00fe\u01e3re innunge)",
+    "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Inmelda]] to c\u0113osenne \u014d\u00f0re spr\u01e3ce on getalum.",
+    "ext-uls-webfonts-select-for": "C\u0113os st\u00e6fcynn for $1",
+    "ext-uls-webfonts-select-for-ui-info": "St\u00e6fcynn \u00fee b\u0113o gebrocen on gewealdes andwlitan",
+    "ext-uls-webfonts-select-for-content-info": "St\u00e6fcynn \u00fee b\u0113o gebrocen on innunge",
+    "ext-uls-webfonts-system-font": "Endebyrdnesse st\u00e6fcynn",
+    "ext-uls-back-to-display-settings": "G\u0101n eft t\u014d \u012bwunge setednessa",
+    "ext-uls-input-settings-desc": "Wr\u012btst \u00fe\u016b on \u014d\u00f0erre spr\u01e3ce?",
+    "ext-uls-input-settings-ui-language": "Spr\u01e3c \u00fee b\u0113o gebrocen on wr\u012btunge",
+    "ext-uls-input-settings-more-languages-tooltip": "M\u0101 spr\u01e3ca",
+    "jquery-ime-other-languages": "\u014c\u00f0ra spr\u01e3ca",
+    "jquery-ime-help": "Help",
+    "ext-uls-language-settings-preferences-link": "M\u0101 spr\u01e3ce setednessa"
+}

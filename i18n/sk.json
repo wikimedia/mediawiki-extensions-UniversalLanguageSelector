@@ -31,10 +31,18 @@
     "ext-uls-input-settings-ime-settings": "Met\u00f3dy vstupu pre $1",
     "ext-uls-input-settings-ui-language": "Jazyk pou\u017e\u00edvan\u00fd pre p\u00edsanie",
     "ext-uls-back-to-input-settings": "Sp\u00e4\u0165 na nastavenia vstupu",
+    "ext-uls-disable-input-method": "Pou\u017e\u00edva\u0165 p\u00f4vodn\u00fa kl\u00e1vesnicu",
     "ext-uls-input-settings-more-languages-tooltip": "\u010eal\u0161ie jazyky",
     "jquery-ime-other-languages": "In\u00e9 jazyky",
+    "jquery-ime-disable-text": "Pou\u017e\u00edva\u0165 p\u00f4vodn\u00fa kl\u00e1vesnicu",
     "jquery-ime-help": "Pomoc",
+    "ext-uls-input-disable": "Vypn\u00fa\u0165 n\u00e1stroje pre vstup",
+    "ext-uls-input-enable": "Zapn\u00fa\u0165 n\u00e1stroje pre vstup",
+    "ext-uls-input-disable-info": "N\u00e1stroje pre vstup s\u00fa vypnut\u00e9.",
+    "ext-uls-input-settings-noime": "Pre tento jazyk nie s\u00fa k dispoz\u00edcii \u017eiadne met\u00f3dy zad\u00e1vania znakov.",
+    "ext-uls-input-disable-notification": "N\u00e1stroje pre vstup boli vypnut\u00e9",
     "ext-uls-input-disable-notification-undo": "Vr\u00e1ti\u0165",
     "ext-uls-input-disable-notification-info-personal": "N\u00e1stroje pre vstup m\u00f4\u017eete kedyko\u013evek zapn\u00fa\u0165 v jazykov\u00fdch nastaveniach.",
+    "ext-uls-input-disable-notification-info-interlanguage": "N\u00e1stroje pre vstup m\u00f4\u017eete kedyko\u013evek zapn\u00fa\u0165 v jazykov\u00fdch nastaveniach ved\u013ea zoznamu jazykov.",
     "ext-uls-language-settings-preferences-link": "Dal\u0161ie jazykov\u00e9 nastavenia"
 }
