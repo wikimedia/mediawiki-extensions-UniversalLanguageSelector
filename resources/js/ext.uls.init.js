@@ -31,8 +31,7 @@
 		this.$languageFilter.addClass( 'noime' );
 	};
 
-	var MWMessageStore,
-		jsonLoader,
+	var jsonLoader,
 		initialized = false,
 		currentLang = mw.config.get( 'wgUserLanguage' ),
 		logEventQueue = $.Callbacks( 'memory once' );
@@ -165,54 +164,11 @@
 	};
 
 	/**
-	 * jquery.i18n message store for MediaWiki
-	 *
-	 */
-	MWMessageStore = function () {
-		this.messages = {};
-	};
-
-	MWMessageStore.prototype = {
-		init: function () {},
-
-		get: function ( locale, messageKey ) {
-			return ( this.isLoaded( locale ) && this.messages[locale][messageKey] ) ||
-				'<' + messageKey + '>';
-		},
-
-		set: function( locale, messages ) {
-			this.messages[locale] = messages;
-		},
-
-		isLoaded: function ( locale ) {
-			return this.messages[locale];
-		},
-
-		load: function ( locale ) {
-			var store = this,
-				deferred = $.Deferred(),
-				url = mw.util.wikiScript( 'api' ) + '?action=ulslocalization&language=';
-
-			if ( store.isLoaded( locale ) ) {
-				return deferred.resolve();
-			}
-
-			deferred = $.getJSON( url + locale ).done( function ( data ) {
-				store.set( locale, data );
-			} ).fail( function ( jqxhr, settings, exception ) {
-				mw.log( 'Error in loading messages from ' + url + ' Exception: ' + exception );
-			} );
-			return deferred.promise();
-		}
-	};
-
-	/**
 	 * Initialize ULS front-end and its i18n.
 	 *
 	 * @param {Function} callback callback function to be called after initialization.
 	 */
 	mw.uls.init = function ( callback ) {
-		var messageStore = new MWMessageStore();
 
 		callback = callback || $.noop;
 
@@ -255,11 +211,11 @@
 		// JavaScript side i18n initialization
 		$.i18n( {
 			locale: currentLang,
-			messageStore: messageStore
+			messageStore: mw.uls.messageStore
 		} );
 
 		if ( !jsonLoader ) {
-			jsonLoader = messageStore.load( currentLang );
+			jsonLoader = mw.uls.messageStore.load( currentLang );
 		} else {
 			jsonLoader.done( function () {
 				initialized = true;

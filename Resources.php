@@ -58,9 +58,14 @@ $wgResourceModules['ext.uls.init'] = array(
 		'mediawiki.util',
 		'jquery.json',
 		'jquery.uls',
-		'jquery.i18n',
+		'ext.uls.i18n',
 	),
 	'position' => 'top',
+) + $resourcePaths;
+
+$wgResourceModules['ext.uls.i18n'] = array(
+	'scripts' => 'resources/js/ext.uls.i18n.js',
+	'dependencies' => 'jquery.i18n',
 ) + $resourcePaths;
 
 $wgResourceModules['ext.uls.inputsettings'] = array(
@@ -120,9 +125,30 @@ $wgResourceModules['ext.uls.webfonts.repository'] = array(
 	'scripts' => 'resources/js/ext.uls.webfonts.repository.js',
 ) + $resourcePaths;
 
-
 $wgResourceModules['jquery.i18n'] = array(
-	'scripts' => 'lib/jquery.i18n.js',
+	'scripts' => array(
+		'lib/jquery.i18n/jquery.i18n.js',
+		'lib/jquery.i18n/jquery.i18n.parser.js',
+		'lib/jquery.i18n/jquery.i18n.emitter.js',
+		'lib/jquery.i18n/jquery.i18n.language.js',
+	),
+	'dependencies' => 'mediawiki.libs.pluralruleparser',
+	'languageScripts' => array(
+		'bs' => 'lib/jquery.i18n/languages/bs.js',
+		'dsb' => 'lib/jquery.i18n/languages/dsb.js',
+		'fi' => 'lib/jquery.i18n/languages/fi.js',
+		'ga' => 'lib/jquery.i18n/languages/ga.js',
+		'he' => 'lib/jquery.i18n/languages/he.js',
+		'hsb' => 'lib/jquery.i18n/languages/hsb.js',
+		'hu' => 'lib/jquery.i18n/languages/hu.js',
+		'hy' => 'lib/jquery.i18n/languages/hy.js',
+		'la' => 'lib/jquery.i18n/languages/la.js',
+		'ml' => 'lib/jquery.i18n/languages/ml.js',
+		'os' => 'lib/jquery.i18n/languages/os.js',
+		'ru' => 'lib/jquery.i18n/languages/ru.js',
+		'sl' => 'lib/jquery.i18n/languages/sl.js',
+		'uk' => 'lib/jquery.i18n/languages/uk.js',
+	),
 ) + $resourcePaths;
 
 $wgResourceModules['jquery.ime'] = array(
