@@ -33,6 +33,7 @@
 "ext-uls-input-settings-ime-settings": "Input methods for $1",
 "ext-uls-input-settings-ui-language": "Language used for writing",
 "ext-uls-back-to-input-settings": "Back to input settings",
+"ext-uls-ime-help": "How to use",
 "ext-uls-disable-input-method": "Use native keyboard",
 "ext-uls-input-settings-more-languages-tooltip": "More languages",
 "jquery-ime-other-languages": "Other languages",

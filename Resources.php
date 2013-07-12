@@ -71,6 +71,9 @@ $wgResourceModules['ext.uls.inputsettings'] = array(
 		'ext.uls.ime',
 		'jquery.i18n',
 	),
+	'messages' => array(
+		'uls-ime-helppage',
+	),
 ) + $resourcePaths;
 
 // Interface language selection module
