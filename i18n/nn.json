@@ -14,6 +14,7 @@
     "ext-uls-language-settings-title": "Spr\u00e5kinnstillingar",
     "ext-uls-language-settings-apply": "Bruk innstillingar",
     "ext-uls-language-settings-cancel": "Bryt av",
+    "ext-uls-language-buttons-help": "Endra spr\u00e5ket i menyane. Spr\u00e5ket p\u00e5 innhaldet vert ikkje p\u00e5verka.",
     "ext-uls-display-settings-font-settings": "Skrifttypeinnstillingar",
     "ext-uls-display-settings-ui-language": "Visingsspr\u00e5k",
     "ext-uls-display-settings-anon-label": "Visingsspr\u00e5k:",
@@ -41,5 +42,7 @@
     "ext-uls-input-settings-noime": "Ingen inndatametodar er tilgjengelege for dette spr\u00e5ket.",
     "ext-uls-input-disable-notification": "Inndataverkt\u00f8ya vart slegne av",
     "ext-uls-input-disable-notification-undo": "Angra",
+    "ext-uls-input-disable-notification-info-personal": "Du kan sl\u00e5 p\u00e5 inndataverkt\u00f8ya kva tid som helst fr\u00e5 spr\u00e5kinnstillingane.",
+    "ext-uls-input-disable-notification-info-interlanguage": "Du kan sl\u00e5 p\u00e5 inndataverkt\u00f8ya kva tid som helst fr\u00e5 spr\u00e5kinnstillingane ved sida av spr\u00e5klista.",
     "ext-uls-language-settings-preferences-link": "Fleire spr\u00e5kinnstillingar"
 }

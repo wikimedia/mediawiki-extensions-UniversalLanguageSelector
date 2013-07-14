@@ -336,6 +336,7 @@ $messages['id'] = array(
 $messages['ilo'] = array(
 	'UniversalLanguageSelector' => 'Unibersal a Pagpilian ti Pagsasao',
 	'uls-desc' => 'Mangited ti agar-aramat kadagiti nadumaduma a pamay-an ti panagpili ti maysa a pagsasao ken ti panagbaliw kadagiti pannakaidisso ti pagsasao',
+	'uls-plang-title-languages' => 'Dagiti pagsasao',
 );
 
 /** Italian (italiano)
@@ -492,6 +493,15 @@ $messages['nl'] = array(
 	'UniversalLanguageSelector' => 'Universele taalkiezer',
 	'uls-desc' => 'Biedt gebruikers verschillende mogelijkheden om een taal te kiezen en bijbehorende instellingen aan te passen',
 	'uls-plang-title-languages' => 'Talen',
+);
+
+/** Norwegian Nynorsk (norsk nynorsk)
+ * @author Njardarlogar
+ */
+$messages['nn'] = array(
+	'UniversalLanguageSelector' => 'Universell språkveljar',
+	'uls-desc' => 'Gjev brukaren fleire måtar å velja eit språk på og dessutan å endra språkinnstillingane',
+	'uls-plang-title-languages' => 'Språk',
 );
 
 /** Ossetic (Ирон)
