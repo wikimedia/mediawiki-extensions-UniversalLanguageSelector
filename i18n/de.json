@@ -32,6 +32,7 @@
     "ext-uls-input-settings-ime-settings": "Eingabemethoden f\u00fcr $1",
     "ext-uls-input-settings-ui-language": "Verwendete Sprache zum Schreiben",
     "ext-uls-back-to-input-settings": "Zur\u00fcck zu den Eingabeeinstellungen",
+    "ext-uls-ime-help": "Hilfe zur Benutzung",
     "ext-uls-disable-input-method": "Native Tastatur verwenden",
     "ext-uls-input-settings-more-languages-tooltip": "Mehr Sprachen",
     "jquery-ime-other-languages": "Andere Sprachen",
