@@ -67,7 +67,7 @@ div.input-settings-block {
 	height: 14px;
 	position: absolute;
 	right: 0;
-	}
+}
 
 .uls-ime-menu-settings-item > a:hover {
 	background-color: #f0f0f0;
@@ -115,4 +115,8 @@ div.input-settings-block {
 .uls-ime-notification-bubble .link {
 	color: #0645AD;
 	cursor: pointer;
+}
+
+.uls-input-settings .uls-ime-help {
+	margin-left: 10px;
 }

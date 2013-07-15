@@ -24,12 +24,14 @@ $messages = array();
  * English
  * @author santhosh
  * @author Amire80
+ * @author Nike
  */
 $messages['en'] = array(
 	'UniversalLanguageSelector' => 'Universal Language Selector',
 	'uls-desc' => 'Gives the user several ways to select a language and to adjust language settings',
 
 	'uls-plang-title-languages' => 'Languages',
+	'uls-ime-helppage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/$1',
 );
 
 /** Message documentation (Message documentation)
@@ -42,6 +44,7 @@ $messages['qqq'] = array(
 	'uls-plang-title-languages' => 'A title for the are in the sidebar in which the interlanguage links are supposed to appear.
 This title is shown when there are no interlanguage links there, but an icon that enables the ULS is shown.
 {{Identical|Language}}',
+	'uls-ime-helppage' => 'Target page for ime helps. $1 is ime id. Intented for wiki local customization.',
 );
 
 /** Arabic (العربية)
