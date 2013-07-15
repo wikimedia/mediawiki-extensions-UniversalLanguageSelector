@@ -111,9 +111,8 @@
 
 	// Add a 'more setttings' link that takes to input settings of ULS
 	$.fn.imeselector.Constructor.prototype.helpLink = function () {
-		var $disableInputToolsLink, $moreSettingsLink, imeselector;
-
-		imeselector = this;
+		var $disableInputToolsLink, $moreSettingsLink,
+			imeselector = this;
 
 		$disableInputToolsLink = $( '<span>' )
 			.addClass( 'uls-ime-disable-link' )
@@ -186,7 +185,7 @@
 					var $ulsTrigger;
 
 					$ulsTrigger = $( '<a>' ).text( '...' )
-						.addClass( 'ime-selector-more-languages' )
+						.addClass( 'ime-selector-more-languages selectable-row selectable-row-item' )
 						.attr( {
 							title: $.i18n( 'ext-uls-input-settings-more-languages-tooltip' )
 						} );
@@ -200,6 +199,18 @@
 					} );
 
 					return $ulsTrigger;
+				},
+				helpHandler: function ( ime ) {
+					return $( '<a>' )
+						.attr( {
+							href: mw.msg( 'uls-ime-helppage' ).replace( '$1', ime ),
+							target: '_blank',
+							title: $.i18n( 'ext-uls-ime-help' )
+						} )
+						.addClass( 'ime-perime-help' )
+						.click( function ( event ) {
+							event.stopPropagation();
+						} );
 				}
 			} );
 

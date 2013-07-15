@@ -111,6 +111,34 @@ div.display-settings-block:hover .settings-text {
 	color: #252525;
 }
 
+/* Ime menu customizations */
+.ime-perime-help {
+	display: none;
+}
+
+.ime-checked .ime-perime-help {
+	display: inline-block;
+	width: 20px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0.75;
+	padding: 0;
+	/* @embed */
+	background: transparent url('../images/help.png') left center no-repeat;
+	/* @embed */
+	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/help.svg');
+	/* @embed */
+	background-image: linear-gradient(transparent, transparent), url('../images/help.svg');
+}
+
+.ime-checked .ime-perime-help:hover {
+	opacity: 1;
+}
+
+
 button.button {
 	display: inline-block;
 	padding: 0.4065em 1.2195em 0.4065em;
