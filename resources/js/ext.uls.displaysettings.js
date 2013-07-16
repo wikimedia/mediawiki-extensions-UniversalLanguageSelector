@@ -159,6 +159,19 @@
 				new mw.Api().parse( $.i18n( 'ext-uls-display-settings-anon-log-in-cta' ) )
 					.done( function ( parsedCta ) {
 						$loginCta.html( parsedCta );
+						// Because browsers navigate away when clicking a link,
+						// we are are overriding the normal click behavior to
+						// allow the event be logged first - currently there is no
+						// local queue for events. The timeout is there to make sure
+						// the user gets to the new page even if event logging is slow
+						// or fails.
+						$loginCta.find( 'a' ).click( function ( event ) {
+							event.preventDefault();
+							mw.uls.logEvent( { action: 'login-click' }, 500 )
+								.always( function () {
+									window.location.href = event.target.href;
+								} );
+						} );
 					} );
 
 				return;
