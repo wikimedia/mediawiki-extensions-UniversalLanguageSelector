@@ -92,16 +92,19 @@
 			mw.hook( 'mw.uls.interface.morelanguages' ).add( $.proxy( this.interfaceMoreLanguages, this ) );
 			mw.hook( 'mw.uls.interface.language.change' ).add( $.proxy( this.interfaceLanguageChange, this ) );
 			mw.hook( 'mw.uls.font.change' ).add( $.proxy( this.fontChange, this ) );
+			$( 'body' ).on( 'noresults.uls', '.uls-menu .languagefilter',
+				 $.proxy( this.noSearchResults, this )
+			);
 		},
 
 		/**
 		 * Log language settings open
-		 * @param {Array} args
+		 * @param {string} context Where it was opened from
 		 */
-		ulsSettingsOpen: function ( args ) {
+		ulsSettingsOpen: function ( context ) {
 			this.log( {
 				action: 'settings-open',
-				context: args
+				context: context
 			} );
 		},
 
@@ -179,7 +182,7 @@
 		/**
 		 * Log font preference changes
 		 *
-		 * @param {Object} context Either 'interface' or 'content'
+		 * @param {string} context Either 'interface' or 'content'
 		 * @param {string} language
 		 * @param {string} font
 		 */
@@ -200,6 +203,18 @@
 			}
 
 			this.log( logParams );
+		},
+
+		/**
+		 * Log search strings which produce no search results.
+		 * @param {jQuery.event} event The orignal event
+		 * @param {string} context The query string
+		 */
+		noSearchResults: function ( event, context ) {
+			this.log( {
+				action: 'no-search-results',
+				context: context
+			} );
 		}
 	};
 
