@@ -44,7 +44,8 @@ $messages['qqq'] = array(
 	'uls-plang-title-languages' => 'A title for the are in the sidebar in which the interlanguage links are supposed to appear.
 This title is shown when there are no interlanguage links there, but an icon that enables the ULS is shown.
 {{Identical|Language}}',
-	'uls-ime-helppage' => 'Target page for ime helps. $1 is ime id. Intented for wiki local customization.',
+	'uls-ime-helppage' => 'Target page for ime helps. Parameters:
+* $1 - ime id. Intended for wiki local customization. e.g. cyrl-palochka',
 );
 
 /** Arabic (العربية)

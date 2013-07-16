@@ -1,12 +1,13 @@
 {
     "@metadata": {
-        "authors": [
-            "Gomoko",
-            "Hyperborean",
-            "Ltrlg",
-            "Metroitendo",
-            "Sherbrooke"
-        ]
+        "authors": {
+            "0": "Gomoko",
+            "1": "Hyperborean",
+            "2": "Ltrlg",
+            "3": "Metroitendo",
+            "4": "Sherbrooke",
+            "6": "Wyz"
+        }
     },
     "ext-uls-display-settings-title": "Afficher les param\u00e8tres",
     "ext-uls-display-settings-language-tab": "Langue",
@@ -35,6 +36,7 @@
     "ext-uls-input-settings-ime-settings": "M\u00e9thodes de saisie pour $1",
     "ext-uls-input-settings-ui-language": "Langue utilis\u00e9e pour \u00e9crire",
     "ext-uls-back-to-input-settings": "Retour aux param\u00e8tres de saisie",
+    "ext-uls-ime-help": "Mode d\u2019emploi",
     "ext-uls-disable-input-method": "Utiliser un clavier local",
     "ext-uls-input-settings-more-languages-tooltip": "Plus de langues",
     "jquery-ime-other-languages": "Autres langues",
@@ -45,7 +47,7 @@
     "ext-uls-input-disable-info": "Les outils d'entr\u00e9e sont d\u00e9sactiv\u00e9s.",
     "ext-uls-input-settings-noime": "Aucune m\u00e9thode de saisie n'est disponible pour cette langue.",
     "ext-uls-input-disable-notification": "Les outils d'entr\u00e9e ont \u00e9t\u00e9 d\u00e9sactiv\u00e9s",
-    "ext-uls-input-disable-notification-undo": "D\u00e9faire",
+    "ext-uls-input-disable-notification-undo": "Annuler",
     "ext-uls-input-disable-notification-info-personal": "Vous pouvez activer les outils d'entr\u00e9e \u00e0 tout moment dans vos param\u00e8tres de langue.",
     "ext-uls-input-disable-notification-info-interlanguage": "Vous pouvez activer les outils d'entr\u00e9e \u00e0 tout moment depuis les param\u00e8tres de langue \u00e0 c\u00f4t\u00e9 de la liste des langues.",
     "ext-uls-language-settings-preferences-link": "Plus de param\u00e8tres de langue"

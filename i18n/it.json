@@ -32,6 +32,7 @@
     "ext-uls-input-settings-ime-settings": "Metodi di scrittura per $1",
     "ext-uls-input-settings-ui-language": "Lingua usata per la scrittura",
     "ext-uls-back-to-input-settings": "Ritorna alle impostazioni di scrittura",
+    "ext-uls-ime-help": "Come usarlo",
     "ext-uls-disable-input-method": "Utilizza la tastiera nativa",
     "ext-uls-input-settings-more-languages-tooltip": "Altre lingue",
     "jquery-ime-other-languages": "Altre lingue",
