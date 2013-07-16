@@ -91,6 +91,7 @@
 						.click();
 				} );
 			}
+
 			uls.hide();
 		} );
 	}
@@ -119,6 +120,12 @@
 					} ).click();
 				} );
 			}
+
+			mw.uls.logEvent( {
+				action: 'settings-open',
+				context: 'uls'
+			} );
+
 			uls.hide();
 		} );
 	}
@@ -319,11 +326,20 @@
 				$ulsTrigger.attr( {
 					title: $.i18n( 'ext-uls-select-language-settings-icon-tooltip' )
 				} );
-				$ulsTrigger.on( 'click', function ( e ) {
+
+				$ulsTrigger.on( 'click', function ( e, eventParams ) {
 					var languagesettings = $ulsTrigger.data( 'languagesettings' ),
 						languageSettingsOptions;
 
-					if ( !languagesettings ) {
+					if ( languagesettings ) {
+						if ( !languagesettings.shown ) {
+							mw.uls.logEvent( {
+								action: 'settings-open',
+								context: eventParams && eventParams.source || 'interlanguage'
+							} );
+						}
+					} else {
+						// Initialize the Language settings window
 						languageSettingsOptions = {
 							defaultModule: 'display',
 							onVisible: function () {
@@ -355,6 +371,7 @@
 								this.position();
 							}
 						};
+
 						mw.loader.using( mw.uls.languageSettingsModules, function () {
 							$ulsTrigger.languagesettings( languageSettingsOptions ).click();
 						} );
@@ -363,22 +380,39 @@
 					}
 				} );
 			} else if ( anonMode ) {
-				$ulsTrigger.on( 'click', function ( e ) {
+				$ulsTrigger.on( 'click', function ( e, eventParams ) {
 					var languagesettings = $ulsTrigger.data( 'languagesettings' );
 
-					if ( !languagesettings ) {
+					if ( languagesettings ) {
+						if ( !languagesettings.shown ) {
+							mw.uls.logEvent( {
+								action: 'settings-open',
+								context: eventParams && eventParams.source || 'personal'
+							} );
+						}
+					} else {
 						mw.loader.using( mw.uls.languageSettingsModules, function () {
-							$ulsTrigger.languagesettings().click();
+							$ulsTrigger.languagesettings();
+
+							$ulsTrigger.trigger( 'click', eventParams );
 						} );
+
 						e.stopPropagation();
 					}
 				} );
 			} else {
-				$ulsTrigger.on( 'click', function ( e ) {
+				$ulsTrigger.on( 'click', function ( e, eventParams ) {
 					var uls = $ulsTrigger.data( 'uls' ),
 						ulsOptions;
 
-					if ( !uls ) {
+					if ( uls ) {
+						if ( !uls.shown ) {
+							mw.uls.logEvent( {
+								action: 'settings-open',
+								context: eventParams && eventParams.source || 'personal'
+							} );
+						}
+					} else {
 						// ULS options that are common to all modes of showing
 						ulsOptions = {
 							onReady: function () {
@@ -392,7 +426,9 @@
 								mw.uls.changeLanguage( language );
 							}
 						};
-						$ulsTrigger.uls( ulsOptions ).click();
+
+						$ulsTrigger.uls( ulsOptions ).trigger( 'click', eventParams );
+
 						e.stopPropagation();
 					}
 				} );
@@ -405,11 +441,9 @@
 			$( '#uls-preferences-link' )
 				.text( $.i18n( 'ext-uls-language-settings-preferences-link' ) )
 				.click( function () {
-					if ( $ulsTrigger.length ) {
-						$ulsTrigger.click();
-					} else {
-						$( '.uls-settings-trigger' ).click();
-					}
+					$ulsTrigger.trigger( 'click', {
+						source: 'preferences'
+					} );
 
 					return false;
 				} );
