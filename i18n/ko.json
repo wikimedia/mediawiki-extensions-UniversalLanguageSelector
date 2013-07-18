@@ -32,6 +32,7 @@
     "ext-uls-input-settings-ime-settings": "$1\uc5d0 \ub300\ud55c \uc785\ub825 \ubc29\uc2dd",
     "ext-uls-input-settings-ui-language": "\uc785\ub825\uc5d0 \uc0ac\uc6a9\ud560 \uc5b8\uc5b4",
     "ext-uls-back-to-input-settings": "\uc785\ub825 \uc124\uc815\uc73c\ub85c \ub3cc\uc544\uac00\uae30",
+    "ext-uls-ime-help": "\uc0ac\uc6a9 \ubc29\ubc95",
     "ext-uls-disable-input-method": "\ub124\uc774\ud2f0\ube0c \ud0a4\ubcf4\ub4dc \uc0ac\uc6a9",
     "ext-uls-input-settings-more-languages-tooltip": "\uae30\ud0c0 \uc5b8\uc5b4",
     "jquery-ime-other-languages": "\ub2e4\ub978 \uc5b8\uc5b4",
