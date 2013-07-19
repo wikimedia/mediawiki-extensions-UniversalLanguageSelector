@@ -494,7 +494,7 @@
 
 			$uiFontSelector.on( 'change', function () {
 				displaySettings.enableApplyButton();
-
+				oldUIFont = mw.webfonts.preferences.getFont( displaySettings.uiLanguage );
 				mw.webfonts.preferences.setFont( displaySettings.uiLanguage,
 					$( this ).find( 'option:selected' ).val()
 				);
@@ -503,7 +503,7 @@
 
 			$contentFontSelector.on( 'change', function () {
 				displaySettings.enableApplyButton();
-
+				oldContentFont = mw.webfonts.preferences.getFont( displaySettings.contentLanguage );
 				mw.webfonts.preferences.setFont( displaySettings.contentLanguage,
 					$( this ).find( 'option:selected' ).val()
 				);
