@@ -141,12 +141,15 @@
 
 	/**
 	 * Checks whether the browser is supported.
-	 * Browse support policy: http://www.mediawiki.org/wiki/Browser_support#Grade_A
+	 * Browser support policy: http://www.mediawiki.org/wiki/Browser_support#Grade_A
 	 * @return boolean
 	 */
 	function isBrowserSupported() {
-		// Blacklist Grade B browsers IE 6, 7 and IE60-IE79
-		return !/MSIE [67]/i.test( navigator.userAgent );
+		var blacklist = {
+			'msie': [['<=', 7]]
+		};
+
+		return !$.client.test( blacklist, null, true );
 	}
 
 	/**

@@ -56,6 +56,7 @@ $wgResourceModules['ext.uls.init'] = array(
 		'ext.uls.languagenames',
 		'mediawiki.Uri',
 		'mediawiki.util',
+		'jquery.client',
 		'jquery.json',
 		'jquery.uls',
 		'ext.uls.i18n',
