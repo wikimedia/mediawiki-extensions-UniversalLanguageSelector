@@ -9,7 +9,7 @@
 
 #p-lang .uls-settings-trigger {
 	/* @embed */
-	background: transparent url('../images/cog-sprite.png') right top no-repeat;
+	background: transparent url('../images/cog-sprite.png') no-repeat right top;
 	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/cog-sprite.svg');
 	background-image: -moz-linear-gradient(transparent, transparent), url('../images/cog-sprite.svg');
 	background-image: linear-gradient(transparent, transparent), url('../images/cog-sprite.svg');
