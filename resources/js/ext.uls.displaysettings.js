@@ -104,7 +104,7 @@
 
 	DisplaySettings.prototype = {
 
-		Constructor: DisplaySettings,
+		constructor: DisplaySettings,
 
 		/**
 		 * Render the module into a given target
