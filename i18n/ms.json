@@ -31,6 +31,7 @@
     "ext-uls-input-settings-ime-settings": "Kaedah input untuk $1",
     "ext-uls-input-settings-ui-language": "Bahasa yang digunakan untuk menulis",
     "ext-uls-back-to-input-settings": "Kembali ke tetapan input",
+    "ext-uls-ime-help": "Cara penggunaan",
     "ext-uls-disable-input-method": "Gunakan papan kekunci asal",
     "ext-uls-input-settings-more-languages-tooltip": "Bahasa lain",
     "jquery-ime-other-languages": "Bahasa-bahasa lain",
