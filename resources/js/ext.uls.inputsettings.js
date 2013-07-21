@@ -80,7 +80,7 @@
 
 	InputSettings.prototype = {
 
-		Constructor: InputSettings,
+		constructor: InputSettings,
 
 		/**
 		 * Render the module into a given target
