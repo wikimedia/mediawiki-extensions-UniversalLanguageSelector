@@ -119,6 +119,8 @@
 			this.i18n();
 			this.$webfonts.refresh();
 			this.listen();
+			this.dirty = false;
+			this.savedRegistry = $.extend( true, {}, mw.webfonts.preferences );
 		},
 
 		/**
@@ -196,7 +198,7 @@
 
 			function buttonHandler( button ) {
 				return function () {
-					displaySettings.enableApplyButton();
+					displaySettings.markDirty();
 					displaySettings.uiLanguage = button.data( 'language' ) || displaySettings.uiLanguage;
 					$( 'div.uls-ui-languages button.button' ).removeClass( 'down' );
 					button.addClass( 'down' );
@@ -291,7 +293,7 @@
 					}
 				},
 				onSelect: function ( langCode ) {
-					displaySettings.enableApplyButton();
+					displaySettings.markDirty();
 					displaySettings.uiLanguage = langCode;
 					displaySettings.$parent.show();
 					displaySettings.prepareUIFonts();
@@ -444,11 +446,16 @@
 		},
 
 		/**
-		 * Enable the apply button.
+		 * Mark dirty, there are unsaved changes. Enable the apply button.
 		 * Useful in many places when something changes.
 		 */
-		enableApplyButton: function () {
+		markDirty: function () {
+			this.dirty = true;
 			this.$template.find( '#uls-displaysettings-apply' ).removeAttr( 'disabled' );
+		},
+
+		disableApplyButton: function () {
+			this.$template.find( '#uls-displaysettings-apply' ).prop( 'disabled', true );
 		},
 
 		/**
@@ -458,8 +465,6 @@
 			var displaySettings = this,
 				$contentFontSelector = this.$template.find( '#content-font-selector' ),
 				$uiFontSelector = this.$template.find( '#ui-font-selector' ),
-				oldUIFont = $uiFontSelector.find( 'option:selected' ).val(),
-				oldContentFont = $contentFontSelector.find( 'option:selected' ).val(),
 				$tabButtons = displaySettings.$template.find( '.uls-display-settings-tab-switcher button' );
 
 			// TODO all these repeated selectors can be placed in object constructor.
@@ -469,30 +474,14 @@
 			} );
 
 			displaySettings.$template.find( 'button.uls-display-settings-cancel' ).on( 'click', function () {
-				mw.webfonts.preferences.setFont( displaySettings.contentLanguage, oldContentFont );
-				mw.webfonts.preferences.setFont( displaySettings.uiLanguage, oldUIFont );
-
-				if ( displaySettings.$webfonts ) {
-					displaySettings.$webfonts.refresh();
-				}
-
-				displaySettings.$template.find( 'div.uls-ui-languages button.button' ).each( function () {
-					var $button = $( this );
-
-					if ( $button.attr( 'lang' ) === displaySettings.contentLanguage ) {
-						$button.addClass( 'down' );
-					} else {
-						$button.removeClass( 'down' );
-					}
-				} );
+				displaySettings.cancel();
 				displaySettings.prepareUIFonts();
 				displaySettings.prepareContentFonts();
 				displaySettings.close();
 			} );
 
 			$uiFontSelector.on( 'change', function () {
-				displaySettings.enableApplyButton();
-				oldUIFont = mw.webfonts.preferences.getFont( displaySettings.uiLanguage );
+				displaySettings.markDirty();
 				mw.webfonts.preferences.setFont( displaySettings.uiLanguage,
 					$( this ).find( 'option:selected' ).val()
 				);
@@ -500,8 +489,7 @@
 			} );
 
 			$contentFontSelector.on( 'change', function () {
-				displaySettings.enableApplyButton();
-				oldContentFont = mw.webfonts.preferences.getFont( displaySettings.contentLanguage );
+				displaySettings.markDirty();
 				mw.webfonts.preferences.setFont( displaySettings.contentLanguage,
 					$( this ).find( 'option:selected' ).val()
 				);
@@ -583,6 +571,46 @@
 			mw.webfonts.preferences.save( function ( result ) {
 				// closure for not losing the scope
 				displaySettings.onSave( result );
+				displaySettings.dirty = false;
+				// Update the back-up preferences for the case of canceling
+				displaySettings.savedRegistry = $.extend( true, {}, mw.webfonts.preferences );
+			} );
+		},
+
+		/**
+		 * Cancel the changes done by user for display settings
+		 */
+		cancel: function () {
+			var displaySettings = this;
+
+			if ( !displaySettings.dirty ) {
+				// Nothing changed
+				return;
+			}
+
+			// Reload preferences
+			mw.webfonts.preferences = $.extend( true, {}, displaySettings.savedRegistry );
+			if ( displaySettings.$webfonts ) {
+				displaySettings.$webfonts.refresh();
+			}
+
+			// Clear the dirty bit
+			displaySettings.dirty = false;
+			displaySettings.disableApplyButton();
+
+			// Restore content and UI language
+			displaySettings.uiLanguage = displaySettings.getUILanguage();
+			displaySettings.contentLanguage = displaySettings.getContentLanguage();
+
+			// Restore the visual state of selected language button
+			displaySettings.$template.find( 'div.uls-ui-languages button.button' ).each( function () {
+				var $button = $( this );
+
+				if ( $button.attr( 'lang' ) === displaySettings.uiLanguage ) {
+					$button.addClass( 'down' );
+				} else {
+					$button.removeClass( 'down' );
+				}
 			} );
 		}
 	};

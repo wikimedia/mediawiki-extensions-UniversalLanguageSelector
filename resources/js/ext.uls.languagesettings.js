@@ -49,6 +49,7 @@
 		this.initialized = false;
 		this.left = this.options.left;
 		this.top = this.options.top;
+		this.modules = {},
 		this.$settingsPanel = this.$window.find( '#languagesettings-settings-panel' );
 		this.init();
 		this.listen();
@@ -72,8 +73,8 @@
 			$( 'html' ).click( $.proxy( this.hide, this ) );
 
 			// ... but when clicked on window do not hide.
-			this.$window.on( 'click', function ( e ) {
-				e.stopPropagation();
+			this.$window.on( 'click', function ( event ) {
+				event.stopPropagation();
 			} );
 		},
 
@@ -141,6 +142,7 @@
 				module.render();
 				$settingsLink.addClass( 'active' );
 			}
+			this.modules[moduleName] = module;
 		},
 
 		position: function () {
@@ -204,11 +206,24 @@
 		 * call onClose if defined from the previous context.
 		 */
 		close: function () {
+			if ( !this.shown ) {
+				return;
+			}
+
 			this.hide();
 
+			// optional callback
 			if ( this.options.onClose ) {
 				this.options.onClose();
 			}
+
+			// We are closing language settings. That also means we are cancelling
+			// any changes the user did, but not saved, in all registered modules.
+			$.each( this.modules, function( id, module ) {
+				// Modules should make sure to return early if no changes were made
+				// They can use some kind of 'dirty bits' to implement this.
+				module.cancel();
+			} );
 		},
 
 		click: function ( e ) {
