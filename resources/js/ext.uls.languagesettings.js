@@ -67,6 +67,14 @@
 			this.$element.on( 'click', $.proxy( this.click, this ) );
 			this.$window.find( '#languagesettings-close' )
 				.on( 'click', $.proxy( this.close, this ) );
+
+			// Hide the window when clicked outside
+			$( 'html' ).click( $.proxy( this.close, this ) );
+
+			// ... but when clicked on window do not hide.
+			this.$window.on( 'click', function () {
+				return false;
+			} );
 		},
 
 		render: function () {
@@ -155,7 +163,8 @@
 				this.render();
 				this.initialized = true;
 			}
-
+			// close model windows close, if they hide on page click
+			$( 'html' ).click();
 			this.$window.i18n();
 			this.shown = true;
 			this.$window.show();
@@ -202,7 +211,10 @@
 			}
 		},
 
-		click: function () {
+		click: function ( e ) {
+			e.stopPropagation();
+			e.preventDefault();
+
 			if ( this.shown ) {
 				this.hide();
 			} else {
