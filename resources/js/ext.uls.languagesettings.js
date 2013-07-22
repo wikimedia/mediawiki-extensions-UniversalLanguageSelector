@@ -69,11 +69,11 @@
 				.on( 'click', $.proxy( this.close, this ) );
 
 			// Hide the window when clicked outside
-			$( 'html' ).click( $.proxy( this.close, this ) );
+			$( 'html' ).click( $.proxy( this.hide, this ) );
 
 			// ... but when clicked on window do not hide.
-			this.$window.on( 'click', function () {
-				return false;
+			this.$window.on( 'click', function ( e ) {
+				e.stopPropagation();
 			} );
 		},
 
