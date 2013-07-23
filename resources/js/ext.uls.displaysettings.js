@@ -316,11 +316,9 @@
 		 * @param {String} language Language code
 		 */
 		preview: function ( language ) {
-			var displaySettings = this,
-				i18n = $.i18n();
+			var displaySettings = this;
 
-			i18n.locale = language;
-			i18n.messageStore.load( i18n.locale ).done( function () {
+			mw.uls.loadLocalization( language ).done( function () {
 				displaySettings.i18n();
 			} );
 		},

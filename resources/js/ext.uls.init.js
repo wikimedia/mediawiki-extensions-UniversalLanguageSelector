@@ -31,7 +31,7 @@
 		this.$languageFilter.addClass( 'noime' );
 	};
 
-	var jsonLoader,
+	var jsonLoader = null,
 		initialized = false,
 		currentLang = mw.config.get( 'wgUserLanguage' ),
 		logEventQueue = $.Callbacks( 'memory once' );
@@ -211,14 +211,8 @@
 		 */
 		$.uls.data.addLanguage( 'als', { target: 'gsw' } );
 
-		// JavaScript side i18n initialization
-		$.i18n( {
-			locale: currentLang,
-			messageStore: mw.uls.messageStore
-		} );
-
 		if ( !jsonLoader ) {
-			jsonLoader = mw.uls.messageStore.load( currentLang );
+			jsonLoader = mw.uls.loadLocalization( currentLang );
 		} else {
 			jsonLoader.done( function () {
 				initialized = true;

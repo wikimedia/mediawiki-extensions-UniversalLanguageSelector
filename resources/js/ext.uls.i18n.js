@@ -17,54 +17,31 @@
  * @licence MIT License
  */
 
-( function ( $, mw, undefined ) {
+( function ( $, mw ) {
 	'use strict';
+
+	mw.uls = mw.uls || {};
 
 	// jquery.i18n has CLDRPluralRuleParser but MediaWiki also has the same
 	// parser. Reuse it by aliasing it to window.pluralRuleParser
 	window.pluralRuleParser = mw.libs.pluralRuleParser;
 
-	/**
-	 * jquery.i18n message store for MediaWiki
-	 *
-	 */
-	var MWMessageStore = function () {
-		this.messages = {};
-	};
+	// JavaScript side i18n initialization
+	$.i18n( {
+		locale: mw.config.get( 'wgUserLanguage' )
+	} );
 
-	MWMessageStore.prototype = {
-		init: function () {},
+	mw.uls.loadLocalization = function ( locale ) {
+		var i18n = $.i18n();
 
-		get: function ( locale, messageKey ) {
-			return ( this.isLoaded( locale ) && this.messages[locale][messageKey] ) ||
-				'<' + messageKey + '>';
-		},
-
-		set: function( locale, messages ) {
-			this.messages[locale] = messages;
-		},
-
-		isLoaded: function ( locale ) {
-			return this.messages[locale];
-		},
-
-		load: function ( locale ) {
-			var store = this,
-				deferred = $.Deferred(),
-				url = mw.util.wikiScript( 'api' ) + '?action=ulslocalization&language=';
-
-			if ( store.isLoaded( locale ) ) {
-				return deferred.resolve();
-			}
-
-			deferred = $.getJSON( url + locale ).done( function ( data ) {
-				store.set( locale, data );
-			} ).fail( function ( jqxhr, settings, exception ) {
-				mw.log( 'Error in loading messages from ' + url + ' Exception: ' + exception );
-			} );
-			return deferred.promise();
+		i18n.locale = locale;
+		if ( i18n.messageStore.messages[locale] ) {
+			return $.Deferred().resolve();
 		}
+		return i18n.load(
+			mw.util.wikiScript( 'api' ) + '?action=ulslocalization&language=' + locale,
+			locale
+		);
 	};
-	mw.uls = mw.uls || {};
-	mw.uls.messageStore = new MWMessageStore();
+
 }( jQuery, mediaWiki ) );
