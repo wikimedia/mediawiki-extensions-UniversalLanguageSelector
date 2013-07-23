@@ -174,13 +174,11 @@ $wgResourceModules['jquery.uls'] = array(
 		'jquery.uls.grid',
 		'jquery.uls.data',
 	),
-	'position' => 'top',
 ) + $resourcePaths;
 
 $wgResourceModules['jquery.uls.compact'] = array(
 	'styles' => 'lib/jquery.uls/css/jquery.uls.compact.css',
 	'dependencies' => 'jquery.uls',
-	'position' => 'top',
 ) + $resourcePaths;
 
 $wgResourceModules['jquery.uls.data'] = array(
@@ -188,12 +186,10 @@ $wgResourceModules['jquery.uls.data'] = array(
 		'lib/jquery.uls/src/jquery.uls.data.js',
 		'lib/jquery.uls/src/jquery.uls.data.utils.js',
 	),
-	'position' => 'top',
 ) + $resourcePaths;
 
 $wgResourceModules['jquery.uls.grid'] = array(
 	'styles' => 'lib/jquery.uls/css/jquery.uls.grid.css',
-	'position' => 'top',
 ) + $resourcePaths;
 
 $wgResourceModules['jquery.webfonts'] = array(
