@@ -31,6 +31,9 @@
 		locale: mw.config.get( 'wgUserLanguage' )
 	} );
 
+	// ApiULSLocalization handles fallback in ULS
+	$.i18n.fallbacks = {};
+
 	mw.uls.loadLocalization = function ( locale ) {
 		var i18n = $.i18n();
 
