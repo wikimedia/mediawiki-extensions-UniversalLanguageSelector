@@ -390,6 +390,13 @@ $messages['ko'] = array(
 	'uls-plang-title-languages' => '언어',
 );
 
+/** Karachay-Balkar (къарачай-малкъар)
+ * @author Iltever
+ */
+$messages['krc'] = array(
+	'uls-plang-title-languages' => 'Тилле',
+);
+
 /** Colognian (Ripoarisch)
  * @author Purodha
  */
@@ -664,6 +671,15 @@ $messages['uk'] = array(
  */
 $messages['ur'] = array(
 	'UniversalLanguageSelector' => 'عالمگیر زبان منتخب',
+);
+
+/** vèneto (vèneto)
+ * @author GatoSelvadego
+ */
+$messages['vec'] = array(
+	'UniversalLanguageSelector' => 'Sełetor universałe de ła lengua',
+	'uls-desc' => 'Fornise ai utenti difarenti modi de sełesionar na lengua e de sistemar łe inpostasion de ła lengua',
+	'uls-plang-title-languages' => 'Lengue',
 );
 
 /** Vietnamese (Tiếng Việt)

@@ -1,6 +1,7 @@
 {
     "@metadata": {
         "authors": [
+            "Jopparn",
             "WikiPhoenix"
         ]
     },
@@ -31,6 +32,7 @@
     "ext-uls-input-settings-ime-settings": "Metoder f\u00f6r indata f\u00f6r $1",
     "ext-uls-input-settings-ui-language": "Spr\u00e5k f\u00f6r att skriva",
     "ext-uls-back-to-input-settings": "Tillbaka till inst\u00e4llningar f\u00f6r indata",
+    "ext-uls-ime-help": "Hur man anv\u00e4nder",
     "ext-uls-disable-input-method": "Anv\u00e4nd standardtangentbord",
     "ext-uls-input-settings-more-languages-tooltip": "Fler spr\u00e5k",
     "jquery-ime-other-languages": "Andra spr\u00e5k:",
