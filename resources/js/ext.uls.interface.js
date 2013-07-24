@@ -270,10 +270,8 @@
 
 	$( document ).ready( function () {
 		mw.uls.init( function () {
-			var $ulsSettingsTrigger,
-				$triggers,
+			var $triggers,
 				$pLang,
-				ulsOptions,
 				$ulsTrigger = $( '.uls-trigger' ),
 				rtlPage = $( 'body' ).hasClass( 'rtl' ),
 				anonMode = ( mw.user.isAnon() &&
@@ -281,16 +279,17 @@
 				ulsPosition = mw.config.get( 'wgULSPosition' );
 
 			if ( ulsPosition === 'interlanguage' ) {
+				// TODO: Refactor this block
 				// The interlanguage links section
 				$pLang = $( '#p-lang' );
 				// Add an element near the interlanguage links header
-				$ulsSettingsTrigger = $( '<span>' )
+				$ulsTrigger = $( '<span>' )
 					.addClass( 'uls-settings-trigger' )
 					.attr( 'title', $.i18n( 'ext-uls-language-settings-title' ) );
 				// Append ULS cog to languages section, but make sure it is visible.
-				$pLang.show().prepend( $ulsSettingsTrigger );
+				$pLang.show().prepend( $ulsTrigger );
 				// Take care of any other elements with this class.
-				$ulsSettingsTrigger = $( '.uls-settings-trigger' );
+				$ulsTrigger = $( '.uls-settings-trigger' );
 				// Remove the dummy link, which was added to make sure that the section appears
 				$pLang.find( '.uls-p-lang-dummy' ).remove();
 
@@ -305,68 +304,82 @@
 						$pLang.find( 'div.pBody' ).remove();
 					}
 				}
-			}
 
-			// ULS options that are common to all modes of showing
-			ulsOptions = {
-				onReady: function () {
-					if ( $.fn.languagesettings ) {
-						addDisplaySettings( this );
-						addInputSettings( this );
-					}
-				},
-				onSelect: function ( language ) {
-					mw.uls.changeLanguage( language );
-				},
-				languages: mw.config.get( 'wgULSLanguages' ),
-				searchAPI: mw.util.wikiScript( 'api' ) + '?action=languagesearch',
-				quickList: function () {
-					return mw.uls.getFrequentLanguageList();
-				}
-			};
-
-			if ( ulsPosition === 'interlanguage' ) {
-				$ulsSettingsTrigger.attr( {
+				$ulsTrigger.attr( {
 					title: $.i18n( 'ext-uls-select-language-settings-icon-tooltip' )
 				} );
+				$ulsTrigger.on( 'click', function ( e ) {
+					var languagesettings = $ulsTrigger.data( 'languagesettings' ),
+						langaugeSettingsOptions;
 
-				$ulsSettingsTrigger.languagesettings( {
-					defaultModule: 'display',
-					onVisible: function () {
-						var topRowHeight, caretHeight, caretWidth,
-							$caretBefore = $( '<span>' ).addClass( 'caret-before' ),
-							$caretAfter = $( '<span>' ).addClass( 'caret-after' ),
-							ulsTriggerWidth = this.$element.width(),
-							ulsTriggerOffset = this.$element.offset();
+					if ( !languagesettings ) {
+						langaugeSettingsOptions = {
+							defaultModule: 'display',
+							onVisible: function () {
+								var topRowHeight, caretHeight, caretWidth,
+									$caretBefore = $( '<span>' ).addClass( 'caret-before' ),
+									$caretAfter = $( '<span>' ).addClass( 'caret-after' ),
+									ulsTriggerWidth = this.$element.width(),
+									ulsTriggerOffset = this.$element.offset();
 
-						// Add the callout caret triangle
-						// pointing to the trigger icon
-						this.$window.addClass( 'callout' );
-						this.$window.prepend( $caretBefore, $caretAfter );
+								// Add the callout caret triangle
+								// pointing to the trigger icon
+								this.$window.addClass( 'callout' );
+								this.$window.prepend( $caretBefore, $caretAfter );
 
-						// Calculate the positioning of the panel
-						// according to the position of the trigger icon
-						if ( rtlPage ) {
-							caretWidth = parseInt( $caretBefore.css( 'border-left-width' ), 10 );
-							this.left = ulsTriggerOffset.left - this.$window.width() - caretWidth;
-						} else {
-							caretWidth = parseInt( $caretBefore.css( 'border-right-width' ), 10 );
-							this.left = ulsTriggerOffset.left + ulsTriggerWidth + caretWidth;
-						}
+								// Calculate the positioning of the panel
+								// according to the position of the trigger icon
+								if ( rtlPage ) {
+									caretWidth = parseInt( $caretBefore.css( 'border-left-width' ), 10 );
+									this.left = ulsTriggerOffset.left - this.$window.width() - caretWidth;
+								} else {
+									caretWidth = parseInt( $caretBefore.css( 'border-right-width' ), 10 );
+									this.left = ulsTriggerOffset.left + ulsTriggerWidth + caretWidth;
+								}
 
-						topRowHeight = this.$window.find( '.row' ).height();
-						caretHeight = parseInt( $caretBefore.css( 'top' ), 10 );
-						this.top = ulsTriggerOffset.top - topRowHeight - caretHeight / 2;
+								topRowHeight = this.$window.find( '.row' ).height();
+								caretHeight = parseInt( $caretBefore.css( 'top' ), 10 );
+								this.top = ulsTriggerOffset.top - topRowHeight - caretHeight / 2;
 
-						this.position();
+								this.position();
+							}
+						};
+						$ulsTrigger.languagesettings( langaugeSettingsOptions ).click();
+						e.stopPropagation();
 					}
 				} );
 			} else if ( anonMode ) {
-				$ulsTrigger.languagesettings();
-			} else {
-				$ulsTrigger.uls( ulsOptions );
-			}
+				$ulsTrigger.on( 'click', function ( e ) {
+					var languagesettings = $ulsTrigger.data( 'languagesettings' );
 
+					if ( !languagesettings ) {
+						$ulsTrigger.languagesettings().click();
+						e.stopPropagation();
+					}
+				} );
+			} else {
+				$ulsTrigger.on( 'click', function ( e ) {
+					var uls = $ulsTrigger.data( 'uls' ),
+						ulsOptions;
+
+					if ( !uls ) {
+						// ULS options that are common to all modes of showing
+						ulsOptions = {
+							onReady: function () {
+								if ( $.fn.languagesettings ) {
+									addDisplaySettings( this );
+									addInputSettings( this );
+								}
+							},
+							onSelect: function ( language ) {
+								mw.uls.changeLanguage( language );
+							}
+						};
+						$ulsTrigger.uls( ulsOptions ).click();
+						e.stopPropagation();
+					}
+				} );
+			}
 			// At this point we don't care which kind of trigger it is
 			$triggers = $( '.uls-settings-trigger, .uls-trigger' );
 			addAccessibilityFeatures( $triggers );
