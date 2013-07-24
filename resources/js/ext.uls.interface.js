@@ -22,6 +22,7 @@
 
 	/**
 	 * Construct the display settings link
+	 * @return {jQuery}
 	 */
 	function displaySettings() {
 		var $displaySettingsTitle, displaySettingsText, $displaySettings;
@@ -40,6 +41,7 @@
 
 	/**
 	 * Construct the input settings link
+	 * @returns {jQuery}
 	 */
 	function inputSettings() {
 		var $inputSettingsTitle, inputSettingsText, $inputSettings;
@@ -61,28 +63,32 @@
 	 * @param {Object} uls The ULS object
 	 */
 	function addDisplaySettings( uls ) {
-		var $displaySettings = displaySettings(),
-			ulsPosition = mw.config.get( 'wgULSPosition' ),
-			anonMode = ( mw.user.isAnon() &&
-				!mw.config.get( 'wgULSAnonCanChangeLanguage' ) ),
-			displaySettingsOptions = {
-				defaultModule: 'display'
-			};
-
-		// If the ULS trigger is shown in the top personal menu,
-		// closing the display settings must show the main ULS
-		// languages list, unless we are in anon mode and thus
-		// cannot show the language list
-		if ( ulsPosition === 'personal' && !anonMode ) {
-			displaySettingsOptions.onClose = function () {
-				uls.show();
-			};
-		}
-		$.extend( displaySettingsOptions, uls.position() );
+		var $displaySettings = displaySettings();
 
 		uls.$menu.find( '#settings-block' ).append( $displaySettings );
-		$displaySettings.languagesettings( displaySettingsOptions );
 		$displaySettings.on( 'click', function () {
+			var languagesettings = $displaySettings.data( 'languagesettings' ),
+				displaySettingsOptions = {
+					defaultModule: 'display'
+				},
+				ulsPosition = mw.config.get( 'wgULSPosition' ),
+				anonMode = ( mw.user.isAnon() &&
+					!mw.config.get( 'wgULSAnonCanChangeLanguage' ) );
+
+			if ( !languagesettings ) {
+				// If the ULS trigger is shown in the top personal menu,
+				// closing the display settings must show the main ULS
+				// languages list, unless we are in anon mode and thus
+				// cannot show the language list
+				if ( ulsPosition === 'personal' && !anonMode ) {
+					displaySettingsOptions.onClose = function () {
+						uls.show();
+					};
+				}
+				$.extend( displaySettingsOptions, uls.position() );
+				$displaySettings.languagesettings( displaySettingsOptions )
+					.click();
+			}
 			uls.hide();
 		} );
 	}
@@ -92,22 +98,23 @@
 	 * @param {Object} uls The ULS object
 	 */
 	function addInputSettings( uls ) {
-		var $inputSettings, position;
+		var $inputSettings = inputSettings();
 
-		$inputSettings = inputSettings();
 		uls.$menu.find( '#settings-block' ).append( $inputSettings );
-		position = uls.position();
-
-		$inputSettings.languagesettings( {
-			defaultModule: 'input',
-			onClose: function () {
-				uls.show();
-			},
-			top: position.top,
-			left: position.left
-		} );
-
 		$inputSettings.on( 'click', function () {
+			var position = uls.position(),
+				languagesettings = $inputSettings.data( 'languagesettings' );
+
+			if ( !languagesettings ) {
+				$inputSettings.languagesettings( {
+					defaultModule: 'input',
+					onClose: function () {
+						uls.show();
+					},
+					top: position.top,
+					left: position.left
+				} ).click();
+			}
 			uls.hide();
 		} );
 	}
