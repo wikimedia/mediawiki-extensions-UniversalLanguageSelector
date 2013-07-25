@@ -34,7 +34,7 @@
 		$displaySettings = $( '<div>' )
 			.addClass( 'display-settings-block' )
 			.prop( 'id', 'display-settings-block' )
-			.append( $displaySettingsTitle );
+			.append( $displaySettingsTitle.i18n() );
 
 		return $displaySettings;
 	}
@@ -53,7 +53,7 @@
 		$inputSettings = $( '<div>' )
 			.addClass( 'input-settings-block' )
 			.prop( 'id', 'input-settings-block' )
-			.append( $inputSettingsTitle );
+			.append( $inputSettingsTitle.i18n() );
 
 		return $inputSettings;
 	}
@@ -86,8 +86,10 @@
 					};
 				}
 				$.extend( displaySettingsOptions, uls.position() );
-				$displaySettings.languagesettings( displaySettingsOptions )
-					.click();
+				mw.loader.using( mw.uls.languageSettingsModules, function () {
+					$displaySettings.languagesettings( displaySettingsOptions )
+						.click();
+				} );
 			}
 			uls.hide();
 		} );
@@ -106,14 +108,16 @@
 				languagesettings = $inputSettings.data( 'languagesettings' );
 
 			if ( !languagesettings ) {
-				$inputSettings.languagesettings( {
-					defaultModule: 'input',
-					onClose: function () {
-						uls.show();
-					},
-					top: position.top,
-					left: position.left
-				} ).click();
+				mw.loader.using( mw.uls.languageSettingsModules, function () {
+					$inputSettings.languagesettings( {
+						defaultModule: 'input',
+						onClose: function () {
+							uls.show();
+						},
+						top: position.top,
+						left: position.left
+					} ).click();
+				} );
 			}
 			uls.hide();
 		} );
@@ -344,7 +348,10 @@
 								this.position();
 							}
 						};
-						$ulsTrigger.languagesettings( langaugeSettingsOptions ).click();
+						mw.loader.using( mw.uls.languageSettingsModules, function () {
+							$ulsTrigger.languagesettings( langaugeSettingsOptions ).click();
+						} );
+
 						e.stopPropagation();
 					}
 				} );
@@ -353,7 +360,9 @@
 					var languagesettings = $ulsTrigger.data( 'languagesettings' );
 
 					if ( !languagesettings ) {
-						$ulsTrigger.languagesettings().click();
+						mw.loader.using( mw.uls.languageSettingsModules, function () {
+							$ulsTrigger.languagesettings().click();
+						} );
 						e.stopPropagation();
 					}
 				} );
@@ -366,10 +375,11 @@
 						// ULS options that are common to all modes of showing
 						ulsOptions = {
 							onReady: function () {
-								if ( $.fn.languagesettings ) {
-									addDisplaySettings( this );
-									addInputSettings( this );
-								}
+								var uls = this;
+								mw.loader.using( mw.uls.languageSettingsModules, function () {
+									addDisplaySettings( uls );
+									addInputSettings( uls );
+								} );
 							},
 							onSelect: function ( language ) {
 								mw.uls.changeLanguage( language );

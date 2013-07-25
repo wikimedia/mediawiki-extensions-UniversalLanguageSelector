@@ -88,8 +88,11 @@ $wgResourceModules['ext.uls.interface'] = array(
 	'dependencies' => array(
 		'ext.uls.init',
 		'jquery.tipsy',
-		'ext.uls.displaysettings',
-		'ext.uls.inputsettings',
+		'mediawiki.user',
+		// We can not delay webfonts loading since it is required
+		// immediately after page load
+		'ext.uls.webfonts',
+		'ext.uls.ime',
 	),
 	'messages' => array(
 		'uls-plang-title-languages',

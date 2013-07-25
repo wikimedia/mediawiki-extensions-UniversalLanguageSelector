@@ -38,6 +38,7 @@
 
 	mw.uls = mw.uls || {};
 	mw.uls.previousLanguagesCookie = 'uls-previous-languages';
+	mw.uls.languageSettingsModules = ['ext.uls.inputsettings', 'ext.uls.displaysettings'];
 	/**
 	 * Change the language of wiki using setlang URL parameter
 	 * @param {String} language
