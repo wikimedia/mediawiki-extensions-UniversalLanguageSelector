@@ -33,9 +33,11 @@ $wgResourceModules['ext.uls.geoclient'] = array(
 $wgResourceModules['ext.uls.ime'] = array(
 	'scripts' => 'resources/js/ext.uls.ime.js',
 	'dependencies' => array(
-		'jquery.ime',
 		'ext.uls.init',
 		'ext.uls.preferences',
+	),
+	'messages' => array(
+		'uls-ime-helppage',
 	),
 ) + $resourcePaths;
 
@@ -75,10 +77,8 @@ $wgResourceModules['ext.uls.inputsettings'] = array(
 	'dependencies' => array(
 		'ext.uls.languagesettings',
 		'ext.uls.ime',
+		'jquery.ime',
 		'jquery.i18n',
-	),
-	'messages' => array(
-		'uls-ime-helppage',
 	),
 ) + $resourcePaths;
 
