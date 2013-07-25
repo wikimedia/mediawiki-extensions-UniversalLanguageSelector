@@ -109,7 +109,7 @@
 		imePath: mwImeRulesPath
 	} );
 
-	// Add a 'more setttings' link that takes to input settings of ULS
+	// Add a 'more settings' link that takes to input settings of ULS
 	$.fn.imeselector.Constructor.prototype.helpLink = function () {
 		var $disableInputToolsLink, $moreSettingsLink,
 			imeselector = this;
