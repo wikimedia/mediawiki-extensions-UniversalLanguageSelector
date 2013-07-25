@@ -94,7 +94,8 @@
 			this.$parent.$settingsPanel.append( this.$template );
 
 			$enabledOnly = this.$template.find( '.enabled-only' );
-
+			// ime system is lazy loaded, make sure it is initialized
+			mw.ime.init();
 			if ( $.ime.preferences.isEnabled() ) {
 				$enabledOnly.removeClass( 'hide' );
 			} else {
