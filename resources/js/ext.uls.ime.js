@@ -19,7 +19,7 @@
 ( function ( $, mw, document, undefined ) {
 	'use strict';
 
-	var mwImeRulesPath, inputSelector, inputPreferences, ulsIMEPreferences, customHelpLink;
+	var mwImeRulesPath, inputSelector, inputPreferences;
 
 	mwImeRulesPath = mw.config.get( 'wgExtensionAssetsPath' ) +
 		'/UniversalLanguageSelector/lib/jquery.ime/';
@@ -57,7 +57,8 @@
 		return unique.slice( 0, 6 );
 	};
 
-	ulsIMEPreferences = {
+	// Extend the ime preference system
+	$.extend( $.ime.preferences, {
 
 		save: function ( callback ) {
 			if ( !this.registry.isDirty ) {
@@ -101,10 +102,15 @@
 		getDefaultLanguage: function () {
 			return mw.config.get( 'wgContentLanguage' );
 		}
-	};
+	} );
 
-	// Add a 'more setttings' link that takes to input settings of ULS
-	customHelpLink = function () {
+	// MediaWiki specific overrides for jquery.ime
+	$.extend( $.ime.defaults, {
+		imePath: mwImeRulesPath
+	} );
+
+	// Add a 'more settings' link that takes to input settings of ULS
+	$.fn.imeselector.Constructor.prototype.helpLink = function () {
 		var $disableInputToolsLink, $moreSettingsLink,
 			imeselector = this;
 
@@ -167,40 +173,19 @@
 		$( inputSelector ).trigger( 'destroy.ime' );
 	};
 
-	mw.ime.init = function () {
-		// Extend the ime preference system
-		$.extend( $.ime.preferences, ulsIMEPreferences );
-		// MediaWiki specific overrides for jquery.ime
-		$.extend( $.ime.defaults, {
-			imePath: mwImeRulesPath
-		} );
-		// Load the ime preferences
-		$.ime.preferences.load();
-		$.fn.imeselector.Constructor.prototype.helpLink = customHelpLink;
-	};
-
 	mw.ime.setup = function () {
-		if ( $.ime ) {
-			mw.ime.init();
-		}
 
 		$( 'body' ).on( 'focus.ime', inputSelector, function () {
 			var imeselector, $input, noImeSelector;
 
-			$input = $( this );
-
-			if ( !$.ime ) {
-				mw.loader.using( 'jquery.ime', function () {
-					mw.ime.init();
-					$input.trigger( 'focus.ime' );
-				} );
-				return;
-			}
-
+			// It's possible to disable IME through the settings
+			// panels before it was initialized, so we need to check
+			// that it's supposed to be initialized
 			if ( !$.ime.preferences.isEnabled() ) {
 				return;
 			}
 
+			$input = $( this );
 			noImeSelector = mw.config.get( 'wgULSNoImeSelectors' ).join( ', ' );
 
 			if ( noImeSelector.length && $input.is( noImeSelector ) ) {
@@ -253,7 +238,12 @@
 
 	$( document ).ready( function () {
 		mw.uls.init( function () {
-			mw.ime.setup();
+			// Load the ime preferences
+			$.ime.preferences.load();
+
+			if ( $.ime.preferences.isEnabled() ) {
+				mw.ime.setup();
+			}
 		} );
 	} );
 
