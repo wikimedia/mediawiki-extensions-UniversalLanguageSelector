@@ -121,18 +121,20 @@
 		$moreSettingsLink = $( '<span>' )
 			.addClass( 'uls-ime-more-settings-link' );
 
-		$moreSettingsLink.languagesettings( {
-			defaultModule: 'input',
-			onClose: function () {
-				// on close of input settings, keep focus in input area.
-				imeselector.$element.focus();
-			},
-			top: imeselector.$element.offset().top
-		} );
-
 		// Hide the menu.
 		$moreSettingsLink.on( 'click', function ( e ) {
+			var languageSettings = $( this ).data( 'languagesettings' );
 			imeselector.hide();
+			if ( !languageSettings ) {
+				$( this ).languagesettings( {
+					defaultModule: 'input',
+					onClose: function () {
+						// on close of input settings, keep focus in input area.
+						imeselector.$element.focus();
+					},
+					top: imeselector.$element.offset().top
+				} ).click();
+			}
 			e.stopPropagation();
 		} );
 
