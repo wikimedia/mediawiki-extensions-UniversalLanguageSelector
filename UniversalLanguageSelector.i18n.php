@@ -703,11 +703,12 @@ $messages['yi'] = array(
 
 /** Simplified Chinese (中文（简体）‎)
  * @author Li3939108
+ * @author Liuxinyu970226
  * @author Shirayuki
  * @author Xiaomingyan
  */
 $messages['zh-hans'] = array(
-	'UniversalLanguageSelector' => '全球语言选择器',
+	'UniversalLanguageSelector' => '全局语言选择器',
 	'uls-desc' => '为用户提供多种方法来选择语言和调整语言设置',
 	'uls-plang-title-languages' => '语言',
 );
