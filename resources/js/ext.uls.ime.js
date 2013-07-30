@@ -228,8 +228,8 @@
 							$input.data( 'imeselector' ).selectLanguage( language );
 							$input.focus();
 						},
-						lazyload: false,
-						languages: mw.ime.getLanguagesWithIME()
+						languages: mw.ime.getLanguagesWithIME(),
+						top: $input.offset().top
 					} );
 
 					return $ulsTrigger;
