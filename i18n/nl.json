@@ -32,6 +32,7 @@
     "ext-uls-input-settings-ime-settings": "Invoermethoden voor $1",
     "ext-uls-input-settings-ui-language": "Taal voor invoer",
     "ext-uls-back-to-input-settings": "Terug naar invoerinstellingen",
+    "ext-uls-ime-help": "Hoe gebruiken",
     "ext-uls-disable-input-method": "Standaard toetsenbord gebruiken",
     "ext-uls-input-settings-more-languages-tooltip": "Meer talen",
     "jquery-ime-other-languages": "Andere talen",
