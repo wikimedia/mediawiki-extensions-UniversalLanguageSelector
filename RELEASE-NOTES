@@ -1,0 +1,33 @@
+== UniversalLanguageSelector 2013.07 ==
+Released at 2013-07-31.
+
+===Noteworthy changes===
+Languages code aliases are now used properly in the Common languages section. This allows, for example, proper display of Tagalog for users from the Philippines.
+
+The variable $wgULSNoImeSelectors was added to allow disabling IME on elements by specifying jQuery selectors that match them.
+
+Basic preparation for using MediaWiki's EventLogging framework was done. It is only enabled if the EventLogging extension is installed and a schema is configured.
+
+The functions for web fonts loading were optimized to improve performance.
+
+The CSS class 'uls-settings-trigger' can be added to any element so that clicking it will make the ULS appear. It is useful for documentation and examples.
+
+Web fonts are applied to the IME selector menu, too.
+
+The internals of loading translated message were changed from the original jquery.i18n implementation to allow loading messages from other domains (CORS).
+
+===Input methods===
+LRM and RLM were added to the Hebrew input methods and the redundant he-kbd input method was removed.
+
+Danda was removed from the Marathi phonetic input method.
+
+A bugs was fixed in Kannada, Tamil and Marathi input methods that didn't allow typing some characters.
+
+The Slovak input method was fixed according to the standard Slovak keyboard.
+
+The names of the Oriya input methods were updated.
+
+===Fonts===
+* Default loading of fonts for Persian and Malayalam is disabled.
+* Added fonts for Canadian Syllabic, Urdu (non-default),
+* Updated UnifrakturMaguntia font.
