@@ -239,9 +239,16 @@
 					hideTipsy();
 				}, timeout );
 			} );
-			// Event handler for links in the tooltip
-			$( 'a.uls-prevlang-link' ).on( 'click', function () {
-				mw.uls.changeLanguage( $( this ).attr( 'lang' ) );
+
+			// Event handler for links in the tooltip.
+			// It looks like the tipsy is always created from scratch so that
+			// there wont be multiple event handlers bound to same click.
+			$( 'a.uls-prevlang-link' ).on( 'click.ulstipsy', function ( event ) {
+				event.preventDefault();
+				mw.uls.logEvent( { action: 'ui-lang-revert' }, 500 )
+					.always( function () {
+						mw.uls.changeLanguage( event.target.lang );
+					} );
 			} );
 			tipsyTimer = window.setTimeout( function () {
 				hideTipsy();
