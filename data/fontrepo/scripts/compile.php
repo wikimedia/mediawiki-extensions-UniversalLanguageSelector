@@ -94,5 +94,6 @@ $js = <<<JAVASCRIPT
 	$.webfonts = $.webfonts || {};
 	$.webfonts.repository = $json;
 }( jQuery ) );
+
 JAVASCRIPT;
 file_put_contents( '../../../resources/js/ext.uls.webfonts.repository.js', $js );
