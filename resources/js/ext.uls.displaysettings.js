@@ -323,6 +323,10 @@
 
 			$moreLanguagesButton.on( 'click', function () {
 				displaySettings.$parent.hide();
+				mw.uls.logEvent( {
+					action: 'more-languages-access',
+					context: 'interface'
+				} );
 			} );
 		},
 
