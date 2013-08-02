@@ -158,13 +158,32 @@
 	 * and ensures the correct schema is loaded.
 	 *
 	 * @param {Object} data Event action and optional fields
+	 * @param {int} [timeout] Fail the request if it is not completed within
+	 *   the specified timeout. Can be use for example to log actions that
+	 *   cause the browser to navigate to other pages.
+	 * @return {jQuery.Promise} jQuery Promise object for the logging call
 	 * @since 2013.07
 	 * @see https://meta.wikimedia.org/wiki/Schema:UniversalLanguageSelector
 	 */
-	mw.uls.logEvent = function ( event ) {
+	mw.uls.logEvent = function ( event, timeout ) {
+		// We need to create our own deferred for two reasons:
+		//  - logEvent might not be executed immediately
+		//  - we cannot reject a promise returned by it
+		// So we proxy the original promises status updates
+		// and register our timeout if requested (for links).
+		var deferred = $.Deferred();
+
 		logEventQueue.add( function () {
-			mw.eventLog.logEvent( 'UniversalLanguageSelector', event );
+			mw.eventLog.logEvent( 'UniversalLanguageSelector', event )
+				.done( deferred.resolve )
+				.fail( deferred.reject );
 		} );
+
+		if ( timeout !== undefined ) {
+			window.setTimeout( deferred.reject, timeout );
+		}
+
+		return deferred.promise();
 	};
 
 	/**
