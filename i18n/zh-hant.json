@@ -2,7 +2,8 @@
     "@metadata": {
         "authors": [
             "Justincheng12345",
-            "Simon Shek"
+            "Simon Shek",
+            "Spring Roll Conan"
         ]
     },
     "ext-uls-display-settings-title": "\u986f\u793a\u8a2d\u5b9a",
@@ -32,6 +33,7 @@
     "ext-uls-input-settings-ime-settings": "$1\u7684\u8f38\u5165\u6cd5",
     "ext-uls-input-settings-ui-language": "\u8981\u66f8\u5beb\u7684\u8a9e\u8a00",
     "ext-uls-back-to-input-settings": "\u56de\u5230\u8f38\u5165\u8a2d\u5b9a",
+    "ext-uls-ime-help": "\u5982\u4f55\u4f7f\u7528",
     "ext-uls-disable-input-method": "\u4f7f\u7528\u539f\u751f\u9375\u76e4",
     "ext-uls-input-settings-more-languages-tooltip": "\u66f4\u591a\u8a9e\u8a00",
     "jquery-ime-other-languages": "\u5176\u4ed6\u8a9e\u8a00",
