@@ -59,6 +59,13 @@ $messages['ar'] = array(
 	'uls-plang-title-languages' => 'لغات',
 );
 
+/** Aramaic (ܐܪܡܝܐ)
+ * @author Basharh
+ */
+$messages['arc'] = array(
+	'uls-plang-title-languages' => 'ܠܫܢ̈ܐ',
+);
+
 /** Algerian Spoken Arabic (جزائري)
  * @author Bachounda
  */
