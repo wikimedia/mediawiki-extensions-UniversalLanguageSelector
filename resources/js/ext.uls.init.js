@@ -164,7 +164,7 @@
 	 * Local wrapper for 'mw.eventLog.logEvent' which handles default params
 	 * and ensures the correct schema is loaded.
 	 *
-	 * @param {Object} data Event action and optional fields
+	 * @param {Object} event Event action and optional fields
 	 * @param {int} [timeout] Fail the request if it is not completed within
 	 *   the specified timeout. Can be use for example to log actions that
 	 *   cause the browser to navigate to other pages.
