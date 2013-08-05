@@ -75,11 +75,16 @@ class LanguageNameSearch {
 		$values = array();
 		$lookingFor = 1;
 		$strLen = strlen( $str );
+		$number = 0;
+
 		for ( $i = 0; $i < $strLen; $i++ ) {
 			$thisValue = ord( $str[$i] );
 			if ( $thisValue < 128 ) {
-				return $thisValue;
-			} else { // Codepoints larger than 127 are represented by multi-byte sequences
+				$number = $thisValue;
+
+				break;
+			} else {
+				// Codepoints larger than 127 are represented by multi-byte sequences
 				if ( count( $values ) === 0 ) {
 					// 224 is the lowest non-overlong-encoded codepoint.
 					$lookingFor = ( $thisValue < 224 ) ? 2 : 3;
@@ -97,10 +102,12 @@ class LanguageNameSearch {
 						$number += $values[1] % 64;
 					}
 
-					return $number;
+					break;
 				}
 			}
 		}
+
+		return $number;
 	}
 
 	/**
