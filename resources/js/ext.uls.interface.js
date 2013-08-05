@@ -187,7 +187,7 @@
 		if ( previousLang === currentLang  ) {
 			$ulsTrigger.tipsy( { gravity: rtlPage ? 'e' : 'w' } );
 
-			return true;
+			return;
 		}
 
 		previousLanguages.push( currentLang );
@@ -198,7 +198,7 @@
 
 		if ( anonMode || !previousLang || !$.uls.data.languages[previousLang] ) {
 			// Do not show tooltip
-			return true;
+			return;
 		}
 
 		// Attach a tipsy tooltip to the trigger
