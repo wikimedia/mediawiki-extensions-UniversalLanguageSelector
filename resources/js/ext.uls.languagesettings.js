@@ -49,7 +49,7 @@
 		this.initialized = false;
 		this.left = this.options.left;
 		this.top = this.options.top;
-		this.modules = {},
+		this.modules = {};
 		this.$settingsPanel = this.$window.find( '#languagesettings-settings-panel' );
 		this.init();
 		this.listen();
