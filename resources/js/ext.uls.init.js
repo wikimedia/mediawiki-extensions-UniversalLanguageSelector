@@ -39,17 +39,24 @@
 	mw.uls = mw.uls || {};
 	mw.uls.previousLanguagesCookie = 'uls-previous-languages';
 	mw.uls.languageSettingsModules = ['ext.uls.inputsettings', 'ext.uls.displaysettings'];
+
 	/**
 	 * Change the language of wiki using setlang URL parameter
-	 * @param {String} language
+	 * @param {string} language Language code.
 	 */
 	mw.uls.changeLanguage = function ( language ) {
 		var uri = new mw.Uri( window.location.href );
 
-		uri.extend( {
-			setlang: language
+		mw.uls.logEvent( {
+			action: 'language-change',
+			context: 'interface',
+			interfaceLanguage: language
+		}, 500 ).always( function () {
+			uri.extend( {
+				setlang: language
+			} );
+			window.location.href = uri.toString();
 		} );
-		window.location.href = uri.toString();
 	};
 
 	mw.uls.setPreviousLanguages = function ( previousLanguages ) {
