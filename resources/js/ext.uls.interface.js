@@ -321,10 +321,10 @@
 				} );
 				$ulsTrigger.on( 'click', function ( e ) {
 					var languagesettings = $ulsTrigger.data( 'languagesettings' ),
-						langaugeSettingsOptions;
+						languageSettingsOptions;
 
 					if ( !languagesettings ) {
-						langaugeSettingsOptions = {
+						languageSettingsOptions = {
 							defaultModule: 'display',
 							onVisible: function () {
 								var topRowHeight, caretHeight, caretWidth,
@@ -356,7 +356,7 @@
 							}
 						};
 						mw.loader.using( mw.uls.languageSettingsModules, function () {
-							$ulsTrigger.languagesettings( langaugeSettingsOptions ).click();
+							$ulsTrigger.languagesettings( languageSettingsOptions ).click();
 						} );
 
 						e.stopPropagation();
