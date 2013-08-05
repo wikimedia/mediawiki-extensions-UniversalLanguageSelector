@@ -1,140 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>jQuery WebFonts Example</title>
-<meta name="description" content="" />
-<meta name="author" content="Santhosh Thottingal" />
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
-<script src="../lib/jquery.webfonts.js"></script>
-<script src="../lib/jquery.uls/src/jquery.uls.data.js"></script>
-<script src="../lib/jquery.uls/src/jquery.uls.data.utils.js"></script>
-<script src="../resources/js/ext.uls.webfonts.repository.js"></script>
-<script>
-	$( document ).ready( function () {
-		var $webfonts, fonts, languages, $fontSelector, $langselector;
+	<meta charset="utf-8"/>
+	<title>jQuery WebFonts Example</title>
+	<meta name="description" content=""/>
+	<meta name="author" content="Santhosh Thottingal"/>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="../lib/jquery.webfonts.js"></script>
+	<script src="../lib/jquery.uls/src/jquery.uls.data.js"></script>
+	<script src="../lib/jquery.uls/src/jquery.uls.data.utils.js"></script>
+	<script src="../resources/js/ext.uls.webfonts.repository.js"></script>
+	<script>
+		$( document ).ready( function () {
+			var $webfonts, fonts, languages, $fontSelector, $langselector;
 
-		$( 'div#webfonts-preview-area' ).webfonts( {
-			repository: $.webfonts.repository
-		} );
-
-		$( 'button#webfonts-preview-bold' ).click( function () {
-			document.execCommand( 'bold', false, null );
-		} );
-
-		$( 'button#webfonts-preview-italic' ).click( function () {
-			document.execCommand( 'italic', false, null );
-		} );
-
-		$( 'button#webfonts-preview-underline' ).click( function () {
-			document.execCommand( 'underline', false, null );
-		} );
-
-		// get an instance of WebFonts
-		$webfonts = $( 'div#webfonts-preview-area' ).data( 'webfonts' );
-		// Get a list of all fonts provided by WebFonts
-		fonts = $webfonts.list();
-		languages = $webfonts.languages();
-		// Also test system fonts.
-		$fontSelector = $( 'select#fontselector' );
-		$langselector = $( 'select#language' );
-
-		function listFonts ( fonts ) {
-			$.merge( fonts, [ 'Sans', 'Serif' ] );
-			$fontSelector.find( 'option' ).remove();
-			$.each( fonts, function ( key, font ) {
-				$fontSelector.append( $( "<option></option>" )
-					.attr( "value", font ).text( font ) );
+			$( 'div#webfonts-preview-area' ).webfonts( {
+				repository: $.webfonts.repository
 			} );
-			$fontSelector.trigger( 'change' );
+
+			$( 'button#webfonts-preview-bold' ).click( function () {
+				document.execCommand( 'bold', false, null );
+			} );
+
+			$( 'button#webfonts-preview-italic' ).click( function () {
+				document.execCommand( 'italic', false, null );
+			} );
+
+			$( 'button#webfonts-preview-underline' ).click( function () {
+				document.execCommand( 'underline', false, null );
+			} );
+
+			// get an instance of WebFonts
+			$webfonts = $( 'div#webfonts-preview-area' ).data( 'webfonts' );
+			// Get a list of all fonts provided by WebFonts
+			fonts = $webfonts.list();
+			languages = $webfonts.languages();
+			// Also test system fonts.
+			$fontSelector = $( 'select#fontselector' );
+			$langselector = $( 'select#language' );
+
+			function listFonts( fonts ) {
+				$.merge( fonts, [ 'Sans', 'Serif' ] );
+				$fontSelector.find( 'option' ).remove();
+				$.each( fonts, function ( key, font ) {
+					$fontSelector.append( $( "<option></option>" )
+						.attr( "value", font ).text( font ) );
+				} );
+				$fontSelector.trigger( 'change' );
+			}
+
+			listFonts( fonts );
+			$.each( languages, function ( lang, language ) {
+				$langselector.append( $( "<option></option>" )
+					.attr( 'value', language )
+					.text( language + " - " + $.uls.data.getAutonym( language ) ) );
+			} );
+			$fontSelector.on( 'change', function () {
+				var font = $fontSelector.find( 'option:selected' ).val();
+
+				$webfonts.apply( font );
+			} );
+			$langselector.on( 'change', function () {
+				var language = $langselector.find( 'option:selected' ).val();
+
+				listFonts( $webfonts.list( language ) );
+				$( '#webfonts-preview-area' ).text( $.uls.data.getAutonym( language ) );
+			} );
+		} )
+	</script>
+	<style>
+		div#webfonts-preview-toolbar {
+			background-color: #F9F9F9;
+			border: 1px solid #CCCCCC;
+			border-radius: 4px 4px 0 0;
+			overflow: hidden;
+			padding: 2px;
+			position: relative;
 		}
 
-		listFonts( fonts );
-		$.each( languages, function ( lang, language ) {
-			$langselector.append( $( "<option></option>" )
-				.attr( 'value', language )
-				.text( language + " - " + $.uls.data.getAutonym( language ) ) );
-		} );
-		$fontSelector.on( 'change', function () {
-			var font = $fontSelector.find( 'option:selected' ).val();
-			$webfonts.apply( font );
-		} );
-		$langselector.on( 'change', function () {
-			var language = $langselector.find( 'option:selected' ).val();
-			listFonts( $webfonts.list( language ) );
-			$( '#webfonts-preview-area' ).text( $.uls.data.getAutonym( language ) );
-		} );
-	} )
-</script>
-<style>
-div#webfonts-preview-toolbar {
-	background-color: #F9F9F9;
-	border: 1px solid #CCCCCC;
-	border-radius: 4px 4px 0 0;
-	overflow: hidden;
-	padding: 2px;
-	position: relative;
-}
+		div#webfonts-preview-area {
+			border: 1px solid #CCCCCC;
+			border-radius: 0 0 4px 4px;
+			height: 150px;
+			line-height: 1.5em;
+			overflow: auto;
+			padding: 10px 5px;
+			text-align: left;
+			font-size: 16px;
+		}
 
-div#webfonts-preview-area {
-	border: 1px solid #CCCCCC;
-	border-radius: 0 0 4px 4px;
-	height: 150px;
-	line-height: 1.5em;
-	overflow: auto;
-	padding: 10px 5px;
-	text-align: left;
-	font-size: 16px;
-}
+		select {
+			width: 200px;
+			height: 25px;
+		}
 
-select {
-	width: 200px;
-	height: 25px;
-}
+		.langselector,
+		.fontselector {
+			float: left;
+			display: block;
+		}
 
-.langselector,.fontselector {
-	float: left;
-	display: block;
-}
+		#webfonts-preview-bold {
+			font-weight: bold;
+		}
 
-#webfonts-preview-bold {
-	font-weight: bold;
-}
+		#webfonts-preview-italic {
+			font-style: italic;
+			font-weight: bold;
+		}
 
-#webfonts-preview-italic {
-	font-style: italic;
-	font-weight: bold;
-}
+		#webfonts-preview-underline {
+			text-decoration: underline;
+			font-weight: bold;
+		}
 
-#webfonts-preview-underline {
-	text-decoration: underline;
-	font-weight: bold;
-}
-
-</style>
+	</style>
 </head>
 
 <body>
-	<div>
-		<header>
-			<h1>jQuery WebFonts example</h1>
-		</header>
-		<div id='container'>
-			<div id="webfonts-preview-toolbar">
-				<div class='langselector'>
-					<label for="language">Language</label>
-					<select name="language" id="language"></select>
-				</div>
-				<div class='fontselector'>
-					<label for="fontselector">Font</label>
-					<select id="fontselector"></select>
-				</div>
-				<button id='webfonts-preview-bold'>B</button>
-				<button id='webfonts-preview-italic'>I</button>
-				<button id='webfonts-preview-underline'>U</button>
+<div>
+	<header>
+		<h1>jQuery WebFonts example</h1>
+	</header>
+	<div id='container'>
+		<div id="webfonts-preview-toolbar">
+			<div class='langselector'>
+				<label for="language">Language</label>
+				<select name="language" id="language"></select>
 			</div>
-			<div contenteditable="true" id="webfonts-preview-area"></div>
+			<div class='fontselector'>
+				<label for="fontselector">Font</label>
+				<select id="fontselector"></select>
+			</div>
+			<button id='webfonts-preview-bold'>B</button>
+			<button id='webfonts-preview-italic'>I</button>
+			<button id='webfonts-preview-underline'>U</button>
 		</div>
+		<div contenteditable="true" id="webfonts-preview-area"></div>
 	</div>
+</div>
 </body>
 </html>
