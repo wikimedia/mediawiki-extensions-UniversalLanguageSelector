@@ -18,7 +18,7 @@
  * @licence MIT License
  */
 class LanguageNameSearch {
-	static $languagenames;
+	protected static $languagenames;
 
 	public static function init() {
 		self::$languagenames = unserialize( file_get_contents( __DIR__ . '/langnames.ser' ) );
@@ -74,11 +74,12 @@ class LanguageNameSearch {
 	static function getCodepoint( $str ) {
 		$values = array();
 		$lookingFor = 1;
-		for ( $i = 0; $i < strlen( $str ); $i++ ) {
+		$strLen = strlen( $str );
+		for ( $i = 0; $i < $strLen; $i++ ) {
 			$thisValue = ord( $str[$i] );
 			if ( $thisValue < 128 ) {
 				return $thisValue;
-			} else { // Codepoints larger than 127 are represented by multi-byte sequences,
+			} else { // Codepoints larger than 127 are represented by multi-byte sequences
 				if ( count( $values ) === 0 ) {
 					// 224 is the lowest non-overlong-encoded codepoint.
 					$lookingFor = ( $thisValue < 224 ) ? 2 : 3;

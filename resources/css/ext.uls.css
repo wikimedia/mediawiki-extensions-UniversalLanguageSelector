@@ -32,8 +32,8 @@
 /* RTL text direction here (bug 45142). x:-o-prefocus won't match anything, */
 /* but will make other browsers ignore this rule. */
 x:-o-prefocus, body.rtl li#pt-uls {
-  /* @noflip */
-  direction: ltr;
+	/* @noflip */
+	direction: ltr;
 }
 
 #settings-block {
