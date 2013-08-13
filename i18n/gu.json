@@ -1,10 +1,35 @@
 {
     "@metadata": {
         "authors": [
-            "Ashok modhvadia"
+            "Ashok modhvadia",
+            "KartikMistry"
         ]
     },
+    "ext-uls-display-settings-title": "\u0aa6\u0ac7\u0a96\u0abe\u0ab5 \u0aaa\u0ab8\u0a82\u0aa6\u0a97\u0ac0\u0a93",
+    "ext-uls-display-settings-language-tab": "\u0aad\u0abe\u0ab7\u0abe",
+    "ext-uls-display-settings-fonts-tab": "\u0aab\u0acb\u0aa8\u0acd\u0a9f\u0acd\u0ab8",
+    "ext-uls-display-settings-title-short": "\u0aa6\u0ac7\u0a96\u0abe\u0ab5",
+    "ext-uls-display-settings-desc": "\u0aae\u0ac7\u0aa8\u0ac1\u0a93 \u0a85\u0aa8\u0ac7 \u0aab\u0acb\u0aa8\u0acd\u0a9f\u0acd\u0ab8 \u0aae\u0abe\u0a9f\u0ac7 \u0ab5\u0aaa\u0ab0\u0abe\u0aaf\u0ac7\u0ab2 \u0aad\u0abe\u0ab7\u0abe \u0aaa\u0ab8\u0a82\u0aa6 \u0a95\u0ab0\u0acb.",
+    "ext-uls-select-language-settings-icon-tooltip": "\u0aad\u0abe\u0ab7\u0abe \u0ab8\u0ac1\u0aaf\u0acb\u0a9c\u0aa8\u0acb",
+    "ext-uls-language-settings-title": "\u0aad\u0abe\u0ab7\u0abe \u0ab8\u0ac1\u0aaf\u0acb\u0a9c\u0aa8\u0acb",
+    "ext-uls-language-settings-apply": "\u0ab8\u0ac1\u0aaf\u0acb\u0a9c\u0aa8\u0acb \u0ab2\u0abe\u0a97\u0ac1 \u0a95\u0ab0\u0acb",
+    "ext-uls-language-settings-cancel": "\u0ab0\u0aa6 \u0a95\u0ab0\u0acb",
+    "ext-uls-display-settings-font-settings": "\u0aab\u0acb\u0aa8\u0acd\u0a9f \u0ab8\u0ac1\u0aaf\u0acb\u0a9c\u0aa8\u0acb",
+    "ext-uls-display-settings-ui-language": "\u0aad\u0abe\u0ab7\u0abe \u0aa6\u0ab0\u0acd\u0ab6\u0abe\u0ab5\u0acb",
+    "ext-uls-display-settings-anon-label": "\u0aad\u0abe\u0ab7\u0abe \u0aa6\u0ab0\u0acd\u0ab6\u0abe\u0ab5\u0acb:",
+    "ext-uls-display-settings-anon-same-as-content": "\u0a85\u0a82\u0a97\u0acd\u0ab0\u0ac7\u0a9c\u0ac0 (\u0ab5\u0abf\u0a97\u0aa4\u0aa8\u0ac0 \u0a9c\u0ac7\u0aae \u0a9c)",
+    "ext-uls-webfonts-system-font": "\u0ab8\u0abf\u0ab8\u0acd\u0a9f\u0aae \u0aab\u0acb\u0aa8\u0acd\u0a9f",
+    "ext-uls-input-settings-title": "\u0a87\u0aa8\u0aaa\u0ac1\u0a9f \u0ab8\u0ac1\u0aaf\u0acb\u0a9c\u0aa8\u0acb",
+    "ext-uls-input-settings-title-short": "\u0a88\u0aa8\u0aaa\u0ac1\u0a9f",
+    "ext-uls-ime-help": "\u0a95\u0ac7\u0ab5\u0ac0 \u0ab0\u0ac0\u0aa4\u0ac7 \u0ab5\u0abe\u0aaa\u0ab0\u0ab5\u0ac1\u0a82",
+    "ext-uls-disable-input-method": "\u0aaa\u0acb\u0aa4\u0abe\u0aa8\u0ac1\u0a82 \u0a95\u0ac0\u0aac\u0acb\u0ab0\u0acd\u0aa1 \u0ab5\u0abe\u0aaa\u0ab0\u0acb",
+    "ext-uls-input-settings-more-languages-tooltip": "\u0ab5\u0aa7\u0ac1 \u0aad\u0abe\u0ab7\u0abe\u0a93",
+    "jquery-ime-other-languages": "\u0a85\u0aa8\u0acd\u0aaf \u0aad\u0abe\u0ab7\u0abe\u0a93",
+    "jquery-ime-disable-text": "\u0aaa\u0acb\u0aa4\u0abe\u0aa8\u0ac1\u0a82 \u0a95\u0ac0\u0aac\u0acb\u0ab0\u0acd\u0aa1 \u0ab5\u0abe\u0aaa\u0ab0\u0acb",
+    "jquery-ime-help": "\u0aae\u0aa6\u0aa6",
+    "ext-uls-input-disable": "\u0a87\u0aa8\u0aaa\u0ac1\u0a9f \u0ab8\u0abe\u0aa7\u0aa8\u0acb \u0aa8\u0abf\u0ab7\u0acd\u0a95\u0acd\u0ab0\u0abf\u0aaf \u0a95\u0ab0\u0acb",
     "ext-uls-input-enable": "\u0a87\u0aa8\u0aaa\u0ac1\u0a9f \u0ab8\u0abe\u0aa7\u0aa8\u0acb \u0ab8\u0a95\u0acd\u0ab0\u0abf\u0aaf \u0a95\u0ab0\u0acb",
+    "ext-uls-input-disable-info": "\u0a87\u0aa8\u0aaa\u0ac1\u0a9f \u0ab8\u0abe\u0aa7\u0aa8\u0acb \u0aa8\u0abf\u0ab7\u0acd\u0a95\u0acd\u0ab0\u0abf\u0aaf \u0a9b\u0ac7.",
     "ext-uls-input-disable-notification-undo": "\u0ab0\u0aa6 \u0a95\u0ab0\u0acb",
     "ext-uls-language-settings-preferences-link": "\u0ab5\u0aa7\u0ac1 \u0aad\u0abe\u0ab7\u0abe \u0ab8\u0ac1\u0aaf\u0acb\u0a9c\u0aa8\u0acb"
 }
