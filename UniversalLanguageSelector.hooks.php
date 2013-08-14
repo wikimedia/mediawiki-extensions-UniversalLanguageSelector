@@ -48,9 +48,13 @@ class UniversalLanguageSelectorHooks {
 		// Load the style for users without JS, to hide the useless links
 		$out->addModuleStyles( 'ext.uls.nojs' );
 
-		// If EventLogging integration is enabled, load the schema module.
+		// If EventLogging integration is enabled, load the schema module
+		// and the event logging functions module
 		if ( $wgULSEventLogging ) {
-			$out->addModules( 'schema.UniversalLanguageSelector' );
+			$out->addModules( array(
+				'schema.UniversalLanguageSelector',
+				'ext.uls.eventlogger',
+			) );
 		}
 
 		// If the extension is enabled, basic features (API, language data) available.

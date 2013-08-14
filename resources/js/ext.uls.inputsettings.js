@@ -391,10 +391,7 @@
 
 			$moreLanguagesButton.on( 'click', function () {
 				inputSettings.$parent.hide();
-				mw.uls.logEvent( {
-					action: 'more-languages-access',
-					context: 'ime'
-				} );
+				mw.hook( 'mw.uls.ime.morelanguages' ).fire();
 			} );
 		},
 

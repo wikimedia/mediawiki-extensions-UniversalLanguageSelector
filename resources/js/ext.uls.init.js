@@ -33,8 +33,7 @@
 
 	var jsonLoader = null,
 		initialized = false,
-		currentLang = mw.config.get( 'wgUserLanguage' ),
-		logEventQueue = $.Callbacks( 'memory once' );
+		currentLang = mw.config.get( 'wgUserLanguage' );
 
 	mw.uls = mw.uls || {};
 	mw.uls.previousLanguagesCookie = 'uls-previous-languages';
@@ -47,11 +46,7 @@
 	mw.uls.changeLanguage = function ( language ) {
 		var uri = new mw.Uri( window.location.href );
 
-		mw.uls.logEvent( {
-			action: 'language-change',
-			context: 'interface',
-			interfaceLanguage: language
-		}, 500 ).always( function () {
+		mw.hook( 'mw.uls.interface.language.change' ).fire( language, function () {
 			uri.extend( {
 				setlang: language
 			} );
@@ -171,39 +166,6 @@
 	}
 
 	/**
-	 * Local wrapper for 'mw.eventLog.logEvent' which handles default params
-	 * and ensures the correct schema is loaded.
-	 *
-	 * @param {Object} event Event action and optional fields
-	 * @param {int} [timeout] Fail the request if it is not completed within
-	 *   the specified timeout. Can be use for example to log actions that
-	 *   cause the browser to navigate to other pages.
-	 * @return {jQuery.Promise} jQuery Promise object for the logging call
-	 * @since 2013.07
-	 * @see https://meta.wikimedia.org/wiki/Schema:UniversalLanguageSelector
-	 */
-	mw.uls.logEvent = function ( event, timeout ) {
-		// We need to create our own deferred for two reasons:
-		//  - logEvent might not be executed immediately
-		//  - we cannot reject a promise returned by it
-		// So we proxy the original promises status updates
-		// and register our timeout if requested (for links).
-		var deferred = $.Deferred();
-
-		logEventQueue.add( function () {
-			mw.eventLog.logEvent( 'UniversalLanguageSelector', event )
-				.done( deferred.resolve )
-				.fail( deferred.reject );
-		} );
-
-		if ( timeout !== undefined ) {
-			window.setTimeout( deferred.reject, timeout );
-		}
-
-		return deferred.promise();
-	};
-
-	/**
 	 * Initialize ULS front-end and its i18n.
 	 *
 	 * @param {Function} callback callback function to be called after initialization.
@@ -222,20 +184,6 @@
 			$( '#pt-uls' ).hide();
 
 			return;
-		}
-
-		// If EventLogging integration is enabled, set event defaults and make the
-		// the function call event logging with correct schema.
-		if ( mw.config.get( 'wgULSEventLogging' ) ) {
-			mw.loader.using( 'schema.UniversalLanguageSelector', function () {
-				mw.eventLog.setDefaults( 'UniversalLanguageSelector', {
-					version: 1,
-					token: mw.user.id(),
-					contentLanguage: mw.config.get( 'wgContentLanguage' ),
-					interfaceLanguage: currentLang
-				} );
-				logEventQueue.fire();
-			} );
 		}
 
 		/*

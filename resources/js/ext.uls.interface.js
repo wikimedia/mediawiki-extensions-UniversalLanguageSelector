@@ -91,7 +91,7 @@
 						.click();
 				} );
 			}
-
+			mw.hook( 'mw.uls.settings.open' ).fire( 'uls' );
 			uls.hide();
 		} );
 	}
@@ -121,11 +121,7 @@
 				} );
 			}
 
-			mw.uls.logEvent( {
-				action: 'settings-open',
-				context: 'uls'
-			} );
-
+			mw.hook( 'mw.uls.settings.open' ).fire( 'uls' );
 			uls.hide();
 		} );
 	}
@@ -252,10 +248,9 @@
 			// there wont be multiple event handlers bound to same click.
 			$( 'a.uls-prevlang-link' ).on( 'click.ulstipsy', function ( event ) {
 				event.preventDefault();
-				mw.uls.logEvent( { action: 'ui-lang-revert' }, 500 )
-					.always( function () {
-						mw.uls.changeLanguage( event.target.lang );
-					} );
+				mw.hook( 'mw.uls.language.revert' ).fire( function () {
+					mw.uls.changeLanguage( event.target.lang );
+				} );
 			} );
 			tipsyTimer = window.setTimeout( function () {
 				hideTipsy();
@@ -333,10 +328,7 @@
 
 					if ( languagesettings ) {
 						if ( !languagesettings.shown ) {
-							mw.uls.logEvent( {
-								action: 'settings-open',
-								context: eventParams && eventParams.source || 'interlanguage'
-							} );
+							mw.hook( 'mw.uls.settings.open' ).fire( eventParams && eventParams.source || 'interlanguage' );
 						}
 					} else {
 						// Initialize the Language settings window
@@ -385,10 +377,7 @@
 
 					if ( languagesettings ) {
 						if ( !languagesettings.shown ) {
-							mw.uls.logEvent( {
-								action: 'settings-open',
-								context: eventParams && eventParams.source || 'personal'
-							} );
+							mw.hook( 'mw.uls.settings.open' ).fire( eventParams && eventParams.source || 'personal' );
 						}
 					} else {
 						mw.loader.using( mw.uls.languageSettingsModules, function () {
@@ -407,10 +396,7 @@
 
 					if ( uls ) {
 						if ( !uls.shown ) {
-							mw.uls.logEvent( {
-								action: 'settings-open',
-								context: eventParams && eventParams.source || 'personal'
-							} );
+							mw.hook( 'mw.uls.settings.open' ).fire( eventParams && eventParams.source || 'personal' );
 						}
 					} else {
 						// ULS options that are common to all modes of showing

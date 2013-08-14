@@ -66,6 +66,11 @@ $wgResourceModules['ext.uls.init'] = array(
 	'position' => 'top',
 ) + $resourcePaths;
 
+$wgResourceModules['ext.uls.eventlogger'] = array(
+	'scripts' => 'resources/js/ext.uls.eventlogger.js',
+	'dependencies' => 'schema.UniversalLanguageSelector',
+) + $resourcePaths;
+
 $wgResourceModules['ext.uls.i18n'] = array(
 	'scripts' => 'resources/js/ext.uls.i18n.js',
 	'dependencies' => 'jquery.i18n',
