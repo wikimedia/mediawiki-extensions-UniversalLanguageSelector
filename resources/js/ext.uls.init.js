@@ -75,8 +75,18 @@
 		return $.parseJSON( previousLanguages ).slice( -5 );
 	};
 
+	/**
+	 * Returns the browser's user interface language or the system language.
+	 * The caller should check the validity of the returned language code.
+	 *
+	 * @return {string} Language code or empty string.
+	 */
 	mw.uls.getBrowserLanguage = function () {
-		return ( window.navigator.language || window.navigator.userLanguage ).split( '-' )[0];
+		// language is the standard property.
+		// userLanguage is only for IE and returns system locale.
+		// Empty string is a fallback in case both are undefined
+		// to avoid runtime error with split().
+		return ( window.navigator.language || window.navigator.userLanguage || '' ).split( '-' )[0];
 	};
 
 	/*jshint camelcase:false*/
