@@ -91,6 +91,7 @@
 			mw.hook( 'mw.uls.ime.morelanguages' ).add( $.proxy( this.imeMoreLanguages, this ) );
 			mw.hook( 'mw.uls.interface.morelanguages' ).add( $.proxy( this.interfaceMoreLanguages, this ) );
 			mw.hook( 'mw.uls.interface.language.change' ).add( $.proxy( this.interfaceLanguageChange, this ) );
+			mw.hook( 'mw.uls.font.change' ).add( $.proxy( this.fontChange, this ) );
 		},
 
 		/**
@@ -173,6 +174,32 @@
 				action: 'more-languages-access',
 				context: 'interface'
 			} );
+		},
+
+		/**
+		 * Log font preference changes
+		 *
+		 * @param {Object} context Either 'interface' or 'content'
+		 * @param {string} language
+		 * @param {string} font
+		 */
+		fontChange: function ( context, language, font ) {
+			var logParams = {
+				action: 'font-change',
+				context: context
+			};
+
+			if ( context === 'interface' ) {
+				$.extend( logParams, {
+					interfaceFont: font,
+					// Override in case the user changed the ui language but hasn't applied it yet
+					interfaceLanguage: language
+				} );
+			} else {
+				logParams.contentFont = font;
+			}
+
+			this.log( logParams );
 		}
 	};
 

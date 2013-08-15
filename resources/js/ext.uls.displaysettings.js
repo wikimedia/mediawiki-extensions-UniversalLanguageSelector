@@ -582,6 +582,21 @@
 
 			// Save the preferences
 			mw.webfonts.preferences.save( function ( result ) {
+				var newFonts = mw.webfonts.preferences.registry.fonts || {},
+					oldFonts = displaySettings.savedRegistry.registry.fonts || {};
+
+				if ( newFonts[displaySettings.uiLanguage] !== oldFonts[displaySettings.uiLanguage] ) {
+					mw.hook( 'mw.uls.font.change' ).fire(
+						'interface', displaySettings.uiLanguage, newFonts[displaySettings.uiLanguage]
+					);
+				}
+
+				if ( newFonts[displaySettings.contentLanguage] !== oldFonts[displaySettings.contentLanguage] ) {
+					mw.hook( 'mw.uls.font.change' ).fire(
+						'content', displaySettings.contentLanguage, newFonts[displaySettings.contentLanguage]
+					);
+				}
+
 				// closure for not losing the scope
 				displaySettings.onSave( result );
 				displaySettings.dirty = false;
