@@ -44,14 +44,23 @@
 	 * @param {string} language Language code.
 	 */
 	mw.uls.changeLanguage = function ( language ) {
-		var uri = new mw.Uri( window.location.href );
+		var uri = new mw.Uri( window.location.href ),
+			deferred = new $.Deferred();
 
-		mw.hook( 'mw.uls.interface.language.change' ).fire( language, function () {
+		deferred.done( function () {
 			uri.extend( {
 				setlang: language
 			} );
 			window.location.href = uri.toString();
 		} );
+
+		mw.hook( 'mw.uls.interface.language.change' ).fire( language, deferred );
+
+		// Delay is zero if event logging is not enabled
+		window.setTimeout( function () {
+			deferred.resolve();
+		}, mw.config.get( 'wgULSEventLogging' ) * 500  );
+
 	};
 
 	mw.uls.setPreviousLanguages = function ( previousLanguages ) {

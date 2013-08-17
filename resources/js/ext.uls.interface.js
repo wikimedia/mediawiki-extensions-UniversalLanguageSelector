@@ -247,10 +247,19 @@
 			// It looks like the tipsy is always created from scratch so that
 			// there wont be multiple event handlers bound to same click.
 			$( 'a.uls-prevlang-link' ).on( 'click.ulstipsy', function ( event ) {
+				var deferred = $.Deferred();
+
 				event.preventDefault();
-				mw.hook( 'mw.uls.language.revert' ).fire( function () {
+				deferred.done( function () {
 					mw.uls.changeLanguage( event.target.lang );
 				} );
+
+				mw.hook( 'mw.uls.language.revert' ).fire( deferred );
+
+				// Delay is zero if event logging is not enabled
+				window.setTimeout( function () {
+					deferred.resolve();
+				}, mw.config.get( 'wgULSEventLogging' ) * 500 );
 			} );
 			tipsyTimer = window.setTimeout( function () {
 				hideTipsy();

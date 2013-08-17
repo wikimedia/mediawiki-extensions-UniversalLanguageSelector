@@ -158,18 +158,30 @@
 
 				new mw.Api().parse( $.i18n( 'ext-uls-display-settings-anon-log-in-cta' ) )
 					.done( function ( parsedCta ) {
+						var deferred = new $.Deferred();
+
 						$loginCta.html( parsedCta );
 						$loginCta.find( 'a' ).click( function ( event ) {
 							event.preventDefault();
 							// Because browsers navigate away when clicking a link,
 							// we are are overriding the normal click behavior to
 							// allow the event be logged first - currently there is no
-							// local queue for events. The timeout is there to make sure
-							// the user gets to the new page even if event logging is slow
-							// or fails.
-							mw.hook( 'mw.uls.login.click' ).fire( function () {
+							// local queue for events. Since the hook system does not
+							// allow returning values, we have this ugly event logging
+							// specific hack to delay the page load if event logging
+							// is enabled. The promise is passed to the hook, so that
+							// if event logging is enabled, in can resole the promise
+							// immediately to avoid extra delays.
+							deferred.done( function () {
 								window.location.href = event.target.href;
 							} );
+
+							mw.hook( 'mw.uls.login.click' ).fire( deferred );
+
+							// Delay is zero if event logging is not enabled
+							window.setTimeout( function () {
+								deferred.resolve();
+							}, mw.config.get( 'wgULSEventLogging' ) * 500 );
 						} );
 					} );
 

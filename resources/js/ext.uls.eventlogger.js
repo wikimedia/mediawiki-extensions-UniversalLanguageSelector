@@ -48,21 +48,16 @@
 		},
 
 		/**
-		 * Local wrapper for 'mw.eventLog.logEvent' which handles default params
-		 * and ensures the correct schema is loaded.
+		 * Local wrapper for 'mw.eventLog.logEvent'
 		 *
 		 * @param {Object} event Event action and optional fields
-		 * @param {int} [timeout] Fail the request if it is not completed within
-		 *   the specified timeout. Can be use for example to log actions that
-		 *   cause the browser to navigate to other pages.
 		 * @return {jQuery.Promise} jQuery Promise object for the logging call
 		 */
-		log: function ( event, timeout ) {
+		log: function ( event ) {
 			// We need to create our own deferred for two reasons:
 			//  - logEvent might not be executed immediately
 			//  - we cannot reject a promise returned by it
-			// So we proxy the original promises status updates
-			// and register our timeout if requested (for links).
+			// So we proxy the original promises status updates.
 			var deferred = $.Deferred();
 
 			this.logEventQueue.add( function () {
@@ -70,10 +65,6 @@
 					.done( deferred.resolve )
 					.fail( deferred.reject );
 			} );
-
-			if ( timeout !== undefined ) {
-				window.setTimeout( deferred.reject, timeout );
-			}
 
 			return deferred.promise();
 		},
@@ -110,11 +101,10 @@
 
 		/**
 		 * Log language revert
-		 *
-		 * @param {Function} callback
+		 * @param {jQuery.Deferred} deferred
 		 */
-		ulsLanguageRevert: function ( callback ) {
-			this.log( { action: 'ui-lang-revert' }, 500 ).always( callback );
+		ulsLanguageRevert: function ( deferred ) {
+			this.log( { action: 'ui-lang-revert' } ).always( deferred.resolve() );
 		},
 
 		/**
@@ -132,17 +122,11 @@
 		},
 
 		/**
-		 * Log login link click in display settings. Since this will navigate
-		 * away from the current page, provide a callback option.
-		 *
-		 * If page is navigating away, event logging will fail because it is not
-		 * yet completed. With the callback, the navigation can be executed in
-		 * callback. The waiting for callback is not indefinite, but with a timeout.
-		 *
-		 * @param {Function} callback
+		 * Log login link click in display settings.
+		 * @param {jQuery.Deferred} deferred
 		 */
-		loginClick: function ( callback ) {
-			this.log( { action: 'login-click' }, 500 ).always( callback );
+		loginClick: function ( deferred ) {
+			this.log( { action: 'login-click' } ).always( deferred.resolve );
 		},
 
 		/**
@@ -159,14 +143,14 @@
 		 * Log interface language change
 		 *
 		 * @param {string} language language code
-		 * @param {Function} callback
+		 * @param {jQuery.Deferred} deferred
 		 */
-		interfaceLanguageChange: function ( language, callback ) {
+		interfaceLanguageChange: function ( language, deferred ) {
 			this.log( {
 				action: 'language-change',
 				context: 'interface',
 				interfaceLanguage: language
-			}, 500 ).always( callback );
+			} ).always( deferred.resolve );
 		},
 
 		/**
