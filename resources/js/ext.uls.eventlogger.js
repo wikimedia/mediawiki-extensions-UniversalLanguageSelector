@@ -177,5 +177,5 @@
 	};
 
 	mw.uls = mw.uls || {};
-	mw.uls.eventlogger= new ULSEventLogger();
+	mw.uls.eventlogger = new ULSEventLogger();
 }( jQuery, mediaWiki ) );
