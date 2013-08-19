@@ -177,7 +177,7 @@ $wgExtensionFunctions[] = function() {
 			$wgResourceModules['schema.UniversalLanguageSelector'] = array(
 				'class'  => 'ResourceLoaderSchemaModule',
 				'schema' => 'UniversalLanguageSelector',
-				'revision' => 5573536,
+				'revision' => 5729800,
 			);
 		} else {
 			wfWarn( 'UniversalLanguageSelector is configured to use EventLogging, but '

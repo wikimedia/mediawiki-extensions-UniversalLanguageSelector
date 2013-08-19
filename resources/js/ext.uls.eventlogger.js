@@ -146,11 +146,17 @@
 		 * @param {jQuery.Deferred} deferred
 		 */
 		interfaceLanguageChange: function ( language, deferred ) {
-			this.log( {
+			var logParams = {
 				action: 'language-change',
 				context: 'interface',
 				interfaceLanguage: language
-			} ).always( deferred.resolve );
+			};
+
+			if ( mw.uls.languageSelectionMethod !== undefined ) {
+				logParams.languageSelectionMethod = mw.uls.languageSelectionMethod;
+			}
+
+			this.log( logParams ).always( deferred.resolve );
 		},
 
 		/**

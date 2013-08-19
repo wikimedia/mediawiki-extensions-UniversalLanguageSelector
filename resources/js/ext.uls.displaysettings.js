@@ -295,12 +295,18 @@
 					);
 				},
 				onVisible: function () {
+					var $parent;
+
+					mw.uls.addEventLoggingTriggers();
+
 					if ( !displaySettings.$parent.$window.hasClass( 'callout' ) ) {
 						// callout menus will have position rules. others use
 						// default position
 						return;
 					}
-					var $parent = $( '#language-settings-dialog' );
+
+					$parent = $( '#language-settings-dialog' );
+
 					// Re-position the element according to the window that called it
 					if ( parseInt( $parent.css( 'left' ), 10 ) ) {
 						this.$menu.css( 'left', $parent.css( 'left' ) );

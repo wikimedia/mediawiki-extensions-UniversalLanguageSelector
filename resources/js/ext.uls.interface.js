@@ -420,6 +420,9 @@
 							},
 							onSelect: function ( language ) {
 								mw.uls.changeLanguage( language );
+							},
+							onVisible: function () {
+								mw.uls.addEventLoggingTriggers();
 							}
 						} ).trigger( 'click', eventParams );
 
