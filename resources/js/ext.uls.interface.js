@@ -400,16 +400,17 @@
 				} );
 			} else {
 				$ulsTrigger.on( 'click', function ( e, eventParams ) {
-					var uls = $ulsTrigger.data( 'uls' ),
-						ulsOptions;
+					var uls = $ulsTrigger.data( 'uls' );
 
 					if ( uls ) {
 						if ( !uls.shown ) {
 							mw.hook( 'mw.uls.settings.open' ).fire( eventParams && eventParams.source || 'personal' );
 						}
 					} else {
-						// ULS options that are common to all modes of showing
-						ulsOptions = {
+						$ulsTrigger.uls( {
+							quickList: function () {
+								return mw.uls.getFrequentLanguageList();
+							},
 							onReady: function () {
 								var uls = this;
 								mw.loader.using( mw.uls.languageSettingsModules, function () {
@@ -420,9 +421,7 @@
 							onSelect: function ( language ) {
 								mw.uls.changeLanguage( language );
 							}
-						};
-
-						$ulsTrigger.uls( ulsOptions ).trigger( 'click', eventParams );
+						} ).trigger( 'click', eventParams );
 
 						e.stopPropagation();
 					}
