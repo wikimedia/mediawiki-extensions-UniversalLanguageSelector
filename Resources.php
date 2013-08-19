@@ -203,3 +203,12 @@ $wgResourceModules['jquery.uls.grid'] = array(
 $wgResourceModules['jquery.webfonts'] = array(
 	'scripts' => 'lib/jquery.webfonts.js',
 ) + $resourcePaths;
+
+// A module named rangy is defined in VisualExtension with more features of rangy.
+// Here we need only the core library. This module is loaded dynamically from
+// client when rangy is undefined. If VE is present rangy will be defined, the module
+// defined in VE will be used. ie, This get loaded only when VE is not present and
+// user trying to type in a contenteditable
+$wgResourceModules['rangy.core'] = array(
+	'scripts' => 'lib/rangy/rangy-core.js',
+) + $resourcePaths;

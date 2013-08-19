@@ -23,7 +23,7 @@
 
 	mwImeRulesPath = mw.config.get( 'wgExtensionAssetsPath' ) +
 		'/UniversalLanguageSelector/lib/jquery.ime/';
-	inputSelector = 'input:not([type]), input[type=text], input[type=search], textarea';
+	inputSelector = 'input:not([type]), input[type=text], input[type=search], textarea, [contenteditable]';
 
 	inputPreferences = mw.uls.preferences();
 
@@ -199,12 +199,22 @@
 				mw.loader.using( 'jquery.ime', function () {
 					$input.trigger( 'focus.ime' );
 				} );
+
 				return;
 			}
 
 			mw.ime.init();
 
 			if ( $input.is( '.noime' ) || !$.ime.preferences.isEnabled() ) {
+				return;
+			}
+
+			if ( $input.is( '[contenteditable]' ) && !window.rangy ) {
+				// for supporting content editable divs we need rangy library
+				mw.loader.using( 'rangy.core', function () {
+					$input.trigger( 'focus.ime' );
+				} );
+
 				return;
 			}
 
