@@ -528,18 +528,26 @@
 		 * Handle the apply button press
 		 */
 		apply: function () {
-			var toggleHookName,
-				inputSettings = this;
+			var previousIM,
+				inputSettings = this,
+				previousLanguage = inputSettings.savedRegistry.language,
+				currentlyEnabled = $.ime.preferences.isEnabled(),
+				currentLanguage = $.ime.preferences.getLanguage(),
+				currentIM = $.ime.preferences.getIM( currentLanguage );
 
-			mw.hook( 'mw.uls.ime.change' ).fire(
-				$.ime.preferences.getIM( $.ime.preferences.getLanguage() )
-			);
+			if ( previousLanguage ) {
+				previousIM = inputSettings.savedRegistry.imes[previousLanguage];
+			}
 
-			if ( inputSettings.savedRegistry.enable !== $.ime.preferences.isEnabled() ) {
-				toggleHookName = $.ime.preferences.isEnabled() ?
-					'mw.uls.ime.enable' :
-					'mw.uls.ime.disable';
-				mw.hook( toggleHookName ).fire( 'inputsettings' );
+			if ( currentLanguage !== inputSettings.savedRegistry.language ||
+				currentIM !== previousIM
+			) {
+				mw.hook( 'mw.uls.ime.change' ).fire( currentIM );
+			}
+
+			if ( inputSettings.savedRegistry.enable !== currentlyEnabled ) {
+				mw.hook( currentlyEnabled ? 'mw.uls.ime.enable' : 'mw.uls.ime.disable' )
+					.fire( 'inputsettings' );
 			}
 
 			// Save the preferences
