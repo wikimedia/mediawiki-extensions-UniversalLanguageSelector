@@ -25,7 +25,8 @@ if ( getenv( 'MW_INSTALL_PATH' ) !== false ) {
 	$dir = __DIR__;
 	$IP = "$dir/../../..";
 }
-require_once ( "$IP/maintenance/Maintenance.php" );
+require_once "$IP/maintenance/Maintenance.php";
+
 class LanguageNameIndexer extends Maintenance {
 	public function __construct() {
 		parent::__construct();
