@@ -262,9 +262,11 @@
 			imeselector = $input.data( 'imeselector' );
 			if ( imeselector ) {
 				imeselector.selectLanguage( $.ime.preferences.getLanguage() );
+				imeselector.$element.on( 'setim.ime', function ( event, inputMethod ) {
+					mw.hook( 'mw.uls.ime.change' ).fire( inputMethod );
+				} );
 			}
 		} );
-
 	};
 
 	$( document ).ready( function () {

@@ -530,6 +530,10 @@
 		apply: function () {
 			var inputSettings = this;
 
+			mw.hook( 'mw.uls.ime.change' ).fire(
+				$.ime.preferences.getIM( $.ime.preferences.getLanguage() )
+			);
+
 			// Save the preferences
 			$.ime.preferences.save( function ( result ) {
 				// closure for not losing the scope
