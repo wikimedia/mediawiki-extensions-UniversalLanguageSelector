@@ -78,6 +78,7 @@
 			mw.hook( 'mw.uls.language.revert' ).add( $.proxy( this.ulsLanguageRevert, this ) );
 			mw.hook( 'mw.uls.ime.enable' ).add( $.proxy( this.enableIME, this ) );
 			mw.hook( 'mw.uls.ime.disable' ).add( $.proxy( this.disableIME, this ) );
+			mw.hook( 'mw.uls.ime.change' ).add( $.proxy( this.changeIME, this ) );
 			mw.hook( 'mw.uls.login.click' ).add( $.proxy( this.loginClick, this ) );
 			mw.hook( 'mw.uls.ime.morelanguages' ).add( $.proxy( this.imeMoreLanguages, this ) );
 			mw.hook( 'mw.uls.interface.morelanguages' ).add( $.proxy( this.interfaceMoreLanguages, this ) );
@@ -119,6 +120,17 @@
 		 */
 		enableIME: function () {
 			this.log( { action: 'ime-enable' } );
+		},
+
+		/**
+		 * Log IME change
+		 * @param {string} inputMethod
+		 */
+		changeIME: function ( inputMethod ) {
+			this.log( {
+				action: 'ime-change',
+				inputMethod: inputMethod
+			} );
 		},
 
 		/**
