@@ -181,9 +181,18 @@
 		$.extend( $.ime.defaults, {
 			imePath: mwImeRulesPath
 		} );
+
 		// Load the ime preferences
 		$.ime.preferences.load();
+
 		$.fn.imeselector.Constructor.prototype.helpLink = customHelpLink;
+
+		// Override the autonym function for the case that
+		// somebody tries to select a language for which there are
+		// no input methods, which is possible in MediaWiki
+		$.fn.imeselector.Constructor.prototype.getAutonym = function ( languageCode ) {
+			return $.uls.data.getAutonym( languageCode );
+		};
 	};
 
 	mw.ime.setup = function () {
@@ -260,7 +269,7 @@
 			// Some fields may be uninitialized
 			imeselector = $input.data( 'imeselector' );
 			if ( imeselector ) {
-				imeselector.selectLanguage( $.ime.preferences.getLanguage() );
+				imeselector.selectLanguage( imeselector.decideLanguage() );
 				imeselector.$element.on( 'setim.ime', function ( event, inputMethod ) {
 					mw.hook( 'mw.uls.ime.change' ).fire( inputMethod );
 				} );
