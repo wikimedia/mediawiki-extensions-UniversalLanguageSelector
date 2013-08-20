@@ -81,13 +81,11 @@
 		disable: function () {
 			this.registry.isDirty = true;
 			this.registry.enable = false;
-			mw.hook( 'mw.uls.ime.disable' ).fire();
 		},
 
 		enable: function () {
 			this.registry.isDirty = true;
 			this.registry.enable = true;
-			mw.hook( 'mw.uls.ime.enable' ).fire();
 		},
 
 		isEnabled: function () {
@@ -152,6 +150,7 @@
 			$.ime.preferences.save( function () {
 				mw.ime.disable();
 				imeNotification();
+				mw.hook( 'mw.uls.ime.disable' ).fire( 'menu' );
 			} );
 			e.stopPropagation();
 		} );
