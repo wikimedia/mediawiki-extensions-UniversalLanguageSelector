@@ -1,0 +1,20 @@
+{
+    "@metadata": {
+        "authors": [
+            "Sky Harbor"
+        ]
+    },
+    "ext-uls-display-settings-language-tab": "Wika",
+    "ext-uls-display-settings-fonts-tab": "Estilo ng titik",
+    "ext-uls-language-settings-cancel": "Huwag ituloy",
+    "ext-uls-language-buttons-help": "Palitan ang wika ng mga menu.  Hindi maaapektuhan ang wika ng nilalaman.",
+    "ext-uls-display-settings-anon-same-as-content": "Tagalog (pareho ng nilalaman)",
+    "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Lumagda]] upang mamili ng ibang wika para sa mga menu.",
+    "ext-uls-webfonts-select-for": "Mamili ng estilo ng titik para sa $1",
+    "ext-uls-webfonts-select-for-content-info": "Estilo ng titik na ginagamit para sa nilalaman",
+    "ext-uls-webfonts-system-font": "Estilo ng titik na gamit ng sistema",
+    "ext-uls-input-settings-desc": "Nais mong magsulat gamit ng ibang wika?",
+    "ext-uls-disable-input-method": "Gamitin ang katutubong tipaan",
+    "jquery-ime-disable-text": "Gamitin ang katutubong tipaan",
+    "jquery-ime-help": "Tulong"
+}
