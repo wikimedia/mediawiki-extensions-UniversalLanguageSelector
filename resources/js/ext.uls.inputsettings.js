@@ -528,11 +528,19 @@
 		 * Handle the apply button press
 		 */
 		apply: function () {
-			var inputSettings = this;
+			var toggleHookName,
+				inputSettings = this;
 
 			mw.hook( 'mw.uls.ime.change' ).fire(
 				$.ime.preferences.getIM( $.ime.preferences.getLanguage() )
 			);
+
+			if ( inputSettings.savedRegistry.enable !== $.ime.preferences.isEnabled() ) {
+				toggleHookName = $.ime.preferences.isEnabled() ?
+					'mw.uls.ime.enable' :
+					'mw.uls.ime.disable';
+				mw.hook( toggleHookName ).fire( 'inputsettings' );
+			}
 
 			// Save the preferences
 			$.ime.preferences.save( function ( result ) {

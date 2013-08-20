@@ -110,16 +110,18 @@
 
 		/**
 		 * Log IME disabling
+		 * @param {string} context Where the setting was changed.
 		 */
-		disableIME: function () {
-			this.log( { action: 'ime-disable' } );
+		disableIME: function ( context ) {
+			this.log( { action: 'ime-disable', context: context } );
 		},
 
 		/**
 		 * Log IME enabling
+		 * @param {string} context Where the setting was changed.
 		 */
-		enableIME: function () {
-			this.log( { action: 'ime-enable' } );
+		enableIME: function ( context ) {
+			this.log( { action: 'ime-enable', context: context } );
 		},
 
 		/**
