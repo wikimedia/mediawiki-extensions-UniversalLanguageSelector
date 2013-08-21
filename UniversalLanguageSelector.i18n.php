@@ -299,6 +299,15 @@ $messages['gl'] = array(
 	'uls-plang-title-languages' => 'Linguas',
 );
 
+/** Gujarati (ગુજરાતી)
+ * @author KartikMistry
+ */
+$messages['gu'] = array(
+	'UniversalLanguageSelector' => 'યુનિવર્સલ લેંગ્વેજ સિલેક્ટર',
+	'uls-desc' => 'સભ્યને ભાષા પસંદ અને ગોઠવણીઓ માટેનાં અનેક રસ્તાઓ પૂરા પાડે છે',
+	'uls-plang-title-languages' => 'ભાષાઓ',
+);
+
 /** Hebrew (עברית)
  * @author Amire80
  */
