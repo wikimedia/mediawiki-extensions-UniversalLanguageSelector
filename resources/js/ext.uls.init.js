@@ -20,6 +20,26 @@
 ( function ( $, mw, undefined ) {
 	'use strict';
 
+	// FIXME: Remove when ULS minimum MW version is 1.22
+	if ( mw.hook === undefined ) {
+		mw.hook = ( function () {
+			var lists = {},
+				slice = Array.prototype.slice;
+
+			return function ( name ) {
+				var list = lists[name] || ( lists[name] = $.Callbacks( 'memory' ) );
+
+				return {
+					add: list.add,
+					remove: list.remove,
+					fire: function () {
+						return list.fireWith( null, slice.call( arguments ) );
+					}
+				};
+			};
+		}() );
+	}
+
 	// MediaWiki override for ULS defaults.
 	$.fn.uls.defaults = $.extend( $.fn.uls.defaults, {
 		languages: mw.config.get( 'wgULSLanguages' ),
