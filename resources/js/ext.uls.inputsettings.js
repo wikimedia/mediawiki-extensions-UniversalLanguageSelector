@@ -474,6 +474,8 @@
 						inputSettings.enableInputTools();
 					}
 				} );
+
+			mw.hook( 'mw.uls.settings.cancel' ).add( $.proxy( this.cancel, this ) );
 		},
 
 		/**
