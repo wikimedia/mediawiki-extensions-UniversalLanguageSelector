@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function ( $ ) {
+( function ( $, mw ) {
 	'use strict';
 
 	var closeRow, settingsMenu, settingsPanel, windowTemplate, panelsRow;
@@ -217,13 +217,7 @@
 				this.options.onClose();
 			}
 
-			// We are closing language settings. That also means we are cancelling
-			// any changes the user did, but not saved, in all registered modules.
-			$.each( this.modules, function( id, module ) {
-				// Modules should make sure to return early if no changes were made
-				// They can use some kind of 'dirty bits' to implement this.
-				module.cancel();
-			} );
+			mw.hook( 'mw.uls.settings.cancel' ).fire();
 		},
 
 		click: function ( e ) {
@@ -265,4 +259,4 @@
 	};
 
 	$.fn.languagesettings.Constructor = LanguageSettings;
-}( jQuery ) );
+}( jQuery, mediaWiki ) );
