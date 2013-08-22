@@ -1,22 +1,42 @@
-== Copying ==
+== Universal Language Selector ==
+The Universal Language Selector extension (ULS) provides a flexible way to
+configure and deliver language settings like interface language, fonts, and
+input methods (keyboard mappings). This will allow users to type text in
+different languages not directly supported by their keyboard, read content in a
+script for which fonts are not available locally, or customise the language in
+which menus are displayed.
 
-In short: You may use any Project Milkshake product, including the Universal
-Language Selector, under the terms of either the MIT License or the GNU General
-Public License (GPL) Version 2 or later.
+For more information see:
+ https://www.mediawiki.org/wiki/Universal_Language_Selector
+
+== Copying ==
+You may use any Project Milkshake product, including the Universal Language
+Selector, under the terms of either the MIT License or the GNU General Public
+License (GPL) Version 2 or later.
 
 See GPL-LICENSE and MIT-LICENSE for details.
 
 == Installation ==
-For a very, very quick start add the following to LocalSettings.php:
+For a very, very quick start add the following lines to LocalSettings.php of
+your MediaWiki setup:
 
-include("$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php");
+require_once "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php";
+
+By default, ULS will appear at personal toolbar position. If you want ULS at
+interlanguage position, add the following line:
+
+$wgULSPosition = 'interlanguage';
 
 == For Developers ==
-The MediaWiki Universal Language Selector project uses jquery.uls(https://github.com/wikimedia/jquery.uls).
-Its development is at wikimedia github account. So any fixes to lib/jquery.uls should happen at github. 
-Follow the build instructions of jquery.uls to create jquery.uls.js.
+The MediaWiki Universal Language Selector project uses jquery.uls:
+ https://github.com/wikimedia/jquery.uls
 
-More documenation is at
+Its development is at Wikimedia Github account. Any fixes to lib/ should happen
+at Github. Follow the build instructions of jquery.uls to create jquery.uls.js.
+
+More documenation is at:
  https://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector
 
-== Change log ==
+For reporting bugs, use 'UniversalLanguageSelector' component under
+'MediaWiki extensions' product at:
+ https://bugzilla.wikimedia.org
