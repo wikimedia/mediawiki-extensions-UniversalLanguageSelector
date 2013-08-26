@@ -506,8 +506,6 @@
 
 			displaySettings.$template.find( 'button.uls-display-settings-cancel' ).on( 'click', function () {
 				displaySettings.cancel();
-				displaySettings.prepareUIFonts();
-				displaySettings.prepareContentFonts();
 				displaySettings.close();
 			} );
 
@@ -566,13 +564,6 @@
 		 * Depending on the context, actions vary.
 		 */
 		close: function () {
-			var origUILanguage = this.getUILanguage();
-
-			if ( $.i18n().locale !== origUILanguage ) {
-				// restore UI localization for display settings panel
-				$.i18n().locale = origUILanguage;
-				this.i18n();
-			}
 			this.$parent.close();
 		},
 
@@ -629,7 +620,8 @@
 		 * Cancel the changes done by user for display settings
 		 */
 		cancel: function () {
-			var displaySettings = this;
+			var displaySettings = this,
+				origUILanguage = this.getUILanguage();
 
 			if ( !displaySettings.dirty ) {
 				// Nothing changed
@@ -642,6 +634,12 @@
 				displaySettings.$webfonts.refresh();
 			}
 
+			if ( $.i18n().locale !== origUILanguage ) {
+				// restore UI localization for display settings panel
+				$.i18n().locale = origUILanguage;
+				this.i18n();
+			}
+
 			// Clear the dirty bit
 			displaySettings.dirty = false;
 			displaySettings.disableApplyButton();
@@ -649,6 +647,10 @@
 			// Restore content and UI language
 			displaySettings.uiLanguage = displaySettings.getUILanguage();
 			displaySettings.contentLanguage = displaySettings.getContentLanguage();
+
+			// Restore the font dropdowns
+			displaySettings.prepareUIFonts();
+			displaySettings.prepareContentFonts();
 
 			// Restore the visual state of selected language button
 			displaySettings.$template.find( 'div.uls-ui-languages button.button' ).each( function () {
