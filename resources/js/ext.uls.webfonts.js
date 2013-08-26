@@ -87,7 +87,7 @@
 			// MediaWiki specific overrides for jquery.webfonts
 			$.extend( $.fn.webfonts.defaults, {
 				repository: mediawikiFontRepository,
-				fontStack: new Array( $( 'body' ).css( 'font-family' ) )
+				fontStack: $( 'body' ).css( 'font-family' ).split( /, /g )
 			} );
 
 			mw.webfonts.preferences.load();
