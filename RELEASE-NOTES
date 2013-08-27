@@ -1,0 +1,50 @@
+== UniversalLanguageSelector 2013.08 ==
+Released at 2013-08-27.
+
+=== Noteworthy changes ===
+* Added support for event logging. To use it you need to install the EventLogging extension. The support is considered to be experimental.
+To enable event logging, add following lines to your LocalSettings.php:
+
+require_once "$IP/extensions/EventLogging/EventLogging.php";
+$wgMainCacheType    = CACHE_MEMCACHED;
+$wgMemCachedServers = array( '127.0.0.1:11211' );
+$wgEventLoggingBaseUri = 'http://localhost:8080/event.gif';
+$wgEventLoggingFile = '/var/log/mediawiki/events.log';
+
+To learn more about setting up EventLogging extention, see:
+[1] https://github.com/wikimedia/mediawiki-extensions-EventLogging/blob/master/server/README.rst
+[2] https://www.mediawiki.org/wiki/Extension:EventLogging
+
+* The libraries are loaded on demand, when they are actually used for reducing traffic.
+* Language settings are closed when clicked outside ULS langauge selection window.
+* Bug 50564: When the user makes changes in multiple modules and clicks  the Cancel button or closes the language settings after that, cancel the  changes in all the modules.
+* Bug 50562: Canceling font change doesn't work for system font.
+* Internal code changes to improve performance and make loading faster.
+* Top position the ULS for IME menu with reference to the input field instead of ... menu item to fix weird positioning at some places.
+* Bug 51923: Use no-repeat follow url for background images to remove possible duplicate images
+* Fix wrong language comparison in webfonts so that expliticit fontfamily style are not added to child elements.
+* Use events instead of callbacks for success or no results in the ULS search box. This allows extension users to bind for this event and reduces callbacks.
+* Use mw.hook for notifying cancel of settings window to modules.
+* Documentation fixes.
+
+=== Browser Blacklisting ===
+* Currently, Internet Explorer < 7 is blacklisted for MediaWiki version 1.22 and Internet Explorer 6 and 7 are explicitly blacklisted for MediaWiki before version 1.22
+
+=== Fonts ===
+* Added Gentium font for Latin languages rich with diacritics like IPA, Vietnamese and Polytonic Greek.
+* Added Junicode font for Old English.
+* Added Phetsarath font for Lao.
+* Added lklug font for Sinhala.
+* Added the Nuosu SIL font for the Yi language.
+* Added Xerxes for for Old Persian.
+* Added Shapour font for Pahlavi script.
+* Added Nazli as a serif font for Persian script.
+
+=== Input methods ===
+* Bug fixes in Gujarati Phonetic, Gujarati Inscript 2, Punjabi Phonetic and Oriya keyboards that didn't allow typing some characters.
+* Added Kyrgyz Cyrillic keyboard.
+* Added IPA X-SAMPA layout.
+* Fixed the IPA-SIL layout: use the "modifier letter apostrophe" for ejective consonants.
+* Fixes ZWNJ character issues for Hindi and Marathi input methods.
+* Updated Javanese keyboard.
+* Removed outdated Myanmar keyboard.
