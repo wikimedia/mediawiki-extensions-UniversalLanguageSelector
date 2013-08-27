@@ -68,10 +68,10 @@ Then(/^the selected (.*?) font must be "(.*?)"$/) do |type, font|
 end
 
 When(/^I apply the changes$/) do
-	on(ULSPage).panel_button_display_apply_element.click
-	wait = Selenium::WebDriver::Wait.new(:timeout => 3)
-	panel = @browser.driver.find_element(:id => 'language-settings-dialog')
-  wait.until { !panel.displayed? }
+	on(ULSPage).panel_button_apply_element.click
+	# Leave a little time for the settings to be saved. The settings window closes
+	# immediately, so it is not enough to wait for it to disappear.
+	sleep 2
 end
 
 Then(/^the (.*) font must be changed to the "(.*?)" font$/) do |type, font|

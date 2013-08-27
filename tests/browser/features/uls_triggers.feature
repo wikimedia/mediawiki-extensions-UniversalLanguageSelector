@@ -35,6 +35,3 @@ Feature: ULS trigger in personal toolbar
     | user status | close method           |
     | logged in   | I click X              |
     | logged out  | I click Cancel         |
-    # It is weird that this works, since the button is disabled until changes
-    # have been made
-    | logged out  | I click Apply Settings |

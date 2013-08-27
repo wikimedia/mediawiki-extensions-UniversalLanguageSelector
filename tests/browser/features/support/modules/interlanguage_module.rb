@@ -4,10 +4,8 @@ module InterlanguagePageModule
   include PageObject
 
   a(:add_links, id: 'wbc-linkToItem-link')
-  span(:apply_settings, class: 'uls-settings-trigger')
   a(:back_to_display, text: 'Back to display settings')
   a(:back_to_input, text: 'Back to input settings')
-  button(:cancel, class: 'button uls-display-settings-cancel')
   span(:cog, class: 'uls-settings-trigger')
   button(:ellipsis_button, class: 'uls-more-languages button')
   a(:english_link, text: 'English')

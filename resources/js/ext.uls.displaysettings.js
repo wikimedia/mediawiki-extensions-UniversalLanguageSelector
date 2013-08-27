@@ -78,19 +78,9 @@
 
 		+ '</div>' // End font selectors
 
-		+ '</div>' // End font settings section
+		+ '</div>'; // End font settings section
 
-		// Separator
-		+ '<div class="row"></div>'
 
-		// Apply and Cancel buttons
-		+ '<div class="row language-settings-buttons">'
-		+ '<div class="eleven columns">'
-		+ '<button class="button uls-display-settings-cancel" data-i18n="ext-uls-language-settings-cancel"></button>'
-		+ '<button class="button active blue" id="uls-displaysettings-apply" data-i18n="ext-uls-language-settings-apply" disabled></button>'
-		+ '</div>'
-		+ '</div>'
-		+ '</div>';
 
 	function DisplaySettings( $parent ) {
 		this.name = $.i18n( 'ext-uls-display-settings-title-short' );
@@ -452,8 +442,7 @@
 		 * i18n this settings panel
 		 */
 		i18n: function () {
-			this.$template.i18n();
-
+			this.$parent.i18n();
 			this.$template.find( '#ui-font-selector-label strong' )
 				.text( $.i18n( 'ext-uls-webfonts-select-for', $.uls.data.getAutonym( this.uiLanguage ) ) );
 			this.$template.find( '#content-font-selector-label strong' )
@@ -485,11 +474,11 @@
 		 */
 		markDirty: function () {
 			this.dirty = true;
-			this.$template.find( '#uls-displaysettings-apply' ).removeAttr( 'disabled' );
+			this.$parent.$window.find( 'button.uls-settings-apply' ).removeAttr( 'disabled' );
 		},
 
 		disableApplyButton: function () {
-			this.$template.find( '#uls-displaysettings-apply' ).prop( 'disabled', true );
+			this.$parent.$window.find( 'button.uls-settings-apply' ).prop( 'disabled', true );
 		},
 
 		/**
@@ -502,15 +491,6 @@
 				$tabButtons = displaySettings.$template.find( '.uls-display-settings-tab-switcher button' );
 
 			// TODO all these repeated selectors can be placed in object constructor.
-
-			displaySettings.$template.find( '#uls-displaysettings-apply' ).on( 'click', function () {
-				displaySettings.apply();
-			} );
-
-			displaySettings.$template.find( 'button.uls-display-settings-cancel' ).on( 'click', function () {
-				displaySettings.cancel();
-				displaySettings.close();
-			} );
 
 			$uiFontSelector.on( 'change', function () {
 				displaySettings.markDirty();
@@ -551,7 +531,6 @@
 
 			} );
 
-			mw.hook( 'mw.uls.settings.cancel' ).add( $.proxy( this.cancel, this ) );
 		},
 
 		/**
@@ -624,6 +603,7 @@
 		 */
 		cancel: function () {
 			if ( !this.dirty ) {
+				this.close();
 				return;
 			}
 			// Reload preferences
@@ -637,6 +617,7 @@
 			// Restore content and UI language
 			this.uiLanguage = this.getUILanguage();
 			this.contentLanguage = this.getContentLanguage();
+			this.close();
 		}
 	};
 

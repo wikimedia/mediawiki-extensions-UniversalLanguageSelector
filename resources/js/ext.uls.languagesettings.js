@@ -20,7 +20,7 @@
 ( function ( $, mw ) {
 	'use strict';
 
-	var closeRow, settingsMenu, settingsPanel, windowTemplate, panelsRow;
+	var closeRow, settingsMenu, settingsPanel, windowTemplate, panelsRow, buttonsRow;
 
 	closeRow = '<div class="row">' +
 		'<div class="uls-language-settings-close-block eight columns offset-by-four"><span id="languagesettings-close" class="icon-close"></span></div>' +
@@ -32,9 +32,19 @@
 		'</div>';
 	settingsPanel = '<div id="languagesettings-settings-panel" class="eight columns">' +
 		'</div>';
+	buttonsRow = '<div class="row"></div>' +
+		// Apply and Cancel buttons
+		'<div class="row language-settings-buttons">' +
+		'<div class="eleven columns">' +
+		'<button class="button uls-settings-cancel" data-i18n="ext-uls-language-settings-cancel"></button>' +
+		'<button class="button active blue uls-settings-apply" data-i18n="ext-uls-language-settings-apply" disabled></button>' +
+		'</div>' +
+		'</div>' +
+		'</div>';
 	panelsRow = '<div class="row" id="languagesettings-panels">' +
 		settingsMenu +
 		settingsPanel +
+		buttonsRow +
 		'</div>';
 	windowTemplate = '<div style="display: block;" id="language-settings-dialog" class="grid uls-menu uls-wide">' +
 		closeRow +
@@ -66,9 +76,11 @@
 		// Register all event listeners to the ULS language settings here.
 		listen: function () {
 			this.$element.on( 'click', $.proxy( this.click, this ) );
-			this.$window.find( '#languagesettings-close' )
-				.on( 'click', $.proxy( this.close, this ) );
 
+			this.$window.find( '#languagesettings-close, button.uls-settings-cancel' )
+				.on( 'click', $.proxy( mw.hook( 'mw.uls.settings.cancel' ).fire, this ) );
+			this.$window.find( 'button.uls-settings-apply' )
+				.on( 'click', $.proxy( mw.hook( 'mw.uls.settings.apply' ).fire, this ) );
 			// Hide the window when clicked outside
 			$( 'html' ).click( $.proxy( this.hide, this ) );
 
@@ -95,17 +107,18 @@
 					}
 
 					// Call render function on the current setting module.
-					languageSettings.renderModule( moduleName, defaultModule === moduleName );
+					languageSettings.initModule( moduleName, defaultModule === moduleName );
 				}
 			} );
 		},
 
 		/**
+		 * Initialize the module.
 		 * Render the link and settings area for a language setting module.
-		 * @param moduleName String Name of the setting module
-		 * @param active boolean Make this module active and show by default
+		 * @param {string} moduleName Name of the setting module
+		 * @param {boolean} active boolean Make this module active and show by default
 		 */
-		renderModule: function ( moduleName, active ) {
+		initModule: function ( moduleName, active ) {
 			var $settingsTitle, $settingsText, $settingsLink,
 				languageSettings = this,
 				module = new $.fn.languagesettings.modules[moduleName]( languageSettings ),
@@ -132,7 +145,7 @@
 				var $this = $( this );
 
 				$this.data( 'module' ).render();
-				// re-position the window and scroll in to view if required.
+				// Re-position the window and scroll in to view if required.
 				languageSettings.position();
 				$settingsMenuItems.find( '.menu-section' ).removeClass( 'active' );
 				$this.addClass( 'active' );
@@ -143,6 +156,10 @@
 				$settingsLink.addClass( 'active' );
 			}
 			this.modules[moduleName] = module;
+
+			// Register cancel and apply hooks
+			mw.hook( 'mw.uls.settings.cancel' ).add( $.proxy( module.cancel, module ) );
+			mw.hook( 'mw.uls.settings.apply' ).add( $.proxy( module.apply, module ) );
 		},
 
 		position: function () {
@@ -160,6 +177,10 @@
 			this.$window.scrollIntoView();
 		},
 
+		i18n: function () {
+			this.$window.i18n();
+		},
+
 		show: function () {
 			if ( !this.initialized ) {
 				this.render();
@@ -167,7 +188,7 @@
 			}
 			// close model windows close, if they hide on page click
 			$( 'html' ).click();
-			this.$window.i18n();
+			this.i18n();
 			this.shown = true;
 			this.$window.show();
 
@@ -217,7 +238,6 @@
 				this.options.onClose();
 			}
 
-			mw.hook( 'mw.uls.settings.cancel' ).fire();
 		},
 
 		click: function ( e ) {

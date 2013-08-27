@@ -27,12 +27,8 @@ Given(/^I navigate to the Language Settings panel$/) do
   step 'I see the logged in language settings panel'
 end
 
-When(/^I click Apply Settings$/) do
-  on(InterlanguagePage).apply_settings_element.click
-end
-
 When(/^I click Cancel$/) do
-  on(InterlanguagePage).cancel_element.click
+  on(ULSPage).panel_button_cancel_element.click
 end
 
 When(/^I click on the link to select Malayalam$/) do

@@ -92,7 +92,7 @@
 	background-color: #F5F5F5;
 }
 
-#languagesettings-settings-panel .language-settings-buttons {
+.language-settings-buttons {
 	border-top: 1px solid #F0F0F0;
 	margin-top: 25px;
 	padding: 15px;

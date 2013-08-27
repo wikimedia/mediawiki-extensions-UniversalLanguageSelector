@@ -53,18 +53,6 @@
 		+ '<div class="six columns button uls-input-settings-toggle">'
 		+ '<button class="active green button uls-input-toggle-button"></button>'
 		+ '</div>'
-		+ '</div>'
-
-		// Separator
-		+ '<div class="row"></div>'
-
-		// Apply and Cancel buttons
-		+ '<div class="row language-settings-buttons">'
-		+ '<div class="eleven columns">'
-		+ '<button class="button uls-input-settings-cancel" data-i18n="ext-uls-language-settings-cancel"></button>'
-		+ '<button class="active blue button uls-input-settings-apply" data-i18n="ext-uls-language-settings-apply" disabled></button>'
-		+ '</div>'
-		+ '</div>'
 		+ '</div>';
 
 	function InputSettings( $parent ) {
@@ -76,6 +64,8 @@
 		this.$imes = null;
 		this.$parent = $parent;
 		this.savedRegistry = $.extend( true, {}, $.ime.preferences.registry );
+		// ime system is lazy loaded, make sure it is initialized
+		mw.ime.init();
 	}
 
 	InputSettings.prototype = {
@@ -92,8 +82,6 @@
 			this.$imes = $( 'body' ).data( 'ime' );
 			this.$parent.$settingsPanel.append( this.$template );
 			$enabledOnly = this.$template.find( '.enabled-only' );
-			// ime system is lazy loaded, make sure it is initialized
-			mw.ime.init();
 			if ( $.ime.preferences.isEnabled() ) {
 				$enabledOnly.removeClass( 'hide' );
 			} else {
@@ -103,8 +91,7 @@
 
 			this.prepareLanguages();
 			this.prepareToggleButton();
-			this.$template.i18n();
-			this.disableApplyButton();
+			this.$parent.i18n();
 			$( 'body' ).data( 'webfonts' ).refresh();
 			this.listen();
 		},
@@ -115,11 +102,11 @@
 		 */
 		markDirty: function () {
 			this.dirty = true;
-			this.$template.find( 'button.uls-input-settings-apply' ).prop( 'disabled', false );
+			this.$parent.$window.find( 'button.uls-settings-apply' ).prop( 'disabled', false );
 		},
 
 		disableApplyButton: function () {
-			this.$template.find( 'button.uls-input-settings-apply' ).prop( 'disabled', true );
+			this.$parent.$window.find( 'button.uls-settings-apply' ).prop( 'disabled', true );
 		},
 
 		prepareInputmethods: function ( language ) {
@@ -446,16 +433,6 @@
 
 			$imeListContainer = this.$template.find( '.uls-input-settings-inputmethods-list' );
 
-			// Apply and close buttons
-			inputSettings.$template.find( 'button.uls-input-settings-apply' ).on( 'click', function () {
-				inputSettings.apply();
-			} );
-
-			inputSettings.$template.find( 'button.uls-input-settings-cancel' ).on( 'click', function () {
-				inputSettings.cancel();
-				inputSettings.close();
-			} );
-
 			$imeListContainer.on( 'change', 'input:radio[name=ime]:checked', function () {
 				inputSettings.markDirty();
 				$.ime.preferences.setIM( $( this ).val() );
@@ -472,7 +449,6 @@
 					}
 				} );
 
-			mw.hook( 'mw.uls.settings.cancel' ).add( $.proxy( this.cancel, this ) );
 		},
 
 		/**
@@ -564,6 +540,7 @@
 		 */
 		cancel: function () {
 			if ( !this.dirty ) {
+				this.close();
 				return;
 			}
 			// Reload preferences
@@ -576,6 +553,7 @@
 			} else {
 				mw.ime.disable();
 			}
+			this.close();
 		}
 	};
 

@@ -10,7 +10,8 @@ class ULSPage
 	button(:panel_language, id: 'uls-display-settings-language-tab')
 
 	span(:panel_button_close, id: 'languagesettings-close')
-	button(:panel_button_display_apply, id: 'uls-displaysettings-apply')
+	button(:panel_button_apply, class: 'uls-settings-apply')
+	button(:panel_button_cancel, class: 'uls-settings-cancel')
 
 	button(:panel_disable_input_methods, class: 'uls-input-toggle-button')
 	button(:panel_enable_input_methods, class: 'uls-input-toggle-button')
