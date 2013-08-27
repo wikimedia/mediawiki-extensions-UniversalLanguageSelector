@@ -113,11 +113,9 @@
 			this.$parent.$settingsPanel.empty();
 			this.$webfonts = $( 'body' ).data( 'webfonts' );
 			this.$parent.$settingsPanel.append( this.$template );
-			this.disableApplyButton();
 			this.prepareLanguages();
 			this.prepareUIFonts();
 			this.prepareContentFonts();
-			$.i18n().locale = this.uiLanguage;
 			this.i18n();
 			this.$webfonts.refresh();
 			this.listen();
@@ -622,14 +620,48 @@
 		 * Cancel the changes done by user for display settings
 		 */
 		cancel: function () {
-			if ( !this.dirty ) {
+			var displaySettings = this,
+				origUILanguage = this.getUILanguage();
+
+			if ( !displaySettings.dirty ) {
+				// Nothing changed
 				return;
 			}
+
 			// Reload preferences
-			mw.webfonts.preferences = $.extend( true, {}, this.savedRegistry );
+			mw.webfonts.preferences = $.extend( true, {}, displaySettings.savedRegistry );
+			if ( displaySettings.$webfonts ) {
+				displaySettings.$webfonts.refresh();
+			}
+
+			if ( $.i18n().locale !== origUILanguage ) {
+				// restore UI localization for display settings panel
+				$.i18n().locale = origUILanguage;
+				this.i18n();
+			}
+
+			// Clear the dirty bit
+			displaySettings.dirty = false;
+			displaySettings.disableApplyButton();
+
 			// Restore content and UI language
-			this.uiLanguage = this.getUILanguage();
-			this.contentLanguage = this.getContentLanguage();
+			displaySettings.uiLanguage = displaySettings.getUILanguage();
+			displaySettings.contentLanguage = displaySettings.getContentLanguage();
+
+			// Restore the font dropdowns
+			displaySettings.prepareUIFonts();
+			displaySettings.prepareContentFonts();
+
+			// Restore the visual state of selected language button
+			displaySettings.$template.find( 'div.uls-ui-languages button.button' ).each( function () {
+				var $button = $( this );
+
+				if ( $button.attr( 'lang' ) === displaySettings.uiLanguage ) {
+					$button.addClass( 'down' );
+				} else {
+					$button.removeClass( 'down' );
+				}
+			} );
 		}
 	};
 
