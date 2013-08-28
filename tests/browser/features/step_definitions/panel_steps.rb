@@ -92,6 +92,18 @@ Then(/^the (.*) font must be changed to the "(.*?)" font$/) do |type, font|
 	end
 end
 
-Then(/^the selected font displayed as the interface font must be the same as before the intermediate selection$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I can disable input methods$/) do
+	on(ULSPage).panel_disable_input_methods_element.click
+end
+
+Then(/^I can enable input methods$/) do
+	on(ULSPage).panel_enable_input_methods_element.click
+end
+
+Then(/^a font selector for interface language appears$/) do
+  on(ULSPage).panel_interface_font_selector_element.should be_visible
+end
+
+Then(/^a font selector for content language appears$/) do
+  on(ULSPage).panel_content_font_selector_element.should be_visible
 end

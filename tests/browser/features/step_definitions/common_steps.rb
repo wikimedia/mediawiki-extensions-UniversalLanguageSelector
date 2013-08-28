@@ -2,6 +2,9 @@ Given(/^I am at random page$/) do
   visit RandomPage
 end
 
+Given(/^I am logged out$/) do
+end
+
 Given(/^I am logged in$/) do
   visit(LoginPage).login_with(@mediawiki_username, @mediawiki_password)
 end
@@ -32,4 +35,14 @@ end
 After('@reset-preferences-after') do |scenario|
 	visit(ResetPreferencesPage)
 	on(ResetPreferencesPage).submit_element.click
+end
+
+Before('@uls-in-sidebar-only') do |scenario|
+	if !defined?($uls_position)
+		visit(ULSPage)
+		$uls_position = @browser.execute_script( "return mw.config.get( 'wgULSPosition' )" );
+	end
+	if $uls_position != 'interlanguage'
+		scenario.skip_invoke!
+	end
 end

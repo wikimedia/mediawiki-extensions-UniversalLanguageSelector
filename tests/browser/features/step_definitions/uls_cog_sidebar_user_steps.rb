@@ -18,13 +18,13 @@ end
 Given(/^I navigate to the anonymous Language Settings panel$/) do
   step 'I am on a page with interlanguage links'
   step 'I click the cog icon by Languages in the sidebar'
-  step 'I see the anonymous Language Settings panel'
+  step 'I see the logged out language settings panel'
 end
 
 Given(/^I navigate to the Language Settings panel$/) do
   step 'I am on a page with interlanguage links'
   step 'I click the cog icon by Languages in the sidebar'
-  step 'I see the Language Settings panel'
+  step 'I see the logged in language settings panel'
 end
 
 When(/^I click Apply Settings$/) do
@@ -33,18 +33,6 @@ end
 
 When(/^I click Cancel$/) do
   on(InterlanguagePage).cancel_element.click
-end
-
-Then(/^I click Enable input$/) do
-  on(InterlanguagePage).enable_input_element.when_visible.click
-end
-
-When(/^I click Fonts$/) do
-  on(InterlanguagePage).fonts_settings
-end
-
-When(/^I click Input$/) do
-  on(InterlanguagePage).input_settings_element.click
 end
 
 When(/^I click on the link to select Malayalam$/) do
@@ -63,24 +51,8 @@ When(/^I click X$/) do
   on(InterlanguagePage).x_element.click
 end
 
-When(/^I navigate to the talk page$/) do
-  on(InterlanguagePage).talk_element.click
-end
-
 When(/^in the language filter I type (.+)$/) do |language_abbreviation|
   on(RandomPage).language_filter=language_abbreviation
-end
-
-Then(/^a font selectbox appears$/) do
-  on(InterlanguagePage).content_font_selectbox_element.should be_visible
-end
-
-Then(/^I can disable input methods$/) do
-  on(InterlanguagePage).disable_input_methods_element.when_visible.should be_visible
-end
-
-Then(/^I can enable input methods$/) do
-  on(InterlanguagePage).enable_input_element.when_visible.should be_visible
 end
 
 Then(/^I can navigate back to Input Settings$/) do
@@ -102,9 +74,9 @@ When(/^I choose a different language for writing$/) do
 end
 
 Then(/^I do not see the Language Settings panel$/) do
-  on(InterlanguagePage) do |page|
-    page.language_button_element.should_not be_visible
-    page.fonts_button_element.should_not be_visible
+  on(ULSPage) do |page|
+    page.panel_language_element.should_not be_visible
+    page.panel_fonts_element.should_not be_visible
     page.default_language_button_element.should_not be_visible
     page.other_language_button_element.should_not be_visible
   end
@@ -118,17 +90,17 @@ Then(/^I see Language Search$/) do
   on(InterlanguagePage).language_search_element.should be_visible
 end
 
-Then(/^I see the anonymous Language Settings panel$/) do
-  on(NoInterlanguagePage) do |page|
-    page.language_button_element.when_present.should be_visible
-    page.fonts_button_element.should be_visible
+Then(/^I see the logged out language settings panel$/) do
+  on(ULSPage) do |page|
+    page.panel_language_element.should be_visible
+    page.panel_fonts_element.should be_visible
   end
 end
 
-Then(/^I see the Language Settings panel$/) do
-  on(NoInterlanguagePage) do |page|
-    page.language_button_element.when_present.should be_visible
-    page.fonts_button_element.should be_visible
+Then(/^I see the logged in language settings panel$/) do
+  on(ULSPage) do |page|
+    page.panel_language_element.should be_visible
+    page.panel_fonts_element.should be_visible
     page.default_language_button_element.should be_visible
     page.other_language_button_element.should be_visible
   end
@@ -141,18 +113,14 @@ Then(/^I see Worldwide$/) do
   end
 end
 
-Then(/^the cog icon brings up anonymous Language Settings again$/) do
+Then(/^I click the cog icon to open language settings again$/) do
   step 'I click the cog icon by Languages in the sidebar'
-  step 'I see the anonymous Language Settings panel'
+  step 'I see the logged out language settings panel'
 end
 
 Then(/^the cog icon brings up Language Settings again$/) do
   step 'I click the cog icon by Languages in the sidebar'
   step 'I see the Language Settings panel'
-end
-
-Then(/^a font selectbox appears for content$/) do
-  on(InterlanguagePage).content_font_selectbox_element.should be_visible
 end
 
 Then(/^I should see the How to use link near the Malayalam transliteration item$/) do
