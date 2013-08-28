@@ -22,18 +22,19 @@ When(/^I open "(.*?)" panel of language settings$/) do |panel|
 	@browser.execute_script(
 		"jQuery( '.uls-trigger, .uls-settings-trigger' ).eq( 0 ).click()"
 	)
+
 	on(ULSPage) do |page|
 		case panel
 		when "Display"
-			page.panel_display_element.click
+			page.panel_display_element.when_visible.click
 		when "Language"
-			page.panel_display_element.click
+			page.panel_display_element.when_visible.click
 			page.panel_language_element.click
 		when "Fonts"
-			page.panel_display_element.click
+			page.panel_display_element.when_visible.click
 			page.panel_fonts_element.click
 		when "Input"
-			page.panel_input_element.click
+			page.panel_input_element.when_visible.click
 		else
 			pending
 		end

@@ -47,7 +47,10 @@ When(/^I choose (.+?) as the input language$/) do |language|
   on(RandomPage) do |page|
     page.more_languages
     page.language_filter = language
-    page.language_filter_element.send_keys :return
+    # firefox only works with :return
+    # phantomjs only works with :enter
+    # This seems to work on both
+    page.language_filter_element.send_keys "\n"
   end
 end
 
