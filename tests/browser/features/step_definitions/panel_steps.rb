@@ -18,12 +18,14 @@ Given(/^I inspect current fonts$/) do
 end
 
 When(/^I open "(.*?)" panel of language settings$/) do |panel|
-	# These can be of two different type of elements, which PageObjects do not like.
-	@browser.execute_script(
-		"jQuery( '.uls-trigger, .uls-settings-trigger' ).eq( 0 ).click()"
-	)
-
 	on(ULSPage) do |page|
+		# These can be of two different type of elements, which PageObjects do not like.
+		if uls_position() == 'interlanguage'
+			page.trigger_cog_element.when_visible.click
+		elsif uls_position() == 'personal'
+			page.trigger_personal_element.when_visible.click
+		end
+
 		case panel
 		when "Display"
 			page.panel_display_element.when_visible.click

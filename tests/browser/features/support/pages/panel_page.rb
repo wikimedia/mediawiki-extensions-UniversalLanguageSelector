@@ -21,4 +21,8 @@ class ULSPage
 	# TODO: Rename to match convention
 	button(:other_language_button, class: 'button uls-language-button')
 	button(:default_language_button, class: 'button uls-language-button down')
+
+	# Triggers
+	span(:trigger_cog, class: 'uls-settings-trigger')
+	a(:trigger_personal, class: 'uls-trigger')
 end

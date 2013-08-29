@@ -40,22 +40,23 @@ After('@reset-preferences-after') do |scenario|
 	on(ResetPreferencesPage).submit_element.click
 end
 
-Before('@uls-in-sidebar-only') do |scenario|
+def uls_position()
 	if !defined?($uls_position)
 		visit(ULSPage)
 		$uls_position = @browser.execute_script( "return mw.config.get( 'wgULSPosition' )" );
+	else
+		$uls_position
 	end
-	if $uls_position != 'interlanguage'
+end
+
+Before('@uls-in-sidebar-only') do |scenario|
+	if uls_position() != 'interlanguage'
 		scenario.skip_invoke!
 	end
 end
 
 Before('@uls-in-personal-only') do |scenario|
-	if !defined?($uls_position)
-		visit(ULSPage)
-		$uls_position = @browser.execute_script( "return mw.config.get( 'wgULSPosition' )" );
-	end
-	if $uls_position != 'personal'
+	if uls_position() != 'personal'
 		scenario.skip_invoke!
 	end
 end
