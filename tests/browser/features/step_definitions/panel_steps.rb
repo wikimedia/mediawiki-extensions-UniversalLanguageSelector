@@ -110,3 +110,18 @@ end
 Then(/^a font selector for content language appears$/) do
   on(ULSPage).panel_content_font_selector_element.should be_visible
 end
+
+When(/^I use the panel to change my interface language to "(.*?)"$/) do |language|
+	code = language_to_code(language)
+	on(RandomPage).language_filter = code
+	# Because one browser wants :enter and other :return -- sigh
+	on(RandomPage).language_filter_element.send_keys [:enter, "\n"]
+end
+
+Then(/^the panel is in English/) do
+	on(ULSPage).panel_language_element.text.should == 'Language'
+end
+
+When(/^I switch to "Input" panel of language settings/) do
+	on(ULSPage).panel_input_element.when_visible.click
+end
