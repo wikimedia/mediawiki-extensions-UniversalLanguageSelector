@@ -46,3 +46,13 @@ Before('@uls-in-sidebar-only') do |scenario|
 		scenario.skip_invoke!
 	end
 end
+
+Before('@uls-in-personal-only') do |scenario|
+	if !defined?($uls_position)
+		visit(ULSPage)
+		$uls_position = @browser.execute_script( "return mw.config.get( 'wgULSPosition' )" );
+	end
+	if $uls_position != 'personal'
+		scenario.skip_invoke!
+	end
+end
