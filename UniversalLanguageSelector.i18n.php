@@ -304,7 +304,7 @@ $messages['gl'] = array(
  */
 $messages['gu'] = array(
 	'UniversalLanguageSelector' => 'યુનિવર્સલ લેંગ્વેજ સિલેક્ટર',
-	'uls-desc' => 'સભ્યને ભાષા પસંદ અને ગોઠવણીઓ માટેનાં અનેક રસ્તાઓ પૂરા પાડે છે',
+	'uls-desc' => 'સભ્યને ભાષા પસંદગી અને ગોઠવણીઓ માટેનાં અનેક માર્ગો પૂરા પાડે છે',
 	'uls-plang-title-languages' => 'ભાષાઓ',
 );
 
@@ -617,6 +617,15 @@ $messages['ru'] = array(
 $messages['si'] = array(
 	'UniversalLanguageSelector' => 'විශ්ව භාෂා වරකය',
 	'uls-plang-title-languages' => 'භාෂාවන්',
+);
+
+/** Slovak (slovenčina)
+ * @author KuboF
+ */
+$messages['sk'] = array(
+	'UniversalLanguageSelector' => 'Univerzálny výber jazyka',
+	'uls-desc' => 'Ponúka používateľovi niekoľko spôsobov výberu jazyka a úpravy jazykových nastavení',
+	'uls-plang-title-languages' => 'Jazyky',
 );
 
 /** Serbian (Cyrillic script) (српски (ћирилица)‎)
