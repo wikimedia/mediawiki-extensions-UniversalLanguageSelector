@@ -75,7 +75,6 @@
 		this.contentLanguage = this.getContentLanguage();
 		this.$imes = null;
 		this.$parent = $parent;
-		this.dirty = false;
 		this.savedRegistry = $.extend( true, {}, $.ime.preferences.registry );
 	}
 
@@ -88,11 +87,10 @@
 		 */
 		render: function () {
 			var $enabledOnly;
-
+			this.dirty = false;
 			this.$parent.$settingsPanel.empty();
 			this.$imes = $( 'body' ).data( 'ime' );
 			this.$parent.$settingsPanel.append( this.$template );
-
 			$enabledOnly = this.$template.find( '.enabled-only' );
 			// ime system is lazy loaded, make sure it is initialized
 			mw.ime.init();
@@ -106,6 +104,7 @@
 			this.prepareLanguages();
 			this.prepareToggleButton();
 			this.$template.i18n();
+			this.disableApplyButton();
 			$( 'body' ).data( 'webfonts' ).refresh();
 			this.listen();
 		},
@@ -454,8 +453,6 @@
 
 			inputSettings.$template.find( 'button.uls-input-settings-cancel' ).on( 'click', function () {
 				inputSettings.cancel();
-				// Redraw the panel according to the state
-				inputSettings.render();
 				inputSettings.close();
 			} );
 
@@ -569,12 +566,10 @@
 			if ( !this.dirty ) {
 				return;
 			}
-			this.dirty = false;
-			this.disableApplyButton();
-
 			// Reload preferences
 			$.ime.preferences.registry = $.extend( true, {}, this.savedRegistry );
-
+			this.uiLanguage = this.getInterfaceLanguage();
+			this.contentLanguage = this.getContentLanguage();
 			// Restore the state of IME
 			if ( $.ime.preferences.isEnabled() ) {
 				mw.ime.setup();
