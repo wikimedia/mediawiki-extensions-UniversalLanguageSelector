@@ -20,7 +20,7 @@
     "ext-uls-display-settings-font-settings": "Kirjasinasetukset",
     "ext-uls-display-settings-ui-language": "K\u00e4ytt\u00f6liittym\u00e4n kieli",
     "ext-uls-display-settings-anon-label": "K\u00e4ytt\u00f6liittym\u00e4n kieli:",
-    "ext-uls-display-settings-anon-same-as-content": "suomi (sama kuin sis\u00e4ll\u00f6n)",
+    "ext-uls-display-settings-anon-same-as-content": "$1 (sama kuin sis\u00e4ll\u00f6n)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Kirjaudu sis\u00e4\u00e4n]], jos haluat valita eri kielen valikoille.",
     "ext-uls-webfonts-select-for": "Kirjasin kielelle $1",
     "ext-uls-webfonts-select-for-ui-info": "K\u00e4ytt\u00f6liittym\u00e4n kirjasin",

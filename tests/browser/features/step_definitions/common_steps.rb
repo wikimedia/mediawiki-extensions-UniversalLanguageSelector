@@ -12,12 +12,33 @@ Given(/^I am logged in$/) do
 	loggedin.should be_true
 end
 
+Given(/^I set "(.*?)" as the interface language$/) do |language|
+	code = language_to_code(language)
+	visit(ULSPage, :using_params => {:extra => "setlang=#{code}"})
+	# And check it took effect
+	actual = @browser.execute_script( "return jQuery( 'html' ).attr( 'lang' )" )
+	actual.should == code
+end
+
+Given(/^I temporarily use "(.*?)" as the interface language$/) do |language|
+	code = language_to_code(language)
+	visit(ULSPage, :using_params => {:extra => "uselang=#{code}"})
+end
+
+Given(/^the content language is "(.*?)"$/) do |language|
+	code = language_to_code(language)
+	actual = @browser.execute_script( "return mw.config.get( 'wgContentLanguage' )" )
+	actual.should == code
+end
+
 def language_to_code(language)
 	case language
 	when 'German'
 		'de'
 	when 'English'
 		'en'
+	when 'Finnish'
+		'fi'
 	else
 		pending
 	end

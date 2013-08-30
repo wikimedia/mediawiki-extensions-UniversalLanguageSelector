@@ -134,7 +134,7 @@
 				SUGGESTED_LANGUAGES_NUMBER = 3,
 				anonsAllowed = mw.config.get( 'wgULSAnonCanChangeLanguage' ),
 				languagesForButtons, $languages, suggestedLanguages,
-				lang, i, language, $button;
+				lang, i, language, $button, autonym;
 
 			// Don't let anonymous users change interface language
 			if ( !anonsAllowed && mw.user.isAnon() ) {
@@ -144,6 +144,7 @@
 				};
 				$loginCta = $( '<p>' )
 					.attr( 'id', 'uls-display-settings-anon-log-in-cta' );
+				autonym = $.uls.data.getAutonym( this.contentLanguage );
 
 				this.$template.find( '.uls-display-settings-language-tab' )
 					.empty()
@@ -153,7 +154,7 @@
 								.addClass( 'uls-display-settings-anon-label' )
 								.html( $.i18n( 'ext-uls-display-settings-anon-label' ) + '&#160;' ),
 							$( '<span>' )
-								.text( $.i18n( 'ext-uls-display-settings-anon-same-as-content' ) )
+								.text( $.i18n( 'ext-uls-display-settings-anon-same-as-content', autonym ) )
 						),
 						$loginCta
 					);
