@@ -45,6 +45,8 @@ end
 
 When(/^I click the cog icon by Languages in the sidebar$/) do
   on(NoInterlanguagePage).cog_element.when_present.click
+  # Wait for the panel to open
+  on(ULSPage).panel_display_element.when_visible
 end
 
 When(/^I click X$/) do
