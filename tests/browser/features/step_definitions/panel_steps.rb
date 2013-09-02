@@ -1,15 +1,5 @@
-Given(/^I set "(.*?)" as the interface language$/) do |language|
-	code = language_to_code(language)
-	visit(ULSPage, :using_params => {:setlang => "#{code}"})
-	# And check it took effect
-	actual = @browser.execute_script( "return jQuery( 'html' ).attr( 'lang' )" )
-	actual.should == code
-end
-
-Given(/^the content language is "(.*?)"$/) do |language|
-	code = language_to_code(language)
-	actual = @browser.execute_script( "return mw.config.get( 'wgContentLanguage' )" )
-	actual.should == code
+Then(/^I see "(.*?)" as the name of the content language$/) do |text|
+	@browser.span(:text => "#{text}").should be_visible
 end
 
 Given(/^I inspect current fonts$/) do

@@ -2,7 +2,7 @@ class ULSPage
 	include PageObject
 
 	include URL
-	page_url URL.url('?setlang=<%=params[:setlang]%>')
+	page_url URL.url('?<%=params[:extra]%>')
 
 	div(:panel_display, id: 'display-settings-block')
 	div(:panel_input, id: 'input-settings-block')
