@@ -1,4 +1,4 @@
-@ie6-bug  @ie7-bug  @ie8-bug  @ie9-bug @language @sandbox.translatewiki.net
+@language
 Feature: Universal Language Selector Accept-Language
 
   Scenario Outline: Accept-Language

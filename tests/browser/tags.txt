@@ -1,0 +1,26 @@
+This file contains the descriptions of the tags we use.
+
+@en.wikipedia.beta.wmflabs.org
+@commons.wikimedia.beta.wmflabs.org
+  Test is run on this domain unless further excluded by other tags.
+
+@language
+  This tests needs support from Accept-Language header setting from the
+  webdriver.
+
+@ime-default-on
+  These tests expect input methods to be enabled by default.
+
+@login
+  This test logs in. You can filter these tests out if you don't have an
+  account available.
+
+@reset-preferences-after
+  This test changes user preferences and resets them at the end. In theory you
+  could use your normal user account if you skip these tests, but I would not
+  recommend doing that.
+
+@uls-in-personal-only
+@uls-in-sidebar-only
+  These tests will automatically be marked as skipped if ULS configuration is
+  not the one expected for the test.

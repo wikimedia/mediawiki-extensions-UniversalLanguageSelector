@@ -1,13 +1,13 @@
 @commons.wikimedia.beta.wmflabs.org @en.wikipedia.beta.wmflabs.org
 Feature: ULS settings panel
 
-  @login
+  @login @ime-default-on
   Scenario Outline: Input settings display
-    Givan I am <user status>
+    Given I am <user status>
       And I am on a page without interlanguage links
     When I open "Input" panel of language settings
-    Then I can enable input methods
-      And I can disable input methods
+    Then I can disable input methods
+      And I can enable input methods
 
   Examples:
     | user status |
