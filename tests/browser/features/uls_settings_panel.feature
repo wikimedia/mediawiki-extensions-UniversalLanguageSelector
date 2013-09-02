@@ -39,3 +39,15 @@ Feature: ULS settings panel
       And I see Worldwide
       And I see Language Search
       And I can navigate back to Language Settings
+
+  @login
+  Scenario: Temporary live preview for menu language
+
+    Given I am logged in
+    When I open "Language" panel of language settings
+      And I click the button with the ellipsis
+      And I use the panel to change my interface language to "German"
+      And I switch to "Input" panel of language settings
+      And I click X
+      And I open "Language" panel of language settings
+      Then the panel is in English
