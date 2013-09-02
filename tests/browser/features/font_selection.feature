@@ -1,4 +1,4 @@
-@reset-preferences-after @login @en.wikipedia.beta.wmflabs.org @commons.wikimedia.beta.wmflabs.org
+@login @reset-preferences-after @en.wikipedia.beta.wmflabs.org @commons.wikimedia.beta.wmflabs.org
 Feature: Font selection
 
   In order to have better using experience,
