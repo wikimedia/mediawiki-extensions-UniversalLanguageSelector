@@ -43,7 +43,13 @@ When(/^I select "(.*?)" font for the (.*?) language for the live preview$/) do |
 end
 
 When(/^I close the panel to discard the changes$/) do
-	on(ULSPage).panel_button_close_element.click
+	on(ULSPage) do |page|
+		page.panel_button_close_element.click
+		# Also close the ULS language selection if open
+		if uls_position() == 'personal'
+			page.uls_button_close_element.when_visible.click
+		end
+	end
 end
 
 Then(/^the active (.*?) font must be the same as font prior to the preview$/) do |type|
