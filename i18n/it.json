@@ -19,7 +19,7 @@
     "ext-uls-display-settings-font-settings": "Impostazioni per tipo di caratteri",
     "ext-uls-display-settings-ui-language": "Lingua di visualizzazione",
     "ext-uls-display-settings-anon-label": "Lingua di visualizzazione:",
-    "ext-uls-display-settings-anon-same-as-content": "Italiano (come il contenuto)",
+    "ext-uls-display-settings-anon-same-as-content": "$1 (come il contenuto)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Accedi]] per selezionare una lingua diversa per i menu.",
     "ext-uls-webfonts-select-for": "Seleziona tipo di carattere per $1",
     "ext-uls-webfonts-select-for-ui-info": "Tipo di carattere usato per l'interfaccia utente",
