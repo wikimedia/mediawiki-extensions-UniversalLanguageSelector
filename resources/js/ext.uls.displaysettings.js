@@ -107,8 +107,13 @@
 			this.prepareLanguages();
 			this.prepareUIFonts();
 			this.prepareContentFonts();
+
+			// Usually this is already loaded, but when changing language it
+			// might not be.
 			$.i18n().locale = this.uiLanguage;
-			this.i18n();
+			mw.uls.loadLocalization( this.uiLanguage )
+				.done( $.proxy( this.i18n, this ) );
+
 			this.$webfonts.refresh();
 			this.listen();
 			this.dirty = false;
@@ -316,15 +321,13 @@
 					}
 				},
 				onSelect: function ( langCode ) {
-					displaySettings.markDirty();
 					displaySettings.uiLanguage = langCode;
-					displaySettings.$parent.show();
-					displaySettings.prepareUIFonts();
-					displaySettings.prepareLanguages();
-					// set the language for the settings panel so that webfonts
-					// are correctly applied.
 					displaySettings.$template.attr( 'lang', langCode );
-					displaySettings.preview( langCode );
+					// This re-renders the whole thing
+					displaySettings.$parent.show();
+					// And the only thing we need to take care of is to enable
+					// the apply button
+					displaySettings.markDirty();
 				},
 				quickList: function () {
 					return mw.uls.getFrequentLanguageList();
