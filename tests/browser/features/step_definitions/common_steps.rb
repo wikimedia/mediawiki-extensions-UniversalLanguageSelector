@@ -31,6 +31,15 @@ Given(/^the content language is "(.*?)"$/) do |language|
 	actual.should == code
 end
 
+Given(/^the interface language is "(.*?)"$/) do |language|
+	# phantomjs needs little bit time because it executes the script before
+	# the page is fully loaded
+	sleep 0.5;
+	code = language_to_code(language)
+	actual = @browser.execute_script( "return mw.config.get( 'wgUserLanguage' )" )
+	actual.should == code
+end
+
 def language_to_code(language)
 	case language
 	when 'German'

@@ -63,3 +63,13 @@ Feature: ULS settings panel
     Given I temporarily use "Finnish" as the interface language
     When I open "Language" panel of language settings
     Then I see "English (sama kuin sisällön)" as the name of the content language
+
+  @login @reset-preferences-after
+  Scenario: Selecting language via [...] button
+
+    Given I am logged in
+    When I open "Language" panel of language settings
+      And I click the button with the ellipsis
+      And I use the panel to change my interface language to "German"
+      And I apply the changes
+    Then the interface language is "German"
