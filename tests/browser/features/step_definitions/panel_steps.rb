@@ -71,7 +71,7 @@ When(/^I apply the changes$/) do
 	on(ULSPage).panel_button_apply_element.click
 	# Leave a little time for the settings to be saved. The settings window closes
 	# immediately, so it is not enough to wait for it to disappear.
-	sleep 2
+	sleep 4
 end
 
 Then(/^the (.*) font must be changed to the "(.*?)" font$/) do |type, font|
