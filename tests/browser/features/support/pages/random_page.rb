@@ -14,7 +14,6 @@ class RandomPage
   ul(:input_method_language_list, class: 'ime-language-list')
   div(:input_method_selector_menu, class: 'imeselector-menu')
   text_field(:language_filter, id: 'languagefilter')
-  div(:language_settings_dialog, id: 'language-settings-dialog')
   li(:main_page, id: 'n-mainpage-description')
   a(:malayalam_link, title: 'Malayalam')
   a(:more_languages, class: 'ime-selector-more-languages')

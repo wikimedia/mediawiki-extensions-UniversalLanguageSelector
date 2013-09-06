@@ -4,6 +4,9 @@ class ULSPage
 	include URL
 	page_url URL.url('?<%=params[:extra]%>')
 
+	div(:uls, class: 'uls-menu')
+	span(:uls_button_close, id: 'uls-close')
+
 	div(:panel_display, id: 'display-settings-block')
 	div(:panel_input, id: 'input-settings-block')
 	button(:panel_fonts, id: 'uls-display-settings-fonts-tab')

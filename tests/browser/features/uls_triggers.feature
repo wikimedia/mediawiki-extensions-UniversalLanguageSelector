@@ -1,11 +1,30 @@
 @commons.wikimedia.beta.wmflabs.org @en.wikipedia.beta.wmflabs.org
 Feature: ULS trigger in personal toolbar
 
-  @uls-in-personal-only
-  Scenario: Open language selector
-    Given I visit a random page
+  @login @uls-in-personal-only
+  Scenario: Open language selector when logged in
+    Given I am logged in
     When I click language selector trigger element
-    Then I should see the Language selector
+    Then I should see the language selector
+
+  @uls-in-personal-only @no-anon-language-selection
+  Scenario: Open language settings when logged out and language change not allowed
+
+    If the user is logged out, the user will either see the language selector
+    or the settings panel, depending on whether language selection for
+    anonymous users is disabled. This and next test cover both cases.
+
+    Given I am at random page
+    When I click language selector trigger element
+    Then I see the logged in language settings panel
+
+  @uls-in-personal-only @anon-language-selection
+  Scenario: Open language selector when logged out
+
+    Given I am at random page
+    When I click language selector trigger element
+    Then I should see the language selector
+
 
   @login @uls-in-sidebar-only
   Scenario Outline: Opening language settings from sidebar
