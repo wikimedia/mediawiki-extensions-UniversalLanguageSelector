@@ -19,7 +19,7 @@
     "ext-uls-display-settings-font-settings": "\uae00\uaf34 \uc124\uc815",
     "ext-uls-display-settings-ui-language": "\ubcf4\uc77c \uc5b8\uc5b4",
     "ext-uls-display-settings-anon-label": "\ubcf4\uc77c \uc5b8\uc5b4:",
-    "ext-uls-display-settings-anon-same-as-content": "\uc601\uc5b4 (\ub0b4\uc6a9\uacfc \uac19\uc74c)",
+    "ext-uls-display-settings-anon-same-as-content": "$1 (\ub0b4\uc6a9\uacfc \uac19\uc74c)",
     "ext-uls-display-settings-anon-log-in-cta": "\uba54\ub274\uc758 \ub2e4\ub978 \uc5b8\uc5b4\ub97c \uc120\ud0dd\ud558\ub824\uba74 [[Special:UserLogin|\ub85c\uadf8\uc778]]\ud558\uc138\uc694.",
     "ext-uls-webfonts-select-for": "$1\uc5d0 \ub300\ud55c \uae00\uaf34 \uc120\ud0dd",
     "ext-uls-webfonts-select-for-ui-info": "\uc0ac\uc6a9\uc790 \uc778\ud130\ud398\uc774\uc2a4\uc5d0 \uc0ac\uc6a9\ud560 \uae00\uaf34",
