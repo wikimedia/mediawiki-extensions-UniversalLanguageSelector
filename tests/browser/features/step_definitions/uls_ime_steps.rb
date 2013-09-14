@@ -70,3 +70,23 @@ Then(/^in it there must be an element with Malayalam text$/) do
   # 'input_method_enabled' alone only returns []
   on(RandomPage).input_method_enabled_element.text.should == 'ഇൻസ്ക്രിപ്റ്റ് 2'
 end
+
+When(/^I visit page in Vector skin$/) do
+  sleep 1.0;
+  visit(AsciiVector)
+end
+
+When(/^I visit page in Monobook skin$/) do
+  sleep 1.0;
+  visit(AsciiMono)
+end
+
+Then(/^I should see the input method menu is not offscreen$/) do
+  @browser.execute_script( "
+    var $selectorMenu = $( '.imeselector-menu' ),
+        menuLeft = $selectorMenu.offset().left,
+        menuRight = menuLeft + $selectorMenu.width();
+
+    return ( menuLeft >= 0 && menuRight <= $( window ).width() );
+  " ).should == true
+end

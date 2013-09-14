@@ -48,6 +48,8 @@ def language_to_code(language)
 		'en'
 	when 'Finnish'
 		'fi'
+	when 'Hebrew'
+		'he'
 	else
 		pending
 	end
