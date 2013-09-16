@@ -29,4 +29,6 @@ class ULSPage
 	# Triggers
 	span(:trigger_cog, class: 'uls-settings-trigger')
 	a(:trigger_personal, class: 'uls-trigger')
+
+	select(:select_font_for_interface, id: 'ui-font-selector')
 end

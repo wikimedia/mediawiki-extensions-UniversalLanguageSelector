@@ -25,12 +25,6 @@ Given(/^I temporarily use "(.*?)" as the interface language$/) do |language|
 	visit(ULSPage, :using_params => {:extra => "uselang=#{code}"})
 end
 
-Given(/^the content language is "(.*?)"$/) do |language|
-	code = language_to_code(language)
-	actual = @browser.execute_script( "return mw.config.get( 'wgContentLanguage' )" )
-	actual.should == code
-end
-
 Given(/^the interface language is "(.*?)"$/) do |language|
 	# phantomjs needs little bit time because it executes the script before
 	# the page is fully loaded
