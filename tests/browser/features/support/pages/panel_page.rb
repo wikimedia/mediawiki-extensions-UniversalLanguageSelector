@@ -31,4 +31,5 @@ class ULSPage
 	a(:trigger_personal, class: 'uls-trigger')
 
 	select(:select_font_for_interface, id: 'ui-font-selector')
+	select(:select_font_for_content, id: 'content-font-selector')
 end

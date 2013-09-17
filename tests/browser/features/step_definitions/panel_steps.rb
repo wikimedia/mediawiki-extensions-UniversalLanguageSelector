@@ -33,14 +33,14 @@ When(/^I open "(.*?)" panel of language settings$/) do |panel|
 	end
 end
 
-When(/^I select "(.*?)" font for the (.*?) language for the live preview$/) do |font,type|
-	if type == 'interface'
-		type = 'ui'
-	end
-	Selenium::WebDriver::Support::Select.new(
-		@browser.driver.find_element(:id, "#{type}-font-selector")
-	).select_by(:text, font)
+When(/^I select "(.*?)" font for the interface language for the live preview$/) do |font|
+	on(ULSPage).select_font_for_interface = font
 end
+
+When(/^I select "(.*?)" font for the content language for the live preview$/) do |font|
+	on(ULSPage).select_font_for_content = font
+end
+
 
 When(/^I close the panel to discard the changes$/) do
 	on(ULSPage) do |page|
