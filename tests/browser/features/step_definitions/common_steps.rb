@@ -15,9 +15,6 @@ end
 Given(/^I set "(.*?)" as the interface language$/) do |language|
 	code = language_to_code(language)
 	visit(ULSPage, :using_params => {:extra => "setlang=#{code}"})
-	# And check it took effect
-	actual = @browser.execute_script( "return jQuery( 'html' ).attr( 'lang' )" )
-	actual.should == code
 end
 
 Given(/^I temporarily use "(.*?)" as the interface language$/) do |language|
@@ -25,13 +22,9 @@ Given(/^I temporarily use "(.*?)" as the interface language$/) do |language|
 	visit(ULSPage, :using_params => {:extra => "uselang=#{code}"})
 end
 
-Given(/^the interface language is "(.*?)"$/) do |language|
-	# phantomjs needs little bit time because it executes the script before
-	# the page is fully loaded
-	sleep 0.5;
+Then(/^my interface language is "(.*?)"$/) do |language|
 	code = language_to_code(language)
-	actual = @browser.execute_script( "return mw.config.get( 'wgUserLanguage' )" )
-	actual.should == code
+	interface_element.attribute('lang').should == code
 end
 
 def language_to_code(language)

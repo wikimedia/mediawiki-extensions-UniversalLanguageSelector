@@ -32,4 +32,7 @@ class ULSPage
 
 	select(:select_font_for_interface, id: 'ui-font-selector')
 	select(:select_font_for_content, id: 'content-font-selector')
+
+	# Is there way to access the html element?
+	div(:interface, id: 'footer')
 end

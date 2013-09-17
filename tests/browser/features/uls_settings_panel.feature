@@ -72,4 +72,4 @@ Feature: ULS settings panel
       And I click the button with the ellipsis
       And I use the panel to change my interface language to "German"
       And I apply the changes
-    Then the interface language is "German"
+    Then my interface language is "German"
