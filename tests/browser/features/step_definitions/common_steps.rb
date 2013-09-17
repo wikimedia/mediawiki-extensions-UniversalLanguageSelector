@@ -24,7 +24,7 @@ end
 
 Then(/^my interface language is "(.*?)"$/) do |language|
 	code = language_to_code(language)
-	interface_element.attribute('lang').should == code
+	on(ULSPage).interface_element.attribute('lang').should == code
 end
 
 def language_to_code(language)
