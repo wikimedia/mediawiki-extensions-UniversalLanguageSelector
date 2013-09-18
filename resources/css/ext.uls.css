@@ -312,3 +312,8 @@ button.button.green.disabled:hover {
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#2ca368', endColorstr='#2ca368', GradientType=0)";
 	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#2ca368', endColorstr='#2ca368', GradientType=0);
 }
+
+/* Interlanguage links */
+#p-lang a {
+	font-family: 'Autonym', sans-serif;
+}
