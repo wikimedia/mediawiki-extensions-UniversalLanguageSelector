@@ -70,12 +70,17 @@
 				return font;
 			},
 			exclude: ( function () {
+				var excludes = $.fn.webfonts.defaults.exclude;
+
 				if ( mw.user.options.get( 'editfont' ) !== 'default' ) {
 					// Exclude textboxes from webfonts if user has edit area font option
 					// set using 'Preferences' page
-					return 'textarea';
+					excludes = ( excludes )
+						? excludes + ',textarea'
+						: 'textarea';
 				}
-				return $.fn.webfonts.defaults.exclude;
+
+				return excludes;
 			}() )
 		} );
 		$( 'body' ).webfonts();
@@ -87,7 +92,8 @@
 			// MediaWiki specific overrides for jquery.webfonts
 			$.extend( $.fn.webfonts.defaults, {
 				repository: mediawikiFontRepository,
-				fontStack: $( 'body' ).css( 'font-family' ).split( /, /g )
+				fontStack: $( 'body' ).css( 'font-family' ).split( /, /g ),
+				exclude: mw.config.get( 'wgULSNoWebfontsSelectors' ).join( ', ' )
 			} );
 
 			mw.webfonts.preferences.load();

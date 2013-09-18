@@ -130,6 +130,14 @@ $wgULSEventLogging = false;
  */
 $wgULSNoImeSelectors = array( '#wpCaptchaWord' );
 
+
+/**
+ * Array of jQuery selectors of elements on which webfonts must not be applied.
+ * By default exclude the interwiki language links.
+ * @since 2013.09
+ */
+$wgULSNoWebfontsSelectors = array( '#p-lang li > a' );
+
 $dir = __DIR__;
 
 // Internationalization
