@@ -1,13 +1,13 @@
 {
     "@metadata": {
-        "authors": {
-            "0": "Gomoko",
-            "1": "Hyperborean",
-            "2": "Ltrlg",
-            "3": "Metroitendo",
-            "4": "Sherbrooke",
-            "6": "Wyz"
-        }
+        "authors": [
+            "Gomoko",
+            "Hyperborean",
+            "Ltrlg",
+            "Metroitendo",
+            "Sherbrooke",
+            "Wyz"
+        ]
     },
     "ext-uls-display-settings-title": "Afficher les param\u00e8tres",
     "ext-uls-display-settings-language-tab": "Langue",
@@ -23,7 +23,7 @@
     "ext-uls-display-settings-font-settings": "Param\u00e8tres de fonte",
     "ext-uls-display-settings-ui-language": "Langue d'affichage",
     "ext-uls-display-settings-anon-label": "Langue d'affichage :",
-    "ext-uls-display-settings-anon-same-as-content": "Fran\u00e7ais (comme le contenu)",
+    "ext-uls-display-settings-anon-same-as-content": "$1 (comme le contenu)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Se connecter]] pour s\u00e9lectionner une autre langue pour les menus.",
     "ext-uls-webfonts-select-for": "S\u00e9lectionner la police de caract\u00e8res pour $1",
     "ext-uls-webfonts-select-for-ui-info": "Police de caract\u00e8res utilis\u00e9e pour l'interface utilisateur",
