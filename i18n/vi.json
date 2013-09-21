@@ -18,7 +18,7 @@
     "ext-uls-display-settings-font-settings": "T\u00f9y ch\u1ecdn ph\u00f4ng ch\u1eef",
     "ext-uls-display-settings-ui-language": "Ng\u00f4n ng\u1eef tr\u00ecnh b\u00e0y",
     "ext-uls-display-settings-anon-label": "Ng\u00f4n ng\u1eef tr\u00ecnh b\u00e0y:",
-    "ext-uls-display-settings-anon-same-as-content": "Ti\u1ebfng Vi\u1ec7t (ph\u00f9 h\u1ee3p v\u1edbi n\u1ed9i dung)",
+    "ext-uls-display-settings-anon-same-as-content": "$1 (ph\u00f9 h\u1ee3p v\u1edbi n\u1ed9i dung)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|\u0110\u0103ng nh\u1eadp]] \u0111\u1ec3 ch\u1ecdn ng\u00f4n ng\u1eef kh\u00e1c cho c\u00e1c tr\u00ecnh \u0111\u01a1n.",
     "ext-uls-webfonts-select-for": "Ch\u1ecdn ph\u00f4ng ch\u1eef $1",
     "ext-uls-webfonts-select-for-ui-info": "Ph\u00f4ng ch\u1eef giao di\u1ec7n",

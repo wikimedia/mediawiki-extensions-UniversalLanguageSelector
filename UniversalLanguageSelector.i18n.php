@@ -389,6 +389,14 @@ $messages['ka'] = array(
 	'uls-plang-title-languages' => 'ენები',
 );
 
+/** Kazakh (Cyrillic script) (қазақша (кирил)‎)
+ * @author Arystanbek
+ */
+$messages['kk-cyrl'] = array(
+	'UniversalLanguageSelector' => 'Әнбебаб тіл таңдаушы',
+	'uls-plang-title-languages' => 'Тілдер',
+);
+
 /** Kannada (ಕನ್ನಡ)
  * @author Akoppad
  */
