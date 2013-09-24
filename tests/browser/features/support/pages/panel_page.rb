@@ -23,7 +23,7 @@ class PanelPage
 	select_list(:panel_interface_font_selector, id: 'ui-font-selector')
 
 	# TODO: Rename to match convention
-	button(:other_language_button, class: 'button uls-language-button')
+	button(:other_language_button, class: 'button uls-language-button', index: 1)
 	button(:default_language_button, class: 'button uls-language-button down')
 
 	# Triggers
@@ -32,6 +32,8 @@ class PanelPage
 
 	select(:select_font_for_interface, id: 'ui-font-selector')
 	select(:select_font_for_content, id: 'content-font-selector')
+
+	div(:uls_display_settings, class: 'uls-display-settings')
 
 	# Is there way to access the html element?
 	div(:interface, id: 'footer')

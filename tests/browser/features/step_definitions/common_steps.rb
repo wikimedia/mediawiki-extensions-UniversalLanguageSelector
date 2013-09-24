@@ -37,6 +37,8 @@ def language_to_code(language)
 		'fi'
 	when 'Hebrew'
 		'he'
+	when 'Hindi'
+		'hi'
 	else
 		pending
 	end
