@@ -1,5 +1,5 @@
 @commons.wikimedia.beta.wmflabs.org @en.wikipedia.beta.wmflabs.org
-Feature: ULS trigger in personal toolbar
+Feature: Trigger in personal toolbar
 
   @login @uls-in-personal-only
   Scenario: Open language selector when logged in

@@ -1,5 +1,5 @@
 @language
-Feature: Universal Language Selector Accept-Language
+Feature: Accept-Language
 
   Scenario Outline: Accept-Language
     Given that my browser's accept language is <language>

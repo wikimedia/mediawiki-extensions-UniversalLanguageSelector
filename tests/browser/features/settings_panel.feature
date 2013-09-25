@@ -1,5 +1,5 @@
 @commons.wikimedia.beta.wmflabs.org @en.wikipedia.beta.wmflabs.org
-Feature: ULS settings panel
+Feature: Settings panel
 
   @login @ime-default-on
   Scenario Outline: Input settings display

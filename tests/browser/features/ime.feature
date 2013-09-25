@@ -1,5 +1,5 @@
 @commons.wikimedia.beta.wmflabs.org
-Feature: Universal Language Selector input method engine
+Feature: Input method engine
 
 User is able to select among different input methods via a menu which is
 activated by the input method indicator. User can type with selected input
