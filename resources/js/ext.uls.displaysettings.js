@@ -620,6 +620,8 @@
 			// Restore content and UI language
 			this.uiLanguage = this.getUILanguage();
 			this.contentLanguage = this.getContentLanguage();
+			this.$template.attr( 'lang', this.uiLanguage );
+
 			this.close();
 		}
 	};
