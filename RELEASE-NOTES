@@ -1,0 +1,20 @@
+== UniversalLanguageSelector 2013.09 ==
+Released at 2013-09-25.
+
+=== Noteworthy changes ===
+* Web fonts are no longer loaded for autonyms in the interlanguage area. This is a temporary change to improve performance; a more comprehensive fix may be done in the future.
+* Use correct name for wiki content language. An incorrect name could appear when anonymous user could not change the language, and the language of the translation differed from the content language (bug 49738).
+* Revert font preview correctly when pressing cancel button (bug 53203).
+* Make the "Cancel" and "Apply" buttons applicable for all modules (bug 53256).
+* Fixed some edge cases in which the IME menu went off-screen.
+* Show an autonym in the input menu title for languages that don't have input methods instead of an empty title.
+* Ability to customize the time out for the IME selector widget. This helps during development/debugging sessions where you often wish that the widget stayed little longer.
+
+=== Fonts ===
+* Set OskiEast font default for Canadian Syllabic language.
+* Set Phetsarath font default for Lao language.
+* Updated TuladhaJejeg font for Javanese to 2.0.1 version.
+* Fixed name of Estrangelo Edessa font.
+
+=== Input methods ===
+* Added and improved Persian keyboard.
