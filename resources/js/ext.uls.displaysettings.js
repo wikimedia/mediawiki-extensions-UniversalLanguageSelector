@@ -108,11 +108,7 @@
 
 			// Usually this is already loaded, but when changing language it
 			// might not be.
-			$.i18n().locale = this.uiLanguage;
-			mw.uls.loadLocalization( this.uiLanguage )
-				.done( $.proxy( this.i18n, this ) );
-
-			this.$webfonts.refresh();
+			this.preview( this.uiLanguage );
 			this.listen();
 			this.dirty = false;
 			this.savedRegistry = $.extend( true, {}, mw.webfonts.preferences );
@@ -223,9 +219,6 @@
 					$( 'div.uls-ui-languages button.button' ).removeClass( 'down' );
 					button.addClass( 'down' );
 					displaySettings.prepareUIFonts();
-					// set the language for the settings panel so that webfonts
-					// are correctly applied.
-					displaySettings.$template.attr( 'lang', displaySettings.uiLanguage );
 					displaySettings.preview( displaySettings.uiLanguage );
 				};
 			}
@@ -344,9 +337,11 @@
 		 */
 		preview: function ( language ) {
 			var displaySettings = this;
-
+			this.$template.attr( 'lang', language );
+			$.i18n().locale = language;
 			mw.uls.loadLocalization( language ).done( function () {
 				displaySettings.i18n();
+				displaySettings.$webfonts.refresh();
 			} );
 		},
 
@@ -618,7 +613,6 @@
 			// Restore content and UI language
 			this.uiLanguage = this.getUILanguage();
 			this.contentLanguage = this.getContentLanguage();
-			this.$template.attr( 'lang', this.uiLanguage );
 
 			this.close();
 		}
