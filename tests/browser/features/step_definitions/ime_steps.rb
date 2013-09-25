@@ -21,9 +21,9 @@ end
 
 When(/^I open the input method menu$/) do
   on(RandomPage) do |page|
+    page.search_input_element.fire_event "onfocus"
     page.search_input_element.click
-    page.search_input_element.send_keys ' '
-    page.input_method_element.click
+    page.input_method_element.when_present.click
   end
 end
 
