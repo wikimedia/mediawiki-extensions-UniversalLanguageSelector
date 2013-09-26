@@ -72,11 +72,11 @@ Then(/^in it there must be an element with Malayalam text$/) do
 end
 
 When(/^I visit page in Vector skin$/) do
-  visit(ULSPage, :using_params => {:extra => "useskin=vector"})
+  visit(PanelPage, :using_params => {:extra => "useskin=vector"})
 end
 
 When(/^I visit page in Monobook skin$/) do
-  visit(ULSPage, :using_params => {:extra => "useskin=monobook"})
+  visit(PanelPage, :using_params => {:extra => "useskin=monobook"})
 end
 
 Then(/^I should see the input method menu is not offscreen$/) do

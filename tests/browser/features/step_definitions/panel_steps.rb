@@ -8,7 +8,7 @@ Given(/^I inspect current fonts$/) do
 end
 
 When(/^I open "(.*?)" panel of language settings$/) do |panel|
-	on(ULSPage) do |page|
+	on(PanelPage) do |page|
 		# These can be of two different type of elements, which PageObjects do not like.
 		if uls_position() == 'interlanguage'
 			page.trigger_cog_element.when_visible.click
@@ -34,16 +34,16 @@ When(/^I open "(.*?)" panel of language settings$/) do |panel|
 end
 
 When(/^I select "(.*?)" font for the interface language for the live preview$/) do |font|
-	on(ULSPage).select_font_for_interface = font
+	on(PanelPage).select_font_for_interface = font
 end
 
 When(/^I select "(.*?)" font for the content language for the live preview$/) do |font|
-	on(ULSPage).select_font_for_content = font
+	on(PanelPage).select_font_for_content = font
 end
 
 
 When(/^I close the panel to discard the changes$/) do
-	on(ULSPage) do |page|
+	on(PanelPage) do |page|
 		page.panel_button_close_element.click
 		# Also close the ULS language selection if open
 		if uls_position() == 'personal'
@@ -74,7 +74,7 @@ Then(/^the selected (.*?) font must be "(.*?)"$/) do |type, font|
 end
 
 When(/^I apply the changes$/) do
-	on(ULSPage).panel_button_apply_element.click
+	on(PanelPage).panel_button_apply_element.click
 	# Leave a little time for the settings to be saved. The settings window closes
 	# immediately, so it is not enough to wait for it to disappear.
 	sleep 4
@@ -92,19 +92,19 @@ Then(/^the (.*) font must be changed to the "(.*?)" font$/) do |type, font|
 end
 
 Then(/^I can disable input methods$/) do
-	on(ULSPage).panel_disable_input_methods_element.click
+	on(PanelPage).panel_disable_input_methods_element.click
 end
 
 Then(/^I can enable input methods$/) do
-	on(ULSPage).panel_enable_input_methods_element.click
+	on(PanelPage).panel_enable_input_methods_element.click
 end
 
 Then(/^a font selector for interface language appears$/) do
-  on(ULSPage).panel_interface_font_selector_element.should be_visible
+  on(PanelPage).panel_interface_font_selector_element.should be_visible
 end
 
 Then(/^a font selector for content language appears$/) do
-  on(ULSPage).panel_content_font_selector_element.should be_visible
+  on(PanelPage).panel_content_font_selector_element.should be_visible
 end
 
 When(/^I use the panel to change my interface language to "(.*?)"$/) do |language|
@@ -115,9 +115,9 @@ When(/^I use the panel to change my interface language to "(.*?)"$/) do |languag
 end
 
 Then(/^the panel is in English/) do
-	on(ULSPage).panel_language_element.text.should == 'Language'
+	on(PanelPage).panel_language_element.text.should == 'Language'
 end
 
 When(/^I switch to "Input" panel of language settings/) do
-	on(ULSPage).panel_input_element.when_visible.click
+	on(PanelPage).panel_input_element.when_visible.click
 end

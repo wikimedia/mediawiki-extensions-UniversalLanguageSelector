@@ -28,7 +28,7 @@ Given(/^I navigate to the Language Settings panel$/) do
 end
 
 When(/^I click Cancel$/) do
-  on(ULSPage).panel_button_cancel_element.click
+  on(PanelPage).panel_button_cancel_element.click
 end
 
 When(/^I click on the link to select Malayalam$/) do
@@ -42,7 +42,7 @@ end
 When(/^I click the cog icon by Languages in the sidebar$/) do
   on(NoInterlanguagePage).cog_element.when_present.click
   # Wait for the panel to open
-  on(ULSPage).panel_display_element.when_visible
+  on(PanelPage).panel_display_element.when_visible
 end
 
 When(/^I click X$/) do
@@ -72,7 +72,7 @@ When(/^I choose a different language for writing$/) do
 end
 
 Then(/^I do not see the Language Settings panel$/) do
-  on(ULSPage) do |page|
+  on(PanelPage) do |page|
     page.panel_language_element.should_not be_visible
     page.panel_fonts_element.should_not be_visible
     page.default_language_button_element.should_not be_visible
@@ -89,14 +89,14 @@ Then(/^I see Language Search$/) do
 end
 
 Then(/^I see the logged out language settings panel$/) do
-  on(ULSPage) do |page|
+  on(PanelPage) do |page|
     page.panel_language_element.should be_visible
     page.panel_fonts_element.should be_visible
   end
 end
 
 Then(/^I see the logged in language settings panel$/) do
-  on(ULSPage) do |page|
+  on(PanelPage) do |page|
     page.panel_language_element.should be_visible
     page.panel_fonts_element.should be_visible
     page.default_language_button_element.should be_visible

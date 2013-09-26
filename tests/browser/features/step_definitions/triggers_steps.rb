@@ -3,5 +3,5 @@ When(/^I click language selector trigger element$/) do
 end
 
 Then(/^I should see the language selector$/) do
-	on(ULSPage).uls_element.should be_visible
+	on(PanelPage).uls_element.should be_visible
 end

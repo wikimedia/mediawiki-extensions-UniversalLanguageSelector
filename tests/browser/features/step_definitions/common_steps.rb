@@ -14,17 +14,17 @@ end
 
 Given(/^I set "(.*?)" as the interface language$/) do |language|
 	code = language_to_code(language)
-	visit(ULSPage, :using_params => {:extra => "setlang=#{code}"})
+	visit(PanelPage, :using_params => {:extra => "setlang=#{code}"})
 end
 
 Given(/^I temporarily use "(.*?)" as the interface language$/) do |language|
 	code = language_to_code(language)
-	visit(ULSPage, :using_params => {:extra => "uselang=#{code}"})
+	visit(PanelPage, :using_params => {:extra => "uselang=#{code}"})
 end
 
 Then(/^my interface language is "(.*?)"$/) do |language|
 	code = language_to_code(language)
-	on(ULSPage).interface_element.attribute('lang').should == code
+	on(PanelPage).interface_element.attribute('lang').should == code
 end
 
 def language_to_code(language)
@@ -61,7 +61,7 @@ end
 
 def uls_position()
 	if !defined?($uls_position)
-		visit(ULSPage)
+		visit(PanelPage)
 		$uls_position = @browser.execute_script( "return mw.config.get( 'wgULSPosition' )" );
 	else
 		$uls_position

@@ -1,4 +1,4 @@
-class ULSPage
+class PanelPage
 	include PageObject
 
 	include URL
