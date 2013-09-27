@@ -35,5 +35,5 @@ end
 
 Then(/^I should see the text in the language panel in (.+?)$/) do |language|
 	code = language_to_code(language)
-	on(PanelPage).uls_display_settings_element.attribute_value('lang').should == code
+	on(PanelPage).uls_display_settings_element.attribute('lang').should == code
 end
