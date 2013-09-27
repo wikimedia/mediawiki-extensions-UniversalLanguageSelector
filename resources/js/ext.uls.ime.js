@@ -205,7 +205,7 @@
 
 			if ( !$.ime ) {
 				mw.loader.using( 'jquery.ime', function () {
-					$input.trigger( 'focus.ime' );
+					$input.trigger( 'focus' );
 				} );
 
 				return;
@@ -220,7 +220,7 @@
 			if ( $input.is( '[contenteditable]' ) && !window.rangy ) {
 				// for supporting content editable divs we need rangy library
 				mw.loader.using( 'rangy.core', function () {
-					$input.trigger( 'focus.ime' );
+					$input.trigger( 'focus' );
 				} );
 
 				return;
