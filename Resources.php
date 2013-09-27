@@ -153,6 +153,16 @@ $wgResourceModules['ext.uls.webfonts'] = array(
 
 $wgResourceModules['ext.uls.webfonts.repository'] = array(
 	'scripts' => 'resources/js/ext.uls.webfonts.repository.js',
+	'targets' => array( 'desktop', 'mobile' ),
+) + $resourcePaths;
+
+$wgResourceModules['ext.uls.webfonts.mobile'] = array(
+	'scripts' => 'resources/js/ext.uls.webfonts.mobile.js',
+	'targets' => array( 'mobile' ),
+	'dependencies' => array(
+		'jquery.webfonts',
+		'ext.uls.webfonts.repository',
+	),
 ) + $resourcePaths;
 
 $wgResourceModules['jquery.i18n'] = array(
@@ -234,6 +244,7 @@ $wgResourceModules['jquery.uls.grid'] = array(
 
 $wgResourceModules['jquery.webfonts'] = array(
 	'scripts' => 'lib/jquery.webfonts.js',
+	'targets' => array( 'desktop', 'mobile' ),
 ) + $resourcePaths;
 
 // A module named rangy is defined in VisualExtension with more features of rangy.
