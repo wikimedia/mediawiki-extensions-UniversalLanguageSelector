@@ -1,6 +1,7 @@
 {
     "@metadata": {
         "authors": [
+            "Ch.Andrew",
             "Justincheng12345",
             "Simon Shek",
             "Spring Roll Conan"
@@ -20,7 +21,7 @@
     "ext-uls-display-settings-font-settings": "\u5b57\u9ad4\u8a2d\u7f6e",
     "ext-uls-display-settings-ui-language": "\u986f\u793a\u8a9e\u8a00",
     "ext-uls-display-settings-anon-label": "\u986f\u793a\u8a9e\u8a00\uff1a",
-    "ext-uls-display-settings-anon-same-as-content": "\u4e2d\u6587\uff08\u8207\u5167\u5bb9\u76f8\u540c\uff09",
+    "ext-uls-display-settings-anon-same-as-content": "$1\uff08\u8207\u5167\u5bb9\u76f8\u540c\uff09",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|\u767b\u5165]]\u9078\u64c7\u6e05\u55ae\u7684\u5176\u4ed6\u8a9e\u8a00\u3002",
     "ext-uls-webfonts-select-for": "\u70ba$1\u9078\u64c7\u5b57\u9ad4",
     "ext-uls-webfonts-select-for-ui-info": "\u7528\u65bc\u4f7f\u7528\u8005\u4ecb\u9762\u7684\u5b57\u9ad4",
