@@ -337,7 +337,9 @@
 		 */
 		preview: function ( language ) {
 			var displaySettings = this;
-			this.$template.attr( 'lang', language );
+			// Reset the language and font for the panel.
+			this.$template.attr( 'lang', language )
+				.css( 'font-family', '' );
 			$.i18n().locale = language;
 			mw.uls.loadLocalization( language ).done( function () {
 				displaySettings.i18n();
