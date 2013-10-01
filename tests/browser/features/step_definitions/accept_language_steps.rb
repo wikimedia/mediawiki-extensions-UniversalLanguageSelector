@@ -1,5 +1,5 @@
 Given(/^that my browser's accept language is (.+)$/) do |language|
-  @browser = browser(environment, test_name(@scenario), @saucelabs_username, @saucelabs_key, language)
+  @browser = browser(environment, test_name(@scenario), ENV['SAUCE_ONDEMAND_USERNAME'], ENV['SAUCE_ONDEMAND_ACCESS_KEY'], language)
   $session_id = @browser.driver.instance_variable_get(:@bridge).session_id
 end
 
