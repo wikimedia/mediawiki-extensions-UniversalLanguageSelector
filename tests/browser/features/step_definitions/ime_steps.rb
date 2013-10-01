@@ -16,7 +16,7 @@ When(/^I click on an input box$/) do
 end
 
 When(/^I click on the input method indicator$/) do
-  on(RandomPage).input_method_element.click
+  on(RandomPage).input_method_element.when_present.click
 end
 
 When(/^I open the input method menu$/) do
@@ -28,7 +28,7 @@ When(/^I open the input method menu$/) do
 end
 
 Then(/^I should see the input method indicator$/) do
-  on(RandomPage).input_method_element.should be_visible
+  on(RandomPage).input_method_element.when_present.should be_visible
 end
 
 Then(/^I should see input methods for (.+)/) do |language|
