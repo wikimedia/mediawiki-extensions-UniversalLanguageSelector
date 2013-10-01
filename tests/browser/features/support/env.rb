@@ -80,41 +80,10 @@ def sauce_browser(test_name, language)
 
   browser
 end
-
 def test_name(scenario)
   if scenario.respond_to? :feature
     "#{scenario.feature.name}: #{scenario.name}"
   elsif scenario.respond_to? :scenario_outline
     "#{scenario.scenario_outline.feature.name}: #{scenario.scenario_outline.name}: #{scenario.name}"
   end
-end
-
-config = YAML.load_file('config/config.yml')
-mediawiki_username = config['mediawiki_username']
-
-Before('@login') do
-  puts "MEDIAWIKI_PASSWORD environment variable is not defined! Please export a value for that variable before proceeding." unless ENV['MEDIAWIKI_PASSWORD']
-end
-
-Before('@language') do |scenario|
-  @language = true
-  @scenario = scenario
-end
-
-Before do |scenario|
-  @config = config
-  @random_string = Random.new.rand.to_s
-  @mediawiki_username = mediawiki_username
-  unless @language
-    @browser = browser(environment, test_name(scenario), 'default')
-    $session_id = @browser.driver.instance_variable_get(:@bridge).session_id
-  end
-end
-
-After do |scenario|
-  if environment == :saucelabs
-    sauce_api(%Q{{"passed": #{scenario.passed?}}})
-    sauce_api(%Q{{"public": true}})
-  end
-  @browser.close unless ENV['KEEP_BROWSER_OPEN'] == 'true'
 end

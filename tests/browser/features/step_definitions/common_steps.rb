@@ -56,28 +56,11 @@ def get_interface_font()
 	get_font('body')
 end
 
-After('@reset-preferences-after') do |scenario|
-	visit(ResetPreferencesPage)
-	on(ResetPreferencesPage).submit_element.click
-end
-
 def uls_position()
 	if !defined?($uls_position)
 		visit(PanelPage)
 		$uls_position = @browser.execute_script( "return mw.config.get( 'wgULSPosition' )" );
 	else
 		$uls_position
-	end
-end
-
-Before('@uls-in-sidebar-only') do |scenario|
-	if uls_position() != 'interlanguage'
-		scenario.skip_invoke!
-	end
-end
-
-Before('@uls-in-personal-only') do |scenario|
-	if uls_position() != 'personal'
-		scenario.skip_invoke!
 	end
 end
