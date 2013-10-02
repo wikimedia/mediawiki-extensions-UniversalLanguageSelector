@@ -6,7 +6,7 @@ Given(/^I am logged out$/) do
 end
 
 Given(/^I am logged in$/) do
-	visit(LoginPage).login_with(@mediawiki_username, ENV['MEDIAWIKI_PASSWORD'])
+	visit(LoginPage).login_with(ENV['MEDIAWIKI_USER'], ENV['MEDIAWIKI_PASSWORD'])
 	# Assert that login worked
 	loggedin = !@browser.execute_script( "return mw.user.isAnon();" )
 	loggedin.should be_true
