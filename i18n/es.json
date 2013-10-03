@@ -4,6 +4,7 @@
             "Armando-Martin",
             "Fitoschido",
             "Larjona",
+            "Ovruni",
             "Pginer"
         ]
     },
@@ -34,6 +35,7 @@
     "ext-uls-input-settings-ime-settings": "M\u00e9todos de entrada para $1",
     "ext-uls-input-settings-ui-language": "Idioma usado para escribir",
     "ext-uls-back-to-input-settings": "Volver a la configuraci\u00f3n de entrada",
+    "ext-uls-ime-help": "C\u00f3mo utilizar",
     "ext-uls-disable-input-method": "Usar teclado nativo",
     "ext-uls-input-settings-more-languages-tooltip": "M\u00e1s idiomas",
     "jquery-ime-other-languages": "Otros idiomas",

@@ -230,10 +230,12 @@ $messages['eo'] = array(
 
 /** Spanish (español)
  * @author Armando-Martin
+ * @author Ovruni
  */
 $messages['es'] = array(
 	'UniversalLanguageSelector' => 'Selector universal de idiomas',
 	'uls-desc' => 'Ofrece al usuario varias formas para seleccionar un idioma y ajustar su configuración',
+	'uls-plang-title-languages' => 'Idiomas',
 );
 
 /** Estonian (eesti)
