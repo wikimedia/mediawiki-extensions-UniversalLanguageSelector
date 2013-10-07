@@ -448,6 +448,13 @@ $messages['ky'] = array(
 	'uls-plang-title-languages' => 'Тилдер',
 );
 
+/** Latin (Latina)
+ * @author Autokrator
+ */
+$messages['la'] = array(
+	'uls-plang-title-languages' => 'Linguis aliis',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
