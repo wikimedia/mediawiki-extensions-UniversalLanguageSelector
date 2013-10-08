@@ -439,7 +439,7 @@ $messages['ku-latn'] = array(
 	'uls-plang-title-languages' => 'Ziman',
 );
 
-/** Kirghiz (Кыргызча)
+/** Kyrgyz (Кыргызча)
  * @author Викиней
  */
 $messages['ky'] = array(
@@ -516,7 +516,7 @@ $messages['ms'] = array(
 	'uls-plang-title-languages' => 'Bahasa',
 );
 
-/** Neapolitan (Nnapulitano)
+/** Neapolitan (Napulitano)
  * @author Chelin
  */
 $messages['nap'] = array(
@@ -702,6 +702,7 @@ $messages['tr'] = array(
 /** Ukrainian (українська)
  * @author RLuts
  * @author Steve.rusyn
+ * @author SteveR
  */
 $messages['uk'] = array(
 	'UniversalLanguageSelector' => 'Універсальний вибір мови',

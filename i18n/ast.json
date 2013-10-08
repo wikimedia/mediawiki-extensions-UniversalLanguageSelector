@@ -1,6 +1,7 @@
 {
     "@metadata": {
         "authors": [
+            "Esbardu",
             "Xuacu"
         ]
     },
@@ -27,7 +28,7 @@
     "ext-uls-back-to-display-settings": "Volver a les opciones de presentaci\u00f3n",
     "ext-uls-input-settings-title": "Opciones d'entrada",
     "ext-uls-input-settings-title-short": "Entrada",
-    "ext-uls-input-settings-desc": "\u00bfEscribes n'una llingua diferente?",
+    "ext-uls-input-settings-desc": "\u00bfEscribes nuna llingua diferente?",
     "ext-uls-input-settings-ime-settings": "M\u00e9todos d'entrada pal $1",
     "ext-uls-input-settings-ui-language": "Llingua usada pa escribir",
     "ext-uls-back-to-input-settings": "Volver a les opciones d'entrada",

@@ -2,6 +2,7 @@
     "@metadata": {
         "authors": [
             "Byrial",
+            "Christian List",
             "Peter Alberti"
         ]
     },
@@ -19,7 +20,7 @@
     "ext-uls-display-settings-font-settings": "Skrifttypeindstillinger",
     "ext-uls-display-settings-ui-language": "Brugerfladens sprog",
     "ext-uls-display-settings-anon-label": "Brugerfladens sprog:",
-    "ext-uls-display-settings-anon-same-as-content": "Dansk (samme som for indhold)",
+    "ext-uls-display-settings-anon-same-as-content": "$1 (samme som for indhold)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Log ind]] for at v\u00e6lge et andet sprog til menuerne.",
     "ext-uls-webfonts-select-for": "V\u00e6lg skrifttype for $1",
     "ext-uls-webfonts-select-for-ui-info": "Skrifttype, der bruges til brugergr\u00e6nsefladen",
@@ -32,6 +33,7 @@
     "ext-uls-input-settings-ime-settings": "Indtastningsmetoder for $1",
     "ext-uls-input-settings-ui-language": "Sprog, der skrives p\u00e5",
     "ext-uls-back-to-input-settings": "Tilbage til indtastningsindstillinger",
+    "ext-uls-ime-help": "Hvordan man bruger",
     "ext-uls-disable-input-method": "Brug standardtastatur",
     "ext-uls-input-settings-more-languages-tooltip": "Flere sprog",
     "jquery-ime-other-languages": "Andre sprog",
