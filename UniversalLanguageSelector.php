@@ -75,8 +75,8 @@ $wgULSEnableAnon = true;
 
 /**
  * Allow anonymous users to change language with cookie and setlang
- * query param.
-
+ * query parameter.
+ *
  * Do not use if you are caching anonymous page views without
  * taking cookies into account.
  *
@@ -130,7 +130,6 @@ $wgULSEventLogging = false;
  */
 $wgULSNoImeSelectors = array( '#wpCaptchaWord' );
 
-
 /**
  * Array of jQuery selectors of elements on which webfonts must not be applied.
  * By default exclude the interwiki language links.
@@ -161,17 +160,17 @@ $wgHooks['UserGetLanguageObject'][] = 'UniversalLanguageSelectorHooks::getLangua
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] =
 	'UniversalLanguageSelectorHooks::onSkinTemplateOutputPageBeforeExec';
 
-
 $wgDefaultUserOptions['uls-preferences'] = '';
 $wgHooks['GetPreferences'][] = 'UniversalLanguageSelectorHooks::onGetPreferences';
 
-$wgExtensionFunctions[] = function() {
+$wgExtensionFunctions[] = function () {
 	global $wgHooks, $wgResourceModules, $wgULSEventLogging, $wgULSGeoService;
 
 	if ( $wgULSGeoService === true ) {
-		$wgHooks['BeforePageDisplay'][] = function( &$out ) {
+		$wgHooks['BeforePageDisplay'][] = function ( &$out ) {
 			/** @var OutputPage $out */
 			$out->addScript( '<script src="//bits.wikimedia.org/geoiplookup"></script>' );
+
 			return true;
 		};
 	}
@@ -183,13 +182,13 @@ $wgExtensionFunctions[] = function() {
 		if ( class_exists( 'ResourceLoaderSchemaModule' ) ) {
 			/// @see https://meta.wikimedia.org/wiki/Schema:UniversalLanguageSelector
 			$wgResourceModules['schema.UniversalLanguageSelector'] = array(
-				'class'  => 'ResourceLoaderSchemaModule',
+				'class' => 'ResourceLoaderSchemaModule',
 				'schema' => 'UniversalLanguageSelector',
 				'revision' => 5729800,
 			);
 		} else {
 			wfWarn( 'UniversalLanguageSelector is configured to use EventLogging, but '
-					. 'the extension is is not available. Disabling wgULSEventLogging.' );
+				. 'the extension is is not available. Disabling wgULSEventLogging.' );
 			$wgULSEventLogging = false;
 		}
 	}

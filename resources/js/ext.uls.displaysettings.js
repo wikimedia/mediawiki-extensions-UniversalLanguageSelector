@@ -524,7 +524,7 @@
 				} );
 
 				displaySettings.$parent.position();
-				$tabButtons.filter( '.down' ).removeClass( 'down');
+				$tabButtons.filter( '.down' ).removeClass( 'down' );
 				$button.addClass( 'down' );
 
 			} );

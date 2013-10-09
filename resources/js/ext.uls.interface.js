@@ -184,10 +184,10 @@
 		previousLang = previousLanguages.slice( -1 )[0];
 
 		$ulsTrigger = ( ulsPosition === 'interlanguage' ) ?
-					$( '.uls-settings-trigger' ) :
-					$( '.uls-trigger' );
+			$( '.uls-settings-trigger' ) :
+			$( '.uls-trigger' );
 
-		if ( previousLang === currentLang  ) {
+		if ( previousLang === currentLang ) {
 			$ulsTrigger.tipsy( { gravity: rtlPage ? 'e' : 'w' } );
 
 			return;
@@ -196,8 +196,7 @@
 		previousLanguages.push( currentLang );
 		mw.uls.setPreviousLanguages( previousLanguages );
 
-		anonMode = ( mw.user.isAnon() &&
-				!mw.config.get( 'wgULSAnonCanChangeLanguage' ) );
+		anonMode = ( mw.user.isAnon() && !mw.config.get( 'wgULSAnonCanChangeLanguage' ) );
 
 		if ( anonMode || !previousLang || !$.uls.data.languages[previousLang] ) {
 			// Do not show tooltip
@@ -271,7 +270,7 @@
 		}
 
 		// The interlanguage position needs some time to settle down
-		window.setTimeout( function() {
+		window.setTimeout( function () {
 			// Show the tipsy tooltip on page load.
 			showTipsy( 6000 );
 		}, 500 );

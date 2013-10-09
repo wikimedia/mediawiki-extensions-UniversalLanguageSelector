@@ -29,7 +29,7 @@ class ApiULSLocalization extends ApiBase {
 
 		$params = $this->extractRequestParams();
 		$language = $params['language'];
-		if ( !Language::isValidCode( $language ) )  {
+		if ( !Language::isValidCode( $language ) ) {
 			$this->dieUsage( 'Invalid language', 'invalidlanguage' );
 		}
 
