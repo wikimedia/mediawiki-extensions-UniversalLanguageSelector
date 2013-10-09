@@ -128,7 +128,7 @@ $wgULSEventLogging = false;
  *
  * @since 2013.07
  */
-$wgULSNoImeSelectors = array( '#wpCaptchaWord' );
+$wgULSNoImeSelectors = array( '#wpCaptchaWord', '.ve-ce-documentNode' );
 
 
 /**
