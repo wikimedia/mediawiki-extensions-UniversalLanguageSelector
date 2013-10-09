@@ -717,6 +717,13 @@ $messages['ur'] = array(
 	'UniversalLanguageSelector' => 'عالمگیر زبان منتخب',
 );
 
+/** Uzbek (oʻzbekcha)
+ * @author CoderSI
+ */
+$messages['uz'] = array(
+	'uls-plang-title-languages' => 'Tillar',
+);
+
 /** vèneto (vèneto)
  * @author GatoSelvadego
  */
