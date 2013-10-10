@@ -9,11 +9,14 @@ end
 
 When(/^I open "(.*?)" panel of language settings$/) do |panel|
 	on(PanelPage) do |page|
-		# These can be of two different type of elements, which PageObjects do not like.
-		if uls_position() == 'interlanguage'
-			page.trigger_cog_element.when_visible.click
-		elsif uls_position() == 'personal'
-			page.trigger_personal_element.when_visible.click
+		# Open the ULS panel if it's not open already
+		if !page.language_settings_dialog_element.visible?
+			# These can be of two different type of elements, which PageObjects do not like.
+			if uls_position() == 'interlanguage'
+				page.trigger_cog_element.when_visible.click
+			elsif uls_position() == 'personal'
+				page.trigger_personal_element.when_visible.click
+			end
 		end
 
 		case panel

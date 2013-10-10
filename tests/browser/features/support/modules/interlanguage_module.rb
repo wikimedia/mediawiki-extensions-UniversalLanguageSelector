@@ -12,10 +12,11 @@ module InterlanguagePageModule
   a(:english_link, text: 'English')
   a(:hindi_link, text: 'हिन्दी')
   div(:input_settings, id: 'input-settings-block')
-	div(:language_list, class: 'row uls-language-list lcd')
+  div(:language_list, class: 'row uls-language-list lcd')
   text_field(:language_search, id: 'languagefilter')
   button(:non_default_language, class: 'button uls-language-button', index: 1)
   a(:talk, text: 'Discussion')
   span(:x, id: 'languagesettings-close')
   a(:how_to_use_ml_transliteration, href: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/ml-transliteration')
+  a(:edit_link, css: '#ca-edit a')
 end

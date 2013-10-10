@@ -6,4 +6,7 @@ class PreferencesPage
 
 	select(:set_interface_language, id: 'mw-input-wplanguage')
 	button(:save, id: 'prefcontrol')
+
+	a(:preftab_editing, id: 'preftab-editing')
+	select(:pref_editfont, id: 'mw-input-wpeditfont')
 end
