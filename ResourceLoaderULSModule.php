@@ -53,6 +53,7 @@ class ResourceLoaderULSModule extends ResourceLoaderModule {
 		foreach ( $this->getData() as $key => $value ) {
 			$out .= Xml::encodeJsCall( 'mw.config.set', array( $key, $value ) );
 		}
+
 		return $out;
 	}
 
@@ -77,6 +78,7 @@ class ResourceLoaderULSModule extends ResourceLoaderModule {
 			'hash' => $hash,
 			'timestamp' => $timestamp,
 		) );
+
 		return $timestamp;
 	}
 }

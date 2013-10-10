@@ -112,7 +112,7 @@
 		// Delay is zero if event logging is not enabled
 		window.setTimeout( function () {
 			deferred.resolve();
-		}, mw.config.get( 'wgULSEventLogging' ) * 500  );
+		}, mw.config.get( 'wgULSEventLogging' ) * 500 );
 
 	};
 
@@ -221,7 +221,9 @@
 	 */
 	function isBrowserSupported() {
 		var blacklist = {
-			'msie': [['<=', 7]]
+			'msie': [
+				['<=', 7]
+			]
 		};
 
 		// jquery.client changed in MediaWiki 1.22.

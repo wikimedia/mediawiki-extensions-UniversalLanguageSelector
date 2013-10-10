@@ -97,10 +97,10 @@
 
 			// Get the name of all registered modules and list them in left side menu.
 			// Sort the modules based on id
-			modules = $.map( $.fn.languagesettings.modules, function( element, index ) {
+			modules = $.map( $.fn.languagesettings.modules, function ( element, index ) {
 				return index;
 			} ).sort();
-			$.each( modules, function( index, moduleName ) {
+			$.each( modules, function ( index, moduleName ) {
 				if ( $.fn.languagesettings.modules.hasOwnProperty( moduleName ) ) {
 					if ( !defaultModule ) {
 						defaultModule = moduleName;
@@ -166,8 +166,8 @@
 			var top, pos, left;
 
 			pos = $.extend( {}, this.$element.offset(), {
-					height: this.$element[0].offsetHeight
-				} );
+				height: this.$element[0].offsetHeight
+			} );
 			top = this.top || pos.top + pos.height;
 			left = this.left || '25%';
 			this.$window.css( {

@@ -33,6 +33,7 @@ class UniversalLanguageSelectorHooks {
 		if ( !$wgULSEnableAnon && $user->isAnon() ) {
 			return false;
 		}
+
 		return true;
 	}
 
@@ -141,6 +142,7 @@ class UniversalLanguageSelectorHooks {
 		foreach ( $preferred as $code => $weight ) {
 			if ( isset( $supported[$code] ) ) {
 				wfProfileOut( __METHOD__ );
+
 				return $code;
 			}
 		}
@@ -152,11 +154,13 @@ class UniversalLanguageSelectorHooks {
 			$code = $parts[0];
 			if ( isset( $supported[$code] ) ) {
 				wfProfileOut( __METHOD__ );
+
 				return $code;
 			}
 		}
 
 		wfProfileOut( __METHOD__ );
+
 		return '';
 	}
 
@@ -206,6 +210,7 @@ class UniversalLanguageSelectorHooks {
 				// Apply immediately
 				$code = $languageToSave;
 			}
+
 			// Otherwise just use what is stored in preferences
 			return true;
 		}
@@ -219,6 +224,7 @@ class UniversalLanguageSelectorHooks {
 		if ( self::isSupportedLanguage( $languageToSave ) ) {
 			$request->response()->setcookie( 'language', $languageToSave );
 			$code = $languageToSave;
+
 			return true;
 		}
 
@@ -226,6 +232,7 @@ class UniversalLanguageSelectorHooks {
 		$languageToUse = $request->getCookie( 'language' );
 		if ( self::isSupportedLanguage( $languageToUse ) ) {
 			$code = $languageToUse;
+
 			return true;
 		}
 

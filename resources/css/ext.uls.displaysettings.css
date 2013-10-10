@@ -56,9 +56,10 @@ div.display-settings-block {
 	border-top: 1px solid #EEEEEE;
 	padding-top: 25px;
 	top: -20px;
-	position:relative;
+	position: relative;
 	min-height: 150px;
 }
+
 .uls-display-settings-font-selectors {
 	margin: 5px 0 15px 0;
 	border-top: 1px solid #EEEEEE;

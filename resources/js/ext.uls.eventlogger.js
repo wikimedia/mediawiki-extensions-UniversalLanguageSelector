@@ -85,7 +85,7 @@
 			mw.hook( 'mw.uls.interface.language.change' ).add( $.proxy( this.interfaceLanguageChange, this ) );
 			mw.hook( 'mw.uls.font.change' ).add( $.proxy( this.fontChange, this ) );
 			$( 'body' ).on( 'noresults.uls', '.uls-menu .languagefilter',
-				 $.proxy( this.noSearchResults, this )
+				$.proxy( this.noSearchResults, this )
 			);
 		},
 
