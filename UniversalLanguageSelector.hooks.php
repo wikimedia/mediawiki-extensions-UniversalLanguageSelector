@@ -256,7 +256,8 @@ class UniversalLanguageSelectorHooks {
 	 */
 	public static function addConfig( &$vars ) {
 		global $wgULSGeoService, $wgULSIMEEnabled, $wgULSPosition, $wgULSNoWebfontsSelectors,
-			$wgULSAnonCanChangeLanguage, $wgULSEventLogging, $wgULSNoImeSelectors;
+			$wgULSAnonCanChangeLanguage, $wgULSEventLogging, $wgULSNoImeSelectors,
+			$wgULSFontRepositoryBasePath, $wgExtensionAssetsPath;
 
 		// Place constant stuff here (not depending on request context)
 		if ( is_string( $wgULSGeoService ) ) {
@@ -268,6 +269,13 @@ class UniversalLanguageSelectorHooks {
 		$vars['wgULSEventLogging'] = $wgULSEventLogging;
 		$vars['wgULSNoImeSelectors'] = $wgULSNoImeSelectors;
 		$vars['wgULSNoWebfontsSelectors'] = $wgULSNoWebfontsSelectors;
+
+		if ( is_string( $wgULSFontRepositoryBasePath ) ) {
+			$vars['wgULSFontRepositoryBasePath'] = $wgULSFontRepositoryBasePath;
+		} else {
+			$vars['wgULSFontRepositoryBasePath'] = $wgExtensionAssetsPath .
+				'/UniversalLanguageSelector/data/fontrepo/fonts/';
+		}
 
 		return true;
 	}

@@ -137,6 +137,14 @@ $wgULSNoImeSelectors = array( '#wpCaptchaWord', '.ve-ce-documentNode' );
  */
 $wgULSNoWebfontsSelectors = array( '#p-lang li > a' );
 
+/**
+ * Base path of ULS font repository.
+ * If not set, will be set to 'UniversalLanguageSelector/data/fontrepo/fonts/',
+ * relative to $wgExtensionAssetsPath.
+ * @since 2013.10
+ */
+$wgULSFontRepositoryBasePath = false;
+
 // Internationalization
 $wgExtensionMessagesFiles['UniversalLanguageSelector'] =
 	__DIR__ . '/UniversalLanguageSelector.i18n.php';
