@@ -137,17 +137,18 @@ $wgULSNoImeSelectors = array( '#wpCaptchaWord', '.ve-ce-documentNode' );
  */
 $wgULSNoWebfontsSelectors = array( '#p-lang li > a' );
 
-$dir = __DIR__;
-
 // Internationalization
-$wgExtensionMessagesFiles['UniversalLanguageSelector'] = "$dir/UniversalLanguageSelector.i18n.php";
+$wgExtensionMessagesFiles['UniversalLanguageSelector'] =
+	__DIR__ . '/UniversalLanguageSelector.i18n.php';
 
 // Register auto load for the page class
-$wgAutoloadClasses['UniversalLanguageSelectorHooks'] = "$dir/UniversalLanguageSelector.hooks.php";
-$wgAutoloadClasses['ResourceLoaderULSModule'] = "$dir/ResourceLoaderULSModule.php";
-$wgAutoloadClasses['ApiLanguageSearch'] = "$dir/api/ApiLanguageSearch.php";
-$wgAutoloadClasses['ApiULSLocalization'] = "$dir/api/ApiULSLocalization.php";
-$wgAutoloadClasses['LanguageNameSearch'] = "$dir/data/LanguageNameSearch.php";
+$wgAutoloadClasses += array(
+	'UniversalLanguageSelectorHooks' => __DIR__ . '/UniversalLanguageSelector.hooks.php',
+	'ResourceLoaderULSModule' => __DIR__ . '/ResourceLoaderULSModule.php',
+	'ApiLanguageSearch' => __DIR__ . '/api/ApiLanguageSearch.php',
+	'ApiULSLocalization' => __DIR__ . '/api/ApiULSLocalization.php',
+	'LanguageNameSearch' => __DIR__ . '/data/LanguageNameSearch.php',
+);
 
 $wgHooks['BeforePageDisplay'][] = 'UniversalLanguageSelectorHooks::addModules';
 $wgHooks['PersonalUrls'][] = 'UniversalLanguageSelectorHooks::addPersonalBarTrigger';
@@ -196,4 +197,4 @@ $wgExtensionFunctions[] = function () {
 	return true;
 };
 
-require "$dir/Resources.php";
+require __DIR__ . '/Resources.php';
