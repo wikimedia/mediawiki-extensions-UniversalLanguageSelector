@@ -47,8 +47,7 @@
 	};
 
 	mediawikiFontRepository = $.webfonts.repository;
-	mediawikiFontRepository.base = mw.config.get( 'wgExtensionAssetsPath' ) +
-		'/UniversalLanguageSelector/data/fontrepo/fonts/';
+	mediawikiFontRepository.base = mw.config.get( 'wgULSFontRepositoryBasePath' );
 
 	mw.webfonts.setup = function () {
 		// Initialize webfonts
