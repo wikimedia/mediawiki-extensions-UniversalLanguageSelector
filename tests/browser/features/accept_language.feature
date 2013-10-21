@@ -1,4 +1,4 @@
-@language
+@language @sandbox.translatewiki.net
 Feature: Accept-Language
 
   Scenario Outline: Accept-Language
