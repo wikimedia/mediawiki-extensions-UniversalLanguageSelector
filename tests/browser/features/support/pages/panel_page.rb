@@ -38,4 +38,30 @@ class PanelPage
 
 	# Is there way to access the html element?
 	div(:interface, id: 'footer')
+
+	def get_content_font
+		get_font('#mw-content-text')
+	end
+	def get_font(selector)
+		@browser.execute_script( "return $( '#{selector}' ).css( 'font-family' );" )
+	end
+	def get_interface_font
+		get_font('body')
+	end
+	def language_to_code(language)
+		case language
+			when 'German'
+				'de'
+			when 'English'
+				'en'
+			when 'Finnish'
+				'fi'
+			when 'Hebrew'
+				'he'
+			when 'Hindi'
+				'hi'
+			else
+				pending
+		end
+	end
 end
