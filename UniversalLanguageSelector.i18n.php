@@ -601,6 +601,13 @@ $messages['pt-br'] = array(
 	'uls-plang-title-languages' => 'Idiomas',
 );
 
+/** Quechua (Runa Simi)
+ * @author AlimanRuna
+ */
+$messages['qu'] = array(
+	'uls-plang-title-languages' => 'Rimaykuna',
+);
+
 /** Romanian (română)
  * @author Minisarm
  */
