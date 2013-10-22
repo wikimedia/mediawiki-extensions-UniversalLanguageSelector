@@ -313,6 +313,6 @@ button.button.green.disabled:hover {
 }
 
 /* Interlanguage links */
-#p-lang a {
+#p-lang ul {
 	font-family: 'Autonym', sans-serif;
 }
