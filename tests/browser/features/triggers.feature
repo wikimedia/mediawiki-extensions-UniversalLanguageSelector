@@ -1,4 +1,3 @@
-@commons.wikimedia.beta.wmflabs.org 
 Feature: Trigger in personal toolbar
 
   @login @uls-in-personal-only

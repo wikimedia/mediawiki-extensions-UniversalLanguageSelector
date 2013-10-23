@@ -1,4 +1,4 @@
-@login @reset-preferences-after @commons.wikimedia.beta.wmflabs.org
+@login @reset-preferences-after
 Feature: Persistent settings
 
   This assumes wiki content language is English.

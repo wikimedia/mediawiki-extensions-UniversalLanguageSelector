@@ -1,4 +1,3 @@
-@commons.wikimedia.beta.wmflabs.org
 Feature: Input method engine
 
 User is able to select among different input methods via a menu which is

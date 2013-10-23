@@ -1,4 +1,3 @@
-@commons.wikimedia.beta.wmflabs.org 
 Feature: Settings panel
 
   @login @ime-default-on

@@ -1,4 +1,4 @@
-@login @commons.wikimedia.beta.wmflabs.org
+@login
 Feature: Font preferences respected in different languages
 
   If a user has an edit font preferences respect that preference.

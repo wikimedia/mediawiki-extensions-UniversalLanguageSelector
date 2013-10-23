@@ -16,6 +16,5 @@ Before('@uls-in-sidebar-only') do |scenario|
 end
 
 After('@reset-preferences-after') do |scenario|
-  visit(ResetPreferencesPage)
-  on(ResetPreferencesPage).submit_element.click
+  visit(ResetPreferencesPage).submit_element.click if @browser.exist?
 end
