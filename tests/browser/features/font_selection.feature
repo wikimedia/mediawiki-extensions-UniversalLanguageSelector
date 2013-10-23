@@ -1,4 +1,4 @@
-@login @reset-preferences-after @commons.wikimedia.beta.wmflabs.org
+@commons.wikimedia.beta.wmflabs.org @login @reset-preferences-after
 Feature: Font selection
 
   In order to have better using experience,
@@ -12,14 +12,15 @@ Feature: Font selection
   Background:
     Given I am logged in
       And I set "German" as the interface language
+      And I open ULS
+      And I open display settings
+    When I open fonts panel of language settings
 
   Scenario: Font selector appears
-    When I open "Fonts" panel of language settings
     Then a font selector for interface language appears
-    Then a font selector for content language appears
+      And a font selector for content language appears
 
   Scenario: Discarding live preview of content font
-    When I open "Fonts" panel of language settings
       And I select "OpenDyslexic" font for the content language for the live preview
       And I close the panel to discard the changes
     Then the active content font must be the same as font prior to the preview
@@ -27,7 +28,6 @@ Feature: Font selection
       And the selected content font must be "system"
 
   Scenario: Discarding live preview of interface font
-    When I open "Fonts" panel of language settings
       And I select "OpenDyslexic" font for the interface language for the live preview
       And I close the panel to discard the changes
     Then the active interface font must be the same as font prior to the preview
@@ -35,7 +35,6 @@ Feature: Font selection
       And the selected interface font must be "system"
 
   Scenario: Applying the live preview of interface font
-    When I open "Fonts" panel of language settings
       And I select "OpenDyslexic" font for the interface language for the live preview
       And I apply the changes
     Then the interface font must be changed to the "OpenDyslexic" font
