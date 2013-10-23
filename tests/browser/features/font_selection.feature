@@ -6,13 +6,12 @@ Feature: Font selection
   I want to change or disable the fonts for interface and content.
 
   In addition the user is provided live preview feature: changes are applied
-  immediately when selection is made. Changes can either be applied or discared
+  immediately when selection is made. Changes can either be applied or discarded
   for easy testing.
 
   Background:
     Given I am logged in
       And I set "German" as the interface language
-      And I inspect current fonts
 
   Scenario: Font selector appears
     When I open "Fonts" panel of language settings

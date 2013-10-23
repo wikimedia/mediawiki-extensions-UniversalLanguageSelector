@@ -34,6 +34,6 @@ And(/^I click on the link to select Hindi$/) do
 end
 
 Then(/^I should see the text in the language panel in (.+?)$/) do |language|
-	code = language_to_code(language)
+	code = on(PanelPage).language_to_code(language)
 	on(PanelPage).uls_display_settings_element.attribute('lang').should == code
 end

@@ -2,11 +2,6 @@ Then(/^I see "(.*?)" as the name of the content language$/) do |text|
 	@browser.span(:text => "#{text}").should be_visible
 end
 
-Given(/^I inspect current fonts$/) do
-	@original_content_font = get_content_font()
-	@original_interface_font = get_interface_font()
-end
-
 When(/^I open "(.*?)" panel of language settings$/) do |panel|
 	on(PanelPage) do |page|
 		# Open the ULS panel if it's not open already
@@ -58,9 +53,9 @@ end
 Then(/^the active (.*?) font must be the same as font prior to the preview$/) do |type|
 	case type
 	when "content"
-		get_content_font().should === @original_content_font
+		on(PanelPage).get_content_font.should === @original_content_font
 	when "interface"
-		get_interface_font().should === @original_interface_font
+		on(PanelPage).get_interface_font.should === @original_interface_font
 	else
 		pending
 	end
@@ -86,9 +81,9 @@ end
 Then(/^the (.*) font must be changed to the "(.*?)" font$/) do |type, font|
 	case type
 	when "content"
-		get_content_font().should match("^#{font}")
+		on(PanelPage).get_content_font.should match("^#{font}")
 	when "interface"
-		get_interface_font().should match("^#{font}")
+		on(PanelPage).get_interface_font.should match("^#{font}")
 	else
 		pending
 	end
@@ -111,7 +106,7 @@ Then(/^a font selector for content language appears$/) do
 end
 
 When(/^I use the panel to change my interface language to "(.*?)"$/) do |language|
-	code = language_to_code(language)
+	code = on(PanelPage).language_to_code(language)
 	on(RandomPage).language_filter = code
 	# Because one browser wants :enter and other :return -- sigh
 	on(RandomPage).language_filter_element.send_keys [:enter, "\n"]
