@@ -41,30 +41,15 @@ end
 
 
 When(/^I close the panel to discard the changes$/) do
-	on(PanelPage) do |page|
-		page.panel_button_close_element.click
-		# Also close the ULS language selection if open
-		if uls_position() == 'personal'
-			page.uls_button_close_element.when_visible.click
-		end
-	end
+	on(PanelPage).panel_button_close_element.click
 end
 
-Then(/^the active (.*?) font must be the same as font prior to the preview$/) do |type|
-	case type
-	when "content"
-		on(PanelPage).get_content_font.should === @original_content_font
-	when "interface"
-		on(PanelPage).get_interface_font.should === @original_interface_font
-	else
-		pending
-	end
+Then(/^the active interface font must be the same as font prior to the preview$/) do
+	on(PanelPage).get_interface_font.should == @original_interface_font
 end
 
-Then(/^the selected (.*?) font must be "(.*?)"$/) do |type, font|
-	if type == 'interface'
-		type = 'ui'
-	end
+Then(/^the selected interface font must be "(.*?)"$/) do |font|
+	type = 'ui'
 	step 'I open "Fonts" panel of language settings'
 	Selenium::WebDriver::Support::Select.new(
 		@browser.driver.find_element(:id, "#{type}-font-selector")
@@ -78,15 +63,8 @@ When(/^I apply the changes$/) do
 	sleep 4
 end
 
-Then(/^the (.*) font must be changed to the "(.*?)" font$/) do |type, font|
-	case type
-	when "content"
-		on(PanelPage).get_content_font.should match("^#{font}")
-	when "interface"
-		on(PanelPage).get_interface_font.should match("^#{font}")
-	else
-		pending
-	end
+Then(/^the interface font must be changed to the "(.*?)" font$/) do |font|
+	on(PanelPage).get_interface_font.should match("^#{font}")
 end
 
 Then(/^I can disable input methods$/) do
