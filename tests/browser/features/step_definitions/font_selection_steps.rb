@@ -12,7 +12,7 @@ end
 
 Then(/^the active content font must be the same as font prior to the preview$/) do
 	pending('bug #56081') do
-		on(PanelPage).get_content_font.should_not == @original_content_font
+		on(PanelPage).get_content_font.should == @original_content_font
 	end
 end
 
