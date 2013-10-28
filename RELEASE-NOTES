@@ -1,0 +1,18 @@
+== UniversalLanguageSelector 2013.10 ==
+Released at 2013-10-28.
+
+=== Noteworthy changes ===
+ * Bug 54594: Keep correct lang attribute when the display settings are closed.
+ * Bug 53734: Fix the monospace font usage for input fields for Latin scripts.
+ * Bug 55492: Use of jquery.ime with the VisualEditor has been disabled in the Universal Language Selector until Input Method support is improved. 
+ * Reset the language and the font while live preview of content font from Display Settings. If not reset, the font-family will persist for languages without font preferences.
+ * Use the Autonym font for language autonyms in the Language Search box and Interlanguage links.
+
+== Fonts ==
+* Use AbyssinicaSIL font for Ge'ez and Tigre languages.
+* Update Meera font from upstream.
+
+== Input methods ==
+* Improvement in the Hindi Phonetic keyboard.
+* Added support for shift key mappings.
+* Added Shift+Space = ZWNJ support for Persian Keyboard.
