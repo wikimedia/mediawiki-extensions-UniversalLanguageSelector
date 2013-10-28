@@ -25,14 +25,14 @@ Feature: Font selection
       And I close the panel to discard the changes
     Then the active content font must be the same as font prior to the preview
       # System is the default value for English and German
-      And the selected content font must be "system"
+      And the selected content font must be "Systemschriftart"
 
   Scenario: Discarding live preview of interface font
-      And I select "OpenDyslexic" font for the interface language for the live preview
+    When I select "OpenDyslexic" font for the interface language for the live preview
       And I close the panel to discard the changes
     Then the active interface font must be the same as font prior to the preview
       # System is the default value for English and German
-      And the selected interface font must be "system"
+      And the selected interface font must be "Systemschriftart"
 
   Scenario: Applying the live preview of interface font
       And I select "OpenDyslexic" font for the interface language for the live preview

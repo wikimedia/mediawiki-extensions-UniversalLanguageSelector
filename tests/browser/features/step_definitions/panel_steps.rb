@@ -44,18 +44,6 @@ When(/^I close the panel to discard the changes$/) do
 	on(PanelPage).panel_button_close_element.click
 end
 
-Then(/^the active interface font must be the same as font prior to the preview$/) do
-	on(PanelPage).get_interface_font.should == @original_interface_font
-end
-
-Then(/^the selected interface font must be "(.*?)"$/) do |font|
-	type = 'ui'
-	step 'I open "Fonts" panel of language settings'
-	Selenium::WebDriver::Support::Select.new(
-		@browser.driver.find_element(:id, "#{type}-font-selector")
-	).first_selected_option().attribute('value').should == font
-end
-
 When(/^I apply the changes$/) do
 	on(PanelPage).panel_button_apply_element.click
 	# Leave a little time for the settings to be saved. The settings window closes

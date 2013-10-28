@@ -16,8 +16,18 @@ Then(/^the active content font must be the same as font prior to the preview$/) 
 	end
 end
 
+Then(/^the active interface font must be the same as font prior to the preview$/) do
+	on(PanelPage).get_interface_font.should == @original_interface_font
+end
+
 Then(/^the selected content font must be "(.*?)"$/) do |font|
 	step 'I open display settings'
 	step 'I open fonts panel of language settings'
 	on(PanelPage).selected_content_font.should == font
+end
+
+Then(/^the selected interface font must be "(.*?)"$/) do |font|
+	step 'I open display settings'
+	step 'I open fonts panel of language settings'
+	on(PanelPage).selected_interface_font.should == font
 end
