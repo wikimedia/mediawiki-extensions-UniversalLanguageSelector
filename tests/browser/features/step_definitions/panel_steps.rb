@@ -46,13 +46,6 @@ end
 
 When(/^I apply the changes$/) do
 	on(PanelPage).panel_button_apply_element.click
-	# Leave a little time for the settings to be saved. The settings window closes
-	# immediately, so it is not enough to wait for it to disappear.
-	sleep 4
-end
-
-Then(/^the interface font must be changed to the "(.*?)" font$/) do |font|
-	on(PanelPage).get_interface_font.should match("^#{font}")
 end
 
 Then(/^I can disable input methods$/) do

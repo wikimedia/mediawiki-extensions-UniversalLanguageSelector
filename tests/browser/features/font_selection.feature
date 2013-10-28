@@ -35,6 +35,6 @@ Feature: Font selection
       And the selected interface font must be "Systemschriftart"
 
   Scenario: Applying the live preview of interface font
-      And I select "OpenDyslexic" font for the interface language for the live preview
+    When I select "OpenDyslexic" font for the interface language for the live preview
       And I apply the changes
     Then the interface font must be changed to the "OpenDyslexic" font

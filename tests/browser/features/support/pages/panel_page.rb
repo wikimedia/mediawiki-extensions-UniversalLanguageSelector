@@ -42,14 +42,11 @@ class PanelPage
 	# Is there way to access the html element?
 	div(:interface, id: 'footer')
 
-	def get_content_font
-		get_font('#mw-content-text')
+	def content_font
+		font('#mw-content-text')
 	end
-	def get_font(selector)
-		@browser.execute_script( "return $( '#{selector}' ).css( 'font-family' );" )
-	end
-	def get_interface_font
-		get_font('body')
+	def interface_font
+		font('body')
 	end
 	def language_to_code(language)
 		case language
@@ -66,5 +63,10 @@ class PanelPage
 			else
 				pending
 		end
+	end
+
+	private
+	def font(selector)
+		@browser.execute_script( "return $( '#{selector}' ).css( 'font-family' );" )
 	end
 end

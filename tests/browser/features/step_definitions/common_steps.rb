@@ -12,8 +12,8 @@ end
 Given(/^I set "(.*?)" as the interface language$/) do |language|
 	code = on(PanelPage).language_to_code(language)
 	visit(PanelPage, :using_params => {:extra => "setlang=#{code}"})
-	@original_content_font = on(PanelPage).get_content_font
-	@original_interface_font = on(PanelPage).get_interface_font
+	@original_content_font = on(PanelPage).content_font
+	@original_interface_font = on(PanelPage).interface_font
 end
 
 Given(/^I temporarily use "(.*?)" as the interface language$/) do |language|
