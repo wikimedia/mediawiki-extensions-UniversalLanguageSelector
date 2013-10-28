@@ -5,6 +5,7 @@ activated by the input method indicator. User can type with selected input
 method in different input fields and temporarily activate and deactivate the
 input method.
 
+  @commons.wikimedia.beta.wmflabs.org
   Scenario: Input method indicator is shown
 
   The input method indicator is shown when input field gets a focus.
@@ -13,6 +14,7 @@ input method.
     When I click on an input box
     Then I should see the input method indicator
 
+  @commons.wikimedia.beta.wmflabs.org
   Scenario: Input method menu
 
   Input method menu is shown when user clicks the input method indicator.
@@ -24,6 +26,7 @@ input method.
       And I should see a list of available input methods
       And I should see a list of suggested languages
 
+  @commons.wikimedia.beta.wmflabs.org
   Scenario: Unsupported input language
 
   User visits a wiki with content language that does not have have an input
