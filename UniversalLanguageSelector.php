@@ -2,9 +2,9 @@
 /**
  * Initialisation file for MediaWiki extension UniversalLanguageSelector.
  *
- * Copyright (C) 2012 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
- * Niklas Laxström, Pau Giner, Santhosh Thottingal, Siebrand Mazeland and other
- * contributors. See CREDITS for a list.
+ * Copyright (C) 2012-2013 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon
+ * Harris, Niklas Laxström, Pau Giner, Santhosh Thottingal, Siebrand Mazeland
+ * and other contributors. See CREDITS for a list.
  *
  * UniversalLanguageSelector is dual licensed GPLv2 or later and MIT. You don't
  * have to do anything special to choose one license or the other and you don't
@@ -25,7 +25,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 /**
  * Version number used in extension credits and in other placed where needed.
  */
-define( 'ULS_VERSION', '2013-06-17' );
+define( 'ULS_VERSION', '2013-10-28' );
 
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
