@@ -1,7 +1,11 @@
 <?php
 
 if ( isset( $_SERVER['REQUEST_METHOD'] ) ) {
-	exit();
+	exit( "compile.php should be run from the command line\n" );
+}
+
+if ( !is_dir( '../fonts/' ) ) {
+	exit( "compile.php should be run from the data/fontrepo/scripts directory\n" );
 }
 
 $list = array();
@@ -97,3 +101,5 @@ $js = <<<JAVASCRIPT
 
 JAVASCRIPT;
 file_put_contents( '../../../resources/js/ext.uls.webfonts.repository.js', $js );
+
+echo "Done.\n";
