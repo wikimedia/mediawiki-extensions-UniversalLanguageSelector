@@ -25,6 +25,7 @@ $messages = array();
  * @author santhosh
  * @author Amire80
  * @author Nike
+ * @author Kunal Mehta
  */
 $messages['en'] = array(
 	'UniversalLanguageSelector' => 'Universal Language Selector',
@@ -32,11 +33,13 @@ $messages['en'] = array(
 
 	'uls-plang-title-languages' => 'Languages',
 	'uls-ime-helppage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/$1',
+	'uls-preference' => 'Enable the [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Universal Language Selector]',
 );
 
 /** Message documentation (Message documentation)
  * @author Amire80
  * @author Shirayuki
+ * @author Kunal Mehta
  */
 $messages['qqq'] = array(
 	'UniversalLanguageSelector' => 'Extension name',
@@ -46,6 +49,7 @@ This title is shown when there are no interlanguage links there, but an icon tha
 {{Identical|Language}}',
 	'uls-ime-helppage' => 'Target page for ime helps. Parameters:
 * $1 - ime id. Intended for wiki local customization. e.g. cyrl-palochka',
+	'uls-preference' => 'Label for checkbox to enable the Universal Language Selector on Special:Preferences',
 );
 
 /** Arabic (العربية)

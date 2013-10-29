@@ -195,6 +195,7 @@ $GLOBALS['wgHooks']['SkinTemplateOutputPageBeforeExec'][] =
 $GLOBALS['wgHooks']['EnterMobileMode'][] = 'UniversalLanguageSelectorHooks::onEnterMobileMode';
 
 $GLOBALS['wgDefaultUserOptions']['uls-preferences'] = '';
+$GLOBALS['wgDefaultUserOptions']['uls-enable'] = '';
 $GLOBALS['wgHooks']['GetPreferences'][] = 'UniversalLanguageSelectorHooks::onGetPreferences';
 
 $GLOBALS['wgExtensionFunctions'][] = function () {

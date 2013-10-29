@@ -27,6 +27,7 @@ class UniversalLanguageSelectorHooks {
 	 */
 	public static function isToolbarEnabled( $user ) {
 		global $wgULSEnable, $wgULSEnableAnon;
+
 		if ( !$wgULSEnable ) {
 			return false;
 		}
@@ -34,7 +35,7 @@ class UniversalLanguageSelectorHooks {
 			return false;
 		}
 
-		return true;
+		return $user->getBoolOption( 'uls-enable' );
 	}
 
 	/**
@@ -45,6 +46,11 @@ class UniversalLanguageSelectorHooks {
 	 */
 	public static function addModules( $out, $skin ) {
 		global $wgULSGeoService, $wgULSEventLogging;
+
+		$user = $out->getUser();
+		if ( !$user->getBoolOption( 'uls-enable') ) {
+			return true;
+		}
 
 		// Load the style for users without JS, to hide the useless links
 		$out->addModuleStyles( 'ext.uls.nojs' );
@@ -65,7 +71,7 @@ class UniversalLanguageSelectorHooks {
 			$out->addModules( 'ext.uls.geoclient' );
 		}
 
-		if ( self::isToolbarEnabled( $out->getUser() ) ) {
+		if ( self::isToolbarEnabled( $user ) ) {
 			// Enable UI language selection for the user.
 			$out->addModules( 'ext.uls.interface' );
 		}
@@ -299,6 +305,12 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	public static function onGetPreferences( $user, &$preferences ) {
+		$preferences['uls-enable'] = array(
+			'type' => 'toggle',
+			'label-message' => 'uls-preference',
+			'section' => 'personal/i18n',
+		);
+
 		$preferences['uls-preferences'] = array(
 			'type' => 'api',
 		);
