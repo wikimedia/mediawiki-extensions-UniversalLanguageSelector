@@ -1,8 +1,8 @@
 div.display-settings-block {
 	/* @embed */
 	background: transparent url('../images/display.png') no-repeat left top;
-	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/display.svg');
 	background-image: -moz-linear-gradient(transparent, transparent), url('../images/display.svg');
+	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/display.svg');
 	background-image: linear-gradient(transparent, transparent), url('../images/display.svg');
 	background-size: 20px auto;
 	color: #252525;
@@ -23,10 +23,10 @@ div.display-settings-block {
 }
 
 .uls-button-group > button.button {
-	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	-ms-border-radius: 0;
 	-o-border-radius: 0;
+	-webkit-border-radius: 0;
 	border-radius: 0;
 	float: left;
 	padding: 8px 10px;
