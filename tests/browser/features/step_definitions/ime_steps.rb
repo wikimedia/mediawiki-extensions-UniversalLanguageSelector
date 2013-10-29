@@ -7,40 +7,34 @@ Given(/^I am on a wiki in Kotava language$/) do
 end
 
 When(/^I click on an input box$/) do
-  on(RandomPage) do |page|
-    page.search_input_element.click
-    # For some reason click alone doesn't seem to trigger the ime indicator
-    # when running tests
-    page.search_input_element.send_keys ' '
-  end
+  on(IMEPage).search_input_element.click
 end
 
 When(/^I click on the input method indicator$/) do
-  on(RandomPage).input_method_element.when_present.click
+  on(IMEPage).input_method_element.when_present.click
 end
 
 When(/^I open the input method menu$/) do
-  on(RandomPage) do |page|
-    page.search_input_element.fire_event "onfocus"
-    page.search_input_element.click
-    page.input_method_element.when_present.click
+  step 'I click on an input box'
+  pending('Bug in ULS with unsupported languages like avk') do
+    on(IMEPage).input_method_element.when_present.click
   end
 end
 
 Then(/^I should see the input method indicator$/) do
-  on(RandomPage).input_method_element.when_present.should be_visible
+  on(IMEPage).input_method_element.when_present.should be_visible
 end
 
 Then(/^I should see input methods for (.+)/) do |language|
-  on(RandomPage).input_method_ime_list_title.should == language
+  on(IMEPage).input_method_ime_list_title.should == language
 end
 
 Then(/^I should see a list of available input methods$/) do
-  on(RandomPage).input_method_selector_menu_element.should be_visible
+  on(IMEPage).input_method_selector_menu_element.should be_visible
 end
 
 Then(/^I should see a list of suggested languages$/) do
-  on(RandomPage).input_method_language_list_element.should be_visible
+  on(IMEPage).input_method_language_list_element.should be_visible
 end
 
 When(/^I choose (.+?) as the input language$/) do |language|
