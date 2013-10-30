@@ -663,6 +663,13 @@ $messages['sr-ec'] = array(
 	'uls-plang-title-languages' => 'Језици',
 );
 
+/** Serbian (Latin script) (srpski (latinica)‎)
+ * @author Milicevic01
+ */
+$messages['sr-el'] = array(
+	'uls-plang-title-languages' => 'Jezici',
+);
+
 /** Swedish (svenska)
  * @author WikiPhoenix
  */
