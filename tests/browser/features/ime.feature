@@ -26,7 +26,6 @@ input method.
       And I should see a list of available input methods
       And I should see a list of suggested languages
 
-  @commons.wikimedia.beta.wmflabs.org
   Scenario: Unsupported input language
 
   User visits a wiki with content language that does not have have an input
@@ -36,6 +35,7 @@ input method.
     When I open the input method menu
     Then I should see input methods for Kotava
 
+  @commons.wikimedia.beta.wmflabs.org
   Scenario: Sticky input methods
 
   Chosen input method selection persists across page loads.

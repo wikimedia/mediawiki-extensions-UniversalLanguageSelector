@@ -16,9 +16,7 @@ end
 
 When(/^I open the input method menu$/) do
   step 'I click on an input box'
-  pending('Bug in ULS with unsupported languages like avk') do
-    on(IMEPage).input_method_element.when_present.click
-  end
+  on(IMEPage).input_method_element.when_present.click
 end
 
 Then(/^I should see the input method indicator$/) do
@@ -38,7 +36,7 @@ Then(/^I should see a list of suggested languages$/) do
 end
 
 When(/^I choose (.+?) as the input language$/) do |language|
-  on(RandomPage) do |page|
+  on(IMEPage) do |page|
     page.more_languages
     page.language_filter = language
     # firefox only works with :return
@@ -49,11 +47,11 @@ When(/^I choose (.+?) as the input language$/) do |language|
 end
 
 When(/^I click on the Malayalam InScript 2 menu item$/) do
-  on(RandomPage).uls_malayalam_inscript2_item_element.click
+  on(IMEPage).malayalam_inscript2_element.click
 end
 
-When(/^I press Control\-M$/) do
-  on(RandomPage).search_input_element.send_keys [:control, 'm']
+When(/^I press Control-M$/) do
+  on(IMEPage).search_input_element.send_keys [:control, 'm']
 end
 
 When(/^I go to another random page$/) do
@@ -62,7 +60,7 @@ end
 
 Then(/^in it there must be an element with Malayalam text$/) do
   # 'input_method_enabled' alone only returns []
-  on(RandomPage).input_method_enabled_element.text.should == 'ഇൻസ്ക്രിപ്റ്റ് 2'
+  on(IMEPage).input_method_enabled_element.text.should == 'ഇൻസ്ക്രിപ്റ്റ് 2'
 end
 
 When(/^I visit page in Vector skin$/) do
