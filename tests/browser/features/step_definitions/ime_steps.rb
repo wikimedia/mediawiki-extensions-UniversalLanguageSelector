@@ -63,20 +63,10 @@ Then(/^in it there must be an element with Malayalam text$/) do
   on(IMEPage).input_method_enabled_element.text.should == 'ഇൻസ്ക്രിപ്റ്റ് 2'
 end
 
-When(/^I visit page in Vector skin$/) do
-  visit(PanelPage, :using_params => {:extra => "useskin=vector"})
-end
-
-When(/^I visit page in Monobook skin$/) do
-  visit(PanelPage, :using_params => {:extra => "useskin=monobook"})
+Given(/^I visit a random page with (.+) skin and (.+) as the interface language$/) do |skin, language|
+  visit(IMEPage, :using_params => {:extra => "useskin=#{skin.downcase}&uselang=#{on(IMEPage).language_to_code(language)}"})
 end
 
 Then(/^I should see the input method menu is not offscreen$/) do
-  @browser.execute_script( "
-    var $selectorMenu = $( '.imeselector-menu' ),
-        menuLeft = $selectorMenu.offset().left,
-        menuRight = menuLeft + $selectorMenu.width();
-
-    return ( menuLeft >= 0 && menuRight <= $( window ).width() );
-  " ).should == true
+  on(IMEPage).ime_input_method_menu_onscreen?.should == true
 end

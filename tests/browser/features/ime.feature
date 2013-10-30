@@ -52,31 +52,15 @@ input method.
     Then I should see the input method indicator
       And in it there must be an element with Malayalam text
 
-  @login @reset-preferences-after
-  Scenario: Input method menu is not offscreen
-
-  Input method indicator is not offscreen for English and RTL languages.
-
-    Given I am logged in
-    Given I set "English" as the interface language
-    When I visit page in Vector skin
-      And I open the input method menu
+  @commons.wikimedia.beta.wmflabs.org
+  Scenario Outline: Input method menu is completely visible
+    Given I visit a random page with <skin> skin and <language> as the interface language
+    When I open the input method menu
     Then I should see the input method menu is not offscreen
 
-    Given I am logged in
-    Given I set "Hebrew" as the interface language
-    When I visit page in Monobook skin
-      And I open the input method menu
-    Then I should see the input method menu is not offscreen
-
-    Given I am logged in
-    Given I set "English" as the interface language
-    When I visit page in Monobook skin
-      And I open the input method menu
-    Then I should see the input method menu is not offscreen
-
-    Given I am logged in
-    Given I set "Hebrew" as the interface language
-    When I visit page in Vector skin
-      And I open the input method menu
-    Then I should see the input method menu is not offscreen
+  Examples:
+    | skin     | language |
+    | Vector   | English  |
+    | Vector   | Hebrew   |
+    | Monobook | English  |
+    #| Monobook | Hebrew   |

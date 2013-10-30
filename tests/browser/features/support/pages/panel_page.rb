@@ -1,5 +1,6 @@
 class PanelPage
 	include PageObject
+	include LanguageModule
 
 	include URL
 	page_url URL.url('?<%=params[:extra]%>')
@@ -50,23 +51,6 @@ class PanelPage
 
 	def interface_font
 		font('body')
-	end
-
-	def language_to_code(language)
-		case language
-			when 'German'
-				'de'
-			when 'English'
-				'en'
-			when 'Finnish'
-				'fi'
-			when 'Hebrew'
-				'he'
-			when 'Hindi'
-				'hi'
-			else
-				pending
-		end
 	end
 
 	private
