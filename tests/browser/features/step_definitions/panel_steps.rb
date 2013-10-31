@@ -3,7 +3,7 @@ Then(/^I see "(.*?)" as the name of the content language$/) do |text|
 end
 
 When(/^I open "(.*?)" panel of language settings$/) do |panel|
-	on(PanelPage) do |page|
+	visit(PanelPage) do |page|
 		# Open the ULS panel if it's not open already
 		if !page.language_settings_dialog_element.visible?
 			# These can be of two different type of elements, which PageObjects do not like.
@@ -77,4 +77,12 @@ end
 
 When(/^I switch to "Input" panel of language settings/) do
 	on(PanelPage).panel_input_element.when_visible.click
+end
+
+Then(/^the language list of ULS should use Autonym font$/) do
+	on(PanelPage).autonym_element.style("font-family").should == "'Autonym',sans-serif"
+end
+
+Then(/^the Interlanguage area should use Autonym font$/) do
+	on(InterlanguagePage).interlang_link_element.style("font-family").should == "'Autonym',sans-serif"
 end

@@ -13,6 +13,8 @@ class PanelPage
 	button(:panel_fonts, id: 'uls-display-settings-fonts-tab')
 	button(:panel_language, id: 'uls-display-settings-language-tab')
 
+	ul(:autonym, class: 'three columns end')
+
 	span(:panel_button_close, id: 'languagesettings-close')
 	button(:panel_button_apply, class: 'uls-settings-apply')
 	button(:panel_button_cancel, class: 'uls-settings-cancel')
@@ -45,9 +47,11 @@ class PanelPage
 	def content_font
 		font('#mw-content-text')
 	end
+
 	def interface_font
 		font('body')
 	end
+
 	def language_to_code(language)
 		case language
 			when 'German'
