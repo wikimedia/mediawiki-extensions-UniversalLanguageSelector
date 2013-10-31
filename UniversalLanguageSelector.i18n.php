@@ -464,6 +464,13 @@ $messages['lb'] = array(
 	'uls-plang-title-languages' => 'Sproochen',
 );
 
+/** لوری (لوری)
+ * @author Mogoeilor
+ */
+$messages['lrc'] = array(
+	'uls-plang-title-languages' => 'زونا',
+);
+
 /** Lithuanian (lietuvių)
  * @author Mantak111
  */
@@ -471,6 +478,15 @@ $messages['lt'] = array(
 	'UniversalLanguageSelector' => 'Universalus kalbų rinkiklis',
 	'uls-desc' => 'Suteikia vartotojui keliais būdais, pasirinkti kalbą ir sureguliuoti kalbos parametrus.',
 	'uls-plang-title-languages' => 'Kalbos',
+);
+
+/** Latvian (latviešu)
+ * @author Papuass
+ */
+$messages['lv'] = array(
+	'UniversalLanguageSelector' => 'Universālā valodas izvēle',
+	'uls-desc' => 'Ļauj lietotājam dažādos veidos izvēlēties valodu un pielāgot valodas iestatījumus',
+	'uls-plang-title-languages' => 'Valodas',
 );
 
 /** Minangkabau (Baso Minangkabau)
