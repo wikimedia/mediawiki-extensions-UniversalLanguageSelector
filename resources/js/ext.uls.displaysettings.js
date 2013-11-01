@@ -141,6 +141,7 @@
 						$( '<p>' ).append(
 							$( '<span>' )
 								.addClass( 'uls-display-settings-anon-label' )
+								// .html() is needed for correct parsing of the nbsp
 								.html( $.i18n( 'ext-uls-display-settings-anon-label' ) + '&#160;' ),
 							$( '<span>' )
 								.text( $.i18n( 'ext-uls-display-settings-anon-same-as-content', autonym ) )
@@ -152,7 +153,7 @@
 					.done( function ( parsedCta ) {
 						var deferred = new $.Deferred();
 
-						$loginCta.html( parsedCta );
+						$loginCta.html( parsedCta ); // The parsed CTA is HTML
 						$loginCta.find( 'a' ).click( function ( event ) {
 							event.preventDefault();
 							// Because browsers navigate away when clicking a link,
@@ -289,8 +290,8 @@
 					mw.uls.addEventLoggingTriggers();
 
 					if ( !displaySettings.$parent.$window.hasClass( 'callout' ) ) {
-						// callout menus will have position rules. others use
-						// default position
+						// Callout menus will have position rules.
+						// Others use the default position.
 						return;
 					}
 
@@ -418,7 +419,9 @@
 				}
 			} );
 
-			$systemFont = $( '<option>' ).val( 'system' ).text( $.i18n( 'ext-uls-webfonts-system-font' ) );
+			$systemFont = $( '<option>' )
+				.val( 'system' )
+				.text( $.i18n( 'ext-uls-webfonts-system-font' ) );
 			$fontSelector.append( $systemFont );
 			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
 
