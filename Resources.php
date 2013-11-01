@@ -26,6 +26,7 @@ $wgResourceModules['ext.uls.displaysettings'] = array(
 		'ext.uls.buttons',
 		'ext.uls.languagesettings',
 		'ext.uls.webfonts',
+		'jquery.uls.grid',
 		'jquery.i18n',
 		'mediawiki.api.parse',
 	),
@@ -89,6 +90,7 @@ $wgResourceModules['ext.uls.inputsettings'] = array(
 		'ext.uls.buttons',
 		'ext.uls.languagesettings',
 		'ext.uls.ime',
+		'jquery.uls.grid',
 		'jquery.ime',
 		'jquery.i18n',
 	),
@@ -118,6 +120,7 @@ $wgResourceModules['ext.uls.languagesettings'] = array(
 	'dependencies' => array(
 		'ext.uls.buttons',
 		'ext.uls.preferences',
+		'jquery.uls.grid',
 	),
 ) + $resourcePaths;
 
@@ -189,7 +192,6 @@ $wgResourceModules['jquery.uls'] = array(
 	),
 	'dependencies' => array(
 		'jquery.i18n',
-		'jquery.uls.grid',
 		'jquery.uls.data',
 	),
 ) + $resourcePaths;
