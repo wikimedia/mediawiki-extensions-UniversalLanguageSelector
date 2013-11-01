@@ -15,10 +15,15 @@ $wgResourceModules['ext.uls.languagenames'] = array(
 	'class' => 'ResourceLoaderULSModule'
 );
 
+$wgResourceModules['ext.uls.buttons'] = array(
+	'styles' => 'resources/css/ext.uls.buttons.css',
+) + $resourcePaths;
+
 $wgResourceModules['ext.uls.displaysettings'] = array(
 	'scripts' => 'resources/js/ext.uls.displaysettings.js',
 	'styles' => 'resources/css/ext.uls.displaysettings.css',
 	'dependencies' => array(
+		'ext.uls.buttons',
 		'ext.uls.languagesettings',
 		'ext.uls.webfonts',
 		'jquery.i18n',
@@ -60,6 +65,7 @@ $wgResourceModules['ext.uls.init'] = array(
 		'mediawiki.util',
 		'jquery.client',
 		'jquery.json',
+		'jquery.cookie',
 		'jquery.uls',
 		'ext.uls.i18n',
 	),
@@ -80,6 +86,7 @@ $wgResourceModules['ext.uls.inputsettings'] = array(
 	'scripts' => 'resources/js/ext.uls.inputsettings.js',
 	'styles' => 'resources/css/ext.uls.inputsettings.css',
 	'dependencies' => array(
+		'ext.uls.buttons',
 		'ext.uls.languagesettings',
 		'ext.uls.ime',
 		'jquery.ime',
@@ -108,7 +115,10 @@ $wgResourceModules['ext.uls.interface'] = array(
 $wgResourceModules['ext.uls.languagesettings'] = array(
 	'scripts' => 'resources/js/ext.uls.languagesettings.js',
 	'styles' => 'resources/css/ext.uls.languagesettings.css',
-	'dependencies' => 'ext.uls.preferences',
+	'dependencies' => array(
+		'ext.uls.buttons',
+		'ext.uls.preferences',
+	),
 ) + $resourcePaths;
 
 $wgResourceModules['ext.uls.preferences'] = array(
