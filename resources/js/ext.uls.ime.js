@@ -195,93 +195,107 @@
 		};
 	};
 
+	/**
+	 * Binds the event listeners.
+	 */
 	mw.ime.setup = function () {
+		var imeSelectors = mw.config.get( 'wgULSImeSelectors' ).join( ', ' );
+
 		mw.ime.init();
-		$( 'body' ).on( 'focus.ime', inputSelector, function () {
-			var imeselector, $input, noImeSelector;
-
-			noImeSelector = mw.config.get( 'wgULSNoImeSelectors' ).join( ', ' );
-			$input = $( this );
-
-			if ( !$.ime ) {
-				mw.loader.using( 'jquery.ime', function () {
-					$input.trigger( 'focus' );
-				} );
-
-				return;
-			}
-
-			mw.ime.init();
-
-			if ( $input.is( '.noime' ) || !$.ime.preferences.isEnabled() ) {
-				return;
-			}
-
-			if ( $input.is( '[contenteditable]' ) && !window.rangy ) {
-				// for supporting content editable divs we need rangy library
-				mw.loader.using( 'rangy.core', function () {
-					$input.trigger( 'focus' );
-				} );
-
-				return;
-			}
-
-			if ( noImeSelector.length && $input.is( noImeSelector ) ) {
-				$input.addClass( 'noime' );
-				return;
-			}
-
-			$input.ime( {
-				languages: mw.ime.getIMELanguageList(),
-				languageSelector: function () {
-					var $ulsTrigger;
-
-					$ulsTrigger = $( '<a>' ).text( '...' )
-						.addClass( 'ime-selector-more-languages selectable-row selectable-row-item' )
-						.attr( {
-							title: $.i18n( 'ext-uls-input-settings-more-languages-tooltip' )
-						} );
-					$ulsTrigger.uls( {
-						onSelect: function ( language ) {
-							$input.data( 'imeselector' ).selectLanguage( language );
-							$input.focus();
-						},
-						languages: mw.ime.getLanguagesWithIME(),
-						top: $input.offset().top
-					} );
-
-					return $ulsTrigger;
-				},
-				helpHandler: function ( ime ) {
-					return $( '<a>' )
-						.attr( {
-							href: mw.msg( 'uls-ime-helppage' ).replace( '$1', ime ),
-							target: '_blank',
-							title: $.i18n( 'ext-uls-ime-help' )
-						} )
-						.addClass( 'ime-perime-help' )
-						.click( function ( event ) {
-							event.stopPropagation();
-						} );
-				}
-			} );
-
-			// Some fields may be uninitialized
-			imeselector = $input.data( 'imeselector' );
-			if ( imeselector ) {
-				imeselector.selectLanguage( imeselector.decideLanguage() );
-				imeselector.$element.on( 'setim.ime', function ( event, inputMethod ) {
-					mw.hook( 'mw.uls.ime.change' ).fire( inputMethod );
-				} );
-			}
+		$( 'body' ).on( 'focus.ime', imeSelectors, function () {
+			mw.ime.handleFocus( $( this ) );
 		} );
 	};
 
-	$( document ).ready( function () {
-		mw.uls.init( function () {
-			mw.ime.setup();
+	/**
+	 * Loads necessary dependencies, checks input for validity and
+	 * adds the ime menu for elements that should have it.
+	 * @param {jquery.Element} $input
+	 * @since 2013.11
+	 */
+	mw.ime.handleFocus = function ( $input ) {
+		var noImeSelectors;
+
+		if ( $input.is( '.noime' ) || $input.data( 'ime' ) ) {
+			// input does not need IME or already applied
+			return;
+		}
+
+		noImeSelectors = mw.config.get( 'wgULSNoImeSelectors' ).join( ', ' );
+		if ( noImeSelectors.length && $input.is( noImeSelectors ) ) {
+			$input.addClass( 'noime' );
+
+			return;
+		}
+
+		if ( !$.ime.preferences.isEnabled() ) {
+			return;
+		}
+
+		if ( $input.is( '[contenteditable]' ) && !window.rangy ) {
+			// For supporting content editable divs we need rangy library
+			mw.loader.using( 'rangy.core', function () {
+				mw.ime.addIme( $input );
+			} );
+
+			return;
+		}
+
+		mw.ime.addIme( $input );
+	};
+
+	/**
+	 * Just adds ime menu to any input element.
+	 * @param {jquery.Element} $input
+	 * @since 2013.11
+	 */
+	mw.ime.addIme = function ( $input ) {
+		var imeselector;
+
+		$input.ime( {
+			languages: mw.ime.getIMELanguageList(),
+			languageSelector: function () {
+				var $ulsTrigger;
+
+				$ulsTrigger = $( '<a>' ).text( '...' )
+					.addClass( 'ime-selector-more-languages selectable-row selectable-row-item' )
+					.attr( {
+						title: $.i18n( 'ext-uls-input-settings-more-languages-tooltip' )
+					} );
+				$ulsTrigger.uls( {
+					onSelect: function ( language ) {
+						$input.data( 'imeselector' ).selectLanguage( language );
+						$input.focus();
+					},
+					languages: mw.ime.getLanguagesWithIME(),
+					top: $input.offset().top
+				} );
+
+				return $ulsTrigger;
+			},
+			helpHandler: function ( ime ) {
+				return $( '<a>' )
+					.attr( {
+						href: mw.msg( 'uls-ime-helppage' ).replace( '$1', ime ),
+						target: '_blank',
+						title: $.i18n( 'ext-uls-ime-help' )
+					} )
+					.addClass( 'ime-perime-help' )
+					.click( function ( event ) {
+						event.stopPropagation();
+					} );
+			}
 		} );
-	} );
+
+		// Some fields may be uninitialized
+		imeselector = $input.data( 'imeselector' );
+		if ( imeselector ) {
+			imeselector.selectLanguage( imeselector.decideLanguage() );
+			imeselector.$element.on( 'setim.ime', function ( event, inputMethod ) {
+				mw.hook( 'mw.uls.ime.change' ).fire( inputMethod );
+			} );
+		}
+	};
 
 	function imeNotification() {
 		var notificationMsg = ( mw.config.get( 'wgULSPosition' ) === 'personal' ) ?

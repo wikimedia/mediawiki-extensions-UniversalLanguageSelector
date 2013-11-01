@@ -45,6 +45,7 @@ $wgResourceModules['ext.uls.ime'] = array(
 	'dependencies' => array(
 		'ext.uls.init',
 		'ext.uls.preferences',
+		'jquery.ime',
 	),
 	'messages' => array(
 		'uls-ime-helppage',
@@ -110,7 +111,6 @@ $wgResourceModules['ext.uls.interface'] = array(
 		// We can not delay webfonts loading since it is required
 		// immediately after page load
 		'ext.uls.webfonts',
-		'ext.uls.ime',
 	),
 	'messages' => array(
 		'uls-plang-title-languages',
