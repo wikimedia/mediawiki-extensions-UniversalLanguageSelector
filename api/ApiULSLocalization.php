@@ -25,7 +25,7 @@ class ApiULSLocalization extends ApiBase {
 
 	public function execute() {
 		$this->getMain()->setCacheMode( 'public' );
-		$this->getMain()->setCacheMaxAge( 300 );
+		$this->getMain()->setCacheMaxAge( 2419200 );
 
 		$params = $this->extractRequestParams();
 		$language = $params['language'];
