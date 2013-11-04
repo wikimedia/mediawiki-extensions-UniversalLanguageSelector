@@ -138,6 +138,7 @@ div.display-settings-block:hover .settings-text {
 }
 
 /* Interlanguage links */
-#p-lang ul {
+#p-lang ul,
+.autonym {
 	font-family: 'Autonym', sans-serif;
 }
