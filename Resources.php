@@ -15,6 +15,10 @@ $wgResourceModules['ext.uls.languagenames'] = array(
 	'class' => 'ResourceLoaderULSModule'
 );
 
+$wgResourceModules['ext.uls.messages'] = array(
+	'class' => 'ResourceLoaderULSJsonMessageModule'
+);
+
 $wgResourceModules['ext.uls.buttons'] = array(
 	'styles' => 'resources/css/ext.uls.buttons.css',
 ) + $resourcePaths;
@@ -68,7 +72,7 @@ $wgResourceModules['ext.uls.init'] = array(
 		'jquery.json',
 		'jquery.cookie',
 		'jquery.uls',
-		'ext.uls.i18n',
+		'ext.uls.messages',
 	),
 	'position' => 'top',
 ) + $resourcePaths;
