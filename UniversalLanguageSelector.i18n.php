@@ -593,11 +593,13 @@ $messages['pl'] = array(
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
 	'UniversalLanguageSelector' => 'Seletor Universal ëd Lenga',
 	'uls-desc' => "A dà a l'utent vàire manere ëd selessioné na lenga e ëd sistemé j'ampostassion ëd lenga",
+	'uls-plang-title-languages' => 'Lenghe',
 );
 
 /** Pashto (پښتو)
