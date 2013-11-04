@@ -152,9 +152,12 @@ $wgExtensionMessagesFiles['UniversalLanguageSelector'] =
 // Register auto load for the page class
 $wgAutoloadClasses += array(
 	'UniversalLanguageSelectorHooks' => __DIR__ . '/UniversalLanguageSelector.hooks.php',
-	'ResourceLoaderULSModule' => __DIR__ . '/ResourceLoaderULSModule.php',
+	'ResourceLoaderULSModule' => __DIR__ . '/includes/ResourceLoaderULSModule.php',
+	'ResourceLoaderULSJsonMessageModule' =>
+		__DIR__ . '/includes/ResourceLoaderULSJsonMessageModule.php',
 	'ApiLanguageSearch' => __DIR__ . '/api/ApiLanguageSearch.php',
 	'ApiULSLocalization' => __DIR__ . '/api/ApiULSLocalization.php',
+	'JsonMessageLoader' => __DIR__ . '/includes/JsonMessageLoader.php',
 	'LanguageNameSearch' => __DIR__ . '/data/LanguageNameSearch.php',
 );
 

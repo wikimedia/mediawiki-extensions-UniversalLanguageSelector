@@ -32,45 +32,10 @@ class ApiULSLocalization extends ApiBase {
 		if ( !Language::isValidCode( $language ) ) {
 			$this->dieUsage( 'Invalid language', 'invalidlanguage' );
 		}
-
-		$contents = array();
-		// jQuery.uls localization
-		$contents += $this->loadI18nFile( __DIR__ . '/../lib/jquery.uls/i18n', $language );
-		// mediaWiki.uls localization
-		$contents += $this->loadI18nFile( __DIR__ . '/../i18n', $language );
-
+		$contents = JsonMessageLoader::getMessages( $language );
 		// Output the file's contents raw
 		$this->getResult()->addValue( null, 'text', json_encode( $contents ) );
 		$this->getResult()->addValue( null, 'mime', 'application/json' );
-	}
-
-	/**
-	 * Load messages from the jquery.i18n json file and from
-	 * fallback languages.
-	 * @param string $dir Directory of the json file.
-	 * @param string $language Language code.
-	 * @return array
-	 */
-	protected function loadI18nFile( $dir, $language ) {
-		$languages = Language::getFallbacksFor( $language );
-		// Prepend the requested language code
-		// to load them all in one loop
-		array_unshift( $languages, $language );
-		$messages = array();
-
-		foreach ( $languages as $language ) {
-			$filename = "$dir/$language.json";
-
-			if ( !file_exists( $filename ) ) {
-				continue;
-			}
-
-			$contents = file_get_contents( $filename );
-			$messagesForLanguage = json_decode( $contents, true );
-			$messages = array_merge( $messagesForLanguage, $messages );
-		}
-
-		return $messages;
 	}
 
 	public function getCustomPrinter() {
