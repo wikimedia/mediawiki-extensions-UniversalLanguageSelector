@@ -228,7 +228,7 @@
 			for ( i = 0; i < SUGGESTED_LANGUAGES_NUMBER; i++ ) {
 				language = languagesForButtons[i];
 				$button = $( '<button>' )
-					.addClass( 'button uls-language-button' )
+					.addClass( 'button uls-language-button autonym' )
 					.text( $.uls.data.getAutonym( language ) )
 					.prop( {
 						lang: language,
