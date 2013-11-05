@@ -113,7 +113,7 @@ class UniversalLanguageSelectorHooks {
 			'uls' => array(
 				'text' => $lang->fetchLanguageName( $lang->getCode() ),
 				'href' => '#',
-				'class' => 'uls-trigger',
+				'class' => 'uls-trigger autonym',
 				'active' => true
 			)
 		) + $personal_urls;
