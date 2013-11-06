@@ -407,29 +407,32 @@
 							mw.hook( 'mw.uls.settings.open' ).fire( eventParams && eventParams.source || 'personal' );
 						}
 					} else {
-						$ulsTrigger.uls( {
-							quickList: function () {
-								return mw.uls.getFrequentLanguageList();
-							},
-							onReady: function () {
-								var uls = this;
-								mw.loader.using( mw.uls.languageSettingsModules, function () {
-									addDisplaySettings( uls );
-									addInputSettings( uls );
-								} );
-							},
-							onSelect: function ( language ) {
-								mw.uls.changeLanguage( language );
-							},
-							onVisible: function () {
-								mw.uls.addEventLoggingTriggers();
-							}
-						} ).trigger( 'click', eventParams );
+						mw.loader.using( 'ext.jquery.uls', function () {
+							$ulsTrigger.uls( {
+								quickList: function () {
+									return mw.uls.getFrequentLanguageList();
+								},
+								onReady: function () {
+									var uls = this;
+									mw.loader.using( mw.uls.languageSettingsModules, function () {
+										addDisplaySettings( uls );
+										addInputSettings( uls );
+									} );
+								},
+								onSelect: function ( language ) {
+									mw.uls.changeLanguage( language );
+								},
+								onVisible: function () {
+									mw.uls.addEventLoggingTriggers();
+								}
+							} ).trigger( 'click', eventParams );
 
-						e.stopPropagation();
+							e.stopPropagation();
+						} );
 					}
 				} );
 			}
+
 			// At this point we don't care which kind of trigger it is
 			$triggers = $( '.uls-settings-trigger, .uls-trigger' );
 			addAccessibilityFeatures( $triggers );

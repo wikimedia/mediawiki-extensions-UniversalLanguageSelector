@@ -163,7 +163,8 @@
 		},
 
 		position: function () {
-			var top, pos, left;
+			var top, pos, left,
+				languageSettings = this;
 
 			pos = $.extend( {}, this.$element.offset(), {
 				height: this.$element[0].offsetHeight
@@ -174,7 +175,12 @@
 				top: top,
 				left: left
 			} );
-			this.$window.scrollIntoView();
+			setTimeout( function () {
+				// Don't mess up height calculations with parallel css loading
+				// See: http://ejohn.org/blog/how-javascript-timers-work/
+				languageSettings.$window.scrollIntoView();
+			}, 0 );
+
 		},
 
 		i18n: function () {
@@ -182,6 +188,8 @@
 		},
 
 		show: function () {
+			var languageSettings = this;
+
 			if ( !this.initialized ) {
 				this.render();
 				this.initialized = true;
@@ -196,7 +204,11 @@
 			// settings panels is upto date. So just click on active menu item.
 			this.$window.find( '.settings-menu-items > .active' ).click();
 			this.position();
-			this.visible();
+			setTimeout( function () {
+				// Don't mess up height calculations with parallel css loading
+				// See: http://ejohn.org/blog/how-javascript-timers-work/
+				languageSettings.visible();
+			}, 0 );
 		},
 
 		/**

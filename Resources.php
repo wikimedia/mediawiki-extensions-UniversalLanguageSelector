@@ -30,7 +30,7 @@ $wgResourceModules['ext.uls.displaysettings'] = array(
 		'ext.uls.buttons',
 		'ext.uls.languagesettings',
 		'ext.uls.webfonts',
-		'jquery.uls.grid',
+		'ext.uls.mediawiki',
 		'jquery.i18n',
 		'mediawiki.api.parse',
 	),
@@ -45,6 +45,7 @@ $wgResourceModules['ext.uls.ime'] = array(
 	'dependencies' => array(
 		'ext.uls.init',
 		'ext.uls.preferences',
+		'ext.uls.mediawiki',
 		'jquery.ime',
 	),
 	'messages' => array(
@@ -58,7 +59,7 @@ $wgResourceModules['ext.uls.nojs'] = array(
 	'position' => 'top',
 ) + $resourcePaths;
 
-// Base ULS module
+// Initialization of MW ULS functionality
 $wgResourceModules['ext.uls.init'] = array(
 	'scripts' => 'resources/js/ext.uls.init.js',
 	'styles' => 'resources/css/ext.uls.css',
@@ -66,13 +67,12 @@ $wgResourceModules['ext.uls.init'] = array(
 		'monobook' => 'resources/css/ext.uls-monobook.css',
 	),
 	'dependencies' => array(
-		'ext.uls.languagenames',
 		'mediawiki.Uri',
 		'mediawiki.util',
 		'jquery.client',
 		'jquery.json',
 		'jquery.cookie',
-		'jquery.uls',
+		'jquery.uls.data',
 		'ext.uls.messages',
 	),
 	'position' => 'top',
@@ -95,7 +95,7 @@ $wgResourceModules['ext.uls.inputsettings'] = array(
 		'ext.uls.buttons',
 		'ext.uls.languagesettings',
 		'ext.uls.ime',
-		'jquery.uls.grid',
+		'ext.uls.mediawiki',
 		'jquery.ime',
 		'jquery.i18n',
 	),
@@ -124,6 +124,8 @@ $wgResourceModules['ext.uls.languagesettings'] = array(
 	'dependencies' => array(
 		'ext.uls.buttons',
 		'ext.uls.preferences',
+		// The grid styles are used here,
+		// but ULS itself is lazy-loaded
 		'jquery.uls.grid',
 	),
 ) + $resourcePaths;
@@ -184,6 +186,16 @@ $wgResourceModules['jquery.ime'] = array(
 	'styles' => 'lib/jquery.ime/css/jquery.ime.css',
 ) + $resourcePaths;
 
+// A module that sets useful ULS default options
+$wgResourceModules['ext.uls.mediawiki'] = array(
+	'scripts' => 'resources/js/ext.uls.mediawiki.js',
+	'dependencies' => array(
+		'jquery.uls',
+		'jquery.i18n',
+		'ext.uls.languagenames',
+	),
+) + $resourcePaths;
+
 $wgResourceModules['jquery.uls'] = array(
 	'scripts' => array(
 		'lib/jquery.uls/src/jquery.uls.core.js',
@@ -198,6 +210,7 @@ $wgResourceModules['jquery.uls'] = array(
 	'dependencies' => array(
 		'jquery.i18n',
 		'jquery.uls.data',
+		'jquery.uls.grid',
 	),
 ) + $resourcePaths;
 
