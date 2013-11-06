@@ -124,6 +124,19 @@ $wgULSPosition = 'personal';
 $wgULSEventLogging = false;
 
 /**
+ * Array of jQuery selectors of elements on which IME should be enabled.
+ *
+ * @since 2013.11
+ */
+$wgULSImeSelectors = array(
+	'input:not([type])',
+	'input[type=text]',
+	'input[type=search]',
+	'textarea',
+	'[contenteditable]',
+);
+
+/**
  * Array of jQuery selectors of elements on which IME must not be enabled.
  *
  * @since 2013.07

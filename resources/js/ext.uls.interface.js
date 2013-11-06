@@ -297,6 +297,7 @@
 				rtlPage = $( 'body' ).hasClass( 'rtl' ),
 				anonMode = ( mw.user.isAnon() &&
 					!mw.config.get( 'wgULSAnonCanChangeLanguage' ) ),
+				imeSelector = mw.config.get( 'wgULSImeSelectors' ).join( ', ' ),
 				ulsPosition = mw.config.get( 'wgULSPosition' );
 
 			if ( ulsPosition === 'interlanguage' ) {
@@ -445,6 +446,15 @@
 				} );
 
 			showULSTooltip();
+
+			$( 'body' ).on( 'focus.imeinit', imeSelector, function () {
+				var $input = $( this );
+				$( 'body' ).off( '.imeinit' );
+				mw.loader.using( 'ext.uls.ime', function () {
+					mw.ime.setup();
+					mw.ime.handleFocus( $input );
+				} );
+			} );
 		} );
 	} );
 }( jQuery, mediaWiki ) );
