@@ -83,6 +83,13 @@
 			}() )
 		} );
 		$( 'body' ).webfonts();
+		// Load the css required for Autonym font. Note that this wont download the font.
+		// Browsers are smart enough to delay it till some element with this font-family
+		// become visible. For eg: If there is a popup div with an element with class
+		// 'autonym', without explicitly calling .webfonts() on it, Autonym font will not
+		// be applied in general. But we ensure that css is ready so that automatically
+		// the font get applied to such future elements.
+		$( 'body' ).data( 'webfonts' ).load( 'Autonym' );
 	};
 
 	$( document ).ready( function () {
