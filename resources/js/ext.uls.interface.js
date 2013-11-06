@@ -165,13 +165,14 @@
 	}
 
 	/**
-	 * The tooltip to be shown when language changed using ULS
+	 * The tooltip to be shown when language changed using ULS.
 	 * It also allows to undo the language selection.
 	 */
 	function showULSTooltip() {
 		var ulsPosition = mw.config.get( 'wgULSPosition' ),
 			currentLang = mw.config.get( 'wgUserLanguage' ),
 			previousLang,
+			previousLanguageAutonym,
 			$ulsTrigger,
 			anonMode,
 			rtlPage = $( 'body' ).hasClass( 'rtl' ),
@@ -198,10 +199,13 @@
 
 		anonMode = ( mw.user.isAnon() && !mw.config.get( 'wgULSAnonCanChangeLanguage' ) );
 
-		if ( anonMode || !previousLang || !$.uls.data.languages[previousLang] ) {
+		if ( anonMode || !previousLang ) {
 			// Do not show tooltip
 			return;
 		}
+
+		previousLanguageAutonym = $.cookie( mw.uls.previousLanguageAutonymCookie ) ||
+			previousLang;
 
 		// Attach a tipsy tooltip to the trigger
 		$ulsTrigger.tipsy( {
@@ -213,12 +217,15 @@
 			title: function () {
 				var link;
 
-				link = $( '<a>' ).text( $.uls.data.getAutonym( previousLang ) )
+				link = $( '<a>' ).text( previousLanguageAutonym )
 					.attr( {
 						href: '#',
 						'class': 'uls-prevlang-link',
 						lang: previousLang,
-						dir: $.uls.data.getDir( previousLang )
+						// We could get dir from uls.data,
+						// but we are trying to avoid loading it
+						// and 'auto' is safe enough in this context
+						dir: 'auto'
 					} );
 
 				// Get the html of the link by wrapping it in div first
@@ -227,6 +234,15 @@
 				return $.i18n( 'ext-uls-undo-language-tooltip-text', link );
 			}
 		} );
+
+		// Now that we set the previous languages,
+		// we can set the cookie of the previous autonym.
+		// TODO: Refactor this, because it doesn't directly belong
+		// to the tooltip.
+		$.cookie( mw.uls.previousLanguageAutonymCookie,
+			mw.config.get( 'wgULSCurrentAutonym' ),
+			{ path: '/' }
+		);
 
 		function showTipsy( timeout ) {
 			var tipsyTimer = 0;

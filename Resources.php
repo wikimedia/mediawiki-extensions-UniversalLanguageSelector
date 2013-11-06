@@ -72,7 +72,6 @@ $wgResourceModules['ext.uls.init'] = array(
 		'jquery.client',
 		'jquery.json',
 		'jquery.cookie',
-		'jquery.uls.data',
 		'ext.uls.messages',
 	),
 	'position' => 'top',
