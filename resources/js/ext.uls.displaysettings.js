@@ -88,6 +88,7 @@
 		this.contentLanguage = this.getContentLanguage();
 		this.$webfonts = null;
 		this.$parent = $parent;
+		this.savedRegistry = $.extend( true, {}, mw.webfonts.preferences );
 	}
 
 	DisplaySettings.prototype = {
@@ -111,7 +112,6 @@
 			this.preview( this.uiLanguage );
 			this.listen();
 			this.dirty = false;
-			this.savedRegistry = $.extend( true, {}, mw.webfonts.preferences );
 		},
 
 		/**
@@ -555,7 +555,7 @@
 		 */
 		onSave: function ( success ) {
 			if ( success ) {
-				if ( this.$webfonts !== undefined ) {
+				if ( this.$webfonts ) {
 					// Live font update
 					this.$webfonts.refresh();
 				}
