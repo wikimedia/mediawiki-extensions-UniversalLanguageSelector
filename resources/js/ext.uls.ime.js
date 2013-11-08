@@ -31,10 +31,11 @@
 
 	mw.ime.getLanguagesWithIME = function () {
 		var language,
+			ulsLanguages = mw.config.get( 'wgULSLanguages' ),
 			availableLanguages = {};
 
 		for ( language in $.ime.languages ) {
-			availableLanguages[language] = mw.config.get( 'wgULSLanguages' )[language];
+			availableLanguages[language] = ulsLanguages[language];
 		}
 
 		return availableLanguages;
