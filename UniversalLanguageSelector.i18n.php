@@ -286,6 +286,15 @@ $messages['fr'] = array(
 	'uls-plang-title-languages' => 'Langues',
 );
 
+/** Northern Frisian (Nordfriisk)
+ * @author Murma174
+ */
+$messages['frr'] = array(
+	'UniversalLanguageSelector' => 'Universal Language Selector',
+	'uls-desc' => 'Maaget det mögelk, en spriak ütjtuschüken an spriakiinstelangen tu feranrin',
+	'uls-plang-title-languages' => 'Spriaken',
+);
+
 /** Friulian (furlan)
  * @author Klenje
  */
@@ -452,6 +461,7 @@ $messages['ky'] = array(
  * @author Autokrator
  */
 $messages['la'] = array(
+	'UniversalLanguageSelector' => 'Lectio linguarum universalis',
 	'uls-plang-title-languages' => 'Linguis aliis',
 );
 
