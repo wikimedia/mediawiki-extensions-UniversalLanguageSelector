@@ -423,7 +423,7 @@
 							mw.hook( 'mw.uls.settings.open' ).fire( eventParams && eventParams.source || 'personal' );
 						}
 					} else {
-						mw.loader.using( 'ext.jquery.uls', function () {
+						mw.loader.using( 'ext.uls.mediawiki', function () {
 							$ulsTrigger.uls( {
 								quickList: function () {
 									return mw.uls.getFrequentLanguageList();
