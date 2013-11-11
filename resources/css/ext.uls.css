@@ -3,6 +3,19 @@
  * or near the interlanguage links.
  */
 
+/*
+ * A hack to load the icon before the rest of the module is lazy-loaded.
+ * Copied from jquuery.uls.css with the path changed.
+ */
+.uls-trigger {
+	/* @embed */
+	background: transparent url('../../lib/jquery.uls/images/icon-language.png') no-repeat scroll left center;
+	background-image: -webkit-linear-gradient(transparent, transparent), url('../../lib/jquery.uls/images/icon-language.svg');
+	background-image: -moz-linear-gradient(transparent, transparent), url('../../lib/jquery.uls/images/icon-language.svg');
+	background-image: linear-gradient(transparent, transparent), url('../../lib/jquery.uls/images/icon-language.svg');
+	padding-left: 30px;
+}
+
 #pt-uls a.uls-trigger {
 	padding-left: 30px;
 }
