@@ -23,21 +23,19 @@
  * Resource loader module for providing MediaWiki language names.
  */
 class ResourceLoaderULSModule extends ResourceLoaderModule {
-	/**
-	 * @var Language
-	 */
-	protected $language;
 	protected $targets = array( 'desktop', 'mobile' );
 
 	/**
-	 * Get all the dynamic data for the content language to an array
+	 * Get all the dynamic data for the content language to an array.
 	 *
+	 * @param string $languageCode Language code
 	 * @return array
 	 */
-	protected function getData() {
+	protected function getData( $languageCode ) {
 		$vars = array();
 		$vars['wgULSLanguages'] = Language::fetchLanguageNames(
-			$this->language->getCode(), 'mwfile'
+			$languageCode,
+			'mwfile'
 		);
 
 		return $vars;
@@ -45,12 +43,12 @@ class ResourceLoaderULSModule extends ResourceLoaderModule {
 
 	/**
 	 * @param $context ResourceLoaderContext
-	 * @return string: JavaScript code
+	 * @return string JavaScript code
 	 */
 	public function getScript( ResourceLoaderContext $context ) {
-		$this->language = Language::factory( $context->getLanguage() );
+		$languageCode = $context->getLanguage();
 		$out = '';
-		foreach ( $this->getData() as $key => $value ) {
+		foreach ( $this->getData( $languageCode ) as $key => $value ) {
 			$out .= Xml::encodeJsCall( 'mw.config.set', array( $key, $value ) );
 		}
 
@@ -58,15 +56,28 @@ class ResourceLoaderULSModule extends ResourceLoaderModule {
 	}
 
 	/**
+	 * Gets the last modified time for this module depending on the given
+	 * context.
+	 *
 	 * @param $context ResourceLoaderContext
-	 * @return array|int|Mixed
+	 * @return int Unix timestamp
 	 */
 	public function getModifiedTime( ResourceLoaderContext $context ) {
-		$this->language = Language::factory( $context->getLanguage() );
-		$cache = wfGetCache( CACHE_ANYTHING );
-		$key = wfMemcKey( 'resourceloader', 'ulsmodule', 'changeinfo' );
+		$languageCode = $context->getLanguage();
 
-		$data = $this->getData();
+		$cache = wfGetCache( CACHE_ANYTHING );
+
+		// Since we are updating the timestamp on hash change, we need to
+		// cache the hash per language to avoid updating the timestamp when
+		// different languages are being requested.
+		$key = wfMemcKey(
+			'resourceloader',
+			'modulemodifiedhash',
+			$this->getName(),
+			$languageCode
+		);
+
+		$data = $this->getData( $languageCode );
 		$hash = md5( serialize( $data ) );
 
 		$result = $cache->get( $key );
