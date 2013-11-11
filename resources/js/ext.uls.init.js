@@ -47,6 +47,7 @@
 
 	mw.uls = mw.uls || {};
 	mw.uls.previousLanguagesCookie = 'uls-previous-languages';
+	mw.uls.previousLanguageAutonymCookie = 'uls-previous-language-autonym';
 	mw.uls.languageSettingsModules = ['ext.uls.inputsettings', 'ext.uls.displaysettings'];
 
 	// What was the last thing that the user did to select the language:
@@ -94,6 +95,7 @@
 			uri.extend( {
 				setlang: language
 			} );
+
 			window.location.href = uri.toString();
 		} );
 
@@ -107,8 +109,10 @@
 	};
 
 	mw.uls.setPreviousLanguages = function ( previousLanguages ) {
-		$.cookie( mw.uls.previousLanguagesCookie, $.toJSON( previousLanguages ),
-			{ path: '/' } );
+		$.cookie( mw.uls.previousLanguagesCookie,
+			$.toJSON( previousLanguages ),
+			{ path: '/' }
+		);
 	};
 
 	mw.uls.getPreviousLanguages = function () {
