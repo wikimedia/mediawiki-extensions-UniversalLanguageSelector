@@ -118,10 +118,6 @@ $wgResourceModules['ext.uls.interface'] = array(
 	'position' => 'top',
 ) + $resourcePaths;
 
-// Anonymous users need 'jquery.jStorage' module for client side preference persistence.
-$wgResourceModules['ext.uls.interface.anon'] = $wgResourceModules['ext.uls.interface'];
-$wgResourceModules['ext.uls.interface.anon']['dependencies'][] = 'jquery.jStorage';
-
 $wgResourceModules['ext.uls.languagesettings'] = array(
 	'scripts' => 'resources/js/ext.uls.languagesettings.js',
 	'styles' => 'resources/css/ext.uls.languagesettings.css',
@@ -137,10 +133,7 @@ $wgResourceModules['ext.uls.preferences'] = array(
 	'dependencies' => array(
 		'mediawiki.user',
 		'mediawiki.api',
-		'jquery.json',
-		// This is quite a big module and only needed for anons.
-		// Loaded conditionally in ext.uls.interface(.anon).
-		//'jquery.jStorage',
+		'jquery.jStorage',
 	),
 ) + $resourcePaths;
 
