@@ -115,14 +115,13 @@
 		 * Initialize
 		 */
 		init: function () {
-			var options;
-
 			if ( this.isAnon ) {
-				this.preferences = $.jStorage.get( this.preferenceName ) || {};
+				this.preferences = $.jStorage.get( this.preferenceName );
 			} else {
-				options = mw.user.options.get( this.preferenceName );
-				this.preferences = $.parseJSON( options ) || {};
+				var options = mw.user.options.get( this.preferenceName );
+				this.preferences = $.parseJSON( options );
 			}
+			this.preferences = this.preferences || {};
 		},
 
 		/**
@@ -158,6 +157,7 @@
 				$.jStorage.set( this.preferenceName, this.preferences );
 				callback.call( this, true );
 			} else {
+
 				// Logged in user. Use MW APIs to change preferences
 				saveOptionsWithToken( {
 					action: 'options',

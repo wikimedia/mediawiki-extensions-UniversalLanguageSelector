@@ -67,11 +67,7 @@ class UniversalLanguageSelectorHooks {
 
 		if ( self::isToolbarEnabled( $out->getUser() ) ) {
 			// Enable UI language selection for the user.
-			if (  $out->getUser()->isAnon() ) {
-				$out->addModules( 'ext.uls.interface.anon' );
-			} else {
-				$out->addModules( 'ext.uls.interface' );
-			}
+			$out->addModules( 'ext.uls.interface' );
 		}
 
 		return true;
