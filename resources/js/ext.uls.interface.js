@@ -423,7 +423,7 @@
 							mw.hook( 'mw.uls.settings.open' ).fire( eventParams && eventParams.source || 'personal' );
 						}
 					} else {
-						mw.loader.using( 'ext.uls.mediawiki', function () {
+						mw.loader.using( ['ext.uls.mediawiki', 'jquery.uls.grid'], function () {
 							$ulsTrigger.uls( {
 								quickList: function () {
 									return mw.uls.getFrequentLanguageList();
@@ -441,7 +441,13 @@
 								onVisible: function () {
 									mw.uls.addEventLoggingTriggers();
 								}
-							} ).trigger( 'click', eventParams );
+							} );
+
+							// Allow styles to apply first and position to work by
+							// delaying the activation after them.
+							window.setTimeout( function () {
+								$ulsTrigger.trigger( 'click', eventParams );
+							}, 0 );
 
 							e.stopPropagation();
 						} );
