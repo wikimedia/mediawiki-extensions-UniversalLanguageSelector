@@ -53,6 +53,18 @@ class PanelPage
 		font('body')
 	end
 
+	def uls_onscreen?
+		@browser.execute_script( "
+			var $menu = $( '.uls-menu' ),
+				$window = $( window ),
+				top = $menu.offset().top,
+				viewportTop = $window.scrollTop(),
+				viewportBottom = $window.scrollTop() + $window.height();
+
+			return ( top < viewportBottom && top >= viewportTop )" )
+	end
+
+
 	private
 	def font(selector)
 		@browser.execute_script( "return $( '#{selector}' ).css( 'font-family' );" )

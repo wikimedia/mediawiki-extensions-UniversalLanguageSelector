@@ -20,11 +20,6 @@ This file contains the descriptions of the tags we use.
   could use your normal user account if you skip these tests, but I would not
   recommend doing that.
 
-@uls-in-personal-only
-@uls-in-sidebar-only
-  These tests will automatically be marked as skipped if ULS configuration is
-  not the one expected for the test.
-
 @anon-language-selection
 @no-anon-language-selection
   Depending on the wiki configuration, you should filter out either one of

@@ -25,12 +25,3 @@ Then(/^my interface language is "(.*?)"$/) do |language|
 	code = on(PanelPage).language_to_code(language)
 	on(PanelPage).interface_element.attribute('lang').should == code
 end
-
-def uls_position()
-	if !defined?($uls_position)
-		visit(PanelPage)
-		$uls_position = @browser.execute_script( "return mw.config.get( 'wgULSPosition' )" );
-	else
-		$uls_position
-	end
-end
