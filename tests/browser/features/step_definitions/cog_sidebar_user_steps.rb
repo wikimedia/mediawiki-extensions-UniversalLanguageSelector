@@ -50,7 +50,7 @@ When(/^I click X$/) do
 end
 
 When(/^in the language filter I type (.+)$/) do |language_abbreviation|
-  on(RandomPage).language_filter=language_abbreviation
+  on(IMEPage).language_filter=language_abbreviation
 end
 
 Then(/^I can navigate back to Input Settings$/) do

@@ -2,6 +2,22 @@ Then(/^I see "(.*?)" as the name of the content language$/) do |text|
 	@browser.span(:text => "#{text}").should be_visible
 end
 
+When(/^I open the Universal Language Selector$/) do
+	on(PanelPage).trigger_personal_element.when_visible.click
+end
+
+When(/^I open Display panel of language settings$/) do
+	on(PanelPage).panel_display_element.when_visible.click
+end
+
+When(/^I open Language panel of language settings$/) do
+	on(PanelPage).panel_language_element.click
+end
+
+When(/^I open Fonts panel of language settings$/) do
+	on(PanelPage).panel_fonts_element.click
+end
+
 When(/^I open "(.*?)" panel of language settings$/) do |panel|
 	visit(PanelPage) do |page|
 		# Open the ULS panel if it's not open already
@@ -15,11 +31,6 @@ When(/^I open "(.*?)" panel of language settings$/) do |panel|
 		end
 
 		case panel
-		when "Display"
-			page.panel_display_element.when_visible.click
-		when "Language"
-			page.panel_display_element.when_visible.click
-			page.panel_language_element.click
 		when "Fonts"
 			page.panel_display_element.when_visible.click
 			page.panel_fonts_element.click
@@ -32,11 +43,11 @@ When(/^I open "(.*?)" panel of language settings$/) do |panel|
 end
 
 When(/^I select "(.*?)" font for the interface language for the live preview$/) do |font|
-	on(PanelPage).select_font_for_interface = font
+	on(PanelPage).font_for_interface = font
 end
 
 When(/^I select "(.*?)" font for the content language for the live preview$/) do |font|
-	on(PanelPage).select_font_for_content = font
+	on(PanelPage).font_for_content = font
 end
 
 
@@ -66,9 +77,11 @@ end
 
 When(/^I use the panel to change my interface language to "(.*?)"$/) do |language|
 	code = on(PanelPage).language_to_code(language)
-	on(RandomPage).language_filter = code
-	# Because one browser wants :enter and other :return -- sigh
-	on(RandomPage).language_filter_element.send_keys [:enter, "\n"]
+	on(IMEPage) do |page|
+		page.language_filter = code
+		# Because one browser wants :enter and other :return -- sigh
+		page.language_filter_element.send_keys [:enter, "\n"]
+	end
 end
 
 Then(/^the panel is in English/) do
