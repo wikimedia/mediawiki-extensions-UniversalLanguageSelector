@@ -18,10 +18,9 @@ Feature: Font preferences respected in different languages
       And I start editing a page
     Then I should see the edit area text being displayed using "monospace" font
 
+  @commons.wikimedia.beta.wmflabs.org
   Scenario: Edit area should use the fonts selected by the user from ULS for a language
-    When I open "Fonts" panel of language settings
-      And I select "OpenDyslexic" font for the content language for the live preview
-      And I apply the changes
+    When I select OpenDyslexic font for the content language
       And I start editing a page
     Then I should see the edit area text being displayed using "OpenDyslexic" font
 

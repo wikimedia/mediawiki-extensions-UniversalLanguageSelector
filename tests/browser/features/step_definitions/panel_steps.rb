@@ -31,9 +31,6 @@ When(/^I open "(.*?)" panel of language settings$/) do |panel|
 		end
 
 		case panel
-		when "Fonts"
-			page.panel_display_element.when_visible.click
-			page.panel_fonts_element.click
 		when "Input"
 			page.panel_input_element.when_visible.click
 		else
@@ -42,11 +39,11 @@ When(/^I open "(.*?)" panel of language settings$/) do |panel|
 	end
 end
 
-When(/^I select "(.*?)" font for the interface language for the live preview$/) do |font|
+When(/^I select (.*?) font for the interface language for the live preview$/) do |font|
 	on(PanelPage).font_for_interface = font
 end
 
-When(/^I select "(.*?)" font for the content language for the live preview$/) do |font|
+When(/^I select (.*?) font for the content language for the live preview$/) do |font|
 	on(PanelPage).font_for_content = font
 end
 

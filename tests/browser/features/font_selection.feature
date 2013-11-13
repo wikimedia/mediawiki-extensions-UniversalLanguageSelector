@@ -14,27 +14,27 @@ Feature: Font selection
       And I set "German" as the interface language
       And I open ULS
       And I open display settings
-    When I open fonts panel of language settings
+    When I open Fonts panel of language settings
 
   Scenario: Font selector appears
     Then a font selector for interface language appears
       And a font selector for content language appears
 
   Scenario: Discarding live preview of content font
-    When I select "OpenDyslexic" font for the content language for the live preview
+    When I select OpenDyslexic font for the content language for the live preview
       And I close the panel to discard the changes
     Then the active content font must be the same as font prior to the preview
       # System is the default value for English and German
       And the selected content font must be "Systemschriftart"
 
   Scenario: Discarding live preview of interface font
-    When I select "OpenDyslexic" font for the interface language for the live preview
+    When I select OpenDyslexic font for the interface language for the live preview
       And I close the panel to discard the changes
     Then the active interface font must be the same as font prior to the preview
       # System is the default value for English and German
       And the selected interface font must be "Systemschriftart"
 
   Scenario: Applying the live preview of interface font
-    When I select "OpenDyslexic" font for the interface language for the live preview
+    When I select OpenDyslexic font for the interface language for the live preview
       And I apply the changes
     Then the interface font must be changed to the "OpenDyslexic" font
