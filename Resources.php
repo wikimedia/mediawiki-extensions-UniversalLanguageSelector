@@ -68,7 +68,6 @@ $wgResourceModules['ext.uls.init'] = array(
 	),
 	'dependencies' => array(
 		'mediawiki.Uri',
-		'mediawiki.util',
 		'jquery.client',
 		'jquery.json',
 		'jquery.cookie',
@@ -84,7 +83,10 @@ $wgResourceModules['ext.uls.eventlogger'] = array(
 
 $wgResourceModules['ext.uls.i18n'] = array(
 	'scripts' => 'resources/js/ext.uls.i18n.js',
-	'dependencies' => 'jquery.i18n',
+	'dependencies' => array(
+		'jquery.i18n',
+		'mediawiki.util',
+	),
 ) + $resourcePaths;
 
 $wgResourceModules['ext.uls.inputsettings'] = array(
@@ -191,6 +193,7 @@ $wgResourceModules['ext.uls.mediawiki'] = array(
 	'dependencies' => array(
 		'jquery.uls',
 		'jquery.i18n',
+		'mediawiki.util',
 		'ext.uls.languagenames',
 	),
 ) + $resourcePaths;
