@@ -571,10 +571,18 @@
 		},
 
 		/**
-		 * Handle the apply button press
+		 * Handle the apply button press.
+		 * Note that the button press may not be from the input settings module.
+		 * For example, a user can change input settings and then go to display settings panel,
+		 * do some changes and press apply button there. That press is applicable for all
+		 * modules.
 		 */
 		apply: function () {
 			var displaySettings = this;
+			if ( !displaySettings.dirty ) {
+				// No changes to save in this module.
+				return;
+			}
 
 			// Save the preferences
 			mw.webfonts.preferences.save( function ( result ) {

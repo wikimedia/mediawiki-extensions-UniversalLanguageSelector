@@ -500,7 +500,11 @@
 		},
 
 		/**
-		 * Handle the apply button press
+		 * Handle the apply button press.
+		 * Note that the button press may not be from the input settings module.
+		 * For example, a user can change input settings and then go to display settings panel,
+		 * do some changes and press apply button there. That press is applicable for all
+		 * modules.
 		 */
 		apply: function () {
 			var previousIM,
@@ -509,6 +513,11 @@
 				currentlyEnabled = $.ime.preferences.isEnabled(),
 				currentLanguage = $.ime.preferences.getLanguage(),
 				currentIM = $.ime.preferences.getIM( currentLanguage );
+
+			if ( !inputSettings.dirty ) {
+				// No changes to save in this module.
+				return;
+			}
 
 			if ( previousLanguage ) {
 				previousIM = inputSettings.savedRegistry.imes[previousLanguage];
