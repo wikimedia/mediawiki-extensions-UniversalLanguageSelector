@@ -419,9 +419,11 @@
 				}
 			} );
 
+			// Using attr() instead of data() because jquery.i18n doesn't
+			// currently see latter.
 			$systemFont = $( '<option>' )
 				.val( 'system' )
-				.text( $.i18n( 'ext-uls-webfonts-system-font' ) );
+				.attr( 'data-i18n', 'ext-uls-webfonts-system-font' );
 			$fontSelector.append( $systemFont );
 			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
 
