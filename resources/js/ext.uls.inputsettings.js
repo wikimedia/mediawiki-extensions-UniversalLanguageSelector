@@ -63,9 +63,9 @@
 		this.contentLanguage = this.getContentLanguage();
 		this.$imes = null;
 		this.$parent = $parent;
-		this.savedRegistry = $.extend( true, {}, $.ime.preferences.registry );
 		// ime system is lazy loaded, make sure it is initialized
 		mw.ime.init();
+		this.savedRegistry = $.extend( true, {}, $.ime.preferences.registry );
 	}
 
 	InputSettings.prototype = {
@@ -366,10 +366,10 @@
 					}
 				},
 				onSelect: function ( langCode ) {
-					inputSettings.markDirty();
 					$.ime.preferences.setLanguage( langCode );
 					inputSettings.$parent.show();
 					inputSettings.prepareLanguages();
+					inputSettings.markDirty();
 				},
 				languages: mw.ime.getLanguagesWithIME()
 			} );
