@@ -1,12 +1,12 @@
 Feature: Trigger in personal toolbar
 
-  @login @uls-in-personal-only
+  @commons.wikimedia.beta.wmflabs.org @login
   Scenario: Open language selector when logged in
     Given I am logged in
     When I click language selector trigger element
     Then I should see the language selector
 
-  @uls-in-personal-only @no-anon-language-selection
+  @no-anon-language-selection
   Scenario: Open language settings when logged out and language change not allowed
 
     If the user is logged out, the user will either see the language selector
@@ -17,7 +17,7 @@ Feature: Trigger in personal toolbar
     When I click language selector trigger element
     Then I see the logged in language settings panel
 
-  @uls-in-personal-only @anon-language-selection
+  @anon-language-selection
   Scenario: Open language selector when logged out
 
     Given I am at random page
@@ -25,7 +25,7 @@ Feature: Trigger in personal toolbar
     Then I should see the language selector
 
 
-  @login @uls-in-sidebar-only
+  @login
   Scenario Outline: Opening language settings from sidebar
     Given I am <user status>
       And I am on <page type>
@@ -39,7 +39,7 @@ Feature: Trigger in personal toolbar
     | logged out  | a talk page without interlanguage links |
     | logged out  | a talk page with interlanguage links    |
 
-  @login @uls-in-sidebar-only
+  @login
   Scenario Outline: Closing language settings without saving
     Given I am <user status>
       And I am on a page without interlanguage links

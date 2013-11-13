@@ -13,5 +13,4 @@ class RandomPage
   a(:print_export, text: 'Print/export')
   a(:printable_version, text: 'Printable version')
   button(:search_button, id: 'searchButton')
-  a(:uls_trigger, class: 'uls-trigger')
 end
