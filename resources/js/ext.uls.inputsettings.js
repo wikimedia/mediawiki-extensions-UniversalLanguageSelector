@@ -371,8 +371,7 @@
 					inputSettings.$parent.show();
 					inputSettings.prepareLanguages();
 				},
-				languages: mw.ime.getLanguagesWithIME(),
-				lazyload: false
+				languages: mw.ime.getLanguagesWithIME()
 			} );
 
 			$moreLanguagesButton.on( 'click', function () {
