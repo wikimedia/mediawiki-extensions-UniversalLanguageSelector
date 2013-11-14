@@ -468,14 +468,6 @@
 		},
 
 		/**
-		 * Hide this window.
-		 * Used while navigating to language selector and need coming back
-		 */
-		hide: function () {
-			this.$parent.hide();
-		},
-
-		/**
 		 * Close the language settings window.
 		 * Depending on the context, actions vary.
 		 */
