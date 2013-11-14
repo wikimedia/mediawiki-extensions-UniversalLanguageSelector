@@ -573,6 +573,7 @@
 				return;
 			}
 
+			displaySettings.$parent.setBusy( true );
 			// Save the preferences
 			mw.webfonts.preferences.save( function ( result ) {
 				var newFonts = mw.webfonts.preferences.registry.fonts || {},
@@ -595,6 +596,7 @@
 				displaySettings.dirty = false;
 				// Update the back-up preferences for the case of canceling
 				displaySettings.savedRegistry = $.extend( true, {}, mw.webfonts.preferences );
+				displaySettings.$parent.setBusy( false );
 			} );
 		},
 

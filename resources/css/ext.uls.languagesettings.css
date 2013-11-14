@@ -120,3 +120,7 @@
 label.checkbox input[type="checkbox"] {
 	float: left;
 }
+
+.waiting {
+	cursor: progress;
+}
