@@ -261,6 +261,10 @@
 			} else {
 				this.show();
 			}
+		},
+
+		disableApplyButton: function () {
+			this.$window.find( 'button.uls-settings-apply' ).prop( 'disabled', true );
 		}
 	};
 

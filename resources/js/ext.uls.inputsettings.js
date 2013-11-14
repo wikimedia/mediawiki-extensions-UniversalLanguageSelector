@@ -105,10 +105,6 @@
 			this.$parent.$window.find( 'button.uls-settings-apply' ).prop( 'disabled', false );
 		},
 
-		disableApplyButton: function () {
-			this.$parent.$window.find( 'button.uls-settings-apply' ).prop( 'disabled', true );
-		},
-
 		prepareInputmethods: function ( language ) {
 			var index, inputSettings, $imeListContainer, defaultInputmethod,
 				imes, selected, imeId, $imeListTitle;
@@ -494,6 +490,8 @@
 			if ( success ) {
 				// Live ime update
 				this.$parent.hide();
+				// Disable apply button
+				this.$parent.disableApplyButton();
 			}
 			// FIXME in case of failure. what to do?!
 		},

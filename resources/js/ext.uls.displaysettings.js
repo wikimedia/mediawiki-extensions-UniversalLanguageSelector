@@ -102,7 +102,6 @@
 			this.$parent.$settingsPanel.empty();
 			this.$webfonts = $( 'body' ).data( 'webfonts' );
 			this.$parent.$settingsPanel.append( this.$template );
-			this.disableApplyButton();
 			this.prepareLanguages();
 			this.prepareUIFonts();
 			this.prepareContentFonts();
@@ -480,10 +479,6 @@
 			this.$parent.$window.find( 'button.uls-settings-apply' ).removeAttr( 'disabled' );
 		},
 
-		disableApplyButton: function () {
-			this.$parent.$window.find( 'button.uls-settings-apply' ).prop( 'disabled', true );
-		},
-
 		/**
 		 * Register general event listeners
 		 */
@@ -567,6 +562,8 @@
 				if ( this.uiLanguage !== this.getUILanguage() ) {
 					mw.uls.changeLanguage( this.uiLanguage );
 				}
+				// Disable apply button
+				this.$parent.disableApplyButton();
 			} // @todo What to do in case of failure?
 		},
 
