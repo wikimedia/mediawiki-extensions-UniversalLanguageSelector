@@ -40,15 +40,14 @@
 	 * Also called by RL module ResourceLoaderULSJsonMessageModule
 	 * @param {string} locale the language code
 	 * @param {Object} [messages]
-	 * @return {jQuery.Deferred}
+	 * @return {jQuery.Promise}
 	 */
 	mw.uls.loadLocalization = function ( locale, messages ) {
 		var i18n = $.i18n();
 
 		i18n.locale = locale;
 		if ( messages ) {
-			i18n.load( messages, locale );
-			return $.Deferred().resolve();
+			return i18n.load( messages, locale );
 		}
 		if ( i18n.messageStore.messages[locale] ) {
 			return $.Deferred().resolve();

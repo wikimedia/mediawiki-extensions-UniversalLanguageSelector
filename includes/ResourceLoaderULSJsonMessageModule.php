@@ -36,7 +36,7 @@ class ResourceLoaderULSJsonMessageModule extends ResourceLoaderModule {
 
 		$mtimes = array_map(
 			'filemtime',
-			JsonMessageLoader::getFilenames( $code )
+			ULSJsonMessageLoader::getFilenames( $code )
 		);
 		// Make sure we have at least one entry
 		$mtimes[] = 1;
@@ -56,7 +56,7 @@ class ResourceLoaderULSJsonMessageModule extends ResourceLoaderModule {
 			$code = 'en';
 		}
 
-		$params = array( $code, JsonMessageLoader::getMessages( $code ) );
+		$params = array( $code, ULSJsonMessageLoader::getMessages( $code ) );
 
 		return Xml::encodeJsCall( 'mw.uls.loadLocalization', $params );
 	}

@@ -19,7 +19,7 @@
  * @since 2013.11
  */
 
-class JsonMessageLoader {
+class ULSJsonMessageLoader {
 	/**
 	 * Returns all message files that are used to load messages for the given
 	 * language.

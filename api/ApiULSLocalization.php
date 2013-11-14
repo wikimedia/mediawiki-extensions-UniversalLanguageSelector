@@ -32,7 +32,7 @@ class ApiULSLocalization extends ApiBase {
 		if ( !Language::isValidCode( $language ) ) {
 			$this->dieUsage( 'Invalid language', 'invalidlanguage' );
 		}
-		$contents = JsonMessageLoader::getMessages( $language );
+		$contents = ULSJsonMessageLoader::getMessages( $language );
 		// Output the file's contents raw
 		$this->getResult()->addValue( null, 'text', json_encode( $contents ) );
 		$this->getResult()->addValue( null, 'mime', 'application/json' );

@@ -170,7 +170,7 @@ $wgAutoloadClasses += array(
 		__DIR__ . '/includes/ResourceLoaderULSJsonMessageModule.php',
 	'ApiLanguageSearch' => __DIR__ . '/api/ApiLanguageSearch.php',
 	'ApiULSLocalization' => __DIR__ . '/api/ApiULSLocalization.php',
-	'JsonMessageLoader' => __DIR__ . '/includes/JsonMessageLoader.php',
+	'ULSJsonMessageLoader' => __DIR__ . '/includes/ULSJsonMessageLoader.php',
 	'LanguageNameSearch' => __DIR__ . '/data/LanguageNameSearch.php',
 );
 
