@@ -7,30 +7,30 @@ Feature: Autonym font
 
   @login @commons.wikimedia.beta.wmflabs.org
   Scenario: Autonym font is used in the ULS language search dialog for display language selection by logged-in users
-
     Given I am logged in
-    When I open "Language" panel of language settings
-      And I click the button with the ellipsis
+      And I open the Universal Language Selector
+      And I open Display panel of language settings
+    When I click the button with the ellipsis
     Then the language list of ULS should use Autonym font
 
   @login @commons.wikimedia.beta.wmflabs.org
   Scenario: Autonym font is used in the ULS language search dialog for input language selection by logged-in users
-
     Given I am logged in
-    When I open "Input" panel of language settings
-      And I click the button with the ellipsis
+      And I open the Universal Language Selector
+      And I open Input panel of language settings
+    When I click the button with the ellipsis
     Then the language list of ULS should use Autonym font
 
   @login @en.wikipedia.beta.wmflabs.org
   Scenario: Autonym font should be used in the Interlanguage area of a page with Interlanguage links
-
     Given I am logged in
     When I am on a page with interlanguage links
     Then the Interlanguage area should use Autonym font
 
   @anon-language-selection @commons.wikimedia.beta.wmflabs.org
   Scenario: Autonym font is used in the ULS language search dialog for input language selection by anonymous users
-
-    When I open "Input" panel of language settings
-      And I click the button with the ellipsis
+    Given I am at random page
+      And I open the Universal Language Selector
+      And I open Input panel of language settings
+    When I click the button with the ellipsis
     Then the language list of ULS should use Autonym font

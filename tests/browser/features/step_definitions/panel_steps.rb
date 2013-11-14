@@ -18,27 +18,6 @@ When(/^I open Fonts panel of language settings$/) do
 	on(PanelPage).panel_fonts_element.click
 end
 
-When(/^I open "(.*?)" panel of language settings$/) do |panel|
-	visit(PanelPage) do |page|
-		# Open the ULS panel if it's not open already
-		if !page.language_settings_dialog_element.visible?
-			# These can be of two different type of elements, which PageObjects do not like.
-			if uls_position() == 'interlanguage'
-				page.trigger_cog_element.when_visible.click
-			elsif uls_position() == 'personal'
-				page.trigger_personal_element.when_visible.click
-			end
-		end
-
-		case panel
-		when "Input"
-			page.panel_input_element.when_visible.click
-		else
-			pending
-		end
-	end
-end
-
 When(/^I select (.*?) font for the interface language for the live preview$/) do |font|
 	on(PanelPage).font_for_interface = font
 end
@@ -46,7 +25,6 @@ end
 When(/^I select (.*?) font for the content language for the live preview$/) do |font|
 	on(PanelPage).font_for_content = font
 end
-
 
 When(/^I close the panel to discard the changes$/) do
 	on(PanelPage).panel_button_close_element.click
