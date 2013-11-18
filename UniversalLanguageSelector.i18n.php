@@ -193,6 +193,13 @@ $messages['de'] = array(
 	'uls-plang-title-languages' => 'Sprachen',
 );
 
+/** Zazaki (Zazaki)
+ * @author Gorizon
+ */
+$messages['diq'] = array(
+	'uls-plang-title-languages' => 'Zıwani',
+);
+
 /** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
