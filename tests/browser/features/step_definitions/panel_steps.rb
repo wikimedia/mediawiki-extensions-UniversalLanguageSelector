@@ -53,7 +53,7 @@ Then(/^a font selector for content language appears$/) do
   on(PanelPage).panel_content_font_selector_element.should be_visible
 end
 
-When(/^I use the panel to change my interface language to "(.*?)"$/) do |language|
+When(/^I use the panel to change my (?:interface|input) language to "(.*?)"$/) do |language|
 	code = on(PanelPage).language_to_code(language)
 	on(IMEPage) do |page|
 		page.language_filter = code
@@ -76,4 +76,8 @@ end
 
 Then(/^the Interlanguage area should use Autonym font$/) do
 	on(InterlanguagePage).interlang_link_element.style("font-family").should == "'Autonym',sans-serif"
+end
+
+Then(/^I should see (.*) as the selected input language$/) do |language|
+	on(PanelPage).default_language_button_element.text.should == language
 end
