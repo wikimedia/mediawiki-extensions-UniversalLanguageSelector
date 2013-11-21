@@ -14,6 +14,9 @@ class PanelPage
 	button(:panel_fonts, id: 'uls-display-settings-fonts-tab')
 	button(:panel_language, id: 'uls-display-settings-language-tab')
 
+	div(:panel_side_display, id: 'display-panel-trigger')
+	div(:panel_side_input, id: 'input-panel-trigger')
+
 	ul(:autonym, class: 'three columns end')
 
 	span(:panel_button_close, id: 'languagesettings-close')
