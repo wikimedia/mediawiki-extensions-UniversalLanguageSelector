@@ -45,6 +45,8 @@ class PanelPage
 
 	div(:uls_display_settings, class: 'uls-display-settings')
 
+	radio_button(:ml_inscript2_radio, id: 'ml-inscript2')
+
 	# Is there way to access the html element?
 	div(:interface, id: 'footer')
 

@@ -20,3 +20,14 @@ Feature: Persistent settings
     When I close the panel to discard the changes
       And I visit a random page
     Then the selected interface font must be Systemschriftart
+
+  Scenario: Changing both a font and an input method is saved
+    When I open Input side panel of language settings
+      And I click the button with the ellipsis
+      And in the language filter I type ml
+      And I click on the link to select Malayalam
+      And I select the ml-inscript2 input method in the panel
+      And I apply the changes
+      And I visit a random page
+    Then the selected interface font must be OpenDyslexic
+      And the selected input method for Malayalam is ml-inscript2
