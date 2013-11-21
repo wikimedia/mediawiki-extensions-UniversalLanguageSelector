@@ -73,3 +73,15 @@ Feature: Settings panel
       And I use the panel to change my interface language to "German"
       And I apply the changes
     Then my interface language is "German"
+
+  @commons.wikimedia.beta.wmflabs.org @login
+  Scenario: Regression test for bug 56913
+
+    Given I am logged in
+    When I open the Universal Language Selector
+      And I open Input panel of language settings
+      And I click the button with the ellipsis
+      And I use the panel to change my input language to "Finnish"
+      And I close the panel to discard the changes
+      And I open Input panel of language settings
+    Then I should see English as the selected input language

@@ -28,7 +28,7 @@ class PanelPage
 
 	# TODO: Rename to match convention
 	button(:other_language_button, class: 'button uls-language-button', index: 1)
-	button(:default_language_button, class: 'button uls-language-button down')
+	button(:default_language_button, css: '.uls-language-button.down')
 
 	# Triggers
 	span(:trigger_cog, class: 'uls-settings-trigger')
