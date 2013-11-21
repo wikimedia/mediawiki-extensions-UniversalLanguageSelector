@@ -31,7 +31,10 @@ When(/^I close the panel to discard the changes$/) do
 end
 
 When(/^I apply the changes$/) do
-	on(PanelPage).panel_button_apply_element.click
+	on(PanelPage) do |page|
+		page.panel_button_apply_element.click
+		page.language_settings_dialog_element.wait_while_present
+	end
 end
 
 Then(/^I can disable input methods$/) do
