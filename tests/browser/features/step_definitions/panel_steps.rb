@@ -33,7 +33,7 @@ end
 When(/^I apply the changes$/) do
 	on(PanelPage) do |page|
 		page.panel_button_apply_element.click
-		page.language_settings_dialog_element.wait_while_present
+		page.language_settings_dialog_element.when_not_present
 	end
 end
 
