@@ -80,15 +80,13 @@
 	border-left-color: #3366BB;
 }
 
-#input-settings-block.menu-section,
-#display-settings-block.menu-section {
+.settings-menu-items .menu-section {
 	background-position: 6% 6px;
 	padding-left: 40px;
 	cursor: pointer;
 }
 
-#input-settings-block.menu-section:hover,
-#display-settings-block.menu-section:hover {
+.settings-menu-items .menu-section:hover {
 	background-color: #F5F5F5;
 }
 

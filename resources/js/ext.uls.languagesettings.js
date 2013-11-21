@@ -132,7 +132,7 @@
 				.text( module.description );
 			$settingsLink = $( '<div>' )
 				.addClass( moduleName + '-settings-block menu-section' )
-				.prop( 'id', moduleName + '-settings-block' )
+				.prop( 'id', moduleName + '-panel-trigger' )
 				.data( 'module', module )
 				.append(
 					$settingsTitle,
