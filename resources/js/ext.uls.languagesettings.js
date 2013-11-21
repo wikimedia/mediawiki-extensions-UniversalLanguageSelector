@@ -235,6 +235,28 @@
 		},
 
 		/**
+		 * Put the language settings panel in busy mode.
+		 * Busy mode means displaying a progress cursor,
+		 * and showing the 'apply' button as disabled and with
+		 * a different label.
+		 * @param {boolean} busy set true to put the panel in busy mode,
+		 *     false to unset the busy mode.
+		 */
+		setBusy: function ( busy ) {
+			var $applyButton = this.$window.find( 'button.uls-settings-apply' );
+
+			if ( busy ) {
+				this.$window.addClass( 'waiting' );
+				$applyButton
+					.text( $.i18n( 'ext-uls-language-settings-applying' ) )
+					.prop( 'disabled', true );
+			} else {
+				this.$window.removeClass( 'waiting' );
+				$applyButton.text( $.i18n( 'ext-uls-language-settings-apply' ) );
+			}
+		},
+
+		/**
 		 * Close this language settings window, and
 		 * call onClose if defined from the previous context.
 		 */

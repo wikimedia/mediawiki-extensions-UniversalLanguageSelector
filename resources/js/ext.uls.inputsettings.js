@@ -507,6 +507,7 @@
 				// No changes to save in this module.
 				return;
 			}
+			inputSettings.$parent.setBusy( true );
 
 			if ( previousLanguage ) {
 				previousIM = inputSettings.savedRegistry.imes[previousLanguage];
@@ -530,6 +531,7 @@
 				inputSettings.dirty = false;
 				// Update the back-up preferences for the case of canceling
 				inputSettings.savedRegistry = $.extend( true, {}, $.ime.preferences.registry );
+				inputSettings.$parent.setBusy( false );
 			} );
 		},
 

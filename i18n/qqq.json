@@ -48,5 +48,6 @@
     "ext-uls-input-disable-notification-undo": "Undo link text in the input method disable notification bubble",
     "ext-uls-input-disable-notification-info-personal": "Notification bubble text when input methods are disabled, appears if the ULS is at personal toolbar",
     "ext-uls-input-disable-notification-info-interlanguage": "Notification bubble text when input methods are disabled, appears if the ULS is at interlanguage toolbar",
+    "ext-uls-language-settings-applying": "Label for apply settings button in language settings screen, while settings being saved. Please keep it short.",
     "ext-uls-language-settings-preferences-link": "Text for the link showin in user preference screen"
 }
