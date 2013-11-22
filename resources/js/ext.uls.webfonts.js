@@ -36,6 +36,8 @@
 		},
 
 		save: function ( callback ) {
+			// get updated copy of preferences
+			ulsPreferences = mw.uls.preferences();
 			ulsPreferences.set( 'webfonts', this.registry );
 			ulsPreferences.save( callback );
 		},

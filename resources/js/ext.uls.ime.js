@@ -69,6 +69,8 @@
 				return;
 			}
 
+			// get updated copy of preferences
+			inputPreferences = mw.uls.preferences();
 			inputPreferences.set( 'ime', this.registry );
 			inputPreferences.save( callback );
 			// reset the dirty bit
