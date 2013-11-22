@@ -6,9 +6,9 @@ Then(/^the selected interface font must be (.*?)$/) do |font|
 end
 
 Then(/^the selected input method for Malayalam is ml-inscript2$/) do
-	@browser.execute_script(
-		"return $.parseJSON( mw.user.options.values['uls-preferences'] ).ime.imes.ml"
-	).should == 'ml-inscript2'
+	step 'I click on an input box'
+	step 'I should see the input method indicator'
+	step 'in it there must be an element with Malayalam text'
 end
 
 When(/^I select the ml-inscript2 input method in the panel$/) do
