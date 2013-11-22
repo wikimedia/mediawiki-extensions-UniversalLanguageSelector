@@ -156,11 +156,11 @@
 						$loginCta.find( 'a' ).click( function ( event ) {
 							event.preventDefault();
 							// Because browsers navigate away when clicking a link,
-							// we are are overriding the normal click behavior to
-							// allow the event be logged first - currently there is no
+							// we are overriding the normal click behavior to allow
+							// the event be logged first - currently there is no
 							// local queue for events. Since the hook system does not
-							// allow returning values, we have this ugly event logging
-							// specific hack to delay the page load if event logging
+							// allow returning values, we have this ugly hack
+							// for event logging to delay the page loading if event logging
 							// is enabled. The promise is passed to the hook, so that
 							// if event logging is enabled, in can resole the promise
 							// immediately to avoid extra delays.
@@ -250,8 +250,8 @@
 		 * Prepare the more languages button. It is a ULS trigger
 		 */
 		prepareMoreLanguages: function () {
-			var displaySettings = this,
-				$languages, $moreLanguagesButton;
+			var $languages, $moreLanguagesButton,
+				displaySettings = this;
 
 			$languages = this.$template.find( 'div.uls-ui-languages' );
 			$moreLanguagesButton = $( '<button>' )
@@ -337,6 +337,7 @@
 		 */
 		preview: function ( language ) {
 			var displaySettings = this;
+
 			// Reset the language and font for the panel.
 			this.$template.attr( 'lang', language )
 				.css( 'font-family', '' );
@@ -568,6 +569,7 @@
 		 */
 		apply: function () {
 			var displaySettings = this;
+
 			if ( !displaySettings.dirty ) {
 				// No changes to save in this module.
 				return;
