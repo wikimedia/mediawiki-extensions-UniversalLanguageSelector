@@ -318,6 +318,20 @@ $messages['gl'] = array(
 	'uls-plang-title-languages' => 'Linguas',
 );
 
+/** Goan Konkani (कोंकणी/Konknni )
+ * @author The Discoverer
+ */
+$messages['gom'] = array(
+	'uls-plang-title-languages' => 'Bhaso',
+);
+
+/** Goan Konkani (Latin script) (Konknni)
+ * @author The Discoverer
+ */
+$messages['gom-latn'] = array(
+	'uls-plang-title-languages' => 'Bhaso',
+);
+
 /** Gujarati (ગુજરાતી)
  * @author KartikMistry
  */
