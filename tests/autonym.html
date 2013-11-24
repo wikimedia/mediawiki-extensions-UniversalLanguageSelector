@@ -18,55 +18,84 @@
 	font-style: normal;
 }
 
-.autonym {
-	font-family: 'Autonym';
-	font-size: 1em;
+table, th, td {
+	border: 1px solid #ddd;
+	border-collapse:collapse;
+	padding: 5px;
 }
 
-.list {
-	width: 100%;
-	-moz-column-count: 6; /* Firefox */
-	-webkit-column-count: 6; /* Safari and Chrome */
-	-moz-column-rule:3px outset #555; /* Firefox */
-	-webkit-column-rule:3px outset #555; /* Safari and Chrome */
+td.lang, td.index {
+	background-color: #ccc;
 }
 
-li {
-	list-style: none;
-	font-size: 1em;
-	line-height: 2em;
-}
 </style>
 </head>
 <body>
 <h1>Autonym Font</h1>
 <p>Following content in this page uses <a href="https://github.com/santhoshtr/AutonymFont">Autonym</a>
  font for displaying language names without font issues.</p>
-<div class="dropdown">A dropdown example:
-<select class="autonym">
+<hr/>
+<div>
+<select id="ff">
+	<option value="sans-serif">Select Font</option>
+	<option value="Autonym">Autonym</option>
+	<option value="sans-serif">sans-serif</option>
+	<option value="Autonym, sans-serif">Autonym, sans-serif</option>
+	<option value="sans-serif, Autonym">sans-serif, Autonym</option>
+</select>
+<select id="fs">
+	<option value="8">Select size (px)</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+	<option value="14">14</option>
+	<option value="16">16</option>
+	<option value="20">20</option>
+	<option value="24">24</option>
+	<option value="30">30</option>
+	<option value="36">36</option>
+	<option value="48">48</option>
+</select>
+<table class="autonym"><tr></tr></table>
+<div>A dropdown example:
+<select class="dropdown autonym">
 </select>
 </div>
-<hr/>
-<div class="list">
-A list example
-<ul class="autonym"></ul>
 <script>
+var index = 0;
+
+$( '#ff' ).change( function () {
+	$( '.autonym').css('font-family',$(this).val() );
+});
+$( '#fs' ).change( function () {
+	$( '.autonym').css('font-size', $(this).val() + 'px' );
+});
+
+
 $.each( $.uls.data.languages, function( langCode) {
 	var autonym = $.uls.data.getAutonym( langCode );
-	$( 'select' ).append(
+	$( '.dropdown' ).append(
 		$( '<option>')
 			.attr( 'lang', langCode )
 			.text( autonym )
-			
+
 	)
-	$( 'ul' ).append(
-		$( '<li>')
-			.attr( 'lang', langCode )
-			.text( autonym )
-	)
+	$( 'table' ).append(
+		$( '<tr>' ).append(
+			$( '<td class=index>')
+				.text( index+1 ),
+			$( '<td class=lang>')
+				.text( langCode ),
+			$( '<td class=name>')
+				.attr( 'lang', langCode )
+				.text( autonym )
+		)
+	);
+	index++;
 } );
 </script>
-
-
 </div>
 </body>
