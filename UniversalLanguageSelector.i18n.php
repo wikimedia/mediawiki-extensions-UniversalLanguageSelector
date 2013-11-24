@@ -572,10 +572,12 @@ $messages['nap'] = array(
 );
 
 /** Norwegian Bokmål (norsk bokmål)
+ * @author Danmichaelo
  */
 $messages['nb'] = array(
 	'UniversalLanguageSelector' => 'Universal språkvelger',
 	'uls-desc' => 'Gir brukeren flere måter å velge språk på og endre språkinnstillinger',
+	'uls-plang-title-languages' => 'Språk',
 );
 
 /** Dutch (Nederlands)
