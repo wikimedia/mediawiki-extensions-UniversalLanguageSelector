@@ -1,4 +1,4 @@
-This file describes common fields in font.ini file.
+This file describes common fields in font.ini file. Use ';' to add any comments.
 
 languages
 ---------
@@ -11,21 +11,20 @@ Font version.
 
 license
 -------
-License in SPDX format. see licenses/LICENSES file for format and details.
+License in SPDX format. see licenses/README file for format and details.
 
 licensefile
 -----------
 Name of license file from licenses folder.
 
-request-bug
+request-url
 -----------
 URL of bug or request where font addition request was made. For more than 2
-languages, use URLs separated by comma.
+languages, use URLs separated by comma in,
 
-request-default
----------------
-URL of bug or request where font was requested to make default for language.
-For more than 2 languages, use URLs separated by comma.
+request-url=url1, url2
+
+format.
 
 url
 ---
