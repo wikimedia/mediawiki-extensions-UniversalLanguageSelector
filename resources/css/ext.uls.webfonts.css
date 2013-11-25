@@ -1,4 +1,4 @@
-#p-lang ul,/* Interlanguage links */
+#p-lang li.interlanguage-link,
 .autonym { /* provide autonym class for simplifying the Autonym font usage */
 	font-family: 'Autonym', sans-serif;
 }
