@@ -5,7 +5,7 @@ Feature: Live preview of display language changes
     Given I am logged in
       And I am at random page
 
-  @commons.wikimedia.beta.wmflabs.org
+  @needs-custom-setup @commons.wikimedia.beta.wmflabs.org
   Scenario: Display language change is previewed immediately
     Given I open the Universal Language Selector
       And I open Display panel of language settings

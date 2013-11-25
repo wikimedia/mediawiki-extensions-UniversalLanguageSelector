@@ -14,7 +14,7 @@ input method.
     When I click on an input box
     Then I should see the input method indicator
 
-  @commons.wikimedia.beta.wmflabs.org
+  @commons.wikimedia.beta.wmflabs.org @needs-custom-setup
   Scenario: Input method menu
 
   Input method menu is shown when user clicks the input method indicator.
@@ -26,6 +26,7 @@ input method.
       And I should see a list of available input methods
       And I should see a list of suggested languages
 
+  @needs-custom-setup
   Scenario: Unsupported input language
 
   User visits a wiki with content language that does not have have an input
@@ -35,7 +36,7 @@ input method.
     When I open the input method menu
     Then I should see input methods for Kotava
 
-  @commons.wikimedia.beta.wmflabs.org
+  @needs-custom-setup @commons.wikimedia.beta.wmflabs.org
   Scenario: Sticky input methods
 
   Chosen input method selection persists across page loads.

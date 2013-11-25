@@ -1,3 +1,8 @@
+# The tests do not normalize the font-family passed back by the browser
+# Firefox/Chrome/Phantomjs handle the normalization differently.
+#
+# https://bugzilla.wikimedia.org/show_bug.cgi?id=57101
+@phantomjs-bug
 Feature: Autonym font
 
   * Web font should always be applied to the ULS language selector's language

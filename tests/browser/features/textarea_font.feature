@@ -18,7 +18,8 @@ Feature: Font preferences respected in different languages
       And I start editing a page
     Then I should see the edit area text being displayed using "monospace" font
 
-  @commons.wikimedia.beta.wmflabs.org
+  # Needs OpenDyslexic font to have been configured on the target wiki
+  @needs-custom-setup @commons.wikimedia.beta.wmflabs.org
   Scenario: Edit area should use the fonts selected by the user from ULS for a language
     When I select OpenDyslexic font for the content language
       And I start editing a page
@@ -42,6 +43,7 @@ Feature: Font preferences respected in different languages
       And I start editing a page
     Then I should see the edit area text being displayed using "monospace" font
 
+  @phantomjs-bug
   Scenario: Edit area should use browser's default Monospace font for languages that have a default monospace font (Latin, Cyrillic, Hebrew etc.)
     When I start editing a page
     Then I should see the edit area text being displayed using "monospace" font

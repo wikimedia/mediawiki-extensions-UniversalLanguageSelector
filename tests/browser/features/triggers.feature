@@ -1,3 +1,4 @@
+@needs-custom-setup
 Feature: Trigger in personal toolbar
 
   @commons.wikimedia.beta.wmflabs.org @login

@@ -1,2 +1,7 @@
+# Cloudbee/Saucelab configuration:
 ci: --format Cucumber::Formatter::Sauce --out reports/junit
+
+# WMF Jenkins/Gerrit
+ciwmf: -t ~@needs-custom-setup -t ~@phantomjs-bug
+
 default: --format progress
