@@ -13,7 +13,7 @@ Feature: Font selection
     Given I am logged in
       And I set "German" as the interface language
       And I open ULS
-      And I open display settings
+      And I open Display panel of language settings
     When I open Fonts panel of language settings
 
   Scenario: Font selector appears
@@ -32,7 +32,7 @@ Feature: Font selection
       And I close the panel to discard the changes
     Then the active interface font must be the same as font prior to the preview
       # System is the default value for English and German
-      And the selected interface font must be "Systemschriftart"
+      And the selected interface font must be Systemschriftart
 
   Scenario: Applying the live preview of interface font
     When I select OpenDyslexic font for the interface language for the live preview
