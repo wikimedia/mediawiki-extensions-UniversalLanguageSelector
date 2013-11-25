@@ -68,7 +68,8 @@
 
 				return;
 			}
-
+			// we don't want to save isDirty field.
+			this.registry.isDirty = undefined;
 			// get updated copy of preferences
 			inputPreferences = mw.uls.preferences();
 			inputPreferences.set( 'ime', this.registry );
