@@ -1,5 +1,6 @@
 class InterlanguagePage
   include PageObject
+  include InterlanguagePageModule
 
   include URL
   def self.url
@@ -7,5 +8,5 @@ class InterlanguagePage
   end
   page_url url
 
-  include InterlanguagePageModule
 end
+

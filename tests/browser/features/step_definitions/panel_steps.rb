@@ -76,10 +76,6 @@ Then(/^the language list of ULS should use Autonym font$/) do
 	on(PanelPage).autonym_element.style("font-family").should == "'Autonym',sans-serif"
 end
 
-Then(/^the Interlanguage area should use Autonym font$/) do
-	on(InterlanguagePage).interlang_link_element.style("font-family").should == "'Autonym',sans-serif"
-end
-
 Then(/^I should see (.*) as the selected input language$/) do |language|
 	on(PanelPage).default_language_button_element.text.should == language
 end

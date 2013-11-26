@@ -21,11 +21,11 @@ Feature: Autonym font
     When I click the button with the ellipsis
     Then the language list of ULS should use Autonym font
 
-  @login @en.wikipedia.beta.wmflabs.org
-  Scenario: Autonym font should be used in the Interlanguage area of a page with Interlanguage links
-    Given I am logged in
-    When I am on a page with interlanguage links
-    Then the Interlanguage area should use Autonym font
+  @en.wikipedia.beta.wmflabs.org
+  Scenario: Autonym font should be used in the Interlanguage area of a page only with Interlanguage links
+    When I am on the main page
+    Then the Interlanguage links should use Autonym font
+      And elements that are not Interlanguage links should not use Autonym font
 
   @anon-language-selection @commons.wikimedia.beta.wmflabs.org
   Scenario: Autonym font is used in the ULS language search dialog for input language selection by anonymous users
