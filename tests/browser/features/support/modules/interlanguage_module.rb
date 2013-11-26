@@ -19,5 +19,5 @@ module InterlanguagePageModule
   span(:x, id: 'languagesettings-close')
   a(:how_to_use_ml_transliteration, href: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/ml-transliteration')
   a(:edit_link, css: '#ca-edit a')
-  a(:interlang_link, css: '#p-lang ul')
+  a(:interlang_link, css: '#p-lang li.interlanguage-link')
 end
