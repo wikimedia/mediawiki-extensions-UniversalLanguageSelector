@@ -3,7 +3,7 @@ class NoInterlanguagePage
 
   include URL
   def self.url
-    URL.url('Think_Like_a_Cat')
+    URL.url("Think_Like_a_Cat")
   end
   page_url url
 

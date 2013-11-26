@@ -15,13 +15,13 @@ When(/^I start editing a page$/) do
 end
 
 When(/^I select (.*?) font for the content language$/) do |font|
-	step 'I open the Universal Language Selector'
-	step 'I open Display panel of language settings'
-	step 'I open Fonts panel of language settings'
+	step "I open the Universal Language Selector"
+	step "I open Display panel of language settings"
+	step "I open Fonts panel of language settings"
 	pending("Bug 56885") do
 		step "I select #{font} font for the content language for the live preview"
 	end
-	step 'I apply the changes'
+	step "I apply the changes"
 end
 
 Then(/^I should see the edit area text being displayed using "(.*?)" font$/) do |font|

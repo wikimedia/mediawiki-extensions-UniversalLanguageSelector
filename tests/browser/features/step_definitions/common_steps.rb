@@ -6,7 +6,7 @@ Given(/^I am logged out$/) do
 end
 
 Given(/^I am logged in$/) do
-	visit(LoginPage).login_with(ENV['MEDIAWIKI_USER'], ENV['MEDIAWIKI_PASSWORD'])
+	visit(LoginPage).login_with(ENV["MEDIAWIKI_USER"], ENV["MEDIAWIKI_PASSWORD"])
 end
 
 Given(/^I set "(.*?)" as the interface language$/) do |language|
@@ -23,5 +23,5 @@ end
 
 Then(/^my interface language is "(.*?)"$/) do |language|
 	code = on(PanelPage).language_to_code(language)
-	on(PanelPage).interface_element.attribute('lang').should == code
+	on(PanelPage).interface_element.attribute("lang").should == code
 end

@@ -3,7 +3,7 @@ Given(/^I open ULS$/) do
 end
 
 Then(/^the active content font must be the same as font prior to the preview$/) do
-	pending('bug #56081') do
+	pending("bug #56081") do
 		on(PanelPage).content_font.should == @original_content_font
 	end
 end
@@ -13,8 +13,8 @@ Then(/^the active interface font must be the same as font prior to the preview$/
 end
 
 Then(/^the selected content font must be "(.*?)"$/) do |font|
-	step 'I open Display panel of language settings'
-	step 'I open Fonts panel of language settings'
+	step "I open Display panel of language settings"
+	step "I open Fonts panel of language settings"
 	on(PanelPage).selected_content_font.should == font
 end
 

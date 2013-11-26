@@ -16,15 +16,15 @@ Given(/^I am on a talk page without interlanguage links$/) do
 end
 
 Given(/^I navigate to the anonymous Language Settings panel$/) do
-  step 'I am on a page with interlanguage links'
-  step 'I click the cog icon by Languages in the sidebar'
-  step 'I see the logged out language settings panel'
+  step "I am on a page with interlanguage links"
+  step "I click the cog icon by Languages in the sidebar"
+  step "I see the logged out language settings panel"
 end
 
 Given(/^I navigate to the Language Settings panel$/) do
-  step 'I am on a page with interlanguage links'
-  step 'I click the cog icon by Languages in the sidebar'
-  step 'I see the logged in language settings panel'
+  step "I am on a page with interlanguage links"
+  step "I click the cog icon by Languages in the sidebar"
+  step "I see the logged in language settings panel"
 end
 
 When(/^I click Cancel$/) do
@@ -81,7 +81,7 @@ Then(/^I do not see the Language Settings panel$/) do
 end
 
 Then(/^I see Common Languages$/) do
-  on(InterlanguagePage).language_list.should match Regexp.escape('Common languages')
+  on(InterlanguagePage).language_list.should match Regexp.escape("Common languages")
 end
 
 Then(/^I see Language Search$/) do
@@ -106,19 +106,19 @@ end
 
 Then(/^I see Worldwide$/) do
    on(InterlanguagePage) do |page|
-    page.language_list.should match Regexp.escape('Worldwide')
+    page.language_list.should match Regexp.escape("Worldwide")
     page.english_link_element.should be_visible
   end
 end
 
 Then(/^I click the cog icon to open language settings again$/) do
-  step 'I click the cog icon by Languages in the sidebar'
-  step 'I see the logged out language settings panel'
+  step "I click the cog icon by Languages in the sidebar"
+  step "I see the logged out language settings panel"
 end
 
 Then(/^the cog icon brings up Language Settings again$/) do
-  step 'I click the cog icon by Languages in the sidebar'
-  step 'I see the Language Settings panel'
+  step "I click the cog icon by Languages in the sidebar"
+  step "I see the Language Settings panel"
 end
 
 Then(/^I should see the How to use link near the Malayalam transliteration item$/) do

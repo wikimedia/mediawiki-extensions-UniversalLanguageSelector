@@ -65,7 +65,7 @@ When(/^I use the panel to change my (?:interface|input) language to "(.*?)"$/) d
 end
 
 Then(/^the panel is in English/) do
-	on(PanelPage).panel_language_element.text.should == 'Language'
+	on(PanelPage).panel_language_element.text.should == "Language"
 end
 
 When(/^I switch to "Input" panel of language settings/) do

@@ -15,7 +15,7 @@ When(/^I click on the input method indicator$/) do
 end
 
 When(/^I open the input method menu$/) do
-  step 'I click on an input box'
+  step "I click on an input box"
   on(IMEPage).input_method_element.when_present.click
 end
 
@@ -51,7 +51,7 @@ When(/^I click on the Malayalam InScript 2 menu item$/) do
 end
 
 When(/^I press Control-M$/) do
-  on(IMEPage).search_input_element.send_keys [:control, 'm']
+  on(IMEPage).search_input_element.send_keys [:control, "m"]
 end
 
 When(/^I go to another random page$/) do
@@ -60,7 +60,7 @@ end
 
 Then(/^in it there must be an element with Malayalam text$/) do
   # 'input_method_enabled' alone only returns []
-  on(IMEPage).input_method_enabled_element.text.should == 'ഇൻസ്ക്രിപ്റ്റ് 2'
+  on(IMEPage).input_method_enabled_element.text.should == "ഇൻസ്ക്രിപ്റ്റ് 2"
 end
 
 Given(/^I visit a random page with (.+) skin and (.+) as the interface language$/) do |skin, language|
