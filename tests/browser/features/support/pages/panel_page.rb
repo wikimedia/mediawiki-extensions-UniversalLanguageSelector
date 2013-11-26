@@ -40,7 +40,6 @@ class PanelPage
 	select(:selected_content_font, id: 'content-font-selector')
 	select(:selected_interface_font, id: 'ui-font-selector')
 
-	select(:font_for_interface, id: 'ui-font-selector')
 	select(:font_for_content, id: 'content-font-selector')
 
 	div(:uls_display_settings, class: 'uls-display-settings')

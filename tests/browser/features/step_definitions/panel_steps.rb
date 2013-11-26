@@ -3,7 +3,9 @@ Then(/^I see "(.*?)" as the name of the content language$/) do |text|
 end
 
 When(/^I open the Universal Language Selector$/) do
-	on(PanelPage).trigger_personal_element.when_visible.click
+	on(PanelPage) do |page|
+		page.trigger_personal_element.when_visible.click unless page.uls_element.visible?
+	end
 end
 
 When(/^I open Display panel of language settings$/) do
@@ -19,7 +21,7 @@ When(/^I open Fonts panel of language settings$/) do
 end
 
 When(/^I select (.*?) font for the interface language for the live preview$/) do |font|
-	on(PanelPage).font_for_interface = font
+	on(PanelPage).selected_interface_font = font
 end
 
 When(/^I select (.*?) font for the content language for the live preview$/) do |font|
