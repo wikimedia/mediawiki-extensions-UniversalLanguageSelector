@@ -4,7 +4,7 @@ Given(/^that my browser's accept language is (.+)$/) do |language|
 end
 
 When(/^I visit a random page$/) do
-  visit(RandomPage)
+  visit RandomPage
 end
 
 Then(/^link to the main page has text (.+)$/) do |text|

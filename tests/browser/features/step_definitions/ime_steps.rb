@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 Given(/^I am on a wiki in Kotava language$/) do
-  visit(RandomPage)
+  visit RandomPage
   # Fake a Kotava Wiki
   @browser.execute_script( "mw.config.set( 'wgContentLanguage', 'avk' )" )
 end
@@ -55,7 +55,7 @@ When(/^I press Control-M$/) do
 end
 
 When(/^I go to another random page$/) do
-  visit(RandomPage)
+  visit RandomPage
 end
 
 Then(/^in it there must be an element with Malayalam text$/) do
