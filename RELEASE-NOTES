@@ -1,0 +1,24 @@
+== UniversalLanguageSelector 2013.11 ==
+Released at 2013-11-29.
+
+=== Noteworthy changes ===
+* Lots of cleanup, refactoring and performance improvments.
+* Apply Autonym only to class interlanguage-link.
+* Use Autonym font in webfonts repository.
+* Bug 53772: Visual indication while saving the settings.
+* Bug 56885: Fix and enable feature Persistent settings.
+* Bug 56888: Use data-i18n for system font l10n. This ensures that the translation is updated properly in the language live preview.
+* Fixed uk and ru languages grammar rules.
+
+=== Fonts ===
+* New fonts: Hanuman, Nokora and Suwannaphum fonts for Khmer.
+* New font: Batak.
+* Updated MiriamCLM font from upstream.
+* Updated OpenDyslexic fonts from upstream.
+* Added BoldItalic OpenDyslexic fonts.
+* Bug 57136: Add Polish also to OpenDyslexic font supported languages.
+
+=== Input methods ===
+* Bug 54646: Fixed input from numerical keypad.
+* Bug 56160: Make names for Hindi and Marathi input methods consistent.
+* Bug 55698: Change name for de-transliteration input method. Remove obsolete my-kbd input method.
