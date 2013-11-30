@@ -206,6 +206,7 @@ $messages['diq'] = array(
 $messages['dsb'] = array(
 	'UniversalLanguageSelector' => 'Uniwersalny wuběrk rěcow',
 	'uls-desc' => 'Dawa wužywarjeju wšake metody, aby rěc wubrał a rěcne nastajenja pśiměrił',
+	'uls-plang-title-languages' => 'Rěcy',
 );
 
 /** Divehi (ދިވެހިބަސް)
@@ -363,6 +364,7 @@ $messages['hr'] = array(
 $messages['hsb'] = array(
 	'UniversalLanguageSelector' => 'Uniwersalny wuběr rěčow',
 	'uls-desc' => 'Dawa wužiwarjej wšelake metody, zo by rěč wubrał a rěčne nastajenja přiměrił',
+	'uls-plang-title-languages' => 'Rěče',
 );
 
 /** Armenian (Հայերեն)
