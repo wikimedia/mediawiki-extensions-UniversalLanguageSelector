@@ -51,7 +51,6 @@ Feature: Settings panel
       And I open "Language" panel of language settings
       Then the panel is in English
 
-  @no-anon-language-selection
   Scenario: The name of site content language is correct when translation language is different
 
     This feature is a bit hard to test. In most cases content language matches

@@ -27,7 +27,7 @@ Feature: Autonym font
     Then the Interlanguage links should use Autonym font
       And elements that are not Interlanguage links should not use Autonym font
 
-  @anon-language-selection @commons.wikimedia.beta.wmflabs.org
+  @commons.wikimedia.beta.wmflabs.org
   Scenario: Autonym font is used in the ULS language search dialog for input language selection by anonymous users
     Given I am at random page
       And I open the Universal Language Selector
