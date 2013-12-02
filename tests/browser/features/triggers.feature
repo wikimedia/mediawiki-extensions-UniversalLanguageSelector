@@ -6,7 +6,6 @@ Feature: Trigger in personal toolbar
     When I click language selector trigger element
     Then I should see the language selector
 
-  @no-anon-language-selection
   Scenario: Open language settings when logged out and language change not allowed
 
     If the user is logged out, the user will either see the language selector
@@ -17,7 +16,6 @@ Feature: Trigger in personal toolbar
     When I click language selector trigger element
     Then I see the logged in language settings panel
 
-  @anon-language-selection
   Scenario: Open language selector when logged out
 
     Given I am at random page

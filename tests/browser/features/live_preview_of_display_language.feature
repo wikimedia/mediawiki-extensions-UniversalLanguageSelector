@@ -1,8 +1,9 @@
-@login @reset-preferences-after
+@login
 Feature: Live preview of display language changes
 
   Background:
     Given I am logged in
+      And I have reset my preferences
       And I set "English" as the interface language
       And I am on a page with interlanguage links
 
