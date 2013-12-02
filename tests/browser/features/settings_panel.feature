@@ -63,10 +63,11 @@ Feature: Settings panel
     When I open "Language" panel of language settings
     Then I see "English (sama kuin sisällön)" as the name of the content language
 
-  @login @reset-preferences-after
+  @login
   Scenario: Selecting language via [...] button
 
     Given I am logged in
+      And I have reset my preferences
     When I open "Language" panel of language settings
       And I click the button with the ellipsis
       And I use the panel to change my interface language to "German"

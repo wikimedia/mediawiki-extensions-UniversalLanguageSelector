@@ -1,10 +1,11 @@
-@commons.wikimedia.beta.wmflabs.org @login @reset-preferences-after
+@commons.wikimedia.beta.wmflabs.org @login
 Feature: Persistent settings
 
   This assumes wiki content language is English.
 
   Background:
     Given I am logged in
+      And I have reset my preferences
       And I set "German" as the interface language
       And I open the Universal Language Selector
       And I open Display panel of language settings

@@ -1,4 +1,4 @@
-@commons.wikimedia.beta.wmflabs.org @login @reset-preferences-after
+@commons.wikimedia.beta.wmflabs.org @login
 Feature: Font selection
 
   In order to have better using experience,
@@ -11,6 +11,7 @@ Feature: Font selection
 
   Background:
     Given I am logged in
+      And I have reset my preferences
       And I set "German" as the interface language
       And I open ULS
       And I open Display panel of language settings

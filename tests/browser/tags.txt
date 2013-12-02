@@ -14,8 +14,3 @@ This file contains the descriptions of the tags we use.
 @login
   This test logs in. You can filter these tests out if you don't have an
   account available.
-
-@reset-preferences-after
-  This test changes user preferences and resets them at the end. In theory you
-  could use your normal user account if you skip these tests, but I would not
-  recommend doing that.
