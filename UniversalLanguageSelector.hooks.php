@@ -344,4 +344,21 @@ class UniversalLanguageSelectorHooks {
 
 		return true;
 	}
+
+	/**
+	 * Add basic webfonts support to the mobile interface (via MobileFrontend extension)
+	 * Hook: EnterMobileMode
+	 * @param MobileContext $context
+	 * @return bool
+	 */
+	public static function onEnterMobileMode( $context ) {
+		global $wgULSEnable, $wgULSMobileWebfontsEnabled;
+
+		// Currently only supported in mobile Beta mode
+		if ( $wgULSEnable && $wgULSMobileWebfontsEnabled && $context->isBetaGroupMember() ) {
+			$context->getOutput()->addModules( 'ext.uls.webfonts.mobile' );
+		}
+
+		return true;
+	}
 }

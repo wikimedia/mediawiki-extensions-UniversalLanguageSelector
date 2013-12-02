@@ -105,6 +105,12 @@ $wgULSLanguageDetection = true;
 $wgULSIMEEnabled = true;
 
 /**
+ * Set whether webfont support is loaded within the mobile interface (via the
+ * MobileFrontend extension).
+ */
+$wgULSMobileWebfontsEnabled = false;
+
+/**
  * The location and the form of the language selection trigger.
  * The possible values are:
  * 'personal': as a link near the username or the log in link in
@@ -184,6 +190,7 @@ $wgAPIModules['ulslocalization'] = 'ApiULSLocalization';
 $wgHooks['UserGetLanguageObject'][] = 'UniversalLanguageSelectorHooks::getLanguage';
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] =
 	'UniversalLanguageSelectorHooks::onSkinTemplateOutputPageBeforeExec';
+$wgHooks['EnterMobileMode'][] = 'UniversalLanguageSelectorHooks::onEnterMobileMode';
 
 $wgDefaultUserOptions['uls-preferences'] = '';
 $wgHooks['GetPreferences'][] = 'UniversalLanguageSelectorHooks::onGetPreferences';
