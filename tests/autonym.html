@@ -59,22 +59,22 @@ td.index {
 	<option value="36">36</option>
 	<option value="48">48</option>
 </select>
-<table class="autonym"><tr></tr></table>
+<table><tr></tr></table>
 <div>A dropdown example:
 <select class="dropdown autonym">
 </select>
 </div>
 <script>
 var index = 1,
-	$autonym = $( '.autonym' ),
 	$fontSelector = $( '#font-selector' ),
 	$sizeSelector = $( '#size-selector' );
 
 $fontSelector.change( function () {
-	$autonym.css( 'font-family', $( this ).val() );
+	$( '.autonym' ).css( 'font-family', $( this ).val() );
 });
+
 $sizeSelector.change( function () {
-	$autonym.css( 'font-size', $( this ).val() + 'px' );
+	$( '.autonym' ).css( 'font-size', $( this ).val() + 'px' );
 });
 
 $.each( $.uls.data.languages, function( langCode ) {
@@ -99,7 +99,7 @@ $.each( $.uls.data.languages, function( langCode ) {
 				.addClass( 'lang' )
 				.text( langCode ),
 			$( '<td>' )
-				.addClass( 'name' )
+				.addClass( 'name autonym' )
 				.attr( {
 					lang: langCode,
 					dir: dir
@@ -110,7 +110,7 @@ $.each( $.uls.data.languages, function( langCode ) {
 } );
 
 // Apply the initial font
-$autonym.css( 'font-family', $fontSelector.val() );
+$( '.autonym' ).css( 'font-family', $fontSelector.val() );
 </script>
 </div>
 </body>
