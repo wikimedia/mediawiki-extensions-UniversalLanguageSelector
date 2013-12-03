@@ -11,7 +11,10 @@ class RandomPage
   a(:download_as_pdf, text: "Download as PDF")
   a(:download_the_file, text: "Download the file")
   li(:main_page, id: "n-mainpage-description")
-  a(:malayalam_link, title: "Malayalam")
+  div(:asia, id: 'AS')
+  a(:malayalam) do |page|
+    page.asia_element.element.a(title: "Malayalam")
+  end
   a(:print_export, text: "Print/export")
   a(:printable_version, text: "Printable version")
   button(:search_button, id: "searchButton")

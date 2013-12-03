@@ -3,16 +3,16 @@ Feature: Live preview of display language changes
 
   Background:
     Given I am logged in
-      And I have reset my preferences
-      And I set "English" as the interface language
-      And I am on a page with interlanguage links
+      And I am at random page
 
+  @commons.wikimedia.beta.wmflabs.org
   Scenario: Display language change is previewed immediately
-    Given I open "Language" panel of language settings
+    Given I open the Universal Language Selector
+      And I open Display panel of language settings
       And I click the button with the ellipsis
-      And in the language filter I type hi
-      And I click on the link to select Hindi
-    Then I should see the text in the language panel in Hindi
+      And in the language filter I type malayalam
+      And I click on the link to select Malayalam
+    Then I should see the text in the language panel in Malayalam
 
   Scenario: Live preview of display language changes can be reverted on cancel
     Given I open "Language" panel of language settings

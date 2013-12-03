@@ -13,8 +13,10 @@ module LanguageModule
 				"he"
 			when "Hindi"
 				"hi"
+			when "Malayalam"
+				"ml"
 			else
-				pending
+				p "Unknown language #{language}"
 		end
 	end
 end

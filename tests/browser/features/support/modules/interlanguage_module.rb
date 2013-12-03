@@ -10,7 +10,7 @@ module InterlanguagePageModule
   span(:cog, class: "uls-settings-trigger")
   button(:ellipsis_button, class: "uls-more-languages button")
   a(:english_link, text: "English")
-  a(:hindi_link, text: "हिन्दी")
+  a(:hindi_link, title: "Hindi")
   div(:input_settings, id: "input-settings-block")
   div(:language_list, class: "row uls-language-list lcd")
   text_field(:language_search, id: "languagefilter")

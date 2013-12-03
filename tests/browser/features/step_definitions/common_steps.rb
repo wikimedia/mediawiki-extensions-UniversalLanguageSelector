@@ -25,3 +25,11 @@ Then(/^my interface language is "(.*?)"$/) do |language|
 	code = on(PanelPage).language_to_code(language)
 	on(PanelPage).interface_element.attribute("lang").should == code
 end
+
+When(/^I click the button with the ellipsis$/) do
+	on(InterlanguagePage).ellipsis_button_element.click
+end
+
+When(/^in the language filter I type (.+)$/) do |language_abbreviation|
+	on(IMEPage).language_filter = language_abbreviation
+end

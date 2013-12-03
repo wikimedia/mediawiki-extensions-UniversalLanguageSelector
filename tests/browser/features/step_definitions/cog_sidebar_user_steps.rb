@@ -31,14 +31,6 @@ When(/^I click Cancel$/) do
   on(PanelPage).panel_button_cancel_element.click
 end
 
-When(/^I click on the link to select Malayalam$/) do
-  on(RandomPage).malayalam_link
-end
-
-When(/^I click the button with the ellipsis$/) do
-  on(InterlanguagePage).ellipsis_button_element.click
-end
-
 When(/^I click the cog icon by Languages in the sidebar$/) do
   on(NoInterlanguagePage).cog_element.when_present.click
   # Wait for the panel to open
@@ -47,10 +39,6 @@ end
 
 When(/^I click X$/) do
   on(InterlanguagePage).x_element.click
-end
-
-When(/^in the language filter I type (.+)$/) do |language_abbreviation|
-  on(IMEPage).language_filter=language_abbreviation
 end
 
 Then(/^I can navigate back to Input Settings$/) do
