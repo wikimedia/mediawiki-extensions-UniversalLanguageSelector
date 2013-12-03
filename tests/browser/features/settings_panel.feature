@@ -78,6 +78,7 @@ Feature: Settings panel
   Scenario: Regression test for bug 56913
 
     Given I am logged in
+      And I have reset my preferences
     When I open the Universal Language Selector
       And I open Input panel of language settings
       And I click the button with the ellipsis
