@@ -33,3 +33,11 @@ end
 When(/^in the language filter I type (.+)$/) do |language_abbreviation|
 	on(IMEPage).language_filter = language_abbreviation
 end
+
+When(/^I click Cancel$/) do
+	on(PanelPage).panel_button_cancel_element.click
+end
+
+When(/^I click X$/) do
+	on(InterlanguagePage).x_element.click
+end
