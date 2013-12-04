@@ -42,13 +42,3 @@ Feature: Live preview of display language changes
     When I click Cancel
       And I open Display panel of language settings
     Then I should see the text in the language panel in English
-
-  Scenario: Font setting is reset after pressing "Cancel"
-    Given I open "Fonts" panel of language settings
-    When I set English font to OpenDyslexic
-      And I apply the changes
-      And I open "Fonts" panel of language settings
-      And I set English font to System
-      And I click Cancel
-    When I open "Fonts" panel of language settings
-    Then the selected content font must be OpenDyslexic
