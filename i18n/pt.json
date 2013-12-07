@@ -1,8 +1,10 @@
 {
     "@metadata": {
         "authors": [
-            "Luckas"
+            "Luckas",
+            "Malafaya"
         ]
     },
-    "ext-uls-language-settings-cancel": "Cancelar"
+    "ext-uls-language-settings-cancel": "Cancelar",
+    "ext-uls-input-settings-desc": "Escreve num idioma diferente?"
 }

@@ -1,0 +1,16 @@
+{
+    "@metadata": {
+        "authors": [
+            "Mogoeilor"
+        ]
+    },
+    "ext-uls-display-settings-language-tab": "زون",
+    "ext-uls-display-settings-fonts-tab": "فونتيا",
+    "ext-uls-display-settings-title-short": "نشون ديئن",
+    "ext-uls-select-language-settings-icon-tooltip": "تنظيمات زون",
+    "ext-uls-language-settings-title": "تنظيمات زون",
+    "ext-uls-language-settings-cancel": "رد كردن",
+    "ext-uls-input-settings-more-languages-tooltip": "زونيا بيشتر",
+    "jquery-ime-other-languages": "د زونيا هنی",
+    "jquery-ime-help": "هومياری"
+}

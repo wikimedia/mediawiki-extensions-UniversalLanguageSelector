@@ -1,0 +1,18 @@
+{
+    "@metadata": {
+        "authors": [
+            "Xabier Armendaritz"
+        ]
+    },
+    "ext-uls-display-settings-title-short": "Bistaratzea",
+    "ext-uls-display-settings-desc": "Ezar ezazu menuetarako eta letra tipoetarako hizkuntza.",
+    "ext-uls-select-language-settings-icon-tooltip": "Hizkuntza ezarpenak",
+    "ext-uls-language-settings-title": "Hizkuntza ezarpenak",
+    "ext-uls-language-settings-apply": "Aplikatu ezarpenak",
+    "ext-uls-language-settings-cancel": "Utzi",
+    "ext-uls-language-buttons-help": "Aldatu menuen hizkuntza. Edukien hizkuntza ez da aldatuko.",
+    "ext-uls-display-settings-ui-language": "Bistaratze hizkuntza",
+    "ext-uls-display-settings-anon-label": "Bistaratze hizkuntza:",
+    "ext-uls-input-settings-title-short": "Sarrera",
+    "ext-uls-language-settings-preferences-link": "Hizkuntza ezarpen gehiago"
+}

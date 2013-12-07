@@ -46,5 +46,6 @@
     "ext-uls-input-disable-notification-undo": "Ongedaan maken",
     "ext-uls-input-disable-notification-info-personal": "U kunt de invoermethoden weer inschakelen via de taalinstellingen.",
     "ext-uls-input-disable-notification-info-interlanguage": "U kunt de invoermethoden weer inschakelen via de taalinstellingen naast de lijst met talen.",
+    "ext-uls-language-settings-applying": "Toepassen...",
     "ext-uls-language-settings-preferences-link": "Meer taalinstellingen"
 }

@@ -143,7 +143,7 @@ $messages['ckb'] = array(
 	'uls-plang-title-languages' => 'زمانەکان',
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Mormegil
  */
 $messages['cs'] = array(
@@ -152,7 +152,7 @@ $messages['cs'] = array(
 	'uls-plang-title-languages' => 'Jazyky',
 );
 
-/** Church Slavic (словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
+/** Church Slavic (словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
  * @author ОйЛ
  */
 $messages['cu'] = array(
