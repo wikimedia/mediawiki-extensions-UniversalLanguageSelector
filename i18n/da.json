@@ -47,5 +47,6 @@
     "ext-uls-input-disable-notification-undo": "Fortryd ændring",
     "ext-uls-input-disable-notification-info-personal": "Du kan altid slå indtastningsværktøjerne til i sprogindstillingerne.",
     "ext-uls-input-disable-notification-info-interlanguage": "Du kan altid slå indtastningsværktøjerne til i sprogindstillingerne ved siden af sproglisten.",
+    "ext-uls-language-settings-applying": "Anvender...",
     "ext-uls-language-settings-preferences-link": "Flere sprogindstillinger"
 }
