@@ -68,8 +68,8 @@ Then(/^the panel is in English/) do
 	on(PanelPage).panel_language_element.text.should == "Language"
 end
 
-When(/^I switch to "Input" panel of language settings/) do
-	on(PanelPage).panel_input_element.when_visible.click
+When(/^I switch to Input panel of language settings/) do
+	on(PanelPage).panel_side_input_element.click
 end
 
 Then(/^the language list of ULS should use Autonym font$/) do

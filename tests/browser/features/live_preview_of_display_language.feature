@@ -32,20 +32,13 @@ Feature: Live preview of display language changes
       And I open Display panel of language settings
     Then I should see the text in the language panel in English
 
-  Scenario: Live preview of display language changes can be reverted on closing the dialog on cancel from a different section
-    Given I open "Language" panel of language settings
+  # https://bugzilla.wikimedia.org/57967
+  # @commons.wikimedia.beta.wmflabs.org
+  Scenario: Live preview of display language changes can be reverted on closing the dialog on cancel from a different panel
+    Given I open the Universal Language Selector
+      And I open Display panel of language settings
       And I select a language different than English for display language
-      And I switch to "Input" panel of language settings
+      And I switch to Input panel of language settings
     When I click Cancel
-      And I open "Language" panel of language settings
+      And I open Display panel of language settings
     Then I should see the text in the language panel in English
-
-  Scenario: Font setting is reset after pressing "Cancel"
-    Given I open "Fonts" panel of language settings
-    When I set English font to OpenDyslexic
-      And I apply the changes
-      And I open "Fonts" panel of language settings
-      And I set English font to System
-      And I click Cancel
-    When I open "Fonts" panel of language settings
-    Then the selected content font must be OpenDyslexic
