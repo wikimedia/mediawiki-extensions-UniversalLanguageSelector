@@ -29,7 +29,6 @@ class PanelPage
 	select_list(:panel_content_font_selector, id: "content-font-selector")
 	select_list(:panel_interface_font_selector, id: "ui-font-selector")
 
-	# TODO: Rename to match convention
 	button(:other_language_button, class: "button uls-language-button", index: 1)
 	button(:default_language_button, css: ".uls-language-button.down")
 
