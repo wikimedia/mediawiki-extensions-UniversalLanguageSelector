@@ -6,6 +6,8 @@ Feature: Trigger in personal toolbar
     Given I am logged in
     When I click language selector trigger element
     Then I should see the language selector
+      And I see Common Languages
+      And I see Worldwide
 
   Scenario: Open language settings when logged out and language change not allowed
 
