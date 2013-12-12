@@ -151,10 +151,11 @@ $wgULSNoImeSelectors = array( '#wpCaptchaWord', '.ve-ce-documentNode' );
 
 /**
  * Array of jQuery selectors of elements on which webfonts must not be applied.
- * By default exclude the interwiki language links.
+ * By default exclude elements with .autonym because that style set font as
+ * Autonym
  * @since 2013.09
  */
-$wgULSNoWebfontsSelectors = array( '#p-lang li > a' );
+$wgULSNoWebfontsSelectors = array( '.autonym' );
 
 /**
  * Base path of ULS font repository.
