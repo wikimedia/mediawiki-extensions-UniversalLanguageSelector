@@ -1,5 +1,4 @@
-# On phantomjs, we need to figure out a way to pass the accept language header.
-@language @phantomjs-bug @sandbox.translatewiki.net
+@language @sandbox.translatewiki.net
 Feature: Accept-Language
 
   Scenario Outline: Accept-Language
