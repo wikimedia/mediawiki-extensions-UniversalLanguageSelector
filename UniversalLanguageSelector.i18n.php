@@ -551,9 +551,12 @@ $messages['ml'] = array(
 
 /** Marathi (मराठी)
  * @author Mahitgar
+ * @author V.narsikar
  */
 $messages['mr'] = array(
-	'uls-desc' => 'भाषा निवडण्याचे आणि सेटींग ॲड्जस्ट करण्याचे अनेक मार्ग उपलब्ध करते',
+	'UniversalLanguageSelector' => 'वैश्विक भाषा वरणित्र',
+	'uls-desc' => 'सदस्यांना भाषा निवडण्याचे आणि त्यांची मांडणी अनुकूल करण्याचे अनेक मार्ग उपलब्ध करते',
+	'uls-plang-title-languages' => 'भाषा',
 );
 
 /** Malay (Bahasa Melayu)
