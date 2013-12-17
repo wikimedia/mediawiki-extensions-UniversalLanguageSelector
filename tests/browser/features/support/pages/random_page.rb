@@ -11,7 +11,7 @@ class RandomPage
   a(:download_as_pdf, text: "Download as PDF")
   a(:download_the_file, text: "Download the file")
   li(:main_page, id: "n-mainpage-description")
-  div(:asia, id: 'AS')
+  div(:asia, id: "AS")
   a(:malayalam) do |page|
     page.asia_element.element.a(title: "Malayalam")
   end
