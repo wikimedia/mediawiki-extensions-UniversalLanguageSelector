@@ -39,7 +39,13 @@
     "jquery-ime-disable-text": "Dovré na tastadura local",
     "jquery-ime-help": "Agiut",
     "ext-uls-input-disable": "Disabilité j'utiss d'imission",
-    "ext-uls-input-enable": "Abìlita j'utiss dël métod d'imission",
-    "ext-uls-input-disable-info": "J'utiss dël métod d'imission a son disabilità.",
-    "ext-uls-input-settings-noime": "Gnun métod d'imission a l'é disponìbij për costa lenga."
+    "ext-uls-input-enable": "Abilité j'utiss d'imission",
+    "ext-uls-input-disable-info": "J'utiss d'imission a son disabilità.",
+    "ext-uls-input-settings-noime": "Gnun métod d'imission a l'é disponìbij për costa lenga.",
+    "ext-uls-input-disable-notification": "J'utiss d'imission a son ëstàit disativà",
+    "ext-uls-input-disable-notification-undo": "Buté 'me ch'a l'era",
+    "ext-uls-input-disable-notification-info-personal": "A peul ativé j'utiss d'imission an qualsëssìa moment an soe ampostassion ëd lenga.",
+    "ext-uls-input-disable-notification-info-interlanguage": "A peul ativé j'utiss d'imission an qualsëssìa moment ant j'ampostassion ëd lenga da banda dla lista dle lenghe.",
+    "ext-uls-language-settings-applying": "Ativassion an cors...",
+    "ext-uls-language-settings-preferences-link": "Pi d'ampostassion ëd lenga"
 }
