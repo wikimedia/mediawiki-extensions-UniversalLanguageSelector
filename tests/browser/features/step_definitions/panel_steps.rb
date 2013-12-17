@@ -35,7 +35,7 @@ end
 When(/^I apply the changes$/) do
 	on(PanelPage) do |page|
 		page.panel_button_apply_element.click
-		page.language_settings_dialog_element.when_not_present
+		page.language_settings_dialog_element.when_not_present(10)
 	end
 end
 

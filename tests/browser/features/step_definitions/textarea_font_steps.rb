@@ -18,9 +18,7 @@ When(/^I select (.*?) font for the content language$/) do |font|
 	step "I open the Universal Language Selector"
 	step "I open Display panel of language settings"
 	step "I open Fonts panel of language settings"
-	pending("Bug 56885") do
-		step "I select #{font} font for the content language for the live preview"
-	end
+	step "I select #{font} font for the content language for the live preview"
 	step "I apply the changes"
 end
 
