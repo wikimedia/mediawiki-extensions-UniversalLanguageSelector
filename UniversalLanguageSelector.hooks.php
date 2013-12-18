@@ -271,10 +271,6 @@ class UniversalLanguageSelectorHooks {
 		$vars['wgULSNoImeSelectors'] = $wgULSNoImeSelectors;
 		$vars['wgULSNoWebfontsSelectors'] = $wgULSNoWebfontsSelectors;
 
-		// An optimization to avoid loading all of uls.data just to get the autonym
-		$lang = RequestContext::getMain()->getLanguage();
-		$vars['wgULSCurrentAutonym'] = $lang->fetchLanguageName( $lang->getCode() );
-
 		if ( is_string( $wgULSFontRepositoryBasePath ) ) {
 			$vars['wgULSFontRepositoryBasePath'] = $wgULSFontRepositoryBasePath;
 		} else {
@@ -294,6 +290,10 @@ class UniversalLanguageSelectorHooks {
 	public static function addVariables( &$vars, OutputPage $out ) {
 		// Place request context dependent stuff here
 		$vars['wgULSAcceptLanguageList'] = array_keys( $out->getRequest()->getAcceptLang() );
+
+		// An optimization to avoid loading all of uls.data just to get the autonym
+		$lang = $out->getLanguage();
+		$vars['wgULSCurrentAutonym'] = $lang->fetchLanguageName( $lang->getCode() );
 
 		return true;
 	}
