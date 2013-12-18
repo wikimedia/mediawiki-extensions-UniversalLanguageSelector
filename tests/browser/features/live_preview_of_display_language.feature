@@ -3,6 +3,7 @@ Feature: Live preview of display language changes
 
   Background:
     Given I am logged in
+      And I have reset my preferences
       And I am at random page
 
   @needs-custom-setup @commons.wikimedia.beta.wmflabs.org
