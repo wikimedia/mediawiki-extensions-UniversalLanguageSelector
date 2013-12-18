@@ -32,6 +32,7 @@
     "ext-uls-input-settings-ime-settings": "Metody zadávání znaků pro jazyk $1",
     "ext-uls-input-settings-ui-language": "Jazyk, kterým píšete",
     "ext-uls-back-to-input-settings": "Zpět na nastavení vstupu",
+    "ext-uls-ime-help": "Jak používat",
     "ext-uls-disable-input-method": "Používat původní klávesnici",
     "ext-uls-input-settings-more-languages-tooltip": "Další jazyky",
     "jquery-ime-other-languages": "Jiné jazyky",
@@ -45,5 +46,6 @@
     "ext-uls-input-disable-notification-undo": "Zpět",
     "ext-uls-input-disable-notification-info-personal": "Nástroje pro vstup můžete kdykoli zapnout v jazykových nastaveních.",
     "ext-uls-input-disable-notification-info-interlanguage": "Nástroje pro vstup můžete kdykoli zapnout v jazykových nastaveních vedle seznamu jazyků.",
+    "ext-uls-language-settings-applying": "Provádí se…",
     "ext-uls-language-settings-preferences-link": "Další jazyková nastavení"
 }
