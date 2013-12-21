@@ -1,6 +1,8 @@
 {
     "@metadata": {
-        "authors": null
+        "authors": [
+            "Edgars2007"
+        ]
     },
     "ext-uls-undo-language-tooltip-text": "Valoda nomainīta no $1"
 }

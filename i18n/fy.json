@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Kening Aldgilles"
+        ]
+    },
+    "ext-uls-language-settings-title": "Taalynstellings",
+    "ext-uls-language-settings-apply": "Ynstellingen tapasse",
+    "ext-uls-language-settings-cancel": "Ofbrekke",
+    "ext-uls-display-settings-font-settings": "Lettertype ynstellingen",
+    "ext-uls-display-settings-ui-language": "Taal sjen litte",
+    "ext-uls-display-settings-anon-label": "Taal sjen litte:"
+}
