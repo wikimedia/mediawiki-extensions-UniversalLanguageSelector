@@ -1,13 +1,14 @@
 {
     "@metadata": {
         "authors": [
-            "Si Gam Acèh"
+            "Si Gam Acèh",
+            "Ayie7791"
         ]
     },
-    "ext-uls-display-settings-title": "Atô seuneudeuih",
+    "ext-uls-display-settings-title": "Atô seuneudeuh",
     "ext-uls-display-settings-language-tab": "Bahsa",
     "ext-uls-display-settings-fonts-tab": "Haraih",
-    "ext-uls-display-settings-title-short": "Seuneudeuih",
+    "ext-uls-display-settings-title-short": "Seuneudeuh",
     "ext-uls-display-settings-desc": "Atô bahsa keu menu ngón haraih",
     "ext-uls-select-language-settings-icon-tooltip": "Atô bahsa",
     "ext-uls-undo-language-tooltip-text": "Bahsa meugantoë nibak $1",
@@ -16,8 +17,8 @@
     "ext-uls-language-settings-cancel": "Pubateuë",
     "ext-uls-language-buttons-help": "Gantoë bahsa menu. Bahsa asoë hana teupeungarôh.",
     "ext-uls-display-settings-font-settings": "Atô haraih",
-    "ext-uls-display-settings-ui-language": "Seuneudeuih bahsa",
-    "ext-uls-display-settings-anon-label": "Seuneudeuih bahsa:",
+    "ext-uls-display-settings-ui-language": "Seuneudeuh bahsa",
+    "ext-uls-display-settings-anon-label": "Seuneudeuh bahsa:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (saban lagèë asoë)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Neutamöng log]] mangat jeuët neupiléh bahsa la'én keu menu.",
     "ext-uls-webfonts-select-for": "Piléh haraih keu $1",
@@ -28,7 +29,7 @@
     "ext-uls-input-settings-title": "Atô peunasoë",
     "ext-uls-input-settings-title-short": "Peunasoë",
     "ext-uls-input-settings-desc": "Tuléh lam bahsa la'én?",
-    "ext-uls-input-settings-ime-settings": "Metode pasoë keu $1",
+    "ext-uls-input-settings-ime-settings": "Kri pasoë keu $1",
     "ext-uls-input-settings-ui-language": "Bahsa nyang geungui keu teumuléh",
     "ext-uls-back-to-input-settings": "Riwang u atô peunasoë",
     "ext-uls-ime-help": "Kri ngui",
@@ -37,11 +38,11 @@
     "jquery-ime-other-languages": "Bahsa la’én",
     "jquery-ime-disable-text": "Ngui papeuën haraih aseuli",
     "jquery-ime-help": "Beunantu",
-    "ext-uls-input-disable": "Pumaté peukakaih pasoë",
+    "ext-uls-input-disable": "Peumaté peukakaih pasoë",
     "ext-uls-input-enable": "Peuudép peukakaih pasoë",
-    "ext-uls-input-disable-info": "Peukakaih pasoë teupumaté",
-    "ext-uls-input-settings-noime": "Hana metode pasoë keu bahsa nyoë",
-    "ext-uls-input-disable-notification": "Peukakaih pasoë teupumaté",
+    "ext-uls-input-disable-info": "Peukakaih pasoë teupeumaté",
+    "ext-uls-input-settings-noime": "Hana kri pasoë keu bahsa nyoë",
+    "ext-uls-input-disable-notification": "Peukakaih pasoë teupeumaté",
     "ext-uls-input-disable-notification-undo": "Pubateuë",
     "ext-uls-input-disable-notification-info-personal": "Droëneuh jeuët neupeuudép peukakaih pasoë pajan mantöng nibak neuatô bahsa",
     "ext-uls-input-disable-notification-info-interlanguage": "Droëneuh jeuët neupeuudép peukakaih pasoë baranggajan nibak neuatô bahsa nyang na bak binèh dapeuta bahsa",
