@@ -2,7 +2,8 @@
     "@metadata": {
         "authors": [
             "Gorizon",
-            "Marmase"
+            "Marmase",
+            "Mirzali"
         ]
     },
     "ext-uls-display-settings-language-tab": "Zıwan",
@@ -14,7 +15,7 @@
     "ext-uls-input-settings-more-languages-tooltip": "Zewbi zıwani",
     "jquery-ime-other-languages": "Zıwanê bini",
     "jquery-ime-disable-text": "Hesıbyaye klavyer bıkarne",
-    "jquery-ime-help": "Desteg",
+    "jquery-ime-help": "Peşti",
     "ext-uls-input-disable-notification-undo": "Peyser biya",
     "ext-uls-language-settings-applying": "Dezgeyeno...",
     "ext-uls-language-settings-preferences-link": "Dahana véşi zıwani"
