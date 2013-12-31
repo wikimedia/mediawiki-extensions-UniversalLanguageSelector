@@ -1,0 +1,16 @@
+== UniversalLanguageSelector 2013.12 ==
+Released at 2013-12-31.
+
+=== Noteworthy changes ===
+* Language selector now opens an order of magnitude faster (see https://github.com/wikimedia/jquery.uls/pull/122 for details).
+
+* Initial support for webfonts in MobileFrontend:
+** Currently, support for webfonts in MobileFrontend is disabled by default. It can be enabled by setting $wgULSMobileWebfontsEnabled = true; in LocalSettings.php file. Note that, even then it will only be enabled for users who has opted in for the mobile beta mode.
+
+=== Fonts ===
+* Bug 57767: Enable Amiri font for Soranî language.
+* Bug 58381, 58382: Add Lateef and Scheherazade fonts for Soranî and Farsi languages.
+* Update Autonym font to version 20131205:
+** Fixed Autonym for Old Slavonic.
+** Fixed glyphs for the Glagolitic script.
+** Removed Reserved Font Name (RFN) and documentation updates.
