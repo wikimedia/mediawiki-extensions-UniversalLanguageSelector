@@ -17,8 +17,6 @@ class PanelPage
 	div(:panel_side_display, id: "display-panel-trigger")
 	div(:panel_side_input, id: "input-panel-trigger")
 
-	ul(:autonym, class: "three columns end")
-
 	span(:panel_button_close, id: "languagesettings-close")
 	button(:panel_button_apply, class: "uls-settings-apply")
 	button(:panel_button_cancel, class: "uls-settings-cancel")
@@ -47,6 +45,10 @@ class PanelPage
 
 	# Is there way to access the html element?
 	div(:interface, id: "footer")
+
+	def uls_language_name_item(language)
+		@browser.element(css: ".uls-language-block li[lang=#{language}] a")
+	end
 
 	def content_font
 		font("#mw-content-text")
