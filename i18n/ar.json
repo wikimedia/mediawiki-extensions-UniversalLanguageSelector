@@ -19,7 +19,7 @@
     "ext-uls-display-settings-font-settings": "إعدادات الخط",
     "ext-uls-display-settings-ui-language": "لغة العرض",
     "ext-uls-display-settings-anon-label": "لغة العرض:",
-    "ext-uls-display-settings-anon-same-as-content": "العربية (كما في المحتوى)",
+    "ext-uls-display-settings-anon-same-as-content": "$1 (كما في المحتوى)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|سجل الدخول]] لتحديد لغة مختلفة للقوائم.",
     "ext-uls-webfonts-select-for": "حدد خطا للغة $1",
     "ext-uls-webfonts-select-for-ui-info": "الخط المستعمل لواجهة المستخدم",
@@ -42,9 +42,10 @@
     "ext-uls-input-enable": "تشغيل أدوات الإدخال",
     "ext-uls-input-disable-info": "عطلت أدوات الإدخال.",
     "ext-uls-input-settings-noime": "ما من أساليب إدخال متوفرة لهذه اللغة.",
-    "ext-uls-input-disable-notification": "أساليب الإدخال عطلت.",
+    "ext-uls-input-disable-notification": "أدوات الإدخال عطلت.",
     "ext-uls-input-disable-notification-undo": "إلغاء",
     "ext-uls-input-disable-notification-info-personal": "بوسعك تشغيل أدوات الإدخال في أي وقت في إعدادات اللغة.",
     "ext-uls-input-disable-notification-info-interlanguage": "بوسعك تشغيل  أدوات الإدخال في أي وقت في إعدادات اللغة الموجودة بجانب قائمة اللغات.",
+    "ext-uls-language-settings-applying": "تطبيق...",
     "ext-uls-language-settings-preferences-link": "المزيد من إعدادات اللغة"
 }

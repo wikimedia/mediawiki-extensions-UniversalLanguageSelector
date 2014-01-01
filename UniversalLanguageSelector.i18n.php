@@ -488,6 +488,13 @@ $messages['la'] = array(
 	'uls-plang-title-languages' => 'Linguis aliis',
 );
 
+/** Ladino (Ladino)
+ * @author Menachem.Moreira
+ */
+$messages['lad'] = array(
+	'uls-plang-title-languages' => 'Lenguas',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
