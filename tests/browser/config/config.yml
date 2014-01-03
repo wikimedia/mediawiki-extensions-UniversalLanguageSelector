@@ -8,7 +8,7 @@ chrome:
 firefox:
   name: firefox
   platform: Linux
-  version: 23
+  version: 25
 
 # IE <8 not supported, IE8 has some issues
 internet_explorer_8:
