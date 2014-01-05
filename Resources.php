@@ -3,7 +3,7 @@
  * JavaScript and CSS resource definitions.
  *
  * @file
- * @license GPL2+
+ * @license GPL-2.0+
  */
 
 $resourcePaths = array(
@@ -11,6 +11,7 @@ $resourcePaths = array(
 	'remoteExtPath' => 'UniversalLanguageSelector'
 );
 
+global $wgResourceModules;
 $wgResourceModules['ext.uls.languagenames'] = array(
 	'class' => 'ResourceLoaderULSModule'
 );
