@@ -27,7 +27,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  */
 define( 'ULS_VERSION', '2013-12-31' );
 
-$wgExtensionCredits['other'][] = array(
+$GLOBALS['wgExtensionCredits']['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'UniversalLanguageSelector',
 	'version' => ULS_VERSION,
@@ -54,7 +54,7 @@ $wgExtensionCredits['other'][] = array(
  *
  * The service should return jsonp that uses the supplied callback parameter.
  */
-$wgULSGeoService = true;
+$GLOBALS['wgULSGeoService'] = true;
 
 /**
  * Enable language selection, input methods and webfonts for everyone, unless
@@ -64,14 +64,14 @@ $wgULSGeoService = true;
  * use of other extensions. Language changing via cookie or setlang query
  * parameter is not possible.
  */
-$wgULSEnable = true;
+$GLOBALS['wgULSEnable'] = true;
 
 /**
  * Equivalent to $wgULSEnable for anonymous users only.
  *
  * Does not have any effect if $wgULSEnable is false.
  */
-$wgULSEnableAnon = true;
+$GLOBALS['wgULSEnableAnon'] = true;
 
 /**
  * Allow anonymous users to change language with cookie and setlang
@@ -85,7 +85,7 @@ $wgULSEnableAnon = true;
  *
  * @since 2013.04
  */
-$wgULSAnonCanChangeLanguage = true;
+$GLOBALS['wgULSAnonCanChangeLanguage'] = true;
 
 /**
  * Try to use preferred interface language for anonymous users.
@@ -96,19 +96,19 @@ $wgULSAnonCanChangeLanguage = true;
  * Does not have any effect if any of $wgULSEnable, $wgULSEnableAnon
  * or $wgULSAnonCanChangeLanguage is set to false.
  */
-$wgULSLanguageDetection = true;
+$GLOBALS['wgULSLanguageDetection'] = true;
 
 /**
  * Disable the input methods feature for all users by default. Can still
  * be enabled manually by the user.
  */
-$wgULSIMEEnabled = true;
+$GLOBALS['wgULSIMEEnabled'] = true;
 
 /**
  * Set whether webfont support is loaded within the mobile interface (via the
  * MobileFrontend extension).
  */
-$wgULSMobileWebfontsEnabled = false;
+$GLOBALS['wgULSMobileWebfontsEnabled'] = false;
 
 /**
  * The location and the form of the language selection trigger.
@@ -120,21 +120,21 @@ $wgULSMobileWebfontsEnabled = false;
  *
  * @since 2013.04
  */
-$wgULSPosition = 'personal';
+$GLOBALS['wgULSPosition'] = 'personal';
 
 /**
  * Whether to use EventLogging. The EventLogging extension must be installed
  * if this option is enabled.
  * @since 2013.06
  */
-$wgULSEventLogging = false;
+$GLOBALS['wgULSEventLogging'] = false;
 
 /**
  * Array of jQuery selectors of elements on which IME should be enabled.
  *
  * @since 2013.11
  */
-$wgULSImeSelectors = array(
+$GLOBALS['wgULSImeSelectors'] = array(
 	'input:not([type])',
 	'input[type=text]',
 	'input[type=search]',
@@ -147,7 +147,7 @@ $wgULSImeSelectors = array(
  *
  * @since 2013.07
  */
-$wgULSNoImeSelectors = array( '#wpCaptchaWord', '.ve-ce-documentNode' );
+$GLOBALS['wgULSNoImeSelectors'] = array( '#wpCaptchaWord', '.ve-ce-documentNode' );
 
 /**
  * Array of jQuery selectors of elements on which webfonts must not be applied.
@@ -155,7 +155,7 @@ $wgULSNoImeSelectors = array( '#wpCaptchaWord', '.ve-ce-documentNode' );
  * Autonym
  * @since 2013.09
  */
-$wgULSNoWebfontsSelectors = array( '.autonym' );
+$GLOBALS['wgULSNoWebfontsSelectors'] = array( '.autonym' );
 
 /**
  * Base path of ULS font repository.
@@ -163,14 +163,14 @@ $wgULSNoWebfontsSelectors = array( '.autonym' );
  * relative to $wgExtensionAssetsPath.
  * @since 2013.10
  */
-$wgULSFontRepositoryBasePath = false;
+$GLOBALS['wgULSFontRepositoryBasePath'] = false;
 
 // Internationalization
-$wgExtensionMessagesFiles['UniversalLanguageSelector'] =
+$GLOBALS['wgExtensionMessagesFiles']['UniversalLanguageSelector'] =
 	__DIR__ . '/UniversalLanguageSelector.i18n.php';
 
 // Register auto load for the page class
-$wgAutoloadClasses += array(
+$GLOBALS['wgAutoloadClasses'] += array(
 	'UniversalLanguageSelectorHooks' => __DIR__ . '/UniversalLanguageSelector.hooks.php',
 	'ResourceLoaderULSModule' => __DIR__ . '/includes/ResourceLoaderULSModule.php',
 	'ResourceLoaderULSJsonMessageModule' =>
@@ -181,22 +181,23 @@ $wgAutoloadClasses += array(
 	'LanguageNameSearch' => __DIR__ . '/data/LanguageNameSearch.php',
 );
 
-$wgHooks['BeforePageDisplay'][] = 'UniversalLanguageSelectorHooks::addModules';
-$wgHooks['PersonalUrls'][] = 'UniversalLanguageSelectorHooks::addPersonalBarTrigger';
-$wgHooks['ResourceLoaderTestModules'][] = 'UniversalLanguageSelectorHooks::addTestModules';
-$wgHooks['ResourceLoaderGetConfigVars'][] = 'UniversalLanguageSelectorHooks::addConfig';
-$wgHooks['MakeGlobalVariablesScript'][] = 'UniversalLanguageSelectorHooks::addVariables';
-$wgAPIModules['languagesearch'] = 'ApiLanguageSearch';
-$wgAPIModules['ulslocalization'] = 'ApiULSLocalization';
-$wgHooks['UserGetLanguageObject'][] = 'UniversalLanguageSelectorHooks::getLanguage';
-$wgHooks['SkinTemplateOutputPageBeforeExec'][] =
+$GLOBALS['wgHooks']['BeforePageDisplay'][] = 'UniversalLanguageSelectorHooks::addModules';
+$GLOBALS['wgHooks']['PersonalUrls'][] = 'UniversalLanguageSelectorHooks::addPersonalBarTrigger';
+$GLOBALS['wgHooks']['ResourceLoaderTestModules'][] =
+	'UniversalLanguageSelectorHooks::addTestModules';
+$GLOBALS['wgHooks']['ResourceLoaderGetConfigVars'][] = 'UniversalLanguageSelectorHooks::addConfig';
+$GLOBALS['wgHooks']['MakeGlobalVariablesScript'][] = 'UniversalLanguageSelectorHooks::addVariables';
+$GLOBALS['wgAPIModules']['languagesearch'] = 'ApiLanguageSearch';
+$GLOBALS['wgAPIModules']['ulslocalization'] = 'ApiULSLocalization';
+$GLOBALS['wgHooks']['UserGetLanguageObject'][] = 'UniversalLanguageSelectorHooks::getLanguage';
+$GLOBALS['wgHooks']['SkinTemplateOutputPageBeforeExec'][] =
 	'UniversalLanguageSelectorHooks::onSkinTemplateOutputPageBeforeExec';
-$wgHooks['EnterMobileMode'][] = 'UniversalLanguageSelectorHooks::onEnterMobileMode';
+$GLOBALS['wgHooks']['EnterMobileMode'][] = 'UniversalLanguageSelectorHooks::onEnterMobileMode';
 
-$wgDefaultUserOptions['uls-preferences'] = '';
-$wgHooks['GetPreferences'][] = 'UniversalLanguageSelectorHooks::onGetPreferences';
+$GLOBALS['wgDefaultUserOptions']['uls-preferences'] = '';
+$GLOBALS['wgHooks']['GetPreferences'][] = 'UniversalLanguageSelectorHooks::onGetPreferences';
 
-$wgExtensionFunctions[] = function () {
+$GLOBALS['wgExtensionFunctions'][] = function () {
 	global $wgHooks, $wgResourceModules, $wgULSEventLogging, $wgULSGeoService;
 
 	if ( $wgULSGeoService === true ) {
