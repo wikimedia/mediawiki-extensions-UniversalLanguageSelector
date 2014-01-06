@@ -18,6 +18,8 @@
 
 #pt-uls a.uls-trigger {
 	padding-left: 30px;
+	/* Fix alignment in vector: https://bugzilla.wikimedia.org/59239 */
+	line-height: 1;
 }
 
 #p-lang .uls-settings-trigger {
