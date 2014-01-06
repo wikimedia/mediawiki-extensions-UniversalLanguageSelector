@@ -12,7 +12,7 @@
 	"license": [ "GPL-2.0+", "MIT" ],
 	"support": {
 		"issues": "https://bugzilla.wikimedia.org/",
-		"irc": "irc://irc.freenode.net/mediawiki-i18n",
+		"irc": "irc://irc.freenode.net/mediawiki-i18n"
 	},
 	"require": {
 		"php": ">=5.3.0",
