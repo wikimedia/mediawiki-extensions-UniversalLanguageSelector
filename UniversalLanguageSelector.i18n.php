@@ -77,9 +77,12 @@ $messages['arq'] = array(
 
 /** Assamese (অসমীয়া)
  * @author Bishnu Saikia
+ * @author Gitartha.bordoloi
  */
 $messages['as'] = array(
 	'UniversalLanguageSelector' => 'গোলকীয় ভাষা নিৰ্বাচক',
+	'uls-desc' => 'ব্যৱহাৰকাৰীক ভাষা নিৰ্বাচন কৰিবলৈ আৰু ভাষাৰ ছেটিং সলাবলৈ বিভিন্ন উপায় দিয়ে',
+	'uls-plang-title-languages' => 'ভাষাসমূহ',
 );
 
 /** Asturian (asturianu)
@@ -195,8 +198,10 @@ $messages['de'] = array(
 
 /** Zazaki (Zazaki)
  * @author Gorizon
+ * @author Mirzali
  */
 $messages['diq'] = array(
+	'UniversalLanguageSelector' => 'Weçinıtışê Zıwanio Cihanên',
 	'uls-plang-title-languages' => 'Zıwani',
 );
 
@@ -365,6 +370,13 @@ $messages['hsb'] = array(
 	'UniversalLanguageSelector' => 'Uniwersalny wuběr rěčow',
 	'uls-desc' => 'Dawa wužiwarjej wšelake metody, zo by rěč wubrał a rěčne nastajenja přiměrił',
 	'uls-plang-title-languages' => 'Rěče',
+);
+
+/** Hungarian (magyar)
+ * @author BáthoryPéter
+ */
+$messages['hu'] = array(
+	'uls-plang-title-languages' => 'Nyelvek',
 );
 
 /** Armenian (Հայերեն)
