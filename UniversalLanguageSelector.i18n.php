@@ -201,7 +201,7 @@ $messages['de'] = array(
  * @author Mirzali
  */
 $messages['diq'] = array(
-	'UniversalLanguageSelector' => 'Weçinıtışê Zıwanio Cihanên',
+	'UniversalLanguageSelector' => 'Zıwan Weçınıtoğo Universal',
 	'uls-plang-title-languages' => 'Zıwani',
 );
 
