@@ -18,7 +18,11 @@
  */
 ( function ( $, mw, undefined ) {
 	'use strict';
-	var mediawikiFontRepository, ulsPreferences;
+	var mediawikiFontRepository, ulsPreferences,
+		// Text to prepend the sample text. 0D00 is an unassigned unicode point.
+		tofuSalt = '\u0D00',
+		// cache languages with tofu.
+		tofuLanguages = {};
 
 	mw.webfonts = mw.webfonts || {};
 	ulsPreferences = mw.uls.preferences();
@@ -48,19 +52,107 @@
 		}
 	};
 
+
+	/**
+	 * Detect tofu
+	 *
+	 * Create a temporary span in the page with fontsize 72px and font-family
+	 * sans-serif for each letter of the text.
+	 * For each of these spans, calculate the width and height. If they are same
+	 * for all spans, we can understand that each of the letter is rendered using
+	 * same glyph - it must be a tofu.
+	 *
+	 * @param {string} text
+	 * @return {boolean}
+	 */
+	function detectTofu( text ) {
+		var index,
+			$fixture,
+			width = {},
+			height = {},
+			length = Math.min( 4, text.length ),
+			detected = false;
+
+		text = tofuSalt + text;
+		$fixture = $( '<span>' )
+			.css( {
+				fontSize: '72px',
+				fontFamily: 'sans-serif'
+			} )
+			.appendTo( 'body' );
+
+		for ( index = 0; index < length; index++ ) {
+			$fixture.text( text[index] );
+			width[index] = $fixture.width() || width[index-1];
+			height[index] = $fixture.height();
+
+			if( index > 0 &&
+				( width[index] !== width[index - 1] ||
+					height[index] !== height[index - 1] )
+			) {
+				detected = false;
+				break;
+			}
+		}
+
+		$fixture.remove();
+
+		if ( index === length ) {
+			detected = true;
+		}
+
+		return detected;
+	}
+
 	mediawikiFontRepository = $.webfonts.repository;
 	mediawikiFontRepository.base = mw.config.get( 'wgULSFontRepositoryBasePath' );
 
 	mw.webfonts.setup = function () {
 		// Initialize webfonts
 		$.fn.webfonts.defaults = $.extend( $.fn.webfonts.defaults, {
-			fontSelector: function ( repository, language ) {
-				var font;
+			 /**
+			  * Font selector - depending the language and optionally
+			  * based on the class given choose a font.
+			  *
+			  * @param {Object} repository
+			  * @param {string} language
+			  * @param {array} classes
+			  */
+			fontSelector: function ( repository, language, classes ) {
+				var font, tofu, autonym, defaultFont;
 
+				if ( !language ) {
+					return null;
+				}
+
+				defaultFont = repository.defaultFont( language );
+
+				if ( classes && $.inArray( 'autonym', classes ) >= 0 ) {
+					autonym = true;
+				}
+
+				// If the user has a font preference, apply it always.
 				font = mw.webfonts.preferences.getFont( language );
+				if ( !font || autonym ) {
+					// Is there any default font for this language?
+					if ( ( !defaultFont || defaultFont === 'system' ) && !autonym ) {
+						return font;
+					}
 
-				if ( !font ) {
-					font = repository.defaultFont( language );
+					// There is a default font for this language,
+					// but check whether the user sees tofu for it.
+					tofu = tofuLanguages[language] ||
+						detectTofu( $.uls.data.getAutonym( language ) );
+
+					if ( tofu ) {
+						mw.log( 'tofu detected for ' + language );
+						// Cache the languages with tofu
+						tofuLanguages[language] = true;
+						font = autonym ? 'Autonym' : defaultFont;
+					} else {
+						// No tofu and no font preference. Use system font.
+						font = 'system';
+					}
 				}
 
 				if ( font === 'system' ) {
@@ -70,15 +162,16 @@
 
 				return font;
 			},
+
 			exclude: ( function () {
 				var excludes = $.fn.webfonts.defaults.exclude;
 
 				if ( mw.user.options.get( 'editfont' ) !== 'default' ) {
-					// Exclude textboxes from webfonts if user has edit area font option
+					// Exclude textboxes from webfonts if the user has edit area font option
 					// set using 'Preferences' page
-					excludes = ( excludes )
-						? excludes + ',textarea'
-						: 'textarea';
+					excludes = ( excludes ) ?
+						excludes + ',textarea' :
+						'textarea';
 				}
 
 				return excludes;
