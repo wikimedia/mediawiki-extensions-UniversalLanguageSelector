@@ -1,8 +1,11 @@
 div.display-settings-block {
 	/* @embed */
 	background: transparent url('../images/display.png') no-repeat left top;
+	/* @embed */
 	background-image: -moz-linear-gradient(transparent, transparent), url('../images/display.svg');
+	/* @embed */
 	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/display.svg');
+	/* @embed */
 	background-image: linear-gradient(transparent, transparent), url('../images/display.svg');
 	background-size: 20px auto;
 	color: #252525;
