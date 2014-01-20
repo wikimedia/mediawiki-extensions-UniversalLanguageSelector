@@ -73,7 +73,10 @@
 			length = Math.min( 4, text.length ),
 			detected = false;
 
-		text = tofuSalt + text;
+		if ( $.client.test( { msie: false } ) ) {
+			// IE shows a different tofu for unassigned code points!
+			text = tofuSalt + text;
+		}
 		$fixture = $( '<span>' )
 			.css( {
 				fontSize: '72px',
