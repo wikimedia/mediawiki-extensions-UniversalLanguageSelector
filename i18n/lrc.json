@@ -11,8 +11,11 @@
     "ext-uls-select-language-settings-icon-tooltip": "تنظيمات زون",
     "ext-uls-language-settings-title": "تنظيمات زون",
     "ext-uls-language-settings-cancel": "رد كردن",
+    "ext-uls-display-settings-ui-language": "نشون دئن زون",
     "ext-uls-display-settings-anon-log-in-cta": "[[ویجه:وامین اومائن کارور|وامین اومائن]] سی انتخاو یه گل زون هنی د دیارگه یا.",
     "ext-uls-webfonts-select-for-ui-info": "فونت استفاده بیه سی مین پیوست کارور",
+    "ext-uls-input-settings-desc": "نیسنن د زون هنی؟",
+    "ext-uls-input-settings-ui-language": "زون استفاده بیه سی نیسنن",
     "ext-uls-input-settings-more-languages-tooltip": "زونيا بيشتر",
     "jquery-ime-other-languages": "د زونيا هنی",
     "jquery-ime-help": "هومياری"
