@@ -155,7 +155,7 @@ $GLOBALS['wgULSNoImeSelectors'] = array( '#wpCaptchaWord', '.ve-ce-documentNode'
  * Autonym
  * @since 2013.09
  */
-$GLOBALS['wgULSNoWebfontsSelectors'] = array( '.autonym' );
+$GLOBALS['wgULSNoWebfontsSelectors'] = array( '#p-lang li.interlanguage-link > a' );
 
 /**
  * Base path of ULS font repository.
