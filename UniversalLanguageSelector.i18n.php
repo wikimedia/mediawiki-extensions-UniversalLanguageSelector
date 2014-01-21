@@ -38,8 +38,8 @@ $messages['en'] = array(
 
 /** Message documentation (Message documentation)
  * @author Amire80
- * @author Shirayuki
  * @author Kunal Mehta
+ * @author Shirayuki
  */
 $messages['qqq'] = array(
 	'UniversalLanguageSelector' => 'Extension name',
@@ -198,6 +198,7 @@ $messages['de'] = array(
 	'UniversalLanguageSelector' => 'Universelle Sprachauswahl',
 	'uls-desc' => 'Ermöglicht verschiedene Wege, eine Sprache auszuwählen und Spracheinstellungen anzupassen',
 	'uls-plang-title-languages' => 'Sprachen',
+	'uls-preference' => 'Die [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector universelle Sprachauswahl] aktivieren',
 );
 
 /** Zazaki (Zazaki)
@@ -561,6 +562,7 @@ $messages['mk'] = array(
 	'UniversalLanguageSelector' => 'Универзален избирач на јазици',
 	'uls-desc' => 'Му дава на корисникот неколку начини за избор на јазик и прилагодување на јазичните поставки',
 	'uls-plang-title-languages' => 'Јазици',
+	'uls-preference' => 'Вклучи го [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Универзалниот избирач на јазици]',
 );
 
 /** Malayalam (മലയാളം)
