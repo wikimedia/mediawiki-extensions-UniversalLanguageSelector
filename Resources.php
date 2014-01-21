@@ -205,6 +205,7 @@ $wgResourceModules['ext.uls.mediawiki'] = array(
 		'jquery.uls',
 		'jquery.i18n',
 		'mediawiki.util',
+		'ext.uls.init',
 		'ext.uls.languagenames',
 	),
 ) + $resourcePaths;
