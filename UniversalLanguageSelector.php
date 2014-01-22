@@ -99,8 +99,8 @@ $GLOBALS['wgULSAnonCanChangeLanguage'] = true;
 $GLOBALS['wgULSLanguageDetection'] = true;
 
 /**
- * Disable the input methods feature for all users by default. Can still
- * be enabled manually by the user.
+ * Enable the input methods feature for all users by default.
+ * Can be disabled manually by the user.
  */
 $GLOBALS['wgULSIMEEnabled'] = true;
 
