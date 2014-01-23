@@ -45,7 +45,7 @@ class UniversalLanguageSelectorHooks {
 	 * Hook: BeforePageDisplay
 	 */
 	public static function addModules( $out, $skin ) {
-		global $wgULSGeoService, $wgULSEventLogging;
+		global $wgULSPosition, $wgULSGeoService, $wgULSEventLogging;
 
 		$user = $out->getUser();
 		if ( !$user->getBoolOption( 'uls-enable') ) {
@@ -74,6 +74,12 @@ class UniversalLanguageSelectorHooks {
 		if ( self::isToolbarEnabled( $user ) ) {
 			// Enable UI language selection for the user.
 			$out->addModules( 'ext.uls.interface' );
+		}
+
+		if ( $wgULSPosition === 'personal' ) {
+			$out->addModules( 'ext.uls.pt' );
+		} else {
+			$out->addModules( 'ext.uls.interlanguage' );
 		}
 
 		return true;
