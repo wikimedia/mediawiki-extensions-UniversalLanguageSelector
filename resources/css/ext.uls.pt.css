@@ -1,0 +1,61 @@
+/*
+ * The trigger can be placed in the personal toolbar near the username
+ * or near the interlanguage links.
+ */
+
+/*
+ * A hack to load the icon before the rest of the module is lazy-loaded.
+ * Copied from jquery.uls.css with the path changed.
+ */
+.uls-trigger {
+	/* @embed */
+	background: transparent url('../../lib/jquery.uls/images/icon-language.png') no-repeat scroll left center;
+	/* @embed */
+	background-image: -webkit-linear-gradient(transparent, transparent), url('../../lib/jquery.uls/images/icon-language.svg');
+	/* @embed */
+	background-image: -moz-linear-gradient(transparent, transparent), url('../../lib/jquery.uls/images/icon-language.svg');
+	/* @embed */
+	background-image: linear-gradient(transparent, transparent), url('../../lib/jquery.uls/images/icon-language.svg');
+	padding-left: 30px;
+}
+
+#pt-uls a.uls-trigger {
+	padding-left: 30px;
+	/* Fix alignment in vector: https://bugzilla.wikimedia.org/59239 */
+	line-height: 1;
+}
+
+/* Opera for some inexplicable reason confuses right and left padding with */
+/* RTL text direction here (bug 45142). x:-o-prefocus won't match anything, */
+/* but will make other browsers ignore this rule. */
+x:-o-prefocus, body.rtl li#pt-uls {
+	/* @noflip */
+	direction: ltr;
+}
+
+#settings-block {
+	border-top: 1px solid #C9C9C9;
+	background: #f8f8f8;
+	background: -webkit-gradient(linear, left top, left bottom, from(#FBFBFB), to(#F0F0F0));
+	background: -webkit-linear-gradient(top, #FBFBFB, #F0F0F0);
+	background: -moz-linear-gradient(top, #FBFBFB, #F0F0F0);
+	background: -o-linear-gradient(top, #FBFBFB, #F0F0F0);
+	background: linear-gradient(#FBFBFB, #F0F0F0);
+	padding-left: 10px;
+	line-height: 1.2em;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+}
+
+#settings-block div.display-settings-block,
+#settings-block div.input-settings-block {
+	display: inline-block;
+	margin: 8px 15px;
+	color: #565656;
+}
+
+#settings-block div.display-settings-block:hover,
+#settings-block div.input-settings-block:hover {
+	color: #252525;
+}

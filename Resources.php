@@ -249,6 +249,14 @@ $wgResourceModules['jquery.webfonts'] = array(
 	'targets' => array( 'desktop', 'mobile' ),
 ) + $resourcePaths;
 
+$wgResourceModules['ext.uls.pt'] = array(
+	'styles' => 'resources/css/ext.uls.pt.css',
+) + $resourcePaths;
+
+$wgResourceModules['ext.uls.interlanguage'] = array(
+	'styles' => 'resources/css/ext.uls.interlanguage.css',
+) + $resourcePaths;
+
 // A module named rangy is defined in VisualExtension with more features of rangy.
 // Here we need only the core library. This module is loaded dynamically from
 // client when rangy is undefined. If VE is present rangy will be defined, the module
