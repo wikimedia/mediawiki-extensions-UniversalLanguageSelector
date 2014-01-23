@@ -231,7 +231,7 @@
 				// Get the html of the link by wrapping it in div first
 				link = $( '<div>' ).html( link ).html();
 
-				return $.i18n( 'ext-uls-undo-language-tooltip-text', link );
+				return mw.msg( 'ext-uls-undo-language-tooltip-text', link );
 			}
 		} );
 
@@ -321,9 +321,7 @@
 				// The interlanguage links section
 				$pLang = $( '#p-lang' );
 				// Add an element near the interlanguage links header
-				$ulsTrigger = $( '<span>' )
-					.addClass( 'uls-settings-trigger' )
-					.attr( 'title', $.i18n( 'ext-uls-language-settings-title' ) );
+				$ulsTrigger = $( '<span>' ).addClass( 'uls-settings-trigger' );
 				// Append ULS cog to languages section, but make sure it is visible.
 				$pLang.show().prepend( $ulsTrigger );
 				// Take care of any other elements with this class.
@@ -344,7 +342,7 @@
 				}
 
 				$ulsTrigger.attr( {
-					title: $.i18n( 'ext-uls-select-language-settings-icon-tooltip' )
+					title: mw.msg( 'ext-uls-select-language-settings-icon-tooltip' )
 				} );
 
 				$ulsTrigger.on( 'click', function ( e, eventParams ) {
@@ -461,7 +459,7 @@
 
 			// Bind language settings to preferences page link
 			$( '#uls-preferences-link' )
-				.text( $.i18n( 'ext-uls-language-settings-preferences-link' ) )
+				.text( mw.msg( 'ext-uls-language-settings-preferences-link' ) )
 				.click( function () {
 					$ulsTrigger.trigger( 'click', {
 						source: 'preferences'

@@ -40,11 +40,6 @@
 		}() );
 	}
 
-
-	var jsonLoader = null,
-		initialized = false,
-		currentLang = mw.config.get( 'wgUserLanguage' );
-
 	mw.uls = mw.uls || {};
 	mw.uls.previousLanguagesCookie = 'uls-previous-languages';
 	mw.uls.previousLanguageAutonymCookie = 'uls-previous-language-autonym';
@@ -230,33 +225,19 @@
 	}
 
 	/**
-	 * Initialize ULS front-end and its i18n.
+	 * Initialize ULS front-end if browser is supported.
 	 *
 	 * @param {Function} callback callback function to be called after initialization.
 	 */
 	mw.uls.init = function ( callback ) {
-
-		callback = callback || $.noop;
-
-		if ( initialized ) {
-			callback.call( this );
-
-			return;
-		}
-
 		if ( !isBrowserSupported() ) {
 			$( '#pt-uls' ).hide();
 
 			return;
 		}
 
-		if ( !jsonLoader ) {
-			jsonLoader = mw.uls.loadLocalization( currentLang );
-		} else {
-			jsonLoader.done( function () {
-				initialized = true;
-			} );
-			jsonLoader.done( callback );
+		if ( callback ) {
+			callback.call( this );
 		}
 	};
 
