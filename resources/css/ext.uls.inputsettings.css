@@ -2,8 +2,6 @@ div.input-settings-block {
 	/* @embed */
 	background: transparent url('../images/input.png') no-repeat left top;
 	/* @embed */
-	background-image: -moz-linear-gradient(transparent, transparent), url('../images/input.svg');
-	/* @embed */
 	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/input.svg');
 	/* @embed */
 	background-image: linear-gradient(transparent, transparent), url('../images/input.svg');
@@ -44,8 +42,6 @@ div.input-settings-block {
 	/* @embed */
 	background: transparent url('../images/remove-input.png') no-repeat left top;
 	/* @embed */
-	background-image: -moz-linear-gradient(transparent, transparent), url('../images/remove-input.svg');
-	/* @embed */
 	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/remove-input.svg');
 	/* @embed */
 	background-image: linear-gradient(transparent, transparent), url('../images/remove-input.svg');
@@ -59,8 +55,6 @@ div.input-settings-block {
 .uls-ime-more-settings-link {
 	/* @embed */
 	background: transparent url('../images/cog.png') no-repeat center top;
-	/* @embed */
-	background-image: -moz-linear-gradient(transparent, transparent), url('../images/cog.svg');
 	/* @embed */
 	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/cog.svg');
 	/* @embed */
