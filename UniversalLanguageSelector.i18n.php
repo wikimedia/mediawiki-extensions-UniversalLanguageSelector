@@ -115,6 +115,7 @@ $messages['bn'] = array(
 	'UniversalLanguageSelector' => 'ইউনিভার্সাল ল্যাঙ্গুয়েজ সিলেক্টর',
 	'uls-desc' => 'ব্যবহারকারীকে ভাষা নির্বাচন এবং ভাষা সম্পর্কিত সেটিং সমন্বয়ের বিভিন্ন উপায় দেয়',
 	'uls-plang-title-languages' => 'ভাষা',
+	'uls-preference' => '[https://www.mediawiki.org/wiki/Universal_Language_Selector/bn ইউনিভার্সাল ল্যাঙ্গুয়েজ সিলেক্টর] সক্রিয় করো',
 );
 
 /** Breton (brezhoneg)
@@ -249,11 +250,13 @@ $messages['eo'] = array(
 /** Spanish (español)
  * @author Armando-Martin
  * @author Ovruni
+ * @author Peter Bowman
  */
 $messages['es'] = array(
 	'UniversalLanguageSelector' => 'Selector universal de idiomas',
 	'uls-desc' => 'Ofrece al usuario varias formas para seleccionar un idioma y ajustar su configuración',
 	'uls-plang-title-languages' => 'Idiomas',
+	'uls-preference' => 'Activar el [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector selector universal de idiomas]',
 );
 
 /** Estonian (eesti)
@@ -293,6 +296,7 @@ $messages['fi'] = array(
 );
 
 /** French (français)
+ * @author Gomoko
  * @author Ltrlg
  * @author Metroitendo
  * @author Tititou36
@@ -302,6 +306,7 @@ $messages['fr'] = array(
 	'UniversalLanguageSelector' => 'Sélecteur de Langue Universel',
 	'uls-desc' => "Donne à l'utilisateur plusieurs manières de sélectionner une langue et d'ajuster les paramètres de langue",
 	'uls-plang-title-languages' => 'Langues',
+	'uls-preference' => 'Activer le [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Sélecteur universel de langues]',
 );
 
 /** Northern Frisian (Nordfriisk)
@@ -343,6 +348,13 @@ $messages['gom-latn'] = array(
 	'uls-plang-title-languages' => 'Bhaso',
 );
 
+/** Swiss German (Alemannisch)
+ * @author Als-Holder
+ */
+$messages['gsw'] = array(
+	'uls-preference' => 'Di [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector universäll Sprochuuswahl] aktiviere',
+);
+
 /** Gujarati (ગુજરાતી)
  * @author KartikMistry
  */
@@ -359,6 +371,7 @@ $messages['he'] = array(
 	'UniversalLanguageSelector' => 'בורר השפות העולמי',
 	'uls-desc' => 'נותן למשתמשים מספר דרכים לבחור שפה ולכוונן את הגדרות השפה',
 	'uls-plang-title-languages' => 'שפות',
+	'uls-preference' => 'להפעיל את [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector בורר השפות האוניברסלי]',
 );
 
 /** Croatian (hrvatski)
@@ -419,6 +432,7 @@ $messages['it'] = array(
 	'UniversalLanguageSelector' => 'Selettore universale della lingua',
 	'uls-desc' => 'Fornisce agli utenti diversi modi di selezionare una lingua e sistemare le impostazioni della lingua',
 	'uls-plang-title-languages' => 'Lingue',
+	'uls-preference' => 'Abilita il [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector selettore universale delle lingue]',
 );
 
 /** Japanese (日本語)
@@ -428,6 +442,7 @@ $messages['ja'] = array(
 	'UniversalLanguageSelector' => 'ユニバーサル言語選択',
 	'uls-desc' => '言語を選択するため/言語設定を調整するための、いくつかの方法を利用者に提供する',
 	'uls-plang-title-languages' => '言語',
+	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector ユニバーサル言語選択]を有効にする',
 );
 
 /** Georgian (ქართული)
@@ -458,12 +473,14 @@ $messages['kn'] = array(
 
 /** Korean (한국어)
  * @author Kwj2772
+ * @author Priviet
  * @author 아라
  */
 $messages['ko'] = array(
 	'UniversalLanguageSelector' => '일반 언어 선택기',
 	'uls-desc' => '사용자에게 언어를 선택하고 언어 설정을 바꾸는 몇 가지 방법을 제공합니다',
 	'uls-plang-title-languages' => '언어',
+	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector 보편 언어 선택기]를 활성화',
 );
 
 /** Karachay-Balkar (къарачай-малкъар)
@@ -566,12 +583,14 @@ $messages['mk'] = array(
 );
 
 /** Malayalam (മലയാളം)
+ * @author Praveenp
  * @author Santhosh.thottingal
  */
 $messages['ml'] = array(
 	'UniversalLanguageSelector' => 'ആഗോള ഭാഷാസഹായി',
 	'uls-desc' => 'ഭാഷ തിരഞ്ഞെടുക്കുന്നതിനും സജ്ജീകരിക്കുന്നതിനുമുള്ള സംവിധാനം',
 	'uls-plang-title-languages' => 'ഭാഷകൾ',
+	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector യൂണിവേഴ്സൽ ലാങ്വേജ് സെലക്റ്റർ] സജ്ജമാക്കുക',
 );
 
 /** Marathi (मराठी)
@@ -582,6 +601,7 @@ $messages['mr'] = array(
 	'UniversalLanguageSelector' => 'वैश्विक भाषा वरणित्र',
 	'uls-desc' => 'सदस्यांना भाषा निवडण्याचे आणि त्यांची मांडणी अनुकूल करण्याचे अनेक मार्ग उपलब्ध करते',
 	'uls-plang-title-languages' => 'भाषा',
+	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector वैश्विक भाषा वरणित्र ] सक्षम करा.',
 );
 
 /** Malay (Bahasa Melayu)
@@ -647,12 +667,14 @@ $messages['pa'] = array(
 
 /** Polish (polski)
  * @author BeginaFelicysym
+ * @author Peter Bowman
  * @author WTM
  */
 $messages['pl'] = array(
 	'UniversalLanguageSelector' => 'Uniwersalny Selektor Języka',
 	'uls-desc' => 'Daje użytkownikowi kilka sposobów, aby wybrać język i dostosować ustawienia języka',
 	'uls-plang-title-languages' => 'Języki',
+	'uls-preference' => 'Włącz [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector uniwersalny selektor języków]',
 );
 
 /** Piedmontese (Piemontèis)
@@ -663,6 +685,7 @@ $messages['pms'] = array(
 	'UniversalLanguageSelector' => 'Seletor Universal ëd Lenga',
 	'uls-desc' => "A dà a l'utent vàire manere ëd selessioné na lenga e ëd sistemé j'ampostassion ëd lenga",
 	'uls-plang-title-languages' => 'Lenghe',
+	'uls-preference' => 'Ativé ël [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Seletor universal ëd lenghe]',
 );
 
 /** Pashto (پښتو)
@@ -705,16 +728,19 @@ $messages['roa-tara'] = array(
 	'UniversalLanguageSelector' => 'Scacchiatore Universale de Lènghe',
 	'uls-desc' => "Dèje diverse mode a l'utende de scacchià 'na lènghe e de consiglià le 'mbostaziune d'a lènghe",
 	'uls-plang-title-languages' => 'Lènghe',
+	'uls-preference' => "Abbilite 'u [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Selettore de Lènghe Universale]",
 );
 
 /** Russian (русский)
  * @author Amire80
+ * @author Okras
  * @author Putnik
  */
 $messages['ru'] = array(
 	'UniversalLanguageSelector' => 'Универсальный переключатель языков',
 	'uls-desc' => 'Даёт пользователю несколько способов выбрать язык и произвести установки языка',
 	'uls-plang-title-languages' => 'Языки',
+	'uls-preference' => 'Включить [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Универсальный переключатель языков]',
 );
 
 /** Sinhala (සිංහල)
@@ -758,6 +784,7 @@ $messages['sv'] = array(
 	'UniversalLanguageSelector' => 'Universal språkväljare',
 	'uls-desc' => 'Ger användaren flera sätt att välja ett språk på och justera språkinställningar',
 	'uls-plang-title-languages' => 'Språk',
+	'uls-preference' => 'Aktivera [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Universala språkväljaren]',
 );
 
 /** Tamil (தமிழ்)
@@ -857,14 +884,17 @@ $messages['zh-hans'] = array(
 	'UniversalLanguageSelector' => '全球语言选择器',
 	'uls-desc' => '为用户提供多种方法来选择语言和调整语言设置',
 	'uls-plang-title-languages' => '语言',
+	'uls-preference' => '启用[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector 通用语言选择器]',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
  * @author Justincheng12345
+ * @author Liuxinyu970226
  * @author Simon Shek
  */
 $messages['zh-hant'] = array(
 	'UniversalLanguageSelector' => '通用語言選擇器',
 	'uls-desc' => '為用戶提供多種方法來選擇語言和調整語言設置',
 	'uls-plang-title-languages' => '語言',
+	'uls-preference' => '啟用[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector 通用語言選擇器]',
 );
