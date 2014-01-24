@@ -24,9 +24,9 @@ Feature: Font selection
   Scenario: Discarding live preview of content font
     When I select OpenDyslexic font for the content language for the live preview
       And I close the panel to discard the changes
-    Then the active content font must be the same as font prior to the preview
-      # System is the default value for English and German
-      And the selected content font must be "Systemschriftart"
+    # System is the default value for English and German
+    Then the selected content font must be "Systemschriftart"
+      And the active content font must be the same as font prior to the preview
 
   Scenario: Discarding live preview of interface font
     When I select OpenDyslexic font for the interface language for the live preview
