@@ -231,7 +231,7 @@
 				// Get the html of the link by wrapping it in div first
 				link = $( '<div>' ).html( link ).html();
 
-				return $.i18n( 'ext-uls-undo-language-tooltip-text', link );
+				return mw.msg( 'ext-uls-undo-language-tooltip-text', link );
 			}
 		} );
 
@@ -342,7 +342,7 @@
 				}
 
 				$ulsTrigger.attr( {
-					title: $.i18n( 'ext-uls-select-language-settings-icon-tooltip' )
+					title: mw.msg( 'ext-uls-select-language-settings-icon-tooltip' )
 				} );
 
 				$ulsTrigger.on( 'click', function ( e, eventParams ) {
@@ -459,7 +459,7 @@
 
 			// Bind language settings to preferences page link
 			$( '#uls-preferences-link' )
-				.text( $.i18n( 'ext-uls-language-settings-preferences-link' ) )
+				.text( mw.msg( 'ext-uls-language-settings-preferences-link' ) )
 				.click( function () {
 					$ulsTrigger.trigger( 'click', {
 						source: 'preferences'

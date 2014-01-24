@@ -11,8 +11,6 @@
 "ext-uls-display-settings-fonts-tab": "Fonts",
 "ext-uls-display-settings-title-short": "Display",
 "ext-uls-display-settings-desc": "Set language used for menus and fonts.",
-"ext-uls-select-language-settings-icon-tooltip": "Language settings",
-"ext-uls-undo-language-tooltip-text": "Language changed from $1",
 "ext-uls-language-settings-title": "Language settings",
 "ext-uls-language-settings-apply": "Apply settings",
 "ext-uls-language-settings-cancel": "Cancel",
@@ -47,6 +45,5 @@
 "ext-uls-input-disable-notification-undo": "Undo",
 "ext-uls-input-disable-notification-info-personal": "You can enable the input tools at any time from the language settings.",
 "ext-uls-input-disable-notification-info-interlanguage": "You can enable the input tools at any time from the language settings next to the language list.",
-"ext-uls-language-settings-applying": "Applying...",
-"ext-uls-language-settings-preferences-link": "More language settings"
+"ext-uls-language-settings-applying": "Applying..."
 }
