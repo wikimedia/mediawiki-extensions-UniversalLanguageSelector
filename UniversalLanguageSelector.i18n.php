@@ -149,6 +149,7 @@ $messages['ckb'] = array(
 	'UniversalLanguageSelector' => 'ھەڵبژاردنی زمانی گەردوونی',
 	'uls-desc' => 'ڕێگای جۆربەجۆر بۆ بەکارھێنەر بۆ ھەڵبژاردنی زمان و جێبەجێکردنی ڕێکخستنەکانی زمان دخاتە ڕوو.',
 	'uls-plang-title-languages' => 'زمانەکان',
+	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector ULS] چالاک بکە',
 );
 
 /** Czech (čeština)
@@ -366,12 +367,13 @@ $messages['gu'] = array(
 
 /** Hebrew (עברית)
  * @author Amire80
+ * @author Guycn2
  */
 $messages['he'] = array(
 	'UniversalLanguageSelector' => 'בורר השפות העולמי',
 	'uls-desc' => 'נותן למשתמשים מספר דרכים לבחור שפה ולכוונן את הגדרות השפה',
 	'uls-plang-title-languages' => 'שפות',
-	'uls-preference' => 'להפעיל את [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector בורר השפות האוניברסלי]',
+	'uls-preference' => 'הפעלת [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector בורר השפות האוניברסלי]',
 );
 
 /** Croatian (hrvatski)
@@ -822,6 +824,7 @@ $messages['tr'] = array(
 );
 
 /** Ukrainian (українська)
+ * @author Andriykopanytsia
  * @author RLuts
  * @author Steve.rusyn
  * @author SteveR
@@ -830,6 +833,8 @@ $messages['uk'] = array(
 	'UniversalLanguageSelector' => 'Універсальний вибір мови',
 	'uls-desc' => 'Надає користувачу декілька способів вибрати мову та налаштувати мовні параметри.',
 	'uls-plang-title-languages' => 'Мови',
+	'uls-preference' => 'Увімкнути
+[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Універсальний перемикач мов]',
 );
 
 /** Urdu (اردو)
