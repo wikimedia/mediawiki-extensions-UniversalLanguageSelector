@@ -14,7 +14,6 @@ foreach ( glob( '../fonts/*/font.ini' ) as $inifile ) {
 	$conf = parse_ini_file( $inifile, true );
 	$languages = array();
 	$version = null;
-	$license = null;
 	foreach ( $conf as $fontname => $font ) {
 
 		if ( isset( $font['languages'] ) ) {
@@ -36,13 +35,8 @@ foreach ( glob( '../fonts/*/font.ini' ) as $inifile ) {
 		if ( isset( $font['version'] ) ) {
 			$version = $font['version'];
 		}
-		if ( isset( $font['license'] ) ) {
-			$license = $font['license'];
-		}
-
 		$list['fonts'][$fontname] = array(
 			'version' => $version,
-			'license' => $license,
 		);
 
 		if ( isset( $font['fontweight'] ) ) {
