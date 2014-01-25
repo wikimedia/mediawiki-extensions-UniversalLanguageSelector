@@ -201,14 +201,18 @@ $wgResourceModules['jquery.ime'] = array(
 	'styles' => 'lib/jquery.ime/css/jquery.ime.css',
 ) + $resourcePaths;
 
-// A module that sets useful ULS default options
+// This module sets default options for the language selector that are
+// suitable for MediaWiki and loads necessary dependencies like grid,
+// messages and jquery.uls itself.
 $wgResourceModules['ext.uls.mediawiki'] = array(
 	'scripts' => 'resources/js/ext.uls.mediawiki.js',
 	'dependencies' => array(
-		'jquery.uls',
-		'mediawiki.util',
 		'ext.uls.init',
 		'ext.uls.languagenames',
+		'ext.uls.messages',
+		'jquery.uls',
+		'jquery.uls.grid',
+		'mediawiki.util',
 	),
 ) + $resourcePaths;
 
