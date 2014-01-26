@@ -9,8 +9,6 @@
     "ext-uls-display-settings-fonts-tab": "Carattere",
     "ext-uls-display-settings-title-short": "Fà vedè",
     "ext-uls-display-settings-desc": "'Mboste 'a lènghe ausate pe menu e carattere.",
-    "ext-uls-select-language-settings-icon-tooltip": "'Mbostaziune de lènghe",
-    "ext-uls-undo-language-tooltip-text": "Lènghe cangiate da $1",
     "ext-uls-language-settings-title": "'Mbostaziune d'a lènghe",
     "ext-uls-language-settings-apply": "Appliche le 'mbostaziune",
     "ext-uls-language-settings-cancel": "Annulle",
@@ -45,6 +43,5 @@
     "ext-uls-input-disable-notification-undo": "Annulle",
     "ext-uls-input-disable-notification-info-personal": "Tu puè abbilità le struminde de ingresse ogne vote da le 'mbostaziune d'a lènghe.",
     "ext-uls-input-disable-notification-info-interlanguage": "Tu puè abbilità le struminde de ingresse ogne vote da le 'mbostaziune d'a lènghe successive a l'elenghe de le lènghe.",
-    "ext-uls-language-settings-applying": "Stoche a appleche...",
-    "ext-uls-language-settings-preferences-link": "Otre 'mbostaziune d'a lènghe"
+    "ext-uls-language-settings-applying": "Stoche a appleche..."
 }

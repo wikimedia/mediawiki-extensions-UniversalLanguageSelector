@@ -42,6 +42,7 @@ $messages['en'] = array(
 /** Message documentation (Message documentation)
  * @author Amire80
  * @author Kunal Mehta
+ * @author Raymond
  * @author Shirayuki
  */
 $messages['qqq'] = array(
@@ -53,6 +54,11 @@ This title is shown when there are no interlanguage links there, but an icon tha
 	'uls-ime-helppage' => 'Target page for ime helps. Parameters:
 * $1 - ime id. Intended for wiki local customization. e.g. cyrl-palochka',
 	'uls-preference' => 'Label for checkbox to enable the Universal Language Selector on Special:Preferences',
+	'ext-uls-select-language-settings-icon-tooltip' => 'A tooltip for the icon that shows the language selector.
+{{Identical|Language settings}}',
+	'ext-uls-undo-language-tooltip-text' => 'Text for the tooltip appearing when language is changed. Parameters:
+* $1 - the previous language acronym',
+	'ext-uls-language-settings-preferences-link' => 'Text for the link showin in user preference screen',
 );
 
 /** Arabic (العربية)
@@ -99,6 +105,10 @@ $messages['ast'] = array(
 	'UniversalLanguageSelector' => 'Selector universal de llingua',
 	'uls-desc' => 'Ufre al usuariu delles maneres pa seleicionar una llingua y axustar la configuración de llingua',
 	'uls-plang-title-languages' => 'Llingües',
+	'uls-preference' => 'Activar el [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector selector universal de llingua]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Preferencies de llingua',
+	'ext-uls-undo-language-tooltip-text' => 'La llingua camudó dende $1',
+	'ext-uls-language-settings-preferences-link' => 'Más preferencies de llingua',
 );
 
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
@@ -119,6 +129,9 @@ $messages['bn'] = array(
 	'uls-desc' => 'ব্যবহারকারীকে ভাষা নির্বাচন এবং ভাষা সম্পর্কিত সেটিং সমন্বয়ের বিভিন্ন উপায় দেয়',
 	'uls-plang-title-languages' => 'ভাষা',
 	'uls-preference' => '[https://www.mediawiki.org/wiki/Universal_Language_Selector/bn ইউনিভার্সাল ল্যাঙ্গুয়েজ সিলেক্টর] সক্রিয় করো',
+	'ext-uls-select-language-settings-icon-tooltip' => 'ভাষা সেটিং',
+	'ext-uls-undo-language-tooltip-text' => '$1 হতে ভাষার পরিবর্তন',
+	'ext-uls-language-settings-preferences-link' => 'আরও ভাষা সেটিং',
 );
 
 /** Breton (brezhoneg)
@@ -153,6 +166,9 @@ $messages['ckb'] = array(
 	'uls-desc' => 'ڕێگای جۆربەجۆر بۆ بەکارھێنەر بۆ ھەڵبژاردنی زمان و جێبەجێکردنی ڕێکخستنەکانی زمان دخاتە ڕوو.',
 	'uls-plang-title-languages' => 'زمانەکان',
 	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector ULS] چالاک بکە',
+	'ext-uls-select-language-settings-icon-tooltip' => 'ڕێکخستنەکانی زمان',
+	'ext-uls-undo-language-tooltip-text' => 'زمان گۆڕدرا لە $1',
+	'ext-uls-language-settings-preferences-link' => 'ڕێکخستنەکانی زیاتری زمان',
 );
 
 /** Czech (čeština)
@@ -204,6 +220,9 @@ $messages['de'] = array(
 	'uls-desc' => 'Ermöglicht verschiedene Wege, eine Sprache auszuwählen und Spracheinstellungen anzupassen',
 	'uls-plang-title-languages' => 'Sprachen',
 	'uls-preference' => 'Die [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector universelle Sprachauswahl] aktivieren',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Spracheinstellungen',
+	'ext-uls-undo-language-tooltip-text' => 'Sprache geändert von $1',
+	'ext-uls-language-settings-preferences-link' => 'Weitere Spracheinstellungen',
 );
 
 /** Zazaki (Zazaki)
@@ -222,6 +241,10 @@ $messages['dsb'] = array(
 	'UniversalLanguageSelector' => 'Uniwersalny wuběrk rěcow',
 	'uls-desc' => 'Dawa wužywarjeju wšake metody, aby rěc wubrał a rěcne nastajenja pśiměrił',
 	'uls-plang-title-languages' => 'Rěcy',
+	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Uniwersalny wuběrk rěcow] zmóžniś',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Rěcne nastajenja',
+	'ext-uls-undo-language-tooltip-text' => 'Rěc $1 změnjona',
+	'ext-uls-language-settings-preferences-link' => 'Dalšne rěcne nastajenja',
 );
 
 /** Divehi (ދިވެހިބަސް)
@@ -261,6 +284,9 @@ $messages['es'] = array(
 	'uls-desc' => 'Ofrece al usuario varias formas para seleccionar un idioma y ajustar su configuración',
 	'uls-plang-title-languages' => 'Idiomas',
 	'uls-preference' => 'Activar el [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector selector universal de idiomas]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Opciones de idioma',
+	'ext-uls-undo-language-tooltip-text' => 'El idioma cambió de $1',
+	'ext-uls-language-settings-preferences-link' => 'Más opciones de idioma',
 );
 
 /** Estonian (eesti)
@@ -270,6 +296,10 @@ $messages['et'] = array(
 	'UniversalLanguageSelector' => 'Universaalne keelevalija',
 	'uls-desc' => 'Võimaldab kasutajal mitmel viisil keelt valida ja keelesätteid kohandada.',
 	'uls-plang-title-languages' => 'Keeled',
+	'uls-preference' => 'Kasuta [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector universaalset keelevalijat]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Keelesätted',
+	'ext-uls-undo-language-tooltip-text' => 'Keel vahetatud, enne: $1',
+	'ext-uls-language-settings-preferences-link' => 'Veel keelesätteid',
 );
 
 /** Basque (euskara)
@@ -304,13 +334,17 @@ $messages['fi'] = array(
  * @author Ltrlg
  * @author Metroitendo
  * @author Tititou36
+ * @author Urhixidur
  * @author Wyz
  */
 $messages['fr'] = array(
 	'UniversalLanguageSelector' => 'Sélecteur de Langue Universel',
-	'uls-desc' => "Donne à l'utilisateur plusieurs manières de sélectionner une langue et d'ajuster les paramètres de langue",
+	'uls-desc' => 'Donne à l’utilisateur plusieurs manières de sélectionner une langue et d’ajuster les paramètres de langue',
 	'uls-plang-title-languages' => 'Langues',
 	'uls-preference' => 'Activer le [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Sélecteur universel de langues]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Paramètres de langue',
+	'ext-uls-undo-language-tooltip-text' => 'Langue modifiée de $1',
+	'ext-uls-language-settings-preferences-link' => 'Plus de paramètres de langue',
 );
 
 /** Northern Frisian (Nordfriisk)
@@ -377,6 +411,9 @@ $messages['he'] = array(
 	'uls-desc' => 'נותן למשתמשים מספר דרכים לבחור שפה ולכוונן את הגדרות השפה',
 	'uls-plang-title-languages' => 'שפות',
 	'uls-preference' => 'הפעלת [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector בורר השפות האוניברסלי]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'הגדרות שפה',
+	'ext-uls-undo-language-tooltip-text' => 'השפה השתנתה מ{{GRAMMAR:תחילית|$1}}',
+	'ext-uls-language-settings-preferences-link' => 'הגדרות שפה נוספות',
 );
 
 /** Croatian (hrvatski)
@@ -393,6 +430,10 @@ $messages['hsb'] = array(
 	'UniversalLanguageSelector' => 'Uniwersalny wuběr rěčow',
 	'uls-desc' => 'Dawa wužiwarjej wšelake metody, zo by rěč wubrał a rěčne nastajenja přiměrił',
 	'uls-plang-title-languages' => 'Rěče',
+	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Uniwersalny wuběr rěčow] zmóžnić',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Rěčne nastajenja',
+	'ext-uls-undo-language-tooltip-text' => 'Rěč $1 změnjena',
+	'ext-uls-language-settings-preferences-link' => 'Dalše rěčne nastajenja',
 );
 
 /** Hungarian (magyar)
@@ -438,6 +479,9 @@ $messages['it'] = array(
 	'uls-desc' => 'Fornisce agli utenti diversi modi di selezionare una lingua e sistemare le impostazioni della lingua',
 	'uls-plang-title-languages' => 'Lingue',
 	'uls-preference' => 'Abilita il [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector selettore universale delle lingue]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Impostazioni per la lingua',
+	'ext-uls-undo-language-tooltip-text' => 'Lingua modificata da $1',
+	'ext-uls-language-settings-preferences-link' => 'Ulteriori impostazioni per la lingua',
 );
 
 /** Japanese (日本語)
@@ -448,6 +492,9 @@ $messages['ja'] = array(
 	'uls-desc' => '言語を選択するため/言語設定を調整するための、いくつかの方法を利用者に提供する',
 	'uls-plang-title-languages' => '言語',
 	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector ユニバーサル言語選択]を有効にする',
+	'ext-uls-select-language-settings-icon-tooltip' => '言語の設定',
+	'ext-uls-undo-language-tooltip-text' => '言語を$1から変更しました。',
+	'ext-uls-language-settings-preferences-link' => '言語のその他の設定',
 );
 
 /** Georgian (ქართული)
@@ -466,6 +513,10 @@ $messages['ka'] = array(
 $messages['kk-cyrl'] = array(
 	'UniversalLanguageSelector' => 'Әнбебаб тіл таңдаушы',
 	'uls-plang-title-languages' => 'Тілдер',
+	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Әмбебап тіл таңдаушыны] қосу',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Тіл баптаулары',
+	'ext-uls-undo-language-tooltip-text' => '$1 дегеннен тіл өзгертілді',
+	'ext-uls-language-settings-preferences-link' => 'Қосымша тіл баптаулары',
 );
 
 /** Kannada (ಕನ್ನಡ)
@@ -486,6 +537,9 @@ $messages['ko'] = array(
 	'uls-desc' => '사용자에게 언어를 선택하고 언어 설정을 바꾸는 몇 가지 방법을 제공합니다',
 	'uls-plang-title-languages' => '언어',
 	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector 보편 언어 선택기]를 활성화',
+	'ext-uls-select-language-settings-icon-tooltip' => '언어 설정',
+	'ext-uls-undo-language-tooltip-text' => '$1에서 언어가 바뀌었습니다',
+	'ext-uls-language-settings-preferences-link' => '자세한 언어 설정',
 );
 
 /** Karachay-Balkar (къарачай-малкъар)
@@ -585,6 +639,9 @@ $messages['mk'] = array(
 	'uls-desc' => 'Му дава на корисникот неколку начини за избор на јазик и прилагодување на јазичните поставки',
 	'uls-plang-title-languages' => 'Јазици',
 	'uls-preference' => 'Вклучи го [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Универзалниот избирач на јазици]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Јазични поставки',
+	'ext-uls-undo-language-tooltip-text' => 'Јазикот сменет од изворниот $1',
+	'ext-uls-language-settings-preferences-link' => 'Уште јазични поставки',
 );
 
 /** Malayalam (മലയാളം)
@@ -596,6 +653,9 @@ $messages['ml'] = array(
 	'uls-desc' => 'ഭാഷ തിരഞ്ഞെടുക്കുന്നതിനും സജ്ജീകരിക്കുന്നതിനുമുള്ള സംവിധാനം',
 	'uls-plang-title-languages' => 'ഭാഷകൾ',
 	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector യൂണിവേഴ്സൽ ലാങ്വേജ് സെലക്റ്റർ] സജ്ജമാക്കുക',
+	'ext-uls-select-language-settings-icon-tooltip' => 'ഭാഷാ സജ്ജീകരണങ്ങൾ',
+	'ext-uls-undo-language-tooltip-text' => 'ഭാഷ മാറിയിരിക്കുന്നു. പഴയ ഭാഷ: $1',
+	'ext-uls-language-settings-preferences-link' => 'കൂടുതൽ ഭാഷാസജ്ജീകരണങ്ങൾ',
 );
 
 /** Marathi (मराठी)
@@ -607,6 +667,9 @@ $messages['mr'] = array(
 	'uls-desc' => 'सदस्यांना भाषा निवडण्याचे आणि त्यांची मांडणी अनुकूल करण्याचे अनेक मार्ग उपलब्ध करते',
 	'uls-plang-title-languages' => 'भाषा',
 	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector वैश्विक भाषा वरणित्र ] सक्षम करा.',
+	'ext-uls-select-language-settings-icon-tooltip' => 'भाषा सेटींग्स',
+	'ext-uls-undo-language-tooltip-text' => '$1 पासुन भाषा बदलली',
+	'ext-uls-language-settings-preferences-link' => 'अधिकचे भाषा मांडणी पर्याय',
 );
 
 /** Malay (Bahasa Melayu)
@@ -680,6 +743,9 @@ $messages['pl'] = array(
 	'uls-desc' => 'Daje użytkownikowi kilka sposobów, aby wybrać język i dostosować ustawienia języka',
 	'uls-plang-title-languages' => 'Języki',
 	'uls-preference' => 'Włącz [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector uniwersalny selektor języków]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Ustawienia języka',
+	'ext-uls-undo-language-tooltip-text' => 'Poprzedni język: $1',
+	'ext-uls-language-settings-preferences-link' => 'Więcej ustawień języka',
 );
 
 /** Piedmontese (Piemontèis)
@@ -691,6 +757,9 @@ $messages['pms'] = array(
 	'uls-desc' => "A dà a l'utent vàire manere ëd selessioné na lenga e ëd sistemé j'ampostassion ëd lenga",
 	'uls-plang-title-languages' => 'Lenghe',
 	'uls-preference' => 'Ativé ël [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Seletor universal ëd lenghe]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Paràmeter ëd lenga',
+	'ext-uls-undo-language-tooltip-text' => 'Lenga cangià da $1',
+	'ext-uls-language-settings-preferences-link' => "Pi d'ampostassion ëd lenga",
 );
 
 /** Pashto (پښتو)
@@ -734,6 +803,9 @@ $messages['roa-tara'] = array(
 	'uls-desc' => "Dèje diverse mode a l'utende de scacchià 'na lènghe e de consiglià le 'mbostaziune d'a lènghe",
 	'uls-plang-title-languages' => 'Lènghe',
 	'uls-preference' => "Abbilite 'u [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Selettore de Lènghe Universale]",
+	'ext-uls-select-language-settings-icon-tooltip' => "'Mbostaziune de lènghe",
+	'ext-uls-undo-language-tooltip-text' => 'Lènghe cangiate da $1',
+	'ext-uls-language-settings-preferences-link' => "Otre 'mbostaziune d'a lènghe",
 );
 
 /** Russian (русский)
@@ -746,6 +818,9 @@ $messages['ru'] = array(
 	'uls-desc' => 'Даёт пользователю несколько способов выбрать язык и произвести установки языка',
 	'uls-plang-title-languages' => 'Языки',
 	'uls-preference' => 'Включить [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Универсальный переключатель языков]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Установки языка',
+	'ext-uls-undo-language-tooltip-text' => 'Предыдущий язык: $1',
+	'ext-uls-language-settings-preferences-link' => 'Дополнительные установки языка',
 );
 
 /** Sinhala (සිංහල)
@@ -790,6 +865,9 @@ $messages['sv'] = array(
 	'uls-desc' => 'Ger användaren flera sätt att välja ett språk på och justera språkinställningar',
 	'uls-plang-title-languages' => 'Språk',
 	'uls-preference' => 'Aktivera [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Universala språkväljaren]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Språkinställningar',
+	'ext-uls-undo-language-tooltip-text' => 'Språk ändrades från $1',
+	'ext-uls-language-settings-preferences-link' => 'Fler språkinställningar',
 );
 
 /** Tamil (தமிழ்)
@@ -838,6 +916,9 @@ $messages['uk'] = array(
 	'uls-plang-title-languages' => 'Мови',
 	'uls-preference' => 'Увімкнути
 [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Універсальний перемикач мов]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Налаштування мови',
+	'ext-uls-undo-language-tooltip-text' => 'Мову змінено з $1',
+	'ext-uls-language-settings-preferences-link' => 'Додаткові налаштування мови',
 );
 
 /** Urdu (اردو)
@@ -893,6 +974,9 @@ $messages['zh-hans'] = array(
 	'uls-desc' => '为用户提供多种方法来选择语言和调整语言设置',
 	'uls-plang-title-languages' => '语言',
 	'uls-preference' => '启用[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector 通用语言选择器]',
+	'ext-uls-select-language-settings-icon-tooltip' => '语言设置',
+	'ext-uls-undo-language-tooltip-text' => '语言已更改自$1',
+	'ext-uls-language-settings-preferences-link' => '更多语言设置',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
@@ -905,4 +989,7 @@ $messages['zh-hant'] = array(
 	'uls-desc' => '為用戶提供多種方法來選擇語言和調整語言設置',
 	'uls-plang-title-languages' => '語言',
 	'uls-preference' => '啟用[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector 通用語言選擇器]',
+	'ext-uls-select-language-settings-icon-tooltip' => '語言設定',
+	'ext-uls-undo-language-tooltip-text' => '語言已從$1更改',
+	'ext-uls-language-settings-preferences-link' => '更多語言設定',
 );
