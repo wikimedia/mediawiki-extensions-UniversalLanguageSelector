@@ -178,6 +178,10 @@ $messages['cs'] = array(
 	'UniversalLanguageSelector' => 'Univerzální výběr jazyka',
 	'uls-desc' => 'Nabízí uživateli několik způsobů volby jazyka a úpravy jazykových nastavení',
 	'uls-plang-title-languages' => 'Jazyky',
+	'uls-preference' => 'Zapnout [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Univerzální výběr jazyka]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Jazyková nastavení',
+	'ext-uls-undo-language-tooltip-text' => 'Jazyk změněn z $1',
+	'ext-uls-language-settings-preferences-link' => 'Další jazyková nastavení',
 );
 
 /** Church Slavic (словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
@@ -208,6 +212,10 @@ $messages['da'] = array(
 	'UniversalLanguageSelector' => 'Universel sprogvælger',
 	'uls-desc' => 'Giver brugeren forskellige måder at vælge et sprog og at justere indstillingerne for sproget',
 	'uls-plang-title-languages' => 'Sprog',
+	'uls-preference' => 'Aktivér den [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector universelle sprogvælger]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Sprogindstillinger',
+	'ext-uls-undo-language-tooltip-text' => 'Sprog ændret fra $1',
+	'ext-uls-language-settings-preferences-link' => 'Flere sprogindstillinger',
 );
 
 /** German (Deutsch)
@@ -370,6 +378,10 @@ $messages['gl'] = array(
 	'UniversalLanguageSelector' => 'Selector universal de linguas',
 	'uls-desc' => 'Dá ao usuario varios xeitos de seleccionar unha lingua e de axustar as preferencias da mesma',
 	'uls-plang-title-languages' => 'Linguas',
+	'uls-preference' => 'Activar o [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector selector universal de linguas]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Opcións de lingua',
+	'ext-uls-undo-language-tooltip-text' => 'A lingua cambiou desde o $1',
+	'ext-uls-language-settings-preferences-link' => 'Máis opcións de lingua',
 );
 
 /** Goan Konkani (कोंकणी/Konknni )
@@ -400,6 +412,10 @@ $messages['gu'] = array(
 	'UniversalLanguageSelector' => 'યુનિવર્સલ લેંગ્વેજ સિલેક્ટર',
 	'uls-desc' => 'સભ્યને ભાષા પસંદગી અને ગોઠવણીઓ માટેનાં અનેક માર્ગો પૂરા પાડે છે',
 	'uls-plang-title-languages' => 'ભાષાઓ',
+	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Universal Language Selector] સક્રિય કરો',
+	'ext-uls-select-language-settings-icon-tooltip' => 'ભાષા સુયોજનો',
+	'ext-uls-undo-language-tooltip-text' => '$1 માંથી ભાષા બદલવામાં આવી',
+	'ext-uls-language-settings-preferences-link' => 'વધુ ભાષા સુયોજનો',
 );
 
 /** Hebrew (עברית)
@@ -602,6 +618,8 @@ $messages['lb'] = array(
  */
 $messages['lrc'] = array(
 	'uls-plang-title-languages' => 'زونا',
+	'ext-uls-select-language-settings-icon-tooltip' => 'تنظيمات زون',
+	'ext-uls-language-settings-preferences-link' => 'میزونکاری زونیا بیشتر',
 );
 
 /** Lithuanian (lietuvių)
