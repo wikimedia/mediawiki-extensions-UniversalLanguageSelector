@@ -48,5 +48,6 @@
 "ext-uls-input-disable-notification-undo": "Undo",
 "ext-uls-input-disable-notification-info-personal": "You can enable the input tools at any time from the language settings.",
 "ext-uls-input-disable-notification-info-interlanguage": "You can enable the input tools at any time from the language settings next to the language list.",
-"ext-uls-language-settings-applying": "Applying..."
+"ext-uls-language-settings-applying": "Applying...",
+"ext-uls-compact-link-count": "{{PLURAL:$1|One more language|$1 more languages}}"
 }

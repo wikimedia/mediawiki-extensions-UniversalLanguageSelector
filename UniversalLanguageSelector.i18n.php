@@ -26,6 +26,7 @@ $messages = array();
  * @author Amire80
  * @author Nike
  * @author Kunal Mehta
+ * @author Niharika
  */
 $messages['en'] = array(
 	'UniversalLanguageSelector' => 'Universal Language Selector',
@@ -36,6 +37,8 @@ $messages['en'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Language settings',
 	'ext-uls-undo-language-tooltip-text' => 'Language changed from $1',
 	'ext-uls-language-settings-preferences-link' => 'More language settings',
+	'uls-betafeature-label' => 'Compacting interlanguage links',
+	'uls-betafeature-desc' => 'Displays a shorter version of the language list with the languages that are more relevant to you.',
 );
 
 /** Message documentation (Message documentation)
@@ -58,6 +61,8 @@ This title is shown when there are no interlanguage links there, but an icon tha
 	'ext-uls-undo-language-tooltip-text' => 'Text for the tooltip appearing when language is changed. Parameters:
 * $1 - the previous language acronym',
 	'ext-uls-language-settings-preferences-link' => 'Text for the link showin in user preference screen',
+	'uls-betafeature-label' => 'Title for the compact interlanguage links beta feature',
+	'uls-betafeature-desc' => 'Description for the compact interlanguage links beta feature'
 );
 
 /** Arabic (العربية)

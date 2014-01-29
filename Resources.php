@@ -146,6 +146,17 @@ $wgResourceModules['ext.uls.preferences'] = array(
 	),
 ) + $resourcePaths;
 
+$wgResourceModules['ext.uls.compactlinks'] = array(
+	'scripts' => 'resources/js/ext.uls.compactlinks.js',
+	'styles' => 'resources/css/ext.uls.compactlinks.css',
+	'dependencies' => array(
+		'ext.uls.mediawiki',
+		'ext.uls.init',
+		'jquery.uls.compact',
+		'mediawiki.ui.button',
+	),
+) + $resourcePaths;
+
 $wgResourceModules['ext.uls.webfonts'] = array(
 	'scripts' => 'resources/js/ext.uls.webfonts.js',
 	'dependencies' => array(

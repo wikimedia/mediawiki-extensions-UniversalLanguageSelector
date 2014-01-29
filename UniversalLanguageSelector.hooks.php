@@ -62,6 +62,13 @@ class UniversalLanguageSelectorHooks {
 		// If the extension is enabled, basic features (API, language data) available.
 		$out->addModules( 'ext.uls.init' );
 
+		// If compact ULS beta feature is enabled
+		if ( class_exists( 'BetaFeatures' ) &&
+			BetaFeatures::isFeatureEnabled( $out->getUser(), 'uls-compact-links' )
+		) {
+			$out->addModules( 'ext.uls.compactlinks' );
+		}
+
 		if ( is_string( $wgULSGeoService ) ) {
 			$out->addModules( 'ext.uls.geoclient' );
 		}
@@ -325,6 +332,20 @@ class UniversalLanguageSelectorHooks {
 		);
 
 		return true;
+	}
+
+	public static function onGetBetaFeaturePreferences( $user, &$prefs ) {
+		global $wgExtensionAssetsPath;
+		$prefs['uls-compact-links'] = array(
+			'label-message' => 'uls-betafeature-label',
+			'desc-message' => 'uls-betafeature-desc',
+			'screenshot' => $wgExtensionAssetsPath .
+				'/UniversalLanguageSelector/resources/images/compact-links-ltr.png',
+			'info-link' =>
+				'https://www.mediawiki.org/wiki/Universal_Language_Selector/Design/Interlanguage_links',
+			'discussion-link' =>
+				'https://www.mediawiki.org/wiki/Talk:Universal_Language_Selector/Design/Interlanguage_links',
+		);
 	}
 
 	/**

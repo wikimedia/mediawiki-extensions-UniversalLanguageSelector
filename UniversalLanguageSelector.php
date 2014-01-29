@@ -203,6 +203,8 @@ $GLOBALS['wgHooks']['EnterMobileMode'][] = 'UniversalLanguageSelectorHooks::onEn
 
 $GLOBALS['wgDefaultUserOptions']['uls-preferences'] = '';
 $GLOBALS['wgHooks']['GetPreferences'][] = 'UniversalLanguageSelectorHooks::onGetPreferences';
+$GLOBALS['wgHooks']['GetBetaFeaturePreferences'][] =
+	'UniversalLanguageSelectorHooks::onGetBetaFeaturePreferences';
 
 $GLOBALS['wgExtensionFunctions'][] = function () {
 	global $wgHooks, $wgResourceModules, $wgULSEventLogging, $wgULSGeoService;

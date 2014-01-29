@@ -1,0 +1,38 @@
+#more-lang-label {
+	color: #8b8989;
+	font-size: 12px;
+	display: block;
+}
+
+#p-lang-list .uls-trigger {
+	background-image: none;
+	padding: 0;
+}
+
+.mw-interlanguage-selector {
+	cursor: pointer;
+	margin: 2px 0;
+	padding: 0 8px;
+}
+
+.interlanguage-uls-menu:after,
+.interlanguage-uls-menu:before {
+	right: 100%;
+	content: " ";
+	position: absolute;
+	border: 1px solid black;
+}
+
+.interlanguage-uls-menu:after {
+	border-color: transparent;
+	border-right-color: #FCFCFC;
+	border-width: 20px;
+	top: 250px;
+}
+
+.interlanguage-uls-menu:before {
+	border-color: transparent;
+	border-right-color: #555555;
+	border-width: 20px;
+	top: 250px;
+}
