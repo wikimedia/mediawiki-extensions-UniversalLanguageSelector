@@ -1,0 +1,14 @@
+== UniversalLanguageSelector 2014.01 ==
+Released at 2014-01-31.
+
+=== Noteworthy changes ===
+* Bug 59175: When clicking a regions in the map in ULS, scroll only the list of
+languages and not the entire page.
+* Bug 59239: Fixed an alignment issue of ULS personal toolbar trigger.
+* Bug 59958: Fixed an issue where web fonts were sometimes loaded for elements
+that use the Autonym font.
+
+=== Fonts ===
+* Added new font RailwaysSans.
+* Updated AbyssinicaSIL font to latest upstream (1.500) version.
+* Fix name of Scheherazade to properly target locally installed font on system.
