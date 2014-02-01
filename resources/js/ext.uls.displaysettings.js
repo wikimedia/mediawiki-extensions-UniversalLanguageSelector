@@ -81,8 +81,8 @@
 		+ '</div>'; // End font settings section
 
 	function DisplaySettings( $parent ) {
-		this.name = $.i18n( 'ext-uls-display-settings-title-short' );
-		this.description = $.i18n( 'ext-uls-display-settings-desc' );
+		this.nameI18n = 'ext-uls-display-settings-title-short';
+		this.descriptionI18n = 'ext-uls-display-settings-desc';
 		this.$template = $( template );
 		this.uiLanguage = this.getUILanguage();
 		this.contentLanguage = this.getContentLanguage();

@@ -56,8 +56,8 @@
 		+ '</div>';
 
 	function InputSettings( $parent ) {
-		this.name = $.i18n( 'ext-uls-input-settings-title-short' );
-		this.description = $.i18n( 'ext-uls-input-settings-desc' );
+		this.nameI18n = 'ext-uls-input-settings-title-short';
+		this.descriptionI18n = 'ext-uls-input-settings-desc';
 		this.$template = $( template );
 		this.uiLanguage = this.getInterfaceLanguage();
 		this.contentLanguage = this.getContentLanguage();
