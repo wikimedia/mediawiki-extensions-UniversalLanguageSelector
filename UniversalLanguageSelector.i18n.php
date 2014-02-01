@@ -70,6 +70,10 @@ $messages['ar'] = array(
 	'UniversalLanguageSelector' => 'محدد اللغات الشامل',
 	'uls-desc' => 'يمنح المستخدم عدة طرق لاختيار لغة، وضبط إعدادات اللغة',
 	'uls-plang-title-languages' => 'لغات',
+	'uls-preference' => 'شغل [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector محدد اللغات الشامل]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'إعدادات اللغة',
+	'ext-uls-undo-language-tooltip-text' => 'غيرت اللغة من $1',
+	'ext-uls-language-settings-preferences-link' => 'المزيد من إعدادات اللغة',
 );
 
 /** Aramaic (ܐܪܡܝܐ)
@@ -156,6 +160,10 @@ $messages['ca'] = array(
 $messages['ce'] = array(
 	'uls-desc' => 'Декъашхойн таро хуьлуьйту масийтта кепара мотт харжа а мотт дIахIотто а',
 	'uls-plang-title-languages' => 'Меттанаш',
+	'uls-preference' => 'Латайе [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Меттанаш универсальни дӀасатухург]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Мотт дIахIоттор',
+	'ext-uls-undo-language-tooltip-text' => 'Хьалхара мотт: $1',
+	'ext-uls-language-settings-preferences-link' => 'Кхин мотт дIахIоттор',
 );
 
 /** Sorani Kurdish (کوردی)
@@ -433,10 +441,15 @@ $messages['he'] = array(
 );
 
 /** Croatian (hrvatski)
+ * @author MaGa
  * @author SpeedyGonsales
  */
 $messages['hr'] = array(
 	'uls-plang-title-languages' => 'jezične postavke',
+	'uls-preference' => 'Omogući [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Universal Language Selector]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Jezične postavke',
+	'ext-uls-undo-language-tooltip-text' => 'Jezik promijenjen, prethodno je bio postavljen $1',
+	'ext-uls-language-settings-preferences-link' => 'Više jezičnih postavki',
 );
 
 /** Upper Sorbian (hornjoserbsce)
@@ -466,6 +479,19 @@ $messages['hy'] = array(
 	'UniversalLanguageSelector' => 'Լեզվական նախընտրանքներ',
 	'uls-desc' => 'Օգտագործողին թույլ է տալիս մի քանի եղանակաով ընտրել լեզուներ և լեզվական կարգավորումներ',
 	'uls-plang-title-languages' => 'Լեզուներ',
+);
+
+/** Interlingua (interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'UniversalLanguageSelector' => 'Selector universal de lingua',
+	'uls-desc' => 'Da al usator plure manieras de seliger un lingua e adjustar le configuration de lingua',
+	'uls-plang-title-languages' => 'Linguas',
+	'uls-preference' => 'Activar le [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector selector universal de lingua]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Configuration de lingua',
+	'ext-uls-undo-language-tooltip-text' => 'Lingua cambiate ab $1',
+	'ext-uls-language-settings-preferences-link' => 'Altere parametros de lingua',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -544,6 +570,7 @@ $messages['kn'] = array(
 );
 
 /** Korean (한국어)
+ * @author Freebiekr
  * @author Kwj2772
  * @author Priviet
  * @author 아라
@@ -552,7 +579,7 @@ $messages['ko'] = array(
 	'UniversalLanguageSelector' => '일반 언어 선택기',
 	'uls-desc' => '사용자에게 언어를 선택하고 언어 설정을 바꾸는 몇 가지 방법을 제공합니다',
 	'uls-plang-title-languages' => '언어',
-	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector 보편 언어 선택기]를 활성화',
+	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector 일반 언어 선택기]를 활성화',
 	'ext-uls-select-language-settings-icon-tooltip' => '언어 설정',
 	'ext-uls-undo-language-tooltip-text' => '$1에서 언어가 바뀌었습니다',
 	'ext-uls-language-settings-preferences-link' => '자세한 언어 설정',
@@ -858,6 +885,19 @@ $messages['sk'] = array(
 	'uls-plang-title-languages' => 'Jazyky',
 );
 
+/** Slovenian (slovenščina)
+ * @author Dbc334
+ */
+$messages['sl'] = array(
+	'UniversalLanguageSelector' => 'Vsesplošni izbirnik jezika',
+	'uls-desc' => 'Daje uporabniku več načinov izbire jezika in prilagoditve jezikovnih nastavitev',
+	'uls-plang-title-languages' => 'Jeziki',
+	'uls-preference' => 'Omogoči [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Vsesplošni izbirnik jezika]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Nastavitve jezika',
+	'ext-uls-undo-language-tooltip-text' => 'Sprememba jezika iz $1',
+	'ext-uls-language-settings-preferences-link' => 'Več jezikovnih nastavitev',
+);
+
 /** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Milicevic01
  * @author Милан Јелисавчић
@@ -970,6 +1010,10 @@ $messages['vi'] = array(
 	'UniversalLanguageSelector' => 'Bộ lựa chọn Ngôn ngữ Phổ quát',
 	'uls-desc' => 'Trình bày giao diện để lựa chọn ngôn ngữ và điều chỉnh các tùy chọn ngôn ngữ',
 	'uls-plang-title-languages' => 'Ngôn ngữ',
+	'uls-preference' => 'Bật tính năng [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Lựa chọn Ngôn ngữ Toàn thể]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Tùy chọn ngôn ngữ',
+	'ext-uls-undo-language-tooltip-text' => 'Đã đổi ngôn ngữ từ $1',
+	'ext-uls-language-settings-preferences-link' => 'Thêm tùy chọn ngôn ngữ',
 );
 
 /** Yiddish (ייִדיש)

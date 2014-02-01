@@ -1,7 +1,8 @@
 {
     "@metadata": {
         "authors": [
-            "Eleassar"
+            "Eleassar",
+            "Dbc334"
         ]
     },
     "ext-uls-display-settings-title": "Nastavitve prikaza",
@@ -9,8 +10,6 @@
     "ext-uls-display-settings-fonts-tab": "Pisave",
     "ext-uls-display-settings-title-short": "Prikaz",
     "ext-uls-display-settings-desc": "Nastavite jezik menijev in pisav.",
-    "ext-uls-select-language-settings-icon-tooltip": "Nastavitve jezika",
-    "ext-uls-undo-language-tooltip-text": "Sprememba jezika iz $1",
     "ext-uls-language-settings-title": "Jezikovne nastavitve",
     "ext-uls-language-settings-apply": "Uporabi nastavitve",
     "ext-uls-language-settings-cancel": "Prekliči",
@@ -45,5 +44,5 @@
     "ext-uls-input-disable-notification-undo": "Razveljavi",
     "ext-uls-input-disable-notification-info-personal": "Orodja za vnos lahko prek jezikovnih nastavitev omogočite kadar koli.",
     "ext-uls-input-disable-notification-info-interlanguage": "Orodja za vnos lahko prek jezikovnih nastavitev poleg seznama jezikov omogočite kadar koli.",
-    "ext-uls-language-settings-preferences-link": "Več jezikovnih nastavitev"
+    "ext-uls-language-settings-applying": "Uveljavljanje ..."
 }
