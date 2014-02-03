@@ -2,7 +2,8 @@
     "@metadata": {
         "authors": [
             "Jopparn",
-            "WikiPhoenix"
+            "WikiPhoenix",
+            "Lokal Profil"
         ]
     },
     "ext-uls-display-settings-title": "Visningsinställningar",
@@ -10,8 +11,6 @@
     "ext-uls-display-settings-fonts-tab": "Typsnitt",
     "ext-uls-display-settings-title-short": "Visning",
     "ext-uls-display-settings-desc": "Ange språk för menyer och teckensnitt.",
-    "ext-uls-select-language-settings-icon-tooltip": "Språkinställningar",
-    "ext-uls-undo-language-tooltip-text": "Språk ändrades från $1",
     "ext-uls-language-settings-title": "Språkinställningar",
     "ext-uls-language-settings-apply": "Tillämpa inställningar",
     "ext-uls-language-settings-cancel": "Avbryt",
@@ -46,5 +45,5 @@
     "ext-uls-input-disable-notification-undo": "Ångra",
     "ext-uls-input-disable-notification-info-personal": "Du kan aktivera verktygen för indata när som helst från språkinställningarna.",
     "ext-uls-input-disable-notification-info-interlanguage": "Du kan aktivera verktygen för indata när som helst från språkinställningarna bredvid språklistan.",
-    "ext-uls-language-settings-preferences-link": "Fler språkinställningar"
+    "ext-uls-language-settings-applying": "Tillämpar..."
 }

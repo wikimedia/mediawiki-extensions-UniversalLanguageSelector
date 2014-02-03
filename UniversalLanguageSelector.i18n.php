@@ -338,11 +338,16 @@ $messages['fa'] = array(
 
 /** Finnish (suomi)
  * @author Nike
+ * @author Stryn
  */
 $messages['fi'] = array(
 	'UniversalLanguageSelector' => 'Suuri kielenvalitsin',
 	'uls-desc' => 'Tarjoaa useita tapoja valita kieli ja asettaa kieliasetukset',
 	'uls-plang-title-languages' => 'Kielet',
+	'uls-preference' => 'Ota käyttöön [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Universal Language Selector]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Kieliasetukset',
+	'ext-uls-undo-language-tooltip-text' => 'Kieli vaihdettu kielestä $1',
+	'ext-uls-language-settings-preferences-link' => 'Lisää kieliasetuksia',
 );
 
 /** French (français)
@@ -813,6 +818,19 @@ $messages['pms'] = array(
 $messages['ps'] = array(
 	'UniversalLanguageSelector' => 'نړېوال ژبټاکونکی',
 	'uls-plang-title-languages' => 'ژبې',
+);
+
+/** Portuguese (português)
+ * @author Fúlvio
+ */
+$messages['pt'] = array(
+	'UniversalLanguageSelector' => 'Seletor Universal de Idiomas',
+	'uls-desc' => 'Fornece ao utilizador várias maneiras de selecionar um idioma e ajustar suas configurações.',
+	'uls-plang-title-languages' => 'Idiomas',
+	'uls-preference' => 'Activar o [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Seletor Universal de Idiomas]',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Configurações de idioma',
+	'ext-uls-undo-language-tooltip-text' => 'Idioma alterado para $1',
+	'ext-uls-language-settings-preferences-link' => 'Mais configurações de idioma',
 );
 
 /** Brazilian Portuguese (português do Brasil)
