@@ -140,7 +140,6 @@ $wgResourceModules['ext.uls.preferences'] = array(
 	'dependencies' => array(
 		'mediawiki.user',
 		'mediawiki.api',
-		'jquery.jStorage',
 	),
 ) + $resourcePaths;
 

@@ -101,6 +101,58 @@
 		} );
 	}
 
+	/**
+	 * Wrapper for localStorage, falls back to cookie
+	 * when localStorage not supported by browser.
+	 */
+	function preferenceStore() {
+
+		// If value is detected, set new or modify store
+		return {
+			/*
+			 * Set the value to the given key
+			 * @param {string} key
+			 * @param {Object} value value to be set
+			 */
+			set: function ( key, value ) {
+				// Convert object values to JSON
+				if ( typeof value === 'object' ) {
+					value = JSON.stringify( value );
+				}
+				// Set the store
+				try {
+					localStorage.setItem( key, value );
+				} catch ( e ) { // Use cookie
+					$.cookie( key, value, { path: '/' } );
+				}
+			},
+			/*
+			 * Returns the value of the given key
+			 * @param {string} key
+			 * @retun {Object} value of the key
+			 */
+			get: function ( key ) {
+				var data;
+
+				// No value supplied, return value
+				try {
+					data = localStorage.getItem( key );
+				} catch ( e ) { // Use cookie
+					data = $.cookie( key );
+				}
+
+				// Try to parse JSON
+				try {
+					data = JSON.parse( data );
+				} catch ( e ) {
+					data = data;
+				}
+
+				return data;
+			}
+		};
+	}
+
 	ULSPreferences = function () {
 		this.preferenceName = 'uls-preferences';
 		this.username = mw.user.getName();
@@ -115,10 +167,10 @@
 		 */
 		init: function () {
 			if ( this.isAnon ) {
-				this.preferences = $.jStorage.get( this.preferenceName );
+				this.preferences = preferenceStore().get( this.preferenceName );
 			} else {
 				var options = mw.user.options.get( this.preferenceName );
-				this.preferences = $.parseJSON( options );
+				this.preferences = JSON.parse( options );
 			}
 			this.preferences = this.preferences || {};
 		},
@@ -153,7 +205,7 @@
 			callback = callback || $.noop;
 			if ( this.isAnon ) {
 				// Anonymous user. Save preferences in local storage
-				$.jStorage.set( this.preferenceName, this.preferences );
+				preferenceStore().set( this.preferenceName, this.preferences );
 				callback.call( this, true );
 			} else {
 
@@ -161,7 +213,7 @@
 				saveOptionsWithToken( {
 					action: 'options',
 					optionname: ulsPreferences.preferenceName,
-					optionvalue: $.toJSON( ulsPreferences.preferences )
+					optionvalue: JSON.stringify( ulsPreferences.preferences )
 				}, function () {
 					callback.call( this, true );
 				}, function () {
