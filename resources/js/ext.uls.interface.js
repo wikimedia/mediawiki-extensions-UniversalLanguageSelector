@@ -289,7 +289,7 @@
 		window.setTimeout( function () {
 			// Show the tipsy tooltip on page load.
 			showTipsy( 6000 );
-		}, 500 );
+		}, 700 );
 
 		// manually show the tooltip
 		$ulsTrigger.on( 'mouseover', function () {
