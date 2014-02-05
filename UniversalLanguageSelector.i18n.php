@@ -203,11 +203,16 @@ $messages['cu'] = array(
 
 /** Welsh (Cymraeg)
  * @author Lloffiwr
+ * @author Robin Owain
  */
 $messages['cy'] = array(
 	'UniversalLanguageSelector' => 'Cyfun-ddewisydd Iaith',
 	'uls-desc' => "Yn cynnig sawl ffordd i'r defnyddiwr allu dewis iaith a newid gosodiadau iaith",
 	'uls-plang-title-languages' => 'Ieithoedd',
+	'uls-preference' => "Gosod yr [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector ''Universal Language Selector'']",
+	'ext-uls-select-language-settings-icon-tooltip' => 'Gosodiadau iaith',
+	'ext-uls-undo-language-tooltip-text' => 'Newidiwyd yr iaith o $1',
+	'ext-uls-language-settings-preferences-link' => 'Rhagor o osodiadau iaith',
 );
 
 /** Danish (dansk)
