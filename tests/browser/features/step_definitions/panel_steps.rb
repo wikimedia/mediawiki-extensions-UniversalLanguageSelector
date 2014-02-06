@@ -73,7 +73,7 @@ When(/^I switch to Input panel of language settings/) do
 end
 
 Then(/^the language list of ULS should use Autonym font$/) do
-	on(PanelPage).uls_language_name_item("en").style("font-family").should == "'Autonym',sans-serif"
+	on(PanelPage).uls_language_name_item("en").style("font-family").should match /Autonym'?, ?sans-serif/
 end
 
 Then(/^I should see (.*) as the selected input language$/) do |language|
