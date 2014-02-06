@@ -117,6 +117,8 @@
 		$moreSettingsLink = $( '<span>' )
 			.addClass( 'uls-ime-more-settings-link' );
 
+		// Apparently we depend on some styles which are loaded with
+		// these modules. This needs refactoring.
 		mw.loader.using( mw.uls.languageSettingsModules, function () {
 			$moreSettingsLink.languagesettings( {
 				defaultModule: 'input',
@@ -130,18 +132,7 @@
 
 		// Hide the menu.
 		$moreSettingsLink.on( 'click', function ( e ) {
-			var languageSettings = $( this ).data( 'languagesettings' );
 			imeselector.hide();
-			if ( !languageSettings ) {
-				$( this ).languagesettings( {
-					defaultModule: 'input',
-					onClose: function () {
-						// on close of input settings, keep focus in input area.
-						imeselector.$element.focus();
-					},
-					top: imeselector.$element.offset().top
-				} ).click();
-			}
 			e.stopPropagation();
 		} );
 
