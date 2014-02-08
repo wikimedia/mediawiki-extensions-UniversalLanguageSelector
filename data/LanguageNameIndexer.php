@@ -18,19 +18,16 @@
  * @licence MIT License
  */
 
-// Standard boilerplate to define $IP
-if ( getenv( 'MW_INSTALL_PATH' ) !== false ) {
-	$IP = getenv( 'MW_INSTALL_PATH' );
-} else {
-	$dir = __DIR__;
-	$IP = "$dir/../../..";
+$IP = getenv( 'MW_INSTALL_PATH' );
+if ( $IP === false ) {
+	$IP = __DIR__  . '/../../..';
 }
 require_once "$IP/maintenance/Maintenance.php";
 
 class LanguageNameIndexer extends Maintenance {
 	public function __construct() {
 		parent::__construct();
-		$this->addDescription( "Script to create language names index." );
+		$this->addDescription( 'Script to create language names index.' );
 	}
 
 	public function execute() {

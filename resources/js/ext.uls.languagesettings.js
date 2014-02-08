@@ -16,7 +16,6 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
-
 ( function ( $, mw ) {
 	'use strict';
 

@@ -1,4 +1,5 @@
 {
+
 	"camelcase": true,
 	"curly": true,
 	"eqeqeq": true,
@@ -12,7 +13,7 @@
 	"trailing": true,
 	"undef": true,
 	"unused": true,
-	"onevar": true,
+
 	"bitwise": true,
 	"forin": false,
 	"regexp": false,
@@ -21,6 +22,8 @@
 	"smarttabs": true,
 	"multistr": true,
 	"browser": true,
+	"onevar": true,
+
 	"predef": [
 		"mediaWiki",
 		"jQuery",

@@ -16,7 +16,7 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
-( function ( $, mw, document, undefined ) {
+( function ( $, mw ) {
 	'use strict';
 
 	var mwImeRulesPath, inputSelector, inputPreferences, ulsIMEPreferences, customHelpLink;
@@ -324,4 +324,4 @@
 
 		mw.notify( $notification.i18n() );
 	}
-}( jQuery, mediaWiki, document ) );
+}( jQuery, mediaWiki ) );

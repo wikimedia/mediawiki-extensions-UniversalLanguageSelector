@@ -16,8 +16,7 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
-
-( function ( $, mw, undefined ) {
+( function ( $, mw ) {
 	'use strict';
 
 	// FIXME: Remove when ULS minimum MW version is 1.22

@@ -16,8 +16,9 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
-( function ( $, mw, undefined ) {
+( function ( $, mw ) {
 	'use strict';
+
 	var mediawikiFontRepository, ulsPreferences,
 		// Text to prepend the sample text. 0D00 is an unassigned unicode point.
 		tofuSalt = '\u0D00',

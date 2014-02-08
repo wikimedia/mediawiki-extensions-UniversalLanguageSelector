@@ -16,8 +16,7 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
-
-( function ( $, mw, undefined ) {
+( function ( $, mw ) {
 	'use strict';
 
 	var template = '<div class="uls-input-settings">'
