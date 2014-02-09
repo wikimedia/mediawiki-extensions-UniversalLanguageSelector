@@ -18,6 +18,7 @@
     "ext-uls-webfonts-select-for-ui-info": "فونت استفاده بیه سی مین پیوست کارور",
     "ext-uls-back-to-display-settings": "ورئرد د میزونکاری نشون دئن",
     "ext-uls-input-settings-desc": "نیسنن د زون هنی؟",
+    "ext-uls-input-settings-ime-settings": "روشتیا دریندئه سی $1",
     "ext-uls-input-settings-ui-language": "زون استفاده بیه سی نیسنن",
     "ext-uls-back-to-input-settings": "ورئرد د میزونکاری دریندئه",
     "ext-uls-input-settings-more-languages-tooltip": "زونيا بيشتر",

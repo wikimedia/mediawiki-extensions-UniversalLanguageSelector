@@ -557,6 +557,10 @@ $messages['ka'] = array(
 	'UniversalLanguageSelector' => 'ენების უნივერსალური გადამრთველი',
 	'uls-desc' => 'აძლევს მომხმარებელს ენის არჩევისა და კონფიგურაციის საშუალებას',
 	'uls-plang-title-languages' => 'ენები',
+	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector ენების უნივერსალური გადამრთველის] ჩართვა',
+	'ext-uls-select-language-settings-icon-tooltip' => 'ენის პარამეტრები',
+	'ext-uls-undo-language-tooltip-text' => 'წინა ენა: $1',
+	'ext-uls-language-settings-preferences-link' => 'მეტი ენის პარამეტრები',
 );
 
 /** Kazakh (Cyrillic script) (қазақша (кирил)‎)
