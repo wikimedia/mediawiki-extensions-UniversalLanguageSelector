@@ -2,7 +2,7 @@
 /**
  * Initialisation file for MediaWiki extension UniversalLanguageSelector.
  *
- * Copyright (C) 2012-2013 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon
+ * Copyright (C) 2012-2014 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon
  * Harris, Niklas Laxström, Pau Giner, Santhosh Thottingal, Siebrand Mazeland
  * and other contributors. See CREDITS for a list.
  *
@@ -25,7 +25,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 /**
  * Version number used in extension credits and in other placed where needed.
  */
-define( 'ULS_VERSION', '2013-12-31' );
+define( 'ULS_VERSION', '2013-02-10' );
 
 $GLOBALS['wgExtensionCredits']['other'][] = array(
 	'path' => __FILE__,
