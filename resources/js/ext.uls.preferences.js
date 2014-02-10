@@ -137,6 +137,16 @@
 				// No value supplied, return value
 				try {
 					data = localStorage.getItem( key );
+					if ( !data ) {
+						// Try to restore the old preferences, if any, if possible.
+						try {
+							data = JSON.parse( localStorage.getItem( 'jStorage' ) )['uls-preferences'];
+							// And try to remove it.
+							localStorage.removeItem( 'jStorage' );
+						} catch ( e ) {
+							// Don't bother about it.
+						}
+					}
 				} catch ( e ) { // Use cookie
 					data = $.cookie( key );
 				}
