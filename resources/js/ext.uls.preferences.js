@@ -180,8 +180,15 @@
 				this.preferences = preferenceStore().get( this.preferenceName );
 			} else {
 				var options = mw.user.options.get( this.preferenceName );
-				this.preferences = JSON.parse( options );
+
+				// Try to parse JSON
+				try {
+					this.preferences = JSON.parse( options );
+				} catch ( e ) {
+					this.preferences = {};
+				}
 			}
+
 			this.preferences = this.preferences || {};
 		},
 
