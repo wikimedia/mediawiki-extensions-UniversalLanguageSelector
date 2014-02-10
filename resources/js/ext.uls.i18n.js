@@ -52,7 +52,10 @@
 			return $.Deferred().resolve();
 		}
 		return i18n.load(
-			mw.util.wikiScript( 'api' ) + '?action=ulslocalization&language=' + locale,
+			mw.util.wikiScript( 'api' ) + '?' + $.param( {
+				action: 'ulslocalization',
+				language: locale
+			} ),
 			locale
 		);
 	};
