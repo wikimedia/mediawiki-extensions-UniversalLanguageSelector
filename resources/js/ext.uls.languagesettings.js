@@ -125,10 +125,10 @@
 
 			$settingsTitle = $( '<div>' )
 				.addClass( 'settings-title' )
-				.text( module.name );
+				.attr( 'data-i18n', module.nameI18n );
 			$settingsText = $( '<span>' )
 				.addClass( 'settings-text' )
-				.text( module.description );
+				.attr( 'data-i18n', module.descriptionI18n );
 			$settingsLink = $( '<div>' )
 				.addClass( moduleName + '-settings-block menu-section' )
 				.prop( 'id', moduleName + '-panel-trigger' )
