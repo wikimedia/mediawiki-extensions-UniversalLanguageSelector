@@ -150,8 +150,11 @@
 			e.stopPropagation();
 		} );
 
-		// apply fonts to this
-		imeselector.$menu.webfonts();
+		// If the webfonts are loaded, apply webfonts to the selector
+		if ( $.fn.webfonts ) {
+			imeselector.$menu.webfonts();
+		}
+
 		return $( '<div>' )
 			.addClass( 'uls-ime-menu-settings-item' )
 			.append( $disableInputToolsLink, $moreSettingsLink );

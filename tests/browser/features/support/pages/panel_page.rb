@@ -10,7 +10,6 @@ class PanelPage
 
 	div(:language_settings_dialog, id: "language-settings-dialog")
 	div(:panel_display, id: "display-settings-block")
-	div(:panel_input, id: "input-settings-block")
 	button(:panel_fonts, id: "uls-display-settings-fonts-tab")
 	button(:panel_language, id: "uls-display-settings-language-tab")
 
@@ -23,6 +22,8 @@ class PanelPage
 
 	button(:panel_disable_input_methods, class: "uls-input-toggle-button")
 	button(:panel_enable_input_methods, class: "uls-input-toggle-button")
+
+	checkbox(:webfonts_enable_checkbox, id: "webfonts-enable-checkbox")
 
 	select_list(:panel_content_font_selector, id: "content-font-selector")
 	select_list(:panel_interface_font_selector, id: "ui-font-selector")
@@ -69,6 +70,9 @@ class PanelPage
 			return ( top < viewportBottom && top >= viewportTop )" )
 	end
 
+	def webfonts_library_loaded
+		@browser.execute_script("return( $( 'body' ).data( 'webfonts' ) !== undefined )")
+	end
 
 	private
 	def font(selector)

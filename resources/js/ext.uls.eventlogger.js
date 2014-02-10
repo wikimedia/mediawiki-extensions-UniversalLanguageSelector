@@ -83,6 +83,9 @@
 			mw.hook( 'mw.uls.interface.morelanguages' ).add( $.proxy( this.interfaceMoreLanguages, this ) );
 			mw.hook( 'mw.uls.interface.language.change' ).add( $.proxy( this.interfaceLanguageChange, this ) );
 			mw.hook( 'mw.uls.font.change' ).add( $.proxy( this.fontChange, this ) );
+			mw.hook( 'mw.uls.webfonts.enable' ).add( $.proxy( this.enableWebfonts, this ) );
+			mw.hook( 'mw.uls.webfonts.disable' ).add( $.proxy( this.disableWebfonts, this ) );
+
 			$( 'body' ).on( 'noresults.uls', '.uls-menu .languagefilter',
 				$.proxy( this.noSearchResults, this )
 			);
@@ -206,6 +209,22 @@
 			}
 
 			this.log( logParams );
+		},
+
+		/**
+		 * Log webfonts disabling
+		 * @param {string} context Where the setting was changed.
+		 */
+		disableWebfonts: function ( context ) {
+			this.log( { action: 'webfonts-disable', context: context } );
+		},
+
+		/**
+		 * Log webfonts enabling
+		 * @param {string} context Where the setting was changed.
+		 */
+		enableWebfonts: function ( context ) {
+			this.log( { action: 'webfonts-enable', context: context } );
 		},
 
 		/**

@@ -35,7 +35,7 @@ class UniversalLanguageSelectorHooks {
 			return false;
 		}
 
-		return $user->getBoolOption( 'uls-enable' );
+		return true;
 	}
 
 	/**
@@ -46,11 +46,6 @@ class UniversalLanguageSelectorHooks {
 	 */
 	public static function addModules( $out, $skin ) {
 		global $wgULSPosition, $wgULSGeoService, $wgULSEventLogging;
-
-		$user = $out->getUser();
-		if ( !$user->getBoolOption( 'uls-enable') ) {
-			return true;
-		}
 
 		// Load the style for users without JS, to hide the useless links
 		$out->addModuleStyles( 'ext.uls.nojs' );
@@ -71,7 +66,7 @@ class UniversalLanguageSelectorHooks {
 			$out->addModules( 'ext.uls.geoclient' );
 		}
 
-		if ( self::isToolbarEnabled( $user ) ) {
+		if ( self::isToolbarEnabled( $out->getUser() ) ) {
 			// Enable UI language selection for the user.
 			$out->addModules( 'ext.uls.interface' );
 		}
@@ -267,7 +262,9 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function addConfig( &$vars ) {
-		global $wgULSGeoService, $wgULSIMEEnabled, $wgULSPosition, $wgULSNoWebfontsSelectors,
+		global $wgULSGeoService,
+			$wgULSIMEEnabled, $wgULSWebfontsEnabled,
+			$wgULSPosition, $wgULSNoWebfontsSelectors,
 			$wgULSAnonCanChangeLanguage, $wgULSEventLogging, $wgULSImeSelectors,
 			$wgULSNoImeSelectors, $wgULSFontRepositoryBasePath, $wgExtensionAssetsPath;
 
@@ -275,7 +272,9 @@ class UniversalLanguageSelectorHooks {
 		if ( is_string( $wgULSGeoService ) ) {
 			$vars['wgULSGeoService'] = $wgULSGeoService;
 		}
+
 		$vars['wgULSIMEEnabled'] = $wgULSIMEEnabled;
+		$vars['wgULSWebfontsEnabled'] = $wgULSWebfontsEnabled;
 		$vars['wgULSPosition'] = $wgULSPosition;
 		$vars['wgULSAnonCanChangeLanguage'] = $wgULSAnonCanChangeLanguage;
 		$vars['wgULSEventLogging'] = $wgULSEventLogging;
@@ -311,12 +310,6 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	public static function onGetPreferences( $user, &$preferences ) {
-		$preferences['uls-enable'] = array(
-			'type' => 'toggle',
-			'label-message' => 'uls-preference',
-			'section' => 'personal/i18n',
-		);
-
 		$preferences['uls-preferences'] = array(
 			'type' => 'api',
 		);

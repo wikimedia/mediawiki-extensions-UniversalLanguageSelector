@@ -18,8 +18,7 @@
  */
 ( function ( $, mw ) {
 	'use strict';
-
-	var mediawikiFontRepository, ulsPreferences,
+	var ulsPreferences,
 		// Text to prepend the sample text. 0D00 is an unassigned unicode point.
 		tofuSalt = '\u0D00',
 		// cache languages with tofu.
@@ -29,7 +28,20 @@
 	ulsPreferences = mw.uls.preferences();
 	mw.webfonts.preferences = {
 		registry: {
-			fonts: {}
+			fonts: {},
+			webfontsEnabled: mw.config.get( 'wgULSWebfontsEnabled' )
+		},
+
+		isEnabled: function () {
+			return this.registry.webfontsEnabled;
+		},
+
+		enable: function () {
+			this.registry.webfontsEnabled = true;
+		},
+
+		disable: function () {
+			this.registry.webfontsEnabled = false;
 		},
 
 		setFont: function ( language, font ) {
@@ -52,7 +64,6 @@
 				ulsPreferences.get( 'webfonts' ) );
 		}
 	};
-
 
 	/**
 	 * Detect tofu
@@ -108,11 +119,19 @@
 		return detected;
 	}
 
-	mediawikiFontRepository = $.webfonts.repository;
-	mediawikiFontRepository.base = mw.config.get( 'wgULSFontRepositoryBasePath' );
-
 	mw.webfonts.setup = function () {
 		// Initialize webfonts
+		var mediawikiFontRepository = $.webfonts.repository;
+
+		mediawikiFontRepository.base = mw.config.get( 'wgULSFontRepositoryBasePath' );
+
+		// MediaWiki specific overrides for jquery.webfonts
+		$.extend( $.fn.webfonts.defaults, {
+			repository: mediawikiFontRepository,
+			fontStack: $( 'body' ).css( 'font-family' ).split( /, /g ),
+			exclude: mw.config.get( 'wgULSNoWebfontsSelectors' ).join( ', ' )
+		} );
+
 		$.fn.webfonts.defaults = $.extend( $.fn.webfonts.defaults, {
 			 /**
 			  * Font selector - depending the language and optionally
@@ -200,16 +219,11 @@
 
 	$( document ).ready( function () {
 		mw.uls.init( function () {
-
-			// MediaWiki specific overrides for jquery.webfonts
-			$.extend( $.fn.webfonts.defaults, {
-				repository: mediawikiFontRepository,
-				fontStack: $( 'body' ).css( 'font-family' ).split( /, /g ),
-				exclude: mw.config.get( 'wgULSNoWebfontsSelectors' ).join( ', ' )
-			} );
-
 			mw.webfonts.preferences.load();
-			mw.webfonts.setup();
+
+			if ( mw.webfonts.preferences.isEnabled() ) {
+				mw.loader.using( 'ext.uls.webfonts.fonts', mw.webfonts.setup );
+			}
 		} );
 	} );
 }( jQuery, mediaWiki ) );

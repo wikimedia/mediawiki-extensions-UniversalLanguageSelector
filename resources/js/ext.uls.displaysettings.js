@@ -77,6 +77,18 @@
 
 		+ '</div>' // End font selectors
 
+		// Webfonts enabling checkbox with label
+		+ '<div class="row">'
+		+ '<div class="eleven columns">'
+		+ '<label class="checkbox">'
+		+ '<input type="checkbox" id="webfonts-enable-checkbox" />'
+		+ '<strong data-i18n="ext-uls-webfonts-settings-title"></strong> '
+		+ '<span data-i18n="ext-uls-webfonts-settings-info"></span> '
+		+ '<a target="_blank" href="https://www.mediawiki.org/wiki/Universal_Language_Selector/WebFonts" data-i18n="ext-uls-webfonts-settings-info-link"></a>'
+		+ '</label>'
+		+ '</div>'
+		+ '</div>'
+
 		+ '</div>'; // End font settings section
 
 	function DisplaySettings( $parent ) {
@@ -104,12 +116,27 @@
 			this.prepareLanguages();
 			this.prepareUIFonts();
 			this.prepareContentFonts();
+			this.prepareWebfontsCheckbox();
 
 			// Usually this is already loaded, but when changing language it
 			// might not be.
 			this.preview( this.uiLanguage );
 			this.listen();
 			this.dirty = false;
+		},
+
+		prepareWebfontsCheckbox: function () {
+			var webFontsEnabled = this.isWebFontsEnabled();
+
+			if ( !webFontsEnabled ) {
+				$( '#uls-display-settings-font-selectors' ).addClass( 'hide' );
+			}
+
+			$( '#webfonts-enable-checkbox' ).prop( 'checked', webFontsEnabled );
+		},
+
+		isWebFontsEnabled: function () {
+			return mw.webfonts.preferences.isEnabled();
 		},
 
 		/**
@@ -343,7 +370,9 @@
 			$.i18n().locale = language;
 			mw.uls.loadLocalization( language ).done( function () {
 				displaySettings.i18n();
-				displaySettings.$webfonts.refresh();
+				if ( displaySettings.$webfonts ) {
+					displaySettings.$webfonts.refresh();
+				}
 			} );
 		},
 
@@ -383,7 +412,11 @@
 			// Get the language code from the right property -
 			// uiLanguage or contentLanguage
 			language = this[ target + 'Language' ];
-			fonts = this.$webfonts.list( language );
+			if ( this.isWebFontsEnabled() ) {
+				fonts = this.$webfonts.list( language );
+			} else {
+				fonts = [];
+			}
 
 			// Possible classes:
 			// uls-ui-fonts
@@ -417,6 +450,8 @@
 					$fontOption.attr( 'selected', savedFont === font );
 				}
 			} );
+
+			$fontSelector.prop( 'disabled', !this.isWebFontsEnabled() );
 
 			// Using attr() instead of data() because jquery.i18n doesn't
 			// currently see latter.
@@ -488,7 +523,41 @@
 				$uiFontSelector = this.$template.find( '#ui-font-selector' ),
 				$tabButtons = displaySettings.$template.find( '.uls-display-settings-tab-switcher button' );
 
-			// TODO all these repeated selectors can be placed in object constructor.
+			$( '#webfonts-enable-checkbox' ).on( 'click', function () {
+				var $fontSelectors = $( '#uls-display-settings-font-selectors' );
+
+				displaySettings.markDirty();
+
+				if ( this.checked ) {
+					mw.loader.using( 'ext.uls.webfonts.fonts', function () {
+						mw.webfonts.setup();
+
+						// Allow the webfonts library to finish loading
+						setTimeout( function() {
+							displaySettings.$webfonts = $( 'body' ).data( 'webfonts' );
+
+							mw.webfonts.preferences.enable();
+
+							displaySettings.prepareContentFonts();
+							displaySettings.prepareUIFonts();
+
+							displaySettings.i18n();
+							displaySettings.$webfonts.apply( $uiFontSelector.find( 'option:selected' ) );
+							displaySettings.$webfonts.refresh();
+
+							$fontSelectors.removeClass( 'hide' );
+						}, 1 );
+					} );
+				} else {
+					$fontSelectors.addClass( 'hide' );
+					mw.webfonts.preferences.disable();
+					mw.webfonts.preferences.setFont( displaySettings.uiLanguage, 'system' );
+					displaySettings.$webfonts.refresh();
+
+					$contentFontSelector.prop( 'disabled', true );
+					$uiFontSelector.prop( 'disabled', true );
+				}
+			} );
 
 			$uiFontSelector.on( 'change', function () {
 				displaySettings.markDirty();
@@ -577,8 +646,24 @@
 			displaySettings.$parent.setBusy( true );
 			// Save the preferences
 			mw.webfonts.preferences.save( function ( result ) {
-				var newFonts = mw.webfonts.preferences.registry.fonts || {},
-					oldFonts = displaySettings.savedRegistry.registry.fonts || {};
+				var newWebfontsEnable, oldWebfontsEnable, webfontsEvent,
+					newRegistry = mw.webfonts.preferences.registry,
+					oldRegistry = displaySettings.savedRegistry.registry,
+					newFonts = newRegistry.fonts || {},
+					oldFonts = oldRegistry.fonts || {};
+
+				newWebfontsEnable = newRegistry.webfontsEnabled;
+				oldWebfontsEnable = oldRegistry.webfontsEnabled;
+				if ( oldWebfontsEnable === undefined ) {
+					oldWebfontsEnable = mw.config.get( 'wgULSWebfontsEnabled' );
+				}
+
+				if ( newWebfontsEnable !== oldWebfontsEnable ) {
+					webfontsEvent = newWebfontsEnable ?
+						'mw.uls.webfonts.enable' :
+						'mw.uls.webfonts.disable';
+					mw.hook( webfontsEvent ).fire( 'displaysettings' );
+				}
 
 				if ( newFonts[displaySettings.uiLanguage] !== oldFonts[displaySettings.uiLanguage] ) {
 					mw.hook( 'mw.uls.font.change' ).fire(

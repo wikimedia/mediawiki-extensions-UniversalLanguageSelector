@@ -75,7 +75,9 @@
 		 * Render the module into a given target
 		 */
 		render: function () {
-			var $enabledOnly;
+			var $enabledOnly,
+				webfonts = $( 'body' ).data( 'webfonts' );
+
 			this.dirty = false;
 			this.$parent.$settingsPanel.empty();
 			this.$imes = $( 'body' ).data( 'ime' );
@@ -91,7 +93,11 @@
 			this.prepareLanguages();
 			this.prepareToggleButton();
 			this.$parent.i18n();
-			$( 'body' ).data( 'webfonts' ).refresh();
+
+			if ( webfonts ) {
+				webfonts.refresh();
+			}
+
 			this.listen();
 		},
 

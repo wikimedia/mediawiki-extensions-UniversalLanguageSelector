@@ -4,7 +4,8 @@ Feature: Settings panel
   Scenario Outline: Input settings display
     Given I am <user status>
       And I am on a page without interlanguage links
-    When I open "Input" panel of language settings
+    When I open ULS
+      And I switch to Input panel of language settings
     Then I can disable input methods
       And I can enable input methods
 
@@ -15,7 +16,8 @@ Feature: Settings panel
 
   Scenario: How to use link appears in the Input settings panel
     Given I am at random page
-    When I open "Input" panel of language settings
+    When I open ULS
+      And I switch to Input panel of language settings
       And I click the button with the ellipsis
       And in the language filter I type ml
       And I click on the link to select Malayalam
@@ -23,7 +25,8 @@ Feature: Settings panel
 
   Scenario: More languages (input language selection)
     Given I am at random page
-    When I open "Input" panel of language settings
+    When I open ULS
+      And I switch to Input panel of language settings
       And I click the button with the ellipsis
     Then I see Worldwide
       And I see Language Search
@@ -80,9 +83,9 @@ Feature: Settings panel
     Given I am logged in
       And I have reset my preferences
     When I open the Universal Language Selector
-      And I open Input panel of language settings
+      And I switch to Input panel of language settings
       And I click the button with the ellipsis
       And I use the panel to change my input language to "Finnish"
       And I close the panel to discard the changes
-      And I open Input panel of language settings
+      And I switch to Input panel of language settings
     Then I should see English as the selected input language

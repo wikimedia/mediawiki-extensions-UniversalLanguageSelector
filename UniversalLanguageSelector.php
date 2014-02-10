@@ -100,9 +100,16 @@ $GLOBALS['wgULSLanguageDetection'] = true;
 
 /**
  * Enable the input methods feature for all users by default.
- * Can be disabled manually by the user.
+ * Can be controlled by the user.
  */
 $GLOBALS['wgULSIMEEnabled'] = true;
+
+/**
+ * Enable the webfonts feature for all users by default.
+ * Can be controlled by the user.
+ * @since 2013.01
+ */
+$GLOBALS['wgULSWebfontsEnabled'] = true;
 
 /**
  * Set whether webfont support is loaded within the mobile interface (via the
@@ -195,7 +202,6 @@ $GLOBALS['wgHooks']['SkinTemplateOutputPageBeforeExec'][] =
 $GLOBALS['wgHooks']['EnterMobileMode'][] = 'UniversalLanguageSelectorHooks::onEnterMobileMode';
 
 $GLOBALS['wgDefaultUserOptions']['uls-preferences'] = '';
-$GLOBALS['wgDefaultUserOptions']['uls-enable'] = '';
 $GLOBALS['wgHooks']['GetPreferences'][] = 'UniversalLanguageSelectorHooks::onGetPreferences';
 
 $GLOBALS['wgExtensionFunctions'][] = function () {
@@ -219,7 +225,7 @@ $GLOBALS['wgExtensionFunctions'][] = function () {
 			$wgResourceModules['schema.UniversalLanguageSelector'] = array(
 				'class' => 'ResourceLoaderSchemaModule',
 				'schema' => 'UniversalLanguageSelector',
-				'revision' => 5729800,
+				'revision' => 7327441,
 			);
 		} else {
 			wfWarn( 'UniversalLanguageSelector is configured to use EventLogging, but '

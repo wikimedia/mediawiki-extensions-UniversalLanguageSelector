@@ -22,7 +22,7 @@ Feature: Autonym font
   Scenario: Autonym font is used in the ULS language search dialog for input language selection by logged-in users
     Given I am logged in
       And I open the Universal Language Selector
-      And I open Input panel of language settings
+      And I switch to Input panel of language settings
     When I click the button with the ellipsis
     Then the language list of ULS should use Autonym font
 

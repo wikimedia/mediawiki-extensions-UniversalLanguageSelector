@@ -33,7 +33,6 @@ $messages['en'] = array(
 
 	'uls-plang-title-languages' => 'Languages',
 	'uls-ime-helppage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/$1',
-	'uls-preference' => 'Enable the [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Universal Language Selector]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Language settings',
 	'ext-uls-undo-language-tooltip-text' => 'Language changed from $1',
 	'ext-uls-language-settings-preferences-link' => 'More language settings',

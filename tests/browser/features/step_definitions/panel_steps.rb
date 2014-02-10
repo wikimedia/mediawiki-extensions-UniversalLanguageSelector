@@ -48,11 +48,19 @@ Then(/^I can enable input methods$/) do
 end
 
 Then(/^a font selector for interface language appears$/) do
-  on(PanelPage).panel_interface_font_selector_element.should be_visible
+	on(PanelPage).panel_interface_font_selector_element.should be_visible
+end
+
+Then(/^a font selector for interface language doesn't appear$/) do
+	on(PanelPage).panel_interface_font_selector_element.should_not be_visible
 end
 
 Then(/^a font selector for content language appears$/) do
-  on(PanelPage).panel_content_font_selector_element.should be_visible
+	on(PanelPage).panel_content_font_selector_element.should be_visible
+end
+
+Then(/^a font selector for content language doesn't appear$/) do
+	on(PanelPage).panel_content_font_selector_element.should_not be_visible
 end
 
 When(/^I use the panel to change my (?:interface|input) language to "(.*?)"$/) do |language|
@@ -68,7 +76,7 @@ Then(/^the panel is in English/) do
 	on(PanelPage).panel_language_element.text.should == "Language"
 end
 
-When(/^I switch to Input panel of language settings/) do
+When(/^I switch to Input panel of language settings$/) do
 	on(PanelPage).panel_side_input_element.click
 end
 

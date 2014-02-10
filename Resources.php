@@ -147,11 +147,16 @@ $wgResourceModules['ext.uls.preferences'] = array(
 $wgResourceModules['ext.uls.webfonts'] = array(
 	'scripts' => 'resources/js/ext.uls.webfonts.js',
 	'dependencies' => array(
-		'jquery.webfonts',
 		'ext.uls.init',
+		'ext.uls.preferences',
+	),
+) + $resourcePaths;
+
+$wgResourceModules['ext.uls.webfonts.fonts'] = array(
+	'dependencies' => array(
+		'jquery.webfonts',
 		'jquery.uls.data',
 		'ext.uls.webfonts.repository',
-		'ext.uls.preferences',
 	),
 ) + $resourcePaths;
 
