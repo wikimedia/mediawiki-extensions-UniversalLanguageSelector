@@ -835,7 +835,6 @@ $messages['pt'] = array(
 	'UniversalLanguageSelector' => 'Seletor Universal de Idiomas',
 	'uls-desc' => 'Fornece ao utilizador várias maneiras de selecionar um idioma e ajustar suas configurações.',
 	'uls-plang-title-languages' => 'Idiomas',
-	'uls-preference' => 'Activar o [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Seletor Universal de Idiomas]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Configurações de idioma',
 	'ext-uls-undo-language-tooltip-text' => 'Idioma alterado para $1',
 	'ext-uls-language-settings-preferences-link' => 'Mais configurações de idioma',

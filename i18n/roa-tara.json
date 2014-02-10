@@ -18,6 +18,8 @@
     "ext-uls-display-settings-anon-label": "Fà vedè le lènghe:",
     "ext-uls-display-settings-anon-same-as-content": "$1 ('u stesse cumme condenute)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Tràse]] pe scacchià 'na lènghe diverse pe le menu.",
+    "ext-uls-webfonts-settings-title": "Scareche le carattere quanne abbesògne",
+    "ext-uls-webfonts-settings-info-link": "Cchiù 'mbormaziune",
     "ext-uls-webfonts-select-for": "Scacchie 'u carattere pe $1",
     "ext-uls-webfonts-select-for-ui-info": "Carattere ausate pe l'inderfacce utende",
     "ext-uls-webfonts-select-for-content-info": "Carattere ausate pe condenute",
