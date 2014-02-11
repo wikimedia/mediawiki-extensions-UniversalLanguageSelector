@@ -10,8 +10,6 @@
     "ext-uls-display-settings-fonts-tab": "フォント",
     "ext-uls-display-settings-title-short": "表示",
     "ext-uls-display-settings-desc": "メニューで使用する言語やフォントを設定します。",
-    "ext-uls-select-language-settings-icon-tooltip": "言語の設定",
-    "ext-uls-undo-language-tooltip-text": "言語を$1から変更しました。",
     "ext-uls-language-settings-title": "言語の設定",
     "ext-uls-language-settings-apply": "設定を適用",
     "ext-uls-language-settings-cancel": "キャンセル",
@@ -21,6 +19,9 @@
     "ext-uls-display-settings-anon-label": "表示言語:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (本文と同じ)",
     "ext-uls-display-settings-anon-log-in-cta": "メニューを他の言語で表示するには[[Special:UserLogin|ログイン]]してください。",
+    "ext-uls-webfonts-settings-title": "フォントが必要な際にダウンロードする",
+    "ext-uls-webfonts-settings-info": "不足しているフォントを自動的にダウンロードして、適切なフォントを選択できるようにします。",
+    "ext-uls-webfonts-settings-info-link": "詳細情報",
     "ext-uls-webfonts-select-for": "$1用のフォントの選択",
     "ext-uls-webfonts-select-for-ui-info": "ユーザーインターフェイスに使用するフォント",
     "ext-uls-webfonts-select-for-content-info": "本文に使用するフォント",
@@ -46,6 +47,5 @@
     "ext-uls-input-disable-notification-undo": "取り消す",
     "ext-uls-input-disable-notification-info-personal": "言語の設定で、いつでも入力ツールを有効にできます。",
     "ext-uls-input-disable-notification-info-interlanguage": "言語一覧の隣にある言語の設定で、いつでも入力ツールを有効にできます。",
-    "ext-uls-language-settings-applying": "適用しています...",
-    "ext-uls-language-settings-preferences-link": "言語のその他の設定"
+    "ext-uls-language-settings-applying": "適用しています..."
 }

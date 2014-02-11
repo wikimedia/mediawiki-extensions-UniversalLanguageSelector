@@ -10,8 +10,6 @@
     "ext-uls-display-settings-fonts-tab": "גופנים",
     "ext-uls-display-settings-title-short": "תצוגה",
     "ext-uls-display-settings-desc": "בחירת שפה לתפריטים.",
-    "ext-uls-select-language-settings-icon-tooltip": "הגדרות שפה",
-    "ext-uls-undo-language-tooltip-text": "השפה השתנתה מ{{GRAMMAR:תחילית|$1}}",
     "ext-uls-language-settings-title": "הגדרות שפה",
     "ext-uls-language-settings-apply": "החלת שינויים",
     "ext-uls-language-settings-cancel": "ביטול",
@@ -21,6 +19,9 @@
     "ext-uls-display-settings-anon-label": "שפת תצוגה:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (כמו שפת התוכן)",
     "ext-uls-display-settings-anon-log-in-cta": "יש [[Special:UserLogin|להיכנס]] לחשבון כדי לבחור שפה אחרת לתפריטים.",
+    "ext-uls-webfonts-settings-title": "הורדת גופן כשזה נחוץ",
+    "ext-uls-webfonts-settings-info": "הורדת גופנים באופן אוטומטי ובחירת הגופן המועדף.",
+    "ext-uls-webfonts-settings-info-link": "מידע נוסף",
     "ext-uls-webfonts-select-for": "בחירת גופן עבור $1",
     "ext-uls-webfonts-select-for-ui-info": "גופן לממשק משתמש",
     "ext-uls-webfonts-select-for-content-info": "גופן לתוכן",
@@ -46,6 +47,5 @@
     "ext-uls-input-disable-notification-undo": "ביטול",
     "ext-uls-input-disable-notification-info-personal": "באפשרותך להפעיל את כלי הקלט בכל זמן מהגדרות השפה.",
     "ext-uls-input-disable-notification-info-interlanguage": "באפשרותך להפעיל את כלי הקלט בכל זמן מהגדרות השפה שליד רשימת השפות.",
-    "ext-uls-language-settings-applying": "החלה...",
-    "ext-uls-language-settings-preferences-link": "הגדרות שפה נוספות"
+    "ext-uls-language-settings-applying": "החלה..."
 }

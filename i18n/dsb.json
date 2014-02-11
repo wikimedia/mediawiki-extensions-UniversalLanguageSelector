@@ -9,8 +9,6 @@
     "ext-uls-display-settings-fonts-tab": "Pisma",
     "ext-uls-display-settings-title-short": "Zwobraznjenje",
     "ext-uls-display-settings-desc": "Rěc za menije a pisma póstajiś",
-    "ext-uls-select-language-settings-icon-tooltip": "Rěcne nastajenja",
-    "ext-uls-undo-language-tooltip-text": "Rěc $1 změnjona",
     "ext-uls-language-settings-title": "Rěcne nastajenja",
     "ext-uls-language-settings-apply": "Nastajenja nałožyś",
     "ext-uls-language-settings-cancel": "Pśetergnuś",
@@ -20,6 +18,9 @@
     "ext-uls-display-settings-anon-label": "Zwobraznjowańska rěc:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (ako wopśimjeśe)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Pśizjaw se]], aby drugu rěc za menije wubrał.",
+    "ext-uls-webfonts-settings-title": "Pisma ześěgnuś, jolic trěbne",
+    "ext-uls-webfonts-settings-info": "Felujuce pisma awtomatiski ześěgnuś a wuběranje preferěrowanych pismow zmóžniś.",
+    "ext-uls-webfonts-settings-info-link": "Dalšne informacije",
     "ext-uls-webfonts-select-for": "Pismo za $1 wubraś",
     "ext-uls-webfonts-select-for-ui-info": "Pismo za wužywarski powjerch",
     "ext-uls-webfonts-select-for-content-info": "Pismo za wopśimjeśe",
@@ -45,6 +46,5 @@
     "ext-uls-input-disable-notification-undo": "Anulěrowaś",
     "ext-uls-input-disable-notification-info-personal": "Móžoš zapódawańske rědy kuždy cas z rěcnych nastajenjow zmóžniś.",
     "ext-uls-input-disable-notification-info-interlanguage": "Móžoš zapódawańske rědy kuždy cas z rěcnych nastajenjow pódla lisćiny rěcow zmóžniś.",
-    "ext-uls-language-settings-applying": "Nałožujo se...",
-    "ext-uls-language-settings-preferences-link": "Dalšne rěcne nastajenja"
+    "ext-uls-language-settings-applying": "Nałožujo se..."
 }

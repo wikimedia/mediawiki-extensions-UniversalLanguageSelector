@@ -14,8 +14,6 @@
     "ext-uls-display-settings-fonts-tab": "Polices de caractères",
     "ext-uls-display-settings-title-short": "Affichage",
     "ext-uls-display-settings-desc": "Définir la langue utilisée pour les menus et les polices de caractères.",
-    "ext-uls-select-language-settings-icon-tooltip": "Paramètres de langue",
-    "ext-uls-undo-language-tooltip-text": "Langue modifiée de $1",
     "ext-uls-language-settings-title": "Paramètres de langue",
     "ext-uls-language-settings-apply": "Appliquer les paramètres",
     "ext-uls-language-settings-cancel": "Annuler",
@@ -25,6 +23,9 @@
     "ext-uls-display-settings-anon-label": "Langue d'affichage :",
     "ext-uls-display-settings-anon-same-as-content": "$1 (comme le contenu)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Se connecter]] pour sélectionner une autre langue pour les menus.",
+    "ext-uls-webfonts-settings-title": "Télécharger les polices lorsque cela est nécessaire",
+    "ext-uls-webfonts-settings-info": "Télécharger automatiquement les polices manquantes et permettre la sélection des polices préférées.",
+    "ext-uls-webfonts-settings-info-link": "Plus d'informations",
     "ext-uls-webfonts-select-for": "Sélectionner la police de caractères pour $1",
     "ext-uls-webfonts-select-for-ui-info": "Police de caractères utilisée pour l'interface utilisateur",
     "ext-uls-webfonts-select-for-content-info": "Police de caractères utilisée pour le contenu",
@@ -50,6 +51,5 @@
     "ext-uls-input-disable-notification-undo": "Annuler",
     "ext-uls-input-disable-notification-info-personal": "Vous pouvez activer les outils d'entrée à tout moment dans vos paramètres de langue.",
     "ext-uls-input-disable-notification-info-interlanguage": "Vous pouvez activer les outils d'entrée à tout moment depuis les paramètres de langue à côté de la liste des langues.",
-    "ext-uls-language-settings-applying": "Mise en œuvre en cours…",
-    "ext-uls-language-settings-preferences-link": "Plus de paramètres de langue"
+    "ext-uls-language-settings-applying": "Mise en œuvre en cours…"
 }
