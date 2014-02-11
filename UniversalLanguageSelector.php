@@ -107,7 +107,7 @@ $GLOBALS['wgULSIMEEnabled'] = true;
 /**
  * Enable the webfonts feature for all users by default.
  * Can be controlled by the user.
- * @since 2013.01
+ * @since 2014.02
  */
 $GLOBALS['wgULSWebfontsEnabled'] = true;
 
