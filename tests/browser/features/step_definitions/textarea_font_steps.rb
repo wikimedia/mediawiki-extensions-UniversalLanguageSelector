@@ -1,7 +1,3 @@
-Given(/^I have reset my preferences$/) do
-	visit(ResetPreferencesPage).submit_element.click
-end
-
 When(/^I set the editing fonts to "(.*?)"$/) do |editing_font|
 	visit(PreferencesPage) do |page|
 		page.editing_tab_element.click
