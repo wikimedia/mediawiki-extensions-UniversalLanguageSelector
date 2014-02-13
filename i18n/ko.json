@@ -3,7 +3,8 @@
         "authors": [
             "Hym411",
             "Kwj2772",
-            "아라"
+            "아라",
+            "Priviet"
         ]
     },
     "ext-uls-display-settings-title": "보기 설정",
@@ -11,8 +12,6 @@
     "ext-uls-display-settings-fonts-tab": "글꼴",
     "ext-uls-display-settings-title-short": "보기",
     "ext-uls-display-settings-desc": "메뉴와 글꼴에 사용하는 언어를 설정합니다.",
-    "ext-uls-select-language-settings-icon-tooltip": "언어 설정",
-    "ext-uls-undo-language-tooltip-text": "$1에서 언어가 바뀌었습니다",
     "ext-uls-language-settings-title": "언어 설정",
     "ext-uls-language-settings-apply": "설정 적용",
     "ext-uls-language-settings-cancel": "취소",
@@ -22,6 +21,9 @@
     "ext-uls-display-settings-anon-label": "보일 언어:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (내용과 같음)",
     "ext-uls-display-settings-anon-log-in-cta": "메뉴의 다른 언어를 선택하려면 [[Special:UserLogin|로그인]]하세요.",
+    "ext-uls-webfonts-settings-title": "필요할 때 글꼴 내려받기",
+    "ext-uls-webfonts-settings-info": "없는 폰트를 자동으로 내려받고 선호하는 글꼴을 선택할 수 있도록 허용합니다.",
+    "ext-uls-webfonts-settings-info-link": "자세한 정보",
     "ext-uls-webfonts-select-for": "$1에 대한 글꼴 선택",
     "ext-uls-webfonts-select-for-ui-info": "사용자 인터페이스에 사용할 글꼴",
     "ext-uls-webfonts-select-for-content-info": "내용에 사용할 글꼴",
@@ -47,6 +49,5 @@
     "ext-uls-input-disable-notification-undo": "되돌리기",
     "ext-uls-input-disable-notification-info-personal": "언어 설정에서 언제든지 입력 도구를 활성화할 수 있습니다.",
     "ext-uls-input-disable-notification-info-interlanguage": "언어 목록 옆에 있는 언어 설정에서 언제든지 입력 도구를 활성화할 수 있습니다.",
-    "ext-uls-language-settings-applying": "적용 중....",
-    "ext-uls-language-settings-preferences-link": "자세한 언어 설정"
+    "ext-uls-language-settings-applying": "적용 중...."
 }
