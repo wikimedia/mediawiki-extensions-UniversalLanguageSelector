@@ -13,8 +13,6 @@
     "ext-uls-display-settings-fonts-tab": "Шрифти",
     "ext-uls-display-settings-title-short": "Відображення",
     "ext-uls-display-settings-desc": "Встановити мову меню та шрифтів.",
-    "ext-uls-select-language-settings-icon-tooltip": "Налаштування мови",
-    "ext-uls-undo-language-tooltip-text": "Мову змінено з $1",
     "ext-uls-language-settings-title": "Налаштування мови",
     "ext-uls-language-settings-apply": "Застосувати налаштування",
     "ext-uls-language-settings-cancel": "Скасувати",
@@ -24,6 +22,9 @@
     "ext-uls-display-settings-anon-label": "Мова відтворення:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (так само, як і вміст)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Увійдіть в систему]], щоб вибрати іншу мову меню.",
+    "ext-uls-webfonts-settings-title": "Завантажити шрифти за необхідності",
+    "ext-uls-webfonts-settings-info": "Автоматично завантажувати відсутні шрифти і дозволити вибір бажаних шрифтів.",
+    "ext-uls-webfonts-settings-info-link": "Додаткова інформація",
     "ext-uls-webfonts-select-for": "Оберіть шрифт для мови $1",
     "ext-uls-webfonts-select-for-ui-info": "Шрифт для інтерфейсу користувача",
     "ext-uls-webfonts-select-for-content-info": "Шрифт для тексту",
@@ -49,6 +50,5 @@
     "ext-uls-input-disable-notification-undo": "Скасувати",
     "ext-uls-input-disable-notification-info-personal": "Ви можете увімкнути знаряддя вводу в будь-який момент через налаштування мови.",
     "ext-uls-input-disable-notification-info-interlanguage": "Ви можете увімкнути знаряддя вводу в будь-який момент через налаштування мови біля переліку мов.",
-    "ext-uls-language-settings-applying": "Застосування...",
-    "ext-uls-language-settings-preferences-link": "Додаткові налаштування мови"
+    "ext-uls-language-settings-applying": "Застосування..."
 }

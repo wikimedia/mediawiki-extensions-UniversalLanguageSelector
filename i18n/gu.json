@@ -10,8 +10,6 @@
     "ext-uls-display-settings-fonts-tab": "ફોન્ટ્સ",
     "ext-uls-display-settings-title-short": "દેખાવ",
     "ext-uls-display-settings-desc": "મેનુઓ અને ફોન્ટ્સ માટે વપરાયેલ ભાષા પસંદ કરો.",
-    "ext-uls-select-language-settings-icon-tooltip": "ભાષા સુયોજનો",
-    "ext-uls-undo-language-tooltip-text": "$1 માંથી ભાષા બદલવામાં આવી",
     "ext-uls-language-settings-title": "ભાષા સુયોજનો",
     "ext-uls-language-settings-apply": "સુયોજનો લાગુ કરો",
     "ext-uls-language-settings-cancel": "રદ કરો",
@@ -21,6 +19,9 @@
     "ext-uls-display-settings-anon-label": "ભાષા દર્શાવો:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (વિગતની જેમ જ)",
     "ext-uls-display-settings-anon-log-in-cta": "મેનુઓ માટે બીજી ભાષા પસંદ કરવા માટે [[Special:UserLogin|પ્રવેશ કરો]].",
+    "ext-uls-webfonts-settings-title": "જ્યારે જરુર હોય ત્યારે ફોન્ટ ડાઉનલોડ કરો",
+    "ext-uls-webfonts-settings-info": "ખૂટતાં ફોન્ટ્સ આપમેળે ડાઉનલોડ કરો અને માનીતા ફોન્ટ્સની પસંદગી કરવા દો.",
+    "ext-uls-webfonts-settings-info-link": "વધુ માહિતી",
     "ext-uls-webfonts-select-for": "$1 માટે ફોન્ટ પસંદ કરો",
     "ext-uls-webfonts-select-for-ui-info": "વપરાશકર્તા દેખાવ માટે વપરાયેલ ફોન્ટ",
     "ext-uls-webfonts-select-for-content-info": "વિગત માટે વપરાયેલ ફોન્ટ",
@@ -46,6 +47,5 @@
     "ext-uls-input-disable-notification-undo": "રદ કરો",
     "ext-uls-input-disable-notification-info-personal": "ભાષા સુયોજનો વડે તમે ગમે તે સમયે ઇનપુટ સાધનો સક્રિય કરી શકો છો.",
     "ext-uls-input-disable-notification-info-interlanguage": "ભાષા યાદીની બાજુ પર આવેલા ભાષા સુયોજનો વડે તમે ગમે તે સમયે ઇનપુટ સાધનો સક્રિય કરી શકો છો.",
-    "ext-uls-language-settings-applying": "લાગુ પાડે છે...",
-    "ext-uls-language-settings-preferences-link": "વધુ ભાષા સુયોજનો"
+    "ext-uls-language-settings-applying": "લાગુ પાડે છે..."
 }
