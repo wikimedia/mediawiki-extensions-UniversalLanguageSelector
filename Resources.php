@@ -176,7 +176,7 @@ $wgResourceModules['ext.uls.webfonts.mobile'] = array(
 $wgResourceModules['jquery.i18n'] = array(
 	'scripts' => array(
 		'lib/jquery.i18n/jquery.i18n.js',
-		'lib/jquery.i18n/jquery.i18n.messages.js',
+		'lib/jquery.i18n/jquery.i18n.messagestore.js',
 		'lib/jquery.i18n/jquery.i18n.parser.js',
 		'lib/jquery.i18n/jquery.i18n.emitter.js',
 		'lib/jquery.i18n/jquery.i18n.language.js',
