@@ -247,11 +247,14 @@ $messages['de'] = array(
 
 /** Zazaki (Zazaki)
  * @author Gorizon
+ * @author Marmase
  * @author Mirzali
  */
 $messages['diq'] = array(
 	'UniversalLanguageSelector' => 'Zıwan Weçınıtoğo Universal',
 	'uls-plang-title-languages' => 'Zıwani',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Sazé zıwani',
+	'ext-uls-language-settings-preferences-link' => 'Dahana véşi zıwani',
 );
 
 /** Lower Sorbian (dolnoserbski)

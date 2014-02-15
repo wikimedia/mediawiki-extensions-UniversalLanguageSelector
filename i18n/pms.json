@@ -10,8 +10,6 @@
     "ext-uls-display-settings-fonts-tab": "Tipo ëd caràter",
     "ext-uls-display-settings-title-short": "Visualisa",
     "ext-uls-display-settings-desc": "Amposté la lenga dovrà për jë mnù e ij caràter.",
-    "ext-uls-select-language-settings-icon-tooltip": "Paràmeter ëd lenga",
-    "ext-uls-undo-language-tooltip-text": "Lenga cangià da $1",
     "ext-uls-language-settings-title": "Ampostassion ëd lenga",
     "ext-uls-language-settings-apply": "Apliché j'ampostassion",
     "ext-uls-language-settings-cancel": "Scancela",
@@ -21,6 +19,9 @@
     "ext-uls-display-settings-anon-label": "Lenga ëd visualisassion:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (coma ël contnù)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Rintré ant ël sistema]] për selessioné n'àutra lenga për jë mnu.",
+    "ext-uls-webfonts-settings-title": "Dëscarié ij caràter quand a-i na j'é damanca",
+    "ext-uls-webfonts-settings-info": "Dëscarié an automàtich ij caràter mancant e përmëtte la selession dij caràter preferì.",
+    "ext-uls-webfonts-settings-info-link": "Pi d'anformassion",
     "ext-uls-webfonts-select-for": "Selessioné ij caràter për $1",
     "ext-uls-webfonts-select-for-ui-info": "Caràter dovrà për l'antërfacia utent",
     "ext-uls-webfonts-select-for-content-info": "Caràter dovrà për ël contnù",
@@ -46,6 +47,5 @@
     "ext-uls-input-disable-notification-undo": "Buté 'me ch'a l'era",
     "ext-uls-input-disable-notification-info-personal": "A peul ativé j'utiss d'imission an qualsëssìa moment an soe ampostassion ëd lenga.",
     "ext-uls-input-disable-notification-info-interlanguage": "A peul ativé j'utiss d'imission an qualsëssìa moment ant j'ampostassion ëd lenga da banda dla lista dle lenghe.",
-    "ext-uls-language-settings-applying": "Ativassion an cors...",
-    "ext-uls-language-settings-preferences-link": "Pi d'ampostassion ëd lenga"
+    "ext-uls-language-settings-applying": "Ativassion an cors..."
 }

@@ -9,8 +9,6 @@
     "ext-uls-display-settings-fonts-tab": "Skraften",
     "ext-uls-display-settings-title-short": "Uunwisin",
     "ext-uls-display-settings-desc": "Spriak för menüüs an skraften iinracht.",
-    "ext-uls-select-language-settings-icon-tooltip": "Spriakiinstelangen",
-    "ext-uls-undo-language-tooltip-text": "Spriak feranert faan $1",
     "ext-uls-language-settings-title": "Spriakiinstelangen",
     "ext-uls-language-settings-apply": "Iinstelangen brük",
     "ext-uls-language-settings-cancel": "Ufbreeg",
@@ -20,6 +18,9 @@
     "ext-uls-display-settings-anon-label": "Uunwiset spriak:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (detsalew üs a teksten)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Melde di uun]], am en ööder spriak för't menüü iintustelen.",
+    "ext-uls-webfonts-settings-title": "Skraftoorten deeloose, wan nuadag.",
+    "ext-uls-webfonts-settings-info": "Brükt skraftoorten automaatisk deelloose an en ütjwool faan skraftoorten mögelk maage.",
+    "ext-uls-webfonts-settings-info-link": "Muar diartu",
     "ext-uls-webfonts-select-for": "Skraft för $1 ütjschük",
     "ext-uls-webfonts-select-for-ui-info": "Skraft för di brüker-skak",
     "ext-uls-webfonts-select-for-content-info": "Skraft för teksten",
@@ -45,6 +46,5 @@
     "ext-uls-input-disable-notification-undo": "Turag",
     "ext-uls-input-disable-notification-info-personal": "Dü könst a werktjüügen tu skriiwen tu arke tidj uun a spriakiinstelangen aktiwiare.",
     "ext-uls-input-disable-notification-info-interlanguage": "Dü könst a werktjüügen tu skriiwen tu arke tidj uun a spriakiinstelangen üüb sidj faan det spriakenlist aktiwiare.",
-    "ext-uls-language-settings-applying": "Brüken ...",
-    "ext-uls-language-settings-preferences-link": "Muar spriakiinstelangen"
+    "ext-uls-language-settings-applying": "Brüken ..."
 }
