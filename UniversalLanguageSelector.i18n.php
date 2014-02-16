@@ -253,7 +253,7 @@ $messages['de'] = array(
 $messages['diq'] = array(
 	'UniversalLanguageSelector' => 'Zıwan Weçınıtoğo Universal',
 	'uls-plang-title-languages' => 'Zıwani',
-	'ext-uls-select-language-settings-icon-tooltip' => 'Sazé zıwani',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Eyarê zıwani',
 	'ext-uls-language-settings-preferences-link' => 'Dahana véşi zıwani',
 );
 
