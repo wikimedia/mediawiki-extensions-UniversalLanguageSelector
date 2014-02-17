@@ -35,12 +35,16 @@
 		init: function () {
 			var eventLogger = this;
 
-			// Set event defaults and make the
 			mw.eventLog.setDefaults( 'UniversalLanguageSelector', {
 				version: 1,
 				token: mw.user.id(),
 				contentLanguage: mw.config.get( 'wgContentLanguage' ),
 				interfaceLanguage: mw.config.get( 'wgUserLanguage' )
+			} );
+
+			mw.eventLog.setDefaults( 'UniversalLanguageSelector-tofu', {
+				version: 1,
+				token: mw.user.id()
 			} );
 
 			eventLogger.logEventQueue.fire();
@@ -50,17 +54,20 @@
 		 * Local wrapper for 'mw.eventLog.logEvent'
 		 *
 		 * @param {Object} event Event action and optional fields
+		 * @param {String} schema The schema; 'UniversalLanguageSelector' is the default
 		 * @return {jQuery.Promise} jQuery Promise object for the logging call
 		 */
-		log: function ( event ) {
+		log: function ( event, schema ) {
 			// We need to create our own deferred for two reasons:
 			//  - logEvent might not be executed immediately
 			//  - we cannot reject a promise returned by it
 			// So we proxy the original promises status updates.
 			var deferred = $.Deferred();
 
+			schema = schema || 'UniversalLanguageSelector';
+
 			this.logEventQueue.add( function () {
-				mw.eventLog.logEvent( 'UniversalLanguageSelector', event )
+				mw.eventLog.logEvent( schema, event )
 					.done( deferred.resolve )
 					.fail( deferred.reject );
 			} );
@@ -85,6 +92,7 @@
 			mw.hook( 'mw.uls.font.change' ).add( $.proxy( this.fontChange, this ) );
 			mw.hook( 'mw.uls.webfonts.enable' ).add( $.proxy( this.enableWebfonts, this ) );
 			mw.hook( 'mw.uls.webfonts.disable' ).add( $.proxy( this.disableWebfonts, this ) );
+			mw.hook( 'mw.uls.webfonts.tofudetected' ).add( $.proxy( this.tofuDetected, this ) );
 
 			$( 'body' ).on( 'noresults.uls', '.uls-menu .languagefilter',
 				$.proxy( this.noSearchResults, this )
@@ -225,6 +233,17 @@
 		 */
 		enableWebfonts: function ( context ) {
 			this.log( { action: 'webfonts-enable', context: context } );
+		},
+
+		/**
+		 * Log tofu detection
+		 * @param {string} language Code of the element in which tofu was detected
+		 */
+		tofuDetected: function ( language ) {
+			this.log( {
+				tofuElementLanguage: language,
+				webfontsEnabled: mw.webfonts.preferences.isEnabled()
+			}, 'UniversalLanguageSelector-tofu' );
 		},
 
 		/**

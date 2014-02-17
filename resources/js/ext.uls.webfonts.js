@@ -168,9 +168,15 @@
 						detectTofu( $.uls.data.getAutonym( language ) );
 
 					if ( tofu ) {
-						mw.log( 'tofu detected for ' + language );
-						// Cache the languages with tofu
-						tofuLanguages[language] = true;
+						// Log the tofu detection only once per page per language
+						if ( !tofuLanguages[language] ) {
+							mw.log( 'tofu detected for ' + language );
+							mw.hook( 'mw.uls.webfonts.tofudetected' ).fire( language );
+
+							// Cache the languages with tofu
+							tofuLanguages[language] = true;
+						}
+
 						font = autonym ? 'Autonym' : defaultFont;
 					} else {
 						// No tofu and no font preference. Use system font.

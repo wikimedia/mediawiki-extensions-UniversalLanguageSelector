@@ -216,20 +216,29 @@ $GLOBALS['wgExtensionFunctions'][] = function () {
 		};
 	}
 
-	// If EventLogging integration is enabled, first ensure that the
-	// EventLogging extension is present, then declare schema module.
+	// If EventLogging integration is enabled, first ensure that
+	// the EventLogging extension is present, then declare schema module.
 	// If it is not present, emit a warning and disable logging.
 	if ( $wgULSEventLogging ) {
 		if ( class_exists( 'ResourceLoaderSchemaModule' ) ) {
+			// NB: When updating the schema, remember also to update the version
+			// in the schema default in the JavaScript library.
 			/// @see https://meta.wikimedia.org/wiki/Schema:UniversalLanguageSelector
 			$wgResourceModules['schema.UniversalLanguageSelector'] = array(
 				'class' => 'ResourceLoaderSchemaModule',
 				'schema' => 'UniversalLanguageSelector',
 				'revision' => 7327441,
 			);
+
+			/// @see https://meta.wikimedia.org/wiki/Schema:UniversalLanguageSelector-tofu
+			$wgResourceModules['schema.UniversalLanguageSelector-tofu'] = array(
+				'class' => 'ResourceLoaderSchemaModule',
+				'schema' => 'UniversalLanguageSelector-tofu',
+				'revision' => 7629564,
+			);
 		} else {
-			wfWarn( 'UniversalLanguageSelector is configured to use EventLogging, but '
-				. 'the extension is is not available. Disabling wgULSEventLogging.' );
+			wfWarn( 'UniversalLanguageSelector is configured to use EventLogging, '
+				. 'but the extension is not available. Disabling wgULSEventLogging.' );
 			$wgULSEventLogging = false;
 		}
 	}
