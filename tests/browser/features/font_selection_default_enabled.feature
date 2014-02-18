@@ -11,7 +11,7 @@ Feature: Font selection
 
   This feature is similar to font_selection_default_disabled,
   but it is targeted at wikis where automatic font downloading
-  is disabled by default ($wgULSWebfontsEnabled = true).
+  is enabled by default ($wgULSWebfontsEnabled = true).
 
   Background:
     Given I am logged in
