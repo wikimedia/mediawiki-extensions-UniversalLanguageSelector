@@ -19,7 +19,7 @@
 		"composer/installers": ">=1.0.1"
 	},
 	"suggest": {
-		"mediawiki/cldr": "Language names in all languages."
+		"mediawiki/cldr": "Language names in all languages"
 	},
 	"autoload": {
 		"files": ["UniversalLanguageSelector.php"]
