@@ -10,8 +10,6 @@
     "ext-uls-display-settings-fonts-tab": "टंक (फाँट)",
     "ext-uls-display-settings-title-short": "दर्शवा",
     "ext-uls-display-settings-desc": "मेनु व फाँटच्या वापरासाठी भाषेची निवड करा.",
-    "ext-uls-select-language-settings-icon-tooltip": "भाषा सेटींग्स",
-    "ext-uls-undo-language-tooltip-text": "$1 पासुन भाषा बदलली",
     "ext-uls-language-settings-title": "भाषा सेटींग्स",
     "ext-uls-language-settings-apply": "मांडणी (सेटींग्ज) लागु करा",
     "ext-uls-language-settings-cancel": "रद्द करा",
@@ -21,6 +19,8 @@
     "ext-uls-display-settings-anon-label": "भाषा दाखवा:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (मजकुराच्या भाषेनुसार)",
     "ext-uls-display-settings-anon-log-in-cta": "दुसऱ्या कोणत्याही भाषेचा उपयोग करण्यासाठी [[Special:UserLogin|प्रवेश]] करा",
+    "ext-uls-webfonts-settings-title": "आवश्यकता भासल्यास टंकांचे अधिभारण करा",
+    "ext-uls-webfonts-settings-info": "हरविलेल्या टंकांचे स्वयंचलितरित्या अधिभारण करा व पसंतीतले टंक निवडण्यास परवानगी द्या.",
     "ext-uls-webfonts-select-for": "$1 करिता टंक(फाँट) निवडा",
     "ext-uls-webfonts-select-for-ui-info": "सदस्य आंतरपृष्ठासाठी (इंटरफेस) वापरलेला फाँट",
     "ext-uls-webfonts-select-for-content-info": "आशयासाठी वापरण्यात आलेला फाँट",
@@ -46,6 +46,5 @@
     "ext-uls-input-disable-notification-undo": "रद्द करा",
     "ext-uls-input-disable-notification-info-personal": "आपण क्षेपन साधनांचा (टायपींग/इनपुट टुल्स) वापर 'भाषा मांडणी'(लॅंग्वेज सेटींग्ज)तुन कधीही पुर्ववत् करु शकता.",
     "ext-uls-input-disable-notification-info-interlanguage": "भाषेच्या यादीशेजारी असलेल्या क्षेपन साधनांचा (टायपींग/इनपुट टुल्स) वापर आपण   'भाषा मांडणी'(लॅंग्वेज सेटींग्ज)तुन कधीही पुर्ववत् करु शकता.",
-    "ext-uls-language-settings-applying": "लागू करीत आहे...",
-    "ext-uls-language-settings-preferences-link": "अधिकचे भाषा मांडणी पर्याय"
+    "ext-uls-language-settings-applying": "लागू करीत आहे..."
 }

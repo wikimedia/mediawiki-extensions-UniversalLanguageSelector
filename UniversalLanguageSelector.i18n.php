@@ -1008,10 +1008,16 @@ $messages['uk'] = array(
 );
 
 /** Urdu (اردو)
+ * @author Muhammad Shuaib
  * @author පසිඳු කාවින්ද
  */
 $messages['ur'] = array(
-	'UniversalLanguageSelector' => 'عالمگیر زبان منتخب',
+	'UniversalLanguageSelector' => 'آلہ برائے انتخاب عالمی زبان',
+	'uls-desc' => 'صارف کو زبان کے انتخاب اور زبان کی ترتیبات کی تنظیم کے لیے متعدد راہیں فراہم کرتا ہے',
+	'uls-plang-title-languages' => 'زبانیں',
+	'ext-uls-select-language-settings-icon-tooltip' => 'زبان کی ترتیبات',
+	'ext-uls-undo-language-tooltip-text' => '$1 سے زبان تبدیل ہوگئی',
+	'ext-uls-language-settings-preferences-link' => 'مزید ترتیبات زبان',
 );
 
 /** Uzbek (oʻzbekcha)

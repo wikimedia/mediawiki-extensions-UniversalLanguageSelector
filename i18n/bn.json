@@ -10,8 +10,6 @@
     "ext-uls-display-settings-fonts-tab": "ফন্ট",
     "ext-uls-display-settings-title-short": "প্রদর্শন",
     "ext-uls-display-settings-desc": "মেন্যু এবং ফন্টের জন্য ব্যবহৃত ভাষা নির্বাচন করুন।",
-    "ext-uls-select-language-settings-icon-tooltip": "ভাষা সেটিং",
-    "ext-uls-undo-language-tooltip-text": "$1 হতে ভাষার পরিবর্তন",
     "ext-uls-language-settings-title": "ভাষা সেটিং",
     "ext-uls-language-settings-apply": "সেটিং প্রয়োগ",
     "ext-uls-language-settings-cancel": "বাতিল",
@@ -21,6 +19,9 @@
     "ext-uls-display-settings-anon-label": "প্রদর্শন ভাষা:",
     "ext-uls-display-settings-anon-same-as-content": "বাংলা (কন্টেন্টের মত)",
     "ext-uls-display-settings-anon-log-in-cta": "মেন্যুর জন্য আলাদা ভাষা নির্বাচন করতে [[Special:UserLogin|প্রবেশ]] করুন।",
+    "ext-uls-webfonts-settings-title": "ফন্ট ডাউনলোড করুন যখন প্রয়োজন হবে?",
+    "ext-uls-webfonts-settings-info": "স্বয়ংক্রিয়ভাবে অনুপস্থিত ফন্ট ডাউনলোড করুন এবং পছন্দের ফন্ট নির্বাচনের অনুমতি দিন।",
+    "ext-uls-webfonts-settings-info-link": "আরও তথ্য",
     "ext-uls-webfonts-select-for": "$1 এর জন্য ফন্ট নির্বাচন",
     "ext-uls-webfonts-select-for-ui-info": "ব্যবহারকারী ইন্টারফেসের জন্য ব্যবহৃত ফন্ট",
     "ext-uls-webfonts-select-for-content-info": "কন্টেন্টের জন্য ব্যবহৃত ফন্ট",
@@ -45,6 +46,5 @@
     "ext-uls-input-disable-notification": "ইনপুট টুল নিস্ক্রিয় করা হয়েছে",
     "ext-uls-input-disable-notification-undo": "পূর্বাবস্থায় ফেরাও",
     "ext-uls-input-disable-notification-info-personal": "আপনি ভাষা সেটিং থেকে যে কোনো সময়ে ইনপুট টুল সক্রিয় করতে পারেন।",
-    "ext-uls-input-disable-notification-info-interlanguage": "আপনি ভাষার তালিকার পাশে ভাষা সেটিং থেকে যে কোনো সময়ে ইনপুট টুল সক্রিয় করতে পারেন।",
-    "ext-uls-language-settings-preferences-link": "আরও ভাষা সেটিং"
+    "ext-uls-input-disable-notification-info-interlanguage": "আপনি ভাষার তালিকার পাশে ভাষা সেটিং থেকে যে কোনো সময়ে ইনপুট টুল সক্রিয় করতে পারেন।"
 }

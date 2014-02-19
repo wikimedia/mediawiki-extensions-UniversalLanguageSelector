@@ -2,7 +2,8 @@
     "@metadata": {
         "authors": [
             "Jaideraf",
-            "Luckas"
+            "Luckas",
+            "Caio1478"
         ]
     },
     "ext-uls-display-settings-title": "Exibir configurações",
@@ -10,8 +11,6 @@
     "ext-uls-display-settings-fonts-tab": "Fontes",
     "ext-uls-display-settings-title-short": "Exibição",
     "ext-uls-display-settings-desc": "Configurar o idioma para os menus e as fontes.",
-    "ext-uls-select-language-settings-icon-tooltip": "Configurações de idioma",
-    "ext-uls-undo-language-tooltip-text": "Idioma foi mudado de $1",
     "ext-uls-language-settings-title": "Configurações de idioma",
     "ext-uls-language-settings-apply": "Aplicar configurações",
     "ext-uls-language-settings-cancel": "Cancelar",
@@ -21,6 +20,9 @@
     "ext-uls-display-settings-anon-label": "Exibir idioma:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (o mesmo que o conteúdo)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Entre]] para selecionar um idioma diferente para os menus.",
+    "ext-uls-webfonts-settings-title": "Baixar fontes quando necessário",
+    "ext-uls-webfonts-settings-info": "Baixar fontes ausentes automaticamente e permitir a seleção de fontes preferenciais.",
+    "ext-uls-webfonts-settings-info-link": "Mais informações",
     "ext-uls-webfonts-select-for": "Selecione fonte para $1",
     "ext-uls-webfonts-select-for-ui-info": "Fonte utilizada para a interface de usuário",
     "ext-uls-webfonts-select-for-content-info": "Fonte utilizada para o conteúdo",
@@ -46,6 +48,5 @@
     "ext-uls-input-disable-notification-undo": "Desfazer",
     "ext-uls-input-disable-notification-info-personal": "Você pode habilitar as ferramentas de entrada de texto a qualquer momento a partir das configurações de idioma.",
     "ext-uls-input-disable-notification-info-interlanguage": "Você pode habilitar as ferramentas de entrada de texto a qualquer momento a partir das configurações de idioma próximo da lista de idiomas,",
-    "ext-uls-language-settings-applying": "Aplicando…",
-    "ext-uls-language-settings-preferences-link": "Mais configurações de idioma"
+    "ext-uls-language-settings-applying": "Aplicando…"
 }
