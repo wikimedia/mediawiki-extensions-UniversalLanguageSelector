@@ -1,0 +1,9 @@
+{
+    "@metadata": {
+        "authors": [
+            "John Reid"
+        ]
+    },
+    "ext-uls-webfonts-settings-title": "Download fonts whan needed",
+    "ext-uls-webfonts-settings-info": "Download missing fonts autaematicly an allou selection o preferred fonts."
+}
