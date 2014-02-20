@@ -1,4 +1,4 @@
-@commons.wikimedia.beta.wmflabs.org @login @needs-custom-setup
+@login @needs-custom-setup
 Feature: Font selection
 
   In order to have better using experience,
