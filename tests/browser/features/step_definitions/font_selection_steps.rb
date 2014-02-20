@@ -19,9 +19,7 @@ Given(/^I open ULS$/) do
 end
 
 Then(/^the active content font must be the same as font prior to the preview$/) do
-	pending("bug #56081") do
-		on(PanelPage).content_font.should == @original_content_font
-	end
+	on(PanelPage).content_font.should == @original_content_font
 end
 
 Then(/^the active interface font must be the same as font prior to the preview$/) do
