@@ -77,7 +77,7 @@ Feature: Settings panel
       And I apply the changes
     Then my interface language is "German"
 
-  @commons.wikimedia.beta.wmflabs.org @login
+  @login
   Scenario: Regression test for bug 56913
 
     Given I am logged in

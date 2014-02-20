@@ -11,7 +11,6 @@ Feature: Font preferences respected in different languages
     Given I am logged in
       And I have reset my preferences
 
-  @commons.wikimedia.beta.wmflabs.org
   Scenario: Edit area fonts should not change on UI language change if the user preferences for edit area font are set
     When I set the editing fonts to "monospace"
       And I set "Hindi" as the interface language
@@ -19,7 +18,7 @@ Feature: Font preferences respected in different languages
     Then I should see the edit area text being displayed using "monospace" font
 
   # Needs OpenDyslexic font to have been configured on the target wiki
-  @needs-custom-setup @commons.wikimedia.beta.wmflabs.org
+  @needs-custom-setup
   Scenario: Edit area should use the fonts selected by the user from ULS for a language
     When I select OpenDyslexic font for the content language
       And I start editing a page
