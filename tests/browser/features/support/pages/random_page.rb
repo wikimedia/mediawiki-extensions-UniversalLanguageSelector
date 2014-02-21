@@ -13,7 +13,7 @@ class RandomPage
   li(:main_page, id: "n-mainpage-description")
   div(:asia, id: "AS")
   a(:malayalam) do |page|
-    page.asia_element.element.li(title: "Malayalam")
+    page.asia_element.element.li(lang: "ml")
   end
   a(:print_export, text: "Print/export")
   a(:printable_version, text: "Printable version")

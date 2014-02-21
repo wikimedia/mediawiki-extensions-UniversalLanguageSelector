@@ -60,7 +60,12 @@ end
 
 Then(/^in it there must be an element with Malayalam text$/) do
   # 'input_method_enabled' alone only returns []
-  on(IMEPage).input_method_enabled_element.text.should == "ഇൻസ്ക്രിപ്റ്റ് 2"
+  on(IMEPage) do |page|
+    page.wait_until do
+      page.input_method_enabled_element.text != ""
+    end
+    page.input_method_enabled_element.text.should == "ഇൻസ്ക്രിപ്റ്റ് 2"
+  end
 end
 
 Given(/^I visit a random page with (.+) skin and (.+) as the interface language$/) do |skin, language|

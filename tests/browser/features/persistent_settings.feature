@@ -1,5 +1,5 @@
 # First scenario seems to fail whenever OpenDyslexic is missing
-@login @needs-custom-setup
+@language-browsertests.wmflabs.org @login @needs-custom-setup
 Feature: Persistent settings
 
   This assumes wiki content language is English.

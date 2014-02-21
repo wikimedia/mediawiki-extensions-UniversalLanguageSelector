@@ -1,4 +1,4 @@
-@login @needs-custom-setup
+@language-browsertests.wmflabs.org @login @needs-custom-setup
 Feature: Font selection
 
   In order to have better using experience,
