@@ -21,6 +21,7 @@
     "ext-uls-display-settings-anon-same-as-content": "$1 (كما في المحتوى)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|سجل الدخول]] لتحديد لغة مختلفة للقوائم.",
     "ext-uls-webfonts-settings-title": "تحميل الخطوط عند الحاجة",
+    "ext-uls-webfonts-settings-info": "حمل الخطوط الناقصة تلقائيا ومكن من اختيار الخطوط المفضلة.",
     "ext-uls-webfonts-settings-info-link": "مزيد من المعلومات",
     "ext-uls-webfonts-select-for": "حدد خطا للغة $1",
     "ext-uls-webfonts-select-for-ui-info": "الخط المستعمل لواجهة المستخدم",

@@ -2,7 +2,8 @@
     "@metadata": {
         "authors": [
             "Siebrand",
-            "Wiki13"
+            "Wiki13",
+            "Southparkfan"
         ]
     },
     "ext-uls-display-settings-title": "Weergaveinstellingen",
@@ -10,8 +11,6 @@
     "ext-uls-display-settings-fonts-tab": "Lettertypen",
     "ext-uls-display-settings-title-short": "Weergave",
     "ext-uls-display-settings-desc": "Taal instellen voor menu's en lettertypen.",
-    "ext-uls-select-language-settings-icon-tooltip": "Taalinstellingen",
-    "ext-uls-undo-language-tooltip-text": "Taal gewijzigd van $1",
     "ext-uls-language-settings-title": "Taalinstellingen",
     "ext-uls-language-settings-apply": "Instellingen toepassen",
     "ext-uls-language-settings-cancel": "Annuleren",
@@ -21,6 +20,9 @@
     "ext-uls-display-settings-anon-label": "Weergavetaal:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (zelfde als inhoud)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Meld u aan]] om een andere taal voor menu's te kiezen.",
+    "ext-uls-webfonts-settings-title": "Lettertypes downloaden wanneer nodig",
+    "ext-uls-webfonts-settings-info": "Webfonts worden gedownload voor de weergave van tekst in speciale schriften.",
+    "ext-uls-webfonts-settings-info-link": "Meer informatie",
     "ext-uls-webfonts-select-for": "Lettertype selecteren voor $1",
     "ext-uls-webfonts-select-for-ui-info": "Lettertype voor gebruikersinterface",
     "ext-uls-webfonts-select-for-content-info": "Lettertype voor inhoud",
@@ -46,6 +48,5 @@
     "ext-uls-input-disable-notification-undo": "Ongedaan maken",
     "ext-uls-input-disable-notification-info-personal": "U kunt de invoermethoden weer inschakelen via de taalinstellingen.",
     "ext-uls-input-disable-notification-info-interlanguage": "U kunt de invoermethoden weer inschakelen via de taalinstellingen naast de lijst met talen.",
-    "ext-uls-language-settings-applying": "Toepassen...",
-    "ext-uls-language-settings-preferences-link": "Meer taalinstellingen"
+    "ext-uls-language-settings-applying": "Toepassen..."
 }
