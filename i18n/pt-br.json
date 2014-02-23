@@ -3,7 +3,8 @@
         "authors": [
             "Jaideraf",
             "Luckas",
-            "Caio1478"
+            "Caio1478",
+            "Helder.wiki"
         ]
     },
     "ext-uls-display-settings-title": "Exibir configurações",
@@ -47,6 +48,6 @@
     "ext-uls-input-disable-notification": "As ferramentas de entrada de texto foram desabilitadas",
     "ext-uls-input-disable-notification-undo": "Desfazer",
     "ext-uls-input-disable-notification-info-personal": "Você pode habilitar as ferramentas de entrada de texto a qualquer momento a partir das configurações de idioma.",
-    "ext-uls-input-disable-notification-info-interlanguage": "Você pode habilitar as ferramentas de entrada de texto a qualquer momento a partir das configurações de idioma próximo da lista de idiomas,",
+    "ext-uls-input-disable-notification-info-interlanguage": "Você pode habilitar as ferramentas de entrada de texto a qualquer momento a partir das configurações de idioma próximo da lista de idiomas.",
     "ext-uls-language-settings-applying": "Aplicando…"
 }

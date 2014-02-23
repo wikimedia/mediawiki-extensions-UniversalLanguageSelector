@@ -934,6 +934,9 @@ $messages['sr-ec'] = array(
 	'UniversalLanguageSelector' => 'Универзални језички изборник',
 	'uls-desc' => 'Даје кориснику неколико начина да изабере језик и да прилагоди поставке језика',
 	'uls-plang-title-languages' => 'Језици',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Подешавања језика',
+	'ext-uls-undo-language-tooltip-text' => 'Језик промењен са $1',
+	'ext-uls-language-settings-preferences-link' => 'Додатне језичке поставке',
 );
 
 /** Serbian (Latin script) (srpski (latinica)‎)
@@ -941,6 +944,9 @@ $messages['sr-ec'] = array(
  */
 $messages['sr-el'] = array(
 	'uls-plang-title-languages' => 'Jezici',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Podešavanja jezika',
+	'ext-uls-undo-language-tooltip-text' => 'Jezik promenjen sa $1',
+	'ext-uls-language-settings-preferences-link' => 'Dodatne jezičke postavke',
 );
 
 /** Swedish (svenska)

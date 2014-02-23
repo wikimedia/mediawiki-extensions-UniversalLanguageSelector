@@ -3,7 +3,8 @@
         "authors": [
             "Siebrand",
             "Wiki13",
-            "Southparkfan"
+            "Southparkfan",
+            "Arent"
         ]
     },
     "ext-uls-display-settings-title": "Weergaveinstellingen",
@@ -20,7 +21,7 @@
     "ext-uls-display-settings-anon-label": "Weergavetaal:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (zelfde als inhoud)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Meld u aan]] om een andere taal voor menu's te kiezen.",
-    "ext-uls-webfonts-settings-title": "Lettertypes downloaden wanneer nodig",
+    "ext-uls-webfonts-settings-title": "Lettertypes downloaden indien nodig",
     "ext-uls-webfonts-settings-info": "Webfonts worden gedownload voor de weergave van tekst in speciale schriften.",
     "ext-uls-webfonts-settings-info-link": "Meer informatie",
     "ext-uls-webfonts-select-for": "Lettertype selecteren voor $1",

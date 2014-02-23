@@ -1,8 +1,23 @@
 {
     "@metadata": {
         "authors": [
-            "Pginer"
+            "Pginer",
+            "Vriullop"
         ]
     },
-    "ext-uls-display-settings-language-tab": "Idioma"
+    "ext-uls-display-settings-title": "Configuració de presentació",
+    "ext-uls-display-settings-language-tab": "Idioma",
+    "ext-uls-display-settings-title-short": "Presentació",
+    "ext-uls-display-settings-desc": "Defineix la llengua utilitzada per als menús i tipus de lletra.",
+    "ext-uls-language-settings-title": "Configuracions de llengua",
+    "ext-uls-language-settings-apply": "Aplica la configuració",
+    "ext-uls-language-settings-cancel": "Cancel·la",
+    "ext-uls-language-buttons-help": "Canvia la llengua dels menús. La llengua del contingut no es veurà afectada.",
+    "ext-uls-display-settings-font-settings": "Configuració de fonts",
+    "ext-uls-display-settings-ui-language": "Llengua de presentació",
+    "ext-uls-display-settings-anon-label": "Llengua de presentació:",
+    "ext-uls-display-settings-anon-same-as-content": "$1 (com el contingut)",
+    "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Inicieu sessió]] per seleccionar una altra llengua per als menús.",
+    "ext-uls-webfonts-settings-title": "Descarrega fonts quan sigui necessari",
+    "ext-uls-input-settings-title": "Configuració d'escriptura"
 }

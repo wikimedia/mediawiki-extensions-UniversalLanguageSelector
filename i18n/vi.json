@@ -9,8 +9,6 @@
     "ext-uls-display-settings-fonts-tab": "Phông chữ",
     "ext-uls-display-settings-title-short": "Trình bày",
     "ext-uls-display-settings-desc": "Đặt ngôn ngữ của các trình đơn và phông chữ.",
-    "ext-uls-select-language-settings-icon-tooltip": "Tùy chọn ngôn ngữ",
-    "ext-uls-undo-language-tooltip-text": "Đã đổi ngôn ngữ từ $1",
     "ext-uls-language-settings-title": "Tùy chọn ngôn ngữ",
     "ext-uls-language-settings-apply": "Áp dụng tùy chọn",
     "ext-uls-language-settings-cancel": "Hủy bỏ",
@@ -20,6 +18,9 @@
     "ext-uls-display-settings-anon-label": "Ngôn ngữ trình bày:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (phù hợp với nội dung)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Đăng nhập]] để chọn ngôn ngữ khác cho các trình đơn.",
+    "ext-uls-webfonts-settings-title": "Tải về phông chữ khi nào cần",
+    "ext-uls-webfonts-settings-info": "Tự động tải về các phông chữ bị thiếu và cho phép lựa chọn các phông chữ ưa thích.",
+    "ext-uls-webfonts-settings-info-link": "Thêm thông tin",
     "ext-uls-webfonts-select-for": "Chọn phông chữ $1",
     "ext-uls-webfonts-select-for-ui-info": "Phông chữ giao diện",
     "ext-uls-webfonts-select-for-content-info": "Phông chữ nội dung",
@@ -45,6 +46,5 @@
     "ext-uls-input-disable-notification-undo": "Hoàn tác",
     "ext-uls-input-disable-notification-info-personal": "Bạn có thể bật bộ gõ bất cứ lúc nào từ tùy chọn ngôn ngữ.",
     "ext-uls-input-disable-notification-info-interlanguage": "Bạn có thể bật bộ gõ bất cứ lúc nào từ tùy chọn ngôn ngữ bên cạnh danh sách ngôn ngữ.",
-    "ext-uls-language-settings-applying": "Đang áp dụng…",
-    "ext-uls-language-settings-preferences-link": "Thêm tùy chọn ngôn ngữ"
+    "ext-uls-language-settings-applying": "Đang áp dụng…"
 }
