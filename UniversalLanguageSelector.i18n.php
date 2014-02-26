@@ -151,6 +151,7 @@ $messages['ca'] = array(
 	'UniversalLanguageSelector' => 'Selector universal de llengua',
 	'uls-desc' => "Dóna a l'usuari diverses maneres per seleccionar una llengua i ajustar la seva configuració",
 	'uls-plang-title-languages' => 'Llengües',
+	'ext-uls-language-settings-preferences-link' => 'Més configuracions de llengua',
 );
 
 /** Chechen (нохчийн)

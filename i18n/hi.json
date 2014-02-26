@@ -2,8 +2,11 @@
     "@metadata": {
         "authors": [
             "Siddhartha Ghai",
-            "Vdhatterwal"
+            "Vdhatterwal",
+            "Vivek Rai"
         ]
     },
-    "ext-uls-display-settings-anon-log-in-cta": "मेन्यू में किसी अन्य भाषा का चुनाव करने के लिए [[Special:UserLogin|लॉग इन]] करें।"
+    "ext-uls-display-settings-anon-log-in-cta": "मेन्यू में किसी अन्य भाषा का चुनाव करने के लिए [[Special:UserLogin|लॉग इन]] करें।",
+    "ext-uls-webfonts-settings-title": "जरुरत अनुसार फॉण्ट डाउनलोड करें।",
+    "ext-uls-webfonts-settings-info": "विशेष लिपियों का पाठ प्रदर्शित करने के लिए वेब फ़ॉन्ट्स को डाउनलोड किया जाएगा"
 }
