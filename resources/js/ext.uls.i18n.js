@@ -51,7 +51,7 @@
 		if ( i18n.messageStore.messages[locale] ) {
 			return $.Deferred().resolve();
 		}
-		return i18n.load(
+		return i18n.messageStore.load(
 			mw.util.wikiScript( 'api' ) + '?' + $.param( {
 				action: 'ulslocalization',
 				language: locale
