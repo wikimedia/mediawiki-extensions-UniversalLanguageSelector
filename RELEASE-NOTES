@@ -1,0 +1,20 @@
+== UniversalLanguageSelector 2014.02 ==
+Released at 2014-02-28.
+
+=== Noteworthy changes ===
+* Detect tofu before applying any default fonts. See: https://www.mediawiki.org/wiki/Universal_Language_Selector/WebFonts#How_webfonts_are_applied.3F for technical documentation about how tofu detection works in ULS.
+* Bug 60304: Added enableWebfonts preference. Each wiki can be configured to load the fonts by default using the new global variable $wgULSWebfontsEnabled. Its default value is true (to load fonts).
+* ULS is now much lighter for the browser thanks to many changes:
+** Bug 56292: All SVG images were optimized to reduce their size even 50% in some cases.
+** I18n related jquery.i18n and messages code is now loaded only later after user interacts with ULS.
+** We removed a dependency to a big JavaScript module which was no longer needed to support anonymous preferences.
+* Bug 60815: Add Marwari (rwr) and Ottoman Turkish (ota) to the languages supported by ULS.
+
+=== Fonts ===
+* Add Iranian Serif and Iranian Sans Bold fonts.
+* Removed Amiri font from Persian.
+* Replaced Xerxes font with Artaxerxes.
+
+=== Input methods ===
+* Bug 53695: For languages which have no input methods, the "Use native keyboard" option is now shown as selected by default.
+* Added Venetian input method.
