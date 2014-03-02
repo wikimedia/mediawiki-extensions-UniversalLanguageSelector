@@ -11,8 +11,6 @@
     "ext-uls-display-settings-fonts-tab": "Skrifttyper",
     "ext-uls-display-settings-title-short": "Visning",
     "ext-uls-display-settings-desc": "Vælg det sprog, der bruges til menuer, og skrifttyper.",
-    "ext-uls-select-language-settings-icon-tooltip": "Sprogindstillinger",
-    "ext-uls-undo-language-tooltip-text": "Sprog ændret fra $1",
     "ext-uls-language-settings-title": "Sprogindstillinger",
     "ext-uls-language-settings-apply": "Anvend indstillinger",
     "ext-uls-language-settings-cancel": "Afbryd",
@@ -22,6 +20,9 @@
     "ext-uls-display-settings-anon-label": "Brugerfladens sprog:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (samme som for indhold)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Log ind]] for at vælge et andet sprog til menuerne.",
+    "ext-uls-webfonts-settings-title": "Hent skrifttyper, når det er nødvendigt",
+    "ext-uls-webfonts-settings-info": "Hent manglende skrifttyper automatisk og tillad udvalg af foretrukne skrifttyper.",
+    "ext-uls-webfonts-settings-info-link": "Flere oplysninger",
     "ext-uls-webfonts-select-for": "Vælg skrifttype for $1",
     "ext-uls-webfonts-select-for-ui-info": "Skrifttype, der bruges til brugergrænsefladen",
     "ext-uls-webfonts-select-for-content-info": "Skrifttype, der bruges til indhold",
@@ -47,6 +48,5 @@
     "ext-uls-input-disable-notification-undo": "Fortryd ændring",
     "ext-uls-input-disable-notification-info-personal": "Du kan altid slå indtastningsværktøjerne til i sprogindstillingerne.",
     "ext-uls-input-disable-notification-info-interlanguage": "Du kan altid slå indtastningsværktøjerne til i sprogindstillingerne ved siden af sproglisten.",
-    "ext-uls-language-settings-applying": "Anvender...",
-    "ext-uls-language-settings-preferences-link": "Flere sprogindstillinger"
+    "ext-uls-language-settings-applying": "Anvender..."
 }

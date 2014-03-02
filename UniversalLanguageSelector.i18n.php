@@ -453,6 +453,18 @@ $messages['he'] = array(
 	'ext-uls-language-settings-preferences-link' => 'הגדרות שפה נוספות',
 );
 
+/** Hindi (हिन्दी)
+ * @author Siddhartha Ghai
+ */
+$messages['hi'] = array(
+	'UniversalLanguageSelector' => 'वैश्विक भाषा चुनावकर्ता',
+	'uls-desc' => 'सदस्य को भाषा चुनने और भाषा विकल्प बदलने के कई तरीके देता है',
+	'uls-plang-title-languages' => 'भाषाएँ',
+	'ext-uls-select-language-settings-icon-tooltip' => 'भाषा विकल्प',
+	'ext-uls-undo-language-tooltip-text' => 'भाषा $1 से बदली गयी',
+	'ext-uls-language-settings-preferences-link' => 'अधिक भाषा विकल्प',
+);
+
 /** Croatian (hrvatski)
  * @author MaGa
  * @author SpeedyGonsales

@@ -2,9 +2,10 @@
     "@metadata": {
         "authors": [
             "Luckas",
-            "Malafaya"
+            "Malafaya",
+            "Hamilton Abreu"
         ]
     },
     "ext-uls-language-settings-cancel": "Cancelar",
-    "ext-uls-input-settings-desc": "Escreve num idioma diferente?"
+    "ext-uls-input-settings-desc": "Escreve numa língua diferente?"
 }

@@ -1,18 +1,21 @@
 {
     "@metadata": {
         "authors": [
-            "පසිඳු කාවින්ද"
+            "පසිඳු කාවින්ද",
+            "Sahan.ssw"
         ]
     },
     "ext-uls-display-settings-title": "සන්දර්ශන සැකසුම්",
     "ext-uls-display-settings-title-short": "සන්දර්ශනය",
     "ext-uls-display-settings-desc": "මෙනු සහ අක්ෂර සඳහා භාවිතා වන භාෂාවක් සකසන්න.",
-    "ext-uls-undo-language-tooltip-text": "$1 ගෙන් භාෂාව වෙනස් වුණි",
     "ext-uls-language-settings-title": "භාෂා සැකසුම්",
     "ext-uls-language-settings-apply": "සැකසුම් යොමන්න",
     "ext-uls-language-settings-cancel": "අවලංගු කරන්න",
     "ext-uls-display-settings-font-settings": "අක්ෂර සැකසුම්",
     "ext-uls-display-settings-ui-language": "සන්දර්ශන භාෂාව",
+    "ext-uls-webfonts-settings-title": "අවශ්‍ය වූ විට අක්ෂර බාගන්න",
+    "ext-uls-webfonts-settings-info": "නැති  අක්ෂර ස්වයංක්‍රීයව බාගත කිරීම හා කොටසට ගැළපෙන අක්ෂර යොදන්න",
+    "ext-uls-webfonts-settings-info-link": "තවත් තොරතුරු",
     "ext-uls-webfonts-select-for": "$1 සඳහා අක්ෂරය තෝරන්න",
     "ext-uls-webfonts-select-for-ui-info": "පරිශීලක අතුරුමුහුණත සඳහා භාවිතා කරන අක්ෂරය",
     "ext-uls-webfonts-select-for-content-info": "අන්තර්ගතය සඳහා භාවිතා කරන අක්ෂරය",
