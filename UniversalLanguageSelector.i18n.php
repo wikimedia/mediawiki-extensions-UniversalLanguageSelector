@@ -969,7 +969,6 @@ $messages['sv'] = array(
 	'UniversalLanguageSelector' => 'Universal språkväljare',
 	'uls-desc' => 'Ger användaren flera sätt att välja ett språk på och justera språkinställningar',
 	'uls-plang-title-languages' => 'Språk',
-	'uls-preference' => 'Aktivera [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Universala språkväljaren]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Språkinställningar',
 	'ext-uls-undo-language-tooltip-text' => 'Språk ändrades från $1',
 	'ext-uls-language-settings-preferences-link' => 'Fler språkinställningar',
