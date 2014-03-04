@@ -50,5 +50,6 @@
     "ext-uls-input-disable-notification-undo": "Отменить",
     "ext-uls-input-disable-notification-info-personal": "Инструменты ввода можно включить в любое время из установок языка.",
     "ext-uls-input-disable-notification-info-interlanguage": "Инструменты ввода можно включить в любое время из установок языка рядом со списком языков.",
-    "ext-uls-language-settings-applying": "Применение…"
+    "ext-uls-language-settings-applying": "Применение…",
+    "ext-uls-compact-link-count": "Ещё на {{PLURAL:$1|одном языке|$1 языках}}"
 }

@@ -55,14 +55,13 @@ This title is shown when there are no interlanguage links there, but an icon tha
 {{Identical|Language}}',
 	'uls-ime-helppage' => 'Target page for ime helps. Parameters:
 * $1 - ime id. Intended for wiki local customization. e.g. cyrl-palochka',
-	'uls-preference' => 'Label for checkbox to enable the Universal Language Selector on Special:Preferences',
 	'ext-uls-select-language-settings-icon-tooltip' => 'A tooltip for the icon that shows the language selector.
 {{Identical|Language settings}}',
 	'ext-uls-undo-language-tooltip-text' => 'Text for the tooltip appearing when language is changed. Parameters:
 * $1 - the previous language acronym',
 	'ext-uls-language-settings-preferences-link' => 'Text for the link showin in user preference screen',
 	'uls-betafeature-label' => 'Title for the compact interlanguage links beta feature',
-	'uls-betafeature-desc' => 'Description for the compact interlanguage links beta feature'
+	'uls-betafeature-desc' => 'Description for the compact interlanguage links beta feature',
 );
 
 /** Arabic (العربية)
@@ -245,10 +244,11 @@ $messages['de'] = array(
 	'UniversalLanguageSelector' => 'Universelle Sprachauswahl',
 	'uls-desc' => 'Ermöglicht verschiedene Wege, eine Sprache auszuwählen und Spracheinstellungen anzupassen',
 	'uls-plang-title-languages' => 'Sprachen',
-	'uls-preference' => 'Die [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector universelle Sprachauswahl] aktivieren',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Spracheinstellungen',
 	'ext-uls-undo-language-tooltip-text' => 'Sprache geändert von $1',
 	'ext-uls-language-settings-preferences-link' => 'Weitere Spracheinstellungen',
+	'uls-betafeature-label' => 'Kompaktere Interlanguage-Links',
+	'uls-betafeature-desc' => 'Zeigt eine kürzere Version der Sprachenliste mit den Sprachen an, die für dich mehr von Bedeutung sind.',
 );
 
 /** Zazaki (Zazaki)
@@ -375,10 +375,11 @@ $messages['fr'] = array(
 	'UniversalLanguageSelector' => 'Sélecteur de Langue Universel',
 	'uls-desc' => 'Donne à l’utilisateur plusieurs manières de sélectionner une langue et d’ajuster les paramètres de langue',
 	'uls-plang-title-languages' => 'Langues',
-	'uls-preference' => 'Activer le [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Sélecteur universel de langues]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Paramètres de langue',
 	'ext-uls-undo-language-tooltip-text' => 'Langue modifiée de $1',
 	'ext-uls-language-settings-preferences-link' => 'Plus de paramètres de langue',
+	'uls-betafeature-label' => 'Compactage des liens interlangues',
+	'uls-betafeature-desc' => 'Affiche une version raccourcie de la liste des langues avec les langues les plus pertinentes pour vous.',
 );
 
 /** Northern Frisian (Nordfriisk)
@@ -779,11 +780,16 @@ $messages['nb'] = array(
 
 /** Dutch (Nederlands)
  * @author Siebrand
+ * @author Sjoerddebruin
  */
 $messages['nl'] = array(
 	'UniversalLanguageSelector' => 'Universele taalkiezer',
 	'uls-desc' => 'Biedt gebruikers verschillende mogelijkheden om een taal te kiezen en bijbehorende instellingen aan te passen',
 	'uls-plang-title-languages' => 'Talen',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Taalinstellingen',
+	'ext-uls-undo-language-tooltip-text' => 'Taal gewijzigd van $1',
+	'ext-uls-language-settings-preferences-link' => 'Meer taalinstellingen',
+	'uls-betafeature-label' => "Lijst van interwiki's inkorten",
 );
 
 /** Norwegian Nynorsk (norsk nynorsk)
@@ -908,10 +914,11 @@ $messages['ru'] = array(
 	'UniversalLanguageSelector' => 'Универсальный переключатель языков',
 	'uls-desc' => 'Даёт пользователю несколько способов выбрать язык и произвести установки языка',
 	'uls-plang-title-languages' => 'Языки',
-	'uls-preference' => 'Включить [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Универсальный переключатель языков]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Установки языка',
 	'ext-uls-undo-language-tooltip-text' => 'Предыдущий язык: $1',
 	'ext-uls-language-settings-preferences-link' => 'Дополнительные установки языка',
+	'uls-betafeature-label' => 'Сжатие ссылок на другие языковые разделы',
+	'uls-betafeature-desc' => 'Показывает сокращенный вариант списка языков с языками, которые являются более актуальными для вас.',
 );
 
 /** Sinhala (සිංහල)
