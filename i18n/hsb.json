@@ -46,5 +46,6 @@
     "ext-uls-input-disable-notification-undo": "Cofnyć",
     "ext-uls-input-disable-notification-info-personal": "Móžeš zapodawanske nastroje kóždy čas z rěčnych nastajenjow zmóžnić.",
     "ext-uls-input-disable-notification-info-interlanguage": "Móžeš zapodawanske nastroje kóždy čas z rěčnych nastajenjow pódla lisćiny rěčow zmóžnić.",
-    "ext-uls-language-settings-applying": "Nałožuje so..."
+    "ext-uls-language-settings-applying": "Nałožuje so...",
+    "ext-uls-compact-link-count": "{{PLURAL:$1Jedna dalša rěč|$1 dalšej rěči|$1 dalše rěče|$1 dalšich rěčow}}"
 }

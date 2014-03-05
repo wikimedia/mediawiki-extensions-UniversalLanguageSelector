@@ -13,8 +13,6 @@
     "ext-uls-display-settings-fonts-tab": "字型",
     "ext-uls-display-settings-title-short": "顯示",
     "ext-uls-display-settings-desc": "設置功能表及字體使用的語言。",
-    "ext-uls-select-language-settings-icon-tooltip": "語言設定",
-    "ext-uls-undo-language-tooltip-text": "語言已從$1更改",
     "ext-uls-language-settings-title": "語言設定",
     "ext-uls-language-settings-apply": "套用設定",
     "ext-uls-language-settings-cancel": "取消",
@@ -24,6 +22,9 @@
     "ext-uls-display-settings-anon-label": "顯示語言：",
     "ext-uls-display-settings-anon-same-as-content": "$1（與內容相同）",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|登入]]選擇清單的其他語言。",
+    "ext-uls-webfonts-settings-title": "需要時下載字體",
+    "ext-uls-webfonts-settings-info": "將下載Webfonts以於特殊程式碼中顯示文字。",
+    "ext-uls-webfonts-settings-info-link": "更多資訊",
     "ext-uls-webfonts-select-for": "為$1選擇字體",
     "ext-uls-webfonts-select-for-ui-info": "用於使用者介面的字體",
     "ext-uls-webfonts-select-for-content-info": "用於內容的字體",
@@ -50,5 +51,5 @@
     "ext-uls-input-disable-notification-info-personal": "你可以在任何時候，從語言設定中，啟用輸入工具。",
     "ext-uls-input-disable-notification-info-interlanguage": "你可以在任何時候，從語言清單旁邊的語言設定中，啟用輸入工具。",
     "ext-uls-language-settings-applying": "應用中......",
-    "ext-uls-language-settings-preferences-link": "更多語言設定"
+    "ext-uls-compact-link-count": "$1個更多語言"
 }

@@ -60,8 +60,12 @@ This title is shown when there are no interlanguage links there, but an icon tha
 	'ext-uls-undo-language-tooltip-text' => 'Text for the tooltip appearing when language is changed. Parameters:
 * $1 - the previous language acronym',
 	'ext-uls-language-settings-preferences-link' => 'Text for the link showin in user preference screen',
-	'uls-betafeature-label' => 'Title for the compact interlanguage links beta feature',
-	'uls-betafeature-desc' => 'Description for the compact interlanguage links beta feature',
+	'uls-betafeature-label' => 'Used as checkbox label for beta feature.
+
+The description for this label is {{msg-mw|Uls-betafeature-desc}}.',
+	'uls-betafeature-desc' => 'Description for the compact interlanguage links beta feature.
+
+This description is for the checkbox label {{msg-mw|Uls-betafeature-label}}.',
 );
 
 /** Arabic (العربية)
@@ -112,10 +116,11 @@ $messages['ast'] = array(
 	'UniversalLanguageSelector' => 'Selector universal de llingua',
 	'uls-desc' => 'Ufre al usuariu delles maneres pa seleicionar una llingua y axustar la configuración de llingua',
 	'uls-plang-title-languages' => 'Llingües',
-	'uls-preference' => 'Activar el [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector selector universal de llingua]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Preferencies de llingua',
 	'ext-uls-undo-language-tooltip-text' => 'La llingua camudó dende $1',
 	'ext-uls-language-settings-preferences-link' => 'Más preferencies de llingua',
+	'uls-betafeature-label' => 'Compactando enllaces interllingüísticos',
+	'uls-betafeature-desc' => 'Amuesa una versión más curtia de la llista de llingües coles que son más relevantes pa vusté.',
 );
 
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
@@ -270,10 +275,11 @@ $messages['dsb'] = array(
 	'UniversalLanguageSelector' => 'Uniwersalny wuběrk rěcow',
 	'uls-desc' => 'Dawa wužywarjeju wšake metody, aby rěc wubrał a rěcne nastajenja pśiměrił',
 	'uls-plang-title-languages' => 'Rěcy',
-	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Uniwersalny wuběrk rěcow] zmóžniś',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Rěcne nastajenja',
 	'ext-uls-undo-language-tooltip-text' => 'Rěc $1 změnjona',
 	'ext-uls-language-settings-preferences-link' => 'Dalšne rěcne nastajenja',
+	'uls-betafeature-label' => 'Wěcej kompaktne mjazyrěcne wótkaze',
+	'uls-betafeature-desc' => 'Pokazujo krotšu wersiju rěcneje lisćiny z rěcami, kótarež su relewantne za tebje.',
 );
 
 /** Divehi (ދިވެހިބަސް)
@@ -490,10 +496,11 @@ $messages['hsb'] = array(
 	'UniversalLanguageSelector' => 'Uniwersalny wuběr rěčow',
 	'uls-desc' => 'Dawa wužiwarjej wšelake metody, zo by rěč wubrał a rěčne nastajenja přiměrił',
 	'uls-plang-title-languages' => 'Rěče',
-	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Uniwersalny wuběr rěčow] zmóžnić',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Rěčne nastajenja',
 	'ext-uls-undo-language-tooltip-text' => 'Rěč $1 změnjena',
 	'ext-uls-language-settings-preferences-link' => 'Dalše rěčne nastajenja',
+	'uls-betafeature-label' => 'Bóle kompaktne mjezyrěčne wotkazy',
+	'uls-betafeature-desc' => 'Pokazuje krótšu wersiju rěčneje lisćiny z rěčemi, kotrež su relewantne za tebje.',
 );
 
 /** Hungarian (magyar)
@@ -551,10 +558,11 @@ $messages['it'] = array(
 	'UniversalLanguageSelector' => 'Selettore universale della lingua',
 	'uls-desc' => 'Fornisce agli utenti diversi modi di selezionare una lingua e sistemare le impostazioni della lingua',
 	'uls-plang-title-languages' => 'Lingue',
-	'uls-preference' => 'Abilita il [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector selettore universale delle lingue]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Impostazioni per la lingua',
 	'ext-uls-undo-language-tooltip-text' => 'Lingua modificata da $1',
 	'ext-uls-language-settings-preferences-link' => 'Ulteriori impostazioni per la lingua',
+	'uls-betafeature-label' => 'Compatta collegamenti interlinguistici',
+	'uls-betafeature-desc' => "Mostra una versione ridotta dell'elenco delle lingue, con quelle più rilevanti per te.",
 );
 
 /** Japanese (日本語)
@@ -564,10 +572,10 @@ $messages['ja'] = array(
 	'UniversalLanguageSelector' => 'ユニバーサル言語選択',
 	'uls-desc' => '言語を選択するため/言語設定を調整するための、いくつかの方法を利用者に提供する',
 	'uls-plang-title-languages' => '言語',
-	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector ユニバーサル言語選択]を有効にする',
 	'ext-uls-select-language-settings-icon-tooltip' => '言語の設定',
 	'ext-uls-undo-language-tooltip-text' => '言語を$1から変更しました。',
 	'ext-uls-language-settings-preferences-link' => '言語のその他の設定',
+	'uls-betafeature-label' => '言語間リンクを短縮',
 );
 
 /** Georgian (ქართული)
@@ -718,10 +726,11 @@ $messages['mk'] = array(
 	'UniversalLanguageSelector' => 'Универзален избирач на јазици',
 	'uls-desc' => 'Му дава на корисникот неколку начини за избор на јазик и прилагодување на јазичните поставки',
 	'uls-plang-title-languages' => 'Јазици',
-	'uls-preference' => 'Вклучи го [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Универзалниот избирач на јазици]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Јазични поставки',
 	'ext-uls-undo-language-tooltip-text' => 'Јазикот сменет од изворниот $1',
 	'ext-uls-language-settings-preferences-link' => 'Уште јазични поставки',
+	'uls-betafeature-label' => 'Збивање на меѓујазичните врски',
+	'uls-betafeature-desc' => 'Прикажува скратена верзија на јазичните врски, односно само оние јазици што се однесуваат на вас',
 );
 
 /** Malayalam (മലയാളം)
@@ -921,6 +930,14 @@ $messages['ru'] = array(
 	'uls-betafeature-desc' => 'Показывает сокращенный вариант списка языков с языками, которые являются более актуальными для вас.',
 );
 
+/** Scots (Scots)
+ * @author John Reid
+ */
+$messages['sco'] = array(
+	'uls-betafeature-label' => 'Compactin interlei links',
+	'uls-betafeature-desc' => 'Displeys ae shorter version o the leid leet wi the lieds that ar mair relevant til ye.',
+);
+
 /** Sinhala (සිංහල)
  * @author පසිඳු කාවින්ද
  */
@@ -975,6 +992,7 @@ $messages['sr-el'] = array(
 );
 
 /** Swedish (svenska)
+ * @author Lokal Profil
  * @author WikiPhoenix
  */
 $messages['sv'] = array(
@@ -984,6 +1002,8 @@ $messages['sv'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Språkinställningar',
 	'ext-uls-undo-language-tooltip-text' => 'Språk ändrades från $1',
 	'ext-uls-language-settings-preferences-link' => 'Fler språkinställningar',
+	'uls-betafeature-label' => 'Kompakterar språklänkar',
+	'uls-betafeature-desc' => 'Visar en kortare version av språklistan med de språk som är mer relevanta för dig.',
 );
 
 /** Tamil (தமிழ்)
@@ -1099,10 +1119,11 @@ $messages['zh-hans'] = array(
 	'UniversalLanguageSelector' => '全球语言选择器',
 	'uls-desc' => '为用户提供多种方法来选择语言和调整语言设置',
 	'uls-plang-title-languages' => '语言',
-	'uls-preference' => '启用[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector 通用语言选择器]',
 	'ext-uls-select-language-settings-icon-tooltip' => '语言设置',
 	'ext-uls-undo-language-tooltip-text' => '语言已更改自$1',
 	'ext-uls-language-settings-preferences-link' => '更多语言设置',
+	'uls-betafeature-label' => '压缩跨语言链接',
+	'uls-betafeature-desc' => '显示与您使用的语言相关语言列表的较短版本。',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
@@ -1114,8 +1135,9 @@ $messages['zh-hant'] = array(
 	'UniversalLanguageSelector' => '通用語言選擇器',
 	'uls-desc' => '為用戶提供多種方法來選擇語言和調整語言設置',
 	'uls-plang-title-languages' => '語言',
-	'uls-preference' => '啟用[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector 通用語言選擇器]',
 	'ext-uls-select-language-settings-icon-tooltip' => '語言設定',
 	'ext-uls-undo-language-tooltip-text' => '語言已從$1更改',
 	'ext-uls-language-settings-preferences-link' => '更多語言設定',
+	'uls-betafeature-label' => '壓縮跨語言連接',
+	'uls-betafeature-desc' => '顯示與您使用語言相關語言列表之較短版本。',
 );

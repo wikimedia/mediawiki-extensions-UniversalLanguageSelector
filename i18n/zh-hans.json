@@ -50,5 +50,6 @@
     "ext-uls-input-disable-notification-undo": "撤销",
     "ext-uls-input-disable-notification-info-personal": "你可以在任何时间在语言设置中启用输入工具。",
     "ext-uls-input-disable-notification-info-interlanguage": "你可以在任何时间在语言列表旁的语言设置中启用输入工具。",
-    "ext-uls-language-settings-applying": "正在应用......"
+    "ext-uls-language-settings-applying": "正在应用......",
+    "ext-uls-compact-link-count": "$1个更多语言"
 }

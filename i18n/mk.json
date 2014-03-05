@@ -46,5 +46,6 @@
     "ext-uls-input-disable-notification-undo": "Врати",
     "ext-uls-input-disable-notification-info-personal": "Вносните алатки можете да ги вклучите во јазичните поставки во секое време.",
     "ext-uls-input-disable-notification-info-interlanguage": "Вносните алатки можете да ги вклучите во во секое време во јазичните поставки, веднаш до списокот на јазици.",
-    "ext-uls-language-settings-applying": "Применувам..."
+    "ext-uls-language-settings-applying": "Применувам...",
+    "ext-uls-compact-link-count": "Уште на {{PLURAL:$1|еден јазик|$1 јазика}}"
 }

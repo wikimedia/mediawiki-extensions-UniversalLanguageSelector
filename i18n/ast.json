@@ -47,5 +47,6 @@
     "ext-uls-input-disable-notification-undo": "Desfacer",
     "ext-uls-input-disable-notification-info-personal": "Pue activar les ferramientes d'entrada en cualquier momentu dende la configuración d'idioma.",
     "ext-uls-input-disable-notification-info-interlanguage": "Pue activar les ferramientes d'entrada en cualquier momentu dende la configuración d'idioma que ta cabo la llista de llingües.",
-    "ext-uls-language-settings-applying": "Aplicando..."
+    "ext-uls-language-settings-applying": "Aplicando...",
+    "ext-uls-compact-link-count": "{{PLURAL:$1|Una llingua más|$1 llingües más}}"
 }
