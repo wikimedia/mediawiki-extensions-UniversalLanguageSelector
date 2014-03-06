@@ -172,6 +172,16 @@ $GLOBALS['wgULSNoWebfontsSelectors'] = array( '#p-lang li.interlanguage-link > a
  */
 $GLOBALS['wgULSFontRepositoryBasePath'] = false;
 
+/**
+ * Whether the "Compact language links" Beta Feature is exposed. Requires
+ * $wgULSPosition to be 'interlanguage'.
+ *
+ * Defaults to false.
+ *
+ * @since 2014.03
+ */
+$GLOBALS['wgULSCompactLinks'] = false;
+
 // Internationalization
 $GLOBALS['wgExtensionMessagesFiles']['UniversalLanguageSelector'] =
 	__DIR__ . '/UniversalLanguageSelector.i18n.php';

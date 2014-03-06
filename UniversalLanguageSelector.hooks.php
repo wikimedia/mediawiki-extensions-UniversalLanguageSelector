@@ -63,7 +63,9 @@ class UniversalLanguageSelectorHooks {
 		$out->addModules( 'ext.uls.init' );
 
 		// If compact ULS beta feature is enabled
-		if ( class_exists( 'BetaFeatures' ) &&
+		if ( $wgULSCompactLinks &&
+			$wgULSPosition === 'interlanguage' &&
+			class_exists( 'BetaFeatures' ) &&
 			BetaFeatures::isFeatureEnabled( $out->getUser(), 'uls-compact-links' )
 		) {
 			$out->addModules( 'ext.uls.compactlinks' );
