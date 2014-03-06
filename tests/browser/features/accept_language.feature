@@ -1,4 +1,4 @@
-@language @phantomjs-bug @sandbox.translatewiki.net
+@custom-browser @phantomjs-bug @sandbox.translatewiki.net
 Feature: Accept-Language
 
   Scenario Outline: Accept-Language

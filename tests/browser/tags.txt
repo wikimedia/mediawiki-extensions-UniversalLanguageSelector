@@ -4,7 +4,7 @@ This file contains the descriptions of the tags we use.
 @commons.wikimedia.beta.wmflabs.org
   Test is run on this domain unless further excluded by other tags.
 
-@language
+@custom-browser
   This tests needs support from Accept-Language header setting from the
   webdriver.
 
