@@ -37,8 +37,8 @@ $messages['en'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Language settings',
 	'ext-uls-undo-language-tooltip-text' => 'Language changed from $1',
 	'ext-uls-language-settings-preferences-link' => 'More language settings',
-	'uls-betafeature-label' => 'Compacting interlanguage links',
-	'uls-betafeature-desc' => 'Displays a shorter version of the language list with the languages that are more relevant to you.',
+	'uls-betafeature-label' => 'Compact language links',
+	'uls-betafeature-desc' => 'Show a shorter version of the language list, with just the languages that are more relevant to you.',
 );
 
 /** Message documentation (Message documentation)
