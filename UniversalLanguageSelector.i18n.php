@@ -1094,10 +1094,11 @@ $messages['vi'] = array(
 	'UniversalLanguageSelector' => 'Bộ lựa chọn Ngôn ngữ Phổ quát',
 	'uls-desc' => 'Trình bày giao diện để lựa chọn ngôn ngữ và điều chỉnh các tùy chọn ngôn ngữ',
 	'uls-plang-title-languages' => 'Ngôn ngữ',
-	'uls-preference' => 'Bật tính năng [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Lựa chọn Ngôn ngữ Toàn thể]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Tùy chọn ngôn ngữ',
 	'ext-uls-undo-language-tooltip-text' => 'Đã đổi ngôn ngữ từ $1',
 	'ext-uls-language-settings-preferences-link' => 'Thêm tùy chọn ngôn ngữ',
+	'uls-betafeature-label' => 'Thu gọn các liên kết giữa ngôn ngữ',
+	'uls-betafeature-desc' => 'Thu gọn danh sách các liên kết giữa ngôn ngữ để chỉ hiển thị các ngôn ngữ mà bạn có thể muốn sử dụng.',
 );
 
 /** Yiddish (ייִדיש)
