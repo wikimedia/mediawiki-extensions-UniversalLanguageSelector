@@ -156,6 +156,9 @@ $wgResourceModules['ext.uls.compactlinks'] = array(
 		'jquery.uls.compact',
 		'mediawiki.ui.button',
 	),
+	'messages' => array(
+		'ext-uls-compact-link-count',
+	),
 ) + $resourcePaths;
 
 $wgResourceModules['ext.uls.webfonts'] = array(
