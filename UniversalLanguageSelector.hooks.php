@@ -45,7 +45,7 @@ class UniversalLanguageSelectorHooks {
 	 * Hook: BeforePageDisplay
 	 */
 	public static function addModules( $out, $skin ) {
-		global $wgULSPosition, $wgULSGeoService, $wgULSEventLogging;
+		global $wgULSCompactLinks, $wgULSPosition, $wgULSGeoService, $wgULSEventLogging;
 
 		// Load the style for users without JS, to hide the useless links
 		$out->addModuleStyles( 'ext.uls.nojs' );
@@ -337,17 +337,19 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	public static function onGetBetaFeaturePreferences( $user, &$prefs ) {
-		global $wgExtensionAssetsPath;
-		$prefs['uls-compact-links'] = array(
-			'label-message' => 'uls-betafeature-label',
-			'desc-message' => 'uls-betafeature-desc',
-			'screenshot' => $wgExtensionAssetsPath .
-				'/UniversalLanguageSelector/resources/images/compact-links-ltr.png',
-			'info-link' =>
-				'https://www.mediawiki.org/wiki/Universal_Language_Selector/Design/Interlanguage_links',
-			'discussion-link' =>
-				'https://www.mediawiki.org/wiki/Talk:Universal_Language_Selector/Design/Interlanguage_links',
-		);
+		global $wgExtensionAssetsPath, $wgULSCompactLinks;
+		if ( $wgULSCompactLinks ) {
+			$prefs['uls-compact-links'] = array(
+				'label-message' => 'uls-betafeature-label',
+				'desc-message' => 'uls-betafeature-desc',
+				'screenshot' => $wgExtensionAssetsPath .
+					'/UniversalLanguageSelector/resources/images/compact-links-ltr.png',
+				'info-link' =>
+					'https://www.mediawiki.org/wiki/Universal_Language_Selector/Design/Interlanguage_links',
+				'discussion-link' =>
+					'https://www.mediawiki.org/wiki/Talk:Universal_Language_Selector/Design/Interlanguage_links',
+			);
+		}
 	}
 
 	/**
