@@ -5,7 +5,8 @@
             "Ebraminio",
             "Mjbmr",
             "Reza1615",
-            "Mahan"
+            "Mahan",
+            "Armin1392"
         ]
     },
     "ext-uls-display-settings-title": "تنظیمات نمایش",
@@ -23,6 +24,7 @@
     "ext-uls-display-settings-anon-same-as-content": "$1 (به مانند مطالب)",
     "ext-uls-display-settings-anon-log-in-cta": "برای انتخاب زبان‌های مختلف برای منوها [[ویژه:UserLogin|وارد شوید]].",
     "ext-uls-webfonts-settings-title": "دانلود فونت‌های مورد نیاز",
+    "ext-uls-webfonts-settings-info": "به طور خودکار دانلود فونت‌های گم شده و اجازه انتخاب فونت‌های دلخواه.",
     "ext-uls-webfonts-settings-info-link": "اطلاعات بیشتر",
     "ext-uls-webfonts-select-for": "انتخاب قلم برای $1",
     "ext-uls-webfonts-select-for-ui-info": "قلم مورد استفادهٔ رابط کاربری",
@@ -49,5 +51,6 @@
     "ext-uls-input-disable-notification-undo": "واگردانی",
     "ext-uls-input-disable-notification-info-personal": "در هر زمان می‌توانید ابزارهای ورودی را از بخش تنظیمات زبان فعال کنید.",
     "ext-uls-input-disable-notification-info-interlanguage": "در هر زمان می توانید ابزارهای ورودی را از بخش تنظیمات زبان در کنار فهرست زبان‌ها فعال است.",
-    "ext-uls-language-settings-applying": "اعمال‌کردن..."
+    "ext-uls-language-settings-applying": "اعمال‌کردن...",
+    "ext-uls-compact-link-count": "{{PLURAL:$1|یک ربان بیشتر|$1 زبان‌های بیشتر}}"
 }

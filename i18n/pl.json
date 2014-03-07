@@ -22,7 +22,7 @@
     "ext-uls-display-settings-anon-same-as-content": "$1 (tak samo, jak i treść)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Zaloguj się]] aby wybrać inny język interfejsu.",
     "ext-uls-webfonts-settings-title": "Pobierz czcionki, gdy to konieczne",
-    "ext-uls-webfonts-settings-info": "Czcionki będę pobierane, aby wyświetlić tekst w innych systemach pisma.",
+    "ext-uls-webfonts-settings-info": "Pobieraj brakujące czcionki automatycznie.",
     "ext-uls-webfonts-settings-info-link": "Więcej informacji",
     "ext-uls-webfonts-select-for": "Czcionka dla języka: $1",
     "ext-uls-webfonts-select-for-ui-info": "Czcionka interfejsu użytkownika",
@@ -49,5 +49,6 @@
     "ext-uls-input-disable-notification-undo": "Cofnij",
     "ext-uls-input-disable-notification-info-personal": "Możesz w dowolnym momencie włączyć narzędzia wprowadzania tekstu w ustawieniach języka.",
     "ext-uls-input-disable-notification-info-interlanguage": "Możesz w dowolnym momencie włączyć narzędzia wprowadzania tekstu w ustawieniach języka, obok listy języków.",
-    "ext-uls-language-settings-applying": "Realizacja w toku..."
+    "ext-uls-language-settings-applying": "Realizacja w toku...",
+    "ext-uls-compact-link-count": "{{PLURAL:$1|Kolejny język|$1 kolejne języki|$1 kolejnych języków}}"
 }
