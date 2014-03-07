@@ -64,7 +64,6 @@ class UniversalLanguageSelectorHooks {
 
 		// If compact ULS beta feature is enabled
 		if ( $wgULSCompactLinks &&
-			$wgULSPosition === 'interlanguage' &&
 			class_exists( 'BetaFeatures' ) &&
 			BetaFeatures::isFeatureEnabled( $out->getUser(), 'uls-compact-links' )
 		) {
@@ -337,8 +336,8 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	public static function onGetBetaFeaturePreferences( $user, &$prefs ) {
-		global $wgExtensionAssetsPath, $wgULSCompactLinks;
-		if ( $wgULSCompactLinks ) {
+		global $wgExtensionAssetsPath, $wgULSCompactLinks, $wgHideInterlanguageLinks, $wgInterwikiMagic;
+		if ( $wgULSCompactLinks && $wgInterwikiMagic == true && $wgHideInterlanguageLinks == false) {
 			$prefs['uls-compact-links'] = array(
 				'label-message' => 'uls-betafeature-label',
 				'desc-message' => 'uls-betafeature-desc',
