@@ -37,8 +37,8 @@ $messages['en'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Language settings',
 	'ext-uls-undo-language-tooltip-text' => 'Language changed from $1',
 	'ext-uls-language-settings-preferences-link' => 'More language settings',
-	'uls-betafeature-label' => 'Compacting interlanguage links',
-	'uls-betafeature-desc' => 'Displays a shorter version of the language list with the languages that are more relevant to you.',
+	'uls-betafeature-label' => 'Compact language links',
+	'uls-betafeature-desc' => 'Show a shorter version of the language list, with just the languages that are more relevant to you.',
 );
 
 /** Message documentation (Message documentation)
@@ -119,8 +119,8 @@ $messages['ast'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Preferencies de llingua',
 	'ext-uls-undo-language-tooltip-text' => 'La llingua camudó dende $1',
 	'ext-uls-language-settings-preferences-link' => 'Más preferencies de llingua',
-	'uls-betafeature-label' => 'Compactando enllaces interllingüísticos',
-	'uls-betafeature-desc' => 'Amuesa una versión más curtia de la llista de llingües coles que son más relevantes pa vusté.',
+	'uls-betafeature-label' => 'Compactando enllaces interllingüísticos', # Fuzzy
+	'uls-betafeature-desc' => 'Amuesa una versión más curtia de la llista de llingües coles que son más relevantes pa vusté.', # Fuzzy
 );
 
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
@@ -252,8 +252,8 @@ $messages['de'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Spracheinstellungen',
 	'ext-uls-undo-language-tooltip-text' => 'Sprache geändert von $1',
 	'ext-uls-language-settings-preferences-link' => 'Weitere Spracheinstellungen',
-	'uls-betafeature-label' => 'Kompaktere Interlanguage-Links',
-	'uls-betafeature-desc' => 'Zeigt eine kürzere Version der Sprachenliste mit den Sprachen an, die für dich mehr von Bedeutung sind.',
+	'uls-betafeature-label' => 'Kompakte Sprachlinks',
+	'uls-betafeature-desc' => 'Zeigt eine kürzere Version der Sprachenliste mit den für dich relevanten Sprachen an.',
 );
 
 /** Zazaki (Zazaki)
@@ -278,8 +278,8 @@ $messages['dsb'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Rěcne nastajenja',
 	'ext-uls-undo-language-tooltip-text' => 'Rěc $1 změnjona',
 	'ext-uls-language-settings-preferences-link' => 'Dalšne rěcne nastajenja',
-	'uls-betafeature-label' => 'Wěcej kompaktne mjazyrěcne wótkaze',
-	'uls-betafeature-desc' => 'Pokazujo krotšu wersiju rěcneje lisćiny z rěcami, kótarež su relewantne za tebje.',
+	'uls-betafeature-label' => 'Wěcej kompaktne mjazyrěcne wótkaze', # Fuzzy
+	'uls-betafeature-desc' => 'Pokazujo krotšu wersiju rěcneje lisćiny z rěcami, kótarež su relewantne za tebje.', # Fuzzy
 );
 
 /** Divehi (ދިވެހިބަސް)
@@ -311,6 +311,7 @@ $messages['eo'] = array(
 
 /** Spanish (español)
  * @author Armando-Martin
+ * @author Ihojose
  * @author Ovruni
  * @author Peter Bowman
  */
@@ -318,10 +319,11 @@ $messages['es'] = array(
 	'UniversalLanguageSelector' => 'Selector universal de idiomas',
 	'uls-desc' => 'Ofrece al usuario varias formas para seleccionar un idioma y ajustar su configuración',
 	'uls-plang-title-languages' => 'Idiomas',
-	'uls-preference' => 'Activar el [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector selector universal de idiomas]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Opciones de idioma',
 	'ext-uls-undo-language-tooltip-text' => 'El idioma cambió de $1',
 	'ext-uls-language-settings-preferences-link' => 'Más opciones de idioma',
+	'uls-betafeature-label' => 'Enlaces de lenguaje compacto',
+	'uls-betafeature-desc' => 'Mostrar una versión más corta de la lista de idiomas, con sólo los idiomas que son más relevantes para usted.',
 );
 
 /** Estonian (eesti)
@@ -345,6 +347,7 @@ $messages['eu'] = array(
 );
 
 /** Persian (فارسی)
+ * @author Armin1392
  * @author Calak
  * @author Mjbmr
  * @author Reza1615
@@ -353,6 +356,11 @@ $messages['fa'] = array(
 	'UniversalLanguageSelector' => 'انتخاب زبان جهانی',
 	'uls-desc' => 'به کاربر راه‌های مختلفی برای انتخاب زبان و تنظیم تنظیمات زبان  می‌دهد',
 	'uls-plang-title-languages' => 'زبان‌ها',
+	'ext-uls-select-language-settings-icon-tooltip' => 'تنظیمات زبان',
+	'ext-uls-undo-language-tooltip-text' => 'تغییر زبان از $1',
+	'ext-uls-language-settings-preferences-link' => 'تنظیمات بیشتر زبان',
+	'uls-betafeature-label' => 'لینک‌های فشرده زبان',
+	'uls-betafeature-desc' => 'نمایش یک نسخه کوتاه‌تر فهرست زبان، با فقط زبانی که بیشتر به شما مربوط است.',
 );
 
 /** Finnish (suomi)
@@ -371,6 +379,7 @@ $messages['fi'] = array(
 
 /** French (français)
  * @author Gomoko
+ * @author Jgaignerot
  * @author Ltrlg
  * @author Metroitendo
  * @author Tititou36
@@ -384,8 +393,8 @@ $messages['fr'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Paramètres de langue',
 	'ext-uls-undo-language-tooltip-text' => 'Langue modifiée de $1',
 	'ext-uls-language-settings-preferences-link' => 'Plus de paramètres de langue',
-	'uls-betafeature-label' => 'Compactage des liens interlangues',
-	'uls-betafeature-desc' => 'Affiche une version raccourcie de la liste des langues avec les langues les plus pertinentes pour vous.',
+	'uls-betafeature-label' => 'Compacter les liens de langue',
+	'uls-betafeature-desc' => 'Afficher une version abrégée de la liste des langues, avec juste les langues qui vous intéressent le plus.',
 );
 
 /** Northern Frisian (Nordfriisk)
@@ -445,10 +454,11 @@ $messages['gu'] = array(
 	'UniversalLanguageSelector' => 'યુનિવર્સલ લેંગ્વેજ સિલેક્ટર',
 	'uls-desc' => 'સભ્યને ભાષા પસંદગી અને ગોઠવણીઓ માટેનાં અનેક માર્ગો પૂરા પાડે છે',
 	'uls-plang-title-languages' => 'ભાષાઓ',
-	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Universal Language Selector] સક્રિય કરો',
-	'ext-uls-select-language-settings-icon-tooltip' => 'ભાષા સુયોજનો',
+	'ext-uls-select-language-settings-icon-tooltip' => 'ભાષા ગોઠવણીઓ',
 	'ext-uls-undo-language-tooltip-text' => '$1 માંથી ભાષા બદલવામાં આવી',
-	'ext-uls-language-settings-preferences-link' => 'વધુ ભાષા સુયોજનો',
+	'ext-uls-language-settings-preferences-link' => 'વધુ ભાષા ગોઠવણીઓ',
+	'uls-betafeature-label' => 'ટૂંકી ભાષા કડીઓ',
+	'uls-betafeature-desc' => 'તમને સંબંધિત ભાષાઓની જ, ભાષા કડીઓનું ટૂંકી આવૃત્તિ દર્શાવે છે.',
 );
 
 /** Hebrew (עברית)
@@ -459,10 +469,11 @@ $messages['he'] = array(
 	'UniversalLanguageSelector' => 'בורר השפות העולמי',
 	'uls-desc' => 'נותן למשתמשים מספר דרכים לבחור שפה ולכוונן את הגדרות השפה',
 	'uls-plang-title-languages' => 'שפות',
-	'uls-preference' => 'הפעלת [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector בורר השפות האוניברסלי]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'הגדרות שפה',
 	'ext-uls-undo-language-tooltip-text' => 'השפה השתנתה מ{{GRAMMAR:תחילית|$1}}',
 	'ext-uls-language-settings-preferences-link' => 'הגדרות שפה נוספות',
+	'uls-betafeature-label' => 'קישורי שפה מוקטנים',
+	'uls-betafeature-desc' => 'הצגת גרסה מקוצרת של רשימת השפות, רק עם השפות שרלוונטיות לך.',
 );
 
 /** Hindi (हिन्दी)
@@ -499,8 +510,8 @@ $messages['hsb'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Rěčne nastajenja',
 	'ext-uls-undo-language-tooltip-text' => 'Rěč $1 změnjena',
 	'ext-uls-language-settings-preferences-link' => 'Dalše rěčne nastajenja',
-	'uls-betafeature-label' => 'Bóle kompaktne mjezyrěčne wotkazy',
-	'uls-betafeature-desc' => 'Pokazuje krótšu wersiju rěčneje lisćiny z rěčemi, kotrež su relewantne za tebje.',
+	'uls-betafeature-label' => 'Bóle kompaktne mjezyrěčne wotkazy', # Fuzzy
+	'uls-betafeature-desc' => 'Pokazuje krótšu wersiju rěčneje lisćiny z rěčemi, kotrež su relewantne za tebje.', # Fuzzy
 );
 
 /** Hungarian (magyar)
@@ -561,8 +572,8 @@ $messages['it'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Impostazioni per la lingua',
 	'ext-uls-undo-language-tooltip-text' => 'Lingua modificata da $1',
 	'ext-uls-language-settings-preferences-link' => 'Ulteriori impostazioni per la lingua',
-	'uls-betafeature-label' => 'Compatta collegamenti interlinguistici',
-	'uls-betafeature-desc' => "Mostra una versione ridotta dell'elenco delle lingue, con quelle più rilevanti per te.",
+	'uls-betafeature-label' => 'Compatta collegamenti interlinguistici', # Fuzzy
+	'uls-betafeature-desc' => "Mostra una versione ridotta dell'elenco delle lingue, con quelle più rilevanti per te.", # Fuzzy
 );
 
 /** Japanese (日本語)
@@ -575,7 +586,7 @@ $messages['ja'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => '言語の設定',
 	'ext-uls-undo-language-tooltip-text' => '言語を$1から変更しました。',
 	'ext-uls-language-settings-preferences-link' => '言語のその他の設定',
-	'uls-betafeature-label' => '言語間リンクを短縮',
+	'uls-betafeature-label' => '言語リンクを短縮',
 );
 
 /** Georgian (ქართული)
@@ -729,7 +740,7 @@ $messages['mk'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Јазични поставки',
 	'ext-uls-undo-language-tooltip-text' => 'Јазикот сменет од изворниот $1',
 	'ext-uls-language-settings-preferences-link' => 'Уште јазични поставки',
-	'uls-betafeature-label' => 'Збивање на меѓујазичните врски',
+	'uls-betafeature-label' => 'Збиени јазични врски',
 	'uls-betafeature-desc' => 'Прикажува скратена верзија на јазичните врски, односно само оние јазици што се однесуваат на вас',
 );
 
@@ -798,7 +809,7 @@ $messages['nl'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Taalinstellingen',
 	'ext-uls-undo-language-tooltip-text' => 'Taal gewijzigd van $1',
 	'ext-uls-language-settings-preferences-link' => 'Meer taalinstellingen',
-	'uls-betafeature-label' => "Lijst van interwiki's inkorten",
+	'uls-betafeature-label' => "Lijst van interwiki's inkorten", # Fuzzy
 );
 
 /** Norwegian Nynorsk (norsk nynorsk)
@@ -836,10 +847,11 @@ $messages['pl'] = array(
 	'UniversalLanguageSelector' => 'Uniwersalny Selektor Języka',
 	'uls-desc' => 'Daje użytkownikowi kilka sposobów, aby wybrać język i dostosować ustawienia języka',
 	'uls-plang-title-languages' => 'Języki',
-	'uls-preference' => 'Włącz [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector uniwersalny selektor języków]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Ustawienia języka',
 	'ext-uls-undo-language-tooltip-text' => 'Poprzedni język: $1',
 	'ext-uls-language-settings-preferences-link' => 'Więcej ustawień języka',
+	'uls-betafeature-label' => 'Skrócona wersja linków interwiki',
+	'uls-betafeature-desc' => 'Pokazuj krótszą wersję listy odnośników interwiki, zawierającą tylko językami, które są istotne dla ciebie.',
 );
 
 /** Piedmontese (Piemontèis)
@@ -926,16 +938,16 @@ $messages['ru'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Установки языка',
 	'ext-uls-undo-language-tooltip-text' => 'Предыдущий язык: $1',
 	'ext-uls-language-settings-preferences-link' => 'Дополнительные установки языка',
-	'uls-betafeature-label' => 'Сжатие ссылок на другие языковые разделы',
-	'uls-betafeature-desc' => 'Показывает сокращенный вариант списка языков с языками, которые являются более актуальными для вас.',
+	'uls-betafeature-label' => 'Сжатие ссылок на другие языковые разделы', # Fuzzy
+	'uls-betafeature-desc' => 'Показывает сокращенный вариант списка языков с языками, которые являются более актуальными для вас.', # Fuzzy
 );
 
 /** Scots (Scots)
  * @author John Reid
  */
 $messages['sco'] = array(
-	'uls-betafeature-label' => 'Compactin interlei links',
-	'uls-betafeature-desc' => 'Displeys ae shorter version o the leid leet wi the lieds that ar mair relevant til ye.',
+	'uls-betafeature-label' => 'Compact leid links',
+	'uls-betafeature-desc' => 'Shaw ae shorter version o the leid leet, wi just the leids that ar mai reelevant fer ye.',
 );
 
 /** Sinhala (සිංහල)
@@ -1002,8 +1014,8 @@ $messages['sv'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Språkinställningar',
 	'ext-uls-undo-language-tooltip-text' => 'Språk ändrades från $1',
 	'ext-uls-language-settings-preferences-link' => 'Fler språkinställningar',
-	'uls-betafeature-label' => 'Kompakterar språklänkar',
-	'uls-betafeature-desc' => 'Visar en kortare version av språklistan med de språk som är mer relevanta för dig.',
+	'uls-betafeature-label' => 'Kompakta språklänkar',
+	'uls-betafeature-desc' => 'Visa en kortare version av språklistan, med bara de språk som är mer relevanta för dig.',
 );
 
 /** Tamil (தமிழ்)
@@ -1097,8 +1109,8 @@ $messages['vi'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Tùy chọn ngôn ngữ',
 	'ext-uls-undo-language-tooltip-text' => 'Đã đổi ngôn ngữ từ $1',
 	'ext-uls-language-settings-preferences-link' => 'Thêm tùy chọn ngôn ngữ',
-	'uls-betafeature-label' => 'Thu gọn các liên kết giữa ngôn ngữ',
-	'uls-betafeature-desc' => 'Thu gọn danh sách các liên kết giữa ngôn ngữ để chỉ hiển thị các ngôn ngữ mà bạn có thể muốn sử dụng.',
+	'uls-betafeature-label' => 'Thu gọn các liên kết giữa ngôn ngữ', # Fuzzy
+	'uls-betafeature-desc' => 'Thu gọn danh sách các liên kết giữa ngôn ngữ để chỉ hiển thị các ngôn ngữ mà bạn có thể muốn sử dụng.', # Fuzzy
 );
 
 /** Yiddish (ייִדיש)
@@ -1123,8 +1135,8 @@ $messages['zh-hans'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => '语言设置',
 	'ext-uls-undo-language-tooltip-text' => '语言已更改自$1',
 	'ext-uls-language-settings-preferences-link' => '更多语言设置',
-	'uls-betafeature-label' => '压缩跨语言链接',
-	'uls-betafeature-desc' => '显示与您使用的语言相关语言列表的较短版本。',
+	'uls-betafeature-label' => '紧凑跨语言链接',
+	'uls-betafeature-desc' => '显示语言列表的简短版本，这些语言与您的语言相关。',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
@@ -1139,6 +1151,6 @@ $messages['zh-hant'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => '語言設定',
 	'ext-uls-undo-language-tooltip-text' => '語言已從$1更改',
 	'ext-uls-language-settings-preferences-link' => '更多語言設定',
-	'uls-betafeature-label' => '壓縮跨語言連接',
-	'uls-betafeature-desc' => '顯示與您使用語言相關語言列表之較短版本。',
+	'uls-betafeature-label' => '緊湊跨語言連結',
+	'uls-betafeature-desc' => '顯示語言列表之簡短版本，這些語言與您的語言密切相關。',
 );

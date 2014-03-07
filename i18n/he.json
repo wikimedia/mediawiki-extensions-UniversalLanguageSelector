@@ -47,5 +47,6 @@
     "ext-uls-input-disable-notification-undo": "ביטול",
     "ext-uls-input-disable-notification-info-personal": "באפשרותך להפעיל את כלי הקלט בכל זמן מהגדרות השפה.",
     "ext-uls-input-disable-notification-info-interlanguage": "באפשרותך להפעיל את כלי הקלט בכל זמן מהגדרות השפה שליד רשימת השפות.",
-    "ext-uls-language-settings-applying": "החלה..."
+    "ext-uls-language-settings-applying": "החלה...",
+    "ext-uls-compact-link-count": "עוד {{PLURAL:$1|שפה אחת|$1 שפות}}"
 }
