@@ -46,5 +46,6 @@
     "ext-uls-input-disable-notification-undo": "Ibabawi",
     "ext-uls-input-disable-notification-info-personal": "Mabalinmo a pakabaelan dagiti ramit ti ikabil iti aniaman a panawen manipud kadagiti disso ti pagsasao.",
     "ext-uls-input-disable-notification-info-interlanguage": "Mabalinmo a pakabaelan dagiti ramit ti ikabil manipud kadagiti disso ti pagsasao idiay kaariping ti listaan ti pagsasao.",
-    "ext-uls-language-settings-applying": "Ipakpakat..."
+    "ext-uls-language-settings-applying": "Ipakpakat...",
+    "ext-uls-compact-link-count": "{{PLURAL:$1|Maysa pay a pagsasao|$1 pay kadagiti pagsasao}}"
 }

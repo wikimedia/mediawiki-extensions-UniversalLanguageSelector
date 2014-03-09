@@ -218,10 +218,11 @@ $messages['cy'] = array(
 	'UniversalLanguageSelector' => 'Cyfun-ddewisydd Iaith',
 	'uls-desc' => "Yn cynnig sawl ffordd i'r defnyddiwr allu dewis iaith a newid gosodiadau iaith",
 	'uls-plang-title-languages' => 'Ieithoedd',
-	'uls-preference' => "Gosod yr [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector ''Universal Language Selector'']",
 	'ext-uls-select-language-settings-icon-tooltip' => 'Gosodiadau iaith',
 	'ext-uls-undo-language-tooltip-text' => 'Newidiwyd yr iaith o $1',
 	'ext-uls-language-settings-preferences-link' => 'Rhagor o osodiadau iaith',
+	'uls-betafeature-label' => 'Cysylltau iaith cryno',
+	'uls-betafeature-desc' => 'Dangos fersiwn byrach o restr yr ieithoedd, gan ddangos dim ond yr ieithoedd sydd yn debygol o fod yn berthnasol i chi.',
 );
 
 /** Danish (dansk)
@@ -559,6 +560,11 @@ $messages['ilo'] = array(
 	'UniversalLanguageSelector' => 'Unibersal a Pagpilian ti Pagsasao',
 	'uls-desc' => 'Mangited ti agar-aramat kadagiti nadumaduma a pamay-an ti panagpili ti maysa a pagsasao ken ti panagbaliw kadagiti pannakaidisso ti pagsasao',
 	'uls-plang-title-languages' => 'Dagiti pagsasao',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Dagiti disso ti pagsasao',
+	'ext-uls-undo-language-tooltip-text' => 'Binaliwan ti pagsasao manipud ti $1',
+	'ext-uls-language-settings-preferences-link' => 'Adu pay a disso ti pagsasao',
+	'uls-betafeature-label' => 'Kompakto a silsilpo ti pagsasao',
+	'uls-betafeature-desc' => 'Ipakita ti ababa a bersion ti listaan ti pagsasao, ken dagiti laeng pagsasao a maitunos kaniam.',
 );
 
 /** Italian (italiano)
@@ -572,8 +578,8 @@ $messages['it'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Impostazioni per la lingua',
 	'ext-uls-undo-language-tooltip-text' => 'Lingua modificata da $1',
 	'ext-uls-language-settings-preferences-link' => 'Ulteriori impostazioni per la lingua',
-	'uls-betafeature-label' => 'Compatta collegamenti interlinguistici', # Fuzzy
-	'uls-betafeature-desc' => "Mostra una versione ridotta dell'elenco delle lingue, con quelle più rilevanti per te.", # Fuzzy
+	'uls-betafeature-label' => 'Compatta collegamenti linguistici',
+	'uls-betafeature-desc' => "Mostra una versione ridotta dell'elenco delle lingue, con solo quelle più rilevanti per te.",
 );
 
 /** Japanese (日本語)
@@ -692,6 +698,11 @@ $messages['lb'] = array(
 	'UniversalLanguageSelector' => 'Universell Auswiel vun der Sprooch',
 	'uls-desc' => "Gëtt dem Benotzer verschidde Méiglechkeete fir eng Sprooch erauszesichen an d'Parameter vun der Sprooch festzeleeën",
 	'uls-plang-title-languages' => 'Sproochen',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Sproochastellungen',
+	'ext-uls-undo-language-tooltip-text' => 'Sprooch geännert vu(n) $1',
+	'ext-uls-language-settings-preferences-link' => 'Méi Sproochastellungen',
+	'uls-betafeature-label' => 'Kompakt Sproochlinken',
+	'uls-betafeature-desc' => 'Méi eng kuerz Versioun vun der Lëscht vun de Sprooche weisen, mat just deene Sproochen déi fir Iech méi relevant sinn.',
 );
 
 /** لوری (لوری)
@@ -782,11 +793,14 @@ $messages['ms'] = array(
 );
 
 /** Neapolitan (Napulitano)
+ * @author C.R.
  * @author Chelin
  */
 $messages['nap'] = array(
 	'UniversalLanguageSelector' => 'Selettore annevierziale d"a lengua',
 	'uls-plang-title-languages' => 'Lengue',
+	'uls-betafeature-label' => 'Cumpatta cullegamiente lenguisteche',
+	'uls-betafeature-desc' => "Mmusta na verziona cchiù curta d&#39;'a lista 'e llengue, sulamente cu 'e llengue ca songo 'e cchiù mpurtante pe' tte.",
 );
 
 /** Norwegian Bokmål (norsk bokmål)
@@ -878,6 +892,7 @@ $messages['ps'] = array(
 
 /** Portuguese (português)
  * @author Fúlvio
+ * @author SandroHc
  */
 $messages['pt'] = array(
 	'UniversalLanguageSelector' => 'Seletor Universal de Idiomas',
@@ -886,6 +901,8 @@ $messages['pt'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Configurações de idioma',
 	'ext-uls-undo-language-tooltip-text' => 'Idioma alterado para $1',
 	'ext-uls-language-settings-preferences-link' => 'Mais configurações de idioma',
+	'uls-betafeature-label' => 'Links de linguagens compactos',
+	'uls-betafeature-desc' => 'Mostrar uma lista reduzida de linguagens, com apenas as linguagens mais relevantes para ti.',
 );
 
 /** Brazilian Portuguese (português do Brasil)
@@ -1062,11 +1079,11 @@ $messages['uk'] = array(
 	'UniversalLanguageSelector' => 'Універсальний вибір мови',
 	'uls-desc' => 'Надає користувачу декілька способів вибрати мову та налаштувати мовні параметри.',
 	'uls-plang-title-languages' => 'Мови',
-	'uls-preference' => 'Увімкнути
-[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Універсальний перемикач мов]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Налаштування мови',
 	'ext-uls-undo-language-tooltip-text' => 'Мову змінено з $1',
 	'ext-uls-language-settings-preferences-link' => 'Додаткові налаштування мови',
+	'uls-betafeature-label' => 'Компактні мовні посилання',
+	'uls-betafeature-desc' => 'Переглянути скорочену версію списку мов лише з тими мовами, які найпридатніші для вас.',
 );
 
 /** Urdu (اردو)

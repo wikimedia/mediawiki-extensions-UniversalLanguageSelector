@@ -50,5 +50,6 @@
     "ext-uls-input-disable-notification-undo": "Скасувати",
     "ext-uls-input-disable-notification-info-personal": "Ви можете увімкнути знаряддя вводу в будь-який момент через налаштування мови.",
     "ext-uls-input-disable-notification-info-interlanguage": "Ви можете увімкнути знаряддя вводу в будь-який момент через налаштування мови біля переліку мов.",
-    "ext-uls-language-settings-applying": "Застосування..."
+    "ext-uls-language-settings-applying": "Застосування...",
+    "ext-uls-compact-link-count": "Ще {{PLURAL:$1|одна мова|$1 мови|$1 мов}}"
 }
