@@ -769,6 +769,13 @@ $messages['ml'] = array(
 	'ext-uls-language-settings-preferences-link' => 'കൂടുതൽ ഭാഷാസജ്ജീകരണങ്ങൾ',
 );
 
+/** Mongolian (монгол)
+ * @author Mongol
+ */
+$messages['mn'] = array(
+	'uls-betafeature-desc' => 'Өөрт илүү хамааралтай хэлний жагсаалтын богино хувилбарыг харуулах',
+);
+
 /** Marathi (मराठी)
  * @author Mahitgar
  * @author V.narsikar
@@ -1126,8 +1133,8 @@ $messages['vi'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Tùy chọn ngôn ngữ',
 	'ext-uls-undo-language-tooltip-text' => 'Đã đổi ngôn ngữ từ $1',
 	'ext-uls-language-settings-preferences-link' => 'Thêm tùy chọn ngôn ngữ',
-	'uls-betafeature-label' => 'Thu gọn các liên kết giữa ngôn ngữ', # Fuzzy
-	'uls-betafeature-desc' => 'Thu gọn danh sách các liên kết giữa ngôn ngữ để chỉ hiển thị các ngôn ngữ mà bạn có thể muốn sử dụng.', # Fuzzy
+	'uls-betafeature-label' => 'Thu gọn các liên kết ngôn ngữ',
+	'uls-betafeature-desc' => 'Thu gọn danh sách các liên kết giữa ngôn ngữ để chỉ hiển thị các ngôn ngữ mà bạn có thể muốn sử dụng.',
 );
 
 /** Yiddish (ייִדיש)

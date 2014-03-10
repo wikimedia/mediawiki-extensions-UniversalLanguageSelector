@@ -4,7 +4,8 @@
             "Siebrand",
             "Wiki13",
             "Southparkfan",
-            "Arent"
+            "Arent",
+            "SPQRobin"
         ]
     },
     "ext-uls-display-settings-title": "Weergaveinstellingen",
@@ -49,5 +50,6 @@
     "ext-uls-input-disable-notification-undo": "Ongedaan maken",
     "ext-uls-input-disable-notification-info-personal": "U kunt de invoermethoden weer inschakelen via de taalinstellingen.",
     "ext-uls-input-disable-notification-info-interlanguage": "U kunt de invoermethoden weer inschakelen via de taalinstellingen naast de lijst met talen.",
-    "ext-uls-language-settings-applying": "Toepassen..."
+    "ext-uls-language-settings-applying": "Toepassen...",
+    "ext-uls-compact-link-count": "{{PLURAL:$1|Nog een taal|Nog $1 talen}}"
 }
