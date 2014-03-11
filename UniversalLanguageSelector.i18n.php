@@ -421,10 +421,11 @@ $messages['gl'] = array(
 	'UniversalLanguageSelector' => 'Selector universal de linguas',
 	'uls-desc' => 'Dá ao usuario varios xeitos de seleccionar unha lingua e de axustar as preferencias da mesma',
 	'uls-plang-title-languages' => 'Linguas',
-	'uls-preference' => 'Activar o [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector selector universal de linguas]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Opcións de lingua',
 	'ext-uls-undo-language-tooltip-text' => 'A lingua cambiou desde o $1',
 	'ext-uls-language-settings-preferences-link' => 'Máis opcións de lingua',
+	'uls-betafeature-label' => 'Compactar as ligazóns lingüísticas',
+	'uls-betafeature-desc' => 'Mostrar unha versión máis curta da lista de linguas, unicamente coas linguas máis relevantes para vostede.',
 );
 
 /** Goan Konkani (कोंकणी/Konknni )
@@ -962,8 +963,8 @@ $messages['ru'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Установки языка',
 	'ext-uls-undo-language-tooltip-text' => 'Предыдущий язык: $1',
 	'ext-uls-language-settings-preferences-link' => 'Дополнительные установки языка',
-	'uls-betafeature-label' => 'Сжатие ссылок на другие языковые разделы', # Fuzzy
-	'uls-betafeature-desc' => 'Показывает сокращенный вариант списка языков с языками, которые являются более актуальными для вас.', # Fuzzy
+	'uls-betafeature-label' => 'Сжатые языковые ссылки',
+	'uls-betafeature-desc' => 'Показывает сокращенный вариант списка языков, только с языками, которые являются более актуальными для вас.',
 );
 
 /** Scots (Scots)

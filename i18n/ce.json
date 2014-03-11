@@ -9,8 +9,6 @@
     "ext-uls-display-settings-fonts-tab": "Шрифташ",
     "ext-uls-display-settings-title-short": "Сурт хӀоттор",
     "ext-uls-display-settings-desc": "Меню а шрифташан а мотт",
-    "ext-uls-select-language-settings-icon-tooltip": "Мотт дIахIоттор",
-    "ext-uls-undo-language-tooltip-text": "Хьалхара мотт: $1",
     "ext-uls-language-settings-title": "Мотт дIахIоттор",
     "ext-uls-language-settings-apply": "Ӏалашдан",
     "ext-uls-language-settings-cancel": "Цаоьшу",
@@ -46,5 +44,5 @@
     "ext-uls-input-disable-notification-info-personal": "Яздаран гӀирс лело йиш ю муьлхачу хенахь мотт хуьйцу гӀирсан чохь.",
     "ext-uls-input-disable-notification-info-interlanguage": "Яздаран гӀирс лело йиш ю муьлхачу хенахь мотт хуьйцу гӀирсан чохь.",
     "ext-uls-language-settings-applying": "ДӀахӀоттор…",
-    "ext-uls-language-settings-preferences-link": "Кхин мотт дIахIоттор"
+    "ext-uls-compact-link-count": "Кхин {{PLURAL:$1|цхьан маттахь|$1 меттанашкахь}}"
 }
