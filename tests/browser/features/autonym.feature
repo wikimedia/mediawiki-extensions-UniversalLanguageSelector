@@ -25,7 +25,7 @@ Feature: Autonym font
       And elements that are not Interlanguage links should not use Autonym font
 
   Scenario: Autonym font is used in the ULS language search dialog for input language selection by anonymous users
-    Given I am at random page
+    Given I am at the main page
       And I open the Universal Language Selector
       And I open Input side panel of language settings
     When I click the button with the ellipsis

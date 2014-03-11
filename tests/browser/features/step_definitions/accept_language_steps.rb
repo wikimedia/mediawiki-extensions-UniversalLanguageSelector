@@ -3,10 +3,10 @@ Given(/^that my browser's accept language is (.+)$/) do |language|
   $session_id = @browser.driver.instance_variable_get(:@bridge).session_id
 end
 
-When(/^I visit a random page$/) do
-  visit RandomPage
+When(/^I am at the preferences page$/) do
+	visit PreferencesPage
 end
 
 Then(/^link to the main page has text (.+)$/) do |text|
-  on(RandomPage).main_page_element.text.should == text
+  on(MainPage).main_page_element.text.should == text
 end

@@ -3,7 +3,7 @@ Feature: Accept-Language
 
   Scenario Outline: Accept-Language
     Given that my browser's accept language is <language>
-    When I visit a random page
+    When I am at the preferences page
     Then link to the main page has text <text>
 
   Examples:

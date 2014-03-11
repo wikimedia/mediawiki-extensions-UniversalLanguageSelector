@@ -15,12 +15,12 @@ Feature: Persistent settings
 
   Scenario: Interface font sticks to another page
     When I apply the changes
-      And I visit a random page
+      And I am at the main page
     Then the selected interface font must be OpenDyslexic
 
   Scenario: Discarding a live preview of a font keeps the previous font
     When I close the panel to discard the changes
-      And I visit a random page
+      And I am at the main page
     Then the selected interface font must be Systemschriftart
 
   Scenario: Changing both a font and an input method is saved
@@ -30,6 +30,6 @@ Feature: Persistent settings
       And I click on the link to select Malayalam
       And I select the ml-inscript2 input method in the panel
       And I apply the changes
-      And I visit a random page
+      And I am at the main page
     Then the selected interface font must be OpenDyslexic
       And the selected input method for Malayalam is ml-inscript2

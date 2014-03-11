@@ -15,7 +15,7 @@ Given(/^I select a language different than English for display language$/) do
 end
 
 When(/^I click on the link to select Malayalam$/) do
-	on(RandomPage).malayalam_element.click
+	on(MainPage).malayalam_element.click
 end
 
 Then(/^I should see the text in the language panel in (.+?)$/) do |language|

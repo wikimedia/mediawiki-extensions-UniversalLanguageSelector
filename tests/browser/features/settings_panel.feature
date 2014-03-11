@@ -15,7 +15,7 @@ Feature: Settings panel
     | logged in   |
 
   Scenario: How to use link appears in the Input settings panel
-    Given I am at random page
+    Given I am at the main page
     When I open ULS
       And I switch to Input panel of language settings
       And I click the button with the ellipsis
@@ -24,7 +24,7 @@ Feature: Settings panel
     Then I should see the How to use link near the Malayalam transliteration item
 
   Scenario: More languages (input language selection)
-    Given I am at random page
+    Given I am at the main page
     When I open ULS
       And I switch to Input panel of language settings
       And I click the button with the ellipsis

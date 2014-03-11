@@ -1,5 +1,5 @@
-Given(/^I am at random page$/) do
-	visit RandomPage
+Given(/^I am at the main page$/) do
+	visit MainPage
 end
 
 Given(/^I am logged out$/) do

@@ -10,7 +10,7 @@ input method.
 
   The input method indicator is shown when input field gets a focus.
 
-    Given I am at random page
+    Given I am at the main page
     When I click on an input box
     Then I should see the input method indicator
 
@@ -19,7 +19,7 @@ input method.
 
   Input method menu is shown when user clicks the input method indicator.
 
-    Given I am at random page
+    Given I am at the main page
     When I click on an input box
       And I click on the input method indicator
     Then I should see input methods for English
@@ -41,13 +41,13 @@ input method.
 
   Chosen input method selection persists across page loads.
 
-    Given I am at random page
+    Given I am at the main page
     When I open the input method menu
       And I choose ml as the input language
       And I open the input method menu
       And I click on the Malayalam InScript 2 menu item
       And I press Control-M
-      And I go to another random page
+      And I reload the page
       And I click on an input box
       And I press Control-M
     Then I should see the input method indicator

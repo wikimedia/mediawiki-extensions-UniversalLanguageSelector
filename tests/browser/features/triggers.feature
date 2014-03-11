@@ -15,13 +15,13 @@ Feature: Trigger in personal toolbar
     or the settings panel, depending on whether language selection for
     anonymous users is disabled. This and next test cover both cases.
 
-    Given I am at random page
+    Given I am at the main page
     When I click language selector trigger element
     Then I see the logged in language settings panel
 
   Scenario: Open language selector when logged out
 
-    Given I am at random page
+    Given I am at the main page
     When I click language selector trigger element
     Then I should see the language selector
 

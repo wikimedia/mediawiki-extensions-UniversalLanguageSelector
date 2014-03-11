@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 Given(/^I am on a wiki in Kotava language$/) do
-  visit RandomPage
+  step "I am at the main page"
   # Fake a Kotava Wiki
   @browser.execute_script( "mw.config.set( 'wgContentLanguage', 'avk' )" )
 end
@@ -52,10 +52,6 @@ end
 
 When(/^I press Control-M$/) do
   on(IMEPage).search_input_element.send_keys [:control, "m"]
-end
-
-When(/^I go to another random page$/) do
-  visit RandomPage
 end
 
 Then(/^in it there must be an element with Malayalam text$/) do
