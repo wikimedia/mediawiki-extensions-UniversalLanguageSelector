@@ -44,6 +44,7 @@ $messages['en'] = array(
 /** Message documentation (Message documentation)
  * @author Amire80
  * @author Kunal Mehta
+ * @author Nemo bis
  * @author Raymond
  * @author Shirayuki
  */
@@ -60,10 +61,10 @@ This title is shown when there are no interlanguage links there, but an icon tha
 	'ext-uls-undo-language-tooltip-text' => 'Text for the tooltip appearing when language is changed. Parameters:
 * $1 - the previous language acronym',
 	'ext-uls-language-settings-preferences-link' => 'Text for the link showin in user preference screen',
-	'uls-betafeature-label' => 'Used as checkbox label for beta feature.
+	'uls-betafeature-label' => 'Used as checkbox label for beta feature. "Compact" is an adjective and "language links" is a short name for the interlanguage links, also known as interwiki (links) in the sidebar of a page.
 
 The description for this label is {{msg-mw|Uls-betafeature-desc}}.',
-	'uls-betafeature-desc' => 'Description for the compact interlanguage links beta feature.
+	'uls-betafeature-desc' => 'Description for the [[mw:Universal Language Selector/Design/Interlanguage links|compact interlanguage links beta feature]]. The "language list" is the "{{int:otherlanguages}}" box in the sidebar, also known as interwikis.
 
 This description is for the checkbox label {{msg-mw|Uls-betafeature-label}}.',
 );
@@ -164,15 +165,17 @@ $messages['ca'] = array(
 );
 
 /** Chechen (нохчийн)
+ * @author Nemo bis
  * @author Умар
  */
 $messages['ce'] = array(
 	'uls-desc' => 'Декъашхойн таро хуьлуьйту масийтта кепара мотт харжа а мотт дIахIотто а',
 	'uls-plang-title-languages' => 'Меттанаш',
-	'uls-preference' => 'Латайе [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Меттанаш универсальни дӀасатухург]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Мотт дIахIоттор',
 	'ext-uls-undo-language-tooltip-text' => 'Хьалхара мотт: $1',
 	'ext-uls-language-settings-preferences-link' => 'Кхин мотт дIахIоттор',
+	'uls-betafeature-label' => 'Меттанийн хьажоргийн боца могӀа', # Fuzzy
+	'uls-betafeature-desc' => 'Гайта меттанийн боца могӀа, хьона кест-кеста йоьшуш болу меттанаш бен хира бац.',
 );
 
 /** Sorani Kurdish (کوردی)
@@ -212,6 +215,7 @@ $messages['cu'] = array(
 
 /** Welsh (Cymraeg)
  * @author Lloffiwr
+ * @author Nemo bis
  * @author Robin Owain
  */
 $messages['cy'] = array(
@@ -221,7 +225,7 @@ $messages['cy'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Gosodiadau iaith',
 	'ext-uls-undo-language-tooltip-text' => 'Newidiwyd yr iaith o $1',
 	'ext-uls-language-settings-preferences-link' => 'Rhagor o osodiadau iaith',
-	'uls-betafeature-label' => 'Cysylltau iaith cryno',
+	'uls-betafeature-label' => 'Cysylltau iaith cryno', # Fuzzy
 	'uls-betafeature-desc' => 'Dangos fersiwn byrach o restr yr ieithoedd, gan ddangos dim ond yr ieithoedd sydd yn debygol o fod yn berthnasol i chi.',
 );
 
@@ -313,6 +317,7 @@ $messages['eo'] = array(
 /** Spanish (español)
  * @author Armando-Martin
  * @author Ihojose
+ * @author Nemo bis
  * @author Ovruni
  * @author Peter Bowman
  */
@@ -323,7 +328,7 @@ $messages['es'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Opciones de idioma',
 	'ext-uls-undo-language-tooltip-text' => 'El idioma cambió de $1',
 	'ext-uls-language-settings-preferences-link' => 'Más opciones de idioma',
-	'uls-betafeature-label' => 'Enlaces de lenguaje compacto',
+	'uls-betafeature-label' => 'Enlaces de lenguaje compacto', # Fuzzy
 	'uls-betafeature-desc' => 'Mostrar una versión más corta de la lista de idiomas, con sólo los idiomas que son más relevantes para usted.',
 );
 
@@ -394,7 +399,7 @@ $messages['fr'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Paramètres de langue',
 	'ext-uls-undo-language-tooltip-text' => 'Langue modifiée de $1',
 	'ext-uls-language-settings-preferences-link' => 'Plus de paramètres de langue',
-	'uls-betafeature-label' => 'Compacter les liens de langue',
+	'uls-betafeature-label' => ' Compacter les liens de langue',
 	'uls-betafeature-desc' => 'Afficher une version abrégée de la liste des langues, avec juste les langues qui vous intéressent le plus.',
 );
 
@@ -415,6 +420,7 @@ $messages['fur'] = array(
 );
 
 /** Galician (galego)
+ * @author Nemo bis
  * @author Toliño
  */
 $messages['gl'] = array(
@@ -424,7 +430,7 @@ $messages['gl'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Opcións de lingua',
 	'ext-uls-undo-language-tooltip-text' => 'A lingua cambiou desde o $1',
 	'ext-uls-language-settings-preferences-link' => 'Máis opcións de lingua',
-	'uls-betafeature-label' => 'Compactar as ligazóns lingüísticas',
+	'uls-betafeature-label' => 'Compactar as ligazóns lingüísticas', # Fuzzy
 	'uls-betafeature-desc' => 'Mostrar unha versión máis curta da lista de linguas, unicamente coas linguas máis relevantes para vostede.',
 );
 
@@ -556,6 +562,7 @@ $messages['id'] = array(
 
 /** Iloko (Ilokano)
  * @author Lam-ang
+ * @author Nemo bis
  */
 $messages['ilo'] = array(
 	'UniversalLanguageSelector' => 'Unibersal a Pagpilian ti Pagsasao',
@@ -564,13 +571,14 @@ $messages['ilo'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Dagiti disso ti pagsasao',
 	'ext-uls-undo-language-tooltip-text' => 'Binaliwan ti pagsasao manipud ti $1',
 	'ext-uls-language-settings-preferences-link' => 'Adu pay a disso ti pagsasao',
-	'uls-betafeature-label' => 'Kompakto a silsilpo ti pagsasao',
+	'uls-betafeature-label' => 'Kompakto a silsilpo ti pagsasao', # Fuzzy
 	'uls-betafeature-desc' => 'Ipakita ti ababa a bersion ti listaan ti pagsasao, ken dagiti laeng pagsasao a maitunos kaniam.',
 );
 
 /** Italian (italiano)
  * @author Beta16
  * @author Darth Kule
+ * @author Nemo bis
  */
 $messages['it'] = array(
 	'UniversalLanguageSelector' => 'Selettore universale della lingua',
@@ -579,8 +587,8 @@ $messages['it'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Impostazioni per la lingua',
 	'ext-uls-undo-language-tooltip-text' => 'Lingua modificata da $1',
 	'ext-uls-language-settings-preferences-link' => 'Ulteriori impostazioni per la lingua',
-	'uls-betafeature-label' => 'Compatta collegamenti linguistici',
-	'uls-betafeature-desc' => "Mostra una versione ridotta dell'elenco delle lingue, con solo quelle più rilevanti per te.",
+	'uls-betafeature-label' => 'Interwiki compatti',
+	'uls-betafeature-desc' => "Mostra una versione ridotta dell'elenco degli interwiki (lingue in cui una pagina è disponibile), limitata a quelle più rilevanti per te.",
 );
 
 /** Japanese (日本語)
@@ -598,16 +606,17 @@ $messages['ja'] = array(
 
 /** Georgian (ქართული)
  * @author David1010
+ * @author Otogi
  * @author გიორგიმელა
  */
 $messages['ka'] = array(
 	'UniversalLanguageSelector' => 'ენების უნივერსალური გადამრთველი',
 	'uls-desc' => 'აძლევს მომხმარებელს ენის არჩევისა და კონფიგურაციის საშუალებას',
 	'uls-plang-title-languages' => 'ენები',
-	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector ენების უნივერსალური გადამრთველის] ჩართვა',
 	'ext-uls-select-language-settings-icon-tooltip' => 'ენის პარამეტრები',
 	'ext-uls-undo-language-tooltip-text' => 'წინა ენა: $1',
 	'ext-uls-language-settings-preferences-link' => 'მეტი ენის პარამეტრები',
+	'uls-betafeature-label' => 'ენის კომპაქტური ბმულები',
 );
 
 /** Kazakh (Cyrillic script) (қазақша (кирил)‎)
@@ -632,6 +641,7 @@ $messages['kn'] = array(
 
 /** Korean (한국어)
  * @author Freebiekr
+ * @author Hym411
  * @author Kwj2772
  * @author Priviet
  * @author 아라
@@ -640,10 +650,10 @@ $messages['ko'] = array(
 	'UniversalLanguageSelector' => '일반 언어 선택기',
 	'uls-desc' => '사용자에게 언어를 선택하고 언어 설정을 바꾸는 몇 가지 방법을 제공합니다',
 	'uls-plang-title-languages' => '언어',
-	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector 일반 언어 선택기]를 활성화',
 	'ext-uls-select-language-settings-icon-tooltip' => '언어 설정',
 	'ext-uls-undo-language-tooltip-text' => '$1에서 언어가 바뀌었습니다',
 	'ext-uls-language-settings-preferences-link' => '자세한 언어 설정',
+	'uls-betafeature-label' => '소형 언어 링크',
 );
 
 /** Karachay-Balkar (къарачай-малкъар)
@@ -803,11 +813,12 @@ $messages['ms'] = array(
 /** Neapolitan (Napulitano)
  * @author C.R.
  * @author Chelin
+ * @author Nemo bis
  */
 $messages['nap'] = array(
 	'UniversalLanguageSelector' => 'Selettore annevierziale d"a lengua',
 	'uls-plang-title-languages' => 'Lengue',
-	'uls-betafeature-label' => 'Cumpatta cullegamiente lenguisteche',
+	'uls-betafeature-label' => 'Cumpatta cullegamiente lenguisteche', # Fuzzy
 	'uls-betafeature-desc' => "Mmusta na verziona cchiù curta d&#39;'a lista 'e llengue, sulamente cu 'e llengue ca songo 'e cchiù mpurtante pe' tte.",
 );
 
@@ -862,6 +873,7 @@ $messages['pa'] = array(
 
 /** Polish (polski)
  * @author BeginaFelicysym
+ * @author Nemo bis
  * @author Peter Bowman
  * @author WTM
  */
@@ -872,8 +884,8 @@ $messages['pl'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Ustawienia języka',
 	'ext-uls-undo-language-tooltip-text' => 'Poprzedni język: $1',
 	'ext-uls-language-settings-preferences-link' => 'Więcej ustawień języka',
-	'uls-betafeature-label' => 'Skrócona wersja linków interwiki',
-	'uls-betafeature-desc' => 'Pokazuj krótszą wersję listy odnośników interwiki, zawierającą tylko językami, które są istotne dla ciebie.',
+	'uls-betafeature-label' => 'Skrócona wersja linków interwiki', # Fuzzy
+	'uls-betafeature-desc' => 'Pokazuj krótszą wersję listy odnośników interwiki, zawierającą tylko języki, które są istotne dla Ciebie.',
 );
 
 /** Piedmontese (Piemontèis)
@@ -900,6 +912,7 @@ $messages['ps'] = array(
 
 /** Portuguese (português)
  * @author Fúlvio
+ * @author Imperadeiro98
  * @author SandroHc
  */
 $messages['pt'] = array(
@@ -909,7 +922,7 @@ $messages['pt'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Configurações de idioma',
 	'ext-uls-undo-language-tooltip-text' => 'Idioma alterado para $1',
 	'ext-uls-language-settings-preferences-link' => 'Mais configurações de idioma',
-	'uls-betafeature-label' => 'Links de linguagens compactos',
+	'uls-betafeature-label' => 'Links de idioma compactos',
 	'uls-betafeature-desc' => 'Mostrar uma lista reduzida de linguagens, com apenas as linguagens mais relevantes para ti.',
 );
 
@@ -953,6 +966,7 @@ $messages['roa-tara'] = array(
 
 /** Russian (русский)
  * @author Amire80
+ * @author Kaganer
  * @author Okras
  * @author Putnik
  */
@@ -963,7 +977,7 @@ $messages['ru'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Установки языка',
 	'ext-uls-undo-language-tooltip-text' => 'Предыдущий язык: $1',
 	'ext-uls-language-settings-preferences-link' => 'Дополнительные установки языка',
-	'uls-betafeature-label' => 'Сжатые языковые ссылки',
+	'uls-betafeature-label' => 'Компактный список языковых ссылок',
 	'uls-betafeature-desc' => 'Показывает сокращенный вариант списка языков, только с языками, которые являются более актуальными для вас.',
 );
 
@@ -1125,6 +1139,7 @@ $messages['vec'] = array(
 
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
+ * @author Nemo bis
  * @author Vinhtantran
  */
 $messages['vi'] = array(
@@ -1134,7 +1149,7 @@ $messages['vi'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Tùy chọn ngôn ngữ',
 	'ext-uls-undo-language-tooltip-text' => 'Đã đổi ngôn ngữ từ $1',
 	'ext-uls-language-settings-preferences-link' => 'Thêm tùy chọn ngôn ngữ',
-	'uls-betafeature-label' => 'Thu gọn các liên kết ngôn ngữ',
+	'uls-betafeature-label' => 'Thu gọn các liên kết ngôn ngữ', # Fuzzy
 	'uls-betafeature-desc' => 'Thu gọn danh sách các liên kết giữa ngôn ngữ để chỉ hiển thị các ngôn ngữ mà bạn có thể muốn sử dụng.',
 );
 
