@@ -71,7 +71,7 @@ class PanelPage
 	end
 
 	def webfonts_library_loaded
-		@browser.execute_script("return( $( 'body' ).data( 'webfonts' ) !== undefined )")
+		@browser.execute_script( "return ( $( 'body' ).data( 'webfonts' ) !== undefined )" )
 	end
 
 	private
