@@ -336,8 +336,13 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	public static function onGetBetaFeaturePreferences( $user, &$prefs ) {
-		global $wgExtensionAssetsPath, $wgULSCompactLinks, $wgHideInterlanguageLinks, $wgInterwikiMagic;
-		if ( $wgULSCompactLinks && $wgInterwikiMagic == true && $wgHideInterlanguageLinks == false) {
+		global $wgExtensionAssetsPath, $wgULSCompactLinks,
+			$wgHideInterlanguageLinks, $wgInterwikiMagic;
+
+		if ( $wgULSCompactLinks &&
+			$wgInterwikiMagic === true &&
+			$wgHideInterlanguageLinks === false
+		) {
 			$prefs['uls-compact-links'] = array(
 				'label-message' => 'uls-betafeature-label',
 				'desc-message' => 'uls-betafeature-desc',
