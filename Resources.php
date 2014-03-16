@@ -113,8 +113,8 @@ $wgResourceModules['ext.uls.interface'] = array(
 		'jquery.tipsy',
 		'mediawiki.jqueryMsg',
 		'mediawiki.user',
-		// We can not delay webfonts loading since it is required
-		// immediately after page load
+		// We cannot delay the loading of the basic webfonts library
+		// because it is required immediately after page load
 		'ext.uls.webfonts',
 	),
 	'messages' => array(
