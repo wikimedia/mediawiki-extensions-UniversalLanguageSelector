@@ -137,6 +137,25 @@ $GLOBALS['wgULSPosition'] = 'personal';
 $GLOBALS['wgULSEventLogging'] = false;
 
 /**
+ * How frequently to run tofu detection for all languages and to log them.
+ * This must be a number between 0 and 100, which signifies the percentage
+ * of pages for which this will be done. If it's 100, then it will be
+ * done for all pages. If it's 20, then it will be done on 20% of pages.
+ * The default is not to do it on any pages.
+ * @since 2014.04
+ */
+$GLOBALS['wgULSTofuLoggingChance'] = 0;
+
+/**
+ * If tofu detection for all languages is enabled, and this value is non-zero
+ * this specifies the maximum time in milliseconds that the tofu detection
+ * is allowed to run before it's forced to stop.
+ * The default is 0 - not to force it to stop.
+ * @since 2014.04
+ */
+$GLOBALS['wgULSTofuLoggingMaxTime'] = 0;
+
+/**
  * Array of jQuery selectors of elements on which IME should be enabled.
  *
  * @since 2013.11
