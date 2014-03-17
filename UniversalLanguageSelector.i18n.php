@@ -316,6 +316,7 @@ $messages['eo'] = array(
 
 /** Spanish (español)
  * @author Armando-Martin
+ * @author Fitoschido
  * @author Ihojose
  * @author Nemo bis
  * @author Ovruni
@@ -328,7 +329,7 @@ $messages['es'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Opciones de idioma',
 	'ext-uls-undo-language-tooltip-text' => 'El idioma cambió de $1',
 	'ext-uls-language-settings-preferences-link' => 'Más opciones de idioma',
-	'uls-betafeature-label' => 'Enlaces de lenguaje compacto', # Fuzzy
+	'uls-betafeature-label' => 'Compactación de lista de idiomas',
 	'uls-betafeature-desc' => 'Mostrar una versión más corta de la lista de idiomas, con sólo los idiomas que son más relevantes para usted.',
 );
 
@@ -377,10 +378,11 @@ $messages['fi'] = array(
 	'UniversalLanguageSelector' => 'Suuri kielenvalitsin',
 	'uls-desc' => 'Tarjoaa useita tapoja valita kieli ja asettaa kieliasetukset',
 	'uls-plang-title-languages' => 'Kielet',
-	'uls-preference' => 'Ota käyttöön [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Universal Language Selector]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Kieliasetukset',
 	'ext-uls-undo-language-tooltip-text' => 'Kieli vaihdettu kielestä $1',
 	'ext-uls-language-settings-preferences-link' => 'Lisää kieliasetuksia',
+	'uls-betafeature-label' => 'Kielilinkit tiivistetysti',
+	'uls-betafeature-desc' => 'Näytä lyhyempi versio kielilinkkilistasta, sisältäen vain kielet, jotka ovat osuvampia sinulle.',
 );
 
 /** French (français)
@@ -399,7 +401,7 @@ $messages['fr'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Paramètres de langue',
 	'ext-uls-undo-language-tooltip-text' => 'Langue modifiée de $1',
 	'ext-uls-language-settings-preferences-link' => 'Plus de paramètres de langue',
-	'uls-betafeature-label' => ' Compacter les liens de langue',
+	'uls-betafeature-label' => 'Compacter les liens de langue',
 	'uls-betafeature-desc' => 'Afficher une version abrégée de la liste des langues, avec juste les langues qui vous intéressent le plus.',
 );
 
@@ -571,7 +573,7 @@ $messages['ilo'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Dagiti disso ti pagsasao',
 	'ext-uls-undo-language-tooltip-text' => 'Binaliwan ti pagsasao manipud ti $1',
 	'ext-uls-language-settings-preferences-link' => 'Adu pay a disso ti pagsasao',
-	'uls-betafeature-label' => 'Kompakto a silsilpo ti pagsasao', # Fuzzy
+	'uls-betafeature-label' => 'Kompakto a silsilpo ti pagsasao',
 	'uls-betafeature-desc' => 'Ipakita ti ababa a bersion ti listaan ti pagsasao, ken dagiti laeng pagsasao a maitunos kaniam.',
 );
 
@@ -625,10 +627,11 @@ $messages['ka'] = array(
 $messages['kk-cyrl'] = array(
 	'UniversalLanguageSelector' => 'Әнбебаб тіл таңдаушы',
 	'uls-plang-title-languages' => 'Тілдер',
-	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Әмбебап тіл таңдаушыны] қосу',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Тіл баптаулары',
 	'ext-uls-undo-language-tooltip-text' => '$1 дегеннен тіл өзгертілді',
 	'ext-uls-language-settings-preferences-link' => 'Қосымша тіл баптаулары',
+	'uls-betafeature-label' => 'Тіл сілтемелерін ықшамдау',
+	'uls-betafeature-desc' => 'Тіл тізімін қызқа нұқсада көрсетеді',
 );
 
 /** Kannada (ಕನ್ನಡ)
@@ -854,6 +857,15 @@ $messages['nn'] = array(
 	'uls-plang-title-languages' => 'Språk',
 );
 
+/** Occitan (occitan)
+ * @author Cedric31
+ */
+$messages['oc'] = array(
+	'uls-desc' => 'Dona a l’utilizaire mantun biais de seleccionar una lenga e d’ajustar los paramètres de lenga',
+	'uls-betafeature-label' => ' Compactar los ligams de lenga',
+	'uls-betafeature-desc' => 'Afichar una version abreujada de la lista de las lengas, amb sonque las lengas que vos interèssan lo mai.',
+);
+
 /** Ossetic (Ирон)
  * @author Bouron
  */
@@ -914,6 +926,7 @@ $messages['ps'] = array(
  * @author Fúlvio
  * @author Imperadeiro98
  * @author SandroHc
+ * @author Vitorvicentevalente
  */
 $messages['pt'] = array(
 	'UniversalLanguageSelector' => 'Seletor Universal de Idiomas',
@@ -922,8 +935,8 @@ $messages['pt'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Configurações de idioma',
 	'ext-uls-undo-language-tooltip-text' => 'Idioma alterado para $1',
 	'ext-uls-language-settings-preferences-link' => 'Mais configurações de idioma',
-	'uls-betafeature-label' => 'Links de idioma compactos',
-	'uls-betafeature-desc' => 'Mostrar uma lista reduzida de linguagens, com apenas as linguagens mais relevantes para ti.',
+	'uls-betafeature-label' => 'Ligações de idioma compactadas',
+	'uls-betafeature-desc' => 'Mostra uma lista reduzida de idiomas, com apenas as línguas mais relevantes para si.',
 );
 
 /** Brazilian Portuguese (português do Brasil)
@@ -985,6 +998,12 @@ $messages['ru'] = array(
  * @author John Reid
  */
 $messages['sco'] = array(
+	'UniversalLanguageSelector' => 'Uneeversal Leid Selecter',
+	'uls-desc' => 'Gies the uiser several waas tae select ae leid n tae adjust leid settins',
+	'uls-plang-title-languages' => 'Leids',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Leid settins',
+	'ext-uls-undo-language-tooltip-text' => 'Leid chynged fae $1',
+	'ext-uls-language-settings-preferences-link' => 'Mair leid settins',
 	'uls-betafeature-label' => 'Compact leid links',
 	'uls-betafeature-desc' => 'Shaw ae shorter version o the leid leet, wi just the leids that ar mai reelevant fer ye.',
 );

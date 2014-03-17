@@ -2,7 +2,8 @@
     "@metadata": {
         "authors": [
             "Emperyan",
-            "Incelemeelemani"
+            "Incelemeelemani",
+            "Meelo"
         ]
     },
     "ext-uls-display-settings-title": "Ekran ayarları",
@@ -10,8 +11,6 @@
     "ext-uls-display-settings-fonts-tab": "Yazı tipleri",
     "ext-uls-display-settings-title-short": "Görünüm",
     "ext-uls-display-settings-desc": "Menüler ve yazı tipleri için kullanılan dili ayarlayın.",
-    "ext-uls-select-language-settings-icon-tooltip": "Dil ayarları",
-    "ext-uls-undo-language-tooltip-text": "Dil, $1 dilinden değiştirildi.",
     "ext-uls-language-settings-title": "Dil ayarları",
     "ext-uls-language-settings-apply": "Ayarları uygula",
     "ext-uls-language-settings-cancel": "İptal",
@@ -19,8 +18,11 @@
     "ext-uls-display-settings-font-settings": "Yazı tipi ayarları",
     "ext-uls-display-settings-ui-language": "Görüntüleme dili",
     "ext-uls-display-settings-anon-label": "Görüntüleme dili:",
-    "ext-uls-display-settings-anon-same-as-content": "Türkçe (içerik aynı)",
+    "ext-uls-display-settings-anon-same-as-content": "$1 (içerik ile aynı)",
     "ext-uls-display-settings-anon-log-in-cta": "Menüler için farklı bir dil seçmek için [[Special:UserLogin|oturum açın]].",
+    "ext-uls-webfonts-settings-title": "Gerektiğinde yazı tipi indir",
+    "ext-uls-webfonts-settings-info": "Otomatik olarak eksik yazı tiplerini indir ve tercih edilen yazı tiplerinin seçimine izin ver.",
+    "ext-uls-webfonts-settings-info-link": "Daha fazla bilgi",
     "ext-uls-webfonts-select-for": "$1 için yazı tipi seçin",
     "ext-uls-webfonts-select-for-ui-info": "Arayüz için kullanılan yazı tipi",
     "ext-uls-webfonts-select-for-content-info": "İçerik için kullanılan yazı tipi",
@@ -46,5 +48,6 @@
     "ext-uls-input-disable-notification-undo": "Geri al",
     "ext-uls-input-disable-notification-info-personal": "Dil ayarlarınızı istediğiniz zaman giriş araçlarından etkinleştirebilirsiniz.",
     "ext-uls-input-disable-notification-info-interlanguage": "Dil ayarlarını dil listesinin yanında bulunan giriş araçlarından etkinleştirebilirsiniz.",
-    "ext-uls-language-settings-preferences-link": "Daha fazla dil ayarları"
+    "ext-uls-language-settings-applying": "Uygulanıyor...",
+    "ext-uls-compact-link-count": "{{PLURAL:$1|Bir dil daha|$1 dilden fazla}}"
 }

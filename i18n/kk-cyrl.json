@@ -9,8 +9,6 @@
     "ext-uls-display-settings-fonts-tab": "Қаріптер",
     "ext-uls-display-settings-title-short": "Бейнебет",
     "ext-uls-display-settings-desc": "Қаріптер және мәзірлерде қолданылған тілді орнату.",
-    "ext-uls-select-language-settings-icon-tooltip": "Тіл баптаулары",
-    "ext-uls-undo-language-tooltip-text": "$1 дегеннен тіл өзгертілді",
     "ext-uls-language-settings-title": "Тіл баптаулары",
     "ext-uls-language-settings-apply": "Баптауларды қолдану",
     "ext-uls-language-settings-cancel": "Болдырмау",
@@ -18,8 +16,10 @@
     "ext-uls-display-settings-font-settings": "Қаріп баптаулары",
     "ext-uls-display-settings-ui-language": "Бейнебет тілі",
     "ext-uls-display-settings-anon-label": "Бейнебет тілі:",
-    "ext-uls-display-settings-anon-same-as-content": "Ағылшынша (кейбір контент үшін)",
+    "ext-uls-display-settings-anon-same-as-content": "$1 (кейбір контент үшін)",
     "ext-uls-display-settings-anon-log-in-cta": "Мәзір үшін басқа тілді таңдау үшін [[Special:UserLogin|кіріңіз]].",
+    "ext-uls-webfonts-settings-title": "Қаріпті түсіріп алуды қажет етеді",
+    "ext-uls-webfonts-settings-info-link": "Толығырақ мәлімет",
     "ext-uls-webfonts-select-for": "$1 үшін қаріп таңдау",
     "ext-uls-webfonts-select-for-ui-info": "Қатысушы интерфейсі үшін қолданылған қаріп",
     "ext-uls-webfonts-select-for-content-info": "Мағұлымат үшін қолданылған қаріп",
@@ -40,9 +40,11 @@
     "ext-uls-input-disable": "Енгізу құралдарын өшіру",
     "ext-uls-input-enable": "Енгізу құралдарын қосу",
     "ext-uls-input-disable-info": "Енгізу құралдары өшірілген.",
+    "ext-uls-input-settings-noime": "Бұл тіл үшін енгізу әдістері қолжетімді емес",
     "ext-uls-input-disable-notification": "Енгізу құралдары өшірілді",
     "ext-uls-input-disable-notification-undo": "Болдырмау",
     "ext-uls-input-disable-notification-info-personal": "Сіз тіл баптауларынан кез келген уақытта енгізу құралдарын қоса аласыз.",
     "ext-uls-input-disable-notification-info-interlanguage": "Сіз тіл баптаулары тіл тізімі қатарынан кез келген уақытта енгізу құралдарын қоса аласыз.",
-    "ext-uls-language-settings-preferences-link": "Қосымша тіл баптаулары"
+    "ext-uls-language-settings-applying": "Қолданылуда...",
+    "ext-uls-compact-link-count": "{{PLURAL:$1|тағы бір тілде|тағы $1 тілде}}"
 }
