@@ -1168,7 +1168,7 @@ $messages['vi'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Tùy chọn ngôn ngữ',
 	'ext-uls-undo-language-tooltip-text' => 'Đã đổi ngôn ngữ từ $1',
 	'ext-uls-language-settings-preferences-link' => 'Thêm tùy chọn ngôn ngữ',
-	'uls-betafeature-label' => 'Thu gọn các liên kết ngôn ngữ', # Fuzzy
+	'uls-betafeature-label' => 'Danh sách liên kết ngôn ngữ thu gọn',
 	'uls-betafeature-desc' => 'Thu gọn danh sách các liên kết giữa ngôn ngữ để chỉ hiển thị các ngôn ngữ mà bạn có thể muốn sử dụng.',
 );
 
