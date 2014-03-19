@@ -71,7 +71,7 @@ class ResourceLoaderULSModule extends ResourceLoaderModule {
 		// cache the hash per language to avoid updating the timestamp when
 		// different languages are being requested.
 		$key = wfMemcKey(
-			'resourceloader',
+			'uls',
 			'modulemodifiedhash',
 			$this->getName(),
 			$languageCode
