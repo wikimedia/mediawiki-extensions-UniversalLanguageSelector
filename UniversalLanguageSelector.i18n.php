@@ -70,6 +70,7 @@ This description is for the checkbox label {{msg-mw|Uls-betafeature-label}}.',
 );
 
 /** Arabic (العربية)
+ * @author Asaifm
  * @author Tarawneh
  * @author ترجمان05
  * @author زكريا
@@ -78,10 +79,11 @@ $messages['ar'] = array(
 	'UniversalLanguageSelector' => 'محدد اللغات الشامل',
 	'uls-desc' => 'يمنح المستخدم عدة طرق لاختيار لغة، وضبط إعدادات اللغة',
 	'uls-plang-title-languages' => 'لغات',
-	'uls-preference' => 'شغل [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector محدد اللغات الشامل]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'إعدادات اللغة',
 	'ext-uls-undo-language-tooltip-text' => 'غيرت اللغة من $1',
 	'ext-uls-language-settings-preferences-link' => 'المزيد من إعدادات اللغة',
+	'uls-betafeature-label' => 'روابط اللغة المدمجة',
+	'uls-betafeature-desc' => 'تقوم بإظهار قائمة مختصرة للغات، حيث تعمل الخاصية على إظهار اللغات التي تهمك أكثر.',
 );
 
 /** Aramaic (ܐܪܡܝܐ)
@@ -198,10 +200,11 @@ $messages['cs'] = array(
 	'UniversalLanguageSelector' => 'Univerzální výběr jazyka',
 	'uls-desc' => 'Nabízí uživateli několik způsobů volby jazyka a úpravy jazykových nastavení',
 	'uls-plang-title-languages' => 'Jazyky',
-	'uls-preference' => 'Zapnout [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Univerzální výběr jazyka]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Jazyková nastavení',
 	'ext-uls-undo-language-tooltip-text' => 'Jazyk změněn z $1',
 	'ext-uls-language-settings-preferences-link' => 'Další jazyková nastavení',
+	'uls-betafeature-label' => 'Kompaktní mezijazykové odkazy',
+	'uls-betafeature-desc' => 'Zobrazovat kratší verzi seznamu jazyků, obsahující jen jazyky, které jsou pro vás důležité.',
 );
 
 /** Church Slavic (словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
@@ -777,10 +780,10 @@ $messages['ml'] = array(
 	'UniversalLanguageSelector' => 'ആഗോള ഭാഷാസഹായി',
 	'uls-desc' => 'ഭാഷ തിരഞ്ഞെടുക്കുന്നതിനും സജ്ജീകരിക്കുന്നതിനുമുള്ള സംവിധാനം',
 	'uls-plang-title-languages' => 'ഭാഷകൾ',
-	'uls-preference' => '[https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector യൂണിവേഴ്സൽ ലാങ്വേജ് സെലക്റ്റർ] സജ്ജമാക്കുക',
 	'ext-uls-select-language-settings-icon-tooltip' => 'ഭാഷാ സജ്ജീകരണങ്ങൾ',
 	'ext-uls-undo-language-tooltip-text' => 'ഭാഷ മാറിയിരിക്കുന്നു. പഴയ ഭാഷ: $1',
 	'ext-uls-language-settings-preferences-link' => 'കൂടുതൽ ഭാഷാസജ്ജീകരണങ്ങൾ',
+	'uls-betafeature-label' => 'ഒതുക്കമുള്ള ഭാഷാ കണ്ണികൾ',
 );
 
 /** Mongolian (монгол)

@@ -50,5 +50,5 @@
     "ext-uls-input-disable-notification-info-personal": "Pode activar as ferramentas de entrada quando quiser a partir das configurações de idioma.",
     "ext-uls-input-disable-notification-info-interlanguage": "Pode activar as ferramentas de entrada quando quiser a partir das configurações de idioma, ao lado da lista de idiomas.",
     "ext-uls-language-settings-applying": "A aplicar...",
-    "ext-uls-compact-link-count": "{{PLURAL:$1|Um idioma mais|$1 mais idiomas}}"
+    "ext-uls-compact-link-count": "{{PLURAL:$1|Um outro idioma|$1 outros idiomas}}"
 }
