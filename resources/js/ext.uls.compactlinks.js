@@ -198,7 +198,7 @@
 			currentLangs = getInterlanguageList(),
 			numLanguages = 9,
 			minLanguages = 7,
-			flagForNumberOfLangs = 0, i,
+			i,
 			finalList; //Final list of languages to be displayed on page
 
 		if ( $numOfLangCurrently > 9) {
@@ -206,7 +206,6 @@
 			if ( $numOfLangCurrently > 9 && $numOfLangCurrently <= 12 ) {
 				finalList = displayLanguages( minLanguages );
 			} else {
-				flagForNumberOfLangs = 1;
 				finalList = displayLanguages( numLanguages );
 			}
 
@@ -215,11 +214,7 @@
 			}
 
 			addULSlink();
-			if ( !flagForNumberOfLangs ) {
-				addLabel( $numOfLangCurrently, minLanguages );
-			} else {
-				addLabel( $numOfLangCurrently, numLanguages );
-			}
+			addLabel( $numOfLangCurrently, finalList.length );
 		}
 	}
 
