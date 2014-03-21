@@ -49,5 +49,6 @@
     "ext-uls-input-disable-notification-undo": "തിരസ്ക്കരിക്കുക",
     "ext-uls-input-disable-notification-info-personal": "ഭാഷാ സജ്ജീകരണങ്ങൾ ഉപയോഗിച്ച് താങ്കൾക്ക് എഴുത്തുപകരണം വീണ്ടും പ്രവർത്തനസജ്ജമാക്കാം.",
     "ext-uls-input-disable-notification-info-interlanguage": "ഭാഷകളുടെ പട്ടികയ്ക്കടുത്തുള്ള ഭാഷാ സജ്ജീകരണങ്ങൾ ഉപയോഗിച്ച് താങ്കൾക്ക് എഴുത്തുപകരണം വീണ്ടും പ്രവർത്തനസജ്ജമാക്കാം.",
-    "ext-uls-language-settings-applying": "സജ്ജമാക്കുന്നു..."
+    "ext-uls-language-settings-applying": "സജ്ജമാക്കുന്നു...",
+    "ext-uls-compact-link-count": "{{PLURAL:$1|ഒരു ഭാഷ കൂടി|$1 ഭാഷകൾ കൂടി}}"
 }

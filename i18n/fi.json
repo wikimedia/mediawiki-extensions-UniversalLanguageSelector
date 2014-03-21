@@ -5,7 +5,8 @@
             "Nedergard",
             "Nike",
             "Olli",
-            "Pxos"
+            "Pxos",
+            "Stryn"
         ]
     },
     "ext-uls-display-settings-title": "Näyttöasetukset",
@@ -47,5 +48,6 @@
     "ext-uls-input-disable-info": "Syöttötavat eivät ole käytössä.",
     "ext-uls-input-settings-noime": "Tälle kielelle ei ole syöttötapoja.",
     "ext-uls-input-disable-notification": "Syöttötavat ovat poistettu käytöstä.",
-    "ext-uls-input-disable-notification-undo": "Kumoa"
+    "ext-uls-input-disable-notification-undo": "Kumoa",
+    "ext-uls-compact-link-count": "$1 {{PLURAL:$1|kieli|kieltä}} lisää"
 }
