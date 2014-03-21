@@ -80,6 +80,7 @@ $wgResourceModules['ext.uls.init'] = array(
 $wgResourceModules['ext.uls.eventlogger'] = array(
 	'scripts' => 'resources/js/ext.uls.eventlogger.js',
 	'dependencies' => array(
+		'mediawiki.user',
 		'schema.UniversalLanguageSelector',
 		'schema.UniversalLanguageSelector-tofu',
 	),
