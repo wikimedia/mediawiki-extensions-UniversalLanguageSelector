@@ -1,5 +1,5 @@
 Given(/^that my browser's accept language is (.+)$/) do |language|
-  @browser = browser(environment, test_name(@scenario), language)
+  @browser = browser(test_name(@scenario), {language: language})
   $session_id = @browser.driver.instance_variable_get(:@bridge).session_id
 end
 
