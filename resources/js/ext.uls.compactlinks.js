@@ -196,19 +196,27 @@
 	function manageInterlaguageList() {
 		var $numOfLangCurrently = $( '.interlanguage-link' ).length,
 			currentLangs = getInterlanguageList(),
-			numLanguages = 9,
-			minLanguages = 7,
+			longListLength = 9,
+			maxLanguageCheck = 12,
+			shortListLength = 7,
 			i,
-			finalList; //Final list of languages to be displayed on page
+			finalList; // Final list of languages to be displayed on page
 
-		if ( $numOfLangCurrently > 9) {
+		// If the total number of languages are between 9(longListLength) and 12(inclusive) then
+		// we show only 7 (shortListLength) languages (to avoid displaying "2/3 more languages")
+		// Else, we show 9 languages. Please note that as per the current design of the system, this
+		// does not always hold true. The language list might exceed 9. This will be fixed as we refine
+		// the algo for the languages being shown.
+
+		if ( $numOfLangCurrently > longListLength ) {
 			hideLanguages();
-			if ( $numOfLangCurrently > 9 && $numOfLangCurrently <= 12 ) {
-				finalList = displayLanguages( minLanguages );
+			if ( $numOfLangCurrently > longListLength && $numOfLangCurrently <= maxLanguageCheck ) {
+				finalList = displayLanguages( shortListLength );
 			} else {
-				finalList = displayLanguages( numLanguages );
+				finalList = displayLanguages( longListLength );
 			}
 
+			// Output all the languages we have in the finalList to the page
 			for ( i in finalList ) {
 				addLanguage( $.uls.data.getAutonym( finalList[i] ), currentLangs[ finalList[i] ] );
 			}
