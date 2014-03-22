@@ -848,7 +848,7 @@ $messages['nl'] = array(
 	'ext-uls-select-language-settings-icon-tooltip' => 'Taalinstellingen',
 	'ext-uls-undo-language-tooltip-text' => 'Taal gewijzigd van $1',
 	'ext-uls-language-settings-preferences-link' => 'Meer taalinstellingen',
-	'uls-betafeature-label' => "Lijst van interwiki's inkorten", # Fuzzy
+	'uls-betafeature-label' => 'Compacte taalkoppelingen',
 );
 
 /** Norwegian Nynorsk (norsk nynorsk)
