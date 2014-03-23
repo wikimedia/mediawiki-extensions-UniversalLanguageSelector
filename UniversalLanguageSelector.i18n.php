@@ -507,10 +507,11 @@ $messages['hi'] = array(
  */
 $messages['hr'] = array(
 	'uls-plang-title-languages' => 'jezične postavke',
-	'uls-preference' => 'Omogući [https://www.mediawiki.org/wiki/Special:MyLanguage/Universal_Language_Selector Universal Language Selector]',
 	'ext-uls-select-language-settings-icon-tooltip' => 'Jezične postavke',
 	'ext-uls-undo-language-tooltip-text' => 'Jezik promijenjen, prethodno je bio postavljen $1',
 	'ext-uls-language-settings-preferences-link' => 'Više jezičnih postavki',
+	'uls-betafeature-label' => 'Sažete poveznice na druge jezike',
+	'uls-betafeature-desc' => 'Kraći popis s poveznicama na druge jezike, samo s jezicima koji su Vam najvažniji.',
 );
 
 /** Upper Sorbian (hornjoserbsce)
@@ -849,6 +850,7 @@ $messages['nl'] = array(
 	'ext-uls-undo-language-tooltip-text' => 'Taal gewijzigd van $1',
 	'ext-uls-language-settings-preferences-link' => 'Meer taalinstellingen',
 	'uls-betafeature-label' => 'Compacte taalkoppelingen',
+	'uls-betafeature-desc' => 'Een kortere versie van de talenlijst weergeven, met alleen de talen die het meest relevant zijn voor u.',
 );
 
 /** Norwegian Nynorsk (norsk nynorsk)
