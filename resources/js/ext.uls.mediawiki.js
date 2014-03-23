@@ -21,7 +21,7 @@
 
 	// MediaWiki overrides for ULS defaults
 	$.fn.uls.defaults = $.extend( $.fn.uls.defaults, {
-		languages: mw.config.get( 'wgULSLanguages' ),
+		languages: mw.config.get( 'wgULSLanguages' ) || {},
 		searchAPI: mw.util.wikiScript( 'api' ) + '?action=languagesearch'
 	} );
 
