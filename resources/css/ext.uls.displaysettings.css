@@ -24,10 +24,6 @@ div.display-settings-block {
 }
 
 .uls-button-group > button.button {
-	-moz-border-radius: 0;
-	-ms-border-radius: 0;
-	-o-border-radius: 0;
-	-webkit-border-radius: 0;
 	border-radius: 0;
 	float: left;
 	padding: 8px 10px;
@@ -36,20 +32,12 @@ div.display-settings-block {
 }
 
 .uls-button-group > button.button:first-child {
-	-moz-border-radius-topleft: 3px;
-	-webkit-border-top-left-radius: 3px;
 	border-top-left-radius: 3px;
-	-moz-border-radius-bottomleft: 3px;
-	-webkit-border-bottom-left-radius: 3px;
 	border-bottom-left-radius: 3px;
 }
 
 .uls-button-group > button.button:last-child {
-	-moz-border-radius-topright: 3px;
-	-webkit-border-top-right-radius: 3px;
 	border-top-right-radius: 3px;
-	-moz-border-radius-bottomright: 3px;
-	-webkit-border-bottom-right-radius: 3px;
 	border-bottom-right-radius: 3px;
 }
 
