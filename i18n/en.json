@@ -1,11 +1,22 @@
 {
 "@metadata": {
 	"authors": [
+		"Nike",
+		"Kunal Mehta",
+		"Niharika",
 		"Amire80",
 		"Santhosh Thottingal"
 	],
 	"message-documentation": "qqq"
 },
+"uls-desc": "Gives the user several ways to select a language and to adjust language settings",
+"uls-plang-title-languages": "Languages",
+"uls-ime-helppage": "https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/$1",
+"ext-uls-select-language-settings-icon-tooltip": "Language settings",
+"ext-uls-undo-language-tooltip-text": "Language changed from $1",
+"ext-uls-language-settings-preferences-link": "More language settings",
+"uls-betafeature-label": "Compact language links",
+"uls-betafeature-desc": "Show a shorter version of the language list, with just the languages that are more relevant to you.",
 "ext-uls-display-settings-title": "Display settings",
 "ext-uls-display-settings-language-tab": "Language",
 "ext-uls-display-settings-fonts-tab": "Fonts",
