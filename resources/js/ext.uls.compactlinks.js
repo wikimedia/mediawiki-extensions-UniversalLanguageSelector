@@ -94,6 +94,14 @@
 	}
 
 	/**
+	 * Push the selected language into the previous languages list
+	 * @param {string} Language code of language selected (clicked on)
+	 */
+	function insertPreviousLanguage( currentLang ) {
+		mw.uls.insertPreviousLanguage( currentLang );
+	}
+
+	/**
 	 * Add a ULS trigger beneath the interlanguage links
 	 */
 	function addULSlink() {
@@ -118,6 +126,8 @@
 
 			onSelect: function( language ) {
 				supportedLangs = getInterlanguageList();
+				// To set selected language as a previous language
+				insertPreviousLanguage( language );
 				window.location.href = supportedLangs[language];
 			},
 
@@ -145,20 +155,34 @@
 	 */
 	function displayLanguages( numberOfLanguagesToShow ) {
 		var commonLang = getCommonLanguages(),
-			currentLangs = getInterlanguageList(), i,
+			acceptedLangs = $.map( getCurrentLanguages(), function ( element, index ) {
+				return index;
+			} ), i,
+			prevLangs = mw.uls.getPreviousLanguages(),
 			count,
 			finalList = [];
 
-		// Check existing languages for ones in common, and add them to final list
+		// Add languages in the common list and accepted by article
 		for ( i = 0; i < commonLang.length; i++ ) {
 			finalList.push( commonLang[i] );
 		}
 
-		count = commonLang.length;
+		// Add languages in previous choices to list if not already in it
+		for ( i = 0; i < prevLangs.length; i++ ) {
+			if (
+				$.inArray( prevLangs[i], finalList ) < 0 &&
+				$.inArray( prevLangs[i], acceptedLangs ) >= 0
+			) {
+				finalList.push( prevLangs[i] );
+			}
+		}
+
+		// Add random languages to make the language list long enough, if it isn't already
+		count = finalList.length;
 		if ( count < numberOfLanguagesToShow ) {
-			for ( i in currentLangs ) {
-				if ( $.inArray( i, commonLang ) === -1 ) {
-					finalList.push( i );
+			for ( i = 0; i < acceptedLangs.length; i++ ) {
+				if ( $.inArray( acceptedLangs[i], finalList ) < 0 ) {
+					finalList.push( acceptedLangs[i] );
 					count++;
 					if ( count === numberOfLanguagesToShow ) {
 						break;

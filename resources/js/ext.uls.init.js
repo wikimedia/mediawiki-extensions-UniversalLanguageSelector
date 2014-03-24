@@ -121,6 +121,25 @@
 	};
 
 	/**
+	 * Push the selected language into the previous languages list
+	 * if it isn't there already
+	 * @param {string} Language code of language to be pushed into list
+	 */
+	mw.uls.insertPreviousLanguage = function ( prevLangCode ) {
+		var previousLanguages = mw.uls.getPreviousLanguages() || [],
+			currentLangIndex;
+		// Checking if it already exists in array
+		currentLangIndex = $.inArray( prevLangCode, previousLanguages );
+		if ( currentLangIndex < 0 ) {
+			previousLanguages.push( prevLangCode );
+		} else {
+			previousLanguages.splice( currentLangIndex, 1 );
+			previousLanguages.push( prevLangCode );
+		}
+		mw.uls.setPreviousLanguages( previousLanguages );
+	};
+
+	/**
 	 * Returns the browser's user interface language or the system language.
 	 * The caller should check the validity of the returned language code.
 	 *
