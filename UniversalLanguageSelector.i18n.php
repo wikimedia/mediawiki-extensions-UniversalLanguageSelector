@@ -143,10 +143,11 @@ $messages['bn'] = array(
 	'UniversalLanguageSelector' => 'ইউনিভার্সাল ল্যাঙ্গুয়েজ সিলেক্টর',
 	'uls-desc' => 'ব্যবহারকারীকে ভাষা নির্বাচন এবং ভাষা সম্পর্কিত সেটিং সমন্বয়ের বিভিন্ন উপায় দেয়',
 	'uls-plang-title-languages' => 'ভাষা',
-	'uls-preference' => '[https://www.mediawiki.org/wiki/Universal_Language_Selector/bn ইউনিভার্সাল ল্যাঙ্গুয়েজ সিলেক্টর] সক্রিয় করো',
 	'ext-uls-select-language-settings-icon-tooltip' => 'ভাষা সেটিং',
 	'ext-uls-undo-language-tooltip-text' => '$1 হতে ভাষার পরিবর্তন',
 	'ext-uls-language-settings-preferences-link' => 'আরও ভাষা সেটিং',
+	'uls-betafeature-label' => 'সংক্ষেপিত ভাষা সংযোগ',
+	'uls-betafeature-desc' => 'অন্যান্য ভাষাসমূহের সাথে ভাষার তালিকার একটি সংক্ষিপ্ত সংস্করণ দেখাবে, যা আপনার কাছে আরো বেশি প্রাসঙ্গিক।',
 );
 
 /** Breton (brezhoneg)
@@ -415,6 +416,11 @@ $messages['frr'] = array(
 	'UniversalLanguageSelector' => 'Universal Language Selector',
 	'uls-desc' => 'Maaget det mögelk, en spriak ütjtuschüken an spriakiinstelangen tu feranrin',
 	'uls-plang-title-languages' => 'Spriaken',
+	'ext-uls-select-language-settings-icon-tooltip' => 'Spriakiinstelangen',
+	'ext-uls-undo-language-tooltip-text' => 'Spriak feranert faan $1',
+	'ext-uls-language-settings-preferences-link' => 'Muar spriakiinstelangen',
+	'uls-betafeature-label' => 'Tuupfaadet spriaklinks',
+	'uls-betafeature-desc' => 'Wiset en kurter spriakenlist mä för di wichtag spriaken.',
 );
 
 /** Friulian (furlan)
@@ -785,6 +791,7 @@ $messages['ml'] = array(
 	'ext-uls-undo-language-tooltip-text' => 'ഭാഷ മാറിയിരിക്കുന്നു. പഴയ ഭാഷ: $1',
 	'ext-uls-language-settings-preferences-link' => 'കൂടുതൽ ഭാഷാസജ്ജീകരണങ്ങൾ',
 	'uls-betafeature-label' => 'ഒതുക്കമുള്ള ഭാഷാ കണ്ണികൾ',
+	'uls-betafeature-desc' => 'താങ്കളെ സംബന്ധിച്ച് പ്രസക്തമായ ഭാഷകൾ മാത്രം ഉൾപ്പെടുന്ന, ചുരുക്കിയ ഭാഷകളുടെ പട്ടിക പ്രദർശിപ്പിക്കുക.',
 );
 
 /** Mongolian (монгол)
