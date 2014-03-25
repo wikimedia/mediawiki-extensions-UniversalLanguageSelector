@@ -26,8 +26,8 @@
     "ext-uls-display-settings-anon-label": "Jazyk rozhraní:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (jako obsah)",
     "ext-uls-display-settings-anon-log-in-cta": "Jiný jazyk pro nabídky si můžete zvolit po [[Special:UserLogin|přihlášení]].",
-    "ext-uls-webfonts-settings-title": "V případě potřeby stáhnout písmo",
-    "ext-uls-webfonts-settings-info": "Pro zobrazení textu ve zvláštních písmech se stáhnou webová písma.",
+    "ext-uls-webfonts-settings-title": "V případě potřeby stáhnout písma",
+    "ext-uls-webfonts-settings-info": "Stahuje chybějící písma automaticky a umožňuje volbu preferovaných písem.",
     "ext-uls-webfonts-settings-info-link": "Více informací",
     "ext-uls-webfonts-select-for": "Vyberte písmo pro jazyk $1",
     "ext-uls-webfonts-select-for-ui-info": "Písmo používané pro uživatelské rozhraní",
@@ -54,5 +54,6 @@
     "ext-uls-input-disable-notification-undo": "Zpět",
     "ext-uls-input-disable-notification-info-personal": "Nástroje pro vstup můžete kdykoli zapnout v jazykových nastaveních.",
     "ext-uls-input-disable-notification-info-interlanguage": "Nástroje pro vstup můžete kdykoli zapnout v jazykových nastaveních vedle seznamu jazyků.",
-    "ext-uls-language-settings-applying": "Provádí se…"
+    "ext-uls-language-settings-applying": "Provádí se…",
+    "ext-uls-compact-link-count": "$1 {{PLURAL:$1|další jazyk|další jazyky|dalších jazyků}}"
 }

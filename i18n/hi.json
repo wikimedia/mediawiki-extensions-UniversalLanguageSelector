@@ -3,7 +3,8 @@
         "authors": [
             "Siddhartha Ghai",
             "Vdhatterwal",
-            "Vivek Rai"
+            "Vivek Rai",
+            "Goelujjwal"
         ]
     },
     "uls-desc": "सदस्य को भाषा चुनने और भाषा विकल्प बदलने के कई तरीके देता है",
@@ -13,17 +14,17 @@
     "ext-uls-language-settings-preferences-link": "अधिक भाषा विकल्प",
     "ext-uls-display-settings-title": "दृश्यता विकल्प",
     "ext-uls-display-settings-language-tab": "भाषा",
-    "ext-uls-display-settings-fonts-tab": "फ़ॉण्ट",
+    "ext-uls-display-settings-fonts-tab": "टंकन (फ़ॉण्ट)",
     "ext-uls-display-settings-title-short": "प्रदर्शन",
     "ext-uls-display-settings-desc": "मेन्यू और फ़ॉण्ट में प्रयोग हेतु भाषा सेट करें",
     "ext-uls-language-settings-title": "भाषा विकल्प",
     "ext-uls-language-settings-apply": "सेटिंग लागू करें",
     "ext-uls-language-settings-cancel": "रद्द करें",
     "ext-uls-language-buttons-help": "मेन्यू की भाषा बदलें। सामग्री की भाषा पर असर नहीं पड़ेगा।",
-    "ext-uls-display-settings-font-settings": "फ़ॉण्ट विकल्प",
+    "ext-uls-display-settings-font-settings": "टंकन विकल्प",
     "ext-uls-display-settings-ui-language": "प्रदर्शन भाषा",
     "ext-uls-display-settings-anon-label": "प्रदर्शन भाषा:",
-    "ext-uls-display-settings-anon-same-as-content": "$1(सामग्री के समान)",
+    "ext-uls-display-settings-anon-same-as-content": "$1 (सामग्री के समान)",
     "ext-uls-display-settings-anon-log-in-cta": "मेन्यू में किसी अन्य भाषा का चुनाव करने के लिए [[Special:UserLogin|लॉग इन]] करें।",
     "ext-uls-webfonts-settings-title": "ज़रूरत अनुसार फ़ॉण्ट डाउनलोड करें",
     "ext-uls-webfonts-settings-info": "जो फ़ॉण्ट मौजूद नहीं हैं स्वचालित रूप से डाउनलोड करें और पसंद अनुसार फ़ॉण्ट चुनने का विकल्प दें।",
