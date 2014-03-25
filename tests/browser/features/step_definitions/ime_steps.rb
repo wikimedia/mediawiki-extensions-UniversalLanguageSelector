@@ -54,6 +54,10 @@ When(/^I press Control-M$/) do
   on(IMEPage).search_input_element.send_keys [:control, "m"]
 end
 
+When(/^I reload the page$/) do
+  @browser.refresh
+end
+
 Then(/^in it there must be an element with Malayalam text$/) do
   # 'input_method_enabled' alone only returns []
   on(IMEPage) do |page|
