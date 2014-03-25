@@ -1,8 +1,14 @@
 {
     "@metadata": {
         "authors": [
-            "Noor2020"
+            "Noor2020",
+            "Muhammad Shuaib"
         ]
     },
+    "uls-desc": "صارف کو زبان کے انتخاب اور زبان کی ترتیبات کی تنظیم کے لیے متعدد راہیں فراہم کرتا ہے",
+    "uls-plang-title-languages": "زبانیں",
+    "ext-uls-select-language-settings-icon-tooltip": "زبان کی ترتیبات",
+    "ext-uls-undo-language-tooltip-text": "$1 سے زبان تبدیل ہوگئی",
+    "ext-uls-language-settings-preferences-link": "مزید ترتیبات زبان",
     "ext-uls-language-buttons-help": "مینیو کی زبان تبدیل کریں ۔ مواد کی بولی اثرانداز نہیں ہوں گے ۔"
 }

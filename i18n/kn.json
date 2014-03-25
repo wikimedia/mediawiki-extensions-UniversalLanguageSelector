@@ -4,13 +4,16 @@
             "Akoppad"
         ]
     },
+    "uls-desc": "ಬಳಕೆದಾರರಿಗೆ ಭಾಷೆಯನ್ನು ಆರಿಸಲು ಮತ್ತು ಭಾಷೆಯ ವ್ಯವಸ್ಥೆಗಳನ್ನು ಹೊಂದಿಸಲು ಹಲವಾರು ಮಾರ್ಗಗಳನ್ನು ನೀಡುತ್ತದೆ",
+    "uls-plang-title-languages": "ಭಾಷೆಗಳು",
+    "ext-uls-select-language-settings-icon-tooltip": "ಭಾಷಾ ವ್ಯವಸ್ಥೆಗಳು",
+    "ext-uls-undo-language-tooltip-text": "ಈ ಭಾಷೆಯಿಂದ $1  ಬದಲಾಗಿಸಿದೆ",
+    "ext-uls-language-settings-preferences-link": "ನಾನಾ ಭಾಷಾ ವ್ಯವಸ್ಥೆಗಳು",
     "ext-uls-display-settings-title": "ಪ್ರದರ್ಶಿಸಿಕ ನಿಲುವುಗಳು",
     "ext-uls-display-settings-language-tab": "ಭಾಷೆ",
     "ext-uls-display-settings-fonts-tab": "ಲಿಪಿ",
     "ext-uls-display-settings-title-short": "ಪ್ರದರ್ಶಿಸು",
     "ext-uls-display-settings-desc": " ಸಲಹಾಕಾರಗಳಿಗೆ ಮತ್ತು ಲಿಪಿಗಳಿಗೆ ಭಾಷೆಯನ್ನು  ಸ್ಥಾಪಿಸಿ",
-    "ext-uls-select-language-settings-icon-tooltip": "ಭಾಷಾ ವ್ಯವಸ್ಥೆಗಳು",
-    "ext-uls-undo-language-tooltip-text": "ಈ ಭಾಷೆಯಿಂದ $1  ಬದಲಾಗಿಸಿದೆ",
     "ext-uls-language-settings-title": "ಭಾಷಾ ವ್ಯವಸ್ಥೆಗಳು",
     "ext-uls-language-settings-apply": "ನಿಲುವುಗಳನ್ನು ಹೊಂದಿಸಿ",
     "ext-uls-language-settings-cancel": "ರದ್ದು ಮಾಡು",
@@ -34,6 +37,5 @@
     "ext-uls-input-disable-notification": "ಒಳಗೆ ಸೇರಿಸುವ ಸಲಕರಣೆಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿಲಾಗಿದೆ",
     "ext-uls-input-disable-notification-undo": "ಕಳಚು",
     "ext-uls-input-disable-notification-info-personal": "ನೀವು ಒಳಗೆ ಹಾಕುವ ಸಾದನಗಳನ್ನು ಭಾಷೆಯ ಭಂಗಿಯಲ್ಲಿ ಯಾವಾಗ ಬೇಕಾದರೂ ಸಕ್ರಿಯಗೊಳಿಸಬಹದು",
-    "ext-uls-input-disable-notification-info-interlanguage": "ಭಾಷೆಗಳ ಪಟ್ಟಿಯ ಪಕ್ಕದಲ್ಲಿರುವ ಭಾಷೆಯ ಭಂಗಿಯಯಿಂದ ನೀವು ಒಳಗೆ ಹಾಕುವ ಸಾದನಗಳನ್ನು ಯಾವಾಗ ಬೇಕಾದರೂ ಸಕ್ರಿಯಗೊಳಿಸಬಹದು",
-    "ext-uls-language-settings-preferences-link": "ನಾನಾ ಭಾಷಾ ವ್ಯವಸ್ಥೆಗಳು"
+    "ext-uls-input-disable-notification-info-interlanguage": "ಭಾಷೆಗಳ ಪಟ್ಟಿಯ ಪಕ್ಕದಲ್ಲಿರುವ ಭಾಷೆಯ ಭಂಗಿಯಯಿಂದ ನೀವು ಒಳಗೆ ಹಾಕುವ ಸಾದನಗಳನ್ನು ಯಾವಾಗ ಬೇಕಾದರೂ ಸಕ್ರಿಯಗೊಳಿಸಬಹದು"
 }

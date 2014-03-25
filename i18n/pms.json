@@ -5,6 +5,11 @@
             "Dragonòt"
         ]
     },
+    "uls-desc": "A dà a l'utent vàire manere ëd selessioné na lenga e ëd sistemé j'ampostassion ëd lenga",
+    "uls-plang-title-languages": "Lenghe",
+    "ext-uls-select-language-settings-icon-tooltip": "Paràmeter ëd lenga",
+    "ext-uls-undo-language-tooltip-text": "Lenga cangià da $1",
+    "ext-uls-language-settings-preferences-link": "Pi d'ampostassion ëd lenga",
     "ext-uls-display-settings-title": "Ampostassion ëd visualisassion",
     "ext-uls-display-settings-language-tab": "Lenga",
     "ext-uls-display-settings-fonts-tab": "Tipo ëd caràter",

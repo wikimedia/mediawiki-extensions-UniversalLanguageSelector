@@ -4,6 +4,13 @@
             "Murma174"
         ]
     },
+    "uls-desc": "Maaget det mögelk, en spriak ütjtuschüken an spriakiinstelangen tu feranrin",
+    "uls-plang-title-languages": "Spriaken",
+    "ext-uls-select-language-settings-icon-tooltip": "Spriakiinstelangen",
+    "ext-uls-undo-language-tooltip-text": "Spriak feranert faan $1",
+    "ext-uls-language-settings-preferences-link": "Muar spriakiinstelangen",
+    "uls-betafeature-label": "Tuupfaadet spriaklinks",
+    "uls-betafeature-desc": "Wiset en kurter spriakenlist mä för di wichtag spriaken.",
     "ext-uls-display-settings-title": "Iinstelangen för't uunwisin",
     "ext-uls-display-settings-language-tab": "Spriak",
     "ext-uls-display-settings-fonts-tab": "Skraften",

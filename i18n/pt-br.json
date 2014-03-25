@@ -7,6 +7,11 @@
             "Helder.wiki"
         ]
     },
+    "uls-desc": "Oferece ao usuário várias maneiras para selecionar um idioma e ajustar as configurações de idioma",
+    "uls-plang-title-languages": "Idiomas",
+    "ext-uls-select-language-settings-icon-tooltip": "Configurações de idioma",
+    "ext-uls-undo-language-tooltip-text": "Idioma foi mudado de $1",
+    "ext-uls-language-settings-preferences-link": "Mais configurações de idioma",
     "ext-uls-display-settings-title": "Exibir configurações",
     "ext-uls-display-settings-language-tab": "Idioma",
     "ext-uls-display-settings-fonts-tab": "Fontes",

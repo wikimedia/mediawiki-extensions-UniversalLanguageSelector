@@ -2,9 +2,17 @@
     "@metadata": {
         "authors": [
             "Lloffiwr",
-            "Robin Owain"
+            "Robin Owain",
+            "Nemo bis"
         ]
     },
+    "uls-desc": "Yn cynnig sawl ffordd i'r defnyddiwr allu dewis iaith a newid gosodiadau iaith",
+    "uls-plang-title-languages": "Ieithoedd",
+    "ext-uls-select-language-settings-icon-tooltip": "Gosodiadau iaith",
+    "ext-uls-undo-language-tooltip-text": "Newidiwyd yr iaith o $1",
+    "ext-uls-language-settings-preferences-link": "Rhagor o osodiadau iaith",
+    "uls-betafeature-label": "Cysylltau iaith cryno",
+    "uls-betafeature-desc": "Dangos fersiwn byrach o restr yr ieithoedd, gan ddangos dim ond yr ieithoedd sydd yn debygol o fod yn berthnasol i chi.",
     "ext-uls-display-settings-title": "Gosodiadau'r sgrîn",
     "ext-uls-display-settings-language-tab": "Iaith",
     "ext-uls-display-settings-fonts-tab": "Ffontiau",

@@ -4,6 +4,12 @@
             "Arystanbek"
         ]
     },
+    "uls-plang-title-languages": "Тілдер",
+    "ext-uls-select-language-settings-icon-tooltip": "Тіл баптаулары",
+    "ext-uls-undo-language-tooltip-text": "$1 дегеннен тіл өзгертілді",
+    "ext-uls-language-settings-preferences-link": "Қосымша тіл баптаулары",
+    "uls-betafeature-label": "Тіл сілтемелерін ықшамдау",
+    "uls-betafeature-desc": "Тіл тізімін қызқа нұқсада көрсетеді",
     "ext-uls-display-settings-title": "Көрініс баптаулары",
     "ext-uls-display-settings-language-tab": "Тіл",
     "ext-uls-display-settings-fonts-tab": "Қаріптер",

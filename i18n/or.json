@@ -4,13 +4,14 @@
             "Psubhashish"
         ]
     },
+    "ext-uls-select-language-settings-icon-tooltip": "ଭାଷା ସେଟିଙ୍ଗ",
+    "ext-uls-undo-language-tooltip-text": "$1ରୁ ଭାଷା ବଦଳିଗଲା",
+    "ext-uls-language-settings-preferences-link": "ଅଧିକ ଭାଷା ସେଟିଙ୍ଗ",
     "ext-uls-display-settings-title": "ଦେଖଣା ସେଟିଙ୍ଗ",
     "ext-uls-display-settings-language-tab": "ଭାଷା",
     "ext-uls-display-settings-fonts-tab": "ଫଣ୍ଟ",
     "ext-uls-display-settings-title-short": "ଦେଖଣା",
     "ext-uls-display-settings-desc": "ମେନୁ ଓ ଫଣ୍ଟ ପାଇଁ ଭାଷା ବାଛନ୍ତୁ",
-    "ext-uls-select-language-settings-icon-tooltip": "ଭାଷା ସେଟିଙ୍ଗ",
-    "ext-uls-undo-language-tooltip-text": "$1ରୁ ଭାଷା ବଦଳିଗଲା",
     "ext-uls-language-settings-title": "ଭାଷା ସେଟିଙ୍ଗ",
     "ext-uls-language-settings-apply": "ନୂଆ ସେଟିଙ୍ଗ ସଚଳ କରନ୍ତୁ",
     "ext-uls-language-settings-cancel": "ନାକଚ",
@@ -43,6 +44,5 @@
     "ext-uls-input-disable-notification": "ଇନପୁଟ ଟୁଲ ଅଚଳ କରାଯାଇଛି",
     "ext-uls-input-disable-notification-undo": "ପଛକୁ ଫେରିବା",
     "ext-uls-input-disable-notification-info-personal": "ଭାଷା ସେଟିଙ୍ଗରୁ ଇନପୁଟ ଟୁଲ ସବୁବେଳେ ସଚଳ କରିପାରିବେ ।",
-    "ext-uls-input-disable-notification-info-interlanguage": "ଭାଷା ସେଟିଙ୍ଗରୁ ଇନପୁଟ ଟୁଲ ସବୁବେଳେ ସଚଳ କରିପାରିବେ ଓ ଭାଷା ବାଛିପାରିବେ ।",
-    "ext-uls-language-settings-preferences-link": "ଅଧିକ ଭାଷା ସେଟିଙ୍ଗ"
+    "ext-uls-input-disable-notification-info-interlanguage": "ଭାଷା ସେଟିଙ୍ଗରୁ ଇନପୁଟ ଟୁଲ ସବୁବେଳେ ସଚଳ କରିପାରିବେ ଓ ଭାଷା ବାଛିପାରିବେ ।"
 }

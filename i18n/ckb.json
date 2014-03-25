@@ -4,13 +4,16 @@
             "Calak"
         ]
     },
+    "uls-desc": "ڕێگای جۆربەجۆر بۆ بەکارھێنەر بۆ ھەڵبژاردنی زمان و جێبەجێکردنی ڕێکخستنەکانی زمان دخاتە ڕوو.",
+    "uls-plang-title-languages": "زمانەکان",
+    "ext-uls-select-language-settings-icon-tooltip": "ڕێکخستنەکانی زمان",
+    "ext-uls-undo-language-tooltip-text": "زمان گۆڕدرا لە $1",
+    "ext-uls-language-settings-preferences-link": "ڕێکخستنەکانی زیاتری زمان",
     "ext-uls-display-settings-title": "ڕێکخستنەکانی پێشاندان",
     "ext-uls-display-settings-language-tab": "زمان",
     "ext-uls-display-settings-fonts-tab": "فۆنتەکان",
     "ext-uls-display-settings-title-short": "پێشاندان",
     "ext-uls-display-settings-desc": "زمانی بەکاگیراوی مێنووکان و فۆنتەکان ھەڵبژێرە.",
-    "ext-uls-select-language-settings-icon-tooltip": "ڕێکخستنەکانی زمان",
-    "ext-uls-undo-language-tooltip-text": "زمان گۆڕدرا لە $1",
     "ext-uls-language-settings-title": "ڕێکخستنەکانی زمان",
     "ext-uls-language-settings-apply": "ڕێکخستنەکان بەکاربەرە",
     "ext-uls-language-settings-cancel": "ھەڵیوەشێنەوە",
@@ -20,6 +23,7 @@
     "ext-uls-display-settings-anon-label": "پێشاندانی زمان:",
     "ext-uls-display-settings-anon-same-as-content": "کوردی (وەکوو ناوەرۆک)",
     "ext-uls-display-settings-anon-log-in-cta": "بۆ ھەڵبژاردنی زمانی جیاواز بۆ مێنووکان [[تایبەت:UserLogin|بچۆ ژوورەوە]].",
+    "ext-uls-webfonts-settings-info-link": "زانیاریی زیاتر",
     "ext-uls-webfonts-select-for": "فۆنت ھەڵبژێرە بۆ زمانی $1",
     "ext-uls-webfonts-select-for-ui-info": "فۆنتی بەکارگیراو بۆ ڕووکاری بەکارھێنەر",
     "ext-uls-webfonts-select-for-content-info": "فۆنتی بەکارگیراو بۆ ناوەرۆک",
@@ -44,6 +48,5 @@
     "ext-uls-input-disable-notification": "ئامرازەکانی تەختەکلیل ناچالاک کراون.",
     "ext-uls-input-disable-notification-undo": "پووچەڵکردنەوە",
     "ext-uls-input-disable-notification-info-personal": "ھەر کات ویستت دەتوانی ئامرازەکانی تەختەکلیل لە بەشی ڕێکخستنەکانی زمان چالاک بکەی.",
-    "ext-uls-input-disable-notification-info-interlanguage": "ھەر کات ویستت دەتوانی ئامرازەکانی تەختەکلیل لە بەشی ڕێکخستنەکانی زمان لە لای پێرستی زمانەکان چالاک بکەی.",
-    "ext-uls-language-settings-preferences-link": "ڕێکخستنەکانی زیاتری زمان"
+    "ext-uls-input-disable-notification-info-interlanguage": "ھەر کات ویستت دەتوانی ئامرازەکانی تەختەکلیل لە بەشی ڕێکخستنەکانی زمان لە لای پێرستی زمانەکان چالاک بکەی."
 }

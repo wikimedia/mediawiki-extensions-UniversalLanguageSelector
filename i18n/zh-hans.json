@@ -6,9 +6,18 @@
             "Zhangjintao",
             "Zhuyifei1999",
             "Liuxinyu970226",
-            "Shizhao"
+            "Shizhao",
+            "Li3939108",
+            "Shirayuki"
         ]
     },
+    "uls-desc": "为用户提供多种方法来选择语言和调整语言设置",
+    "uls-plang-title-languages": "语言",
+    "ext-uls-select-language-settings-icon-tooltip": "语言设置",
+    "ext-uls-undo-language-tooltip-text": "语言已更改自$1",
+    "ext-uls-language-settings-preferences-link": "更多语言设置",
+    "uls-betafeature-label": "紧凑跨语言链接",
+    "uls-betafeature-desc": "显示语言列表的简短版本，这些语言与您的语言相关。",
     "ext-uls-display-settings-title": "显示设置",
     "ext-uls-display-settings-language-tab": "语言",
     "ext-uls-display-settings-fonts-tab": "字体",

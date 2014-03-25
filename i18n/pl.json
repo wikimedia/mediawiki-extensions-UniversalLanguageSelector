@@ -4,9 +4,19 @@
             "Matma Rex",
             "Rezonansowy",
             "WTM",
-            "Chrumps"
+            "Chrumps",
+            "BeginaFelicysym",
+            "Nemo bis",
+            "Peter Bowman"
         ]
     },
+    "uls-desc": "Daje użytkownikowi kilka sposobów, aby wybrać język i dostosować ustawienia języka",
+    "uls-plang-title-languages": "Języki",
+    "ext-uls-select-language-settings-icon-tooltip": "Ustawienia języka",
+    "ext-uls-undo-language-tooltip-text": "Poprzedni język: $1",
+    "ext-uls-language-settings-preferences-link": "Więcej ustawień języka",
+    "uls-betafeature-label": "Skrócona wersja linków interwiki",
+    "uls-betafeature-desc": "Pokazuj krótszą wersję listy odnośników interwiki, zawierającą tylko języki, które są istotne dla Ciebie.",
     "ext-uls-display-settings-title": "Ustawienia wyświetlania",
     "ext-uls-display-settings-language-tab": "Język",
     "ext-uls-display-settings-fonts-tab": "Czcionka",

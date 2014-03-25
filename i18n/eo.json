@@ -4,13 +4,16 @@
             "KuboF"
         ]
     },
+    "uls-desc": "Proponas al uzanto kelkajn manierojn por elekti lingvon kaj modifi lingvajn agordojn",
+    "uls-plang-title-languages": "Lingvoj",
+    "ext-uls-select-language-settings-icon-tooltip": "Lingvaj agordoj",
+    "ext-uls-undo-language-tooltip-text": "Lingvo ŝanĝita de $1",
+    "ext-uls-language-settings-preferences-link": "Pliaj lingvaj agordoj",
     "ext-uls-display-settings-title": "Montri agordojn",
     "ext-uls-display-settings-language-tab": "Lingvo",
     "ext-uls-display-settings-fonts-tab": "Tiparoj",
     "ext-uls-display-settings-title-short": "Montrado",
     "ext-uls-display-settings-desc": "Agordu lingvon uzotan por menuoj kaj tiparoj.",
-    "ext-uls-select-language-settings-icon-tooltip": "Lingvaj agordoj",
-    "ext-uls-undo-language-tooltip-text": "Lingvo ŝanĝita de $1",
     "ext-uls-language-settings-title": "Lingvaj agordoj",
     "ext-uls-language-settings-apply": "Apliki agordojn",
     "ext-uls-language-settings-cancel": "Nuligi",
@@ -44,6 +47,5 @@
     "ext-uls-input-disable-notification": "Enigaj iloj estis malŝaltitaj",
     "ext-uls-input-disable-notification-undo": "Malfari",
     "ext-uls-input-disable-notification-info-personal": "Vi povas iam ajn ŝalti enigajn ilojn en lingvaj agordoj.",
-    "ext-uls-input-disable-notification-info-interlanguage": "Vi povas iam ajn ŝalti enigajn ilojn en lingvaj agordoj ĉe lingvolisto.",
-    "ext-uls-language-settings-preferences-link": "Pliaj lingvaj agordoj"
+    "ext-uls-input-disable-notification-info-interlanguage": "Vi povas iam ajn ŝalti enigajn ilojn en lingvaj agordoj ĉe lingvolisto."
 }

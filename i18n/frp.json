@@ -4,15 +4,17 @@
             "ChrisPtDe"
         ]
     },
+    "ext-uls-undo-language-tooltip-text": "Lengoua changiêye dês $1",
     "ext-uls-display-settings-title": "Configuracion de visualisacion",
     "ext-uls-display-settings-title-short": "Visualisacion",
     "ext-uls-display-settings-desc": "Dèfenir la lengoua empleyêye por los menus et les polices.",
-    "ext-uls-undo-language-tooltip-text": "Lengoua changiêye dês $1",
     "ext-uls-language-settings-title": "Configuracion de lengoua",
     "ext-uls-language-settings-apply": "Aplicar la configuracion",
     "ext-uls-language-settings-cancel": "Anular",
     "ext-uls-display-settings-font-settings": "Configuracion de police",
     "ext-uls-display-settings-ui-language": "Lengoua de visualisacion",
+    "ext-uls-webfonts-settings-title": "Tèlèchargiér la police quand fôt",
+    "ext-uls-webfonts-settings-info-link": "Més d’enformacions",
     "ext-uls-webfonts-select-for": "Chouèsir la police por $1",
     "ext-uls-webfonts-select-for-ui-info": "Police empleyêye por l’entèrface utilisator",
     "ext-uls-webfonts-select-for-content-info": "Police empleyêye por lo contegnu",

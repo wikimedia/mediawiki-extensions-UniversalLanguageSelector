@@ -4,13 +4,14 @@
             "Gott wisst"
         ]
     },
+    "ext-uls-select-language-settings-icon-tooltip": "Sprǣce setednessa",
+    "ext-uls-undo-language-tooltip-text": "Sprǣc wæs andwended fram $1",
+    "ext-uls-language-settings-preferences-link": "Mā sprǣce setednessa",
     "ext-uls-display-settings-title": "Īwunge setednessa",
     "ext-uls-display-settings-language-tab": "Sprǣc",
     "ext-uls-display-settings-fonts-tab": "Stæfcynn",
     "ext-uls-display-settings-title-short": "Īwung",
     "ext-uls-display-settings-desc": "Cēosan þā sprǣce þe bēo gebrocen on getalum and stæfcynnum.",
-    "ext-uls-select-language-settings-icon-tooltip": "Sprǣce setednessa",
-    "ext-uls-undo-language-tooltip-text": "Sprǣc wæs andwended fram $1",
     "ext-uls-language-settings-title": "Sprǣce setednessa",
     "ext-uls-language-settings-apply": "Astellan setednessa",
     "ext-uls-language-buttons-help": "Andwendan þā sprǣce getala. Sēo sprǣc þǣre innunge ne biþ nā gehrinen.",
@@ -28,6 +29,5 @@
     "ext-uls-input-settings-ui-language": "Sprǣc þe bēo gebrocen on wrītunge",
     "ext-uls-input-settings-more-languages-tooltip": "Mā sprǣca",
     "jquery-ime-other-languages": "Ōðra sprǣca",
-    "jquery-ime-help": "Help",
-    "ext-uls-language-settings-preferences-link": "Mā sprǣce setednessa"
+    "jquery-ime-help": "Help"
 }

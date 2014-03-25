@@ -4,13 +4,13 @@
             "DzWiki"
         ]
     },
+    "ext-uls-select-language-settings-icon-tooltip": "Postavke jezika",
+    "ext-uls-undo-language-tooltip-text": "Jezik promijenjen sa $1",
     "ext-uls-display-settings-title": "Postavke prikaza",
     "ext-uls-display-settings-language-tab": "Jezik",
     "ext-uls-display-settings-fonts-tab": "Fontovi",
     "ext-uls-display-settings-title-short": "Prikaz",
     "ext-uls-display-settings-desc": "Postavi jezik koji će se koristiti za menije i fontove",
-    "ext-uls-select-language-settings-icon-tooltip": "Postavke jezika",
-    "ext-uls-undo-language-tooltip-text": "Jezik promijenjen sa $1",
     "ext-uls-language-settings-title": "Postavke jezika",
     "ext-uls-language-settings-apply": "Primijeni postavke",
     "ext-uls-language-settings-cancel": "Otkaži",

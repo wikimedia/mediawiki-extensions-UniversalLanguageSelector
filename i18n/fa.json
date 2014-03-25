@@ -9,6 +9,13 @@
             "Armin1392"
         ]
     },
+    "uls-desc": "به کاربر راه‌های مختلفی برای انتخاب زبان و تنظیم تنظیمات زبان  می‌دهد",
+    "uls-plang-title-languages": "زبان‌ها",
+    "ext-uls-select-language-settings-icon-tooltip": "تنظیمات زبان",
+    "ext-uls-undo-language-tooltip-text": "تغییر زبان از $1",
+    "ext-uls-language-settings-preferences-link": "تنظیمات بیشتر زبان",
+    "uls-betafeature-label": "لینک‌های فشرده زبان",
+    "uls-betafeature-desc": "نمایش یک نسخه کوتاه‌تر فهرست زبان، با فقط زبانی که بیشتر به شما مربوط است.",
     "ext-uls-display-settings-title": "تنظیمات نمایش",
     "ext-uls-display-settings-language-tab": "زبان",
     "ext-uls-display-settings-fonts-tab": "قلم‌ها",

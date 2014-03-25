@@ -4,13 +4,15 @@
             "Iltever"
         ]
     },
+    "uls-plang-title-languages": "Тилле",
+    "ext-uls-select-language-settings-icon-tooltip": "Тил джарашдырыула",
+    "ext-uls-undo-language-tooltip-text": "Алгъыннгы тил: $1",
+    "ext-uls-language-settings-preferences-link": "Къошакъ тил джарашдырыула",
     "ext-uls-display-settings-title": "Кёрюнюуню джарашдырыулары",
     "ext-uls-display-settings-language-tab": "Тил",
     "ext-uls-display-settings-fonts-tab": "Шрифтле",
     "ext-uls-display-settings-title-short": "Кёрюнюу",
     "ext-uls-display-settings-desc": "Менюла бла шрифтлени тили",
-    "ext-uls-select-language-settings-icon-tooltip": "Тил джарашдырыула",
-    "ext-uls-undo-language-tooltip-text": "Алгъыннгы тил: $1",
     "ext-uls-language-settings-title": "Тил джарашдырыула",
     "ext-uls-language-settings-apply": "Хайырландыр",
     "ext-uls-language-settings-cancel": "Ызына ал",
@@ -43,6 +45,5 @@
     "ext-uls-input-disable-notification": "Джазыу адырла джукъландыла.",
     "ext-uls-input-disable-notification-undo": "Ызына ал",
     "ext-uls-input-disable-notification-info-personal": "Джазыу адырланы хар заманда да тил джарашдырыуладан джандырыргъа боллукъду.",
-    "ext-uls-input-disable-notification-info-interlanguage": "Джазыу адырланы хар заманда да тилле тизимни къатындагъы тил джарашдырыуладан джандырыргъа боллукъду.",
-    "ext-uls-language-settings-preferences-link": "Къошакъ тил джарашдырыула"
+    "ext-uls-input-disable-notification-info-interlanguage": "Джазыу адырланы хар заманда да тилле тизимни къатындагъы тил джарашдырыуладан джандырыргъа боллукъду."
 }

@@ -6,6 +6,13 @@
             "Xabier Armendaritz"
         ]
     },
+    "uls-desc": "Gëtt dem Benotzer verschidde Méiglechkeete fir eng Sprooch erauszesichen an d'Parameter vun der Sprooch festzeleeën",
+    "uls-plang-title-languages": "Sproochen",
+    "ext-uls-select-language-settings-icon-tooltip": "Sproochastellungen",
+    "ext-uls-undo-language-tooltip-text": "Sprooch geännert vu(n) $1",
+    "ext-uls-language-settings-preferences-link": "Méi Sproochastellungen",
+    "uls-betafeature-label": "Kompakt Sproochlinken",
+    "uls-betafeature-desc": "Méi eng kuerz Versioun vun der Lëscht vun de Sprooche weisen, mat just deene Sproochen déi fir Iech méi relevant sinn.",
     "ext-uls-display-settings-title": "Astellunge weisen",
     "ext-uls-display-settings-language-tab": "Sprooch",
     "ext-uls-display-settings-fonts-tab": "Schrëftarten",

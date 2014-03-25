@@ -8,6 +8,13 @@
             "SPQRobin"
         ]
     },
+    "uls-desc": "Biedt gebruikers verschillende mogelijkheden om een taal te kiezen en bijbehorende instellingen aan te passen",
+    "uls-plang-title-languages": "Talen",
+    "ext-uls-select-language-settings-icon-tooltip": "Taalinstellingen",
+    "ext-uls-undo-language-tooltip-text": "Taal gewijzigd van $1",
+    "ext-uls-language-settings-preferences-link": "Meer taalinstellingen",
+    "uls-betafeature-label": "Compacte taalkoppelingen",
+    "uls-betafeature-desc": "Een kortere versie van de talenlijst weergeven, met alleen de talen die het meest relevant zijn voor u.",
     "ext-uls-display-settings-title": "Weergaveinstellingen",
     "ext-uls-display-settings-language-tab": "Taal",
     "ext-uls-display-settings-fonts-tab": "Lettertypen",

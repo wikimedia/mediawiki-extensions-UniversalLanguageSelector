@@ -4,6 +4,13 @@
             "Bjankuloski06"
         ]
     },
+    "uls-desc": "Му дава на корисникот неколку начини за избор на јазик и прилагодување на јазичните поставки",
+    "uls-plang-title-languages": "Јазици",
+    "ext-uls-select-language-settings-icon-tooltip": "Јазични поставки",
+    "ext-uls-undo-language-tooltip-text": "Јазикот сменет од изворниот $1",
+    "ext-uls-language-settings-preferences-link": "Уште јазични поставки",
+    "uls-betafeature-label": "Збиени јазични врски",
+    "uls-betafeature-desc": "Прикажува скратена верзија на јазичните врски, односно само оние јазици што се однесуваат на вас",
     "ext-uls-display-settings-title": "Поставки за приказ",
     "ext-uls-display-settings-language-tab": "Јазик",
     "ext-uls-display-settings-fonts-tab": "Фонтови",

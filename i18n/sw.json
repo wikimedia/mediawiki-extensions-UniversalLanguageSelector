@@ -5,13 +5,14 @@
             "Muddyb Blast Producer"
         ]
     },
+    "ext-uls-select-language-settings-icon-tooltip": "Mipangilio ya lugha",
+    "ext-uls-undo-language-tooltip-text": "Lugha imebadilishwa kutoka $1",
+    "ext-uls-language-settings-preferences-link": "Mipangilio mingine ya lugha",
     "ext-uls-display-settings-title": "Mipangilio ya kusano",
     "ext-uls-display-settings-language-tab": "Lugha",
     "ext-uls-display-settings-fonts-tab": "Fonti",
     "ext-uls-display-settings-title-short": "Kusano",
     "ext-uls-display-settings-desc": "Weka lugha inayotumika kwa ajili ya menyu na herufi.",
-    "ext-uls-select-language-settings-icon-tooltip": "Mipangilio ya lugha",
-    "ext-uls-undo-language-tooltip-text": "Lugha imebadilishwa kutoka $1",
     "ext-uls-language-settings-title": "Mipangilio ya lugha",
     "ext-uls-language-settings-apply": "Weka mipangilio",
     "ext-uls-language-settings-cancel": "Ghairi",
@@ -21,6 +22,9 @@
     "ext-uls-display-settings-anon-label": "Lugha ya kusano:",
     "ext-uls-display-settings-anon-same-as-content": "Kiswahili (ndiye pia lugha ya yaliyomo)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Sajili]] ili kuchagua lugha tofauti kwa ajili ya kusano.",
+    "ext-uls-webfonts-settings-title": "Pakua mtindo wa maandishi unapohitajika",
+    "ext-uls-webfonts-settings-info": "Mitindo ya herufi ya tarakalishi itapakuzwa ili kuonesha maandishi maalumu.",
+    "ext-uls-webfonts-settings-info-link": "Maelezo zaidi",
     "ext-uls-webfonts-select-for": "Chagua mtindo wa herufi kwa ajili ya $1",
     "ext-uls-webfonts-select-for-ui-info": "Maandishi yatumikayo kwa ajili ya kusano za mtumiaji",
     "ext-uls-webfonts-select-for-content-info": "Mtindo wa herufi kwa ajili ya yaliyomo",
@@ -44,6 +48,5 @@
     "ext-uls-input-disable-notification": "Zana za kuingiza zimelemazwa.",
     "ext-uls-input-disable-notification-undo": "Tengua",
     "ext-uls-input-disable-notification-info-personal": "Unaweza kuwezesha zana za kuingiza wakati wowote kwa kupitia mipangilio ya lugha.",
-    "ext-uls-input-disable-notification-info-interlanguage": "Unaweza kuwezesha zana za kuingiza wakati wowote kwa kupitia mipangilio ya lugha iliyopo kando ya orodha ya lugha.",
-    "ext-uls-language-settings-preferences-link": "Mipangilio mingine ya lugha"
+    "ext-uls-input-disable-notification-info-interlanguage": "Unaweza kuwezesha zana za kuingiza wakati wowote kwa kupitia mipangilio ya lugha iliyopo kando ya orodha ya lugha."
 }

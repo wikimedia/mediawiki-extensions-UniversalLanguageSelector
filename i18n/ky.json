@@ -5,13 +5,16 @@
             "Викиней"
         ]
     },
+    "uls-desc": "Колдонуучуга тил тандоонун бир нече жолун берип, тил ырастоолорду аткарууга мүмкүн кылат.",
+    "uls-plang-title-languages": "Тилдер",
+    "ext-uls-select-language-settings-icon-tooltip": "Тил ырастоолору",
+    "ext-uls-undo-language-tooltip-text": "Мурдагы тили: $1",
+    "ext-uls-language-settings-preferences-link": "Кошумча тил ырастоолору",
     "ext-uls-display-settings-title": "Көрүнүш ырастоолору",
     "ext-uls-display-settings-language-tab": "Тили",
     "ext-uls-display-settings-fonts-tab": "Шрифттер",
     "ext-uls-display-settings-title-short": "Көрүнүш",
     "ext-uls-display-settings-desc": "Меню жана шрифттердин тили",
-    "ext-uls-select-language-settings-icon-tooltip": "Тил ырастоолору",
-    "ext-uls-undo-language-tooltip-text": "Мурдагы тили: $1",
     "ext-uls-language-settings-title": "Тил ырастоолору",
     "ext-uls-language-settings-apply": "Ырастоолорду колдонуу",
     "ext-uls-language-settings-cancel": "Жокко чыгаруу",
@@ -29,6 +32,5 @@
     "ext-uls-input-settings-ui-language": "Жазуу тили",
     "ext-uls-input-settings-more-languages-tooltip": "Кошумча тилдер",
     "jquery-ime-other-languages": "Башка тилдерде",
-    "jquery-ime-help": "Жардам",
-    "ext-uls-language-settings-preferences-link": "Кошумча тил ырастоолору"
+    "jquery-ime-help": "Жардам"
 }

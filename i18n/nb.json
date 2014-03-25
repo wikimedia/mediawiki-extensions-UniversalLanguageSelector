@@ -4,13 +4,16 @@
             "Danmichaelo"
         ]
     },
+    "uls-desc": "Gir brukeren flere måter å velge språk på og endre språkinnstillinger",
+    "uls-plang-title-languages": "Språk",
+    "ext-uls-select-language-settings-icon-tooltip": "Språkinnstillinger",
+    "ext-uls-undo-language-tooltip-text": "Språk endret fra $1",
+    "ext-uls-language-settings-preferences-link": "Flere språkinnstillinger",
     "ext-uls-display-settings-title": "Visningsinnstillinger",
     "ext-uls-display-settings-language-tab": "Språk",
     "ext-uls-display-settings-fonts-tab": "Skrifttyper",
     "ext-uls-display-settings-title-short": "Visning",
     "ext-uls-display-settings-desc": "Velg språk og skrifttyper for brukergrensesnittet.",
-    "ext-uls-select-language-settings-icon-tooltip": "Språkinnstillinger",
-    "ext-uls-undo-language-tooltip-text": "Språk endret fra $1",
     "ext-uls-language-settings-title": "Språkinnstillinger",
     "ext-uls-language-settings-apply": "Bruk innstillinger",
     "ext-uls-language-settings-cancel": "Avbryt",
@@ -45,6 +48,5 @@
     "ext-uls-input-disable-notification-undo": "Angre",
     "ext-uls-input-disable-notification-info-personal": "Du kan når som helst skru på inndataverktøy fra språkinnstillingene.",
     "ext-uls-input-disable-notification-info-interlanguage": "Du kan når som helst skru på inndataverktøy fra språkinnstillingene ved siden av språklisten.",
-    "ext-uls-language-settings-applying": "Tar i bruk…",
-    "ext-uls-language-settings-preferences-link": "Flere språkinnstillinger"
+    "ext-uls-language-settings-applying": "Tar i bruk…"
 }

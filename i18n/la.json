@@ -4,13 +4,15 @@
             "Autokrator"
         ]
     },
+    "uls-plang-title-languages": "Linguis aliis",
+    "ext-uls-select-language-settings-icon-tooltip": "Praeferentiae linguae",
+    "ext-uls-undo-language-tooltip-text": "Lingua commota ex $1",
+    "ext-uls-language-settings-preferences-link": "Plura",
     "ext-uls-display-settings-title": "Praeferentias monstrare",
     "ext-uls-display-settings-language-tab": "Lingua",
     "ext-uls-display-settings-fonts-tab": "Scripturae",
     "ext-uls-display-settings-title-short": "Depictio",
     "ext-uls-display-settings-desc": "Linguam per navigatrum atque scripturam ligere",
-    "ext-uls-select-language-settings-icon-tooltip": "Praeferentiae linguae",
-    "ext-uls-undo-language-tooltip-text": "Lingua commota ex $1",
     "ext-uls-language-settings-title": "Praeferentiae linguae",
     "ext-uls-language-settings-apply": "Praeferentias mutare",
     "ext-uls-language-settings-cancel": "Abrogare",
@@ -29,6 +31,5 @@
     "ext-uls-input-settings-more-languages-tooltip": "Plurae linguae",
     "jquery-ime-other-languages": "Aliae linguae",
     "jquery-ime-help": "Auxilium",
-    "ext-uls-input-disable-notification-undo": "Abrogare",
-    "ext-uls-language-settings-preferences-link": "Plura"
+    "ext-uls-input-disable-notification-undo": "Abrogare"
 }

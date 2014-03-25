@@ -1,16 +1,21 @@
 {
     "@metadata": {
         "authors": [
-            "Geraki"
+            "Geraki",
+            "Glavkos",
+            "Protnet"
         ]
     },
+    "uls-desc": "Προσφέρει στο χρήστη μια σειρά από τρόπους να επιλέξει γλώσσα και να προσαρμόσει τις γλωσσικές ρυθμίσεις",
+    "uls-plang-title-languages": "Γλώσσες",
+    "ext-uls-select-language-settings-icon-tooltip": "Ρυθμίσεις γλώσσας",
+    "ext-uls-undo-language-tooltip-text": "Η γλώσσα άλλαξε από $1",
+    "ext-uls-language-settings-preferences-link": "Περισσότερες ρυθμίσεις γλώσσας",
     "ext-uls-display-settings-title": "Ρυθμίσεις απεικόνισης",
     "ext-uls-display-settings-language-tab": "Γλώσσα",
     "ext-uls-display-settings-fonts-tab": "Γραμματοσειρές",
     "ext-uls-display-settings-title-short": "Εμφάνιση",
     "ext-uls-display-settings-desc": "Ορίστε τη γλώσσα που χρησιμοποιείται στα μενού και γραμματοσειρές.",
-    "ext-uls-select-language-settings-icon-tooltip": "Ρυθμίσεις γλώσσας",
-    "ext-uls-undo-language-tooltip-text": "Η γλώσσα άλλαξε από $1",
     "ext-uls-language-settings-title": "Ρυθμίσεις γλώσσας",
     "ext-uls-language-settings-apply": "Εφαρμογή ρυθμίσεων",
     "ext-uls-language-settings-cancel": "Ακύρωση",
@@ -45,6 +50,5 @@
     "ext-uls-input-disable-notification-undo": "Αναίρεση",
     "ext-uls-input-disable-notification-info-personal": "Μπορείτε να ενεργοποιήσετε τα εργαλεία εισαγωγής, ανά πάσα στιγμή από τις ρυθμίσεις γλώσσας.",
     "ext-uls-input-disable-notification-info-interlanguage": "Μπορείτε να ενεργοποιήσετε τα εργαλεία εισαγωγής, ανά πάσα στιγμή από τις ρυθμίσεις γλώσσας δίπλα από τη λίστα γλωσσών.",
-    "ext-uls-language-settings-applying": "Εφαρμογή...",
-    "ext-uls-language-settings-preferences-link": "Περισσότερες ρυθμίσεις γλώσσας"
+    "ext-uls-language-settings-applying": "Εφαρμογή..."
 }

@@ -7,6 +7,12 @@
             "Priviet"
         ]
     },
+    "uls-desc": "사용자에게 언어를 선택하고 언어 설정을 바꾸는 몇 가지 방법을 제공합니다",
+    "uls-plang-title-languages": "언어",
+    "ext-uls-select-language-settings-icon-tooltip": "언어 설정",
+    "ext-uls-undo-language-tooltip-text": "$1에서 언어가 바뀌었습니다",
+    "ext-uls-language-settings-preferences-link": "자세한 언어 설정",
+    "uls-betafeature-label": "소형 언어 링크",
     "ext-uls-display-settings-title": "보기 설정",
     "ext-uls-display-settings-language-tab": "언어",
     "ext-uls-display-settings-fonts-tab": "글꼴",

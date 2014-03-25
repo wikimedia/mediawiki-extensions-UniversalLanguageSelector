@@ -5,6 +5,13 @@
             "KartikMistry"
         ]
     },
+    "uls-desc": "સભ્યને ભાષા પસંદગી અને ગોઠવણીઓ માટેનાં અનેક માર્ગો પૂરા પાડે છે",
+    "uls-plang-title-languages": "ભાષાઓ",
+    "ext-uls-select-language-settings-icon-tooltip": "ભાષા ગોઠવણીઓ",
+    "ext-uls-undo-language-tooltip-text": "$1 માંથી ભાષા બદલવામાં આવી",
+    "ext-uls-language-settings-preferences-link": "વધુ ભાષા ગોઠવણીઓ",
+    "uls-betafeature-label": "ટૂંકી ભાષા કડીઓ",
+    "uls-betafeature-desc": "તમને સંબંધિત ભાષાઓની જ, ભાષા કડીઓનું ટૂંકી આવૃત્તિ દર્શાવે છે.",
     "ext-uls-display-settings-title": "દેખાવ ગોઠવણીઓ",
     "ext-uls-display-settings-language-tab": "ભાષા",
     "ext-uls-display-settings-fonts-tab": "ફોન્ટ્સ",

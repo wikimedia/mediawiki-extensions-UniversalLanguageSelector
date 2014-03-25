@@ -4,6 +4,11 @@
             "Joetaras"
         ]
     },
+    "uls-desc": "Dèje diverse mode a l'utende de scacchià 'na lènghe e de consiglià le 'mbostaziune d'a lènghe",
+    "uls-plang-title-languages": "Lènghe",
+    "ext-uls-select-language-settings-icon-tooltip": "'Mbostaziune de lènghe",
+    "ext-uls-undo-language-tooltip-text": "Lènghe cangiate da $1",
+    "ext-uls-language-settings-preferences-link": "Otre 'mbostaziune d'a lènghe",
     "ext-uls-display-settings-title": "Fà vedè le 'mbostaziune",
     "ext-uls-display-settings-language-tab": "Lènghe",
     "ext-uls-display-settings-fonts-tab": "Carattere",

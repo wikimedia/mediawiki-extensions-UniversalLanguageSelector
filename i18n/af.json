@@ -4,13 +4,14 @@
             "Naudefj"
         ]
     },
+    "ext-uls-select-language-settings-icon-tooltip": "Taalvoorkeure",
+    "ext-uls-undo-language-tooltip-text": "Taal verander vanaf $1",
+    "ext-uls-language-settings-preferences-link": "Meer taal-voorkeure",
     "ext-uls-display-settings-title": "Vertoon-voorkeure",
     "ext-uls-display-settings-language-tab": "Taal",
     "ext-uls-display-settings-fonts-tab": "Lettertipes",
     "ext-uls-display-settings-title-short": "Vertoon",
     "ext-uls-display-settings-desc": "Stel taal vir keuseskerms en lettertipes.",
-    "ext-uls-select-language-settings-icon-tooltip": "Taalvoorkeure",
-    "ext-uls-undo-language-tooltip-text": "Taal verander vanaf $1",
     "ext-uls-language-settings-title": "Taalvoorkeure",
     "ext-uls-language-settings-apply": "Pas toe",
     "ext-uls-language-settings-cancel": "Kanselleer",
@@ -43,6 +44,5 @@
     "ext-uls-input-disable-notification": "Invoer-gereedskap is gedeaktiveer",
     "ext-uls-input-disable-notification-undo": "Maak ongedaan",
     "ext-uls-input-disable-notification-info-personal": "U kan die invoer-gereedskap weer via die taal-voorkeure aktiveer",
-    "ext-uls-input-disable-notification-info-interlanguage": "U kan die invoer-gereedskap enige tyd weer via die taal-voorkeure langs die lys van tale aktiveer.",
-    "ext-uls-language-settings-preferences-link": "Meer taal-voorkeure"
+    "ext-uls-input-disable-notification-info-interlanguage": "U kan die invoer-gereedskap enige tyd weer via die taal-voorkeure langs die lys van tale aktiveer."
 }

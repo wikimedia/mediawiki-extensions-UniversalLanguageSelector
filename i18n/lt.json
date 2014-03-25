@@ -4,13 +4,16 @@
             "Mantak111"
         ]
     },
+    "uls-desc": "Suteikia vartotojui keliais būdais, pasirinkti kalbą ir sureguliuoti kalbos parametrus.",
+    "uls-plang-title-languages": "Kalbos",
+    "ext-uls-select-language-settings-icon-tooltip": "Kalbos nustatymai",
+    "ext-uls-undo-language-tooltip-text": "Kalba pakeista iš $1",
+    "ext-uls-language-settings-preferences-link": "Daugiau kalbos parametrų",
     "ext-uls-display-settings-title": "Ekrano parametrai",
     "ext-uls-display-settings-language-tab": "Kalba",
     "ext-uls-display-settings-fonts-tab": "Šriftai",
     "ext-uls-display-settings-title-short": "Rodyti",
     "ext-uls-display-settings-desc": "Nustatyti kalbą naudojant meniu ir šriftus.",
-    "ext-uls-select-language-settings-icon-tooltip": "Kalbos nustatymai",
-    "ext-uls-undo-language-tooltip-text": "Kalba pakeista iš $1",
     "ext-uls-language-settings-title": "Kalbos parametrai",
     "ext-uls-language-settings-apply": "Taikyti parametrus",
     "ext-uls-language-settings-cancel": "Atšaukti",
@@ -43,6 +46,5 @@
     "ext-uls-input-disable-notification": "Įvesties priemonės yra išjungtos",
     "ext-uls-input-disable-notification-undo": "Anuliuoti",
     "ext-uls-input-disable-notification-info-personal": "Jūs galite įgalinti įvesties priemones bet kuriuo metu iš kalbos parametrų.",
-    "ext-uls-input-disable-notification-info-interlanguage": "Jūs galite įgalinti įvesties priemones bet kuriuo metu iš kalbos parametrų šalia kalbos sąrašo.",
-    "ext-uls-language-settings-preferences-link": "Daugiau kalbos parametrų"
+    "ext-uls-input-disable-notification-info-interlanguage": "Jūs galite įgalinti įvesties priemones bet kuriuo metu iš kalbos parametrų šalia kalbos sąrašo."
 }

@@ -1,9 +1,15 @@
 {
     "@metadata": {
         "authors": [
-            "Sudo77(new)"
+            "Sudo77(new)",
+            "KuboF"
         ]
     },
+    "uls-desc": "Ponúka používateľovi niekoľko spôsobov výberu jazyka a úpravy jazykových nastavení",
+    "uls-plang-title-languages": "Jazyky",
+    "ext-uls-select-language-settings-icon-tooltip": "Jazykové nastavenia",
+    "ext-uls-undo-language-tooltip-text": "Jazyk zmenený z $1",
+    "ext-uls-language-settings-preferences-link": "Dalšie jazykové nastavenia",
     "ext-uls-display-settings-title": "Nastavenia zobrazenia",
     "ext-uls-display-settings-language-tab": "Jazyk",
     "ext-uls-display-settings-fonts-tab": "Písma",

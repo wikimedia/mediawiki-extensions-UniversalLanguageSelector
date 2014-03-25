@@ -6,6 +6,13 @@
             "Lokal Profil"
         ]
     },
+    "uls-desc": "Ger användaren flera sätt att välja ett språk på och justera språkinställningar",
+    "uls-plang-title-languages": "Språk",
+    "ext-uls-select-language-settings-icon-tooltip": "Språkinställningar",
+    "ext-uls-undo-language-tooltip-text": "Språk ändrades från $1",
+    "ext-uls-language-settings-preferences-link": "Fler språkinställningar",
+    "uls-betafeature-label": "Kompakta språklänkar",
+    "uls-betafeature-desc": "Visa en kortare version av språklistan, med bara de språk som är mer relevanta för dig.",
     "ext-uls-display-settings-title": "Visningsinställningar",
     "ext-uls-display-settings-language-tab": "Språk",
     "ext-uls-display-settings-fonts-tab": "Typsnitt",

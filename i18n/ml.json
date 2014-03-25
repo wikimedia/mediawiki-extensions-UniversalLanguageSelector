@@ -7,6 +7,13 @@
             "Vssun"
         ]
     },
+    "uls-desc": "ഭാഷ തിരഞ്ഞെടുക്കുന്നതിനും സജ്ജീകരിക്കുന്നതിനുമുള്ള സംവിധാനം",
+    "uls-plang-title-languages": "ഭാഷകൾ",
+    "ext-uls-select-language-settings-icon-tooltip": "ഭാഷാ സജ്ജീകരണങ്ങൾ",
+    "ext-uls-undo-language-tooltip-text": "ഭാഷ മാറിയിരിക്കുന്നു. പഴയ ഭാഷ: $1",
+    "ext-uls-language-settings-preferences-link": "കൂടുതൽ ഭാഷാസജ്ജീകരണങ്ങൾ",
+    "uls-betafeature-label": "ഒതുക്കമുള്ള ഭാഷാ കണ്ണികൾ",
+    "uls-betafeature-desc": "താങ്കളെ സംബന്ധിച്ച് പ്രസക്തമായ ഭാഷകൾ മാത്രം ഉൾപ്പെടുന്ന, ചുരുക്കിയ ഭാഷകളുടെ പട്ടിക പ്രദർശിപ്പിക്കുക.",
     "ext-uls-display-settings-title": "പ്രദർശന സജ്ജീകരണങ്ങൾ",
     "ext-uls-display-settings-language-tab": "ഭാഷ",
     "ext-uls-display-settings-fonts-tab": "ഫോണ്ടുകൾ",

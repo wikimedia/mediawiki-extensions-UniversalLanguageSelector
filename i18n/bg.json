@@ -6,13 +6,14 @@
             "Termininja"
         ]
     },
+    "ext-uls-select-language-settings-icon-tooltip": "Езикови настройки",
+    "ext-uls-undo-language-tooltip-text": "Предишен език: $1",
+    "ext-uls-language-settings-preferences-link": "Още езикови настройки",
     "ext-uls-display-settings-title": "Настройки на изгледа",
     "ext-uls-display-settings-language-tab": "Език",
     "ext-uls-display-settings-fonts-tab": "Шрифтове",
     "ext-uls-display-settings-title-short": "Изглед",
     "ext-uls-display-settings-desc": "Настройка на езика, използван в менютата и шрифтовете.",
-    "ext-uls-select-language-settings-icon-tooltip": "Езикови настройки",
-    "ext-uls-undo-language-tooltip-text": "Предишен език: $1",
     "ext-uls-language-settings-title": "Езикови настройки",
     "ext-uls-language-settings-apply": "Прилагане на настройките",
     "ext-uls-language-settings-cancel": "Отказ",
@@ -22,6 +23,9 @@
     "ext-uls-display-settings-anon-label": "Език за показване:",
     "ext-uls-display-settings-anon-same-as-content": "Български (същияткато на съдържанието)",
     "ext-uls-display-settings-anon-log-in-cta": "За избиране на друг език за менютата е необходимо [[Special:UserLogin|влизане]] в системата.",
+    "ext-uls-webfonts-settings-title": "Изтегляне на шрифта при необходимост",
+    "ext-uls-webfonts-settings-info": "Ще бъдат свалени уебшрифтове за визуализиране на специалните символи в текста.",
+    "ext-uls-webfonts-settings-info-link": "Още информация",
     "ext-uls-webfonts-select-for": "Избор на шрифт за $1",
     "ext-uls-webfonts-select-for-ui-info": "Шрифт за потребителския интерфейс",
     "ext-uls-webfonts-select-for-content-info": "Шрифт за съдържанието",
@@ -45,6 +49,5 @@
     "ext-uls-input-disable-notification": "Инструментите за въвеждане бяха изключени",
     "ext-uls-input-disable-notification-undo": "Отмяна",
     "ext-uls-input-disable-notification-info-personal": "Можете да активирате инструментите за въвеждане по всяко време от езиковите настройки.",
-    "ext-uls-input-disable-notification-info-interlanguage": "Можете да разрешите инструментите за въвеждане по всяко време от езиковите настройки до списъка с езици.",
-    "ext-uls-language-settings-preferences-link": "Още езикови настройки"
+    "ext-uls-input-disable-notification-info-interlanguage": "Можете да разрешите инструментите за въвеждане по всяко време от езиковите настройки до списъка с езици."
 }

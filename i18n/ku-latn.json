@@ -1,9 +1,11 @@
 {
     "@metadata": {
         "authors": [
-            "George Animal"
+            "George Animal",
+            "Ghybu"
         ]
     },
+    "uls-plang-title-languages": "Ziman",
     "ext-uls-display-settings-language-tab": "Ziman",
     "jquery-ime-other-languages": "Zimanên din",
     "jquery-ime-help": "Alîkarî"

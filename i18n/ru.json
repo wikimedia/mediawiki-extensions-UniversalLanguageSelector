@@ -5,9 +5,17 @@
             "Okras",
             "Putnik",
             "ShinePhantom",
-            "Умар"
+            "Умар",
+            "Kaganer"
         ]
     },
+    "uls-desc": "Даёт пользователю несколько способов выбрать язык и произвести установки языка",
+    "uls-plang-title-languages": "Языки",
+    "ext-uls-select-language-settings-icon-tooltip": "Установки языка",
+    "ext-uls-undo-language-tooltip-text": "Предыдущий язык: $1",
+    "ext-uls-language-settings-preferences-link": "Дополнительные установки языка",
+    "uls-betafeature-label": "Компактный список языковых ссылок",
+    "uls-betafeature-desc": "Показывает сокращенный вариант списка языков, только с языками, которые являются более актуальными для вас.",
     "ext-uls-display-settings-title": "Установки отображения",
     "ext-uls-display-settings-language-tab": "Язык",
     "ext-uls-display-settings-fonts-tab": "Шрифты",

@@ -5,9 +5,17 @@
             "Base",
             "RLuts",
             "Ата",
-            "Юрій Булка"
+            "Юрій Булка",
+            "SteveR"
         ]
     },
+    "uls-desc": "Надає користувачу декілька способів вибрати мову та налаштувати мовні параметри.",
+    "uls-plang-title-languages": "Мови",
+    "ext-uls-select-language-settings-icon-tooltip": "Налаштування мови",
+    "ext-uls-undo-language-tooltip-text": "Мову змінено з $1",
+    "ext-uls-language-settings-preferences-link": "Додаткові налаштування мови",
+    "uls-betafeature-label": "Компактні мовні посилання",
+    "uls-betafeature-desc": "Переглянути скорочену версію списку мов лише з тими мовами, які найпридатніші для вас.",
     "ext-uls-display-settings-title": "Налаштування відображення",
     "ext-uls-display-settings-language-tab": "Мова",
     "ext-uls-display-settings-fonts-tab": "Шрифти",

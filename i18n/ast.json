@@ -5,6 +5,13 @@
             "Xuacu"
         ]
     },
+    "uls-desc": "Ufre al usuariu delles maneres pa seleicionar una llingua y axustar la configuración de llingua",
+    "uls-plang-title-languages": "Llingües",
+    "ext-uls-select-language-settings-icon-tooltip": "Preferencies de llingua",
+    "ext-uls-undo-language-tooltip-text": "La llingua camudó dende $1",
+    "ext-uls-language-settings-preferences-link": "Más preferencies de llingua",
+    "uls-betafeature-label": "Compactando enllaces interllingüísticos",
+    "uls-betafeature-desc": "Amuesa una versión más curtia de la llista de llingües coles que son más relevantes pa vusté.",
     "ext-uls-display-settings-title": "Opciones de presentación",
     "ext-uls-display-settings-language-tab": "Llingua",
     "ext-uls-display-settings-fonts-tab": "Tipografía",

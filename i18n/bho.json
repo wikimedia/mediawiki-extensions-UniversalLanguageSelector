@@ -4,13 +4,14 @@
             "Nepaboy"
         ]
     },
+    "ext-uls-select-language-settings-icon-tooltip": "भाषा सेटिंग्स",
+    "ext-uls-undo-language-tooltip-text": "$1 से भाषा बदल दिहल गईल",
+    "ext-uls-language-settings-preferences-link": "अउर अधिक भाषा सेटिंग्स",
     "ext-uls-display-settings-title": "प्रदर्शन सेटिंग्स",
     "ext-uls-display-settings-language-tab": "भाषा",
     "ext-uls-display-settings-fonts-tab": "लिपी",
     "ext-uls-display-settings-title-short": "प्रदर्शन",
     "ext-uls-display-settings-desc": "मेनु आ लिपी खातिर प्रयोग भाषा सेट करीं",
-    "ext-uls-select-language-settings-icon-tooltip": "भाषा सेटिंग्स",
-    "ext-uls-undo-language-tooltip-text": "$1 से भाषा बदल दिहल गईल",
     "ext-uls-language-settings-title": "भाषा सेटिंग्स",
     "ext-uls-language-settings-apply": "सेटिंग्स लागू करीं",
     "ext-uls-language-settings-cancel": "रद्द करीं",
@@ -43,6 +44,5 @@
     "ext-uls-input-disable-notification": "इनपुट औजार कुल निष्क्रिय बा",
     "ext-uls-input-disable-notification-undo": "पूर्ववत",
     "ext-uls-input-disable-notification-info-personal": "भाषा सेटिंग्स में जाके कभी भी रउआ इनपुट औजार के सक्रिय कर सकत बानी।",
-    "ext-uls-input-disable-notification-info-interlanguage": "भाषा सूची के आगे भाषा सेटिंग्स में जाके रउआ कभी भी इनपुट औजार के सक्रिय कर सकत बानी।",
-    "ext-uls-language-settings-preferences-link": "अउर अधिक भाषा सेटिंग्स"
+    "ext-uls-input-disable-notification-info-interlanguage": "भाषा सूची के आगे भाषा सेटिंग्स में जाके रउआ कभी भी इनपुट औजार के सक्रिय कर सकत बानी।"
 }

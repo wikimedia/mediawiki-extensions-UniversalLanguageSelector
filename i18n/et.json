@@ -5,6 +5,11 @@
             "Pikne"
         ]
     },
+    "uls-desc": "Võimaldab kasutajal mitmel viisil keelt valida ja keelesätteid kohandada.",
+    "uls-plang-title-languages": "Keeled",
+    "ext-uls-select-language-settings-icon-tooltip": "Keelesätted",
+    "ext-uls-undo-language-tooltip-text": "Keel vahetatud, enne: $1",
+    "ext-uls-language-settings-preferences-link": "Veel keelesätteid",
     "ext-uls-display-settings-title": "Kuvasätted",
     "ext-uls-display-settings-language-tab": "Keel",
     "ext-uls-display-settings-fonts-tab": "Kirjatüübid",

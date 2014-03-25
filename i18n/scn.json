@@ -4,13 +4,14 @@
             "Gmelfi"
         ]
     },
+    "ext-uls-select-language-settings-icon-tooltip": "Mpustazzioni pâ lingua",
+    "ext-uls-undo-language-tooltip-text": "Lingua canciata a pàrtiri di $1",
+    "ext-uls-language-settings-preferences-link": "Àutri mpustazzioni pâ lingua",
     "ext-uls-display-settings-title": "Mpustazzioni di visualizzazzioni",
     "ext-uls-display-settings-language-tab": "Lingua",
     "ext-uls-display-settings-fonts-tab": "Tipa di carattiri",
     "ext-uls-display-settings-title-short": "Littura",
     "ext-uls-display-settings-desc": "Mposta la lingua usata pi minù e carattiri.",
-    "ext-uls-select-language-settings-icon-tooltip": "Mpustazzioni pâ lingua",
-    "ext-uls-undo-language-tooltip-text": "Lingua canciata a pàrtiri di $1",
     "ext-uls-language-settings-title": "Mpustazzioni pâ lingua",
     "ext-uls-language-settings-apply": "Applica li mpustazzioni",
     "ext-uls-language-settings-cancel": "Annulla",
@@ -44,6 +45,5 @@
     "ext-uls-input-disable-notification": "Li strummenta di scrittura foru disabbilitati",
     "ext-uls-input-disable-notification-undo": "Annulla",
     "ext-uls-input-disable-notification-info-personal": "È pussibbili attivari quannegghiè li strummenta di scrittura a pàrtiri dê mpustazzioni dâ lingua.",
-    "ext-uls-input-disable-notification-info-interlanguage": "È pussibbili attivari quannegghiè li strummenta di scrittura a pàrtiri dê mpustazzioni dâ lingua, vicinu a l'alencu dê lingui.",
-    "ext-uls-language-settings-preferences-link": "Àutri mpustazzioni pâ lingua"
+    "ext-uls-input-disable-notification-info-interlanguage": "È pussibbili attivari quannegghiè li strummenta di scrittura a pàrtiri dê mpustazzioni dâ lingua, vicinu a l'alencu dê lingui."
 }

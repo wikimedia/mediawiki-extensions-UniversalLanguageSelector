@@ -5,6 +5,11 @@
             "V.narsikar"
         ]
     },
+    "uls-desc": "सदस्यांना भाषा निवडण्याचे आणि त्यांची मांडणी अनुकूल करण्याचे अनेक मार्ग उपलब्ध करते",
+    "uls-plang-title-languages": "भाषा",
+    "ext-uls-select-language-settings-icon-tooltip": "भाषा सेटींग्स",
+    "ext-uls-undo-language-tooltip-text": "$1 पासुन भाषा बदलली",
+    "ext-uls-language-settings-preferences-link": "अधिकचे भाषा मांडणी पर्याय",
     "ext-uls-display-settings-title": "मांडणी दाखवा",
     "ext-uls-display-settings-language-tab": "भाषा",
     "ext-uls-display-settings-fonts-tab": "टंक (फाँट)",

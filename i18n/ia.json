@@ -4,6 +4,11 @@
             "McDutchie"
         ]
     },
+    "uls-desc": "Da al usator plure manieras de seliger un lingua e adjustar le configuration de lingua",
+    "uls-plang-title-languages": "Linguas",
+    "ext-uls-select-language-settings-icon-tooltip": "Configuration de lingua",
+    "ext-uls-undo-language-tooltip-text": "Lingua cambiate ab $1",
+    "ext-uls-language-settings-preferences-link": "Altere parametros de lingua",
     "ext-uls-display-settings-title": "Optiones de visualisation",
     "ext-uls-display-settings-language-tab": "Lingua",
     "ext-uls-display-settings-fonts-tab": "Typos de litteras",

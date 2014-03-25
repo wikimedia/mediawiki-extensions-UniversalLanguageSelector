@@ -4,13 +4,15 @@
             "Ahmed-Najib-Biabani-Ibrahimkhel"
         ]
     },
+    "uls-plang-title-languages": "ژبې",
+    "ext-uls-select-language-settings-icon-tooltip": "د ژبې امستنې",
+    "ext-uls-undo-language-tooltip-text": "له $1 څخه مو ژبه بدله شوه",
+    "ext-uls-language-settings-preferences-link": "د نورو ژبو امستنې",
     "ext-uls-display-settings-title": "د ښکارېدو امستنې",
     "ext-uls-display-settings-language-tab": "ژبه",
     "ext-uls-display-settings-fonts-tab": "ليکبڼې",
     "ext-uls-display-settings-title-short": "ښکارېدنه",
     "ext-uls-display-settings-desc": "د غورنۍ او ليکبڼو لپاره کارېدونکې ژبه ټاکل",
-    "ext-uls-select-language-settings-icon-tooltip": "د ژبې امستنې",
-    "ext-uls-undo-language-tooltip-text": "له $1 څخه مو ژبه بدله شوه",
     "ext-uls-language-settings-title": "د ژبې امستنې",
     "ext-uls-language-settings-apply": "امستنې پلي کول",
     "ext-uls-language-settings-cancel": "ناگارل",
@@ -20,6 +22,7 @@
     "ext-uls-display-settings-anon-label": "د ښکارېدنې ژبه:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (مېنځپانگې ته ورته)",
     "ext-uls-display-settings-anon-log-in-cta": "د غورنۍ لپاره د يوې بلې ژبې د ټاکلو په خاطر [[Special:UserLogin|غونډال ته ننوځۍ]].",
+    "ext-uls-webfonts-settings-info-link": "نور مالومات",
     "ext-uls-webfonts-select-for": "د $1 لپاره ليکبڼه ټاکل",
     "ext-uls-webfonts-select-for-ui-info": "د ليدنمخ لپاره کارېدونکې ليکبڼه",
     "ext-uls-webfonts-select-for-content-info": "د مېنځپانگې لپاره کارېدونکې ليکبڼه",
@@ -43,6 +46,5 @@
     "ext-uls-input-disable-notification": "د ننوتنې اوزار ناچارن شوي.",
     "ext-uls-input-disable-notification-undo": "ناکړل",
     "ext-uls-input-disable-notification-info-personal": "تاسې د ننوتلو اوزارونه هر وخت د ژبې امستنو څخه چارنولی شی.",
-    "ext-uls-input-disable-notification-info-interlanguage": "تاسې د ننوتلو اوزارونه هر وخت، د ژبې لړليک څنگ ته، د ژب-امستنو څخه چارنولی شی.",
-    "ext-uls-language-settings-preferences-link": "د نورو ژبو امستنې"
+    "ext-uls-input-disable-notification-info-interlanguage": "تاسې د ننوتلو اوزارونه هر وخت، د ژبې لړليک څنگ ته، د ژب-امستنو څخه چارنولی شی."
 }

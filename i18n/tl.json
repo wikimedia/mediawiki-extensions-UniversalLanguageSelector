@@ -1,14 +1,16 @@
 {
     "@metadata": {
         "authors": [
-            "Sky Harbor"
+            "Sky Harbor",
+            "AnakngAraw"
         ]
     },
+    "uls-desc": "Nagbibigay sa tagagamit ng ilang mga paraan upang makapili ng isang wika at upang mabago ang mga katakdaan ng wika",
+    "ext-uls-select-language-settings-icon-tooltip": "Mga kagustuhan sa wika",
+    "ext-uls-undo-language-tooltip-text": "Ipinalit ang wika mula sa $1",
     "ext-uls-display-settings-language-tab": "Wika",
     "ext-uls-display-settings-fonts-tab": "Estilo ng titik",
     "ext-uls-display-settings-desc": "Itakda ang wikang ginagamit para sa mga menu at estilo ng titik.",
-    "ext-uls-select-language-settings-icon-tooltip": "Mga kagustuhan sa wika",
-    "ext-uls-undo-language-tooltip-text": "Ipinalit ang wika mula sa $1",
     "ext-uls-language-settings-apply": "Ilapat ang mga kagustuhan",
     "ext-uls-language-settings-cancel": "Huwag ituloy",
     "ext-uls-language-buttons-help": "Palitan ang wika ng mga menu.  Hindi maaapektuhan ang wika ng nilalaman.",

@@ -3,9 +3,15 @@
         "authors": [
             "Byrial",
             "Christian List",
-            "Peter Alberti"
+            "Peter Alberti",
+            "Cgtdk"
         ]
     },
+    "uls-desc": "Giver brugeren forskellige måder at vælge et sprog og at justere indstillingerne for sproget",
+    "uls-plang-title-languages": "Sprog",
+    "ext-uls-select-language-settings-icon-tooltip": "Sprogindstillinger",
+    "ext-uls-undo-language-tooltip-text": "Sprog ændret fra $1",
+    "ext-uls-language-settings-preferences-link": "Flere sprogindstillinger",
     "ext-uls-display-settings-title": "Visningsindstillinger",
     "ext-uls-display-settings-language-tab": "Sprog",
     "ext-uls-display-settings-fonts-tab": "Skrifttyper",

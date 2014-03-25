@@ -4,6 +4,11 @@
             "GatoSelvadego"
         ]
     },
+    "uls-desc": "Fornise ai utenti difarenti modi de sełesionar na lengua e de sistemar łe inpostasion de ła lengua",
+    "uls-plang-title-languages": "Lengue",
+    "ext-uls-select-language-settings-icon-tooltip": "Inpostasion par ła lengua",
+    "ext-uls-undo-language-tooltip-text": "Lengua canbià da $1",
+    "ext-uls-language-settings-preferences-link": "Altre inpostasion par ła lengua",
     "ext-uls-display-settings-title": "Inpostasion de vixuałixasion",
     "ext-uls-display-settings-language-tab": "Lengua",
     "ext-uls-display-settings-fonts-tab": "Tipi de caratare",

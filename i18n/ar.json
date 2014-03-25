@@ -3,9 +3,17 @@
         "authors": [
             "ترجمان05",
             "زكريا",
-            "Asaifm"
+            "Asaifm",
+            "Tarawneh"
         ]
     },
+    "uls-desc": "يمنح المستخدم عدة طرق لاختيار لغة، وضبط إعدادات اللغة",
+    "uls-plang-title-languages": "لغات",
+    "ext-uls-select-language-settings-icon-tooltip": "إعدادات اللغة",
+    "ext-uls-undo-language-tooltip-text": "غيرت اللغة من $1",
+    "ext-uls-language-settings-preferences-link": "المزيد من إعدادات اللغة",
+    "uls-betafeature-label": "روابط اللغة المدمجة",
+    "uls-betafeature-desc": "تقوم بإظهار قائمة مختصرة للغات، حيث تعمل الخاصية على إظهار اللغات التي تهمك أكثر.",
     "ext-uls-display-settings-title": "إعدادات العرض",
     "ext-uls-display-settings-language-tab": "لغة",
     "ext-uls-display-settings-fonts-tab": "خطوط",

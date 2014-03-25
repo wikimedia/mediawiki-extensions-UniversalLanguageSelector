@@ -1,8 +1,13 @@
 {
     "@metadata": {
         "authors": [
-            "Chelin"
+            "Chelin",
+            "C.R.",
+            "Nemo bis"
         ]
     },
+    "uls-plang-title-languages": "Lengue",
+    "uls-betafeature-label": "Cumpatta cullegamiente lenguisteche",
+    "uls-betafeature-desc": "Mmusta na verziona cchiù curta d\u0026#39;'a lista 'e llengue, sulamente cu 'e llengue ca songo 'e cchiù mpurtante pe' tte.",
     "ext-uls-language-settings-cancel": "Canciella"
 }

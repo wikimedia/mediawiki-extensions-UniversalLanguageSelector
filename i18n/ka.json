@@ -2,9 +2,17 @@
     "@metadata": {
         "authors": [
             "David1010",
-            "Tokoko"
+            "Tokoko",
+            "Otogi",
+            "გიორგიმელა"
         ]
     },
+    "uls-desc": "აძლევს მომხმარებელს ენის არჩევისა და კონფიგურაციის საშუალებას",
+    "uls-plang-title-languages": "ენები",
+    "ext-uls-select-language-settings-icon-tooltip": "ენის პარამეტრები",
+    "ext-uls-undo-language-tooltip-text": "წინა ენა: $1",
+    "ext-uls-language-settings-preferences-link": "მეტი ენის პარამეტრები",
+    "uls-betafeature-label": "ენის კომპაქტური ბმულები",
     "ext-uls-display-settings-title": "ჩვენების პარამეტრები",
     "ext-uls-display-settings-language-tab": "ენა",
     "ext-uls-display-settings-fonts-tab": "შრიფტები",

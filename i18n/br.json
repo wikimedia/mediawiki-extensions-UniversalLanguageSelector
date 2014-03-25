@@ -5,13 +5,14 @@
             "Y-M D"
         ]
     },
+    "ext-uls-select-language-settings-icon-tooltip": "Arventennoù ar yezh",
+    "ext-uls-undo-language-tooltip-text": "Yezh kemmet eus $1",
+    "ext-uls-language-settings-preferences-link": "Muioc'h a arventennoù yezh",
     "ext-uls-display-settings-title": "Diskwel an arventennoù",
     "ext-uls-display-settings-language-tab": "Yezh",
     "ext-uls-display-settings-fonts-tab": "Fontoù",
     "ext-uls-display-settings-title-short": "Diskwel",
     "ext-uls-display-settings-desc": "Dibab ar yezh implijet evit al lañserioù hag ar fontoù",
-    "ext-uls-select-language-settings-icon-tooltip": "Arventennoù ar yezh",
-    "ext-uls-undo-language-tooltip-text": "Yezh kemmet eus $1",
     "ext-uls-language-settings-title": "Arventennoù ar yezh",
     "ext-uls-language-settings-apply": "Arloañ an arventennoù",
     "ext-uls-language-settings-cancel": "Nullañ",
@@ -20,6 +21,8 @@
     "ext-uls-display-settings-ui-language": "Yezhoù diskwel",
     "ext-uls-display-settings-anon-label": "Yezhoù diskwel :",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Kevreañ]] evit dibab ur yezh all evit al lañserioù.",
+    "ext-uls-webfonts-settings-title": "Pellgargañ ar font pa vez ezhomm",
+    "ext-uls-webfonts-settings-info-link": "Muioc'h a ditouroù",
     "ext-uls-webfonts-select-for": "Dibab ar font evit $1",
     "ext-uls-webfonts-select-for-ui-info": "Font implijet evit an etrefas",
     "ext-uls-webfonts-select-for-content-info": "Font implijet evit an danvez",
@@ -37,6 +40,5 @@
     "jquery-ime-help": "Skoazell",
     "ext-uls-input-disable": "Diweredekaat an ostilhoù bizskrivañ",
     "ext-uls-input-enable": "Gweredekaat an ostilhoù bizskrivañ",
-    "ext-uls-input-disable-notification-undo": "Dizober",
-    "ext-uls-language-settings-preferences-link": "Muioc'h a arventennoù yezh"
+    "ext-uls-input-disable-notification-undo": "Dizober"
 }

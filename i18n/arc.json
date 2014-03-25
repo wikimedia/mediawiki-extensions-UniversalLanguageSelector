@@ -4,13 +4,15 @@
             "Basharh"
         ]
     },
+    "uls-plang-title-languages": "ܠܫܢ̈ܐ",
+    "ext-uls-select-language-settings-icon-tooltip": "ܛܘܝܒ̈ܐ ܕܠܫܢܐ",
+    "ext-uls-undo-language-tooltip-text": "ܠܫܢܐ ܐܫܬܚܠܦ ܡܢ $1",
+    "ext-uls-language-settings-preferences-link": "ܛܘܝܒ̈ܐ ܕܠܫܢܐ ܝܬܝܪ",
     "ext-uls-display-settings-title": "ܠܫܢܐ ܕܚܘܘܝܐ",
     "ext-uls-display-settings-language-tab": "ܠܫܢܐ",
     "ext-uls-display-settings-fonts-tab": "ܣܪ̈ܛܐ",
     "ext-uls-display-settings-title-short": "ܚܘܘܝܐ",
     "ext-uls-display-settings-desc": "ܛܟܣ ܠܫܢܐ ܕܡܟܬܒܘܬ̈ܐ ܘܣܪ̈ܛܐ",
-    "ext-uls-select-language-settings-icon-tooltip": "ܛܘܝܒ̈ܐ ܕܠܫܢܐ",
-    "ext-uls-undo-language-tooltip-text": "ܠܫܢܐ ܐܫܬܚܠܦ ܡܢ $1",
     "ext-uls-language-settings-title": "ܛܘܝܒ̈ܐ ܕܠܫܢܐ",
     "ext-uls-language-settings-apply": "ܐܦܠܚ ܛܘܝܒ̈ܐ",
     "ext-uls-language-settings-cancel": "ܒܛܘܠ",
@@ -44,6 +46,5 @@
     "ext-uls-input-disable-notification": "ܫܒܝܠ̈ܐ ܕܥܘܠܠܐ ܕܠܫܢܐ ܠܐ ܬܘܦܥܠ̈ܐ ܐܢܘܢ",
     "ext-uls-input-disable-notification-undo": "ܠܐ ܬܥܒܕ",
     "ext-uls-input-disable-notification-info-personal": "ܡܨܬ ܕܬܦܥܠܬ ܫܒܝܠ̈ܐ ܕܥܘܠܠܐ ܕܠܫܢܐ ܒܐܝܢܐ ܥܕܢܐ ܡܢ ܛܘܝܒ̈ܐ ܕܠܫܢܐ",
-    "ext-uls-input-disable-notification-info-interlanguage": "ܡܨܬ ܕܬܦܥܠܬ ܫܒܝܠ̈ܐ ܕܥܘܠܠܐ ܕܠܫܢܐ ܒܐܝܢܐ ܥܕܢܐ ܡܢ ܛܘܝܒ̈ܐ ܕܠܫܢܐ ܓܢܒ ܡܟܬܒܘܬܐ ܕܠܫܢܐ",
-    "ext-uls-language-settings-preferences-link": "ܛܘܝܒ̈ܐ ܕܠܫܢܐ ܝܬܝܪ"
+    "ext-uls-input-disable-notification-info-interlanguage": "ܡܨܬ ܕܬܦܥܠܬ ܫܒܝܠ̈ܐ ܕܥܘܠܠܐ ܕܠܫܢܐ ܒܐܝܢܐ ܥܕܢܐ ܡܢ ܛܘܝܒ̈ܐ ܕܠܫܢܐ ܓܢܒ ܡܟܬܒܘܬܐ ܕܠܫܢܐ"
 }

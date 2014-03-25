@@ -2,9 +2,17 @@
     "@metadata": {
         "authors": [
             "Metalhead64",
-            "Se4598"
+            "Se4598",
+            "Kghbln"
         ]
     },
+    "uls-desc": "Ermöglicht verschiedene Wege, eine Sprache auszuwählen und Spracheinstellungen anzupassen",
+    "uls-plang-title-languages": "Sprachen",
+    "ext-uls-select-language-settings-icon-tooltip": "Spracheinstellungen",
+    "ext-uls-undo-language-tooltip-text": "Sprache geändert von $1",
+    "ext-uls-language-settings-preferences-link": "Weitere Spracheinstellungen",
+    "uls-betafeature-label": "Kompakte Sprachlinks",
+    "uls-betafeature-desc": "Zeigt eine kürzere Version der Sprachenliste mit den für dich relevanten Sprachen an.",
     "ext-uls-display-settings-title": "Anzeigeeinstellungen",
     "ext-uls-display-settings-language-tab": "Sprache",
     "ext-uls-display-settings-fonts-tab": "Schriftarten",

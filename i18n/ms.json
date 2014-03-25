@@ -5,13 +5,16 @@
             "Xabier Armendaritz"
         ]
     },
+    "uls-desc": "Membolehkan pengguna memilih bahasa dan mengubah tetapan bahasa dengan pelbagai cara",
+    "uls-plang-title-languages": "Bahasa",
+    "ext-uls-select-language-settings-icon-tooltip": "Tetapan bahasa",
+    "ext-uls-undo-language-tooltip-text": "Bahasa ditukar dari $1",
+    "ext-uls-language-settings-preferences-link": "Tetapan bahasa lanjutan",
     "ext-uls-display-settings-title": "Tetapan paparan",
     "ext-uls-display-settings-language-tab": "Bahasa",
     "ext-uls-display-settings-fonts-tab": "Fon",
     "ext-uls-display-settings-title-short": "Paparan",
     "ext-uls-display-settings-desc": "Tetapkan bahasa yang digunakan untuk menu dan rupa huruf.",
-    "ext-uls-select-language-settings-icon-tooltip": "Tetapan bahasa",
-    "ext-uls-undo-language-tooltip-text": "Bahasa ditukar dari $1",
     "ext-uls-language-settings-title": "Tetapan bahasa",
     "ext-uls-language-settings-apply": "Gunakan tetapan",
     "ext-uls-language-settings-cancel": "Batalkan",
@@ -21,6 +24,9 @@
     "ext-uls-display-settings-anon-label": "Bahasa paparan:",
     "ext-uls-display-settings-anon-same-as-content": "Bahasa Melayu (sama dengan kandungan)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Log masuk]] untuk memilih bahasa yang lain untuk menu.",
+    "ext-uls-webfonts-settings-title": "Muat turun rupa huruf apabila diperlukan",
+    "ext-uls-webfonts-settings-info": "Webfont akan dimuat turun untuk memaparkan teks dalam tulisan khas.",
+    "ext-uls-webfonts-settings-info-link": "Maklumat lanjut",
     "ext-uls-webfonts-select-for": "Pilih rupa huruf untuk $1",
     "ext-uls-webfonts-select-for-ui-info": "Rupa huruf yang digunakan untuk antaramuka pengguna",
     "ext-uls-webfonts-select-for-content-info": "Rupa huruf yang digunakan untuk isi kandungan",
@@ -45,6 +51,5 @@
     "ext-uls-input-disable-notification": "Peralatan input dimatikan",
     "ext-uls-input-disable-notification-undo": "Nyahbuat",
     "ext-uls-input-disable-notification-info-personal": "Anda boleh menghidupkan peralatan input pada bila-bila masa dari tetapan bahasa.",
-    "ext-uls-input-disable-notification-info-interlanguage": "Anda boleh menghidupkan peralatan input pada bila-bila masa dari tetapan bahasa dekat dengan senarai bahasa.",
-    "ext-uls-language-settings-preferences-link": "Tetapan bahasa lanjutan"
+    "ext-uls-input-disable-notification-info-interlanguage": "Anda boleh menghidupkan peralatan input pada bila-bila masa dari tetapan bahasa dekat dengan senarai bahasa."
 }

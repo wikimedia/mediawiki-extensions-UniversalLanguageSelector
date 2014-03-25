@@ -1,16 +1,19 @@
 {
     "@metadata": {
         "authors": [
-            "Veeven"
+            "Veeven",
+            "Arjunaraoc"
         ]
     },
+    "uls-plang-title-languages": "భాషలు",
+    "ext-uls-select-language-settings-icon-tooltip": "భాషా అమరికలు",
+    "ext-uls-undo-language-tooltip-text": "భాషను $1 నుండి మార్చారు",
+    "ext-uls-language-settings-preferences-link": "మరిన్ని భాషా అమరికలు",
     "ext-uls-display-settings-title": "ప్రదర్శన అమరికలు",
     "ext-uls-display-settings-language-tab": "భాష",
     "ext-uls-display-settings-fonts-tab": "ఖతులు",
     "ext-uls-display-settings-title-short": "దర్శనం",
     "ext-uls-display-settings-desc": "మెనూలు మరియు ఖతుల కోసం వాడే భాషను ఎంచుకోండి.",
-    "ext-uls-select-language-settings-icon-tooltip": "భాషా అమరికలు",
-    "ext-uls-undo-language-tooltip-text": "భాషను $1 నుండి మార్చారు",
     "ext-uls-language-settings-title": "భాషా అమరికలు",
     "ext-uls-language-settings-apply": "అమరికలను వర్తింపజేయి",
     "ext-uls-language-settings-cancel": "రద్దుచేయి",
@@ -30,6 +33,5 @@
     "ext-uls-back-to-input-settings": "తిరిగి ఇన్‌పుట్ అమరికలకు",
     "ext-uls-input-settings-more-languages-tooltip": "మరిన్ని భాషలు",
     "jquery-ime-other-languages": "ఇతర భాషలు",
-    "jquery-ime-help": "సహాయం",
-    "ext-uls-language-settings-preferences-link": "మరిన్ని భాషా అమరికలు"
+    "jquery-ime-help": "సహాయం"
 }

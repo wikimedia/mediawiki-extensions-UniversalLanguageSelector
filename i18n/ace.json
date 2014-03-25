@@ -5,13 +5,14 @@
             "Ayie7791"
         ]
     },
+    "ext-uls-select-language-settings-icon-tooltip": "Atô bahsa",
+    "ext-uls-undo-language-tooltip-text": "Bahsa meugantoë nibak $1",
+    "ext-uls-language-settings-preferences-link": "Neuatô bahsa leubèh le",
     "ext-uls-display-settings-title": "Atô seuneudeuh",
     "ext-uls-display-settings-language-tab": "Bahsa",
     "ext-uls-display-settings-fonts-tab": "Haraih",
     "ext-uls-display-settings-title-short": "Seuneudeuh",
     "ext-uls-display-settings-desc": "Atô bahsa keu menu ngón haraih",
-    "ext-uls-select-language-settings-icon-tooltip": "Atô bahsa",
-    "ext-uls-undo-language-tooltip-text": "Bahsa meugantoë nibak $1",
     "ext-uls-language-settings-title": "Atô bahsa",
     "ext-uls-language-settings-apply": "Ngui neuatô",
     "ext-uls-language-settings-cancel": "Pubateuë",
@@ -46,6 +47,5 @@
     "ext-uls-input-disable-notification-undo": "Pubateuë",
     "ext-uls-input-disable-notification-info-personal": "Droëneuh jeuët neupeuudép peukakaih pasoë pajan mantöng nibak neuatô bahsa",
     "ext-uls-input-disable-notification-info-interlanguage": "Droëneuh jeuët neupeuudép peukakaih pasoë baranggajan nibak neuatô bahsa nyang na bak binèh dapeuta bahsa",
-    "ext-uls-language-settings-applying": "Peujak...",
-    "ext-uls-language-settings-preferences-link": "Neuatô bahsa leubèh le"
+    "ext-uls-language-settings-applying": "Peujak..."
 }

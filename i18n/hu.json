@@ -2,9 +2,11 @@
     "@metadata": {
         "authors": [
             "R-Joe",
-            "Tgr"
+            "Tgr",
+            "BáthoryPéter"
         ]
     },
+    "uls-plang-title-languages": "Nyelvek",
     "ext-uls-display-settings-title": "Megjelenítési beállítások",
     "ext-uls-display-settings-language-tab": "Nyelv",
     "ext-uls-display-settings-fonts-tab": "Betűkészletek",

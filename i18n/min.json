@@ -4,13 +4,16 @@
             "Iwan Novirion"
         ]
     },
+    "uls-desc": "Mangagiah pangguno caro untuak mamiliah bahaso dan manyasuaian pangaturannyo",
+    "uls-plang-title-languages": "Bahaso",
+    "ext-uls-select-language-settings-icon-tooltip": "Pangaturan bahaso",
+    "ext-uls-undo-language-tooltip-text": "Bahaso barubah dari $1",
+    "ext-uls-language-settings-preferences-link": "Pangaturan bahaso lanjutan",
     "ext-uls-display-settings-title": "Pangaturan tampilan",
     "ext-uls-display-settings-language-tab": "Bahaso",
     "ext-uls-display-settings-fonts-tab": "Hurup",
     "ext-uls-display-settings-title-short": "Tampilan",
     "ext-uls-display-settings-desc": "Pangaturan untuak menu jo hurup",
-    "ext-uls-select-language-settings-icon-tooltip": "Pangaturan bahaso",
-    "ext-uls-undo-language-tooltip-text": "Bahaso barubah dari $1",
     "ext-uls-language-settings-title": "Pangaturan bahaso",
     "ext-uls-language-settings-apply": "Terapkan pangaturan",
     "ext-uls-language-settings-cancel": "Batalan",
@@ -20,6 +23,9 @@
     "ext-uls-display-settings-anon-label": "Bahaso tampilan",
     "ext-uls-display-settings-anon-same-as-content": "Inggirih (samo jo konten)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Masuak log]] guno mamiliah bahaso nan lain untuak menu.",
+    "ext-uls-webfonts-settings-title": "Unduah hurup bilo paralu.",
+    "ext-uls-webfonts-settings-info": "Hurup web ka diunduah untuak manampilan teks pado skrip khusuih.",
+    "ext-uls-webfonts-settings-info-link": "Informasi labiah lanjuik",
     "ext-uls-webfonts-select-for": "Piliah hurup untuak $1",
     "ext-uls-webfonts-select-for-ui-info": "Hurup nan untuak antarmuko pangguno",
     "ext-uls-webfonts-select-for-content-info": "Hurup nan untuak konten",
@@ -43,6 +49,5 @@
     "ext-uls-input-disable-notification": "Parangkaik input dinonaktipan",
     "ext-uls-input-disable-notification-undo": "Ulang",
     "ext-uls-input-disable-notification-info-personal": "Sanak dapek mangaktipan parangkaik input tiok saaik dari pangaturan bahaso.",
-    "ext-uls-input-disable-notification-info-interlanguage": "Sanak dapek mangaktipan parangkaik input tiok saaik dari pangaturan bahaso di sabalah daftar bahaso.",
-    "ext-uls-language-settings-preferences-link": "Pangaturan bahaso lanjutan"
+    "ext-uls-input-disable-notification-info-interlanguage": "Sanak dapek mangaktipan parangkaik input tiok saaik dari pangaturan bahaso di sabalah daftar bahaso."
 }

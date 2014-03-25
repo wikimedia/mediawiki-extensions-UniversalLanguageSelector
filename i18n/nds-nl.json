@@ -4,13 +4,14 @@
             "Servien"
         ]
     },
+    "ext-uls-select-language-settings-icon-tooltip": "Taalinstellingen",
+    "ext-uls-undo-language-tooltip-text": "Taal ewiezigd van $1",
+    "ext-uls-language-settings-preferences-link": "Meer taalinstellingen",
     "ext-uls-display-settings-title": "Weergave-instellingen",
     "ext-uls-display-settings-language-tab": "Taal",
     "ext-uls-display-settings-fonts-tab": "Lettertypen",
     "ext-uls-display-settings-title-short": "Weergave",
     "ext-uls-display-settings-desc": "Taal kiezen veur menu's en lettertypen.",
-    "ext-uls-select-language-settings-icon-tooltip": "Taalinstellingen",
-    "ext-uls-undo-language-tooltip-text": "Taal ewiezigd van $1",
     "ext-uls-language-settings-title": "Taalinstellingen",
     "ext-uls-language-settings-apply": "Laot kulen!",
     "ext-uls-language-settings-cancel": "Aofbreken",
@@ -44,6 +45,5 @@
     "ext-uls-input-disable-notification": "Invoermethoden bin uutezet",
     "ext-uls-input-disable-notification-undo": "Weerummedreien",
     "ext-uls-input-disable-notification-info-personal": "Je kunnen de invoermethoden weer anzetten via de taalinstellingen.",
-    "ext-uls-input-disable-notification-info-interlanguage": "Je kunnen de invoermethoden weer anzetten via de taalinstellingen naost de lieste mit talen.",
-    "ext-uls-language-settings-preferences-link": "Meer taalinstellingen"
+    "ext-uls-input-disable-notification-info-interlanguage": "Je kunnen de invoermethoden weer anzetten via de taalinstellingen naost de lieste mit talen."
 }

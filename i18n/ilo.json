@@ -4,6 +4,13 @@
             "Lam-ang"
         ]
     },
+    "uls-desc": "Mangited ti agar-aramat kadagiti nadumaduma a pamay-an ti panagpili ti maysa a pagsasao ken ti panagbaliw kadagiti pannakaidisso ti pagsasao",
+    "uls-plang-title-languages": "Dagiti pagsasao",
+    "ext-uls-select-language-settings-icon-tooltip": "Dagiti disso ti pagsasao",
+    "ext-uls-undo-language-tooltip-text": "Binaliwan ti pagsasao manipud ti $1",
+    "ext-uls-language-settings-preferences-link": "Adu pay a disso ti pagsasao",
+    "uls-betafeature-label": "Kompakto a silsilpo ti pagsasao",
+    "uls-betafeature-desc": "Ipakita ti ababa a bersion ti listaan ti pagsasao, ken dagiti laeng pagsasao a maitunos kaniam.",
     "ext-uls-display-settings-title": "Idaya dagiti disso",
     "ext-uls-display-settings-language-tab": "Pagsasao",
     "ext-uls-display-settings-fonts-tab": "Kita ti letletra",

@@ -5,12 +5,15 @@
             "Xelgen"
         ]
     },
+    "uls-desc": "Օգտագործողին թույլ է տալիս մի քանի եղանակաով ընտրել լեզուներ և լեզվական կարգավորումներ",
+    "uls-plang-title-languages": "Լեզուներ",
+    "ext-uls-select-language-settings-icon-tooltip": "Լեզվական կարգավորումներ",
+    "ext-uls-undo-language-tooltip-text": "Լեզուն փոխվել է $1ից։",
+    "ext-uls-language-settings-preferences-link": "Հավելյալ լեզվական կարգավորումներ։",
     "ext-uls-display-settings-language-tab": "Լեզու",
     "ext-uls-display-settings-fonts-tab": "Տառատեսակներ",
     "ext-uls-display-settings-title-short": "Ցուցադրել",
     "ext-uls-display-settings-desc": "Միջներեսի և տառատեսակների լեզուն։",
-    "ext-uls-select-language-settings-icon-tooltip": "Լեզվական կարգավորումներ",
-    "ext-uls-undo-language-tooltip-text": "Լեզուն փոխվել է $1ից։",
     "ext-uls-language-settings-title": "Լեզվական կարգավորումներ",
     "ext-uls-language-settings-apply": "Կիրառել կարգավորումները։",
     "ext-uls-language-settings-cancel": "Չեղարկել",
@@ -45,6 +48,5 @@
     "ext-uls-input-disable-notification-undo": "Հետարկել",
     "ext-uls-input-disable-notification-info-personal": "Դուք ցանկացած պահին կարող եք միացնել ներածման գործիքները, լեզվական կարգավորումներից։",
     "ext-uls-input-disable-notification-info-interlanguage": "Դուք ցանկացած պահին կարող եք միացնել ներածման գործիքները լեզվական կարգավորումներում, լեզուների ցանկի կողքը։",
-    "ext-uls-language-settings-applying": "Կիրառում․․․",
-    "ext-uls-language-settings-preferences-link": "Հավելյալ լեզվական կարգավորումներ։"
+    "ext-uls-language-settings-applying": "Կիրառում․․․"
 }
