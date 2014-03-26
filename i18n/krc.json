@@ -45,5 +45,6 @@
     "ext-uls-input-disable-notification": "Джазыу адырла джукъландыла.",
     "ext-uls-input-disable-notification-undo": "Ызына ал",
     "ext-uls-input-disable-notification-info-personal": "Джазыу адырланы хар заманда да тил джарашдырыуладан джандырыргъа боллукъду.",
-    "ext-uls-input-disable-notification-info-interlanguage": "Джазыу адырланы хар заманда да тилле тизимни къатындагъы тил джарашдырыуладан джандырыргъа боллукъду."
+    "ext-uls-input-disable-notification-info-interlanguage": "Джазыу адырланы хар заманда да тил тизимни къатындагъы тил джарашдырыуладан джандырыргъа боллукъду.",
+    "ext-uls-compact-link-count": "Энтда {{PLURAL:$1|бир тилде|$1 тилде}}"
 }

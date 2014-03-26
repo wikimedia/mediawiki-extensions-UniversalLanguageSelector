@@ -2,7 +2,8 @@
     "@metadata": {
         "authors": [
             "Veeven",
-            "Arjunaraoc"
+            "Arjunaraoc",
+            "రహ్మానుద్దీన్"
         ]
     },
     "uls-plang-title-languages": "భాషలు",
@@ -31,7 +32,9 @@
     "ext-uls-input-settings-ime-settings": "$1 ఇన్‌పుట్ పద్ధతులు",
     "ext-uls-input-settings-ui-language": "వ్రాయడానికి వాడే భాష",
     "ext-uls-back-to-input-settings": "తిరిగి ఇన్‌పుట్ అమరికలకు",
+    "ext-uls-ime-help": "ఎలా ఉపయోగించాలి",
     "ext-uls-input-settings-more-languages-tooltip": "మరిన్ని భాషలు",
     "jquery-ime-other-languages": "ఇతర భాషలు",
-    "jquery-ime-help": "సహాయం"
+    "jquery-ime-help": "సహాయం",
+    "ext-uls-input-disable-notification-undo": "రద్దుచెయ్యి"
 }
