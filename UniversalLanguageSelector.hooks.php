@@ -343,11 +343,14 @@ class UniversalLanguageSelectorHooks {
 			$wgInterwikiMagic === true &&
 			$wgHideInterlanguageLinks === false
 		) {
+			$imagesDir = "$wgExtensionAssetsPath/UniversalLanguageSelector/resources/images";
 			$prefs['uls-compact-links'] = array(
 				'label-message' => 'uls-betafeature-label',
 				'desc-message' => 'uls-betafeature-desc',
-				'screenshot' => $wgExtensionAssetsPath .
-					'/UniversalLanguageSelector/resources/images/compact-links-ltr.png',
+				'screenshot' => array(
+					'ltr' => "$imagesDir/compact-links-ltr.png",
+					'rtl' => "$imagesDir/compact-links-rtl.png",
+				),
 				'info-link' =>
 					'https://www.mediawiki.org/wiki/Universal_Language_Selector/Design/Interlanguage_links',
 				'discussion-link' =>
