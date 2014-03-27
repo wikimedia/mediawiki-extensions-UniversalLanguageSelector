@@ -10,6 +10,8 @@
     "ext-uls-select-language-settings-icon-tooltip": "Keelesätted",
     "ext-uls-undo-language-tooltip-text": "Keel vahetatud, enne: $1",
     "ext-uls-language-settings-preferences-link": "Veel keelesätteid",
+    "uls-betafeature-label": "Kompaktsed keelelingid",
+    "uls-betafeature-desc": "Näita keelelinkide lühemat versiooni, milles on vaid sinu jaoks enam huvi pakkuvad keeled.",
     "ext-uls-display-settings-title": "Kuvasätted",
     "ext-uls-display-settings-language-tab": "Keel",
     "ext-uls-display-settings-fonts-tab": "Kirjatüübid",
@@ -52,5 +54,6 @@
     "ext-uls-input-disable-notification-undo": "Võta tagasi",
     "ext-uls-input-disable-notification-info-personal": "Saad alati keelesätetes sisestusriistad lubada.",
     "ext-uls-input-disable-notification-info-interlanguage": "Saad alati keelesätetes keelte loendi kõrval sisestusriistad lubada.",
-    "ext-uls-language-settings-applying": "Rakendamine..."
+    "ext-uls-language-settings-applying": "Rakendamine...",
+    "ext-uls-compact-link-count": "Veel {{PLURAL:$1|üks keel|$1 keelt}}"
 }
