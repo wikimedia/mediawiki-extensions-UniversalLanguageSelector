@@ -78,7 +78,7 @@
 			var language;
 
 			for ( language in this.compactList ) {
-				this.addLanguage( language );
+				this.showLanguage( language );
 			}
 			this.addTrigger();
 		},
@@ -250,21 +250,11 @@
 		},
 
 		/**
-		 * Add a language to the interlanguage list
+		 * Show a language from the interlanguage list
 		 * @param {string} language
 		 */
-		addLanguage: function ( language ) {
-			var $link, $listItem, languageLink;
-
-			languageLink = this.interlanguageList[ language ];
-			$link = $( '<a>' )
-				.addClass( 'active' )
-				.attr( 'href', languageLink.href )
-				.text( languageLink.autonym );
-			$listItem = $( '<li>' )
-				.addClass( 'interlanguage-link interwiki-' + language )
-				.append( $link );
-			this.$interlanguageList.append( $listItem );
+		showLanguage: function ( language ) {
+			this.$interlanguageList.find( '.interwiki-' + language ).show();
 		}
 	};
 
