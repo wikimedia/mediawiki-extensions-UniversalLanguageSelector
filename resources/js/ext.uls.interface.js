@@ -397,6 +397,8 @@
 				$ulsTrigger.on( 'click', function ( e, eventParams ) {
 					var languagesettings = $ulsTrigger.data( 'languagesettings' );
 
+					e.preventDefault();
+
 					if ( languagesettings ) {
 						if ( !languagesettings.shown ) {
 							mw.hook( 'mw.uls.settings.open' ).fire( eventParams && eventParams.source || 'personal' );
@@ -407,13 +409,13 @@
 
 							$ulsTrigger.trigger( 'click', eventParams );
 						} );
-
-						e.stopPropagation();
 					}
 				} );
 			} else {
 				$ulsTrigger.on( 'click', function ( e, eventParams ) {
 					var uls = $ulsTrigger.data( 'uls' );
+
+					e.preventDefault();
 
 					if ( uls ) {
 						if ( !uls.shown ) {
@@ -445,8 +447,6 @@
 							window.setTimeout( function () {
 								$ulsTrigger.trigger( 'click', eventParams );
 							}, 0 );
-
-							e.stopPropagation();
 						} );
 					}
 				} );
