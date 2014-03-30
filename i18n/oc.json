@@ -7,11 +7,20 @@
     "uls-desc": "Dona a l’utilizaire mantun biais de seleccionar una lenga e d’ajustar los paramètres de lenga",
     "uls-betafeature-label": " Compactar los ligams de lenga",
     "uls-betafeature-desc": "Afichar una version abreujada de la lista de las lengas, amb sonque las lengas que vos interèssan lo mai.",
+    "ext-uls-display-settings-title": "Afichar los paramètres",
     "ext-uls-display-settings-language-tab": "Lenga",
+    "ext-uls-display-settings-fonts-tab": "Poliças de caractèrs",
+    "ext-uls-display-settings-title-short": "Afichatge",
     "ext-uls-language-settings-title": "Paramètres de lenga",
     "ext-uls-language-settings-apply": "Aplicar los paramètres",
     "ext-uls-language-settings-cancel": "Anullar",
+    "ext-uls-display-settings-font-settings": "Paramètres de poliça",
     "ext-uls-display-settings-ui-language": "Lenga d'afichatge",
+    "ext-uls-display-settings-anon-same-as-content": "$1 (coma lo contengut)",
     "ext-uls-input-settings-ui-language": "Lenga utilizada per escriure",
-    "ext-uls-language-settings-applying": "Mesa en òbra en cors…"
+    "ext-uls-disable-input-method": "Utilizar un clavièr local",
+    "ext-uls-input-settings-more-languages-tooltip": "Mai de lengas",
+    "ext-uls-input-disable-notification-undo": "Anullar",
+    "ext-uls-language-settings-applying": "Mesa en òbra en cors…",
+    "ext-uls-compact-link-count": "{{PLURAL:$1|Una lenga mai|$1 lengas mai}}"
 }
