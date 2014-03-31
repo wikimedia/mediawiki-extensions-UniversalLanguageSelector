@@ -1,0 +1,13 @@
+== UniversalLanguageSelector 2014.03 ==
+Released at 2014-03-31.
+
+=== Noteworthy changes ===
+* compacting the interlanguage links with the ULS as new Beta feature. Displays
+a shorter version of the language list with the languages that are more
+relevant to you. More information at:
+https://www.mediawiki.org/wiki/Universal_Language_Selector/Design/Interlanguage_links
+* Bug 56081: Reset webfonts where inline css style found upon reset. This fixes
+broken live preview for content font.
+
+=== Fonts ===
+* Updated Lohit Oriya font to new upstream version and renamed to Lohit Odia.
