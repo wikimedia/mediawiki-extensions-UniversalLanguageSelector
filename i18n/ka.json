@@ -13,6 +13,7 @@
     "ext-uls-undo-language-tooltip-text": "წინა ენა: $1",
     "ext-uls-language-settings-preferences-link": "მეტი ენის პარამეტრები",
     "uls-betafeature-label": "ენის კომპაქტური ბმულები",
+    "uls-betafeature-desc": "აჩვენებს საერთაშორისო ბმულების შემოკლებულ ვარიანტს; ჩანს მხოლოდ თქვენთვის უფრო შესაბამისი ენათშორისი ბმულები.",
     "ext-uls-display-settings-title": "ჩვენების პარამეტრები",
     "ext-uls-display-settings-language-tab": "ენა",
     "ext-uls-display-settings-fonts-tab": "შრიფტები",
