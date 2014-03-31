@@ -134,8 +134,8 @@
 
 		$.fn.webfonts.defaults = $.extend( $.fn.webfonts.defaults, {
 			 /**
-			  * Font selector - depending the language and optionally
-			  * based on the class given choose a font.
+			  * Returns a suitable font from font repository based
+			  * on the given language and html classes and user preference.
 			  *
 			  * @param {Object} repository
 			  * @param {string} language
