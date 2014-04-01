@@ -2,7 +2,7 @@
 
 DEST="../lib/";
 CLONEDIR="/tmp/jquery.webfonts";
-HERE=`pwd`;
+HERE=$(pwd);
 UPSTREAM="https://github.com/wikimedia/jquery.webfonts.git";
 
 echo -e "Getting latest jquery.webfonts from $UPSTREAM\n";
@@ -13,5 +13,5 @@ else
     git clone $UPSTREAM $CLONEDIR;
 fi
 
-cd $HERE;
+cd "$HERE";
 cp -rf $CLONEDIR/src/* $DEST
