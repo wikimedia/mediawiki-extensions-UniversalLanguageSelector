@@ -21,235 +21,282 @@
 	'use strict';
 
 	/**
-	 * Add a language to the interlanguage list
-	 * @param {string} name Name of language in Autonym font
-	 * @param {string} url Link of the article in the respective language wiki
+	 * For the given array, remove duplicates
+	 * @param {Array} originalArray
+	 * @return de-duplicated array
 	 */
-	function addLanguage( name, url ) {
-		var $linkNode,
-			$listNode,
-			$interlanguageList;
+	function unique( originalArray ) {
+		var uniqueArray = [];
 
-		$linkNode = $( '<a>' )
-			.addClass( 'active' )
-			.attr( 'href', url )
-			.text( name );
-
-		$listNode = $( '<li>' )
-			.append( $linkNode );
-
-		$interlanguageList = $( '#p-lang > div > ul' );
-		$interlanguageList.append( $listNode );
-	}
-
-	/**
-	 * Find out the existing languages supported
-	 * by article and fetch their href
-	 * @return {Object} List of exiting language codes and their hrefs
-	 */
-	function getInterlanguageList() {
-		var interlangList = {},
-			selectedElement;
-		$( '#p-lang > div > ul > li > a' ).each( function() {
-			selectedElement = $( this );
-			interlangList[ selectedElement.attr( 'lang' ) ] = selectedElement.attr( 'href' );
+		$.each( originalArray, function ( i, v ) {
+			if ( $.inArray( v, uniqueArray ) === -1 ) {
+				uniqueArray.push( v );
+			}
 		} );
-		return interlangList;
+		return uniqueArray;
 	}
 
 	/**
-	 * Fetch list of language names(in Autonym) which are supported by the article
-	 * @return {Object} List of Language names in Autonym supported by article
+	 * @class
 	 */
-	function getCurrentLanguages() {
-		var acceptedLanglist = {},
-			interlangList = getInterlanguageList(), i;
-		for ( i in interlangList ) {
-			if( interlangList.hasOwnProperty( i ) ) {
-				acceptedLanglist[ i ] = $.uls.data.getAutonym(i);
+	function CompactInterlanguageList( interlanguageList, options ) {
+		this.$interlanguageList = $( interlanguageList );
+		this.options = $.extend( {}, $.fn.compactInterlanguageList.defaults, options );
+		this.interlanguageList = {};
+		this.compactList = {};
+		this.$trigger = null;
+		this.compactSize = 0;
+		this.listSize = 0;
+		this.init();
+	}
+
+	CompactInterlanguageList.prototype = {
+		/**
+		 * Initialize the plugin
+		 */
+		init: function () {
+			this.interlanguageList = this.getInterlanguageList();
+			this.listSize = this.getListSize();
+
+			if ( this.listSize <= this.options.max ) {
+				// Not enough languages to compact the list
+				return;
 			}
-		}
-		return acceptedLanglist;
-	}
 
-	/**
-	 * Frequently spoken languages which are supported by the article for
-	 * the Common Languages section of the ULS
-	 * @return {Array} List of those language codes which are supported by article and appears
-	 * in the Common Languages section of ULS
-	 */
-	function getCommonLanguages() {
-		// From ext.uls.init.js
-		var frequentLang = mw.uls.getFrequentLanguageList(),
-			$acceptedLang = $.map( getCurrentLanguages(), function ( element, index ) {
+			// if the interlanguage list is of moderate size, the compact size is 7.
+			this.compactSize = ( this.listSize <= 12 ) ? 7 : this.options.max;
+			this.hideOriginal();
+			this.compactList = this.getCompactList();
+			this.render();
+			this.listen();
+		},
+
+		/**
+		 * Render the compacted interlanguage list and triggers
+		 */
+		render: function () {
+			var language;
+
+			for ( language in this.compactList ) {
+				this.addLanguage( language );
+			}
+			this.addTrigger();
+		},
+
+		/**
+		 * Bind to event handlers and listen for events
+		 */
+		listen: function () {
+			var cl = this,
+				triggerPosition = this.$trigger.offset(),
+				ulsLanguageList = {},
+				languages;
+
+			languages = $.map( this.interlanguageList, function ( language, languageCode ) {
+				ulsLanguageList[ languageCode ] = language.autonym;
+				return languageCode;
+			} );
+
+			// Attach ULS to the trigger
+			this.$trigger.uls( {
+				onReady: function () {
+					this.$menu.addClass( 'interlanguage-uls-menu' );
+				},
+				/**
+				 * Language selection handler
+				 * @param {string} language language code
+				 */
+				onSelect: function ( language ) {
+					var previousLanguages = mw.uls.getPreviousLanguages();
+					previousLanguages.push( language );
+					previousLanguages = unique( previousLanguages );
+					mw.uls.setPreviousLanguages( previousLanguages );
+					window.location.href = cl.interlanguageList[ language ].href;
+				},
+				// Use compact version of ULS
+				compact: true,
+				// Left position of the language selector
+				left: triggerPosition.left + cl.$trigger.width() + cl.$interlanguageList.width() + 'px',
+				// Top position of the language selector. Top it 250px above to take care of
+				// caret pointing the trigger. See .interlanguage-uls-menu:after style definition
+				top: triggerPosition.top - cl.$trigger.height() / 2 - 250 + 'px',
+				// List of languages to be shown
+				languages: ulsLanguageList,
+				// Show common languages
+				quickList: cl.filterByCommonLanguages( languages )
+			} );
+		},
+
+		/**
+		 * Get the compacted interlanguage list as associative array
+		 * @return {Object}
+		 */
+		getCompactList: function () {
+			var language, languages, compactLanguages, index, compactedList = {};
+
+			languages = $.map( this.interlanguageList, function ( element, index ) {
 				return index;
-			} ),
-			commonLanguages = [], i;
-		for ( i = 0; i < frequentLang.length; i++ ) {
-			if ( $.inArray( frequentLang[i], $acceptedLang ) >= 0 ) {
-				commonLanguages.push( frequentLang[i] );
+			} );
+			compactLanguages = this.compact( languages );
+
+			for ( index = 0; index < compactLanguages.length; index++ ) {
+				language = compactLanguages[ index ];
+				compactedList[ language ] = this.interlanguageList[ language ];
 			}
+			return compactedList;
+		},
+
+		/**
+		 * Compact a given array of languages
+		 * @param {Array} languages
+		 * @return {Array} compacted array
+		 */
+		compact: function ( languages ) {
+			var compactLanguages = [];
+
+			// Add previous language selections to this array. Previous languages are always
+			// the better suggestion because user had explicitly chosen them.
+			compactLanguages = compactLanguages.concat( this.filterByPreviousLanguages() );
+			// Add all common languages to the beginning of array. These are the most probable
+			// languages predicted by ULS
+			compactLanguages = compactLanguages.concat( this.filterByCommonLanguages( languages ) );
+			// Finally add the whole languages array too. We will remove duplicate and cut down
+			// to required size.
+			compactLanguages = compactLanguages.concat( languages );
+			// Remove duplicates
+			compactLanguages = unique( compactLanguages );
+			// Cut to compact size and  sort
+			compactLanguages = compactLanguages.slice( 0, this.compactSize ).sort();
+			return compactLanguages;
+		},
+
+		/**
+		 * Filter the language list by previous languages. Not all previous languages
+		 * will be present in interlanguage links. So filtering them.
+		 * @return {Array} List of those language codes which are supported by article
+		 */
+		filterByPreviousLanguages: function ( languages ) {
+			var previousLanguages;
+
+			previousLanguages = mw.uls.getPreviousLanguages();
+			return $.grep( previousLanguages, function ( language ) {
+				return $.inArray( language, languages ) >= 0;
+			} );
+		},
+
+		/**
+		 * Filter the language list by common languages. Common languages are the most
+		 * probable languages predicted by ULS
+		 * @return {Array} List of those language codes which are supported by article
+		 */
+		filterByCommonLanguages: function ( languages ) {
+			var commonLanguages;
+
+			commonLanguages = mw.uls.getFrequentLanguageList();
+			return $.grep( commonLanguages, function ( language ) {
+				return $.inArray( language, languages ) >= 0;
+			} );
+		},
+
+		/**
+		 * Find out the existing languages supported
+		 * by article and fetch their href
+		 * @return {Object} List of existing language codes and their hrefs
+		 */
+		getInterlanguageList: function getInterlanguageList() {
+			var interlanguageList = {};
+
+			this.$interlanguageList.find( 'li.interlanguage-link > a' ).each( function () {
+				var $this = $( this );
+				interlanguageList[ $this.attr( 'lang' ) ] = {
+					href: $this.attr( 'href' ),
+					autonym: $this.text()
+				};
+			} );
+			return interlanguageList;
+		},
+
+		/**
+		 * Get the size of the interlanguage list
+		 */
+		getListSize: function () {
+			return $.map( this.interlanguageList, function ( item, index ) {
+				return index;
+			} ).length;
+		},
+
+		/**
+		 * Hide the original interlanguage list
+		 */
+		hideOriginal: function () {
+			this.$interlanguageList.find( '.interlanguage-link' ).hide();
+		},
+
+		/**
+		 * Add the trigger at the bottom of the language list
+		 */
+		addTrigger: function () {
+			var $trigger, $triggerLabel;
+
+			$trigger = $( '<div>' )
+				.addClass( 'mw-interlanguage-selector mw-ui-button active' )
+				.html( '&#8230' ); // '…'
+
+			$triggerLabel = $( '<label>' )
+				.attr( 'id', 'more-lang-label' )
+				.text( $.i18n( 'ext-uls-compact-link-count', this.listSize - this.compactSize ) );
+			this.$interlanguageList.append( $trigger, $triggerLabel );
+			this.$trigger = $trigger;
+		},
+
+		/**
+		 * Add a language to the interlanguage list
+		 * @param {string} language
+		 */
+		addLanguage: function ( language ) {
+			var $link, $listItem, languageLink;
+
+			languageLink = this.interlanguageList[ language ];
+			$link = $( '<a>' )
+				.addClass( 'active' )
+				.attr( 'href', languageLink.href )
+				.text( languageLink.autonym );
+			$listItem = $( '<li>' )
+				.addClass( 'interlanguage-link interwiki-' + language )
+				.append( $link );
+			this.$interlanguageList.append( $listItem );
 		}
-		return commonLanguages;
-	}
+	};
 
 	/**
-	 * Push the selected language into the previous languages list
-	 * @param {string} Language code of language selected (clicked on)
+	 * CompactInterlanguageList Plugin
+	 * @param {Object} [option]
 	 */
-	function insertPreviousLanguage( currentLang ) {
-		mw.uls.insertPreviousLanguage( currentLang );
-	}
+	$.fn.compactInterlanguageList = function ( option ) {
+		return this.each( function () {
+			var $this = $( this ),
+				data = $this.data( 'compactinterlanguagelist' ),
+				options = typeof option === 'object' && option;
 
-	/**
-	 * Add a ULS trigger beneath the interlanguage links
-	 */
-	function addULSlink() {
-		var $newLinknode,
-			$interlanguageList,
-			supportedLangs,
-			posOfTrigger;
+			if ( !data ) {
+				$this.data( 'compactinterlanguagelist', ( data = new CompactInterlanguageList( this, options ) ) );
+			}
 
-		$newLinknode = $( '<div>' )
-			.addClass( 'mw-interlanguage-selector mw-ui-button active' )
-			.html( '&#8230' )
-			.append( $newLinknode );
-
-		$interlanguageList = $( '#p-lang > div > ul' );
-		$interlanguageList.append( $newLinknode );
-		posOfTrigger = $newLinknode.offset();
-
-		$( '.mw-interlanguage-selector' ).uls( {
-			onReady: function() {
-				this.$menu.addClass( 'interlanguage-uls-menu' );
-			},
-
-			onSelect: function( language ) {
-				supportedLangs = getInterlanguageList();
-				// To set selected language as a previous language
-				insertPreviousLanguage( language );
-				window.location.href = supportedLangs[language];
-			},
-
-			compact: true,
-			left: posOfTrigger.left + $newLinknode.width() + 50 + 'px',
-			top: posOfTrigger.top - $newLinknode.height()/2 - 250 + 'px',
-			languages: getCurrentLanguages(),
-			quickList: getCommonLanguages()
+			if ( typeof option === 'string' ) {
+				data[ option ]();
+			}
 		} );
-	}
+	};
 
 	/**
-	 * Hide existing languages displayed on the page
+	 * Defaults
 	 */
-	function hideLanguages() {
-		var $languages = $( '.interlanguage-link' );
-		$languages.hide();
-	}
+	$.fn.compactInterlanguageList.defaults = {
+		max: 9 // Compact the list to this size
+	};
 
-	/**
-	 * Returns all languages returned by the commonLanguages function
-	 * and randomly some more if the number falls short of numberOfLanguagesToShow parameter
-	 * @param {number} numberOfLanguagesToShow Number of languages to be shown in sidebar
-	 * @return {Array} Language codes of the final list to be displayed
-	 */
-	function displayLanguages( numberOfLanguagesToShow ) {
-		var commonLang = getCommonLanguages(),
-			acceptedLangs = $.map( getCurrentLanguages(), function ( element, index ) {
-				return index;
-			} ), i,
-			prevLangs = mw.uls.getPreviousLanguages(),
-			count,
-			finalList = [];
-
-		// Add languages in the common list and accepted by article
-		for ( i = 0; i < commonLang.length; i++ ) {
-			finalList.push( commonLang[i] );
-		}
-
-		// Add languages in previous choices to list if not already in it
-		for ( i = 0; i < prevLangs.length; i++ ) {
-			if (
-				$.inArray( prevLangs[i], finalList ) < 0 &&
-				$.inArray( prevLangs[i], acceptedLangs ) >= 0
-			) {
-				finalList.push( prevLangs[i] );
-			}
-		}
-
-		// Add random languages to make the language list long enough, if it isn't already
-		count = finalList.length;
-		if ( count < numberOfLanguagesToShow ) {
-			for ( i = 0; i < acceptedLangs.length; i++ ) {
-				if ( $.inArray( acceptedLangs[i], finalList ) < 0 ) {
-					finalList.push( acceptedLangs[i] );
-					count++;
-					if ( count === numberOfLanguagesToShow ) {
-						break;
-					}
-				}
-			}
-		}
-
-		// Sorting the language list in alphabetical order of ISO codes
-		finalList = finalList.sort();
-		return finalList;
-	}
-
-	/*
-	 * Adds a label stating the number of more languages
-	 * beneath the ULS link
-	 * @param {Number} numberOfLanguagesSupported Number of languages supported by article
-	 * @param {Number} numberOfLanguagesToShow Number of languages to be shown in the sidebar
-	 */
-	function addLabel( numberOfLanguagesSupported, numberOfLanguagesToShow ) {
-		var $interlanguageList = $( '#p-lang > div > ul' ),
-			newLabel = $( '<label>' )
-				.attr( 'id', 'more-lang-label' ),
-			numberOfLanguagesHidden = numberOfLanguagesSupported - numberOfLanguagesToShow;
-		newLabel.text( $.i18n( 'ext-uls-compact-link-count', numberOfLanguagesHidden ) );
-		$interlanguageList.append( newLabel );
-	}
-
-	/*
-	 * Driver function to manipulate interlanguage list
-	 * Computes number of languages to be shown
-	 * and passes appropriate parameters to displayLanguages
-	 * and addLabel functions
-	 */
-	function manageInterlaguageList() {
-		var $numOfLangCurrently = $( '.interlanguage-link' ).length,
-			currentLangs = getInterlanguageList(),
-			longListLength = 9,
-			maxLanguageCheck = 12,
-			shortListLength = 7,
-			i,
-			finalList; // Final list of languages to be displayed on page
-
-		// If the total number of languages are between 9(longListLength) and 12(inclusive) then
-		// we show only 7 (shortListLength) languages (to avoid displaying "2/3 more languages")
-		// Else, we show 9 languages. Please note that as per the current design of the system, this
-		// does not always hold true. The language list might exceed 9. This will be fixed as we refine
-		// the algo for the languages being shown.
-
-		if ( $numOfLangCurrently > longListLength ) {
-			hideLanguages();
-			if ( $numOfLangCurrently > longListLength && $numOfLangCurrently <= maxLanguageCheck ) {
-				finalList = displayLanguages( shortListLength );
-			} else {
-				finalList = displayLanguages( longListLength );
-			}
-
-			// Output all the languages we have in the finalList to the page
-			for ( i in finalList ) {
-				addLanguage( $.uls.data.getAutonym( finalList[i] ), currentLangs[ finalList[i] ] );
-			}
-
-			addULSlink();
-			addLabel( $numOfLangCurrently, finalList.length );
-		}
-	}
-
-	$( document ).ready( manageInterlaguageList() );
+	$( document ).ready( function () {
+		$( '#p-lang-list' ).compactInterlanguageList();
+	} );
 
 }( jQuery, mediaWiki ) );

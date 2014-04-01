@@ -26,7 +26,7 @@
 				slice = Array.prototype.slice;
 
 			return function ( name ) {
-				var list = lists[name] || ( lists[name] = $.Callbacks( 'memory' ) );
+				var list = lists[ name ] || ( lists[ name ] = $.Callbacks( 'memory' ) );
 
 				return {
 					add: list.add,
@@ -42,7 +42,7 @@
 	mw.uls = mw.uls || {};
 	mw.uls.previousLanguagesCookie = 'uls-previous-languages';
 	mw.uls.previousLanguageAutonymCookie = 'uls-previous-language-autonym';
-	mw.uls.languageSettingsModules = ['ext.uls.inputsettings', 'ext.uls.displaysettings'];
+	mw.uls.languageSettingsModules = [ 'ext.uls.inputsettings', 'ext.uls.displaysettings' ];
 
 	// What was the last thing that the user did to select the language:
 	// * 'map' - clicked the map
@@ -104,8 +104,9 @@
 
 	mw.uls.setPreviousLanguages = function ( previousLanguages ) {
 		$.cookie( mw.uls.previousLanguagesCookie,
-			$.toJSON( previousLanguages ),
-			{ path: '/' }
+			$.toJSON( previousLanguages ), {
+				path: '/'
+			}
 		);
 	};
 
@@ -121,25 +122,6 @@
 	};
 
 	/**
-	 * Push the selected language into the previous languages list
-	 * if it isn't there already
-	 * @param {string} Language code of language to be pushed into list
-	 */
-	mw.uls.insertPreviousLanguage = function ( prevLangCode ) {
-		var previousLanguages = mw.uls.getPreviousLanguages() || [],
-			currentLangIndex;
-		// Checking if it already exists in array
-		currentLangIndex = $.inArray( prevLangCode, previousLanguages );
-		if ( currentLangIndex < 0 ) {
-			previousLanguages.push( prevLangCode );
-		} else {
-			previousLanguages.splice( currentLangIndex, 1 );
-			previousLanguages.push( prevLangCode );
-		}
-		mw.uls.setPreviousLanguages( previousLanguages );
-	};
-
-	/**
 	 * Returns the browser's user interface language or the system language.
 	 * The caller should check the validity of the returned language code.
 	 *
@@ -150,7 +132,7 @@
 		// userLanguage is only for IE and returns system locale.
 		// Empty string is a fallback in case both are undefined
 		// to avoid runtime error with split().
-		return ( window.navigator.language || window.navigator.userLanguage || '' ).split( '-' )[0];
+		return ( window.navigator.language || window.navigator.userLanguage || '' ).split( '-' )[ 0 ];
 	};
 
 	/*jshint camelcase:false*/
@@ -201,7 +183,7 @@
 			var target;
 
 			// If the language is already known and defined, just use it
-			if ( $.fn.uls.defaults.languages[langCode] !== undefined ) {
+			if ( $.fn.uls.defaults.languages[ langCode ] !== undefined ) {
 				return true;
 			}
 
@@ -212,7 +194,7 @@
 			if ( target ) {
 				// Check that the redirect's target is known
 				// to this instance of ULS
-				return $.fn.uls.defaults.languages[target] !== undefined;
+				return $.fn.uls.defaults.languages[ target ] !== undefined;
 			}
 
 			return false;
@@ -229,13 +211,13 @@
 	function isBrowserSupported() {
 		var blacklist = {
 			'msie': [
-				['<=', 7]
+				[ '<=', 7 ]
 			]
 		};
 
 		// jquery.client changed in MediaWiki 1.22.
 		// FIXME: Remove when ULS minimum MW version is 1.22.
-		if ( parseInt( mw.config.get( 'wgVersion' ).split( '.' )[1], '10' ) < 22 ) {
+		if ( parseInt( mw.config.get( 'wgVersion' ).split( '.' )[ 1 ], '10' ) < 22 ) {
 			return !/MSIE [67]/i.test( navigator.userAgent );
 		}
 
