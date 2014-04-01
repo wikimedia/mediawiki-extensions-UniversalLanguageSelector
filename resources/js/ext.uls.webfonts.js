@@ -142,7 +142,7 @@
 			  * @param {array} classes
 			  */
 			fontSelector: function ( repository, language, classes ) {
-				var font, tofu, autonym, defaultFont;
+				var font, autonym, defaultFont;
 
 				if ( !language ) {
 					return null;
@@ -164,19 +164,17 @@
 
 					// There is a default font for this language,
 					// but check whether the user sees tofu for it.
-					tofu = tofuLanguages[language] ||
-						detectTofu( $.uls.data.getAutonym( language ) );
+					if ( tofuLanguages[language] === undefined ) {
+						tofuLanguages[language] = detectTofu( $.uls.data.getAutonym( language ) );
 
-					if ( tofu ) {
 						// Log the tofu detection only once per page per language
-						if ( !tofuLanguages[language] ) {
+						if ( tofuLanguages[language] ) {
 							mw.log( 'tofu detected for ' + language );
 							mw.hook( 'mw.uls.webfonts.tofudetected' ).fire( language );
-
-							// Cache the languages with tofu
-							tofuLanguages[language] = true;
 						}
+					}
 
+					if ( tofuLanguages[language] ) {
 						font = autonym ? 'Autonym' : defaultFont;
 					} else {
 						// No tofu and no font preference. Use system font.
