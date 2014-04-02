@@ -3,7 +3,8 @@
         "authors": [
             "Emperyan",
             "Incelemeelemani",
-            "Meelo"
+            "Meelo",
+            "Rapsar"
         ]
     },
     "uls-desc": "Kullanıcının bir dil seçmesi ve dil ayarlarını değiştirmesi için seçenekler sağlar.",
@@ -11,6 +12,8 @@
     "ext-uls-select-language-settings-icon-tooltip": "Dil ayarları",
     "ext-uls-undo-language-tooltip-text": "Dil, $1 dilinden değiştirildi.",
     "ext-uls-language-settings-preferences-link": "Daha fazla dil ayarları",
+    "uls-betafeature-label": "Daraltılmış dil bağlantıları",
+    "uls-betafeature-desc": "Yalnızca sizinle daha alakalı olan dillerin yer aldığı, daha kısa bir dil listesi görüntüler.",
     "ext-uls-display-settings-title": "Ekran ayarları",
     "ext-uls-display-settings-language-tab": "Dil",
     "ext-uls-display-settings-fonts-tab": "Yazı tipleri",
