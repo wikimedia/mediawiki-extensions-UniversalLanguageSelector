@@ -25,7 +25,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 /**
  * Version number used in extension credits and in other placed where needed.
  */
-define( 'ULS_VERSION', '2014-03-31' );
+define( 'ULS_VERSION', '2014-04-03' );
 
 $GLOBALS['wgExtensionCredits']['other'][] = array(
 	'path' => __FILE__,
@@ -183,6 +183,7 @@ $GLOBALS['wgULSFontRepositoryBasePath'] = false;
 $GLOBALS['wgULSCompactLinks'] = false;
 
 // Internationalization
+$GLOBALS['wgMessagesDirs']['UniversalLanguageSelector'] = __DIR__ . '/i18n';
 $GLOBALS['wgExtensionMessagesFiles']['UniversalLanguageSelector'] =
 	__DIR__ . '/UniversalLanguageSelector.i18n.php';
 
