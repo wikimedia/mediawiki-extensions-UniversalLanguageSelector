@@ -90,9 +90,10 @@
 		 */
 		listen: function () {
 			var languages,
-				ulsTop, ulsLeft,
 				compactLinks = this,
-				triggerPosition = compactLinks.$trigger.offset(),
+				dir = $( 'html' ).prop( 'dir' ),
+				interlanguageListLeft,
+				interlanguageListWidth,
 				ulsLanguageList = {};
 
 			languages = $.map( compactLinks.interlanguageList, function ( language, languageCode ) {
@@ -101,9 +102,9 @@
 				return languageCode;
 			} );
 
-			ulsTop = triggerPosition.top - compactLinks.$trigger.height() / 2 - 250 + 'px';
-			ulsLeft = triggerPosition.left + compactLinks.$trigger.width() + compactLinks.$interlanguageList.width() + 'px';
-
+			// Calculate the left and width values
+			interlanguageListLeft = compactLinks.$interlanguageList.offset().left;
+			interlanguageListWidth = compactLinks.$interlanguageList.width();
 			// Attach ULS to the trigger
 			compactLinks.$trigger.uls( {
 				onReady: function () {
@@ -121,13 +122,21 @@
 					mw.uls.setPreviousLanguages( previousLanguages );
 					window.location.href = compactLinks.interlanguageList[ language ].href;
 				},
+				onVisible: function () {
+					// Calculate the positioning of the panel
+					// according to the position of the trigger icon
+					if ( dir === 'rtl' ) {
+						this.left = interlanguageListLeft - this.$menu.width();
+					} else {
+						this.left = interlanguageListLeft + interlanguageListWidth;
+					}
+					this.$menu.css( 'left', this.left );
+				},
 				// Use compact version of ULS
 				compact: true,
-				// Left position of the language selector
-				left: ulsLeft,
 				// Top position of the language selector. Top it 250px above to take care of
 				// caret pointing the trigger. See .interlanguage-uls-menu:after style definition
-				top: ulsTop,
+				top: compactLinks.$trigger.offset().top - compactLinks.$trigger.height() / 2 - 250,
 				// List of languages to be shown
 				languages: ulsLanguageList,
 				// Show common languages
