@@ -9,6 +9,8 @@
     "ext-uls-select-language-settings-icon-tooltip": "Språkinnstillinger",
     "ext-uls-undo-language-tooltip-text": "Språk endret fra $1",
     "ext-uls-language-settings-preferences-link": "Flere språkinnstillinger",
+    "uls-betafeature-label": "Kompakte språklenker",
+    "uls-betafeature-desc": "Vis en kortere utgave av språklisten, med kun språk som er relevante for deg.",
     "ext-uls-display-settings-title": "Visningsinnstillinger",
     "ext-uls-display-settings-language-tab": "Språk",
     "ext-uls-display-settings-fonts-tab": "Skrifttyper",
@@ -23,6 +25,9 @@
     "ext-uls-display-settings-anon-label": "Visningsspråk:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (samme som for innhold)",
     "ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Logg inn]] for å velge et annet språk for brukergrensesnittet.",
+    "ext-uls-webfonts-settings-title": "Last ned skrifttyper når det er nødvendig",
+    "ext-uls-webfonts-settings-info": "Last ned manglende skrifttyper automatisk og tillat valg av foretrukne skrifttyper.",
+    "ext-uls-webfonts-settings-info-link": "Mer informasjon",
     "ext-uls-webfonts-select-for": "Velg skrifttype for $1",
     "ext-uls-webfonts-select-for-ui-info": "Skrifttype for brukergrensesnittet",
     "ext-uls-webfonts-select-for-content-info": "Skrifttype for innholdet",
@@ -48,5 +53,6 @@
     "ext-uls-input-disable-notification-undo": "Angre",
     "ext-uls-input-disable-notification-info-personal": "Du kan når som helst skru på inndataverktøy fra språkinnstillingene.",
     "ext-uls-input-disable-notification-info-interlanguage": "Du kan når som helst skru på inndataverktøy fra språkinnstillingene ved siden av språklisten.",
-    "ext-uls-language-settings-applying": "Tar i bruk…"
+    "ext-uls-language-settings-applying": "Tar i bruk…",
+    "ext-uls-compact-link-count": "{{PLURAL:$1|Ett språk til|$1 språk til}}"
 }
