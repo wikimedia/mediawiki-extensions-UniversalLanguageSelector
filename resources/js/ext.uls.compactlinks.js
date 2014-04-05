@@ -33,6 +33,7 @@
 				uniqueArray.push( v );
 			}
 		} );
+
 		return uniqueArray;
 	}
 
@@ -63,7 +64,7 @@
 				return;
 			}
 
-			// if the interlanguage list is of moderate size, the compact size is 7.
+			// If the interlanguage list is of moderate size, the compact size is 7.
 			this.compactSize = ( this.listSize <= 12 ) ? 7 : this.options.max;
 			this.hideOriginal();
 			this.compactList = this.getCompactList();
@@ -80,6 +81,7 @@
 			for ( language in this.compactList ) {
 				this.showLanguage( language );
 			}
+
 			this.addTrigger();
 		},
 
@@ -87,18 +89,23 @@
 		 * Bind to event handlers and listen for events
 		 */
 		listen: function () {
-			var cl = this,
-				triggerPosition = this.$trigger.offset(),
-				ulsLanguageList = {},
-				languages;
+			var languages,
+				ulsTop, ulsLeft,
+				compactLinks = this,
+				triggerPosition = compactLinks.$trigger.offset(),
+				ulsLanguageList = {};
 
-			languages = $.map( this.interlanguageList, function ( language, languageCode ) {
+			languages = $.map( compactLinks.interlanguageList, function ( language, languageCode ) {
 				ulsLanguageList[ languageCode ] = language.autonym;
+
 				return languageCode;
 			} );
 
+			ulsTop = triggerPosition.top - compactLinks.$trigger.height() / 2 - 250 + 'px';
+			ulsLeft = triggerPosition.left + compactLinks.$trigger.width() + compactLinks.$interlanguageList.width() + 'px';
+
 			// Attach ULS to the trigger
-			this.$trigger.uls( {
+			compactLinks.$trigger.uls( {
 				onReady: function () {
 					this.$menu.addClass( 'interlanguage-uls-menu' );
 				},
@@ -108,22 +115,23 @@
 				 */
 				onSelect: function ( language ) {
 					var previousLanguages = mw.uls.getPreviousLanguages();
+
 					previousLanguages.push( language );
 					previousLanguages = unique( previousLanguages );
 					mw.uls.setPreviousLanguages( previousLanguages );
-					window.location.href = cl.interlanguageList[ language ].href;
+					window.location.href = compactLinks.interlanguageList[ language ].href;
 				},
 				// Use compact version of ULS
 				compact: true,
 				// Left position of the language selector
-				left: triggerPosition.left + cl.$trigger.width() + cl.$interlanguageList.width() + 'px',
+				left: ulsLeft,
 				// Top position of the language selector. Top it 250px above to take care of
 				// caret pointing the trigger. See .interlanguage-uls-menu:after style definition
-				top: triggerPosition.top - cl.$trigger.height() / 2 - 250 + 'px',
+				top: ulsTop,
 				// List of languages to be shown
 				languages: ulsLanguageList,
 				// Show common languages
-				quickList: cl.filterByCommonLanguages( languages )
+				quickList: compactLinks.filterByCommonLanguages( languages )
 			} );
 		},
 
@@ -132,17 +140,20 @@
 		 * @return {Object}
 		 */
 		getCompactList: function () {
-			var language, languages, compactLanguages, index, compactedList = {};
+			var language, languages, compactLanguages, index,
+				compactedList = {};
 
 			languages = $.map( this.interlanguageList, function ( element, index ) {
 				return index;
 			} );
+
 			compactLanguages = this.compact( languages );
 
 			for ( index = 0; index < compactLanguages.length; index++ ) {
 				language = compactLanguages[ index ];
 				compactedList[ language ] = this.interlanguageList[ language ];
 			}
+
 			return compactedList;
 		},
 
@@ -154,45 +165,50 @@
 		compact: function ( languages ) {
 			var compactLanguages = [];
 
-			// Add previous language selections to this array. Previous languages are always
-			// the better suggestion because user had explicitly chosen them.
+			// Add previously selected languages.
+			// Previous languages are always the better suggestion
+			// because user had explicitly chosen them.
 			compactLanguages = compactLanguages.concat( this.filterByPreviousLanguages() );
-			// Add all common languages to the beginning of array. These are the most probable
-			// languages predicted by ULS
+
+			// Add all common languages to the beginning of array.
+			// These are the most probable languages predicted by ULS.
 			compactLanguages = compactLanguages.concat( this.filterByCommonLanguages( languages ) );
-			// Finally add the whole languages array too. We will remove duplicate and cut down
-			// to required size.
+
+			// Finally add the whole languages array too.
+			// We will remove duplicate and cut down to required size.
 			compactLanguages = compactLanguages.concat( languages );
+
 			// Remove duplicates
 			compactLanguages = unique( compactLanguages );
+
 			// Cut to compact size and  sort
 			compactLanguages = compactLanguages.slice( 0, this.compactSize ).sort();
+
 			return compactLanguages;
 		},
 
 		/**
-		 * Filter the language list by previous languages. Not all previous languages
-		 * will be present in interlanguage links. So filtering them.
+		 * Filter the language list by previous languages.
+		 * Not all previous languages will be present in interlanguage links,
+		 * so we are filtering them.
 		 * @return {Array} List of those language codes which are supported by article
 		 */
 		filterByPreviousLanguages: function ( languages ) {
-			var previousLanguages;
+			var previousLanguages = mw.uls.getPreviousLanguages();
 
-			previousLanguages = mw.uls.getPreviousLanguages();
 			return $.grep( previousLanguages, function ( language ) {
 				return $.inArray( language, languages ) >= 0;
 			} );
 		},
 
 		/**
-		 * Filter the language list by common languages. Common languages are the most
-		 * probable languages predicted by ULS
+		 * Filter the language list by common languages.
+		 * Common languages are the most probable languages predicted by ULS.
 		 * @return {Array} List of those language codes which are supported by article
 		 */
 		filterByCommonLanguages: function ( languages ) {
-			var commonLanguages;
+			var commonLanguages = mw.uls.getFrequentLanguageList();
 
-			commonLanguages = mw.uls.getFrequentLanguageList();
 			return $.grep( commonLanguages, function ( language ) {
 				return $.inArray( language, languages ) >= 0;
 			} );
@@ -200,7 +216,7 @@
 
 		/**
 		 * Find out the existing languages supported
-		 * by article and fetch their href
+		 * by article and fetch their href.
 		 * @return {Object} List of existing language codes and their hrefs
 		 */
 		getInterlanguageList: function getInterlanguageList() {
@@ -208,11 +224,13 @@
 
 			this.$interlanguageList.find( 'li.interlanguage-link > a' ).each( function () {
 				var $this = $( this );
+
 				interlanguageList[ $this.attr( 'lang' ) ] = {
 					href: $this.attr( 'href' ),
 					autonym: $this.text()
 				};
 			} );
+
 			return interlanguageList;
 		},
 
@@ -245,6 +263,7 @@
 			$triggerLabel = $( '<label>' )
 				.attr( 'id', 'more-lang-label' )
 				.text( $.i18n( 'ext-uls-compact-link-count', this.listSize - this.compactSize ) );
+
 			this.$interlanguageList.append( $trigger, $triggerLabel );
 			this.$trigger = $trigger;
 		},
@@ -288,5 +307,4 @@
 	$( document ).ready( function () {
 		$( '#p-lang-list' ).compactInterlanguageList();
 	} );
-
 }( jQuery, mediaWiki ) );
