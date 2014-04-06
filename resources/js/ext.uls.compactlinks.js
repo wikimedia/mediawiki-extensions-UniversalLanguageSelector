@@ -271,7 +271,10 @@
 
 			$triggerLabel = $( '<label>' )
 				.attr( 'id', 'more-lang-label' )
-				.text( $.i18n( 'ext-uls-compact-link-count', this.listSize - this.compactSize ) );
+				.text( $.i18n(
+					'ext-uls-compact-link-count',
+					mw.language.convertNumber( this.listSize - this.compactSize )
+				) );
 
 			this.$interlanguageList.append( $trigger, $triggerLabel );
 			this.$trigger = $trigger;

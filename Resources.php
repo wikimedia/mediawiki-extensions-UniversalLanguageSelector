@@ -155,6 +155,7 @@ $wgResourceModules['ext.uls.compactlinks'] = array(
 		'ext.uls.mediawiki',
 		'ext.uls.init',
 		'jquery.uls.compact',
+		'mediawiki.language',
 		'mediawiki.ui.button',
 	),
 ) + $resourcePaths;
