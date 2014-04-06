@@ -18,6 +18,7 @@
     "ext-uls-display-settings-ui-language": "Lenga d'afichatge",
     "ext-uls-display-settings-anon-same-as-content": "$1 (coma lo contengut)",
     "ext-uls-input-settings-ui-language": "Lenga utilizada per escriure",
+    "ext-uls-ime-help": "Mòde d’emplec",
     "ext-uls-disable-input-method": "Utilizar un clavièr local",
     "ext-uls-input-settings-more-languages-tooltip": "Mai de lengas",
     "ext-uls-input-disable-notification-undo": "Anullar",
