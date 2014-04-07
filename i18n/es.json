@@ -14,7 +14,7 @@
     "ext-uls-select-language-settings-icon-tooltip": "Opciones de idioma",
     "ext-uls-undo-language-tooltip-text": "El idioma cambió de $1",
     "ext-uls-language-settings-preferences-link": "Más opciones de idioma",
-    "uls-betafeature-label": "Compactación de lista de idiomas",
+    "uls-betafeature-label": "Lista de idiomas compacta",
     "uls-betafeature-desc": "Mostrar una versión más corta de la lista de idiomas, con sólo los idiomas que son más relevantes para usted.",
     "ext-uls-display-settings-title": "Configuración de presentación",
     "ext-uls-display-settings-language-tab": "Idioma",

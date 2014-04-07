@@ -11,7 +11,7 @@
     "ext-uls-select-language-settings-icon-tooltip": "הגדרות שפה",
     "ext-uls-undo-language-tooltip-text": "השפה השתנתה מ{{GRAMMAR:תחילית|$1}}",
     "ext-uls-language-settings-preferences-link": "הגדרות שפה נוספות",
-    "uls-betafeature-label": "קישורי שפה מקוצרים",
+    "uls-betafeature-label": "רשימת קישורי שפה מקוצרת",
     "uls-betafeature-desc": "הצגת גרסה מקוצרת של רשימת השפות, רק עם השפות שרלוונטיות לך.",
     "ext-uls-display-settings-title": "הגדרות תצוגה",
     "ext-uls-display-settings-language-tab": "שפה",
