@@ -16,6 +16,7 @@
     "ext-uls-language-settings-cancel": "Anullar",
     "ext-uls-display-settings-font-settings": "Paramètres de poliça",
     "ext-uls-display-settings-ui-language": "Lenga d'afichatge",
+    "ext-uls-display-settings-anon-label": "Lenga d'afichatge :",
     "ext-uls-display-settings-anon-same-as-content": "$1 (coma lo contengut)",
     "ext-uls-input-settings-ui-language": "Lenga utilizada per escriure",
     "ext-uls-ime-help": "Mòde d’emplec",
