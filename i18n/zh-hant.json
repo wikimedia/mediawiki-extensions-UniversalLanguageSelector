@@ -5,7 +5,8 @@
             "Justincheng12345",
             "Liuxinyu970226",
             "Simon Shek",
-            "Spring Roll Conan"
+            "Spring Roll Conan",
+            "Liangent"
         ]
     },
     "uls-desc": "為用戶提供多種方法來選擇語言和調整語言設置",
@@ -13,8 +14,8 @@
     "ext-uls-select-language-settings-icon-tooltip": "語言設定",
     "ext-uls-undo-language-tooltip-text": "語言已從$1更改",
     "ext-uls-language-settings-preferences-link": "更多語言設定",
-    "uls-betafeature-label": "緊湊跨語言連結",
-    "uls-betafeature-desc": "顯示語言列表之簡短版本，這些語言與您的語言密切相關。",
+    "uls-betafeature-label": "簡潔版語言列表",
+    "uls-betafeature-desc": "顯示較簡潔的語言列表，隱藏與您不相關的語言。",
     "ext-uls-display-settings-title": "顯示設定",
     "ext-uls-display-settings-language-tab": "語言",
     "ext-uls-display-settings-fonts-tab": "字型",
