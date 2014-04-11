@@ -1,5 +1,5 @@
 # First scenario seems to fail whenever OpenDyslexic is missing
-@language-browsertests.wmflabs.org @login @needs-custom-setup
+@firefox @internet_explorer_10 @language-browsertests.wmflabs.org @login @phantomjs
 Feature: Persistent settings
 
   This assumes wiki content language is English.

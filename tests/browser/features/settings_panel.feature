@@ -1,3 +1,4 @@
+@firefox @internet_explorer_10 @phantomjs
 Feature: Settings panel
 
   @login @ime-default-on
@@ -32,10 +33,10 @@ Feature: Settings panel
       And I see Language Search
       And I can navigate back to Input Settings
 
-  @login
+   @login
   Scenario: More languages (interface language selection)
     Given I am logged in
-    When I open "Language" panel of language settings
+    When I open Language panel of language settings
       And I click the button with the ellipsis
     Then I see Common Languages
       And I see Worldwide
@@ -46,12 +47,12 @@ Feature: Settings panel
   Scenario: Temporary live preview for menu language
 
     Given I am logged in
-    When I open "Language" panel of language settings
+    When I open Language panel of language settings
       And I click the button with the ellipsis
       And I use the panel to change my interface language to "German"
       And I switch to Input panel of language settings
       And I click X
-      And I open "Language" panel of language settings
+      And I open Language panel of language settings
       Then the panel is in English
 
   Scenario: The name of site content language is correct when translation language is different
@@ -63,7 +64,7 @@ Feature: Settings panel
     interface language to a non-default value.
 
     Given I temporarily use "Finnish" as the interface language
-    When I open "Language" panel of language settings
+    When I open Language panel of language settings
     Then I see "English (sama kuin sisällön)" as the name of the content language
 
   @login
@@ -71,7 +72,7 @@ Feature: Settings panel
 
     Given I am logged in
       And I have reset my preferences
-    When I open "Language" panel of language settings
+    When I open Language panel of language settings
       And I click the button with the ellipsis
       And I use the panel to change my interface language to "German"
       And I apply the changes

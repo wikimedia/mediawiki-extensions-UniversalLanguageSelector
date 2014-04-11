@@ -1,4 +1,4 @@
-@login
+@firefox @internet_explorer_10 @login @phantomjs
 Feature: Live preview of display language changes
 
   Background:
@@ -6,7 +6,7 @@ Feature: Live preview of display language changes
       And I have reset my preferences
       And I am at the main page
 
-  @needs-custom-setup @commons.wikimedia.beta.wmflabs.org
+  @commons.wikimedia.beta.wmflabs.org
   Scenario: Display language change is previewed immediately
     Given I open the Universal Language Selector
       And I open Display panel of language settings
@@ -15,7 +15,7 @@ Feature: Live preview of display language changes
       And I click on the link to select Malayalam
     Then I should see the text in the language panel in Malayalam
 
-  @commons.wikimedia.beta.wmflabs.org
+  @clean @commons.wikimedia.beta.wmflabs.org
   Scenario: Live preview of display language changes can be reverted on cancel
     Given I open the Universal Language Selector
       And I open Display panel of language settings
@@ -24,7 +24,7 @@ Feature: Live preview of display language changes
       And I open Display panel of language settings
     Then I should see the text in the language panel in English
 
-  @commons.wikimedia.beta.wmflabs.org
+  @clean @commons.wikimedia.beta.wmflabs.org
   Scenario: Live preview of display language changes can be reverted on closing the dialog with the X button
     Given I open the Universal Language Selector
       And I open Display panel of language settings
@@ -34,7 +34,7 @@ Feature: Live preview of display language changes
     Then I should see the text in the language panel in English
 
   # https://bugzilla.wikimedia.org/57967
-  # @commons.wikimedia.beta.wmflabs.org
+  # @clean @commons.wikimedia.beta.wmflabs.org
   Scenario: Live preview of display language changes can be reverted on closing the dialog on cancel from a different panel
     Given I open the Universal Language Selector
       And I open Display panel of language settings

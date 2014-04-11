@@ -1,4 +1,4 @@
-@custom-browser @sandbox.translatewiki.net
+@custom-browser @firefox @internet_explorer_10 @phantomjs @sandbox.translatewiki.net
 Feature: Accept-Language
 
   Scenario Outline: Accept-Language
