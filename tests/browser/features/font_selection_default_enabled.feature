@@ -1,4 +1,4 @@
-@language-browsertests.wmflabs.org @login @needs-custom-setup
+@firefox @internet_explorer_10 @language-browsertests.wmflabs.org @login @phantomjs
 Feature: Font selection
 
   In order to have better using experience,

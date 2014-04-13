@@ -1,4 +1,4 @@
-@commons.wikimedia.beta.wmflabs.org @login @needs-custom-setup
+@commons.wikimedia.beta.wmflabs.org @firefox @internet_explorer_10 @login @phantomjs
 Feature: Font selection
 
   In order to have better using experience,

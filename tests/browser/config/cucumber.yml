@@ -1,2 +1,0 @@
-# WMF Jenkins/Gerrit
-ciwmf: -t ~@needs-custom-setup -t ~@phantomjs-bug

@@ -1,3 +1,4 @@
+@firefox @internet_explorer_10 @phantomjs
 Feature: Autonym font
 
   * With tofu detection in ULS, system fonts will be given preference over webfonts.
