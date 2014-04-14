@@ -223,11 +223,70 @@
 
 	$( document ).ready( function () {
 		mw.uls.init( function () {
+			var tofuStartTime, tofuEndTime, tofuTime;
+
 			mw.webfonts.preferences.load();
 
 			if ( mw.webfonts.preferences.isEnabled() ) {
 				mw.loader.using( 'ext.uls.webfonts.fonts', mw.webfonts.setup );
 			}
+
+			// If event logging is enabled and this page "wins" the tofu logging lottery
+			// try to detect tofu
+			if ( !mw.config.get( 'wgULSEventLogging' ) ||
+				mw.config.get( 'wgULSTofuLoggingChance' ) < mw.config.get( 'wgArticleId' ) % 100
+			) {
+				return;
+			}
+
+			setTimeout( function () {
+				var i, lang, text,
+					$langElements, $element,
+					maxTime = mw.config.get( 'wgULSTofuLoggingMaxTime' );
+
+				tofuStartTime = ( new Date() ).getTime();
+
+				// Check all elements that have the lang attribute,
+				// except the root <html> - it has lang,
+				// but its text is not useful for testing.
+				// mw-content-text also always has lang,
+				// and its text is more relevant.
+				$langElements = $( 'body [lang]' );
+
+				for ( i = 0; i < $langElements.length; i++ ) {
+					$element = $( $langElements[ i ] );
+					lang = $element.prop( 'lang' );
+
+					// Skip if this languages was already tested
+					if ( tofuLanguages[lang] !== undefined ) {
+						continue;
+					}
+
+					text = $.trim( $element.text() ).substr( 0, 4 );
+
+					// Skip if the text only has basic ASCII and Latin
+					if ( !text.match( /[^\u0009-\u0200]/ ) ) {
+						continue;
+					}
+
+					tofuLanguages[lang] = detectTofu( text );
+
+					if ( tofuLanguages[lang] ) {
+						mw.log( 'tofu detected for ' + lang );
+						mw.hook( 'mw.uls.webfonts.tofudetected' ).fire( lang );
+					}
+
+					// Force to break the detection loop if it's taking too long
+					if ( maxTime && ( new Date() ).getTime() - tofuStartTime > maxTime ) {
+						mw.log( 'tofu detection max time reached. last lang: ' + lang );
+						break;
+					}
+				}
+
+				tofuEndTime = ( new Date() ).getTime();
+				tofuTime = ( tofuEndTime - tofuStartTime ) / 1000;
+				mw.log( 'tofu detection took ' + tofuTime + ' seconds' );
+			}, 1000 );
 		} );
 	} );
 }( jQuery, mediaWiki ) );
