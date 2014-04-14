@@ -202,7 +202,8 @@
 				}
 
 				return excludes;
-			}() )
+			}() ),
+			overridableFontFamilies: [ $( 'h1' ).css( 'font-family' ) ]
 		} );
 
 		// Execute after task queue is processed so that the rendering is complete.
