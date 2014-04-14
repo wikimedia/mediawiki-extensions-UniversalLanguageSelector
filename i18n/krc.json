@@ -4,10 +4,13 @@
             "Iltever"
         ]
     },
+    "uls-desc": "Къошулуучугъа тил сайларгъа эмда тил джарашдырыуланы тюрлендирирге талай амал береди",
     "uls-plang-title-languages": "Тилле",
     "ext-uls-select-language-settings-icon-tooltip": "Тил джарашдырыула",
     "ext-uls-undo-language-tooltip-text": "Алгъыннгы тил: $1",
     "ext-uls-language-settings-preferences-link": "Къошакъ тил джарашдырыула",
+    "uls-betafeature-label": "Тил джибериулени компакт тизмеси",
+    "uls-betafeature-desc": "Тил джибериулени тизмесини, къуру сизге керекли болгъан тилле бла, къысха вариантын кёргюзтеди.",
     "ext-uls-display-settings-title": "Кёрюнюуню джарашдырыулары",
     "ext-uls-display-settings-language-tab": "Тил",
     "ext-uls-display-settings-fonts-tab": "Шрифтле",
@@ -22,6 +25,9 @@
     "ext-uls-display-settings-anon-label": "Кёрюнюуню тили:",
     "ext-uls-display-settings-anon-same-as-content": "$1 (ичиндегини тилича)",
     "ext-uls-display-settings-anon-log-in-cta": "Менюлагъа башха тил сайлар ючюн [[Special:UserLogin|кирген этигиз]].",
+    "ext-uls-webfonts-settings-title": "Керек болгъанда шрифтлени джюкле",
+    "ext-uls-webfonts-settings-info": "Болмагъан шрифтлени автомат халда джюклеу эмда изленнген шрифтлени сайларгъа эркинлик бериу.",
+    "ext-uls-webfonts-settings-info-link": "Къошакъ билги",
     "ext-uls-webfonts-select-for": "$1 ючюн шрифт сайла",
     "ext-uls-webfonts-select-for-ui-info": "Къошулуучуну интерфейсини шрифти",
     "ext-uls-webfonts-select-for-content-info": "Текст ючюн шрифт",
@@ -33,6 +39,7 @@
     "ext-uls-input-settings-ime-settings": "$1 ючюн клавиатурала",
     "ext-uls-input-settings-ui-language": "Джазаргъа ючюн хайырланнган тил",
     "ext-uls-back-to-input-settings": "Джазыу джарашдырыулагъа къайыт",
+    "ext-uls-ime-help": "Къалай хайырландырылады?",
     "ext-uls-disable-input-method": "Кесинги клавиатурангы хайырландыр",
     "ext-uls-input-settings-more-languages-tooltip": "Дагъыда тилле",
     "jquery-ime-other-languages": "Башха тилле",
@@ -46,5 +53,6 @@
     "ext-uls-input-disable-notification-undo": "Ызына ал",
     "ext-uls-input-disable-notification-info-personal": "Джазыу адырланы хар заманда да тил джарашдырыуладан джандырыргъа боллукъду.",
     "ext-uls-input-disable-notification-info-interlanguage": "Джазыу адырланы хар заманда да тил тизимни къатындагъы тил джарашдырыуладан джандырыргъа боллукъду.",
+    "ext-uls-language-settings-applying": "Сингдирилиую...",
     "ext-uls-compact-link-count": "Энтда {{PLURAL:$1|бир тилде|$1 тилде}}"
 }
