@@ -8,6 +8,8 @@
     "ext-uls-select-language-settings-icon-tooltip": "Podešavanja jezika",
     "ext-uls-undo-language-tooltip-text": "Jezik promenjen sa $1",
     "ext-uls-language-settings-preferences-link": "Dodatne jezičke postavke",
+    "uls-betafeature-label": "Sažete veza ka drugim jezicima",
+    "uls-betafeature-desc": "Prikažuje kraću jezičku listu samo sa vama bitnim jezicima.",
     "ext-uls-display-settings-fonts-tab": "Fontovi",
     "ext-uls-display-settings-desc": "Podesite jezik koji se će se koristiti za menije i fontove",
     "ext-uls-language-settings-title": "Podešavanja jezika",
