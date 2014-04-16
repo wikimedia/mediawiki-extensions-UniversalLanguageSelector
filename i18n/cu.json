@@ -1,24 +1,24 @@
 {
-    "@metadata": {
-        "authors": [
-            "ОйЛ"
-        ]
-    },
-    "uls-desc": "Срѣдьство дѣлꙗ польꙃєватєльска оустроѥниꙗ ѩꙁꙑка и съвѧꙁанъ вєщии",
-    "uls-plang-title-languages": "ѩꙁꙑци",
-    "ext-uls-select-language-settings-icon-tooltip": "ѩꙁꙑка строи",
-    "ext-uls-undo-language-tooltip-text": "ѩꙁꙑкъ иꙁмѣнєнъ ѥстъ отъ $1",
-    "ext-uls-language-settings-preferences-link": "вѧщи ѩꙁꙑка строи",
-    "ext-uls-display-settings-language-tab": "ѩꙁꙑкъ",
-    "ext-uls-display-settings-fonts-tab": "боукъвиѥ",
-    "ext-uls-language-settings-title": "ѩꙁꙑка строи",
-    "ext-uls-display-settings-font-settings": "боукъвиꙗ строи",
-    "ext-uls-display-settings-anon-same-as-content": "$1 (ꙗко жє съдрьжаниѥ)",
-    "ext-uls-webfonts-select-for": "боукъвиꙗ иꙁборъ $1 дѣлꙗ",
-    "ext-uls-webfonts-system-font": "сѷстимьно боуквиѥ",
-    "ext-uls-input-settings-desc": "иномь ѩꙁꙑкомь пьшєши ли ?",
-    "ext-uls-input-settings-ui-language": "ѩꙁꙑкъ пьсаниꙗ дѣлꙗ",
-    "ext-uls-input-settings-more-languages-tooltip": "вѧщи ѩꙁꙑци",
-    "jquery-ime-other-languages": "дроуꙃи ѩꙁꙑци",
-    "jquery-ime-help": "помощь"
+	"@metadata": {
+		"authors": [
+			"ОйЛ"
+		]
+	},
+	"uls-desc": "Срѣдьство дѣлꙗ польꙃєватєльска оустроѥниꙗ ѩꙁꙑка и съвѧꙁанъ вєщии",
+	"uls-plang-title-languages": "ѩꙁꙑци",
+	"ext-uls-select-language-settings-icon-tooltip": "ѩꙁꙑка строи",
+	"ext-uls-undo-language-tooltip-text": "ѩꙁꙑкъ иꙁмѣнєнъ ѥстъ отъ $1",
+	"ext-uls-language-settings-preferences-link": "вѧщи ѩꙁꙑка строи",
+	"ext-uls-display-settings-language-tab": "ѩꙁꙑкъ",
+	"ext-uls-display-settings-fonts-tab": "боукъвиѥ",
+	"ext-uls-language-settings-title": "ѩꙁꙑка строи",
+	"ext-uls-display-settings-font-settings": "боукъвиꙗ строи",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (ꙗко жє съдрьжаниѥ)",
+	"ext-uls-webfonts-select-for": "боукъвиꙗ иꙁборъ $1 дѣлꙗ",
+	"ext-uls-webfonts-system-font": "сѷстимьно боуквиѥ",
+	"ext-uls-input-settings-desc": "иномь ѩꙁꙑкомь пьшєши ли ?",
+	"ext-uls-input-settings-ui-language": "ѩꙁꙑкъ пьсаниꙗ дѣлꙗ",
+	"ext-uls-input-settings-more-languages-tooltip": "вѧщи ѩꙁꙑци",
+	"jquery-ime-other-languages": "дроуꙃи ѩꙁꙑци",
+	"jquery-ime-help": "помощь"
 }

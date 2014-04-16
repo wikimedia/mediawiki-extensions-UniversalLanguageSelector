@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Menachem.Moreira"
-        ]
-    },
-    "uls-plang-title-languages": "Lenguas",
-    "ext-uls-display-settings-language-tab": "Lengua",
-    "ext-uls-ime-help": "Komo se uza",
-    "jquery-ime-other-languages": "Otras lenguas",
-    "jquery-ime-help": "Ayudo"
+	"@metadata": {
+		"authors": [
+			"Menachem.Moreira"
+		]
+	},
+	"uls-plang-title-languages": "Lenguas",
+	"ext-uls-display-settings-language-tab": "Lengua",
+	"ext-uls-ime-help": "Komo se uza",
+	"jquery-ime-other-languages": "Otras lenguas",
+	"jquery-ime-help": "Ayudo"
 }

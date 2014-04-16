@@ -1,18 +1,18 @@
 {
-    "@metadata": {
-        "authors": [
-            "Akmalzhon",
-            "CoderSI",
-            "Sociologist"
-        ]
-    },
-    "uls-plang-title-languages": "Tillar",
-    "ext-uls-display-settings-title": "Koʻrsatish moslamalari",
-    "ext-uls-display-settings-title-short": "Koʻrsatish",
-    "ext-uls-language-settings-title": "Til moslamalari",
-    "ext-uls-language-settings-cancel": "Bekor qilish",
-    "ext-uls-display-settings-ui-language": "Displey tili",
-    "ext-uls-display-settings-anon-label": "Displey tili",
-    "jquery-ime-other-languages": "Boshqa tillarda",
-    "jquery-ime-help": "Yordam"
+	"@metadata": {
+		"authors": [
+			"Akmalzhon",
+			"CoderSI",
+			"Sociologist"
+		]
+	},
+	"uls-plang-title-languages": "Tillar",
+	"ext-uls-display-settings-title": "Koʻrsatish moslamalari",
+	"ext-uls-display-settings-title-short": "Koʻrsatish",
+	"ext-uls-language-settings-title": "Til moslamalari",
+	"ext-uls-language-settings-cancel": "Bekor qilish",
+	"ext-uls-display-settings-ui-language": "Displey tili",
+	"ext-uls-display-settings-anon-label": "Displey tili",
+	"jquery-ime-other-languages": "Boshqa tillarda",
+	"jquery-ime-help": "Yordam"
 }

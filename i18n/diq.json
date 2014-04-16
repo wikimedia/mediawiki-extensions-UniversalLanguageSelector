@@ -1,27 +1,27 @@
 {
-    "@metadata": {
-        "authors": [
-            "Gorizon",
-            "Marmase",
-            "Mirzali"
-        ]
-    },
-    "uls-plang-title-languages": "Zıwani",
-    "ext-uls-select-language-settings-icon-tooltip": "Eyarê zıwani",
-    "ext-uls-language-settings-preferences-link": "Dahana véşi zıwani",
-    "ext-uls-display-settings-language-tab": "Zıwan",
-    "ext-uls-display-settings-fonts-tab": "Fonti",
-    "ext-uls-display-settings-title-short": "Asen",
-    "ext-uls-language-settings-cancel": "Bıtexelne",
-    "ext-uls-display-settings-font-settings": "Eyarê tipê nuştey",
-    "ext-uls-display-settings-ui-language": "Zıwanê asnayışi",
-    "ext-uls-display-settings-anon-label": "Zıwanê asnayışi:",
-    "ext-uls-ime-help": "Seni ke fêno kar",
-    "ext-uls-disable-input-method": "Hesıbyaye klavyer bıkarne",
-    "ext-uls-input-settings-more-languages-tooltip": "Zewbi zıwani",
-    "jquery-ime-other-languages": "Zıwanê bini",
-    "jquery-ime-disable-text": "Hesıbyaye klavyer bıkarne",
-    "jquery-ime-help": "Peşti",
-    "ext-uls-input-disable-notification-undo": "Peyser biya",
-    "ext-uls-language-settings-applying": "Dezgeyeno..."
+	"@metadata": {
+		"authors": [
+			"Gorizon",
+			"Marmase",
+			"Mirzali"
+		]
+	},
+	"uls-plang-title-languages": "Zıwani",
+	"ext-uls-select-language-settings-icon-tooltip": "Eyarê zıwani",
+	"ext-uls-language-settings-preferences-link": "Dahana véşi zıwani",
+	"ext-uls-display-settings-language-tab": "Zıwan",
+	"ext-uls-display-settings-fonts-tab": "Fonti",
+	"ext-uls-display-settings-title-short": "Asen",
+	"ext-uls-language-settings-cancel": "Bıtexelne",
+	"ext-uls-display-settings-font-settings": "Eyarê tipê nuştey",
+	"ext-uls-display-settings-ui-language": "Zıwanê asnayışi",
+	"ext-uls-display-settings-anon-label": "Zıwanê asnayışi:",
+	"ext-uls-ime-help": "Seni ke fêno kar",
+	"ext-uls-disable-input-method": "Hesıbyaye klavyer bıkarne",
+	"ext-uls-input-settings-more-languages-tooltip": "Zewbi zıwani",
+	"jquery-ime-other-languages": "Zıwanê bini",
+	"jquery-ime-disable-text": "Hesıbyaye klavyer bıkarne",
+	"jquery-ime-help": "Peşti",
+	"ext-uls-input-disable-notification-undo": "Peyser biya",
+	"ext-uls-language-settings-applying": "Dezgeyeno..."
 }

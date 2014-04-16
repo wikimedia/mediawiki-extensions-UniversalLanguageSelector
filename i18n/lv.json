@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Edgars2007",
-            "Papuass"
-        ]
-    },
-    "uls-desc": "Ļauj lietotājam dažādos veidos izvēlēties valodu un pielāgot valodas iestatījumus",
-    "uls-plang-title-languages": "Valodas",
-    "ext-uls-undo-language-tooltip-text": "Valoda nomainīta no $1"
+	"@metadata": {
+		"authors": [
+			"Edgars2007",
+			"Papuass"
+		]
+	},
+	"uls-desc": "Ļauj lietotājam dažādos veidos izvēlēties valodu un pielāgot valodas iestatījumus",
+	"uls-plang-title-languages": "Valodas",
+	"ext-uls-undo-language-tooltip-text": "Valoda nomainīta no $1"
 }

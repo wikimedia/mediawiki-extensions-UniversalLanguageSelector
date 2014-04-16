@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Danielquayle"
-        ]
-    },
-    "ext-uls-select-language-settings-icon-tooltip": "Soieaghyn çhengey",
-    "ext-uls-undo-language-tooltip-text": "Çhengey caghlaait voish $1",
-    "ext-uls-display-settings-language-tab": "Çhengey",
-    "ext-uls-display-settings-fonts-tab": "Aghtyn clouscreeu",
-    "ext-uls-display-settings-title-short": "Taishbyney",
-    "ext-uls-language-settings-title": "Soieaghyn çhengey"
+	"@metadata": {
+		"authors": [
+			"Danielquayle"
+		]
+	},
+	"ext-uls-select-language-settings-icon-tooltip": "Soieaghyn çhengey",
+	"ext-uls-undo-language-tooltip-text": "Çhengey caghlaait voish $1",
+	"ext-uls-display-settings-language-tab": "Çhengey",
+	"ext-uls-display-settings-fonts-tab": "Aghtyn clouscreeu",
+	"ext-uls-display-settings-title-short": "Taishbyney",
+	"ext-uls-language-settings-title": "Soieaghyn çhengey"
 }

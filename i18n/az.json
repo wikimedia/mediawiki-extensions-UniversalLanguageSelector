@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Interfase"
-        ]
-    },
-    "uls-plang-title-languages": "Dillər",
-    "ext-uls-select-language-settings-icon-tooltip": "Dilin təyin edilməsi",
-    "ext-uls-undo-language-tooltip-text": "Əvvəlki dil: $1"
+	"@metadata": {
+		"authors": [
+			"Interfase"
+		]
+	},
+	"uls-plang-title-languages": "Dillər",
+	"ext-uls-select-language-settings-icon-tooltip": "Dilin təyin edilməsi",
+	"ext-uls-undo-language-tooltip-text": "Əvvəlki dil: $1"
 }

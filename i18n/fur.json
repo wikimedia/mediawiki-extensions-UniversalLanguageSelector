@@ -1,18 +1,18 @@
 {
-    "@metadata": {
-        "authors": [
-            "Klenje"
-        ]
-    },
-    "ext-uls-select-language-settings-icon-tooltip": "Impuestazions de lenghe",
-    "ext-uls-display-settings-language-tab": "Lenghe",
-    "ext-uls-display-settings-fonts-tab": "Caratars",
-    "ext-uls-language-settings-title": "Impuestazions de lenghe",
-    "ext-uls-language-settings-apply": "Apliche lis impuestazions",
-    "ext-uls-language-settings-cancel": "Scancele",
-    "ext-uls-display-settings-font-settings": "Impuestazions dai caratars",
-    "ext-uls-webfonts-settings-info-link": "Altris informazions",
-    "ext-uls-input-settings-more-languages-tooltip": "Altris lenghis",
-    "jquery-ime-other-languages": "Altris lenghis",
-    "jquery-ime-help": "Jutori"
+	"@metadata": {
+		"authors": [
+			"Klenje"
+		]
+	},
+	"ext-uls-select-language-settings-icon-tooltip": "Impuestazions de lenghe",
+	"ext-uls-display-settings-language-tab": "Lenghe",
+	"ext-uls-display-settings-fonts-tab": "Caratars",
+	"ext-uls-language-settings-title": "Impuestazions de lenghe",
+	"ext-uls-language-settings-apply": "Apliche lis impuestazions",
+	"ext-uls-language-settings-cancel": "Scancele",
+	"ext-uls-display-settings-font-settings": "Impuestazions dai caratars",
+	"ext-uls-webfonts-settings-info-link": "Altris informazions",
+	"ext-uls-input-settings-more-languages-tooltip": "Altris lenghis",
+	"jquery-ime-other-languages": "Altris lenghis",
+	"jquery-ime-help": "Jutori"
 }
