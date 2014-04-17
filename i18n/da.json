@@ -4,7 +4,8 @@
 			"Byrial",
 			"Christian List",
 			"Peter Alberti",
-			"Cgtdk"
+			"Cgtdk",
+			"Sarrus"
 		]
 	},
 	"uls-desc": "Giver brugeren forskellige måder at vælge et sprog og at justere indstillingerne for sproget",
@@ -12,6 +13,7 @@
 	"ext-uls-select-language-settings-icon-tooltip": "Sprogindstillinger",
 	"ext-uls-undo-language-tooltip-text": "Sprog ændret fra $1",
 	"ext-uls-language-settings-preferences-link": "Flere sprogindstillinger",
+	"uls-betafeature-desc": "Vis en kortere version af sproglisten, kun med de sprog, der er mest relevante for dig.",
 	"ext-uls-display-settings-title": "Visningsindstillinger",
 	"ext-uls-display-settings-language-tab": "Sprog",
 	"ext-uls-display-settings-fonts-tab": "Skrifttyper",
