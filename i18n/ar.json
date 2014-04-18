@@ -12,7 +12,7 @@
 	"ext-uls-select-language-settings-icon-tooltip": "إعدادات اللغة",
 	"ext-uls-undo-language-tooltip-text": "غيرت اللغة من $1",
 	"ext-uls-language-settings-preferences-link": "المزيد من إعدادات اللغة",
-	"uls-betafeature-label": "روابط اللغة المدمجة",
+	"uls-betafeature-label": "وصلات اللغة المدمجة",
 	"uls-betafeature-desc": "تقوم بإظهار قائمة مختصرة للغات، حيث تعمل الخاصية على إظهار اللغات التي تهمك أكثر.",
 	"ext-uls-display-settings-title": "إعدادات العرض",
 	"ext-uls-display-settings-language-tab": "لغة",
@@ -57,5 +57,5 @@
 	"ext-uls-input-disable-notification-info-personal": "بوسعك تشغيل أدوات الإدخال في أي وقت في إعدادات اللغة.",
 	"ext-uls-input-disable-notification-info-interlanguage": "بوسعك تشغيل  أدوات الإدخال في أي وقت في إعدادات اللغة الموجودة بجانب قائمة اللغات.",
 	"ext-uls-language-settings-applying": "تطبيق...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|هناك لغة أخرى|يوجد المزيد من اللغات وعددها $1}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|بقية الوصلات: $1}}"
 }

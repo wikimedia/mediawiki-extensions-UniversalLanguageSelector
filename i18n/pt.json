@@ -5,13 +5,14 @@
 			"Malafaya",
 			"Hamilton Abreu",
 			"Vitorvicentevalente",
-			"Fúlvio"
+			"Fúlvio",
+			555
 		]
 	},
 	"uls-desc": "Fornece ao utilizador várias maneiras de selecionar um idioma e ajustar suas configurações.",
 	"uls-plang-title-languages": "Idiomas",
 	"ext-uls-select-language-settings-icon-tooltip": "Configurações de idioma",
-	"ext-uls-undo-language-tooltip-text": "Idioma alterado para $1",
+	"ext-uls-undo-language-tooltip-text": "Idioma alterado de $1",
 	"ext-uls-language-settings-preferences-link": "Mais configurações de idioma",
 	"uls-betafeature-label": "Ligações de idioma compactadas",
 	"uls-betafeature-desc": "Mostra uma lista reduzida de idiomas, com apenas as línguas mais relevantes para si.",
