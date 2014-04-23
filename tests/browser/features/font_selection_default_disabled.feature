@@ -1,5 +1,5 @@
 @commons.wikimedia.beta.wmflabs.org @firefox @internet_explorer_10 @login @phantomjs
-Feature: Font selection
+Feature: Font selection default disabled
 
   In order to have better using experience,
   As a reader and writer,

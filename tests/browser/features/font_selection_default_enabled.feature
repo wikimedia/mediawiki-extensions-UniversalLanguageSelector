@@ -1,5 +1,5 @@
 @firefox @internet_explorer_10 @language-browsertests.wmflabs.org @login @phantomjs
-Feature: Font selection
+Feature: Font selection default enabled
 
   In order to have better using experience,
   As a reader and writer,
