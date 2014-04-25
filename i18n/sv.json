@@ -6,7 +6,7 @@
 			"Lokal Profil"
 		]
 	},
-	"uls-desc": "Ger användaren flera sätt att välja ett språk på och justera språkinställningar",
+	"uls-desc": "Ger användaren flera sätt att välja ett språk och justera språkinställningar",
 	"uls-plang-title-languages": "Språk",
 	"ext-uls-select-language-settings-icon-tooltip": "Språkinställningar",
 	"ext-uls-undo-language-tooltip-text": "Språk ändrades från $1",
@@ -39,7 +39,7 @@
 	"ext-uls-input-settings-title-short": "Indata",
 	"ext-uls-input-settings-desc": "Skriver du på ett annat språk?",
 	"ext-uls-input-settings-ime-settings": "Metoder för indata för $1",
-	"ext-uls-input-settings-ui-language": "Språk för att skriva",
+	"ext-uls-input-settings-ui-language": "Språk som används för att skriva",
 	"ext-uls-back-to-input-settings": "Tillbaka till inställningar för indata",
 	"ext-uls-ime-help": "Hur man använder",
 	"ext-uls-disable-input-method": "Använd standardtangentbord",
@@ -50,7 +50,7 @@
 	"ext-uls-input-disable": "Inaktivera verktyg för indata",
 	"ext-uls-input-enable": "Aktivera indataverktyg",
 	"ext-uls-input-disable-info": "Verktyg för indata är inaktiverade.",
-	"ext-uls-input-settings-noime": "Inga metoder för indata finns tillgängligt för detta språk.",
+	"ext-uls-input-settings-noime": "Inga metoder för indata finns tillgängliga för detta språk.",
 	"ext-uls-input-disable-notification": "Verktyg för indata har inaktiverats.",
 	"ext-uls-input-disable-notification-undo": "Ångra",
 	"ext-uls-input-disable-notification-info-personal": "Du kan aktivera verktygen för indata när som helst från språkinställningarna.",
