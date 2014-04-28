@@ -1,0 +1,14 @@
+== UniversalLanguageSelector 2014.04 ==
+Released at 2014-04-28.
+
+=== Noteworthy changes ===
+* Allow always logging tofu detection in EventLogging.
+* Bug 62981: Fixed RTL positioning for compact interlanguage links.
+* Localize the number in the "more languages" message in the compact links feature.
+* Bug 60815: Set Arabic as the writing system for Ottoman Turkish (ota).
+* Bug 63718: Allow overriding the header styles from typography refresh.
+* Add loading of messages using $wgMessagesDirs
+
+=== Input Methods ===
+* Added Batak input method.
+* Fixed the Odia Lekhani method, as well as the InScript methods for Hindi, Odia and Malayalam.
