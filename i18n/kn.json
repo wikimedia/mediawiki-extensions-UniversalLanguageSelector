@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Akoppad"
+			"Akoppad",
+			"VASANTH S.N."
 		]
 	},
 	"uls-desc": "ಬಳಕೆದಾರರಿಗೆ ಭಾಷೆಯನ್ನು ಆರಿಸಲು ಮತ್ತು ಭಾಷೆಯ ವ್ಯವಸ್ಥೆಗಳನ್ನು ಹೊಂದಿಸಲು ಹಲವಾರು ಮಾರ್ಗಗಳನ್ನು ನೀಡುತ್ತದೆ",
@@ -25,6 +26,7 @@
 	"ext-uls-input-settings-ime-settings": "$1 ಕ್ಕೆ ಒಳಗೆ ಹಾಕುವ ಸಾದನಗಳ",
 	"ext-uls-input-settings-ui-language": "ಬರೆಯಲು ಉಪಯೋಗಿಸುವ ಭಾಷೆ",
 	"ext-uls-back-to-input-settings": "ಒಳಬರುವಿಕೆ ಸದನೆಗಳಿಗೆ ಹಿಂದಿರುಗಿ",
+	"ext-uls-ime-help": "ಹೇಗೆ ಉಪಯೋಗಿಸುವುದು",
 	"ext-uls-disable-input-method": "ದೇಶೀಯ keyboard ಬಳಸಿ",
 	"ext-uls-input-settings-more-languages-tooltip": "ಹೆಚ್ಚಿನ ಭಾಷೆಗಳು",
 	"jquery-ime-other-languages": "ಇತರೆ ಭಾಷೆಗಳು",
