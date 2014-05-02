@@ -60,11 +60,11 @@
 		// Remove previous values when reinitializing
 		mw.uls.languageSelectionMethod = undefined;
 
-		$( '#map-block' ).on( 'click', function () {
+		$( '#uls-map-block' ).on( 'click', function () {
 			mw.uls.languageSelectionMethod = 'map';
 		} );
 
-		$( '#languagefilter' ).on( 'keydown', function () {
+		$( '#uls-languagefilter' ).on( 'keydown', function () {
 			// If it's the first letter,
 			// log the usage of the search box
 			if ( $( this ).val() === '' ) {
