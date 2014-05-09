@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Fohanno",
-			"Y-M D"
+			"Y-M D",
+			"Fulup"
 		]
 	},
+	"uls-plang-title-languages": "Yezhoù",
 	"ext-uls-select-language-settings-icon-tooltip": "Arventennoù ar yezh",
 	"ext-uls-undo-language-tooltip-text": "Yezh kemmet eus $1",
 	"ext-uls-language-settings-preferences-link": "Muioc'h a arventennoù yezh",
@@ -20,6 +22,7 @@
 	"ext-uls-display-settings-font-settings": "Arventennoù ar font",
 	"ext-uls-display-settings-ui-language": "Yezhoù diskwel",
 	"ext-uls-display-settings-anon-label": "Yezhoù diskwel :",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (evel evit an danvez)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Kevreañ]] evit dibab ur yezh all evit al lañserioù.",
 	"ext-uls-webfonts-settings-title": "Pellgargañ ar font pa vez ezhomm",
 	"ext-uls-webfonts-settings-info-link": "Muioc'h a ditouroù",
@@ -33,12 +36,14 @@
 	"ext-uls-input-settings-ui-language": "Yezh implijet evit skrivañ",
 	"ext-uls-back-to-input-settings": "Distreiñ d'an arventennoù bizskrivañ",
 	"ext-uls-ime-help": "Doare implijout",
-	"ext-uls-disable-input-method": "Implijout an touchennaoueg lec'hel",
+	"ext-uls-disable-input-method": "Implijout ur c'hlavier dibar",
 	"ext-uls-input-settings-more-languages-tooltip": "Muioc'h a yezhoù",
 	"jquery-ime-other-languages": "Yezhoù all",
-	"jquery-ime-disable-text": "Implijout an touchennaoueg lec'hel",
+	"jquery-ime-disable-text": "Implijout ur c'hlavier dibar",
 	"jquery-ime-help": "Skoazell",
 	"ext-uls-input-disable": "Diweredekaat an ostilhoù bizskrivañ",
 	"ext-uls-input-enable": "Gweredekaat an ostilhoù bizskrivañ",
-	"ext-uls-input-disable-notification-undo": "Dizober"
+	"ext-uls-input-disable-notification-undo": "Dizober",
+	"ext-uls-language-settings-applying": "O lakaat e pleustr...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ur|$1}} yezh ouzhpenn"
 }

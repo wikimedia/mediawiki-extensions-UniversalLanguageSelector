@@ -3,10 +3,15 @@
 		"authors": [
 			"R-Joe",
 			"Tgr",
-			"BáthoryPéter"
+			"BáthoryPéter",
+			"Tacsipacsi"
 		]
 	},
 	"uls-plang-title-languages": "Nyelvek",
+	"ext-uls-select-language-settings-icon-tooltip": "Nyelvi beállítások",
+	"ext-uls-undo-language-tooltip-text": "A nyelv megváltozott erről: $1",
+	"ext-uls-language-settings-preferences-link": "További nyelvi beállítások",
+	"uls-betafeature-desc": "Egy rövidebb változatát mutatja a nyelvi hivatkozások listájának, csak a számodra fontosabb nyelvekkel.",
 	"ext-uls-display-settings-title": "Megjelenítési beállítások",
 	"ext-uls-display-settings-language-tab": "Nyelv",
 	"ext-uls-display-settings-fonts-tab": "Betűkészletek",
@@ -22,7 +27,30 @@
 	"ext-uls-display-settings-anon-same-as-content": "$1 (ugyanaz, mint a tartalom)",
 	"ext-uls-display-settings-anon-log-in-cta": "A menük nyelvének megváltoztatásához [[Special:UserLogin|jelentkezz be]]",
 	"ext-uls-webfonts-settings-title": "Töltse le a hiányzó betűkészleteket",
+	"ext-uls-webfonts-settings-info-link": "További információk",
+	"ext-uls-webfonts-select-for": "Betűtípus kiválasztása ehhez: $1",
+	"ext-uls-webfonts-select-for-ui-info": "A felhasználói felülethez használt betűtípus",
+	"ext-uls-webfonts-select-for-content-info": "A tartalomhoz használt betűtípus",
+	"ext-uls-webfonts-system-font": "Rendszer-betűtípus",
+	"ext-uls-back-to-display-settings": "Vissza a megjelenítési beállításokhoz",
+	"ext-uls-input-settings-title": "Beviteli beállítások",
+	"ext-uls-input-settings-title-short": "Bevitel",
+	"ext-uls-input-settings-desc": "Más nyelven írsz?",
+	"ext-uls-input-settings-ime-settings": "Beviteli módok a következőhöz: $1",
+	"ext-uls-input-settings-ui-language": "Íráshoz használt nyelv",
+	"ext-uls-back-to-input-settings": "Vissza a beviteli beállításokhoz",
+	"ext-uls-ime-help": "Használati útmutató",
+	"ext-uls-input-settings-more-languages-tooltip": "További nyelvek",
 	"jquery-ime-other-languages": "További nyelvek",
 	"jquery-ime-help": "Súgó",
-	"ext-uls-input-settings-noime": "Beviteli módszerek nem állnak rendelkezésre ezen a nyelven."
+	"ext-uls-input-disable": "Beviteli eszközök letiltása",
+	"ext-uls-input-enable": "Beviteli eszközök engedélyezése",
+	"ext-uls-input-disable-info": "A beviteli eszközök le vannak tiltva.",
+	"ext-uls-input-settings-noime": "Beviteli módszerek nem állnak rendelkezésre ezen a nyelven.",
+	"ext-uls-input-disable-notification": "A beviteli eszközök le lettek tiltva",
+	"ext-uls-input-disable-notification-undo": "Visszavonás",
+	"ext-uls-input-disable-notification-info-personal": "Bármikor engedélyezheted a beviteli eszközöket a nyelvi beállításaid között.",
+	"ext-uls-input-disable-notification-info-interlanguage": "Bármikor engedélyezheted a beviteli eszközöket a nyelvi beállításaid között, a nyelvközi hivatkozások között.",
+	"ext-uls-language-settings-applying": "Alkalmazás…",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Egy további nyelv|$1 további nyelv}}"
 }
