@@ -174,6 +174,9 @@
 		compact: function ( languages ) {
 			var compactLanguages = [];
 
+			// Add user-defined assistant languages on wikis with Translate extension.
+			compactLanguages = compactLanguages.concat( this.filterByAssistantLanguages() );
+
 			// Add previously selected languages.
 			// Previous languages are always the better suggestion
 			// because the user has explicitly chosen them.
@@ -221,6 +224,23 @@
 			return $.grep( commonLanguages, function ( language ) {
 				return $.inArray( language, languages ) >= 0;
 			} );
+		},
+
+		/**
+		 * Filter the language list by Translate's assistant languages.
+		 * Where available, they're languages deemed useful by the user.
+		 * @return {Array} List of those language codes which are supported by article
+		 */
+		filterByAssistantLanguages: function ( languages ) {
+			var assistantLanguages = mw.user.options.get( 'translate-editlangs' );
+
+			if ( assistantLanguages && assistantLanguages !== 'default' ) {
+				return $.grep( assistantLanguages.split(/,\s*/), function ( language ) {
+					return $.inArray( language, languages ) >= 0;
+				} );
+			}
+
+			return [];
 		},
 
 		/**
