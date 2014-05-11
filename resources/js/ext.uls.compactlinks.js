@@ -176,7 +176,7 @@
 
 			// Add previously selected languages.
 			// Previous languages are always the better suggestion
-			// because user had explicitly chosen them.
+			// because the user has explicitly chosen them.
 			compactLanguages = compactLanguages.concat( this.filterByPreviousLanguages() );
 
 			// Add all common languages to the beginning of array.
@@ -184,13 +184,13 @@
 			compactLanguages = compactLanguages.concat( this.filterByCommonLanguages( languages ) );
 
 			// Finally add the whole languages array too.
-			// We will remove duplicate and cut down to required size.
+			// We will remove duplicates and cut down to required size.
 			compactLanguages = compactLanguages.concat( languages );
 
 			// Remove duplicates
 			compactLanguages = unique( compactLanguages );
 
-			// Cut to compact size and  sort
+			// Cut to compact size and sort
 			compactLanguages = compactLanguages.slice( 0, this.compactSize ).sort();
 
 			return compactLanguages;
@@ -200,7 +200,7 @@
 		 * Filter the language list by previous languages.
 		 * Not all previous languages will be present in interlanguage links,
 		 * so we are filtering them.
-		 * @return {Array} List of those language codes which are supported by article
+		 * @return {Array} List of language codes supported by the article
 		 */
 		filterByPreviousLanguages: function ( languages ) {
 			var previousLanguages = mw.uls.getPreviousLanguages();
@@ -213,7 +213,7 @@
 		/**
 		 * Filter the language list by common languages.
 		 * Common languages are the most probable languages predicted by ULS.
-		 * @return {Array} List of those language codes which are supported by article
+		 * @return {Array} List of language codes supported by the article
 		 */
 		filterByCommonLanguages: function ( languages ) {
 			var commonLanguages = mw.uls.getFrequentLanguageList();
@@ -225,7 +225,7 @@
 
 		/**
 		 * Find out the existing languages supported
-		 * by article and fetch their href.
+		 * by the article and fetch their href.
 		 * @return {Object} List of existing language codes and their hrefs
 		 */
 		getInterlanguageList: function getInterlanguageList() {
