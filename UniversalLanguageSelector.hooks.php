@@ -45,7 +45,8 @@ class UniversalLanguageSelectorHooks {
 	 * Hook: BeforePageDisplay
 	 */
 	public static function addModules( $out, $skin ) {
-		global $wgULSCompactLinks, $wgULSPosition, $wgULSGeoService, $wgULSEventLogging;
+		global $wgULSCompactLinks, $wgULSPosition, $wgULSGeoService, $wgULSEventLogging,
+			$wgInterwikiMagic, $wgHideInterlanguageLinks;
 
 		// Load the style for users without JS, to hide the useless links
 		$out->addModuleStyles( 'ext.uls.nojs' );
@@ -62,8 +63,11 @@ class UniversalLanguageSelectorHooks {
 		// If the extension is enabled, basic features (API, language data) available.
 		$out->addModules( 'ext.uls.init' );
 
-		// If compact ULS beta feature is enabled
+		// If compact ULS beta feature is enabled and is actually functional
+		// (see onGetBetaFeaturePreferences)
 		if ( $wgULSCompactLinks &&
+			$wgInterwikiMagic === true &&
+			$wgHideInterlanguageLinks === false &&
 			class_exists( 'BetaFeatures' ) &&
 			BetaFeatures::isFeatureEnabled( $out->getUser(), 'uls-compact-links' )
 		) {
