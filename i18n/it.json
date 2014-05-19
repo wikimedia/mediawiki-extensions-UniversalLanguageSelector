@@ -13,7 +13,7 @@
 	"ext-uls-undo-language-tooltip-text": "Lingua modificata da $1",
 	"ext-uls-language-settings-preferences-link": "Ulteriori impostazioni per la lingua",
 	"uls-betafeature-label": "Interwiki compatti",
-	"uls-betafeature-desc": "Mostra una versione ridotta dell'elenco degli interwiki (lingue in cui una pagina è disponibile), limitata a quelle più rilevanti per te.",
+	"uls-betafeature-desc": "Mostra una versione ridotta dell'elenco degli interwiki, cioè i collegamenti alle lingue nelle quali una pagina è disponibile, limitata a quelle più rilevanti per te.",
 	"ext-uls-display-settings-title": "Impostazioni di visualizzazione",
 	"ext-uls-display-settings-language-tab": "Lingua",
 	"ext-uls-display-settings-fonts-tab": "Tipi di carattere",
