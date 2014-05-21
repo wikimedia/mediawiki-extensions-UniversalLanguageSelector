@@ -317,6 +317,6 @@
 	};
 
 	$( document ).ready( function () {
-		$( '#p-lang-list' ).compactInterlanguageList();
+		$( '#p-lang .body ul' ).compactInterlanguageList();
 	} );
 }( jQuery, mediaWiki ) );
