@@ -64,7 +64,7 @@
 	function addDisplaySettings( uls ) {
 		var $displaySettings = displaySettings();
 
-		uls.$menu.find( '#settings-block' ).append( $displaySettings );
+		uls.$menu.find( '#uls-settings-block' ).append( $displaySettings );
 		$displaySettings.on( 'click', function () {
 			var languagesettings = $displaySettings.data( 'languagesettings' ),
 				displaySettingsOptions = {
@@ -102,7 +102,7 @@
 	function addInputSettings( uls ) {
 		var $inputSettings = inputSettings();
 
-		uls.$menu.find( '#settings-block' ).append( $inputSettings );
+		uls.$menu.find( '#uls-settings-block' ).append( $inputSettings );
 		$inputSettings.on( 'click', function () {
 			var position = uls.position(),
 				languagesettings = $inputSettings.data( 'languagesettings' );
