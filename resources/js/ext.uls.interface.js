@@ -257,6 +257,11 @@
 				}, timeout );
 			} );
 
+			// hide the tooltip when clicked on it
+			$( '.tipsy' ).on( 'click', function () {
+				hideTipsy();
+			} );
+
 			// Event handler for links in the tooltip.
 			// It looks like the tipsy is always created from scratch so that
 			// there wont be multiple event handlers bound to same click.
@@ -296,11 +301,6 @@
 			if ( !$( '.uls-menu:visible' ).length ) {
 				showTipsy( 3000 );
 			}
-		} );
-
-		// hide the tooltip when clicked on uls trigger
-		$ulsTrigger.on( 'click', function () {
-			hideTipsy();
 		} );
 	}
 
