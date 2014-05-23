@@ -337,6 +337,6 @@
 	};
 
 	$( document ).ready( function () {
-		$( '#p-lang .body ul' ).compactInterlanguageList();
+		$( '#p-lang ul' ).compactInterlanguageList();
 	} );
 }( jQuery, mediaWiki ) );

@@ -6,7 +6,8 @@
 	margin: 5px 0;
 }
 
-#p-lang .body ul .uls-trigger {
+#p-lang .body ul .uls-trigger,
+#p-lang .pBody ul .uls-trigger {
 	background-image: none;
 	padding: 0;
 }
