@@ -22,7 +22,7 @@
 	var closeRow, settingsMenu, settingsPanel, windowTemplate, panelsRow, buttonsRow;
 
 	closeRow = '<div class="row">' +
-		'<div class="uls-language-settings-close-block eight columns offset-by-four"><span id="languagesettings-close" class="icon-close"></span></div>' +
+		'<div class="uls-language-settings-close-block eight columns offset-by-four"><span id="languagesettings-close" class="uls-icon-close"></span></div>' +
 		'</div>';
 	settingsMenu = '<div class="four columns languagesettings-menu">' +
 		'<h1 data-i18n="ext-uls-language-settings-title"></h1>' +
