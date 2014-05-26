@@ -252,15 +252,11 @@
 				window.clearTimeout( tipsyTimer );
 			} );
 			$( '.tipsy' ).on( 'mouseout', function () {
-				tipsyTimer = window.setTimeout( function () {
-					hideTipsy();
-				}, timeout );
+				tipsyTimer = window.setTimeout( hideTipsy, timeout );
 			} );
 
 			// hide the tooltip when clicked on it
-			$( '.tipsy' ).on( 'click', function () {
-				hideTipsy();
-			} );
+			$( '.tipsy' ).on( 'click', hideTipsy );
 
 			// Event handler for links in the tooltip.
 			// It looks like the tipsy is always created from scratch so that
@@ -280,9 +276,7 @@
 					deferred.resolve();
 				}, mw.config.get( 'wgULSEventLogging' ) * 500 );
 			} );
-			tipsyTimer = window.setTimeout( function () {
-				hideTipsy();
-			}, timeout );
+			tipsyTimer = window.setTimeout( hideTipsy, timeout );
 		}
 
 		function hideTipsy() {
