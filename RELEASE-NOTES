@@ -1,0 +1,12 @@
+== UniversalLanguageSelector 2014.05 ==
+Released at 2014-05-31.
+
+=== Noteworthy changes ===
+* Bug 62342: Always display assistant languages in compact language list when
+defined by user in Translate extension.
+
+==== Input Methods ====
+* Bug 63895: Updated Sanskrit Transliteration layout as per community request.
+
+==== Fonts ====
+* Bug 56939: Added 'Hussaini Nastaleeq' font for Urdu.
