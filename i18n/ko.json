@@ -13,6 +13,7 @@
 	"ext-uls-undo-language-tooltip-text": "$1에서 언어가 바뀌었습니다",
 	"ext-uls-language-settings-preferences-link": "자세한 언어 설정",
 	"uls-betafeature-label": "소형 언어 링크",
+	"uls-betafeature-desc": "당신과 더욱 관련있는 짧은 버전의 언어 리스트를 표시",
 	"ext-uls-display-settings-title": "보기 설정",
 	"ext-uls-display-settings-language-tab": "언어",
 	"ext-uls-display-settings-fonts-tab": "글꼴",
