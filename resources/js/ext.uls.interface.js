@@ -327,11 +327,6 @@
 					// if there are no interlanguage links
 					$pLang.find( 'h3' )
 						.text( mw.msg( 'uls-plang-title-languages' ) );
-
-					// Remove the empty box that appears in the monobook skin
-					if ( mw.config.get( 'skin' ) === 'monobook' ) {
-						$pLang.find( 'div.pBody' ).remove();
-					}
 				}
 
 				$ulsTrigger.attr( {
