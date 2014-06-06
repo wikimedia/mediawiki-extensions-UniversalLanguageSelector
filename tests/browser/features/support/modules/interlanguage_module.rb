@@ -13,7 +13,7 @@ module InterlanguagePageModule
   a(:hindi_link, title: "Hindi")
   div(:input_settings, id: "input-settings-block")
   div(:language_list, class: "row uls-language-list lcd")
-  text_field(:language_search, id: "languagefilter")
+  text_field(:language_search, id: "uls-languagefilter")
   button(:non_default_language, class: "button uls-language-button", index: 1)
   a(:talk, text: "Discussion")
   span(:x, id: "languagesettings-close")
