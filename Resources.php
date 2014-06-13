@@ -215,6 +215,7 @@ $wgResourceModules['jquery.i18n'] = array(
 		'sl' => 'lib/jquery.i18n/languages/sl.js',
 		'uk' => 'lib/jquery.i18n/languages/uk.js',
 	),
+	'targets' => array( 'desktop', 'mobile' ),
 ) + $resourcePaths;
 
 $wgResourceModules['jquery.ime'] = array(
@@ -265,6 +266,7 @@ $wgResourceModules['jquery.uls.data'] = array(
 		'lib/jquery.uls/src/jquery.uls.data.js',
 		'lib/jquery.uls/src/jquery.uls.data.utils.js',
 	),
+	'targets' => array( 'desktop', 'mobile' ),
 ) + $resourcePaths;
 
 $wgResourceModules['jquery.uls.grid'] = array(
