@@ -32,7 +32,9 @@ Then(/^I should see a list of available input methods$/) do
 end
 
 Then(/^I should see a list of suggested languages$/) do
-  on(IMEPage).input_method_language_list_element.should be_visible
+  pending("Bug 61214") do
+    on(IMEPage).input_method_language_list_element.should be_visible
+  end
 end
 
 When(/^I choose (.+?) as the input language$/) do |language|
