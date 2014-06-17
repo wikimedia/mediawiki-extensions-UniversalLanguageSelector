@@ -1,5 +1,5 @@
 # First scenario seems to fail whenever OpenDyslexic is missing
-@firefox @internet_explorer_10 @language-browsertests.wmflabs.org @login @phantomjs
+@firefox @internet_explorer_10 @login @phantomjs
 Feature: Persistent settings
 
   This assumes wiki content language is English.
@@ -13,11 +13,13 @@ Feature: Persistent settings
       And I open Fonts panel of language settings
       And I select OpenDyslexic font for the interface language for the live preview
 
+  @language-browsertests.wmflabs.org
   Scenario: Interface font sticks to another page
     When I apply the changes
       And I am at the main page
     Then the selected interface font must be OpenDyslexic
 
+  @language-browsertests.wmflabs.org
   Scenario: Discarding a live preview of a font keeps the previous font
     When I close the panel to discard the changes
       And I am at the main page
