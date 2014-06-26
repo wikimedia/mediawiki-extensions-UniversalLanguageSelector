@@ -42,11 +42,6 @@
 				interfaceLanguage: mw.config.get( 'wgUserLanguage' )
 			} );
 
-			mw.eventLog.setDefaults( 'UniversalLanguageSelector-tofu', {
-				version: 1,
-				token: mw.user.id()
-			} );
-
 			eventLogger.logEventQueue.fire();
 		},
 
@@ -92,7 +87,6 @@
 			mw.hook( 'mw.uls.font.change' ).add( $.proxy( this.fontChange, this ) );
 			mw.hook( 'mw.uls.webfonts.enable' ).add( $.proxy( this.enableWebfonts, this ) );
 			mw.hook( 'mw.uls.webfonts.disable' ).add( $.proxy( this.disableWebfonts, this ) );
-			mw.hook( 'mw.uls.webfonts.tofudetected' ).add( $.proxy( this.tofuDetected, this ) );
 
 			$( 'body' ).on( 'noresults.uls', '.uls-menu .languagefilter',
 				$.proxy( this.noSearchResults, this )
@@ -233,17 +227,6 @@
 		 */
 		enableWebfonts: function ( context ) {
 			this.log( { action: 'webfonts-enable', context: context } );
-		},
-
-		/**
-		 * Log tofu detection
-		 * @param {string} language Code of the element in which tofu was detected
-		 */
-		tofuDetected: function ( language ) {
-			this.log( {
-				tofuElementLanguage: language,
-				webfontsEnabled: mw.webfonts.preferences.isEnabled()
-			}, 'UniversalLanguageSelector-tofu' );
 		},
 
 		/**

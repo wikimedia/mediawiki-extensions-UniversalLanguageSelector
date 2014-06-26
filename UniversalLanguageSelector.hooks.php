@@ -275,7 +275,6 @@ class UniversalLanguageSelectorHooks {
 			$wgULSPosition, $wgULSNoWebfontsSelectors,
 			$wgULSAnonCanChangeLanguage,
 			$wgULSEventLogging,
-			$wgULSTofuLoggingChance, $wgULSTofuLoggingMaxTime,
 			$wgULSImeSelectors, $wgULSNoImeSelectors,
 			$wgULSFontRepositoryBasePath,
 			$wgExtensionAssetsPath;
@@ -290,8 +289,6 @@ class UniversalLanguageSelectorHooks {
 		$vars['wgULSPosition'] = $wgULSPosition;
 		$vars['wgULSAnonCanChangeLanguage'] = $wgULSAnonCanChangeLanguage;
 		$vars['wgULSEventLogging'] = $wgULSEventLogging;
-		$vars['wgULSTofuLoggingChance'] = $wgULSTofuLoggingChance;
-		$vars['wgULSTofuLoggingMaxTime'] = $wgULSTofuLoggingMaxTime;
 		$vars['wgULSImeSelectors'] = $wgULSImeSelectors;
 		$vars['wgULSNoImeSelectors'] = $wgULSNoImeSelectors;
 		$vars['wgULSNoWebfontsSelectors'] = $wgULSNoWebfontsSelectors;

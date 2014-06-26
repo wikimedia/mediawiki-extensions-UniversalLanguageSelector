@@ -82,7 +82,6 @@ $wgResourceModules['ext.uls.eventlogger'] = array(
 	'dependencies' => array(
 		'mediawiki.user',
 		'schema.UniversalLanguageSelector',
-		'schema.UniversalLanguageSelector-tofu',
 	),
 ) + $resourcePaths;
 
