@@ -25,7 +25,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 /**
  * Version number used in extension credits and in other placed where needed.
  */
-define( 'ULS_VERSION', '2014-05-31' );
+define( 'ULS_VERSION', '2014-06-26' );
 
 $GLOBALS['wgExtensionCredits']['other'][] = array(
 	'path' => __FILE__,
