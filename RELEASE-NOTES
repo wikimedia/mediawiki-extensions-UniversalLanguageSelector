@@ -1,0 +1,6 @@
+== UniversalLanguageSelector 2014.06 ==
+Released at 2014-06-28.
+
+=== Noteworthy changes ===
+* Bug 64741: Fix 'Add links' option in Monobook skin when page has no interlanguage links.
+* Added support for Khakas language.
