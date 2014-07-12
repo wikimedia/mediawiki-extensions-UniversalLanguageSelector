@@ -104,7 +104,7 @@
 
 	mw.uls.setPreviousLanguages = function ( previousLanguages ) {
 		$.cookie( mw.uls.previousLanguagesCookie,
-			$.toJSON( previousLanguages ), {
+			JSON.stringify( previousLanguages ), {
 				path: '/'
 			}
 		);
@@ -118,7 +118,7 @@
 		}
 
 		// return last 5 language changes
-		return $.parseJSON( previousLanguages ).slice( -5 );
+		return JSON.parse( previousLanguages ).slice( -5 );
 	};
 
 	/**
