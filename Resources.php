@@ -71,7 +71,6 @@ $wgResourceModules['ext.uls.init'] = array(
 	'dependencies' => array(
 		'mediawiki.Uri',
 		'jquery.client',
-		'jquery.json',
 		'jquery.cookie',
 	),
 	'position' => 'top',
