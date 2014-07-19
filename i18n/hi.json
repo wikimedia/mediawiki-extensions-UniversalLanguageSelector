@@ -12,6 +12,8 @@
 	"ext-uls-select-language-settings-icon-tooltip": "भाषा विकल्प",
 	"ext-uls-undo-language-tooltip-text": "भाषा $1 से बदली गयी",
 	"ext-uls-language-settings-preferences-link": "अधिक भाषा विकल्प",
+	"uls-betafeature-label": "संक्षिप्त भाषा कड़ियाँ",
+	"uls-betafeature-desc": "संक्षिप्त भाषा सूची दिखाएँ, केवल उन भाषाओं के साथ जो आपसे सम्बद्ध हों।",
 	"ext-uls-display-settings-title": "दृश्यता विकल्प",
 	"ext-uls-display-settings-language-tab": "भाषा",
 	"ext-uls-display-settings-fonts-tab": "टंकन (फ़ॉण्ट)",
@@ -36,6 +38,7 @@
 	"ext-uls-back-to-display-settings": "प्रदर्शन विकल्प में वापिस जायें",
 	"ext-uls-input-settings-title": "इनपुट विकल्प",
 	"ext-uls-input-settings-title-short": "इनपुट",
+	"ext-uls-input-settings-desc": "किसी अन्य भाषा में लिखना है?",
 	"ext-uls-input-settings-ime-settings": "$1 के लिये इनपुट विधियाँ",
 	"ext-uls-input-settings-ui-language": "लेखन में प्रयुक्त भाषा",
 	"ext-uls-back-to-input-settings": "इनपुट विकल्प में वापिस जायें",
@@ -53,5 +56,6 @@
 	"ext-uls-input-disable-notification-undo": "पूर्ववत करें",
 	"ext-uls-input-disable-notification-info-personal": "आप किसी भी समय भाषा विकल्प में से इनपुट उपकरण सक्षम कर सकते हैं।",
 	"ext-uls-input-disable-notification-info-interlanguage": "आप किसी भी समय भाषा सूची के साथ स्थित भाषा विकल्प में से इनपुट उपकरण सक्षम कर सकते हैं।",
-	"ext-uls-language-settings-applying": "लागू हो रहा है..."
+	"ext-uls-language-settings-applying": "लागू हो रहा है...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|एक और भाषा|$1 और भाषाएँ}}"
 }
