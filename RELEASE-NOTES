@@ -1,0 +1,10 @@
+== UniversalLanguageSelector 2014.07 ==
+Released at 2014-07-28.
+
+=== Noteworthy changes ===
+* Stopped using deprecated jquery.json module.
+* Added support for Rutul language.
+
+=== Input Methods ===
+* Added Ludic (lud) transliteration layout.
+* Added Tibetian (bo) EWTS layout.
