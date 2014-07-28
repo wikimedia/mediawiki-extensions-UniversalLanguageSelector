@@ -10,7 +10,7 @@
 			"LNDDYL"
 		]
 	},
-	"uls-desc": "為用戶提供多種方法來選擇語言和調整語言設置",
+	"uls-desc": "為使用者提供多種方法來選擇語言和調整語言設定",
 	"uls-plang-title-languages": "語言",
 	"ext-uls-select-language-settings-icon-tooltip": "語言設定",
 	"ext-uls-undo-language-tooltip-text": "語言已從$1更改",
