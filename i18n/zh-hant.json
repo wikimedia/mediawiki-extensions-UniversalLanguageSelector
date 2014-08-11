@@ -7,7 +7,8 @@
 			"Simon Shek",
 			"Spring Roll Conan",
 			"Liangent",
-			"LNDDYL"
+			"LNDDYL",
+			"Cwlin0416"
 		]
 	},
 	"uls-desc": "為使用者提供多種方法來選擇語言和調整語言設定",
@@ -35,7 +36,7 @@
 	"ext-uls-webfonts-settings-info": "將下載Webfonts以於特殊程式碼中顯示文字。",
 	"ext-uls-webfonts-settings-info-link": "更多資訊",
 	"ext-uls-webfonts-select-for": "為$1選擇字體",
-	"ext-uls-webfonts-select-for-ui-info": "用於使用者介面的字體",
+	"ext-uls-webfonts-select-for-ui-info": "用於使用者介面的字型",
 	"ext-uls-webfonts-select-for-content-info": "用於內容的字體",
 	"ext-uls-webfonts-system-font": "系統字型",
 	"ext-uls-back-to-display-settings": "回到顯示設定",
