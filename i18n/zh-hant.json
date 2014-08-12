@@ -60,6 +60,6 @@
 	"ext-uls-input-disable-notification-undo": "復原",
 	"ext-uls-input-disable-notification-info-personal": "你可以在任何時候，從語言設定中，啟用輸入工具。",
 	"ext-uls-input-disable-notification-info-interlanguage": "你可以在任何時候，從語言清單旁邊的語言設定中，啟用輸入工具。",
-	"ext-uls-language-settings-applying": "應用中......",
+	"ext-uls-language-settings-applying": "套用中......",
 	"ext-uls-compact-link-count": "$1個更多語言"
 }
