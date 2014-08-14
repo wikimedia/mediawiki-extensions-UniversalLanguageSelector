@@ -285,7 +285,7 @@
 		addTrigger: function () {
 			var $trigger, $triggerLabel;
 
-			$trigger = $( '<div>' )
+			$trigger = $( '<button>' )
 				.addClass( 'mw-interlanguage-selector mw-ui-button active' )
 				.html( '&#8230' ); // '…'
 
