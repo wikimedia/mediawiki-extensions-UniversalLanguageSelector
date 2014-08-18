@@ -11,6 +11,7 @@
 	"ext-uls-undo-language-tooltip-text": "言語を$1から変更しました。",
 	"ext-uls-language-settings-preferences-link": "言語のその他の設定",
 	"uls-betafeature-label": "言語リンクを短縮",
+	"uls-betafeature-desc": "他言語リストを短くし、あなたに関係がある言語だけ表示するようにする。",
 	"ext-uls-display-settings-title": "表示設定",
 	"ext-uls-display-settings-language-tab": "言語",
 	"ext-uls-display-settings-fonts-tab": "フォント",
