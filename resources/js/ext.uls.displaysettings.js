@@ -447,7 +447,7 @@
 				if ( font !== 'system' ) {
 					$fontOption = $( '<option>' ).attr( 'value', font ).text( font );
 					$fontSelector.append( $fontOption );
-					$fontOption.attr( 'selected', savedFont === font );
+					$fontOption.prop( 'selected', savedFont === font );
 				}
 			} );
 
@@ -459,7 +459,7 @@
 				.val( 'system' )
 				.attr( 'data-i18n', 'ext-uls-webfonts-system-font' );
 			$fontSelector.append( $systemFont );
-			$systemFont.attr( 'selected', savedFont === 'system' || !savedFont );
+			$systemFont.prop( 'selected', savedFont === 'system' || !savedFont );
 
 			// Possible ids:
 			// uls-ui-font-selector-label
