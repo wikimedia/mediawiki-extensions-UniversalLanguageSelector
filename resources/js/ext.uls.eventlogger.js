@@ -88,7 +88,7 @@
 			mw.hook( 'mw.uls.webfonts.enable' ).add( $.proxy( this.enableWebfonts, this ) );
 			mw.hook( 'mw.uls.webfonts.disable' ).add( $.proxy( this.disableWebfonts, this ) );
 
-			$( 'body' ).on( 'noresults.uls', '.uls-menu .languagefilter',
+			$( 'body' ).on( 'noresults.uls', '.uls-menu .uls-languagefilter',
 				$.proxy( this.noSearchResults, this )
 			);
 		},
