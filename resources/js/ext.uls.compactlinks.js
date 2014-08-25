@@ -132,6 +132,10 @@
 					}
 					this.$menu.css( 'left', this.left );
 				},
+				languageDecorator: function ( $languageLink, language ) {
+					// set href according to language
+					$languageLink.prop( 'href', compactLinks.interlanguageList[ language ].href );
+				},
 				// Use compact version of ULS
 				compact: true,
 				// Top position of the language selector. Top it 250px above to take care of
