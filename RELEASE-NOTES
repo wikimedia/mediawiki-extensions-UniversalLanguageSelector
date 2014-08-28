@@ -1,0 +1,15 @@
+== UniversalLanguageSelector 2014.08 ==
+Released at 2014-08-28.
+
+=== Noteworthy changes ===
+* Change the autonym for Algerian Arabic.
+* Localisation updates.
+
+==== Input Methods ====
+* Tibetian-ewts: Use of unicode NFC instead of NFD.
+* Fixed description in Bengali Probhat layout.
+
+==== Fonts ====
+* Added Comic Neue font. It is available for English and other languages using
+the latin alphabet.
+* Updated UnifrakturMaguntia font to the latest version.
