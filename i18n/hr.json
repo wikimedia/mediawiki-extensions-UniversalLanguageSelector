@@ -6,7 +6,7 @@
 			"MaGa"
 		]
 	},
-	"uls-plang-title-languages": "jezične postavke",
+	"uls-plang-title-languages": "Jezične postavke",
 	"ext-uls-select-language-settings-icon-tooltip": "Jezične postavke",
 	"ext-uls-undo-language-tooltip-text": "Jezik promijenjen, prethodno je bio postavljen $1",
 	"ext-uls-language-settings-preferences-link": "Više jezičnih postavki",
@@ -26,6 +26,9 @@
 	"ext-uls-display-settings-anon-label": "Prikaži jezik:",
 	"ext-uls-display-settings-anon-same-as-content": "Hrvatski (isto kao sadržaj)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Prijavi se]] za odabir različitih jezika u izborniku.",
+	"ext-uls-webfonts-settings-title": "Preuzimanje fontova po potrebi",
+	"ext-uls-webfonts-settings-info": "Automatsko preuzimanje fontova koji nedostaju i omogućavanje odabira preferiranih fontova.",
+	"ext-uls-webfonts-settings-info-link": "Više informacija",
 	"ext-uls-webfonts-select-for": "Odaberi font za $1",
 	"ext-uls-webfonts-select-for-ui-info": "Odabrani font za suradničko sučelje",
 	"ext-uls-webfonts-select-for-content-info": "Odabrani font za sadržaj",
