@@ -22,18 +22,24 @@
 
 	QUnit.module( 'ext.uls', QUnit.newMwEnvironment() );
 
-	QUnit.test( '-- Initial check', 1, function ( assert ) {
+	QUnit.test( 'Initial check', function ( assert ) {
+		QUnit.expect( 1 );
+
 		assert.ok( $.fn.uls, '$.fn.uls is defined' );
 	} );
 
-	QUnit.test( '-- Custom langdb', 1, function ( assert ) {
+	QUnit.test( 'Custom langdb', function ( assert ) {
+		QUnit.expect( 1 );
+
 		// This is a custom non-standard language code used in MW.
 		// If it's not defined, then, for example,
 		// its direction cannot be acquired using the langdb utils.
 		assert.strictEqual( $.uls.data.getDir( 'als' ), 'ltr', 'The direction of custom MW language als is ltr.' );
 	} );
 
-	QUnit.asyncTest( '-- User preferences', 2, function ( assert ) {
+	QUnit.test( 'User preferences', function ( assert ) {
+		QUnit.expect( 2 );
+
 		// 'gofanim' means "fonts" in Hebrew.
 		// Here it's used as a meaningless word, to test
 		// the preferences without changing anything useful.
@@ -43,29 +49,38 @@
 			readPrefs;
 
 		prefsToSave[prefName] = {
-			'fonts': {
-				'qqy': 'Megafont'
-			},
-			'webfonts-enabled': true
+			fonts: {
+				qqy: 'Megafont'
+			}
 		};
 
 		prefs.set( prefName, prefsToSave );
+
+		readPrefs = prefs.get( prefName );
+		assert.strictEqual(
+			readPrefs[prefName].fonts.qqy,
+			'Megafont',
+			'Correct value for the font name'
+		);
+
 		QUnit.stop();
 		prefs.save( function ( successSave ) {
 			QUnit.start();
 			assert.ok( successSave, 'Options saving API did not produce an error.' );
+
+			// Delete old options
+			prefs.set( prefName, undefined );
+			QUnit.stop();
+			prefs.save( function () {
+				QUnit.start();
+			} );
 		} );
-
-		readPrefs = prefs.get( prefName );
-		assert.strictEqual( readPrefs[prefName].fonts.qqy, 'Megafont', 'Correct value for the font name' );
-
-		// Delete old options
-		prefs.set( prefName, undefined );
-		prefs.save();
 	} );
 
-	QUnit.test( '-- Common languages', 1, function ( assert ) {
+	QUnit.test( 'Common languages', function ( assert ) {
 		var i, foundTagalog, languagesInPH;
+
+		QUnit.expect( 1 );
 
 		// Bug 49847
 		foundTagalog = false;
