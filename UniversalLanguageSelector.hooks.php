@@ -102,7 +102,7 @@ class UniversalLanguageSelectorHooks {
 	public static function addTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
 		$testModules['qunit']['ext.uls.tests'] = array(
 			'scripts' => array( 'tests/qunit/ext.uls.tests.js' ),
-			'dependencies' => array( 'ext.uls.init', 'ext.uls.interface' ),
+			'dependencies' => array( 'jquery.uls', 'ext.uls.preferences' ),
 			'localBasePath' => __DIR__,
 			'remoteExtPath' => 'UniversalLanguageSelector',
 		);
