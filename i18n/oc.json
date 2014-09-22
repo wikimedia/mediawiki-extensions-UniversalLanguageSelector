@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Cedric31"
+			"Cedric31",
+			"Ltrlg"
 		]
 	},
 	"uls-desc": "Dona a l’utilizaire mantun biais de seleccionar una lenga e d’ajustar los paramètres de lenga",
-	"uls-betafeature-label": " Compactar los ligams de lenga",
+	"uls-betafeature-label": "Compactar los ligams de lenga",
 	"uls-betafeature-desc": "Afichar una version abreujada de la lista de las lengas, amb sonque las lengas que vos interèssan lo mai.",
 	"ext-uls-display-settings-title": "Afichar los paramètres",
 	"ext-uls-display-settings-language-tab": "Lenga",
