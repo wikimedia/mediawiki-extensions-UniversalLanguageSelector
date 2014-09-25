@@ -200,6 +200,8 @@ $GLOBALS['wgAutoloadClasses'] += array(
 );
 
 $GLOBALS['wgHooks']['BeforePageDisplay'][] = 'UniversalLanguageSelectorHooks::addModules';
+$GLOBALS['wgHooks']['ResourceLoaderRegisterModules'][] =
+	'UniversalLanguageSelectorHooks::onResourceLoaderRegisterModules';
 $GLOBALS['wgHooks']['PersonalUrls'][] = 'UniversalLanguageSelectorHooks::addPersonalBarTrigger';
 $GLOBALS['wgHooks']['ResourceLoaderTestModules'][] =
 	'UniversalLanguageSelectorHooks::addTestModules';
@@ -216,40 +218,5 @@ $GLOBALS['wgDefaultUserOptions']['uls-preferences'] = '';
 $GLOBALS['wgHooks']['GetPreferences'][] = 'UniversalLanguageSelectorHooks::onGetPreferences';
 $GLOBALS['wgHooks']['GetBetaFeaturePreferences'][] =
 	'UniversalLanguageSelectorHooks::onGetBetaFeaturePreferences';
-
-$GLOBALS['wgExtensionFunctions'][] = function () {
-	global $wgHooks, $wgResourceModules, $wgULSEventLogging, $wgULSGeoService;
-
-	if ( $wgULSGeoService === true ) {
-		$wgHooks['BeforePageDisplay'][] = function ( &$out ) {
-			/** @var OutputPage $out */
-			$out->addScript( '<script src="//bits.wikimedia.org/geoiplookup"></script>' );
-
-			return true;
-		};
-	}
-
-	// If EventLogging integration is enabled, first ensure that
-	// the EventLogging extension is present, then declare schema module.
-	// If it is not present, emit a warning and disable logging.
-	if ( $wgULSEventLogging ) {
-		if ( class_exists( 'ResourceLoaderSchemaModule' ) ) {
-			// NB: When updating the schema, remember also to update the version
-			// in the schema default in the JavaScript library.
-			/// @see https://meta.wikimedia.org/wiki/Schema:UniversalLanguageSelector
-			$wgResourceModules['schema.UniversalLanguageSelector'] = array(
-				'class' => 'ResourceLoaderSchemaModule',
-				'schema' => 'UniversalLanguageSelector',
-				'revision' => 7327441,
-			);
-		} else {
-			wfWarn( 'UniversalLanguageSelector is configured to use EventLogging, '
-				. 'but the extension is not available. Disabling wgULSEventLogging.' );
-			$wgULSEventLogging = false;
-		}
-	}
-
-	return true;
-};
 
 require __DIR__ . '/Resources.php';

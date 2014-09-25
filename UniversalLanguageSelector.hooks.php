@@ -76,6 +76,8 @@ class UniversalLanguageSelectorHooks {
 
 		if ( is_string( $wgULSGeoService ) ) {
 			$out->addModules( 'ext.uls.geoclient' );
+		} elseif ( $wgULSGeoService === true ) {
+			$out->addScript( '<script src="//bits.wikimedia.org/geoiplookup"></script>' );
 		}
 
 		if ( self::isToolbarEnabled( $out->getUser() ) ) {
@@ -90,6 +92,35 @@ class UniversalLanguageSelectorHooks {
 		}
 
 		return true;
+	}
+
+	/**
+	 * Register conditional modules
+	 *
+	 * @param ResourceLoader $rl
+	 */
+	public static function onResourceLoaderRegisterModules( ResourceLoader &$rl ) {
+		global $wgULSEventLogging;
+		// If EventLogging integration is enabled, first ensure that
+		// the EventLogging extension is present, then declare schema module.
+		// If it is not present, emit a warning and disable logging.
+		if ( $wgULSEventLogging ) {
+			if ( class_exists( 'ResourceLoaderSchemaModule' ) ) {
+				// NB: When updating the schema, remember also to update the version
+				// in the schema default in the JavaScript library.
+				/// @see https://meta.wikimedia.org/wiki/Schema:UniversalLanguageSelector
+				$rl->register( 'schema.UniversalLanguageSelector', array(
+					'class' => 'ResourceLoaderSchemaModule',
+					'schema' => 'UniversalLanguageSelector',
+					'revision' => 7327441,
+				) );
+			} else {
+				wfWarn( 'UniversalLanguageSelector is configured to use EventLogging, '
+					. 'but the extension is not available. Disabling wgULSEventLogging.' );
+				$wgULSEventLogging = false;
+			}
+		}
+
 	}
 
 	/**
