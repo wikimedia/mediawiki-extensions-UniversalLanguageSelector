@@ -287,20 +287,16 @@
 		 * Add the trigger at the bottom of the language list
 		 */
 		addTrigger: function () {
-			var $trigger, $triggerLabel;
+			var $trigger;
 
 			$trigger = $( '<button>' )
 				.addClass( 'mw-interlanguage-selector mw-ui-button active' )
-				.html( '&#8230' ); // '…'
-
-			$triggerLabel = $( '<label>' )
-				.attr( 'id', 'more-lang-label' )
-				.text( $.i18n(
+				.html( $.i18n(
 					'ext-uls-compact-link-count',
 					mw.language.convertNumber( this.listSize - this.compactSize )
 				) );
 
-			this.$interlanguageList.append( $trigger, $triggerLabel );
+			this.$interlanguageList.append( $trigger );
 			this.$trigger = $trigger;
 		},
 
