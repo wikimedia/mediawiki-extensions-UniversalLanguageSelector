@@ -3,7 +3,8 @@
 		"message-documentation": "qqq",
 		"authors": [
 			"Amire80",
-			"Yona b"
+			"Yona b",
+			"Guycn2"
 		]
 	},
 	"uls-desc": "נותן למשתמשים מספר דרכים לבחור שפה ולכוונן את הגדרות השפה",
@@ -26,7 +27,7 @@
 	"ext-uls-display-settings-ui-language": "שפת התצוגה",
 	"ext-uls-display-settings-anon-label": "שפת תצוגה:",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (כמו שפת התוכן)",
-	"ext-uls-display-settings-anon-log-in-cta": "יש [[Special:UserLogin|להיכנס]] לחשבון כדי לבחור שפה אחרת לתפריטים.",
+	"ext-uls-display-settings-anon-log-in-cta": "יש [[Special:UserLogin|להיכנס לחשבון]] כדי לבחור שפה אחרת עבור תפריטים.",
 	"ext-uls-webfonts-settings-title": "הורדת גופן כשזה נחוץ",
 	"ext-uls-webfonts-settings-info": "הורדת גופנים באופן אוטומטי ובחירת הגופן המועדף.",
 	"ext-uls-webfonts-settings-info-link": "מידע נוסף",
