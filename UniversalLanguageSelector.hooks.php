@@ -94,33 +94,8 @@ class UniversalLanguageSelectorHooks {
 		return true;
 	}
 
-	/**
-	 * Register conditional modules
-	 *
-	 * @param ResourceLoader $rl
-	 */
-	public static function onResourceLoaderRegisterModules( ResourceLoader &$rl ) {
-		global $wgULSEventLogging;
-		// If EventLogging integration is enabled, first ensure that
-		// the EventLogging extension is present, then declare schema module.
-		// If it is not present, emit a warning and disable logging.
-		if ( $wgULSEventLogging ) {
-			if ( class_exists( 'ResourceLoaderSchemaModule' ) ) {
-				// NB: When updating the schema, remember also to update the version
-				// in the schema default in the JavaScript library.
-				/// @see https://meta.wikimedia.org/wiki/Schema:UniversalLanguageSelector
-				$rl->register( 'schema.UniversalLanguageSelector', array(
-					'class' => 'ResourceLoaderSchemaModule',
-					'schema' => 'UniversalLanguageSelector',
-					'revision' => 7327441,
-				) );
-			} else {
-				wfWarn( 'UniversalLanguageSelector is configured to use EventLogging, '
-					. 'but the extension is not available. Disabling wgULSEventLogging.' );
-				$wgULSEventLogging = false;
-			}
-		}
-
+	public static function onEventLoggingRegisterSchemas( array &$schemas ) {
+		$schemas['UniversalLanguageSelector'] = 7327441;
 	}
 
 	/**
@@ -309,7 +284,7 @@ class UniversalLanguageSelectorHooks {
 		$vars['wgULSWebfontsEnabled'] = $wgULSWebfontsEnabled;
 		$vars['wgULSPosition'] = $wgULSPosition;
 		$vars['wgULSAnonCanChangeLanguage'] = $wgULSAnonCanChangeLanguage;
-		$vars['wgULSEventLogging'] = $wgULSEventLogging;
+		$vars['wgULSEventLogging'] = $wgULSEventLogging && class_exists( 'ResourceLoaderSchemaModule' );
 		$vars['wgULSImeSelectors'] = $wgULSImeSelectors;
 		$vars['wgULSNoImeSelectors'] = $wgULSNoImeSelectors;
 		$vars['wgULSNoWebfontsSelectors'] = $wgULSNoWebfontsSelectors;
