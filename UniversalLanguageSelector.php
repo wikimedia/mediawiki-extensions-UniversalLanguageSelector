@@ -200,8 +200,8 @@ $GLOBALS['wgAutoloadClasses'] += array(
 );
 
 $GLOBALS['wgHooks']['BeforePageDisplay'][] = 'UniversalLanguageSelectorHooks::addModules';
-$GLOBALS['wgHooks']['ResourceLoaderRegisterModules'][] =
-	'UniversalLanguageSelectorHooks::onResourceLoaderRegisterModules';
+$GLOBALS['wgHooks']['EventLoggingRegisterSchemas'][] =
+	'UniversalLanguageSelectorHooks::onEventLoggingRegisterSchemas';
 $GLOBALS['wgHooks']['PersonalUrls'][] = 'UniversalLanguageSelectorHooks::addPersonalBarTrigger';
 $GLOBALS['wgHooks']['ResourceLoaderTestModules'][] =
 	'UniversalLanguageSelectorHooks::addTestModules';
