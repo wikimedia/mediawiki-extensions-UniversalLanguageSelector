@@ -14,5 +14,6 @@
 	"ext-uls-display-settings-ui-language": "Displey tili",
 	"ext-uls-display-settings-anon-label": "Displey tili",
 	"jquery-ime-other-languages": "Boshqa tillarda",
-	"jquery-ime-help": "Yordam"
+	"jquery-ime-help": "Yordam",
+	"ext-uls-compact-link-count": "Yana {{PLURAL:$1|bitta tilda|$1 ta tillarda}}"
 }
