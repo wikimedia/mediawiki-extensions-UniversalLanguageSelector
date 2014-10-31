@@ -13,6 +13,7 @@
 	"ext-uls-select-language-settings-icon-tooltip": "Sprogindstillinger",
 	"ext-uls-undo-language-tooltip-text": "Sprog ændret fra $1",
 	"ext-uls-language-settings-preferences-link": "Flere sprogindstillinger",
+	"uls-betafeature-label": "Kompakte sproglinks",
 	"uls-betafeature-desc": "Vis en kortere version af sproglisten, kun med de sprog, der er mest relevante for dig.",
 	"ext-uls-display-settings-title": "Visningsindstillinger",
 	"ext-uls-display-settings-language-tab": "Sprog",
@@ -56,5 +57,6 @@
 	"ext-uls-input-disable-notification-undo": "Fortryd ændring",
 	"ext-uls-input-disable-notification-info-personal": "Du kan altid slå indtastningsværktøjerne til i sprogindstillingerne.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Du kan altid slå indtastningsværktøjerne til i sprogindstillingerne ved siden af sproglisten.",
-	"ext-uls-language-settings-applying": "Anvender..."
+	"ext-uls-language-settings-applying": "Anvender...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Et sprog til|$1 sprog til}}"
 }
