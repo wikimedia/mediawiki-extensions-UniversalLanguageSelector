@@ -1,0 +1,6 @@
+== UniversalLanguageSelector 2014.10 ==
+Released at 2014-10-31.
+
+=== Noteworthy changes ===
+=== Input Methods ===
+* Fixed bug in Burmese (my-xkb) keyboard.
