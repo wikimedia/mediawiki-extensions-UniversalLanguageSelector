@@ -54,16 +54,25 @@ class ApiULSLocalization extends ApiBase {
 		);
 	}
 
+	/**
+	 * @deprecated since MediaWiki core 1.25
+	 */
 	public function getParamDescription() {
 		return array(
 			'language' => 'Language string',
 		);
 	}
 
+	/**
+	 * @deprecated since MediaWiki core 1.25
+	 */
 	public function getDescription() {
 		return 'Get the localization of ULS in given language';
 	}
 
+	/**
+	 * @deprecated since MediaWiki core 1.25
+	 */
 	public function getExamples() {
 		return array(
 			'api.php?action=ulslocalization&language=ta',
@@ -71,7 +80,15 @@ class ApiULSLocalization extends ApiBase {
 		);
 	}
 
-	public function getVersion() {
-		return __CLASS__ . ': ' . ULS_VERSION;
+	/**
+	 * @see ApiBase::getExamplesMessages()
+	 */
+	protected function getExamplesMessages() {
+		return array(
+			'action=ulslocalization&language=ta'
+				=> 'apihelp-ulslocalization-example-1',
+			'action=ulslocalization&language=hi'
+				=> 'apihelp-ulslocalization-example-2',
+		);
 	}
 }

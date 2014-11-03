@@ -49,6 +49,9 @@ class ApiLanguageSearch extends ApiBase {
 		);
 	}
 
+	/**
+	 * @deprecated since MediaWiki core 1.25
+	 */
 	public function getParamDescription() {
 		return array(
 			'search' => 'Search string',
@@ -56,10 +59,16 @@ class ApiLanguageSearch extends ApiBase {
 		);
 	}
 
+	/**
+	 * @deprecated since MediaWiki core 1.25
+	 */
 	public function getDescription() {
 		return 'Search for language names in any script';
 	}
 
+	/**
+	 * @deprecated since MediaWiki core 1.25
+	 */
 	public function getExamples() {
 		return array(
 			'api.php?action=languagesearch&search=Te',
@@ -68,7 +77,17 @@ class ApiLanguageSearch extends ApiBase {
 		);
 	}
 
-	public function getVersion() {
-		return __CLASS__ . ': ' . ULS_VERSION;
+	/**
+	 * @see ApiBase::getExamplesMessages()
+	 */
+	protected function getExamplesMessages() {
+		return array(
+			'action=languagesearch&search=Te'
+				=> 'apihelp-languagesearch-example-1',
+			'action=languagesearch&search=ഫി'
+				=> 'apihelp-languagesearch-example-2',
+			'action=languagesearch&search=ഫി&typos=1'
+				=> 'apihelp-languagesearch-example-3',
+		);
 	}
 }
