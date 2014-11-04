@@ -193,10 +193,10 @@ class UniversalLanguageSelectorHooks {
 	 * Hook to UserGetLanguageObject
 	 * @param User $user
 	 * @param string $code
-	 * @param RequestContext $context
+	 * @param IContextSource $context
 	 * @return bool
 	 */
-	public static function getLanguage( User $user, &$code, RequestContext $context ) {
+	public static function getLanguage( User $user, &$code, IContextSource $context ) {
 		global $wgULSAnonCanChangeLanguage, $wgULSLanguageDetection;
 
 		if ( !self::isToolbarEnabled( $user ) ) {
