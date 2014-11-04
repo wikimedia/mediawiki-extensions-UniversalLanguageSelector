@@ -20,10 +20,12 @@
 	"ext-uls-display-settings-anon-log-in-cta": "[[ویجه:وامین اومائن کارور|وامین اومائن]] سی انتخاو یه گل زون هنی د دیارگه یا.",
 	"ext-uls-webfonts-select-for-ui-info": "فونت استفاده بیه سی مین پیوست کارور",
 	"ext-uls-back-to-display-settings": "ورئرد د میزونکاری نشون دئن",
+	"ext-uls-input-settings-title-short": "درینده",
 	"ext-uls-input-settings-desc": "نیسنن د زون هنی؟",
 	"ext-uls-input-settings-ime-settings": "روشتیا دریندئه سی $1",
 	"ext-uls-input-settings-ui-language": "زون استفاده بیه سی نیسنن",
 	"ext-uls-back-to-input-settings": "ورئرد د میزونکاری دریندئه",
+	"ext-uls-ime-help": "چه جوری وه کار گرته با",
 	"ext-uls-input-settings-more-languages-tooltip": "زونيا بيشتر",
 	"jquery-ime-other-languages": "د زونيا هنی",
 	"jquery-ime-help": "هومياری"

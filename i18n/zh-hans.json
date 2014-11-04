@@ -61,5 +61,12 @@
 	"ext-uls-input-disable-notification-info-personal": "你可以在任何时间在语言设置中启用输入工具。",
 	"ext-uls-input-disable-notification-info-interlanguage": "你可以在任何时间在语言列表旁的语言设置中启用输入工具。",
 	"ext-uls-language-settings-applying": "正在应用...",
-	"ext-uls-compact-link-count": "还有$1种语言"
+	"ext-uls-compact-link-count": "还有$1种语言",
+	"apihelp-languagesearch-param-search": "搜索字符串。",
+	"apihelp-languagesearch-example-1": "搜索“Te”",
+	"apihelp-languagesearch-example-2": "搜索“ഫി”",
+	"apihelp-languagesearch-example-3": "搜索“ഫി”，允许一个错字",
+	"apihelp-ulslocalization-param-language": "语言字符串。",
+	"apihelp-ulslocalization-example-1": "获得泰米尔语本地化",
+	"apihelp-ulslocalization-example-2": "获得印地语本地化"
 }

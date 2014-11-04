@@ -23,5 +23,6 @@
 	"jquery-ime-disable-text": "Hesıbyaye klavyer bıkarne",
 	"jquery-ime-help": "Peşti",
 	"ext-uls-input-disable-notification-undo": "Peyser biya",
-	"ext-uls-language-settings-applying": "Dezgeyeno..."
+	"ext-uls-language-settings-applying": "Dezgeyeno...",
+	"apihelp-ulslocalization-param-language": "Eyarê zıwani."
 }

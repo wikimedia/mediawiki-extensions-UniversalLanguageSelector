@@ -7,7 +7,8 @@
 			"Shirayuki",
 			"Siebrand",
 			"Nemo bis",
-			"Raymond"
+			"Raymond",
+			"Liuxinyu970226"
 		]
 	},
 	"uls-desc": "Extension description",
@@ -63,7 +64,7 @@
 	"ext-uls-language-settings-applying": "Label for apply settings button in language settings screen, while settings being saved. Please keep it short.",
 	"ext-uls-compact-link-count": "Message next to list of languages which indicates that there are more languages than the ones shown. Parameters:\n* $1 - number of languages",
 	"apihelp-languagesearch-description": "{{doc-apihelp-description|languagesearch}}",
-	"apihelp-languagesearch-param-search": "{{doc-apihelp-param|languagesearch|search}}",
+	"apihelp-languagesearch-param-search": "{{doc-apihelp-param|languagesearch|search}}\n{{Identical|Search string}}",
 	"apihelp-languagesearch-param-typos": "{{doc-apihelp-param|languagesearch|typos}}",
 	"apihelp-languagesearch-example-1": "{{doc-apihelp-example|languagesearch}}",
 	"apihelp-languagesearch-example-2": "{{doc-apihelp-example|languagesearch}}",

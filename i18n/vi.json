@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Minh Nguyen"
+			"Minh Nguyen",
+			"Max20091"
 		]
 	},
 	"uls-desc": "Trình bày giao diện để lựa chọn ngôn ngữ và điều chỉnh các tùy chọn ngôn ngữ",
@@ -54,5 +55,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Bạn có thể bật bộ gõ bất cứ lúc nào từ tùy chọn ngôn ngữ.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Bạn có thể bật bộ gõ bất cứ lúc nào từ tùy chọn ngôn ngữ bên cạnh danh sách ngôn ngữ.",
 	"ext-uls-language-settings-applying": "Đang áp dụng…",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Một ngôn ngữ|$1 ngôn ngữ}} nữa"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Một ngôn ngữ|$1 ngôn ngữ}} nữa",
+	"apihelp-languagesearch-param-search": "Tìm kiếm string.",
+	"apihelp-languagesearch-example-2": "Tìm kiếm cho “ഫി”"
 }
