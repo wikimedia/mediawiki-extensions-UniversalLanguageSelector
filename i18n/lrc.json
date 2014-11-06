@@ -16,10 +16,13 @@
 	"ext-uls-language-settings-cancel": "رد كردن",
 	"ext-uls-display-settings-font-settings": "میزونکاری فونت",
 	"ext-uls-display-settings-ui-language": "نشون دئن زون",
+	"ext-uls-display-settings-anon-label": "نشون دئن زون:",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (چی یه گل مینونه)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[ویجه:وامین اومائن کارور|وامین اومائن]] سی انتخاو یه گل زون هنی د دیارگه یا.",
+	"ext-uls-webfonts-settings-info-link": "دونسمنيا بیشتر",
 	"ext-uls-webfonts-select-for-ui-info": "فونت استفاده بیه سی مین پیوست کارور",
 	"ext-uls-back-to-display-settings": "ورئرد د میزونکاری نشون دئن",
+	"ext-uls-input-settings-title": "میزونکاری درینده",
 	"ext-uls-input-settings-title-short": "درینده",
 	"ext-uls-input-settings-desc": "نیسنن د زون هنی؟",
 	"ext-uls-input-settings-ime-settings": "روشتیا دریندئه سی $1",
@@ -28,5 +31,8 @@
 	"ext-uls-ime-help": "چه جوری وه کار گرته با",
 	"ext-uls-input-settings-more-languages-tooltip": "زونيا بيشتر",
 	"jquery-ime-other-languages": "د زونيا هنی",
-	"jquery-ime-help": "هومياری"
+	"jquery-ime-help": "هومياری",
+	"ext-uls-language-settings-applying": "د حال و بال وه کار گرتن....",
+	"apihelp-languagesearch-example-1": "پی جوری سی  \"Te\"",
+	"apihelp-languagesearch-example-2": "پی جوری سی \"ഫി\""
 }

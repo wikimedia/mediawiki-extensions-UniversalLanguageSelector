@@ -54,5 +54,15 @@
 	"ext-uls-input-disable-notification-info-personal": "Вносните алатки можете да ги вклучите во јазичните поставки во секое време.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Вносните алатки можете да ги вклучите во во секое време во јазичните поставки, веднаш до списокот на јазици.",
 	"ext-uls-language-settings-applying": "Применувам...",
-	"ext-uls-compact-link-count": "Уште на {{PLURAL:$1|еден јазик|$1 јазика}}"
+	"ext-uls-compact-link-count": "Уште на {{PLURAL:$1|еден јазик|$1 јазика}}",
+	"apihelp-languagesearch-description": "Пребарајте имиња на јазици на било кое писмо.",
+	"apihelp-languagesearch-param-search": "Низа за пребарување.",
+	"apihelp-languagesearch-param-typos": "Број на допуштени грешки при пишување во низата на пребарувањето.",
+	"apihelp-languagesearch-example-1": "Пребарај „Te“",
+	"apihelp-languagesearch-example-2": "Пребарај „ഫി“",
+	"apihelp-languagesearch-example-3": "Пребарај „ഫി“, допуштајќи една грешка при пишување",
+	"apihelp-ulslocalization-description": "Дај превод на универзалниот јазичен избрач на даден јазик.",
+	"apihelp-ulslocalization-param-language": "Јазична низа.",
+	"apihelp-ulslocalization-example-1": "Дај превод на тамилски",
+	"apihelp-ulslocalization-example-2": "Дај превод на хинди"
 }
