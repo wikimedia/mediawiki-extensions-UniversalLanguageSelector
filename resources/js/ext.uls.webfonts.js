@@ -129,18 +129,14 @@
 		$.extend( $.fn.webfonts.defaults, {
 			repository: mediawikiFontRepository,
 			fontStack: $( 'body' ).css( 'font-family' ).split( /, /g ),
-			exclude: mw.config.get( 'wgULSNoWebfontsSelectors' ).join( ', ' )
-		} );
-
-		$.fn.webfonts.defaults = $.extend( $.fn.webfonts.defaults, {
-			 /**
-			  * Returns a suitable font from font repository based
-			  * on the given language and html classes and user preference.
-			  *
-			  * @param {Object} repository
-			  * @param {string} language
-			  * @param {array} classes
-			  */
+			/**
+			 * Returns a suitable font from font repository based
+			 * on the given language and html classes and user preference.
+			 *
+			 * @param {Object} repository
+			 * @param {string} language
+			 * @param {array} classes
+			 */
 			fontSelector: function ( repository, language, classes ) {
 				var font, autonym, defaultFont;
 
@@ -191,19 +187,20 @@
 			},
 
 			exclude: ( function () {
-				var excludes = $.fn.webfonts.defaults.exclude;
+				var excludes = mw.config.get( 'wgULSNoWebfontsSelectors' ).join( ', ' );
 
 				if ( mw.user.options.get( 'editfont' ) !== 'default' ) {
 					// Exclude textboxes from webfonts if the user has edit area font option
 					// set using 'Preferences' page
-					excludes = ( excludes ) ?
-						excludes + ',textarea' :
-						'textarea';
+					excludes = excludes ? excludes + ',textarea' : 'textarea';
 				}
 
 				return excludes;
 			}() ),
-			overridableFontFamilies: [ $( 'h1' ).css( 'font-family' ) ]
+			overridableFontFamilies: ( function () {
+				var headingFont = $( 'h1' ).css( 'font-family' );
+				return headingFont ? [ headingFont ] : [];
+			}() )
 		} );
 
 		// Execute after task queue is processed so that the rendering is complete.
