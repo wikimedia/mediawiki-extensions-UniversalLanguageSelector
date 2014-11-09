@@ -62,6 +62,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "你可以在任何时间在语言列表旁的语言设置中启用输入工具。",
 	"ext-uls-language-settings-applying": "正在应用...",
 	"ext-uls-compact-link-count": "还有$1种语言",
+	"apihelp-languagesearch-description": "使用任何字母搜索语言名称。",
 	"apihelp-languagesearch-param-search": "搜索字符串。",
 	"apihelp-languagesearch-example-1": "搜索“Te”",
 	"apihelp-languagesearch-example-2": "搜索“ഫി”",
