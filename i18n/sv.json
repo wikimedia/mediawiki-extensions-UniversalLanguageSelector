@@ -56,5 +56,11 @@
 	"ext-uls-input-disable-notification-info-personal": "Du kan aktivera verktygen för indata när som helst från språkinställningarna.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Du kan aktivera verktygen för indata när som helst från språkinställningarna bredvid språklistan.",
 	"ext-uls-language-settings-applying": "Tillämpar...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Ett språk till|$1 språk till}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ett språk till|$1 språk till}}",
+	"apihelp-languagesearch-param-search": "Söksträng.",
+	"apihelp-languagesearch-param-typos": "Antalet felstavningar som tillåts i söksträngen.",
+	"apihelp-languagesearch-example-1": "Sök efter \"Te\"",
+	"apihelp-languagesearch-example-2": "Sök efter \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Sök efter \"ഫി\", tillåter ett stavfel",
+	"apihelp-ulslocalization-param-language": "Språksträng."
 }
