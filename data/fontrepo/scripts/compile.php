@@ -60,10 +60,13 @@ foreach ( glob( '../fonts/*/font.ini' ) as $inifile ) {
 		if ( isset( $font['woff'] ) ) {
 			$list['fonts'][$fontname]['woff'] = basename( $dir ) . '/' . $font['woff'];
 		}
+		if ( isset( $font['woff2'] ) ) {
+			$list['fonts'][$fontname]['woff2'] = basename( $dir ) . '/' . $font['woff2'];
+		}
 
 		// If font formats are not explicitly defined, scan the directory.
 		if ( !isset( $list['fonts'][$fontname]['ttf'] ) ) {
-			foreach ( glob( "$dir/*.{eot,ttf,woff,svg}", GLOB_BRACE ) as $fontfile ) {
+			foreach ( glob( "$dir/*.{eot,ttf,woff,woff2,svg}", GLOB_BRACE ) as $fontfile ) {
 				$type = substr( $fontfile, strrpos( $fontfile, '.' ) + 1 );
 				$list['fonts'][$fontname][$type] = str_replace( dirname( $dir ) . '/', '', $fontfile );
 			}
