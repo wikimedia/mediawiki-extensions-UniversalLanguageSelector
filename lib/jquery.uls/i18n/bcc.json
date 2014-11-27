@@ -1,12 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Reza1615",
-			"Alirezaaa"
+			"Baloch Afghanistan"
 		]
 	},
-	"uls-select-language": "انتخاب زبان",
-	"uls-region-WW": "در سراسر جهان",
+	"uls-select-language": "زبانی انتخاب",
+	"uls-region-WW": "بی سراسری دونیا",
 	"uls-region-SP": "ویژه",
 	"uls-region-AM": "آمریکا",
 	"uls-region-AF": "آفریقا",
