@@ -1,0 +1,14 @@
+== UniversalLanguageSelector 2014.11 ==
+Released at 2014-11-29.
+
+=== Noteworthy changes ===
+* ULS WebAPI documentation is now localized. Only works in MediaWiki 1.24 and
+newer.
+* T67516: Removed font-size for ULS language selection panel buttons, which
+caused tiny font sizes on the Monobook skin.
+* Small compatibility fix when both ULS and VisualEditor are in use.
+* About 20 new languages are now supported in the language selector and a
+couple language names were changes.
+* A JavaScript error no longer happens on pages without any headings.
+* Added support for WOFF2 webfont format. Note that there are no WOFF2 webfonts
+in the font repository yet due to pending issues in WOFF2 font generation.
