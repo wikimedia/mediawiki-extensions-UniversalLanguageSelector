@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Littledogboy",
-			"Mormegil"
+			"Mormegil",
+			"Matěj Suchánek"
 		]
 	},
 	"uls-desc": "Nabízí uživateli několik způsobů volby jazyka a úpravy jazykových nastavení",
@@ -11,7 +12,7 @@
 	"ext-uls-undo-language-tooltip-text": "Jazyk změněn z $1",
 	"ext-uls-language-settings-preferences-link": "Další jazyková nastavení",
 	"uls-betafeature-label": "Kompaktní mezijazykové odkazy",
-	"uls-betafeature-desc": "Zobrazovat kratší verzi seznamu jazyků, obsahující jen jazyky, které jsou pro vás důležité.",
+	"uls-betafeature-desc": "Zobrazuje kratší verzi seznamu jazyků, obsahující jen jazyky, které jsou pro vás důležité.",
 	"ext-uls-display-settings-title": "Nastavení zobrazení",
 	"ext-uls-display-settings-language-tab": "Jazyk",
 	"ext-uls-display-settings-fonts-tab": "Písma",
