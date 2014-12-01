@@ -1,21 +1,20 @@
-#more-lang-label {
-	color: #8b8989;
-	display: block;
-	font-size: 12px;
-	line-height: 1.2;
-	margin: 5px 0;
-}
-
 #p-lang .body ul .uls-trigger,
 #p-lang .pBody ul .uls-trigger {
 	background-image: none;
 	padding: 0;
 }
 
-.mw-interlanguage-selector {
+.mw-interlanguage-selector,
+.mw-interlanguage-selector:active {
 	cursor: pointer;
-	margin: 2px 0;
-	padding: 0 8px;
+	padding: 4px 6px 4px 25px;
+	font-size: 13px;
+	font-weight: 400;
+	background-image: url( ../images/compact-links-trigger.svg );
+	background-size: 17px;
+	background-repeat: no-repeat;
+	background-position: 9% 8%;
+	margin-top: 4px;
 }
 
 .interlanguage-uls-menu:after,
