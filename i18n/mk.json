@@ -54,7 +54,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Вносните алатки можете да ги вклучите во јазичните поставки во секое време.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Вносните алатки можете да ги вклучите во во секое време во јазичните поставки, веднаш до списокот на јазици.",
 	"ext-uls-language-settings-applying": "Применувам...",
-	"ext-uls-compact-link-count": "Уште на {{PLURAL:$1|еден јазик|$1 јазика}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Уште еден|Уште $1}}",
 	"apihelp-languagesearch-description": "Пребарајте имиња на јазици на било кое писмо.",
 	"apihelp-languagesearch-param-search": "Низа за пребарување.",
 	"apihelp-languagesearch-param-typos": "Број на допуштени грешки при пишување во низата на пребарувањето.",

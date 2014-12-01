@@ -25,6 +25,7 @@
 	"ext-uls-display-settings-anon-same-as-content": "$1 (кейбір контент үшін)",
 	"ext-uls-display-settings-anon-log-in-cta": "Мәзір үшін басқа тілді таңдау үшін [[Special:UserLogin|кіріңіз]].",
 	"ext-uls-webfonts-settings-title": "Қаріпті түсіріп алуды қажет етеді",
+	"ext-uls-webfonts-settings-info": "Қажет еткен қаріпті автоматты түрде түсіріп алу және қалаған қаріпті таңдауға рұқсат ету",
 	"ext-uls-webfonts-settings-info-link": "Толығырақ мәлімет",
 	"ext-uls-webfonts-select-for": "$1 үшін қаріп таңдау",
 	"ext-uls-webfonts-select-for-ui-info": "Қатысушы интерфейсі үшін қолданылған қаріп",
@@ -52,5 +53,13 @@
 	"ext-uls-input-disable-notification-info-personal": "Сіз тіл баптауларынан кез келген уақытта енгізу құралдарын қоса аласыз.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Сіз тіл баптаулары тіл тізімі қатарынан кез келген уақытта енгізу құралдарын қоса аласыз.",
 	"ext-uls-language-settings-applying": "Қолданылуда...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|тағы бір тілде|тағы $1 тілде}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|тағы бір тілде|тағы $1 тілде}}",
+	"apihelp-languagesearch-description": "Кез келген шрифттегі тіл атауларын іздеу.",
+	"apihelp-languagesearch-param-search": "Іздеу жолы.",
+	"apihelp-languagesearch-param-typos": "Іздеу жолында дұрыс жазу ережесін бұзуына рұқсат етілген саны",
+	"apihelp-languagesearch-example-1": "«Te» үшін іздеу",
+	"apihelp-languagesearch-example-2": "«ഫി» үшін іздеу",
+	"apihelp-ulslocalization-param-language": "Тіл жолы.",
+	"apihelp-ulslocalization-example-1": "Тамил жерсіндірілуін алу",
+	"apihelp-ulslocalization-example-2": "Хинди жерсіндірілуін алу"
 }
