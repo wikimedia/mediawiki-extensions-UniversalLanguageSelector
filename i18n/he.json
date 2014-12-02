@@ -57,7 +57,7 @@
 	"ext-uls-input-disable-notification-info-personal": "באפשרותך להפעיל את כלי הקלט בכל זמן מהגדרות השפה.",
 	"ext-uls-input-disable-notification-info-interlanguage": "באפשרותך להפעיל את כלי הקלט בכל זמן מהגדרות השפה שליד רשימת השפות.",
 	"ext-uls-language-settings-applying": "החלה...",
-	"ext-uls-compact-link-count": "עוד {{PLURAL:$1|שפה אחת|$1 שפות}}",
+	"ext-uls-compact-link-count": "עוד {{PLURAL:$1|אחת|$1}}",
 	"apihelp-ulslocalization-example-1": "קבלת תרגום לטמילית",
 	"apihelp-ulslocalization-example-2": "קבלת תרגום להינדי"
 }
