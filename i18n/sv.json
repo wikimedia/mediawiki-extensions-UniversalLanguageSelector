@@ -3,7 +3,8 @@
 		"authors": [
 			"Jopparn",
 			"WikiPhoenix",
-			"Lokal Profil"
+			"Lokal Profil",
+			"Albinomamba"
 		]
 	},
 	"uls-desc": "Ger användaren flera sätt att välja ett språk och justera språkinställningar",
@@ -56,7 +57,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Du kan aktivera verktygen för indata när som helst från språkinställningarna.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Du kan aktivera verktygen för indata när som helst från språkinställningarna bredvid språklistan.",
 	"ext-uls-language-settings-applying": "Tillämpar...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Ett språk till|$1 språk till}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ett till|$1 till}}",
 	"apihelp-languagesearch-description": "Sök efter språknamn i valfritt skriftsystem.",
 	"apihelp-languagesearch-param-search": "Söksträng.",
 	"apihelp-languagesearch-param-typos": "Antalet felstavningar som tillåts i söksträngen.",
