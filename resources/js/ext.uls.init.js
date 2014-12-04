@@ -19,26 +19,6 @@
 ( function ( $, mw ) {
 	'use strict';
 
-	// FIXME: Remove when ULS minimum MW version is 1.22
-	if ( mw.hook === undefined ) {
-		mw.hook = ( function () {
-			var lists = {},
-				slice = Array.prototype.slice;
-
-			return function ( name ) {
-				var list = lists[ name ] || ( lists[ name ] = $.Callbacks( 'memory' ) );
-
-				return {
-					add: list.add,
-					remove: list.remove,
-					fire: function () {
-						return list.fireWith( null, slice.call( arguments ) );
-					}
-				};
-			};
-		}() );
-	}
-
 	mw.uls = mw.uls || {};
 	mw.uls.previousLanguagesCookie = 'uls-previous-languages';
 	mw.uls.previousLanguageAutonymCookie = 'uls-previous-language-autonym';
@@ -214,12 +194,6 @@
 				[ '<=', 7 ]
 			]
 		};
-
-		// jquery.client changed in MediaWiki 1.22.
-		// FIXME: Remove when ULS minimum MW version is 1.22.
-		if ( parseInt( mw.config.get( 'wgVersion' ).split( '.' )[ 1 ], '10' ) < 22 ) {
-			return !/MSIE [67]/i.test( navigator.userAgent );
-		}
 
 		return !$.client.test( blacklist, null, true );
 	}
