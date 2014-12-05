@@ -6,7 +6,8 @@
 			"Mjbmr",
 			"Reza1615",
 			"Mahan",
-			"Armin1392"
+			"Armin1392",
+			"Mehran"
 		]
 	},
 	"uls-desc": "به کاربر راه‌های مختلفی برای انتخاب زبان و تنظیم تنظیمات زبان  می‌دهد",
@@ -59,5 +60,6 @@
 	"ext-uls-input-disable-notification-info-personal": "در هر زمان می‌توانید ابزارهای ورودی را از بخش تنظیمات زبان فعال کنید.",
 	"ext-uls-input-disable-notification-info-interlanguage": "در هر زمان می توانید ابزارهای ورودی را از بخش تنظیمات زبان در کنار فهرست زبان‌ها فعال است.",
 	"ext-uls-language-settings-applying": "اعمال‌کردن...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|یک زبان دیگر|$1 زبان دیگر}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|یک زبان دیگر|$1 زبان دیگر}}",
+	"apihelp-languagesearch-param-search": "جستجوی رشته."
 }
