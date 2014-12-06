@@ -19,12 +19,12 @@
 
 #pt-uls a.uls-trigger {
 	padding-left: 30px;
-	/* Fix alignment in vector: https://bugzilla.wikimedia.org/59239 */
+	/* Fix alignment in vector: https://phabricator.wikimedia.org/T61239 */
 	line-height: 1;
 }
 
 /* Opera for some inexplicable reason confuses right and left padding with */
-/* RTL text direction here (bug 45142). x:-o-prefocus won't match anything, */
+/* RTL text direction here (bug T47142). x:-o-prefocus won't match anything, */
 /* but will make other browsers ignore this rule. */
 x:-o-prefocus, body.rtl li#pt-uls {
 	/* @noflip */

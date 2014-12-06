@@ -34,9 +34,5 @@ The MediaWiki Universal Language Selector project uses jquery.uls:
 Its development is at Wikimedia Github account. Any fixes to lib/ should happen
 at Github. Follow the build instructions of jquery.uls to create jquery.uls.js.
 
-More documentation is at:
- https://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector
-
-For reporting bugs, use 'UniversalLanguageSelector' component under
-'MediaWiki extensions' product at:
- https://bugzilla.wikimedia.org
+Bugs for the extension are handled in Phabricator:
+ https://phabricator.wikimedia.org/tag/mediawiki-extensions-universallanguageselector/

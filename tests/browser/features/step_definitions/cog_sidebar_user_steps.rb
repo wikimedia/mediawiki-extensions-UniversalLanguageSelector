@@ -4,7 +4,7 @@ end
 
 Given(/^I am on a page without interlanguage links$/) do
   visit NoInterlanguagePage #  .add_links_element.when_visible.should be_visible
-  # cannot do this because of https://bugzilla.wikimedia.org/show_bug.cgi?id=49139
+  # cannot do this because of https://phabricator.wikimedia.org/T51139
 end
 
 Given(/^I am on a talk page with interlanguage links$/) do
