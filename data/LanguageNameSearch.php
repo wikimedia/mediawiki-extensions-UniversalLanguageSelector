@@ -42,11 +42,9 @@ class LanguageNameSearch {
 		$results = array();
 		foreach ( $bucket as $name => $code ) {
 			// Prefix search
-			if ( strpos( $name, $searchKey, 0 ) === 0 ) {
-				$results[$code] = $name;
-				continue;
-			}
-			if ( $typos > 0 && self::levenshteinDistance( $name, $searchKey ) === $typos ) {
+			if ( strrpos( $name, $searchKey, -strlen( $name ) ) !== false
+				|| ( $typos > 0 && self::levenshteinDistance( $name, $searchKey ) <= $typos )
+			) {
 				$results[$code] = $name;
 			}
 		}
@@ -55,14 +53,7 @@ class LanguageNameSearch {
 	}
 
 	public static function getIndex( $name ) {
-		$codepoint = self::getCodepoint( $name );
-		if ( $codepoint < 1000 ) {
-			$bucket = $codepoint;
-		} else {
-			$bucket = $codepoint % 1000;
-		}
-
-		return $bucket;
+		return self::getCodepoint( $name ) % 1000;
 	}
 
 	/**
