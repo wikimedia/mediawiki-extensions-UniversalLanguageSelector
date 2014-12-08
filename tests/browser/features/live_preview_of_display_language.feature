@@ -33,7 +33,7 @@ Feature: Live preview of display language changes
       And I open Display panel of language settings
     Then I should see the text in the language panel in English
 
-  # https://bugzilla.wikimedia.org/57967
+  # https://phabricator.wikimedia.org/T59967
   # @clean @commons.wikimedia.beta.wmflabs.org
   Scenario: Live preview of display language changes can be reverted on closing the dialog on cancel from a different panel
     Given I open the Universal Language Selector

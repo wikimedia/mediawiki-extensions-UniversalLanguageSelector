@@ -11,7 +11,7 @@
 	"homepage": "https://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector",
 	"license": [ "GPL-2.0+", "MIT" ],
 	"support": {
-		"issues": "https://bugzilla.wikimedia.org/",
+		"issues": "https://phabricator.wikimedia.org/tag/mediawiki-extensions-universallanguageselector/",
 		"irc": "irc://irc.freenode.net/mediawiki-i18n"
 	},
 	"require": {

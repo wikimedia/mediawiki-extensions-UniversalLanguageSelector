@@ -79,7 +79,7 @@ Feature: Settings panel
     Then my interface language is "German"
 
   @login
-  Scenario: Regression test for bug 56913
+  Scenario: Regression test for bug T58913
 
     Given I am logged in
       And I have reset my preferences
