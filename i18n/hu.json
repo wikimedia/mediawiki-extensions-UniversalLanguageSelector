@@ -54,5 +54,5 @@
 	"ext-uls-input-disable-notification-info-personal": "Bármikor engedélyezheted a beviteli eszközöket a nyelvi beállításaid között.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Bármikor engedélyezheted a beviteli eszközöket a nyelvi beállításaid között, a nyelvközi hivatkozások között.",
 	"ext-uls-language-settings-applying": "Alkalmazás…",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Egy további nyelv|$1 további nyelv}}"
+	"ext-uls-compact-link-count": "$1 további"
 }
