@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Aftab1995",
-			"Bellayet"
+			"Bellayet",
+			"Aftabuzzaman"
 		]
 	},
 	"uls-desc": "ব্যবহারকারীকে ভাষা নির্বাচন এবং ভাষা সম্পর্কিত সেটিং সমন্বয়ের বিভিন্ন উপায় দেয়",
@@ -55,5 +56,5 @@
 	"ext-uls-input-disable-notification-info-personal": "আপনি ভাষা সেটিং থেকে যে কোনো সময়ে ইনপুট টুল সক্রিয় করতে পারেন।",
 	"ext-uls-input-disable-notification-info-interlanguage": "আপনি ভাষার তালিকার পাশে ভাষা সেটিং থেকে যে কোনো সময়ে ইনপুট টুল সক্রিয় করতে পারেন।",
 	"ext-uls-language-settings-applying": "প্রয়োগ হচ্ছে...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|আরও একটি ভাষা|আরও $1টি ভাষা}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|আরও একটি|আরও $1টি}}"
 }
