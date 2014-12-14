@@ -19,6 +19,8 @@
 ( function ( $, mw ) {
 	'use strict';
 
+	var hasOwn = Object.prototype.hasOwnProperty;
+
 	mw.uls = mw.uls || {};
 	mw.uls.previousLanguagesCookie = 'uls-previous-languages';
 	mw.uls.previousLanguageAutonymCookie = 'uls-previous-language-autonym';
@@ -163,7 +165,7 @@
 			var target;
 
 			// If the language is already known and defined, just use it
-			if ( $.fn.uls.defaults.languages[ langCode ] !== undefined ) {
+			if ( hasOwn.call( $.fn.uls.defaults.languages, langCode ) ) {
 				return true;
 			}
 
@@ -174,7 +176,7 @@
 			if ( target ) {
 				// Check that the redirect's target is known
 				// to this instance of ULS
-				return $.fn.uls.defaults.languages[ target ] !== undefined;
+				return hasOwn.call( $.fn.uls.defaults.languages, target );
 			}
 
 			return false;
