@@ -63,5 +63,9 @@
 	"ext-uls-language-settings-applying": "套用中...",
 	"ext-uls-compact-link-count": "還有 $1 種語言",
 	"apihelp-languagesearch-param-search": "搜尋字串。",
+	"apihelp-languagesearch-example-1": "搜尋 \"Te\"",
+	"apihelp-languagesearch-example-2": "搜尋 \"ഫി\"",
+	"apihelp-languagesearch-example-3": "搜尋 \"ഫി\"，可允許一個錯字",
+	"apihelp-ulslocalization-description": "取得指定語言的在地化 ULS。",
 	"apihelp-ulslocalization-param-language": "語言字串。"
 }
