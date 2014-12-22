@@ -55,5 +55,5 @@
 	"ext-uls-input-disable-notification-info-personal": "Orodja za vnos lahko prek jezikovnih nastavitev omogočite kadar koli.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Orodja za vnos lahko prek jezikovnih nastavitev poleg seznama jezikov omogočite kadar koli.",
 	"ext-uls-language-settings-applying": "Uveljavljanje ...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|1=Še en jezik|Še $1 jezik|Še $1 jezika|Še $1 jeziki|Še $1 jezikov}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|1=Še en|Še $1}}"
 }

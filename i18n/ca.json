@@ -8,6 +8,8 @@
 	"uls-desc": "Dóna a l'usuari diverses maneres per seleccionar una llengua i ajustar la seva configuració",
 	"uls-plang-title-languages": "Llengües",
 	"ext-uls-language-settings-preferences-link": "Més configuracions de llengua",
+	"uls-betafeature-label": "Enllaços de llengua compactes",
+	"uls-betafeature-desc": "Mostra una versió reduïda de la llista de llengües amb aquelles que més us interessen.",
 	"ext-uls-display-settings-title": "Configuració de presentació",
 	"ext-uls-display-settings-language-tab": "Llengua",
 	"ext-uls-display-settings-title-short": "Presentació",
