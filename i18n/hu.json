@@ -5,7 +5,8 @@
 			"Tgr",
 			"BáthoryPéter",
 			"Tacsipacsi",
-			"Dorgan"
+			"Dorgan",
+			"Bináris"
 		]
 	},
 	"uls-plang-title-languages": "Nyelvek",
@@ -13,7 +14,7 @@
 	"ext-uls-undo-language-tooltip-text": "A nyelv megváltozott erről: $1",
 	"ext-uls-language-settings-preferences-link": "További nyelvi beállítások",
 	"uls-betafeature-label": "Rövidített interwiki lista",
-	"uls-betafeature-desc": "Egy rövidebb változatát mutatja a nyelvi hivatkozások listájának, csak a számodra fontosabb nyelvekkel.",
+	"uls-betafeature-desc": "A nyelvi hivatkozások listájának rövidebb változatát mutatja, csak a számodra fontosabb nyelvekkel.",
 	"ext-uls-display-settings-title": "Megjelenítési beállítások",
 	"ext-uls-display-settings-language-tab": "Nyelv",
 	"ext-uls-display-settings-fonts-tab": "Betűkészletek",
