@@ -3,9 +3,11 @@
 		"authors": [
 			"DCLXVI",
 			"Spiritia",
-			"Termininja"
+			"Termininja",
+			"Borislav"
 		]
 	},
+	"uls-plang-title-languages": "Езици",
 	"ext-uls-select-language-settings-icon-tooltip": "Езикови настройки",
 	"ext-uls-undo-language-tooltip-text": "Предишен език: $1",
 	"ext-uls-language-settings-preferences-link": "Още езикови настройки",
