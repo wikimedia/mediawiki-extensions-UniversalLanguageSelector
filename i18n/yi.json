@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"פוילישער"
+			"פוילישער",
+			"Har-wradim"
 		]
 	},
 	"uls-desc": "גיט דעם באניצער עטלעכע וועגן אויסצוקלויבן א שפראך און אנצופאסן שפראך־איינשטעלונגען",
 	"uls-plang-title-languages": "שפּראַכן",
 	"ext-uls-select-language-settings-icon-tooltip": "שפראך איינשטעלונגען",
-	"ext-uls-undo-language-tooltip-text": "שפראַך געענדערט פֿון $1",
+	"ext-uls-undo-language-tooltip-text": "שפּראַך געענדערט פון $1",
 	"ext-uls-language-settings-preferences-link": "נאך שפראך איינשטעלונגען",
 	"ext-uls-display-settings-title": "אויסשטעל איינשטעלונגען",
 	"ext-uls-display-settings-language-tab": "שפראַך",
