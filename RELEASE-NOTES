@@ -1,0 +1,10 @@
+== UniversalLanguageSelector 2014.12 ==
+Released at 2014-12-30.
+
+=== Noteworthy changes ===
+* Removed support for MediaWiki <= 1.21.
+* As a part of refactoring ULS design, world map from ULS has been removed.
+You can track progress of task at https://phabricator.wikimedia.org/T85519
+
+=== Fonts ===
+* Removed ComicNeue font for non-supported languages.
