@@ -40,7 +40,7 @@
 	"ext-uls-input-settings-title-short": "Giriş",
 	"ext-uls-input-settings-desc": "Farklı dilde mi yazıyorsun?",
 	"ext-uls-input-settings-ime-settings": "$1 için giriş yöntemleri",
-	"ext-uls-input-settings-ui-language": "Yazmak için kullanılan dil",
+	"ext-uls-input-settings-ui-language": "Yazım için kullanılan dil",
 	"ext-uls-back-to-input-settings": "Giriş ayarlarını görüntülemek için geri dön",
 	"ext-uls-ime-help": "Nasıl kullanılır?",
 	"ext-uls-disable-input-method": "Geçerli klavyeyi kullan",
@@ -57,5 +57,5 @@
 	"ext-uls-input-disable-notification-info-personal": "Dil ayarlarınızı istediğiniz zaman giriş araçlarından etkinleştirebilirsiniz.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Dil ayarlarını dil listesinin yanında bulunan giriş araçlarından etkinleştirebilirsiniz.",
 	"ext-uls-language-settings-applying": "Uygulanıyor...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Bir dil daha|$1 dilden fazla}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Bir tane daha|$1 tane daha}}"
 }
