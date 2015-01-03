@@ -4,7 +4,8 @@
 			"ترجمان05",
 			"زكريا",
 			"Asaifm",
-			"Tarawneh"
+			"Tarawneh",
+			"Abanima"
 		]
 	},
 	"uls-desc": "يمنح المستخدم عدة طرق لاختيار لغة، وضبط إعدادات اللغة",
@@ -57,5 +58,12 @@
 	"ext-uls-input-disable-notification-info-personal": "بوسعك تشغيل أدوات الإدخال في أي وقت في إعدادات اللغة.",
 	"ext-uls-input-disable-notification-info-interlanguage": "بوسعك تشغيل  أدوات الإدخال في أي وقت في إعدادات اللغة الموجودة بجانب قائمة اللغات.",
 	"ext-uls-language-settings-applying": "تطبيق...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|بقية الوصلات: $1}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|بقية الوصلات: $1}}",
+	"apihelp-languagesearch-description": "ابحث عن أسماء اللغات بأي كتابة كانت.",
+	"apihelp-languagesearch-param-search": "سطر البحث",
+	"apihelp-languagesearch-param-typos": "عدد الأخطاء الطباعية المسموح بها في سطر البحث",
+	"apihelp-languagesearch-example-1": "ابحث عن «Te»",
+	"apihelp-languagesearch-example-2": "ابحث عن «ഫി»",
+	"apihelp-languagesearch-example-3": "ابحث عن «ഫി» واسمح بخطأ مطبعي واحد",
+	"apihelp-ulslocalization-param-language": "سطر اللغة."
 }
