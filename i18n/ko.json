@@ -5,13 +5,14 @@
 			"Kwj2772",
 			"아라",
 			"Priviet",
-			"Revi"
+			"Revi",
+			"IRTC1015"
 		]
 	},
 	"uls-desc": "사용자에게 언어를 선택하고 언어 설정을 바꾸는 몇 가지 방법을 제공합니다",
 	"uls-plang-title-languages": "언어",
 	"ext-uls-select-language-settings-icon-tooltip": "언어 설정",
-	"ext-uls-undo-language-tooltip-text": "$1에서 언어가 바뀌었습니다",
+	"ext-uls-undo-language-tooltip-text": "언어가 $1에서 바뀌었습니다",
 	"ext-uls-language-settings-preferences-link": "자세한 언어 설정",
 	"uls-betafeature-label": "소형 언어 링크",
 	"uls-betafeature-desc": "당신과 더 관련된 짧은 버전의 언어 목록을 보여줍니다.",
@@ -32,7 +33,7 @@
 	"ext-uls-webfonts-settings-title": "필요할 때 글꼴 내려받기",
 	"ext-uls-webfonts-settings-info": "없는 폰트를 자동으로 내려받고 선호하는 글꼴을 선택할 수 있도록 허용합니다.",
 	"ext-uls-webfonts-settings-info-link": "자세한 정보",
-	"ext-uls-webfonts-select-for": "$1에 대한 글꼴 선택",
+	"ext-uls-webfonts-select-for": "$1에 사용할 글꼴 선택",
 	"ext-uls-webfonts-select-for-ui-info": "사용자 인터페이스에 사용할 글꼴",
 	"ext-uls-webfonts-select-for-content-info": "내용에 사용할 글꼴",
 	"ext-uls-webfonts-system-font": "시스템 글꼴",
@@ -40,7 +41,7 @@
 	"ext-uls-input-settings-title": "입력 설정",
 	"ext-uls-input-settings-title-short": "입력",
 	"ext-uls-input-settings-desc": "다른 언어로 입력하겠습니까?",
-	"ext-uls-input-settings-ime-settings": "$1에 대한 입력 방식",
+	"ext-uls-input-settings-ime-settings": "$1용 입력 방식",
 	"ext-uls-input-settings-ui-language": "입력에 사용할 언어",
 	"ext-uls-back-to-input-settings": "입력 설정으로 돌아가기",
 	"ext-uls-ime-help": "사용 방법",
@@ -58,5 +59,5 @@
 	"ext-uls-input-disable-notification-info-personal": "언어 설정에서 언제든지 입력 도구를 활성화할 수 있습니다.",
 	"ext-uls-input-disable-notification-info-interlanguage": "언어 목록 옆에 있는 언어 설정에서 언제든지 입력 도구를 활성화할 수 있습니다.",
 	"ext-uls-language-settings-applying": "적용 중....",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|한개의 다른 언어|$1개의 다른 언어}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|다른 언어 $1개}}"
 }
