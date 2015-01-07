@@ -31,9 +31,8 @@
 		'</div>';
 	settingsPanel = '<div id="languagesettings-settings-panel" class="eight columns">' +
 		'</div>';
-	buttonsRow = '<div class="row"></div>' +
-		// Apply and Cancel buttons
-		'<div class="row language-settings-buttons">' +
+	// Apply and Cancel buttons
+	buttonsRow = '<div class="row language-settings-buttons">' +
 		'<div class="eleven columns">' +
 		'<button class="button uls-settings-cancel" data-i18n="ext-uls-language-settings-cancel"></button>' +
 		'<button class="button active blue uls-settings-apply" data-i18n="ext-uls-language-settings-apply" disabled></button>' +
@@ -43,11 +42,11 @@
 	panelsRow = '<div class="row" id="languagesettings-panels">' +
 		settingsMenu +
 		settingsPanel +
-		buttonsRow +
 		'</div>';
 	windowTemplate = '<div style="display: block;" id="language-settings-dialog" class="grid uls-menu uls-wide">' +
 		closeRow +
 		panelsRow +
+		buttonsRow +
 		'</div>';
 
 	function LanguageSettings( element, options ) {
