@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Pginer",
-			"Vriullop"
+			"Vriullop",
+			"Fitoschido"
 		]
 	},
 	"uls-desc": "Dóna a l'usuari diverses maneres per seleccionar una llengua i ajustar la seva configuració",
@@ -10,7 +11,7 @@
 	"ext-uls-language-settings-preferences-link": "Més configuracions de llengua",
 	"uls-betafeature-label": "Enllaços de llengua compactes",
 	"uls-betafeature-desc": "Mostra una versió reduïda de la llista de llengües amb aquelles que més us interessen.",
-	"ext-uls-display-settings-title": "Configuració de presentació",
+	"ext-uls-display-settings-title": "Paràmetres de presentació",
 	"ext-uls-display-settings-language-tab": "Llengua",
 	"ext-uls-display-settings-title-short": "Presentació",
 	"ext-uls-display-settings-desc": "Defineix la llengua utilitzada per als menús i tipus de lletra.",
@@ -31,7 +32,7 @@
 	"ext-uls-webfonts-select-for-content-info": "Tipus de lletra usat per al contingut",
 	"ext-uls-webfonts-system-font": "Tipus de lletra del sistema",
 	"ext-uls-back-to-display-settings": "Torna a la configuració de presentació",
-	"ext-uls-input-settings-title": "Configuració d'escriptura",
+	"ext-uls-input-settings-title": "Paràmetres d’escriptura",
 	"ext-uls-input-settings-title-short": "Entrada",
 	"ext-uls-input-settings-desc": "Escriviu en una altra llengua?",
 	"ext-uls-input-settings-ime-settings": "Mètodes d'entrada per a $1",
