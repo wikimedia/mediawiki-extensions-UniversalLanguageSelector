@@ -3,7 +3,8 @@
 		"authors": [
 			"Farras",
 			"Iwan Novirion",
-			"පසිඳු කාවින්ද"
+			"පසිඳු කාවින්ද",
+			"William Surya Permana"
 		]
 	},
 	"uls-desc": "Memberikan pengguna beberapa cara untuk memilih bahasa dan menyesuaikan pengaturan bahasa",
@@ -11,6 +12,8 @@
 	"ext-uls-select-language-settings-icon-tooltip": "Setelan bahasa",
 	"ext-uls-undo-language-tooltip-text": "Bahasa berubah dari $1",
 	"ext-uls-language-settings-preferences-link": "Pengaturan bahasa lanjutan",
+	"uls-betafeature-label": "Pranala bahasa yang ringkas",
+	"uls-betafeature-desc": "Menampilkan versi yang lebih pendek dari daftar bahasa, dengan hanya menampilkan bahasa yang lebih relevan dengan Anda.",
 	"ext-uls-display-settings-title": "Setelan tampilan",
 	"ext-uls-display-settings-language-tab": "Bahasa",
 	"ext-uls-display-settings-fonts-tab": "Huruf",
@@ -23,10 +26,10 @@
 	"ext-uls-display-settings-font-settings": "Setelan huruf",
 	"ext-uls-display-settings-ui-language": "Tampilan bahasa",
 	"ext-uls-display-settings-anon-label": "Tampilan bahasa:",
-	"ext-uls-display-settings-anon-same-as-content": "Inggris (sama seperti konten)",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (sama dengan konten)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Masuk log]] guna memilih bahasa yang berbeda untuk menu.",
-	"ext-uls-webfonts-settings-title": "Unduh huruf bila diperlukan.",
-	"ext-uls-webfonts-settings-info": "Huruf web akan diunduh untuk menampilkan teks pada skrip khusus.",
+	"ext-uls-webfonts-settings-title": "Unduh fon bila perlu.",
+	"ext-uls-webfonts-settings-info": "Unduh fon yang kurang secara otomatis dan izinkan pemilihan fon yang disukai.",
 	"ext-uls-webfonts-settings-info-link": "Informasi lebih lanjut",
 	"ext-uls-webfonts-select-for": "Pilih huruf untuk $1",
 	"ext-uls-webfonts-select-for-ui-info": "Huruf yang digunakan untuk antarmuka pengguna",
@@ -52,5 +55,17 @@
 	"ext-uls-input-disable-notification": "Perangkat input dinonaktifkan",
 	"ext-uls-input-disable-notification-undo": "Batal",
 	"ext-uls-input-disable-notification-info-personal": "Anda dapat mengaktifkan perangkat input setiap saat dari pengaturan bahasa.",
-	"ext-uls-input-disable-notification-info-interlanguage": "Anda dapat mengaktifkan perangkat input setiap saat dari pengaturan bahasa di sebelah daftar bahasa."
+	"ext-uls-input-disable-notification-info-interlanguage": "Anda dapat mengaktifkan perangkat input setiap saat dari pengaturan bahasa di sebelah daftar bahasa.",
+	"ext-uls-language-settings-applying": "Menerapkan...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Satu lagi|$1 lagi}}",
+	"apihelp-languagesearch-description": "Cari nama bahasa dalam aksara apa pun.",
+	"apihelp-languagesearch-param-search": "Cari kata.",
+	"apihelp-languagesearch-param-typos": "Jumlah kesalahan eja yang diperbolehkan dalam kata pencarian.",
+	"apihelp-languagesearch-example-1": "Cari \"Te\"",
+	"apihelp-languagesearch-example-2": "Cari \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Cari \"ഫി\", memperbolehkan satu kesalahan ketik",
+	"apihelp-ulslocalization-description": "Dapatkan lokalisasi ULS dalam bahasa yang diberikan.",
+	"apihelp-ulslocalization-param-language": "Kata bahasa.",
+	"apihelp-ulslocalization-example-1": "Dapatkan lokalisasi Tamil",
+	"apihelp-ulslocalization-example-2": "Dapatkan lokalisasi Hindi"
 }
