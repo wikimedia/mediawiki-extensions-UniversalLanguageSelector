@@ -8,7 +8,8 @@
 			"Sherbrooke",
 			"Wyz",
 			"Jgaignerot",
-			"Urhixidur"
+			"Urhixidur",
+			"NemesisIII"
 		]
 	},
 	"uls-desc": "Donne à l’utilisateur plusieurs manières de sélectionner une langue et d’ajuster les paramètres de langue",
@@ -34,7 +35,7 @@
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Se connecter]] pour sélectionner une autre langue pour les menus.",
 	"ext-uls-webfonts-settings-title": "Télécharger les polices au besoin",
 	"ext-uls-webfonts-settings-info": "Télécharger automatiquement les polices absentes et permettre la sélection des polices préférées.",
-	"ext-uls-webfonts-settings-info-link": "Plus d’information",
+	"ext-uls-webfonts-settings-info-link": "Plus d’informations",
 	"ext-uls-webfonts-select-for": "Sélectionner une police pour $1",
 	"ext-uls-webfonts-select-for-ui-info": "Police utilisée pour l’interface utilisateur",
 	"ext-uls-webfonts-select-for-content-info": "Police utilisée pour le contenu",
