@@ -55,5 +55,15 @@
 	"ext-uls-input-disable-notification-info-personal": "Pode activar as ferramentas de entrada en calquera momento desde as opcións de lingua.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Pode activar as ferramentas de entrada en calquera momento desde as opcións de lingua, ao carón da lista de linguas.",
 	"ext-uls-language-settings-applying": "Aplicando...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Unha lingua máis|$1 linguas máis}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|$1 máis}}",
+	"apihelp-languagesearch-description": "Procurar nomes de lingua en calquera script.",
+	"apihelp-languagesearch-param-search": "Cadea de busca.",
+	"apihelp-languagesearch-param-typos": "Número de erros ortográficos permitidos na cadea de busca.",
+	"apihelp-languagesearch-example-1": "Procurar \"Te\"",
+	"apihelp-languagesearch-example-2": "Procurar \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Procurar \"ഫി\", permitindo un erro ortográfico",
+	"apihelp-ulslocalization-description": "Obter a localización do ULS na lingua dada.",
+	"apihelp-ulslocalization-param-language": "Cadea de lingua.",
+	"apihelp-ulslocalization-example-1": "Obter a localización en támil",
+	"apihelp-ulslocalization-example-2": "Obter a localización en hindi"
 }
