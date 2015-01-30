@@ -1,0 +1,9 @@
+== UniversalLanguageSelector 2015.01 ==
+Released at 2015-01-30.
+
+=== Highlights ===
+* This version has compatibility issues with Internet Explorer 8. Support will
+be restored in the next MLEB release.
+
+=== Input Methods ===
+* Corrected names of Punjabi input methods.
