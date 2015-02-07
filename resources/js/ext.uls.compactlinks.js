@@ -239,7 +239,7 @@
 			var assistantLanguages = mw.user.options.get( 'translate-editlangs' );
 
 			if ( assistantLanguages && assistantLanguages !== 'default' ) {
-				return $.grep( assistantLanguages.split(/,\s*/), function ( language ) {
+				return $.grep( assistantLanguages.split( /,\s*/ ), function ( language ) {
 					return $.inArray( language, languages ) >= 0;
 				} );
 			}

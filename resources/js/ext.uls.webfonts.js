@@ -98,10 +98,10 @@
 
 		for ( index = 0; index < length; index++ ) {
 			$fixture.text( text[index] );
-			width[index] = $fixture.width() || width[index-1];
+			width[index] = $fixture.width() || width[index - 1];
 			height[index] = $fixture.height();
 
-			if( index > 0 &&
+			if ( index > 0 &&
 				( width[index] !== width[index - 1] ||
 					height[index] !== height[index - 1] )
 			) {
@@ -206,7 +206,7 @@
 		// Execute after task queue is processed so that the rendering is complete.
 		// This is important because webfonts behavior depends on the font-family
 		// property values set by stylesheets.
-		setTimeout( function() {
+		setTimeout( function () {
 			$( 'body' ).webfonts();
 
 			// Load the CSS required for the Autonym font. Note that this won't download the font.

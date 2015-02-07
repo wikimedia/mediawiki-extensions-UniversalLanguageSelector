@@ -533,7 +533,7 @@
 						mw.webfonts.setup();
 
 						// Allow the webfonts library to finish loading
-						setTimeout( function() {
+						setTimeout( function () {
 							displaySettings.$webfonts = $( 'body' ).data( 'webfonts' );
 
 							mw.webfonts.preferences.enable();
