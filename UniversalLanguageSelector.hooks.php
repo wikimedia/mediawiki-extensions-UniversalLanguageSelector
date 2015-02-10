@@ -147,9 +147,7 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	protected static function isSupportedLanguage( $language ) {
-		wfProfileIn( __METHOD__ );
 		$supported = Language::fetchLanguageNames( null, 'mwfile' ); // since 1.20
-		wfProfileOut( __METHOD__ );
 
 		return isset( $supported[$language] );
 	}
@@ -159,15 +157,12 @@ class UniversalLanguageSelectorHooks {
 	 * @return string
 	 */
 	protected static function getDefaultLanguage( array $preferred ) {
-		wfProfileIn( __METHOD__ );
 		$supported = Language::fetchLanguageNames( null, 'mwfile' ); // since 1.20
 
 		// look for a language that is acceptable to the client
 		// and known to the wiki.
 		foreach ( $preferred as $code => $weight ) {
 			if ( isset( $supported[$code] ) ) {
-				wfProfileOut( __METHOD__ );
-
 				return $code;
 			}
 		}
@@ -178,13 +173,9 @@ class UniversalLanguageSelectorHooks {
 			$parts = explode( '-', $code, 2 );
 			$code = $parts[0];
 			if ( isset( $supported[$code] ) ) {
-				wfProfileOut( __METHOD__ );
-
 				return $code;
 			}
 		}
-
-		wfProfileOut( __METHOD__ );
 
 		return '';
 	}
