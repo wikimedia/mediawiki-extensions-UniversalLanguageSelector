@@ -57,5 +57,5 @@
 	"ext-uls-input-disable-notification-info-personal": "È possibile attivare in qualsiasi momento gli strumenti di scrittura dalle impostazioni della lingua.",
 	"ext-uls-input-disable-notification-info-interlanguage": "È possibile attivare in qualsiasi momento gli strumenti di scrittura dalle impostazioni della lingua, vicino all'elenco delle lingue.",
 	"ext-uls-language-settings-applying": "Applicando...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Un'altra lingua|Altre $1 lingue}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Un'altra|Altre $1}}"
 }
