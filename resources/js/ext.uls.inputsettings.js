@@ -48,9 +48,9 @@
 
 		// Disable IME system button
 		+ '<div class="row">'
-		+ '<div class="eleven columns button uls-input-settings-disable-info"></div>'
-		+ '<div class="six columns button uls-input-settings-toggle">'
-		+ '<button class="active green button uls-input-toggle-button"></button>'
+		+ '<div class="eleven columns uls-input-settings-disable-info"></div>'
+		+ '<div class="six columns uls-input-settings-toggle">'
+		+ '<button class="mw-ui-button uls-input-toggle-button"></button>'
 		+ '</div>'
 		+ '</div>';
 
@@ -119,7 +119,7 @@
 			$imeListTitle = this.$template.find( '.ext-uls-input-settings-imes-title' );
 			$imeListContainer = this.$template.find( '.uls-input-settings-inputmethods-list' );
 
-			$imeListContainer.find( 'label' ).remove();
+			$imeListContainer.find( 'div, label' ).remove();
 
 			if ( !imes ) {
 				$imeListContainer.append( $( '<label>' )
@@ -159,13 +159,15 @@
 		 * @return {Object} jQuery object corresponding to the input method item.
 		 */
 		renderInputmethodOption: function ( imeId, selected ) {
-			var $imeLabel, name, description, $helplink, inputmethod, $inputMethodItem;
+			var $imeHolder, $imeLabel, name, description, $helplink, inputmethod, $inputMethodItem;
 
 			if ( imeId !== 'system' && !$.ime.sources[imeId] ) {
 				// imeId not known for jquery.ime.
 				// It is very rare, but still validate it.
 				return $();
 			}
+
+			$imeHolder = $( '<div>' ).class( 'mw-ui-radio' );
 
 			$imeLabel = $( '<label>' ).attr( {
 				'for': imeId,
@@ -179,7 +181,7 @@
 				checked: selected
 			} );
 
-			$imeLabel.append( $inputMethodItem );
+			$imeHolder.append( $inputMethodItem );
 
 			if ( imeId === 'system' ) {
 				name = $.i18n( 'ext-uls-disable-input-method' );
@@ -209,7 +211,8 @@
 				$helplink
 			);
 
-			return $imeLabel;
+			$imeHolder.append( $imeLabel );
+			return $imeHolder;
 		},
 
 		/**
@@ -274,8 +277,8 @@
 						$.ime.preferences.setLanguage( language );
 					}
 					// Mark the button selected
-					$( '.uls-ui-languages .button' ).removeClass( 'down' );
-					button.addClass( 'down' );
+					$( '.uls-ui-languages .mw-ui-button' ).removeClass( 'mw-ui-checked' );
+					button.addClass( 'mw-ui-checked' );
 					inputSettings.prepareInputmethods( language );
 				};
 			}
@@ -286,7 +289,7 @@
 			for ( i = 0; i < SUGGESTED_LANGUAGES_NUMBER; i++ ) {
 				language = languagesForButtons[i];
 				$button = $( '<button>' )
-					.addClass( 'button uls-language-button autonym' )
+					.addClass( 'mw-ui-button uls-language-button autonym' )
 					.text( $.uls.data.getAutonym( language ) )
 					.prop( {
 						lang: language,
@@ -318,7 +321,7 @@
 			$languages = this.$template.find( '.uls-ui-languages' );
 			$moreLanguagesButton = $( '<button>' )
 				.prop( 'class', 'uls-more-languages' )
-				.addClass( 'button' ).text( '...' );
+				.addClass( 'mw-ui-button' ).text( '...' );
 
 			$languages.append( $moreLanguagesButton );
 			// Show the long language list to select a language for ime settings
