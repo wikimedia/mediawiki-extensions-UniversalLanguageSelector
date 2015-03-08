@@ -315,8 +315,8 @@
 				$pLang = $( '#p-lang' );
 				// Add an element near the interlanguage links header
 				$ulsTrigger = $( '<span>' ).addClass( 'uls-settings-trigger' );
-				// Append ULS cog to languages section, but make sure it is visible.
-				$pLang.show().prepend( $ulsTrigger );
+				// Append ULS cog to languages section.
+				$pLang.prepend( $ulsTrigger );
 				// Take care of any other elements with this class.
 				$ulsTrigger = $( '.uls-settings-trigger' );
 				// Remove the dummy link, which was added to make sure that the section appears
