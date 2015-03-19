@@ -56,5 +56,6 @@
 	"ext-uls-input-disable-notification-info-personal": "Du kannst die Eingabewerkzeuge zu jeder Zeit in den Spracheinstellungen aktivieren.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Du kannst die Eingabewerkzeuge zu jeder Zeit in den Spracheinstellungen neben der Sprachenliste aktivieren.",
 	"ext-uls-language-settings-applying": "Anwenden …",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Eine weitere|$1 weitere}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Eine weitere|$1 weitere}}",
+	"apihelp-languagesearch-param-search": "Such-Zeichenfolge."
 }
