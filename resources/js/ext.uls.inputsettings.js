@@ -167,7 +167,7 @@
 				return $();
 			}
 
-			$imeHolder = $( '<div>' ).class( 'mw-ui-radio' );
+			$imeHolder = $( '<div>' ).addClass( 'mw-ui-radio' );
 
 			$imeLabel = $( '<label>' ).attr( {
 				'for': imeId,
