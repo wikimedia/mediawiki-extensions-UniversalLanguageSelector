@@ -6,7 +6,8 @@
 			"아라",
 			"Priviet",
 			"Revi",
-			"IRTC1015"
+			"IRTC1015",
+			"SeoJeongHo"
 		]
 	},
 	"uls-desc": "사용자에게 언어를 선택하고 언어 설정을 바꾸는 몇 가지 방법을 제공합니다",
@@ -59,5 +60,6 @@
 	"ext-uls-input-disable-notification-info-personal": "언어 설정에서 언제든지 입력 도구를 활성화할 수 있습니다.",
 	"ext-uls-input-disable-notification-info-interlanguage": "언어 목록 옆에 있는 언어 설정에서 언제든지 입력 도구를 활성화할 수 있습니다.",
 	"ext-uls-language-settings-applying": "적용 중....",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|다른 언어 $1개}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|다른 언어 $1개}}",
+	"apihelp-ulslocalization-description": "주어진 언어로 ULS의 위치를 가져옵니다."
 }
