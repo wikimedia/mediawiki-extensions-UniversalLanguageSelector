@@ -230,7 +230,7 @@
 				// Get the html of the link by wrapping it in div first
 				link = $( '<div>' ).html( link ).html();
 
-				return mw.msg( 'ext-uls-undo-language-tooltip-text', link );
+				return mw.message( 'ext-uls-undo-language-tooltip-text', '$1' ).escaped().replace( '$1', link );
 			}
 		} );
 
