@@ -1,4 +1,4 @@
-@commons.wikimedia.beta.wmflabs.org @firefox @internet_explorer_10 @login @phantomjs
+@firefox @internet_explorer_10 @login @phantomjs
 Feature: Font selection default disabled
 
   In order to have better using experience,
@@ -37,6 +37,7 @@ Feature: Font selection default disabled
       And the selected content font must be system
       And webfonts are applied to body
 
+  @commons.wikimedia.beta.wmflabs.org
   Scenario: Enabling fonts downloading without saving the preferences
     When I click the checkbox to enable fonts downloading
       And I select OpenDyslexic font for the content language for the live preview
@@ -47,6 +48,7 @@ Feature: Font selection default disabled
       And the active interface font must be the same as font prior to the preview
       And the active content font must be the same as font prior to the preview
 
+  @commons.wikimedia.beta.wmflabs.org
   Scenario: Enabling fonts downloading and saving the preferences
     When I click the checkbox to enable fonts downloading
       And I select OpenDyslexic font for the interface language for the live preview
@@ -54,6 +56,7 @@ Feature: Font selection default disabled
     Then webfonts are applied to body
       And the interface font is OpenDyslexic
 
+  @commons.wikimedia.beta.wmflabs.org
   Scenario: Enabling fonts downloading and going to another page
     When I click the checkbox to enable fonts downloading
       And I select OpenDyslexic font for the content language for the live preview
@@ -62,6 +65,7 @@ Feature: Font selection default disabled
     Then webfonts are applied to body
       And the content font is OpenDyslexic
 
+  @commons.wikimedia.beta.wmflabs.org
   Scenario: Enabling fonts downloading and then disabling them
     When I click the checkbox to enable fonts downloading
       And I select OpenDyslexic font for the interface language for the live preview
@@ -74,6 +78,7 @@ Feature: Font selection default disabled
     Then a font selector for interface language doesn't appear
       And a font selector for content language doesn't appear
 
+  @commons.wikimedia.beta.wmflabs.org
   Scenario: Enabling fonts downloading and then disabling them and saving the preferences
     When I click the checkbox to enable fonts downloading
       And I select OpenDyslexic font for the interface language for the live preview
