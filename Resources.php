@@ -34,7 +34,6 @@ $wgResourceModules['ext.uls.displaysettings'] = array(
 		'ext.uls.mediawiki',
 		'ext.uls.webfonts',
 		'mediawiki.api.parse',
-		'mediawiki.ui.checkbox',
 	),
 ) + $resourcePaths;
 
@@ -102,7 +101,6 @@ $wgResourceModules['ext.uls.inputsettings'] = array(
 		'ext.uls.languagesettings',
 		'ext.uls.mediawiki',
 		'jquery.ime',
-		'mediawiki.ui.radio',
 	),
 ) + $resourcePaths;
 
@@ -131,6 +129,7 @@ $wgResourceModules['ext.uls.languagesettings'] = array(
 	'scripts' => 'resources/js/ext.uls.languagesettings.js',
 	'styles' => 'resources/css/ext.uls.languagesettings.css',
 	'dependencies' => array(
+		'ext.uls.buttons',
 		'ext.uls.messages',
 		'ext.uls.preferences',
 		// The grid styles are used here,
@@ -255,7 +254,6 @@ $wgResourceModules['jquery.uls'] = array(
 		'jquery.i18n',
 		'jquery.uls.data',
 		'jquery.uls.grid',
-		'mediawiki.ui.input',
 	),
 ) + $resourcePaths;
 

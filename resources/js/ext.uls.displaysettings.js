@@ -23,9 +23,9 @@
 
 		+ '<div class="row">' // Tab switcher buttons
 		+ '<div class="twelve columns uls-display-settings-tab-switcher">'
-		+ '<div class="uls-button-group mw-ui-button-group">'
-		+ '<button id="uls-display-settings-language-tab" class="mw-ui-button mw-ui-checked" data-i18n="ext-uls-display-settings-language-tab"></button>'
-		+ '<button id="uls-display-settings-fonts-tab" class="mw-ui-button" data-i18n="ext-uls-display-settings-fonts-tab"></button>'
+		+ '<div class="uls-button-group">'
+		+ '<button id="uls-display-settings-language-tab" class="button down" data-i18n="ext-uls-display-settings-language-tab"></button>'
+		+ '<button id="uls-display-settings-fonts-tab" class="button" data-i18n="ext-uls-display-settings-fonts-tab"></button>'
 		+ '</div>'
 		+ '</div>'
 		+ '</div>'
@@ -79,9 +79,9 @@
 
 		// Webfonts enabling checkbox with label
 		+ '<div class="row">'
-		+ '<div class="eleven columns mw-ui-checkbox">'
+		+ '<div class="eleven columns">'
+		+ '<label class="checkbox">'
 		+ '<input type="checkbox" id="webfonts-enable-checkbox" />'
-		+ '<label class="checkbox" for="webfonts-enable-checkbox">'
 		+ '<strong data-i18n="ext-uls-webfonts-settings-title"></strong> '
 		+ '<span data-i18n="ext-uls-webfonts-settings-info"></span> '
 		+ '<a target="_blank" href="https://www.mediawiki.org/wiki/Universal_Language_Selector/WebFonts" data-i18n="ext-uls-webfonts-settings-info-link"></a>'
@@ -242,8 +242,8 @@
 				return function () {
 					displaySettings.markDirty();
 					displaySettings.uiLanguage = button.data( 'language' ) || displaySettings.uiLanguage;
-					$( 'div.uls-ui-languages button.mw-ui-button' ).removeClass( 'mw-ui-checked' );
-					button.addClass( 'mw-ui-checked' );
+					$( 'div.uls-ui-languages button.button' ).removeClass( 'down' );
+					button.addClass( 'down' );
 					displaySettings.prepareUIFonts();
 					displaySettings.preview( displaySettings.uiLanguage );
 				};
@@ -253,7 +253,7 @@
 			for ( i = 0; i < SUGGESTED_LANGUAGES_NUMBER; i++ ) {
 				language = languagesForButtons[i];
 				$button = $( '<button>' )
-					.addClass( 'mw-ui-button uls-language-button autonym' )
+					.addClass( 'button uls-language-button autonym' )
 					.text( $.uls.data.getAutonym( language ) )
 					.prop( {
 						lang: language,
@@ -261,7 +261,7 @@
 					} );
 
 				if ( language === this.uiLanguage ) {
-					$button.addClass( 'mw-ui-checked' );
+					$button.addClass( 'down' );
 				}
 
 				$button.data( 'language', language );
@@ -282,7 +282,7 @@
 			$languages = this.$template.find( 'div.uls-ui-languages' );
 			$moreLanguagesButton = $( '<button>' )
 				.prop( 'class', 'uls-more-languages' )
-				.addClass( 'mw-ui-button' ).text( '...' );
+				.addClass( 'button' ).text( '...' );
 
 			$languages.append( $moreLanguagesButton );
 			// Show the long language list to select a language for display settings
@@ -578,7 +578,7 @@
 			$tabButtons.on( 'click', function () {
 				var $button = $( this );
 
-				if ( $button.hasClass( 'mw-ui-checked' ) ) {
+				if ( $button.hasClass( 'down' ) ) {
 					return;
 				}
 
@@ -593,8 +593,8 @@
 				} );
 
 				displaySettings.$parent.position();
-				$tabButtons.filter( '.mw-ui-checked' ).removeClass( 'mw-ui-checked' );
-				$button.addClass( 'mw-ui-checked' );
+				$tabButtons.filter( '.down' ).removeClass( 'down' );
+				$button.addClass( 'down' );
 
 			} );
 

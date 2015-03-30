@@ -12,7 +12,7 @@ div.input-settings-block {
 }
 
 .imelabel {
-	display: inline;
+	display: block;
 	padding-bottom: 10px;
 	font-size: 10pt;
 	line-height: 16pt;
@@ -20,6 +20,10 @@ div.input-settings-block {
 
 .imelabel span {
 	padding-left: 5px;
+}
+
+.imelabel input {
+	float: left;
 }
 
 .uls-ime-menu-settings-item {

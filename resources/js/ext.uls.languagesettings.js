@@ -34,8 +34,8 @@
 	// Apply and Cancel buttons
 	buttonsRow = '<div class="row language-settings-buttons">' +
 		'<div class="eleven columns">' +
-		'<button class="mw-ui-button uls-settings-cancel" data-i18n="ext-uls-language-settings-cancel"></button>' +
-		'<button class="mw-ui-button mw-ui-constuctive uls-settings-apply" data-i18n="ext-uls-language-settings-apply" disabled></button>' +
+		'<button class="button uls-settings-cancel" data-i18n="ext-uls-language-settings-cancel"></button>' +
+		'<button class="button active blue uls-settings-apply" data-i18n="ext-uls-language-settings-apply" disabled></button>' +
 		'</div>' +
 		'</div>' +
 		'</div>';
