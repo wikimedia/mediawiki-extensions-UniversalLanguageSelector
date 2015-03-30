@@ -189,37 +189,37 @@
 	 * It also allows to undo the language selection.
 	 */
 	function showULSTooltip() {
-		var ulsPosition = mw.config.get( 'wgULSPosition' ),
+		var previousLang, $ulsTrigger, anonMode, showUndo, newLanguage, previousLanguages,
+			ulsPosition = mw.config.get( 'wgULSPosition' ),
 			currentLang = mw.config.get( 'wgUserLanguage' ),
-			previousLang,
-			$ulsTrigger,
-			anonMode,
 			rtlPage = $( 'body' ).hasClass( 'rtl' ),
 			tipsyGravity = {
 				personal: 'n',
 				interlanguage: rtlPage ? 'e' : 'w'
-			},
-			previousLanguages = mw.uls.getPreviousLanguages() || [];
-
-		previousLang = previousLanguages.slice( -1 )[0];
+			};
 
 		$ulsTrigger = ( ulsPosition === 'interlanguage' ) ?
 			$( '.uls-settings-trigger' ) :
 			$( '.uls-trigger' );
 
-		if ( previousLang === currentLang ) {
-			$ulsTrigger.tipsy( { gravity: rtlPage ? 'e' : 'w' } );
+		previousLanguages = mw.uls.getPreviousLanguages() || [];
+		previousLang = previousLanguages.slice( -1 )[0];
 
-			return;
+		// Whether we see current language for the first time
+		newLanguage = currentLang !== previousLang;
+		// Whether user is able to change language
+		anonMode = ( mw.user.isAnon() && !mw.config.get( 'wgULSAnonCanChangeLanguage' ) );
+		// Whether user is able to change language, and just did so
+		showUndo = !anonMode && newLanguage && previousLang !== undefined;
+
+		if ( newLanguage ) {
+			previousLanguages.push( currentLang );
+			mw.uls.setPreviousLanguages( previousLanguages );
 		}
 
-		previousLanguages.push( currentLang );
-		mw.uls.setPreviousLanguages( previousLanguages );
-
-		anonMode = ( mw.user.isAnon() && !mw.config.get( 'wgULSAnonCanChangeLanguage' ) );
-
-		if ( anonMode || !previousLang ) {
-			// Do not show tooltip
+		if ( !showUndo ) {
+			// In interlanguage mode, we will have normal tooltip, make it look same using tipsy
+			$ulsTrigger.tipsy( { gravity: tipsyGravity[ulsPosition] } );
 			return;
 		}
 
