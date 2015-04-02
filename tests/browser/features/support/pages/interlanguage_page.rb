@@ -7,6 +7,4 @@ class InterlanguagePage
     URL.url("Boleyn_family")
   end
   page_url url
-
 end
-
