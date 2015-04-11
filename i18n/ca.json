@@ -8,6 +8,8 @@
 	},
 	"uls-desc": "Dóna a l'usuari diverses maneres per seleccionar una llengua i ajustar la seva configuració",
 	"uls-plang-title-languages": "Llengües",
+	"ext-uls-select-language-settings-icon-tooltip": "Configuració de llengua",
+	"ext-uls-undo-language-tooltip-text": "Llengua canviada de $1",
 	"ext-uls-language-settings-preferences-link": "Més configuracions de llengua",
 	"uls-betafeature-label": "Enllaços de llengua compactes",
 	"uls-betafeature-desc": "Mostra una versió reduïda de la llista de llengües amb aquelles que més us interessen.",
@@ -52,5 +54,6 @@
 	"ext-uls-input-disable-notification-undo": "Desfés",
 	"ext-uls-input-disable-notification-info-personal": "Podeu habilitar les eines d'entrada en qualsevol moment des de la configuració de llengua.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Podeu habilitar les eines d'entrada en qualsevol moment des de la configuració de llengua al costat de la llista de llengües.",
-	"ext-uls-language-settings-applying": "Aplicant…"
+	"ext-uls-language-settings-applying": "Aplicant…",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Una més|$1 més}}"
 }

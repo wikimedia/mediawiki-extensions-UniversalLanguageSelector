@@ -8,6 +8,8 @@
 	"ext-uls-select-language-settings-icon-tooltip": "د ژبې امستنې",
 	"ext-uls-undo-language-tooltip-text": "له $1 څخه مو ژبه بدله شوه",
 	"ext-uls-language-settings-preferences-link": "د نورو ژبو امستنې",
+	"uls-betafeature-label": "د ژبو د تړنو لنډلړليک",
+	"uls-betafeature-desc": "د ژب لړليک يوه لنډه بڼه ښکاره کوي، يوازې هغه ژبې چې تاسې پورې ډېر اړه لري.",
 	"ext-uls-display-settings-title": "د ښکارېدو امستنې",
 	"ext-uls-display-settings-language-tab": "ژبه",
 	"ext-uls-display-settings-fonts-tab": "ليکبڼې",
