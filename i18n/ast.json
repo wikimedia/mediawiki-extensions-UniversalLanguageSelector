@@ -55,5 +55,15 @@
 	"ext-uls-input-disable-notification-info-personal": "Pue activar les ferramientes d'entrada en cualquier momentu dende la configuración d'idioma.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Pue activar les ferramientes d'entrada en cualquier momentu dende la configuración d'idioma que ta cabo la llista de llingües.",
 	"ext-uls-language-settings-applying": "Aplicando...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Una llingua más|$1 llingües más}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Una más|$1 más}}",
+	"apihelp-languagesearch-description": "Buscar nomes de llingua en cualquier alfabetu.",
+	"apihelp-languagesearch-param-search": "Buscar cadena.",
+	"apihelp-languagesearch-param-typos": "Númberu d'errores ortográficos permitíos na cadena de gueta.",
+	"apihelp-languagesearch-example-1": "Buscar \"Te\"",
+	"apihelp-languagesearch-example-2": "Buscar \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Buscar \"ഫി\", permitiendo un fallu d'ortografía",
+	"apihelp-ulslocalization-description": "Obtener la llocalización de ULS na llingua dada.",
+	"apihelp-ulslocalization-param-language": "Cadena de llingua.",
+	"apihelp-ulslocalization-example-1": "Obtener la llocalización en tamil",
+	"apihelp-ulslocalization-example-2": "Obtener la llocalización en hindi"
 }
