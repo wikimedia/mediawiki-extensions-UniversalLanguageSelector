@@ -4,9 +4,12 @@
 			"Naudefj"
 		]
 	},
+	"uls-plang-title-languages": "Tale",
 	"ext-uls-select-language-settings-icon-tooltip": "Taalvoorkeure",
 	"ext-uls-undo-language-tooltip-text": "Taal verander vanaf $1",
 	"ext-uls-language-settings-preferences-link": "Meer taal-voorkeure",
+	"uls-betafeature-label": "Kompakte taalskakels",
+	"uls-betafeature-desc": "Wys 'n korter lys van tale, net die tale wat meer relevant vir u is.",
 	"ext-uls-display-settings-title": "Vertoon-voorkeure",
 	"ext-uls-display-settings-language-tab": "Taal",
 	"ext-uls-display-settings-fonts-tab": "Lettertipes",
@@ -19,8 +22,10 @@
 	"ext-uls-display-settings-font-settings": "Lettertipe-voorkeure",
 	"ext-uls-display-settings-ui-language": "Vertoontaal",
 	"ext-uls-display-settings-anon-label": "Vertoontaal:",
-	"ext-uls-display-settings-anon-same-as-content": "Engels (selfde as inhoud)",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (selfde as inhoud)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Meld aan]] om 'n ander taal vir keuseskerms te kies.",
+	"ext-uls-webfonts-settings-title": "Laai lettertipes indien nodig",
+	"ext-uls-webfonts-settings-info-link": "Meer inligting",
 	"ext-uls-webfonts-select-for": "Kies lettertipe vir $1",
 	"ext-uls-webfonts-select-for-ui-info": "Lettertipe vir koppelvlak",
 	"ext-uls-webfonts-select-for-content-info": "Lettertipe vir inhoud",
@@ -32,6 +37,7 @@
 	"ext-uls-input-settings-ime-settings": "Invoermetodes vir $1",
 	"ext-uls-input-settings-ui-language": "Taal vir invoer",
 	"ext-uls-back-to-input-settings": "Terug na invoer-voorkeure",
+	"ext-uls-ime-help": "Hoe om te gebruik",
 	"ext-uls-disable-input-method": "Gebruik standaard toetsbord",
 	"ext-uls-input-settings-more-languages-tooltip": "Meer tale",
 	"jquery-ime-other-languages": "Ander tale",
@@ -44,5 +50,7 @@
 	"ext-uls-input-disable-notification": "Invoer-gereedskap is gedeaktiveer",
 	"ext-uls-input-disable-notification-undo": "Maak ongedaan",
 	"ext-uls-input-disable-notification-info-personal": "U kan die invoer-gereedskap weer via die taal-voorkeure aktiveer",
-	"ext-uls-input-disable-notification-info-interlanguage": "U kan die invoer-gereedskap enige tyd weer via die taal-voorkeure langs die lys van tale aktiveer."
+	"ext-uls-input-disable-notification-info-interlanguage": "U kan die invoer-gereedskap enige tyd weer via die taal-voorkeure langs die lys van tale aktiveer.",
+	"ext-uls-language-settings-applying": "Pas toe...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Een meer|$1 meer}}"
 }
