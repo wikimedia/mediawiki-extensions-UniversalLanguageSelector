@@ -16,9 +16,10 @@ class ResourceLoaderULSJsonMessageModule extends ResourceLoaderModule {
 	/**
 	 * Part of the ResourceLoader module interface.
 	 * Declares the core ext.uls.i18n module as a dependency.
+	 * @param ResourceLoaderContext $context
 	 * @return string[] Module names.
 	 */
-	function getDependencies() {
+	function getDependencies( ResourceLoaderContext $context = null ) {
 		return array( 'ext.uls.i18n' );
 	}
 
