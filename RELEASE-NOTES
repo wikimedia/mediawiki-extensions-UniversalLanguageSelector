@@ -1,0 +1,8 @@
+== UniversalLanguageSelector 2015.04 ==
+Released at 2015-04-30.
+
+=== Highlights ===
+* T76196: Show the Common language section only if the list is long enough.
+* Fixed the regions for some languages.
+* T88279: Make ULS IME working in Content Translation.
+* Added support for Talossan in ULS.
