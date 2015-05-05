@@ -271,6 +271,7 @@ $wgResourceModules['jquery.uls.data'] = array(
 ) + $resourcePaths;
 
 $wgResourceModules['jquery.uls.grid'] = array(
+	'position' => 'top',
 	'styles' => 'lib/jquery.uls/css/jquery.uls.grid.css',
 ) + $resourcePaths;
 
