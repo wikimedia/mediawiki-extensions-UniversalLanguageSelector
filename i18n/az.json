@@ -1,10 +1,27 @@
 {
 	"@metadata": {
 		"authors": [
-			"Interfase"
+			"Interfase",
+			"Dağlı95"
 		]
 	},
 	"uls-plang-title-languages": "Dillər",
 	"ext-uls-select-language-settings-icon-tooltip": "Dilin təyin edilməsi",
-	"ext-uls-undo-language-tooltip-text": "Əvvəlki dil: $1"
+	"ext-uls-undo-language-tooltip-text": "Əvvəlki dil: $1",
+	"ext-uls-language-settings-preferences-link": "Daha çox dil parametləri",
+	"ext-uls-display-settings-language-tab": "Dil",
+	"ext-uls-display-settings-fonts-tab": "Şriftlər",
+	"ext-uls-display-settings-title-short": "Görünüş",
+	"ext-uls-display-settings-desc": "Menyular və şriftlər üçün istifadə edilən dil paramertləri",
+	"ext-uls-language-settings-title": "Dil parametrləri",
+	"ext-uls-language-settings-apply": "Parametrləri tətbiq et",
+	"ext-uls-language-settings-cancel": "Ləğv et",
+	"ext-uls-language-buttons-help": "Menyunun dilini dəyiş. Bu dəyişiklik məzmunun dilinə təsir göstərməyəcəkdir.",
+	"ext-uls-display-settings-ui-language": "Görüntü dili",
+	"ext-uls-display-settings-anon-label": "Görüntü dili:",
+	"ext-uls-webfonts-settings-info-link": "Daha çox məlumat",
+	"ext-uls-input-settings-more-languages-tooltip": "Daha çox dillər",
+	"ext-uls-input-disable-notification-undo": "Geri qaytar",
+	"ext-uls-language-settings-applying": "Tətbiq edilir...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Bir ədəd|$1 ədəd daha çox dil}}"
 }
