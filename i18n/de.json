@@ -58,5 +58,6 @@
 	"ext-uls-language-settings-applying": "Anwenden …",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Eine weitere|$1 weitere}}",
 	"apihelp-languagesearch-param-search": "Such-Zeichenfolge.",
+	"apihelp-languagesearch-example-1": "Sucht nach „Te“",
 	"apihelp-ulslocalization-param-language": "Sprachzeichenfolge."
 }
