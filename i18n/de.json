@@ -3,7 +3,8 @@
 		"authors": [
 			"Metalhead64",
 			"Se4598",
-			"Kghbln"
+			"Kghbln",
+			"Tiin"
 		]
 	},
 	"uls-desc": "Bietet verschiedene Möglichkeiten eine Sprache auszuwählen sowie Spracheinstellungen anzupassen",
@@ -57,7 +58,14 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Du kannst die Eingabewerkzeuge zu jeder Zeit in den Spracheinstellungen neben der Sprachenliste aktivieren.",
 	"ext-uls-language-settings-applying": "Anwenden …",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Eine weitere|$1 weitere}}",
+	"apihelp-languagesearch-description": "Sucht nach Sprachnamen in beliebiger Schrift.",
 	"apihelp-languagesearch-param-search": "Such-Zeichenfolge.",
+	"apihelp-languagesearch-param-typos": "Anzahl der erlaubten Rechtschreibfehler in der Sucheingabe.",
 	"apihelp-languagesearch-example-1": "Sucht nach „Te“",
-	"apihelp-ulslocalization-param-language": "Sprachzeichenfolge."
+	"apihelp-languagesearch-example-2": "Sucht nach „ഫി“",
+	"apihelp-languagesearch-example-3": "Sucht nach „ഫി“, erlaubt einen Tippfehler",
+	"apihelp-ulslocalization-description": "Ruft die Lokalisierung von ULS in der vorgegebenen Sprache ab.",
+	"apihelp-ulslocalization-param-language": "Sprachzeichenfolge.",
+	"apihelp-ulslocalization-example-1": "Ruft die Tamil-Lokalisierung ab",
+	"apihelp-ulslocalization-example-2": "Ruft die Hindi-Lokalisierung ab"
 }
