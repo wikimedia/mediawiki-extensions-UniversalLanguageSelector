@@ -59,5 +59,9 @@
 	"ext-uls-input-disable-notification-undo": "Deshacer",
 	"ext-uls-input-disable-notification-info-personal": "Puede activar las herramientas de entrada en cualquier momento desde las opciones de idioma.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Puede activar las herramientas de entrada en cualquier momento desde las opciones de idioma junto a la lista de idiomas.",
-	"ext-uls-language-settings-applying": "Aplicando…"
+	"ext-uls-language-settings-applying": "Aplicando…",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Uno más|$1 más}}",
+	"apihelp-languagesearch-example-1": "Buscar \"Te\"",
+	"apihelp-languagesearch-example-2": "Buscar \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Buscar \"ഫി\", permitiendo un error tipográfico"
 }
