@@ -32,7 +32,7 @@
 	"ext-uls-display-settings-anon-same-as-content": "$1 (igual que el contenido)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Inicie sesión]] para seleccionar un idioma diferente para los menús.",
 	"ext-uls-webfonts-settings-title": "Descargar fuentes cuando sea necesario",
-	"ext-uls-webfonts-settings-info": "Las fuentes se descargarán para mostrar texto en otros sistemas de escritura.",
+	"ext-uls-webfonts-settings-info": "Descargar automáticamente los tipos de letras faltantes y permitir la selección de los tipos preferidos.",
 	"ext-uls-webfonts-settings-info-link": "Más información",
 	"ext-uls-webfonts-select-for": "Seleccione fuente para $1",
 	"ext-uls-webfonts-select-for-ui-info": "Fuente usada para la interfaz de usuario",
@@ -61,7 +61,13 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Puede activar las herramientas de entrada en cualquier momento desde las opciones de idioma junto a la lista de idiomas.",
 	"ext-uls-language-settings-applying": "Aplicando…",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Uno más|$1 más}}",
+	"apihelp-languagesearch-description": "Buscar nombres de idiomas en cualquier sistema de escritura.",
+	"apihelp-languagesearch-param-search": "Buscar cadena.",
+	"apihelp-languagesearch-param-typos": "Número de faltas de ortografía permitidas en la cadena de búsqueda.",
 	"apihelp-languagesearch-example-1": "Buscar \"Te\"",
 	"apihelp-languagesearch-example-2": "Buscar \"ഫി\"",
-	"apihelp-languagesearch-example-3": "Buscar \"ഫി\", permitiendo un error tipográfico"
+	"apihelp-languagesearch-example-3": "Buscar \"ഫി\", permitiendo un error tipográfico",
+	"apihelp-ulslocalization-param-language": "Cadena de idioma.",
+	"apihelp-ulslocalization-example-1": "Obtener la localización en Tamil",
+	"apihelp-ulslocalization-example-2": "Obtener la localización en Hindi"
 }
