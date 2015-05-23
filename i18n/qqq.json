@@ -70,7 +70,7 @@
 	"apihelp-languagesearch-example-2": "Label of an example command which produces a search. Translate as appropriate to your language.\n----\n{{doc-apihelp-example|languagesearch}}",
 	"apihelp-languagesearch-example-3": "Description of a function where the user can find an available language by providing a name to search for.\n----\n{{doc-apihelp-example|languagesearch}}",
 	"apihelp-ulslocalization-description": "{{doc-apihelp-description|ulslocalization}}",
-	"apihelp-ulslocalization-param-language": "Probably means language code, such as \"en\".\n----\n{{doc-apihelp-param|ulslocalization|language}}",
+	"apihelp-ulslocalization-param-language": "{{doc-apihelp-param|ulslocalization|language}}",
 	"apihelp-ulslocalization-example-1": "{{doc-apihelp-example|ulslocalization}}",
 	"apihelp-ulslocalization-example-2": "{{doc-apihelp-example|ulslocalization}}"
 }

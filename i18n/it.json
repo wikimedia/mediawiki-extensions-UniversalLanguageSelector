@@ -4,7 +4,8 @@
 			"Beta16",
 			"Raoli",
 			"Darth Kule",
-			"Nemo bis"
+			"Nemo bis",
+			"F. Cosoleto"
 		]
 	},
 	"uls-desc": "Fornisce agli utenti diversi modi di selezionare una lingua e sistemare le impostazioni della lingua",
@@ -57,5 +58,8 @@
 	"ext-uls-input-disable-notification-info-personal": "È possibile attivare in qualsiasi momento gli strumenti di scrittura dalle impostazioni della lingua.",
 	"ext-uls-input-disable-notification-info-interlanguage": "È possibile attivare in qualsiasi momento gli strumenti di scrittura dalle impostazioni della lingua, vicino all'elenco delle lingue.",
 	"ext-uls-language-settings-applying": "Applicando...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Un'altra|Altre $1}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Un'altra|Altre $1}}",
+	"apihelp-languagesearch-example-1": "Cerca \"Te\"",
+	"apihelp-languagesearch-example-2": "Cerca \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Cerca \"ഫി\", consentendo un errore di battitura"
 }

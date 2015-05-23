@@ -4,5 +4,11 @@
 			"NehalDaveND"
 		]
 	},
-	"uls-plang-title-languages": "भाषाः"
+	"uls-plang-title-languages": "भाषाः",
+	"ext-uls-display-settings-language-tab": "भाषा",
+	"ext-uls-display-settings-title-short": "प्रदर्श्यताम्",
+	"ext-uls-language-settings-cancel": "निरस्यताम्",
+	"ext-uls-input-settings-title-short": "निवेष्यम्",
+	"jquery-ime-help": "साहाय्यम्",
+	"ext-uls-input-disable-notification-undo": "पूर्ववत्"
 }
