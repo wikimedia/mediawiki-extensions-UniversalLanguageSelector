@@ -23,6 +23,7 @@
 	"ext-uls-display-settings-ui-language": "ప్రదర్శనా భాష",
 	"ext-uls-display-settings-anon-label": "ప్రదర్శనా భాష:",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (విషయపు భాషే)",
+	"ext-uls-webfonts-settings-info-link": "మరింత సమాచారం",
 	"ext-uls-webfonts-select-for-ui-info": "వాడుకరి ముఖాంతరానికి వాడాల్సిన ఖతి",
 	"ext-uls-webfonts-select-for-content-info": "విషయానికి వాడాల్సిన ఖతి",
 	"ext-uls-back-to-display-settings": "తిరిగి ప్రదర్శన అమరికలకు",
@@ -36,5 +37,6 @@
 	"ext-uls-input-settings-more-languages-tooltip": "మరిన్ని భాషలు",
 	"jquery-ime-other-languages": "ఇతర భాషలు",
 	"jquery-ime-help": "సహాయం",
-	"ext-uls-input-disable-notification-undo": "రద్దుచెయ్యి"
+	"ext-uls-input-disable-notification-undo": "రద్దుచెయ్యి",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|మరొక్కటి|ఇంకా $1}}"
 }

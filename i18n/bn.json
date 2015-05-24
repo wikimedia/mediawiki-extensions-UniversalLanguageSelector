@@ -3,7 +3,8 @@
 		"authors": [
 			"Aftab1995",
 			"Bellayet",
-			"Aftabuzzaman"
+			"Aftabuzzaman",
+			"Nasir8891"
 		]
 	},
 	"uls-desc": "ব্যবহারকারীকে ভাষা নির্বাচন এবং ভাষা সম্পর্কিত সেটিং সমন্বয়ের বিভিন্ন উপায় দেয়",
@@ -56,5 +57,15 @@
 	"ext-uls-input-disable-notification-info-personal": "আপনি ভাষা সেটিং থেকে যে কোনো সময়ে ইনপুট টুল সক্রিয় করতে পারেন।",
 	"ext-uls-input-disable-notification-info-interlanguage": "আপনি ভাষার তালিকার পাশে ভাষা সেটিং থেকে যে কোনো সময়ে ইনপুট টুল সক্রিয় করতে পারেন।",
 	"ext-uls-language-settings-applying": "প্রয়োগ হচ্ছে...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|আরও একটি|আরও $1টি}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|আরও একটি|আরও $1টি}}",
+	"apihelp-languagesearch-description": "যে কোনো স্ক্রিপ্টে ভাষার নাম অনুসন্ধান করুন।",
+	"apihelp-languagesearch-param-search": "বাক্য অনুসন্ধান।",
+	"apihelp-languagesearch-param-typos": "বাক্য অনুসন্ধানে গ্রহনযোগ্য বানান ভুলের সংখ্যা ।",
+	"apihelp-languagesearch-example-1": "\"Te\" এর জন্য অনুসন্ধান",
+	"apihelp-languagesearch-example-2": "\"ഫി\" এর জন্য অনুসন্ধান",
+	"apihelp-languagesearch-example-3": "\"ഫി\" এর জন্য অনুসন্ধান, একটি বানান ভুল গ্রহনযোগ্য",
+	"apihelp-ulslocalization-description": "ইউএলএস এর এই ভাষায় ব্যবহার করুন।",
+	"apihelp-ulslocalization-param-language": "ভাষা।",
+	"apihelp-ulslocalization-example-1": "তামিল ভাষায় ব্যবহার",
+	"apihelp-ulslocalization-example-2": "হিন্দি ভাষায় ব্যবহার"
 }
