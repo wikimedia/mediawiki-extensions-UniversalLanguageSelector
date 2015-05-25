@@ -9,7 +9,8 @@
 			"Wyz",
 			"Jgaignerot",
 			"Urhixidur",
-			"NemesisIII"
+			"NemesisIII",
+			"Framafan"
 		]
 	},
 	"uls-desc": "Donne à l’utilisateur plusieurs manières de sélectionner une langue et d’ajuster les paramètres de langue",
@@ -62,5 +63,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Vous pouvez activer les outils d'entrée à tout moment dans vos paramètres de langue.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Vous pouvez activer les outils d'entrée à tout moment depuis les paramètres de langue à côté de la liste des langues.",
 	"ext-uls-language-settings-applying": "Application en cours…",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Une langue de plus|$1 langues de plus}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Une langue de plus|$1 langues de plus}}",
+	"apihelp-languagesearch-param-search": "Chercher le texte.",
+	"apihelp-ulslocalization-param-language": "Langue du texte."
 }

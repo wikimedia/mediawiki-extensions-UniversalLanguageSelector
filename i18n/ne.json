@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"NehalDaveND"
+		]
+	},
+	"ext-uls-display-settings-language-tab": "भाषा",
+	"ext-uls-display-settings-fonts-tab": "फन्ट",
+	"ext-uls-display-settings-title-short": "देखाउनु",
+	"ext-uls-language-settings-title": "भाषाको विकल्पहरू",
+	"ext-uls-language-settings-apply": "लागू सेटिंगहरू",
+	"ext-uls-language-settings-cancel": "रद्द गर्ने",
+	"ext-uls-display-settings-font-settings": "फन्ट सेटिंगहरू",
+	"ext-uls-display-settings-ui-language": "भाशा प्रदर्शन गर्नुहोस्",
+	"ext-uls-display-settings-anon-label": "भाशा प्रदर्शन गर्नुहोस्",
+	"ext-uls-input-settings-title-short": "निवेश गर्नु",
+	"ext-uls-ime-help": "कसरी प्रयोग गर्ने?",
+	"ext-uls-disable-input-method": "प्रयोग देशी किबोर्ड",
+	"ext-uls-input-settings-more-languages-tooltip": "थप भाषाहरू",
+	"jquery-ime-other-languages": "अन्य भाषाहरू",
+	"jquery-ime-help": "सहायता",
+	"ext-uls-input-disable": "आगत उपकरणहरू असक्षम गर्नुहोस्",
+	"ext-uls-input-enable": "आगत उपकरणहरू सक्षम",
+	"ext-uls-input-disable-notification-undo": "पूर्ववत गर्ने",
+	"ext-uls-language-settings-applying": "लागू ...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|एक थप|$1 थप}}"
+}
