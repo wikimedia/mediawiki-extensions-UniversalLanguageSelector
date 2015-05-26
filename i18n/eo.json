@@ -54,5 +54,5 @@
 	"ext-uls-input-disable-notification-info-personal": "Vi povas iam ajn ŝalti enigajn ilojn en lingvaj agordoj.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Vi povas iam ajn ŝalti enigajn ilojn en lingvaj agordoj ĉe lingvolisto.",
 	"ext-uls-language-settings-applying": "Aplikiĝado...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Unu plia lingvo|$1 pliaj lingvoj}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Unu plia|$1 pliaj}}"
 }
