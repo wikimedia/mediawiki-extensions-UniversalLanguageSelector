@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Toliño",
-			"Nemo bis"
+			"Nemo bis",
+			"Elisardojm"
 		]
 	},
 	"uls-desc": "Dá ao usuario varios xeitos de seleccionar unha lingua e de axustar as preferencias da mesma",
@@ -63,7 +64,7 @@
 	"apihelp-languagesearch-example-2": "Procurar \"ഫി\"",
 	"apihelp-languagesearch-example-3": "Procurar \"ഫി\", permitindo un erro ortográfico",
 	"apihelp-ulslocalization-description": "Obter a localización do ULS na lingua dada.",
-	"apihelp-ulslocalization-param-language": "Cadea de lingua.",
+	"apihelp-ulslocalization-param-language": "Código da lingua.",
 	"apihelp-ulslocalization-example-1": "Obter a localización en támil",
 	"apihelp-ulslocalization-example-2": "Obter a localización en hindi"
 }

@@ -6,7 +6,8 @@
 			"Hamilton Abreu",
 			"Vitorvicentevalente",
 			"Fúlvio",
-			555
+			555,
+			"Macofe"
 		]
 	},
 	"uls-desc": "Fornece ao utilizador várias maneiras de selecionar um idioma e ajustar suas configurações.",
@@ -59,5 +60,6 @@
 	"ext-uls-input-disable-notification-info-personal": "Pode activar as ferramentas de entrada quando quiser a partir das configurações de idioma.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Pode activar as ferramentas de entrada quando quiser a partir das configurações de idioma, ao lado da lista de idiomas.",
 	"ext-uls-language-settings-applying": "A aplicar...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Um outro|$1 outros}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Um outro|$1 outros}}",
+	"apihelp-ulslocalization-param-language": "Código de idioma."
 }

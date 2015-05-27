@@ -6,7 +6,8 @@
 			"Southparkfan",
 			"Arent",
 			"SPQRobin",
-			"Sjoerddebruin"
+			"Sjoerddebruin",
+			"Macofe"
 		]
 	},
 	"uls-desc": "Biedt gebruikers verschillende mogelijkheden om een taal te kiezen en bijbehorende instellingen aan te passen",
@@ -59,5 +60,6 @@
 	"ext-uls-input-disable-notification-info-personal": "U kunt de invoermethoden weer inschakelen via de taalinstellingen.",
 	"ext-uls-input-disable-notification-info-interlanguage": "U kunt de invoermethoden weer inschakelen via de taalinstellingen naast de lijst met talen.",
 	"ext-uls-language-settings-applying": "Toepassen...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Eén meer|$1 meer}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Eén meer|$1 meer}}",
+	"apihelp-ulslocalization-param-language": "Taalcode."
 }

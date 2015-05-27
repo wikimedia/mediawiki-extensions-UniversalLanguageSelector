@@ -4,7 +4,8 @@
 			"Emperyan",
 			"Incelemeelemani",
 			"Meelo",
-			"Rapsar"
+			"Rapsar",
+			"Sayginer"
 		]
 	},
 	"uls-desc": "Kullanıcının bir dil seçmesi ve dil ayarlarını değiştirmesi için seçenekler sağlar.",
@@ -57,5 +58,6 @@
 	"ext-uls-input-disable-notification-info-personal": "Dil ayarlarınızı istediğiniz zaman giriş araçlarından etkinleştirebilirsiniz.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Dil ayarlarını dil listesinin yanında bulunan giriş araçlarından etkinleştirebilirsiniz.",
 	"ext-uls-language-settings-applying": "Uygulanıyor...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Bir tane daha|$1 tane daha}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Bir tane daha|$1 tane daha}}",
+	"apihelp-ulslocalization-param-language": "Dil kodu."
 }

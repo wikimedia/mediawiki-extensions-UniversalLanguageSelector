@@ -5,7 +5,8 @@
 			"Raoli",
 			"Darth Kule",
 			"Nemo bis",
-			"F. Cosoleto"
+			"F. Cosoleto",
+			"Macofe"
 		]
 	},
 	"uls-desc": "Fornisce agli utenti diversi modi di selezionare una lingua e sistemare le impostazioni della lingua",
@@ -61,5 +62,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Un'altra|Altre $1}}",
 	"apihelp-languagesearch-example-1": "Cerca \"Te\"",
 	"apihelp-languagesearch-example-2": "Cerca \"ഫി\"",
-	"apihelp-languagesearch-example-3": "Cerca \"ഫി\", consentendo un errore di battitura"
+	"apihelp-languagesearch-example-3": "Cerca \"ഫി\", consentendo un errore di battitura",
+	"apihelp-ulslocalization-param-language": "Codice lingua."
 }

@@ -48,7 +48,7 @@
 	"jquery-ime-help": "Помоћ",
 	"ext-uls-input-disable": "Онемогући алате за унос",
 	"ext-uls-input-enable": "Омогући алате за унос",
-	"ext-uls-input-disable-info": "Алати за унос су онемогућени",
+	"ext-uls-input-disable-info": "Алати за унос су онемогућени.",
 	"ext-uls-input-settings-noime": "Нема доступне методе уноса за овај језик.",
 	"ext-uls-input-disable-notification": "Алати за унос су онемогућени",
 	"ext-uls-input-disable-notification-undo": "Опозови",

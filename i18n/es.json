@@ -67,7 +67,7 @@
 	"apihelp-languagesearch-example-1": "Buscar \"Te\"",
 	"apihelp-languagesearch-example-2": "Buscar \"ഫി\"",
 	"apihelp-languagesearch-example-3": "Buscar \"ഫി\", permitiendo un error tipográfico",
-	"apihelp-ulslocalization-param-language": "Cadena de idioma.",
+	"apihelp-ulslocalization-param-language": "Código de idioma.",
 	"apihelp-ulslocalization-example-1": "Obtener la localización en Tamil",
 	"apihelp-ulslocalization-example-2": "Obtener la localización en Hindi"
 }

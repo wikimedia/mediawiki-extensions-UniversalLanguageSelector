@@ -26,5 +26,6 @@
 	"jquery-ime-help": "Alîkarî",
 	"ext-uls-input-disable-notification-undo": "Betal bike",
 	"apihelp-languagesearch-example-1": "Li \"Te\" bigere",
-	"apihelp-languagesearch-example-2": "Li \"ഫി\" bigere"
+	"apihelp-languagesearch-example-2": "Li \"ഫി\" bigere",
+	"apihelp-ulslocalization-param-language": "Koda ziman."
 }
