@@ -68,7 +68,7 @@
 	"apihelp-languagesearch-example-2": "Search for \"ഫി\"",
 	"apihelp-languagesearch-example-3": "Search for \"ഫി\", allowing one typo",
 	"apihelp-ulslocalization-description": "Get the localization of ULS in the given language.",
-	"apihelp-ulslocalization-param-language": "Language string.",
+	"apihelp-ulslocalization-param-language": "Language code.",
 	"apihelp-ulslocalization-example-1": "Get Tamil localization",
 	"apihelp-ulslocalization-example-2": "Get Hindi localization"
 }
