@@ -50,5 +50,6 @@
 	"ext-uls-input-settings-noime": "זענען נישט פֿאראן קייט איינגאב מעטאדן פֿאר דער שפראך.",
 	"ext-uls-input-disable-notification": "איינגאב געצייג זענען געווארן אומאקטיוויזירט",
 	"ext-uls-input-disable-notification-undo": "אַנולירן",
-	"ext-uls-input-disable-notification-info-personal": "איר קענט אקטיוויזירן די איינגאב געצייג אבי ווען פון די שפראך שטעלונגען."
+	"ext-uls-input-disable-notification-info-personal": "איר קענט אקטיוויזירן די איינגאב געצייג אבי ווען פון די שפראך שטעלונגען.",
+	"apihelp-ulslocalization-param-language": "שפראַך קאד."
 }

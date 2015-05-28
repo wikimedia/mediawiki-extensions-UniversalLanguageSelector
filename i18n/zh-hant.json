@@ -67,5 +67,5 @@
 	"apihelp-languagesearch-example-2": "搜尋 \"ഫി\"",
 	"apihelp-languagesearch-example-3": "搜尋 \"ഫി\"，可允許一個錯字",
 	"apihelp-ulslocalization-description": "取得指定語言的在地化 ULS。",
-	"apihelp-ulslocalization-param-language": "語言字串。"
+	"apihelp-ulslocalization-param-language": "語言代碼。"
 }

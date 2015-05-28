@@ -62,7 +62,7 @@
 	"apihelp-languagesearch-example-2": "Söhk noh „ഫി“.",
 	"apihelp-languagesearch-example-3": "Söhk noh „ഫി“ met einem Tipfähler.",
 	"apihelp-ulslocalization-description": "Donn de localization för der <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"Universal Language Selector\">ULS</i> en dä aanjejovve Schprohch holle.",
-	"apihelp-ulslocalization-param-language": "Schprohche Zeijschekätt",
+	"apihelp-ulslocalization-param-language": "Et Shprohcheköözel.",
 	"apihelp-ulslocalization-example-1": "Donn de localization för de tamihlesche Schprohch holle",
 	"apihelp-ulslocalization-example-2": "Donn de localization för de Schprohch Hindi holle"
 }
