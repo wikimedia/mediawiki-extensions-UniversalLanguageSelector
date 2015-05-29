@@ -55,5 +55,6 @@
 	"ext-uls-input-disable-notification-info-personal": "Яздаран гӀирс лело йиш ю муьлхачу хенахь мотт хуьйцу гӀирсан чохь.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Яздаран гӀирс лело йиш ю муьлхачу хенахь мотт хуьйцу гӀирсан чохь.",
 	"ext-uls-language-settings-applying": "ДӀахӀоттор…",
-	"ext-uls-compact-link-count": "Кхин {{PLURAL:$1|цхьан маттахь|$1 меттанашкахь}}"
+	"ext-uls-compact-link-count": "Кхин {{PLURAL:$1|цхьан маттахь|$1 меттанашкахь}}",
+	"apihelp-ulslocalization-param-language": "Меттан код."
 }
