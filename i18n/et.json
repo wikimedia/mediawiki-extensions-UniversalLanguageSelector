@@ -63,7 +63,7 @@
 	"apihelp-languagesearch-example-2": "Otsi sõnet \"ഫി\"",
 	"apihelp-languagesearch-example-3": "Otsi sõnet \"ഫി\", lubatud üks täheviga",
 	"apihelp-ulslocalization-description": "Universaalse keelevalija lokalisatsiooni hankimine antud keeles.",
-	"apihelp-ulslocalization-param-language": "Keelesõne.",
+	"apihelp-ulslocalization-param-language": "Keelekood.",
 	"apihelp-ulslocalization-example-1": "Hangi tamili lokalisatsioon",
 	"apihelp-ulslocalization-example-2": "Hangi hindi lokalisatsioon"
 }
