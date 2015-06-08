@@ -22,5 +22,6 @@
 	"ext-uls-input-settings-more-languages-tooltip": "Hizkuntza gehiago",
 	"jquery-ime-other-languages": "Beste hizkuntzak",
 	"jquery-ime-help": "Laguntza",
-	"ext-uls-input-disable-notification-undo": "Desegin"
+	"ext-uls-input-disable-notification-undo": "Desegin",
+	"apihelp-ulslocalization-param-language": "Hizkuntza-kodea."
 }
