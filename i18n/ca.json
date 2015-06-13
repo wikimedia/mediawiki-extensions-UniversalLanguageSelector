@@ -3,7 +3,8 @@
 		"authors": [
 			"Pginer",
 			"Vriullop",
-			"Fitoschido"
+			"Fitoschido",
+			"Macofe"
 		]
 	},
 	"uls-desc": "Dóna a l'usuari diverses maneres per seleccionar una llengua i ajustar la seva configuració",
@@ -55,5 +56,6 @@
 	"ext-uls-input-disable-notification-info-personal": "Podeu habilitar les eines d'entrada en qualsevol moment des de la configuració de llengua.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Podeu habilitar les eines d'entrada en qualsevol moment des de la configuració de llengua al costat de la llista de llengües.",
 	"ext-uls-language-settings-applying": "Aplicant…",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Una més|$1 més}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Una més|$1 més}}",
+	"apihelp-ulslocalization-param-language": "Codi d'idioma."
 }
