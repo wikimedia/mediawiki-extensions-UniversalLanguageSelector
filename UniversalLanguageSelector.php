@@ -18,6 +18,17 @@
  * @licence MIT License
  */
 
+if ( function_exists( 'wfLoadExtension' ) ) {
+	wfLoadExtension( 'UniversalLanguageSelector' );
+	// Keep i18n globals so mergeMessageFileList.php doesn't break
+	$GLOBALS['wgMessagesDirs']['UniversalLanguageSelector'] = __DIR__ . '/i18n';
+	/* wfWarn(
+		'Deprecated PHP entry point used for UniversalLanguageSelector extension. Please use wfLoadExtension instead, ' .
+		'see https://www.mediawiki.org/wiki/Extension_registration for more details.'
+	); */
+	return;
+}
+
 if ( !defined( 'MEDIAWIKI' ) ) {
 	echo "This file is an extension to the MediaWiki software and cannot be used standalone.\n";
 	die( -1 );
