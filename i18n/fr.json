@@ -11,7 +11,8 @@
 			"Urhixidur",
 			"NemesisIII",
 			"Framafan",
-			"Macofe"
+			"Macofe",
+			"Yodaspirine"
 		]
 	},
 	"uls-desc": "Donne à l’utilisateur plusieurs manières de sélectionner une langue et d’ajuster les paramètres de langue",
@@ -66,5 +67,6 @@
 	"ext-uls-language-settings-applying": "Application en cours…",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Une langue de plus|$1 langues de plus}}",
 	"apihelp-languagesearch-param-search": "Chercher le texte.",
-	"apihelp-ulslocalization-param-language": "Code de langue."
+	"apihelp-ulslocalization-param-language": "Code de langue.",
+	"apihelp-ulslocalization-example-2": "Obtenir la traduction Hindi"
 }
