@@ -184,8 +184,6 @@ $GLOBALS['wgULSCompactLinks'] = false;
 
 // Internationalization
 $GLOBALS['wgMessagesDirs']['UniversalLanguageSelector'] = __DIR__ . '/i18n';
-$GLOBALS['wgExtensionMessagesFiles']['UniversalLanguageSelector'] =
-	__DIR__ . '/UniversalLanguageSelector.i18n.php';
 
 // Register auto load for the page class
 $GLOBALS['wgAutoloadClasses'] += array(
