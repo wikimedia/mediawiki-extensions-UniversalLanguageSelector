@@ -51,7 +51,7 @@
 	"jquery-ime-other-languages": "زبان‌های دیگر",
 	"jquery-ime-disable-text": "استفاده از صفحه‌کلید بومی",
 	"jquery-ime-help": "راهنما",
-	"ext-uls-input-disable": "غیرفعال‌کردن ابزارهای ورودی",
+	"ext-uls-input-disable": "غیرفعال کردن ابزارهای ورودی",
 	"ext-uls-input-enable": "فعال کردن ابزارهای ورودی",
 	"ext-uls-input-disable-info": "ابزارهای ورودی غیرفعال است.",
 	"ext-uls-input-settings-noime": "هیچ روش ورودی‌ای برای این زبان در دسترس نیست.",
@@ -59,7 +59,7 @@
 	"ext-uls-input-disable-notification-undo": "واگردانی",
 	"ext-uls-input-disable-notification-info-personal": "در هر زمان می‌توانید ابزارهای ورودی را از بخش تنظیمات زبان فعال کنید.",
 	"ext-uls-input-disable-notification-info-interlanguage": "در هر زمان می توانید ابزارهای ورودی را از بخش تنظیمات زبان در کنار فهرست زبان‌ها فعال است.",
-	"ext-uls-language-settings-applying": "اعمال‌کردن...",
+	"ext-uls-language-settings-applying": "اعمال کردن...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|یک زبان دیگر|$1 زبان دیگر}}",
 	"apihelp-languagesearch-param-search": "جستجوی رشته."
 }
