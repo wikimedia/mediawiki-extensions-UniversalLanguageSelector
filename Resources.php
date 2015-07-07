@@ -197,6 +197,7 @@ $wgResourceModules['jquery.i18n'] = array(
 		'lib/jquery.i18n/jquery.i18n.messagestore.js',
 		'lib/jquery.i18n/jquery.i18n.parser.js',
 		'lib/jquery.i18n/jquery.i18n.emitter.js',
+		'lib/jquery.i18n/jquery.i18n.emitter.bidi.js',
 		'lib/jquery.i18n/jquery.i18n.language.js',
 	),
 	'dependencies' => 'mediawiki.libs.pluralruleparser',
