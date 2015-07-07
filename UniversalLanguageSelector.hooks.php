@@ -19,6 +19,11 @@
  */
 
 class UniversalLanguageSelectorHooks {
+	// Used when extension registration in use which skips the main php file
+	public static function setVersionConstant() {
+		define( 'ULS_VERSION', '2015-06-08' );
+	}
+
 	/**
 	 * Whether ULS user toolbar (language selection and settings) is enabled.
 	 *

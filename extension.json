@@ -88,6 +88,7 @@
 		"@ULSCompactLinks": "Whether the \"Compact language links\" Beta Feature is exposed. Requires $wgULSPosition to be \"interlanguage\". Defaults to false. @since 2014.03",
 		"ULSCompactLinks": false
 	},
+	"callback": "UniversalLanguageSelectorHooks::setVersionConstant",
 	"ResourceModules": {
 		"ext.uls.languagenames": {
 			"class": "ResourceLoaderULSModule"
