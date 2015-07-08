@@ -393,4 +393,62 @@ class UniversalLanguageSelectorHooks {
 
 		return true;
 	}
+
+	/**
+	 * Conditionally register jquery.18n (backwards copatbility for those on pre-MediaWiki 1.26).
+	 *
+	 * @param ResourceLoader $resourceLoader
+	 * @return boolean true
+	 */
+	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
+		global $wgResourceModules;
+
+		if (
+			(
+				(
+					is_callable( array( $resourceLoader, 'isModuleRegistered' ) ) &&
+					!$resourceLoader->isModuleRegistered( 'jquery.i18n' )
+				)
+				||
+				$resourceLoader->getModule( 'jquery.i18n' ) === null
+			)
+			&&
+			!isset( $wgResourceModules[ 'jquery.i18n' ] )
+		) {
+			$resourceLoader->register( array(
+				'jquery.i18n' => array(
+					'scripts' => array(
+						'lib/jquery.i18n/jquery.i18n.js',
+						'lib/jquery.i18n/jquery.i18n.messagestore.js',
+						'lib/jquery.i18n/jquery.i18n.parser.js',
+						'lib/jquery.i18n/jquery.i18n.emitter.js',
+						'lib/jquery.i18n/jquery.i18n.emitter.bidi.js',
+						'lib/jquery.i18n/jquery.i18n.language.js',
+					),
+					'dependencies' => 'mediawiki.libs.pluralruleparser',
+					'languageScripts' => array(
+						'bs' => 'lib/jquery.i18n/languages/bs.js',
+						'dsb' => 'lib/jquery.i18n/languages/dsb.js',
+						'fi' => 'lib/jquery.i18n/languages/fi.js',
+						'ga' => 'lib/jquery.i18n/languages/ga.js',
+						'he' => 'lib/jquery.i18n/languages/he.js',
+						'hsb' => 'lib/jquery.i18n/languages/hsb.js',
+						'hu' => 'lib/jquery.i18n/languages/hu.js',
+						'hy' => 'lib/jquery.i18n/languages/hy.js',
+						'la' => 'lib/jquery.i18n/languages/la.js',
+						'ml' => 'lib/jquery.i18n/languages/ml.js',
+						'os' => 'lib/jquery.i18n/languages/os.js',
+						'ru' => 'lib/jquery.i18n/languages/ru.js',
+						'sl' => 'lib/jquery.i18n/languages/sl.js',
+						'uk' => 'lib/jquery.i18n/languages/uk.js',
+					),
+					'targets' => array( 'desktop', 'mobile' ),
+					'localBasePath' => __DIR__,
+					'remoteExtPath' => 'UniversalLanguageSelector',
+				)
+			) );
+		}
+
+		return true;
+	}
 }

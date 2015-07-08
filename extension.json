@@ -23,6 +23,7 @@
 		"MakeGlobalVariablesScript": "UniversalLanguageSelectorHooks::addVariables",
 		"PersonalUrls": "UniversalLanguageSelectorHooks::addPersonalBarTrigger",
 		"ResourceLoaderGetConfigVars": "UniversalLanguageSelectorHooks::addConfig",
+		"ResourceLoaderRegisterModules": "UniversalLanguageSelectorHooks::onResourceLoaderRegisterModules",
 		"ResourceLoaderTestModules": "UniversalLanguageSelectorHooks::addTestModules",
 		"SkinTemplateOutputPageBeforeExec": "UniversalLanguageSelectorHooks::onSkinTemplateOutputPageBeforeExec",
 		"UserGetLanguageObject": "UniversalLanguageSelectorHooks::getLanguage"
@@ -283,38 +284,6 @@
 			],
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
-		},
-		"jquery.i18n": {
-			"scripts": [
-				"jquery.i18n/jquery.i18n.js",
-				"jquery.i18n/jquery.i18n.messagestore.js",
-				"jquery.i18n/jquery.i18n.parser.js",
-				"jquery.i18n/jquery.i18n.emitter.js",
-				"jquery.i18n/jquery.i18n.language.js"
-			],
-			"dependencies": "mediawiki.libs.pluralruleparser",
-			"languageScripts": {
-				"bs": "jquery.i18n/languages/bs.js",
-				"dsb": "jquery.i18n/languages/dsb.js",
-				"fi": "jquery.i18n/languages/fi.js",
-				"ga": "jquery.i18n/languages/ga.js",
-				"he": "jquery.i18n/languages/he.js",
-				"hsb": "jquery.i18n/languages/hsb.js",
-				"hu": "jquery.i18n/languages/hu.js",
-				"hy": "jquery.i18n/languages/hy.js",
-				"la": "jquery.i18n/languages/la.js",
-				"ml": "jquery.i18n/languages/ml.js",
-				"os": "jquery.i18n/languages/os.js",
-				"ru": "jquery.i18n/languages/ru.js",
-				"sl": "jquery.i18n/languages/sl.js",
-				"uk": "jquery.i18n/languages/uk.js"
-			},
-			"targets": [
-				"desktop",
-				"mobile"
-			],
-			"localBasePath": "lib",
-			"remoteExtPath": "UniversalLanguageSelector/lib"
 		},
 		"jquery.ime": {
 			"scripts": "jquery.ime/jquery.ime.js",
