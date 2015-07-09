@@ -151,12 +151,6 @@ class UniversalLanguageSelectorHooks {
 		return true;
 	}
 
-	protected static function isSupportedLanguage( $language ) {
-		$supported = Language::fetchLanguageNames( null, 'mwfile' ); // since 1.20
-
-		return isset( $supported[$language] );
-	}
-
 	/**
 	 * @param array $preferred
 	 * @return string
@@ -201,8 +195,8 @@ class UniversalLanguageSelectorHooks {
 
 		$request = $context->getRequest();
 
-		$languageToSave = $request->getVal( 'setlang' );
-		if ( $request->getVal( 'uselang' ) && !$languageToSave ) {
+		$languageToSave = $request->getText( 'setlang' );
+		if ( $request->getText( 'uselang' ) && !$languageToSave ) {
 			// uselang can be used for temporary override of language preference
 			// when setlang is not provided
 			return true;
@@ -211,7 +205,7 @@ class UniversalLanguageSelectorHooks {
 		// Registered users - simple
 		if ( !$user->isAnon() ) {
 			// Language change
-			if ( self::isSupportedLanguage( $languageToSave ) ) {
+			if ( Language::isSupportedLanguage( $languageToSave ) ) {
 				$user->setOption( 'language', $languageToSave );
 				$user->saveSettings();
 				// Apply immediately
@@ -228,7 +222,7 @@ class UniversalLanguageSelectorHooks {
 		}
 
 		// Language change
-		if ( self::isSupportedLanguage( $languageToSave ) ) {
+		if ( Language::isSupportedLanguage( $languageToSave ) ) {
 			$request->response()->setcookie( 'language', $languageToSave );
 			$code = $languageToSave;
 
@@ -236,8 +230,8 @@ class UniversalLanguageSelectorHooks {
 		}
 
 		// Try cookie
-		$languageToUse = $request->getCookie( 'language' );
-		if ( self::isSupportedLanguage( $languageToUse ) ) {
+		$languageToUse = $request->getCookie( 'language', null, '' );
+		if ( Language::isSupportedLanguage( $languageToUse ) ) {
 			$code = $languageToUse;
 
 			return true;
