@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"DzWiki",
-			"Srdjan m"
+			"Srdjan m",
+			"Semso98"
 		]
 	},
 	"uls-desc": "Daje korisniku nekoliko načina da izabere jezik i da prilagodi postavke jezika",
@@ -55,5 +56,5 @@
 	"ext-uls-input-disable-notification-info-personal": "Možete omogućiti alate za unos bilo koje vrijeme na postavke jezika.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Alate za unos možete u svakom trenutku omogućiti u jezičnim postavkama pored jezičnog spiska.",
 	"ext-uls-language-settings-applying": "Primjenjujem...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Još jedan jezik|Još $1 druga jezika|Još $1 drugih jezika}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Još jedan|Još $1}}"
 }
