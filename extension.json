@@ -18,6 +18,8 @@
 		"BeforePageDisplay": "UniversalLanguageSelectorHooks::addModules",
 		"EnterMobileMode": "UniversalLanguageSelectorHooks::onEnterMobileMode",
 		"EventLoggingRegisterSchemas": "UniversalLanguageSelectorHooks::onEventLoggingRegisterSchemas",
+		"GetBetaFeaturePreferences": "UniversalLanguageSelectorHooks::onGetBetaFeaturePreferences",
+		"GetPreferences": "UniversalLanguageSelectorHooks::onGetPreferences",
 		"MakeGlobalVariablesScript": "UniversalLanguageSelectorHooks::addVariables",
 		"PersonalUrls": "UniversalLanguageSelectorHooks::addPersonalBarTrigger",
 		"ResourceLoaderGetConfigVars": "UniversalLanguageSelectorHooks::addConfig",
