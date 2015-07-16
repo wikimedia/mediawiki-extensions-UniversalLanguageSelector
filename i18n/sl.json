@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Eleassar",
-			"Dbc334"
+			"Dbc334",
+			"Yerpo"
 		]
 	},
 	"uls-desc": "Daje uporabniku več načinov izbire jezika in prilagoditve jezikovnih nastavitev",
@@ -52,8 +53,8 @@
 	"ext-uls-input-settings-noime": "Za ta jezik ni na razpolago noben način vnosa.",
 	"ext-uls-input-disable-notification": "Orodja za vnos so onemogočena",
 	"ext-uls-input-disable-notification-undo": "Razveljavi",
-	"ext-uls-input-disable-notification-info-personal": "Orodja za vnos lahko prek jezikovnih nastavitev omogočite kadar koli.",
-	"ext-uls-input-disable-notification-info-interlanguage": "Orodja za vnos lahko prek jezikovnih nastavitev poleg seznama jezikov omogočite kadar koli.",
+	"ext-uls-input-disable-notification-info-personal": "Orodja za vnos lahko prek jezikovnih nastavitev omogočite kadarkoli.",
+	"ext-uls-input-disable-notification-info-interlanguage": "Orodja za vnos lahko prek jezikovnih nastavitev poleg seznama jezikov omogočite kadarkoli.",
 	"ext-uls-language-settings-applying": "Uveljavljanje ...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|1=Še en|Še $1}}"
 }
