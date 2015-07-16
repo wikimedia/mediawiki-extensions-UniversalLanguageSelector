@@ -101,7 +101,9 @@
 				this.preferences = preferenceStore().get( this.preferenceName );
 			} else {
 				var options = mw.user.options.get( this.preferenceName );
-
+				if ( !options ) {
+					options = '{}';
+				}
 				// Try to parse JSON
 				try {
 					this.preferences = JSON.parse( options );
