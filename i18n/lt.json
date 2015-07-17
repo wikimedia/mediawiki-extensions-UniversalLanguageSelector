@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mantak111"
+			"Mantak111",
+			"Salpusnis"
 		]
 	},
 	"uls-desc": "Suteikia vartotojui keliais būdais, pasirinkti kalbą ir sureguliuoti kalbos parametrus.",
@@ -9,6 +10,8 @@
 	"ext-uls-select-language-settings-icon-tooltip": "Kalbos nustatymai",
 	"ext-uls-undo-language-tooltip-text": "Kalba pakeista iš $1",
 	"ext-uls-language-settings-preferences-link": "Daugiau kalbos parametrų",
+	"uls-betafeature-label": "Kompaktiškas kalbų sąrašas",
+	"uls-betafeature-desc": "Rodyti trumpesnę kalbų sąrašo versiją, apimančią tik Jums aktualesnes kalbas.",
 	"ext-uls-display-settings-title": "Ekrano parametrai",
 	"ext-uls-display-settings-language-tab": "Kalba",
 	"ext-uls-display-settings-fonts-tab": "Šriftai",
@@ -21,8 +24,11 @@
 	"ext-uls-display-settings-font-settings": "Šrifto parametrai",
 	"ext-uls-display-settings-ui-language": "Rodymo kalba",
 	"ext-uls-display-settings-anon-label": "Rodymo kalba:",
-	"ext-uls-display-settings-anon-same-as-content": "Lietuvių (toks pat kaip turinys)",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (toks pat kaip turinys)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Prisijunkite]], kad pasirinktumėte skirtingą kalbą meniu.",
+	"ext-uls-webfonts-settings-title": "Atsisiųsti šriftus, kai reikia",
+	"ext-uls-webfonts-settings-info": "Atsisiųsti trūkstamus šriftus automatiškai ir leisti pasirinkti pageidautinus šriftus.",
+	"ext-uls-webfonts-settings-info-link": "Daugiau informacijos",
 	"ext-uls-webfonts-select-for": "Pasirinkite šriftą $1",
 	"ext-uls-webfonts-select-for-ui-info": "Šriftas naudojamas vartotojo sąsajai",
 	"ext-uls-webfonts-select-for-content-info": "Šriftas naudojamas turiniui",
@@ -34,6 +40,7 @@
 	"ext-uls-input-settings-ime-settings": "Įvesties metodai $1",
 	"ext-uls-input-settings-ui-language": "Kalba naudojama rašybai",
 	"ext-uls-back-to-input-settings": "Grįžti į įvesties parametrus",
+	"ext-uls-ime-help": "Kaip naudoti",
 	"ext-uls-disable-input-method": "Naudoti klaviatūrą",
 	"ext-uls-input-settings-more-languages-tooltip": "Daugiau kalbų",
 	"jquery-ime-other-languages": "Kitos kalbos",
@@ -46,5 +53,17 @@
 	"ext-uls-input-disable-notification": "Įvesties priemonės yra išjungtos",
 	"ext-uls-input-disable-notification-undo": "Anuliuoti",
 	"ext-uls-input-disable-notification-info-personal": "Jūs galite įgalinti įvesties priemones bet kuriuo metu iš kalbos parametrų.",
-	"ext-uls-input-disable-notification-info-interlanguage": "Jūs galite įgalinti įvesties priemones bet kuriuo metu iš kalbos parametrų šalia kalbos sąrašo."
+	"ext-uls-input-disable-notification-info-interlanguage": "Jūs galite įgalinti įvesties priemones bet kuriuo metu iš kalbos parametrų šalia kalbos sąrašo.",
+	"ext-uls-language-settings-applying": "Taikant...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Viena daugiau|$1 daugiau}}",
+	"apihelp-languagesearch-description": "Ieškoti kalbų pavadinimų kiekviename scenarijuje.",
+	"apihelp-languagesearch-param-search": "Ieškoti eilutės.",
+	"apihelp-languagesearch-param-typos": "Leistinas rašybos klaidų skaičius paieškos eilutėje.",
+	"apihelp-languagesearch-example-1": "Ieškoti \"Te\"",
+	"apihelp-languagesearch-example-2": "Ieškoti \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Ieškoti \"ഫി\", leidžiant vieną rinkimo klaidą",
+	"apihelp-ulslocalization-description": "Gauti ULS lokalizavimas pateikta kalba.",
+	"apihelp-ulslocalization-param-language": "Kalbos kodas.",
+	"apihelp-ulslocalization-example-1": "Gauti tamilų lokalizavimą",
+	"apihelp-ulslocalization-example-2": "Gauti Hindi lokalizavimą"
 }
