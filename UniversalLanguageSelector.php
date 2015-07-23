@@ -212,6 +212,8 @@ $GLOBALS['wgHooks']['BeforePageDisplay'][] = 'UniversalLanguageSelectorHooks::ad
 $GLOBALS['wgHooks']['EventLoggingRegisterSchemas'][] =
 	'UniversalLanguageSelectorHooks::onEventLoggingRegisterSchemas';
 $GLOBALS['wgHooks']['PersonalUrls'][] = 'UniversalLanguageSelectorHooks::addPersonalBarTrigger';
+$GLOBALS['wgHooks']['ResourceLoaderRegisterModules'][] =
+	'UniversalLanguageSelectorHooks::onResourceLoaderRegisterModules';
 $GLOBALS['wgHooks']['ResourceLoaderTestModules'][] =
 	'UniversalLanguageSelectorHooks::addTestModules';
 $GLOBALS['wgHooks']['ResourceLoaderGetConfigVars'][] = 'UniversalLanguageSelectorHooks::addConfig';
