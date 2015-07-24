@@ -55,7 +55,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Bạn có thể bật bộ gõ bất cứ lúc nào từ tùy chọn ngôn ngữ.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Bạn có thể bật bộ gõ bất cứ lúc nào từ tùy chọn ngôn ngữ bên cạnh danh sách ngôn ngữ.",
 	"ext-uls-language-settings-applying": "Đang áp dụng…",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Một ngôn ngữ|$1 ngôn ngữ}} nữa",
+	"ext-uls-compact-link-count": "$1 nữa",
 	"apihelp-languagesearch-description": "Tìm kiếm các tên người dùng trong hệ thống viết nào.",
 	"apihelp-languagesearch-param-search": "Chuỗi tìm kiếm.",
 	"apihelp-languagesearch-param-typos": "Số lỗi chính tả được cho phép trong chuỗi tìm kiếm.",

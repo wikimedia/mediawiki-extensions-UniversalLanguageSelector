@@ -42,7 +42,7 @@
 	"ext-uls-webfonts-system-font": "Value in a dropdown. System font means that instead of using a specific font provided by this extension, the default font defined in the browser or operating system is used.",
 	"ext-uls-back-to-display-settings": "Text for the link shown when language selector is accessed from language settings.",
 	"ext-uls-input-settings-title": "Title text for input settings screen",
-	"ext-uls-input-settings-title-short": "Short title for input settings screen",
+	"ext-uls-input-settings-title-short": "Short title for input settings screen\n{{Identical|Input}}",
 	"ext-uls-input-settings-desc": "Short description about input settings. Users are asked if they're trying to type in a language different from the current one, so that they can select the desired language and write more easily.",
 	"ext-uls-input-settings-ime-settings": "*$1 - language name",
 	"ext-uls-input-settings-ui-language": "Sub section title for input settings screen",
