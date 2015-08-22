@@ -4,10 +4,10 @@
 			"Lam-ang"
 		]
 	},
-	"uls-desc": "Mangited iti agar-aramat kadagiti nadumaduma a pamay-an iti panagpili ti maysa a pagsasao ken ti panagbaliw kadagiti pannakaisaad ti pagsasao",
+	"uls-desc": "Mangited iti agar-aramat kadagiti nadumaduma a pamay-an iti panagpili iti maysa a pagsasao ken ti panagbaliw kadagiti pannakaisaad ti pagsasao",
 	"uls-plang-title-languages": "Dagiti pagsasao",
 	"ext-uls-select-language-settings-icon-tooltip": "Dagiti pannakaisaad ti pagsasao",
-	"ext-uls-undo-language-tooltip-text": "Binaliwan ti pagsasao manipud ti $1",
+	"ext-uls-undo-language-tooltip-text": "Binaliwan ti pagsasao manipud iti $1",
 	"ext-uls-language-settings-preferences-link": "Adu pay a pannakaisaad ti pagsasao",
 	"uls-betafeature-label": "Kompakto a silsilpo ti pagsasao",
 	"uls-betafeature-desc": "Ipakita ti ababa a bersion ti listaan ti pagsasao, ken dagiti laeng pagsasao a maitunos kaniam.",
@@ -15,7 +15,7 @@
 	"ext-uls-display-settings-language-tab": "Pagsasao",
 	"ext-uls-display-settings-fonts-tab": "Kita ti letletra",
 	"ext-uls-display-settings-title-short": "Idaya",
-	"ext-uls-display-settings-desc": "Isaad ti pagsasao nga inus-usar para kadagiti pagpilian ken letletra.",
+	"ext-uls-display-settings-desc": "Isaad ti inus-usar a pagsasao para kadagiti pagpilian ken letletra.",
 	"ext-uls-language-settings-title": "Dagiti pannakaisaad ti pagsasao",
 	"ext-uls-language-settings-apply": "Ipakat dagiti pannakaisaad",
 	"ext-uls-language-settings-cancel": "Ukasen",
@@ -52,9 +52,9 @@
 	"ext-uls-input-disable-notification": "Dagiti ramit ti ikabil ket nabaldadon.",
 	"ext-uls-input-disable-notification-undo": "Ibabawi",
 	"ext-uls-input-disable-notification-info-personal": "Mabalinmo a pakabaelan dagiti ramit ti ikabil iti aniaman a panawen manipud kadagiti pannakaisaad ti pagsasao.",
-	"ext-uls-input-disable-notification-info-interlanguage": "Mabalinmo a pakabaelan dagiti ramit ti ikabil manipud kadagiti pannakaisaad ti pagsasao idiay kaabay ti listaan ti pagsasao.",
+	"ext-uls-input-disable-notification-info-interlanguage": "Mabalinmo a pakabaelan dagiti ramit ti ikabil manipud kadagiti pannakaisaad ti pagsasao iti kaabay ti listaan ti pagsasao.",
 	"ext-uls-language-settings-applying": "Ipakpakat...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Maysa pay a pagsasao|$1 pay kadagiti pagsasao}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Maysa pay|$1 pay}}",
 	"apihelp-languagesearch-description": "Agbiruk kadagiti nagan ti pagsasao iti ania man nga eskritu.",
 	"apihelp-languagesearch-param-search": "Kuerdas ti panagbiruk.",
 	"apihelp-languagesearch-param-typos": "Bilang dagiti kamali ti panangiletra a maipalubos iti kuerdas ti panagbiruk.",
@@ -62,7 +62,7 @@
 	"apihelp-languagesearch-example-2": "Agbiruk para iti \"ഫി\"",
 	"apihelp-languagesearch-example-3": "Agbiruk para iti \"ഫി\", a mangipalubos iti maysa a kamali",
 	"apihelp-ulslocalization-description": "Alaen ti lokalisasion ti ULS iti naited a pagsasao.",
-	"apihelp-ulslocalization-param-language": "Kuerdas ti pagsasao.",
+	"apihelp-ulslocalization-param-language": "Kodigo ti pagsasao.",
 	"apihelp-ulslocalization-example-1": "Alaen ti lokalisasion ti Tamil",
 	"apihelp-ulslocalization-example-2": "Alaen ti lokalisasion ti Hindi"
 }
