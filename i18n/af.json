@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Naudefj"
+			"Naudefj",
+			"Fwolff"
 		]
 	},
 	"uls-plang-title-languages": "Tale",
@@ -52,5 +53,6 @@
 	"ext-uls-input-disable-notification-info-personal": "U kan die invoer-gereedskap weer via die taal-voorkeure aktiveer",
 	"ext-uls-input-disable-notification-info-interlanguage": "U kan die invoer-gereedskap enige tyd weer via die taal-voorkeure langs die lys van tale aktiveer.",
 	"ext-uls-language-settings-applying": "Pas toe...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Een meer|$1 meer}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Een meer|$1 meer}}",
+	"apihelp-ulslocalization-param-language": "Taalkode."
 }
