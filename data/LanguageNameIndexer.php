@@ -31,7 +31,7 @@ class LanguageNameIndexer extends Maintenance {
 	}
 
 	public function execute() {
-		$languages = Language::fetchLanguageNames( null, 'all' ); // since 1.20
+		$languages = Language::fetchLanguageNames( null, 'all' );
 
 		$all = array();
 		$buckets = array();

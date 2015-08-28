@@ -156,7 +156,7 @@ class UniversalLanguageSelectorHooks {
 	 * @return string
 	 */
 	protected static function getDefaultLanguage( array $preferred ) {
-		$supported = Language::fetchLanguageNames( null, 'mwfile' ); // since 1.20
+		$supported = Language::fetchLanguageNames( null, 'mwfile' );
 
 		// look for a language that is acceptable to the client
 		// and known to the wiki.
