@@ -1,0 +1,17 @@
+== UniversalLanguageSelector 2015.08 ==
+Released at 2015-08-28.
+
+=== Noteworthy changes ===
+* ULS will use jQuery.i18n from MediaWiki core if available.
+* Updated the default geoiplookup URL.
+* ULS supports extension registration now.
+
+* Fonts:
+** Added Gothic font.
+
+* Input Methods:
+** Add Northern Luri keyboard layout.
+** Add Southern Kurdish keyboard layout.
+** Add South Azerbaijani keyboard layout.
+** Add Arabic keyboard layout for Western Baluchi (bgn) (Only for MediaWiki > 1.25).
+** Improvement in many keyboard layouts.
