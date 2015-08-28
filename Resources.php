@@ -49,6 +49,7 @@ $wgResourceModules['ext.uls.ime'] = array(
 		'ext.uls.mediawiki',
 		'ext.uls.messages',
 		'jquery.ime',
+		'mediawiki.notify',
 	),
 	'messages' => array(
 		'uls-ime-helppage',
