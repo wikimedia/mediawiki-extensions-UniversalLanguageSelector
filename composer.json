@@ -20,8 +20,5 @@
 	},
 	"suggest": {
 		"mediawiki/cldr": "Language names in all languages"
-	},
-	"autoload": {
-		"files": ["UniversalLanguageSelector.php"]
 	}
 }
