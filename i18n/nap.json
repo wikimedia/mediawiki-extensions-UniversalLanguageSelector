@@ -3,11 +3,25 @@
 		"authors": [
 			"Chelin",
 			"C.R.",
-			"Nemo bis"
+			"Nemo bis",
+			"Candalua"
 		]
 	},
 	"uls-plang-title-languages": "Lengue",
 	"uls-betafeature-label": "Cumpatta cullegamiente lenguisteche",
 	"uls-betafeature-desc": "Mmusta na verziona cchiù curta d' 'a lista 'e llengue, sulamente cu 'e llengue ca songo 'e cchiù mpurtante pe' vuje.",
-	"ext-uls-language-settings-cancel": "Canciella"
+	"ext-uls-display-settings-language-tab": "Lengua",
+	"ext-uls-display-settings-fonts-tab": "Caratteri",
+	"ext-uls-display-settings-title-short": "Aspetto",
+	"ext-uls-language-settings-cancel": "Canciella",
+	"ext-uls-display-settings-font-settings": "Mpustaziune 'e carattere",
+	"ext-uls-display-settings-ui-language": "Lengua 'e visualizzazione",
+	"ext-uls-display-settings-anon-label": "Lengua 'e visualizzazione:",
+	"ext-uls-webfonts-settings-info-link": "Cchiù nfurmaziune",
+	"jquery-ime-other-languages": "Ate lengue",
+	"jquery-ime-help": "Ajùto",
+	"ext-uls-input-disable-notification-undo": "Annulla",
+	"apihelp-languagesearch-example-1": "Circa \"Te\"",
+	"apihelp-languagesearch-example-2": "Circa \"ഫി\"",
+	"apihelp-ulslocalization-param-language": "Codece lengua."
 }

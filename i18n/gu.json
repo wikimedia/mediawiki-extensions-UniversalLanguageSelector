@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Ashok modhvadia",
-			"KartikMistry"
+			"KartikMistry",
+			"Dsvyas"
 		]
 	},
 	"uls-desc": "સભ્યને ભાષા પસંદગી અને ગોઠવણીઓ માટેનાં અનેક માર્ગો પૂરા પાડે છે",
@@ -63,7 +64,7 @@
 	"apihelp-languagesearch-example-2": "\"ഫി\" માટે શોધો",
 	"apihelp-languagesearch-example-3": "એક ભૂલ કરીને \"ഫി\", માટે શોધો",
 	"apihelp-ulslocalization-description": "ULS નું ભાષાંતર આપેલી ભાષા માટે મેળવો.",
-	"apihelp-ulslocalization-param-language": "ભાષાસંહિતા.",
+	"apihelp-ulslocalization-param-language": "ભાષા સંજ્ઞા.",
 	"apihelp-ulslocalization-example-1": "તમિલ ભાષાંતર મેળવો",
 	"apihelp-ulslocalization-example-2": "હિન્દી ભાષાંતર મેળવો"
 }
