@@ -22,7 +22,7 @@
 	var hasOwn = Object.prototype.hasOwnProperty;
 
 	mw.uls = mw.uls || {};
-	mw.uls.previousLanguagesCookie = 'uls-previous-languages';
+	mw.uls.previousLanguagesStorageKey = 'uls-previous-languages';
 	mw.uls.previousLanguageAutonymCookie = 'uls-previous-language-autonym';
 	mw.uls.languageSettingsModules = [ 'ext.uls.inputsettings', 'ext.uls.displaysettings' ];
 
@@ -85,22 +85,33 @@
 	};
 
 	mw.uls.setPreviousLanguages = function ( previousLanguages ) {
-		$.cookie( mw.uls.previousLanguagesCookie,
-			JSON.stringify( previousLanguages ), {
-				path: '/'
-			}
-		);
+		try {
+			localStorage.setItem(
+				mw.uls.previousLanguagesStorageKey,
+				JSON.stringify( previousLanguages.slice( -5 ) )
+			);
+		} catch ( e ) {}
 	};
 
 	mw.uls.getPreviousLanguages = function () {
-		var previousLanguages = $.cookie( mw.uls.previousLanguagesCookie );
+		var previousLanguages = $.cookie( mw.uls.previousLanguagesStorageKey );
 
-		if ( !previousLanguages ) {
-			return [];
+		if ( $.isArray( previousLanguages ) ) {
+			// Migrate data from cookie to localStorage.
+			mw.uls.setPreviousLanguages( previousLanguages );
+			$.removeCookie( mw.uls.previousLanguagesStorageKey );
+		} else {
+			previousLanguages = [];
 		}
 
-		// return last 5 language changes
-		return JSON.parse( previousLanguages ).slice( -5 );
+		try {
+			previousLanguages.push.apply(
+				previousLanguages,
+				JSON.parse( localStorage.getItem( mw.uls.previousLanguagesStorageKey ) )
+			);
+		} catch ( e ) {}
+
+		return previousLanguages.slice( -5 );
 	};
 
 	/**
