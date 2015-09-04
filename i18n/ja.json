@@ -3,7 +3,8 @@
 		"authors": [
 			"Fryed-peach",
 			"Shirayuki",
-			"Sujiniku"
+			"Sujiniku",
+			"Otokoume"
 		]
 	},
 	"uls-desc": "言語を選択するため/言語設定を調整するための、いくつかの方法を利用者に提供する",
@@ -57,5 +58,6 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "言語一覧の隣にある言語の設定で、いつでも入力ツールを有効にできます。",
 	"ext-uls-language-settings-applying": "適用しています...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|もう一つ|他 $1}}",
+	"apihelp-languagesearch-param-search": "検索文字列。",
 	"apihelp-ulslocalization-param-language": "言語コード"
 }
