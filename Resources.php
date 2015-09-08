@@ -70,7 +70,8 @@ $wgResourceModules['ext.uls.init'] = array(
 		'monobook' => 'resources/css/ext.uls-monobook.css',
 	),
 	'dependencies' => array(
-		'mediawiki.Uri',
+		'mediawiki.api',
+		'mediawiki.cookie',
 		'jquery.client',
 		'jquery.cookie',
 	),

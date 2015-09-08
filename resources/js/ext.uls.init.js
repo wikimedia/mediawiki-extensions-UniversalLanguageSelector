@@ -60,19 +60,42 @@
 	};
 
 	/**
-	 * Change the language of wiki using setlang URL parameter
+	 * Change the language of wiki using API or set cookie and reload the page
 	 * @param {string} language Language code.
 	 */
 	mw.uls.changeLanguage = function ( language ) {
-		var uri = new mw.Uri( window.location.href ),
-			deferred = new $.Deferred();
+		var deferred = new $.Deferred();
+
+		function changeLanguageAnon() {
+			if ( mw.config.get( 'wgULSAnonCanChangeLanguage' ) ) {
+				mw.cookie.set( 'language', language );
+				location.reload();
+			}
+		}
 
 		deferred.done( function () {
-			uri.extend( {
-				setlang: language
-			} );
+			var api;
 
-			window.location.href = uri.toString();
+			if ( mw.user.isAnon() ) {
+				changeLanguageAnon();
+				return;
+			}
+
+			api = new mw.Api();
+			// @todo Change this to api.saveOption when ULS minimum MW version is 1.25
+			api.postWithToken( 'options', {
+				action: 'options',
+				optionname: 'language',
+				optionvalue: language
+			} )
+			.done( function () {
+				location.reload();
+			} )
+			.fail( function () {
+				// Set options failed. Maybe the user has logged off.
+				// Continue like anonymous user and set cookie.
+				changeLanguageAnon();
+			} );
 		} );
 
 		mw.hook( 'mw.uls.interface.language.change' ).fire( language, deferred );
