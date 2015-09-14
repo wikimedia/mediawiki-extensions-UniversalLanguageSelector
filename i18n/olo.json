@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mashoi7"
+		]
+	},
+	"uls-plang-title-languages": "Kielet",
+	"ext-uls-select-language-settings-icon-tooltip": "Kieliazetukset",
+	"ext-uls-undo-language-tooltip-text": "Kieli vaihtettu kielespäi $1",
+	"ext-uls-display-settings-language-tab": "Kieli",
+	"ext-uls-ime-help": "Kui käyttiä",
+	"apihelp-ulslocalization-param-language": "Kielikoudu."
+}
