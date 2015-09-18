@@ -3,7 +3,8 @@
 		"authors": [
 			"Mousa",
 			"Koroğlu",
-			"Ebrahimi-amir"
+			"Ebrahimi-amir",
+			"Alp Er Tunqa"
 		]
 	},
 	"ext-uls-undo-language-tooltip-text": "دیل $1-دن دَییشدیریلدی",
@@ -33,7 +34,7 @@
 	"ext-uls-input-settings-more-languages-tooltip": "چوخ دیل‌لر",
 	"jquery-ime-other-languages": "آیری دیل‌لر",
 	"jquery-ime-disable-text": "گیریش یولونو ایشدن سال",
-	"jquery-ime-help": "یاردیم",
+	"jquery-ime-help": "کؤمک",
 	"ext-uls-input-disable": "گیریش یولو آراجلارینی ایشدن سال",
 	"ext-uls-input-enable": "گیریش یولو آراجلارینی ایشه سال",
 	"ext-uls-input-disable-info": "گیریش یولو آراجلاری ایشدن دوشدولر.",

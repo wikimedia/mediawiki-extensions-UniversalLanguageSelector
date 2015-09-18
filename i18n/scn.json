@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gmelfi"
+			"Gmelfi",
+			"Pippinu"
 		]
 	},
 	"ext-uls-select-language-settings-icon-tooltip": "Mpustazzioni pâ lingua",
@@ -9,14 +10,14 @@
 	"ext-uls-language-settings-preferences-link": "Àutri mpustazzioni pâ lingua",
 	"ext-uls-display-settings-title": "Mpustazzioni di visualizzazzioni",
 	"ext-uls-display-settings-language-tab": "Lingua",
-	"ext-uls-display-settings-fonts-tab": "Tipa di carattiri",
+	"ext-uls-display-settings-fonts-tab": "Tipi di caràttiri",
 	"ext-uls-display-settings-title-short": "Littura",
 	"ext-uls-display-settings-desc": "Mposta la lingua usata pi minù e carattiri.",
 	"ext-uls-language-settings-title": "Mpustazzioni pâ lingua",
 	"ext-uls-language-settings-apply": "Applica li mpustazzioni",
 	"ext-uls-language-settings-cancel": "Annulla",
 	"ext-uls-language-buttons-help": "Cancia la lingua dî minù. La lingua dî cuntinuti nun veni canciata.",
-	"ext-uls-display-settings-font-settings": "Mpustazzioni pî tipa di carattiri",
+	"ext-uls-display-settings-font-settings": "Mpustazzioni pî tipi di caràttiri",
 	"ext-uls-display-settings-ui-language": "Lingua di visualizzazzioni",
 	"ext-uls-display-settings-anon-label": "Lingua di visualizzazioni:",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (come lu cuntinutu)",
