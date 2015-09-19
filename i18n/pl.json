@@ -61,5 +61,6 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Możesz w dowolnym momencie włączyć narzędzia wprowadzania tekstu w ustawieniach języka, obok listy języków.",
 	"ext-uls-language-settings-applying": "Realizacja w toku...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Kolejny język|$1 kolejne języki|$1 kolejnych języków}}",
+	"apihelp-languagesearch-param-search": "Wyszukaj tekst.",
 	"apihelp-ulslocalization-param-language": "Kod języka."
 }
