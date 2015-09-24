@@ -5,3 +5,5 @@
 .idea
 .bundle/
 node_modules/
+composer.lock
+vendor/
