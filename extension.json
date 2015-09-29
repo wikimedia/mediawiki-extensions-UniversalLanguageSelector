@@ -65,7 +65,7 @@
 		"@ULSWebfontsEnabled": "Enable the webfonts feature for all users by default. Can be controlled by the user. @since 2014.02",
 		"ULSWebfontsEnabled": true,
 		"@ULSMobileWebfontsEnabled": "Set whether webfont support is loaded within the mobile interface (via the MobileFrontend extension).",
-		"ULSMobileWebfontsEnabled": true,
+		"ULSMobileWebfontsEnabled": false,
 		"@ULSPosition": "The location and the form of the language selection trigger.  The possible values are: (a) \"personal\"- as a link near the username or the log in link in the personal toolbar (default). (b) \"interlanguage\": as an icon near the header of the list of interlanguage  links in the sidebar.",
 		"ULSPosition": "personal",
 		"@ULSEventLogging": "Whether to use EventLogging. The EventLogging extension must be installed if this option is enabled. @since 2013.06",
