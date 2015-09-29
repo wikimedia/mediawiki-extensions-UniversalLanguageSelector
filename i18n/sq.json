@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Olsi"
+			"Olsi",
+			"Kosovastar"
 		]
 	},
-	"ext-uls-select-language-settings-icon-tooltip": "Cilësimet e gjuhës",
+	"ext-uls-select-language-settings-icon-tooltip": "Tiparet gjuhësore",
 	"ext-uls-undo-language-tooltip-text": "Gjuha u ndryshua nga $1",
 	"ext-uls-language-settings-preferences-link": "Më shumë cilësime për gjuhët",
 	"ext-uls-display-settings-title": "Cilësimet e shfaqjes",
@@ -12,7 +13,7 @@
 	"ext-uls-display-settings-fonts-tab": "Shkrimet",
 	"ext-uls-display-settings-title-short": "Shfaqja",
 	"ext-uls-display-settings-desc": "Vendos gjuhën e përdorur për menutë dhe shkrimet.",
-	"ext-uls-language-settings-title": "Cilësimet e gjuhës",
+	"ext-uls-language-settings-title": "Tiparet gjuhësore",
 	"ext-uls-language-settings-apply": "Apliko cilësimet",
 	"ext-uls-language-settings-cancel": "Anulo",
 	"ext-uls-language-buttons-help": "Ndrysho gjuhën e menuve. Gjuha e përmbajtjes nuk do të pësojë ndryshim.",
@@ -43,6 +44,6 @@
 	"ext-uls-input-settings-noime": "Nuk ka metoda shkrimi për këtë gjuhë.",
 	"ext-uls-input-disable-notification": "Mjetet e shkrimit janë çaktivizuar",
 	"ext-uls-input-disable-notification-undo": "Zhbëj",
-	"ext-uls-input-disable-notification-info-personal": "Ju mund t'i aktivizoni mjetet e shkrimit në çdo kohë nga cilësimet e gjuhës.",
+	"ext-uls-input-disable-notification-info-personal": "Ju mund t'i aktivizoni mjetet e shkrimit në çdo kohë nën tiparet gjuhësore.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Ju mund t'i çaktivizoni mjetet e shkrimit në çdo kohë nga cilësimet e gjuhës ngjitur me listën e gjuhëve."
 }

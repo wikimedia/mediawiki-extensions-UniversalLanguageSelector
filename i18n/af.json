@@ -54,5 +54,8 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "U kan die invoer-gereedskap enige tyd weer via die taal-voorkeure langs die lys van tale aktiveer.",
 	"ext-uls-language-settings-applying": "Pas toe...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Een meer|$1 meer}}",
+	"apihelp-languagesearch-description": "Soek taalname in enige skryfstelsel.",
+	"apihelp-languagesearch-param-search": "Soekstring.",
+	"apihelp-languagesearch-param-typos": "Aantal spelfoute om toe te laat in die soekstring.",
 	"apihelp-ulslocalization-param-language": "Taalkode."
 }
