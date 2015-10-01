@@ -30,10 +30,6 @@ if ( function_exists( 'wfLoadExtension' ) ) {
 	return;
 }
 
-if ( !defined( 'MEDIAWIKI' ) ) {
-	echo "This file is an extension to the MediaWiki software and cannot be used standalone.\n";
-	die( -1 );
-}
 /**
  * Version number used in extension credits and in other placed where needed.
  */
