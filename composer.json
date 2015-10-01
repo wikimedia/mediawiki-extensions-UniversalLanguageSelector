@@ -22,8 +22,8 @@
 		"mediawiki/cldr": "Language names in all languages"
 	},
 	"require-dev": {
-		"jakub-onderka/php-parallel-lint": "0.9.*",
-		"mediawiki/mediawiki-codesniffer": "0.3.0"
+		"jakub-onderka/php-parallel-lint": "0.9",
+		"mediawiki/mediawiki-codesniffer": "0.4.0"
 	},
 	"scripts": {
 		"test": [
