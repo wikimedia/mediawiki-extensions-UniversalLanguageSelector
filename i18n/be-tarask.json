@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Wizardist"
+			"Wizardist",
+			"Red Winged Duck"
 		]
 	},
 	"uls-desc": "Дае карыстальніку некалькі спосабаў выбраць мову і зьмяніць моўныя налады",
@@ -9,6 +10,7 @@
 	"ext-uls-select-language-settings-icon-tooltip": "Моўныя налады",
 	"ext-uls-undo-language-tooltip-text": "Папярэдняя мова — $1",
 	"ext-uls-language-settings-preferences-link": "Больш моўных наладаў",
+	"uls-betafeature-label": "Кампактныя моўныя спасылкі",
 	"ext-uls-display-settings-title": "Налады выгляду",
 	"ext-uls-display-settings-language-tab": "Мова",
 	"ext-uls-display-settings-fonts-tab": "Шрыфты",
