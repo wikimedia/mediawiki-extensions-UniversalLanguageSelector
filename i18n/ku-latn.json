@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"George Animal",
-			"Ghybu"
+			"Ghybu",
+			"Bikarhêner"
 		]
 	},
 	"uls-plang-title-languages": "Ziman",
@@ -19,6 +20,7 @@
 	"ext-uls-webfonts-settings-info-link": "Zêdetir agahî",
 	"ext-uls-webfonts-select-for-content-info": "Tîpên ku bo naverokê tên bikaranîn",
 	"ext-uls-webfonts-system-font": "Tîpên pergalê",
+	"ext-uls-input-settings-title-short": "Têketin",
 	"ext-uls-input-settings-desc": "Tu bi zimanekî cuda dinivîsî?",
 	"ext-uls-input-settings-ui-language": "Zimanê ku bo nivîsînê tê bikaranîn",
 	"ext-uls-input-settings-more-languages-tooltip": "Zêdetir ziman",
