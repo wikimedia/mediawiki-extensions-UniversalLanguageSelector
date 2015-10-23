@@ -9,7 +9,10 @@
 		"Web fonts"
 	],
 	"homepage": "https://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector",
-	"license": [ "GPL-2.0+", "MIT" ],
+	"license": [
+		"GPL-2.0+",
+		"MIT"
+	],
 	"support": {
 		"issues": "https://phabricator.wikimedia.org/tag/mediawiki-extensions-universallanguageselector/",
 		"irc": "irc://irc.freenode.net/mediawiki-i18n"
@@ -23,7 +26,7 @@
 	},
 	"require-dev": {
 		"jakub-onderka/php-parallel-lint": "0.9",
-		"mediawiki/mediawiki-codesniffer": "0.4.0"
+		"mediawiki/mediawiki-codesniffer": "0.5.0"
 	},
 	"scripts": {
 		"test": [
