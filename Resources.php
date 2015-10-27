@@ -34,6 +34,7 @@ $wgResourceModules['ext.uls.displaysettings'] = array(
 		'ext.uls.mediawiki',
 		'ext.uls.webfonts',
 		'mediawiki.api.parse',
+		'mediawiki.Uri',
 	),
 ) + $resourcePaths;
 

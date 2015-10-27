@@ -114,7 +114,8 @@
 				"ext.uls.languagesettings",
 				"ext.uls.mediawiki",
 				"ext.uls.webfonts",
-				"mediawiki.api.parse"
+				"mediawiki.api.parse",
+				"mediawiki.Uri"
 			],
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
@@ -131,7 +132,8 @@
 				"ext.uls.preferences",
 				"ext.uls.mediawiki",
 				"ext.uls.messages",
-				"jquery.ime"
+				"jquery.ime",
+				"mediawiki.notify"
 			],
 			"messages": [
 				"uls-ime-helppage"
@@ -152,7 +154,8 @@
 				"monobook": "css/ext.uls-monobook.css"
 			},
 			"dependencies": [
-				"mediawiki.Uri",
+				"mediawiki.api",
+				"mediawiki.cookie",
 				"jquery.client",
 				"jquery.cookie"
 			],
