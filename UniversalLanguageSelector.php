@@ -33,7 +33,7 @@ if ( function_exists( 'wfLoadExtension' ) ) {
 /**
  * Version number used in extension credits and in other placed where needed.
  */
-define( 'ULS_VERSION', '2015-08-28' );
+define( 'ULS_VERSION', '2015-10-27' );
 
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
