@@ -1,0 +1,12 @@
+== UniversalLanguageSelector 2015.10 ==
+Released at 2015-10-28.
+
+=== Highlights ===
+* MediaWiki 1.23 is no longer supported. Extension is no longer automatically
+  loaded when installed via composer.
+* Language change is now done in two phase: first changed with API, then page
+  is reloaded. The 'setlang' URL parameter is no longer used, although it still
+  works. Due to the change, language switching might take a slightly longer
+  than previously.
+* Previous language selection is now stored in localstorage instead of cookies.
+* Support added for Livvi-Karelian (olo) language.

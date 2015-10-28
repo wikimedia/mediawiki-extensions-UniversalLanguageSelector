@@ -38,7 +38,7 @@ define( 'ULS_VERSION', '2015-10-27' );
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'UniversalLanguageSelector',
-	'version' => ULS_VERSION,
+	'version' => '[https://www.mediawiki.org/wiki/MLEB MLEB 2015.10]',
 	'author' => array(
 		'Alolita Sharma',
 		'Amir Aharoni',
