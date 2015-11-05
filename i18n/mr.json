@@ -54,5 +54,5 @@
 	"ext-uls-input-disable-notification-info-personal": "आपण क्षेपन साधनांचा (टायपींग/इनपुट टुल्स) वापर 'भाषा मांडणी'(लॅंग्वेज सेटींग्ज)तुन कधीही पुर्ववत् करु शकता.",
 	"ext-uls-input-disable-notification-info-interlanguage": "भाषेच्या यादीशेजारी असलेल्या क्षेपन साधनांचा (टायपींग/इनपुट टुल्स) वापर आपण   'भाषा मांडणी'(लॅंग्वेज सेटींग्ज)तुन कधीही पुर्ववत् करु शकता.",
 	"ext-uls-language-settings-applying": "लागू करीत आहे...",
-	"ext-uls-compact-link-count": "{PLURAL:$1|एक अधिक|$1 अधिक}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|एक अधिक|$1 अधिक}}"
 }

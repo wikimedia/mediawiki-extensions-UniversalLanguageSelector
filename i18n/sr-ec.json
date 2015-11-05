@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Milicevic01",
-			"Милан Јелисавчић"
+			"Милан Јелисавчић",
+			"Сербијана"
 		]
 	},
 	"uls-desc": "Даје кориснику неколико начина да изабере језик и да прилагоди поставке језика",
@@ -55,5 +56,5 @@
 	"ext-uls-input-disable-notification-info-personal": "Можете омогућити алате за унос у било које време на подешавањима језика.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Можете омогућити алатке за унос у било које време на подешавањима језика поред списка језика.",
 	"ext-uls-language-settings-applying": "Примењујем...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Још један језик|Још $1 језика}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Још један|Још $1}}"
 }
