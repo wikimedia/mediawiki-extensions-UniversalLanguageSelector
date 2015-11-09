@@ -197,7 +197,6 @@
 			"scripts": "js/ext.uls.interface.js",
 			"dependencies": [
 				"ext.uls.init",
-				"jquery.tipsy",
 				"mediawiki.jqueryMsg",
 				"mediawiki.user",
 				"ext.uls.webfonts"
