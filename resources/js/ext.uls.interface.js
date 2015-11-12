@@ -174,9 +174,11 @@
 			autonym = $.cookie( mw.uls.previousLanguageAutonymCookie );
 
 		if ( autonym ) {
-			deferred.resolve( autonym );
+			mw.loader.using( 'jquery.tipsy', function () {
+				deferred.resolve( autonym );
+			} );
 		} else {
-			mw.loader.using( 'jquery.uls.data', function () {
+			mw.loader.using( [ 'jquery.uls.data', 'jquery.tipsy' ], function () {
 				deferred.resolve( $.uls.data.getAutonym( code ) );
 			} );
 		}
@@ -184,12 +186,22 @@
 		return deferred.promise();
 	}
 
+	function userCanChangeLanguage() {
+		return mw.config.get( 'wgULSAnonCanChangeLanguage') || !mw.user.isAnon();
+	}
+
+	function userHasChangedLanguage() {
+		var previousLang = mw.uls.getPreviousLanguages().slice( -1 )[ 0 ],
+			currentLang = mw.config.get( 'wgUserLanguage' );
+		return previousLang && previousLang !== currentLang;
+	}
+
 	/**
 	 * The tooltip to be shown when language changed using ULS.
 	 * It also allows to undo the language selection.
 	 */
-	function showULSTooltip() {
-		var previousLang, $ulsTrigger, anonMode, showUndo, newLanguage, previousLanguages,
+	function showUndoTooltip() {
+		var previousLanguages, previousLang, $ulsTrigger,
 			ulsPosition = mw.config.get( 'wgULSPosition' ),
 			currentLang = mw.config.get( 'wgUserLanguage' ),
 			rtlPage = $( 'body' ).hasClass( 'rtl' ),
@@ -202,26 +214,11 @@
 			$( '.uls-settings-trigger' ) :
 			$( '.uls-trigger' );
 
-		previousLanguages = mw.uls.getPreviousLanguages() || [];
+		previousLanguages = mw.uls.getPreviousLanguages();
 		previousLang = previousLanguages.slice( -1 )[0];
 
-		// Whether we see current language for the first time
-		newLanguage = currentLang !== previousLang;
-		// Whether user is able to change language
-		anonMode = ( mw.user.isAnon() && !mw.config.get( 'wgULSAnonCanChangeLanguage' ) );
-		// Whether user is able to change language, and just did so
-		showUndo = !anonMode && newLanguage && previousLang !== undefined;
-
-		if ( newLanguage ) {
-			previousLanguages.push( currentLang );
-			mw.uls.setPreviousLanguages( previousLanguages );
-		}
-
-		if ( !showUndo ) {
-			// In interlanguage mode, we will have normal tooltip, make it look same using tipsy
-			$ulsTrigger.tipsy( { gravity: tipsyGravity[ulsPosition] } );
-			return;
-		}
+		previousLanguages.push( currentLang );
+		mw.uls.setPreviousLanguages( previousLanguages );
 
 		getUndoAutonym( previousLang ).done( function( autonym ) {
 			// Attach a tipsy tooltip to the trigger
@@ -475,7 +472,9 @@
 					return false;
 				} );
 
-			showULSTooltip();
+			if ( userCanChangeLanguage() && userHasChangedLanguage() ) {
+				showUndoTooltip();
+			}
 
 			$( 'body' ).on( 'focus.imeinit', imeSelector, function () {
 				var $input = $( this );
