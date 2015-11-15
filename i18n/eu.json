@@ -17,11 +17,18 @@
 	"ext-uls-language-buttons-help": "Aldatu menuen hizkuntza. Edukien hizkuntza ez da aldatuko.",
 	"ext-uls-display-settings-ui-language": "Bistaratze hizkuntza",
 	"ext-uls-display-settings-anon-label": "Bistaratze hizkuntza:",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (edukia bezala)",
+	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Hasi saioa]] menuetarako beste hizkuntza bat hautatzeko.",
 	"ext-uls-webfonts-settings-info-link": "Informazio gehiago",
+	"ext-uls-input-settings-title": "Sarrerako ezarpenak",
 	"ext-uls-input-settings-title-short": "Sarrera",
+	"ext-uls-input-settings-ui-language": "Idazteko hizkuntza",
+	"ext-uls-back-to-input-settings": "Itzuli sarrerako ezarpenetara",
 	"ext-uls-input-settings-more-languages-tooltip": "Hizkuntza gehiago",
 	"jquery-ime-other-languages": "Beste hizkuntzak",
 	"jquery-ime-help": "Laguntza",
+	"ext-uls-input-disable": "Desgaitu sarrerako tresnak",
+	"ext-uls-input-settings-noime": "Ez dago sarrerako metodorik erabilgarri hizkuntza honetarako.",
 	"ext-uls-input-disable-notification-undo": "Desegin",
 	"apihelp-ulslocalization-param-language": "Hizkuntza-kodea."
 }
