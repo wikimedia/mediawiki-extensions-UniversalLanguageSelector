@@ -28,7 +28,7 @@
 	"ext-uls-display-settings-anon-same-as-content": "$1 (як і зьмест)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Увайдзіце]], каб выбраць іншую мову інтэрфэйсу.",
 	"ext-uls-webfonts-settings-title": "Загружаць шрыфты на патрэбу",
-	"ext-uls-webfonts-settings-info": "Загружаць недастатнія шрыфты аўтаматычна і дазволіць выбар пераважных шрыфтаў.",
+	"ext-uls-webfonts-settings-info": "Загружаць адсутныя шрыфты аўтаматычна і дазволіць выбар пераважных шрыфтаў.",
 	"ext-uls-webfonts-settings-info-link": "Болей зьвестак",
 	"ext-uls-webfonts-select-for": "Шрыфт для мовы $1",
 	"ext-uls-webfonts-select-for-ui-info": "Шрыфт для інтэрфэйсу",
