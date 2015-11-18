@@ -2,8 +2,7 @@ class PanelPage
 	include PageObject
 	include LanguageModule
 
-	include URL
-	page_url URL.url("?<%=params[:extra]%>")
+	page_url "?<%=params[:extra]%>"
 
 	div(:uls, class: "uls-menu")
 	span(:uls_button_close, id: "uls-close")
@@ -48,7 +47,7 @@ class PanelPage
 	div(:interface, id: "footer")
 
 	def uls_language_name_item(language)
-		@browser.element(css: ".uls-language-block li[lang=#{language}] a")
+		browser.element(css: ".uls-language-block li[lang=#{language}] a")
 	end
 
 	def content_font
@@ -60,7 +59,7 @@ class PanelPage
 	end
 
 	def uls_onscreen?
-		@browser.execute_script( "
+		browser.execute_script( "
 			var $menu = $( '.uls-menu' ),
 				$window = $( window ),
 				top = $menu.offset().top,
@@ -71,11 +70,11 @@ class PanelPage
 	end
 
 	def webfonts_library_loaded
-		@browser.execute_script( "return ( $( 'body' ).data( 'webfonts' ) !== undefined )" )
+		browser.execute_script( "return ( $( 'body' ).data( 'webfonts' ) !== undefined )" )
 	end
 
 	private
 	def font(selector)
-		@browser.execute_script( "return $( '#{selector}' ).css( 'font-family' );" )
+		browser.execute_script( "return $( '#{selector}' ).css( 'font-family' );" )
 	end
 end

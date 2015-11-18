@@ -1,5 +1,5 @@
 Then(/^I see "(.*?)" as the name of the content language$/) do |text|
-	@browser.span(:text => "#{text}").should be_visible
+	browser.span(:text => "#{text}").should be_visible
 end
 
 When(/^I open the Universal Language Selector$/) do

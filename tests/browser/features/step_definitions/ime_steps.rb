@@ -3,7 +3,7 @@
 Given(/^I am on a wiki in Kotava language$/) do
   step "I am at the main page"
   # Fake a Kotava Wiki
-  @browser.execute_script( "mw.config.set( 'wgContentLanguage', 'avk' )" )
+  browser.execute_script( "mw.config.set( 'wgContentLanguage', 'avk' )" )
 end
 
 When(/^I click on an input box$/) do
@@ -55,7 +55,7 @@ When(/^I press Control-M$/) do
 end
 
 When(/^I reload the page$/) do
-  @browser.refresh
+  browser.refresh
 end
 
 Then(/^in it there must be an element with Malayalam text$/) do

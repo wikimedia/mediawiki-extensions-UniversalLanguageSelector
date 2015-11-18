@@ -2,8 +2,7 @@ class IMEPage
 	include PageObject
 	include LanguageModule
 
-	include URL
-	page_url URL.url("?<%=params[:extra]%>")
+	page_url "?<%=params[:extra]%>"
 
 	div(:input_method, class: "imeselector imeselector-toggle")
 	a(:input_method_enabled, class: "ime-name imeselector-toggle")
@@ -16,7 +15,7 @@ class IMEPage
 	text_field(:search_input, id: "searchInput")
 
 	def ime_input_method_menu_onscreen?
-		@browser.execute_script( "
+		browser.execute_script( "
 			var $selectorMenu = $( '.imeselector-menu' ),
 				menuLeft = $selectorMenu.offset().left,
 				menuRight = menuLeft + $selectorMenu.width();
