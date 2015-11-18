@@ -69,7 +69,7 @@ Then(/^in it there must be an element with Malayalam text$/) do
 end
 
 Given(/^I visit a random page with (.+) skin and (.+) as the interface language$/) do |skin, language|
-  visit(IMEPage, :using_params => {:extra => "useskin=#{skin.downcase}&uselang=#{on(IMEPage).language_to_code(language)}"})
+  visit(IMEPage, :using_params => { :extra => "useskin=#{skin.downcase}&uselang=#{on(IMEPage).language_to_code(language)}" })
 end
 
 Then(/^I should see the input method menu is not offscreen$/) do
