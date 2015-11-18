@@ -35,12 +35,6 @@ Style/GlobalVars:
 Style/HashSyntax:
   Enabled: false
 
-# Offense count: 90
-# Cop supports --auto-correct.
-# Configuration parameters: Width.
-Style/IndentationWidth:
-  Enabled: false
-
 # Offense count: 8
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyleForEmptyBraces, SupportedStyles.

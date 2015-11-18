@@ -85,10 +85,10 @@ Then(/^I see the logged in language settings panel$/) do
 end
 
 Then(/^I see Worldwide$/) do
-   on(InterlanguagePage) do |page|
-    page.language_list.should match Regexp.escape('Worldwide')
-    page.english_link_element.should be_visible
-  end
+  on(InterlanguagePage) do |page|
+   page.language_list.should match Regexp.escape('Worldwide')
+   page.english_link_element.should be_visible
+ end
 end
 
 Then(/^I click the cog icon to open language settings again$/) do
