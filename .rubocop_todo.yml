@@ -17,12 +17,6 @@ Metrics/LineLength:
 Style/AccessModifierIndentation:
   Enabled: false
 
-# Offense count: 6
-# Cop supports --auto-correct.
-# Configuration parameters: IndentWhenRelativeTo, SupportedStyles, IndentOneStep.
-Style/CaseIndentation:
-  Enabled: false
-
 # Offense count: 1
 # Configuration parameters: AllowedVariables.
 Style/GlobalVars:
