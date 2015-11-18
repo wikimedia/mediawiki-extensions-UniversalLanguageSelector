@@ -3,7 +3,7 @@
 Given(/^I am on a wiki in Kotava language$/) do
   step 'I am at the main page'
   # Fake a Kotava Wiki
-  browser.execute_script( "mw.config.set( 'wgContentLanguage', 'avk' )" )
+  browser.execute_script("mw.config.set( 'wgContentLanguage', 'avk' )")
 end
 
 When(/^I click on an input box$/) do

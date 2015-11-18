@@ -40,11 +40,3 @@ Style/HashSyntax:
 # Configuration parameters: EnforcedStyleForEmptyBraces, SupportedStyles.
 Style/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
-
-# Offense count: 10
-# Cop supports --auto-correct.
-Style/SpaceInsideParens:
-  Exclude:
-    - 'tests/browser/features/step_definitions/ime_steps.rb'
-    - 'tests/browser/features/support/pages/ime_page.rb'
-    - 'tests/browser/features/support/pages/panel_page.rb'

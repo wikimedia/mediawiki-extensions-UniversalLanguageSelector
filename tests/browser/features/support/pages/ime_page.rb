@@ -15,11 +15,11 @@ class IMEPage
   text_field(:search_input, id: 'searchInput')
 
   def ime_input_method_menu_onscreen?
-    browser.execute_script( "
+    browser.execute_script("
       var $selectorMenu = $( '.imeselector-menu' ),
         menuLeft = $selectorMenu.offset().left,
         menuRight = menuLeft + $selectorMenu.width();
 
-      return ( menuLeft >= 0 && menuRight <= $( window ).width() );" )
+      return ( menuLeft >= 0 && menuRight <= $( window ).width() );")
   end
 end

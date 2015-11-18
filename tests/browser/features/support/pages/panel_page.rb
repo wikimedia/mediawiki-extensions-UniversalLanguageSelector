@@ -59,22 +59,22 @@ class PanelPage
   end
 
   def uls_onscreen?
-    browser.execute_script( "
+    browser.execute_script("
       var $menu = $( '.uls-menu' ),
         $window = $( window ),
         top = $menu.offset().top,
         viewportTop = $window.scrollTop(),
         viewportBottom = $window.scrollTop() + $window.height();
 
-      return ( top < viewportBottom && top >= viewportTop )" )
+      return ( top < viewportBottom && top >= viewportTop )")
   end
 
   def webfonts_library_loaded
-    browser.execute_script( "return ( $( 'body' ).data( 'webfonts' ) !== undefined )" )
+    browser.execute_script("return ( $( 'body' ).data( 'webfonts' ) !== undefined )")
   end
 
   private
   def font(selector)
-    browser.execute_script( "return $( '#{selector}' ).css( 'font-family' );" )
+    browser.execute_script("return $( '#{selector}' ).css( 'font-family' );")
   end
 end
