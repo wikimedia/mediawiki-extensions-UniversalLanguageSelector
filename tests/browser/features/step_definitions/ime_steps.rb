@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 Given(/^I am on a wiki in Kotava language$/) do
-  step "I am at the main page"
+  step 'I am at the main page'
   # Fake a Kotava Wiki
   browser.execute_script( "mw.config.set( 'wgContentLanguage', 'avk' )" )
 end
@@ -15,7 +15,7 @@ When(/^I click on the input method indicator$/) do
 end
 
 When(/^I open the input method menu$/) do
-  step "I click on an input box"
+  step 'I click on an input box'
   on(IMEPage).input_method_element.when_present.click
 end
 
@@ -51,7 +51,7 @@ When(/^I click on the Malayalam InScript 2 menu item$/) do
 end
 
 When(/^I press Control-M$/) do
-  on(IMEPage).search_input_element.send_keys [:control, "m"]
+  on(IMEPage).search_input_element.send_keys [:control, 'm']
 end
 
 When(/^I reload the page$/) do
@@ -62,9 +62,9 @@ Then(/^in it there must be an element with Malayalam text$/) do
   # 'input_method_enabled' alone only returns []
   on(IMEPage) do |page|
     page.wait_until do
-      page.input_method_enabled_element.text != ""
+      page.input_method_enabled_element.text != ''
     end
-    page.input_method_enabled_element.text.should == "ഇൻസ്ക്രിപ്റ്റ് 2"
+    page.input_method_enabled_element.text.should == 'ഇൻസ്ക്രിപ്റ്റ് 2'
   end
 end
 

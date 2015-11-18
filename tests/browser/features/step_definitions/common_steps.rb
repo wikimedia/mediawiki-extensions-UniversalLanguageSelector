@@ -19,7 +19,7 @@ end
 
 Then(/^my interface language is "(.*?)"$/) do |language|
   code = on(PanelPage).language_to_code(language)
-  on(PanelPage).interface_element.attribute("lang").should == code
+  on(PanelPage).interface_element.attribute('lang').should == code
 end
 
 When(/^I click the button with the ellipsis$/) do

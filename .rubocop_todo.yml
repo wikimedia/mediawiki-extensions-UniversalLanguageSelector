@@ -54,9 +54,3 @@ Style/SpaceInsideParens:
     - 'tests/browser/features/step_definitions/ime_steps.rb'
     - 'tests/browser/features/support/pages/ime_page.rb'
     - 'tests/browser/features/support/pages/panel_page.rb'
-
-# Offense count: 130
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/StringLiterals:
-  Enabled: false

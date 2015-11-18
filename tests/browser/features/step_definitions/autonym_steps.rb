@@ -7,7 +7,7 @@ Then(/^I open Input side panel of language settings$/) do
 end
 
 Then(/^the Interlanguage links should use Autonym font$/) do
-  on(InterlanguagePage).interlang_link_element.style("font-family").should == "'Autonym',sans-serif"
+  on(InterlanguagePage).interlang_link_element.style('font-family').should == "'Autonym',sans-serif"
 end
 
 Then(/^elements that are not Interlanguage links should not use Autonym font$/) do

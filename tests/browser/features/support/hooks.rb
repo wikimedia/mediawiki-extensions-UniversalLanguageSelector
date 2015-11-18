@@ -1,3 +1,3 @@
 After do
-  step "I have reset my preferences"
+  step 'I have reset my preferences'
 end
