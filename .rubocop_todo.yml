@@ -28,9 +28,3 @@ Style/CaseIndentation:
 Style/GlobalVars:
   Exclude:
     - 'tests/browser/features/step_definitions/accept_language_steps.rb'
-
-# Offense count: 7
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, UseHashRocketsWithSymbolValues.
-Style/HashSyntax:
-  Enabled: false
