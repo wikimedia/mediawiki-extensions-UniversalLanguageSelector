@@ -12,12 +12,6 @@ Metrics/LineLength:
   Max: 168
 
 # Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/AccessModifierIndentation:
-  Enabled: false
-
-# Offense count: 1
 # Configuration parameters: AllowedVariables.
 Style/GlobalVars:
   Exclude:
