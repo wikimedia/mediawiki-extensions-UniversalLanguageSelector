@@ -4,7 +4,7 @@ Given(/^that my browser's accept language is (.+)$/) do |language|
 end
 
 When(/^I am at the preferences page$/) do
-	visit PreferencesPage
+  visit PreferencesPage
 end
 
 Then(/^link to the main page has text (.+)$/) do |text|

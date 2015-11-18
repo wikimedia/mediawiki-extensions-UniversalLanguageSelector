@@ -1,11 +1,11 @@
 class PreferencesPage
-	include PageObject
+  include PageObject
 
-	page_url "Special:Preferences"
+  page_url "Special:Preferences"
 
-	select(:set_interface_language, id: "mw-input-wplanguage")
-	button(:save, id: "prefcontrol")
+  select(:set_interface_language, id: "mw-input-wplanguage")
+  button(:save, id: "prefcontrol")
 
-	a(:editing_tab, id: "preftab-editing")
-	select(:editing_font, id: "mw-input-wpeditfont")
+  a(:editing_tab, id: "preftab-editing")
+  select(:editing_font, id: "mw-input-wpeditfont")
 end

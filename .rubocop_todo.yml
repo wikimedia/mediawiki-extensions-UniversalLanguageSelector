@@ -60,23 +60,3 @@ Style/SpaceInsideParens:
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 Style/StringLiterals:
   Enabled: false
-
-# Offense count: 212
-# Cop supports --auto-correct.
-Style/Tab:
-  Exclude:
-    - 'tests/browser/features/step_definitions/accept_language_steps.rb'
-    - 'tests/browser/features/step_definitions/autonym_steps.rb'
-    - 'tests/browser/features/step_definitions/common_steps.rb'
-    - 'tests/browser/features/step_definitions/font_selection_steps.rb'
-    - 'tests/browser/features/step_definitions/live_preview_of_display_language_steps.rb'
-    - 'tests/browser/features/step_definitions/panel_steps.rb'
-    - 'tests/browser/features/step_definitions/persistent_settings_steps.rb'
-    - 'tests/browser/features/step_definitions/textarea_font_steps.rb'
-    - 'tests/browser/features/step_definitions/triggers_steps.rb'
-    - 'tests/browser/features/support/modules/language_module.rb'
-    - 'tests/browser/features/support/pages/edit_page.rb'
-    - 'tests/browser/features/support/pages/ime_page.rb'
-    - 'tests/browser/features/support/pages/main_page.rb'
-    - 'tests/browser/features/support/pages/panel_page.rb'
-    - 'tests/browser/features/support/pages/preferences_page.rb'

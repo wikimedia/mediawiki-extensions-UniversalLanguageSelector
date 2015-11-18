@@ -1,5 +1,5 @@
 class EditPage
-	include PageObject
+  include PageObject
 
-	textarea(:editarea, id: "wpTextbox1")
+  textarea(:editarea, id: "wpTextbox1")
 end
