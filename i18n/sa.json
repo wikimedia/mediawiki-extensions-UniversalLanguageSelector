@@ -1,17 +1,29 @@
 {
 	"@metadata": {
 		"authors": [
-			"NehalDaveND"
+			"NehalDaveND",
+			"Shubha"
 		]
 	},
 	"uls-plang-title-languages": "भाषाः",
+	"ext-uls-select-language-settings-icon-tooltip": "भाषाविकल्पाः",
 	"ext-uls-display-settings-language-tab": "भाषा",
+	"ext-uls-display-settings-fonts-tab": "लिपिः",
 	"ext-uls-display-settings-title-short": "प्रदर्श्यताम्",
+	"ext-uls-display-settings-desc": "भाषा-लिपयोः चयनं क्रियताम्",
+	"ext-uls-language-settings-apply": "आद्यता संरक्ष्यताम्",
 	"ext-uls-language-settings-cancel": "निरस्यताम्",
+	"ext-uls-language-buttons-help": "भाषा परिवर्त्यताम् । विषयस्य भाषा न परिवर्त्यते ।",
 	"ext-uls-display-settings-font-settings": "वर्णविन्यासाः",
 	"ext-uls-display-settings-ui-language": "भाषा दर्श्यताम्",
 	"ext-uls-display-settings-anon-label": "भाषा दर्श्यताम्",
+	"ext-uls-webfonts-settings-title": "अपेक्षानुगुणं लिपिः अवारोप्यताम्  ।",
+	"ext-uls-webfonts-settings-info": "अपेक्षिता लिपिः न विद्यते चेत् उपारोप्यताम् । अपेक्षितां लिपिं चेतुम् अवसरः कल्प्यताम् ।",
+	"ext-uls-webfonts-settings-info-link": "अधिकं विवरणम्",
+	"ext-uls-webfonts-select-for": "वर्णविन्यासं चीयताम्",
+	"ext-uls-webfonts-select-for-content-info": "समग्रविषयस्य वर्णविन्यासः",
 	"ext-uls-input-settings-title-short": "निवेष्यम्",
+	"ext-uls-input-settings-desc": "किं भिन्नभाषया लिखति ?",
 	"jquery-ime-help": "साहाय्यम्",
 	"ext-uls-input-disable-notification-undo": "पूर्ववत्"
 }
