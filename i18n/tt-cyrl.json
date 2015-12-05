@@ -4,6 +4,7 @@
 			"Ильнар"
 		]
 	},
+	"uls-plang-title-languages": "Телләр",
 	"ext-uls-select-language-settings-icon-tooltip": "Тел көйләнмәләре",
 	"ext-uls-undo-language-tooltip-text": "Алдагы тел: $1",
 	"ext-uls-language-settings-preferences-link": "Өстәмә тел көйләнмәләре",
@@ -32,13 +33,16 @@
 	"ext-uls-input-settings-ime-settings": "$1 өчен көймәләр",
 	"ext-uls-input-settings-ui-language": "Хат теле",
 	"ext-uls-back-to-input-settings": "Кертү көйләнмәләренә кайту",
+	"ext-uls-ime-help": "Ничек кулланырга",
 	"ext-uls-disable-input-method": "Төп көймәләрне куллану",
 	"ext-uls-input-settings-more-languages-tooltip": "Башка телләр",
 	"jquery-ime-other-languages": "Башка телләрдә",
 	"jquery-ime-disable-text": "Төп көймәләрне куллану",
 	"jquery-ime-help": "Ярдәм",
+	"ext-uls-input-disable": "Кертү мөмкинлеген бетерү",
 	"ext-uls-input-settings-noime": "Әлеге тел өчен күчерелү куелмаган.",
 	"ext-uls-input-disable-notification": "Кертү җиһазлары ябылды",
 	"ext-uls-input-disable-notification-undo": "Кире кагу",
-	"ext-uls-input-disable-notification-info-personal": "Кертү җиһазларын тел көйләнмәләреннән кабызырга мөмкин."
+	"ext-uls-input-disable-notification-info-personal": "Кертү җиһазларын тел көйләнмәләреннән кабызырга мөмкин.",
+	"ext-uls-compact-link-count": "Башка {{PLURAL:$1|телдә|$1 телдә}}"
 }
