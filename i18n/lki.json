@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hosseinblue"
+		]
+	},
+	"uls-desc": "به کاربر راه‌های مختلفی برای انتخاب زبان و تنظیم تنظیمات زبان  می‌دهد",
+	"uls-plang-title-languages": "زوونۀل",
+	"ext-uls-select-language-settings-icon-tooltip": "تۀنظیمۀل زوون",
+	"ext-uls-undo-language-tooltip-text": "تغییر زوون إژ $1",
+	"ext-uls-language-settings-preferences-link": "تنظیمات فرۀتر زوون",
+	"uls-betafeature-label": "پیوندهای زبانی فشرده",
+	"uls-betafeature-desc": "نمایش یک نسخه کوتاه‌تر فهرست زبان، با فقط زبانی که بیشتر به شما مربوط است.",
+	"ext-uls-display-settings-title": "تنظیمات نمایش",
+	"ext-uls-display-settings-language-tab": "زوون",
+	"ext-uls-display-settings-fonts-tab": "فونت",
+	"ext-uls-display-settings-title-short": "نمایش",
+	"ext-uls-display-settings-desc": "زبان مورد استفاده منوها و قلم را تنظیم کنید.",
+	"ext-uls-language-settings-title": "تۀنظیمۀل زوون",
+	"ext-uls-language-settings-apply": "اعمال تنظیمات",
+	"ext-uls-language-settings-cancel": "ئآهووسانن-لغو",
+	"ext-uls-language-buttons-help": "تغییر زبان منوها. زبان متن‌های ویکی تغییر نمی‌یابد.",
+	"ext-uls-display-settings-font-settings": "تنظیمات قلم",
+	"ext-uls-display-settings-ui-language": "نمایش زوون",
+	"ext-uls-display-settings-anon-label": ":نمایش زوون",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (به مانند مطالب)",
+	"ext-uls-webfonts-settings-title": "دریافت قلم‌های مورد نیاز",
+	"ext-uls-webfonts-settings-info": "دریافت خودکار قلم‌های ناموجود و اجازهٔ انتخاب قلم‌های ترجیح‌داده‌شده.",
+	"ext-uls-webfonts-settings-info-link": "اطلاعات فرۀتر",
+	"ext-uls-webfonts-select-for": "انتخاب قلم برای $1",
+	"ext-uls-webfonts-select-for-ui-info": "قلم مورد استفادهٔ رابط کاربری",
+	"ext-uls-webfonts-select-for-content-info": "قلم مورد استفاده محتوا",
+	"ext-uls-webfonts-system-font": "قلم دستگاه",
+	"ext-uls-back-to-display-settings": "بازگشت برای نمایش‌دادن تنظیمات",
+	"apihelp-ulslocalization-param-language": "کد زوون"
+}
