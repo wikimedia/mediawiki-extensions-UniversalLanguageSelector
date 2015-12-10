@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hosseinblue"
+			"Hosseinblue",
+			"Arash71"
 		]
 	},
 	"uls-desc": "به کاربر راه‌های مختلفی برای انتخاب زبان و تنظیم تنظیمات زبان  می‌دهد",
@@ -18,7 +19,7 @@
 	"ext-uls-display-settings-desc": "زبان مورد استفاده منوها و قلم را تنظیم کنید.",
 	"ext-uls-language-settings-title": "تۀنظیمۀل زوون",
 	"ext-uls-language-settings-apply": "اعمال تنظیمات",
-	"ext-uls-language-settings-cancel": "ئآهووسانن-لغو",
+	"ext-uls-language-settings-cancel": "ئآهووسانن/لغو",
 	"ext-uls-language-buttons-help": "تغییر زبان منوها. زبان متن‌های ویکی تغییر نمی‌یابد.",
 	"ext-uls-display-settings-font-settings": "تنظیمات قلم",
 	"ext-uls-display-settings-ui-language": "نمایش زوون",
