@@ -48,7 +48,7 @@
 	"jquery-ime-disable-text": "Koristi izvornu tastaturu",
 	"jquery-ime-help": "Pomoć",
 	"ext-uls-input-disable": "Isključi alate za unos",
-	"ext-uls-input-enable": "Omogući alate za unos",
+	"ext-uls-input-enable": "Uključi alate za unos",
 	"ext-uls-input-disable-info": "Alati za unos su isključeni.",
 	"ext-uls-input-settings-noime": "Nema dostupne metoda unosa za ovaj jezik.",
 	"ext-uls-input-disable-notification": "Alati za unos su isključeni",
