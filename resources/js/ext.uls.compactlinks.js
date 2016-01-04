@@ -23,7 +23,7 @@
 	/**
 	 * For the given array, remove duplicates
 	 * @param {Array} originalArray
-	 * @return de-duplicated array
+	 * @return {Array} de-duplicated array
 	 */
 	function unique( originalArray ) {
 		var uniqueArray = [];
@@ -56,18 +56,20 @@
 		 * Initialize the plugin
 		 */
 		init: function () {
+			var max = this.options.max;
 			this.interlanguageList = this.getInterlanguageList();
 			this.listSize = this.getListSize();
 
-			if ( this.listSize <= this.options.max ) {
+			if ( this.listSize <= max ) {
 				// Not enough languages to compact the list
 				return;
 			}
 
-			// If the interlanguage list is of moderate size, the compact size is 7.
-			this.compactSize = ( this.listSize <= 12 ) ? 7 : this.options.max;
-			this.hideOriginal();
+			// If we're only a bit beyond max, limit to 7 instead of 9.
+			// FIXME: This assumes the max is 9.
+			this.compactSize = ( this.listSize <= 12 ) ? 7 : max;
 			this.compactList = this.getCompactList();
+			this.hideOriginal();
 			this.render();
 			this.listen();
 		},
@@ -120,7 +122,7 @@
 					previousLanguages.push( language );
 					previousLanguages = unique( previousLanguages );
 					mw.uls.setPreviousLanguages( previousLanguages );
-					window.location.href = compactLinks.interlanguageList[ language ].href;
+					location.href = compactLinks.interlanguageList[ language ].href;
 				},
 				onVisible: function () {
 					// Calculate the positioning of the panel
@@ -153,17 +155,17 @@
 		 * @return {Object}
 		 */
 		getCompactList: function () {
-			var language, languages, compactLanguages, index,
+			var language, languages, compactLanguages, i,
 				compactedList = {};
 
-			languages = $.map( this.interlanguageList, function ( element, index ) {
-				return index;
+			languages = $.map( this.interlanguageList, function ( item, languageCode ) {
+				return languageCode;
 			} );
 
 			compactLanguages = this.compact( languages );
 
-			for ( index = 0; index < compactLanguages.length; index++ ) {
-				language = compactLanguages[ index ];
+			for ( i = 0; i < compactLanguages.length; i++ ) {
+				language = compactLanguages[ i ];
 				compactedList[ language ] = this.interlanguageList[ language ];
 			}
 
@@ -173,27 +175,28 @@
 		/**
 		 * Compact a given array of languages
 		 * @param {Array} languages
-		 * @return {Array} compacted array
+		 * @return {Array} Compacted array
 		 */
 		compact: function ( languages ) {
 			var compactLanguages = [];
 
-			// Add user-defined assistant languages on wikis with Translate extension.
-			compactLanguages = compactLanguages.concat( this.filterByAssistantLanguages() );
+			compactLanguages = compactLanguages.concat(
+				// Add user-defined assistant languages on wikis with Translate extension.
+				this.filterByAssistantLanguages( languages ),
 
-			// Add previously selected languages.
-			// Previous languages are always the better suggestion
-			// because the user has explicitly chosen them.
-			compactLanguages = compactLanguages.concat( this.filterByPreviousLanguages() );
+				// Add previously selected languages.
+				// Previous languages are always the better suggestion
+				// because the user has explicitly chosen them.
+				this.filterByPreviousLanguages( languages ),
 
-			// Add all common languages to the beginning of array.
-			// These are the most probable languages predicted by ULS.
-			compactLanguages = compactLanguages.concat( this.filterByCommonLanguages( languages ) );
+				// Add all common languages to the beginning of array.
+				// These are the most probable languages predicted by ULS.
+				this.filterByCommonLanguages( languages ),
 
-			// Finally add the whole languages array too.
-			// We will remove duplicates and cut down to required size.
-			compactLanguages = compactLanguages.concat( languages );
-
+				// Finally add the whole languages array too.
+				// We will remove duplicates and cut down to required size.
+				languages
+			);
 			// Remove duplicates
 			compactLanguages = unique( compactLanguages );
 
@@ -252,15 +255,13 @@
 		 * by the article and fetch their href.
 		 * @return {Object} List of existing language codes and their hrefs
 		 */
-		getInterlanguageList: function getInterlanguageList() {
+		getInterlanguageList: function () {
 			var interlanguageList = {};
 
 			this.$interlanguageList.find( 'li.interlanguage-link > a' ).each( function () {
-				var $this = $( this );
-
-				interlanguageList[ $this.attr( 'lang' ) ] = {
-					href: $this.attr( 'href' ),
-					autonym: $this.text()
+				interlanguageList[ this.getAttribute( 'lang' ) ] = {
+					href: this.getAttribute( 'href' ),
+					autonym: $( this ).text()
 				};
 			} );
 
@@ -271,8 +272,8 @@
 		 * Get the size of the interlanguage list
 		 */
 		getListSize: function () {
-			return $.map( this.interlanguageList, function ( item, index ) {
-				return index;
+			return $.map( this.interlanguageList, function ( item, languageCode ) {
+				return languageCode;
 			} ).length;
 		},
 
@@ -280,7 +281,7 @@
 		 * Hide the original interlanguage list
 		 */
 		hideOriginal: function () {
-			this.$interlanguageList.find( '.interlanguage-link' ).hide();
+			this.$interlanguageList.find( '.interlanguage-link' ).css( 'display', 'none' );
 		},
 
 		/**
@@ -305,7 +306,7 @@
 		 * @param {string} language
 		 */
 		showLanguage: function ( language ) {
-			this.$interlanguageList.find( '.interwiki-' + language ).show();
+			this.$interlanguageList.find( '.interwiki-' + language ).css( 'display', '' );
 		}
 	};
 
@@ -320,7 +321,8 @@
 				options = typeof option === 'object' && option;
 
 			if ( !data ) {
-				$this.data( 'compactinterlanguagelist', ( data = new CompactInterlanguageList( this, options ) ) );
+				data = new CompactInterlanguageList( this, options );
+				$this.data( 'compactinterlanguagelist', data );
 			}
 
 			if ( typeof option === 'string' ) {
@@ -333,7 +335,8 @@
 	 * Defaults
 	 */
 	$.fn.compactInterlanguageList.defaults = {
-		max: 9 // Compact the list to this size
+		// Compact the list to this size
+		max: 9
 	};
 
 	$( document ).ready( function () {
