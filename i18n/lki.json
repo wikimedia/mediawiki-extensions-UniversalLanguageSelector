@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Hosseinblue",
-			"Arash71"
+			"Arash71",
+			"Lakzon"
 		]
 	},
 	"uls-desc": "به کاربر راه‌های مختلفی برای انتخاب زبان و تنظیم تنظیمات زبان  می‌دهد",
-	"uls-plang-title-languages": "زوونۀل",
+	"uls-plang-title-languages": "زوونەل",
 	"ext-uls-select-language-settings-icon-tooltip": "تۀنظیمۀل زوون",
 	"ext-uls-undo-language-tooltip-text": "تغییر زوون إژ $1",
 	"ext-uls-language-settings-preferences-link": "تنظیمات فرۀتر زوون",
@@ -31,7 +32,7 @@
 	"ext-uls-webfonts-settings-info-link": "اطلاعات فرۀتر",
 	"ext-uls-webfonts-select-for": "انتخاب قلم برای $1",
 	"ext-uls-webfonts-select-for-ui-info": "قلم مورد استفادهٔ رابط کاربری",
-	"ext-uls-webfonts-select-for-content-info": "قلم مورد استفاده محتوا",
+	"ext-uls-webfonts-select-for-content-info": "قلم مورد استفاده نۆم جِک(محتوا)",
 	"ext-uls-webfonts-system-font": "قلم دستگاه",
 	"ext-uls-back-to-display-settings": "بازگشت برای نمایش‌دادن تنظیمات",
 	"ext-uls-input-settings-title": "تنظیمات ورودی",
@@ -46,7 +47,7 @@
 	"jquery-ime-other-languages": "وۀ زوونۀلئ تر",
 	"jquery-ime-disable-text": "استفاده از صفحه‌کلید بومی",
 	"jquery-ime-help": "راهنما",
-	"ext-uls-input-disable": "غیرفعال کردن ابزارهای ورودی",
+	"ext-uls-input-disable": "إ کار کةتن(غیرفعال‌سازی) ابزارەل ورودی",
 	"ext-uls-input-enable": "فعال کردن ابزارهای ورودی",
 	"ext-uls-input-disable-info": "ابزارهای ورودی غیرفعال است.",
 	"ext-uls-input-settings-noime": "هیچ روش ورودی‌ای برای این زبان در دسترس نیست.",

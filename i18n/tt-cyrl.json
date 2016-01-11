@@ -40,8 +40,10 @@
 	"jquery-ime-disable-text": "Төп көймәләрне куллану",
 	"jquery-ime-help": "Ярдәм",
 	"ext-uls-input-disable": "Кертү мөмкинлеген бетерү",
+	"ext-uls-input-enable": "Кертү коралларын ачу",
+	"ext-uls-input-disable-info": "Кертү кораллары ябык",
 	"ext-uls-input-settings-noime": "Әлеге тел өчен күчерелү куелмаган.",
-	"ext-uls-input-disable-notification": "Кертү җиһазлары ябылды",
+	"ext-uls-input-disable-notification": "Кертү кораллары ябылды",
 	"ext-uls-input-disable-notification-undo": "Кире кагу",
 	"ext-uls-input-disable-notification-info-personal": "Кертү җиһазларын тел көйләнмәләреннән кабызырга мөмкин.",
 	"ext-uls-compact-link-count": "Башка {{PLURAL:$1|телдә|$1 телдә}}"
