@@ -162,7 +162,7 @@ $wgULSImeSelectors = array(
  *
  * @since 2013.07
  */
-$wgULSNoImeSelectors = array( '#wpCaptchaWord', '.ve-ce-surface *' );
+$wgULSNoImeSelectors = array( '#wpCaptchaWord' );
 
 /**
  * Array of jQuery selectors of elements on which webfonts must not be applied.
