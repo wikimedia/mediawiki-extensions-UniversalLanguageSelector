@@ -22,7 +22,7 @@
 	// MediaWiki overrides for ULS defaults
 	$.fn.uls.defaults = $.extend( $.fn.uls.defaults, {
 		languages: mw.config.get( 'wgULSLanguages' ) || {},
-		searchAPI: mw.util.wikiScript( 'api' ) + '?action=languagesearch'
+		searchAPI: mw.util.wikiScript( 'api' ) + '?action=languagesearch&format=json'
 	} );
 
 	// No need of IME in the ULS language search bar

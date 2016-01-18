@@ -23,10 +23,6 @@
  */
 class ApiLanguageSearch extends ApiBase {
 
-	public function getCustomPrinter() {
-		return $this->getMain()->createPrinterByName( 'json' );
-	}
-
 	public function execute() {
 		$params = $this->extractRequestParams();
 		$search = $params['search'];
