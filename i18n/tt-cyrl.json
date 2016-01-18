@@ -8,6 +8,8 @@
 	"ext-uls-select-language-settings-icon-tooltip": "Тел көйләнмәләре",
 	"ext-uls-undo-language-tooltip-text": "Алдагы тел: $1",
 	"ext-uls-language-settings-preferences-link": "Өстәмә тел көйләнмәләре",
+	"uls-betafeature-label": "Тел сылтамасының җыйнаклы исемлеге",
+	"uls-betafeature-desc": "Тел сылтамаларының сезнең өчен кирәкле булган кыскача исемлеген күрсәтә.",
 	"ext-uls-display-settings-title": "Күрсәтү көйләнмәләре",
 	"ext-uls-display-settings-language-tab": "Тел",
 	"ext-uls-display-settings-fonts-tab": "Шрифтлар",
