@@ -91,4 +91,9 @@ class ApiULSLocalization extends ApiBase {
 				=> 'apihelp-ulslocalization-example-2',
 		);
 	}
+
+	// Try to scare people away from using this externally
+	public function isInternal() {
+		return true;
+	}
 }
