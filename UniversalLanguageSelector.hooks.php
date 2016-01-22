@@ -404,7 +404,7 @@ class UniversalLanguageSelectorHooks {
 	 * @return boolean true
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
-		global $wgResourceModules;
+		global $wgResourceModules, $wgULSEventLogging;
 
 		if (
 			(
@@ -449,6 +449,20 @@ class UniversalLanguageSelectorHooks {
 					'localBasePath' => __DIR__,
 					'remoteExtPath' => 'UniversalLanguageSelector',
 				)
+			) );
+		}
+
+		if ( $wgULSEventLogging ) {
+			$resourceLoader->register( array(
+				'ext.uls.eventlogger' => array(
+					'scripts' => 'js/ext.uls.eventlogger.js',
+					'dependencies' => array(
+						'mediawiki.user',
+						'schema.UniversalLanguageSelector',
+					),
+					'localBasePath' => __DIR__ . '/resources',
+					'remoteExtPath' => 'UniversalLanguageSelector/resources',
+				),
 			) );
 		}
 

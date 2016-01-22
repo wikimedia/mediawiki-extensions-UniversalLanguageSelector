@@ -163,15 +163,6 @@
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
-		"ext.uls.eventlogger": {
-			"scripts": "js/ext.uls.eventlogger.js",
-			"dependencies": [
-				"mediawiki.user",
-				"schema.UniversalLanguageSelector"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
-		},
 		"ext.uls.i18n": {
 			"scripts": "js/ext.uls.i18n.js",
 			"dependencies": [
