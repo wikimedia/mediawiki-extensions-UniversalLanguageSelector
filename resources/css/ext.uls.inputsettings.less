@@ -1,10 +1,8 @@
+@import "mediawiki.mixins";
+
 div.input-settings-block {
-	/* @embed */
-	background: transparent url('../images/input.png') no-repeat left top;
-	/* @embed */
-	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/input.svg');
-	/* @embed */
-	background-image: linear-gradient(transparent, transparent), url('../images/input.svg');
+	background: transparent no-repeat left top;
+	.background-image-svg( '../images/input.svg', '../images/input.png' );
 	background-size: 20px auto;
 	color: #252525;
 	padding-left: 26px;
@@ -37,12 +35,8 @@ div.input-settings-block {
 }
 
 .uls-ime-disable-link {
-	/* @embed */
-	background: transparent url('../images/remove-input.png') no-repeat left top;
-	/* @embed */
-	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/remove-input.svg');
-	/* @embed */
-	background-image: linear-gradient(transparent, transparent), url('../images/remove-input.svg');
+	background: transparent no-repeat left top;
+	.background-image-svg( '../images/remove-input.svg', '../images/remove-input.png' );
 	background-size: auto 16px;
 	padding-left: 22px;
 	padding-right: 26px;
@@ -51,12 +45,8 @@ div.input-settings-block {
 }
 
 .uls-ime-more-settings-link {
-	/* @embed */
-	background: transparent url('../images/cog.png') no-repeat center top;
-	/* @embed */
-	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/cog.svg');
-	/* @embed */
-	background-image: linear-gradient(transparent, transparent), url('../images/cog.svg');
+	background: transparent no-repeat center top;
+	.background-image-svg( '../images/cog.svg', '../images/cog.png' );
 	background-size: auto 14px;
 	border-left: 1px solid #CCCCCC;
 	width: 22px;
@@ -134,12 +124,8 @@ div.input-settings-block {
 	right: 0;
 	opacity: 0.75;
 	padding: 0;
-	/* @embed */
-	background: transparent url('../images/help.png') left center no-repeat;
-	/* @embed */
-	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/help.svg');
-	/* @embed */
-	background-image: linear-gradient(transparent, transparent), url('../images/help.svg');
+	background: transparent no-repeat left center;
+	.background-image-svg( '../images/help.svg', '../images/help.png' );
 }
 
 .ime-checked .ime-perime-help:hover {

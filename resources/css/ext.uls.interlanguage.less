@@ -1,0 +1,19 @@
+@import "mediawiki.mixins";
+
+#p-lang .uls-settings-trigger {
+	background: transparent no-repeat right top;
+	.background-image-svg( '../images/cog-sprite.svg', '../images/cog-sprite.png' );
+	height: 16px;
+	width: 14px;
+	float: right;
+	cursor: pointer;
+}
+
+.skin-vector #p-lang .uls-settings-trigger {
+	/* Put it in the middle of the first row of the section title */
+	margin-top: 3px;
+}
+
+#p-lang .uls-settings-trigger:hover {
+	background-position: right -16px;
+}

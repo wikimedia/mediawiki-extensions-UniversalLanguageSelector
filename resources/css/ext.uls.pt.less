@@ -1,3 +1,5 @@
+@import "mediawiki.mixins";
+
 /*
  * The trigger can be placed in the personal toolbar near the username
  * or near the interlanguage links.
@@ -8,12 +10,8 @@
  * Copied from jquery.uls.css with the path changed.
  */
 .uls-trigger {
-	/* @embed */
-	background: transparent url('../../lib/jquery.uls/images/icon-language.png') no-repeat scroll left center;
-	/* @embed */
-	background-image: -webkit-linear-gradient(transparent, transparent), url('../../lib/jquery.uls/images/icon-language.svg');
-	/* @embed */
-	background-image: linear-gradient(transparent, transparent), url('../../lib/jquery.uls/images/icon-language.svg');
+	background: transparent no-repeat scroll left center;
+	.background-image-svg( '../../lib/jquery.uls/images/icon-language.svg', '../../lib/jquery.uls/images/icon-language.png' );
 	padding-left: 30px;
 }
 

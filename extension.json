@@ -109,7 +109,7 @@
 		},
 		"ext.uls.displaysettings": {
 			"scripts": "js/ext.uls.displaysettings.js",
-			"styles": "css/ext.uls.displaysettings.css",
+			"styles": "css/ext.uls.displaysettings.less",
 			"dependencies": [
 				"ext.uls.languagesettings",
 				"ext.uls.mediawiki",
@@ -174,7 +174,7 @@
 		},
 		"ext.uls.inputsettings": {
 			"scripts": "js/ext.uls.inputsettings.js",
-			"styles": "css/ext.uls.inputsettings.css",
+			"styles": "css/ext.uls.inputsettings.less",
 			"dependencies": [
 				"ext.uls.ime",
 				"ext.uls.languagesettings",
@@ -350,12 +350,12 @@
 			"remoteExtPath": "UniversalLanguageSelector/lib"
 		},
 		"ext.uls.pt": {
-			"styles": "css/ext.uls.pt.css",
+			"styles": "css/ext.uls.pt.less",
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.interlanguage": {
-			"styles": "css/ext.uls.interlanguage.css",
+			"styles": "css/ext.uls.interlanguage.less",
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
