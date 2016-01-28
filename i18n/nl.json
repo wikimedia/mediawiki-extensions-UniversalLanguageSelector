@@ -61,5 +61,8 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "U kunt de invoermethoden weer inschakelen via de taalinstellingen naast de lijst met talen.",
 	"ext-uls-language-settings-applying": "Toepassen...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Eén meer|$1 meer}}",
+	"apihelp-languagesearch-param-search": "Zoektekst.",
+	"apihelp-languagesearch-example-1": "Zoeken naar \"Te\"",
+	"apihelp-languagesearch-example-2": "Zoeken naar \"ഫി\"",
 	"apihelp-ulslocalization-param-language": "Taalcode."
 }
