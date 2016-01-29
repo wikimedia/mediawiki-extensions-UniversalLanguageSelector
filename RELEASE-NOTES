@@ -1,0 +1,21 @@
+== UniversalLanguageSelector 2016.01 ==
+Released at 2016-01-29.
+
+=== Noteworthy changes ===
+* ULS now uses extension registration and thus requires MediaWiki 1.25 or later 
+* Input methods should now work inside Visual Editor.
+
+* Fonts:
+** OpenDyslexic font updated to latest upstream.
+** Akkadian font should work again.
+
+* Input Methods:
+* New input methods:
+** Rodali (Assamese) layout.
+** OdiScript (Oriya) layout.
+** Yoruba layout.
+
+* Updated input methods:
+** Updated Oriya Lekhani layout.
+** Digit fixes in Southern Kurdish layout.
+** Minor fixes in Sinhala layout.
