@@ -62,6 +62,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Инструменты ввода можно включить в любое время из установок языка рядом со списком языков.",
 	"ext-uls-language-settings-applying": "Применение…",
 	"ext-uls-compact-link-count": "Ещё на {{PLURAL:$1|одном языке|$1 языках}}",
+	"apihelp-languagesearch-description": "Поиск названий языков в любом скрипте.",
 	"apihelp-languagesearch-param-search": "Строка поиска.",
 	"apihelp-languagesearch-param-typos": "Количество орфографических ошибок, которое допускается в искомой строке.",
 	"apihelp-languagesearch-example-1": "Поиск «Te»",
