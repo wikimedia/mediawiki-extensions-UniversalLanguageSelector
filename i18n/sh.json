@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Conquistador"
+		]
+	},
+	"uls-plang-title-languages": "Jezici",
+	"ext-uls-select-language-settings-icon-tooltip": "Postavke jezika",
+	"ext-uls-language-settings-title": "Postavke jezika",
+	"ext-uls-language-settings-cancel": "Otkaži",
+	"jquery-ime-other-languages": "Drugi jezici"
+}
