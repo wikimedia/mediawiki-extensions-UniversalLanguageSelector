@@ -175,9 +175,9 @@
 			$inputMethodItem = $( '<input type="radio">' ).attr( {
 				name: 'ime',
 				id: imeId,
-				value: imeId,
-				checked: selected
-			} );
+				value: imeId
+			} )
+			.prop( 'checked', selected );
 
 			$imeLabel.append( $inputMethodItem );
 
