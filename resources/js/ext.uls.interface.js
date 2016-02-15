@@ -214,50 +214,9 @@
 			$( '.uls-settings-trigger' ) :
 			$( '.uls-trigger' );
 
-		previousLanguages = mw.uls.getPreviousLanguages();
-		previousLang = previousLanguages.slice( -1 )[0];
-
-		previousLanguages.push( currentLang );
-		mw.uls.setPreviousLanguages( previousLanguages );
-
-		getUndoAutonym( previousLang ).done( function( autonym ) {
-			// Attach a tipsy tooltip to the trigger
-			$ulsTrigger.tipsy( {
-				gravity: tipsyGravity[ulsPosition],
-				delayOut: 3000,
-				html: true,
-				fade: true,
-				trigger: 'manual',
-				title: function () {
-					var link;
-
-					link = $( '<a>' ).text( autonym )
-						.attr( {
-							href: '#',
-							'class': 'uls-prevlang-link',
-							lang: previousLang,
-							// We could get dir from uls.data,
-							// but we are trying to avoid loading it
-							// and 'auto' is safe enough in this context
-							dir: 'auto'
-						} );
-
-					// Get the html of the link by wrapping it in div first
-					link = $( '<div>' ).html( link ).html();
-
-					return mw.message( 'ext-uls-undo-language-tooltip-text', '$1' ).escaped().replace( '$1', link );
-				}
-			} );
-		} );
-
-		// Now that we set the previous languages,
-		// we can set the cookie of the previous autonym.
-		// TODO: Refactor this, because it doesn't directly belong
-		// to the tooltip.
-		$.cookie( mw.uls.previousLanguageAutonymCookie,
-			mw.config.get( 'wgULSCurrentAutonym' ),
-			{ path: '/' }
-		);
+		function hideTipsy() {
+			$ulsTrigger.tipsy( 'hide' );
+		}
 
 		function showTipsy( timeout ) {
 			var tipsyTimer = 0;
@@ -295,23 +254,64 @@
 			tipsyTimer = window.setTimeout( hideTipsy, timeout );
 		}
 
-		function hideTipsy() {
-			$ulsTrigger.tipsy( 'hide' );
-		}
+		previousLanguages = mw.uls.getPreviousLanguages();
+		previousLang = previousLanguages.slice( -1 )[0];
 
-		// The interlanguage position needs some time to settle down
-		window.setTimeout( function () {
-			// Show the tipsy tooltip on page load.
-			showTipsy( 6000 );
-		}, 700 );
+		previousLanguages.push( currentLang );
+		mw.uls.setPreviousLanguages( previousLanguages );
 
-		// manually show the tooltip
-		$ulsTrigger.on( 'mouseover', function () {
-			// show only if the ULS panel is not shown
-			if ( !$( '.uls-menu:visible' ).length ) {
-				showTipsy( 3000 );
-			}
+		getUndoAutonym( previousLang ).done( function( autonym ) {
+			// Attach a tipsy tooltip to the trigger
+			$ulsTrigger.tipsy( {
+				gravity: tipsyGravity[ulsPosition],
+				delayOut: 3000,
+				html: true,
+				fade: true,
+				trigger: 'manual',
+				title: function () {
+					var link;
+
+					link = $( '<a>' ).text( autonym )
+						.attr( {
+							href: '#',
+							'class': 'uls-prevlang-link',
+							lang: previousLang,
+							// We could get dir from uls.data,
+							// but we are trying to avoid loading it
+							// and 'auto' is safe enough in this context
+							dir: 'auto'
+						} );
+
+					// Get the html of the link by wrapping it in div first
+					link = $( '<div>' ).html( link ).html();
+
+					return mw.message( 'ext-uls-undo-language-tooltip-text', '$1' ).escaped().replace( '$1', link );
+				}
+			} );
+
+			// The interlanguage position needs some time to settle down
+			window.setTimeout( function () {
+				// Show the tipsy tooltip on page load.
+				showTipsy( 6000 );
+			}, 700 );
+
+			// manually show the tooltip
+			$ulsTrigger.on( 'mouseover', function () {
+				// show only if the ULS panel is not shown
+				if ( !$( '.uls-menu:visible' ).length ) {
+					showTipsy( 3000 );
+				}
+			} );
 		} );
+
+		// Now that we set the previous languages,
+		// we can set the cookie of the previous autonym.
+		// TODO: Refactor this, because it doesn't directly belong
+		// to the tooltip.
+		$.cookie( mw.uls.previousLanguageAutonymCookie,
+			mw.config.get( 'wgULSCurrentAutonym' ),
+			{ path: '/' }
+		);
 	}
 
 	$( document ).ready( function () {
