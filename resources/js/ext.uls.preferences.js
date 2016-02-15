@@ -149,11 +149,10 @@
 				callback.call( this, true );
 			} else {
 				// Logged in user. Use MW APIs to change preferences
-				new mw.Api().postWithToken( 'options', {
-					action: 'options',
-					optionname: ulsPreferences.preferenceName,
-					optionvalue: JSON.stringify( ulsPreferences.preferences )
-				} ).done( function () {
+				new mw.Api().saveOption(
+					ulsPreferences.preferenceName,
+					JSON.stringify( ulsPreferences.preferences )
+				).done( function () {
 					callback.call( this, true );
 				} ).fail( function () {
 					callback.call( this, false );

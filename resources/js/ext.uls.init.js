@@ -82,12 +82,7 @@
 			}
 
 			api = new mw.Api();
-			// @todo Change this to api.saveOption when ULS minimum MW version is 1.25
-			api.postWithToken( 'options', {
-				action: 'options',
-				optionname: 'language',
-				optionvalue: language
-			} )
+			api.saveOption( 'language', language )
 			.done( function () {
 				location.reload();
 			} )
