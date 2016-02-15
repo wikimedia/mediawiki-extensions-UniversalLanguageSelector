@@ -1,4 +1,4 @@
-/**
+/*!
  * ULS - jQuery IME integration
  *
  * Copyright (C) 2012 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
@@ -16,6 +16,7 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
+
 ( function ( $, mw ) {
 	'use strict';
 
@@ -208,6 +209,7 @@
 	/**
 	 * Loads necessary dependencies, checks input for validity and
 	 * adds the ime menu for elements that should have it.
+	 *
 	 * @param {jquery.Element} $input
 	 * @since 2013.11
 	 */
@@ -244,6 +246,7 @@
 
 	/**
 	 * Just adds ime menu to any input element.
+	 *
 	 * @param {jquery.Element} $input
 	 * @since 2013.11
 	 */

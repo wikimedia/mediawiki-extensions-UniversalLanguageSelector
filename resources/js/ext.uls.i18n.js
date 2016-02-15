@@ -1,4 +1,4 @@
-/**
+/*!
  * ULS i18n preparation using jquery.i18n library
  *
  * Copyright (C) 2012-2013 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
@@ -16,6 +16,7 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
+
 ( function ( $, mw ) {
 	'use strict';
 
@@ -37,6 +38,7 @@
 	 * Load localization messags for a locale to the jquery.i18n
 	 * messagestore.
 	 * Also called by RL module ResourceLoaderULSJsonMessageModule
+	 *
 	 * @param {string} locale the language code
 	 * @param {Object} [messages]
 	 * @return {jQuery.Promise}

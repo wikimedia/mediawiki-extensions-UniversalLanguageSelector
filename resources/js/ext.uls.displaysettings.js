@@ -1,4 +1,4 @@
-/**
+/*!
  * ULS-based display settings panel
  *
  * Copyright (C) 2012 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
@@ -16,6 +16,7 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
+
 ( function ( $, mw ) {
 	'use strict';
 
@@ -359,7 +360,8 @@
 
 		/**
 		 * Preview the settings panel in the given language
-		 * @param {String} language Language code
+		 *
+		 * @param {string} language Language code
 		 */
 		preview: function ( language ) {
 			var displaySettings = this;
@@ -378,7 +380,8 @@
 
 		/**
 		 * Get previous languages
-		 * @returns {Array}
+		 *
+		 * @return {Array}
 		 */
 		frequentLanguageList: function () {
 			return mw.uls.getFrequentLanguageList();
@@ -386,7 +389,8 @@
 
 		/**
 		 * Get the current user interface language.
-		 * @returns String Current UI language
+		 *
+		 * @return {string} Current UI language
 		 */
 		getUILanguage: function () {
 			return mw.config.get( 'wgUserLanguage' );
@@ -394,7 +398,8 @@
 
 		/**
 		 * Get the current content language.
-		 * @returns String Current content language
+		 *
+		 * @return {string} Current content language
 		 */
 		getContentLanguage: function () {
 			return mw.config.get( 'wgContentLanguage' );
@@ -403,7 +408,7 @@
 		/**
 		 * Prepare a font selector section with a label and a selector element.
 		 *
-		 * @param target String 'ui' or 'content'
+		 * @param {string} target 'ui' or 'content'
 		 */
 		prepareFontSelector: function ( target ) {
 			var language, fonts, $fontSelector, savedFont,

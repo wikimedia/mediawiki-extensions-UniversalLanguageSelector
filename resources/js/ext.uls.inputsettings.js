@@ -1,4 +1,4 @@
-/**
+/*!
  * ULS-based ime settings panel
  *
  * Copyright (C) 2012 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
@@ -16,6 +16,7 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
+
 ( function ( $, mw ) {
 	'use strict';
 
@@ -346,12 +347,16 @@
 					);
 				},
 				onVisible: function () {
+					var $parent;
+
 					if ( !inputSettings.$parent.$window.hasClass( 'callout' ) ) {
 						// callout menus will have position rules. others use
 						// default position
 						return;
 					}
-					var $parent = $( '#language-settings-dialog' );
+
+					$parent = $( '#language-settings-dialog' );
+
 					// Re-position the element according to the window that called it
 					if ( parseInt( $parent.css( 'left' ), 10 ) ) {
 						this.$menu.css( 'left', $parent.css( 'left' ) );
@@ -402,7 +407,8 @@
 
 		/**
 		 * Get previous languages
-		 * @returns {Array}
+		 *
+		 * @return {Array}
 		 */
 		frequentLanguageList: function () {
 			return mw.uls.getFrequentLanguageList();
@@ -410,7 +416,8 @@
 
 		/**
 		 * Get the current user interface language.
-		 * @returns String Current UI language
+		 *
+		 * @return {string} Current UI language
 		 */
 		getInterfaceLanguage: function () {
 			return mw.config.get( 'wgUserLanguage' );
@@ -418,7 +425,8 @@
 
 		/**
 		 * Get the current content language.
-		 * @returns String Current content language
+		 *
+		 * @return {string} Current content language
 		 */
 		getContentLanguage: function () {
 			return mw.config.get( 'wgContentLanguage' );

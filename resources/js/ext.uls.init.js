@@ -1,4 +1,4 @@
-/**
+/*!
  * ULS startup script - MediaWiki specific customization for jquery.uls
  *
  * Copyright (C) 2012-2013 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
@@ -16,6 +16,7 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
+
 ( function ( $, mw ) {
 	'use strict';
 
@@ -61,6 +62,7 @@
 
 	/**
 	 * Change the language of wiki using API or set cookie and reload the page
+	 *
 	 * @param {string} language Language code.
 	 */
 	mw.uls.changeLanguage = function ( language ) {
@@ -147,7 +149,6 @@
 		return ( window.navigator.language || window.navigator.userLanguage || '' ).split( '-' )[ 0 ];
 	};
 
-	/*jshint camelcase:false*/
 	mw.uls.getCountryCode = function () {
 		return window.Geo && ( window.Geo.country || window.Geo.country_code );
 	};
@@ -165,7 +166,7 @@
 	 * and finally, the languages of countryCode taken from the CLDR,
 	 * taken by default from the user's geolocation.
 	 *
-	 * @param {String} [countryCode] Uppercase country code.
+	 * @param {string} [countryCode] Uppercase country code.
 	 * @return {Array} List of language codes without duplicates.
 	 */
 	mw.uls.getFrequentLanguageList = function ( countryCode ) {
@@ -218,11 +219,12 @@
 	/**
 	 * Checks whether the browser is supported.
 	 * Browser support policy: http://www.mediawiki.org/wiki/Browser_support#Grade_A
-	 * @return boolean
+	 *
+	 * @return {boolean}
 	 */
 	function isBrowserSupported() {
 		var blacklist = {
-			'msie': [
+			msie: [
 				[ '<=', 7 ]
 			]
 		};

@@ -1,10 +1,11 @@
 /*jshint node:true */
 module.exports = function ( grunt ) {
 	'use strict';
+
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
-	grunt.loadNpmTasks( 'grunt-banana-checker' );
-	grunt.loadNpmTasks( 'grunt-jsonlint' );
 	grunt.loadNpmTasks( 'grunt-jscs' );
+	grunt.loadNpmTasks( 'grunt-jsonlint' );
+	grunt.loadNpmTasks( 'grunt-banana-checker' );
 
 	grunt.initConfig( {
 		jshint: {
@@ -12,20 +13,23 @@ module.exports = function ( grunt ) {
 				jshintrc: true
 			},
 			all: [
-				'*.js'
+				'**/*.js',
+				'!lib/**',
+				'!node_modules/**',
+				'!resources/js/ext.uls.webfonts.repository.js'
 			]
 		},
 		jscs: {
 			src: '<%= jshint.all %>'
-		},
-		banana: {
-			all: 'i18n/'
 		},
 		jsonlint: {
 			all: [
 				'**/*.json',
 				'!node_modules/**'
 			]
+		},
+		banana: {
+			all: 'i18n'
 		}
 	} );
 

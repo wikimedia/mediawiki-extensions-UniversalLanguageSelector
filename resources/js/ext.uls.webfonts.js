@@ -1,4 +1,4 @@
-/**
+/*!
  * ULS-Webfonts integration
  *
  * Copyright (C) 2012 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
@@ -16,8 +16,10 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
+
 ( function ( $, mw ) {
 	'use strict';
+
 	var ulsPreferences,
 		// Text to prepend the sample text. 0D00 is an unassigned unicode point.
 		tofuSalt = '\u0D00',
@@ -45,11 +47,11 @@
 		},
 
 		setFont: function ( language, font ) {
-			this.registry.fonts[language] = font;
+			this.registry.fonts[ language ] = font;
 		},
 
 		getFont: function ( language ) {
-			return this.registry.fonts[language];
+			return this.registry.fonts[ language ];
 		},
 
 		save: function ( callback ) {
@@ -97,13 +99,13 @@
 			.appendTo( 'body' );
 
 		for ( index = 0; index < length; index++ ) {
-			$fixture.text( text[index] );
-			width[index] = $fixture.width() || width[index - 1];
-			height[index] = $fixture.height();
+			$fixture.text( text[ index ] );
+			width[ index ] = $fixture.width() || width[ index - 1 ];
+			height[ index ] = $fixture.height();
 
 			if ( index > 0 &&
-				( width[index] !== width[index - 1] ||
-					height[index] !== height[index - 1] )
+				( width[ index ] !== width[ index - 1 ] ||
+					height[ index ] !== height[ index - 1 ] )
 			) {
 				detected = false;
 				break;
@@ -135,7 +137,7 @@
 			 *
 			 * @param {Object} repository
 			 * @param {string} language
-			 * @param {array} classes
+			 * @param {Array} classes
 			 */
 			fontSelector: function ( repository, language, classes ) {
 				var font, autonym, defaultFont;
@@ -160,17 +162,17 @@
 
 					// There is a default font for this language,
 					// but check whether the user sees tofu for it.
-					if ( tofuLanguages[language] === undefined ) {
-						tofuLanguages[language] = detectTofu( $.uls.data.getAutonym( language ) );
+					if ( tofuLanguages[ language ] === undefined ) {
+						tofuLanguages[ language ] = detectTofu( $.uls.data.getAutonym( language ) );
 
 						// Log the tofu detection only once per page per language
-						if ( tofuLanguages[language] ) {
+						if ( tofuLanguages[ language ] ) {
 							mw.log( 'tofu detected for ' + language );
 							mw.hook( 'mw.uls.webfonts.tofudetected' ).fire( language );
 						}
 					}
 
-					if ( tofuLanguages[language] ) {
+					if ( tofuLanguages[ language ] ) {
 						font = autonym ? 'Autonym' : defaultFont;
 					} else {
 						// No tofu and no font preference. Use system font.

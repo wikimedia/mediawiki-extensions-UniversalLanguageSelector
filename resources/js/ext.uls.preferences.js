@@ -1,4 +1,4 @@
-/**
+/*!
  * ULS preferences system for MediaWiki.
  * Local storage for anonymous users, preferences for logged in users.
  *
@@ -17,6 +17,7 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
+
 ( function ( $, mw ) {
 	'use strict';
 
@@ -50,7 +51,7 @@
 			/*
 			 * Returns the value of the given key
 			 * @param {string} key
-			 * @retun {Object} value of the key
+			 * @return {Object} value of the key
 			 */
 			get: function ( key ) {
 				var data;
@@ -97,10 +98,12 @@
 		 * Initialize
 		 */
 		init: function () {
+			var options;
+
 			if ( this.isAnon ) {
 				this.preferences = preferenceStore().get( this.preferenceName );
 			} else {
-				var options = mw.user.options.get( this.preferenceName );
+				options = mw.user.options.get( this.preferenceName );
 				if ( !options ) {
 					options = '{}';
 				}
@@ -118,8 +121,8 @@
 		/**
 		 * Set the preference
 		 *
-		 * @param {String} key
-		 * @param value
+		 * @param {string} key
+		 * @param {mixed} value
 		 */
 		set: function ( key, value ) {
 			this.preferences[ key ] = value;
@@ -128,7 +131,7 @@
 		/**
 		 * Get a preference value for the given preference name
 		 *
-		 * @param key
+		 * @param {string} key
 		 */
 		get: function ( key ) {
 			return this.preferences[ key ];
@@ -137,7 +140,7 @@
 		/**
 		 * Save the preferences
 		 *
-		 * @param callback
+		 * @param {Function} callback
 		 */
 		save: function ( callback ) {
 			var ulsPreferences = this;

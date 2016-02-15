@@ -1,4 +1,4 @@
-/**
+/*!
  * ULS interface integration logic
  *
  * Copyright (C) 2012-2013 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
@@ -16,11 +16,13 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
+
 ( function ( $, mw ) {
 	'use strict';
 
 	/**
 	 * Construct the display settings link
+	 *
 	 * @return {jQuery}
 	 */
 	function displaySettings() {
@@ -40,7 +42,8 @@
 
 	/**
 	 * Construct the input settings link
-	 * @returns {jQuery}
+	 *
+	 * @return {jQuery}
 	 */
 	function inputSettings() {
 		var $inputSettingsTitle, inputSettingsText, $inputSettings;
@@ -59,6 +62,7 @@
 
 	/**
 	 * Add display settings link to the settings bar in ULS
+	 *
 	 * @param {Object} uls The ULS object
 	 */
 	function addDisplaySettings( uls ) {
@@ -97,6 +101,7 @@
 
 	/**
 	 * Add input settings link to the settings bar in ULS
+	 *
 	 * @param {Object} uls The ULS object
 	 */
 	function addInputSettings( uls ) {
@@ -127,6 +132,7 @@
 
 	/**
 	 * Helper function to make the uls triggers accessible with the keyboard.
+	 *
 	 * @param {jQuery} $target One or more jQuery elements.
 	 * @since 2013.07
 	 */
@@ -165,6 +171,7 @@
 
 	/**
 	 * Gets the name of the previously active language
+	 *
 	 * @param {string} code Language code of previously selected language.
 	 * @return {jQuery.Promise}
 	 */
@@ -187,7 +194,7 @@
 	}
 
 	function userCanChangeLanguage() {
-		return mw.config.get( 'wgULSAnonCanChangeLanguage') || !mw.user.isAnon();
+		return mw.config.get( 'wgULSAnonCanChangeLanguage' ) || !mw.user.isAnon();
 	}
 
 	function userHasChangedLanguage() {
@@ -260,7 +267,7 @@
 		previousLanguages.push( currentLang );
 		mw.uls.setPreviousLanguages( previousLanguages );
 
-		getUndoAutonym( previousLang ).done( function( autonym ) {
+		getUndoAutonym( previousLang ).done( function ( autonym ) {
 			// Attach a tipsy tooltip to the trigger
 			$ulsTrigger.tipsy( {
 				gravity: tipsyGravity[ ulsPosition ],

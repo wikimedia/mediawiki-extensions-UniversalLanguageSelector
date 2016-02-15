@@ -1,4 +1,4 @@
-/**
+/*!
  * QUnit tests for ULS.
  *
  * Copyright (C) 2012 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
@@ -38,17 +38,18 @@
 	} );
 
 	QUnit.test( 'User preferences', function ( assert ) {
+		var prefName, prefs, prefsToSave, readPrefs;
+
 		QUnit.expect( 2 );
 
 		// 'gofanim' means "fonts" in Hebrew.
 		// Here it's used as a meaningless word, to test
 		// the preferences without changing anything useful.
-		var prefName = 'gofanim',
-			prefs = mw.uls.preferences(),
-			prefsToSave = {},
-			readPrefs;
+		prefName = 'gofanim';
+		prefs = mw.uls.preferences();
+		prefsToSave = {};
 
-		prefsToSave[prefName] = {
+		prefsToSave[ prefName ] = {
 			fonts: {
 				qqy: 'Megafont'
 			}
@@ -58,7 +59,7 @@
 
 		readPrefs = prefs.get( prefName );
 		assert.strictEqual(
-			readPrefs[prefName].fonts.qqy,
+			readPrefs[ prefName ].fonts.qqy,
 			'Megafont',
 			'Correct value for the font name'
 		);
@@ -87,8 +88,8 @@
 		languagesInPH = mw.uls.getFrequentLanguageList( 'PH' );
 
 		for ( i = 0; i < languagesInPH.length; i++ ) {
-			if ( $.uls.data.isRedirect( languagesInPH[i] ) === 'tl' ||
-				languagesInPH[i] === 'tl'
+			if ( $.uls.data.isRedirect( languagesInPH[ i ] ) === 'tl' ||
+				languagesInPH[ i ] === 'tl'
 			) {
 				foundTagalog = true;
 

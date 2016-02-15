@@ -1,4 +1,4 @@
-/**
+/*!
  * Compact the interlanguage links in the sidebar
  *
  * Copyright (C) 2012-2014 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
@@ -22,6 +22,7 @@
 
 	/**
 	 * For the given array, remove duplicates
+	 *
 	 * @param {Array} originalArray
 	 * @return {Array} de-duplicated array
 	 */
@@ -114,6 +115,7 @@
 				},
 				/**
 				 * Language selection handler
+				 *
 				 * @param {string} language language code
 				 */
 				onSelect: function ( language ) {
@@ -152,6 +154,7 @@
 
 		/**
 		 * Get the compacted interlanguage list as associative array
+		 *
 		 * @return {Object}
 		 */
 		getCompactList: function () {
@@ -174,6 +177,7 @@
 
 		/**
 		 * Compact a given array of languages
+		 *
 		 * @param {Array} languages
 		 * @return {Array} Compacted array
 		 */
@@ -210,6 +214,7 @@
 		 * Filter the language list by previous languages.
 		 * Not all previous languages will be present in interlanguage links,
 		 * so we are filtering them.
+		 *
 		 * @return {Array} List of language codes supported by the article
 		 */
 		filterByPreviousLanguages: function ( languages ) {
@@ -223,6 +228,7 @@
 		/**
 		 * Filter the language list by common languages.
 		 * Common languages are the most probable languages predicted by ULS.
+		 *
 		 * @return {Array} List of language codes supported by the article
 		 */
 		filterByCommonLanguages: function ( languages ) {
@@ -236,6 +242,7 @@
 		/**
 		 * Filter the language list by Translate's assistant languages.
 		 * Where available, they're languages deemed useful by the user.
+		 *
 		 * @return {Array} List of those language codes which are supported by article
 		 */
 		filterByAssistantLanguages: function ( languages ) {
@@ -253,6 +260,7 @@
 		/**
 		 * Find out the existing languages supported
 		 * by the article and fetch their href.
+		 *
 		 * @return {Object} List of existing language codes and their hrefs
 		 */
 		getInterlanguageList: function () {
@@ -303,6 +311,7 @@
 
 		/**
 		 * Show a language from the interlanguage list
+		 *
 		 * @param {string} language
 		 */
 		showLanguage: function ( language ) {
@@ -312,6 +321,7 @@
 
 	/**
 	 * CompactInterlanguageList Plugin
+	 *
 	 * @param {Object} [option]
 	 */
 	$.fn.compactInterlanguageList = function ( option ) {

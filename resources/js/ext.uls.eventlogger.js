@@ -1,4 +1,4 @@
-/**
+/*!
  * ULS Event logger
  *
  * Copyright (C) 2012-2013 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
@@ -16,14 +16,15 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
+
 ( function ( $, mw ) {
 	'use strict';
 
 	/**
 	 * ULS Event logger
+	 * See https://meta.wikimedia.org/wiki/Schema:UniversalLanguageSelector
 	 *
 	 * @since 2013.08
-	 * @see https://meta.wikimedia.org/wiki/Schema:UniversalLanguageSelector
 	 */
 	function ULSEventLogger() {
 		this.logEventQueue = $.Callbacks( 'memory once' );
@@ -49,7 +50,7 @@
 		 * Local wrapper for 'mw.eventLog.logEvent'
 		 *
 		 * @param {Object} event Event action and optional fields
-		 * @param {String} schema The schema; 'UniversalLanguageSelector' is the default
+		 * @param {string} schema The schema; 'UniversalLanguageSelector' is the default
 		 * @return {jQuery.Promise} jQuery Promise object for the logging call
 		 */
 		log: function ( event, schema ) {
@@ -95,6 +96,7 @@
 
 		/**
 		 * Log language settings open
+		 *
 		 * @param {string} context Where it was opened from
 		 */
 		ulsSettingsOpen: function ( context ) {
@@ -106,6 +108,7 @@
 
 		/**
 		 * Log language revert
+		 *
 		 * @param {jQuery.Deferred} deferred
 		 */
 		ulsLanguageRevert: function ( deferred ) {
@@ -114,6 +117,7 @@
 
 		/**
 		 * Log IME disabling
+		 *
 		 * @param {string} context Where the setting was changed.
 		 */
 		disableIME: function ( context ) {
@@ -122,6 +126,7 @@
 
 		/**
 		 * Log IME enabling
+		 *
 		 * @param {string} context Where the setting was changed.
 		 */
 		enableIME: function ( context ) {
@@ -130,6 +135,7 @@
 
 		/**
 		 * Log IME change
+		 *
 		 * @param {string} inputMethod
 		 */
 		changeIME: function ( inputMethod ) {
@@ -141,6 +147,7 @@
 
 		/**
 		 * Log login link click in display settings.
+		 *
 		 * @param {jQuery.Deferred} deferred
 		 */
 		loginClick: function ( deferred ) {
@@ -215,6 +222,7 @@
 
 		/**
 		 * Log webfonts disabling
+		 *
 		 * @param {string} context Where the setting was changed.
 		 */
 		disableWebfonts: function ( context ) {
@@ -223,6 +231,7 @@
 
 		/**
 		 * Log webfonts enabling
+		 *
 		 * @param {string} context Where the setting was changed.
 		 */
 		enableWebfonts: function ( context ) {
@@ -231,6 +240,7 @@
 
 		/**
 		 * Log search strings which produce no search results.
+		 *
 		 * @param {jQuery.event} event The orignal event
 		 * @param {string} context The query string
 		 */

@@ -1,4 +1,4 @@
-/**
+/*!
  * ULS-based language settings dialog for MediaWiki.
  *
  * Copyright (C) 2012 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
@@ -16,6 +16,7 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
+
 ( function ( $, mw ) {
 	'use strict';
 
@@ -113,6 +114,7 @@
 		/**
 		 * Initialize the module.
 		 * Render the link and settings area for a language setting module.
+		 *
 		 * @param {string} moduleName Name of the setting module
 		 * @param {boolean} active boolean Make this module active and show by default
 		 */
@@ -237,6 +239,7 @@
 		 * Busy mode means displaying a progress cursor,
 		 * and showing the 'apply' button as disabled and with
 		 * a different label.
+		 *
 		 * @param {boolean} busy set true to put the panel in busy mode,
 		 *     false to unset the busy mode.
 		 */

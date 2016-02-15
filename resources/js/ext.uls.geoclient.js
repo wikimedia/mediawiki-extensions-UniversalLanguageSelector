@@ -1,4 +1,4 @@
-/**
+/*!
  * ULS GeoIP client
  *
  * Copyright (C) 2012 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
@@ -16,16 +16,17 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
+
 ( function ( $, mw ) {
 	'use strict';
+
+	var currentProto, httpOnly, settings,
+		service = mw.config.get( 'wgULSGeoService' );
 
 	mw.uls = mw.uls || {};
 	mw.uls.setGeo = function ( data ) {
 		window.Geo = data;
 	};
-
-	var currentProto, httpOnly, settings,
-		service = mw.config.get( 'wgULSGeoService' );
 
 	// Call the service only if defined, and if the current
 	// protocol is https, only if the service is not configured
