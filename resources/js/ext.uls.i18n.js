@@ -48,7 +48,7 @@
 		if ( messages ) {
 			return i18n.load( messages, locale );
 		}
-		if ( i18n.messageStore.messages[locale] ) {
+		if ( i18n.messageStore.messages[ locale ] ) {
 			return $.Deferred().resolve();
 		}
 		return i18n.messageStore.load(

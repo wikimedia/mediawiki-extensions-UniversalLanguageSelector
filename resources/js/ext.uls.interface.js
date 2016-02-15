@@ -255,7 +255,7 @@
 		}
 
 		previousLanguages = mw.uls.getPreviousLanguages();
-		previousLang = previousLanguages.slice( -1 )[0];
+		previousLang = previousLanguages.slice( -1 )[ 0 ];
 
 		previousLanguages.push( currentLang );
 		mw.uls.setPreviousLanguages( previousLanguages );
@@ -263,7 +263,7 @@
 		getUndoAutonym( previousLang ).done( function( autonym ) {
 			// Attach a tipsy tooltip to the trigger
 			$ulsTrigger.tipsy( {
-				gravity: tipsyGravity[ulsPosition],
+				gravity: tipsyGravity[ ulsPosition ],
 				delayOut: 3000,
 				html: true,
 				fade: true,

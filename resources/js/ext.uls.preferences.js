@@ -61,7 +61,7 @@
 					if ( !data ) {
 						// Try to restore the old preferences, if any, if possible.
 						try {
-							data = JSON.parse( localStorage.getItem( 'jStorage' ) )['uls-preferences'];
+							data = JSON.parse( localStorage.getItem( 'jStorage' ) )[ 'uls-preferences' ];
 							// And try to remove it.
 							localStorage.removeItem( 'jStorage' );
 						} catch ( e ) {
@@ -122,7 +122,7 @@
 		 * @param value
 		 */
 		set: function ( key, value ) {
-			this.preferences[key] = value;
+			this.preferences[ key ] = value;
 		},
 
 		/**
@@ -131,7 +131,7 @@
 		 * @param key
 		 */
 		get: function ( key ) {
-			return this.preferences[key];
+			return this.preferences[ key ];
 		},
 
 		/**

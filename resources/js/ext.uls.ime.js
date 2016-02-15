@@ -35,7 +35,7 @@
 			availableLanguages = {};
 
 		for ( language in $.ime.languages ) {
-			availableLanguages[language] = ulsLanguages[language];
+			availableLanguages[ language ] = ulsLanguages[ language ];
 		}
 
 		return availableLanguages;

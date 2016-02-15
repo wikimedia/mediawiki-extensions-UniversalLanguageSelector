@@ -119,7 +119,7 @@
 		initModule: function ( moduleName, active ) {
 			var $settingsTitle, $settingsText, $settingsLink,
 				languageSettings = this,
-				module = new $.fn.languagesettings.modules[moduleName]( languageSettings ),
+				module = new $.fn.languagesettings.modules[ moduleName ]( languageSettings ),
 				$settingsMenuItems = languageSettings.$window.find( '.settings-menu-items' );
 
 			$settingsTitle = $( '<div>' )
@@ -153,7 +153,7 @@
 				module.render();
 				$settingsLink.addClass( 'active' );
 			}
-			this.modules[moduleName] = module;
+			this.modules[ moduleName ] = module;
 
 			// Register cancel and apply hooks
 			mw.hook( 'mw.uls.settings.cancel' ).add( $.proxy( module.cancel, module ) );
@@ -165,7 +165,7 @@
 				languageSettings = this;
 
 			pos = $.extend( {}, this.$element.offset(), {
-				height: this.$element[0].offsetHeight
+				height: this.$element[ 0 ].offsetHeight
 			} );
 			top = this.top || pos.top + pos.height;
 			left = this.left || '25%';
@@ -299,7 +299,7 @@
 			}
 
 			if ( typeof option === 'string' ) {
-				data[option]();
+				data[ option ]();
 			}
 		} );
 	};

@@ -114,7 +114,7 @@
 			var index, inputSettings, $imeListContainer, defaultInputmethod,
 				imes, selected, imeId, $imeListTitle;
 
-			imes = $.ime.languages[language];
+			imes = $.ime.languages[ language ];
 
 			$imeListTitle = this.$template.find( '.ext-uls-input-settings-imes-title' );
 			$imeListContainer = this.$template.find( '.uls-input-settings-inputmethods-list' );
@@ -134,10 +134,10 @@
 
 			inputSettings = this;
 
-			defaultInputmethod = $.ime.preferences.getIM( language ) || imes.inputmethods[0];
+			defaultInputmethod = $.ime.preferences.getIM( language ) || imes.inputmethods[ 0 ];
 
 			for ( index in imes.inputmethods ) {
-				imeId = imes.inputmethods[index];
+				imeId = imes.inputmethods[ index ];
 				selected = defaultInputmethod === imeId;
 				$imeListContainer.append( inputSettings.renderInputmethodOption( imeId,
 					selected ) );
@@ -161,7 +161,7 @@
 		renderInputmethodOption: function ( imeId, selected ) {
 			var $imeLabel, name, description, $helplink, inputmethod, $inputMethodItem;
 
-			if ( imeId !== 'system' && !$.ime.sources[imeId] ) {
+			if ( imeId !== 'system' && !$.ime.sources[ imeId ] ) {
 				// imeId not known for jquery.ime.
 				// It is very rare, but still validate it.
 				return $();
@@ -186,7 +186,7 @@
 				description = '';
 				$helplink = '';
 			} else {
-				inputmethod = $.ime.inputmethods[imeId];
+				inputmethod = $.ime.inputmethods[ imeId ];
 				$helplink = $( '<a>' )
 					.addClass( 'uls-ime-help' )
 					.text( $.i18n( 'ext-uls-ime-help' ) )
@@ -195,11 +195,11 @@
 				if ( !inputmethod ) {
 					// The input method definition(rules) not loaded.
 					// We will show the name from $.ime.sources
-					name = $.ime.sources[imeId].name;
+					name = $.ime.sources[ imeId ].name;
 					description = '';
 				} else {
 					name = inputmethod.name;
-					description = $.ime.inputmethods[imeId].description;
+					description = $.ime.inputmethods[ imeId ].description;
 				}
 			}
 
@@ -239,25 +239,25 @@
 
 			// Selected IME language may be different, and it must
 			// be present, too
-			if ( $.uls.data.languages[selectedImeLanguage] &&
+			if ( $.uls.data.languages[ selectedImeLanguage ] &&
 				$.inArray( selectedImeLanguage, languagesForButtons ) === -1 ) {
 				languagesForButtons.push( selectedImeLanguage );
 			}
 
 			// UI language must always be present
 			if ( this.uiLanguage !== this.contentLanguage &&
-				$.uls.data.languages[this.uiLanguage] &&
+				$.uls.data.languages[ this.uiLanguage ] &&
 				$.inArray( this.uiLanguage, languagesForButtons ) === -1 ) {
 				languagesForButtons.push( this.uiLanguage );
 			}
 
 			for ( lang in suggestedLanguages ) {
 				// Skip already found languages
-				if ( $.inArray( suggestedLanguages[lang], languagesForButtons ) > -1 ) {
+				if ( $.inArray( suggestedLanguages[ lang ], languagesForButtons ) > -1 ) {
 					continue;
 				}
 
-				languagesForButtons.push( suggestedLanguages[lang] );
+				languagesForButtons.push( suggestedLanguages[ lang ] );
 
 				// No need to add more languages than buttons
 				if ( languagesForButtons.length >= SUGGESTED_LANGUAGES_NUMBER ) {
@@ -284,7 +284,7 @@
 			selectedImeLanguage = selectedImeLanguage || this.contentLanguage;
 			// Add the buttons for the most likely languages
 			for ( i = 0; i < SUGGESTED_LANGUAGES_NUMBER; i++ ) {
-				language = languagesForButtons[i];
+				language = languagesForButtons[ i ];
 				$button = $( '<button>' )
 					.addClass( 'button uls-language-button autonym' )
 					.text( $.uls.data.getAutonym( language ) )
@@ -515,7 +515,7 @@
 			inputSettings.$parent.setBusy( true );
 
 			if ( previousLanguage ) {
-				previousIM = inputSettings.savedRegistry.imes[previousLanguage];
+				previousIM = inputSettings.savedRegistry.imes[ previousLanguage ];
 			}
 
 			if ( currentLanguage !== inputSettings.savedRegistry.language ||

@@ -226,11 +226,11 @@
 
 			for ( lang in suggestedLanguages ) {
 				// Skip already found languages
-				if ( $.inArray( suggestedLanguages[lang], languagesForButtons ) > -1 ) {
+				if ( $.inArray( suggestedLanguages[ lang ], languagesForButtons ) > -1 ) {
 					continue;
 				}
 
-				languagesForButtons.push( suggestedLanguages[lang] );
+				languagesForButtons.push( suggestedLanguages[ lang ] );
 
 				// No need to add more languages than buttons
 				if ( languagesForButtons.length >= SUGGESTED_LANGUAGES_NUMBER ) {
@@ -251,7 +251,7 @@
 
 			// Add the buttons for the most likely languages
 			for ( i = 0; i < SUGGESTED_LANGUAGES_NUMBER; i++ ) {
-				language = languagesForButtons[i];
+				language = languagesForButtons[ i ];
 				$button = $( '<button>' )
 					.addClass( 'button uls-language-button autonym' )
 					.text( $.uls.data.getAutonym( language ) )
@@ -665,15 +665,15 @@
 					mw.hook( webfontsEvent ).fire( 'displaysettings' );
 				}
 
-				if ( newFonts[displaySettings.uiLanguage] !== oldFonts[displaySettings.uiLanguage] ) {
+				if ( newFonts[ displaySettings.uiLanguage ] !== oldFonts[ displaySettings.uiLanguage ] ) {
 					mw.hook( 'mw.uls.font.change' ).fire(
-						'interface', displaySettings.uiLanguage, newFonts[displaySettings.uiLanguage]
+						'interface', displaySettings.uiLanguage, newFonts[ displaySettings.uiLanguage ]
 					);
 				}
 
-				if ( newFonts[displaySettings.contentLanguage] !== oldFonts[displaySettings.contentLanguage] ) {
+				if ( newFonts[ displaySettings.contentLanguage ] !== oldFonts[ displaySettings.contentLanguage ] ) {
 					mw.hook( 'mw.uls.font.change' ).fire(
-						'content', displaySettings.contentLanguage, newFonts[displaySettings.contentLanguage]
+						'content', displaySettings.contentLanguage, newFonts[ displaySettings.contentLanguage ]
 					);
 				}
 
