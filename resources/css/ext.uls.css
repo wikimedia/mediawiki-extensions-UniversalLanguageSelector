@@ -23,9 +23,12 @@
 }
 
 .uls-ui-languages button {
-	width: 23%;
+	width: 22%;
 	text-overflow: ellipsis;
-	margin-right: 4%;
+	margin-right: 2%;
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 0.5em 0;
 }
 
 button.uls-more-languages {

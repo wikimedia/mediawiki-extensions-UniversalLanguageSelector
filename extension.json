@@ -116,7 +116,9 @@
 				"ext.uls.mediawiki",
 				"ext.uls.webfonts",
 				"mediawiki.api.parse",
-				"mediawiki.Uri"
+				"mediawiki.Uri",
+				"mediawiki.ui.checkbox",
+				"mediawiki.ui.button"
 			],
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
@@ -181,7 +183,9 @@
 				"ext.uls.ime",
 				"ext.uls.languagesettings",
 				"ext.uls.mediawiki",
-				"jquery.ime"
+				"jquery.ime",
+				"mediawiki.ui.button",
+				"mediawiki.ui.radio"
 			],
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
@@ -211,7 +215,8 @@
 				"ext.uls.buttons",
 				"ext.uls.messages",
 				"ext.uls.preferences",
-				"jquery.uls.grid"
+				"jquery.uls.grid",
+				"mediawiki.ui.button"
 			],
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"

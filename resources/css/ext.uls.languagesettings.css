@@ -120,6 +120,11 @@
 	font-size: 10pt;
 }
 
+/* mediawiki.ui does not have a pressed state style. */
+#languagesettings-panels .mw-ui-pressed {
+	background-color: #D8D8D8;
+}
+
 .checkbox input[type="checkbox"] {
 	margin-left: 0;
 }
