@@ -1,7 +1,7 @@
 @firefox @internet_explorer_10 @phantomjs
 Feature: Trigger in personal toolbar
 
-  @commons.wikimedia.beta.wmflabs.org @login
+  @commons.wikimedia.beta.wmflabs.org
   Scenario: Open language selector when logged in
     Given I am logged in
     When I click language selector trigger element
@@ -25,8 +25,6 @@ Feature: Trigger in personal toolbar
     When I click language selector trigger element
     Then I should see the language selector
 
-
-  @login
   Scenario Outline: Opening language settings from sidebar
     Given I am <user status>
       And I am on <page type>
@@ -40,7 +38,6 @@ Feature: Trigger in personal toolbar
     | logged out  | a talk page without interlanguage links |
     | logged out  | a talk page with interlanguage links    |
 
-  @login
   Scenario Outline: Closing language settings without saving
     Given I am <user status>
       And I am on a page without interlanguage links

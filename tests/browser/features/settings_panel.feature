@@ -1,7 +1,7 @@
 @firefox @internet_explorer_10 @phantomjs
 Feature: Settings panel
 
-  @login @ime-default-on
+  @ime-default-on
   Scenario Outline: Input settings display
     Given I am <user status>
       And I am on a page without interlanguage links
@@ -33,7 +33,6 @@ Feature: Settings panel
       And I see Language Search
       And I can navigate back to Input Settings
 
-   @login
   Scenario: More languages (interface language selection)
     Given I am logged in
     When I open Language panel of language settings
@@ -43,7 +42,6 @@ Feature: Settings panel
       And I see Language Search
       And I can navigate back to Language Settings
 
-  @login
   Scenario: Temporary live preview for menu language
 
     Given I am logged in
@@ -67,7 +65,6 @@ Feature: Settings panel
     When I open Language panel of language settings
     Then I see "English (sama kuin sisällön)" as the name of the content language
 
-  @login
   Scenario: Selecting language via [...] button
 
     Given I am logged in
@@ -78,7 +75,6 @@ Feature: Settings panel
       And I apply the changes
     Then my interface language is "German"
 
-  @login
   Scenario: Regression test for bug T58913
 
     Given I am logged in

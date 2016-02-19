@@ -6,7 +6,7 @@ activated by the input method indicator. User can type with selected input
 method in different input fields and temporarily activate and deactivate the
 input method.
 
-  @clean @commons.wikimedia.beta.wmflabs.org @internet_explorer_10
+  @commons.wikimedia.beta.wmflabs.org @internet_explorer_10
   Scenario: Input method indicator is shown
 
   The input method indicator is shown when input field gets a focus.
@@ -54,7 +54,7 @@ input method.
     Then I should see the input method indicator
       And in it there must be an element with Malayalam text
 
-  @clean @commons.wikimedia.beta.wmflabs.org @internet_explorer_10
+  @commons.wikimedia.beta.wmflabs.org @internet_explorer_10
   Scenario Outline: Input method menu is completely visible
     Given I visit a random page with <skin> skin and <language> as the interface language
     When I open the input method menu

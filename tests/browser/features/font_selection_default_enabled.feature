@@ -1,4 +1,4 @@
-@firefox @internet_explorer_10 @language-browsertests.wmflabs.org @login @phantomjs
+@firefox @internet_explorer_10 @language-browsertests.wmflabs.org @phantomjs
 Feature: Font selection default enabled
 
   In order to have better using experience,

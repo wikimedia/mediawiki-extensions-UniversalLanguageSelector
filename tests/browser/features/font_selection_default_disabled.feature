@@ -1,4 +1,4 @@
-@firefox @internet_explorer_10 @login @phantomjs
+@firefox @internet_explorer_10 @phantomjs
 Feature: Font selection default disabled
 
   In order to have better using experience,

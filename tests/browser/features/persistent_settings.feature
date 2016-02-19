@@ -1,5 +1,5 @@
 # First scenario seems to fail whenever OpenDyslexic is missing
-@firefox @internet_explorer_10 @login @phantomjs
+@firefox @internet_explorer_10 @phantomjs
 Feature: Persistent settings
 
   This assumes wiki content language is English.

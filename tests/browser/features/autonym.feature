@@ -4,7 +4,6 @@ Feature: Autonym font
   * With tofu detection in ULS, system fonts will be given preference over webfonts.
   * Reference: https://upload.wikimedia.org/wikipedia/commons/7/7d/ULS-WebFonts-Workflow-Diagram.png
 
-  @login
   Scenario: Autonym font is used in the ULS language search dialog for display language selection by logged-in users
     Given I am logged in
       And I open the Universal Language Selector
@@ -12,7 +11,6 @@ Feature: Autonym font
     When I click the button with the ellipsis
     Then the language list of ULS should use Autonym font
 
-  @login
   Scenario: Autonym font is used in the ULS language search dialog for input language selection by logged-in users
     Given I am logged in
       And I open the Universal Language Selector

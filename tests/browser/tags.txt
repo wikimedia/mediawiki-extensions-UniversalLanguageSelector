@@ -10,7 +10,3 @@ This file contains the descriptions of the tags we use.
 
 @ime-default-on
   These tests expect input methods to be enabled by default.
-
-@login
-  This test logs in. You can filter these tests out if you don't have an
-  account available.

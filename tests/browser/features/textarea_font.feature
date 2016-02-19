@@ -1,4 +1,4 @@
-@firefox @internet_explorer_10 @login @phantomjs
+@firefox @internet_explorer_10 @phantomjs
 Feature: Font preferences respected in different languages
 
   If a user has an edit font preferences respect that preference.
@@ -11,7 +11,6 @@ Feature: Font preferences respected in different languages
     Given I am logged in
       And I have reset my preferences
 
-  @clean
   Scenario: Edit area fonts should not change on UI language change if the user preferences for edit area font are set
     When I set the editing fonts to "monospace"
       And I set "Hindi" as the interface language
