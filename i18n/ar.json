@@ -5,7 +5,8 @@
 			"زكريا",
 			"Asaifm",
 			"Tarawneh",
-			"Abanima"
+			"Abanima",
+			"Maroen1990"
 		]
 	},
 	"uls-desc": "يمنح المستخدم عدة طرق لاختيار لغة، وضبط إعدادات اللغة",
@@ -65,5 +66,5 @@
 	"apihelp-languagesearch-example-1": "ابحث عن «Te»",
 	"apihelp-languagesearch-example-2": "ابحث عن «ഫി»",
 	"apihelp-languagesearch-example-3": "ابحث عن «ഫി» واسمح بخطأ مطبعي واحد",
-	"apihelp-ulslocalization-param-language": "سطر اللغة."
+	"apihelp-ulslocalization-param-language": "كود اللغة."
 }
