@@ -226,7 +226,7 @@ class UniversalLanguageSelectorHooks {
 
 		// Language change
 		if ( Language::isSupportedLanguage( $languageToSave ) ) {
-			$request->response()->setcookie( 'language', $languageToSave );
+			$request->response()->setCookie( 'language', $languageToSave );
 			$code = $languageToSave;
 
 			return true;
