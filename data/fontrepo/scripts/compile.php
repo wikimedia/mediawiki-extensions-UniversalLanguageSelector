@@ -16,6 +16,8 @@ foreach ( glob( '../fonts/*/font.ini' ) as $inifile ) {
 	$languages = array();
 	$version = null;
 
+	$dir = dirname( $inifile );
+
 	foreach ( $conf as $fontname => $font ) {
 		if ( isset( $font['languages'] ) ) {
 			$languages = explode( ',', $font['languages'] );
@@ -51,8 +53,6 @@ foreach ( glob( '../fonts/*/font.ini' ) as $inifile ) {
 		if ( isset( $font['fontstyle'] ) ) {
 			$list['fonts'][$fontname]['fontstyle'] = $font['fontstyle'];
 		}
-
-		$dir = dirname( $inifile );
 
 		if ( isset( $font['ttf'] ) ) {
 			$list['fonts'][$fontname]['ttf'] = basename( $dir ) . '/' . $font['ttf'];
