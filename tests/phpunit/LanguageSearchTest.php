@@ -29,23 +29,23 @@ class LanguageSearchTest extends PHPUnit_Framework_TestCase {
 
 	public function searchDataProvider() {
 		return array(
-			array( "ഹിന്ദി", array(
+			array( 'ഹിന്ദി', array(
 				'hi' => 'ഹിന്ദി'
 			)
 			),
-			array( "മല", array(
-				'ml' => "മലയാളം",
+			array( 'മല', array(
+				'ml' => 'മലയാളം',
 				'mg' => 'മലഗാസി',
 				'ms' => 'മലെയ്',
 			)
 			),
-			array( "Φινλαν", array(
+			array( 'Φινλαν', array(
 				'fi' => 'Φινλανδικά',
 			)
 			),
 			array( 'blah', array()
 			),
-			array( "الفرنسية", array(
+			array( 'الفرنسية', array(
 				'fr' => 'الفرنسية',
 				'fr-ca' => 'الفرنسية الكندية',
 				'fr-ch' => 'الفرنسية السويسرية',
@@ -53,11 +53,11 @@ class LanguageSearchTest extends PHPUnit_Framework_TestCase {
 				'fro' => 'الفرنسية القديمة',
 			)
 			),
-			array( "മലയളം", array(
-				'ml' => "മലയാളം",
+			array( 'മലയളം', array(
+				'ml' => 'മലയാളം',
 			)
 			),
-			array( "finish", array(
+			array( 'finish', array(
 				'fi' => 'finnish'
 			)
 			),

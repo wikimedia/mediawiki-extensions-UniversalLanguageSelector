@@ -49,7 +49,7 @@ class LanguageNameIndexer extends Maintenance {
 				$buckets[$bucket][$name] = $code;
 			}
 		}
-		$this->output( "Total buckets: " . count( $buckets ) . "\n" );
+		$this->output( 'Total buckets: ' . count( $buckets ) . "\n" );
 		file_put_contents( 'langnames.ser', serialize( $buckets ) );
 	}
 }
