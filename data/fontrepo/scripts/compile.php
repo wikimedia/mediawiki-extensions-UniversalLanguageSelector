@@ -10,20 +10,23 @@ if ( !is_dir( '../fonts/' ) ) {
 
 $list = array();
 $list['base'] = '../data/fontrepo/fonts/';
+
 foreach ( glob( '../fonts/*/font.ini' ) as $inifile ) {
 	$conf = parse_ini_file( $inifile, true );
 	$languages = array();
 	$version = null;
-	foreach ( $conf as $fontname => $font ) {
 
+	foreach ( $conf as $fontname => $font ) {
 		if ( isset( $font['languages'] ) ) {
 			$languages = explode( ',', $font['languages'] );
 			foreach ( $languages as $rcode ) {
 				$rcode = trim( $rcode );
 				$code = str_replace( '*', '', $rcode );
+
 				if ( !isset( $list['languages'][$code] ) ) {
 					$list['languages'][$code] = array( 'system' );
 				}
+
 				if ( strpos( $rcode, '*' ) !== false ) {
 					unset( $list['languages'][$code][0] );
 					array_unshift( $list['languages'][$code], $fontname );
@@ -32,9 +35,11 @@ foreach ( glob( '../fonts/*/font.ini' ) as $inifile ) {
 				}
 			}
 		}
+
 		if ( isset( $font['version'] ) ) {
 			$version = $font['version'];
 		}
+
 		$list['fonts'][$fontname] = array(
 			'version' => $version,
 		);
@@ -42,6 +47,7 @@ foreach ( glob( '../fonts/*/font.ini' ) as $inifile ) {
 		if ( isset( $font['fontweight'] ) ) {
 			$list['fonts'][$fontname]['fontweight'] = $font['fontweight'];
 		}
+
 		if ( isset( $font['fontstyle'] ) ) {
 			$list['fonts'][$fontname]['fontstyle'] = $font['fontstyle'];
 		}
@@ -51,15 +57,19 @@ foreach ( glob( '../fonts/*/font.ini' ) as $inifile ) {
 		if ( isset( $font['ttf'] ) ) {
 			$list['fonts'][$fontname]['ttf'] = basename( $dir ) . '/' . $font['ttf'];
 		}
+
 		if ( isset( $font['svg'] ) ) {
 			$list['fonts'][$fontname]['svg'] = basename( $dir ) . '/' . $font['svg'];
 		}
+
 		if ( isset( $font['eot'] ) ) {
 			$list['fonts'][$fontname]['eot'] = basename( $dir ) . '/' . $font['eot'];
 		}
+
 		if ( isset( $font['woff'] ) ) {
 			$list['fonts'][$fontname]['woff'] = basename( $dir ) . '/' . $font['woff'];
 		}
+
 		if ( isset( $font['woff2'] ) ) {
 			$list['fonts'][$fontname]['woff2'] = basename( $dir ) . '/' . $font['woff2'];
 		}
@@ -76,9 +86,11 @@ foreach ( glob( '../fonts/*/font.ini' ) as $inifile ) {
 		if ( isset( $font['bold'] ) ) {
 			$list['fonts'][$fontname]['variants']['bold'] = $font['bold'];
 		}
+
 		if ( isset( $font['bolditalic'] ) ) {
 			$list['fonts'][$fontname]['variants']['bolditalic'] = $font['bolditalic'];
 		}
+
 		if ( isset( $font['italic'] ) ) {
 			$list['fonts'][$fontname]['variants']['italic'] = $font['italic'];
 		}
