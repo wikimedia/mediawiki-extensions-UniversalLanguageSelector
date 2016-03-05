@@ -110,7 +110,7 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 * Hook: ResourceLoaderTestModules
 	 */
-	public static function addTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
+	public static function addTestModules( array &$testModules, ResourceLoader $resourceLoader ) {
 		$testModules['qunit']['ext.uls.tests'] = array(
 			'scripts' => array( 'tests/qunit/ext.uls.tests.js' ),
 			'dependencies' => array( 'jquery.uls', 'ext.uls.init', 'ext.uls.preferences' ),
@@ -357,8 +357,8 @@ class UniversalLanguageSelectorHooks {
 	 * @param QuickTemplate $template
 	 * @return bool
 	 */
-	public static function onSkinTemplateOutputPageBeforeExec( Skin &$skin,
-		QuickTemplate &$template
+	public static function onSkinTemplateOutputPageBeforeExec( Skin $skin,
+		QuickTemplate $template
 	) {
 		global $wgULSPosition;
 
@@ -403,7 +403,7 @@ class UniversalLanguageSelectorHooks {
 	 * @param ResourceLoader $resourceLoader
 	 * @return boolean true
 	 */
-	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
+	public static function onResourceLoaderRegisterModules( ResourceLoader $resourceLoader ) {
 		global $wgResourceModules, $wgULSEventLogging;
 
 		if (
