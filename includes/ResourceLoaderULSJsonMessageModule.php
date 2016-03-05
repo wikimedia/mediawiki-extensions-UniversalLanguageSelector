@@ -19,7 +19,7 @@ class ResourceLoaderULSJsonMessageModule extends ResourceLoaderModule {
 	 * @param ResourceLoaderContext $context
 	 * @return string[] Module names.
 	 */
-	function getDependencies( ResourceLoaderContext $context = null ) {
+	public function getDependencies( ResourceLoaderContext $context = null ) {
 		return array( 'ext.uls.i18n' );
 	}
 
@@ -29,7 +29,7 @@ class ResourceLoaderULSJsonMessageModule extends ResourceLoaderModule {
 	 * @param ResourceLoaderContext $context
 	 * @return int Unix timestamp.
 	 */
-	function getModifiedTime( ResourceLoaderContext $context ) {
+	public function getModifiedTime( ResourceLoaderContext $context ) {
 		$code = $context->getLanguage();
 		if ( !Language::isValidCode( $code ) ) {
 			$code = 'en';
@@ -51,7 +51,7 @@ class ResourceLoaderULSJsonMessageModule extends ResourceLoaderModule {
 	 * @param ResourceLoaderContext $context
 	 * @return string JavaScript code.
 	 */
-	function getScript( ResourceLoaderContext $context ) {
+	public function getScript( ResourceLoaderContext $context ) {
 		$code = $context->getLanguage();
 		if ( !Language::isValidCode( $code ) ) {
 			$code = 'en';

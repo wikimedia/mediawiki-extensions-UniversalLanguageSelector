@@ -17,7 +17,7 @@ class ResourceLoaderULSModuleMemcachedTest extends MediaWikiTestCase {
 	 * correctly with language code.
 	 * @covers ResourceLoaderSchemaModule::getModifiedTime
 	 */
-	function testModifiedTime() {
+	public function testModifiedTime() {
 		$request = new WebRequest();
 		$module = new ResourceLoaderULSModule();
 

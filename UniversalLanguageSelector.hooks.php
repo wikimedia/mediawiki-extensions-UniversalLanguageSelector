@@ -125,7 +125,7 @@ class UniversalLanguageSelectorHooks {
 	 * Add some tabs for navigation for users who do not use Ajax interface.
 	 * Hook: PersonalUrls
 	 */
-	static function addPersonalBarTrigger( array &$personal_urls, &$title ) {
+	public static function addPersonalBarTrigger( array &$personal_urls, &$title ) {
 		global $wgULSPosition;
 
 		if ( $wgULSPosition !== 'personal' ) {
