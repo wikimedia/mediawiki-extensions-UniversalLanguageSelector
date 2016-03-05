@@ -196,7 +196,7 @@ class UniversalLanguageSelectorHooks {
 		$request = $context->getRequest();
 
 		$languageToSave = $request->getText( 'setlang' );
-		if ( $request->getText( 'uselang' ) && !$languageToSave ) {
+		if ( !$languageToSave && $request->getText( 'uselang' ) ) {
 			// uselang can be used for temporary override of language preference
 			// when setlang is not provided
 			return true;
