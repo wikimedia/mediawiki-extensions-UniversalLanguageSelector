@@ -1,30 +1,31 @@
 {
 	"@metadata": {
 		"authors": [
-			"Autokrator"
+			"Autokrator",
+			"Laurentianus"
 		]
 	},
 	"uls-plang-title-languages": "Linguis aliis",
-	"ext-uls-select-language-settings-icon-tooltip": "Praeferentiae linguae",
+	"ext-uls-select-language-settings-icon-tooltip": "Sermonis modi",
 	"ext-uls-undo-language-tooltip-text": "Lingua commota ex $1",
 	"ext-uls-language-settings-preferences-link": "Plura",
-	"ext-uls-display-settings-title": "Praeferentias monstrare",
+	"ext-uls-display-settings-title": "Modos ostendere",
 	"ext-uls-display-settings-language-tab": "Lingua",
 	"ext-uls-display-settings-fonts-tab": "Scripturae",
 	"ext-uls-display-settings-title-short": "Depictio",
 	"ext-uls-display-settings-desc": "Linguam per navigatrum atque scripturam ligere",
-	"ext-uls-language-settings-title": "Praeferentiae linguae",
-	"ext-uls-language-settings-apply": "Praeferentias mutare",
+	"ext-uls-language-settings-title": "Sermonis modi",
+	"ext-uls-language-settings-apply": "Modos applicare",
 	"ext-uls-language-settings-cancel": "Abrogare",
 	"ext-uls-language-buttons-help": "Linguam navigatri mutare. Lingua contentorum non mutabitur.",
-	"ext-uls-display-settings-font-settings": "Praeferentiae scripturae",
+	"ext-uls-display-settings-font-settings": "Scripturae modi",
 	"ext-uls-display-settings-ui-language": "Lingua depictionis",
 	"ext-uls-display-settings-anon-label": "Lingua depictionis",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (eadem ac contenta)",
 	"ext-uls-webfonts-select-for": "Scripturam ligere per $1",
 	"ext-uls-webfonts-select-for-ui-info": "Scriptura navigatri",
 	"ext-uls-webfonts-select-for-content-info": "Scriptura contentorum",
-	"ext-uls-back-to-display-settings": "Reddere ad praeferentias depictionis",
+	"ext-uls-back-to-display-settings": "Redire ad praesentationis modos",
 	"ext-uls-input-settings-desc": "Uterisne alia lingua?",
 	"ext-uls-input-settings-ui-language": "Lingua adhibita ad scribendum",
 	"ext-uls-ime-help": "Auxilium",
