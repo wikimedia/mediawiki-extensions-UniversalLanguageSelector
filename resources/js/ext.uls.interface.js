@@ -285,7 +285,8 @@
 							lang: previousLang,
 							// We could get dir from uls.data,
 							// but we are trying to avoid loading it
-							// and 'auto' is safe enough in this context
+							// and 'auto' is safe enough in this context.
+							// T130390: must use attr
 							dir: 'auto'
 						} );
 
