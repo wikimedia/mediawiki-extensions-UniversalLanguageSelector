@@ -46,34 +46,6 @@ class ApiLanguageSearch extends ApiBase {
 	}
 
 	/**
-	 * @deprecated since MediaWiki core 1.25
-	 */
-	public function getParamDescription() {
-		return array(
-			'search' => 'Search string',
-			'typos' => 'Number of spelling mistakes allowed in the search string',
-		);
-	}
-
-	/**
-	 * @deprecated since MediaWiki core 1.25
-	 */
-	public function getDescription() {
-		return 'Search for language names in any script';
-	}
-
-	/**
-	 * @deprecated since MediaWiki core 1.25
-	 */
-	public function getExamples() {
-		return array(
-			'api.php?action=languagesearch&search=Te',
-			'api.php?action=languagesearch&search=ഫി',
-			'api.php?action=languagesearch&search=ഫി&typos=1',
-		);
-	}
-
-	/**
 	 * @see ApiBase::getExamplesMessages()
 	 */
 	protected function getExamplesMessages() {
