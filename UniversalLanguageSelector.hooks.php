@@ -138,10 +138,10 @@ class UniversalLanguageSelectorHooks {
 		}
 
 		// The element id will be 'pt-uls'
-		$lang = $context->getLanguage();
+		$langCode = $context->getLanguage()->getCode();
 		$personal_urls = array(
 			'uls' => array(
-				'text' => $lang->fetchLanguageName( $lang->getCode() ),
+				'text' => Language::fetchLanguageName( $langCode ),
 				'href' => '#',
 				'class' => 'uls-trigger autonym',
 				'active' => true
@@ -303,8 +303,8 @@ class UniversalLanguageSelectorHooks {
 		$vars['wgULSAcceptLanguageList'] = array_keys( $out->getRequest()->getAcceptLang() );
 
 		// An optimization to avoid loading all of uls.data just to get the autonym
-		$lang = $out->getLanguage();
-		$vars['wgULSCurrentAutonym'] = $lang->fetchLanguageName( $lang->getCode() );
+		$langCode = $out->getLanguage()->getCode();
+		$vars['wgULSCurrentAutonym'] = Language::fetchLanguageName( $langCode );
 
 		return true;
 	}
