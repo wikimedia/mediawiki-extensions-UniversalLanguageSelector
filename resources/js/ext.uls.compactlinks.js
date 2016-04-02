@@ -82,7 +82,7 @@
 			var language;
 
 			for ( language in this.compactList ) {
-				this.showLanguage( language );
+				this.compactList[ language ].element.parentNode.style.display = '';
 			}
 
 			this.addTrigger();
@@ -137,8 +137,13 @@
 					this.$menu.css( 'left', this.left );
 				},
 				languageDecorator: function ( $languageLink, language ) {
-					// set href according to language
-					$languageLink.prop( 'href', compactLinks.interlanguageList[ language ].href );
+					// set href and text exactly same as what was in
+					// interlanguage link. The ULS autonym might be different in some
+					// cases like sr. In ULS it is "српски", while in interlanguage links
+					// it is "српски / srpski"
+					$languageLink
+						.prop( 'href', compactLinks.interlanguageList[ language ].href )
+						.text( compactLinks.interlanguageList[ language ].autonym );
 				},
 				// Use compact version of ULS
 				compact: true,
@@ -267,9 +272,14 @@
 			var interlanguageList = {};
 
 			this.$interlanguageList.find( 'li.interlanguage-link > a' ).each( function () {
-				interlanguageList[ this.getAttribute( 'lang' ) ] = {
+				var langCode = this.getAttribute( 'lang' );
+
+				// We keep interlanguageList with redirect resolved language codes as keys.
+				langCode = $.uls.data.isRedirect( langCode ) || langCode;
+				interlanguageList[ langCode ] = {
 					href: this.getAttribute( 'href' ),
-					autonym: $( this ).text()
+					autonym: $( this ).text(),
+					element: this
 				};
 			} );
 
@@ -307,15 +317,6 @@
 
 			this.$interlanguageList.append( $trigger );
 			this.$trigger = $trigger;
-		},
-
-		/**
-		 * Show a language from the interlanguage list
-		 *
-		 * @param {string} language
-		 */
-		showLanguage: function ( language ) {
-			this.$interlanguageList.find( '.interwiki-' + language ).css( 'display', '' );
 		}
 	};
 
