@@ -95,8 +95,6 @@
 			var languages,
 				compactLinks = this,
 				dir = $( 'html' ).prop( 'dir' ),
-				interlanguageListLeft,
-				interlanguageListWidth,
 				ulsLanguageList = {};
 
 			languages = $.map( compactLinks.interlanguageList, function ( language, languageCode ) {
@@ -105,9 +103,6 @@
 				return languageCode;
 			} );
 
-			// Calculate the left and width values
-			interlanguageListLeft = compactLinks.$interlanguageList.offset().left;
-			interlanguageListWidth = compactLinks.$interlanguageList.width();
 			// Attach ULS to the trigger
 			compactLinks.$trigger.uls( {
 				onReady: function () {
@@ -127,14 +122,33 @@
 					location.href = compactLinks.interlanguageList[ language ].href;
 				},
 				onVisible: function () {
-					// Calculate the positioning of the panel
-					// according to the position of the trigger icon
+					var offset, height, width, triangleWidth;
+					// The panel is positioned carefully so that our pointy triangle,
+					// which is implemented as a square box rotated 45 degrees with
+					// rotation origin in the middle. See the corresponding style file.
+
+					// These are for the trigger
+					offset = compactLinks.$trigger.offset();
+					width = compactLinks.$trigger.outerWidth();
+					height = compactLinks.$trigger.outerHeight();
+
+					// Triangle width is: Math.sqrt( 2 * Math.pow( 25, 2 ) ) / 2 =~ 17.7;
+					// Box width = 24 + 1 for border.
+					// The resulting value is rounded up 20 to have a small space between.
+					triangleWidth = 20;
+
 					if ( dir === 'rtl' ) {
-						this.left = interlanguageListLeft - this.$menu.width();
+						this.left = offset.left - this.$menu.outerWidth() - triangleWidth;
 					} else {
-						this.left = interlanguageListLeft + interlanguageListWidth;
+						this.left = offset.left + width + triangleWidth;
 					}
-					this.$menu.css( 'left', this.left );
+					// Offset -250px from the middle of the trigger
+					this.top = offset.top + ( height / 2 ) - 250;
+
+					this.$menu.css( {
+						left: this.left,
+						top: this.top
+					} );
 				},
 				languageDecorator: function ( $languageLink, language ) {
 					// set href according to language
@@ -142,10 +156,6 @@
 				},
 				// Use compact version of ULS
 				compact: true,
-				// Top position of the language selector. Top it 250px above to take care of
-				// caret pointing the trigger. See .interlanguage-uls-menu:after style definition
-				top: compactLinks.$trigger.offset().top - compactLinks.$trigger.height() / 2 - 250,
-				// List of languages to be shown
 				languages: ulsLanguageList,
 				// Show common languages
 				quickList: compactLinks.filterByCommonLanguages( languages )
