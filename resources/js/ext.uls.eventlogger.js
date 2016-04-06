@@ -177,10 +177,6 @@
 				interfaceLanguage: language
 			};
 
-			if ( mw.uls.languageSelectionMethod !== undefined ) {
-				logParams.languageSelectionMethod = mw.uls.languageSelectionMethod;
-			}
-
 			this.log( logParams ).always( deferred.resolve );
 		},
 

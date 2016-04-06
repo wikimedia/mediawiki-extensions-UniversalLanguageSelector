@@ -313,8 +313,6 @@
 				onVisible: function () {
 					var $parent;
 
-					mw.uls.addEventLoggingTriggers();
-
 					if ( !displaySettings.$parent.$window.hasClass( 'callout' ) ) {
 						// Callout menus will have position rules.
 						// Others use the default position.

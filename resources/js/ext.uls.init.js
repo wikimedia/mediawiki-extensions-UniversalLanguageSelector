@@ -27,39 +27,6 @@
 	mw.uls.previousLanguageAutonymCookie = 'uls-previous-language-autonym';
 	mw.uls.languageSettingsModules = [ 'ext.uls.inputsettings', 'ext.uls.displaysettings' ];
 
-	// What was the last thing that the user did to select the language:
-	// * 'map' - clicked the map
-	// * 'search' - typed in the search box
-	// * 'common' - clicked a link in the "Common languages" section
-	// If the user just clicked in some other section, it remains undefined.
-	// This is useful for logging.
-	mw.uls.languageSelectionMethod = undefined;
-
-	/**
-	 * Add event logging triggers, which are common to different
-	 * ULS instances
-	 */
-	mw.uls.addEventLoggingTriggers = function () {
-		// Remove previous values when reinitializing
-		mw.uls.languageSelectionMethod = undefined;
-
-		$( '#uls-map-block' ).on( 'click', function () {
-			mw.uls.languageSelectionMethod = 'map';
-		} );
-
-		$( '#uls-languagefilter' ).on( 'keydown', function () {
-			// If it's the first letter,
-			// log the usage of the search box
-			if ( $( this ).val() === '' ) {
-				mw.uls.languageSelectionMethod = 'search';
-			}
-		} );
-
-		$( '#uls-lcd-quicklist a' ).on( 'click', function () {
-			mw.uls.languageSelectionMethod = 'common';
-		} );
-	};
-
 	/**
 	 * Change the language of wiki using API or set cookie and reload the page
 	 *
