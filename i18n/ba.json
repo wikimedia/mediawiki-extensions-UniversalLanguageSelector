@@ -2,14 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Азат Хәлилов",
-			"Айбикә"
+			"Айбикә",
+			"Ләйсән"
 		]
 	},
-	"uls-desc": "Ҡулланыусыға тел һайлау өсөн бер нисә ысул бирә",
+	"uls-desc": "Ҡулланыусыға тел һайлау һәм көйләү өсөн бер нисә ысул бирә",
 	"uls-plang-title-languages": "Телдәр",
 	"ext-uls-select-language-settings-icon-tooltip": "Телде көйләү",
 	"ext-uls-undo-language-tooltip-text": "Алдағы тел: $1",
-	"ext-uls-language-settings-preferences-link": "Өҫтәмә тел көйләүҙәре",
+	"ext-uls-language-settings-preferences-link": "Телдең өҫтәмә көйләүҙәре",
 	"uls-betafeature-label": "Тел һылтанмаларының йыйнаҡ исемлеге",
 	"uls-betafeature-desc": "Һеҙҙең өсөн кәрәкле телдәр менән бергә тел исемлегенең ҡыҫҡартылған вариантын күрһәтә",
 	"ext-uls-display-settings-title": "Һүрәтләүҙе көйләү",
@@ -25,5 +26,5 @@
 	"ext-uls-display-settings-ui-language": "Сағылдырыуҙар теле",
 	"ext-uls-webfonts-settings-title": "Кәрәк булғанда шрифтар күсереү",
 	"ext-uls-webfonts-settings-info-link": "Өҫтәмә мәғлүмәт",
-	"ext-uls-webfonts-select-for-ui-info": "\n\nИнтерфейс ҡулланыусыһының шрифты"
+	"ext-uls-webfonts-select-for-ui-info": "Ҡулланыусының интерфейс шрифты"
 }
