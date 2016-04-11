@@ -1,6 +1,6 @@
 /*!
  * ULS preferences system for MediaWiki.
- * Local storage for anonymous users, preferences for logged in users.
+ * Localstorage for anonymous users, preferences for logged in users.
  *
  * Copyright (C) 2012 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
  * Niklas Laxström, Pau Giner, Santhosh Thottingal, Siebrand Mazeland and other
@@ -41,12 +41,10 @@
 				if ( typeof value === 'object' ) {
 					value = JSON.stringify( value );
 				}
-				// Set the store
+
 				try {
 					localStorage.setItem( key, value );
-				} catch ( e ) { // Use cookie
-					$.cookie( key, value, { path: '/' } );
-				}
+				} catch ( e ) {}
 			},
 			/*
 			 * Returns the value of the given key
@@ -56,29 +54,9 @@
 			get: function ( key ) {
 				var data;
 
-				// No value supplied, return value
 				try {
-					data = localStorage.getItem( key );
-					if ( !data ) {
-						// Try to restore the old preferences, if any, if possible.
-						try {
-							data = JSON.parse( localStorage.getItem( 'jStorage' ) )[ 'uls-preferences' ];
-							// And try to remove it.
-							localStorage.removeItem( 'jStorage' );
-						} catch ( e ) {
-							// Don't bother about it.
-						}
-					}
-				} catch ( e ) { // Use cookie
-					data = $.cookie( key );
-				}
-
-				// Try to parse JSON
-				try {
-					data = JSON.parse( data );
-				} catch ( e ) {
-					data = data;
-				}
+					data = JSON.parse( localStorage.getItem( key ) );
+				} catch ( e ) {}
 
 				return data;
 			}
