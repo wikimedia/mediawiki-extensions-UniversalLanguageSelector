@@ -200,6 +200,14 @@
 	function userHasChangedLanguage() {
 		var previousLang = mw.uls.getPreviousLanguages().slice( -1 )[ 0 ],
 			currentLang = mw.config.get( 'wgUserLanguage' );
+
+		// Changed language is saved in showUndoTooltip, which is never
+		// called if previousLang is not defined, which will never be
+		// defined unless we do it now.
+		if ( previousLang === undefined ) {
+			mw.uls.setPreviousLanguages( [ currentLang ] );
+		}
+
 		return previousLang && previousLang !== currentLang;
 	}
 
