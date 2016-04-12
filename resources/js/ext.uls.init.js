@@ -183,40 +183,4 @@
 		return unique;
 	};
 
-	/**
-	 * Checks whether the browser is supported.
-	 * Browser support policy: http://www.mediawiki.org/wiki/Browser_support#Grade_A
-	 *
-	 * @return {boolean}
-	 */
-	function isBrowserSupported() {
-		var blacklist = {
-			msie: [
-				[ '<=', 7 ]
-			]
-		};
-
-		return !$.client.test( blacklist, null, true );
-	}
-
-	/**
-	 * Initialize ULS front-end if browser is supported.
-	 *
-	 * @param {Function} callback callback function to be called after initialization.
-	 */
-	mw.uls.init = function ( callback ) {
-		if ( !isBrowserSupported() ) {
-			$( '#pt-uls' ).hide();
-
-			return;
-		}
-
-		if ( callback ) {
-			callback.call( this );
-		}
-	};
-
-	$( document ).ready( function () {
-		mw.uls.init();
-	} );
 }( jQuery, mediaWiki ) );
