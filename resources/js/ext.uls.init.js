@@ -24,7 +24,6 @@
 
 	mw.uls = mw.uls || {};
 	mw.uls.previousLanguagesStorageKey = 'uls-previous-languages';
-	mw.uls.previousLanguageAutonymCookie = 'uls-previous-language-autonym';
 	mw.uls.languageSettingsModules = [ 'ext.uls.inputsettings', 'ext.uls.displaysettings' ];
 
 	/**

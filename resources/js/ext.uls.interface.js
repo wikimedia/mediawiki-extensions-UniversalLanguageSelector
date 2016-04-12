@@ -20,6 +20,8 @@
 ( function ( $, mw ) {
 	'use strict';
 
+	var previousLanguageAutonymStorageKey = 'uls-previous-language-autonym';
+
 	/**
 	 * Construct the display settings link
 	 *
@@ -176,9 +178,12 @@
 	 * @return {jQuery.Promise}
 	 */
 	function getUndoAutonym( code ) {
-		var
-			deferred = $.Deferred(),
-			autonym = $.cookie( mw.uls.previousLanguageAutonymCookie );
+		var autonym,
+			deferred = $.Deferred();
+
+		try {
+			autonym = localStorage.getItem( previousLanguageAutonymStorageKey );
+		} catch ( e ) {}
 
 		if ( autonym ) {
 			mw.loader.using( 'jquery.tipsy', function () {
@@ -313,14 +318,14 @@
 		} );
 
 		// Now that we set the previous languages,
-		// we can set the cookie of the previous autonym.
+		// we can store the previous autonym.
 		// TODO: Refactor this, because it doesn't directly belong
 		// to the tooltip.
-		$.cookie( mw.uls.previousLanguageAutonymCookie,
-			mw.config.get( 'wgULSCurrentAutonym' ), {
-				path: '/'
-			}
-		);
+		try {
+			localStorage.setItem(
+				previousLanguageAutonymStorageKey, mw.config.get( 'wgULSCurrentAutonym' )
+			);
+		} catch ( e ) {}
 	}
 
 	function initInterface() {
