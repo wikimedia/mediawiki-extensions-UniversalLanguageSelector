@@ -159,8 +159,7 @@
 			"dependencies": [
 				"mediawiki.api",
 				"mediawiki.api.options",
-				"mediawiki.cookie",
-				"jquery.cookie"
+				"mediawiki.cookie"
 			],
 			"position": "top",
 			"localBasePath": "resources",

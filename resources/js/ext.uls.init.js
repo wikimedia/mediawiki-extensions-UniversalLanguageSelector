@@ -81,16 +81,7 @@
 	};
 
 	mw.uls.getPreviousLanguages = function () {
-		var previousLanguages = $.cookie( mw.uls.previousLanguagesStorageKey );
-
-		$.removeCookie( mw.uls.previousLanguagesStorageKey, { path: '/' } );
-
-		if ( $.isArray( previousLanguages ) ) {
-			// Migrate data from cookie to localStorage.
-			mw.uls.setPreviousLanguages( previousLanguages );
-		} else {
-			previousLanguages = [];
-		}
+		var previousLanguages = [];
 
 		try {
 			previousLanguages.push.apply(
