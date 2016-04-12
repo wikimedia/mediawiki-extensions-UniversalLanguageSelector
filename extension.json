@@ -160,7 +160,6 @@
 				"mediawiki.api",
 				"mediawiki.api.options",
 				"mediawiki.cookie",
-				"jquery.client",
 				"jquery.cookie"
 			],
 			"position": "top",
@@ -251,7 +250,8 @@
 			"scripts": "js/ext.uls.webfonts.js",
 			"dependencies": [
 				"ext.uls.init",
-				"ext.uls.preferences"
+				"ext.uls.preferences",
+				"jquery.client"
 			],
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"

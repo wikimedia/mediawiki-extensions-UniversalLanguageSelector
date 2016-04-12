@@ -87,7 +87,9 @@
 			length = Math.min( 4, text.length ),
 			detected = false;
 
-		if ( $.client.test( { msie: false } ) ) {
+		if ( $.client.test( {
+				msie: false
+			} ) ) {
 			// IE shows a different tofu for unassigned code points!
 			text = tofuSalt + text;
 		}
@@ -222,12 +224,10 @@
 	};
 
 	$( document ).ready( function () {
-		mw.uls.init( function () {
-			mw.webfonts.preferences.load();
+		mw.webfonts.preferences.load();
 
-			if ( mw.webfonts.preferences.isEnabled() ) {
-				mw.loader.using( 'ext.uls.webfonts.fonts', mw.webfonts.setup );
-			}
-		} );
+		if ( mw.webfonts.preferences.isEnabled() ) {
+			mw.loader.using( 'ext.uls.webfonts.fonts', mw.webfonts.setup );
+		}
 	} );
 }( jQuery, mediaWiki ) );

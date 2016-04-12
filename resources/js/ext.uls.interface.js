@@ -317,178 +317,181 @@
 		// TODO: Refactor this, because it doesn't directly belong
 		// to the tooltip.
 		$.cookie( mw.uls.previousLanguageAutonymCookie,
-			mw.config.get( 'wgULSCurrentAutonym' ),
-			{ path: '/' }
+			mw.config.get( 'wgULSCurrentAutonym' ), {
+				path: '/'
+			}
 		);
 	}
 
-	$( document ).ready( function () {
-		mw.uls.init( function () {
-			var $triggers,
-				$pLang,
-				$ulsTrigger = $( '.uls-trigger' ),
-				rtlPage = $( 'body' ).hasClass( 'rtl' ),
-				anonMode = ( mw.user.isAnon() &&
-					!mw.config.get( 'wgULSAnonCanChangeLanguage' ) ),
-				imeSelector = mw.config.get( 'wgULSImeSelectors' ).join( ', ' ),
-				ulsPosition = mw.config.get( 'wgULSPosition' );
+	function initInterface() {
+		var $triggers,
+			$pLang,
+			$ulsTrigger = $( '.uls-trigger' ),
+			rtlPage = $( 'body' ).hasClass( 'rtl' ),
+			anonMode = ( mw.user.isAnon() &&
+				!mw.config.get( 'wgULSAnonCanChangeLanguage' ) ),
+			imeSelector = mw.config.get( 'wgULSImeSelectors' ).join( ', ' ),
+			ulsPosition = mw.config.get( 'wgULSPosition' );
 
-			if ( ulsPosition === 'interlanguage' ) {
-				// TODO: Refactor this block
-				// The interlanguage links section
-				$pLang = $( '#p-lang' );
-				// Add an element near the interlanguage links header
-				$ulsTrigger = $( '<span>' ).addClass( 'uls-settings-trigger' );
-				// Append ULS cog to languages section.
-				$pLang.prepend( $ulsTrigger );
-				// Take care of any other elements with this class.
-				$ulsTrigger = $( '.uls-settings-trigger' );
-				// Remove the dummy link, which was added to make sure that the section appears
-				$pLang.find( '.uls-p-lang-dummy' ).remove();
+		if ( ulsPosition === 'interlanguage' ) {
+			// TODO: Refactor this block
+			// The interlanguage links section
+			$pLang = $( '#p-lang' );
+			// Add an element near the interlanguage links header
+			$ulsTrigger = $( '<span>' ).addClass( 'uls-settings-trigger' );
+			// Append ULS cog to languages section.
+			$pLang.prepend( $ulsTrigger );
+			// Take care of any other elements with this class.
+			$ulsTrigger = $( '.uls-settings-trigger' );
+			// Remove the dummy link, which was added to make sure that the section appears
+			$pLang.find( '.uls-p-lang-dummy' ).remove();
 
-				if ( !$pLang.find( 'div ul' ).children().length ) {
-					// Replace the title of the interlanguage links area
-					// if there are no interlanguage links
-					$pLang.find( 'h3' )
-						.text( mw.msg( 'uls-plang-title-languages' ) );
-				}
-
-				$ulsTrigger.attr( {
-					title: mw.msg( 'ext-uls-select-language-settings-icon-tooltip' )
-				} );
-
-				$ulsTrigger.on( 'click', function ( e, eventParams ) {
-					var languagesettings = $ulsTrigger.data( 'languagesettings' ),
-						languageSettingsOptions;
-
-					if ( languagesettings ) {
-						if ( !languagesettings.shown ) {
-							mw.hook( 'mw.uls.settings.open' ).fire( eventParams && eventParams.source || 'interlanguage' );
-						}
-					} else {
-						// Initialize the Language settings window
-						languageSettingsOptions = {
-							defaultModule: 'display',
-							onVisible: function () {
-								var topRowHeight, caretHeight, caretWidth,
-									$caretBefore = $( '<span>' ).addClass( 'caret-before' ),
-									$caretAfter = $( '<span>' ).addClass( 'caret-after' ),
-									ulsTriggerWidth = this.$element.width(),
-									ulsTriggerOffset = this.$element.offset();
-
-								// Add the callout caret triangle
-								// pointing to the trigger icon
-								this.$window.addClass( 'callout' );
-								this.$window.prepend( $caretBefore, $caretAfter );
-
-								// Calculate the positioning of the panel
-								// according to the position of the trigger icon
-								if ( rtlPage ) {
-									caretWidth = parseInt( $caretBefore.css( 'border-left-width' ), 10 );
-									this.left = ulsTriggerOffset.left - this.$window.width() - caretWidth;
-								} else {
-									caretWidth = parseInt( $caretBefore.css( 'border-right-width' ), 10 );
-									this.left = ulsTriggerOffset.left + ulsTriggerWidth + caretWidth;
-								}
-
-								topRowHeight = this.$window.find( '.row' ).height();
-								caretHeight = parseInt( $caretBefore.css( 'top' ), 10 );
-								this.top = ulsTriggerOffset.top - topRowHeight - caretHeight / 2;
-
-								this.position();
-							}
-						};
-
-						mw.loader.using( mw.uls.languageSettingsModules, function () {
-							$ulsTrigger.languagesettings( languageSettingsOptions ).click();
-						} );
-
-						e.stopPropagation();
-					}
-				} );
-			} else if ( anonMode ) {
-				$ulsTrigger.on( 'click', function ( e, eventParams ) {
-					var languagesettings = $ulsTrigger.data( 'languagesettings' );
-
-					e.preventDefault();
-
-					if ( languagesettings ) {
-						if ( !languagesettings.shown ) {
-							mw.hook( 'mw.uls.settings.open' ).fire( eventParams && eventParams.source || 'personal' );
-						}
-					} else {
-						mw.loader.using( mw.uls.languageSettingsModules, function () {
-							$ulsTrigger.languagesettings();
-
-							$ulsTrigger.trigger( 'click', eventParams );
-						} );
-					}
-				} );
-			} else {
-				$ulsTrigger.on( 'click', function ( e, eventParams ) {
-					var uls = $ulsTrigger.data( 'uls' );
-
-					e.preventDefault();
-
-					if ( uls ) {
-						if ( !uls.shown ) {
-							mw.hook( 'mw.uls.settings.open' ).fire( eventParams && eventParams.source || 'personal' );
-						}
-					} else {
-						mw.loader.using( 'ext.uls.mediawiki', function () {
-							$ulsTrigger.uls( {
-								quickList: function () {
-									return mw.uls.getFrequentLanguageList();
-								},
-								onReady: function () {
-									var uls = this;
-									mw.loader.using( mw.uls.languageSettingsModules, function () {
-										addDisplaySettings( uls );
-										addInputSettings( uls );
-									} );
-								},
-								onSelect: function ( language ) {
-									mw.uls.changeLanguage( language );
-								}
-							} );
-
-							// Allow styles to apply first and position to work by
-							// delaying the activation after them.
-							window.setTimeout( function () {
-								$ulsTrigger.trigger( 'click', eventParams );
-							}, 0 );
-						} );
-					}
-				} );
+			if ( !$pLang.find( 'div ul' ).children().length ) {
+				// Replace the title of the interlanguage links area
+				// if there are no interlanguage links
+				$pLang.find( 'h3' )
+					.text( mw.msg( 'uls-plang-title-languages' ) );
 			}
 
-			// At this point we don't care which kind of trigger it is
-			$triggers = $( '.uls-settings-trigger, .uls-trigger' );
-			addAccessibilityFeatures( $triggers );
+			$ulsTrigger.attr( {
+				title: mw.msg( 'ext-uls-select-language-settings-icon-tooltip' )
+			} );
 
-			// Bind language settings to preferences page link
-			$( '#uls-preferences-link' )
-				.text( mw.msg( 'ext-uls-language-settings-preferences-link' ) )
-				.click( function () {
-					$ulsTrigger.trigger( 'click', {
-						source: 'preferences'
+			$ulsTrigger.on( 'click', function ( e, eventParams ) {
+				var languagesettings = $ulsTrigger.data( 'languagesettings' ),
+					languageSettingsOptions;
+
+				if ( languagesettings ) {
+					if ( !languagesettings.shown ) {
+						mw.hook( 'mw.uls.settings.open' ).fire( eventParams && eventParams.source || 'interlanguage' );
+					}
+				} else {
+					// Initialize the Language settings window
+					languageSettingsOptions = {
+						defaultModule: 'display',
+						onVisible: function () {
+							var topRowHeight, caretHeight, caretWidth,
+								$caretBefore = $( '<span>' ).addClass( 'caret-before' ),
+								$caretAfter = $( '<span>' ).addClass( 'caret-after' ),
+								ulsTriggerWidth = this.$element.width(),
+								ulsTriggerOffset = this.$element.offset();
+
+							// Add the callout caret triangle
+							// pointing to the trigger icon
+							this.$window.addClass( 'callout' );
+							this.$window.prepend( $caretBefore, $caretAfter );
+
+							// Calculate the positioning of the panel
+							// according to the position of the trigger icon
+							if ( rtlPage ) {
+								caretWidth = parseInt( $caretBefore.css( 'border-left-width' ), 10 );
+								this.left = ulsTriggerOffset.left - this.$window.width() - caretWidth;
+							} else {
+								caretWidth = parseInt( $caretBefore.css( 'border-right-width' ), 10 );
+								this.left = ulsTriggerOffset.left + ulsTriggerWidth + caretWidth;
+							}
+
+							topRowHeight = this.$window.find( '.row' ).height();
+							caretHeight = parseInt( $caretBefore.css( 'top' ), 10 );
+							this.top = ulsTriggerOffset.top - topRowHeight - caretHeight / 2;
+
+							this.position();
+						}
+					};
+
+					mw.loader.using( mw.uls.languageSettingsModules, function () {
+						$ulsTrigger.languagesettings( languageSettingsOptions ).click();
 					} );
 
-					return false;
+					e.stopPropagation();
+				}
+			} );
+		} else if ( anonMode ) {
+			$ulsTrigger.on( 'click', function ( e, eventParams ) {
+				var languagesettings = $ulsTrigger.data( 'languagesettings' );
+
+				e.preventDefault();
+
+				if ( languagesettings ) {
+					if ( !languagesettings.shown ) {
+						mw.hook( 'mw.uls.settings.open' ).fire( eventParams && eventParams.source || 'personal' );
+					}
+				} else {
+					mw.loader.using( mw.uls.languageSettingsModules, function () {
+						$ulsTrigger.languagesettings();
+
+						$ulsTrigger.trigger( 'click', eventParams );
+					} );
+				}
+			} );
+		} else {
+			$ulsTrigger.on( 'click', function ( e, eventParams ) {
+				var uls = $ulsTrigger.data( 'uls' );
+
+				e.preventDefault();
+
+				if ( uls ) {
+					if ( !uls.shown ) {
+						mw.hook( 'mw.uls.settings.open' ).fire( eventParams && eventParams.source || 'personal' );
+					}
+				} else {
+					mw.loader.using( 'ext.uls.mediawiki', function () {
+						$ulsTrigger.uls( {
+							quickList: function () {
+								return mw.uls.getFrequentLanguageList();
+							},
+							onReady: function () {
+								var uls = this;
+								mw.loader.using( mw.uls.languageSettingsModules, function () {
+									addDisplaySettings( uls );
+									addInputSettings( uls );
+								} );
+							},
+							onSelect: function ( language ) {
+								mw.uls.changeLanguage( language );
+							}
+						} );
+
+						// Allow styles to apply first and position to work by
+						// delaying the activation after them.
+						window.setTimeout( function () {
+							$ulsTrigger.trigger( 'click', eventParams );
+						}, 0 );
+					} );
+				}
+			} );
+		}
+
+		// At this point we don't care which kind of trigger it is
+		$triggers = $( '.uls-settings-trigger, .uls-trigger' );
+		addAccessibilityFeatures( $triggers );
+
+		// Bind language settings to preferences page link
+		$( '#uls-preferences-link' )
+			.text( mw.msg( 'ext-uls-language-settings-preferences-link' ) )
+			.click( function () {
+				$ulsTrigger.trigger( 'click', {
+					source: 'preferences'
 				} );
 
-			if ( userCanChangeLanguage() && userHasChangedLanguage() ) {
-				showUndoTooltip();
-			}
+				return false;
+			} );
 
-			$( 'body' ).on( 'focus.imeinit', imeSelector, function () {
-				var $input = $( this );
-				$( 'body' ).off( '.imeinit' );
-				mw.loader.using( 'ext.uls.ime', function () {
-					mw.ime.setup();
-					mw.ime.handleFocus( $input );
-				} );
+		if ( userCanChangeLanguage() && userHasChangedLanguage() ) {
+			showUndoTooltip();
+		}
+
+		$( 'body' ).on( 'focus.imeinit', imeSelector, function () {
+			var $input = $( this );
+			$( 'body' ).off( '.imeinit' );
+			mw.loader.using( 'ext.uls.ime', function () {
+				mw.ime.setup();
+				mw.ime.handleFocus( $input );
 			} );
 		} );
+	}
+
+	$( document ).ready( function () {
+		initInterface();
 	} );
 }( jQuery, mediaWiki ) );
