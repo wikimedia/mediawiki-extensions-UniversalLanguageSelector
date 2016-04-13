@@ -20,80 +20,86 @@
 ( function ( $, mw ) {
 	'use strict';
 
-	var template = '<div class="uls-display-settings">'
+	var template = '<div class="uls-display-settings">' +
 
-		+ '<div class="row">' // Tab switcher buttons
-		+ '<div class="twelve columns uls-display-settings-tab-switcher">'
-		+ '<div class="uls-button-group mw-ui-button-group">'
-		+ '<button id="uls-display-settings-language-tab" class="mw-ui-button mw-ui-pressed" '
-		+ 'data-i18n="ext-uls-display-settings-language-tab"></button>'
-		+ '<button id="uls-display-settings-fonts-tab" class="mw-ui-button" data-i18n="ext-uls-display-settings-fonts-tab"></button>'
-		+ '</div>'
-		+ '</div>'
-		+ '</div>'
+		// Tab switcher buttons
+		'<div class="row">' +
+		'<div class="twelve columns uls-display-settings-tab-switcher">' +
+		'<div class="uls-button-group mw-ui-button-group">' +
+		'<button id="uls-display-settings-language-tab" class="mw-ui-button mw-ui-pressed" ' +
+		'data-i18n="ext-uls-display-settings-language-tab"></button>' +
+		'<button id="uls-display-settings-fonts-tab" class="mw-ui-button" data-i18n="ext-uls-display-settings-fonts-tab"></button>' +
+		'</div>' +
+		'</div>' +
+		'</div>' +
 
-		+ '<div class="ext-uls-sub-panel uls-display-settings-language-tab">' // Begin display language sub-panel
+		// Begin display language sub-panel
+		'<div class="ext-uls-sub-panel uls-display-settings-language-tab">' +
 
 		// "Display language", title above the buttons row
-		+ '<div class="row">'
-		+ '<div class="eleven columns">'
-		+ '<h4 data-i18n="ext-uls-display-settings-ui-language"></h4>'
-		+ '</div>'
-		+ '</div>'
+		'<div class="row">' +
+		'<div class="eleven columns">' +
+		'<h4 data-i18n="ext-uls-display-settings-ui-language"></h4>' +
+		'</div>' +
+		'</div>' +
 
 		// UI languages buttons row
-		+ '<div class="row">'
-		+ '<div class="uls-ui-languages eleven columns">'
-		+ '<p data-i18n="ext-uls-language-buttons-help"></p>'
-		+ '</div>'
-		+ '</div>'
+		'<div class="row">' +
+		'<div class="uls-ui-languages eleven columns">' +
+		'<p data-i18n="ext-uls-language-buttons-help"></p>' +
+		'</div>' +
+		'</div>' +
 
-		+ '</div>' // End display language section
+		// End display language section
+		'</div>' +
 
-		+ '<div class="ext-uls-sub-panel uls-display-settings-fonts-tab hide">' // Begin font settings section, hidden by default
+		// Begin font settings section, hidden by default
+		'<div class="ext-uls-sub-panel uls-display-settings-fonts-tab hide">' +
 
 		// "Font settings" title
-		+ '<div class="row">'
-		+ '<div class="twelve columns">'
-		+ '<h4 data-i18n="ext-uls-display-settings-font-settings"></h4>'
-		+ '</div>'
-		+ '</div>'
+		'<div class="row">' +
+		'<div class="twelve columns">' +
+		'<h4 data-i18n="ext-uls-display-settings-font-settings"></h4>' +
+		'</div>' +
+		'</div>' +
 
-		+ '<div id="uls-display-settings-font-selectors" class="uls-display-settings-font-selectors">'
+		'<div id="uls-display-settings-font-selectors" class="uls-display-settings-font-selectors">' +
 
 		// Menus font selection dropdown with label
-		+ '<div class="row uls-font-item uls-content-fonts">'
-		+ '<div class="six columns">'
-		+ '<label class="uls-font-label" id="content-font-selector-label"></label>'
-		+ '</div>'
-		+ '<select id="content-font-selector" class="four columns end uls-font-select"></select>'
-		+ '</div>'
+		'<div class="row uls-font-item uls-content-fonts">' +
+		'<div class="six columns">' +
+		'<label class="uls-font-label" id="content-font-selector-label"></label>' +
+		'</div>' +
+		'<select id="content-font-selector" class="four columns end uls-font-select"></select>' +
+		'</div>' +
 
 		// Content font selection dropdown with label
-		+ '<div class="row uls-font-item uls-ui-fonts">'
-		+ '<div class="six columns">'
-		+ '<label class="uls-font-label" id="ui-font-selector-label"></label>'
-		+ '</div>'
-		+ '<select id="ui-font-selector" class="four columns end uls-font-select"></select>'
-		+ '</div>'
+		'<div class="row uls-font-item uls-ui-fonts">' +
+		'<div class="six columns">' +
+		'<label class="uls-font-label" id="ui-font-selector-label"></label>' +
+		'</div>' +
+		'<select id="ui-font-selector" class="four columns end uls-font-select"></select>' +
+		'</div>' +
 
-		+ '</div>' // End font selectors
+		// End font selectors
+		'</div>' +
 
 		// Webfonts enabling checkbox with label
-		+ '<div class="row">'
-		+ '<div class="eleven columns">'
-		+ '<div class="mw-ui-checkbox">'
-		+ '<input type="checkbox" id="webfonts-enable-checkbox" />'
-		+ '<label class="checkbox" for="webfonts-enable-checkbox" >'
-		+ '<strong data-i18n="ext-uls-webfonts-settings-title"></strong> '
-		+ '<span data-i18n="ext-uls-webfonts-settings-info"></span> '
-		+ '<a target="_blank" href="https://www.mediawiki.org/wiki/Universal_Language_Selector/WebFonts" data-i18n="ext-uls-webfonts-settings-info-link"></a>'
-		+ '</label>'
-		+ '</div>'
-		+ '</div>'
-		+ '</div>'
+		'<div class="row">' +
+		'<div class="eleven columns">' +
+		'<div class="mw-ui-checkbox">' +
+		'<input type="checkbox" id="webfonts-enable-checkbox" />' +
+		'<label class="checkbox" for="webfonts-enable-checkbox" >' +
+		'<strong data-i18n="ext-uls-webfonts-settings-title"></strong> ' +
+		'<span data-i18n="ext-uls-webfonts-settings-info"></span> ' +
+		'<a target="_blank" href="https://www.mediawiki.org/wiki/Universal_Language_Selector/WebFonts" data-i18n="ext-uls-webfonts-settings-info-link"></a>' +
+		'</label>' +
+		'</div>' +
+		'</div>' +
+		'</div>' +
 
-		+ '</div>'; // End font settings section
+		// End font settings section
+		'</div>';
 
 	function DisplaySettings( $parent ) {
 		this.nameI18n = 'ext-uls-display-settings-title-short';

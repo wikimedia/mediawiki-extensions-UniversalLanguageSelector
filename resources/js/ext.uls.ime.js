@@ -106,6 +106,30 @@
 		}
 	};
 
+	function imeNotification() {
+		var notificationMsg = ( mw.config.get( 'wgULSPosition' ) === 'personal' ) ?
+				'ext-uls-input-disable-notification-info-personal' :
+				'ext-uls-input-disable-notification-info-interlanguage',
+			$notification = $( '<div>' )
+				.addClass( 'uls-ime-notification-bubble' )
+				.append(
+					$( '<div>' )
+						.attr( 'data-i18n', 'ext-uls-input-disable-notification' ),
+					$( '<div>' )
+						.addClass( 'link' )
+						.attr( 'data-i18n', 'ext-uls-input-disable-notification-undo' )
+						.on( 'click', function () {
+							$.ime.preferences.enable();
+							$.ime.preferences.save( function () {
+								mw.ime.setup();
+							} );
+						} ),
+					$( '<div>' ).attr( 'data-i18n', notificationMsg )
+				);
+
+		mw.notify( $notification.i18n() );
+	}
+
 	// Add a 'more settings' link that takes to input settings of ULS
 	customHelpLink = function () {
 		var $disableInputToolsLink, $moreSettingsLink,
@@ -297,28 +321,4 @@
 			} );
 		}
 	};
-
-	function imeNotification() {
-		var notificationMsg = ( mw.config.get( 'wgULSPosition' ) === 'personal' ) ?
-				'ext-uls-input-disable-notification-info-personal' :
-				'ext-uls-input-disable-notification-info-interlanguage',
-			$notification = $( '<div>' )
-				.addClass( 'uls-ime-notification-bubble' )
-				.append(
-					$( '<div>' )
-						.attr( 'data-i18n', 'ext-uls-input-disable-notification' ),
-					$( '<div>' )
-						.addClass( 'link' )
-						.attr( 'data-i18n', 'ext-uls-input-disable-notification-undo' )
-						.on( 'click', function () {
-							$.ime.preferences.enable();
-							$.ime.preferences.save( function () {
-								mw.ime.setup();
-							} );
-						} ),
-					$( '<div>' ).attr( 'data-i18n', notificationMsg )
-				);
-
-		mw.notify( $notification.i18n() );
-	}
 }( jQuery, mediaWiki ) );

@@ -20,40 +20,41 @@
 ( function ( $, mw ) {
 	'use strict';
 
-	var template = '<div class="uls-input-settings">'
-		+ '<div class="row">' // Top "Display settings" title
-		+ '<div class="twelve columns">'
-		+ '<h3 data-i18n="ext-uls-input-settings-title"></h3>'
-		+ '</div>'
-		+ '</div>'
+	var template = '<div class="uls-input-settings">' +
+		// Top "Display settings" title
+		'<div class="row">' +
+		'<div class="twelve columns">' +
+		'<h3 data-i18n="ext-uls-input-settings-title"></h3>' +
+		'</div>' +
+		'</div>' +
 
 		// "Language for ime", title above the buttons row
-		+ '<div class="row enabled-only uls-input-settings-languages-title">'
-		+ '<div class="eleven columns">'
-		+ '<h4 data-i18n="ext-uls-input-settings-ui-language"></h4>'
-		+ '</div>'
-		+ '</div>'
+		'<div class="row enabled-only uls-input-settings-languages-title">' +
+		'<div class="eleven columns">' +
+		'<h4 data-i18n="ext-uls-input-settings-ui-language"></h4>' +
+		'</div>' +
+		'</div>' +
 
 		// UI languages buttons row
-		+ '<div class="row enabled-only">'
-		+ '<div class="uls-ui-languages eleven columns"></div>'
-		+ '</div>'
+		'<div class="row enabled-only">' +
+		'<div class="uls-ui-languages eleven columns"></div>' +
+		'</div>' +
 
 		// Web IMEs enabling chechbox with label
-		+ '<div class="row enabled-only">'
-		+ '<div class="eleven columns uls-input-settings-inputmethods-list">'
+		'<div class="row enabled-only">' +
+		'<div class="eleven columns uls-input-settings-inputmethods-list">' +
 		// "Input settings for language xyz" title
-		+ '<h4 class="ext-uls-input-settings-imes-title"></h4>'
-		+ '</div>'
-		+ '</div>'
+		'<h4 class="ext-uls-input-settings-imes-title"></h4>' +
+		'</div>' +
+		'</div>' +
 
 		// Disable IME system button
-		+ '<div class="row">'
-		+ '<div class="eleven columns uls-input-settings-disable-info"></div>'
-		+ '<div class="ten columns uls-input-settings-toggle">'
-		+ '<button class="active mw-ui-constructive mw-ui-button uls-input-toggle-button"></button>'
-		+ '</div>'
-		+ '</div>';
+		'<div class="row">' +
+		'<div class="eleven columns uls-input-settings-disable-info"></div>' +
+		'<div class="ten columns uls-input-settings-toggle">' +
+		'<button class="active mw-ui-constructive mw-ui-button uls-input-toggle-button"></button>' +
+		'</div>' +
+		'</div>';
 
 	function InputSettings( $parent ) {
 		this.nameI18n = 'ext-uls-input-settings-title-short';

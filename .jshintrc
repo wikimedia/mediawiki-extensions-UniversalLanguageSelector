@@ -1,32 +1,25 @@
 {
-
-	"camelcase": false,
-	"curly": true,
+	// Enforcing
+	"bitwise": true,
 	"eqeqeq": true,
-	"immed": true,
-	"latedef": true,
-	"newcap": true,
+	"freeze": true,
+	"latedef": "nofunc",
+	"futurehostile": true,
 	"noarg": true,
-	"noempty": true,
 	"nonew": true,
-	"quotmark": "single",
-	"trailing": true,
 	"undef": true,
 	"unused": true,
 
-	"bitwise": true,
-	"forin": false,
-	"regexp": false,
-	"strict": true,
-	"laxbreak": true,
-	"smarttabs": true,
-	"multistr": true,
-	"browser": true,
-	"onevar": true,
+	"strict": false,
 
-	"predef": [
-		"mediaWiki",
-		"jQuery",
-		"QUnit"
-	]
+	// Relaxing
+
+	// Environment
+	"browser": true,
+	"jquery": true,
+
+	"globals": {
+		"mediaWiki": false,
+		"QUnit": false
+	}
 }
