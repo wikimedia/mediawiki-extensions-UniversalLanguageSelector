@@ -1,0 +1,13 @@
+== UniversalLanguageSelector 2016.04 ==
+Released at 2016-04-13.
+
+=== Noteworthy changes ===
+* Fixed issues related to the tooltip shown for language settings that sometimes caused JavaScript errors.
+* Images were further compressed with Zopflipng.
+* Improvements to the compact language links feature.
+
+* Fonts:
+** Updated Amiri fonts.
+
+* Input Methods:
+** Input methods now work with VisualEditor.
