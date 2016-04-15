@@ -1,17 +1,22 @@
 #!/bin/bash
 
-DEST="../lib/jquery.uls";
-CLONEDIR="/tmp/jquery.uls";
-HERE=$(pwd);
-UPSTREAM="https://github.com/wikimedia/jquery.uls.git";
+BASEDIR=$(dirname "$0")
+BASEDIR="$BASEDIR/.."
 
-echo -e "Getting latest jquery.uls from $UPSTREAM\n";
+DEST="$BASEDIR/lib/jquery.uls"
+CLONEDIR="$BASEDIR/vendor/jquery.uls"
 
-if [ -d $CLONEDIR ]; then 
-    git pull;
+UPSTREAM="https://github.com/wikimedia/jquery.uls.git"
+
+echo "Getting latest jquery.uls from $UPSTREAM"
+
+if [ -d "$CLONEDIR" ]; then
+	pushd "$CLONEDIR"
+	git pull
+	popd
 else
-    git clone $UPSTREAM $CLONEDIR;
+	git clone "$UPSTREAM" "$CLONEDIR"
 fi
 
-cd "$HERE";
-cp -rf $CLONEDIR/{images,css,src,i18n} $DEST
+rm -rf "$DEST"/*
+cp -R "$CLONEDIR"/{images,css,src,i18n} "$DEST"
