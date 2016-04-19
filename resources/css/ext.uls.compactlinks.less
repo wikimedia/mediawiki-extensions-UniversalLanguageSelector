@@ -1,3 +1,5 @@
+@import "mediawiki.mixins";
+
 #p-lang .body ul .uls-trigger,
 #p-lang .pBody ul .uls-trigger {
 	background-image: none;
@@ -10,7 +12,7 @@
 	padding: 4px 6px 4px 25px;
 	font-size: 13px;
 	font-weight: 400;
-	background-image: url( ../images/compact-links-trigger.svg );
+	.background-image-svg( '../images/compact-links-trigger.svg', '../images/compact-links-trigger.png' );
 	background-size: 18px;
 	background-repeat: no-repeat;
 	background-position: left 4px center;
