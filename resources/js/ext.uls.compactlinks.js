@@ -116,6 +116,8 @@
 				onSelect: function ( language ) {
 					var previousLanguages = mw.uls.getPreviousLanguages();
 
+					compactLinks.$trigger.removeClass( 'selector-open' );
+
 					previousLanguages.push( language );
 					previousLanguages = unique( previousLanguages );
 					mw.uls.setPreviousLanguages( previousLanguages );
@@ -149,6 +151,7 @@
 						left: this.left,
 						top: this.top
 					} );
+					compactLinks.$trigger.addClass( 'selector-open' );
 				},
 				languageDecorator: function ( $languageLink, language ) {
 					// set href and text exactly same as what was in
@@ -158,6 +161,9 @@
 					$languageLink
 						.prop( 'href', compactLinks.interlanguageList[ language ].href )
 						.text( compactLinks.interlanguageList[ language ].autonym );
+				},
+				onCancel: function () {
+					compactLinks.$trigger.removeClass( 'selector-open' );
 				},
 				// Use compact version of ULS
 				compact: true,
@@ -319,7 +325,7 @@
 			var $trigger;
 
 			$trigger = $( '<button>' )
-				.addClass( 'mw-interlanguage-selector mw-ui-button active' )
+				.addClass( 'mw-interlanguage-selector mw-ui-button' )
 				.html( $.i18n(
 					'ext-uls-compact-link-count',
 					mw.language.convertNumber( this.listSize - this.compactSize )
