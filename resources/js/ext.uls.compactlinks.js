@@ -57,7 +57,9 @@
 		 * Initialize the plugin
 		 */
 		init: function () {
-			var max = this.options.max;
+			var self = this,
+				max = this.options.max;
+
 			this.interlanguageList = this.getInterlanguageList();
 			this.listSize = Object.keys( this.interlanguageList ).length;
 
@@ -66,13 +68,15 @@
 				return;
 			}
 
-			// If we're only a bit beyond max, limit to 7 instead of 9.
-			// FIXME: This assumes the max is 9.
-			this.compactSize = ( this.listSize <= 12 ) ? 7 : max;
-			this.compactList = this.getCompactList();
-			this.hideOriginal();
-			this.render();
-			this.listen();
+			mw.loader.using( 'ext.uls.mediawiki' ).done( function () {
+				// If we're only a bit beyond max, limit to 7 instead of 9.
+				// FIXME: This assumes the max is 9.
+				self.compactSize = ( self.listSize <= 12 ) ? 7 : max;
+				self.compactList = self.getCompactList();
+				self.hideOriginal();
+				self.render();
+				self.listen();
+			} );
 		},
 
 		/**
@@ -105,75 +109,73 @@
 				return languageCode;
 			} );
 
-			return mw.loader.using( 'ext.uls.mediawiki' ).then( function () {
-				// Attach ULS to the trigger
-				$trigger.uls( {
-					onReady: function () {
-						this.$menu.addClass( 'interlanguage-uls-menu' );
-					},
-					/**
-					* Language selection handler
-					*
-					* @param {string} language language code
-					*/
-					onSelect: function ( language ) {
-						var previousLanguages = mw.uls.getPreviousLanguages();
+			// Attach ULS to the trigger
+			$trigger.uls( {
+				onReady: function () {
+					this.$menu.addClass( 'interlanguage-uls-menu' );
+				},
+				/**
+				* Language selection handler
+				*
+				* @param {string} language language code
+				*/
+				onSelect: function ( language ) {
+					var previousLanguages = mw.uls.getPreviousLanguages();
 
-						self.$trigger.removeClass( 'selector-open' );
+					self.$trigger.removeClass( 'selector-open' );
 
-						previousLanguages.push( language );
-						previousLanguages = unique( previousLanguages );
-						mw.uls.setPreviousLanguages( previousLanguages );
-						location.href = self.interlanguageList[ language ].href;
-					},
-					onVisible: function () {
-						var offset, height, width, triangleWidth;
-						// The panel is positioned carefully so that our pointy triangle,
-						// which is implemented as a square box rotated 45 degrees with
-						// rotation origin in the middle. See the corresponding style file.
+					previousLanguages.push( language );
+					previousLanguages = unique( previousLanguages );
+					mw.uls.setPreviousLanguages( previousLanguages );
+					location.href = self.interlanguageList[ language ].href;
+				},
+				onVisible: function () {
+					var offset, height, width, triangleWidth;
+					// The panel is positioned carefully so that our pointy triangle,
+					// which is implemented as a square box rotated 45 degrees with
+					// rotation origin in the middle. See the corresponding style file.
 
-						// These are for the trigger
-						offset = $trigger.offset();
-						width = $trigger.outerWidth();
-						height = $trigger.outerHeight();
+					// These are for the trigger
+					offset = $trigger.offset();
+					width = $trigger.outerWidth();
+					height = $trigger.outerHeight();
 
-						// Triangle width is: Math.sqrt( 2 * Math.pow( 25, 2 ) ) / 2 =~ 17.7;
-						// Box width = 24 + 1 for border.
-						// The resulting value is rounded up 20 to have a small space between.
-						triangleWidth = 20;
+					// Triangle width is: Math.sqrt( 2 * Math.pow( 25, 2 ) ) / 2 =~ 17.7;
+					// Box width = 24 + 1 for border.
+					// The resulting value is rounded up 20 to have a small space between.
+					triangleWidth = 20;
 
-						if ( dir === 'rtl' ) {
-							this.left = offset.left - this.$menu.outerWidth() - triangleWidth;
-						} else {
-							this.left = offset.left + width + triangleWidth;
-						}
-						// Offset -250px from the middle of the trigger
-						this.top = offset.top + ( height / 2 ) - 250;
+					if ( dir === 'rtl' ) {
+						this.left = offset.left - this.$menu.outerWidth() - triangleWidth;
+					} else {
+						this.left = offset.left + width + triangleWidth;
+					}
+					// Offset -250px from the middle of the trigger
+					this.top = offset.top + ( height / 2 ) - 250;
 
-						this.$menu.css( {
-							left: this.left,
-							top: this.top
-						} );
-						$trigger.addClass( 'selector-open' );
-					},
-					languageDecorator: function ( $languageLink, language ) {
-						// set href and text exactly same as what was in
-						// interlanguage link. The ULS autonym might be different in some
-						// cases like sr. In ULS it is "српски", while in interlanguage links
-						// it is "српски / srpski"
-						$languageLink
-							.prop( 'href', self.interlanguageList[ language ].href )
-							.text( self.interlanguageList[ language ].autonym );
-					},
-					onCancel: function () {
-						$trigger.removeClass( 'selector-open' );
-					},
-					// Use compact version of ULS
-					compact: true,
-					languages: ulsLanguageList,
-					// Show common languages
-					quickList: self.filterByCommonLanguages( languages )
-				} );
+					this.$menu.css( {
+						left: this.left,
+						top: this.top
+					} );
+					$trigger.addClass( 'selector-open' );
+				},
+				languageDecorator: function ( $languageLink, language ) {
+					// set href and text exactly same as what was in
+					// interlanguage link. The ULS autonym might be different in some
+					// cases like sr. In ULS it is "српски", while in interlanguage links
+					// it is "српски / srpski"
+					$languageLink
+						.prop( 'href', self.interlanguageList[ language ].href )
+						.text( self.interlanguageList[ language ].autonym );
+				},
+				onCancel: function () {
+					$trigger.removeClass( 'selector-open' );
+				},
+				// Use compact version of ULS
+				compact: true,
+				languages: ulsLanguageList,
+				// Show common languages
+				quickList: self.filterByCommonLanguages( languages )
 			} );
 		},
 
@@ -184,9 +186,8 @@
 			var self = this;
 
 			this.$trigger.one( 'click', function () {
-				self.createSelector( self.$trigger ).then( function () {
-					self.$trigger.click();
-				} );
+				self.createSelector( self.$trigger );
+				self.$trigger.click();
 			} );
 		},
 
