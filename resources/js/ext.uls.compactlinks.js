@@ -326,7 +326,7 @@
 
 			$trigger = $( '<button>' )
 				.addClass( 'mw-interlanguage-selector mw-ui-button' )
-				.html( $.i18n(
+				.text( mw.msg(
 					'ext-uls-compact-link-count',
 					mw.language.convertNumber( this.listSize - this.compactSize )
 				) );
