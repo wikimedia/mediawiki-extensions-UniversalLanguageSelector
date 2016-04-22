@@ -233,8 +233,6 @@
 			"scripts": "js/ext.uls.compactlinks.js",
 			"styles": "css/ext.uls.compactlinks.less",
 			"dependencies": [
-				"ext.uls.mediawiki",
-				"ext.uls.init",
 				"jquery.uls.compact",
 				"mediawiki.language",
 				"mediawiki.ui.button"

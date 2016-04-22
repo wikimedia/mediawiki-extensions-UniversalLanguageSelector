@@ -89,87 +89,104 @@
 		},
 
 		/**
-		 * Bind to event handlers and listen for events
+		 * Attaches the actual selector to the trigger.
+		 *
+		 * @param {jQuery} $trigger Element to use as trigger.
 		 */
-		listen: function () {
+		createSelector: function ( $trigger ) {
 			var languages,
-				compactLinks = this,
+				self = this,
 				dir = $( 'html' ).prop( 'dir' ),
 				ulsLanguageList = {};
 
-			languages = $.map( compactLinks.interlanguageList, function ( language, languageCode ) {
+			languages = $.map( this.interlanguageList, function ( language, languageCode ) {
 				ulsLanguageList[ languageCode ] = language.autonym;
 
 				return languageCode;
 			} );
 
-			// Attach ULS to the trigger
-			compactLinks.$trigger.uls( {
-				onReady: function () {
-					this.$menu.addClass( 'interlanguage-uls-menu' );
-				},
-				/**
-				 * Language selection handler
-				 *
-				 * @param {string} language language code
-				 */
-				onSelect: function ( language ) {
-					var previousLanguages = mw.uls.getPreviousLanguages();
+			return mw.loader.using( 'ext.uls.mediawiki' ).then( function () {
+				// Attach ULS to the trigger
+				$trigger.uls( {
+					onReady: function () {
+						this.$menu.addClass( 'interlanguage-uls-menu' );
+					},
+					/**
+					* Language selection handler
+					*
+					* @param {string} language language code
+					*/
+					onSelect: function ( language ) {
+						var previousLanguages = mw.uls.getPreviousLanguages();
 
-					compactLinks.$trigger.removeClass( 'selector-open' );
+						self.$trigger.removeClass( 'selector-open' );
 
-					previousLanguages.push( language );
-					previousLanguages = unique( previousLanguages );
-					mw.uls.setPreviousLanguages( previousLanguages );
-					location.href = compactLinks.interlanguageList[ language ].href;
-				},
-				onVisible: function () {
-					var offset, height, width, triangleWidth;
-					// The panel is positioned carefully so that our pointy triangle,
-					// which is implemented as a square box rotated 45 degrees with
-					// rotation origin in the middle. See the corresponding style file.
+						previousLanguages.push( language );
+						previousLanguages = unique( previousLanguages );
+						mw.uls.setPreviousLanguages( previousLanguages );
+						location.href = self.interlanguageList[ language ].href;
+					},
+					onVisible: function () {
+						var offset, height, width, triangleWidth;
+						// The panel is positioned carefully so that our pointy triangle,
+						// which is implemented as a square box rotated 45 degrees with
+						// rotation origin in the middle. See the corresponding style file.
 
-					// These are for the trigger
-					offset = compactLinks.$trigger.offset();
-					width = compactLinks.$trigger.outerWidth();
-					height = compactLinks.$trigger.outerHeight();
+						// These are for the trigger
+						offset = $trigger.offset();
+						width = $trigger.outerWidth();
+						height = $trigger.outerHeight();
 
-					// Triangle width is: Math.sqrt( 2 * Math.pow( 25, 2 ) ) / 2 =~ 17.7;
-					// Box width = 24 + 1 for border.
-					// The resulting value is rounded up 20 to have a small space between.
-					triangleWidth = 20;
+						// Triangle width is: Math.sqrt( 2 * Math.pow( 25, 2 ) ) / 2 =~ 17.7;
+						// Box width = 24 + 1 for border.
+						// The resulting value is rounded up 20 to have a small space between.
+						triangleWidth = 20;
 
-					if ( dir === 'rtl' ) {
-						this.left = offset.left - this.$menu.outerWidth() - triangleWidth;
-					} else {
-						this.left = offset.left + width + triangleWidth;
-					}
-					// Offset -250px from the middle of the trigger
-					this.top = offset.top + ( height / 2 ) - 250;
+						if ( dir === 'rtl' ) {
+							this.left = offset.left - this.$menu.outerWidth() - triangleWidth;
+						} else {
+							this.left = offset.left + width + triangleWidth;
+						}
+						// Offset -250px from the middle of the trigger
+						this.top = offset.top + ( height / 2 ) - 250;
 
-					this.$menu.css( {
-						left: this.left,
-						top: this.top
-					} );
-					compactLinks.$trigger.addClass( 'selector-open' );
-				},
-				languageDecorator: function ( $languageLink, language ) {
-					// set href and text exactly same as what was in
-					// interlanguage link. The ULS autonym might be different in some
-					// cases like sr. In ULS it is "српски", while in interlanguage links
-					// it is "српски / srpski"
-					$languageLink
-						.prop( 'href', compactLinks.interlanguageList[ language ].href )
-						.text( compactLinks.interlanguageList[ language ].autonym );
-				},
-				onCancel: function () {
-					compactLinks.$trigger.removeClass( 'selector-open' );
-				},
-				// Use compact version of ULS
-				compact: true,
-				languages: ulsLanguageList,
-				// Show common languages
-				quickList: compactLinks.filterByCommonLanguages( languages )
+						this.$menu.css( {
+							left: this.left,
+							top: this.top
+						} );
+						$trigger.addClass( 'selector-open' );
+					},
+					languageDecorator: function ( $languageLink, language ) {
+						// set href and text exactly same as what was in
+						// interlanguage link. The ULS autonym might be different in some
+						// cases like sr. In ULS it is "српски", while in interlanguage links
+						// it is "српски / srpski"
+						$languageLink
+							.prop( 'href', self.interlanguageList[ language ].href )
+							.text( self.interlanguageList[ language ].autonym );
+					},
+					onCancel: function () {
+						$trigger.removeClass( 'selector-open' );
+					},
+					// Use compact version of ULS
+					compact: true,
+					languages: ulsLanguageList,
+					// Show common languages
+					quickList: self.filterByCommonLanguages( languages )
+				} );
+			} );
+		},
+
+		/**
+		 * Bind to event handlers and listen for events
+		 */
+		listen: function () {
+			var self = this;
+
+			this.$trigger.one( 'click', function () {
+				self.createSelector( self.$trigger ).then( function () {
+					self.$trigger.click();
+				} );
 			} );
 		},
 
