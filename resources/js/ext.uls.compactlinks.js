@@ -59,7 +59,7 @@
 		init: function () {
 			var max = this.options.max;
 			this.interlanguageList = this.getInterlanguageList();
-			this.listSize = this.getListSize();
+			this.listSize = Object.keys( this.interlanguageList ).length;
 
 			if ( this.listSize <= max ) {
 				// Not enough languages to compact the list
@@ -317,15 +317,6 @@
 			} );
 
 			return interlanguageList;
-		},
-
-		/**
-		 * Get the size of the interlanguage list
-		 */
-		getListSize: function () {
-			return $.map( this.interlanguageList, function ( item, languageCode ) {
-				return languageCode;
-			} ).length;
 		},
 
 		/**
