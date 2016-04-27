@@ -300,20 +300,22 @@
 				left: displaySettings.$parent.left,
 				top: displaySettings.$parent.top,
 				onReady: function () {
-					var uls = this,
-						$back = $( '<a>' )
-							.data( 'i18n', 'ext-uls-back-to-display-settings' )
-							.i18n();
+					var  $wrap,
+						uls = this,
+						$back = $( '<div>' )
+							.addClass( 'uls-icon-back' );
 
 					$back.click( function () {
 						uls.hide();
 						displaySettings.$parent.show();
 					} );
 
-					uls.$menu.find( 'div.uls-title-region' ).append( $back );
-					uls.$menu.find( 'h1.uls-title' )
-						.data( 'i18n', 'ext-uls-display-settings-ui-language' )
-						.i18n();
+					$wrap = $( '<div>' )
+						.addClass( 'uls-search-wrapper-wrapper' );
+
+					uls.$menu.find( '.uls-search-wrapper' ).wrap( $wrap );
+					uls.$menu.find( '.uls-search-wrapper-wrapper' ).prepend( $back );
+
 					uls.$menu.prepend(
 						$( '<span>' ).addClass( 'caret-before' ),
 						$( '<span>' ).addClass( 'caret-after' )
@@ -321,6 +323,9 @@
 				},
 				onVisible: function () {
 					var $parent;
+
+					this.$menu.find( '.uls-languagefilter' )
+						.prop( 'placeholder', $.i18n( 'ext-uls-display-settings-ui-language' ) );
 
 					if ( !displaySettings.$parent.$window.hasClass( 'callout' ) ) {
 						// Callout menus will have position rules.
@@ -340,7 +345,7 @@
 					// If the ULS is shown in the the sidebar,
 					// add a caret pointing to the icon
 					if ( displaySettings.$parent.$window.hasClass( 'callout' ) ) {
-						this.$menu.addClass( 'callout' );
+						this.$menu.addClass( 'callout callout--languageselection' );
 					} else {
 						this.$menu.removeClass( 'callout' );
 					}

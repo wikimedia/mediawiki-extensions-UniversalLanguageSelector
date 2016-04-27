@@ -383,9 +383,10 @@
 					languageSettingsOptions = {
 						defaultModule: 'display',
 						onVisible: function () {
-							var topRowHeight, caretHeight, caretWidth,
+							var caretRadius, caretPosition,
 								$caretBefore = $( '<span>' ).addClass( 'caret-before' ),
 								$caretAfter = $( '<span>' ).addClass( 'caret-after' ),
+								ulsTriggerHeight = this.$element.height(),
 								ulsTriggerWidth = this.$element.width(),
 								ulsTriggerOffset = this.$element.offset();
 
@@ -396,17 +397,22 @@
 
 							// Calculate the positioning of the panel
 							// according to the position of the trigger icon
+
+							caretRadius = parseInt( $caretBefore.css( 'border-top-width' ), 10 );
 							if ( rtlPage ) {
-								caretWidth = parseInt( $caretBefore.css( 'border-left-width' ), 10 );
-								this.left = ulsTriggerOffset.left - this.$window.width() - caretWidth;
+								this.left = ulsTriggerOffset.left - this.$window.width() - caretRadius;
 							} else {
-								caretWidth = parseInt( $caretBefore.css( 'border-right-width' ), 10 );
-								this.left = ulsTriggerOffset.left + ulsTriggerWidth + caretWidth;
+								this.left = ulsTriggerOffset.left + ulsTriggerWidth + caretRadius;
 							}
 
-							topRowHeight = this.$window.find( '.row' ).height();
-							caretHeight = parseInt( $caretBefore.css( 'top' ), 10 );
-							this.top = ulsTriggerOffset.top - topRowHeight - caretHeight / 2;
+							caretPosition = $caretBefore.position();
+
+							// The top of the dialog is aligned in relation to
+							// the middle of the trigger, so that middle of the
+							// caret aligns with it. 2 is for border and margin.
+							this.top = ulsTriggerOffset.top +
+								( ulsTriggerHeight / 2 ) -
+								( caretRadius + caretPosition.top + 2 );
 
 							this.position();
 						}

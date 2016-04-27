@@ -326,19 +326,24 @@
 				top: inputSettings.$parent.top,
 				onReady: function () {
 					var uls = this,
-						$back = $( '<a>' )
+						$wrap,
+						$back = $( '<div>' )
+							.addClass( 'uls-icon-back' )
 							.data( 'i18n', 'ext-uls-back-to-input-settings' )
-							.i18n();
+							.i18n()
+							.text( ' ' );
 
 					$back.click( function () {
 						uls.hide();
 						inputSettings.$parent.show();
 					} );
 
-					uls.$menu.find( 'div.uls-title-region' ).append( $back );
-					uls.$menu.find( 'h1.uls-title' )
-						.data( 'i18n', 'ext-uls-input-settings-ui-language' )
-						.i18n();
+					$wrap = $( '<div>' )
+						.addClass( 'uls-search-wrapper-wrapper' );
+
+					uls.$menu.find( '.uls-search-wrapper' ).wrap( $wrap );
+					uls.$menu.find( '.uls-search-wrapper-wrapper' ).prepend( $back );
+
 					uls.$menu.prepend(
 						$( '<span>' ).addClass( 'caret-before' ),
 						$( '<span>' ).addClass( 'caret-after' )
@@ -346,6 +351,9 @@
 				},
 				onVisible: function () {
 					var $parent;
+
+					this.$menu.find( '.uls-languagefilter' )
+						.prop( 'placeholder', $.i18n( 'ext-uls-input-settings-ui-language' ) );
 
 					if ( !inputSettings.$parent.$window.hasClass( 'callout' ) ) {
 						// callout menus will have position rules. others use
@@ -364,7 +372,7 @@
 					}
 
 					if ( inputSettings.$parent.$window.hasClass( 'callout' ) ) {
-						this.$menu.addClass( 'callout' );
+						this.$menu.addClass( 'callout callout--languageselection' );
 					} else {
 						this.$menu.removeClass( 'callout' );
 					}

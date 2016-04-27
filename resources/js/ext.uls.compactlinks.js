@@ -172,8 +172,6 @@
 				onCancel: function () {
 					$trigger.removeClass( 'selector-open' );
 				},
-				// Use compact version of ULS
-				compact: true,
 				languages: ulsLanguageList,
 				// Show common languages
 				quickList: self.getCommonLanguages( languages )
