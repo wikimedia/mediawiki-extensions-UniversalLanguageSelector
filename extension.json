@@ -88,9 +88,7 @@
 			"#p-lang li.interlanguage-link > a"
 		],
 		"@ULSFontRepositoryBasePath": "Base path of ULS font repository. If not set, will be set to 'UniversalLanguageSelector/data/fontrepo/fonts/', relative to $wgExtensionAssetsPath. @since 2013.10",
-		"ULSFontRepositoryBasePath": false,
-		"@ULSCompactLinks": "Whether the \"Compact language links\" Beta Feature is exposed. Requires $wgULSPosition to be \"interlanguage\". Defaults to false. @since 2014.03",
-		"ULSCompactLinks": false
+		"ULSFontRepositoryBasePath": false
 	},
 	"callback": "UniversalLanguageSelectorHooks::setVersionConstant",
 	"ResourceModules": {
