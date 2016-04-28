@@ -44,14 +44,51 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	/**
+	 * Whether ULS Compact interlanguage links enabled
+	 *
+	 * @param User $user
+	 * @return bool
+	 */
+	public static function isCompactLinksEnabled( $user ) {
+		global $wgULSEnable, $wgULSEnableAnon, $wgInterwikiMagic,
+			$wgHideInterlanguageLinks, $wgULSCompactLanguageLinksBetaFeature;
+
+		// Whether any user visible features are enabled
+		if ( !$wgULSEnable ) {
+			return false;
+		}
+
+		if ( !$wgULSEnableAnon && $user->isAnon() ) {
+			return false;
+		}
+
+		if ( $wgULSCompactLanguageLinksBetaFeature === true &&
+			$wgInterwikiMagic === true &&
+			$wgHideInterlanguageLinks === false &&
+			class_exists( 'BetaFeatures' ) &&
+			BetaFeatures::isFeatureEnabled( $user, 'uls-compact-links' )
+		) {
+			// Compact language links is a beta feature in this wiki. Check the user's
+			// preference.
+			return true;
+		}
+
+		if ( $wgULSCompactLanguageLinksBetaFeature === false ) {
+			// Compact language links is a default feature in this wiki.
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
 	 * @param OutputPage $out
 	 * @param Skin $skin
 	 * @return bool
 	 * Hook: BeforePageDisplay
 	 */
 	public static function addModules( $out, $skin ) {
-		global $wgULSPosition, $wgULSGeoService, $wgULSEventLogging,
-			$wgInterwikiMagic, $wgHideInterlanguageLinks;
+		global $wgULSPosition, $wgULSGeoService, $wgULSEventLogging;
 
 		// Load the style for users without JS, to hide the useless links
 		$out->addModuleStyles( 'ext.uls.nojs' );
@@ -68,13 +105,7 @@ class UniversalLanguageSelectorHooks {
 		// If the extension is enabled, basic features (API, language data) available.
 		$out->addModules( 'ext.uls.init' );
 
-		// If compact ULS beta feature is enabled and is actually functional
-		// (see onGetBetaFeaturePreferences)
-		if ( $wgInterwikiMagic === true &&
-			$wgHideInterlanguageLinks === false &&
-			class_exists( 'BetaFeatures' ) &&
-			BetaFeatures::isFeatureEnabled( $out->getUser(), 'uls-compact-links' )
-		) {
+		if ( self::isCompactLinksEnabled( $out->getUser() ) ) {
 			$out->addModules( 'ext.uls.compactlinks' );
 		}
 
@@ -327,10 +358,11 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	public static function onGetBetaFeaturePreferences( $user, &$prefs ) {
-		global $wgExtensionAssetsPath,
+		global $wgExtensionAssetsPath, $wgULSCompactLanguageLinksBetaFeature,
 			$wgHideInterlanguageLinks, $wgInterwikiMagic;
 
-		if ( $wgInterwikiMagic === true &&
+		if ( $wgULSCompactLanguageLinksBetaFeature === true &&
+			$wgInterwikiMagic === true &&
 			$wgHideInterlanguageLinks === false
 		) {
 			$imagesDir = "$wgExtensionAssetsPath/UniversalLanguageSelector/resources/images";

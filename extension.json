@@ -53,7 +53,7 @@
 	"config": {
 		"@ULSGeoService": "ULS can use geolocation services to suggest languages based on the country the user is vising from. Setting this to false will prevent builtin geolocation from being used. You can provide your own geolocation by setting window.Geo to object which has key \"country_code\" or \"country\". If set to true, it will query Wikimedia's geoip service. The service should return jsonp that uses the supplied callback parameter.",
 		"ULSGeoService": true,
-		"@ULSEnable": "Enable language selection, input methods and webfonts for everyone, unless the behavior is overridden by the configuration variables below. Even if false the classes and resource loader modules are registered for the use of other extensions. Language changing via cookie or setlang query parameter is not possible.",
+		"@ULSEnable": "Enable language selection, compact language links, input methods and webfonts for everyone, unless the behavior is overridden by the configuration variables below. Even if false the classes and resource loader modules are registered for the use of other extensions. Language changing via cookie or setlang query parameter is not possible.",
 		"ULSEnable": true,
 		"@ULSEnableAnon": "Equivalent to $wgULSEnable for anonymous users only. Does not have any effect if $wgULSEnable is false.",
 		"ULSEnableAnon": true,
@@ -89,7 +89,9 @@
 			"#p-lang li.interlanguage-link > a"
 		],
 		"@ULSFontRepositoryBasePath": "Base path of ULS font repository. If not set, will be set to 'UniversalLanguageSelector/data/fontrepo/fonts/', relative to $wgExtensionAssetsPath. @since 2013.10",
-		"ULSFontRepositoryBasePath": false
+		"ULSFontRepositoryBasePath": false,
+		"ULSCompactLanguageLinksBetaFeature": true,
+		"@ULSCompactLanguageLinksBetaFeature": "Set compact interlanguage links as beta feature or not. If set false, compact interlanguage links will be available by default to all users."
 	},
 	"callback": "UniversalLanguageSelectorHooks::setVersionConstant",
 	"ResourceModules": {
