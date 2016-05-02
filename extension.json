@@ -38,13 +38,14 @@
 		]
 	},
 	"AutoloadClasses": {
-		"UniversalLanguageSelectorHooks": "UniversalLanguageSelector.hooks.php",
-		"ResourceLoaderULSModule": "includes/ResourceLoaderULSModule.php",
-		"ResourceLoaderULSJsonMessageModule": "includes/ResourceLoaderULSJsonMessageModule.php",
 		"ApiLanguageSearch": "api/ApiLanguageSearch.php",
 		"ApiULSLocalization": "api/ApiULSLocalization.php",
+		"FontRepoCompiler": "includes/FontRepoCompiler.php",
+		"LanguageNameSearch": "data/LanguageNameSearch.php",
+		"ResourceLoaderULSJsonMessageModule": "includes/ResourceLoaderULSJsonMessageModule.php",
+		"ResourceLoaderULSModule": "includes/ResourceLoaderULSModule.php",
 		"ULSJsonMessageLoader": "includes/ULSJsonMessageLoader.php",
-		"LanguageNameSearch": "data/LanguageNameSearch.php"
+		"UniversalLanguageSelectorHooks": "UniversalLanguageSelector.hooks.php"
 	},
 	"DefaultUserOptions": {
 		"uls-preferences": ""
