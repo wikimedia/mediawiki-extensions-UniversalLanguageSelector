@@ -20,6 +20,7 @@
 ( function ( $, mw ) {
 	'use strict';
 
+	var DEFAULT_LIST_SIZE = 9;
 	/**
 	 * For the given array, remove duplicates
 	 *
@@ -43,13 +44,12 @@
 	 */
 	function CompactInterlanguageList( interlanguageList, options ) {
 		this.$interlanguageList = $( interlanguageList );
-		this.options = $.extend( {}, $.fn.compactInterlanguageList.defaults, options );
+		this.options = options || {};
 		this.interlanguageList = {};
 		this.compactList = {};
 		this.$trigger = null;
 		this.compactSize = 0;
 		this.listSize = 0;
-		this.init();
 	}
 
 	CompactInterlanguageList.prototype = {
@@ -58,7 +58,7 @@
 		 */
 		init: function () {
 			var self = this,
-				max = this.options.max;
+				max = this.options.max || DEFAULT_LIST_SIZE;
 
 			this.interlanguageList = this.getInterlanguageList();
 			this.listSize = Object.keys( this.interlanguageList ).length;
@@ -115,10 +115,10 @@
 					this.$menu.addClass( 'interlanguage-uls-menu' );
 				},
 				/**
-				* Language selection handler
-				*
-				* @param {string} language language code
-				*/
+				 * Language selection handler
+				 *
+				 * @param {string} language language code
+				 */
 				onSelect: function ( language ) {
 					var previousLanguages = mw.uls.getPreviousLanguages();
 
@@ -345,37 +345,13 @@
 		}
 	};
 
-	/**
-	 * CompactInterlanguageList Plugin
-	 *
-	 * @param {Object} [option]
-	 */
-	$.fn.compactInterlanguageList = function ( option ) {
-		return this.each( function () {
-			var $this = $( this ),
-				data = $this.data( 'compactinterlanguagelist' ),
-				options = typeof option === 'object' && option;
-
-			if ( !data ) {
-				data = new CompactInterlanguageList( this, options );
-				$this.data( 'compactinterlanguagelist', data );
-			}
-
-			if ( typeof option === 'string' ) {
-				data[ option ]();
-			}
-		} );
-	};
-
-	/**
-	 * Defaults
-	 */
-	$.fn.compactInterlanguageList.defaults = {
-		// Compact the list to this size
-		max: 9
-	};
-
 	$( document ).ready( function () {
-		$( '#p-lang ul' ).compactInterlanguageList();
+		var compactList;
+
+		compactList = new CompactInterlanguageList( $( '#p-lang ul' ), {
+			// Compact the list to this size
+			max: 9
+		} );
+		compactList.init();
 	} );
 }( jQuery, mediaWiki ) );
