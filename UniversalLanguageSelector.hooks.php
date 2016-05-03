@@ -75,7 +75,8 @@ class UniversalLanguageSelectorHooks {
 
 		if ( $wgULSCompactLanguageLinksBetaFeature === false ) {
 			// Compact language links is a default feature in this wiki.
-			return true;
+			// Check user preference
+			return $user->getBoolOption( 'compact-language-links' );
 		}
 
 		return false;
@@ -340,6 +341,8 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	public static function onGetPreferences( $user, &$preferences ) {
+		global $wgULSCompactLanguageLinksBetaFeature;
+
 		$preferences['uls-preferences'] = [
 			'type' => 'api',
 		];
@@ -353,6 +356,14 @@ class UniversalLanguageSelectorHooks {
 			// The above link will have text set from javascript. Just to avoid
 			// showing the link when javascript is disabled.
 		];
+
+		if ( $wgULSCompactLanguageLinksBetaFeature === false ) {
+			$preferences['compact-language-links'] = [
+				'type' => 'check',
+				'section' => 'rendering/languages',
+				'label-message' => 'ext-uls-compact-language-links-preference'
+			];
+		}
 
 		return true;
 	}

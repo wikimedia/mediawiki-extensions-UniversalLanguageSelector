@@ -70,5 +70,7 @@
 	"apihelp-ulslocalization-description": "Get the localization of ULS in the given language.",
 	"apihelp-ulslocalization-param-language": "Language code.",
 	"apihelp-ulslocalization-example-1": "Get Tamil localization",
-	"apihelp-ulslocalization-example-2": "Get Hindi localization"
+	"apihelp-ulslocalization-example-2": "Get Hindi localization",
+	"prefs-languages": "Languages",
+	"ext-uls-compact-language-links-preference":  "Use a compact language list, with languages relevant to you."
 }

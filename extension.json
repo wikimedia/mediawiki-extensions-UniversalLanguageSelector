@@ -48,7 +48,8 @@
 		"UniversalLanguageSelectorHooks": "UniversalLanguageSelector.hooks.php"
 	},
 	"DefaultUserOptions": {
-		"uls-preferences": ""
+		"uls-preferences": "",
+		"compact-language-links": true
 	},
 	"config": {
 		"@ULSGeoService": "ULS can use geolocation services to suggest languages based on the country the user is vising from. Setting this to false will prevent builtin geolocation from being used. You can provide your own geolocation by setting window.Geo to object which has key \"country_code\" or \"country\". If set to true, it will query Wikimedia's geoip service. The service should return jsonp that uses the supplied callback parameter.",
