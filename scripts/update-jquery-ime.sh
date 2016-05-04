@@ -1,20 +1,27 @@
 #!/bin/bash
 
-DEST="../lib/jquery.ime";
-CLONEDIR="/tmp/jquery.ime";
-HERE=$(pwd);
-UPSTREAM="https://github.com/wikimedia/jquery.ime.git";
+BASEDIR=$(dirname "$0")
+BASEDIR="$BASEDIR/.."
 
-echo -e "Getting latest jquery.ime from $UPSTREAM\n";
+DEST="$BASEDIR/lib/jquery.ime"
+CLONEDIR="$BASEDIR/vendor/jquery.ime"
 
-if [ -d $CLONEDIR ]; then
-    git pull;
+UPSTREAM="https://github.com/wikimedia/jquery.ime.git"
+
+echo "Getting latest jquery.ime from $UPSTREAM"
+
+if [ -d "$CLONEDIR" ]; then
+	pushd "$CLONEDIR"
+	git pull
+	popd
 else
-    git clone $UPSTREAM $CLONEDIR;
+	git clone "$UPSTREAM" "$CLONEDIR"
 fi
 
-cd $CLONEDIR;
-npm install;
-grunt copy concat;
-cd "$HERE";
-cp -rf $CLONEDIR/dist/jquery.ime/{images,css,rules,jquery.ime.js} $DEST;
+pushd "$CLONEDIR"
+npm install
+./node_modules/.bin/grunt copy concat
+popd
+
+rm -rf "$DEST"/*
+cp -R "$CLONEDIR"/dist/jquery.ime/{images,css,rules,jquery.ime.js} "$DEST"

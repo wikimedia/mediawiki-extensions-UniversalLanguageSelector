@@ -1,17 +1,22 @@
 #!/bin/bash
 
-DEST="../lib/";
-CLONEDIR="/tmp/jquery.webfonts";
-HERE=$(pwd);
-UPSTREAM="https://github.com/wikimedia/jquery.webfonts.git";
+BASEDIR=$(dirname "$0")
+BASEDIR="$BASEDIR/.."
 
-echo -e "Getting latest jquery.webfonts from $UPSTREAM\n";
+DEST="$BASEDIR/lib/"
+CLONEDIR="$BASEDIR/vendor/jquery.wefonts"
 
-if [ -d $CLONEDIR ]; then
-    git pull;
+UPSTREAM="https://github.com/wikimedia/jquery.webfonts.git"
+
+echo "Getting latest jquery.wefonts from $UPSTREAM"
+
+if [ -d "$CLONEDIR" ]; then
+	pushd "$CLONEDIR"
+	git pull
+	popd
 else
-    git clone $UPSTREAM $CLONEDIR;
+	git clone "$UPSTREAM" "$CLONEDIR"
 fi
 
-cd "$HERE";
-cp -rf $CLONEDIR/src/* $DEST
+rm -rf "$DEST/jquery.webfonts.js"
+cp -R "$CLONEDIR/src/jquery.webfonts.js" "$DEST/jquery.webfonts.js"
