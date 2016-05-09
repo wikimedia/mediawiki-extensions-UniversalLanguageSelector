@@ -47,6 +47,7 @@
 		this.options = options || {};
 		this.interlanguageList = {};
 		this.compactList = {};
+		this.commonInterlanguageList = null;
 		this.$trigger = null;
 		this.compactSize = 0;
 		this.listSize = 0;
@@ -175,7 +176,7 @@
 				compact: true,
 				languages: ulsLanguageList,
 				// Show common languages
-				quickList: self.filterByCommonLanguages( languages )
+				quickList: self.getCommonLanguages( languages )
 			} );
 		},
 
@@ -234,7 +235,7 @@
 
 				// Add all common languages to the beginning of array.
 				// These are the most probable languages predicted by ULS.
-				this.filterByCommonLanguages( languages ),
+				this.getCommonLanguages( languages ),
 
 				// Finally add the whole languages array too.
 				// We will remove duplicates and cut down to required size.
@@ -318,6 +319,13 @@
 			} );
 
 			return interlanguageList;
+		},
+
+		/**
+		 * Get common languages - the most probable languages predicted by ULS.
+		 */
+		getCommonLanguages: function ( languages ) {
+			return this.commonInterlanguageList || this.filterByCommonLanguages( languages );
 		},
 
 		/**
