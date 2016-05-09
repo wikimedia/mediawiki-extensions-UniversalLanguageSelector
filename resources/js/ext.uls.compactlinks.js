@@ -323,9 +323,15 @@
 
 		/**
 		 * Get common languages - the most probable languages predicted by ULS.
+		 *
+		 * @param {Array} languages Array of all languages.
 		 */
 		getCommonLanguages: function ( languages ) {
-			return this.commonInterlanguageList || this.filterByCommonLanguages( languages );
+			if ( this.commonInterlanguageList === null ) {
+				this.commonInterlanguageList = this.filterByCommonLanguages( languages );
+			}
+
+			return this.commonInterlanguageList;
 		},
 
 		/**
