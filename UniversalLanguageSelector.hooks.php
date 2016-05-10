@@ -83,6 +83,19 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	/**
+	 * Sets user preference to enable the Compact language links if the
+	 * user account is new.
+	 *
+	 * To be removed once no longer needed.
+	 */
+	public static function onLocalUserCreated( User $user, $autoCreate ) {
+		if ( RequestContext::getMain()->getConfig()->get( 'ULSCompactLinksForNewAccounts' ) ) {
+			$user->setOption( 'compact-language-links', 1 );
+			$user->saveSettings();
+		}
+	}
+
+	/**
 	 * @param OutputPage $out
 	 * @param Skin $skin
 	 * @return bool
