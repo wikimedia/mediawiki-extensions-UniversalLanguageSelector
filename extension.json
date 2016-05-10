@@ -95,7 +95,9 @@
 		"ULSCompactLanguageLinksBetaFeature": true,
 		"@ULSCompactLanguageLinksBetaFeature": "Set compact interlanguage links as beta feature or not. If set false, compact interlanguage links will be available by default to all users.",
 		"ULSCompactLinksForNewAccounts": false,
-		"@ULSCompactLinksForNewAccounts": "Enable compact interlanguage links for new user accounts."
+		"@ULSCompactLinksForNewAccounts": "Enable compact interlanguage links for new user accounts.",
+		"ULSCompactLinksEnableAnon": false,
+		"@ULSCompactLinksEnableAnon": "Enable compact interlanguage links for anonymous users."
 	},
 	"callback": "UniversalLanguageSelectorHooks::setVersionConstant",
 	"ResourceModules": {

@@ -50,7 +50,8 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function isCompactLinksEnabled( $user ) {
-		global $wgULSEnable, $wgULSEnableAnon, $wgInterwikiMagic,
+		global $wgULSEnable, $wgInterwikiMagic,
+			$wgULSCompactLinksEnableAnon,
 			$wgHideInterlanguageLinks, $wgULSCompactLanguageLinksBetaFeature;
 
 		// Whether any user visible features are enabled
@@ -58,8 +59,8 @@ class UniversalLanguageSelectorHooks {
 			return false;
 		}
 
-		if ( !$wgULSEnableAnon && $user->isAnon() ) {
-			return false;
+		if ( $user->isAnon() && $wgULSCompactLinksEnableAnon ) {
+			return true;
 		}
 
 		if ( $wgULSCompactLanguageLinksBetaFeature === true &&
