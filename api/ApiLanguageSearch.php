@@ -33,29 +33,29 @@ class ApiLanguageSearch extends ApiBase {
 	}
 
 	public function getAllowedParams() {
-		return array(
-			'search' => array(
+		return [
+			'search' => [
 				ApiBase::PARAM_REQUIRED => true
-			),
-			'typos' => array(
+			],
+			'typos' => [
 				ApiBase::PARAM_REQUIRED => false,
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_DFLT => 1
-			),
-		);
+			],
+		];
 	}
 
 	/**
 	 * @see ApiBase::getExamplesMessages()
 	 */
 	protected function getExamplesMessages() {
-		return array(
+		return [
 			'action=languagesearch&search=Te'
 				=> 'apihelp-languagesearch-example-1',
 			'action=languagesearch&search=ഫി'
 				=> 'apihelp-languagesearch-example-2',
 			'action=languagesearch&search=ഫി&typos=1'
 				=> 'apihelp-languagesearch-example-3',
-		);
+		];
 	}
 }

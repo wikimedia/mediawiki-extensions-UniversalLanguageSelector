@@ -20,7 +20,7 @@ class ResourceLoaderULSJsonMessageModule extends ResourceLoaderModule {
 	 * @return string[] Module names.
 	 */
 	public function getDependencies( ResourceLoaderContext $context = null ) {
-		return array( 'ext.uls.i18n' );
+		return [ 'ext.uls.i18n' ];
 	}
 
 	/**
@@ -57,7 +57,7 @@ class ResourceLoaderULSJsonMessageModule extends ResourceLoaderModule {
 			$code = 'en';
 		}
 
-		$params = array( $code, ULSJsonMessageLoader::getMessages( $code ) );
+		$params = [ $code, ULSJsonMessageLoader::getMessages( $code ) ];
 
 		return Xml::encodeJsCall( 'mw.uls.loadLocalization', $params );
 	}

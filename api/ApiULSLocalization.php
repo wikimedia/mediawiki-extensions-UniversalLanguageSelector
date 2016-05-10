@@ -46,24 +46,24 @@ class ApiULSLocalization extends ApiBase {
 	}
 
 	public function getAllowedParams() {
-		return array(
-			'language' => array(
+		return [
+			'language' => [
 				ApiBase::PARAM_REQUIRED => true,
 				ApiBase::PARAM_TYPE => 'string',
-			),
-		);
+			],
+		];
 	}
 
 	/**
 	 * @see ApiBase::getExamplesMessages()
 	 */
 	protected function getExamplesMessages() {
-		return array(
+		return [
 			'action=ulslocalization&language=ta'
 				=> 'apihelp-ulslocalization-example-1',
 			'action=ulslocalization&language=hi'
 				=> 'apihelp-ulslocalization-example-2',
-		);
+		];
 	}
 
 	// Try to scare people away from using this externally

@@ -17,8 +17,8 @@ class FontRepoCompiler {
 	public function getRepository() {
 		$files = $this->getFilesFromPath( $this->fsPath );
 
-		$fonts = array();
-		$languages = array();
+		$fonts = [];
+		$languages = [];
 
 		foreach ( $files as $file ) {
 			$conf = $this->parseFile( $file );
@@ -36,13 +36,12 @@ class FontRepoCompiler {
 		ksort( $languages );
 		ksort( $fonts );
 
-		return array(
+		return [
 			'base' => $this->webPath,
 			'languages' => $languages,
 			'fonts' => $fonts
-		);
+		];
 	}
-
 
 	public function getFilesFromPath( $fspath ) {
 		return glob( "$fspath/*/font.ini" );
@@ -54,7 +53,7 @@ class FontRepoCompiler {
 
 	public function getLanguages( array $font ) {
 		if ( !isset( $font['languages'] ) ) {
-			return array();
+			return [];
 		}
 
 		$languages = explode( ',', $font['languages'] );
@@ -68,7 +67,7 @@ class FontRepoCompiler {
 			$code = str_replace( '*', '', $rcode );
 
 			if ( !isset( $languages[$code] ) ) {
-				$languages[$code] = array( 'system' );
+				$languages[$code] = [ 'system' ];
 			}
 
 			if ( strpos( $rcode, '*' ) !== false ) {
@@ -83,7 +82,7 @@ class FontRepoCompiler {
 	}
 
 	public function getFontInfo( $font, $fontpath, &$version ) {
-		$info = array();
+		$info = [];
 		$fontdir = basename( $fontpath );
 
 		$version = $info['version'] = isset( $font['version'] ) ? $font['version'] : $version;

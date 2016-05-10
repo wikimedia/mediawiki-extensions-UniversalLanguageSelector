@@ -34,12 +34,12 @@ class LanguageNameSearch {
 		$index = self::getIndex( $searchKey );
 
 		if ( !isset( self::$languagenames[$index] ) ) {
-			return array();
+			return [];
 		}
 
 		$bucket = self::$languagenames[$index];
 
-		$results = array();
+		$results = [];
 		foreach ( $bucket as $name => $code ) {
 			// Prefix search
 			if ( strrpos( $name, $searchKey, -strlen( $name ) ) !== false
@@ -63,7 +63,7 @@ class LanguageNameSearch {
 	 * @return integer Code point of first letter of string
 	 */
 	public static function getCodepoint( $str ) {
-		$values = array();
+		$values = [];
 		$lookingFor = 1;
 		$strLen = strlen( $str );
 		$number = 0;
@@ -121,7 +121,7 @@ class LanguageNameSearch {
 		}
 		$prevRow = range( 0, $length2 );
 		for ( $i = 0; $i < $length1; $i++ ) {
-			$currentRow = array();
+			$currentRow = [];
 			$currentRow[0] = $i + 1;
 			$c1 = mb_substr( $str1, $i, 1, 'UTF-8' );
 			for ( $j = 0; $j < $length2; $j++ ) {

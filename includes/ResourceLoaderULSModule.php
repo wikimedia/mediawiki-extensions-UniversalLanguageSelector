@@ -23,7 +23,7 @@
  * Resource loader module for providing MediaWiki language names.
  */
 class ResourceLoaderULSModule extends ResourceLoaderModule {
-	protected $targets = array( 'desktop', 'mobile' );
+	protected $targets = [ 'desktop', 'mobile' ];
 
 	/**
 	 * Get all the dynamic data for the content language to an array.
@@ -32,7 +32,7 @@ class ResourceLoaderULSModule extends ResourceLoaderModule {
 	 * @return array
 	 */
 	protected function getData( $languageCode ) {
-		$vars = array();
+		$vars = [];
 		$vars['wgULSLanguages'] = Language::fetchLanguageNames(
 			$languageCode,
 			'mwfile'
@@ -49,7 +49,7 @@ class ResourceLoaderULSModule extends ResourceLoaderModule {
 		$languageCode = $context->getLanguage();
 		$out = '';
 		foreach ( $this->getData( $languageCode ) as $key => $value ) {
-			$out .= Xml::encodeJsCall( 'mw.config.set', array( $key, $value ) );
+			$out .= Xml::encodeJsCall( 'mw.config.set', [ $key, $value ] );
 		}
 
 		return $out;
@@ -85,10 +85,10 @@ class ResourceLoaderULSModule extends ResourceLoaderModule {
 			return $result['timestamp'];
 		}
 		$timestamp = wfTimestamp();
-		$cache->set( $key, array(
+		$cache->set( $key, [
 			'hash' => $hash,
 			'timestamp' => $timestamp,
-		) );
+		] );
 
 		return $timestamp;
 	}

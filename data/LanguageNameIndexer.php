@@ -33,8 +33,8 @@ class LanguageNameIndexer extends Maintenance {
 	public function execute() {
 		$languages = Language::fetchLanguageNames( null, 'all' );
 
-		$all = array();
-		$buckets = array();
+		$all = [];
+		$buckets = [];
 		foreach ( $languages as $code => $name ) {
 			$all[$code][strtolower( $name )] = true;
 			$langnames = LanguageNames::getNames( $code, 0, 2 );

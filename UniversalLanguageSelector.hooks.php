@@ -96,10 +96,10 @@ class UniversalLanguageSelectorHooks {
 		// If EventLogging integration is enabled, load the schema module
 		// and the event logging functions module
 		if ( $wgULSEventLogging ) {
-			$out->addModules( array(
+			$out->addModules( [
 				'schema.UniversalLanguageSelector',
 				'ext.uls.eventlogger',
-			) );
+			] );
 		}
 
 		// If the extension is enabled, basic features (API, language data) available.
@@ -141,12 +141,12 @@ class UniversalLanguageSelectorHooks {
 	 * Hook: ResourceLoaderTestModules
 	 */
 	public static function addTestModules( array &$testModules, ResourceLoader $resourceLoader ) {
-		$testModules['qunit']['ext.uls.tests'] = array(
-			'scripts' => array( 'tests/qunit/ext.uls.tests.js' ),
-			'dependencies' => array( 'jquery.uls', 'ext.uls.init', 'ext.uls.preferences' ),
+		$testModules['qunit']['ext.uls.tests'] = [
+			'scripts' => [ 'tests/qunit/ext.uls.tests.js' ],
+			'dependencies' => [ 'jquery.uls', 'ext.uls.init', 'ext.uls.preferences' ],
 			'localBasePath' => __DIR__,
 			'remoteExtPath' => 'UniversalLanguageSelector',
-		);
+		];
 
 		return true;
 	}
@@ -169,14 +169,14 @@ class UniversalLanguageSelectorHooks {
 
 		// The element id will be 'pt-uls'
 		$langCode = $context->getLanguage()->getCode();
-		$personal_urls = array(
-			'uls' => array(
+		$personal_urls = [
+			'uls' => [
 				'text' => Language::fetchLanguageName( $langCode ),
 				'href' => '#',
 				'class' => 'uls-trigger autonym',
 				'active' => true
-			)
-		) + $personal_urls;
+			]
+		] + $personal_urls;
 
 		return true;
 	}
@@ -340,19 +340,19 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	public static function onGetPreferences( $user, &$preferences ) {
-		$preferences['uls-preferences'] = array(
+		$preferences['uls-preferences'] = [
 			'type' => 'api',
-		);
+		];
 
 		// A link shown for accessing ULS language settings from preferences screen
-		$preferences['languagesettings'] = array(
+		$preferences['languagesettings'] = [
 			'type' => 'info',
 			'raw' => true,
 			'section' => 'personal/i18n',
 			'default' => "<a id='uls-preferences-link' href='#'></a>",
 			// The above link will have text set from javascript. Just to avoid
 			// showing the link when javascript is disabled.
-		);
+		];
 
 		return true;
 	}
@@ -366,18 +366,18 @@ class UniversalLanguageSelectorHooks {
 			$wgHideInterlanguageLinks === false
 		) {
 			$imagesDir = "$wgExtensionAssetsPath/UniversalLanguageSelector/resources/images";
-			$prefs['uls-compact-links'] = array(
+			$prefs['uls-compact-links'] = [
 				'label-message' => 'uls-betafeature-label',
 				'desc-message' => 'uls-betafeature-desc',
-				'screenshot' => array(
+				'screenshot' => [
 					'ltr' => "$imagesDir/compact-links-ltr.png",
 					'rtl' => "$imagesDir/compact-links-rtl.png",
-				),
+				],
 				'info-link' =>
 					'https://www.mediawiki.org/wiki/Universal_Language_Selector/Design/Interlanguage_links',
 				'discussion-link' =>
 					'https://www.mediawiki.org/wiki/Talk:Universal_Language_Selector/Design/Interlanguage_links',
-			);
+			];
 		}
 	}
 
@@ -401,11 +401,11 @@ class UniversalLanguageSelectorHooks {
 		}
 
 		// A dummy link, just to make sure that the section appears
-		$template->data['language_urls'][] = array(
+		$template->data['language_urls'][] = [
 			'href' => '#',
 			'text' => '',
 			'class' => 'uls-p-lang-dummy',
-		);
+		];
 
 		return true;
 	}
@@ -439,7 +439,7 @@ class UniversalLanguageSelectorHooks {
 		if (
 			(
 				(
-					is_callable( array( $resourceLoader, 'isModuleRegistered' ) ) &&
+					is_callable( [ $resourceLoader, 'isModuleRegistered' ] ) &&
 					!$resourceLoader->isModuleRegistered( 'jquery.i18n' )
 				)
 				||
@@ -448,18 +448,18 @@ class UniversalLanguageSelectorHooks {
 			&&
 			!isset( $wgResourceModules[ 'jquery.i18n' ] )
 		) {
-			$resourceLoader->register( array(
-				'jquery.i18n' => array(
-					'scripts' => array(
+			$resourceLoader->register( [
+				'jquery.i18n' => [
+					'scripts' => [
 						'lib/jquery.i18n/jquery.i18n.js',
 						'lib/jquery.i18n/jquery.i18n.messagestore.js',
 						'lib/jquery.i18n/jquery.i18n.parser.js',
 						'lib/jquery.i18n/jquery.i18n.emitter.js',
 						'lib/jquery.i18n/jquery.i18n.emitter.bidi.js',
 						'lib/jquery.i18n/jquery.i18n.language.js',
-					),
+					],
 					'dependencies' => 'mediawiki.libs.pluralruleparser',
-					'languageScripts' => array(
+					'languageScripts' => [
 						'bs' => 'lib/jquery.i18n/languages/bs.js',
 						'dsb' => 'lib/jquery.i18n/languages/dsb.js',
 						'fi' => 'lib/jquery.i18n/languages/fi.js',
@@ -474,26 +474,26 @@ class UniversalLanguageSelectorHooks {
 						'ru' => 'lib/jquery.i18n/languages/ru.js',
 						'sl' => 'lib/jquery.i18n/languages/sl.js',
 						'uk' => 'lib/jquery.i18n/languages/uk.js',
-					),
-					'targets' => array( 'desktop', 'mobile' ),
+					],
+					'targets' => [ 'desktop', 'mobile' ],
 					'localBasePath' => __DIR__,
 					'remoteExtPath' => 'UniversalLanguageSelector',
-				)
-			) );
+				]
+			] );
 		}
 
 		if ( $wgULSEventLogging ) {
-			$resourceLoader->register( array(
-				'ext.uls.eventlogger' => array(
+			$resourceLoader->register( [
+				'ext.uls.eventlogger' => [
 					'scripts' => 'js/ext.uls.eventlogger.js',
-					'dependencies' => array(
+					'dependencies' => [
 						'mediawiki.user',
 						'schema.UniversalLanguageSelector',
-					),
+					],
 					'localBasePath' => __DIR__ . '/resources',
 					'remoteExtPath' => 'UniversalLanguageSelector/resources',
-				),
-			) );
+				],
+			] );
 		}
 
 		return true;

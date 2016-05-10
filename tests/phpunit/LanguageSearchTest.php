@@ -28,39 +28,39 @@ class LanguageSearchTest extends PHPUnit_Framework_TestCase {
 	}
 
 	public function searchDataProvider() {
-		return array(
-			array( 'ഹിന്ദി', array(
+		return [
+			[ 'ഹിന്ദി', [
 				'hi' => 'ഹിന്ദി'
-			)
-			),
-			array( 'മല', array(
+			]
+			],
+			[ 'മല', [
 				'ml' => 'മലയാളം',
 				'mg' => 'മലഗാസി',
 				'ms' => 'മലെയ്',
-			)
-			),
-			array( 'Φινλαν', array(
+			]
+			],
+			[ 'Φινλαν', [
 				'fi' => 'Φινλανδικά',
-			)
-			),
-			array( 'blah', array()
-			),
-			array( 'الفرنسية', array(
+			]
+			],
+			[ 'blah', []
+			],
+			[ 'الفرنسية', [
 				'fr' => 'الفرنسية',
 				'fr-ca' => 'الفرنسية الكندية',
 				'fr-ch' => 'الفرنسية السويسرية',
 				'frm' => 'الفرنسية الوسطى',
 				'fro' => 'الفرنسية القديمة',
-			)
-			),
-			array( 'മലയളം', array(
+			]
+			],
+			[ 'മലയളം', [
 				'ml' => 'മലയാളം',
-			)
-			),
-			array( 'finish', array(
+			]
+			],
+			[ 'finish', [
 				'fi' => 'finnish'
-			)
-			),
-		);
+			]
+			],
+		];
 	}
 }
