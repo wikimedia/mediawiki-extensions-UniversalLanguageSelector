@@ -24,6 +24,14 @@ class ResourceLoaderULSJsonMessageModule extends ResourceLoaderModule {
 	}
 
 	/**
+	 * Get supported mobile targets
+	 * @return string[] supported targets
+	 */
+	public function getTargets() {
+		return [ 'desktop', 'mobile' ];
+	}
+
+	/**
 	 * Gets the last modified timestamp of this module.
 	 * The last modified timestamp controls caching.
 	 * @param ResourceLoaderContext $context

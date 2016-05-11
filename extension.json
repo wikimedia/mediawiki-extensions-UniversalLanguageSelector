@@ -135,7 +135,7 @@
 		"ext.uls.ime": {
 			"scripts": "js/ext.uls.ime.js",
 			"dependencies": [
-				"ext.uls.init",
+				"ext.uls.common",
 				"ext.uls.preferences",
 				"ext.uls.mediawiki",
 				"ext.uls.messages",
@@ -155,7 +155,12 @@
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.init": {
-			"scripts": "js/ext.uls.init.js",
+			"targets": [ "desktop" ],
+			"dependencies": [ "ext.uls.common" ]
+		},
+		"ext.uls.common": {
+			"targets": [ "desktop", "mobile" ],
+			"scripts": "js/ext.uls.common.js",
 			"styles": "css/ext.uls.css",
 			"skinStyles": {
 				"monobook": "css/ext.uls-monobook.css"
@@ -171,6 +176,7 @@
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.i18n": {
+			"targets": [ "desktop", "mobile" ],
 			"scripts": "js/ext.uls.i18n.js",
 			"dependencies": [
 				"jquery.i18n",
@@ -196,7 +202,7 @@
 		"ext.uls.interface": {
 			"scripts": "js/ext.uls.interface.js",
 			"dependencies": [
-				"ext.uls.init",
+				"ext.uls.common",
 				"mediawiki.jqueryMsg",
 				"mediawiki.user",
 				"ext.uls.webfonts"
@@ -251,7 +257,7 @@
 		"ext.uls.webfonts": {
 			"scripts": "js/ext.uls.webfonts.js",
 			"dependencies": [
-				"ext.uls.init",
+				"ext.uls.common",
 				"ext.uls.preferences",
 				"jquery.client"
 			],
@@ -295,9 +301,10 @@
 			"remoteExtPath": "UniversalLanguageSelector/lib"
 		},
 		"ext.uls.mediawiki": {
+			"targets": [ "desktop", "mobile" ],
 			"scripts": "js/ext.uls.mediawiki.js",
 			"dependencies": [
-				"ext.uls.init",
+				"ext.uls.common",
 				"ext.uls.languagenames",
 				"ext.uls.messages",
 				"jquery.uls",
@@ -308,6 +315,7 @@
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"jquery.uls": {
+			"targets": [ "desktop", "mobile" ],
 			"scripts": [
 				"jquery.uls/src/jquery.uls.core.js",
 				"jquery.uls/src/jquery.uls.lcd.js",
@@ -338,6 +346,7 @@
 			"remoteExtPath": "UniversalLanguageSelector/lib"
 		},
 		"jquery.uls.grid": {
+			"targets": [ "desktop", "mobile" ],
 			"position": "top",
 			"styles": "jquery.uls/css/jquery.uls.grid.css",
 			"localBasePath": "lib",
