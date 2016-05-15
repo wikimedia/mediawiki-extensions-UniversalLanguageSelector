@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"KuboF"
+			"KuboF",
+			"Robin van der Vliet"
 		]
 	},
 	"uls-desc": "Proponas al uzanto kelkajn manierojn por elekti lingvon kaj modifi lingvajn agordojn",
@@ -54,5 +55,9 @@
 	"ext-uls-input-disable-notification-info-personal": "Vi povas iam ajn ŝalti enigajn ilojn en lingvaj agordoj.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Vi povas iam ajn ŝalti enigajn ilojn en lingvaj agordoj ĉe lingvolisto.",
 	"ext-uls-language-settings-applying": "Aplikiĝado...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Unu plia|$1 pliaj}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Unu plia|$1 pliaj}}",
+	"apihelp-languagesearch-param-search": "Serĉa ĉeno.",
+	"apihelp-languagesearch-example-1": "Serĉi por \"Te\"",
+	"apihelp-languagesearch-example-2": "Serĉi por \"ഫി\"",
+	"apihelp-ulslocalization-param-language": "Lingva kodo."
 }

@@ -9,7 +9,8 @@
 			"IRTC1015",
 			"SeoJeongHo",
 			"Hwangjy9",
-			"Nemo bis"
+			"Nemo bis",
+			"Ykhwong"
 		]
 	},
 	"uls-desc": "사용자에게 언어를 선택하고 언어 설정을 바꾸는 몇 가지 방법을 제공합니다",
@@ -18,7 +19,7 @@
 	"ext-uls-undo-language-tooltip-text": "언어가 $1에서 바뀌었습니다",
 	"ext-uls-language-settings-preferences-link": "자세한 언어 설정",
 	"uls-betafeature-label": "언어 링크 단축",
-	"uls-betafeature-desc": "다른 언어 목록을 단축하고, 당신과 더 관계 있는 언어만을 보여줍니다.",
+	"uls-betafeature-desc": "사용자와 관련이 있는 언어들을 위주로 간소화된 언어 목록을 보여줍니다.",
 	"ext-uls-display-settings-title": "보기 설정",
 	"ext-uls-display-settings-language-tab": "언어",
 	"ext-uls-display-settings-fonts-tab": "글꼴",

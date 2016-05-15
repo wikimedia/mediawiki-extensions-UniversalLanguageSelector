@@ -7,7 +7,8 @@
 			"Arent",
 			"SPQRobin",
 			"Sjoerddebruin",
-			"Macofe"
+			"Macofe",
+			"Robin van der Vliet"
 		]
 	},
 	"uls-desc": "Biedt gebruikers verschillende mogelijkheden om een taal te kiezen en bijbehorende instellingen aan te passen",
@@ -61,6 +62,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "U kunt de invoermethoden weer inschakelen via de taalinstellingen naast de lijst met talen.",
 	"ext-uls-language-settings-applying": "Toepassen...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Eén meer|$1 meer}}",
+	"apihelp-languagesearch-description": "Zoeken voor taalnamen in elk script.",
 	"apihelp-languagesearch-param-search": "Zoekterm.",
 	"apihelp-languagesearch-example-1": "Zoeken naar \"Te\"",
 	"apihelp-languagesearch-example-2": "Zoeken naar \"ഫി\"",

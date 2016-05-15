@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Kening Aldgilles",
-			"Robin0van0der0vliet"
+			"Robin0van0der0vliet",
+			"Robin van der Vliet"
 		]
 	},
 	"uls-plang-title-languages": "Talen",
@@ -15,6 +16,13 @@
 	"ext-uls-display-settings-ui-language": "Taal sjen litte",
 	"ext-uls-display-settings-anon-label": "Taal sjen litte:",
 	"ext-uls-webfonts-settings-info-link": "Mear ynformaasje",
+	"ext-uls-input-settings-title-short": "Ynfier",
+	"ext-uls-input-settings-more-languages-tooltip": "Mear talen",
+	"jquery-ime-other-languages": "Oare talen",
 	"jquery-ime-help": "Help",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Ien mear|$1 mear}}"
+	"ext-uls-input-disable-notification-undo": "Weromsette",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ien mear|$1 mear}}",
+	"apihelp-languagesearch-example-1": "Sykje nei \"Te\"",
+	"apihelp-languagesearch-example-2": "Sykje nei \"ഫി\"",
+	"apihelp-ulslocalization-param-language": "Taalkoade."
 }

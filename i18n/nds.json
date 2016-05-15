@@ -4,7 +4,32 @@
 			"Servien"
 		]
 	},
+	"uls-plang-title-languages": "Spraken",
+	"ext-uls-select-language-settings-icon-tooltip": "Spraakinstellungen",
+	"ext-uls-undo-language-tooltip-text": "Spraak ännert vun $1",
+	"ext-uls-language-settings-preferences-link": "Mehr Spraakinstellungen",
+	"uls-betafeature-label": "Kompakte Spraaklenken",
+	"ext-uls-display-settings-title": "Weddergaavinstellungen",
+	"ext-uls-display-settings-language-tab": "Spraak",
+	"ext-uls-display-settings-fonts-tab": "Schriftoorten",
 	"ext-uls-display-settings-title-short": "Weddergaav",
 	"ext-uls-display-settings-desc": "Spraak, de för Menüs un Schriftoorten bruukt warrt.",
-	"ext-uls-language-settings-title": "Spraakinstellungen"
+	"ext-uls-language-settings-title": "Spraakinstellungen",
+	"ext-uls-language-settings-apply": "Instellungen anwennen",
+	"ext-uls-language-settings-cancel": "Afbreken",
+	"ext-uls-language-buttons-help": "Ännert de Menüspraak. De Inholtsspraak warrt nich ännert.",
+	"ext-uls-display-settings-font-settings": "Schriftoortinstellungen",
+	"ext-uls-display-settings-ui-language": "Spraak för Weddergaav",
+	"ext-uls-display-settings-anon-label": "Weddergaavspraak:",
+	"ext-uls-webfonts-settings-info-link": "Mehr Informatschonen",
+	"ext-uls-webfonts-system-font": "Systemschriftoort",
+	"ext-uls-input-settings-title": "Ingave-Instellungen",
+	"ext-uls-input-settings-title-short": "Ingave",
+	"ext-uls-input-settings-desc": "In en annere Spraak schrieven?",
+	"ext-uls-input-settings-more-languages-tooltip": "Mehr Spraken",
+	"jquery-ime-other-languages": "Annere Spraken",
+	"jquery-ime-help": "Hülp",
+	"ext-uls-input-disable-notification-undo": "Rutnehmen",
+	"ext-uls-language-settings-applying": "Anwennen...",
+	"apihelp-ulslocalization-param-language": "Spraak-Kood."
 }
