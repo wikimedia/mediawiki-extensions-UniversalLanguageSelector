@@ -7,7 +7,8 @@
 			"Ovruni",
 			"Pginer",
 			"Ihojose",
-			"Macofe"
+			"Macofe",
+			"GamemOfAnime"
 		]
 	},
 	"uls-desc": "Ofrece al usuario varias formas para seleccionar un idioma y ajustar su configuración",
@@ -70,5 +71,6 @@
 	"apihelp-ulslocalization-description": "Obtener la localización de ULS en el idioma especificado.",
 	"apihelp-ulslocalization-param-language": "Código de idioma.",
 	"apihelp-ulslocalization-example-1": "Obtener la localización en Tamil",
-	"apihelp-ulslocalization-example-2": "Obtener la localización en Hindi"
+	"apihelp-ulslocalization-example-2": "Obtener la localización en Hindi",
+	"prefs-languages": "Lenguas"
 }

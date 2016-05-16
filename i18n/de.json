@@ -67,5 +67,7 @@
 	"apihelp-ulslocalization-description": "Ruft die Lokalisierung von ULS in der vorgegebenen Sprache ab.",
 	"apihelp-ulslocalization-param-language": "Sprachcode.",
 	"apihelp-ulslocalization-example-1": "Ruft die Tamil-Lokalisierung ab",
-	"apihelp-ulslocalization-example-2": "Ruft die Hindi-Lokalisierung ab"
+	"apihelp-ulslocalization-example-2": "Ruft die Hindi-Lokalisierung ab",
+	"prefs-languages": "Sprachen",
+	"ext-uls-compact-language-links-preference": "Eine kompakte Sprachliste mit für dich relevanten Sprachen verwenden."
 }

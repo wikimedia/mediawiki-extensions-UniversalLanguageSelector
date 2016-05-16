@@ -71,5 +71,7 @@
 	"apihelp-ulslocalization-description": "获得指定语言的ULS本地化。",
 	"apihelp-ulslocalization-param-language": "语言代码。",
 	"apihelp-ulslocalization-example-1": "获得泰米尔语本地化",
-	"apihelp-ulslocalization-example-2": "获得印地语本地化"
+	"apihelp-ulslocalization-example-2": "获得印地语本地化",
+	"prefs-languages": "语言",
+	"ext-uls-compact-language-links-preference": "使用紧凑的语言列表，它包含与您有关的语言。"
 }

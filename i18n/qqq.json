@@ -73,6 +73,6 @@
 	"apihelp-ulslocalization-param-language": "{{doc-apihelp-param|ulslocalization|language}}\n{{Identical|Language code}}",
 	"apihelp-ulslocalization-example-1": "{{doc-apihelp-example|ulslocalization}}",
 	"apihelp-ulslocalization-example-2": "{{doc-apihelp-example|ulslocalization}}",
-	"prefs-languages": "Field set legend for user preferences regarding display of language lists",
+	"prefs-languages": "Field set legend for user preferences regarding display of language lists\n{{Identical|Language}}",
 	"ext-uls-compact-language-links-preference": "Label for compact language links user preference"
 }

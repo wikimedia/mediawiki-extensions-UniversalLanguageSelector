@@ -59,5 +59,6 @@
 	"apihelp-languagesearch-param-search": "Serĉa ĉeno.",
 	"apihelp-languagesearch-example-1": "Serĉi por \"Te\"",
 	"apihelp-languagesearch-example-2": "Serĉi por \"ഫി\"",
-	"apihelp-ulslocalization-param-language": "Lingva kodo."
+	"apihelp-ulslocalization-param-language": "Lingva kodo.",
+	"prefs-languages": "Lingvoj"
 }

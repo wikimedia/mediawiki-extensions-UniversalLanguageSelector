@@ -62,5 +62,6 @@
 	"ext-uls-language-settings-applying": "Realizacja w toku...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Kolejny język|$1 kolejne języki|$1 kolejnych języków}}",
 	"apihelp-languagesearch-param-search": "Wyszukaj tekst.",
-	"apihelp-ulslocalization-param-language": "Kod języka."
+	"apihelp-ulslocalization-param-language": "Kod języka.",
+	"prefs-languages": "Języki"
 }
