@@ -20,8 +20,6 @@
 ( function ( $, mw ) {
 	'use strict';
 
-	var hasOwn = Object.prototype.hasOwnProperty;
-
 	mw.uls = mw.uls || {};
 	mw.uls.previousLanguagesStorageKey = 'uls-previous-languages';
 	mw.uls.languageSettingsModules = [ 'ext.uls.inputsettings', 'ext.uls.displaysettings' ];
@@ -152,21 +150,10 @@
 
 		// Filter out unknown and unsupported languages
 		unique = $.grep( unique, function ( langCode ) {
-			var target;
-
-			// If the language is already known and defined, just use it
-			if ( hasOwn.call( $.fn.uls.defaults.languages, langCode ) ) {
+			// If the language is already known and defined, just use it.
+			// $.uls.data.getAutonym will resolve redirects if any.
+			if ( $.uls.data.getAutonym( langCode ) !== langCode ) {
 				return true;
-			}
-
-			// If the language is not immediately known,
-			// try to check is as a redirect
-			target = $.uls.data.isRedirect( langCode );
-
-			if ( target ) {
-				// Check that the redirect's target is known
-				// to this instance of ULS
-				return hasOwn.call( $.fn.uls.defaults.languages, target );
 			}
 
 			return false;
