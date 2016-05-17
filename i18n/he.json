@@ -67,5 +67,7 @@
 	"apihelp-ulslocalization-description": "קבלת תרגומי ממשק של בורר השפות בשפה הנתונה",
 	"apihelp-ulslocalization-param-language": "קוד שפה.",
 	"apihelp-ulslocalization-example-1": "קבלת תרגום לטמילית",
-	"apihelp-ulslocalization-example-2": "קבלת תרגום להינדי"
+	"apihelp-ulslocalization-example-2": "קבלת תרגום להינדי",
+	"prefs-languages": "שפות",
+	"ext-uls-compact-language-links-preference": "שימוש ברשימת שפות מקוצרת, עם שפות שרלוונטיות עבורך."
 }
