@@ -242,7 +242,6 @@
 			"styles": "css/ext.uls.compactlinks.less",
 			"dependencies": [
 				"es5-shim",
-				"jquery.uls.compact",
 				"mediawiki.language",
 				"mediawiki.ui.button"
 			],
