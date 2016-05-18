@@ -13,7 +13,8 @@
 			"Framafan",
 			"Macofe",
 			"Yodaspirine",
-			"Yzelf"
+			"Yzelf",
+			"Yasten"
 		]
 	},
 	"uls-desc": "Donne à l’utilisateur plusieurs manières de sélectionner une langue et d’ajuster les paramètres de langue",
@@ -76,5 +77,6 @@
 	"apihelp-ulslocalization-description": "Obtenir la localisation de ULS dans la langue donnée.",
 	"apihelp-ulslocalization-param-language": "Code de langue.",
 	"apihelp-ulslocalization-example-1": "Obtenir la localisation en Tamil",
-	"apihelp-ulslocalization-example-2": "Obtenir la traduction Hindi"
+	"apihelp-ulslocalization-example-2": "Obtenir la traduction Hindi",
+	"ext-uls-compact-language-links-preference": "Utiliser une liste de langues compacte, avec les langues pertinentes pour vous."
 }

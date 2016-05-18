@@ -72,5 +72,5 @@
 	"apihelp-ulslocalization-param-language": "Código de idioma.",
 	"apihelp-ulslocalization-example-1": "Obtener la localización en Tamil",
 	"apihelp-ulslocalization-example-2": "Obtener la localización en Hindi",
-	"prefs-languages": "Lenguas"
+	"prefs-languages": "Idiomas"
 }
