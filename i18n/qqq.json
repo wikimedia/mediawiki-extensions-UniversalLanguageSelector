@@ -63,6 +63,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Notification bubble text when input methods are disabled, appears if the ULS is at interlanguage toolbar",
 	"ext-uls-language-settings-applying": "Label for apply settings button in language settings screen, while settings being saved. Please keep it short.",
 	"ext-uls-compact-link-count": "Message next to list of languages which indicates that there are more languages than the ones shown. Parameters:\n* $1 - number of languages\n{{Identical|More}}",
+	"ext-uls-compact-link-info": "Tooltip for a button that shows all available languages next to short list of relevant languages",
 	"apihelp-languagesearch-description": "{{doc-apihelp-description|languagesearch}}",
 	"apihelp-languagesearch-param-search": "{{doc-apihelp-param|languagesearch|search}}\n{{Identical|Search string}}",
 	"apihelp-languagesearch-param-typos": "{{doc-apihelp-param|languagesearch|typos}}",

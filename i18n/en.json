@@ -61,6 +61,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "You can enable the input tools at any time from the language settings next to the language list.",
 	"ext-uls-language-settings-applying": "Applying...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|One more|$1 more}}",
+	"ext-uls-compact-link-info": "All languages (initial selection from common choices by you and others)",
 	"apihelp-languagesearch-description": "Search for language names in any script.",
 	"apihelp-languagesearch-param-search": "Search string.",
 	"apihelp-languagesearch-param-typos": "Number of spelling mistakes allowed in the search string.",
