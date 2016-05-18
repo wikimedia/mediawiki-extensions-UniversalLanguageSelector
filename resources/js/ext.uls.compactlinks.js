@@ -69,7 +69,7 @@
 				return;
 			}
 
-			mw.loader.using( 'ext.uls.mediawiki' ).done( function () {
+			mw.loader.using( 'ext.uls.init' ).done( function () {
 				// If we're only a bit beyond max, limit to 7 instead of 9.
 				// FIXME: This assumes the max is 9.
 				self.compactSize = ( self.listSize <= 12 ) ? 7 : max;
@@ -187,8 +187,11 @@
 			var self = this;
 
 			this.$trigger.one( 'click', function () {
-				self.createSelector( self.$trigger );
-				self.$trigger.click();
+				// Load the ULS now.
+				mw.loader.using( 'ext.uls.mediawiki' ).done( function () {
+					self.createSelector( self.$trigger );
+					self.$trigger.click();
+				} );
 			} );
 		},
 
