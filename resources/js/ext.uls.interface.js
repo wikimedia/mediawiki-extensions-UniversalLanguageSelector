@@ -20,7 +20,23 @@
 ( function ( $, mw ) {
 	'use strict';
 
-	var previousLanguageAutonymStorageKey = 'uls-previous-language-autonym';
+	// Replace with mediawiki.storage when >= MW 1.26
+	var Store = function ( key ) {
+		this.key = key;
+	};
+
+	// Returns null if key does not exist according to documentation.
+	Store.prototype.get = function () {
+		try {
+			return localStorage.getItem( this.key );
+		} catch ( e ) {}
+	};
+
+	Store.prototype.set = function ( value ) {
+		try {
+			localStorage.setItem( this.key, value );
+		} catch ( e ) {}
+	};
 
 	/**
 	 * Construct the display settings link
@@ -171,59 +187,17 @@
 		} );
 	}
 
-	/**
-	 * Gets the name of the previously active language
-	 *
-	 * @param {string} code Language code of previously selected language.
-	 * @return {jQuery.Promise}
-	 */
-	function getUndoAutonym( code ) {
-		var autonym,
-			deferred = $.Deferred();
-
-		try {
-			autonym = localStorage.getItem( previousLanguageAutonymStorageKey );
-		} catch ( e ) {}
-
-		if ( autonym ) {
-			mw.loader.using( 'jquery.tipsy', function () {
-				deferred.resolve( autonym );
-			} );
-		} else {
-			mw.loader.using( [ 'jquery.uls.data', 'jquery.tipsy' ], function () {
-				deferred.resolve( $.uls.data.getAutonym( code ) );
-			} );
-		}
-
-		return deferred.promise();
-	}
-
 	function userCanChangeLanguage() {
 		return mw.config.get( 'wgULSAnonCanChangeLanguage' ) || !mw.user.isAnon();
-	}
-
-	function userHasChangedLanguage() {
-		var previousLang = mw.uls.getPreviousLanguages()[ 0 ],
-			currentLang = mw.config.get( 'wgUserLanguage' );
-
-		// Changed language is saved in showUndoTooltip, which is never
-		// called if previousLang is not defined, which will never be
-		// defined unless we do it now.
-		if ( previousLang === undefined ) {
-			mw.uls.addPreviousLanguage( currentLang );
-		}
-
-		return previousLang && previousLang !== currentLang;
 	}
 
 	/**
 	 * The tooltip to be shown when language changed using ULS.
 	 * It also allows to undo the language selection.
 	 */
-	function showUndoTooltip() {
-		var previousLanguages, previousLang, $ulsTrigger,
+	function showUndoTooltip( previousLang, previousAutonym ) {
+		var $ulsTrigger,
 			ulsPosition = mw.config.get( 'wgULSPosition' ),
-			currentLang = mw.config.get( 'wgUserLanguage' ),
 			rtlPage = $( 'body' ).hasClass( 'rtl' ),
 			tipsyGravity = {
 				personal: 'n',
@@ -274,65 +248,48 @@
 			tipsyTimer = window.setTimeout( hideTipsy, timeout );
 		}
 
-		previousLanguages = mw.uls.getPreviousLanguages();
-		previousLang = previousLanguages[ 0 ];
+		// Attach a tipsy tooltip to the trigger
+		$ulsTrigger.tipsy( {
+			gravity: tipsyGravity[ ulsPosition ],
+			delayOut: 3000,
+			html: true,
+			fade: true,
+			trigger: 'manual',
+			title: function () {
+				var link;
 
-		mw.uls.addPreviousLanguage( currentLang );
+				link = $( '<a>' ).text( previousAutonym )
+					.attr( {
+						href: '#',
+						'class': 'uls-prevlang-link',
+						lang: previousLang,
+						// We could get dir from uls.data,
+						// but we are trying to avoid loading it
+						// and 'auto' is safe enough in this context.
+						// T130390: must use attr
+						dir: 'auto'
+					} );
 
-		getUndoAutonym( previousLang ).done( function ( autonym ) {
-			// Attach a tipsy tooltip to the trigger
-			$ulsTrigger.tipsy( {
-				gravity: tipsyGravity[ ulsPosition ],
-				delayOut: 3000,
-				html: true,
-				fade: true,
-				trigger: 'manual',
-				title: function () {
-					var link;
+				// Get the html of the link by wrapping it in div first
+				link = $( '<div>' ).html( link ).html();
 
-					link = $( '<a>' ).text( autonym )
-						.attr( {
-							href: '#',
-							'class': 'uls-prevlang-link',
-							lang: previousLang,
-							// We could get dir from uls.data,
-							// but we are trying to avoid loading it
-							// and 'auto' is safe enough in this context.
-							// T130390: must use attr
-							dir: 'auto'
-						} );
-
-					// Get the html of the link by wrapping it in div first
-					link = $( '<div>' ).html( link ).html();
-
-					return mw.message( 'ext-uls-undo-language-tooltip-text', '$1' ).escaped().replace( '$1', link );
-				}
-			} );
-
-			// The interlanguage position needs some time to settle down
-			window.setTimeout( function () {
-				// Show the tipsy tooltip on page load.
-				showTipsy( 6000 );
-			}, 700 );
-
-			// manually show the tooltip
-			$ulsTrigger.on( 'mouseover', function () {
-				// show only if the ULS panel is not shown
-				if ( !$( '.uls-menu:visible' ).length ) {
-					showTipsy( 3000 );
-				}
-			} );
+				return mw.message( 'ext-uls-undo-language-tooltip-text', '$1' ).escaped().replace( '$1', link );
+			}
 		} );
 
-		// Now that we set the previous languages,
-		// we can store the previous autonym.
-		// TODO: Refactor this, because it doesn't directly belong
-		// to the tooltip.
-		try {
-			localStorage.setItem(
-				previousLanguageAutonymStorageKey, mw.config.get( 'wgULSCurrentAutonym' )
-			);
-		} catch ( e ) {}
+		// The interlanguage position needs some time to settle down
+		window.setTimeout( function () {
+			// Show the tipsy tooltip on page load.
+			showTipsy( 6000 );
+		}, 700 );
+
+		// manually show the tooltip
+		$ulsTrigger.on( 'mouseover', function () {
+			// show only if the ULS panel is not shown
+			if ( !$( '.uls-menu:visible' ).length ) {
+				showTipsy( 3000 );
+			}
+		} );
 	}
 
 	function initInterface() {
@@ -342,7 +299,6 @@
 			rtlPage = $( 'body' ).hasClass( 'rtl' ),
 			anonMode = ( mw.user.isAnon() &&
 				!mw.config.get( 'wgULSAnonCanChangeLanguage' ) ),
-			imeSelector = mw.config.get( 'wgULSImeSelectors' ).join( ', ' ),
 			ulsPosition = mw.config.get( 'wgULSPosition' );
 
 		if ( ulsPosition === 'interlanguage' ) {
@@ -488,10 +444,45 @@
 
 				return false;
 			} );
+	}
 
-		if ( userCanChangeLanguage() && userHasChangedLanguage() ) {
-			showUndoTooltip();
+	function initTooltip() {
+		var previousLanguageCodeStore, previousLanguageAutonymStore,
+			previousLanguage, currentLanguage, previousAutonym, currentAutonym;
+
+		if ( !userCanChangeLanguage() ) {
+			return;
 		}
+
+		previousLanguageCodeStore = new Store( 'uls-previous-language-code' );
+		previousLanguageAutonymStore = new Store( 'uls-previous-language-autonym' );
+
+		previousLanguage = previousLanguageCodeStore.get();
+		currentLanguage = mw.config.get( 'wgUserLanguage' );
+		previousAutonym = previousLanguageAutonymStore.get();
+		currentAutonym = mw.config.get( 'wgULSCurrentAutonym' );
+
+		// If storage is empty, i.e. first visit, then store the current language
+		// immediately so that we know when it changes.
+		if ( !previousLanguage || !previousAutonym ) {
+			previousLanguageCodeStore.set( currentLanguage );
+			previousLanguageAutonymStore.set( currentAutonym );
+			return;
+		}
+
+		if ( previousLanguage !== currentLanguage ) {
+			mw.loader.using( 'jquery.tipsy' ).done( function () {
+				showUndoTooltip( previousLanguage, previousAutonym );
+			} );
+			previousLanguageCodeStore.set( currentLanguage );
+			previousLanguageAutonymStore.set( currentAutonym );
+			// Store this language in a list of frequently used languages
+			mw.uls.addPreviousLanguage( currentLanguage );
+		}
+	}
+
+	function initIme() {
+		var imeSelector = mw.config.get( 'wgULSImeSelectors' ).join( ', ' );
 
 		$( 'body' ).on( 'focus.imeinit', imeSelector, function () {
 			var $input = $( this );
@@ -505,5 +496,7 @@
 
 	$( document ).ready( function () {
 		initInterface();
+		initTooltip();
+		initIme();
 	} );
 }( jQuery, mediaWiki ) );
