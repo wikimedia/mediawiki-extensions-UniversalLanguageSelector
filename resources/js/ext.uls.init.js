@@ -72,7 +72,7 @@
 		try {
 			localStorage.setItem(
 				mw.uls.previousLanguagesStorageKey,
-				JSON.stringify( previousLanguages.slice( -5 ) )
+				JSON.stringify( previousLanguages.slice( 0, 5 ) )
 			);
 		} catch ( e ) {}
 	};
@@ -87,7 +87,24 @@
 			);
 		} catch ( e ) {}
 
-		return previousLanguages.slice( -5 );
+		return previousLanguages.slice( 0, 5 );
+	};
+
+	/**
+	 * Add a selected language to the list of previously selected languages.
+	 *
+	 * @param {string} language Language code.
+	 * @since 2016.05
+	 */
+	mw.uls.addPreviousLanguage = function ( language ) {
+		var languages = mw.uls.getPreviousLanguages();
+
+		// Avoid duplicates
+		languages = $.map( languages, function ( element ) {
+			return element === language ? undefined : element;
+		} );
+		languages.unshift( language );
+		mw.uls.setPreviousLanguages( languages );
 	};
 
 	/**

@@ -203,14 +203,14 @@
 	}
 
 	function userHasChangedLanguage() {
-		var previousLang = mw.uls.getPreviousLanguages().slice( -1 )[ 0 ],
+		var previousLang = mw.uls.getPreviousLanguages()[ 0 ],
 			currentLang = mw.config.get( 'wgUserLanguage' );
 
 		// Changed language is saved in showUndoTooltip, which is never
 		// called if previousLang is not defined, which will never be
 		// defined unless we do it now.
 		if ( previousLang === undefined ) {
-			mw.uls.setPreviousLanguages( [ currentLang ] );
+			mw.uls.addPreviousLanguage( currentLang );
 		}
 
 		return previousLang && previousLang !== currentLang;
@@ -275,10 +275,9 @@
 		}
 
 		previousLanguages = mw.uls.getPreviousLanguages();
-		previousLang = previousLanguages.slice( -1 )[ 0 ];
+		previousLang = previousLanguages[ 0 ];
 
-		previousLanguages.push( currentLang );
-		mw.uls.setPreviousLanguages( previousLanguages );
+		mw.uls.addPreviousLanguage( currentLang );
 
 		getUndoAutonym( previousLang ).done( function ( autonym ) {
 			// Attach a tipsy tooltip to the trigger
