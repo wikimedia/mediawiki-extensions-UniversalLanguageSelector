@@ -51,5 +51,6 @@
 	"ext-uls-input-disable-notification-undo": "ناکړل",
 	"ext-uls-input-disable-notification-info-personal": "تاسې د ننوتلو اوزارونه هر وخت د ژبې امستنو څخه چارنولی شی.",
 	"ext-uls-input-disable-notification-info-interlanguage": "تاسې د ننوتلو اوزارونه هر وخت، د ژبې لړليک څنگ ته، د ژب-امستنو څخه چارنولی شی.",
-	"apihelp-ulslocalization-param-language": "د ژبې کوډ."
+	"apihelp-ulslocalization-param-language": "د ژبې کوډ.",
+	"prefs-languages": "ژبې"
 }

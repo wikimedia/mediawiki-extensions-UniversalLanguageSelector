@@ -55,5 +55,6 @@
 	"ext-uls-input-disable-notification-info-personal": "Dir kënnt d''input tools' zu all Ament vun de Sproochastellungen aus aschalten.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Dir kënnt d''input tools' zu all Ament vun de Sproochastellungen nieft der Lëscht vun de Sproochen aschalten",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Eng méi|$1 méi}}",
-	"apihelp-ulslocalization-param-language": "Sproochcode."
+	"apihelp-ulslocalization-param-language": "Sproochcode.",
+	"prefs-languages": "Sproochen"
 }
