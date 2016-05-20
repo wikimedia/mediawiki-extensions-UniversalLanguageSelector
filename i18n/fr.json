@@ -69,6 +69,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Vous pouvez activer les outils de saisie à tout moment depuis les paramètres de langue à côté de la liste des langues.",
 	"ext-uls-language-settings-applying": "Application en cours…",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Une langue de plus|$1 langues de plus}}",
+	"ext-uls-compact-link-info": "Toutes les langues (sélection initiale de choix communs par vous et les autres)",
 	"apihelp-languagesearch-description": "Rechercher les noms de langue dans n’importe quel script.",
 	"apihelp-languagesearch-param-search": "Chercher le texte.",
 	"apihelp-languagesearch-param-typos": "Nombre d’erreurs d’orthographe permises dans la chaîne de recherche.",
