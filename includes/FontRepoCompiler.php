@@ -91,7 +91,7 @@ class FontRepoCompiler {
 			$info['fontstyle'] = $font['fontstyle'];
 		}
 
-		foreach ( [ 'ttf', 'svg', 'woff', 'woff2' ] as $format ) {
+		foreach ( [ 'ttf', 'woff', 'woff2' ] as $format ) {
 			if ( isset( $font[$format] ) ) {
 				$info[$format] = $this->getFontWebPath( $fontpath, $fontdir, $font[$format] );
 			}
@@ -99,7 +99,7 @@ class FontRepoCompiler {
 
 		// If font formats are not explicitly defined, scan the directory.
 		if ( !isset( $info['ttf'] ) ) {
-			foreach ( glob( "$fontpath/*.{ttf,woff,woff2,svg}", GLOB_BRACE ) as $fontfile ) {
+			foreach ( glob( "$fontpath/*.{ttf,woff,woff2}", GLOB_BRACE ) as $fontfile ) {
 				$type = substr( $fontfile, strrpos( $fontfile, '.' ) + 1 );
 				$info[$type] = $this->getFontWebPath( $fontpath, $fontdir, basename( $fontfile ) );
 			}
