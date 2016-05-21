@@ -58,6 +58,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "באפשרותך להפעיל את כלי הקלט בכל זמן מהגדרות השפה שליד רשימת השפות.",
 	"ext-uls-language-settings-applying": "החלה...",
 	"ext-uls-compact-link-count": "עוד {{PLURAL:$1|אחת|$1}}",
+	"ext-uls-compact-link-info": "כל השפות (הבחירה הראשונית מגיעה מבחירות נפוצות שלך ושל אחרים)",
 	"apihelp-languagesearch-description": "חיפוש שם שפה בכל אלפבית",
 	"apihelp-languagesearch-param-search": "מחרוזת חיפוש.",
 	"apihelp-languagesearch-param-typos": "מספר שגיאות הכתיב שמותרות במחרוזת החיפוש.",

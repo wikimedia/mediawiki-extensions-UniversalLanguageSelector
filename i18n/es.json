@@ -62,6 +62,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Puedes activar las herramientas de entrada en cualquier momento desde las opciones de idioma junto a la lista de idiomas.",
 	"ext-uls-language-settings-applying": "Aplicando…",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Uno más|$1 más}}",
+	"ext-uls-compact-link-info": "Todos los idiomas (selección inicial de opciones comunes tuyas y de otros)",
 	"apihelp-languagesearch-description": "Buscar nombres de idiomas en cualquier sistema de escritura.",
 	"apihelp-languagesearch-param-search": "Buscar cadena.",
 	"apihelp-languagesearch-param-typos": "Número de faltas de ortografía permitidas en la cadena de búsqueda.",
