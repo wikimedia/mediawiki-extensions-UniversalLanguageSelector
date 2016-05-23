@@ -238,6 +238,9 @@
 				// These are the most probable languages predicted by ULS.
 				this.getCommonLanguages( languages ),
 
+				// Some global fallbacks to avoid showing languages in the beginning of the alphabet
+				this.getExtraCommonLanguages( languages ),
+
 				// Finally add the whole languages array too.
 				// We will remove duplicates and cut down to required size.
 				languages
@@ -274,6 +277,22 @@
 		 */
 		filterByCommonLanguages: function ( languages ) {
 			var commonLanguages = mw.uls.getFrequentLanguageList();
+
+			return $.grep( commonLanguages, function ( language ) {
+				return $.inArray( language, languages ) >= 0;
+			} );
+		},
+
+		/**
+		 * Filter the language list by globally common languages, i.e.
+		 * this list is not user specific.
+		 *
+		 * @return {Array} List of language codes supported by the article
+		 */
+		getExtraCommonLanguages: function ( languages ) {
+			var commonLanguages = [ 'zh', 'en', 'hi', 'ur', 'es', 'ar', 'ru', 'id', 'ms', 'pt',
+				'fr', 'de', 'bn', 'ja', 'pnb', 'pa', 'jv', 'te', 'ta', 'ko', 'mr', 'tr', 'vi',
+				'it', 'fa', 'sv', 'nl', 'pl' ];
 
 			return $.grep( commonLanguages, function ( language ) {
 				return $.inArray( language, languages ) >= 0;
