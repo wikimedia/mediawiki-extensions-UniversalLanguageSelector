@@ -63,11 +63,6 @@
 	font-size: 12pt;
 }
 
-#languagesettings-settings-panel h5 {
-	color: #252525;
-	font-size: 10pt;
-}
-
 /* Buttons in the selector panel */
 .menu-section {
 	color: #777;
@@ -83,7 +78,6 @@
 
 .uls-language-settings-close-block {
 	background: #FFFFFF;
-	border-top-right-radius: 5px;
 }
 
 #languagesettings-panels .menu-section.active,
@@ -139,4 +133,14 @@ label.checkbox input[type="checkbox"] {
 
 .waiting {
 	cursor: progress;
+}
+
+.uls-icon-close {
+	background: transparent url('../images/close.png') no-repeat scroll center center;
+	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/close.svg');
+	/* @embed */
+	background-image: linear-gradient(transparent, transparent), url('../images/close.svg');
+	float: right;
+	padding: 15px;
+	cursor: pointer;
 }

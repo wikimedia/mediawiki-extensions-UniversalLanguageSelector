@@ -331,7 +331,6 @@
 			"remoteExtPath": "UniversalLanguageSelector/lib"
 		},
 		"jquery.uls.compact": {
-			"styles": "jquery.uls/css/jquery.uls.compact.css",
 			"dependencies": "jquery.uls",
 			"localBasePath": "lib",
 			"remoteExtPath": "UniversalLanguageSelector/lib"
