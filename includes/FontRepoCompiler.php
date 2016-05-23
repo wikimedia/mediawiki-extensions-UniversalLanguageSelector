@@ -24,12 +24,10 @@ class FontRepoCompiler {
 			$conf = $this->parseFile( $file );
 			$fontPath = dirname( $file );
 
-			// Ugly hack to populate version to all fonts in a set
-			$version = null;
 			foreach ( $conf as $fontname => $font ) {
 				$fontLanguages = $this->getLanguages( $font );
 				$this->appendLanguages( $languages, $fontLanguages, $fontname );
-				$fonts[$fontname] = $this->getFontInfo( $font, $fontPath, $version );
+				$fonts[$fontname] = $this->getFontInfo( $font, $fontPath );
 			}
 		}
 
@@ -81,11 +79,9 @@ class FontRepoCompiler {
 		}
 	}
 
-	public function getFontInfo( $font, $fontpath, &$version ) {
+	public function getFontInfo( $font, $fontpath ) {
 		$info = [];
 		$fontdir = basename( $fontpath );
-
-		$version = $info['version'] = isset( $font['version'] ) ? $font['version'] : $version;
 
 		if ( isset( $font['fontweight'] ) ) {
 			$info['fontweight'] = $font['fontweight'];
@@ -95,31 +91,17 @@ class FontRepoCompiler {
 			$info['fontstyle'] = $font['fontstyle'];
 		}
 
-		if ( isset( $font['ttf'] ) ) {
-			$info['ttf'] = $fontdir . '/' . $font['ttf'];
-		}
-
-		if ( isset( $font['svg'] ) ) {
-			$info['svg'] = $fontdir . '/' . $font['svg'];
-		}
-
-		if ( isset( $font['eot'] ) ) {
-			$info['eot'] = $fontdir . '/' . $font['eot'];
-		}
-
-		if ( isset( $font['woff'] ) ) {
-			$info['woff'] = $fontdir . '/' . $font['woff'];
-		}
-
-		if ( isset( $font['woff2'] ) ) {
-			$info['woff2'] = $fontdir . '/' . $font['woff2'];
+		foreach ( [ 'ttf', 'svg', 'eot', 'woff', 'woff2' ] as $format ) {
+			if ( isset( $font[$format] ) ) {
+				$info[$format] = $this->getFontWebPath( $fontpath, $fontdir, $font[$format] );
+			}
 		}
 
 		// If font formats are not explicitly defined, scan the directory.
 		if ( !isset( $info['ttf'] ) ) {
 			foreach ( glob( "$fontpath/*.{eot,ttf,woff,woff2,svg}", GLOB_BRACE ) as $fontfile ) {
 				$type = substr( $fontfile, strrpos( $fontfile, '.' ) + 1 );
-				$info[$type] = $fontdir . '/' . basename( $fontfile );
+				$info[$type] = $this->getFontWebPath( $fontpath, $fontdir, basename( $fontfile ) );
 			}
 		}
 
@@ -137,5 +119,15 @@ class FontRepoCompiler {
 		}
 
 		return $info;
+	}
+
+	private function getFontWebPath( $path, $fontdir, $filename ) {
+		if ( method_exists( 'OutputPage', 'transformFilePath' ) ) {
+			return OutputPage::transformFilePath( $fontdir, $path, $filename );
+		}
+
+		// BC for MediaWiki <= 1.27
+		$hash = md5_file( "$path/$filename" );
+		return "$fontdir/$filename?" . substr( $hash, 0, 5 );
 	}
 }
