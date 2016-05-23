@@ -65,5 +65,7 @@
 	"apihelp-ulslocalization-description": "Donn de localization för der <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"Universal Language Selector\">ULS</i> en dä aanjejovve Schprohch holle.",
 	"apihelp-ulslocalization-param-language": "Et Schprohcheköözel.",
 	"apihelp-ulslocalization-example-1": "Donn de localization för de tamihlesche Schprohch holle",
-	"apihelp-ulslocalization-example-2": "Donn de localization för de Schprohch Hindi holle"
+	"apihelp-ulslocalization-example-2": "Donn de localization för de Schprohch Hindi holle",
+	"prefs-languages": "Schprohche",
+	"ext-uls-compact-language-links-preference": "Nämm de kompakte Leß met Schprohche, di för Desch vun Bedüggdeneß sin"
 }
