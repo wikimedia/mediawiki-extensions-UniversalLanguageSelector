@@ -71,7 +71,6 @@ div.display-settings-block:hover .settings-text {
 	padding-left: 40px;
 	margin-top: 5px;
 	margin-bottom: 5px;
-
 }
 
 .uls-icon-back {
@@ -94,7 +93,6 @@ div.display-settings-block:hover .settings-text {
 	opacity: 1;
 	cursor: pointer;
 }
-
 
 /* TODO: move to jquery.uls */
 .grid .uls-search {
