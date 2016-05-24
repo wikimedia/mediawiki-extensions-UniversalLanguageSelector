@@ -26,5 +26,6 @@
 	"ext-uls-display-settings-ui-language": "Телде күрһәтеү",
 	"ext-uls-webfonts-settings-title": "Кәрәк булғанда шрифтар күсереү",
 	"ext-uls-webfonts-settings-info-link": "Өҫтәмә мәғлүмәт",
-	"ext-uls-webfonts-select-for-ui-info": "Ҡулланыусының интерфейс шрифты"
+	"ext-uls-webfonts-select-for-ui-info": "Ҡулланыусының интерфейс шрифты",
+	"prefs-languages": "Телдәр"
 }
