@@ -62,7 +62,7 @@ class GenerateFontTestPage extends Maintenance {
 				if ( !isset( $font[$format] ) ) {
 					continue;
 				}
-				$xus[] = "\turl('$relpath/{$font[$format]}?{$font['version']}') format('$format')";
+				$xus[] = "\turl('$relpath/{$font[$format]}') format('$format')";
 			}
 
 			$css .= implode( ",\n", $xus );
