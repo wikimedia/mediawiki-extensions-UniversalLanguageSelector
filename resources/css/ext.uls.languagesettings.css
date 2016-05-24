@@ -1,11 +1,13 @@
+/* stylelint-disable selector-no-id */
+
 #uls-settings-block {
-	border-top: 1px solid #C9C9C9;
+	border-top: 1px solid #c9c9c9;
 	background: #f8f8f8;
-	background: -webkit-gradient(linear, left top, left bottom, from(#FBFBFB), to(#F0F0F0));
-	background: -webkit-linear-gradient(top, #FBFBFB, #F0F0F0);
-	background: -moz-linear-gradient(top, #FBFBFB, #F0F0F0);
-	background: -o-linear-gradient(top, #FBFBFB, #F0F0F0);
-	background: linear-gradient(#FBFBFB, #F0F0F0);
+	background: -webkit-gradient( linear, left top, left bottom, from( #fbfbfb ), to( #f0f0f0 ) );
+	background: -webkit-linear-gradient( top, #fbfbfb, #f0f0f0 );
+	background: -moz-linear-gradient( top, #fbfbfb, #f0f0f0 );
+	background: -o-linear-gradient( top, #fbfbfb, #f0f0f0 );
+	background: linear-gradient( #fbfbfb, #f0f0f0 );
 	padding-left: 10px;
 	line-height: 1.2em;
 	border-radius: 0 0 5px 5px;
@@ -34,19 +36,15 @@
 	line-height: 20pt;
 	margin-top: 0;
 	font-weight: normal;
-	border: none;
+	border: 0;
 	padding: 15px 0 3px 15px;
 	color: #555;
-}
-
-.language-settings-buttons {
-	text-align: right;
 }
 
 #languagesettings-settings-panel {
 	padding-left: 5%;
 	color: #252525;
-	background: #FFFFFF;
+	background: #fff;
 	border-bottom-right-radius: 5px;
 }
 
@@ -73,18 +71,18 @@
 }
 
 #language-settings-dialog {
-	background: #FBFBFB;
+	background: #fbfbfb;
 }
 
 .uls-language-settings-close-block {
-	background: #FFFFFF;
+	background: #fff;
 }
 
 #languagesettings-panels .menu-section.active,
 #languagesettings-panels .menu-section.active:hover {
-	color: black;
-	background-color: #F0F0F0;
-	border-left-color: #3366BB;
+	color: #000;
+	background-color: #f0f0f0;
+	border-left-color: #36b;
 }
 
 .settings-menu-items .menu-section {
@@ -94,14 +92,15 @@
 }
 
 .settings-menu-items .menu-section:hover {
-	background-color: #F5F5F5;
+	background-color: #f5f5f5;
 }
 
 .language-settings-buttons {
-	border-top: 1px solid #F0F0F0;
+	border-top: 1px solid #f0f0f0;
 	margin-top: 25px;
 	padding: 15px;
 	width: auto;
+	text-align: right;
 }
 
 .language-settings-buttons button {
@@ -110,16 +109,16 @@
 
 .uls-ui-languages p,
 .checkbox {
-	color: #555555;
+	color: #555;
 	font-size: 10pt;
 }
 
 /* mediawiki.ui does not have a pressed state style. */
 #languagesettings-panels .mw-ui-pressed {
-	background-color: #D8D8D8;
+	background-color: #d8d8d8;
 }
 
-.checkbox input[type="checkbox"] {
+.checkbox input[type='checkbox'] {
 	margin-left: 0;
 }
 
@@ -127,7 +126,7 @@
 	color: #252525;
 }
 
-label.checkbox input[type="checkbox"] {
+label.checkbox input[type='checkbox'] {
 	float: left;
 }
 
@@ -136,10 +135,10 @@ label.checkbox input[type="checkbox"] {
 }
 
 .uls-icon-close {
-	background: transparent url('../images/close.png') no-repeat scroll center center;
-	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/close.svg');
+	background: transparent url( ../images/close.png ) no-repeat scroll center center;
+	background-image: -webkit-linear-gradient( transparent, transparent ), url( ../images/close.svg );
 	/* @embed */
-	background-image: linear-gradient(transparent, transparent), url('../images/close.svg');
+	background-image: linear-gradient( transparent, transparent ), url( ../images/close.svg );
 	float: right;
 	padding: 15px;
 	cursor: pointer;

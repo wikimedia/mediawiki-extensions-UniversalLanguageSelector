@@ -1,4 +1,6 @@
-@import "mediawiki.mixins";
+@import 'mediawiki.mixins';
+
+/* stylelint-disable selector-no-id */
 
 /*
  * The trigger can be placed in the personal toolbar near the username
@@ -24,19 +26,20 @@
 /* Opera for some inexplicable reason confuses right and left padding with */
 /* RTL text direction here (bug T47142). x:-o-prefocus won't match anything, */
 /* but will make other browsers ignore this rule. */
-x:-o-prefocus, body.rtl li#pt-uls {
+x:-o-prefocus,
+body.rtl li#pt-uls {
 	/* @noflip */
 	direction: ltr;
 }
 
 #uls-settings-block {
-	border-top: 1px solid #C9C9C9;
+	border-top: 1px solid #c9c9c9;
 	background: #f8f8f8;
-	background: -webkit-gradient(linear, left top, left bottom, from(#FBFBFB), to(#F0F0F0));
-	background: -webkit-linear-gradient(top, #FBFBFB, #F0F0F0);
-	background: -moz-linear-gradient(top, #FBFBFB, #F0F0F0);
-	background: -o-linear-gradient(top, #FBFBFB, #F0F0F0);
-	background: linear-gradient(#FBFBFB, #F0F0F0);
+	background: -webkit-gradient( linear, left top, left bottom, from( #fbfbfb ), to( #f0f0f0 ) );
+	background: -webkit-linear-gradient( top, #fbfbfb, #f0f0f0 );
+	background: -moz-linear-gradient( top, #fbfbfb, #f0f0f0 );
+	background: -o-linear-gradient( top, #fbfbfb, #f0f0f0 );
+	background: linear-gradient( #fbfbfb, #f0f0f0 );
 	padding-left: 10px;
 	line-height: 1.2em;
 	border-radius: 0 0 5px 5px;

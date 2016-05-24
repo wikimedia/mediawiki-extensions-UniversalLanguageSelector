@@ -21,7 +21,7 @@
 .uls-menu.callout .caret-before,
 .uls-menu.callout .caret-after {
 	border-top: 10px solid transparent;
-	border-right: 10px solid #C9C9C9;
+	border-right: 10px solid #c9c9c9;
 	border-bottom: 10px solid transparent;
 	display: inline-block;
 	left: -11px;
@@ -31,13 +31,13 @@
 }
 
 .uls-menu.callout .caret-after {
-	border-right: 10px solid #FCFCFC;
+	border-right: 10px solid #fcfcfc;
 	display: inline-block;
 	left: -10px;
 }
 
 .uls-menu.callout--languageselection .caret-after {
-	border-right: 10px solid #FFF;
+	border-right: 10px solid #fff;
 }
 
 .uls-ui-languages button {
@@ -58,7 +58,7 @@ button.uls-more-languages {
 }
 
 .settings-text {
-	color: #555555;
+	color: #555;
 	font-size: 9pt;
 }
 
@@ -74,10 +74,10 @@ div.display-settings-block:hover .settings-text {
 }
 
 .uls-icon-back {
-	background: transparent url('../images/back-grey-ltr.png') no-repeat scroll center center;
-	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/back-grey-ltr.svg');
+	background: transparent url( ../images/back-grey-ltr.png ) no-repeat scroll center center;
+	background-image: -webkit-linear-gradient( transparent, transparent ), url( ../images/back-grey-ltr.svg );
 	/* @embed */
-	background-image: linear-gradient(transparent, transparent), url('../images/back-grey-ltr.svg');
+	background-image: linear-gradient( transparent, transparent ), url( ../images/back-grey-ltr.svg );
 	background-size: 28px;
 	background-position: center center;
 	height: 32px;
@@ -85,7 +85,7 @@ div.display-settings-block:hover .settings-text {
 	display: block;
 	position: absolute;
 	left: 0;
-	border-right: 1px solid #C9C9C9;
+	border-right: 1px solid #c9c9c9;
 	opacity: 0.8;
 }
 
@@ -96,7 +96,7 @@ div.display-settings-block:hover .settings-text {
 
 /* TODO: move to jquery.uls */
 .grid .uls-search {
-	padding-left: 0px;
+	padding-left: 0;
 }
 
 .uls-search-label {
@@ -105,5 +105,5 @@ div.display-settings-block:hover .settings-text {
 }
 
 .uls-filterinput {
-	padding-left: 0px;
+	padding-left: 0;
 }

@@ -1,4 +1,6 @@
-@import "mediawiki.mixins";
+@import 'mediawiki.mixins';
+
+/* stylelint-disable selector-no-id */
 
 #p-lang .body ul .uls-trigger,
 #p-lang .pBody ul .uls-trigger {
@@ -6,12 +8,14 @@
 	padding: 0;
 }
 
+/* stylelint-enable selector-no-id */
+
 .mw-interlanguage-selector,
 .mw-interlanguage-selector:active {
 	cursor: pointer;
 	padding: 4px 6px 4px 25px;
 	font-size: 13px;
-	font-weight: 400;
+	font-weight: normal;
 	.background-image-svg( '../images/compact-links-trigger.svg', '../images/compact-links-trigger.png' );
 	background-size: 18px;
 	background-repeat: no-repeat;
@@ -22,16 +26,16 @@
 
 .mw-interlanguage-selector:active,
 .mw-interlanguage-selector.selector-open {
-	color: #555555;
-	background-color: #cccccc;
+	color: #555;
+	background-color: #ccc;
 }
 
 .interlanguage-uls-menu:before {
-	background: none repeat scroll 0 0 #FCFCFC;
+	background: none repeat scroll 0 0 #fcfcfc;
 	border-left: 1px solid rgba( 0, 0, 0, 0.2 );
 	border-top: 1px solid rgba( 0, 0, 0, 0.2 );
 	box-shadow: -2px -2px 2px rgba( 0, 0, 0, 0.1 );
-	content: "";
+	content: '';
 	height: 24px;
 	width: 24px;
 	left: -13px;

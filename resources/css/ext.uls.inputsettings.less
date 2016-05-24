@@ -1,4 +1,4 @@
-@import "mediawiki.mixins";
+@import 'mediawiki.mixins';
 
 div.input-settings-block {
 	background: transparent no-repeat left top;
@@ -48,7 +48,7 @@ div.input-settings-block {
 	background: transparent no-repeat center top;
 	.background-image-svg( '../images/cog.svg', '../images/cog.png' );
 	background-size: auto 14px;
-	border-left: 1px solid #CCCCCC;
+	border-left: 1px solid #ccc;
 	width: 22px;
 	height: 14px;
 	position: absolute;
@@ -73,15 +73,15 @@ div.input-settings-block {
 	font-size: 11pt;
 }
 
-.down+.uls-input-settings-caret {
+.down + .uls-input-settings-caret {
 	display: inline-block;
 	width: 0;
 	height: 0;
-	border-top: none;
+	border-top: 0;
 	border-right: 8px solid transparent;
 	border-left: 8px solid transparent;
 	border-bottom: 8px solid #f0f0f0;
-	content: "";
+	content: '';
 	position: relative;
 	vertical-align: bottom;
 	top: 12px;
@@ -101,7 +101,7 @@ div.input-settings-block {
 }
 
 .uls-ime-notification-bubble .link {
-	color: #0645AD;
+	color: #0645ad;
 	cursor: pointer;
 }
 
