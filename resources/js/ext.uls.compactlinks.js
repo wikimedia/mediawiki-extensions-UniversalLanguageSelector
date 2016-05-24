@@ -121,13 +121,8 @@
 				 * @param {string} language language code
 				 */
 				onSelect: function ( language ) {
-					var previousLanguages = mw.uls.getPreviousLanguages();
-
 					self.$trigger.removeClass( 'selector-open' );
-
-					previousLanguages.push( language );
-					previousLanguages = unique( previousLanguages );
-					mw.uls.setPreviousLanguages( previousLanguages );
+					mw.uls.addPreviousLanguage( language );
 					location.href = self.interlanguageList[ language ].href;
 				},
 				onVisible: function () {
