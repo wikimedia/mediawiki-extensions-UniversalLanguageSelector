@@ -72,7 +72,7 @@
 		try {
 			localStorage.setItem(
 				mw.uls.previousLanguagesStorageKey,
-				JSON.stringify( previousLanguages.slice( 0, 5 ) )
+				JSON.stringify( previousLanguages.slice( 0, 9 ) )
 			);
 		} catch ( e ) {}
 	};
@@ -87,7 +87,7 @@
 			);
 		} catch ( e ) {}
 
-		return previousLanguages.slice( 0, 5 );
+		return previousLanguages.slice( 0, 9 );
 	};
 
 	/**
