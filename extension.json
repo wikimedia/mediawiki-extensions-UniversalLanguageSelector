@@ -110,11 +110,6 @@
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
-		"ext.uls.buttons": {
-			"styles": "css/ext.uls.buttons.css",
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
-		},
 		"ext.uls.displaysettings": {
 			"scripts": "js/ext.uls.displaysettings.js",
 			"styles": "css/ext.uls.displaysettings.less",
@@ -218,7 +213,6 @@
 			"scripts": "js/ext.uls.languagesettings.js",
 			"styles": "css/ext.uls.languagesettings.css",
 			"dependencies": [
-				"ext.uls.buttons",
 				"ext.uls.messages",
 				"ext.uls.preferences",
 				"jquery.uls.grid",
