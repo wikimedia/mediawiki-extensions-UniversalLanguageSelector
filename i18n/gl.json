@@ -66,5 +66,7 @@
 	"apihelp-ulslocalization-description": "Obter a localización do ULS na lingua dada.",
 	"apihelp-ulslocalization-param-language": "Código da lingua.",
 	"apihelp-ulslocalization-example-1": "Obter a localización en támil",
-	"apihelp-ulslocalization-example-2": "Obter a localización en hindi"
+	"apihelp-ulslocalization-example-2": "Obter a localización en hindi",
+	"prefs-languages": "Linguas",
+	"ext-uls-compact-language-links-preference": "Usar unha lista de linguas compacta, con linguas relevantes para vostede."
 }

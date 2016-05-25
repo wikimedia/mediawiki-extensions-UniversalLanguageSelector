@@ -6,7 +6,8 @@
 			"Darth Kule",
 			"Nemo bis",
 			"F. Cosoleto",
-			"Macofe"
+			"Macofe",
+			"Matteocng"
 		]
 	},
 	"uls-desc": "Fornisce agli utenti diversi modi di selezionare una lingua e sistemare le impostazioni della lingua",
@@ -60,6 +61,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "È possibile attivare in qualsiasi momento gli strumenti di scrittura dalle impostazioni della lingua, vicino all'elenco delle lingue.",
 	"ext-uls-language-settings-applying": "Applicando...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Un'altra|Altre $1}}",
+	"ext-uls-compact-link-info": "Tutte le lingue (selezione iniziale tra le scelte comuni tue e degli altri)",
 	"apihelp-languagesearch-example-1": "Cerca \"Te\"",
 	"apihelp-languagesearch-example-2": "Cerca \"ഫി\"",
 	"apihelp-languagesearch-example-3": "Cerca \"ഫി\", consentendo un errore di battitura",
