@@ -2,10 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Farras",
-			"Iwan Novirion"
+			"Iwan Novirion",
+			"Bennylin"
 		]
 	},
-	"uls-select-language": "Pilih Bahasa",
 	"uls-region-WW": "Seluruh dunia",
 	"uls-region-SP": "Khusus",
 	"uls-region-AM": "Amerika",
@@ -14,9 +14,9 @@
 	"uls-region-AS": "Asia",
 	"uls-region-ME": "Timur Tengah",
 	"uls-region-PA": "Pasifik",
-	"uls-no-results-found": "Tidak ada hasil ditemukan",
+	"uls-no-results-found": "Tidak ada hasil yang ditemukan",
 	"uls-common-languages": "Bahasa umum",
 	"uls-no-results-suggestion-title": "Anda mungkin tertarik pada:",
-	"uls-search-help": "Anda dapat mencari dengan nama bahasa, nama skrip, kode ISO bahasa atau Anda dapat menelusuri menurut wilayahnya:",
+	"uls-search-help": "Anda dapat mencari dengan nama bahasa, nama skrip, kode ISO bahasa atau Anda dapat menelusuri menurut wilayahnya.",
 	"uls-search-placeholder": "Pencarian bahasa"
 }

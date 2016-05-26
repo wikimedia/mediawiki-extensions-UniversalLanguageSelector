@@ -309,8 +309,7 @@
 			"scripts": [
 				"jquery.uls/src/jquery.uls.core.js",
 				"jquery.uls/src/jquery.uls.lcd.js",
-				"jquery.uls/src/jquery.uls.languagefilter.js",
-				"jquery.uls/src/jquery.uls.regionfilter.js"
+				"jquery.uls/src/jquery.uls.languagefilter.js"
 			],
 			"styles": [
 				"jquery.uls/css/jquery.uls.css",
