@@ -42,7 +42,7 @@
 }
 
 #languagesettings-settings-panel {
-	padding-left: 5%;
+	padding: 0 15px;
 	color: #252525;
 	background: #fff;
 	border-bottom-right-radius: 5px;
