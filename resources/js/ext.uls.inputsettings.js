@@ -42,9 +42,11 @@
 
 		// Web IMEs enabling chechbox with label
 		'<div class="row enabled-only">' +
-		'<div class="twelve columns uls-input-settings-inputmethods-list">' +
+		'<div class="twelve columns">' +
+		'<div class="uls-input-settings-inputmethods-list">' +
 		// "Input settings for language xyz" title
 		'<h4 class="ext-uls-input-settings-imes-title"></h4>' +
+		'</div>' +
 		'</div>' +
 		'</div>' +
 
@@ -207,7 +209,7 @@
 			);
 
 			return $( '<div>' )
-				.addClass( 'mw-ui-radio twelve columns' )
+				.addClass( 'mw-ui-radio' )
 				.append( $inputMethodItem, $imeLabel );
 		},
 
