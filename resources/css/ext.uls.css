@@ -14,10 +14,6 @@
 	border-bottom-left-radius: 4px;
 }
 
-.uls-menu a {
-	cursor: pointer;
-}
-
 .uls-menu.callout .caret-before,
 .uls-menu.callout .caret-after {
 	border-top: 10px solid transparent;
