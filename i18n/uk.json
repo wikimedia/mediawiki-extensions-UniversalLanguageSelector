@@ -60,6 +60,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Ви можете увімкнути знаряддя вводу в будь-який момент через налаштування мови біля переліку мов.",
 	"ext-uls-language-settings-applying": "Застосування...",
 	"ext-uls-compact-link-count": "Ще {{PLURAL:$1|одна|$1}}",
+	"ext-uls-compact-link-info": "Усі мови (початковий вибір з поширених виборів Вами та іншими)",
 	"apihelp-languagesearch-description": "Пошук назв мов у будь-якому скрипті.",
 	"apihelp-languagesearch-param-search": "Рядок пошуку.",
 	"apihelp-languagesearch-param-typos": "Кількість орфографічних помилок, дозволених у рядку пошуку.",
@@ -69,5 +70,7 @@
 	"apihelp-ulslocalization-description": "Отримати локалізацію ULS вказаною мовою.",
 	"apihelp-ulslocalization-param-language": "Код мови.",
 	"apihelp-ulslocalization-example-1": "Отримати локалізацію тамільською",
-	"apihelp-ulslocalization-example-2": "Отримати локалізацію хінді"
+	"apihelp-ulslocalization-example-2": "Отримати локалізацію хінді",
+	"prefs-languages": "Мови",
+	"ext-uls-compact-language-links-preference": "Використовувати компактний список мов, з мовами що є релевантними для Вас."
 }
