@@ -27,8 +27,17 @@
 	padding-right: 0;
 }
 
-.languagesettings-menu .settings-title {
+.settings-title {
 	font-size: 13pt;
+}
+
+.settings-text {
+	color: #555;
+	font-size: 9pt;
+}
+
+.display-settings-block:hover .settings-text {
+	color: #252525;
 }
 
 .languagesettings-menu h1 {
