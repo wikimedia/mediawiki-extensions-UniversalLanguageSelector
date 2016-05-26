@@ -39,16 +39,9 @@
 }
 
 .uls-ui-languages button {
-	width: 22%;
-	text-overflow: ellipsis;
-	margin-right: 2%;
+	margin: 5px 15px 5px 0;
 	white-space: nowrap;
 	overflow: hidden;
-	padding: 0.5em 0;
-}
-
-button.uls-more-languages {
-	width: auto;
 }
 
 .uls-search-wrapper-wrapper {

@@ -38,14 +38,14 @@
 
 		// "Display language", title above the buttons row
 		'<div class="row">' +
-		'<div class="eleven columns">' +
+		'<div class="twelve columns">' +
 		'<h4 data-i18n="ext-uls-display-settings-ui-language"></h4>' +
 		'</div>' +
 		'</div>' +
 
 		// UI languages buttons row
 		'<div class="row">' +
-		'<div class="uls-ui-languages eleven columns">' +
+		'<div class="uls-ui-languages twelve columns">' +
 		'<p data-i18n="ext-uls-language-buttons-help"></p>' +
 		'</div>' +
 		'</div>' +
@@ -86,7 +86,7 @@
 
 		// Webfonts enabling checkbox with label
 		'<div class="row">' +
-		'<div class="eleven columns">' +
+		'<div class="twelve columns">' +
 		'<div class="mw-ui-checkbox">' +
 		'<input type="checkbox" id="webfonts-enable-checkbox" />' +
 		'<label class="checkbox" for="webfonts-enable-checkbox" >' +

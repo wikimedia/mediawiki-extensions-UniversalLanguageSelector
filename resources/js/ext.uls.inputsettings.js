@@ -30,19 +30,19 @@
 
 		// "Language for ime", title above the buttons row
 		'<div class="row enabled-only uls-input-settings-languages-title">' +
-		'<div class="eleven columns">' +
+		'<div class="twelve columns">' +
 		'<h4 data-i18n="ext-uls-input-settings-ui-language"></h4>' +
 		'</div>' +
 		'</div>' +
 
 		// UI languages buttons row
 		'<div class="row enabled-only">' +
-		'<div class="uls-ui-languages eleven columns"></div>' +
+		'<div class="uls-ui-languages twelve columns"></div>' +
 		'</div>' +
 
 		// Web IMEs enabling chechbox with label
 		'<div class="row enabled-only">' +
-		'<div class="eleven columns uls-input-settings-inputmethods-list">' +
+		'<div class="twelve columns uls-input-settings-inputmethods-list">' +
 		// "Input settings for language xyz" title
 		'<h4 class="ext-uls-input-settings-imes-title"></h4>' +
 		'</div>' +
@@ -50,7 +50,7 @@
 
 		// Disable IME system button
 		'<div class="row">' +
-		'<div class="eleven columns uls-input-settings-disable-info"></div>' +
+		'<div class="twelve columns uls-input-settings-disable-info"></div>' +
 		'<div class="ten columns uls-input-settings-toggle">' +
 		'<button class="active mw-ui-constructive mw-ui-button uls-input-toggle-button"></button>' +
 		'</div>' +
