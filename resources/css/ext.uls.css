@@ -93,17 +93,3 @@ div.display-settings-block:hover .settings-text {
 	opacity: 1;
 	cursor: pointer;
 }
-
-/* TODO: move to jquery.uls */
-.grid .uls-search {
-	padding-left: 0;
-}
-
-.uls-search-label {
-	background-size: 28px;
-	opacity: 0.8;
-}
-
-.uls-filterinput {
-	padding-left: 0;
-}
