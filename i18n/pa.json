@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Babanwalia",
-			"Satdeep gill"
+			"Satdeep gill",
+			"Jimidar"
 		]
 	},
 	"uls-desc": "ਵਰਤੋਂਕਾਰ ਨੂੰ ਭਾਸ਼ਾਂ ਚੁਣਨ ਅਤੇ ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ ਠੀਕ ਕਰਨ ਲਈ ਕਈ ਤਰੀਕੇ ਸੌਂਪਦਾ ਹੈ",
@@ -48,5 +49,6 @@
 	"ext-uls-input-disable-notification-undo": "ਅਣਕਿੱਤਾ ਕਰੋ",
 	"ext-uls-input-disable-notification-info-personal": "ਤੁਸੀਂ ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ ਤੋਂ ਕਿਸੇ ਵੀ ਵਕਤ ਇਨਪੁਟ ਜ਼ਰੀਏ ਚਾਲੂ ਕਰ ਸਕਦੇ ਹੋ।",
 	"ext-uls-input-disable-notification-info-interlanguage": "ਤੁਸੀਂ ਭਾਸ਼ਾ ਸੂਚੀ ਦੇ ਅੱਗੇ ਦਿੱਤੀਆਂ ਗਈਆਂ ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ ਤੋਂ ਕਿਸੇ ਵੀ ਵਕਤ ਇਨਪੁਟ ਜ਼ਰੀਏ ਚਾਲੂ ਕਰ ਸਕਦੇ ਹੋ।",
-	"apihelp-ulslocalization-param-language": "ਭਾਸ਼ਾ ਕੋਡ"
+	"apihelp-ulslocalization-param-language": "ਭਾਸ਼ਾ ਕੋਡ",
+	"prefs-languages": "ਬੋਲੀਆਂ"
 }
