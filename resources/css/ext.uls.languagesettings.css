@@ -72,6 +72,8 @@
 
 #language-settings-dialog {
 	background: #fbfbfb;
+	/* Ensure base font size is same in different skins */
+	font-size: medium;
 }
 
 .uls-language-settings-close-block {

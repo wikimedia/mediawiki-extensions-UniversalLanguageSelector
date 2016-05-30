@@ -1,6 +1,8 @@
 /* Overrides to follow MediaWiki style */
 .uls-menu {
 	border-radius: 4px;
+	/* Ensure base font size is same in different skins */
+	font-size: medium;
 }
 
 .uls-search,
