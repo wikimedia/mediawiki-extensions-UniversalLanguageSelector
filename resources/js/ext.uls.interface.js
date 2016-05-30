@@ -107,10 +107,7 @@
 					};
 				}
 				$.extend( displaySettingsOptions, uls.position() );
-				mw.loader.using( mw.uls.languageSettingsModules, function () {
-					$displaySettings.languagesettings( displaySettingsOptions )
-						.click();
-				} );
+				$displaySettings.languagesettings( displaySettingsOptions ).click();
 			}
 			mw.hook( 'mw.uls.settings.open' ).fire( 'uls' );
 			uls.hide();
@@ -131,16 +128,14 @@
 				languagesettings = $inputSettings.data( 'languagesettings' );
 
 			if ( !languagesettings ) {
-				mw.loader.using( mw.uls.languageSettingsModules, function () {
-					$inputSettings.languagesettings( {
-						defaultModule: 'input',
-						onClose: function () {
-							uls.show();
-						},
-						top: position.top,
-						left: position.left
-					} ).click();
-				} );
+				$inputSettings.languagesettings( {
+					defaultModule: 'input',
+					onClose: function () {
+						uls.show();
+					},
+					top: position.top,
+					left: position.left
+				} ).click();
 			}
 
 			mw.hook( 'mw.uls.settings.open' ).fire( 'uls' );
