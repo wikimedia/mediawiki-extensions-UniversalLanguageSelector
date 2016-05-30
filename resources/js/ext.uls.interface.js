@@ -87,28 +87,31 @@
 		var $displaySettings = displaySettings();
 
 		uls.$menu.find( '#uls-settings-block' ).append( $displaySettings );
-		$displaySettings.on( 'click', function () {
-			var languagesettings = $displaySettings.data( 'languagesettings' ),
-				displaySettingsOptions = {
+
+		// Initialize the trigger
+		$displaySettings.one( 'click', function () {
+			var displaySettingsOptions = {
 					defaultModule: 'display'
 				},
 				ulsPosition = mw.config.get( 'wgULSPosition' ),
 				anonMode = ( mw.user.isAnon() &&
 					!mw.config.get( 'wgULSAnonCanChangeLanguage' ) );
 
-			if ( !languagesettings ) {
-				// If the ULS trigger is shown in the top personal menu,
-				// closing the display settings must show the main ULS
-				// languages list, unless we are in anon mode and thus
-				// cannot show the language list
-				if ( ulsPosition === 'personal' && !anonMode ) {
-					displaySettingsOptions.onClose = function () {
-						uls.show();
-					};
-				}
-				$.extend( displaySettingsOptions, uls.position() );
-				$displaySettings.languagesettings( displaySettingsOptions ).click();
+			// If the ULS trigger is shown in the top personal menu,
+			// closing the display settings must show the main ULS
+			// languages list, unless we are in anon mode and thus
+			// cannot show the language list
+			if ( ulsPosition === 'personal' && !anonMode ) {
+				displaySettingsOptions.onClose = function () {
+					uls.show();
+				};
 			}
+			$.extend( displaySettingsOptions, uls.position() );
+			$displaySettings.languagesettings( displaySettingsOptions ).click();
+		} );
+
+		// On every click
+		$displaySettings.on( 'click', function () {
 			mw.hook( 'mw.uls.settings.open' ).fire( 'uls' );
 			uls.hide();
 		} );
@@ -123,21 +126,23 @@
 		var $inputSettings = inputSettings();
 
 		uls.$menu.find( '#uls-settings-block' ).append( $inputSettings );
+
+		// Initialize the trigger
+		$inputSettings.one( 'click', function () {
+			var position = uls.position();
+
+			$inputSettings.languagesettings( {
+				defaultModule: 'input',
+				onClose: function () {
+					uls.show();
+				},
+				top: position.top,
+				left: position.left
+			} ).click();
+		} );
+
+		// On every click
 		$inputSettings.on( 'click', function () {
-			var position = uls.position(),
-				languagesettings = $inputSettings.data( 'languagesettings' );
-
-			if ( !languagesettings ) {
-				$inputSettings.languagesettings( {
-					defaultModule: 'input',
-					onClose: function () {
-						uls.show();
-					},
-					top: position.top,
-					left: position.left
-				} ).click();
-			}
-
 			mw.hook( 'mw.uls.settings.open' ).fire( 'uls' );
 			uls.hide();
 		} );
