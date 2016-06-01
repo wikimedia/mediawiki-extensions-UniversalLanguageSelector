@@ -156,13 +156,17 @@
 					$trigger.addClass( 'selector-open' );
 				},
 				languageDecorator: function ( $languageLink, language ) {
+					var data = self.interlanguageList[ language ];
 					// set href and text exactly same as what was in
 					// interlanguage link. The ULS autonym might be different in some
 					// cases like sr. In ULS it is "српски", while in interlanguage links
 					// it is "српски / srpski"
 					$languageLink
-						.prop( 'href', self.interlanguageList[ language ].href )
-						.text( self.interlanguageList[ language ].autonym );
+						.prop( 'href', data.href )
+						.text( data.autonym );
+
+					// This code is to support badges used in Wikimedia
+					$languageLink.parent().addClass( data.element.parentNode.className );
 				},
 				onCancel: function () {
 					$trigger.removeClass( 'selector-open' );
