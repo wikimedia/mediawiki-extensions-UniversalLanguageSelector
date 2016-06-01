@@ -196,31 +196,26 @@
 	 * It also allows to undo the language selection.
 	 */
 	function showUndoTooltip( previousLang, previousAutonym ) {
-		var $ulsTrigger,
-			ulsPosition = mw.config.get( 'wgULSPosition' ),
-			rtlPage = $( 'body' ).hasClass( 'rtl' ),
-			tipsyGravity = {
-				personal: 'n',
-				interlanguage: rtlPage ? 'e' : 'w'
-			};
+		var $ulsTrigger, ulsPopup, offset,
+			ulsPosition = mw.config.get( 'wgULSPosition' );
 
 		$ulsTrigger = ( ulsPosition === 'interlanguage' ) ?
 			$( '.uls-settings-trigger' ) :
 			$( '.uls-trigger' );
 
 		function hideTipsy() {
-			$ulsTrigger.tipsy( 'hide' );
+			ulsPopup.toggle( false );
 		}
 
 		function showTipsy( timeout ) {
 			var tipsyTimer = 0;
 
-			$ulsTrigger.tipsy( 'show' );
+			ulsPopup.toggle( true );
+			ulsPopup.toggleClipping( false );
 			// if the mouse is over the tooltip, do not hide
 			$( '.tipsy' ).on( 'mouseover', function () {
 				window.clearTimeout( tipsyTimer );
-			} );
-			$( '.tipsy' ).on( 'mouseout', function () {
+			} ).on( 'mouseout', function () {
 				tipsyTimer = window.setTimeout( hideTipsy, timeout );
 			} );
 
@@ -248,17 +243,17 @@
 			tipsyTimer = window.setTimeout( hideTipsy, timeout );
 		}
 
-		// Attach a tipsy tooltip to the trigger
-		$ulsTrigger.tipsy( {
-			gravity: tipsyGravity[ ulsPosition ],
-			delayOut: 3000,
-			html: true,
-			fade: true,
-			trigger: 'manual',
-			title: function () {
-				var link;
-
-				link = $( '<a>' ).text( previousAutonym )
+		// remove any existing popups
+		if ( ulsPopup ) {
+			ulsPopup.$element.remove();
+		}
+		ulsPopup = new OO.ui.PopupWidget( {
+			padded: true,
+			width: 300,
+			align: 'forwards',
+			classes:  [ 'tipsy' ],
+			$content: ( function () {
+				var link = $( '<a>' ).text( previousAutonym )
 					.attr( {
 						href: '#',
 						'class': 'uls-prevlang-link',
@@ -273,9 +268,20 @@
 				// Get the html of the link by wrapping it in div first
 				link = $( '<div>' ).html( link ).html();
 
-				return mw.message( 'ext-uls-undo-language-tooltip-text', '$1' ).escaped().replace( '$1', link );
-			}
+				return $( '<p>' )
+					.html(
+						mw.message( 'ext-uls-undo-language-tooltip-text', '$1' )
+							.escaped().replace( '$1', link )
+					);
+			}() )
 		} );
+
+		// Position popup
+		offset = $ulsTrigger.offset();
+		ulsPopup.$element.css( {
+			top: offset.top + 24,
+			left: offset.left + $ulsTrigger.outerWidth() / 2
+		} ).appendTo( 'body' );
 
 		// The interlanguage position needs some time to settle down
 		window.setTimeout( function () {
@@ -453,7 +459,7 @@
 	}
 
 	function initTooltip() {
-		var previousLanguageCodeStore, previousLanguageAutonymStore,
+		var previousLanguageCodeStore, previousLanguageAutonymStore, module,
 			previousLanguage, currentLanguage, previousAutonym, currentAutonym;
 
 		if ( !userCanChangeLanguage() ) {
@@ -477,7 +483,9 @@
 		}
 
 		if ( previousLanguage !== currentLanguage ) {
-			mw.loader.using( 'jquery.tipsy' ).done( function () {
+			// Use oojs-ui-core only after MediaWiki 1.26 is no longer supported
+			module = mw.loader.getState( 'oojs-ui-core' ) === null ? 'oojs-ui' : 'oojs-ui-core';
+			mw.loader.using( module ).done( function () {
 				showUndoTooltip( previousLanguage, previousAutonym );
 			} );
 			previousLanguageCodeStore.set( currentLanguage );

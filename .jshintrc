@@ -20,6 +20,7 @@
 
 	"globals": {
 		"mediaWiki": false,
+		"OO": false,
 		"QUnit": false
 	}
 }
