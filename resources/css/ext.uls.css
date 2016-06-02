@@ -51,19 +51,6 @@ button.uls-more-languages {
 	width: auto;
 }
 
-.settings-title {
-	font-size: 11pt;
-}
-
-.settings-text {
-	color: #555;
-	font-size: 9pt;
-}
-
-div.display-settings-block:hover .settings-text {
-	color: #252525;
-}
-
 .uls-search-wrapper-wrapper {
 	position: relative;
 	padding-left: 40px;
