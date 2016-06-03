@@ -3,7 +3,7 @@
 BASEDIR=$(dirname "$0")
 BASEDIR="$BASEDIR/.."
 
-DEST="$BASEDIR/lib/"
+DEST="$BASEDIR/lib/jquery.webfonts"
 CLONEDIR="$BASEDIR/vendor/jquery.wefonts"
 
 UPSTREAM="https://github.com/wikimedia/jquery.webfonts.git"
@@ -19,4 +19,4 @@ else
 fi
 
 rm -rf "$DEST/jquery.webfonts.js"
-cp -R "$CLONEDIR/src/jquery.webfonts.js" "$DEST/jquery.webfonts.js"
+cp -R "$CLONEDIR"/{src,*LICENSE} "$DEST"
