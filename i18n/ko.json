@@ -66,5 +66,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|한개의 다른 언어|$1개의 다른 언어}}",
 	"apihelp-languagesearch-example-1": "\"Te\"로 검색",
 	"apihelp-languagesearch-example-2": "\"ഫി\"로 검색",
-	"apihelp-ulslocalization-description": "주어진 언어로 ULS의 위치를 가져옵니다."
+	"apihelp-ulslocalization-description": "주어진 언어로 ULS의 위치를 가져옵니다.",
+	"prefs-languages": "언어"
 }
