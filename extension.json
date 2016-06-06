@@ -342,7 +342,7 @@
 			"remoteExtPath": "UniversalLanguageSelector/lib"
 		},
 		"jquery.webfonts": {
-			"scripts": "jquery.webfonts.js",
+			"scripts": "jquery.webfonts/src/jquery.webfonts.js",
 			"targets": [
 				"desktop",
 				"mobile"

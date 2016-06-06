@@ -24,4 +24,4 @@ npm install
 popd
 
 rm -rf "$DEST"/*
-cp -R "$CLONEDIR"/dist/jquery.ime/{images,css,rules,jquery.ime.js} "$DEST"
+cp -R "$CLONEDIR"/dist/jquery.ime/{images,css,rules,jquery.ime.js} "$CLONEDIR"/*LICENSE "$DEST"

@@ -19,4 +19,4 @@ else
 fi
 
 rm -rf "$DEST"/*
-cp -R "$CLONEDIR"/src/* "$DEST"
+cp -R "$CLONEDIR"/src/* "$CLONEDIR"/{*LICENSE,CREDITS} "$DEST"
