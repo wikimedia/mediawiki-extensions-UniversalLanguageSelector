@@ -7,7 +7,8 @@
 			"Chrumps",
 			"BeginaFelicysym",
 			"Nemo bis",
-			"Peter Bowman"
+			"Peter Bowman",
+			"Woytecr"
 		]
 	},
 	"uls-desc": "Daje użytkownikowi kilka sposobów, aby wybrać język i dostosować ustawienia języka",
@@ -63,5 +64,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Kolejny język|$1 kolejne języki|$1 kolejnych języków}}",
 	"apihelp-languagesearch-param-search": "Wyszukaj tekst.",
 	"apihelp-ulslocalization-param-language": "Kod języka.",
-	"prefs-languages": "Języki"
+	"prefs-languages": "Języki",
+	"ext-uls-compact-language-links-preference": "Używaj kompaktowej listy języków z językami najbardziej Tobie odpowiadającymi."
 }
