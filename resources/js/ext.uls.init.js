@@ -128,7 +128,7 @@
 	};
 
 	mw.uls.getAcceptLanguageList = function () {
-		return mw.config.get( 'wgULSAcceptLanguageList' ) || [];
+		return mw.config.get( 'wgULSAcceptLanguageList' ) || window.navigator.languages || [];
 	};
 
 	/**
