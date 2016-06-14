@@ -344,8 +344,14 @@ class UniversalLanguageSelectorHooks {
 	 * @return bool
 	 */
 	public static function addVariables( &$vars, OutputPage $out ) {
+		global $wgULSAnonCanChangeLanguage;
+
 		// Place request context dependent stuff here
-		$vars['wgULSAcceptLanguageList'] = array_keys( $out->getRequest()->getAcceptLang() );
+
+		// Do not output accept languages if there is risk it will get cached accross requests
+		if ( $wgULSAnonCanChangeLanguage || $out->getUser()->isLoggedIn() ) {
+			$vars['wgULSAcceptLanguageList'] = array_keys( $out->getRequest()->getAcceptLang() );
+		}
 
 		// An optimization to avoid loading all of uls.data just to get the autonym
 		$langCode = $out->getLanguage()->getCode();
