@@ -38,6 +38,9 @@ class LanguageNameIndexer extends Maintenance {
 			$translations = LanguageNames::getNames( $sourceLanguage, 0, 2 );
 			foreach ( $translations as $targetLanguage => $translation ) {
 				$translation = mb_strtolower( $translation );
+				// Remove directionality markers used in Names.php: users are not
+				// going to type these.
+				$translation = str_replace( "\xE2\x80\x8E", '', $translation );
 				$bucket = LanguageNameSearch::getIndex( $translation );
 				$buckets[$bucket][$translation] = $targetLanguage;
 			}
