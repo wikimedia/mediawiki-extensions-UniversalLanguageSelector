@@ -33,24 +33,16 @@ class LanguageNameIndexer extends Maintenance {
 	public function execute() {
 		$languages = Language::fetchLanguageNames( null, 'all' );
 
-		$all = [];
 		$buckets = [];
 		foreach ( $languages as $sourceLanguage => $autonym ) {
-
-			$all[$sourceLanguage][strtolower( $autonym )] = true;
-
 			$translations = LanguageNames::getNames( $sourceLanguage, 0, 2 );
 			foreach ( $translations as $targetLanguage => $translation ) {
-				$all[$targetLanguage][] = strtolower( $translation );
+				$translation = strtolower( $translation );
+				$bucket = LanguageNameSearch::getIndex( $translation );
+				$buckets[$bucket][$translation] = $targetLanguage;
 			}
 		}
 
-		foreach ( $all as $targetLanguage => $names ) {
-			foreach ( $names as $name ) {
-				$bucket = LanguageNameSearch::getIndex( $name );
-				$buckets[$bucket][$name] = $targetLanguage;
-			}
-		}
 		$this->output( 'Total buckets: ' . count( $buckets ) . "\n" );
 		file_put_contents( 'langnames.ser', serialize( $buckets ) );
 	}
