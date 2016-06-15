@@ -35,18 +35,20 @@ class LanguageNameIndexer extends Maintenance {
 
 		$all = [];
 		$buckets = [];
-		foreach ( $languages as $code => $name ) {
-			$all[$code][strtolower( $name )] = true;
-			$langnames = LanguageNames::getNames( $code, 0, 2 );
-			foreach ( $langnames as $langCode => $langName ) {
-				$all[$langCode][] = strtolower( $langName );
+		foreach ( $languages as $sourceLanguage => $autonym ) {
+
+			$all[$sourceLanguage][strtolower( $autonym )] = true;
+
+			$translations = LanguageNames::getNames( $sourceLanguage, 0, 2 );
+			foreach ( $translations as $targetLanguage => $translation ) {
+				$all[$targetLanguage][] = strtolower( $translation );
 			}
 		}
 
-		foreach ( $all as $code => $names ) {
+		foreach ( $all as $targetLanguage => $names ) {
 			foreach ( $names as $name ) {
 				$bucket = LanguageNameSearch::getIndex( $name );
-				$buckets[$bucket][$name] = $code;
+				$buckets[$bucket][$name] = $targetLanguage;
 			}
 		}
 		$this->output( 'Total buckets: ' . count( $buckets ) . "\n" );
