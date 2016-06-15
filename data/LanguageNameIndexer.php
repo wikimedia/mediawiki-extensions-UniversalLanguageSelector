@@ -60,6 +60,7 @@ class LanguageNameSearchData {
 
 PHP;
 
+		ksort( $buckets );
 		// Format for short array format
 		$data = var_export( $buckets, true );
 		$data = str_replace( "array (", '[', $data );
