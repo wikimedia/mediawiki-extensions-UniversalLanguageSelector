@@ -19,12 +19,12 @@
  */
 require_once __DIR__ . '/../../data/LanguageNameSearch.php';
 class LanguageSearchTest extends PHPUnit_Framework_TestCase {
-
 	/**
 	 * @dataProvider searchDataProvider
 	 */
-	public function testSearch( $searchKey, $result ) {
-		$this->assertEquals( $result, LanguageNameSearch::search( $searchKey, 1 ) );
+	public function testSearch( $searchKey, $expected ) {
+		$actual = LanguageNameSearch::search( $searchKey, 1 );
+		$this->assertEquals( $expected, $actual );
 	}
 
 	public function searchDataProvider() {
@@ -40,7 +40,7 @@ class LanguageSearchTest extends PHPUnit_Framework_TestCase {
 			]
 			],
 			[ 'Φινλαν', [
-				'fi' => 'Φινλανδικά',
+				'fi' => 'φινλανδικά',
 			]
 			],
 			[ 'blah', []

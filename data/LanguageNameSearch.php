@@ -29,8 +29,11 @@ class LanguageNameSearch {
 			self::init();
 		}
 
+		// Use code's mb_strtolower compatibily code for MW < 1.27
+		$language = Language::factory( 'en' );
+
 		// @todo: Shouldn't this be unicode aware?
-		$searchKey = strtolower( $searchKey );
+		$searchKey = $language->lc( $searchKey );
 		$index = self::getIndex( $searchKey );
 
 		if ( !isset( self::$languagenames[$index] ) ) {

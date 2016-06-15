@@ -37,7 +37,7 @@ class LanguageNameIndexer extends Maintenance {
 		foreach ( $languages as $sourceLanguage => $autonym ) {
 			$translations = LanguageNames::getNames( $sourceLanguage, 0, 2 );
 			foreach ( $translations as $targetLanguage => $translation ) {
-				$translation = strtolower( $translation );
+				$translation = mb_strtolower( $translation );
 				$bucket = LanguageNameSearch::getIndex( $translation );
 				$buckets[$bucket][$translation] = $targetLanguage;
 			}
