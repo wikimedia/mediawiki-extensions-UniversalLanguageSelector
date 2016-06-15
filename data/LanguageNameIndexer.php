@@ -46,7 +46,16 @@ class LanguageNameIndexer extends Maintenance {
 			}
 		}
 
-		$this->output( 'Total buckets: ' . count( $buckets ) . "\n" );
+		$lengths = array_values( array_map( 'count', $buckets ) );
+		$count = count( $buckets );
+		$min = min( $lengths );
+		$max = max( $lengths );
+		$median = $lengths[ceil( $count / 2 )];
+		$avg = array_sum( $lengths ) / $count;
+		$this->output( "Bucket stats:\n - $count buckets\n - smallest has $min entries\n" );
+		$this->output( " - largest has $max entries\n - median size is $median entries\n" );
+		$this->output( " - average size is $avg entries\n" );
+
 		$this->generateFile( $buckets );
 	}
 
