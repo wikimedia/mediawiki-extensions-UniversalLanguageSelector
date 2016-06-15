@@ -6,5 +6,4 @@
 .bundle/
 node_modules/
 composer.lock
-langnames.ser
 vendor/

@@ -18,17 +18,7 @@
  * @licence MIT License
  */
 class LanguageNameSearch {
-	protected static $languagenames;
-
-	public static function init() {
-		self::$languagenames = unserialize( file_get_contents( __DIR__ . '/langnames.ser' ) );
-	}
-
 	public static function search( $searchKey, $typos = 0 ) {
-		if ( self::$languagenames === null ) {
-			self::init();
-		}
-
 		// Use code's mb_strtolower compatibily code for MW < 1.27
 		$language = Language::factory( 'en' );
 
@@ -36,11 +26,11 @@ class LanguageNameSearch {
 		$searchKey = $language->lc( $searchKey );
 		$index = self::getIndex( $searchKey );
 
-		if ( !isset( self::$languagenames[$index] ) ) {
+		if ( !isset( LanguageNameSearchData::$buckets[$index] ) ) {
 			return [];
 		}
 
-		$bucket = self::$languagenames[$index];
+		$bucket = LanguageNameSearchData::$buckets[$index];
 
 		$results = [];
 		foreach ( $bucket as $name => $code ) {
