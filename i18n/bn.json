@@ -26,14 +26,14 @@
 	"ext-uls-display-settings-font-settings": "ফন্ট সেটিং",
 	"ext-uls-display-settings-ui-language": "প্রদর্শন ভাষা",
 	"ext-uls-display-settings-anon-label": "প্রদর্শন ভাষা:",
-	"ext-uls-display-settings-anon-same-as-content": "$1 (কন্টেন্টের মত)",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (বিষয়বস্তুর মত)",
 	"ext-uls-display-settings-anon-log-in-cta": "মেন্যুর জন্য আলাদা ভাষা নির্বাচন করতে [[Special:UserLogin|প্রবেশ]] করুন।",
 	"ext-uls-webfonts-settings-title": "ফন্ট ডাউনলোড করুন যখন প্রয়োজন হবে?",
 	"ext-uls-webfonts-settings-info": "স্বয়ংক্রিয়ভাবে অনুপস্থিত ফন্ট ডাউনলোড করুন এবং পছন্দের ফন্ট নির্বাচনের অনুমতি দিন।",
 	"ext-uls-webfonts-settings-info-link": "আরও তথ্য",
 	"ext-uls-webfonts-select-for": "$1 এর জন্য ফন্ট নির্বাচন",
 	"ext-uls-webfonts-select-for-ui-info": "ব্যবহারকারী ইন্টারফেসের জন্য ব্যবহৃত ফন্ট",
-	"ext-uls-webfonts-select-for-content-info": "কন্টেন্টের জন্য ব্যবহৃত ফন্ট",
+	"ext-uls-webfonts-select-for-content-info": "বিষয়বস্তুর জন্য ব্যবহৃত ফন্ট",
 	"ext-uls-webfonts-system-font": "সিস্টেম ফন্ট",
 	"ext-uls-back-to-display-settings": "প্রদর্শন সেটিং এ ফিরে যাও",
 	"ext-uls-input-settings-title": "ইনপুট সেটিং",
@@ -58,6 +58,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "আপনি ভাষার তালিকার পাশে ভাষা সেটিং থেকে যে কোনো সময়ে ইনপুট সরঞ্জাম সক্রিয় করতে পারেন।",
 	"ext-uls-language-settings-applying": "প্রয়োগ হচ্ছে...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|আরও একটি|আরও $1টি}}",
+	"ext-uls-compact-link-info": "সব ভাষাসমূহ (আপনার ও অন্যদের দ্বারা সাধারণ পছন্দ থেকে প্রাথমিক নির্বাচন)",
 	"apihelp-languagesearch-description": "যে কোনো স্ক্রিপ্টে ভাষার নাম অনুসন্ধান করুন।",
 	"apihelp-languagesearch-param-search": "বাক্য অনুসন্ধান।",
 	"apihelp-languagesearch-param-typos": "বাক্য অনুসন্ধানে গ্রহনযোগ্য বানান ভুলের সংখ্যা ।",
@@ -67,5 +68,7 @@
 	"apihelp-ulslocalization-description": "ইউএলএস এর এই ভাষায় ব্যবহার করুন।",
 	"apihelp-ulslocalization-param-language": "ভাষা কোড।",
 	"apihelp-ulslocalization-example-1": "তামিল ভাষায় ব্যবহার",
-	"apihelp-ulslocalization-example-2": "হিন্দি ভাষায় ব্যবহার"
+	"apihelp-ulslocalization-example-2": "হিন্দি ভাষায় ব্যবহার",
+	"prefs-languages": "ভাষাসমূহ",
+	"ext-uls-compact-language-links-preference": "আপনার কাছে প্রাসঙ্গিক মনে হয় এমন ভাষাসহ, ভাষার একটি ছোট তালিকা ব্যবহার করুন।"
 }

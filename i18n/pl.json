@@ -8,7 +8,8 @@
 			"BeginaFelicysym",
 			"Nemo bis",
 			"Peter Bowman",
-			"Woytecr"
+			"Woytecr",
+			"Sethakill"
 		]
 	},
 	"uls-desc": "Daje użytkownikowi kilka sposobów, aby wybrać język i dostosować ustawienia języka",
@@ -65,5 +66,5 @@
 	"apihelp-languagesearch-param-search": "Wyszukaj tekst.",
 	"apihelp-ulslocalization-param-language": "Kod języka.",
 	"prefs-languages": "Języki",
-	"ext-uls-compact-language-links-preference": "Używaj kompaktowej listy języków z językami najbardziej Tobie odpowiadającymi."
+	"ext-uls-compact-language-links-preference": "Używaj kompaktowej listy języków z językami najbardziej Ci odpowiadającymi."
 }

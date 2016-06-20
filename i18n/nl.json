@@ -66,5 +66,7 @@
 	"apihelp-languagesearch-param-search": "Zoekterm.",
 	"apihelp-languagesearch-example-1": "Zoeken naar \"Te\"",
 	"apihelp-languagesearch-example-2": "Zoeken naar \"ഫി\"",
-	"apihelp-ulslocalization-param-language": "Taalcode."
+	"apihelp-ulslocalization-param-language": "Taalcode.",
+	"prefs-languages": "Talen",
+	"ext-uls-compact-language-links-preference": "Een compacte talenlijst gebruiken, welke voor u relevante talen bevat."
 }
