@@ -59,8 +59,8 @@ class UniversalLanguageSelectorHooks {
 			return false;
 		}
 
-		if ( $user->isAnon() ) {
-			return $wgULSCompactLinksEnableAnon;
+		if ( $user->isAnon() && $wgULSCompactLinksEnableAnon ) {
+			return true;
 		}
 
 		if ( $wgULSCompactLanguageLinksBetaFeature === true &&
