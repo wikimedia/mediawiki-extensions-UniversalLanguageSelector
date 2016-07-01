@@ -52,5 +52,6 @@
 	"ext-uls-input-enable": "საწერი ხელწასყოების ჩართვა",
 	"ext-uls-input-disable-info": "საწერი ხელსაწყოები გამორთულია.",
 	"ext-uls-input-settings-noime": "წერის მეთოდები ამ ენისათვის არ არის განსაზღვრული.",
-	"ext-uls-input-disable-notification-undo": "დაბრუნება"
+	"ext-uls-input-disable-notification-undo": "დაბრუნება",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|კიდევ ერთი|კიდევ $1}}"
 }

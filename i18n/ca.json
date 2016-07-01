@@ -16,6 +16,7 @@
 	"uls-betafeature-desc": "Mostra una versió reduïda de la llista de llengües amb aquelles que més us interessen.",
 	"ext-uls-display-settings-title": "Paràmetres de presentació",
 	"ext-uls-display-settings-language-tab": "Llengua",
+	"ext-uls-display-settings-fonts-tab": "Tipus de lletra",
 	"ext-uls-display-settings-title-short": "Presentació",
 	"ext-uls-display-settings-desc": "Defineix la llengua utilitzada per als menús i tipus de lletra.",
 	"ext-uls-language-settings-title": "Configuració de llengua",
@@ -57,5 +58,8 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Podeu habilitar les eines d'entrada en qualsevol moment des de la configuració de llengua al costat de la llista de llengües.",
 	"ext-uls-language-settings-applying": "Aplicant…",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Una més|$1 més}}",
-	"apihelp-ulslocalization-param-language": "Codi d'idioma."
+	"ext-uls-compact-link-info": "Totes les llengües (selecció inicial d'opcions més comunes vostres i d'altres)",
+	"apihelp-ulslocalization-param-language": "Codi d'idioma.",
+	"prefs-languages": "Llengües",
+	"ext-uls-compact-language-links-preference": "Utilitza una llista de llengües compacta amb aquelles més rellevants per a mi."
 }

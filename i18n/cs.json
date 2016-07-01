@@ -3,7 +3,8 @@
 		"authors": [
 			"Littledogboy",
 			"Mormegil",
-			"Matěj Suchánek"
+			"Matěj Suchánek",
+			"Danny B."
 		]
 	},
 	"uls-desc": "Nabízí uživateli několik způsobů volby jazyka a úpravy jazykových nastavení",
@@ -56,5 +57,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Nástroje pro vstup můžete kdykoli zapnout v jazykových nastaveních.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Nástroje pro vstup můžete kdykoli zapnout v jazykových nastaveních vedle seznamu jazyků.",
 	"ext-uls-language-settings-applying": "Provádí se…",
-	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|další|další|dalších}}"
+	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|další|další|dalších}}",
+	"prefs-languages": "Jazyky",
+	"ext-uls-compact-language-links-preference": "Používat kompaktní seznam jazyků pouze s jazyky pro vás relevantními."
 }

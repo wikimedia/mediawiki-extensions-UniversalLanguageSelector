@@ -8,7 +8,8 @@
 			"Умар",
 			"Kaganer",
 			"Iltever",
-			"Ernác"
+			"Ernác",
+			"Mailman"
 		]
 	},
 	"uls-desc": "Даёт пользователю несколько способов выбрать язык и произвести установки языка",
@@ -68,5 +69,6 @@
 	"apihelp-languagesearch-example-1": "Поиск «Te»",
 	"apihelp-languagesearch-example-2": "Поиск «ഫി»",
 	"apihelp-languagesearch-example-3": "Поиск «ഫി», допускается одна ошибка",
-	"apihelp-ulslocalization-param-language": "Код языка."
+	"apihelp-ulslocalization-param-language": "Код языка.",
+	"prefs-languages": "Языки"
 }
