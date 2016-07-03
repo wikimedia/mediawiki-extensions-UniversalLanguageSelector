@@ -9,7 +9,8 @@
 			"Kaganer",
 			"Iltever",
 			"Ernác",
-			"Mailman"
+			"Mailman",
+			"NBS"
 		]
 	},
 	"uls-desc": "Даёт пользователю несколько способов выбрать язык и произвести установки языка",
@@ -70,5 +71,6 @@
 	"apihelp-languagesearch-example-2": "Поиск «ഫി»",
 	"apihelp-languagesearch-example-3": "Поиск «ഫി», допускается одна ошибка",
 	"apihelp-ulslocalization-param-language": "Код языка.",
-	"prefs-languages": "Языки"
+	"prefs-languages": "Языки",
+	"ext-uls-compact-language-links-preference": "Использовать компактный список языков с релевантными вам языками"
 }
