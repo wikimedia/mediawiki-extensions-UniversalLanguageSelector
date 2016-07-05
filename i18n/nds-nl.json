@@ -65,5 +65,6 @@
 	"apihelp-ulslocalization-param-language": "Taalkode.",
 	"apihelp-ulslocalization-example-1": "Gebruuk Tamil-lokalisasie",
 	"apihelp-ulslocalization-example-2": "Gebruuk Hindi-lokalisasie",
-	"prefs-languages": "Talen"
+	"prefs-languages": "Talen",
+	"ext-uls-compact-language-links-preference": "n Kompakte talenlieste gebruken, mit de talen waor jie wat an hebben."
 }
