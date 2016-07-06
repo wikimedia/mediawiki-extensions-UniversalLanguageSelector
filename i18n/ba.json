@@ -3,7 +3,8 @@
 		"authors": [
 			"Азат Хәлилов",
 			"Айбикә",
-			"Ләйсән"
+			"Ләйсән",
+			"Kaganer"
 		]
 	},
 	"uls-desc": "Ҡулланыусыға тел һайлау һәм көйләү өсөн бер нисә ысул бирә",
@@ -27,5 +28,6 @@
 	"ext-uls-webfonts-settings-title": "Кәрәк булғанда шрифтар күсереү",
 	"ext-uls-webfonts-settings-info-link": "Өҫтәмә мәғлүмәт",
 	"ext-uls-webfonts-select-for-ui-info": "Ҡулланыусының интерфейс шрифты",
+	"jquery-ime-other-languages": "Башҡа телдәр",
 	"prefs-languages": "Телдәр"
 }
