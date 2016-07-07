@@ -54,5 +54,6 @@
 	"ext-uls-input-disable-notification": "Прылады для ўводу былі выключаныя",
 	"ext-uls-input-disable-notification-undo": "Скасаваць",
 	"ext-uls-input-disable-notification-info-personal": "Вы можаце ўключыць прылады для ўводу зноў у моўных наладах.",
-	"ext-uls-input-disable-notification-info-interlanguage": "Вы можаце ўключыць прылады для ўводу зноў у моўных наладах побач са сьпісам моваў."
+	"ext-uls-input-disable-notification-info-interlanguage": "Вы можаце ўключыць прылады для ўводу зноў у моўных наладах побач са сьпісам моваў.",
+	"ext-uls-compact-link-info": "Усе мовы (пачатковая выбарка паводле частых Вашых і іншых запытаў)"
 }

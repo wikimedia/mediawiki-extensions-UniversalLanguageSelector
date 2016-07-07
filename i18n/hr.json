@@ -54,5 +54,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Alate za unos možete u svakome trenutku omogućiti u jezičnim postavkama.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Alate za unos možete u svakom trenutku omogućiti u jezičnim postavkama pored jezičnog popisa.",
 	"ext-uls-language-settings-applying": "Primjenjujem...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Još jedan jezik|Još $1 druga jezika|Još $1 drugih jezika}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Još jedan jezik|Još $1 druga jezika|Još $1 drugih jezika}}",
+	"prefs-languages": "Jezici",
+	"ext-uls-compact-language-links-preference": "Uključi kompaktni popis jezika s jezicima koji su Vam važni."
 }
