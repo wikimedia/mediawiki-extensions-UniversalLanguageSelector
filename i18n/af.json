@@ -5,6 +5,7 @@
 			"Fwolff"
 		]
 	},
+	"uls-desc": "Bied gebruikers verskillende maniere om 'n taal te kies en bybehorende instellings aan te pas",
 	"uls-plang-title-languages": "Tale",
 	"ext-uls-select-language-settings-icon-tooltip": "Taalvoorkeure",
 	"ext-uls-undo-language-tooltip-text": "Taal verander vanaf $1",
@@ -26,6 +27,7 @@
 	"ext-uls-display-settings-anon-same-as-content": "$1 (selfde as inhoud)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Meld aan]] om 'n ander taal vir keuseskerms te kies.",
 	"ext-uls-webfonts-settings-title": "Laai lettertipes indien nodig",
+	"ext-uls-webfonts-settings-info": "Laai ontbrekende lettertipes outomaties af en laat die kies van voorkeur-lettertipes toe.",
 	"ext-uls-webfonts-settings-info-link": "Meer inligting",
 	"ext-uls-webfonts-select-for": "Kies lettertipe vir $1",
 	"ext-uls-webfonts-select-for-ui-info": "Lettertipe vir koppelvlak",
@@ -54,8 +56,11 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "U kan die invoer-gereedskap enige tyd weer via die taal-voorkeure langs die lys van tale aktiveer.",
 	"ext-uls-language-settings-applying": "Pas toe...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Een meer|$1 meer}}",
+	"ext-uls-compact-link-info": "Alle tale (beginlys met algemene keuses van andere)",
 	"apihelp-languagesearch-description": "Soek taalname in enige skryfstelsel.",
 	"apihelp-languagesearch-param-search": "Soekstring.",
 	"apihelp-languagesearch-param-typos": "Aantal spelfoute om toe te laat in die soekstring.",
-	"apihelp-ulslocalization-param-language": "Taalkode."
+	"apihelp-ulslocalization-param-language": "Taalkode.",
+	"prefs-languages": "Tale",
+	"ext-uls-compact-language-links-preference": "Wys 'n kompakte lys van tale, wat slegs relevante tale bevat."
 }
