@@ -55,5 +55,5 @@
 	"ext-uls-input-disable-notification-undo": "დაბრუნება",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|კიდევ ერთი|კიდევ $1}}",
 	"prefs-languages": "ენები",
-	"ext-uls-compact-language-links-preference": "თქვეთან დაკავშირებული ენების კომპაქტური სიის გამოყენება."
+	"ext-uls-compact-language-links-preference": "თქვენთან დაკავშირებული ენების კომპაქტური სიის გამოყენება."
 }
