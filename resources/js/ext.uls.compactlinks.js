@@ -229,6 +229,8 @@
 			// Add all common languages to the beginning of array.
 			// These are the most probable languages predicted by ULS.
 			this.getCommonLanguages,
+			// Add languages that are present in the article content.
+			this.filterByLangsInText,
 			// Some global fallbacks to avoid showing languages in the beginning of the alphabet
 			getExtraCommonLanguages,
 			// Finally add the whole languages array too.
@@ -324,6 +326,30 @@
 
 		return [];
 	}
+
+	/**
+	 * Filter the language list by languages that appear in
+	 * the page's text. This is done by looking for HTML elements with
+	 * a "lang" attribute—they are likely to appear in a foreign name,
+	 * for example.
+	 *
+	 * The reader doesn't necessarily know this language, but it
+	 * appears relevant to the page.
+	 *
+	 * @return {Array} List of language codes supported by the article
+	 */
+	CompactInterlanguageList.prototype.filterByLangsInText = function ( languages ) {
+		var languagesInText = [];
+
+		$( '#mw-content-text [lang]' ).each( function ( i, el ) {
+			var lang = $( el ).attr( 'lang' );
+			if ( $.inArray( lang, languagesInText ) === -1 && $.inArray( lang, languages ) >= 0 ) {
+				languagesInText.push( lang );
+			}
+		} );
+
+		return languagesInText;
+	};
 
 	/**
 	 * Find out the existing languages supported
