@@ -7,5 +7,6 @@
 	},
 	"uls-desc": "Ļauj lietotājam dažādos veidos izvēlēties valodu un pielāgot valodas iestatījumus",
 	"uls-plang-title-languages": "Valodas",
-	"ext-uls-undo-language-tooltip-text": "Valoda nomainīta no $1"
+	"ext-uls-undo-language-tooltip-text": "Valoda nomainīta no $1",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Vēl $1}}"
 }

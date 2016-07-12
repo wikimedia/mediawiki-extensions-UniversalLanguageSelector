@@ -55,7 +55,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Sampéyan bisa nguripaké piranti lebon sawayah-wayah sarana setèlan basa ing sandhingé pratélan basa.",
 	"ext-uls-language-settings-applying": "Ngecakaké...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Siji manèh|$1 manèh}}",
-	"ext-uls-compact-link-info": "Kabèh basa (pilihan kawitan asal saka pilihan barengan déning sampéyan lan liyané)",
+	"ext-uls-compact-link-info": "Kabèh basa (pilihan iki dipilih déning sampéyan lan liyané)",
 	"apihelp-languagesearch-description": "Golèk jeneng basa sarana sembarang aksara.",
 	"apihelp-languagesearch-param-search": "Golèk roncèn.",
 	"apihelp-languagesearch-param-typos": "Gunggung salah éja sing diidinaké ing roncèn golèkan.",
