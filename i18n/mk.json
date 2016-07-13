@@ -28,7 +28,7 @@
 	"ext-uls-webfonts-settings-title": "Преземи фонтови кога ќе треба",
 	"ext-uls-webfonts-settings-info": "Автоматски преземи ги фонтовите што недостасуваат и дај избор на претпочитани фонтови",
 	"ext-uls-webfonts-settings-info-link": "Повеќе информации",
-	"ext-uls-webfonts-select-for": "Одбери фонт за $1",
+	"ext-uls-webfonts-select-for": "Избор на фонт за $1",
 	"ext-uls-webfonts-select-for-ui-info": "Фонт за корисничкиот посредник",
 	"ext-uls-webfonts-select-for-content-info": "Фонт за содржините",
 	"ext-uls-webfonts-system-font": "Системски фонт",
