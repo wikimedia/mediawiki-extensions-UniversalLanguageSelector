@@ -65,5 +65,7 @@
 	"apihelp-languagesearch-example-1": "Søg efter \"Te\"",
 	"apihelp-languagesearch-example-2": "Søg efter \"ഫി\"",
 	"apihelp-languagesearch-example-3": "Søg efter \"ഫി\", og tillad en tastefejl",
-	"apihelp-ulslocalization-param-language": "Sprogkode."
+	"apihelp-ulslocalization-param-language": "Sprogkode.",
+	"prefs-languages": "Sprog",
+	"ext-uls-compact-language-links-preference": "Brug en kompakt sprogliste med sprog, der er relevante for dig."
 }
