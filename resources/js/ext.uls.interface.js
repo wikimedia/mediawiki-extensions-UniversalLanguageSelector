@@ -508,9 +508,16 @@
 		} );
 	}
 
-	$( document ).ready( function () {
+	function init() {
 		initInterface();
 		initTooltip();
 		initIme();
-	} );
+	}
+
+	// Early execute of init
+	if ( document.readyState === 'interactive' ) {
+		init();
+	} else {
+		$( document ).ready( init );
+	}
 }( jQuery, mediaWiki ) );

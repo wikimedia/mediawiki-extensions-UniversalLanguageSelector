@@ -245,7 +245,8 @@
 			"dependencies": [
 				"es5-shim",
 				"mediawiki.language",
-				"mediawiki.ui.button"
+				"mediawiki.ui.button",
+				"ext.uls.init"
 			],
 			"messages": [
 				"ext-uls-compact-link-count",

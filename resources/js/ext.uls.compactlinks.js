@@ -64,15 +64,13 @@
 			return;
 		}
 
-		mw.loader.using( 'ext.uls.init' ).done( function () {
-			// If we're only a bit beyond max, limit to 7 instead of 9.
-			// FIXME: This assumes the max is 9.
-			self.compactSize = ( self.listSize <= 12 ) ? 7 : max;
-			self.compactList = self.getCompactList();
-			self.hideOriginal();
-			self.render();
-			self.listen();
-		} );
+		// If we're only a bit beyond max, limit to 7 instead of 9.
+		// FIXME: This assumes the max is 9.
+		self.compactSize = ( self.listSize <= 12 ) ? 7 : max;
+		self.compactList = self.getCompactList();
+		self.hideOriginal();
+		self.render();
+		self.listen();
 	};
 
 	/**
@@ -450,13 +448,20 @@
 		this.$trigger = $trigger;
 	};
 
-	$( document ).ready( function () {
-		var compactList;
-
-		compactList = new CompactInterlanguageList( $( '#p-lang ul' ), {
+	function createCompactList() {
+		var compactList = new CompactInterlanguageList( $( '#p-lang ul' ), {
 			// Compact the list to this size
 			max: 9
 		} );
 		compactList.init();
-	} );
+
+	}
+
+	// Early execute of createCompactList
+	if ( document.readyState === 'interactive' ) {
+		createCompactList();
+	} else {
+		$( document ).ready( createCompactList );
+	}
+
 }( jQuery, mediaWiki ) );
