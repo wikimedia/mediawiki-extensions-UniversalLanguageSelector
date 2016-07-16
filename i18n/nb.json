@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Danmichaelo"
+			"Danmichaelo",
+			"Jeblad"
 		]
 	},
 	"uls-desc": "Gir brukeren flere måter å velge språk på og endre språkinnstillinger",
@@ -23,7 +24,7 @@
 	"ext-uls-display-settings-font-settings": "Skrifttypeinnstillinger",
 	"ext-uls-display-settings-ui-language": "Visningsspråk",
 	"ext-uls-display-settings-anon-label": "Visningsspråk:",
-	"ext-uls-display-settings-anon-same-as-content": "$1 (samme som for innhold)",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (samme som innholdet)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Logg inn]] for å velge et annet språk for brukergrensesnittet.",
 	"ext-uls-webfonts-settings-title": "Last ned skrifttyper når det er nødvendig",
 	"ext-uls-webfonts-settings-info": "Last ned manglende skrifttyper automatisk og tillat valg av foretrukne skrifttyper.",
@@ -45,14 +46,27 @@
 	"jquery-ime-other-languages": "Andre språk",
 	"jquery-ime-disable-text": "Bruk standardtastatur",
 	"jquery-ime-help": "Hjelp",
-	"ext-uls-input-disable": "Skru av inndataverktøy",
-	"ext-uls-input-enable": "Skru på inndataverktøy",
-	"ext-uls-input-disable-info": "Inndataverktøy er avskrudd.",
+	"ext-uls-input-disable": "Slå av inndataverktøy",
+	"ext-uls-input-enable": "Slå på inndataverktøy",
+	"ext-uls-input-disable-info": "Inndataverktøy er avslått.",
 	"ext-uls-input-settings-noime": "Ingen inndatametoder er tilgjengelige for dette språket.",
-	"ext-uls-input-disable-notification": "Inndataverktøy er avskrudd",
+	"ext-uls-input-disable-notification": "Inndataverktøy er avslått",
 	"ext-uls-input-disable-notification-undo": "Angre",
-	"ext-uls-input-disable-notification-info-personal": "Du kan når som helst skru på inndataverktøy fra språkinnstillingene.",
-	"ext-uls-input-disable-notification-info-interlanguage": "Du kan når som helst skru på inndataverktøy fra språkinnstillingene ved siden av språklisten.",
+	"ext-uls-input-disable-notification-info-personal": "Du kan når som helst slå på inndataverktøy fra språkinnstillingene.",
+	"ext-uls-input-disable-notification-info-interlanguage": "Du kan når som helst slå på inndataverktøy fra språkinnstillingene ved siden av språklisten.",
 	"ext-uls-language-settings-applying": "Tar i bruk…",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Ett språk til|$1 språk til}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|En til|$1 flere}}",
+	"ext-uls-compact-link-info": "Alle språk (innledende utvalg fra felles valg av deg og andre)",
+	"apihelp-languagesearch-description": "Søk etter språknavn i ethvert skript.",
+	"apihelp-languagesearch-param-search": "Søkestreng.",
+	"apihelp-languagesearch-param-typos": "Antall stavefeil tillatt i søkestrengen.",
+	"apihelp-languagesearch-example-1": "Søk etter «Te»",
+	"apihelp-languagesearch-example-2": "Søk etter «ഫി»",
+	"apihelp-languagesearch-example-3": "Søk etter «ഫി», tillat en skrivefeil",
+	"apihelp-ulslocalization-description": "Hent lokalisering av ULS på angitt språk.",
+	"apihelp-ulslocalization-param-language": "Språkkode",
+	"apihelp-ulslocalization-example-1": "Hent lokalisering på tamilsk",
+	"apihelp-ulslocalization-example-2": "Hent lokalisering på hindu",
+	"prefs-languages": "Språk",
+	"ext-uls-compact-language-links-preference": "Bruk kompakte språklenker, med språk som er relevante for deg."
 }
