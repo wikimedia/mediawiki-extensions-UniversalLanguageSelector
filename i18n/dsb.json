@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Michawiki"
+			"Michawiki",
+			"Amire80"
 		]
 	},
 	"uls-desc": "Dawa wužywarjeju wšake metody, aby rěc wubrał a rěcne nastajenja pśiměrił",
@@ -54,5 +55,5 @@
 	"ext-uls-input-disable-notification-info-personal": "Móžoš zapódawańske rědy kuždy cas z rěcnych nastajenjow zmóžniś.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Móžoš zapódawańske rědy kuždy cas z rěcnych nastajenjow pódla lisćiny rěcow zmóžniś.",
 	"ext-uls-language-settings-applying": "Nałožujo se...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1Jadna dalšna rěc|$1 dalšnej rěcy|$1 dalšne rěcy|$1 dalšnych rěcow}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Jadna dalšna|$1 dalšnej|$1 dalšne|$1 dalšnych}}"
 }
