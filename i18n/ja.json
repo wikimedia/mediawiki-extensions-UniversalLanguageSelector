@@ -4,7 +4,8 @@
 			"Fryed-peach",
 			"Shirayuki",
 			"Sujiniku",
-			"Otokoume"
+			"Otokoume",
+			"Kusurija"
 		]
 	},
 	"uls-desc": "言語を選択するため/言語設定を調整するための、いくつかの方法を利用者に提供する",
@@ -59,5 +60,6 @@
 	"ext-uls-language-settings-applying": "適用しています...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|もう一つ|他 $1}}",
 	"apihelp-languagesearch-param-search": "検索文字列。",
-	"apihelp-ulslocalization-param-language": "言語コード"
+	"apihelp-ulslocalization-param-language": "言語コード",
+	"prefs-languages": "言語"
 }

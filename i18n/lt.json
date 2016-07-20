@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Mantak111",
-			"Salpusnis"
+			"Salpusnis",
+			"Kusurija"
 		]
 	},
 	"uls-desc": "Suteikia vartotojui keliais būdais, pasirinkti kalbą ir sureguliuoti kalbos parametrus.",
@@ -65,5 +66,6 @@
 	"apihelp-ulslocalization-description": "Gauti ULS lokalizavimas pateikta kalba.",
 	"apihelp-ulslocalization-param-language": "Kalbos kodas.",
 	"apihelp-ulslocalization-example-1": "Gauti tamilų lokalizavimą",
-	"apihelp-ulslocalization-example-2": "Gauti Hindi lokalizavimą"
+	"apihelp-ulslocalization-example-2": "Gauti Hindi lokalizavimą",
+	"prefs-languages": "Kalbos"
 }

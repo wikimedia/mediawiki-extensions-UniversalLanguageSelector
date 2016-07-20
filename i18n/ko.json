@@ -63,10 +63,11 @@
 	"ext-uls-input-disable-notification-info-personal": "언어 설정에서 언제든지 입력 도구를 활성화할 수 있습니다.",
 	"ext-uls-input-disable-notification-info-interlanguage": "언어 목록 옆에 있는 언어 설정에서 언제든지 입력 도구를 활성화할 수 있습니다.",
 	"ext-uls-language-settings-applying": "적용 중....",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|한 개의 다른 언어|$1개의 다른 언어}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|한 개 더 보기|$1개 더 보기}}",
 	"ext-uls-compact-link-info": "모든 언어 (사용자 및 다른 사용자들의 공통 선택 항목 중 초기 선택 항목)",
 	"apihelp-languagesearch-example-1": "\"Te\"로 검색",
 	"apihelp-languagesearch-example-2": "\"ഫി\"로 검색",
 	"apihelp-ulslocalization-description": "주어진 언어로 ULS의 위치를 가져옵니다.",
-	"prefs-languages": "언어"
+	"prefs-languages": "언어",
+	"ext-uls-compact-language-links-preference": "사용자와 관련이 있는 언어들을 위주로 간소화된 언어 목록을 사용합니다."
 }
