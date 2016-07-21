@@ -59,6 +59,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Nástroje pro vstup můžete kdykoli zapnout v jazykových nastaveních vedle seznamu jazyků.",
 	"ext-uls-language-settings-applying": "Provádí se…",
 	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|další|další|dalších}}",
+	"ext-uls-compact-link-info": "Všechny jazyky (počáteční výběr ze společných voleb vás a ostatních)",
 	"apihelp-languagesearch-param-typos": "Počet pravopisných chyb povolených v řetězci pro vyhledávání.",
 	"apihelp-ulslocalization-param-language": "Kód jazyka.",
 	"prefs-languages": "Jazyky",
