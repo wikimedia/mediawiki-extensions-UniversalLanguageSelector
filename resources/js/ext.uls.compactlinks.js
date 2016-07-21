@@ -131,10 +131,10 @@
 				width = $trigger.outerWidth();
 				height = $trigger.outerHeight();
 
-				// Triangle width is: Math.sqrt( 2 * Math.pow( 25, 2 ) ) / 2 =~ 17.7;
-				// Box width = 24 + 1 for border.
-				// The resulting value is rounded up 20 to have a small space between.
-				triangleWidth = 20;
+				// Triangle width is: Math.sqrt( 2 * Math.pow( 16, 2 ) ) / 2 =~ 11.3;
+				// Box width = 16 + 1 for border.
+				// The resulting value is rounded up 14 to have a small space between.
+				triangleWidth = 14;
 
 				if ( dir === 'rtl' ) {
 					this.left = offset.left - this.$menu.outerWidth() - triangleWidth;
