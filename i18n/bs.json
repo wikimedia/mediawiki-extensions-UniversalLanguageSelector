@@ -58,5 +58,6 @@
 	"ext-uls-language-settings-applying": "Primjenjujem...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Još jedan|Još $1}}",
 	"ext-uls-compact-link-info": "Svi jezici (prvobitni odabir zasnovan je na najčešćim odabirima Vas i drugih korisnika)",
-	"prefs-languages": "Jezici"
+	"prefs-languages": "Jezici",
+	"ext-uls-compact-language-links-preference": "Koristi sažeti spisak jezika s jezicima koji su Vam važni."
 }
