@@ -62,5 +62,6 @@
 	"ext-uls-language-settings-applying": "A aplicar...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Um outro|$1 outros}}",
 	"apihelp-ulslocalization-param-language": "Código de idioma.",
+	"prefs-languages": "Idiomas",
 	"ext-uls-compact-language-links-preference": "Usa uma lista compacta de idiomas, com idiomas relevantes para si."
 }
