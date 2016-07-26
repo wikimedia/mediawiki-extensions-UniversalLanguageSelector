@@ -56,6 +56,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Pue activar les ferramientes d'entrada en cualquier momentu dende la configuración d'idioma que ta cabo la llista de llingües.",
 	"ext-uls-language-settings-applying": "Aplicando...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Una más|$1 más}}",
+	"ext-uls-compact-link-info": "Tolos idiomes (esbilla inicial d'opciones comunes de to y d'otros)",
 	"apihelp-languagesearch-description": "Buscar nomes de llingua en cualquier alfabetu.",
 	"apihelp-languagesearch-param-search": "Buscar cadena.",
 	"apihelp-languagesearch-param-typos": "Númberu d'errores ortográficos permitíos na cadena de gueta.",
@@ -65,5 +66,7 @@
 	"apihelp-ulslocalization-description": "Obtener la llocalización de ULS na llingua dada.",
 	"apihelp-ulslocalization-param-language": "Códigu de llingua.",
 	"apihelp-ulslocalization-example-1": "Obtener la llocalización en tamil",
-	"apihelp-ulslocalization-example-2": "Obtener la llocalización en hindi"
+	"apihelp-ulslocalization-example-2": "Obtener la llocalización en hindi",
+	"prefs-languages": "Llingües",
+	"ext-uls-compact-language-links-preference": "Usar una llista de llingües compacta coles más afayadices pa ti."
 }
