@@ -335,7 +335,7 @@
 		var interlanguageList = {};
 
 		this.$interlanguageList.find( 'li.interlanguage-link > a' ).each( function () {
-			var langCode = this.getAttribute( 'lang' );
+			var langCode = this.getAttribute( 'lang' ).toLowerCase();
 
 			// We keep interlanguageList with redirect resolved language codes as keys.
 			langCode = $.uls.data.isRedirect( langCode ) || langCode;
