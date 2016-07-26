@@ -311,7 +311,8 @@ class UniversalLanguageSelectorHooks {
 			$wgULSEventLogging,
 			$wgULSImeSelectors, $wgULSNoImeSelectors,
 			$wgULSFontRepositoryBasePath,
-			$wgExtensionAssetsPath;
+			$wgExtensionAssetsPath,
+			$wgWBClientSettings;
 
 		// Place constant stuff here (not depending on request context)
 		if ( is_string( $wgULSGeoService ) ) {
@@ -332,6 +333,12 @@ class UniversalLanguageSelectorHooks {
 		} else {
 			$vars['wgULSFontRepositoryBasePath'] = $wgExtensionAssetsPath .
 				'/UniversalLanguageSelector/data/fontrepo/fonts/';
+		}
+
+		// Cannot check where whether CLL is enabled for a particular user. The overhead
+		// of including this data is small.
+		if ( isset( $wgWBClientSettings['sortPrepend'] ) ) {
+			$vars['wgULSCompactLinksPrepend'] = $wgWBClientSettings['sortPrepend'];
 		}
 
 		return true;
