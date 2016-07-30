@@ -65,5 +65,6 @@
 	"apihelp-ulslocalization-description": "वैभावचे (यूएलएस) दिलेल्या भाषेतील स्थानिकीकरण मिळवा.",
 	"apihelp-ulslocalization-param-language": "भाषा संकेत (कोड).",
 	"apihelp-ulslocalization-example-1": "तामिळ स्थानिकिकरण मिळवा",
-	"apihelp-ulslocalization-example-2": "हिंदी स्थानिकिकरण मिळवा"
+	"apihelp-ulslocalization-example-2": "हिंदी स्थानिकिकरण मिळवा",
+	"ext-uls-compact-language-links-preference": "आपल्याशी संबंधित भाषांची, आटोपशीर भाषा यादी वापरा."
 }
