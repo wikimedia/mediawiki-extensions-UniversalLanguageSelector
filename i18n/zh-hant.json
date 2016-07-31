@@ -8,7 +8,8 @@
 			"Spring Roll Conan",
 			"Liangent",
 			"LNDDYL",
-			"Cwlin0416"
+			"Cwlin0416",
+			"Waihorace"
 		]
 	},
 	"uls-desc": "為使用者提供多種方法來選擇語言和調整語言設定",
@@ -62,6 +63,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "你可隨時在語言清單旁的語言設定中開啟輸入工具。",
 	"ext-uls-language-settings-applying": "套用中...",
 	"ext-uls-compact-link-count": "還有 $1 種語言",
+	"ext-uls-compact-link-info": "所有語言（來自您和其他人共同選擇的初始選項）",
 	"apihelp-languagesearch-description": "於任何 Script 搜尋語言名稱。",
 	"apihelp-languagesearch-param-search": "搜尋字串。",
 	"apihelp-languagesearch-param-typos": "允許於搜尋字串中的拼寫錯誤數量。",
@@ -69,5 +71,9 @@
 	"apihelp-languagesearch-example-2": "搜尋 \"ഫി\"",
 	"apihelp-languagesearch-example-3": "搜尋 \"ഫി\"，可允許一個錯字",
 	"apihelp-ulslocalization-description": "取得指定語言的在地化 ULS。",
-	"apihelp-ulslocalization-param-language": "語言代碼。"
+	"apihelp-ulslocalization-param-language": "語言代碼。",
+	"apihelp-ulslocalization-example-1": "取得泰米爾語本地化",
+	"apihelp-ulslocalization-example-2": "取得印度語本地化",
+	"prefs-languages": "語言",
+	"ext-uls-compact-language-links-preference": "使用較簡潔的語言列表，包括與您相關的語言。"
 }
