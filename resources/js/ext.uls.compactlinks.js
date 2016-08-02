@@ -226,6 +226,8 @@
 			// Previous languages are always the better suggestion
 			// because the user has explicitly chosen them.
 			filterByPreviousLanguages,
+			// Site specific highlights, mostly used on Wikimedia sites
+			filterBySitePicks,
 			// Add all common languages to the beginning of array.
 			// These are the most probable languages predicted by ULS.
 			this.getCommonLanguages,
@@ -275,6 +277,19 @@
 		var previousLanguages = mw.uls.getPreviousLanguages();
 
 		return $.grep( previousLanguages, function ( language ) {
+			return $.inArray( language, languages ) >= 0;
+		} );
+	}
+
+	/**
+	 * Filter the language list by site picks.
+	 *
+	 * @return {Array} List of language codes supported by the article
+	 */
+	function filterBySitePicks( languages ) {
+		var picks = mw.config.get( 'wgULSCompactLinksPrepend' ) || [];
+
+		return $.grep( picks, function ( language ) {
 			return $.inArray( language, languages ) >= 0;
 		} );
 	}
