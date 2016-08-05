@@ -50,5 +50,6 @@
 	"ext-uls-input-disable-notification": "Кертү кораллары ябылды",
 	"ext-uls-input-disable-notification-undo": "Кире кагу",
 	"ext-uls-input-disable-notification-info-personal": "Кертү җиһазларын тел көйләнмәләреннән кабызырга мөмкин.",
-	"ext-uls-compact-link-count": "Башка {{PLURAL:$1|телдә|$1 телдә}}"
+	"ext-uls-compact-link-count": "Башка {{PLURAL:$1|телдә|$1 телдә}}",
+	"ext-uls-compact-language-links-preference": "Сезнең өчен мөһим булган телләр исемлеген куллану"
 }

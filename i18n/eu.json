@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Xabier Armendaritz",
-			"Subi"
+			"Subi",
+			"Sator"
 		]
 	},
 	"uls-plang-title-languages": "Hizkuntzak",
@@ -31,5 +32,6 @@
 	"ext-uls-input-settings-noime": "Ez dago sarrerako metodorik erabilgarri hizkuntza honetarako.",
 	"ext-uls-input-disable-notification-undo": "Desegin",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Bat gehiago |$1 gehiago}}",
-	"apihelp-ulslocalization-param-language": "Hizkuntza-kodea."
+	"apihelp-ulslocalization-param-language": "Hizkuntza-kodea.",
+	"prefs-languages": "Hizkuntzak"
 }
