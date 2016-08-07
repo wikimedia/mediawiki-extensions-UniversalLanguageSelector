@@ -57,6 +57,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Eyaranê zıwani şıma şenê, hacetanê ke leweyê lista zıwani derê, feal kerê.",
 	"ext-uls-language-settings-applying": "Dezgeyeno...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|yewna|$1 vêşi}}",
+	"ext-uls-compact-link-info": "Zıwani pêro (hetê to û ê binan ra ke kamcin yeno hesab wa ey weçine)",
 	"apihelp-languagesearch-description": "Nameyê zıwani nuşteyê raştameyeyi de geyreno cı.",
 	"apihelp-languagesearch-param-search": "Rêza cıgeyrayışi.",
 	"apihelp-ulslocalization-param-language": "Kodê zıwani.",
