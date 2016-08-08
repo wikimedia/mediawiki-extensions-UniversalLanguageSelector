@@ -233,6 +233,8 @@
 			this.getCommonLanguages,
 			// Add languages that are present in the article content.
 			this.filterByLangsInText,
+			// Add languages in which there are featured articles.
+			this.filterByBadges,
 			// Some global fallbacks to avoid showing languages in the beginning of the alphabet
 			getExtraCommonLanguages,
 			// Finally add the whole languages array too.
@@ -364,6 +366,22 @@
 		} );
 
 		return languagesInText;
+	};
+
+	/**
+	 * Filter the language list by languages the page in which
+	 * has any kind of a badge, such as "featured article".
+	 * The "badge-*" classes are added by Wikibase.
+	 *
+	 * The reader doesn't necessarily know this language, but it
+	 * appears relevant to the page.
+	 *
+	 * @return {Array} List of language codes in which there are articles with badges
+	 */
+	CompactInterlanguageList.prototype.filterByBadges = function () {
+		return $( '#p-lang' ).find( '[class*="badge"]' ).map( function ( i, el ) {
+			return $( el ).find( 'a' ).attr( 'lang' ); }
+		).toArray();
 	};
 
 	/**
