@@ -46,7 +46,15 @@ class LanguageNameSearch {
 	}
 
 	public static function getIndex( $name ) {
-		return self::getCodepoint( $name ) % 1000;
+		$codepoint = self::getCodepoint( $name );
+
+		if ( $codepoint < 4000 ) {
+			// For latin etc. we need smaller buckets for speed
+			return $codepoint;
+		} else {
+			// Try to group names of same script together
+			return $codepoint - ( $codepoint % 1000 );
+		}
 	}
 
 	/**
