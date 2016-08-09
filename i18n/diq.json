@@ -3,7 +3,8 @@
 		"authors": [
 			"Gorizon",
 			"Marmase",
-			"Mirzali"
+			"Mirzali",
+			"Kumkumuk"
 		]
 	},
 	"uls-desc": "Karberi rê seba weçinıtışê zıwani û vurnayışê eyarê zıwani ra weçinıkan peyda keno",
@@ -60,7 +61,14 @@
 	"ext-uls-compact-link-info": "Zıwani pêro (hetê to û ê binan ra ke kamcin yeno hesab wa ey weçine)",
 	"apihelp-languagesearch-description": "Nameyê zıwani nuşteyê raştameyeyi de geyreno cı.",
 	"apihelp-languagesearch-param-search": "Rêza cıgeyrayışi.",
+	"apihelp-languagesearch-param-typos": "Amora cerğkerdena ratenanê xetayanê imla",
+	"apihelp-languagesearch-example-1": "\"Te\" de bıvin",
+	"apihelp-languagesearch-example-2": "\"ഫി\" de bıvin",
+	"apihelp-languagesearch-example-3": "Qandé  „ഫി“, inlanrê mısade bıgi",
+	"apihelp-ulslocalization-description": "Zıwano daye ra lokalizasyonê ULSi bıgê.",
 	"apihelp-ulslocalization-param-language": "Kodê zıwani.",
 	"apihelp-ulslocalization-example-1": "Lokalizasyonê Tamili ano",
-	"apihelp-ulslocalization-example-2": "Lokalizasyonê Hindi ano"
+	"apihelp-ulslocalization-example-2": "Lokalizasyonê Hindi ano",
+	"prefs-languages": "Zıwani",
+	"ext-uls-compact-language-links-preference": "Yew lista serkerdiye be zıwananê eleqedaran ra bıgurene."
 }
