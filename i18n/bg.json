@@ -5,7 +5,8 @@
 			"Spiritia",
 			"Termininja",
 			"Borislav",
-			"Vodnokon4e"
+			"Vodnokon4e",
+			"StanProg"
 		]
 	},
 	"uls-plang-title-languages": "Езици",
@@ -55,5 +56,8 @@
 	"ext-uls-input-disable-notification-undo": "Отмяна",
 	"ext-uls-input-disable-notification-info-personal": "Можете да активирате инструментите за въвеждане по всяко време от езиковите настройки.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Можете да разрешите инструментите за въвеждане по всяко време от езиковите настройки до списъка с езици.",
-	"apihelp-ulslocalization-param-language": "Езиков код."
+	"ext-uls-language-settings-applying": "Прилагане...",
+	"apihelp-ulslocalization-param-language": "Езиков код.",
+	"prefs-languages": "Езици",
+	"ext-uls-compact-language-links-preference": "Използване на компактен списък на езиците, имащи отношение към вас."
 }
