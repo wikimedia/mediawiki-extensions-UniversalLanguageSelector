@@ -412,9 +412,9 @@ class UniversalLanguageSelectorHooks {
 					'rtl' => "$imagesDir/compact-links-rtl.png",
 				],
 				'info-link' =>
-					'https://www.mediawiki.org/wiki/Universal_Language_Selector/Design/Interlanguage_links',
+					'https://www.mediawiki.org/wiki/Universal_Language_Selector/Compact_Language_Links',
 				'discussion-link' =>
-					'https://www.mediawiki.org/wiki/Talk:Universal_Language_Selector/Design/Interlanguage_links',
+					'https://www.mediawiki.org/wiki/Talk:Universal_Language_Selector/Compact_Language_Links',
 			];
 		}
 	}
