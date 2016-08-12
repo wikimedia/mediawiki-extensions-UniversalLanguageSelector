@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Calak",
-			"Asoxor"
+			"Asoxor",
+			"Sarchia"
 		]
 	},
 	"uls-desc": "ڕێگای جۆربەجۆر بۆ بەکارھێنەر بۆ ھەڵبژاردنی زمان و جێبەجێکردنی ڕێکخستنەکانی زمان دخاتە ڕوو.",
@@ -17,7 +18,7 @@
 	"ext-uls-display-settings-desc": "زمانی بەکاگیراوی مێنووکان و فۆنتەکان ھەڵبژێرە.",
 	"ext-uls-language-settings-title": "ڕێکخستنەکانی زمان",
 	"ext-uls-language-settings-apply": "ڕێکخستنەکان بەکاربەرە",
-	"ext-uls-language-settings-cancel": "ھەڵیوەشێنەوە",
+	"ext-uls-language-settings-cancel": "ھەڵوەشاندنەوە",
 	"ext-uls-language-buttons-help": "زمانی ڕووکار بگۆڕە. کاریگەری لەسەر زمانی ناوەرۆک نابێت.",
 	"ext-uls-display-settings-font-settings": "ڕێکخستنەکانی فۆنت",
 	"ext-uls-display-settings-ui-language": "پێشاندانی زمان",
@@ -51,5 +52,6 @@
 	"ext-uls-input-disable-notification-undo": "پووچەڵکردنەوە",
 	"ext-uls-input-disable-notification-info-personal": "ھەر کات ویستت دەتوانی ئامرازەکانی تەختەکلیل لە بەشی ڕێکخستنەکانی زمان چالاک بکەی.",
 	"ext-uls-input-disable-notification-info-interlanguage": "ھەر کات ویستت دەتوانی ئامرازەکانی تەختەکلیل لە بەشی ڕێکخستنەکانی زمان لە لای پێرستی زمانەکان چالاک بکەی.",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|زمانێکی تر|$1 زمانی تر}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|زمانێکی تر|$1 زمانی تر}}",
+	"prefs-languages": "زمانەکان"
 }
