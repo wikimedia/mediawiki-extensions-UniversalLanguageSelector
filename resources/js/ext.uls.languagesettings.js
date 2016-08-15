@@ -194,14 +194,14 @@
 				this.render();
 				this.initialized = true;
 			}
-			// close model windows close, if they hide on page click
+			// Close other modal windows which listen to click events outside them
 			$( 'html' ).click();
 			this.i18n();
 			this.shown = true;
 			this.$window.show();
 
 			// Every time we show this window, make sure the current
-			// settings panels is upto date. So just click on active menu item.
+			// settings panels is up-to-date. So just click on active menu item.
 			this.$window.find( '.settings-menu-items > .active' ).click();
 			this.position();
 			setTimeout( function () {
