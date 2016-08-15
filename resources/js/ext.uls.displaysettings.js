@@ -612,7 +612,9 @@
 				displaySettings.$parent.position();
 				$tabButtons.removeClass( 'mw-ui-pressed' );
 				$button.addClass( 'mw-ui-pressed' );
-
+			} ).on( 'mousedown', function ( event ) {
+				// Avoid taking focus, to avoid bad looking focus styles
+				event.preventDefault();
 			} );
 
 		},
