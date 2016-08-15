@@ -145,8 +145,7 @@
 				var $this = $( this );
 
 				$this.data( 'module' ).render();
-				// Re-position the window and scroll in to view if required.
-				languageSettings.position();
+				languageSettings.$window.scrollIntoView();
 				$settingsMenuItems.find( '.menu-section' ).removeClass( 'active' );
 				$this.addClass( 'active' );
 			} );
@@ -163,24 +162,12 @@
 		},
 
 		position: function () {
-			var top, pos, left,
-				languageSettings = this;
-
-			pos = $.extend( {}, this.$element.offset(), {
-				height: this.$element[ 0 ].offsetHeight
-			} );
-			top = this.top || pos.top + pos.height;
-			left = this.left || '25%';
+			this.top = this.top || this.$element.offset().top + this.$element.outerHeight();
+			this.left = this.left || '25%';
 			this.$window.css( {
-				top: top,
-				left: left
+				top: this.top,
+				left: this.left
 			} );
-			setTimeout( function () {
-				// Don't mess up height calculations with parallel css loading
-				// See: http://ejohn.org/blog/how-javascript-timers-work/
-				languageSettings.$window.scrollIntoView();
-			}, 0 );
-
 		},
 
 		i18n: function () {
@@ -188,7 +175,7 @@
 		},
 
 		show: function () {
-			var languageSettings = this;
+			this.position();
 
 			if ( !this.initialized ) {
 				this.render();
@@ -197,18 +184,14 @@
 			// close model windows close, if they hide on page click
 			$( 'html' ).click();
 			this.i18n();
-			this.shown = true;
-			this.$window.show();
-
 			// Every time we show this window, make sure the current
 			// settings panels is upto date. So just click on active menu item.
 			this.$window.find( '.settings-menu-items > .active' ).click();
-			this.position();
-			setTimeout( function () {
-				// Don't mess up height calculations with parallel css loading
-				// See: http://ejohn.org/blog/how-javascript-timers-work/
-				languageSettings.visible();
-			}, 0 );
+
+			this.shown = true;
+			this.$window.show();
+			this.visible();
+			this.$window.scrollIntoView();
 		},
 
 		/**
