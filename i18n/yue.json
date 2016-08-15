@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ktchankt"
+			"Ktchankt",
+			"Shinjiman"
 		]
 	},
-	"ext-uls-compact-link-count": "重有 $1 種語言"
+	"ext-uls-compact-link-count": "重有$1種"
 }
