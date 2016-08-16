@@ -139,6 +139,10 @@
 					$settingsText
 				);
 
+			if ( active ) {
+				$settingsLink.addClass( 'active' );
+			}
+
 			$settingsMenuItems.append( $settingsLink );
 
 			$settingsLink.on( 'click', function () {
@@ -151,10 +155,6 @@
 				$this.addClass( 'active' );
 			} );
 
-			if ( active ) {
-				module.render();
-				$settingsLink.addClass( 'active' );
-			}
 			this.modules[ moduleName ] = module;
 
 			// Register cancel and apply hooks
