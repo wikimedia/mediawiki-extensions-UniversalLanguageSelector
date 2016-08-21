@@ -3,7 +3,8 @@
 		"authors": [
 			"Mantak111",
 			"Salpusnis",
-			"Kusurija"
+			"Kusurija",
+			"Hugo.arg"
 		]
 	},
 	"uls-desc": "Suteikia vartotojui keliais būdais, pasirinkti kalbą ir sureguliuoti kalbos parametrus.",
@@ -67,5 +68,6 @@
 	"apihelp-ulslocalization-param-language": "Kalbos kodas.",
 	"apihelp-ulslocalization-example-1": "Gauti tamilų lokalizavimą",
 	"apihelp-ulslocalization-example-2": "Gauti Hindi lokalizavimą",
-	"prefs-languages": "Kalbos"
+	"prefs-languages": "Kalbos",
+	"ext-uls-compact-language-links-preference": "Naudoti suskleistą kalbų sąrašą, rodantį tik jums reikalingas kalbas."
 }
