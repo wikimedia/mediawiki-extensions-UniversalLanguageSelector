@@ -378,7 +378,7 @@
 	 */
 	CompactInterlanguageList.prototype.filterByBadges = function () {
 		return $( '#p-lang' ).find( '[class*="badge"]' ).map( function ( i, el ) {
-			return $( el ).find( 'a' ).attr( 'lang' ); }
+			return $( el ).find( 'a' ).attr( 'lang' ).toLowerCase(); }
 		).toArray();
 	};
 
