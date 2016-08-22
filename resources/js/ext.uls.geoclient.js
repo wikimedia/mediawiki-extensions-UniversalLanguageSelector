@@ -20,29 +20,29 @@
 ( function ( $, mw ) {
 	'use strict';
 
-	var currentProto, httpOnly, settings,
+	var geo,
+		cacheAge = 60 * 60 * 8, // 8 hours
 		service = mw.config.get( 'wgULSGeoService' );
 
-	mw.uls = mw.uls || {};
-	mw.uls.setGeo = function ( data ) {
-		window.Geo = data;
-	};
-
-	// Call the service only if defined, and if the current
-	// protocol is https, only if the service is not configured
-	// with http:// as the protocol
-	if ( service ) {
-		httpOnly = service.substring( 0, 7 ) === 'http://';
-		currentProto = document.location.protocol;
-		if ( !httpOnly || currentProto === 'http:' ) {
-			settings = {
-				cache: true,
-				dataType: 'jsonp',
-				jsonpCallback: 'mw.uls.setGeo'
-			};
-
-			$.ajax( service, settings );
-		}
+	// This is not supposed to happen. For sanity prefer existing value.
+	if ( window.Geo ) {
+		return;
 	}
 
+	// Using cache for speed and to be nice for the service. Using cookies over
+	// localstorage because cookies support automatic expiring and are supported
+	// everywhere where as localstorage might not. This cookie is not currently
+	// read server side.
+	geo = mw.cookie.get( 'ULSGeo' );
+	if ( geo ) {
+		try {
+			window.Geo = JSON.parse( geo );
+			return;
+		} catch ( e ) {}
+	}
+
+	$.getJSON( service ).done( function ( data ) {
+		window.Geo = data;
+		mw.cookie.set( 'ULSGeo', JSON.stringify( data ), cacheAge );
+	} );
 }( jQuery, mediaWiki ) );

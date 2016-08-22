@@ -121,10 +121,8 @@ class UniversalLanguageSelectorHooks {
 			$out->addModules( 'ext.uls.compactlinks' );
 		}
 
-		if ( is_string( $wgULSGeoService ) ) {
+		if ( $wgULSGeoService ) {
 			$out->addModules( 'ext.uls.geoclient' );
-		} elseif ( $wgULSGeoService === true ) {
-			$out->addScript( '<script src="//meta.wikimedia.org/geoiplookup"></script>' );
 		}
 
 		if ( self::isToolbarEnabled( $out->getUser() ) ) {
@@ -312,7 +310,11 @@ class UniversalLanguageSelectorHooks {
 			$wgWBClientSettings;
 
 		// Place constant stuff here (not depending on request context)
-		if ( is_string( $wgULSGeoService ) ) {
+
+		if ( $wgULSGeoService === true ) {
+			$wgULSGeoService = 'https://freegeoip.net/json/?callback=?';
+		}
+		if ( $wgULSGeoService ) {
 			$vars['wgULSGeoService'] = $wgULSGeoService;
 		}
 
