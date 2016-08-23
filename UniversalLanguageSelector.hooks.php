@@ -111,10 +111,7 @@ class UniversalLanguageSelectorHooks {
 		// If EventLogging integration is enabled, load the schema module
 		// and the event logging functions module
 		if ( $wgULSEventLogging ) {
-			$out->addModules( [
-				'schema.UniversalLanguageSelector',
-				'ext.uls.eventlogger',
-			] );
+			$out->addModules( 'ext.uls.eventlogger' );
 		}
 
 		// If the extension is enabled, basic features (API, language data) available.
