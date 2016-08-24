@@ -68,5 +68,6 @@
 	"apihelp-languagesearch-example-2": "ابحث عن «ഫി»",
 	"apihelp-languagesearch-example-3": "ابحث عن «ഫി» واسمح بخطأ مطبعي واحد",
 	"apihelp-ulslocalization-param-language": "كود اللغة.",
+	"prefs-languages": "اللغات",
 	"ext-uls-compact-language-links-preference": "استخدم قائمة اللغات المدمجة، لعرض اللغات المتعلقة بك."
 }
