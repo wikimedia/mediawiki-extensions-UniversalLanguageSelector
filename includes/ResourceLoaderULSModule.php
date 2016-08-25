@@ -1,6 +1,6 @@
 <?php
 /**
- * Resource loader module for UniversalLanguageSelector
+ * ResourceLoader module for UniversalLanguageSelector
  *
  * Copyright (C) 2012 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
  * Niklas Laxström, Pau Giner, Santhosh Thottingal, Siebrand Mazeland and other
@@ -20,7 +20,7 @@
  */
 
 /**
- * Resource loader module for providing MediaWiki language names.
+ * ResourceLoader module for UniversalLanguageSelector
  */
 class ResourceLoaderULSModule extends ResourceLoaderModule {
 	protected $targets = [ 'desktop', 'mobile' ];
@@ -31,13 +31,12 @@ class ResourceLoaderULSModule extends ResourceLoaderModule {
 	 * @param string $languageCode Language code
 	 * @return array
 	 */
-	protected function getData( $languageCode ) {
+	private function getData( $languageCode ) {
 		$vars = [];
 		$vars['wgULSLanguages'] = Language::fetchLanguageNames(
 			$languageCode,
 			'mwfile'
 		);
-
 		return $vars;
 	}
 
@@ -47,49 +46,15 @@ class ResourceLoaderULSModule extends ResourceLoaderModule {
 	 */
 	public function getScript( ResourceLoaderContext $context ) {
 		$languageCode = $context->getLanguage();
-		$out = '';
-		foreach ( $this->getData( $languageCode ) as $key => $value ) {
-			$out .= Xml::encodeJsCall( 'mw.config.set', [ $key, $value ] );
-		}
-
-		return $out;
+		return Xml::encodeJsCall( 'mw.config.set', [
+			$this->getData( $languageCode )
+		] );
 	}
 
 	/**
-	 * Gets the last modified time for this module depending on the given
-	 * context.
-	 *
-	 * @param $context ResourceLoaderContext
-	 * @return int Unix timestamp
+	 * @return bool
 	 */
-	public function getModifiedTime( ResourceLoaderContext $context ) {
-		$languageCode = $context->getLanguage();
-
-		$cache = wfGetCache( CACHE_ANYTHING );
-
-		// Since we are updating the timestamp on hash change, we need to
-		// cache the hash per language to avoid updating the timestamp when
-		// different languages are being requested.
-		$key = wfMemcKey(
-			'uls',
-			'modulemodifiedhash',
-			$this->getName(),
-			$languageCode
-		);
-
-		$data = $this->getData( $languageCode );
-		$hash = md5( serialize( $data ) );
-
-		$result = $cache->get( $key );
-		if ( is_array( $result ) && $result['hash'] === $hash ) {
-			return $result['timestamp'];
-		}
-		$timestamp = wfTimestamp();
-		$cache->set( $key, [
-			'hash' => $hash,
-			'timestamp' => $timestamp,
-		] );
-
-		return $timestamp;
+	public function enableModuleContentVersion() {
+		return true;
 	}
 }
