@@ -36,6 +36,20 @@
 	}
 
 	/**
+	 * Normalize a language code for ULS usage.
+	 *
+	 * MediaWiki language codes (especially on WMF sites) are inconsistent
+	 * with ULS codes. We need to use ULS codes to access the proper data.
+	 *
+	 * @param {string} code
+	 * @return {string} Normalized language code
+	 */
+	function convertMediaWikiLanguageCodeToULS( code ) {
+		code = code.toLowerCase();
+		return $.uls.data.isRedirect( code ) || code;
+	}
+
+	/**
 	 * @class
 	 */
 	function CompactInterlanguageList( interlanguageList, options ) {
@@ -357,7 +371,7 @@
 		var languagesInText = [];
 
 		$( '#mw-content-text [lang]' ).each( function ( i, el ) {
-			var lang = $( el ).attr( 'lang' );
+			var lang = convertMediaWikiLanguageCodeToULS( $( el ).attr( 'lang' ) );
 			if ( $.inArray( lang, languagesInText ) === -1 && $.inArray( lang, languages ) >= 0 ) {
 				languagesInText.push( lang );
 			}
@@ -378,8 +392,8 @@
 	 */
 	CompactInterlanguageList.prototype.filterByBadges = function () {
 		return $( '#p-lang' ).find( '[class*="badge"]' ).map( function ( i, el ) {
-			return $( el ).find( 'a' ).attr( 'lang' ).toLowerCase(); }
-		).toArray();
+			return convertMediaWikiLanguageCodeToULS( $( el ).find( 'a' ).attr( 'lang' ) );
+		} ).toArray();
 	};
 
 	/**
@@ -392,10 +406,8 @@
 		var interlanguageList = {};
 
 		this.$interlanguageList.find( 'li.interlanguage-link > a' ).each( function () {
-			var langCode = this.getAttribute( 'lang' ).toLowerCase();
+			var langCode = convertMediaWikiLanguageCodeToULS( this.getAttribute( 'lang' ) );
 
-			// We keep interlanguageList with redirect resolved language codes as keys.
-			langCode = $.uls.data.isRedirect( langCode ) || langCode;
 			interlanguageList[ langCode ] = {
 				href: this.getAttribute( 'href' ),
 				autonym: $( this ).text(),
