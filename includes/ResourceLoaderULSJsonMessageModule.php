@@ -1,7 +1,6 @@
 <?php
 /**
- * ResourceLoaderModule subclass for loading the json
- * based localization to client-side code.
+ * ResourceLoader module for client-side loading of json-based localization.
  *
  * @file
  * @ingroup Extensions
@@ -9,8 +8,7 @@
  */
 
 /**
- * Packages a remote schema as a JavaScript ResourceLoader module.
- * @since 2013.11
+ * ResourceLoader module for client-side loading of json-based localization.
  */
 class ResourceLoaderULSJsonMessageModule extends ResourceLoaderModule {
 	/**
@@ -32,25 +30,24 @@ class ResourceLoaderULSJsonMessageModule extends ResourceLoaderModule {
 	}
 
 	/**
-	 * Gets the last modified timestamp of this module.
-	 * The last modified timestamp controls caching.
 	 * @param ResourceLoaderContext $context
-	 * @return int Unix timestamp.
+	 * @return array
 	 */
-	public function getModifiedTime( ResourceLoaderContext $context ) {
+	public function getDefinitionSummary( ResourceLoaderContext $context ) {
 		$code = $context->getLanguage();
 		if ( !Language::isValidCode( $code ) ) {
 			$code = 'en';
 		}
-
-		$mtimes = array_map(
-			'filemtime',
+		$fileHashes = array_map(
+			[ __CLASS__, 'safeFileHash' ],
 			ULSJsonMessageLoader::getFilenames( $code )
 		);
-		// Make sure we have at least one entry
-		$mtimes[] = 1;
 
-		return max( $mtimes );
+		$summary = parent::getDefinitionSummary( $context );
+		$summary[] = [
+			'fileHashes' => $fileHashes
+		];
+		return $summary;
 	}
 
 	/**
