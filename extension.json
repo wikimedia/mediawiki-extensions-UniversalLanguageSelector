@@ -120,7 +120,6 @@
 				"ext.uls.mediawiki",
 				"ext.uls.webfonts",
 				"mediawiki.api.parse",
-				"mediawiki.Uri",
 				"mediawiki.ui.checkbox",
 				"mediawiki.ui.button"
 			],
