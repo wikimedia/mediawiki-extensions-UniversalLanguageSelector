@@ -32,6 +32,7 @@
 	"ext-uls-input-disable-notification-undo": "Anullar",
 	"ext-uls-language-settings-applying": "Mesa en òbra en cors…",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Una lenga mai|$1 lengas mai}}",
+	"apihelp-languagesearch-param-search": "Cercar lo tèxte.",
 	"prefs-languages": "Lengas",
 	"ext-uls-compact-language-links-preference": "Utilizar una lista de lengas compacta, amb las lengas pertinentas per vos."
 }
