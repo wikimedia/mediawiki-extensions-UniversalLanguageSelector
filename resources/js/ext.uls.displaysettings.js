@@ -153,7 +153,7 @@
 		 * Prepare the UI language selector
 		 */
 		prepareLanguages: function () {
-			var loginUri, $loginCta,
+			var $loginCta,
 				displaySettings = this,
 				SUGGESTED_LANGUAGES_NUMBER = 3,
 				anonsAllowed = mw.config.get( 'wgULSAnonCanChangeLanguage' ),
@@ -162,10 +162,6 @@
 
 			// Don't let anonymous users change interface language
 			if ( !anonsAllowed && mw.user.isAnon() ) {
-				loginUri = new mw.Uri();
-				loginUri.query = {
-					title: 'Special:UserLogin'
-				};
 				$loginCta = $( '<p>' )
 					.attr( 'id', 'uls-display-settings-anon-log-in-cta' );
 				autonym = $.uls.data.getAutonym( this.contentLanguage );
