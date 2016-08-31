@@ -213,14 +213,14 @@
 			ulsPopup.toggle( true );
 			ulsPopup.toggleClipping( false );
 			// if the mouse is over the tooltip, do not hide
-			$( '.tipsy' ).on( 'mouseover', function () {
+			$( '.uls-tipsy' ).on( 'mouseover', function () {
 				window.clearTimeout( tipsyTimer );
 			} ).on( 'mouseout', function () {
 				tipsyTimer = window.setTimeout( hideTipsy, timeout );
 			} );
 
 			// hide the tooltip when clicked on it
-			$( '.tipsy' ).on( 'click', hideTipsy );
+			$( '.uls-tipsy' ).on( 'click', hideTipsy );
 
 			// Event handler for links in the tooltip.
 			// It looks like the tipsy is always created from scratch so that
@@ -251,7 +251,7 @@
 			padded: true,
 			width: 300,
 			align: 'forwards',
-			classes:  [ 'tipsy' ],
+			classes:  [ 'uls-tipsy' ],
 			$content: ( function () {
 				var link = $( '<a>' ).text( previousAutonym )
 					.attr( {
