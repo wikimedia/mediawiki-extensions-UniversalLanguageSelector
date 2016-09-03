@@ -7,7 +7,8 @@
 			"Tarawneh",
 			"Abanima",
 			"Maroen1990",
-			"Shbib Al-Subaie"
+			"Shbib Al-Subaie",
+			"Meno25"
 		]
 	},
 	"uls-desc": "يمنح المستخدم عدة طرق لاختيار لغة، وضبط إعدادات اللغة",
@@ -68,6 +69,8 @@
 	"apihelp-languagesearch-example-2": "ابحث عن «ഫി»",
 	"apihelp-languagesearch-example-3": "ابحث عن «ഫി» واسمح بخطأ مطبعي واحد",
 	"apihelp-ulslocalization-param-language": "كود اللغة.",
+	"apihelp-ulslocalization-example-1": "الحصول على تعريب التاميلية",
+	"apihelp-ulslocalization-example-2": "الحصول على تعريب الهندية",
 	"prefs-languages": "اللغات",
 	"ext-uls-compact-language-links-preference": "استخدم قائمة اللغات المدمجة، لعرض اللغات المتعلقة بك."
 }
