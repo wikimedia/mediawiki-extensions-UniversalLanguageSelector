@@ -11,6 +11,7 @@
 	"ext-uls-select-language-settings-icon-tooltip": "Ρυθμίσεις γλώσσας",
 	"ext-uls-undo-language-tooltip-text": "Η γλώσσα άλλαξε από $1",
 	"ext-uls-language-settings-preferences-link": "Περισσότερες ρυθμίσεις γλώσσας",
+	"uls-betafeature-label": "Συμπαγείς γλωσσικοί σύνδεσμοι",
 	"ext-uls-display-settings-title": "Ρυθμίσεις απεικόνισης",
 	"ext-uls-display-settings-language-tab": "Γλώσσα",
 	"ext-uls-display-settings-fonts-tab": "Γραμματοσειρές",
@@ -50,5 +51,9 @@
 	"ext-uls-input-disable-notification-undo": "Αναίρεση",
 	"ext-uls-input-disable-notification-info-personal": "Μπορείτε να ενεργοποιήσετε τα εργαλεία εισαγωγής, ανά πάσα στιγμή από τις ρυθμίσεις γλώσσας.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Μπορείτε να ενεργοποιήσετε τα εργαλεία εισαγωγής, ανά πάσα στιγμή από τις ρυθμίσεις γλώσσας δίπλα από τη λίστα γλωσσών.",
-	"ext-uls-language-settings-applying": "Εφαρμογή..."
+	"ext-uls-language-settings-applying": "Εφαρμογή...",
+	"apihelp-languagesearch-param-search": "Συμβολοσειρά αναζήτησης.",
+	"apihelp-ulslocalization-param-language": "Κωδικός γλώσσας",
+	"prefs-languages": "Γλώσσες",
+	"ext-uls-compact-language-links-preference": "Χρήση μιας συμπαγούς λίστας γλωσσών, με γλώσσες που είναι σχετικές με εσάς."
 }
