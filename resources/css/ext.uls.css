@@ -16,11 +16,6 @@
 	border-bottom-left-radius: 4px;
 }
 
-/* Override skin styling, because we are doing it ourselves */
-.uls-language-list li {
-	margin: 0;
-}
-
 .uls-menu.callout .caret-before,
 .uls-menu.callout .caret-after {
 	border-top: 10px solid transparent;
