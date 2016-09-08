@@ -3,7 +3,9 @@
 		"authors": [
 			"Tuliouel",
 			"Amgauna",
-			"Webysther"
+			"Webysther",
+			"Cristofer Alves",
+			"TheEduGobi"
 		]
 	},
 	"uls-region-WW": "Global",
@@ -14,8 +16,9 @@
 	"uls-region-AS": "Ásia",
 	"uls-region-ME": "Oriente Médio",
 	"uls-region-PA": "Pacífico",
+	"uls-region-all": "Todos os idiomas",
 	"uls-no-results-found": "Nenhum resultado encontrado",
-	"uls-common-languages": "Idiomas comuns",
+	"uls-common-languages": "Idiomas sugeridos",
 	"uls-no-results-suggestion-title": "Você pode interessar-se por:",
 	"uls-search-help": "Você pode pesquisar pelo nome da língua, o nome do alfabeto, código ISO da língua, ou você pode procurar por região.",
 	"uls-search-placeholder": "Procurar idioma"
