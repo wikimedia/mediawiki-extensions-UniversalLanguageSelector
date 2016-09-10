@@ -395,8 +395,16 @@
 	 * @return {Array} List of language codes in which there are articles with badges
 	 */
 	CompactInterlanguageList.prototype.filterByBadges = function () {
+		// Can be removed when backwards compatibility before
+		// MediaWiki 1.28 is no longer needed
+		var targetSelector = parseFloat( mw.config.get( 'wgVersion' ) ) >= 1.28 ?
+			'.interlanguage-link-target' :
+			'a';
+
 		return $( '#p-lang' ).find( '[class*="badge"]' ).map( function ( i, el ) {
-			return convertMediaWikiLanguageCodeToULS( $( el ).find( 'a' ).attr( 'lang' ) );
+			return convertMediaWikiLanguageCodeToULS(
+				$( el ).find( targetSelector ).attr( 'lang' )
+			);
 		} ).toArray();
 	};
 
@@ -407,9 +415,16 @@
 	 * @return {Object} List of existing language codes and their hrefs
 	 */
 	CompactInterlanguageList.prototype.getInterlanguageList = function () {
-		var interlanguageList = {};
+		var targetSelector,
+			interlanguageList = {};
 
-		this.$interlanguageList.find( 'li.interlanguage-link > a' ).each( function () {
+		// Can be removed when backwards compatibility before
+		// MediaWiki 1.28 is no longer needed
+		targetSelector = parseFloat( mw.config.get( 'wgVersion' ) ) >= 1.28 ?
+			'.interlanguage-link-target' :
+			'li.interlanguage-link > a';
+
+		this.$interlanguageList.find( targetSelector ).each( function () {
 			var langCode = convertMediaWikiLanguageCodeToULS( this.getAttribute( 'lang' ) );
 
 			interlanguageList[ langCode ] = {
