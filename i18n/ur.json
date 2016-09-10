@@ -55,7 +55,7 @@
 	"ext-uls-input-disable-notification-info-personal": "ترتیبات زبان سے آپ کسی بھی وقت آلات اندراج کو فعال کر سکتے ہیں۔",
 	"ext-uls-input-disable-notification-info-interlanguage": "زبانوں کی فہرست کے قریب موجود ترتیبات زبان سے آپ کسی بھی وقت آلات اندراج کو فعال کر سکتے ہیں۔",
 	"ext-uls-language-settings-applying": "لاگو ہو رہا ہے۔۔۔",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|مزید $1 روابط}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|مزید $1 زبانیں}}",
 	"ext-uls-compact-link-info": "تمام زبانیں (آپ اور دیگر صارفین کی مشترکہ پسند کا انتخاب)",
 	"apihelp-languagesearch-description": "کسی بھی رسم الخط میں زبان کے ناموں کو تلاش کریں۔",
 	"apihelp-languagesearch-param-search": "تلاش کا جملہ",
