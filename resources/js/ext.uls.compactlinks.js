@@ -247,6 +247,8 @@
 			// Previous languages are always the better suggestion
 			// because the user has explicitly chosen them.
 			filterByPreviousLanguages,
+			// User's languages in the Babel box on the user page
+			filterByBabelLanguages,
 			// Site specific highlights, mostly used on Wikimedia sites
 			filterBySitePicks,
 			// Add all common languages to the beginning of array.
@@ -306,13 +308,27 @@
 	}
 
 	/**
+	 * Filter by languages that appear in the Babel box on the user page.
+	 *
+	 * @param {string[]} languages Language codes
+	 * @return {string[]} List of language codes supported by the article
+	 */
+	function filterByBabelLanguages( languages ) {
+		var babelLanguages = mw.config.get( 'wgULSBabelLanguages', [] );
+
+		return $.grep( babelLanguages, function ( language ) {
+			return $.inArray( language, languages ) >= 0;
+		} );
+	}
+
+	/**
 	 * Filter the language list by site picks.
 	 *
 	 * @param {string[]} languages Language codes
 	 * @return {string[]} List of language codes supported by the article
 	 */
 	function filterBySitePicks( languages ) {
-		var picks = mw.config.get( 'wgULSCompactLinksPrepend' ) || [];
+		var picks = mw.config.get( 'wgULSCompactLinksPrepend', [] );
 
 		return $.grep( picks, function ( language ) {
 			return $.inArray( language, languages ) >= 0;

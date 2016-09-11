@@ -350,9 +350,23 @@ class UniversalLanguageSelectorHooks {
 
 		// Place request context dependent stuff here
 
+		$user = $out->getUser();
+		$loggedIn = $user->isLoggedIn();
+
 		// Do not output accept languages if there is risk it will get cached accross requests
-		if ( $wgULSAnonCanChangeLanguage || $out->getUser()->isLoggedIn() ) {
+		if ( $wgULSAnonCanChangeLanguage || $loggedIn ) {
 			$vars['wgULSAcceptLanguageList'] = array_keys( $out->getRequest()->getAcceptLang() );
+		}
+
+		if ( $loggedIn && class_exists( Babel::class ) ) {
+			$userLanguageInfo = Babel::getCachedUserLanguageInfo( $user );
+
+			// This relies on the fact that Babel levels are 'N' and
+			// the digits 0 to 5 as strings, and that in reverse
+			// ASCII order they will be 'N', '5', '4', '3', '2', '1', '0'.
+			arsort( $userLanguageInfo );
+
+			$vars['wgULSBabelLanguages'] = array_keys( $userLanguageInfo );
 		}
 
 		// An optimization to avoid loading all of uls.data just to get the autonym
