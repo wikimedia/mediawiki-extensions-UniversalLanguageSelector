@@ -131,9 +131,9 @@ class UniversalLanguageSelectorHooks {
 		}
 
 		if ( $wgULSPosition === 'personal' ) {
-			$out->addModules( 'ext.uls.pt' );
+			$out->addModuleStyles( 'ext.uls.pt' );
 		} else {
-			$out->addModules( 'ext.uls.interlanguage' );
+			$out->addModuleStyles( 'ext.uls.interlanguage' );
 		}
 
 		return true;
