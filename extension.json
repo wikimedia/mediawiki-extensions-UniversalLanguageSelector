@@ -151,12 +151,6 @@
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
-		"ext.uls.nojs": {
-			"styles": "css/ext.uls.nojs.css",
-			"position": "top",
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
-		},
 		"ext.uls.init": {
 			"targets": [ "desktop" ],
 			"dependencies": [ "ext.uls.common" ]

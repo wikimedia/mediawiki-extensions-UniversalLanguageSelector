@@ -105,9 +105,6 @@ class UniversalLanguageSelectorHooks {
 	public static function addModules( $out, $skin ) {
 		global $wgULSPosition, $wgULSGeoService, $wgULSEventLogging;
 
-		// Load the style for users without JS, to hide the useless links
-		$out->addModuleStyles( 'ext.uls.nojs' );
-
 		// If EventLogging integration is enabled, load the schema module
 		// and the event logging functions module
 		if ( $wgULSEventLogging ) {
