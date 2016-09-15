@@ -196,7 +196,7 @@
 	 * It also allows to undo the language selection.
 	 */
 	function showUndoTooltip( previousLang, previousAutonym ) {
-		var $ulsTrigger, ulsPopup, offset,
+		var $ulsTrigger, ulsPopup,
 			ulsPosition = mw.config.get( 'wgULSPosition' );
 
 		$ulsTrigger = ( ulsPosition === 'interlanguage' ) ?
@@ -208,7 +208,14 @@
 		}
 
 		function showTipsy( timeout ) {
-			var tipsyTimer = 0;
+			var offset, tipsyTimer = 0;
+
+			// Position popup
+			offset = $ulsTrigger.offset();
+			ulsPopup.$element.css( {
+				top: offset.top + 24,
+				left: offset.left + $ulsTrigger.outerWidth() / 2
+			} );
 
 			ulsPopup.toggle( true );
 			ulsPopup.toggleClipping( false );
@@ -276,12 +283,7 @@
 			}() )
 		} );
 
-		// Position popup
-		offset = $ulsTrigger.offset();
-		ulsPopup.$element.css( {
-			top: offset.top + 24,
-			left: offset.left + $ulsTrigger.outerWidth() / 2
-		} ).appendTo( 'body' );
+		ulsPopup.$element.appendTo( 'body' );
 
 		// The interlanguage position needs some time to settle down
 		window.setTimeout( function () {
