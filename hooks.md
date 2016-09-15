@@ -5,6 +5,13 @@ The hook names are prefixed with mw.uls as a convention.
 
 # List of hooks
 
+## mw.uls.compactlinks.initialized
+
+Fired when the rendering of compact language links and
+the corresponding button is completed.
+Sends a boolean true argument if the list was actually compacted
+and the trigger was rendered, and false otherwise.
+
 ## mw.uls.font.change
 
 Fired when the user changes a webfont.

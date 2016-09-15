@@ -75,6 +75,8 @@
 
 		if ( this.listSize <= max ) {
 			// Not enough languages to compact the list
+			mw.hook( 'mw.uls.compactlinks.initialized' ).fire( false );
+
 			return;
 		}
 
@@ -98,6 +100,8 @@
 		}
 
 		this.addTrigger();
+
+		mw.hook( 'mw.uls.compactlinks.initialized' ).fire( true );
 	};
 
 	/**
