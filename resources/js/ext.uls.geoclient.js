@@ -29,10 +29,9 @@
 		return;
 	}
 
-	// Using cache for speed and to be nice for the service. Using cookies over
-	// localstorage because cookies support automatic expiring and are supported
-	// everywhere where as localstorage might not. This cookie is not currently
-	// read server side.
+	// Using cache for speed and to reduce load on the third-party service.
+	// Using cookies over localStorage because cookies support automatic expiring.
+	// This cookie is not currently read server-side.
 	geo = mw.cookie.get( 'ULSGeo' );
 	if ( geo ) {
 		try {
