@@ -434,12 +434,10 @@ class UniversalLanguageSelectorHooks {
 			return true;
 		}
 
-		// A dummy link, just to make sure that the section appears
-		$template->data['language_urls'][] = [
-			'href' => '#',
-			'text' => '',
-			'class' => 'uls-p-lang-dummy',
-		];
+		// Set to an empty array, just to make sure that the section appears
+		if ( $template->get( 'language_urls' ) === false ) {
+			$template->set( 'language_urls', [] );
+		}
 
 		return true;
 	}
