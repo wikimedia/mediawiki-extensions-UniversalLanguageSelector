@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Autokrator",
-			"Laurentianus"
+			"Laurentianus",
+			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Linguis aliis",
+	"uls-plang-title-languages": "Linguis",
 	"ext-uls-select-language-settings-icon-tooltip": "Sermonis modi",
 	"ext-uls-undo-language-tooltip-text": "Lingua commota ex $1",
 	"ext-uls-language-settings-preferences-link": "Plura",

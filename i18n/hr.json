@@ -3,10 +3,11 @@
 		"authors": [
 			"Roberta F.",
 			"SpeedyGonsales",
-			"MaGa"
+			"MaGa",
+			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Jezične postavke",
+	"uls-plang-title-languages": "Jezici",
 	"ext-uls-select-language-settings-icon-tooltip": "Jezične postavke",
 	"ext-uls-undo-language-tooltip-text": "Jezik promijenjen, prethodno je bio postavljen $1",
 	"ext-uls-language-settings-preferences-link": "Više jezičnih postavki",
@@ -24,7 +25,7 @@
 	"ext-uls-display-settings-font-settings": "Postavke fonta (ili fontova)",
 	"ext-uls-display-settings-ui-language": "Prikaži jezik",
 	"ext-uls-display-settings-anon-label": "Prikaži jezik:",
-	"ext-uls-display-settings-anon-same-as-content": "Hrvatski (isto kao sadržaj)",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (isto kao sadržaj)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Prijavi se]] za odabir različitih jezika u izborniku.",
 	"ext-uls-webfonts-settings-title": "Preuzimanje fontova po potrebi",
 	"ext-uls-webfonts-settings-info": "Automatsko preuzimanje fontova koji nedostaju i omogućavanje odabira preferiranih fontova.",
@@ -42,7 +43,7 @@
 	"ext-uls-back-to-input-settings": "Povratak na unos postavki",
 	"ext-uls-ime-help": "Pomoć oko uporabe",
 	"ext-uls-disable-input-method": "Rabi sustavnu tipkovnicu",
-	"ext-uls-input-settings-more-languages-tooltip": "{{PLURAL:$1|Još jedan jezik|Još $1 druga jezika|Još $1 drugih jezika}}",
+	"ext-uls-input-settings-more-languages-tooltip": "Više jezika",
 	"jquery-ime-other-languages": "Drugi jezici",
 	"jquery-ime-disable-text": "Rabi sustavnu tipkovnicu",
 	"jquery-ime-help": "Pomoć",

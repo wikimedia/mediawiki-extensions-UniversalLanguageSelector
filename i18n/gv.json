@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Danielquayle"
+			"Danielquayle",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "Çhengaghyn",
 	"ext-uls-select-language-settings-icon-tooltip": "Soieaghyn çhengey",
 	"ext-uls-undo-language-tooltip-text": "Çhengey caghlaait voish $1",
 	"ext-uls-display-settings-language-tab": "Çhengey",

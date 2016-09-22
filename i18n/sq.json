@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Olsi",
-			"Kosovastar"
+			"Kosovastar",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "Gjuhë",
 	"ext-uls-select-language-settings-icon-tooltip": "Tiparet gjuhësore",
 	"ext-uls-undo-language-tooltip-text": "Gjuha u ndryshua nga $1",
 	"ext-uls-language-settings-preferences-link": "Më shumë cilësime për gjuhët",
