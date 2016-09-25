@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Geopoet"
+			"Geopoet",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "Mga Lengguwahe",
 	"apihelp-ulslocalization-param-language": "Koda nin Lengguwahe"
 }

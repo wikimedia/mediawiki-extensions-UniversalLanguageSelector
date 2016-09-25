@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"ChrisPtDe"
+			"ChrisPtDe",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "Lengoues",
 	"ext-uls-undo-language-tooltip-text": "Lengoua changiêye dês $1",
 	"ext-uls-display-settings-title": "Configuracion de visualisacion",
 	"ext-uls-display-settings-title-short": "Visualisacion",

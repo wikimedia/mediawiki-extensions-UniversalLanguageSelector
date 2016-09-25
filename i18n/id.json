@@ -5,11 +5,12 @@
 			"Iwan Novirion",
 			"පසිඳු කාවින්ද",
 			"William Surya Permana",
-			"Bennylin"
+			"Bennylin",
+			"Xð"
 		]
 	},
 	"uls-desc": "Memberikan pengguna beberapa cara untuk memilih bahasa dan menyesuaikan pengaturan bahasa",
-	"uls-plang-title-languages": "Bahasa-bahasa",
+	"uls-plang-title-languages": "Bahasa",
 	"ext-uls-select-language-settings-icon-tooltip": "Setelan bahasa",
 	"ext-uls-undo-language-tooltip-text": "Bahasa berubah dari $1",
 	"ext-uls-language-settings-preferences-link": "Setelan lanjutan",
