@@ -2,9 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Lloffiwr",
-			"Muddyb Blast Producer"
+			"Muddyb Blast Producer",
+			"Muddyb",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "Lugha",
 	"ext-uls-select-language-settings-icon-tooltip": "Mipangilio ya lugha",
 	"ext-uls-undo-language-tooltip-text": "Lugha imebadilishwa kutoka $1",
 	"ext-uls-language-settings-preferences-link": "Mipangilio mingine ya lugha",

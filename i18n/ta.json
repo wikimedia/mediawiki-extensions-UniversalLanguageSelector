@@ -4,10 +4,12 @@
 			"Karthi.dr",
 			"Logicwiki",
 			"Sank",
-			"Santhosh.thottingal"
+			"Santhosh.thottingal",
+			"Xð"
 		]
 	},
 	"uls-desc": "பயனருக்கு மொழியை மாற்றவும் மொழி அமைப்புகளை மாற்றவும் செய்ய பல வழிகளை தருகின்றது",
+	"uls-plang-title-languages": "மொழிகள்",
 	"ext-uls-select-language-settings-icon-tooltip": "மொழி அமைப்புகள்",
 	"ext-uls-undo-language-tooltip-text": "மொழி $1 லிருந்து மாற்றப்பட்டது",
 	"ext-uls-language-settings-preferences-link": "மேலதிக மொழி அமைப்புகள்",

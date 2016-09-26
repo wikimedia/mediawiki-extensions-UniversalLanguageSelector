@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Paulu"
+			"Paulu",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "Lingue",
 	"ext-uls-input-settings-desc": "Scrivi in una lingua sfarente?"
 }

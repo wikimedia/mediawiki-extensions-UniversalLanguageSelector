@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Sky Harbor",
-			"AnakngAraw"
+			"AnakngAraw",
+			"Xð"
 		]
 	},
 	"uls-desc": "Nagbibigay sa tagagamit ng ilang mga paraan upang makapili ng isang wika at upang mabago ang mga katakdaan ng wika",
+	"uls-plang-title-languages": "Mga wika",
 	"ext-uls-select-language-settings-icon-tooltip": "Mga kagustuhan sa wika",
 	"ext-uls-undo-language-tooltip-text": "Ipinalit ang wika mula sa $1",
 	"ext-uls-display-settings-language-tab": "Wika",

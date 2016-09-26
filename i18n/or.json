@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Psubhashish",
-			"Nistha.aslp"
+			"Nistha.aslp",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "ଭାଷା",
 	"ext-uls-select-language-settings-icon-tooltip": "ଭାଷା ସେଟିଙ୍ଗ",
 	"ext-uls-undo-language-tooltip-text": "$1ରୁ ଭାଷା ବଦଳିଗଲା",
 	"ext-uls-language-settings-preferences-link": "ଅଧିକ ଭାଷା ସେଟିଙ୍ଗ",

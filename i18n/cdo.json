@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"唐吉訶德的侍從"
+			"唐吉訶德的侍從",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "語言",
 	"ext-uls-compact-link-count": "Gì-tă $1 ciáh"
 }

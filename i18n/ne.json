@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"NehalDaveND"
+			"NehalDaveND",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "भाषाहरू",
 	"ext-uls-display-settings-language-tab": "भाषा",
 	"ext-uls-display-settings-fonts-tab": "फन्ट",
 	"ext-uls-display-settings-title-short": "देखाउनु",

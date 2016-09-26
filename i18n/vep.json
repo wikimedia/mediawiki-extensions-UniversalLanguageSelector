@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sebranik"
+			"Sebranik",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "Keled",
 	"ext-uls-select-language-settings-icon-tooltip": "Kelen azotandad",
 	"ext-uls-language-settings-title": "Kelen azotandad",
 	"jquery-ime-other-languages": "Toižed keled"

@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sindhu"
+			"Sindhu",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "ٻوليون",
 	"apihelp-ulslocalization-param-language": "ٻوليءَ جو ڪوڊ"
 }

@@ -2,8 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Ktchankt",
-			"Shinjiman"
+			"Shinjiman",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "語言",
 	"ext-uls-compact-link-count": "重有$1種"
 }

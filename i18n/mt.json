@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Chrisportelli"
+			"Chrisportelli",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "Lingwi",
 	"ext-uls-select-language-settings-icon-tooltip": "Konfigurazzjoni tal-lingwa",
 	"ext-uls-undo-language-tooltip-text": "Il-lingwa nbidlet minn $1",
 	"ext-uls-display-settings-title": "Konfigurazzjoni tal-viżwal",

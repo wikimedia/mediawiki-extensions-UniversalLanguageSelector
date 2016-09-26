@@ -3,10 +3,12 @@
 		"authors": [
 			"Bouron",
 			"Xaris333",
-			"Amikeco"
+			"Amikeco",
+			"Xð"
 		]
 	},
 	"uls-desc": "Архайæгæн дæтты цалдæр фадат æвзаг равзарынæн æмæ йын уаг сæвæрынæн",
+	"uls-plang-title-languages": "Æвзæгтæ",
 	"ext-uls-select-language-settings-icon-tooltip": "Æвзаджы уагæвæрдтæ",
 	"ext-uls-undo-language-tooltip-text": "Ивд æвзаг у $1",
 	"ext-uls-display-settings-title": "Æвдисыны уаг",

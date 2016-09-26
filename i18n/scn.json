@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Gmelfi",
-			"Pippinu"
+			"Pippinu",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "Lingui",
 	"ext-uls-select-language-settings-icon-tooltip": "Mpustazzioni pâ lingua",
 	"ext-uls-undo-language-tooltip-text": "Lingua canciata a pàrtiri di $1",
 	"ext-uls-language-settings-preferences-link": "Àutri mpustazzioni pâ lingua",

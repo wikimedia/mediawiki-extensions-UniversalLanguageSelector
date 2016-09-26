@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Klenje"
+			"Klenje",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "Lenghis",
 	"ext-uls-select-language-settings-icon-tooltip": "Impuestazions de lenghe",
 	"ext-uls-display-settings-language-tab": "Lenghe",
 	"ext-uls-display-settings-fonts-tab": "Caratars",

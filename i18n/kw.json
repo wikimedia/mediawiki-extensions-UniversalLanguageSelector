@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nrowe"
+			"Nrowe",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "Yethow",
 	"ext-uls-select-language-settings-icon-tooltip": "Settyansow yeth",
 	"ext-uls-undo-language-tooltip-text": "Chanjyes re beu an yeth dhyworth $1",
 	"ext-uls-language-settings-preferences-link": "Moy settyansow yeth",

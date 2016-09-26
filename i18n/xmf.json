@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Silovan"
+			"Silovan",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "ნინეფი",
 	"apihelp-ulslocalization-param-language": "ნინაშ კოდი."
 }

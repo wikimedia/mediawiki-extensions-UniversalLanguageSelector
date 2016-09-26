@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jason924tw"
+			"Jason924tw",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "語言",
 	"ext-uls-display-settings-language-tab": "語"
 }

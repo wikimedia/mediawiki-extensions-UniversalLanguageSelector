@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Si Gam Acèh",
-			"Ayie7791"
+			"Ayie7791",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "Bahsa",
 	"ext-uls-select-language-settings-icon-tooltip": "Atô bahsa",
 	"ext-uls-undo-language-tooltip-text": "Bahsa meugantoë nibak $1",
 	"ext-uls-language-settings-preferences-link": "Neuatô bahsa leubèh le",
