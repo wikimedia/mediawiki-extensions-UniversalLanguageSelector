@@ -56,5 +56,6 @@
 	"ext-uls-input-disable-notification-info-personal": "Nástroje pre vstup môžete kedykoľvek zapnúť v jazykových nastaveniach.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Nástroje pre vstup môžete kedykoľvek zapnúť v jazykových nastaveniach vedľa zoznamu jazykov.",
 	"ext-uls-language-settings-applying": "Aplikuje sa...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Ďalší jazyk|$1 ďalších jazykov}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ďalší jazyk|$1 ďalších jazykov}}",
+	"ext-uls-compact-language-links-preference": "Používať kompaktný zoznam jazykov (len jazyky relevantné pre vás)"
 }
