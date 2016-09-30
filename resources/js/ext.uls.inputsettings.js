@@ -54,7 +54,7 @@
 		'<div class="row">' +
 		'<div class="twelve columns uls-input-settings-disable-info"></div>' +
 		'<div class="ten columns uls-input-settings-toggle">' +
-		'<button class="active mw-ui-constructive mw-ui-button uls-input-toggle-button"></button>' +
+		'<button class="mw-ui-button mw-ui-progressive active uls-input-toggle-button"></button>' +
 		'</div>' +
 		'</div>';
 
