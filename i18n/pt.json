@@ -52,7 +52,7 @@
 	"jquery-ime-disable-text": "Usar teclado nativo",
 	"jquery-ime-help": "Ajuda",
 	"ext-uls-input-disable": "Desactivar ferramentas de entrada",
-	"ext-uls-input-enable": "Activar ferramentas de entrada",
+	"ext-uls-input-enable": "Ativar ferramentas de entrada",
 	"ext-uls-input-disable-info": "As ferramentas de entrada estão desactivadas.",
 	"ext-uls-input-settings-noime": "Não existem métodos de entrada disponíveis para este idioma.",
 	"ext-uls-input-disable-notification": "As ferramentas de entrada foram desactivadas",
