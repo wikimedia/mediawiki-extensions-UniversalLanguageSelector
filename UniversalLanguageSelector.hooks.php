@@ -404,8 +404,8 @@ class UniversalLanguageSelectorHooks {
 				'label-message' => 'uls-betafeature-label',
 				'desc-message' => 'uls-betafeature-desc',
 				'screenshot' => [
-					'ltr' => "$imagesDir/compact-links-ltr.png",
-					'rtl' => "$imagesDir/compact-links-rtl.png",
+					'ltr' => "$imagesDir/compact-links-ltr.svg",
+					'rtl' => "$imagesDir/compact-links-rtl.svg",
 				],
 				'info-link' =>
 					'https://www.mediawiki.org/wiki/Universal_Language_Selector/Compact_Language_Links',
