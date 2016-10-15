@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gott wisst"
+			"Gott wisst",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "Sprǣca",
 	"ext-uls-select-language-settings-icon-tooltip": "Sprǣce setednessa",
 	"ext-uls-undo-language-tooltip-text": "Sprǣc wæs andwended fram $1",
 	"ext-uls-language-settings-preferences-link": "Mā sprǣce setednessa",

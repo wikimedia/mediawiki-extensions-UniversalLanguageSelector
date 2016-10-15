@@ -47,5 +47,7 @@
 	"ext-uls-input-disable-notification": "Mjetet e shkrimit janë çaktivizuar",
 	"ext-uls-input-disable-notification-undo": "Zhbëj",
 	"ext-uls-input-disable-notification-info-personal": "Ju mund t'i aktivizoni mjetet e shkrimit në çdo kohë nën tiparet gjuhësore.",
-	"ext-uls-input-disable-notification-info-interlanguage": "Ju mund t'i çaktivizoni mjetet e shkrimit në çdo kohë nga cilësimet e gjuhës ngjitur me listën e gjuhëve."
+	"ext-uls-input-disable-notification-info-interlanguage": "Ju mund t'i çaktivizoni mjetet e shkrimit në çdo kohë nga cilësimet e gjuhës ngjitur me listën e gjuhëve.",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Edhe një tjetër|Edhe $1 të tjera}}",
+	"ext-uls-compact-link-info": "Të gjitha gjuhët (përzgjedhja fillestare nga zgjedhje të zakonshme nga ju dhe të tjerët)"
 }

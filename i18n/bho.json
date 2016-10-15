@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nepaboy"
+			"Nepaboy",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "भाषा",
 	"ext-uls-select-language-settings-icon-tooltip": "भाषा सेटिंग्स",
 	"ext-uls-undo-language-tooltip-text": "$1 से भाषा बदल दिहल गईल",
 	"ext-uls-language-settings-preferences-link": "अउर अधिक भाषा सेटिंग्स",

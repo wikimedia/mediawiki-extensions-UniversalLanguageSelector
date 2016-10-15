@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"ОйЛ"
+			"ОйЛ",
+			"Xð"
 		]
 	},
 	"uls-desc": "Срѣдьство дѣлꙗ польꙃєватєльска оустроѥниꙗ ѩꙁꙑка и съвѧꙁанъ вєщии",
-	"uls-plang-title-languages": "ѩꙁꙑци",
+	"uls-plang-title-languages": "Ѩꙁꙑци",
 	"ext-uls-select-language-settings-icon-tooltip": "ѩꙁꙑка строи",
 	"ext-uls-undo-language-tooltip-text": "ѩꙁꙑкъ иꙁмѣнєнъ ѥстъ отъ $1",
 	"ext-uls-language-settings-preferences-link": "вѧщи ѩꙁꙑка строи",
