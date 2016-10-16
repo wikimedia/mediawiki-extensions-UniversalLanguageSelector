@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mongol"
+			"Mongol",
+			"Xð"
 		]
 	},
+	"uls-plang-title-languages": "Хэл",
 	"uls-betafeature-desc": "Өөрт илүү хамааралтай хэлний жагсаалтын богино хувилбарыг харуулах"
 }
