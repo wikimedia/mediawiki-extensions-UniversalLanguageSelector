@@ -61,6 +61,8 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Pode ativar as ferramentas de entrada quando quiser a partir das configurações de idioma, ao lado da lista de idiomas.",
 	"ext-uls-language-settings-applying": "A aplicar...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Um outro|$1 outros}}",
+	"ext-uls-compact-link-info": "Todos os idiomas (seleção inicial de escolhas comuns para si e para os outros)",
+	"apihelp-languagesearch-description": "Pesquisar nomes de idiomas em qualquer script.",
 	"apihelp-ulslocalization-param-language": "Código de idioma.",
 	"prefs-languages": "Idiomas",
 	"ext-uls-compact-language-links-preference": "Usa uma lista compacta de idiomas, com idiomas relevantes para si."
