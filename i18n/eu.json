@@ -25,6 +25,7 @@
 	"ext-uls-input-settings-title-short": "Sarrera",
 	"ext-uls-input-settings-ui-language": "Idazteko hizkuntza",
 	"ext-uls-back-to-input-settings": "Itzuli sarrerako ezarpenetara",
+	"ext-uls-ime-help": "Nola erabili",
 	"ext-uls-input-settings-more-languages-tooltip": "Hizkuntza gehiago",
 	"jquery-ime-other-languages": "Beste hizkuntzak",
 	"jquery-ime-help": "Laguntza",
@@ -33,5 +34,6 @@
 	"ext-uls-input-disable-notification-undo": "Desegin",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Bat gehiago |$1 gehiago}}",
 	"apihelp-ulslocalization-param-language": "Hizkuntza-kodea.",
-	"prefs-languages": "Hizkuntzak"
+	"prefs-languages": "Hizkuntzak",
+	"ext-uls-compact-language-links-preference": "Hizkuntza-zerrenda trinkoa erabili, zuretzat esanguratsuak diren hizkuntzekin soilik."
 }
