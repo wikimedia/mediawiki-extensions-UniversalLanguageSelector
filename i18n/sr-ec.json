@@ -6,11 +6,11 @@
 			"Сербијана"
 		]
 	},
-	"uls-desc": "Даје кориснику неколико начина да изабере језик и да прилагоди поставке језика",
+	"uls-desc": "Даје кориснику неколико начина да изабере језик и да прилагоди подешавања језика",
 	"uls-plang-title-languages": "Језици",
 	"ext-uls-select-language-settings-icon-tooltip": "Подешавања језика",
 	"ext-uls-undo-language-tooltip-text": "Језик промењен са $1",
-	"ext-uls-language-settings-preferences-link": "Додатне језичке поставке",
+	"ext-uls-language-settings-preferences-link": "Додатна језичка подешавања",
 	"uls-betafeature-label": "Сажете везе ка другим језицима",
 	"uls-betafeature-desc": "Прикажује сажет списак језика, само са вама битним језицима.",
 	"ext-uls-display-settings-title": "Подешавања приказа",

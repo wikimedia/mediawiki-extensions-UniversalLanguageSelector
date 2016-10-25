@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Milicevic01"
+			"Milicevic01",
+			"Сербијана"
 		]
 	},
-	"uls-desc": "Daje korisniku nekoliko načina da izabere jezik i da prilagodi postavke jezika",
+	"uls-desc": "Daje korisniku nekoliko načina da izabere jezik i da prilagodi podešavanja jezika",
 	"uls-plang-title-languages": "Jezici",
 	"ext-uls-select-language-settings-icon-tooltip": "Podešavanja jezika",
 	"ext-uls-undo-language-tooltip-text": "Jezik promenjen sa $1",
-	"ext-uls-language-settings-preferences-link": "Dodatne jezičke postavke",
+	"ext-uls-language-settings-preferences-link": "Dodatna jezička podešavanja",
 	"uls-betafeature-label": "Sažete veze ka drugim jezicima",
 	"uls-betafeature-desc": "Prikažuje sažet spisak jezika, samo sa vama bitnim jezicima.",
 	"ext-uls-display-settings-title": "Podešavanja prikaza",
