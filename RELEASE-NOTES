@@ -1,0 +1,11 @@
+== UniversalLanguageSelector 2016.10 ==
+Released at 2016-10-28.
+
+=== Noteworthy changes ===
+* Amir Aharoni changed "Language search" to "Search for a language". T138235
+* New design implemented by Niklas Laxström was imported from jquery.uls.
+* Niklas Laxström improved language change tooltip positioning. T145483
+* Amir Aharoni documented available hooks and added one new hook. T145755
+* Fomafix improved and simplified the way the CSS is loaded for ULS triggers to avoid flash.
+* Ed Sanders updated beta feature image to use proper layout and colours. T144428
+* Niklas Laxström fixed an issue that caused unparsed plural syntax appear in the compact language links. T148117
