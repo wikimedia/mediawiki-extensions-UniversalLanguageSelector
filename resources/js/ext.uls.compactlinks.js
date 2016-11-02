@@ -17,6 +17,8 @@
  * @licence MIT License
  */
 
+/* eslint-disable no-use-before-define */
+
 ( function ( $, mw ) {
 	'use strict';
 
@@ -51,6 +53,9 @@
 
 	/**
 	 * @class
+	 * @constructor
+	 * @param {string|jQuery} interlanguageList Selector for interlanguage list
+	 * @param {Object} options
 	 */
 	function CompactInterlanguageList( interlanguageList, options ) {
 		this.$interlanguageList = $( interlanguageList );
@@ -289,7 +294,8 @@
 	 * Not all previous languages will be present in interlanguage links,
 	 * so we are filtering them.
 	 *
-	 * @return {Array} List of language codes supported by the article
+	 * @param {string[]} languages Language codes
+	 * @return {string[]} List of language codes supported by the article
 	 */
 	function filterByPreviousLanguages( languages ) {
 		var previousLanguages = mw.uls.getPreviousLanguages();
@@ -302,7 +308,8 @@
 	/**
 	 * Filter the language list by site picks.
 	 *
-	 * @return {Array} List of language codes supported by the article
+	 * @param {string[]} languages Language codes
+	 * @return {string[]} List of language codes supported by the article
 	 */
 	function filterBySitePicks( languages ) {
 		var picks = mw.config.get( 'wgULSCompactLinksPrepend' ) || [];
@@ -316,7 +323,8 @@
 	 * Filter the language list by common languages.
 	 * Common languages are the most probable languages predicted by ULS.
 	 *
-	 * @return {Array} List of language codes supported by the article
+	 * @param {string[]} languages Language codes
+	 * @return {string[]} List of language codes supported by the article
 	 */
 	function filterByCommonLanguages( languages ) {
 		var commonLanguages = mw.uls.getFrequentLanguageList();
@@ -330,12 +338,15 @@
 	 * Filter the language list by globally common languages, i.e.
 	 * this list is not user specific.
 	 *
-	 * @return {Array} List of language codes supported by the article
+	 * @param {string[]} languages Language codes
+	 * @return {string[]} List of language codes supported by the article
 	 */
 	function getExtraCommonLanguages( languages ) {
-		var commonLanguages = [ 'zh', 'en', 'hi', 'ur', 'es', 'ar', 'ru', 'id', 'ms', 'pt',
-				'fr', 'de', 'bn', 'ja', 'pnb', 'pa', 'jv', 'te', 'ta', 'ko', 'mr', 'tr', 'vi',
-				'it', 'fa', 'sv', 'nl', 'pl' ];
+		var commonLanguages = [
+			'zh', 'en', 'hi', 'ur', 'es', 'ar', 'ru', 'id', 'ms', 'pt',
+			'fr', 'de', 'bn', 'ja', 'pnb', 'pa', 'jv', 'te', 'ta', 'ko', 'mr', 'tr', 'vi',
+			'it', 'fa', 'sv', 'nl', 'pl'
+		];
 
 		return $.grep( commonLanguages, function ( language ) {
 			return $.inArray( language, languages ) >= 0;
@@ -346,7 +357,8 @@
 	 * Filter the language list by Translate's assistant languages.
 	 * Where available, they're languages deemed useful by the user.
 	 *
-	 * @return {Array} List of those language codes which are supported by article
+	 * @param {string[]} languages Language codes
+	 * @return {string[]} List of language codes supported by the article
 	 */
 	function filterByAssistantLanguages( languages ) {
 		var assistantLanguages = mw.user.options.get( 'translate-editlangs' );
@@ -369,7 +381,8 @@
 	 * The reader doesn't necessarily know this language, but it
 	 * appears relevant to the page.
 	 *
-	 * @return {Array} List of language codes supported by the article
+	 * @param {string[]} languages Language codes
+	 * @return {string[]} List of language codes supported by the article
 	 */
 	CompactInterlanguageList.prototype.filterByLangsInText = function ( languages ) {
 		var languagesInText = [];
@@ -440,7 +453,8 @@
 	/**
 	 * Get common languages - the most probable languages predicted by ULS.
 	 *
-	 * @param {Array} languages Array of all languages.
+	 * @param {string[]} languages Language codes
+	 * @return {string[]} List of all common language codes
 	 */
 	CompactInterlanguageList.prototype.getCommonLanguages = function ( languages ) {
 		if ( this.commonInterlanguageList === null ) {

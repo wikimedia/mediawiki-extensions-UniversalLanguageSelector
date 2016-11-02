@@ -26,6 +26,8 @@
 	/**
 	 * Wrapper for localStorage, falls back to cookie
 	 * when localStorage not supported by browser.
+	 *
+	 * @return {Object}
 	 */
 	function preferenceStore() {
 
@@ -110,6 +112,7 @@
 		 * Get a preference value for the given preference name
 		 *
 		 * @param {string} key
+		 * @return {Mixed}
 		 */
 		get: function ( key ) {
 			return this.preferences[ key ];

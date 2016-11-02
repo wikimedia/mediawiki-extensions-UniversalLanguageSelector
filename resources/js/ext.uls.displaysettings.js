@@ -296,7 +296,7 @@
 				left: displaySettings.$parent.left,
 				top: displaySettings.$parent.top,
 				onReady: function () {
-					var  $wrap,
+					var $wrap,
 						uls = this,
 						$back = $( '<div>' )
 							.addClass( 'uls-icon-back' );
@@ -625,6 +625,8 @@
 
 		/**
 		 * Callback for save preferences
+		 *
+		 * @param {boolean} success
 		 */
 		onSave: function ( success ) {
 			if ( success ) {

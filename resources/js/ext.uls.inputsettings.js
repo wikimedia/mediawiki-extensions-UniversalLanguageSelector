@@ -498,6 +498,8 @@
 
 		/**
 		 * Callback for save preferences
+		 *
+		 * @param {boolean} success
 		 */
 		onSave: function ( success ) {
 			if ( success ) {

@@ -132,9 +132,7 @@
 	};
 
 	mw.uls.getCountryCode = function () {
-		// jscs:disable requireCamelCaseOrUpperCaseIdentifiers
 		return window.Geo && ( window.Geo.country || window.Geo.country_code );
-		// jscs:enable requireCamelCaseOrUpperCaseIdentifiers
 	};
 
 	mw.uls.getAcceptLanguageList = function () {
