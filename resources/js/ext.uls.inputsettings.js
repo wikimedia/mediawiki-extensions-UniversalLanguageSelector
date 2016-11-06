@@ -203,8 +203,12 @@
 			}
 
 			$imeLabel.append(
-				$( '<strong>' ).text( name ),
-				$( '<span>' ).text( description ),
+				$( '<strong>' )
+					.addClass( 'uls-input-settings-name' )
+					.text( name ),
+				$( '<span>' )
+					.addClass( 'uls-input-settings-description' )
+					.text( description ),
 				$helplink
 			);
 
