@@ -189,7 +189,7 @@
 				$helplink = $( '<a>' )
 					.addClass( 'uls-ime-help' )
 					.text( $.i18n( 'ext-uls-ime-help' ) )
-					.attr( 'href', mw.msg( 'uls-ime-helppage' ).replace( '$1', imeId ) )
+					.attr( 'href', mw.msg( 'uls-ime-helppage', imeId ) )
 					.attr( 'target', '_blank' );
 				if ( !inputmethod ) {
 					// The input method definition(rules) not loaded.
