@@ -194,6 +194,9 @@
 	/**
 	 * The tooltip to be shown when language changed using ULS.
 	 * It also allows to undo the language selection.
+	 *
+	 * @param {string} previousLang
+	 * @param {string} previousAutonym
 	 */
 	function showUndoTooltip( previousLang, previousAutonym ) {
 		var $ulsTrigger, ulsPopup,
@@ -258,7 +261,7 @@
 			padded: true,
 			width: 300,
 			align: 'forwards',
-			classes:  [ 'uls-tipsy' ],
+			classes: [ 'uls-tipsy' ],
 			$content: ( function () {
 				var link = $( '<a>' ).text( previousAutonym )
 					.attr( {

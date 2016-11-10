@@ -88,8 +88,8 @@
 			detected = false;
 
 		if ( $.client.test( {
-				msie: false
-			} ) ) {
+			msie: false
+		} ) ) {
 			// IE shows a different tofu for unassigned code points!
 			text = tofuSalt + text;
 		}
@@ -139,7 +139,8 @@
 			 *
 			 * @param {Object} repository
 			 * @param {string} language
-			 * @param {Array} classes
+			 * @param {string[]} classes
+			 * @return {string|null}
 			 */
 			fontSelector: function ( repository, language, classes ) {
 				var font, autonym, defaultFont;
