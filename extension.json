@@ -198,6 +198,7 @@
 		},
 		"ext.uls.interface": {
 			"scripts": "js/ext.uls.interface.js",
+			"styles": "css/ext.uls.interface.css",
 			"dependencies": [
 				"ext.uls.common",
 				"mediawiki.jqueryMsg",
