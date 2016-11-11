@@ -3,7 +3,8 @@
 		"authors": [
 			"Xabier Armendaritz",
 			"Subi",
-			"Sator"
+			"Sator",
+			"Gorkaazk"
 		]
 	},
 	"uls-plang-title-languages": "Hizkuntzak",
@@ -35,5 +36,5 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Bat gehiago |$1 gehiago}}",
 	"apihelp-ulslocalization-param-language": "Hizkuntza-kodea.",
 	"prefs-languages": "Hizkuntzak",
-	"ext-uls-compact-language-links-preference": "Hizkuntza-zerrenda trinkoa erabili, zuretzat esanguratsuak diren hizkuntzekin soilik."
+	"ext-uls-compact-language-links-preference": "Erabili hizkuntza-zerrenda trinkoa, zuretzat esanguratsuak diren hizkuntzekin soilik."
 }
