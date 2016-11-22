@@ -129,7 +129,6 @@
 		"ext.uls.geoclient": {
 			"scripts": "js/ext.uls.geoclient.js",
 			"dependencies": [
-				"json",
 				"mediawiki.cookie"
 			],
 			"localBasePath": "resources",
