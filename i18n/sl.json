@@ -3,7 +3,8 @@
 		"authors": [
 			"Eleassar",
 			"Dbc334",
-			"Yerpo"
+			"Yerpo",
+			"Janezdrilc"
 		]
 	},
 	"uls-desc": "Daje uporabniku več načinov izbire jezika in prilagoditve jezikovnih nastavitev",
@@ -53,8 +54,8 @@
 	"ext-uls-input-settings-noime": "Za ta jezik ni na razpolago noben način vnosa.",
 	"ext-uls-input-disable-notification": "Orodja za vnos so onemogočena",
 	"ext-uls-input-disable-notification-undo": "Razveljavi",
-	"ext-uls-input-disable-notification-info-personal": "Orodja za vnos lahko prek jezikovnih nastavitev omogočite kadarkoli.",
-	"ext-uls-input-disable-notification-info-interlanguage": "Orodja za vnos lahko prek jezikovnih nastavitev poleg seznama jezikov omogočite kadarkoli.",
+	"ext-uls-input-disable-notification-info-personal": "Orodja za vnos lahko v jezikovnih nastavitvah omogočite kadarkoli.",
+	"ext-uls-input-disable-notification-info-interlanguage": "Orodja za vnos lahko v jezikovnih nastavitvah poleg seznama jezikov omogočite kadarkoli.",
 	"ext-uls-language-settings-applying": "Uveljavljanje ...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|1=Še en|Še $1}}",
 	"ext-uls-compact-language-links-preference": "Uporabite kompakten seznam jezikov z jeziki, relevantnimi za vas."
