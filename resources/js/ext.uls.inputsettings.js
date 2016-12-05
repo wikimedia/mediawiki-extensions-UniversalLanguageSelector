@@ -205,7 +205,7 @@
 			$imeLabel.append(
 				$( '<strong>' )
 					.addClass( 'uls-input-settings-name' )
-					.text( name ),
+					.text( name + ' ' ),
 				$( '<span>' )
 					.addClass( 'uls-input-settings-description' )
 					.text( description ),
