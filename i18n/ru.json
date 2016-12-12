@@ -64,13 +64,17 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Инструменты ввода можно включить в любое время из установок языка рядом со списком языков.",
 	"ext-uls-language-settings-applying": "Применение…",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Ещё $1}}",
+	"ext-uls-compact-link-info": "Все языки (чаче всего использовались вами и другими)",
 	"apihelp-languagesearch-description": "Поиск названий языков на любом алфавите.",
 	"apihelp-languagesearch-param-search": "Строка поиска.",
 	"apihelp-languagesearch-param-typos": "Количество орфографических ошибок, которое допускается в искомой строке.",
 	"apihelp-languagesearch-example-1": "Поиск «Te»",
 	"apihelp-languagesearch-example-2": "Поиск «ഫി»",
 	"apihelp-languagesearch-example-3": "Поиск «ഫി», допускается одна ошибка",
+	"apihelp-ulslocalization-description": "Получить локализацию ULS на указанном языке.",
 	"apihelp-ulslocalization-param-language": "Код языка.",
+	"apihelp-ulslocalization-example-1": "Получить тамильскую локализацию",
+	"apihelp-ulslocalization-example-2": "Получить локализацию на хинди",
 	"prefs-languages": "Языки",
 	"ext-uls-compact-language-links-preference": "Использовать компактный список языков с релевантными вам языками"
 }
