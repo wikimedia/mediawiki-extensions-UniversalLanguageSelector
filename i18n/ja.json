@@ -5,7 +5,8 @@
 			"Shirayuki",
 			"Sujiniku",
 			"Otokoume",
-			"Kusurija"
+			"Kusurija",
+			"にょきにょき"
 		]
 	},
 	"uls-desc": "言語を選択するため/言語設定を調整するための、いくつかの方法を利用者に提供する",
@@ -61,5 +62,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|もう一つ|他 $1}}",
 	"apihelp-languagesearch-param-search": "検索文字列。",
 	"apihelp-ulslocalization-param-language": "言語コード",
-	"prefs-languages": "言語"
+	"prefs-languages": "言語",
+	"ext-uls-compact-language-links-preference": "あなたと関係するもの以外折りたたまれたコンパクトな言語間リンクを利用する。"
 }
