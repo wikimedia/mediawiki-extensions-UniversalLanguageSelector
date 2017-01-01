@@ -9,10 +9,11 @@
 			"Nemo bis",
 			"Raymond",
 			"Liuxinyu970226",
-			"Purodha"
+			"Purodha",
+			"Umherirrender"
 		]
 	},
-	"uls-desc": "Extension description",
+	"uls-desc": "{{desc|name=UniversalLanguageSelector|url=https://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector}}",
 	"uls-plang-title-languages": "A title for the are in the sidebar in which the interlanguage links are supposed to appear.\nThis title is shown when there are no interlanguage links there, but an icon that enables the ULS is shown.\n{{Identical|Language}}",
 	"uls-ime-helppage": "Target page for ime helps. Parameters:\n* $1 - ime id. Intended for wiki local customization. e.g. cyrl-palochka",
 	"ext-uls-select-language-settings-icon-tooltip": "A tooltip for the icon that shows the language selector.\n{{Identical|Language settings}}",
