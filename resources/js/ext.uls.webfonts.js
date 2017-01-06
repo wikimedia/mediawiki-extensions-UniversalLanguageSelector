@@ -224,7 +224,7 @@
 		}, 0 );
 	};
 
-	$( document ).ready( function () {
+	$( function () {
 		mw.webfonts.preferences.load();
 
 		if ( mw.webfonts.preferences.isEnabled() ) {

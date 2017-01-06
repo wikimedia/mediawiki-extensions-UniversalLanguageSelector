@@ -523,6 +523,6 @@
 	if ( document.readyState === 'interactive' ) {
 		init();
 	} else {
-		$( document ).ready( init );
+		$( init );
 	}
 }( jQuery, mediaWiki ) );

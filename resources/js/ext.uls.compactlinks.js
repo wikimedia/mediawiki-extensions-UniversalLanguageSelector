@@ -506,7 +506,7 @@
 	if ( document.readyState === 'interactive' ) {
 		createCompactList();
 	} else {
-		$( document ).ready( createCompactList );
+		$( createCompactList );
 	}
 
 }( jQuery, mediaWiki ) );
