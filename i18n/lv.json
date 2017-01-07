@@ -2,11 +2,16 @@
 	"@metadata": {
 		"authors": [
 			"Edgars2007",
-			"Papuass"
+			"Papuass",
+			"Silraks"
 		]
 	},
 	"uls-desc": "Ļauj lietotājam dažādos veidos izvēlēties valodu un pielāgot valodas iestatījumus",
 	"uls-plang-title-languages": "Valodas",
 	"ext-uls-undo-language-tooltip-text": "Valoda nomainīta no $1",
+	"ext-uls-display-settings-language-tab": "Valoda",
+	"ext-uls-display-settings-fonts-tab": "Fonti",
+	"ext-uls-language-settings-cancel": "Atcelt",
+	"ext-uls-display-settings-font-settings": "Fontu iestatījumi",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Vēl $1}}"
 }
