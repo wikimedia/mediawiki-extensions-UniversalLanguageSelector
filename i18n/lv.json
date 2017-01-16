@@ -9,6 +9,7 @@
 	"uls-desc": "Ļauj lietotājam dažādos veidos izvēlēties valodu un pielāgot valodas iestatījumus",
 	"uls-plang-title-languages": "Valodas",
 	"ext-uls-undo-language-tooltip-text": "Valoda nomainīta no $1",
+	"ext-uls-language-settings-preferences-link": "Vairāk valodas iestatījumi",
 	"ext-uls-display-settings-language-tab": "Valoda",
 	"ext-uls-display-settings-fonts-tab": "Fonti",
 	"ext-uls-language-settings-cancel": "Atcelt",
