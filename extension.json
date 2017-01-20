@@ -201,6 +201,7 @@
 			"dependencies": [
 				"ext.uls.common",
 				"mediawiki.jqueryMsg",
+				"mediawiki.storage",
 				"mediawiki.user",
 				"ext.uls.webfonts"
 			],

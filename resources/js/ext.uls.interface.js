@@ -20,24 +20,6 @@
 ( function ( $, mw ) {
 	'use strict';
 
-	// Replace with mediawiki.storage when >= MW 1.26
-	var Store = function ( key ) {
-		this.key = key;
-	};
-
-	// Returns null if key does not exist according to documentation.
-	Store.prototype.get = function () {
-		try {
-			return localStorage.getItem( this.key );
-		} catch ( e ) {}
-	};
-
-	Store.prototype.set = function ( value ) {
-		try {
-			localStorage.setItem( this.key, value );
-		} catch ( e ) {}
-	};
-
 	/**
 	 * Construct the display settings link
 	 *
@@ -464,26 +446,22 @@
 	}
 
 	function initTooltip() {
-		var previousLanguageCodeStore, previousLanguageAutonymStore, module,
-			previousLanguage, currentLanguage, previousAutonym, currentAutonym;
+		var module, previousLanguage, currentLanguage, previousAutonym, currentAutonym;
 
 		if ( !userCanChangeLanguage() ) {
 			return;
 		}
 
-		previousLanguageCodeStore = new Store( 'uls-previous-language-code' );
-		previousLanguageAutonymStore = new Store( 'uls-previous-language-autonym' );
-
-		previousLanguage = previousLanguageCodeStore.get();
+		previousLanguage = mw.storage.get( 'uls-previous-language-code' );
 		currentLanguage = mw.config.get( 'wgUserLanguage' );
-		previousAutonym = previousLanguageAutonymStore.get();
+		previousAutonym = mw.storage.get( 'uls-previous-language-autonym' );
 		currentAutonym = mw.config.get( 'wgULSCurrentAutonym' );
 
 		// If storage is empty, i.e. first visit, then store the current language
 		// immediately so that we know when it changes.
 		if ( !previousLanguage || !previousAutonym ) {
-			previousLanguageCodeStore.set( currentLanguage );
-			previousLanguageAutonymStore.set( currentAutonym );
+			mw.storage.set( 'uls-previous-language-code', currentLanguage );
+			mw.storage.set( 'uls-previous-language-autonym', currentAutonym );
 			return;
 		}
 
@@ -493,8 +471,8 @@
 			mw.loader.using( module ).done( function () {
 				showUndoTooltip( previousLanguage, previousAutonym );
 			} );
-			previousLanguageCodeStore.set( currentLanguage );
-			previousLanguageAutonymStore.set( currentAutonym );
+			mw.storage.set( 'uls-previous-language-code', currentLanguage );
+			mw.storage.set( 'uls-previous-language-autonym', currentAutonym );
 			// Store this language in a list of frequently used languages
 			mw.uls.addPreviousLanguage( currentLanguage );
 		}
