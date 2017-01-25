@@ -1,0 +1,6 @@
+== UniversalLanguageSelector 2017.01 ==
+Released at 2017-01-25.
+
+=== Noteworthy changes ===
+* Fomafix added patch to remove jquery.i18n library which is available in MediaWiki core since 1.26 version.
+* Niklas Laxström added warning for deprecated PHP entry point. Use <code>wfLoadExtensions( array( 'UniversalLanguageSelector' ) );</code> to load extension in LocalSettings.php now.
