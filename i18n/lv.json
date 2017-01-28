@@ -16,6 +16,7 @@
 	"ext-uls-display-settings-font-settings": "Fontu iestatījumi",
 	"ext-uls-input-settings-desc": "Raksti citā valodā?",
 	"ext-uls-ime-help": "Kā lietot",
+	"jquery-ime-other-languages": "Citas valodas",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Vēl $1}}",
 	"prefs-languages": "Valodas"
 }
