@@ -304,8 +304,6 @@
 			$pLang.prepend( $ulsTrigger );
 			// Take care of any other elements with this class.
 			$ulsTrigger = $( '.uls-settings-trigger' );
-			// Remove the dummy link, which was added to make sure that the section appears
-			$pLang.find( '.uls-p-lang-dummy' ).remove();
 
 			if ( !$pLang.find( 'div ul' ).children().length ) {
 				// Replace the title of the interlanguage links area
