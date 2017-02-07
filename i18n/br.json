@@ -3,7 +3,8 @@
 		"authors": [
 			"Fohanno",
 			"Y-M D",
-			"Fulup"
+			"Fulup",
+			"VIGNERON"
 		]
 	},
 	"uls-plang-title-languages": "Yezhoù",
@@ -45,5 +46,5 @@
 	"ext-uls-input-enable": "Gweredekaat an ostilhoù bizskrivañ",
 	"ext-uls-input-disable-notification-undo": "Dizober",
 	"ext-uls-language-settings-applying": "O lakaat e pleustr...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Ur|$1}} yezh ouzhpenn"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Unan|$1}} ouzhpenn"
 }

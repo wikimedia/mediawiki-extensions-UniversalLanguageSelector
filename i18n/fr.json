@@ -15,7 +15,9 @@
 			"Yodaspirine",
 			"Yzelf",
 			"Yasten",
-			"Wladek92"
+			"Wladek92",
+			"The RedBurn",
+			"Trizek (WMF)"
 		]
 	},
 	"uls-desc": "Donne à l’utilisateur plusieurs manières de sélectionner une langue et d’ajuster les paramètres de langue",
@@ -24,7 +26,7 @@
 	"ext-uls-undo-language-tooltip-text": "Langue modifiée de $1",
 	"ext-uls-language-settings-preferences-link": "Plus de paramètres de langue",
 	"uls-betafeature-label": "Compacter les liens de langue",
-	"uls-betafeature-desc": "Afficher une version abrégée de la liste des langues, avec juste les langues qui sont les plus pertinentes pour vous.",
+	"uls-betafeature-desc": "Affiche une version abrégée de la liste des langues, avec uniquement les langues qui sont les plus pertinentes pour vous.",
 	"ext-uls-display-settings-title": "Afficher les paramètres",
 	"ext-uls-display-settings-language-tab": "Langue",
 	"ext-uls-display-settings-fonts-tab": "Polices de caractères",
@@ -68,7 +70,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Vous pouvez activer les outils de saisie à tout moment dans vos paramètres de langue.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Vous pouvez activer les outils de saisie à tout moment depuis les paramètres de langue à côté de la liste des langues.",
 	"ext-uls-language-settings-applying": "Application en cours…",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Une langue de plus|$1 langues de plus}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Une de plus|$1 de plus}}",
 	"ext-uls-compact-link-info": "Toutes les langues (sélection initiale de choix communs par vous et les autres)",
 	"apihelp-languagesearch-description": "Rechercher les noms de langue dans n’importe quel script.",
 	"apihelp-languagesearch-param-search": "Chercher le texte.",

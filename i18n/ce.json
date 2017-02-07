@@ -59,5 +59,6 @@
 	"apihelp-languagesearch-param-search": "Лахаран могӀа.",
 	"apihelp-languagesearch-example-1": "Лахар «Te»",
 	"apihelp-languagesearch-example-2": "Лахар «ഫി»",
-	"apihelp-ulslocalization-param-language": "Меттан код."
+	"apihelp-ulslocalization-param-language": "Меттан код.",
+	"ext-uls-compact-language-links-preference": "Лелабе компакте болу меттанийн могӀам хьайна оьшу меттанаш долуш"
 }

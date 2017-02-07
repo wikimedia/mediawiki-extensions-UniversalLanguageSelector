@@ -3,7 +3,8 @@
 		"authors": [
 			"Lloffiwr",
 			"Robin Owain",
-			"Nemo bis"
+			"Nemo bis",
+			"Divec"
 		]
 	},
 	"uls-desc": "Yn cynnig sawl ffordd i'r defnyddiwr allu dewis iaith a newid gosodiadau iaith",
@@ -56,5 +57,5 @@
 	"ext-uls-input-disable-notification-info-personal": "Gallwch alluogi'r offer mewnbynnu unrhyw bryd, drwy'r gosodiadau iaith.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Gallwch alluogi'r offer mewnbynnu unrhyw bryd drwy'r gosodiadau iaith, wrth ymyl rhestr yr ieithoedd.",
 	"ext-uls-language-settings-applying": "Wrthi'n gosod...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|$1 iaith arall}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|dim eraill|un arall|$1 eraill}}"
 }

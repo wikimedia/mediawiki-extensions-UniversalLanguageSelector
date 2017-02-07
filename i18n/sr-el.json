@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Milicevic01",
-			"Сербијана"
+			"Сербијана",
+			"Amire80"
 		]
 	},
 	"uls-desc": "Daje korisniku nekoliko načina da izabere jezik i da prilagodi podešavanja jezika",
@@ -55,5 +56,5 @@
 	"ext-uls-input-disable-notification-info-personal": "Možete omogućiti alate za unos u bilo koje vreme na podešavanjima jezika.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Možete omogućiti alatke za unos u bilo koje vreme na podešavanjima jezika pored spiska jezika.",
 	"ext-uls-language-settings-applying": "Primenjujem...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Još jedan jezik|Još $1 jezika}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Još jedan|Još $1}}"
 }
