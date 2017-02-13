@@ -384,7 +384,10 @@ class UniversalLanguageSelectorHooks {
 			$preferences['compact-language-links'] = [
 				'type' => 'check',
 				'section' => 'rendering/languages',
-				'label-message' => 'ext-uls-compact-language-links-preference'
+				'label-message' => [
+					'ext-uls-compact-language-links-preference',
+					'mediawikiwiki:Special:MyLanguage/Universal_Language_Selector/Compact_Language_Links'
+				]
 			];
 		}
 
