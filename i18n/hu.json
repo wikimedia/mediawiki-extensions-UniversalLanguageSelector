@@ -6,7 +6,8 @@
 			"BáthoryPéter",
 			"Tacsipacsi",
 			"Dorgan",
-			"Bináris"
+			"Bináris",
+			"BanKris"
 		]
 	},
 	"uls-plang-title-languages": "Nyelvek",
@@ -43,6 +44,7 @@
 	"ext-uls-input-settings-ui-language": "Íráshoz használt nyelv",
 	"ext-uls-back-to-input-settings": "Vissza a beviteli beállításokhoz",
 	"ext-uls-ime-help": "Használati útmutató",
+	"ext-uls-disable-input-method": "Anyanyelvi billentyűzet használata",
 	"ext-uls-input-settings-more-languages-tooltip": "További nyelvek",
 	"jquery-ime-other-languages": "További nyelvek",
 	"jquery-ime-help": "Súgó",
@@ -56,6 +58,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Bármikor engedélyezheted a beviteli eszközöket a nyelvi beállításaid között, a nyelvközi hivatkozások között.",
 	"ext-uls-language-settings-applying": "Alkalmazás…",
 	"ext-uls-compact-link-count": "$1 további",
+	"apihelp-ulslocalization-param-language": "Nyelvkód.",
 	"prefs-languages": "Nyelvek",
 	"ext-uls-compact-language-links-preference": "A nyelvközi hivatkozások megjelenítése egy kompakt listában, csak a neked releváns nyelvekkel."
 }
