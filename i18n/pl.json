@@ -69,5 +69,5 @@
 	"apihelp-languagesearch-example-3": "Wyszukaj „ഫി”, dopuszczalna jedna literówka",
 	"apihelp-ulslocalization-param-language": "Kod języka.",
 	"prefs-languages": "Języki",
-	"ext-uls-compact-language-links-preference": "Używaj kompaktowej listy języków z językami najbardziej Ci odpowiadającymi."
+	"ext-uls-compact-language-links-preference": "Używaj [[$1|kompaktowej listy języków]] z językami najbardziej Ci odpowiadającymi."
 }
