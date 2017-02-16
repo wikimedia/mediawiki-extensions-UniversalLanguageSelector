@@ -17,7 +17,8 @@
 			"Yasten",
 			"Wladek92",
 			"The RedBurn",
-			"Trizek (WMF)"
+			"Trizek (WMF)",
+			"Aboulouei1"
 		]
 	},
 	"uls-desc": "Donne à l’utilisateur plusieurs manières de sélectionner une langue et d’ajuster les paramètres de langue",
@@ -73,7 +74,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Une de plus|$1 de plus}}",
 	"ext-uls-compact-link-info": "Toutes les langues (sélection initiale de choix communs par vous et les autres)",
 	"apihelp-languagesearch-description": "Rechercher les noms de langue dans n’importe quel script.",
-	"apihelp-languagesearch-param-search": "Chercher le texte.",
+	"apihelp-languagesearch-param-search": "Chaîne de recherche.",
 	"apihelp-languagesearch-param-typos": "Nombre d’erreurs d’orthographe permises dans la chaîne de recherche.",
 	"apihelp-languagesearch-example-1": "Rechercher « Te »",
 	"apihelp-languagesearch-example-2": "Rechercher « ഫി »",
@@ -81,7 +82,7 @@
 	"apihelp-ulslocalization-description": "Obtenir la localisation de ULS dans la langue donnée.",
 	"apihelp-ulslocalization-param-language": "Code de langue.",
 	"apihelp-ulslocalization-example-1": "Obtenir la localisation en Tamil",
-	"apihelp-ulslocalization-example-2": "Obtenir la traduction Hindi",
+	"apihelp-ulslocalization-example-2": "Obtenir la localisation en Hindi",
 	"prefs-languages": "Langues",
-	"ext-uls-compact-language-links-preference": "Utiliser une liste de langues compacte, avec les langues pertinentes pour vous."
+	"ext-uls-compact-language-links-preference": "Utilisez une [[$1|liste de langue compacte]], avec les langues qui vous concernent."
 }

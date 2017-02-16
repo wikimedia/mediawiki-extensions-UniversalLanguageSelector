@@ -70,5 +70,5 @@
 	"apihelp-ulslocalization-example-1": "קבלת תרגום לטמילית",
 	"apihelp-ulslocalization-example-2": "קבלת תרגום להינדי",
 	"prefs-languages": "שפות",
-	"ext-uls-compact-language-links-preference": "שימוש ברשימת שפות מקוצרת, המציגה שפות שרלוונטיות עבורך"
+	"ext-uls-compact-language-links-preference": "שימוש ב[[$1|רשימת שפות מקוצרת]], המציגה שפות שרלוונטיות עבורך."
 }

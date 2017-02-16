@@ -71,5 +71,5 @@
 	"apihelp-ulslocalization-example-1": "Få lokalanpassning för Tamil",
 	"apihelp-ulslocalization-example-2": "Få lokalanpassning för Hindi",
 	"prefs-languages": "Språk",
-	"ext-uls-compact-language-links-preference": "Använd en kompakt språklista med språk som är relevanta för dig."
+	"ext-uls-compact-language-links-preference": "Använd en [[$1|kompakt språklista]] med språk som är relevanta för dig."
 }
