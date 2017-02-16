@@ -331,10 +331,8 @@ class UniversalLanguageSelectorHooks {
 				'/UniversalLanguageSelector/data/fontrepo/fonts/';
 		}
 
-		// Cannot check where whether CLL is enabled for a particular user. The overhead
-		// of including this data is small.
-		if ( isset( $wgWBClientSettings['sortPrepend'] ) ) {
-			$vars['wgULSCompactLinksPrepend'] = $wgWBClientSettings['sortPrepend'];
+		if ( isset( $wgInterwikiSortingSortPrepend ) && $wgInterwikiSortingSortPrepend !== [] ) {
+			$vars['wgULSCompactLinksPrepend'] = $wgInterwikiSortingSortPrepend;
 		}
 
 		return true;
