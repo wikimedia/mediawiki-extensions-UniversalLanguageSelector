@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Esbardu",
-			"Xuacu"
+			"Xuacu",
+			"Macofe"
 		]
 	},
 	"uls-desc": "Ufre al usuariu delles maneres pa seleicionar una llingua y axustar la configuración de llingua",
@@ -68,5 +69,5 @@
 	"apihelp-ulslocalization-example-1": "Obtener la llocalización en tamil",
 	"apihelp-ulslocalization-example-2": "Obtener la llocalización en hindi",
 	"prefs-languages": "Llingües",
-	"ext-uls-compact-language-links-preference": "Usar una llista de llingües compacta coles más afayadices pa ti."
+	"ext-uls-compact-language-links-preference": "Usar una [[$1|llista de llingües compacta]] coles más afayadices pa ti."
 }

@@ -77,5 +77,5 @@
 	"apihelp-ulslocalization-example-1": "Получить тамильскую локализацию",
 	"apihelp-ulslocalization-example-2": "Получить локализацию на хинди",
 	"prefs-languages": "Языки",
-	"ext-uls-compact-language-links-preference": "Использовать компактный список языков с подходящими вам языками"
+	"ext-uls-compact-language-links-preference": "Использовать [[$1|компактный список языков]] с подходящими вам языками."
 }

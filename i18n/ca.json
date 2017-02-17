@@ -61,5 +61,5 @@
 	"ext-uls-compact-link-info": "Totes les llengües (selecció inicial d'opcions més comunes vostres i d'altres)",
 	"apihelp-ulslocalization-param-language": "Codi d'idioma.",
 	"prefs-languages": "Llengües",
-	"ext-uls-compact-language-links-preference": "Utilitza una llista de llengües compacta amb aquelles més rellevants per a mi."
+	"ext-uls-compact-language-links-preference": "Utilitza una [[$1|llista de llengües compacta]] amb aquelles més rellevants per a mi."
 }

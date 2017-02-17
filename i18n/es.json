@@ -75,5 +75,5 @@
 	"apihelp-ulslocalization-example-1": "Obtener la localización en Tamil",
 	"apihelp-ulslocalization-example-2": "Obtener la localización en Hindi",
 	"prefs-languages": "Idiomas",
-	"ext-uls-compact-language-links-preference": "Usar una lista de idiomas compacta, con idiomas relevantes para ti."
+	"ext-uls-compact-language-links-preference": "Usar una [[$1|lista de idiomas compacta]], con idiomas relevantes para ti."
 }

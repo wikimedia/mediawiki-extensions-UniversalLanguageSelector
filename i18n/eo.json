@@ -3,7 +3,8 @@
 		"authors": [
 			"KuboF",
 			"Robin van der Vliet",
-			"Gamliel Fishkin"
+			"Gamliel Fishkin",
+			"Macofe"
 		]
 	},
 	"uls-desc": "Proponas al uzanto kelkajn manierojn por elekti lingvon kaj modifi lingvajn agordojn",
@@ -62,5 +63,5 @@
 	"apihelp-languagesearch-example-2": "Serĉi por \"ഫി\"",
 	"apihelp-ulslocalization-param-language": "Lingva kodo.",
 	"prefs-languages": "Lingvoj",
-	"ext-uls-compact-language-links-preference": "Uzi kompaktan liston de lingvoj, kun lingvoj konvenaj por vi"
+	"ext-uls-compact-language-links-preference": "Uzi [[$1|kompaktan liston de lingvoj]], kun lingvoj konvenaj por vi."
 }
