@@ -70,5 +70,5 @@
 	"apihelp-ulslocalization-example-1": "তামিল ভাষায় ব্যবহার",
 	"apihelp-ulslocalization-example-2": "হিন্দি ভাষায় ব্যবহার",
 	"prefs-languages": "ভাষাসমূহ",
-	"ext-uls-compact-language-links-preference": "আপনার কাছে প্রাসঙ্গিক মনে হয় এমন ভাষাসহ, ভাষার একটি ছোট তালিকা ব্যবহার করুন।"
+	"ext-uls-compact-language-links-preference": "আপনার কাছে প্রাসঙ্গিক মনে হয় এমন ভাষাসহ, [[$1|ভাষার একটি ছোট তালিকা]] ব্যবহার করে।"
 }

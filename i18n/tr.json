@@ -6,7 +6,8 @@
 			"Meelo",
 			"Rapsar",
 			"Sayginer",
-			"McAang"
+			"McAang",
+			"Katpatuka"
 		]
 	},
 	"uls-desc": "Kullanıcının bir dil seçmesi ve dil ayarlarını değiştirmesi için seçenekler sağlar.",
@@ -62,5 +63,5 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Bir tane daha|$1 tane daha}}",
 	"apihelp-ulslocalization-param-language": "Dil kodu.",
 	"prefs-languages": "Diller",
-	"ext-uls-compact-language-links-preference": "Yalnızca sizinle ilgisi bulunan dilleri listeleyen sıkıştırılmış diller listesi kullanın."
+	"ext-uls-compact-language-links-preference": "Sadece seni ilgilendiren [[$1|dil listesi]] kullan."
 }
