@@ -304,7 +304,8 @@ class UniversalLanguageSelectorHooks {
 			$wgULSImeSelectors, $wgULSNoImeSelectors,
 			$wgULSFontRepositoryBasePath,
 			$wgExtensionAssetsPath,
-			$wgWBClientSettings;
+			$wgWBClientSettings,
+			$wgInterwikiSortingSortPrepend;
 
 		// Place constant stuff here (not depending on request context)
 
