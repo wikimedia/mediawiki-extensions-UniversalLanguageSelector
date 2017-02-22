@@ -5,7 +5,8 @@
 			"Mormegil",
 			"Matěj Suchánek",
 			"Danny B.",
-			"Kusurija"
+			"Kusurija",
+			"Dvorapa"
 		]
 	},
 	"uls-desc": "Nabízí uživateli několik způsobů volby jazyka a úpravy jazykových nastavení",
@@ -63,5 +64,5 @@
 	"apihelp-languagesearch-param-typos": "Počet pravopisných chyb povolených v řetězci pro vyhledávání.",
 	"apihelp-ulslocalization-param-language": "Kód jazyka.",
 	"prefs-languages": "Jazyky",
-	"ext-uls-compact-language-links-preference": "Používat kompaktní seznam jazyků pouze s jazyky pro vás relevantními."
+	"ext-uls-compact-language-links-preference": "Používat [[$1|kompaktní seznam jazyků]] pouze s jazyky pro vás relevantními."
 }
