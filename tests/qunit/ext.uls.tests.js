@@ -23,14 +23,10 @@
 	QUnit.module( 'ext.uls', QUnit.newMwEnvironment() );
 
 	QUnit.test( 'Initial check', function ( assert ) {
-		QUnit.expect( 1 );
-
 		assert.ok( $.fn.uls, '$.fn.uls is defined' );
 	} );
 
 	QUnit.test( 'Custom langdb', function ( assert ) {
-		QUnit.expect( 1 );
-
 		// This is a custom non-standard language code used in MW.
 		// If it's not defined, then, for example,
 		// its direction cannot be acquired using the langdb utils.
@@ -38,9 +34,7 @@
 	} );
 
 	QUnit.test( 'User preferences', function ( assert ) {
-		var prefName, prefs, prefsToSave, readPrefs;
-
-		QUnit.expect( 2 );
+		var prefName, prefs, prefsToSave, readPrefs, done;
 
 		// 'gofanim' means "fonts" in Hebrew.
 		// Here it's used as a meaningless word, to test
@@ -64,24 +58,17 @@
 			'Correct value for the font name'
 		);
 
-		QUnit.stop();
+		done = assert.async();
 		prefs.save( function ( successSave ) {
-			QUnit.start();
 			assert.ok( successSave, 'Options saving API did not produce an error.' );
-
 			// Delete old options
 			prefs.set( prefName, undefined );
-			QUnit.stop();
-			prefs.save( function () {
-				QUnit.start();
-			} );
+			prefs.save( done );
 		} );
 	} );
 
 	QUnit.test( 'Common languages', function ( assert ) {
 		var i, foundTagalog, languagesInPH;
-
-		QUnit.expect( 1 );
 
 		// Bug 49847
 		foundTagalog = false;
