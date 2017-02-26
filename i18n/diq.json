@@ -5,7 +5,8 @@
 			"Marmase",
 			"Mirzali",
 			"Kumkumuk",
-			"1917 Ekim Devrimi"
+			"1917 Ekim Devrimi",
+			"Gırd"
 		]
 	},
 	"uls-desc": "Karberi rê seba weçinıtışê zıwani û vurnayışê eyarê zıwani ra weçinıkan peyda keno",
@@ -58,7 +59,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Eyaranê zıwani şıma çı wext ke wazenê, şıma şenê hacetanê cıkewtışi ra feal kerê.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Eyaranê zıwani şıma şenê, hacetanê ke leweyê lista zıwani derê, feal kerê.",
 	"ext-uls-language-settings-applying": "Dezgeyeno...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|na deha|$1 na deha}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|vêşêr|$1 vêşêr}}",
 	"ext-uls-compact-link-info": "Zıwani pêro (hetê to û ê binan ra ke kamcin yeno hesab wa ey weçine)",
 	"apihelp-languagesearch-description": "Nameyê zıwani nuşteyê raştameyeyi de geyreno cı.",
 	"apihelp-languagesearch-param-search": "Rêza cıgeyrayışi.",
