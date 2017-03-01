@@ -75,5 +75,5 @@
 	"apihelp-ulslocalization-example-1": "取得泰米爾語本地化",
 	"apihelp-ulslocalization-example-2": "取得印度語本地化",
 	"prefs-languages": "語言",
-	"ext-uls-compact-language-links-preference": "使用較簡潔的語言列表，包括與您相關的語言。"
+	"ext-uls-compact-language-links-preference": "使用[[$1|較簡潔的語言列表]]，包括與您相關的語言。"
 }

@@ -59,5 +59,5 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Још један|Још $1}}",
 	"ext-uls-compact-link-info": "Сви језици (првобитни одабир заснован је на најчешћим одабирима Вас и других корисника)",
 	"prefs-languages": "Језици",
-	"ext-uls-compact-language-links-preference": "Користи сажет списак језика, само са вама битним језицима."
+	"ext-uls-compact-language-links-preference": "Користи [[$1|сажет списак језика]], само са вама битним језицима."
 }
