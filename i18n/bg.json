@@ -60,5 +60,5 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Още $1}}",
 	"apihelp-ulslocalization-param-language": "Езиков код.",
 	"prefs-languages": "Езици",
-	"ext-uls-compact-language-links-preference": "Използване на компактен списък на езиците, имащи отношение към вас."
+	"ext-uls-compact-language-links-preference": "Използване на [[$1|компактен списък на езиците]], имащи отношение към вас."
 }
