@@ -12,7 +12,7 @@
 	"uls-plang-title-languages": "Езици",
 	"ext-uls-select-language-settings-icon-tooltip": "Езикови настройки",
 	"ext-uls-undo-language-tooltip-text": "Предишен език: $1",
-	"ext-uls-language-settings-preferences-link": "Още езикови настройки",
+	"ext-uls-language-settings-preferences-link": "Допълнителни езикови настройки",
 	"uls-betafeature-label": "Компактен списък на езикови връзки",
 	"uls-betafeature-desc": "Показва съкратен вариант на списъка с езици, само с тези, които са по-подходящи за вас.",
 	"ext-uls-display-settings-title": "Настройки на изгледа",
