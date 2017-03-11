@@ -237,7 +237,7 @@
 	 * compact size is achieved. Each item should be an array and should
 	 * take the whole language list as argument.
 	 *
-	 * @return {Function[]} Array of comacting functions
+	 * @return {Function[]} Array of compacting functions
 	 */
 	CompactInterlanguageList.prototype.getCompactStrategies = function () {
 		return [
