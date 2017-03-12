@@ -7,7 +7,8 @@
 			"Tacsipacsi",
 			"Dorgan",
 			"Bináris",
-			"BanKris"
+			"BanKris",
+			"Máté"
 		]
 	},
 	"uls-plang-title-languages": "Nyelvek",
@@ -44,7 +45,7 @@
 	"ext-uls-input-settings-ui-language": "Íráshoz használt nyelv",
 	"ext-uls-back-to-input-settings": "Vissza a beviteli beállításokhoz",
 	"ext-uls-ime-help": "Használati útmutató",
-	"ext-uls-disable-input-method": "Anyanyelvi billentyűzet használata",
+	"ext-uls-disable-input-method": "Alapételmezett billentyűzet használata",
 	"ext-uls-input-settings-more-languages-tooltip": "További nyelvek",
 	"jquery-ime-other-languages": "További nyelvek",
 	"jquery-ime-help": "Súgó",

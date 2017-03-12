@@ -6,7 +6,8 @@
 			"RLuts",
 			"Ата",
 			"Юрій Булка",
-			"SteveR"
+			"SteveR",
+			"Piramidion"
 		]
 	},
 	"uls-desc": "Надає користувачу декілька способів вибрати мову та налаштувати мовні параметри.",
@@ -72,5 +73,5 @@
 	"apihelp-ulslocalization-example-1": "Отримати локалізацію тамільською",
 	"apihelp-ulslocalization-example-2": "Отримати локалізацію хінді",
 	"prefs-languages": "Мови",
-	"ext-uls-compact-language-links-preference": "Використовувати компактний список мов, з мовами, що є релевантними для Вас."
+	"ext-uls-compact-language-links-preference": "Використовувати [[$1|компактний список мов]], з мовами, що є релевантними для Вас."
 }
