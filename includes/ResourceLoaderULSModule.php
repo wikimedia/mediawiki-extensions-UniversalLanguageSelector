@@ -46,9 +46,7 @@ class ResourceLoaderULSModule extends ResourceLoaderModule {
 	 */
 	public function getScript( ResourceLoaderContext $context ) {
 		$languageCode = $context->getLanguage();
-		return Xml::encodeJsCall( 'mw.config.set', [
-			$this->getData( $languageCode )
-		] );
+		return ResourceLoader::makeConfigSetScript( $this->getData( $languageCode ) );
 	}
 
 	/**
