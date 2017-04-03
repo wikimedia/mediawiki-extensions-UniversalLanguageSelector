@@ -193,17 +193,13 @@
 		}
 
 		function showTipsy( timeout ) {
-			var offset, tipsyTimer = 0;
-
-			// Position popup
-			offset = $ulsTrigger.offset();
-			ulsPopup.$element.css( {
-				top: offset.top + 24,
-				left: offset.left + $ulsTrigger.outerWidth() / 2
-			} );
+			var tipsyTimer = 0;
 
 			ulsPopup.toggle( true );
 			ulsPopup.toggleClipping( false );
+			// Position popup
+			ulsPopup.setFloatableContainer( $ulsTrigger );
+
 			// if the mouse is over the tooltip, do not hide
 			$( '.uls-tipsy' ).on( 'mouseover', function () {
 				window.clearTimeout( tipsyTimer );
@@ -242,7 +238,6 @@
 		ulsPopup = new OO.ui.PopupWidget( {
 			padded: true,
 			width: 300,
-			align: 'forwards',
 			classes: [ 'uls-tipsy' ],
 			$content: ( function () {
 				var link = $( '<a>' ).text( previousAutonym )
