@@ -197,8 +197,6 @@
 
 			ulsPopup.toggle( true );
 			ulsPopup.toggleClipping( false );
-			// Position popup
-			ulsPopup.setFloatableContainer( $ulsTrigger );
 
 			// if the mouse is over the tooltip, do not hide
 			$( '.uls-tipsy' ).on( 'mouseover', function () {
@@ -239,6 +237,9 @@
 			padded: true,
 			width: 300,
 			classes: [ 'uls-tipsy' ],
+			// Automatically positioned relative to the trigger
+			$floatableContainer: $ulsTrigger,
+			position: ( ulsPosition === 'interlanguage' ) ? 'after' : 'below',
 			$content: ( function () {
 				var link = $( '<a>' ).text( previousAutonym )
 					.attr( {
