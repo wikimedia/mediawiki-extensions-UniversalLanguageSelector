@@ -456,7 +456,7 @@
 	}
 
 	function initTooltip() {
-		var module, previousLanguage, currentLanguage, previousAutonym, currentAutonym;
+		var previousLanguage, currentLanguage, previousAutonym, currentAutonym;
 
 		if ( !userCanChangeLanguage() ) {
 			return;
@@ -476,9 +476,7 @@
 		}
 
 		if ( previousLanguage !== currentLanguage ) {
-			// Use oojs-ui-core only after MediaWiki 1.26 is no longer supported
-			module = mw.loader.getState( 'oojs-ui-core' ) === null ? 'oojs-ui' : 'oojs-ui-core';
-			mw.loader.using( module ).done( function () {
+			mw.loader.using( 'oojs-ui-core' ).done( function () {
 				showUndoTooltip( previousLanguage, previousAutonym );
 			} );
 			mw.storage.set( 'uls-previous-language-code', currentLanguage );

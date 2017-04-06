@@ -15,6 +15,9 @@
 	"url": "https://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector",
 	"descriptionmsg": "uls-desc",
 	"license-name": "GPL-2.0+",
+	"requires": {
+		"MediaWiki": ">= 1.27.0"
+	},
 	"Hooks": {
 		"BeforePageDisplay": "UniversalLanguageSelectorHooks::addModules",
 		"EnterMobileMode": "UniversalLanguageSelectorHooks::onEnterMobileMode",
