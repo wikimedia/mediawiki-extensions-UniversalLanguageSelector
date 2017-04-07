@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"J. 'mach' wust"
+			"J. 'mach' wust",
+			"Als-Holder"
 		]
 	},
 	"uls-desc": "Bietet verschidnigi Müglechkeite, für’ne Sprach uszwählen u für Sprachystelligen azpasse",
 	"uls-plang-title-languages": "Sprache",
 	"ext-uls-select-language-settings-icon-tooltip": "Sprachystellige",
-	"ext-uls-undo-language-tooltip-text": "Sprach g’änderet vo $1",
+	"ext-uls-undo-language-tooltip-text": "Sprach gänderet vo $1",
 	"ext-uls-language-settings-preferences-link": "Meh Sprachystellige",
 	"uls-betafeature-label": "Gchürzti Sprachliste",
 	"uls-betafeature-desc": "D Spracheliste wird gchürzt. Si zeigt nume no die Sprachen a, wo für di di relevantere sy.",
