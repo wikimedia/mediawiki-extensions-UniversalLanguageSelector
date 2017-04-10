@@ -379,6 +379,10 @@
 			"system",
 			"OpenDyslexic"
 		],
+		"su": [
+			"system",
+			"NotoSansSundanese Regular"
+		],
 		"sux": [
 			"Akkadian"
 		],
@@ -825,6 +829,11 @@
 			"variants": {
 				"bold": "Nokora Bold"
 			}
+		},
+		"NotoSansSundanese Regular": {
+			"ttf": "NotoSansSundanese/NotoSansSundanese-Regular.ttf?e7cec",
+			"woff": "NotoSansSundanese/NotoSansSundanese-Regular.woff?a8907",
+			"woff2": "NotoSansSundanese/NotoSansSundanese-Regular.woff2?97973"
 		},
 		"Nuosu SIL": {
 			"ttf": "NuosuSIL/NuosuSIL.ttf?8f309",
