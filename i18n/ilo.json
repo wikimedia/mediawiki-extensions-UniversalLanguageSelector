@@ -51,7 +51,7 @@
 	"ext-uls-input-settings-noime": "Awan dagiti pamay-an ti ikabil ti mabalin a magun-od para iti daytoy a pagsasao.",
 	"ext-uls-input-disable-notification": "Dagiti ramit ti ikabil ket nabaldadon.",
 	"ext-uls-input-disable-notification-undo": "Ibabawi",
-	"ext-uls-input-disable-notification-info-personal": "Mabalinmo a pakabaelan dagiti ramit ti ikabil iti aniaman a panawen manipud kadagiti pannakaisaad ti pagsasao.",
+	"ext-uls-input-disable-notification-info-personal": "Mabalinmo a pakabaelan dagiti ramit ti pagikabilan iti ania man a panawen manipud kadagiti pannakaisaad ti pagsasao.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Mabalinmo a pakabaelan dagiti ramit ti ikabil manipud kadagiti pannakaisaad ti pagsasao iti kaabay ti listaan ti pagsasao.",
 	"ext-uls-language-settings-applying": "Ipakpakat...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Maysa pay|$1 pay}}",
