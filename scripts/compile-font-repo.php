@@ -31,7 +31,7 @@ class CompileFontRepo extends Maintenance {
 
 		$list = $compiler->getRepository();
 
-		$json = FormatJson::encode( $list );
+		$json = FormatJson::encode( $list, "\t" );
 		$js = <<<JAVASCRIPT
 // Do not edit! This file is generated from data/fontrepo by data/fontrepo/scripts/compile.php
 ( function ( $ ) {
