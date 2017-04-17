@@ -24,5 +24,6 @@
 	"ext-uls-input-settings-more-languages-tooltip": "Əlavə dillər",
 	"ext-uls-input-disable-notification-undo": "Geri qaytar",
 	"ext-uls-language-settings-applying": "Tətbiq edilir...",
-	"ext-uls-compact-link-count": "Daha {{PLURAL:$1|1 dil|$1 dil}}"
+	"ext-uls-compact-link-count": "Daha {{PLURAL:$1|1 dil|$1 dil}}",
+	"ext-uls-compact-language-links-preference": "Yalnız özünüzə maraqlı olan [[$1|yığcam dil siyahısını]] istifadə etmək."
 }
