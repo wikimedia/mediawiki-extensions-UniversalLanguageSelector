@@ -64,5 +64,7 @@
 	"apihelp-ulslocalization-description": "Alaen ti lokalisasion ti ULS iti naited a pagsasao.",
 	"apihelp-ulslocalization-param-language": "Kodigo ti pagsasao.",
 	"apihelp-ulslocalization-example-1": "Alaen ti lokalisasion ti Tamil",
-	"apihelp-ulslocalization-example-2": "Alaen ti lokalisasion ti Hindi"
+	"apihelp-ulslocalization-example-2": "Alaen ti lokalisasion ti Hindi",
+	"prefs-languages": "Dagiti pagsasao",
+	"ext-uls-compact-language-links-preference": "Usaren ti [[$1|kompakto a listaan ti pagsasao]], kadagiti pagsasao a nangruna kenka."
 }
