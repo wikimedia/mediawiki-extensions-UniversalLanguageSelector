@@ -1,0 +1,20 @@
+== UniversalLanguageSelector 2017.04 ==
+Released at 2017-04-28.
+
+=== Noteworthy changes ===
+* Bartosz Dziewoński fixed language change tooltip position. (T161203)
+* Niklas Laxström added link to Compact Language Links info page in the beta
+feature description.
+* Niklas Laxström fixed broken site picks feature for Compact Language Links.
+(T157344)
+
+=== Fonts ===
+* Kartik Mistry added Sundanese (su) font. (T162221)
+
+=== Input methods ===
+* Amir Aharoni fixed name of Arabic keyboard.
+* Amir Aharoni and Felix Nartey added keyboard for Ga language.
+* Amir Aharoni added Akan keyboard also for Twi language.
+* fgaim added new IMEs for Eritrean languages: Tigrinya (ti), Tigre (tig),
+Blin (byn).
+* WikiDiscoverer fixed autonym for Gõychi Konknni (gom) language.
