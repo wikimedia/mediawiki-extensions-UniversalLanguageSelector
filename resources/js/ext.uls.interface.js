@@ -193,7 +193,16 @@
 		}
 
 		function showTipsy( timeout ) {
-			var tipsyTimer = 0;
+			var offset, tipsyTimer = 0;
+
+			// BC for MW 1.27
+			if ( ulsPopup.setFloatableContainer === undefined ) {
+				offset = $ulsTrigger.offset();
+				ulsPopup.$element.css( {
+					top: offset.top + 24,
+					left: offset.left + $ulsTrigger.outerWidth() / 2
+				} );
+			}
 
 			ulsPopup.toggle( true );
 			ulsPopup.toggleClipping( false );
