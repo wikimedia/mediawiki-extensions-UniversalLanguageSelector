@@ -468,22 +468,42 @@ class UniversalLanguageSelectorHooks {
 	 * @return boolean true
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader $resourceLoader ) {
-		global $wgULSEventLogging;
+		global $wgULSEventLogging, $wgVersion;
 
-		if ( $wgULSEventLogging ) {
-			$resourceLoader->register( [
-				'ext.uls.eventlogger' => [
-					'scripts' => 'js/ext.uls.eventlogger.js',
-					'dependencies' => [
-						'mediawiki.user',
-						'schema.UniversalLanguageSelector',
-					],
-					'localBasePath' => __DIR__ . '/resources',
-					'remoteExtPath' => 'UniversalLanguageSelector/resources',
-				],
-			] );
+		$modules = [];
+		$modules['ext.uls.compactlinks'] = [
+			'scripts' => 'js/ext.uls.compactlinks.js',
+			'styles' => 'css/ext.uls.compactlinks.less',
+			'dependencies' => [
+				'mediawiki.jqueryMsg',
+				'mediawiki.language',
+				'mediawiki.ui.button',
+				'ext.uls.init'
+			],
+			'messages' => [
+				'ext-uls-compact-link-count',
+				'ext-uls-compact-link-info'
+			],
+			'localBasePath' => __DIR__ . '/resources',
+			'remoteExtPath' => 'UniversalLanguageSelector/resources'
+		];
+		if ( version_compare( $wgVersion, '1.29', '<' ) ) {
+			// Support: MediaWiki 1.28 and earlier (T162590)
+			$modules['ext.uls.compactlinks']['dependencies'][] = 'es5-shim';
 		}
 
-		return true;
+		if ( $wgULSEventLogging ) {
+			$modules['ext.uls.eventlogger'] = [
+				'scripts' => 'js/ext.uls.eventlogger.js',
+				'dependencies' => [
+					'mediawiki.user',
+					'schema.UniversalLanguageSelector',
+				],
+				'localBasePath' => __DIR__ . '/resources',
+				'remoteExtPath' => 'UniversalLanguageSelector/resources',
+			];
+		}
+
+		$resourceLoader->register( $modules );
 	}
 }
