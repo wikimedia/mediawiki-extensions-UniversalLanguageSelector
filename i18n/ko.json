@@ -68,6 +68,9 @@
 	"apihelp-languagesearch-example-1": "\"Te\"로 검색",
 	"apihelp-languagesearch-example-2": "\"ഫി\"로 검색",
 	"apihelp-ulslocalization-description": "주어진 언어로 ULS의 위치를 가져옵니다.",
+	"apihelp-ulslocalization-param-language": "언어 코드입니다.",
+	"apihelp-ulslocalization-example-1": "타밀어 지역화 가져오기",
+	"apihelp-ulslocalization-example-2": "힌디어 지역화 가져오기",
 	"prefs-languages": "언어",
 	"ext-uls-compact-language-links-preference": "사용자와 관련이 있는 언어들을 위주로 [[$1|간소화된 언어 목록]]을 사용합니다."
 }
