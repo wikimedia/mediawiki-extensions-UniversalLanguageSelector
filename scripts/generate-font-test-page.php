@@ -75,6 +75,7 @@ class GenerateFontTestPage extends Maintenance {
 		// Charset is needed, because Edge is so brilliant that it thinks this page full of UTF-8
 		// is actually in some legacy encoding and does not provide way to change it ;)
 		$html = <<<HTML
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
