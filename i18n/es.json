@@ -37,7 +37,7 @@
 	"ext-uls-webfonts-settings-info": "Descargar automáticamente los tipos de letras faltantes y permitir la selección de los tipos preferidos.",
 	"ext-uls-webfonts-settings-info-link": "Más información",
 	"ext-uls-webfonts-select-for": "Selecciona fuente para $1",
-	"ext-uls-webfonts-select-for-ui-info": "Fuente usada para la interfaz de usuario",
+	"ext-uls-webfonts-select-for-ui-info": "Tipo de letra usado en la interfaz de usuario",
 	"ext-uls-webfonts-select-for-content-info": "Fuente usada para el contenido",
 	"ext-uls-webfonts-system-font": "Tipo de letra del sistema",
 	"ext-uls-back-to-display-settings": "Volver a la configuración de la presentación",
