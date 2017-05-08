@@ -4,7 +4,8 @@
 			"Siddhartha Ghai",
 			"Vdhatterwal",
 			"Vivek Rai",
-			"Goelujjwal"
+			"Goelujjwal",
+			"Sfic"
 		]
 	},
 	"uls-desc": "सदस्य को भाषा चुनने और भाषा विकल्प बदलने के कई तरीके देता है",
@@ -57,5 +58,6 @@
 	"ext-uls-input-disable-notification-info-personal": "आप किसी भी समय भाषा विकल्प में से इनपुट उपकरण सक्षम कर सकते हैं।",
 	"ext-uls-input-disable-notification-info-interlanguage": "आप किसी भी समय भाषा सूची के साथ स्थित भाषा विकल्प में से इनपुट उपकरण सक्षम कर सकते हैं।",
 	"ext-uls-language-settings-applying": "लागू हो रहा है...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|एक और भाषा|$1 और भाषाएँ}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|एक और भाषा|$1 और भाषाएँ}}",
+	"prefs-languages": "भाषा"
 }
