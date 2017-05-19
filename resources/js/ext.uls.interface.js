@@ -294,7 +294,6 @@
 		var $triggers,
 			$pLang,
 			$ulsTrigger = $( '.uls-trigger' ),
-			rtlPage = $( 'body' ).hasClass( 'rtl' ),
 			anonMode = ( mw.user.isAnon() &&
 				!mw.config.get( 'wgULSAnonCanChangeLanguage' ) ),
 			ulsPosition = mw.config.get( 'wgULSPosition' );
@@ -337,6 +336,7 @@
 							var caretRadius, caretPosition,
 								$caretBefore = $( '<span>' ).addClass( 'caret-before' ),
 								$caretAfter = $( '<span>' ).addClass( 'caret-after' ),
+								$caretWrapper = $( '<span>' ),
 								ulsTriggerHeight = this.$element.height(),
 								ulsTriggerWidth = this.$element.width(),
 								ulsTriggerOffset = this.$element.offset();
@@ -344,19 +344,23 @@
 							// Add the callout caret triangle
 							// pointing to the trigger icon
 							this.$window.addClass( 'callout' );
-							this.$window.prepend( $caretBefore, $caretAfter );
+							this.$window.prepend( $caretWrapper.prepend( $caretBefore, $caretAfter ) );
 
 							// Calculate the positioning of the panel
 							// according to the position of the trigger icon
 
 							caretRadius = parseInt( $caretBefore.css( 'border-top-width' ), 10 );
-							if ( rtlPage ) {
+
+							if ( ulsTriggerOffset.left > ( this.$window.width() - caretRadius ) / 2 ) {
 								this.left = ulsTriggerOffset.left - this.$window.width() - caretRadius;
+								$caretWrapper.addClass( 'caret-right' );
+								caretPosition = $caretBefore.position();
+
 							} else {
 								this.left = ulsTriggerOffset.left + ulsTriggerWidth + caretRadius;
+								$caretWrapper.addClass( 'caret-left' );
+								caretPosition = $caretAfter.position();
 							}
-
-							caretPosition = $caretBefore.position();
 
 							// The top of the dialog is aligned in relation to
 							// the middle of the trigger, so that middle of the

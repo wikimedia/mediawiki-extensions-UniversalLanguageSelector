@@ -16,25 +16,62 @@
 	border-bottom-left-radius: 4px;
 }
 
+/* Caret */
 .uls-menu.callout .caret-before,
 .uls-menu.callout .caret-after {
 	border-top: 10px solid transparent;
-	border-right: 10px solid #c9c9c9;
 	border-bottom: 10px solid transparent;
 	display: inline-block;
-	left: -11px;
 	/* 17px aligns nicely with the size of the search row in language selection */
 	top: 17px;
 	position: absolute;
 }
-
 .uls-menu.callout .caret-after {
-	border-right: 10px solid #fcfcfc;
 	display: inline-block;
-	left: -10px;
 }
 
-.uls-menu.callout--languageselection .caret-after {
+// How do you do switch for flipping in less? These are very redundant.
+.uls-menu.callout .caret-right {
+	.caret-before,
+	.caret-after {
+		/* @noflip */
+		border-left: 10px solid #c9c9c9;
+		/* @noflip */
+		right: -11px;
+	}
+
+	.caret-after {
+		/* @noflip */
+		border-left: 10px solid #fcfcfc;
+		/* @noflip */
+		right: -10px;
+	}
+
+}
+.uls-menu.callout--languageselection .caret-right .caret-after {
+	/* @noflip */
+	border-left: 10px solid #fff;
+}
+
+.uls-menu.callout .caret-left {
+	.caret-before,
+	.caret-after {
+		/* @noflip */
+		border-right: 10px solid #c9c9c9;
+		/* @noflip */
+		left: -11px;
+	}
+
+	.caret-after {
+		/* @noflip */
+		border-right: 10px solid #fcfcfc;
+		/* @noflip */
+		left: -10px;
+	}
+
+}
+.uls-menu.callout--languageselection .caret-left .caret-after {
+	/* @noflip */
 	border-right: 10px solid #fff;
 }
 
