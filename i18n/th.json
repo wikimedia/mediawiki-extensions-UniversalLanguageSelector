@@ -1,11 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð",
-			"Ans"
+			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "ภาษา",
-	"prefs-languages": "ภาษา",
-	"ext-uls-compact-language-links-preference": "ใช้ [[$1|รายการภาษาแบบกระชับ]] โดยมีภาษาที่เกี่ยวข้องกับคุณ"
+	"uls-plang-title-languages": "ภาษา"
 }
