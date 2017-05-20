@@ -351,7 +351,7 @@
 
 							caretRadius = parseInt( $caretBefore.css( 'border-top-width' ), 10 );
 
-							if ( ulsTriggerOffset.left > ( this.$window.width() - caretRadius ) / 2 ) {
+							if ( ulsTriggerOffset.left > $( window ).width() / 2 ) {
 								this.left = ulsTriggerOffset.left - this.$window.width() - caretRadius;
 								$caretWrapper.addClass( 'caret-right' );
 								caretPosition = $caretBefore.position();
