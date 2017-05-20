@@ -181,7 +181,7 @@
 	 * @param {string} previousAutonym
 	 */
 	function showUndoTooltip( previousLang, previousAutonym ) {
-		var $ulsTrigger, ulsPopup,
+		var $ulsTrigger, ulsPopup, ulsPopupPosition,
 			ulsPosition = mw.config.get( 'wgULSPosition' );
 
 		$ulsTrigger = ( ulsPosition === 'interlanguage' ) ?
@@ -242,13 +242,26 @@
 		if ( ulsPopup ) {
 			ulsPopup.$element.remove();
 		}
+		if ( ulsPosition === 'interlanguage' ) {
+			if ( $ulsTrigger.offset().left > $( window ).width() / 2 ) {
+				ulsPopupPosition = 'before';
+			} else {
+				ulsPopupPosition = 'after';
+			}
+			// Reverse for RTL
+			if ( $( 'html' ).prop( 'dir' ) === 'rtl' ) {
+				ulsPopupPosition = ( ulsPopupPosition === 'after' ) ? 'before' : 'after';
+			}
+		} else {
+			ulsPopupPosition = 'below';
+		}
 		ulsPopup = new OO.ui.PopupWidget( {
 			padded: true,
 			width: 300,
 			classes: [ 'uls-tipsy' ],
 			// Automatically positioned relative to the trigger
 			$floatableContainer: $ulsTrigger,
-			position: ( ulsPosition === 'interlanguage' ) ? 'after' : 'below',
+			position: ulsPopupPosition,
 			$content: ( function () {
 				var link = $( '<a>' ).text( previousAutonym )
 					.attr( {
