@@ -51,5 +51,6 @@
 	"ext-uls-input-disable-notification-undo": "Disfacer",
 	"ext-uls-input-disable-notification-info-personal": "Tu pote activar le instrumentos de entrata a omne momento in le configuration de lingua.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Tu pote activar le instrumentos de entrata a omne momento in le configuration de lingua al latere del lista de linguas.",
-	"ext-uls-language-settings-applying": "Applica..."
+	"ext-uls-language-settings-applying": "Applica...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Un altere|$1 alteres}}"
 }
