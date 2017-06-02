@@ -33,6 +33,7 @@
 	"ext-uls-input-settings-more-languages-tooltip": "Vairāk valodu",
 	"jquery-ime-other-languages": "Citas valodas",
 	"jquery-ime-help": "Palīdzība",
+	"ext-uls-input-disable": "Atspējot ievades rīkus",
 	"ext-uls-input-disable-notification-undo": "Atsaukt",
 	"ext-uls-language-settings-applying": "Pielieto...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Vēl $1}}",
