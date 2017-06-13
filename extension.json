@@ -121,7 +121,8 @@
 				"ext.uls.webfonts",
 				"mediawiki.api.parse",
 				"mediawiki.ui.checkbox",
-				"mediawiki.ui.button"
+				"mediawiki.ui.button",
+				"mediawiki.user"
 			],
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
@@ -165,6 +166,7 @@
 				"mediawiki.api",
 				"mediawiki.api.options",
 				"mediawiki.cookie",
+				"mediawiki.user",
 				"jquery.uls.data"
 			],
 			"position": "top",
