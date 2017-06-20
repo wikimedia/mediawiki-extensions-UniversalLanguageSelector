@@ -247,7 +247,7 @@ class UniversalLanguageSelectorHooks {
 				$user->setOption( 'language', $languageToSave );
 				$code = $languageToSave;
 				// Promise to sync the DB on post-send
-				DeferredUpdates::addCallableUpdate( function() use ( $user ) {
+				DeferredUpdates::addCallableUpdate( function () use ( $user ) {
 					$user->saveSettings();
 				} );
 			}

@@ -44,7 +44,7 @@ class ULSJsonMessageLoader {
 			$filenames[] = __DIR__ . "/../i18n/$language.json";
 		}
 
-		$filenames = array_filter( $filenames, function( $filename ) {
+		$filenames = array_filter( $filenames, function ( $filename ) {
 			return file_exists( $filename );
 		} );
 
