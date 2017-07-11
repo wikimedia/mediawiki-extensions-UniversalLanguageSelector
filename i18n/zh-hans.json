@@ -58,7 +58,7 @@
 	"ext-uls-input-settings-noime": "没有该语言的输入法。",
 	"ext-uls-input-disable-notification": "输入工具已停用",
 	"ext-uls-input-disable-notification-undo": "撤销",
-	"ext-uls-input-disable-notification-info-personal": "你可以在任何时间在语言设置中启用输入工具。",
+	"ext-uls-input-disable-notification-info-personal": "您可以在任何时间在语言设置中启用输入工具。",
 	"ext-uls-input-disable-notification-info-interlanguage": "您可以在任何时间在语言列表旁的语言设置中启用输入工具。",
 	"ext-uls-language-settings-applying": "正在应用...",
 	"ext-uls-compact-link-count": "还有$1种语言",
