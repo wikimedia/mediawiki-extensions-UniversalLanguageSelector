@@ -6,7 +6,8 @@
 			"Caio1478",
 			"Helder.wiki",
 			"Dianakc",
-			"Opraco"
+			"Opraco",
+			"Felipe L. Ewald"
 		]
 	},
 	"uls-desc": "Oferece ao usuário várias maneiras para selecionar um idioma e ajustar as configurações de idioma",
@@ -62,5 +63,7 @@
 	"apihelp-languagesearch-example-1": "Pesquisar por \"Te\"",
 	"apihelp-languagesearch-example-2": "Pesquisar por \"ഫി\"",
 	"apihelp-languagesearch-example-3": "Pesquisar por \"ഫി\", permitindo um erro ortográfico",
+	"apihelp-ulslocalization-param-language": "Código do idioma.",
+	"prefs-languages": "Idiomas",
 	"ext-uls-compact-language-links-preference": "Mostrar uma lista compacta de versões em outras línguas, dando ênfase para as mais relevantes"
 }
