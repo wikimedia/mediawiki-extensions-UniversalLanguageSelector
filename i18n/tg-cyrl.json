@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"ToJack"
 		]
 	},
-	"uls-plang-title-languages": "Забонҳо"
+	"uls-plang-title-languages": "Забонҳо",
+	"ext-uls-display-settings-language-tab": "Забон"
 }

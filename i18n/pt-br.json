@@ -65,5 +65,5 @@
 	"apihelp-languagesearch-example-3": "Pesquisar por \"ഫി\", permitindo um erro ortográfico",
 	"apihelp-ulslocalization-param-language": "Código do idioma.",
 	"prefs-languages": "Idiomas",
-	"ext-uls-compact-language-links-preference": "Mostrar uma lista compacta de versões em outras línguas, dando ênfase para as mais relevantes"
+	"ext-uls-compact-language-links-preference": "Use uma [[$1|lista de idiomas compactos]], com idiomas relevantes para você."
 }
