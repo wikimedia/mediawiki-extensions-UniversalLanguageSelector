@@ -60,6 +60,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Eine weitere|$1 weitere}}",
 	"ext-uls-compact-link-info": "Alle Sprachen (erste Auswahl der häufigen Auswahlen von dir und anderen)",
 	"apihelp-languagesearch-description": "Sucht nach Sprachnamen in beliebiger Schrift.",
+	"apihelp-languagesearch-summary": "Sucht nach Sprachnamen in einem beliebigen Skript.",
 	"apihelp-languagesearch-param-search": "Such-Zeichenfolge.",
 	"apihelp-languagesearch-param-typos": "Anzahl der erlaubten Rechtschreibfehler in der Sucheingabe.",
 	"apihelp-languagesearch-example-1": "Sucht nach „Te“",
