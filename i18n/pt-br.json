@@ -64,6 +64,8 @@
 	"apihelp-languagesearch-example-2": "Pesquisar por \"ഫി\"",
 	"apihelp-languagesearch-example-3": "Pesquisar por \"ഫി\", permitindo um erro ortográfico",
 	"apihelp-ulslocalization-param-language": "Código da linguagem",
+	"apihelp-ulslocalization-example-1": "Obter localização Tamil",
+	"apihelp-ulslocalization-example-2": "Obter localização Hindi",
 	"prefs-languages": "Idiomas",
 	"ext-uls-compact-language-links-preference": "Use uma [[$1|lista de idiomas compactos]], com idiomas relevantes para você."
 }
