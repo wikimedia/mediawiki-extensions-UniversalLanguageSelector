@@ -52,5 +52,10 @@
 	"ext-uls-input-disable-notification-info-personal": "Tu puè abbilità le struminde de ingresse ogne vote da le 'mbostaziune d'a lènghe.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Tu puè abbilità le struminde de ingresse ogne vote da le 'mbostaziune d'a lènghe successive a l'elenghe de le lènghe.",
 	"ext-uls-language-settings-applying": "Stoche a appleche...",
-	"apihelp-ulslocalization-param-language": "Codece d'a Lènghe."
+	"apihelp-languagesearch-param-search": "Cirche 'a stringhe.",
+	"apihelp-languagesearch-example-1": "Cirche \"Te\"",
+	"apihelp-languagesearch-example-2": "Cirche \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Cirche \"ഫി\", cu l'errore de battiture",
+	"apihelp-ulslocalization-param-language": "Codece d'a Lènghe.",
+	"prefs-languages": "Lènghe"
 }
