@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Brad Jorsch",
+			"Nike",
+			"Amire80",
+			"Purodha",
+			"Santhosh Thottingal"
+		]
+	},
+	"apihelp-languagesearch-description": "Search for language names in any script.",
+	"apihelp-languagesearch-summary": "Search for language names in any script.",
+	"apihelp-languagesearch-param-search": "Search string.",
+	"apihelp-languagesearch-param-typos": "Number of spelling mistakes allowed in the search string.",
+	"apihelp-languagesearch-example-1": "Search for \"Te\"",
+	"apihelp-languagesearch-example-2": "Search for \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Search for \"ഫി\", allowing one typo",
+	"apihelp-ulslocalization-description": "Get the localization of ULS in the given language.",
+	"apihelp-ulslocalization-summary": "Get the localization of ULS in the given language.",
+	"apihelp-ulslocalization-param-language": "Language code.",
+	"apihelp-ulslocalization-example-1": "Get Tamil localization",
+	"apihelp-ulslocalization-example-2": "Get Hindi localization"
+}

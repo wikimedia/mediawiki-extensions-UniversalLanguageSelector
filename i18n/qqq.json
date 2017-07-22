@@ -66,18 +66,6 @@
 	"ext-uls-language-settings-applying": "Label for apply settings button in language settings screen, while settings being saved. Please keep it short.",
 	"ext-uls-compact-link-count": "Message next to the list of languages which indicates that there are more languages than the ones shown. Parameter $1 is the number of languages.\n\nIf your language has a singular form for number 1, then the number should be explicitly mentioned. If it's possible in your language, please write \"1 more\" or \"one more\". Another option is to write \"more\" in a way that doesn't depend on a particular number.",
 	"ext-uls-compact-link-info": "A tooltip for a button that shows all available languages next to a short list of relevant languages.",
-	"apihelp-languagesearch-description": "{{doc-apihelp-description|languagesearch}}",
-	"apihelp-languagesearch-summary": "{{doc-apihelp-summary|languagesearch}}",
-	"apihelp-languagesearch-param-search": "The \"search string\" is the string that the user asks to search for, in looking for a language name.\n\n{{doc-apihelp-param|languagesearch|search}}\n{{Identical|Search string}}",
-	"apihelp-languagesearch-param-typos": "{{doc-apihelp-param|languagesearch|typos}}",
-	"apihelp-languagesearch-example-1": "Label of a command which produces a search by \"te\". Translate as imperative or noun as most suitable for your language.\n----\n{{doc-apihelp-example|languagesearch}}",
-	"apihelp-languagesearch-example-2": "Label of an example command which produces a search. Translate as appropriate to your language.\n----\n{{doc-apihelp-example|languagesearch}}",
-	"apihelp-languagesearch-example-3": "Description of a function where the user can find an available language by providing a name to search for.\n----\n{{doc-apihelp-example|languagesearch}}",
-	"apihelp-ulslocalization-description": "{{doc-apihelp-description|ulslocalization}}",
-	"apihelp-ulslocalization-summary": "{{doc-apihelp-summary|ulslocalization}}",
-	"apihelp-ulslocalization-param-language": "{{doc-apihelp-param|ulslocalization|language}}\n{{Identical|Language code}}",
-	"apihelp-ulslocalization-example-1": "{{doc-apihelp-example|ulslocalization}}",
-	"apihelp-ulslocalization-example-2": "{{doc-apihelp-example|ulslocalization}}",
 	"prefs-languages": "Field set legend for user preferences regarding display of language lists\n{{Identical|Language}}",
 	"ext-uls-compact-language-links-preference": "Label for compact language links user preference"
 }
