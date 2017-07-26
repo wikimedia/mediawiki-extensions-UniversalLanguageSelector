@@ -1,0 +1,38 @@
+== UniversalLanguageSelector 2017.07 ==
+Released at 2017-07-26.
+
+=== Noteworthy changes ===
+* Amir Aharoni added to Compact Language Links the ability to show languages
+that logged-in users specified in the Babel box. (T135371)
+* Amir Aharoni improved the language database by making sure all language
+autonyms are unique.
+* Amir Aharoni fixed misaligned icons in the jquery.ime selector in RTL.
+(T164474)
+* Amir Aharoni added five African languages and one Asian language to the
+language database.
+* Amir Aharoni added five language of Taiwan to the language database.
+* Amir Aharoni added Rangi language to the language database.
+* Federico Leva added four new languages for translatewiki.net to the language
+database.
+* Federico Leva added variants for Hakka language to the language database.
+
+=== Input methods ===
+* Amir Aharoni added an input method for the Fula, Wolof language and improved
+the keyboard for the Dagbani language.
+* Amir Aharoni added input methods for Dinka, Bambara and Dagbani languages.
+* Amir Aharoni renamed Akan keyboard and made it usable also for Twi.
+* Kartik Mistry and Amir Aharoni merged numerous pull requests from volunteers:
+** Kannada language input methods now also work for the Tulu language.
+** Added Tarandine language keyboard by User:Joetaras
+** Added Piedmontese language keyboard by User:GatoSelvadego
+** Fixes to the Odia transliteration keyboard by User:Psubhashish
+** Added the Tulalip input method for the Lushootseed language by
+[https://github.com/jcrowgey jcrowgey].
+** Added Sambhota input method for Tibetan language by
+[https://github.com/eroux Elie Roux].
+** Added a Gothic input method by User:Bokareis
+** Added added mm3 input method for the Burmese language by User:Lionslayer.
+** Added input methods for the Mongolian language by
+[https://github.com/hfl Feilong Huang].
+** Fixes to the Tamil 99 input method for the Tamil language by
+User:Balajijagadesh
