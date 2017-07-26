@@ -479,7 +479,7 @@ class UniversalLanguageSelectorHooks {
 	 * Conditionally register module ext.uls.eventlogger.
 	 *
 	 * @param ResourceLoader $resourceLoader
-	 * @return boolean true
+	 * @return bool true
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader $resourceLoader ) {
 		global $wgULSEventLogging, $wgVersion;
