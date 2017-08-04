@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Xð",
-			"Pahles"
+			"Pahles",
+			"Ooswesthoesbes"
 		]
 	},
-	"uls-plang-title-languages": "Sjpräök",
+	"uls-plang-title-languages": "Spraoke",
 	"ext-uls-select-language-settings-icon-tooltip": "Sjpraokinsjtellinge",
 	"ext-uls-undo-language-tooltip-text": "Sjpraok verangerd van $1",
 	"ext-uls-language-settings-preferences-link": "Mie sjpraokinsjtellinge",
@@ -40,10 +41,10 @@
 	"ext-uls-back-to-input-settings": "Trök nao invoerinsjtèllinge",
 	"ext-uls-ime-help": "Wie gebroeke",
 	"ext-uls-input-settings-more-languages-tooltip": "Mie sjpräök",
-	"jquery-ime-other-languages": "Anger sjpräök",
+	"jquery-ime-other-languages": "Anger spraoke",
 	"jquery-ime-help": "Hölp",
 	"ext-uls-input-disable-notification-undo": "Maak óngedaon",
 	"ext-uls-language-settings-applying": "Toepasse...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Eine mie|$1 mie}}",
-	"prefs-languages": "Sjpräök"
+	"prefs-languages": "Spraoke"
 }
