@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Saraiki"
+		]
+	},
+	"uls-plang-title-languages": "زباناں",
+	"ext-uls-select-language-settings-icon-tooltip": "زبان دی ترتیباں",
+	"ext-uls-display-settings-language-tab": "زبان",
+	"ext-uls-display-settings-fonts-tab": "فونٹ",
+	"ext-uls-display-settings-title-short": "ڈسپلے",
+	"ext-uls-language-settings-title": "زبان دی ترتیباں",
+	"ext-uls-language-settings-cancel": "منسوخ",
+	"ext-uls-display-settings-font-settings": "فونٹ دیاں ترتیباں",
+	"ext-uls-display-settings-ui-language": "ظاہری زبان",
+	"ext-uls-display-settings-anon-label": "ظاہری زبان:",
+	"ext-uls-webfonts-settings-info-link": "ٻیاں معلومات",
+	"ext-uls-input-settings-more-languages-tooltip": "مزید زبانیں",
+	"jquery-ime-other-languages": "ٻیاں زباناں",
+	"jquery-ime-help": "مدد",
+	"ext-uls-input-disable-notification-undo": "واپس",
+	"apihelp-ulslocalization-param-language": "زبان دا کوڈ۔",
+	"prefs-languages": "زباناں"
+}
