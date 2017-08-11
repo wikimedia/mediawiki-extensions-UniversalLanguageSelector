@@ -1,4 +1,5 @@
 @import 'mediawiki.mixins';
+@import 'ext.uls.mixins.less';
 
 /* stylelint-disable selector-no-id */
 
@@ -30,34 +31,6 @@
 	background-color: #ccc;
 }
 
-.interlanguage-uls-menu:before {
-	background: none repeat scroll 0 0 #fcfcfc;
-	border-left: 1px solid rgba( 0, 0, 0, 0.2 );
-	border-top: 1px solid rgba( 0, 0, 0, 0.2 );
-	box-shadow: -2px -2px 2px rgba( 0, 0, 0, 0.1 );
-	content: '';
-	height: 16px;
-	width: 16px;
-	left: -9px;
-	position: absolute;
-	/* The dialog middle is positioned 250px away from the center of the trigger. Substract 8 for
-	 * half of the box height to center middle of the box rather than the top.  The remaining 2 are
-	 * either for top-margin of the menu and border of this box, or because we use do not account
-	 * for the margin of the trigger when we use $.fn.outerWidth without true as a parameter.
-	 */
-	top: 240px;
-	transform: rotate( -45deg );
-	-webkit-transform: rotate( -45deg );
-	-moz-transform: rotate( -45deg );
-	-o-transform: rotate( -45deg );
-	-ms-transform: rotate( -45deg );
-	background-clip: padding-box;
-}
-
-body.rtl .interlanguage-uls-menu:before {
-	transform: rotate( 45deg );
-	-webkit-transform: rotate( 45deg );
-	-moz-transform: rotate( 45deg );
-	-o-transform: rotate( 45deg );
-	-ms-transform: rotate( 45deg );
+.interlanguage-uls-menu {
+	.caret();
 }

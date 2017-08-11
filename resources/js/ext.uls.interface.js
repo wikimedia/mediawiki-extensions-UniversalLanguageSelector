@@ -346,41 +346,31 @@
 					languageSettingsOptions = {
 						defaultModule: 'display',
 						onVisible: function () {
-							var caretRadius, caretPosition,
-								$caretBefore = $( '<span>' ).addClass( 'caret-before' ),
-								$caretAfter = $( '<span>' ).addClass( 'caret-after' ),
-								$caretWrapper = $( '<span>' ),
+							var caretRadius,
 								ulsTriggerHeight = this.$element.height(),
 								ulsTriggerWidth = this.$element.width(),
 								ulsTriggerOffset = this.$element.offset();
 
-							// Add the callout caret triangle
-							// pointing to the trigger icon
 							this.$window.addClass( 'callout' );
-							this.$window.prepend( $caretWrapper.prepend( $caretBefore, $caretAfter ) );
 
-							// Calculate the positioning of the panel
-							// according to the position of the trigger icon
-
-							caretRadius = parseInt( $caretBefore.css( 'border-top-width' ), 10 );
+							// Same as border width in mixins.less, or near enough
+							caretRadius = 12;
 
 							if ( ulsTriggerOffset.left > $( window ).width() / 2 ) {
 								this.left = ulsTriggerOffset.left - this.$window.width() - caretRadius;
-								$caretWrapper.addClass( 'caret-right' );
-								caretPosition = $caretBefore.position();
+								this.$window.removeClass( 'selector-left' ).addClass( 'selector-right' );
 
 							} else {
 								this.left = ulsTriggerOffset.left + ulsTriggerWidth + caretRadius;
-								$caretWrapper.addClass( 'caret-left' );
-								caretPosition = $caretAfter.position();
+								this.$window.removeClass( 'selector-right' ).addClass( 'selector-left' );
 							}
 
 							// The top of the dialog is aligned in relation to
 							// the middle of the trigger, so that middle of the
-							// caret aligns with it. 2 is for border and margin.
+							// caret aligns with it. 17 is a random number.
 							this.top = ulsTriggerOffset.top +
 								( ulsTriggerHeight / 2 ) -
-								( caretRadius + caretPosition.top + 2 );
+								( caretRadius + 17 );
 
 							this.position();
 						}

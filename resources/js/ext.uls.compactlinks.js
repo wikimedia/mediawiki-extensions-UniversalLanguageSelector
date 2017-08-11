@@ -117,7 +117,6 @@
 	CompactInterlanguageList.prototype.createSelector = function ( $trigger ) {
 		var languages,
 			self = this,
-			dir = $( 'html' ).prop( 'dir' ),
 			ulsLanguageList = {};
 
 		languages = $.map( this.interlanguageList, function ( language, languageCode ) {
@@ -152,18 +151,18 @@
 				width = $trigger.outerWidth();
 				height = $trigger.outerHeight();
 
-				// Triangle width is: Math.sqrt( 2 * Math.pow( 16, 2 ) ) / 2 =~ 11.3;
-				// Box width = 16 + 1 for border.
-				// The resulting value is rounded up 14 to have a small space between.
-				triangleWidth = 14;
+				// Triangle width is: who knows now, but this still looks fine.
+				triangleWidth = 12;
 
-				if ( dir === 'rtl' ) {
+				if ( offset.left > $( window ).width() / 2 ) {
 					this.left = offset.left - this.$menu.outerWidth() - triangleWidth;
+					this.$menu.removeClass( 'selector-left' ).addClass( 'selector-right' );
 				} else {
 					this.left = offset.left + width + triangleWidth;
+					this.$menu.removeClass( 'selector-right' ).addClass( 'selector-left' );
 				}
-				// Offset -250px from the middle of the trigger
-				this.top = offset.top + ( height / 2 ) - 250;
+				// Offset from the middle of the trigger
+				this.top = offset.top + ( height / 2 ) - 27;
 
 				this.$menu.css( {
 					left: this.left,
