@@ -9,7 +9,8 @@
 			"Sjoerddebruin",
 			"Macofe",
 			"Robin van der Vliet",
-			"McDutchie"
+			"McDutchie",
+			"Mainframe98"
 		]
 	},
 	"uls-desc": "Biedt gebruikers verschillende mogelijkheden om een taal te kiezen en bijbehorende instellingen aan te passen",
@@ -69,5 +70,5 @@
 	"apihelp-languagesearch-example-2": "Zoeken naar \"ഫി\"",
 	"apihelp-ulslocalization-param-language": "Taalcode.",
 	"prefs-languages": "Talen",
-	"ext-uls-compact-language-links-preference": "Een compacte talenlijst gebruiken, welke voor u relevante talen bevat."
+	"ext-uls-compact-language-links-preference": "Een [[$1|compacte talenlijst]] gebruiken, welke voor u relevante talen bevat."
 }
