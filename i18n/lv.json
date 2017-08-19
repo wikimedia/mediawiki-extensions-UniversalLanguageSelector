@@ -11,7 +11,7 @@
 	"ext-uls-select-language-settings-icon-tooltip": "Valodas iestatījumi",
 	"ext-uls-undo-language-tooltip-text": "Valoda nomainīta no $1",
 	"ext-uls-language-settings-preferences-link": "Vairāk valodas iestatījumi",
-	"uls-betafeature-label": "Kompaktas valodas saites",
+	"uls-betafeature-label": "Kompaktas valodu saites",
 	"ext-uls-display-settings-title": "Attēlošanas iestatījumi",
 	"ext-uls-display-settings-language-tab": "Valoda",
 	"ext-uls-display-settings-fonts-tab": "Fonti",
@@ -38,5 +38,6 @@
 	"ext-uls-language-settings-applying": "Pielieto...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Vēl $1}}",
 	"apihelp-ulslocalization-param-language": "Valodas kods.",
-	"prefs-languages": "Valodas"
+	"prefs-languages": "Valodas",
+	"ext-uls-compact-language-links-preference": "Izmantot [[$1|kompakto valodu sarakstu]] ar tev atbilstošajām valodām."
 }
