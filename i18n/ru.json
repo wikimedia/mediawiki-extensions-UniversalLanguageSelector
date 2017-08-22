@@ -11,7 +11,8 @@
 			"Ernác",
 			"Mailman",
 			"NBS",
-			"Mix Gerder"
+			"Mix Gerder",
+			"Jack who built the house"
 		]
 	},
 	"uls-desc": "Даёт пользователю несколько способов выбрать язык и произвести установки языка",
@@ -65,7 +66,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Инструменты ввода можно включить в любое время из установок языка рядом со списком языков.",
 	"ext-uls-language-settings-applying": "Применение…",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Ещё $1}}",
-	"ext-uls-compact-link-info": "Все языки (чаще всего использовались вами и другими)",
+	"ext-uls-compact-link-info": "Все языки (изначальная выборка — это языки, которые чаще всего использовались вами и другими)",
 	"apihelp-languagesearch-description": "Поиск названий языков на любом алфавите.",
 	"apihelp-languagesearch-param-search": "Строка поиска.",
 	"apihelp-languagesearch-param-typos": "Количество орфографических ошибок, которое допускается в искомой строке.",
