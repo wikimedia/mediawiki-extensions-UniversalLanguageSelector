@@ -21,7 +21,7 @@
 class UniversalLanguageSelectorHooks {
 	// Used when extension registration in use which skips the main php file
 	public static function setVersionConstant() {
-		define( 'ULS_VERSION', '2015-06-08' );
+		define( 'ULS_VERSION', '2017-07-25' );
 	}
 
 	/**
