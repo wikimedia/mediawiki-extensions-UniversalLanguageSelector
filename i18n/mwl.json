@@ -1,8 +1,29 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"MokaAkashiyaPT"
 		]
 	},
-	"uls-plang-title-languages": "Lhénguas"
+	"uls-plang-title-languages": "Lhénguas",
+	"ext-uls-select-language-settings-icon-tooltip": "Defeniçones de lhéngua",
+	"ext-uls-undo-language-tooltip-text": "Lhéngua altarada de $1",
+	"ext-uls-language-settings-preferences-link": "Mais defeniçones de lhéngua",
+	"ext-uls-display-settings-language-tab": "Lhéngua",
+	"ext-uls-display-settings-title-short": "Apersentaçon",
+	"ext-uls-display-settings-desc": "Defenir la lhéngua outelizada ne ls menus i las fuontes.",
+	"ext-uls-language-settings-title": "Defeniçones de lhéngua",
+	"ext-uls-language-settings-apply": "Aplicar defeniçones",
+	"ext-uls-language-settings-cancel": "Cancelar",
+	"ext-uls-language-buttons-help": "Altarar la lhéngua de ls menus. La lhéngua de l cuntenido nun será afetada.",
+	"ext-uls-display-settings-ui-language": "Lhéngua d'apersentaçon",
+	"ext-uls-display-settings-anon-label": "Lhéngua de l'anterface:",
+	"ext-uls-input-settings-title": "Defeniçones d'antrada",
+	"ext-uls-input-settings-desc": "Scribe nua lhéngua defrente?",
+	"ext-uls-input-settings-ui-language": "Lhéngua outelizada pa scribir",
+	"ext-uls-back-to-input-settings": "Buoltar a las defeniçones d'antrada",
+	"ext-uls-input-disable": "Zatibar las ferramientas d'antrada",
+	"ext-uls-input-settings-noime": "Nun eisisten métodos de antrada çponibles pa esta lhéngua.",
+	"prefs-languages": "Lhénguas",
+	"ext-uls-compact-language-links-preference": "Outelizar ua [[$1|lhista cumpata de lhénguas]], culas lhénguas relebantes pa si"
 }
