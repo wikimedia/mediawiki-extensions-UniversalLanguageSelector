@@ -199,7 +199,7 @@
 		},
 		"ext.uls.interface": {
 			"scripts": "js/ext.uls.interface.js",
-			"styles": "css/ext.uls.interface.css",
+			"styles": "css/ext.uls.interface.less",
 			"dependencies": [
 				"ext.uls.common",
 				"mediawiki.jqueryMsg",
@@ -219,7 +219,7 @@
 		},
 		"ext.uls.languagesettings": {
 			"scripts": "js/ext.uls.languagesettings.js",
-			"styles": "css/ext.uls.languagesettings.css",
+			"styles": "css/ext.uls.languagesettings.less",
 			"dependencies": [
 				"ext.uls.messages",
 				"ext.uls.preferences",

@@ -4,7 +4,7 @@ div.display-settings-block {
 	background: transparent no-repeat left top;
 	.background-image-svg( '../images/display.svg', '../images/display.png' );
 	background-size: 20px auto;
-	color: #252525;
+	color: #222;
 	padding-left: 26px;
 	cursor: pointer;
 }
@@ -22,7 +22,7 @@ div.display-settings-block {
 }
 
 .ext-uls-sub-panel {
-	border-top: 1px solid #eee;
+	border-top: 1px solid #eaecf0;
 	padding-top: 25px;
 	top: -20px;
 	position: relative;
@@ -34,38 +34,30 @@ div.display-settings-block {
 }
 
 .uls-font-item {
-	border-bottom: 1px solid #eee;
-	background: #fbfbfb;
+	border-bottom: 1px solid #eaecf0;
+	background: #f8f9fa;
 	padding: 10px 0;
 
 	&:first-child {
-		border-top: 1px solid #eee;
+		border-top: 1px solid #eaecf0;
 	}
 }
 
 .uls-font-label,
-.uls-font-select {
+.uls-font-select,
+#uls-display-settings-anon-log-in-cta { /* stylelint-disable-line selector-no-id */
 	font-size: 10pt;
-}
-
-.uls-content-fonts:hover,
-.uls-ui-fonts:hover {
-	background-color: #f6f6f6;
-}
-
-.uls-font-label strong {
-	color: #252525;
 }
 
 .uls-font-label {
-	color: #555;
+	color: #54595d;
 	font-size: 10pt;
+}
+
+.uls-font-label strong {
+	color: #222;
 }
 
 .uls-display-settings-anon-label {
 	font-weight: bold;
-}
-
-#uls-display-settings-anon-log-in-cta { /* stylelint-disable-line selector-no-id */
-	font-size: 10pt;
 }

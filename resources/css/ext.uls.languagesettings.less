@@ -1,13 +1,9 @@
-/* stylelint-disable selector-no-id */
+@import 'mediawiki.mixins';
 
+/* stylelint-disable selector-no-id */
 #uls-settings-block {
-	border-top: 1px solid #c9c9c9;
-	background: #f8f8f8;
-	background: -webkit-gradient( linear, left top, left bottom, from( #fbfbfb ), to( #f0f0f0 ) );
-	background: -webkit-linear-gradient( top, #fbfbfb, #f0f0f0 );
-	background: -moz-linear-gradient( top, #fbfbfb, #f0f0f0 );
-	background: -o-linear-gradient( top, #fbfbfb, #f0f0f0 );
-	background: linear-gradient( #fbfbfb, #f0f0f0 );
+	.vertical-gradient( #fbfbfb, #f0f0f0 );
+	border-top: 1px solid #c8ccd1;
 	padding-left: 10px;
 	line-height: 1.2em;
 	border-radius: 0 0 5px 5px;
@@ -32,12 +28,12 @@
 }
 
 .settings-text {
-	color: #555;
+	color: #54595d;
 	font-size: 9pt;
 }
 
 .display-settings-block:hover .settings-text {
-	color: #252525;
+	color: #222;
 }
 
 .languagesettings-menu h1 {
@@ -47,17 +43,17 @@
 	font-weight: normal;
 	border: 0;
 	padding: 15px 0 3px 15px;
-	color: #555;
+	color: #54595d;
 }
 
 #languagesettings-settings-panel {
 	padding: 0 15px;
-	color: #252525;
+	color: #222;
 	background: #fff;
 }
 
 #languagesettings-settings-panel h3 {
-	color: #252525;
+	color: #222;
 	padding-top: 15px;
 	margin-top: 1pt;
 	line-height: 20pt;
@@ -65,13 +61,13 @@
 }
 
 #languagesettings-settings-panel h4 {
-	color: #252525;
+	color: #222;
 	font-size: 12pt;
 }
 
 /* Buttons in the selector panel */
 .menu-section {
-	color: #777;
+	color: #72777d;
 	padding: 5px 0 5px 50px;
 	border-left: 3px solid transparent;
 	display: block;
@@ -79,7 +75,7 @@
 }
 
 #language-settings-dialog {
-	background: #fbfbfb;
+	background: #f8f9fa;
 	/* Ensure base font size is same in different skins */
 	font-size: medium;
 }
@@ -90,9 +86,9 @@
 
 #languagesettings-panels .menu-section.active,
 #languagesettings-panels .menu-section.active:hover {
+	background-color: #fff;
 	color: #000;
-	background-color: #f0f0f0;
-	border-left-color: #36b;
+	border-left-color: #36c;
 }
 
 .settings-menu-items .menu-section {
@@ -102,11 +98,11 @@
 }
 
 .settings-menu-items .menu-section:hover {
-	background-color: #f5f5f5;
+	background-color: #fff;
 }
 
 .language-settings-buttons {
-	border-top: 1px solid #f0f0f0;
+	border-top: 1px solid #eaecf0;
 	margin-top: 25px;
 	padding: 15px;
 	width: auto;
@@ -119,13 +115,14 @@
 
 .uls-ui-languages p,
 .checkbox {
-	color: #555;
+	color: #54595d;
 	font-size: 10pt;
 }
 
 /* mediawiki.ui does not have a pressed state style. */
 #languagesettings-panels .mw-ui-pressed {
-	background-color: #d8d8d8;
+	background-color: #2a4b8d;
+	color: #fff;
 }
 
 .checkbox input[type='checkbox'] {
@@ -133,7 +130,7 @@
 }
 
 .checkbox strong {
-	color: #252525;
+	color: #222;
 }
 
 label.checkbox input[type='checkbox'] {
