@@ -424,7 +424,8 @@ class UniversalLanguageSelectorHooks {
 					'rtl' => "$imagesDir/compact-links-rtl.svg",
 				],
 				'info-link' =>
-					'https://www.mediawiki.org/wiki/Universal_Language_Selector/Compact_Language_Links',
+					'https://www.mediawiki.org/wiki/Special:MyLanguage/' .
+					'Universal_Language_Selector/Compact_Language_Links',
 				'discussion-link' =>
 					'https://www.mediawiki.org/wiki/Talk:Universal_Language_Selector/Compact_Language_Links',
 			];
