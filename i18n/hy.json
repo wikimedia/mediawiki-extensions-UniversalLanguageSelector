@@ -55,7 +55,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Դուք ցանկացած պահին կարող եք միացնել ներածման գործիքները լեզվական կարգավորումներում, լեզուների ցանկի կողքը։",
 	"ext-uls-language-settings-applying": "Կիրառում․․․",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Եվս մեկը|Եվս $1}}",
-	"ext-uls-compact-link-info": "Բոլոր լեզուները (սկզբնապես բերված են քո և մյուսների կողմից ընտրված տարածված տարբերակները)",
+	"ext-uls-compact-link-info": "Բոլոր լեզուները (նախնական ցանկը կազմված է ձեր և մյուսների կողմից հաճախ ընտրված տարբերակները)",
 	"apihelp-languagesearch-description": "Լեզվի անվանման որոնում ցանկացած այբուբենով",
 	"apihelp-ulslocalization-param-language": "Լեզվի կոդը",
 	"prefs-languages": "Լեզուներ"

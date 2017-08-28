@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Xð",
-			"Ans"
+			"Ans",
+			"Aefgh39622"
 		]
 	},
 	"uls-plang-title-languages": "ภาษา",
+	"ext-uls-undo-language-tooltip-text": "เปลี่ยนภาษาจาก $1 แล้ว",
 	"prefs-languages": "ภาษา",
 	"ext-uls-compact-language-links-preference": "ใช้ [[$1|รายการภาษาแบบกระชับ]] โดยมีภาษาที่เกี่ยวข้องกับคุณ"
 }
