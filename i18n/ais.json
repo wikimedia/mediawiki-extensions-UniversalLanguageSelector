@@ -5,6 +5,11 @@
 		]
 	},
 	"uls-plang-title-languages": "kamu",
+	"ext-uls-display-settings-language-tab": "kamu",
+	"ext-uls-display-settings-fonts-tab": "kataci nu sulit",
+	"ext-uls-display-settings-title-short": "paazih",
 	"ext-uls-language-settings-cancel": "palawpes",
+	"jquery-ime-help": "buhci tu kamu",
+	"ext-uls-input-disable-notification-undo": "patiku",
 	"prefs-languages": "kamu"
 }
