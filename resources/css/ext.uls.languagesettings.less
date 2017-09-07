@@ -142,11 +142,10 @@ label.checkbox input[type='checkbox'] {
 }
 
 .uls-icon-close {
-	background: transparent url( ../images/close.png ) no-repeat scroll center center;
-	background-image: -webkit-linear-gradient( transparent, transparent ), url( ../images/close.svg );
-	/* @embed */
-	background-image: linear-gradient( transparent, transparent ), url( ../images/close.svg );
+	background: transparent no-repeat center center;
+	.background-image-svg( '../images/close.svg', '../images/close.png' );
+	background-size: 16px 16px; // Support: Android Browser <= 4.3, doesn't accept it as part of `background` shorthand
 	float: right;
-	padding: 15px;
+	padding: 16px;
 	cursor: pointer;
 }
