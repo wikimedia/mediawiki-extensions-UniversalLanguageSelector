@@ -1,15 +1,26 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bunukwiki"
+			"Bunukwiki",
+			"Benel"
 		]
 	},
 	"uls-plang-title-languages": "kamu",
+	"ext-uls-display-settings-title": "paazih tu setin",
 	"ext-uls-display-settings-language-tab": "kamu",
 	"ext-uls-display-settings-fonts-tab": "kataci nu sulit",
 	"ext-uls-display-settings-title-short": "paazih",
+	"ext-uls-language-settings-title": "kamu a setin",
+	"ext-uls-language-settings-apply": "caedung tu setin",
 	"ext-uls-language-settings-cancel": "palawpes",
+	"ext-uls-display-settings-font-settings": "misetin tu kataci nu silit",
+	"ext-uls-display-settings-ui-language": "paazih tu kamu",
+	"ext-uls-input-settings-title": "suliten tu setin",
+	"ext-uls-ime-help": "hicaen pisaungay",
+	"jquery-ime-other-languages": "zumaay a kamu",
 	"jquery-ime-help": "buhci tu kamu",
 	"ext-uls-input-disable-notification-undo": "patiku",
+	"ext-uls-language-settings-applying": "caedung henay ayza...",
+	"apihelp-ulslocalization-param-language": "kamu a kodo.",
 	"prefs-languages": "kamu"
 }
