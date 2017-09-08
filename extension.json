@@ -160,7 +160,8 @@
 			"scripts": "js/ext.uls.common.js",
 			"styles": "css/ext.uls.less",
 			"skinStyles": {
-				"monobook": "css/ext.uls-monobook.css"
+				"monobook": "css/ext.uls-monobook.css",
+				"vector": "css/ext.uls-vector.less"
 			},
 			"dependencies": [
 				"mediawiki.api",
