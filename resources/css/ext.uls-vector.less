@@ -1,3 +1,18 @@
-.uls-menu {
-	font-size: 0.875em; // not inherited from `.mw-body-content`, as we insert at `body`
+@import 'mediawiki.mixins';
+
+// We need higher specificity due to loading order of LESS files and jQuery.ULS
+.skin-vector {
+	.uls-menu {
+		border-color: #c8ccd1;
+		.box-shadow( 0 2px 2px 0 rgba( 0, 0, 0, 0.25 ) ); // Overwrite lib/jquery.uls
+		font-size: 0.875em; // not inherited from `.mw-body-content`, as we insert at `body`
+	}
+
+	.uls-search {
+		border-bottom-color: #c8ccd1;
+	}
+
+	.uls-filtersuggestion {
+		color: #72777d;
+	}
 }
