@@ -6,6 +6,7 @@
 		]
 	},
 	"uls-plang-title-languages": "kamu",
+	"ext-uls-language-settings-preferences-link": "kayadahay a kamu misetin",
 	"ext-uls-display-settings-title": "paazih tu setin",
 	"ext-uls-display-settings-language-tab": "kamu",
 	"ext-uls-display-settings-fonts-tab": "kataci nu sulit",
@@ -17,13 +18,18 @@
 	"ext-uls-display-settings-ui-language": "paazih tu kamu",
 	"ext-uls-display-settings-anon-label": "paazih tu kamu:",
 	"ext-uls-webfonts-system-font": "sisetyimo kataci nu silit",
+	"ext-uls-back-to-display-settings": "tatiku paazih a setin",
 	"ext-uls-input-settings-title": "suliten tu setin",
+	"ext-uls-back-to-input-settings": "pananukas suliten setin",
 	"ext-uls-ime-help": "hicaen pisaungay",
 	"ext-uls-input-settings-more-languages-tooltip": "sayadahay a kamu",
 	"jquery-ime-other-languages": "zumaay a kamu",
 	"jquery-ime-help": "buhci tu kamu",
+	"ext-uls-input-disable": "mapasatezep suliten a sakaluk",
+	"ext-uls-input-enable": "miwawah misulitan a sakaluk",
 	"ext-uls-input-disable-notification-undo": "patiku",
 	"ext-uls-language-settings-applying": "caedung henay ayza...",
+	"apihelp-languagesearch-param-search": "mikilim sulisulitan.",
 	"apihelp-ulslocalization-param-language": "kamu a kodo.",
 	"prefs-languages": "kamu"
 }
