@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Bunukwiki",
-			"Benel"
+			"Benel",
+			"Tokoabibi"
 		]
 	},
 	"uls-plang-title-languages": "kamu",
@@ -17,6 +18,7 @@
 	"ext-uls-display-settings-font-settings": "misetin tu kataci nu silit",
 	"ext-uls-display-settings-ui-language": "paazih tu kamu",
 	"ext-uls-display-settings-anon-label": "paazih tu kamu:",
+	"ext-uls-webfonts-settings-info-link": "sayadahay a cesyun",
 	"ext-uls-webfonts-system-font": "sisetyimo kataci nu silit",
 	"ext-uls-back-to-display-settings": "tatiku paazih a setin",
 	"ext-uls-input-settings-title": "suliten tu setin",
