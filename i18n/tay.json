@@ -5,10 +5,18 @@
 		]
 	},
 	"ext-uls-language-settings-preferences-link": "Ssi’ sa pzyux na’ na kay’",
+	"ext-uls-display-settings-language-tab": "Kay’",
+	"ext-uls-display-settings-fonts-tab": "Inrkyasan na biru’",
+	"ext-uls-display-settings-title-short": "Pkaykita’",
+	"ext-uls-language-settings-cancel": "Laxan",
 	"ext-uls-back-to-display-settings": "Psbzinah sa sni’ sa kktan",
 	"ext-uls-back-to-input-settings": "Psbzinah squw miru’ sa ssi’",
 	"ext-uls-disable-input-method": "Ptzyawganiy sa ’ringan balayna Cyenpan niya’",
 	"jquery-ime-disable-text": "Ptzyawganiy sa ’ringan balayna Cyenpan niya’",
+	"jquery-ime-help": "Minblaq kmal",
 	"ext-uls-input-disable": "Phngaw quw qayqaya’ na bbiru",
-	"ext-uls-input-enable": "Gyahiy qayqaya’ na bbiru’ sa qsahuy"
+	"ext-uls-input-enable": "Gyahiy qayqaya’ na bbiru’ sa qsahuy",
+	"ext-uls-input-disable-notification-undo": "Psbzih",
+	"ext-uls-language-settings-applying": "Siy galiy...",
+	"prefs-languages": "Kay’"
 }

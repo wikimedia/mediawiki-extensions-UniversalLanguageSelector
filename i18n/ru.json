@@ -74,6 +74,7 @@
 	"apihelp-languagesearch-example-2": "Поиск «ഫി»",
 	"apihelp-languagesearch-example-3": "Поиск «ഫി», допускается одна ошибка",
 	"apihelp-ulslocalization-description": "Получить локализацию ULS на указанном языке.",
+	"apihelp-ulslocalization-summary": "Получить локализацию ULS на указанном языке.",
 	"apihelp-ulslocalization-param-language": "Код языка.",
 	"apihelp-ulslocalization-example-1": "Получить тамильскую локализацию",
 	"apihelp-ulslocalization-example-2": "Получить локализацию на хинди",
