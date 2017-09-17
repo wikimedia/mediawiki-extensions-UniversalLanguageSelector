@@ -3,7 +3,8 @@
 		"authors": [
 			"Sindhu",
 			"Xð",
-			"Mehtab ahmed"
+			"Mehtab ahmed",
+			"Indus Asia"
 		]
 	},
 	"uls-desc": "ڪا ٻولي چونڊڻ ۽ ٻوليءَ جو ترتيبون ايڊجسٽ ڪرڻ لاءِ يوزر کي ڪيترائي رستا ڏئي ٿو.",
@@ -31,7 +32,7 @@
 	"ext-uls-webfonts-settings-info": "رھيل فونٽس خودبخود لاھيو ۽ پسنديده فونٽس جي چونڊ جي اجازت ڏيو.",
 	"ext-uls-webfonts-settings-info-link": "وڌيڪ معلومات",
 	"ext-uls-webfonts-select-for": "$1 لاءِ فونٽ چونڊيو",
-	"ext-uls-webfonts-select-for-ui-info": "واھپ انٽرفيس لاءِ استعمال ٿيندڙ فونٽ",
+	"ext-uls-webfonts-select-for-ui-info": "واھپ (يوزر) انٽرفيس لاءِ استعمال ٿيندڙ فونٽ",
 	"ext-uls-webfonts-select-for-content-info": "مواد لاءِ استعمال ٿيندڙ فونٽ",
 	"ext-uls-webfonts-system-font": "سرشتي جا فونٽ",
 	"ext-uls-back-to-display-settings": "ڊسپلي ترتيبن ڏانھن واپس",
