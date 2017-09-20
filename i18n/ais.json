@@ -36,11 +36,5 @@
 	"ext-uls-input-disable-notification": "sulitan sakaluk mapasatezep tuway",
 	"ext-uls-input-disable-notification-undo": "patiku",
 	"ext-uls-language-settings-applying": "caedung henay ayza...",
-	"apihelp-languagesearch-param-search": "mikilim sulisulitan.",
-	"apihelp-languagesearch-example-1": "kilim tu \"Te\"",
-	"apihelp-languagesearch-example-2": "kilim tu \"ഫി\"",
-	"apihelp-ulslocalization-param-language": "kamu a kodo.",
-	"apihelp-ulslocalization-example-1": "maala kamu nu Taymil sanuniyazu’en",
-	"apihelp-ulslocalization-example-2": "maala kamu nu intu  sanuniyazu’en",
 	"prefs-languages": "kamu"
 }

@@ -59,14 +59,6 @@
 	"ext-uls-language-settings-applying": "لاڳو ڪندي...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|ھڪ وڌيڪ|$1 وڌيڪ}}",
 	"ext-uls-compact-link-info": "سڀ ٻوليون (توھان ۽ ٻين جي عام اختيارن مان شروعاتي چونڊ)",
-	"apihelp-languagesearch-description": "ڪنھن بہ اسڪرپٽ ۾ ٻوليءَ جي نالن جي ڳولا ڪريو.",
-	"apihelp-languagesearch-param-search": "ڳولا تار.",
-	"apihelp-languagesearch-param-typos": "ڳولا تار ۾ ھجي جي غلطين جو اجازت ڏنل انگ.",
-	"apihelp-languagesearch-example-1": "\"Te\" لاءِ ڳوليو",
-	"apihelp-languagesearch-example-2": "\"ഫി\" لاءِ ڳوليو",
-	"apihelp-ulslocalization-param-language": "ٻوليءَ جو ڪوڊ",
-	"apihelp-ulslocalization-example-1": "تامل مقامڪاري وٺو",
-	"apihelp-ulslocalization-example-2": "ھندي مقامڪاري وٺو",
 	"prefs-languages": "ٻوليون",
 	"ext-uls-compact-language-links-preference": "توھان سان لاڳاپيل ٻولين لاءِ [[$1|ٻولين جي ڳتيل فھرست]] استعمال ڪريو."
 }
