@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Piramidion",
+			"Ата"
+		]
+	},
+	"apihelp-languagesearch-description": "Пошук назв мов у будь-якому скрипті.",
+	"apihelp-languagesearch-summary": "Шукати назв мов у будь-якому написанні.",
+	"apihelp-languagesearch-param-search": "Рядок пошуку.",
+	"apihelp-languagesearch-param-typos": "Кількість орфографічних помилок, дозволених у рядку пошуку.",
+	"apihelp-languagesearch-example-1": "Пошук «Te»",
+	"apihelp-languagesearch-example-2": "Пошук «ഫി»",
+	"apihelp-languagesearch-example-3": "Пошук «ഫി», допускається одна помилка",
+	"apihelp-ulslocalization-description": "Отримати локалізацію ULS вказаною мовою.",
+	"apihelp-ulslocalization-summary": "Отримати локалізацію ULS вказаною мовою.",
+	"apihelp-ulslocalization-param-language": "Код мови.",
+	"apihelp-ulslocalization-example-1": "Отримати локалізацію тамільською",
+	"apihelp-ulslocalization-example-2": "Отримати локалізацію хінді"
+}

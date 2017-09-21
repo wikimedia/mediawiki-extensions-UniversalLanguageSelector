@@ -7,6 +7,7 @@
 		]
 	},
 	"uls-plang-title-languages": "kamu",
+	"ext-uls-undo-language-tooltip-text": "kamu nay $1 misumad",
 	"ext-uls-language-settings-preferences-link": "kayadahay a kamu misetin",
 	"uls-betafeature-label": "madayumay kamu masasiket",
 	"ext-uls-display-settings-title": "paazih tu setin",
@@ -21,6 +22,7 @@
 	"ext-uls-display-settings-anon-label": "paazih tu kamu:",
 	"ext-uls-webfonts-settings-info-link": "sayadahay a cesyun",
 	"ext-uls-webfonts-select-for": "naka $1 sa kyu mipili’ kataci nu silit",
+	"ext-uls-webfonts-select-for-ui-info": "kawiza i misaungayay taypuolayta a kataci nu silit",
 	"ext-uls-webfonts-system-font": "sisetyimo kataci nu silit",
 	"ext-uls-back-to-display-settings": "tatiku paazih a setin",
 	"ext-uls-input-settings-title": "suliten tu setin",

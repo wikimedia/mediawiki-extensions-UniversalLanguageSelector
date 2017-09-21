@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jeblad",
+			"Jon Harald Søby"
+		]
+	},
+	"apihelp-languagesearch-description": "Søk etter språknavn i ethvert skript.",
+	"apihelp-languagesearch-summary": "Søk etter språknavn uansett alfabet.",
+	"apihelp-languagesearch-param-search": "Søkestreng.",
+	"apihelp-languagesearch-param-typos": "Antall stavefeil tillatt i søkestrengen.",
+	"apihelp-languagesearch-example-1": "Søk etter «Te»",
+	"apihelp-languagesearch-example-2": "Søk etter «ഫി»",
+	"apihelp-languagesearch-example-3": "Søk etter «ഫി», tillat en skrivefeil",
+	"apihelp-ulslocalization-description": "Hent lokalisering av ULS på angitt språk.",
+	"apihelp-ulslocalization-summary": "Hent lokaliseringen av ULS på det gitte språket.",
+	"apihelp-ulslocalization-param-language": "Språkkode",
+	"apihelp-ulslocalization-example-1": "Hent lokalisering på tamilsk",
+	"apihelp-ulslocalization-example-2": "Hent lokalisering på hindu"
+}
