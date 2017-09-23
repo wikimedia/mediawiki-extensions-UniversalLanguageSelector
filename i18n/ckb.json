@@ -3,7 +3,8 @@
 		"authors": [
 			"Calak",
 			"Asoxor",
-			"Sarchia"
+			"Sarchia",
+			"Lost Whispers"
 		]
 	},
 	"uls-desc": "ڕێگای جۆربەجۆر بۆ بەکارھێنەر بۆ ھەڵبژاردنی زمان و جێبەجێکردنی ڕێکخستنەکانی زمان دخاتە ڕوو.",
@@ -53,5 +54,6 @@
 	"ext-uls-input-disable-notification-info-personal": "ھەر کات ویستت دەتوانی ئامرازەکانی تەختەکلیل لە بەشی ڕێکخستنەکانی زمان چالاک بکەی.",
 	"ext-uls-input-disable-notification-info-interlanguage": "ھەر کات ویستت دەتوانی ئامرازەکانی تەختەکلیل لە بەشی ڕێکخستنەکانی زمان لە لای پێرستی زمانەکان چالاک بکەی.",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|زمانێکی تر|$1 زمانی تر}}",
-	"prefs-languages": "زمانەکان"
+	"prefs-languages": "زمانەکان",
+	"ext-uls-compact-language-links-preference": "بەکارھێنانی [[$1|پێرستێکی پتەوی زمانەکان]] بەو زمانانەوەی کە دەیانناسیت"
 }
