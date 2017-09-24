@@ -56,9 +56,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Яздаран гӀирс лело йиш ю муьлхачу хенахь мотт хуьйцу гӀирсан чохь.",
 	"ext-uls-language-settings-applying": "ДӀахӀоттор…",
 	"ext-uls-compact-link-count": "Кхин {{PLURAL:$1|цхьан маттахь|$1 меттанашкахь}}",
-	"apihelp-languagesearch-param-search": "Лахаран могӀа.",
-	"apihelp-languagesearch-example-1": "Лахар «Te»",
-	"apihelp-languagesearch-example-2": "Лахар «ഫി»",
-	"apihelp-ulslocalization-param-language": "Меттан код.",
-	"ext-uls-compact-language-links-preference": "Лелабе компакте болу меттанийн могӀам хьайна оьшу меттанаш долуш"
+	"ext-uls-compact-link-info": "Берриге меттанаш (дуьххьара хаьржинарш бу ахьа я кхечара лелина меттанаш)",
+	"prefs-languages": "Меттанаш",
+	"ext-uls-compact-language-links-preference": "Лелабе [[$1|компакте болу меттанийн могӀам]] хьайна оьшу меттанаш долуш."
 }
