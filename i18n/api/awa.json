@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"1AnuraagPandey"
+		]
+	},
+	"apihelp-languagesearch-description": "भाषा कय कवनो भी लिपी मा खोजी सका जात है",
+	"apihelp-languagesearch-param-search": "स्ट्रिङ खोजा जाय",
+	"apihelp-languagesearch-example-1": "\"Te\" खोजा जाय"
+}

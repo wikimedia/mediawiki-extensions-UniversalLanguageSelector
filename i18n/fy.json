@@ -21,8 +21,5 @@
 	"jquery-ime-other-languages": "Oare talen",
 	"jquery-ime-help": "Help",
 	"ext-uls-input-disable-notification-undo": "Weromsette",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Ien mear|$1 mear}}",
-	"apihelp-languagesearch-example-1": "Sykje nei \"Te\"",
-	"apihelp-languagesearch-example-2": "Sykje nei \"ഫി\"",
-	"apihelp-ulslocalization-param-language": "Taalkoade."
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ien mear|$1 mear}}"
 }

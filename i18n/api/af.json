@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fwolff"
+		]
+	},
+	"apihelp-languagesearch-description": "Soek taalname in enige skryfstelsel.",
+	"apihelp-languagesearch-param-search": "Soekstring.",
+	"apihelp-languagesearch-param-typos": "Aantal spelfoute om toe te laat in die soekstring.",
+	"apihelp-languagesearch-example-1": "Soek vir \"Te\"",
+	"apihelp-languagesearch-example-2": "Soek vir \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Soek vir \"ഫി\" met hoogstens een tikfout",
+	"apihelp-ulslocalization-description": "Kry die lokalisering van ULS in die gegewe taal.",
+	"apihelp-ulslocalization-param-language": "Taalkode.",
+	"apihelp-ulslocalization-example-1": "Kry Tamil lokalisering",
+	"apihelp-ulslocalization-example-2": "Kry Hindi lokalisering"
+}

@@ -55,15 +55,5 @@
 	"ext-uls-input-disable-notification-info-personal": "Du chasch d Ygabystellige jederzyt by de Sprachystelligen aktiviere.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Du chasch d Ygabystellige jederzyt by de Sprachystellige näb der Sprachlisten aktiviere.",
 	"ext-uls-language-settings-applying": "Am Spychere...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Eini meh|$1 meh}}",
-	"apihelp-languagesearch-description": "Sprachnämen i allne Schrifte sueche.",
-	"apihelp-languagesearch-param-search": "Zeichefolg für d Suechi",
-	"apihelp-languagesearch-param-typos": "Azahl müglechi Abwychigen ir Schrybig vor Zeichefolg für d Suechi.",
-	"apihelp-languagesearch-example-1": "Nach «Te» sueche",
-	"apihelp-languagesearch-example-2": "Nach «ഫി» sueche",
-	"apihelp-languagesearch-example-3": "Nach «ഫി» sueche, mit eire müglechen Abwychig ir Schrybig",
-	"apihelp-ulslocalization-description": "D Lokalisierig vom ULS i der vor’gänige Sprach abrüeffe.",
-	"apihelp-ulslocalization-param-language": "Sprachcode.",
-	"apihelp-ulslocalization-example-1": "Tamil-Lokalisierig abrüeffe",
-	"apihelp-ulslocalization-example-2": "Hindi-Lokalisierig abrüeffe"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Eini meh|$1 meh}}"
 }

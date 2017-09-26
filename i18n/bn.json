@@ -59,16 +59,6 @@
 	"ext-uls-language-settings-applying": "প্রয়োগ হচ্ছে...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|আরও একটি|আরও $1টি}}",
 	"ext-uls-compact-link-info": "সব ভাষাসমূহ (আপনার ও অন্যদের দ্বারা সাধারণ পছন্দ থেকে প্রাথমিক নির্বাচন)",
-	"apihelp-languagesearch-description": "যে কোনো স্ক্রিপ্টে ভাষার নাম অনুসন্ধান করুন।",
-	"apihelp-languagesearch-param-search": "বাক্য অনুসন্ধান।",
-	"apihelp-languagesearch-param-typos": "বাক্য অনুসন্ধানে গ্রহনযোগ্য বানান ভুলের সংখ্যা ।",
-	"apihelp-languagesearch-example-1": "\"Te\" এর জন্য অনুসন্ধান",
-	"apihelp-languagesearch-example-2": "\"ഫി\" এর জন্য অনুসন্ধান",
-	"apihelp-languagesearch-example-3": "\"ഫി\" এর জন্য অনুসন্ধান, একটি বানান ভুল গ্রহনযোগ্য",
-	"apihelp-ulslocalization-description": "ইউএলএস এর এই ভাষায় ব্যবহার করুন।",
-	"apihelp-ulslocalization-param-language": "ভাষা কোড।",
-	"apihelp-ulslocalization-example-1": "তামিল ভাষায় ব্যবহার",
-	"apihelp-ulslocalization-example-2": "হিন্দি ভাষায় ব্যবহার",
 	"prefs-languages": "ভাষাসমূহ",
 	"ext-uls-compact-language-links-preference": "আপনার কাছে প্রাসঙ্গিক মনে হয় এমন ভাষাসহ, [[$1|ভাষার একটি ছোট তালিকা]] ব্যবহার করে।"
 }

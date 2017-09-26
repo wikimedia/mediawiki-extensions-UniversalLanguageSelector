@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lam-ang"
+		]
+	},
+	"apihelp-languagesearch-description": "Agbiruk kadagiti nagan ti pagsasao iti ania man nga eskritu.",
+	"apihelp-languagesearch-param-search": "Kuerdas ti panagbiruk.",
+	"apihelp-languagesearch-param-typos": "Bilang dagiti kamali ti panangiletra a maipalubos iti kuerdas ti panagbiruk.",
+	"apihelp-languagesearch-example-1": "Agbiruk para iti \"Te\"",
+	"apihelp-languagesearch-example-2": "Agbiruk para iti \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Agbiruk para iti \"ഫി\", a mangipalubos iti maysa a kamali",
+	"apihelp-ulslocalization-description": "Alaen ti lokalisasion ti ULS iti naited a pagsasao.",
+	"apihelp-ulslocalization-param-language": "Kodigo ti pagsasao.",
+	"apihelp-ulslocalization-example-1": "Alaen ti lokalisasion ti Tamil",
+	"apihelp-ulslocalization-example-2": "Alaen ti lokalisasion ti Hindi"
+}

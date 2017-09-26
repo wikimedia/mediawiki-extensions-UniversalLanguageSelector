@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226"
+		]
+	},
+	"apihelp-languagesearch-description": "使用任何字母搜索语言名称。",
+	"apihelp-languagesearch-summary": "使用任何字母搜索语言名称。",
+	"apihelp-languagesearch-param-search": "搜索字符串。",
+	"apihelp-languagesearch-param-typos": "搜索字符串中允许的拼写错误数量。",
+	"apihelp-languagesearch-example-1": "搜索“Te”",
+	"apihelp-languagesearch-example-2": "搜索“ഫി”",
+	"apihelp-languagesearch-example-3": "搜索“ഫി”，允许一个错字",
+	"apihelp-ulslocalization-description": "获得指定语言的ULS本地化。",
+	"apihelp-ulslocalization-summary": "获取指定语言的ULS本地化。",
+	"apihelp-ulslocalization-param-language": "语言代码。",
+	"apihelp-ulslocalization-example-1": "获得泰米尔语本地化",
+	"apihelp-ulslocalization-example-2": "获得印地语本地化"
+}

@@ -54,6 +54,5 @@
 	"ext-uls-input-disable-notification-info-personal": "អ្នកអាចបើកអោយប្រើឧបករណ៍វាយបញ្ចូលពេលណាក៏បាន ដោយចូលទៅកាន់ការកំណត់ភាសា។",
 	"ext-uls-input-disable-notification-info-interlanguage": "អ្នកអាចបើកអោយប្រើឧបករណ៍វាយបញ្ចូលពេលណាក៏បាន ដោយចូលទៅកាន់ការកំណត់ភាសា​ដែលនៅក្បែរបញ្ជីភាសា។",
 	"ext-uls-language-settings-applying": "កំពុងអនុវត្ត...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|មួយទៀត|$1 ទៀត}}",
-	"apihelp-ulslocalization-param-language": "កូដ​ភាសា។"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|មួយទៀត|$1 ទៀត}}"
 }

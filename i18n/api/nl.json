@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Macofe",
+			"Robin van der Vliet",
+			"Siebrand",
+			"Sjoerddebruin"
+		]
+	},
+	"apihelp-languagesearch-description": "Zoeken voor taalnamen in elk script.",
+	"apihelp-languagesearch-param-search": "Zoekterm.",
+	"apihelp-languagesearch-example-1": "Zoeken naar \"Te\"",
+	"apihelp-languagesearch-example-2": "Zoeken naar \"ഫി\"",
+	"apihelp-ulslocalization-param-language": "Taalcode."
+}

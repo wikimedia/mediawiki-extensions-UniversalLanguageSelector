@@ -52,8 +52,5 @@
 	"ext-uls-input-disable-notification-info-personal": "भाषा सेटिंग्स में जाइकय कब्बो भी आप इनपुट औजार कय सक्रिय कै सका जात है।",
 	"ext-uls-input-disable-notification-info-interlanguage": "भाषा सूची कय आगे भाषा सेटिंग्स में जाइकय आप कब्बो भी इनपुट औजार कय सक्रिय कै सका जात है।",
 	"ext-uls-language-settings-applying": "लागू होत है...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|एक्ठु अउर|$1 अउर}}",
-	"apihelp-languagesearch-description": "भाषा कय कवनो भी लिपी मा खोजी सका जात है",
-	"apihelp-languagesearch-param-search": "स्ट्रिङ खोजा जाय",
-	"apihelp-languagesearch-example-1": "\"Te\" खोजा जाय"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|एक्ठु अउर|$1 अउर}}"
 }

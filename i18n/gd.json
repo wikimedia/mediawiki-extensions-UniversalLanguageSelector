@@ -56,16 +56,6 @@
 	"ext-uls-language-settings-applying": "'Ga chur an sàs...",
 	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|a bharrachd}}",
 	"ext-uls-compact-link-info": "A h-uile cànan (an taghadh tùsail o roghainnean minig leat fhèin is le càch)",
-	"apihelp-languagesearch-description": "Lorg airson ainmean chànan ann an sgriobt sam bith.",
-	"apihelp-languagesearch-param-search": "Sreang an luirg.",
-	"apihelp-languagesearch-param-typos": "Àireamh dhe mhearachdan litreachaidh a tha ceadaichte san t-sreang luirg.",
-	"apihelp-languagesearch-example-1": "Lorg \"Te\"",
-	"apihelp-languagesearch-example-2": "Lorg \"ഫി\"",
-	"apihelp-languagesearch-example-3": "Lorg \"ഫി\" le aon mhearachd sgrìobhaidh ceadaichte",
-	"apihelp-ulslocalization-description": "Faigh ionadaileadh air an roghnaichear chànan uile-choitcheann sa chànan shònraichte.",
-	"apihelp-ulslocalization-param-language": "Còd a' chànain.",
-	"apihelp-ulslocalization-example-1": "Faigh ionadaileadh na Taimilis",
-	"apihelp-ulslocalization-example-2": "Faigh ionadaileadh na Hindis",
 	"prefs-languages": "Cànain",
 	"ext-uls-compact-language-links-preference": "cleachd liosta beag nan cànan leis na cànain a tha a' buntainn riut."
 }

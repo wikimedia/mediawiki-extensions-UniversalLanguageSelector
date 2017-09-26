@@ -42,9 +42,5 @@
 	"jquery-ime-help": "هومياری",
 	"ext-uls-input-disable-notification-undo": "انجوم ندی ئن",
 	"ext-uls-language-settings-applying": "د حال و بال وه کار گرتن....",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|یه گل بیشتر|$1 بیشتر}}",
-	"apihelp-languagesearch-param-search": "پی جوری د یه گل رشته.",
-	"apihelp-languagesearch-example-1": "پی جوری سی  \"Te\"",
-	"apihelp-languagesearch-example-2": "پی جوری سی \"ഫി\"",
-	"apihelp-ulslocalization-param-language": "رازینه زوٙن."
+	"ext-uls-compact-link-count": "{{PLURAL:$1|یه گل بیشتر|$1 بیشتر}}"
 }

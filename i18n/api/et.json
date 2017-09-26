@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pikne"
+		]
+	},
+	"apihelp-languagesearch-description": "Keelenimetuste otsimine, kasutades ükskõik millist kirja.",
+	"apihelp-languagesearch-param-search": "Otsisõne.",
+	"apihelp-languagesearch-param-typos": "Lubatud tähevigade arv otsisõnes.",
+	"apihelp-languagesearch-example-1": "Otsi sõnet \"Te\"",
+	"apihelp-languagesearch-example-2": "Otsi sõnet \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Otsi sõnet \"ഫി\", lubatud üks täheviga",
+	"apihelp-ulslocalization-description": "Universaalse keelevalija lokalisatsiooni hankimine antud keeles.",
+	"apihelp-ulslocalization-param-language": "Keelekood.",
+	"apihelp-ulslocalization-example-1": "Hangi tamili lokalisatsioon",
+	"apihelp-ulslocalization-example-2": "Hangi hindi lokalisatsioon"
+}

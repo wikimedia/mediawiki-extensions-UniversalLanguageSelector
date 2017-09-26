@@ -59,13 +59,6 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Du kan altid slå indtastningsværktøjerne til i sprogindstillingerne ved siden af sproglisten.",
 	"ext-uls-language-settings-applying": "Anvender...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Et mere|$1 mere}}",
-	"apihelp-languagesearch-description": "Søg efter navne på sprog i valgfrit skriftsystem.",
-	"apihelp-languagesearch-param-search": "Søgestreng.",
-	"apihelp-languagesearch-param-typos": "Antallet af stavefejl som tillades i søgestrengen.",
-	"apihelp-languagesearch-example-1": "Søg efter \"Te\"",
-	"apihelp-languagesearch-example-2": "Søg efter \"ഫി\"",
-	"apihelp-languagesearch-example-3": "Søg efter \"ഫി\", og tillad en tastefejl",
-	"apihelp-ulslocalization-param-language": "Sprogkode.",
 	"prefs-languages": "Sprog",
 	"ext-uls-compact-language-links-preference": "Brug en kompakt sprogliste med sprog, der er relevante for dig."
 }

@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"apihelp-languagesearch-description": "Pesquisar nomes de línguas em qualquer sistema de escrita.",
+	"apihelp-languagesearch-summary": "Pesquisar nomes de línguas em qualquer sistema de escrita.",
+	"apihelp-languagesearch-param-search": "Texto da pesquisa.",
+	"apihelp-languagesearch-param-typos": "Número de erros ortográficos permitidos to texto da pesquisa.",
+	"apihelp-languagesearch-example-1": "Pesquisar \"Te\"",
+	"apihelp-languagesearch-example-2": "Pesquisar \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Pesquisar \"ഫി\", permitindo um erro ortográfico",
+	"apihelp-ulslocalization-description": "Obter a localização de ULS na língua indicada.",
+	"apihelp-ulslocalization-summary": "Obter a localização de ULS na língua indicada.",
+	"apihelp-ulslocalization-param-language": "Código de língua.",
+	"apihelp-ulslocalization-example-1": "Obter a localização em tamil",
+	"apihelp-ulslocalization-example-2": "Obter a localização em hindi"
+}

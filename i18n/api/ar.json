@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Abanima",
+			"Maroen1990",
+			"Meno25"
+		]
+	},
+	"apihelp-languagesearch-description": "ابحث عن أسماء اللغات بأي كتابة كانت.",
+	"apihelp-languagesearch-summary": "ابحث عن أسماء اللغات بأي كتابة كانت.",
+	"apihelp-languagesearch-param-search": "سطر البحث",
+	"apihelp-languagesearch-param-typos": "عدد الأخطاء الطباعية المسموح بها في سطر البحث",
+	"apihelp-languagesearch-example-1": "ابحث عن «Te»",
+	"apihelp-languagesearch-example-2": "ابحث عن «ഫി»",
+	"apihelp-languagesearch-example-3": "ابحث عن «ഫി» واسمح بخطأ مطبعي واحد",
+	"apihelp-ulslocalization-description": "الحصول على ترجمة ULS باللغة المعطاة.",
+	"apihelp-ulslocalization-summary": "الحصول على ترجمة ULS باللغة المعطاة.",
+	"apihelp-ulslocalization-param-language": "كود اللغة.",
+	"apihelp-ulslocalization-example-1": "الحصول على تعريب التاميلية",
+	"apihelp-ulslocalization-example-2": "الحصول على تعريب الهندية"
+}

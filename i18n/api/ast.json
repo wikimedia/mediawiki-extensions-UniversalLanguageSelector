@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"apihelp-languagesearch-description": "Buscar nomes de llingua en cualquier alfabetu.",
+	"apihelp-languagesearch-summary": "Buscar nomes de llingua en cualquier alfabetu.",
+	"apihelp-languagesearch-param-search": "Buscar cadena.",
+	"apihelp-languagesearch-param-typos": "Númberu d'errores ortográficos permitíos na cadena de gueta.",
+	"apihelp-languagesearch-example-1": "Buscar \"Te\"",
+	"apihelp-languagesearch-example-2": "Buscar \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Buscar \"ഫി\", permitiendo un fallu d'ortografía",
+	"apihelp-ulslocalization-description": "Obtener la llocalización de ULS na llingua dada.",
+	"apihelp-ulslocalization-summary": "Obtener la llocalización de ULS na llingua dada.",
+	"apihelp-ulslocalization-param-language": "Códigu de llingua.",
+	"apihelp-ulslocalization-example-1": "Obtener la llocalización en tamil",
+	"apihelp-ulslocalization-example-2": "Obtener la llocalización en hindi"
+}

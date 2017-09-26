@@ -54,15 +54,5 @@
 	"ext-uls-input-disable-notification-info-personal": "Dü könst a werktjüügen tu skriiwen tu arke tidj uun a spriakiinstelangen aktiwiare.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Dü könst a werktjüügen tu skriiwen tu arke tidj uun a spriakiinstelangen üüb sidj faan det spriakenlist aktiwiare.",
 	"ext-uls-language-settings-applying": "Brüken ...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Ian muar|$1 muar}}",
-	"apihelp-languagesearch-description": "Spriak-nöömer uun arke skript schük",
-	"apihelp-languagesearch-param-search": "Tekst trochschük.",
-	"apihelp-languagesearch-param-typos": "Taal faan skriiwfeelern uun det schük-wurd.",
-	"apihelp-languagesearch-example-1": "Schük \"Te\"",
-	"apihelp-languagesearch-example-2": "Schük \"ഫി\"",
-	"apihelp-languagesearch-example-3": "Schük \"ഫി\", uk mä ään skriiwfeeler",
-	"apihelp-ulslocalization-description": "Haale det auersaatang faan ULS uun det uunden spriak.",
-	"apihelp-ulslocalization-param-language": "Spriak-tekst",
-	"apihelp-ulslocalization-example-1": "Haale det auersaatang uun Tamil",
-	"apihelp-ulslocalization-example-2": "Haale det auersaatang uun Hindi"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ian muar|$1 muar}}"
 }

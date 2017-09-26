@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kumkumuk",
+			"Mirzali"
+		]
+	},
+	"apihelp-languagesearch-description": "Nameyê zıwani nuşteyê raştameyeyi de geyreno cı.",
+	"apihelp-languagesearch-param-search": "Rêza cıgeyrayışi.",
+	"apihelp-languagesearch-param-typos": "Amora cerğkerdena ratenanê xetayanê imla",
+	"apihelp-languagesearch-example-1": "\"Te\" de bıvin",
+	"apihelp-languagesearch-example-2": "\"ഫി\" de bıvin",
+	"apihelp-languagesearch-example-3": "Qandé  „ഫി“, inlanrê mısade bıgi",
+	"apihelp-ulslocalization-description": "Zıwano daye ra lokalizasyonê ULSi bıgê.",
+	"apihelp-ulslocalization-param-language": "Kodê zıwani.",
+	"apihelp-ulslocalization-example-1": "Lokalizasyonê Tamili ano",
+	"apihelp-ulslocalization-example-2": "Lokalizasyonê Hindi ano"
+}

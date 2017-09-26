@@ -61,7 +61,6 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Dil ayarlarını dil listesinin yanında bulunan giriş araçlarından etkinleştirebilirsiniz.",
 	"ext-uls-language-settings-applying": "Uygulanıyor...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Bir tane daha|$1 tane daha}}",
-	"apihelp-ulslocalization-param-language": "Dil kodu.",
 	"prefs-languages": "Diller",
 	"ext-uls-compact-language-links-preference": "Sadece seni ilgilendiren [[$1|dil listesi]] kullan."
 }

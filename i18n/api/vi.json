@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen"
+		]
+	},
+	"apihelp-languagesearch-description": "Tìm kiếm các tên người dùng trong hệ thống viết nào.",
+	"apihelp-languagesearch-param-search": "Chuỗi tìm kiếm.",
+	"apihelp-languagesearch-param-typos": "Số lỗi chính tả được cho phép trong chuỗi tìm kiếm.",
+	"apihelp-languagesearch-example-1": "Tìm kiếm cho “Te”",
+	"apihelp-languagesearch-example-2": "Tìm kiếm cho “ഫി”",
+	"apihelp-languagesearch-example-3": "Tìm kiếm cho “ഫി” mà cho phép một lỗi chính tả",
+	"apihelp-ulslocalization-description": "Lấy bản dịch ULS trong ngôn ngữ được chỉ định.",
+	"apihelp-ulslocalization-param-language": "Chuỗi ngôn ngữ.",
+	"apihelp-ulslocalization-example-1": "Lấy bản dịch tiếng Tamil",
+	"apihelp-ulslocalization-example-2": "Lấy bản dịch tiếng Hindi"
+}

@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robin van der Vliet"
+		]
+	},
+	"apihelp-languagesearch-example-1": "Sykje nei \"Te\"",
+	"apihelp-languagesearch-example-2": "Sykje nei \"ഫി\"",
+	"apihelp-ulslocalization-param-language": "Taalkoade."
+}

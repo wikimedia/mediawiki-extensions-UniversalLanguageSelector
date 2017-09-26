@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bennylin",
+			"William Surya Permana"
+		]
+	},
+	"apihelp-languagesearch-description": "Cari nama bahasa dalam aksara apa pun.",
+	"apihelp-languagesearch-param-search": "Cari kata.",
+	"apihelp-languagesearch-param-typos": "Jumlah kesalahan eja yang diperbolehkan dalam kata pencarian.",
+	"apihelp-languagesearch-example-1": "Cari \"Te\"",
+	"apihelp-languagesearch-example-2": "Cari \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Cari \"ഫി\", memperbolehkan satu kesalahan ketik",
+	"apihelp-ulslocalization-description": "Dapatkan lokalisasi ULS dalam bahasa yang diberikan.",
+	"apihelp-ulslocalization-param-language": "Kode bahasa.",
+	"apihelp-ulslocalization-example-1": "Dapatkan lokalisasi Tamil",
+	"apihelp-ulslocalization-example-2": "Dapatkan lokalisasi Hindi"
+}

@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Muhammad Shuaib"
+		]
+	},
+	"apihelp-languagesearch-description": "کسی بھی رسم الخط میں زبان کے ناموں کو تلاش کریں۔",
+	"apihelp-languagesearch-param-search": "تلاش کا جملہ",
+	"apihelp-languagesearch-param-typos": "تلاش کے جملے میں ہجے کی غلطیوں کی تعداد۔",
+	"apihelp-languagesearch-example-1": "تلاش برائے «Te»",
+	"apihelp-languagesearch-example-2": "تلاش برائے «ഫി»",
+	"apihelp-languagesearch-example-3": "تلاش برائے «ഫി» اور ایک غلطی کی اجازت دیں",
+	"apihelp-ulslocalization-description": "درج شدہ زبان میں ULS کی مقامیت کاری حاصل کریں",
+	"apihelp-ulslocalization-param-language": "رمز زبان۔",
+	"apihelp-ulslocalization-example-1": "تمل مقامیت کاری حاصل کریں",
+	"apihelp-ulslocalization-example-2": "ہندی مقامیت کاری حاصل کریں"
+}

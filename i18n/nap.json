@@ -57,15 +57,5 @@
 	"ext-uls-input-disable-notification-info-personal": "Vuje putite appiccià 'e strumiente 'e scrittura 'a ll'impostaziune 'e llengua.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Vuje putite appiccià 'e tool dint'a qualsiasi mumento d' 'e preferenze 'e llengua aropp'a l'elenco 'e llengue",
 	"ext-uls-language-settings-applying": "Apprecanno...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|N'ata|N'ati $1}}",
-	"apihelp-languagesearch-description": "Ascìa pe' lengue dint'a qualunque script.",
-	"apihelp-languagesearch-param-search": "Ascìa stringa.",
-	"apihelp-languagesearch-param-typos": "Nummero errure 'e battitura ca fossero premmesse dint'a na stringa 'e cerca",
-	"apihelp-languagesearch-example-1": "Circa \"Te\"",
-	"apihelp-languagesearch-example-2": "Circa \"ഫി\"",
-	"apihelp-languagesearch-example-3": "Cerca \"ഫി\", cunzentenno 'e fà n'errore 'e battitura",
-	"apihelp-ulslocalization-description": "Arrepiglia 'a localizzaziona d' 'o ULS dint'a llengua data.",
-	"apihelp-ulslocalization-param-language": "Codece lengua.",
-	"apihelp-ulslocalization-example-1": "Arrepiglia 'a localizzaziona Tamil",
-	"apihelp-ulslocalization-example-2": "Arrepiglia 'a localizzaziona Hindi"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|N'ata|N'ati $1}}"
 }

@@ -59,18 +59,6 @@
 	"ext-uls-language-settings-applying": "Aplicando...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|$1 máis}}",
 	"ext-uls-compact-link-info": "Todas as linguas (selección inicial de opcións comúns súas e doutros)",
-	"apihelp-languagesearch-description": "Procurar nomes de lingua en calquera script.",
-	"apihelp-languagesearch-summary": "Procurar nomes de lingua en calquera script.",
-	"apihelp-languagesearch-param-search": "Cadea de busca.",
-	"apihelp-languagesearch-param-typos": "Número de erros ortográficos permitidos na cadea de busca.",
-	"apihelp-languagesearch-example-1": "Procurar \"Te\"",
-	"apihelp-languagesearch-example-2": "Procurar \"ഫി\"",
-	"apihelp-languagesearch-example-3": "Procurar \"ഫി\", permitindo un erro ortográfico",
-	"apihelp-ulslocalization-description": "Obter a localización do ULS na lingua dada.",
-	"apihelp-ulslocalization-summary": "Obter a localización do ULS na lingua dada.",
-	"apihelp-ulslocalization-param-language": "Código da lingua.",
-	"apihelp-ulslocalization-example-1": "Obter a localización en támil",
-	"apihelp-ulslocalization-example-2": "Obter a localización en hindi",
 	"prefs-languages": "Linguas",
 	"ext-uls-compact-language-links-preference": "Usar unha [[$1|lista de linguas compacta]], con linguas relevantes para vostede."
 }

@@ -58,7 +58,6 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Можете да разрешите инструментите за въвеждане по всяко време от езиковите настройки до списъка с езици.",
 	"ext-uls-language-settings-applying": "Прилагане...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Още $1}}",
-	"apihelp-ulslocalization-param-language": "Езиков код.",
 	"prefs-languages": "Езици",
 	"ext-uls-compact-language-links-preference": "Използване на [[$1|компактен списък на езиците]], имащи отношение към вас."
 }

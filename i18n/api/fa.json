@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mehran",
+			"Reza1615"
+		]
+	},
+	"apihelp-languagesearch-description": "جستجو برای نام زبان در هر کد.",
+	"apihelp-languagesearch-param-search": "جستجوی رشته.",
+	"apihelp-languagesearch-param-typos": "تعداد غلطهای املایی مجاز در جستجوی متن.",
+	"apihelp-languagesearch-example-1": "جستجوی \"Te\"",
+	"apihelp-languagesearch-example-2": "جستجوی ഫി\"",
+	"apihelp-languagesearch-example-3": "جستجوی ഫി\"، اجازه برای یک خطای نوشتاری",
+	"apihelp-ulslocalization-description": "تنظیم بومی‌سازی ULS در زبان داده شده",
+	"apihelp-ulslocalization-param-language": "کد زبان.",
+	"apihelp-ulslocalization-example-1": "تنظیم بومی‌سازی تامیلی",
+	"apihelp-ulslocalization-example-2": "تنظیم بومی‌سازی هندی"
+}

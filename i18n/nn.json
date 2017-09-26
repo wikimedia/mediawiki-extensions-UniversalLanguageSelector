@@ -54,7 +54,6 @@
 	"ext-uls-language-settings-applying": "Tek i bruk …",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Eitt til|$1 til}}",
 	"ext-uls-compact-link-info": "Alle språk (utvalet i mergen er basert på vanlege val av deg og andre)",
-	"apihelp-ulslocalization-param-language": "Språkkode.",
 	"prefs-languages": "Språk",
 	"ext-uls-compact-language-links-preference": "Bruk ei kompakt språkliste med språk som er relevante for deg."
 }

@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"apihelp-languagesearch-description": "Cirche 'u nome de le lènghe jndr'à tutte le script.",
+	"apihelp-languagesearch-summary": "Cirche 'u nome de le lènghe jndr'à tutte le script.",
+	"apihelp-languagesearch-param-search": "Cirche 'a stringhe.",
+	"apihelp-languagesearch-param-typos": "Numere de errore de dizione permesse jndr'à stringhe de ricerche.",
+	"apihelp-languagesearch-example-1": "Cirche \"Te\"",
+	"apihelp-languagesearch-example-2": "Cirche \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Cirche \"ഫി\", cu l'errore de battiture",
+	"apihelp-ulslocalization-description": "Pigghie 'a localizzazione de ULS jndr'à lènga scacchiate.",
+	"apihelp-ulslocalization-summary": "Pigghie 'a localizzazione de ULS jndr'à lènga scacchiate.",
+	"apihelp-ulslocalization-param-language": "Codece d'a Lènghe.",
+	"apihelp-ulslocalization-example-1": "Pigghie 'a localizzazione Tamil",
+	"apihelp-ulslocalization-example-2": "Pigghie 'a localizzazione Hindi"
+}

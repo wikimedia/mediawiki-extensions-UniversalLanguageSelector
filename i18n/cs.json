@@ -61,8 +61,6 @@
 	"ext-uls-language-settings-applying": "Provádí se…",
 	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|další|další|dalších}}",
 	"ext-uls-compact-link-info": "Všechny jazyky (počáteční výběr ze společných voleb vás a ostatních)",
-	"apihelp-languagesearch-param-typos": "Počet pravopisných chyb povolených v řetězci pro vyhledávání.",
-	"apihelp-ulslocalization-param-language": "Kód jazyka.",
 	"prefs-languages": "Jazyky",
 	"ext-uls-compact-language-links-preference": "Používat [[$1|kompaktní seznam jazyků]] pouze s jazyky pro vás relevantními"
 }

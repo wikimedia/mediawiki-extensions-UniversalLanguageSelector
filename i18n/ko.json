@@ -65,16 +65,6 @@
 	"ext-uls-language-settings-applying": "적용 중....",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|한 개 더 보기|$1개 더 보기}}",
 	"ext-uls-compact-link-info": "모든 언어 (사용자 및 다른 사용자들의 공통 선택 항목 중 초기 선택 항목)",
-	"apihelp-languagesearch-description": "임의의 스크립트에서 언어 이름을 검색합니다.",
-	"apihelp-languagesearch-summary": "임의의 스크립트에서 언어 이름을 검색합니다.",
-	"apihelp-languagesearch-param-search": "검색 문자열입니다.",
-	"apihelp-languagesearch-example-1": "\"Te\"로 검색",
-	"apihelp-languagesearch-example-2": "\"ഫി\"로 검색",
-	"apihelp-ulslocalization-description": "주어진 언어로 ULS의 지역화를 가져옵니다.",
-	"apihelp-ulslocalization-summary": "주어진 언어로 ULS의 지역화를 가져옵니다.",
-	"apihelp-ulslocalization-param-language": "언어 코드입니다.",
-	"apihelp-ulslocalization-example-1": "타밀어 지역화 가져오기",
-	"apihelp-ulslocalization-example-2": "힌디어 지역화 가져오기",
 	"prefs-languages": "언어",
 	"ext-uls-compact-language-links-preference": "사용자와 관련이 있는 언어들을 위주로 [[$1|간소화된 언어 목록]]을 사용합니다."
 }

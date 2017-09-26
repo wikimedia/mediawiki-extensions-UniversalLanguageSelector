@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"apihelp-languagesearch-description": "Пребарајте имиња на јазици на било кое писмо.",
+	"apihelp-languagesearch-summary": "Пребарајте имиња на јазици на било кое писмо.",
+	"apihelp-languagesearch-param-search": "Низа за пребарување.",
+	"apihelp-languagesearch-param-typos": "Број на допуштени грешки при пишување во низата на пребарувањето.",
+	"apihelp-languagesearch-example-1": "Пребарај „Te“",
+	"apihelp-languagesearch-example-2": "Пребарај „ഫി“",
+	"apihelp-languagesearch-example-3": "Пребарај „ഫി“, допуштајќи една грешка при пишување",
+	"apihelp-ulslocalization-description": "Дај превод на универзалниот јазичен избрач на дадениот јазик.",
+	"apihelp-ulslocalization-summary": "Дај превод на универзалниот јазичен избрач на дадениот јазик.",
+	"apihelp-ulslocalization-param-language": "Јазичен код.",
+	"apihelp-ulslocalization-example-1": "Дај превод на тамилски",
+	"apihelp-ulslocalization-example-2": "Дај превод на хинди"
+}

@@ -57,16 +57,6 @@
 	"ext-uls-language-settings-applying": "Rakendamine...",
 	"ext-uls-compact-link-count": "Veel {{PLURAL:$1|üks keel|$1 keelt}}",
 	"ext-uls-compact-link-info": "Kõik keeled (esialgne valik sinu ja teiste ühiste valikute põhjal)",
-	"apihelp-languagesearch-description": "Keelenimetuste otsimine, kasutades ükskõik millist kirja.",
-	"apihelp-languagesearch-param-search": "Otsisõne.",
-	"apihelp-languagesearch-param-typos": "Lubatud tähevigade arv otsisõnes.",
-	"apihelp-languagesearch-example-1": "Otsi sõnet \"Te\"",
-	"apihelp-languagesearch-example-2": "Otsi sõnet \"ഫി\"",
-	"apihelp-languagesearch-example-3": "Otsi sõnet \"ഫി\", lubatud üks täheviga",
-	"apihelp-ulslocalization-description": "Universaalse keelevalija lokalisatsiooni hankimine antud keeles.",
-	"apihelp-ulslocalization-param-language": "Keelekood.",
-	"apihelp-ulslocalization-example-1": "Hangi tamili lokalisatsioon",
-	"apihelp-ulslocalization-example-2": "Hangi hindi lokalisatsioon",
 	"prefs-languages": "Keeled",
 	"ext-uls-compact-language-links-preference": "Kasuta [[$1|kompaktset keeleloendit]], milles on sinu jaoks asjakohased keeled"
 }

@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dsvyas",
+			"KartikMistry"
+		]
+	},
+	"apihelp-languagesearch-description": "કોઇપણ લિપીમાં ભાષા નામો શોધો.",
+	"apihelp-languagesearch-summary": "કોઇપણ લિપીમાં ભાષા નામો શોધો.",
+	"apihelp-languagesearch-param-search": "શોધ પદ.",
+	"apihelp-languagesearch-param-typos": "શોધવાના શબ્દમાં માન્ય જોડણીની ભૂલો.",
+	"apihelp-languagesearch-example-1": "\"Te\" માટે શોધો",
+	"apihelp-languagesearch-example-2": "\"ഫി\" માટે શોધો",
+	"apihelp-languagesearch-example-3": "એક ભૂલ કરીને \"ഫി\", માટે શોધો",
+	"apihelp-ulslocalization-description": "ULS નું ભાષાંતર આપેલી ભાષા માટે મેળવો.",
+	"apihelp-ulslocalization-summary": "ULS નું ભાષાંતર આપેલી ભાષા માટે મેળવો.",
+	"apihelp-ulslocalization-param-language": "ભાષા સંજ્ઞા.",
+	"apihelp-ulslocalization-example-1": "તમિલ ભાષાંતર મેળવો",
+	"apihelp-ulslocalization-example-2": "હિન્દી ભાષાંતર મેળવો"
+}

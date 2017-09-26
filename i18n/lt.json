@@ -58,16 +58,6 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Jūs galite įgalinti įvesties priemones bet kuriuo metu iš kalbos parametrų šalia kalbos sąrašo.",
 	"ext-uls-language-settings-applying": "Taikant...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Viena daugiau|$1 daugiau}}",
-	"apihelp-languagesearch-description": "Ieškoti kalbų pavadinimų kiekviename scenarijuje.",
-	"apihelp-languagesearch-param-search": "Ieškoti eilutės.",
-	"apihelp-languagesearch-param-typos": "Leistinas rašybos klaidų skaičius paieškos eilutėje.",
-	"apihelp-languagesearch-example-1": "Ieškoti \"Te\"",
-	"apihelp-languagesearch-example-2": "Ieškoti \"ഫി\"",
-	"apihelp-languagesearch-example-3": "Ieškoti \"ഫി\", leidžiant vieną rinkimo klaidą",
-	"apihelp-ulslocalization-description": "Gauti ULS lokalizavimas pateikta kalba.",
-	"apihelp-ulslocalization-param-language": "Kalbos kodas.",
-	"apihelp-ulslocalization-example-1": "Gauti tamilų lokalizavimą",
-	"apihelp-ulslocalization-example-2": "Gauti Hindi lokalizavimą",
 	"prefs-languages": "Kalbos",
 	"ext-uls-compact-language-links-preference": "Naudoti suskleistą kalbų sąrašą, rodantį tik jums svarbias kalbas."
 }

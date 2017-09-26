@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16",
+			"F. Cosoleto",
+			"Macofe"
+		]
+	},
+	"apihelp-languagesearch-example-1": "Cerca \"Te\"",
+	"apihelp-languagesearch-example-2": "Cerca \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Cerca \"ഫി\", consentendo un errore di battitura",
+	"apihelp-ulslocalization-param-language": "Codice lingua.",
+	"apihelp-ulslocalization-example-1": "Ottieni localizzazione in Tamil",
+	"apihelp-ulslocalization-example-2": "Ottieni localizzazione in Hindi"
+}

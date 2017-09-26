@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kusurija"
+		]
+	},
+	"apihelp-languagesearch-param-typos": "Počet pravopisných chyb povolených v řetězci pro vyhledávání.",
+	"apihelp-ulslocalization-param-language": "Kód jazyka."
+}

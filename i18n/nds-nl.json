@@ -55,16 +55,6 @@
 	"ext-uls-language-settings-applying": "Toepassen...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Nog ene|Nog $1}}",
 	"ext-uls-compact-link-info": "Alle talen (eerste seleksie van algemene keuzes emaakt deur joe en aanderen)",
-	"apihelp-languagesearch-description": "Zeuken naor taalnamen in elk schriftsysteem.",
-	"apihelp-languagesearch-param-search": "Zeukterm.",
-	"apihelp-languagesearch-param-typos": "Antal toe-eleuten spelfouten in de zeukterm.",
-	"apihelp-languagesearch-example-1": "Zeuken naor \"Te\"",
-	"apihelp-languagesearch-example-2": "Zeuken naor \"ഫി\"",
-	"apihelp-languagesearch-example-3": "Zeuken naor \"ഫി\", één spelfout toe-estaon",
-	"apihelp-ulslocalization-description": "Gebruuk de lokalisasie van ULS in de op-egeven taal.",
-	"apihelp-ulslocalization-param-language": "Taalkode.",
-	"apihelp-ulslocalization-example-1": "Gebruuk Tamil-lokalisasie",
-	"apihelp-ulslocalization-example-2": "Gebruuk Hindi-lokalisasie",
 	"prefs-languages": "Talen",
 	"ext-uls-compact-language-links-preference": "n Kompakte talenlieste gebruken, mit de talen waor jie wat an hebben."
 }

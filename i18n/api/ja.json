@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Otokoume",
+			"Sujiniku"
+		]
+	},
+	"apihelp-languagesearch-param-search": "検索文字列。",
+	"apihelp-ulslocalization-param-language": "言語コード"
+}

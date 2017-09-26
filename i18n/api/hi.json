@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sfic"
+		]
+	},
+	"apihelp-languagesearch-param-search": "स्ट्रिंग खोजें",
+	"apihelp-languagesearch-example-1": "\"Te\" हेतु खोजें",
+	"apihelp-languagesearch-example-2": "\"ഫി\" हेतु खोजें",
+	"apihelp-ulslocalization-param-language": "भाषा कोड"
+}

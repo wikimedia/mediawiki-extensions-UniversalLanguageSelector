@@ -63,11 +63,6 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Możesz w dowolnym momencie włączyć narzędzia wprowadzania tekstu w ustawieniach języka, obok listy języków.",
 	"ext-uls-language-settings-applying": "Realizacja w toku...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Jeden więcej|$1 więcej}}",
-	"apihelp-languagesearch-param-search": "Wyszukaj tekst.",
-	"apihelp-languagesearch-example-1": "Wyszukaj „Te”",
-	"apihelp-languagesearch-example-2": "Wyszukaj „ഫി”",
-	"apihelp-languagesearch-example-3": "Wyszukaj „ഫി”, dopuszczalna jedna literówka",
-	"apihelp-ulslocalization-param-language": "Kod języka.",
 	"prefs-languages": "Języki",
 	"ext-uls-compact-language-links-preference": "Używaj [[$1|kompaktowej listy języków]] z językami najbardziej Ci odpowiadającymi."
 }

@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hwangjy9",
+			"Ykhwong"
+		]
+	},
+	"apihelp-languagesearch-description": "임의의 스크립트에서 언어 이름을 검색합니다.",
+	"apihelp-languagesearch-summary": "임의의 스크립트에서 언어 이름을 검색합니다.",
+	"apihelp-languagesearch-param-search": "검색 문자열입니다.",
+	"apihelp-languagesearch-example-1": "\"Te\"로 검색",
+	"apihelp-languagesearch-example-2": "\"ഫി\"로 검색",
+	"apihelp-ulslocalization-description": "주어진 언어로 ULS의 지역화를 가져옵니다.",
+	"apihelp-ulslocalization-summary": "주어진 언어로 ULS의 지역화를 가져옵니다.",
+	"apihelp-ulslocalization-param-language": "언어 코드입니다.",
+	"apihelp-ulslocalization-example-1": "타밀어 지역화 가져오기",
+	"apihelp-ulslocalization-example-2": "힌디어 지역화 가져오기"
+}

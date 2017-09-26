@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mogoeilor"
+		]
+	},
+	"apihelp-languagesearch-param-search": "پی جوری د یه گل رشته.",
+	"apihelp-languagesearch-example-1": "پی جوری سی  \"Te\"",
+	"apihelp-languagesearch-example-2": "پی جوری سی \"ഫി\"",
+	"apihelp-ulslocalization-param-language": "رازینه زوٙن."
+}

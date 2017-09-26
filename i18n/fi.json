@@ -61,8 +61,6 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Syöttötoiminnot voi ottaa milloin tahansa käyttöön kieliasetuksissa kieliluettelon vierestä.",
 	"ext-uls-language-settings-applying": "Tallennetaan...",
 	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|muu kieli|muuta kieltä}}",
-	"apihelp-languagesearch-param-typos": "Virheiden enimmäislukumäärä hakutekstissä",
-	"apihelp-ulslocalization-param-language": "Kielikoodi.",
 	"prefs-languages": "Kielet",
 	"ext-uls-compact-language-links-preference": "Käytä kompaktia kielilistaa, joka näyttää sinulle tärkeimmät kielet."
 }

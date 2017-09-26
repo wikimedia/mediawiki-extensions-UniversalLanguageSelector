@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"V.narsikar"
+		]
+	},
+	"apihelp-languagesearch-description": "कोणत्याही लिपीतील भाषा-नावांचा शोध घ्या.",
+	"apihelp-languagesearch-param-search": "शोध सूत्र.",
+	"apihelp-languagesearch-param-typos": "शोध सूत्रात परवानगी दिलेली स्पेलिंग चूकांची संख्या.",
+	"apihelp-languagesearch-example-1": "\"Te\" साठी शोधा",
+	"apihelp-languagesearch-example-2": "\"ഫി\" साठी शोधा",
+	"apihelp-languagesearch-example-3": "\"ഫി\" साठी शोधा, एक चूक क्षम्य",
+	"apihelp-ulslocalization-description": "वैभावचे (यूएलएस) दिलेल्या भाषेतील स्थानिकीकरण मिळवा.",
+	"apihelp-ulslocalization-param-language": "भाषा संकेत (कोड).",
+	"apihelp-ulslocalization-example-1": "तामिळ स्थानिकिकरण मिळवा",
+	"apihelp-ulslocalization-example-2": "हिंदी स्थानिकिकरण मिळवा"
+}

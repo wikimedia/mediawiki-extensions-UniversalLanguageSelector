@@ -59,9 +59,5 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "आप किसी भी समय भाषा सूची के साथ स्थित भाषा विकल्प में से इनपुट उपकरण सक्षम कर सकते हैं।",
 	"ext-uls-language-settings-applying": "लागू हो रहा है...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|एक और भाषा|$1 और भाषाएँ}}",
-	"apihelp-languagesearch-param-search": "स्ट्रिंग खोजें",
-	"apihelp-languagesearch-example-1": "\"Te\" हेतु खोजें",
-	"apihelp-languagesearch-example-2": "\"ഫി\" हेतु खोजें",
-	"apihelp-ulslocalization-param-language": "भाषा कोड",
 	"prefs-languages": "भाषा"
 }

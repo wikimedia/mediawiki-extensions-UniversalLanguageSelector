@@ -63,18 +63,6 @@
 	"ext-uls-language-settings-applying": "正在应用...",
 	"ext-uls-compact-link-count": "还有$1种语言",
 	"ext-uls-compact-link-info": "所有语言（来自您和其他人共同选择的初始选项）",
-	"apihelp-languagesearch-description": "使用任何字母搜索语言名称。",
-	"apihelp-languagesearch-summary": "使用任何字母搜索语言名称。",
-	"apihelp-languagesearch-param-search": "搜索字符串。",
-	"apihelp-languagesearch-param-typos": "搜索字符串中允许的拼写错误数量。",
-	"apihelp-languagesearch-example-1": "搜索“Te”",
-	"apihelp-languagesearch-example-2": "搜索“ഫി”",
-	"apihelp-languagesearch-example-3": "搜索“ഫി”，允许一个错字",
-	"apihelp-ulslocalization-description": "获得指定语言的ULS本地化。",
-	"apihelp-ulslocalization-summary": "获取指定语言的ULS本地化。",
-	"apihelp-ulslocalization-param-language": "语言代码。",
-	"apihelp-ulslocalization-example-1": "获得泰米尔语本地化",
-	"apihelp-ulslocalization-example-2": "获得印地语本地化",
 	"prefs-languages": "语言",
 	"ext-uls-compact-language-links-preference": "使用[[$1|紧凑的语言列表]]，它包含与您有关的语言。"
 }

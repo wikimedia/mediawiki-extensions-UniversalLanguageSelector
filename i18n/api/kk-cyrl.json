@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arystanbek"
+		]
+	},
+	"apihelp-languagesearch-description": "Кез келген шрифттегі тіл атауларын іздеу.",
+	"apihelp-languagesearch-param-search": "Іздеу жолы.",
+	"apihelp-languagesearch-param-typos": "Іздеу жолында дұрыс жазу ережесін бұзуына рұқсат етілген саны",
+	"apihelp-languagesearch-example-1": "«Te» үшін іздеу",
+	"apihelp-languagesearch-example-2": "«ഫി» үшін іздеу",
+	"apihelp-ulslocalization-param-language": "Тіл жолы.",
+	"apihelp-ulslocalization-example-1": "Тамил жерсіндірілуін алу",
+	"apihelp-ulslocalization-example-2": "Хинди жерсіндірілуін алу"
+}

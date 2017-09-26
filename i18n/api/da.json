@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Christian List"
+		]
+	},
+	"apihelp-languagesearch-description": "Søg efter navne på sprog i valgfrit skriftsystem.",
+	"apihelp-languagesearch-param-search": "Søgestreng.",
+	"apihelp-languagesearch-param-typos": "Antallet af stavefejl som tillades i søgestrengen.",
+	"apihelp-languagesearch-example-1": "Søg efter \"Te\"",
+	"apihelp-languagesearch-example-2": "Søg efter \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Søg efter \"ഫി\", og tillad en tastefejl",
+	"apihelp-ulslocalization-param-language": "Sprogkode."
+}

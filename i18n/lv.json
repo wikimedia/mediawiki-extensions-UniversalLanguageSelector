@@ -37,7 +37,6 @@
 	"ext-uls-input-disable-notification-undo": "Atsaukt",
 	"ext-uls-language-settings-applying": "Pielieto...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Vēl $1}}",
-	"apihelp-ulslocalization-param-language": "Valodas kods.",
 	"prefs-languages": "Valodas",
 	"ext-uls-compact-language-links-preference": "Izmantot [[$1|kompakto valodu sarakstu]] ar tev atbilstošajām valodām."
 }

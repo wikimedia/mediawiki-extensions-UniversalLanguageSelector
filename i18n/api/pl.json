@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps"
+		]
+	},
+	"apihelp-languagesearch-param-search": "Wyszukaj tekst.",
+	"apihelp-languagesearch-example-1": "Wyszukaj „Te”",
+	"apihelp-languagesearch-example-2": "Wyszukaj „ഫി”",
+	"apihelp-languagesearch-example-3": "Wyszukaj „ഫി”, dopuszczalna jedna literówka",
+	"apihelp-ulslocalization-param-language": "Kod języka."
+}

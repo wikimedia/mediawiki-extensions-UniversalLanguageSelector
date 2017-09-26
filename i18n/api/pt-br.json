@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dianakc",
+			"Felipe L. Ewald"
+		]
+	},
+	"apihelp-languagesearch-description": "Procure nomes de idiomas em qualquer script.",
+	"apihelp-languagesearch-summary": "Procure nomes de idiomas em qualquer script.",
+	"apihelp-languagesearch-param-search": "Pesquisar string.",
+	"apihelp-languagesearch-param-typos": "Número de erros ortográficos permitidos na cadeia de pesquisa.",
+	"apihelp-languagesearch-example-1": "Pesquisar por \"Te\"",
+	"apihelp-languagesearch-example-2": "Pesquisar por \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Pesquisar por \"ഫി\", permitindo um erro ortográfico",
+	"apihelp-ulslocalization-description": "Obtenha a localização do ULS no idioma indicado.",
+	"apihelp-ulslocalization-summary": "Obtenha a localização do ULS no idioma indicado.",
+	"apihelp-ulslocalization-param-language": "Código da linguagem.",
+	"apihelp-ulslocalization-example-1": "Obter localização Tamil",
+	"apihelp-ulslocalization-example-2": "Obter localização Hindi"
+}

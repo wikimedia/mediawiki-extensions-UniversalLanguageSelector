@@ -56,7 +56,6 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Dir kënnt d''input tools' zu all Ament vun de Sproochastellungen nieft der Lëscht vun de Sproochen aschalten",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Eng méi|$1 méi}}",
 	"ext-uls-compact-link-info": "All Sproochen (éischte Choix aus den heefegste Choixe vun Iech an Aneren)",
-	"apihelp-ulslocalization-param-language": "Sproochcode.",
 	"prefs-languages": "Sproochen",
 	"ext-uls-compact-language-links-preference": "Benotzt eng  [[$1|kompakt Lëscht vu Sproochen]], mat de Sproochen déi fir Iech relevant sinn."
 }

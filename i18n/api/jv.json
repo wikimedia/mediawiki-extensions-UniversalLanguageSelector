@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"NoiX180"
+		]
+	},
+	"apihelp-languagesearch-description": "Golèk jeneng basa sarana sembarang aksara.",
+	"apihelp-languagesearch-param-search": "Golèk roncèn.",
+	"apihelp-languagesearch-param-typos": "Gunggung salah éja sing diidinaké ing roncèn golèkan.",
+	"apihelp-languagesearch-example-1": "Golèk \"Te\"",
+	"apihelp-languagesearch-example-2": "Golèk \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Golèk \"ഫി\", idinaké tipo siji",
+	"apihelp-ulslocalization-description": "Jupuk palokaling ULS ing basa sing dikarepaké.",
+	"apihelp-ulslocalization-param-language": "Kodhé basa.",
+	"apihelp-ulslocalization-example-1": "Jupuk palokaling basa Tamil",
+	"apihelp-ulslocalization-example-2": "Jupuk palokaling basa Hindhi"
+}

@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"apihelp-languagesearch-description": "חיפוש שם שפה בכל אלפבית",
+	"apihelp-languagesearch-summary": "חיפוש של שמות שפות בכל שיטת כתב.",
+	"apihelp-languagesearch-param-search": "מחרוזת חיפוש.",
+	"apihelp-languagesearch-param-typos": "מספר שגיאות הכתיב שמותרות במחרוזת החיפוש.",
+	"apihelp-languagesearch-example-1": "חיפוש \"Te\"",
+	"apihelp-languagesearch-example-2": "חיפוש \"ഫി\"",
+	"apihelp-languagesearch-example-3": "חיפוש \"ഫി\", עם אפשרות לשגיאת כתיב אחת",
+	"apihelp-ulslocalization-description": "קבלת תרגומי ממשק של בורר השפות בשפה הנתונה",
+	"apihelp-ulslocalization-summary": "קבלת תרגומי ממשק של בורר השפות האוניברסלי בשפה הנתונה.",
+	"apihelp-ulslocalization-param-language": "קוד שפה.",
+	"apihelp-ulslocalization-example-1": "קבלת תרגום לטמילית",
+	"apihelp-ulslocalization-example-2": "קבלת תרגום להינדי"
+}
