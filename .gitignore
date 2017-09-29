@@ -3,7 +3,6 @@
 *.kate-swp
 .*.swp
 .idea
-.bundle/
 node_modules/
 composer.lock
 vendor/
