@@ -18,9 +18,11 @@
 	"ext-uls-language-settings-title": "kamu a setin",
 	"ext-uls-language-settings-apply": "caedung tu setin",
 	"ext-uls-language-settings-cancel": "palawpes",
+	"ext-uls-language-buttons-help": "misumad mapili’ay a pisaungay a kamu, caay lawilaw lacul kamu.",
 	"ext-uls-display-settings-font-settings": "misetin tu kataci nu silit",
 	"ext-uls-display-settings-ui-language": "paazih tu kamu",
 	"ext-uls-display-settings-anon-label": "paazih tu kamu:",
+	"ext-uls-webfonts-settings-info": "lunuk patasasa’ caay kataneng a kataci nu silit atu mahasa mipili’ kanamuhan a kataci nu silit.",
 	"ext-uls-webfonts-settings-info-link": "sayadahay a cesyun",
 	"ext-uls-webfonts-select-for": "naka $1 sa kyu mipili’ kataci nu silit",
 	"ext-uls-webfonts-select-for-ui-info": "kawiza i misaungayay taypuolayta a kataci nu silit",
@@ -37,8 +39,10 @@
 	"ext-uls-input-disable": "mapasatezep suliten a sakaluk",
 	"ext-uls-input-enable": "miwawah misulitan a sakaluk",
 	"ext-uls-input-disable-info": "mapasatezep tuway misulitan a sakaluk.",
+	"ext-uls-input-settings-noime": "inayi’ nipabeli tina kamu a sapisulit(suzufa).",
 	"ext-uls-input-disable-notification": "sulitan sakaluk mapasatezep tuway",
 	"ext-uls-input-disable-notification-undo": "patiku",
+	"ext-uls-input-disable-notification-info-personal": "kapah kisu i kamu setin miwawah  sulitan a sakaluk.",
 	"ext-uls-language-settings-applying": "caedung henay ayza...",
 	"prefs-languages": "kamu"
 }
