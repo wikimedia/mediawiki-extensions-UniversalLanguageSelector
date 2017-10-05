@@ -6,10 +6,12 @@
 			"Tokoabibi"
 		]
 	},
+	"uls-desc": "sanipabeli misaungayay yadah sakaluk mipili’ kamu atu sulimet kamu setin",
 	"uls-plang-title-languages": "kamu",
 	"ext-uls-undo-language-tooltip-text": "kamu nay $1 misumad",
 	"ext-uls-language-settings-preferences-link": "kayadahay a kamu misetin",
 	"uls-betafeature-label": "madayumay kamu masasiket",
+	"uls-betafeature-desc": "paazih sapuyuay a kamu piazihan-tu-sulit, paazih dada’ mahizaay kamu nu misu",
 	"ext-uls-display-settings-title": "paazih tu setin",
 	"ext-uls-display-settings-language-tab": "kamu",
 	"ext-uls-display-settings-fonts-tab": "kataci nu sulit",
@@ -44,5 +46,6 @@
 	"ext-uls-input-disable-notification-undo": "patiku",
 	"ext-uls-input-disable-notification-info-personal": "kapah kisu i kamu setin miwawah  sulitan a sakaluk.",
 	"ext-uls-language-settings-applying": "caedung henay ayza...",
+	"ext-uls-compact-link-info": "sacahamin a kamu (namakay misu atu zumaay tatemaw pulung mipili’ a saayaway mapiliay)",
 	"prefs-languages": "kamu"
 }
