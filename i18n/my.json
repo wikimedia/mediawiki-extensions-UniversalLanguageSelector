@@ -6,5 +6,6 @@
 	},
 	"uls-plang-title-languages": "ဘာသာစကားများ",
 	"ext-uls-input-settings-more-languages-tooltip": "နောက်ထပ် ဘာသာစကားများ",
-	"jquery-ime-help": "အကူအညီ"
+	"jquery-ime-help": "အကူအညီ",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|နောက်ထပ် တစ်ခု|နောက်ထပ် $1 ခု}}"
 }
