@@ -59,7 +59,7 @@ class ApiULSLocalization extends ApiBase {
 	}
 
 	/**
-	 * @see ApiBase::getExamplesMessages()
+	 * @inheritDoc
 	 */
 	protected function getExamplesMessages() {
 		return [
@@ -70,8 +70,8 @@ class ApiULSLocalization extends ApiBase {
 		];
 	}
 
-	// Try to scare people away from using this externally
 	public function isInternal() {
+		// Try to scare people away from using this externally
 		return true;
 	}
 }

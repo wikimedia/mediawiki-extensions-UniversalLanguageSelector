@@ -60,7 +60,7 @@ class LanguageNameSearch {
 	/**
 	 * Get the code point of first letter of string
 	 *
-	 * @param $str string
+	 * @param string $str
 	 * @return int Code point of first letter of string
 	 */
 	public static function getCodepoint( $str ) {
@@ -104,8 +104,8 @@ class LanguageNameSearch {
 
 	/**
 	 * Calculate the Levenshtein distance between two strings
-	 * @param $str1
-	 * @param $str2
+	 * @param string $str1
+	 * @param string $str2
 	 * @return int
 	 */
 	public static function levenshteinDistance( $str1, $str2 ) {

@@ -41,7 +41,7 @@ class ResourceLoaderULSModule extends ResourceLoaderModule {
 	}
 
 	/**
-	 * @param $context ResourceLoaderContext
+	 * @param ResourceLoaderContext $context
 	 * @return string JavaScript code
 	 */
 	public function getScript( ResourceLoaderContext $context ) {

@@ -19,7 +19,10 @@
  */
 
 class UniversalLanguageSelectorHooks {
-	// Used when extension registration in use which skips the main php file
+
+	/**
+	 * Used when extension registration in use which skips the main php file
+	 */
 	public static function setVersionConstant() {
 		define( 'ULS_VERSION', '2017-07-25' );
 	}
@@ -88,6 +91,8 @@ class UniversalLanguageSelectorHooks {
 	 * user account is new.
 	 *
 	 * To be removed once no longer needed.
+	 * @param User $user
+	 * @param bool $autoCreate
 	 */
 	public static function onLocalUserCreated( User $user, $autoCreate ) {
 		if ( RequestContext::getMain()->getConfig()->get( 'ULSCompactLinksForNewAccounts' ) ) {
@@ -141,7 +146,7 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	/**
-	 * @param $testModules array of javascript testing modules. 'qunit' is fed
+	 * @param array &$testModules array of javascript testing modules. 'qunit' is fed
 	 * using tests/qunit/QUnitTestResources.php.
 	 * @param ResourceLoader $resourceLoader
 	 * @return bool
@@ -161,6 +166,9 @@ class UniversalLanguageSelectorHooks {
 	/**
 	 * Add some tabs for navigation for users who do not use Ajax interface.
 	 * Hook: PersonalUrls
+	 * @param array &$personal_urls
+	 * @param string &$title
+	 * @return true
 	 */
 	public static function addPersonalBarTrigger( array &$personal_urls, &$title ) {
 		global $wgULSPosition;
@@ -219,7 +227,7 @@ class UniversalLanguageSelectorHooks {
 	/**
 	 * Hook to UserGetLanguageObject
 	 * @param User $user
-	 * @param string $code
+	 * @param string &$code
 	 * @param IContextSource $context
 	 * @return bool
 	 */
@@ -292,7 +300,7 @@ class UniversalLanguageSelectorHooks {
 
 	/**
 	 * Hook: ResourceLoaderGetConfigVars
-	 * @param array $vars
+	 * @param array &$vars
 	 * @return bool
 	 */
 	public static function addConfig( &$vars ) {
@@ -341,7 +349,7 @@ class UniversalLanguageSelectorHooks {
 
 	/**
 	 * Hook: MakeGlobalVariablesScript
-	 * @param array $vars
+	 * @param array &$vars
 	 * @param OutputPage $out
 	 * @return bool
 	 */
