@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Minisarm"
+			"Minisarm",
+			"Strainu"
 		]
 	},
 	"uls-desc": "Oferă utilizatorului mai multe modalități de a selecta o limbă și de a modifica setările de limbă",
@@ -54,5 +55,8 @@
 	"ext-uls-input-disable-notification-info-personal": "Puteți activa uneltele pentru introducere oricând din setările de limbă.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Puteți activa uneltele pentru introducere oricând din setările de limbă aflate lângă lista cu limbile disponibile.",
 	"ext-uls-language-settings-applying": "Se aplică...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Încă o limbă|Încă $1 limbi|Încă $1 de limbi}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Încă una|Încă $1}}",
+	"ext-uls-compact-link-info": "Toate limbile (selecție inițială cu alegerile obișnuite ale dumneavoastră și ale altor utilizatori)",
+	"prefs-languages": "Limbi",
+	"ext-uls-compact-language-links-preference": "Folosiți o [[$1|listă redusă de limbi]], ce conține doar limbile relevante pentru dumneavoastră."
 }

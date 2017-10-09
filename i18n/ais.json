@@ -48,5 +48,6 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "kapah kisu demidemiad sa itapal nu kamu piazihan-tu-sulit a kamu setin miwawah misulit a sakaluk.",
 	"ext-uls-language-settings-applying": "caedung henay ayza...",
 	"ext-uls-compact-link-info": "sacahamin a kamu (namakay misu atu zumaay tatemaw pulung mipili’ a saayaway mapiliay)",
-	"prefs-languages": "kamu"
+	"prefs-languages": "kamu",
+	"ext-uls-compact-language-links-preference": "pisaungay [[$1|sapuyuay a kamu liseto]], yamalyilu mahizaay kamu nu misu."
 }

@@ -55,7 +55,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Яздаран гӀирс лело йиш ю муьлхачу хенахь мотт хуьйцу гӀирсан чохь.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Яздаран гӀирс лело йиш ю муьлхачу хенахь мотт хуьйцу гӀирсан чохь.",
 	"ext-uls-language-settings-applying": "ДӀахӀоттор…",
-	"ext-uls-compact-link-count": "Кхин {{PLURAL:$1|цхьан маттахь|$1 меттанашкахь}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Кхин $1}}",
 	"ext-uls-compact-link-info": "Берриге меттанаш (дуьххьара хаьржинарш бу ахьа я кхечара лелина меттанаш)",
 	"prefs-languages": "Меттанаш",
 	"ext-uls-compact-language-links-preference": "Лелабе [[$1|компакте болу меттанийн могӀам]] хьайна оьшу меттанаш долуш."
