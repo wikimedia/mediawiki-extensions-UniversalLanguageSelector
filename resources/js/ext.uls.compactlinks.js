@@ -172,12 +172,15 @@
 			},
 			languageDecorator: function ( $languageLink, language ) {
 				var data = self.interlanguageList[ language ];
-				// set href and text exactly same as what was in
+				// Set href, text, and tooltip exactly same as what was in
 				// interlanguage link. The ULS autonym might be different in some
 				// cases like sr. In ULS it is "српски", while in interlanguage links
 				// it is "српски / srpski"
 				$languageLink
-					.prop( 'href', data.href )
+					.prop( {
+						href: data.href,
+						title: data.element.title
+					} )
 					.text( data.autonym );
 
 				// This code is to support badges used in Wikimedia
