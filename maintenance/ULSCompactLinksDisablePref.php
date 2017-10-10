@@ -38,7 +38,7 @@ class ULSCompactLinksDisablePref extends Maintenance {
 			$tables = [ 'revision', 'user_properties', 'user_groups' ];
 			$fields = [ 'rev_user', 'isbot' => 'ug_group', 'hasbeta' => 'up_value' ];
 			$conds = [
-				'rev_timestamp > ' . $dbr->timestamp( 20161001000000 ),
+				'rev_timestamp > ' . $dbr->timestamp( 20170101000000 ),
 				"rev_user > $lastUserId"
 			];
 			$options = [
