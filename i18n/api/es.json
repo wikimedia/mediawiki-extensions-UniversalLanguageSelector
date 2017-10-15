@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Macofe"
+			"Macofe",
+			"Fitoschido"
 		]
 	},
 	"apihelp-languagesearch-description": "Buscar nombres de idiomas en cualquier sistema de escritura.",
@@ -12,6 +13,6 @@
 	"apihelp-languagesearch-example-3": "Buscar \"ഫി\", permitiendo un error tipográfico",
 	"apihelp-ulslocalization-description": "Obtener la localización de ULS en el idioma especificado.",
 	"apihelp-ulslocalization-param-language": "Código de idioma.",
-	"apihelp-ulslocalization-example-1": "Obtener la localización en Tamil",
-	"apihelp-ulslocalization-example-2": "Obtener la localización en Hindi"
+	"apihelp-ulslocalization-example-1": "Recuperar la traducción al tamil",
+	"apihelp-ulslocalization-example-2": "Recuperar la traducción al hindi"
 }
