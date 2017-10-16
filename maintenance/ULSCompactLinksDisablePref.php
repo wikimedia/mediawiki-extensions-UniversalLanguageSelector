@@ -43,7 +43,6 @@ class ULSCompactLinksDisablePref extends Maintenance {
 			];
 			$options = [
 				'GROUP BY' => 'rev_user',
-				'HAVING' => 'count(*) >= 20',
 				'ORDER BY' => 'rev_user',
 				'LIMIT' => $this->mBatchSize,
 			];
