@@ -5,7 +5,9 @@
 			"Bunukwiki"
 		]
 	},
+	"apihelp-languagesearch-description": "i amahicahica tu Script kilim kamu kalungangan.",
 	"apihelp-languagesearch-param-search": "mikilim sulisulitan.",
+	"apihelp-languagesearch-param-typos": "mahasa ilabu nu kilim sasulitan a pasasuala tu sulit mungangaw nikayadah.",
 	"apihelp-languagesearch-example-1": "kilim tu \"Te\"",
 	"apihelp-languagesearch-example-2": "kilim tu \"ഫി\"",
 	"apihelp-ulslocalization-param-language": "kamu a kodo.",
