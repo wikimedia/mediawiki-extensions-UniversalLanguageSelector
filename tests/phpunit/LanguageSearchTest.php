@@ -58,6 +58,30 @@ class LanguageSearchTest extends PHPUnit_Framework_TestCase {
 				'ml' => 'മലയാളം',
 			]
 			],
+			[ 'punja', [
+				'pa' => 'punjaabi sennii',
+				'pnb' => 'punjabi western',
+			]
+			],
+			[ 'kartuli', [
+				'ka' => 'kartuli',
+			]
+			],
+			[ 'valencia', [
+				'ca' => 'valencia',
+			]
+			],
+			[ 'chinese', [
+				'zh-hans' => 'chinese simplified',
+				'zh-hant' => 'chinese traditional',
+				'zh' => 'chinesesch',
+				'zh-cn' => 'chinese (china)',
+				'zh-hk' => 'chinese (hong kong)',
+				'zh-min-nan' => 'chinese (min nan)',
+				'zh-sg' => 'chinese (singapore)',
+				'zh-tw' => 'chinese (taiwan)'
+			]
+			],
 			[ 'finish', [
 				'fi' => 'finnish'
 			]

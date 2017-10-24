@@ -36,6 +36,7 @@ class LanguageNameIndexer extends Maintenance {
 		$buckets = [];
 		foreach ( $languages as $sourceLanguage => $autonym ) {
 			$translations = LanguageNames::getNames( $sourceLanguage, 0, 2 );
+
 			foreach ( $translations as $targetLanguage => $translation ) {
 				$translation = mb_strtolower( $translation );
 				// Remove directionality markers used in Names.php: users are not
@@ -44,6 +45,29 @@ class LanguageNameIndexer extends Maintenance {
 				$bucket = LanguageNameSearch::getIndex( $translation );
 				$buckets[$bucket][$translation] = $targetLanguage;
 			}
+		}
+
+		// Some languages don't have a conveniently searchable name in CLDR.
+		// For example, the name of Western Punjabi doesn't start with
+		// the string "punjabi" in any language, so it cannot be found
+		// by people who search in English.
+		// To resolve this, some languages are added here locally.
+		$specialLanguages = [
+			// Catalan, sometimes searched as "Valencià"
+			'ca' => 'valencia',
+			// Georgian, the transliteration of the autonym is often used for searching
+			'ka' => 'kartuli',
+			// Western Punjabi, doesn't start with the word "Punjabi" in any language
+			'pnb' => 'punjabi western',
+			// Simplified and Traditional Chinese, because zh-hans and zh-hant
+			// are not mapped to any English name
+			'zh-hans' => 'chinese simplified',
+			'zh-hant' => 'chinese traditional',
+		];
+
+		foreach ( $specialLanguages as $targetLanguage => $translation ) {
+			$bucket = LanguageNameSearch::getIndex( $translation );
+			$buckets[$bucket][$translation] = $targetLanguage;
 		}
 
 		$lengths = array_values( array_map( 'count', $buckets ) );
