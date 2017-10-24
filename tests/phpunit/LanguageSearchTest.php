@@ -51,6 +51,7 @@ class LanguageSearchTest extends PHPUnit_Framework_TestCase {
 				'fr-ch' => 'الفرنسية السويسرية',
 				'frm' => 'الفرنسية الوسطى',
 				'fro' => 'الفرنسية القديمة',
+				'crs' => 'الفرنسية الكريولية السيشيلية'
 			]
 			],
 			[ 'മലയളം', [
