@@ -31,6 +31,11 @@ class LanguageNameIndexer extends Maintenance {
 	}
 
 	public function execute() {
+		global $wgExtraLanguageNames;
+
+		// Avoid local configuration leaking to this script
+		$wgExtraLanguageNames = [];
+
 		$languages = Language::fetchLanguageNames( null, 'all' );
 
 		$buckets = [];
