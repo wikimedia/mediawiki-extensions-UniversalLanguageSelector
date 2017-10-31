@@ -59,7 +59,7 @@ class LanguageSearchTest extends PHPUnit_Framework_TestCase {
 			]
 			],
 			[ 'punja', [
-				'pa' => 'punjaabi sennii',
+				'pa' => 'punjabi <èdè punjabi>',
 				'pnb' => 'punjabi western',
 			]
 			],
@@ -79,7 +79,15 @@ class LanguageSearchTest extends PHPUnit_Framework_TestCase {
 				'zh-hk' => 'chinese (hong kong)',
 				'zh-min-nan' => 'chinese (min nan)',
 				'zh-sg' => 'chinese (singapore)',
-				'zh-tw' => 'chinese (taiwan)'
+				'zh-tw' => 'chinese (taiwan)',
+				'cdo' => 'chinese <min dong chinese>',
+				'gan' => 'chinese <isi-gan chinese>',
+				'hak' => 'chinese <isi-hakka chinese>',
+				'lzh' => 'chinesesch <klassescht chinesesch>',
+				'nan' => 'chinese <isi-min nan chinese>',
+				'wuu' => 'chinese <isi-wu chinese>',
+				'zh-classical' => 'chinese <classical chinese>',
+				'hsn' => 'chinese <isi-xiang chinese>',
 			]
 			],
 			[ 'finish', [

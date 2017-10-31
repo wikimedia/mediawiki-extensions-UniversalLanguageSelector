@@ -43,12 +43,27 @@ class LanguageNameIndexer extends Maintenance {
 			$translations = LanguageNames::getNames( $sourceLanguage, 0, 2 );
 
 			foreach ( $translations as $targetLanguage => $translation ) {
-				$translation = mb_strtolower( $translation );
 				// Remove directionality markers used in Names.php: users are not
 				// going to type these.
 				$translation = str_replace( "\xE2\x80\x8E", '', $translation );
-				$bucket = LanguageNameSearch::getIndex( $translation );
-				$buckets[$bucket][$translation] = $targetLanguage;
+				$translation = mb_strtolower( $translation );
+				$translation = trim( $translation );
+
+				// Clean up "gjermanishte zvicerane (dialekti i alpeve)" to "gjermanishte zvicerane".
+				// The original name is still shown, but avoid us creating entries such as
+				// "(dialekti" or "alpeve)".
+				$basicForm = preg_replace( '/\(.+\)$/', '', $translation );
+				$words = preg_split( '/[\s]+/u', $basicForm, -1, PREG_SPLIT_NO_EMPTY );
+
+				foreach ( $words as $index => $word ) {
+					$bucket = LanguageNameSearch::getIndex( $word );
+
+					$display = $translation;
+					if ( $index > 0 && count( $words ) > 1 ) {
+						$display = "$word <$translation>";
+					}
+					$buckets[$bucket][$display] = $targetLanguage;
+				}
 			}
 		}
 
