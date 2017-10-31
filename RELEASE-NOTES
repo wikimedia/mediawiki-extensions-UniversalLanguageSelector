@@ -1,0 +1,7 @@
+== UniversalLanguageSelector 2017.10 ==
+Released at 2017-10-31.
+
+=== Noteworthy changes ===
+* Popup positioning should now work better in various skins.
+* Style updates.
+* Language searching is improved with new language name data and better "no results found" view.
