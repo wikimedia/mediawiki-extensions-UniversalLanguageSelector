@@ -33,8 +33,8 @@
 	settingsPanel = '<div id="languagesettings-settings-panel" class="eight columns">' +
 		'</div>';
 	// Apply and Cancel buttons
-	buttonsRow = '<div class="row language-settings-buttons">' +
-		'<div class="eleven columns">' +
+	buttonsRow = '<div class="row collapse language-settings-buttons">' +
+		'<div class="twelve columns">' +
 		'<button class="mw-ui-button uls-settings-cancel" data-i18n="ext-uls-language-settings-cancel"></button>' +
 		'<button class="mw-ui-button mw-ui-progressive active uls-settings-apply" data-i18n="ext-uls-language-settings-apply" disabled></button>' +
 		'</div>' +
