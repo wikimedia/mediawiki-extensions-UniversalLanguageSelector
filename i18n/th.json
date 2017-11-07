@@ -6,8 +6,10 @@
 			"Aefgh39622"
 		]
 	},
+	"uls-desc": "ให้ผู้ใช้​เลือก​ภาษาและปรับการตั้งค่าภาษาได้หลายวิธี",
 	"uls-plang-title-languages": "ภาษา",
 	"ext-uls-undo-language-tooltip-text": "เปลี่ยนภาษาจาก $1 แล้ว",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|เพิ่มเติมอีกหนึ่งภาษา|เพิ่มเติมอีก $1 ภาษา}}",
 	"prefs-languages": "ภาษา",
 	"ext-uls-compact-language-links-preference": "ใช้ [[$1|รายการภาษาแบบกระชับ]] โดยมีภาษาที่เกี่ยวข้องกับคุณ"
 }

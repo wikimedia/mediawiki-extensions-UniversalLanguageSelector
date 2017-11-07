@@ -29,6 +29,7 @@
 	"ext-uls-input-settings-title": "Ievades iestatījumi",
 	"ext-uls-input-settings-title-short": "Ievade",
 	"ext-uls-input-settings-desc": "Raksti citā valodā?",
+	"ext-uls-input-settings-ui-language": "Rakstīšanai izmantotā valoda",
 	"ext-uls-ime-help": "Kā lietot",
 	"ext-uls-input-settings-more-languages-tooltip": "Vairāk valodu",
 	"jquery-ime-other-languages": "Citas valodas",
