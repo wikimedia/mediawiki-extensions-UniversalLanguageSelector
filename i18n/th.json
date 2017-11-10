@@ -54,7 +54,7 @@
 	"ext-uls-input-disable-notification": "เครื่องมือป้อนข้อมูลได้ถูกปิดใช้งาน",
 	"ext-uls-input-disable-notification-undo": "เลิกทำ",
 	"ext-uls-input-disable-notification-info-personal": "คุณสามารถเปิดใช้งานเครื่องมือป้อนข้อมูลได้ทุกเมื่อจากการตั้งค่าภาษา",
-	"ext-uls-input-disable-notification-info-interlanguage": "คุณสามารถเปิดใช้งานเครื่องมือป้อนข้อมูลได้ทุกเมื่อจากการตั้งค่าภาษาถัดจากรายการภาษษ",
+	"ext-uls-input-disable-notification-info-interlanguage": "คุณสามารถเปิดใช้งานเครื่องมือป้อนข้อมูลได้ทุกเมื่อจากการตั้งค่าภาษาถัดจากรายการภาษา",
 	"ext-uls-language-settings-applying": "กำลังใช้...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|เพิ่มเติมอีกหนึ่งภาษา|เพิ่มเติมอีก $1 ภาษา}}",
 	"prefs-languages": "ภาษา",
