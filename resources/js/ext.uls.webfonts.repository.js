@@ -11,9 +11,6 @@
 			"system",
 			"OpenDyslexic"
 		],
-		"ahr": [
-			"Lohit Marathi"
-		],
 		"akk": [
 			"Akkadian"
 		],
@@ -37,27 +34,16 @@
 			"East Syriac Adiabene",
 			"SertoUrhoy"
 		],
-		"as": [
-			"system",
-			"Lohit Assamese"
-		],
 		"bbc": [
 			"system",
 			"Pangururan"
-		],
-		"bh": [
-			"Lohit Devanagari"
-		],
-		"bho": [
-			"Lohit Devanagari"
 		],
 		"bk": [
 			"system",
 			"OpenDyslexic"
 		],
 		"bn": [
-			"Siyam Rupali",
-			"Lohit Bengali"
+			"Siyam Rupali"
 		],
 		"bo": [
 			"Jomolhari"
@@ -66,8 +52,7 @@
 			"Jomolhari"
 		],
 		"bpy": [
-			"Siyam Rupali",
-			"Lohit Bengali"
+			"Siyam Rupali"
 		],
 		"btk": [
 			"system",
@@ -170,9 +155,6 @@
 		"goe": [
 			"Jomolhari"
 		],
-		"gom": [
-			"Lohit Devanagari"
-		],
 		"got": [
 			"system",
 			"Skeirs II"
@@ -180,9 +162,6 @@
 		"grc": [
 			"system",
 			"GentiumPlus"
-		],
-		"gu": [
-			"Lohit Gujarati"
 		],
 		"hbo": [
 			"Taamey Frank CLM",
@@ -193,9 +172,6 @@
 			"Alef",
 			"Miriam CLM",
 			"Taamey Frank CLM"
-		],
-		"hi": [
-			"Lohit Devanagari"
 		],
 		"hu": [
 			"system",
@@ -245,11 +221,8 @@
 			"Suwannaphum"
 		],
 		"kn": [
-			"Lohit Kannada",
+			"system",
 			"Gubbi"
-		],
-		"kok": [
-			"Lohit Devanagari"
 		],
 		"kte": [
 			"Jomolhari"
@@ -280,9 +253,6 @@
 		"lya": [
 			"Jomolhari"
 		],
-		"mai": [
-			"Lohit Devanagari"
-		],
 		"mak": [
 			"Saweri"
 		],
@@ -294,9 +264,6 @@
 			"system",
 			"AnjaliOldLipi",
 			"Meera"
-		],
-		"mr": [
-			"Lohit Marathi"
 		],
 		"ms": [
 			"system",
@@ -321,7 +288,7 @@
 			"OpenDyslexic"
 		],
 		"ne": [
-			"Lohit Nepali",
+			"system",
 			"Madan"
 		],
 		"nl": [
@@ -337,14 +304,14 @@
 			"Jomolhari"
 		],
 		"or": [
-			"Lohit Odia",
+			"system",
 			"Utkal"
 		],
 		"otb": [
 			"Jomolhari"
 		],
 		"pa": [
-			"Lohit Punjabi",
+			"system",
 			"Saab"
 		],
 		"pal": [
@@ -360,9 +327,6 @@
 		"pt": [
 			"system",
 			"OpenDyslexic"
-		],
-		"sa": [
-			"Lohit Devanagari"
 		],
 		"saz": [
 			"Pagul"
@@ -398,8 +362,6 @@
 		],
 		"ta": [
 			"system",
-			"Lohit Tamil",
-			"Lohit Tamil Classical",
 			"Thendral",
 			"Thenee"
 		],
@@ -407,11 +369,8 @@
 			"Jomolhari"
 		],
 		"tcy": [
-			"Lohit Kannada",
+			"system",
 			"Gubbi"
-		],
-		"te": [
-			"Lohit Telugu"
 		],
 		"thw": [
 			"Jomolhari"
@@ -707,66 +666,6 @@
 			"ttf": "LinuxLibertine/LinLibertine_RIah.ttf?70eb1",
 			"woff": "LinuxLibertine/LinLibertine_RIah.woff?1c058",
 			"woff2": "LinuxLibertine/LinLibertine_RIah.woff2?4e887"
-		},
-		"Lohit Assamese": {
-			"ttf": "LohitAssamese/Lohit-Assamese.ttf?4f17c",
-			"woff": "LohitAssamese/Lohit-Assamese.woff?6a45f",
-			"woff2": "LohitAssamese/Lohit-Assamese.woff2?4c37a"
-		},
-		"Lohit Bengali": {
-			"ttf": "LohitBengali/Lohit-Bengali.ttf?e9d81",
-			"woff": "LohitBengali/Lohit-Bengali.woff?81e9c",
-			"woff2": "LohitBengali/Lohit-Bengali.woff2?1faf1"
-		},
-		"Lohit Devanagari": {
-			"ttf": "LohitDevanagari/Lohit-Devanagari.ttf?88cb2",
-			"woff": "LohitDevanagari/Lohit-Devanagari.woff?79da4",
-			"woff2": "LohitDevanagari/Lohit-Devanagari.woff2?9b0dd"
-		},
-		"Lohit Gujarati": {
-			"ttf": "LohitGujarati/Lohit-Gujarati.ttf?b588d",
-			"woff": "LohitGujarati/Lohit-Gujarati.woff?8280a",
-			"woff2": "LohitGujarati/Lohit-Gujarati.woff2?0607e"
-		},
-		"Lohit Kannada": {
-			"ttf": "LohitKannada/Lohit-Kannada.ttf?f15a8",
-			"woff": "LohitKannada/Lohit-Kannada.woff?28cd1",
-			"woff2": "LohitKannada/Lohit-Kannada.woff2?9f9f6"
-		},
-		"Lohit Marathi": {
-			"ttf": "LohitMarathi/Lohit-Marathi.ttf?079e3",
-			"woff": "LohitMarathi/Lohit-Marathi.woff?c5933",
-			"woff2": "LohitMarathi/Lohit-Marathi.woff2?ca64f"
-		},
-		"Lohit Nepali": {
-			"ttf": "LohitNepali/Lohit-Nepali.ttf?2b9e9",
-			"woff": "LohitNepali/Lohit-Nepali.woff?2279b",
-			"woff2": "LohitNepali/Lohit-Nepali.woff2?8bb98"
-		},
-		"Lohit Odia": {
-			"ttf": "LohitOdia/Lohit-Odia.ttf?c89cc",
-			"woff": "LohitOdia/Lohit-Odia.woff?48933",
-			"woff2": "LohitOdia/Lohit-Odia.woff2?e73ea"
-		},
-		"Lohit Punjabi": {
-			"ttf": "LohitPunjabi/Lohit-Punjabi.ttf?39e00",
-			"woff": "LohitPunjabi/Lohit-Punjabi.woff?35236",
-			"woff2": "LohitPunjabi/Lohit-Punjabi.woff2?dfae7"
-		},
-		"Lohit Tamil": {
-			"ttf": "LohitTamil/Lohit-Tamil.ttf?005ab",
-			"woff": "LohitTamil/Lohit-Tamil.woff?0e291",
-			"woff2": "LohitTamil/Lohit-Tamil.woff2?1c60e"
-		},
-		"Lohit Tamil Classical": {
-			"ttf": "LohitTamilClassical/Lohit-Tamil-Classical.ttf?6a560",
-			"woff": "LohitTamilClassical/Lohit-Tamil-Classical.woff?907ac",
-			"woff2": "LohitTamilClassical/Lohit-Tamil-Classical.woff2?cc6bb"
-		},
-		"Lohit Telugu": {
-			"ttf": "LohitTelugu/Lohit-Telugu.ttf?e6783",
-			"woff": "LohitTelugu/Lohit-Telugu.woff?db2d9",
-			"woff2": "LohitTelugu/Lohit-Telugu.woff2?1b0f5"
 		},
 		"Madan": {
 			"ttf": "madan/madan.ttf?a9297",
