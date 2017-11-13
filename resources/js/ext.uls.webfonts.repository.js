@@ -298,10 +298,6 @@
 		"ola": [
 			"Jomolhari"
 		],
-		"or": [
-			"system",
-			"Utkal"
-		],
 		"otb": [
 			"Jomolhari"
 		],
@@ -861,11 +857,6 @@
 			"ttf": "UnifrakturMaguntia/UnifrakturMaguntia.ttf?1cf8f",
 			"woff": "UnifrakturMaguntia/UnifrakturMaguntia.woff?6ad8f",
 			"woff2": "UnifrakturMaguntia/UnifrakturMaguntia.woff2?23272"
-		},
-		"Utkal": {
-			"ttf": "utkal/utkal.ttf?0c644",
-			"woff": "utkal/utkal.woff?58d5e",
-			"woff2": "utkal/utkal.woff2?d550c"
 		},
 		"lklug": {
 			"ttf": "lklug/lklug.ttf?96b2f",
