@@ -20,11 +20,7 @@
 ( function ( $, mw ) {
 	'use strict';
 
-	var ulsPreferences,
-		// Text to prepend the sample text. 0D00 is an unassigned unicode point.
-		tofuSalt = '\u0D00',
-		// cache languages with tofu.
-		tofuLanguages = {};
+	var ulsPreferences;
 
 	mw.webfonts = mw.webfonts || {};
 	ulsPreferences = mw.uls.preferences();
@@ -67,62 +63,6 @@
 		}
 	};
 
-	/**
-	 * Detect tofu
-	 *
-	 * Create a temporary span in the page with fontsize 72px and font-family
-	 * sans-serif for each letter of the text.
-	 * For each of these spans, calculate the width and height. If they are same
-	 * for all spans, we can understand that each of the letter is rendered using
-	 * same glyph - it must be a tofu.
-	 *
-	 * @param {string} text
-	 * @return {boolean}
-	 */
-	function detectTofu( text ) {
-		var index,
-			$fixture,
-			width = {},
-			height = {},
-			length = Math.min( 4, text.length ),
-			detected = false;
-
-		if ( $.client.test( {
-			msie: false
-		} ) ) {
-			// IE shows a different tofu for unassigned code points!
-			text = tofuSalt + text;
-		}
-		$fixture = $( '<span>' )
-			.css( {
-				fontSize: '72px',
-				fontFamily: 'sans-serif'
-			} )
-			.appendTo( 'body' );
-
-		for ( index = 0; index < length; index++ ) {
-			$fixture.text( text[ index ] );
-			width[ index ] = $fixture.width() || width[ index - 1 ];
-			height[ index ] = $fixture.height();
-
-			if ( index > 0 &&
-				( width[ index ] !== width[ index - 1 ] ||
-					height[ index ] !== height[ index - 1 ] )
-			) {
-				detected = false;
-				break;
-			}
-		}
-
-		$fixture.remove();
-
-		if ( index === length ) {
-			detected = true;
-		}
-
-		return detected;
-	}
-
 	mw.webfonts.setup = function () {
 		// Initialize webfonts
 		var mediawikiFontRepository = $.webfonts.repository;
@@ -143,7 +83,7 @@
 			 * @return {string|null}
 			 */
 			fontSelector: function ( repository, language, classes ) {
-				var font, autonym, defaultFont;
+				var font, defaultFont;
 
 				if ( !language ) {
 					return null;
@@ -152,40 +92,15 @@
 				defaultFont = repository.defaultFont( language );
 
 				if ( classes && $.inArray( 'autonym', classes ) >= 0 ) {
-					autonym = true;
+					// Do not load font for showing autonym.
+					return null;
 				}
 
 				// If the user has a font preference, apply it always.
-				font = mw.webfonts.preferences.getFont( language );
-				if ( !font || autonym ) {
-					// Is there any default font for this language?
-					if ( ( !defaultFont || defaultFont === 'system' ) && !autonym ) {
-						return font;
-					}
-
-					// There is a default font for this language,
-					// but check whether the user sees tofu for it.
-					if ( tofuLanguages[ language ] === undefined ) {
-						tofuLanguages[ language ] = detectTofu( $.uls.data.getAutonym( language ) );
-
-						// Log the tofu detection only once per page per language
-						if ( tofuLanguages[ language ] ) {
-							mw.log( 'tofu detected for ' + language );
-							mw.hook( 'mw.uls.webfonts.tofudetected' ).fire( language );
-						}
-					}
-
-					if ( tofuLanguages[ language ] ) {
-						font = autonym ? 'Autonym' : defaultFont;
-					} else {
-						// No tofu and no font preference. Use system font.
-						font = 'system';
-					}
-				}
-
-				if ( font === 'system' ) {
+				font = mw.webfonts.preferences.getFont( language ) || defaultFont;
+				if ( !font || font === 'system' ) {
 					// Avoid setting 'system' as a font in css
-					font = null;
+					return null;
 				}
 
 				return font;
@@ -213,14 +128,6 @@
 		// property values set by stylesheets.
 		setTimeout( function () {
 			$( 'body' ).webfonts();
-
-			// Load the CSS required for the Autonym font. Note that this won't download the font.
-			// Browsers are smart enough to delay it till some element with this font-family
-			// becomes visible. For example: If there is a popup div with an element with class
-			// 'autonym', without explicitly calling .webfonts() on it, Autonym font will not
-			// be applied in general. But we ensure that the CSS is ready so that the font
-			// will be applied automatically to such future elements.
-			$( 'body' ).data( 'webfonts' ).load( 'Autonym' );
 		}, 0 );
 	};
 

@@ -257,7 +257,6 @@
 		"ext.uls.webfonts.fonts": {
 			"dependencies": [
 				"jquery.webfonts",
-				"jquery.uls.data",
 				"ext.uls.webfonts.repository"
 			],
 			"localBasePath": "resources",

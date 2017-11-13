@@ -1,4 +1,4 @@
-// Do not edit! This file is generated from data/fontrepo by data/fontrepo/scripts/compile.php
+// Do not edit! This file is generated from data/fontrepo by scripts/compile-font-repo.php
 ( function ( $ ) {
 	$.webfonts = $.webfonts || {};
 	$.webfonts.repository = {
@@ -306,10 +306,6 @@
 		"muk": [
 			"Jomolhari"
 		],
-		"mul": [
-			"system",
-			"Autonym"
-		],
 		"my": [
 			"TharLon",
 			"Myanmar3",
@@ -521,11 +517,6 @@
 			"ttf": "Artaxerxes/Artaxerxes.ttf?79a74",
 			"woff": "Artaxerxes/Artaxerxes.woff?c1ed7",
 			"woff2": "Artaxerxes/Artaxerxes.woff2?7a96e"
-		},
-		"Autonym": {
-			"ttf": "Autonym/Autonym.ttf?d41f5",
-			"woff": "Autonym/Autonym.woff?235d8",
-			"woff2": "Autonym/Autonym.woff2?280d0"
 		},
 		"CharisSIL": {
 			"ttf": "CharisSIL/CharisSIL-R.ttf?20bec",
