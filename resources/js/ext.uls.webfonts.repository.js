@@ -220,10 +220,6 @@
 			"Nokora Regular",
 			"Suwannaphum"
 		],
-		"kn": [
-			"system",
-			"Gubbi"
-		],
 		"kte": [
 			"Jomolhari"
 		],
@@ -353,10 +349,6 @@
 		],
 		"tcn": [
 			"Jomolhari"
-		],
-		"tcy": [
-			"system",
-			"Gubbi"
 		],
 		"thw": [
 			"Jomolhari"
@@ -506,10 +498,6 @@
 			"fontstyle": "italic",
 			"woff": "GentiumPlus/GentiumPlus-I.woff?ab550",
 			"woff2": "GentiumPlus/GentiumPlus-I.woff2?35b11"
-		},
-		"Gubbi": {
-			"woff": "Gubbi/Gubbi.woff?ce807",
-			"woff2": "Gubbi/Gubbi.woff2?66d38"
 		},
 		"Hanuman": {
 			"woff": "Hanuman/Hanuman.woff?d5078",
