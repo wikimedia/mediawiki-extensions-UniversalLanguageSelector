@@ -260,11 +260,6 @@
 			"system",
 			"OpenDyslexic"
 		],
-		"ml": [
-			"system",
-			"AnjaliOldLipi",
-			"Meera"
-		],
 		"ms": [
 			"system",
 			"ComicNeue",
@@ -467,11 +462,6 @@
 			"woff": "amiri/amiri-slanted.woff?7d658",
 			"woff2": "amiri/amiri-slanted.woff2?a90a0"
 		},
-		"AnjaliOldLipi": {
-			"ttf": "AnjaliOldLipi/AnjaliOldLipi.ttf?b47e8",
-			"woff": "AnjaliOldLipi/AnjaliOldLipi.woff?1f259",
-			"woff2": "AnjaliOldLipi/AnjaliOldLipi.woff2?7db63"
-		},
 		"Artaxerxes": {
 			"ttf": "Artaxerxes/Artaxerxes.ttf?79a74",
 			"woff": "Artaxerxes/Artaxerxes.woff?c1ed7",
@@ -671,11 +661,6 @@
 			"ttf": "madan/madan.ttf?a9297",
 			"woff": "madan/madan.woff?cee7d",
 			"woff2": "madan/madan.woff2?81dd1"
-		},
-		"Meera": {
-			"ttf": "Meera/Meera.ttf?8895f",
-			"woff": "Meera/Meera.woff?9e162",
-			"woff2": "Meera/Meera.woff2?b597d"
 		},
 		"Miriam CLM": {
 			"ttf": "MiriamCLM/MiriamCLM-Book.ttf?a070f",
