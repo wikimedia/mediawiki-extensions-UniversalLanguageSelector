@@ -355,11 +355,6 @@
 			"East Syriac Adiabene",
 			"SertoUrhoy"
 		],
-		"ta": [
-			"system",
-			"Thendral",
-			"Thenee"
-		],
 		"tcn": [
 			"Jomolhari"
 		],
@@ -856,16 +851,6 @@
 			"ttf": "TharLon/TharLon.ttf?91312",
 			"woff": "TharLon/TharLon.woff?0df3e",
 			"woff2": "TharLon/TharLon.woff2?9012f"
-		},
-		"Thendral": {
-			"ttf": "Thendral/ThendralUni.ttf?c4f2d",
-			"woff": "Thendral/ThendralUni.woff?788be",
-			"woff2": "Thendral/ThendralUni.woff2?0af7d"
-		},
-		"Thenee": {
-			"ttf": "Thenee/TheneeUni.ttf?f89c7",
-			"woff": "Thenee/TheneeUni.woff?a32ac",
-			"woff2": "Thenee/TheneeUni.woff2?c24ef"
 		},
 		"Tuladha Jejeg": {
 			"ttf": "TuladhaJejeg/TuladhaJejeg_gr.ttf?210ce",
