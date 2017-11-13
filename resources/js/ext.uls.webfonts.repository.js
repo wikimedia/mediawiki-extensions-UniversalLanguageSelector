@@ -278,10 +278,6 @@
 			"system",
 			"OpenDyslexic"
 		],
-		"ne": [
-			"system",
-			"Madan"
-		],
 		"nl": [
 			"system",
 			"ComicNeue",
@@ -596,10 +592,6 @@
 			"fontstyle": "italic",
 			"woff": "LinuxLibertine/LinLibertine_RIah.woff?1c058",
 			"woff2": "LinuxLibertine/LinLibertine_RIah.woff2?4e887"
-		},
-		"Madan": {
-			"woff": "madan/madan.woff?cee7d",
-			"woff2": "madan/madan.woff2?81dd1"
 		},
 		"Miriam CLM": {
 			"woff": "MiriamCLM/MiriamCLM-Book.woff?28216",
