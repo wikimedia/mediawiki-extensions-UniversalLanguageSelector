@@ -178,7 +178,7 @@
 				id: imeId,
 				value: imeId
 			} )
-			.prop( 'checked', selected );
+				.prop( 'checked', selected );
 
 			if ( imeId === 'system' ) {
 				name = $.i18n( 'ext-uls-disable-input-method' );

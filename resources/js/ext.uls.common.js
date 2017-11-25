@@ -59,14 +59,14 @@
 
 			api = new mw.Api();
 			api.saveOption( 'language', language )
-			.done( function () {
-				location.reload();
-			} )
-			.fail( function () {
-				// Set options failed. Maybe the user has logged off.
-				// Continue like anonymous user and set cookie.
-				changeLanguageAnon();
-			} );
+				.done( function () {
+					location.reload();
+				} )
+				.fail( function () {
+					// Set options failed. Maybe the user has logged off.
+					// Continue like anonymous user and set cookie.
+					changeLanguageAnon();
+				} );
 		} );
 
 		mw.hook( 'mw.uls.interface.language.change' ).fire( language, deferred );
