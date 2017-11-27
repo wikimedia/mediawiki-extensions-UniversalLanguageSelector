@@ -22,12 +22,11 @@
  * @ingroup API
  */
 class ApiLanguageSearch extends ApiBase {
-
 	public function execute() {
 		$params = $this->extractRequestParams();
 		$search = $params['search'];
 		$typos = $params['typos'];
-		$searches = LanguageNameSearch::search( $search, $typos );
+		$searches = LanguageNameSearch::search( $search, $typos, $this->getLanguage()->getCode() );
 		$result = $this->getResult();
 		$result->addValue( null, $this->getModuleName(), $searches );
 	}
