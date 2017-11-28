@@ -5,30 +5,28 @@
 			<path d="M0 0v152l12 10 12-10 12 10 12-10 12 10 12-10 12 10 12-10 12 10 12-10 12 10 12-10 12 10 12-10 12 10 12-10 12 10 12-10 12 10 12-10 12 10 12-10V0z"/>
 		</clipPath>
 	</defs>
-	<g id="screenshot" transform="matrix(-1 0 0 1 264 0)" clip-path="url(#jagged-edge)">
-		<path id="background" fill="#fff" d="M263.5 162.25l-263-.5V.5h263z"/>
-		<g fill="#eaecf0">
-			<path id="article" d="M252 162.496V29H48v133.496z"/>
-			<path id="logo" d="M11 22c0-7.732 6.268-14 14-14s14 6.268 14 14-6.268 14-14 14-14-6.268-14-14z"/>
-			<path id="sidebar" d="M38 129.667V58H13v71.667h25z"/>
-			<path id="personal-tools" d="M233 5h26v6h-26V5zm-24 0h22v6h-22zm-24 0h22v6h-22zm-23 0h13v6h-13zm15 0h6v6h-6zm-23 0h6v6h-6z"/>
-		</g>
-		<g id="search" fill="#eaecf0">
-			<path id="path5717" d="M258 16v4h-92v-4h92m1-1h-94v6h94v-6z"/>
+	<g clip-path="url(#jagged-edge)" fill="#eaecf0" transform="matrix(-1 0 0 1 264 0)">
+		<path id="background" fill="#fff" d="M0 0h264v162H0"/>
+		<path id="site-logo" d="M11 22c0-8 6-14 14-14s14 6 14 14-6 14-14 14-14-6-14-14"/>
+		<path id="site-title" d="M38 45v-5H13v5h25"/>
+		<path id="sidebar" d="M38 130V58H13v72h25z"/>
+		<path id="personal-tools" d="M233 5h26v6h-26V5zm-24 0h22v6h-22zm-24 0h22v6h-22zm-23 0h13v6h-13zm15 0h6v6h-6zm-23 0h6v6h-6z"/>
+		<g id="search">
+			<path id="input" d="M258 16v4h-92v-4h92m1-1h-94v6h94v-6z"/>
 			<path id="icon" d="M168 17h2v2h-2z"/>
 		</g>
-		<path id="sitename" fill="#eaecf0" d="M38 45v-5H13v5h25z"/>
-		<path id="border" fill="#eaecf0" d="M0 0v162h264V0zm1 1h262v150.533l-11 9.166-12-10-12 10-12-10-12 10-12-10-12 10-12-10-12 10-12-10-12 10-12-10-12 10-12-10-12 10-12-10-12 10-12-10-12 10-12-10-12 10-11-9.17z"/>
+        <path id="article" d="M252 162V29H48v133z"/>
+		<path id="border" d="M0 0v162h264V0zm1 1h262v150.533l-11 9.166-12-10-12 10-12-10-12 10-12-10-12 10-12-10-12 10-12-10-12 10-12-10-12 10-12-10-12 10-12-10-12 10-12-10-12 10-12-10-12 10-11-9z"/>
 		<path fill="#36c" d="M38 132.625v-35H13v35h25z"/>
-		<rect width="20.438" height="2.176" x="15.281" y="108.59" fill="#eaf3ff" rx=".151" ry=".107"/>
-		<rect width="20.438" height="2.176" x="15.281" y="113.831" fill="#eaf3ff" rx=".151" ry=".107"/>
-		<rect width="20.438" height="6.188" x="15.281" y="124.313" fill="#2a4b8d" rx=".151" ry=".303"/>
-		<g fill="#fff" transform="matrix(.7 0 0 .7 7.3 33.5)">
-			<rect width="1.823" height="1.882" x="20.273" y="125.738" rx=".013" ry=".092"/>
-			<rect width="1.823" height="1.882" x="26.655" y="125.738" rx=".013" ry=".092"/>
-			<rect width="1.823" height="1.882" x="23.464" y="125.738" rx=".013" ry=".092"/>
+		<rect width="19" height="2" x="16" y="108.59" fill="#eaf3ff" rx=".151" ry=".107"/>
+		<rect width="19" height="2" x="16" y="113.831" fill="#eaf3ff" rx=".151" ry=".107"/>
+		<rect width="19" height="6" x="16" y="124.313" fill="#2a4b8d" rx=".151" ry=".303"/>
+		<g fill="#fff" transform="matrix(.747 0 0 .747 7.295 33.453)">
+			<rect width="2" height="2" x="20" y="125" rx=".013" ry=".092"/>
+			<rect width="2" height="2" x="23" y="125" rx=".013" ry=".092"/>
+			<rect width="2" height="2" x="26" y="125" rx=".013" ry=".092"/>
 		</g>
-		<rect width="20.438" height="2.176" x="15.281" y="103.349" fill="#eaf3ff" rx=".151" ry=".107"/>
-		<rect width="20.438" height="2.176" x="15.281" y="119.072" fill="#eaf3ff" rx=".151" ry=".107"/>
+		<rect width="19" height="2" x="16" y="103.349" fill="#eaf3ff" rx=".151" ry=".107"/>
+		<rect width="19" height="2" x="16" y="119.072" fill="#eaf3ff" rx=".151" ry=".107"/>
 	</g>
 </svg>
