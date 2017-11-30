@@ -105,16 +105,16 @@ class LanguageNameSearch {
 	 * @return int
 	 */
 	public static function levenshteinDistance( $str1, $str2 ) {
+		if ( $str1 === $str2 ) {
+			return 0;
+		}
 		$length1 = mb_strlen( $str1, 'UTF-8' );
 		$length2 = mb_strlen( $str2, 'UTF-8' );
-		if ( $length1 < $length2 ) {
-			return self::levenshteinDistance( $str2, $str1 );
-		}
 		if ( $length1 === 0 ) {
 			return $length2;
 		}
-		if ( $str1 === $str2 ) {
-			return 0;
+		if ( $length1 < $length2 ) {
+			return self::levenshteinDistance( $str2, $str1 );
 		}
 		$prevRow = range( 0, $length2 );
 		for ( $i = 0; $i < $length1; $i++ ) {
