@@ -23,8 +23,11 @@ class LanguageSearchTest extends PHPUnit_Framework_TestCase {
 	 * @dataProvider searchDataProvider
 	 */
 	public function testSearch( $searchKey, $expected ) {
-		$actual = LanguageNameSearch::search( $searchKey, 1 );
+		$actual = LanguageNameSearch::search( $searchKey, 1, 'en' );
+		// This is for better error messages
 		$this->assertEquals( $expected, $actual );
+		// This is for identical order
+		$this->assertSame( $expected, $actual );
 	}
 
 	public function searchDataProvider() {
@@ -34,8 +37,8 @@ class LanguageSearchTest extends PHPUnit_Framework_TestCase {
 			]
 			],
 			[ 'മല', [
-				'ml' => 'മലയാളം',
 				'mg' => 'മലഗാസി',
+				'ml' => 'മലയാളം',
 				'ms' => 'മലെയ്',
 			]
 			],
@@ -43,15 +46,16 @@ class LanguageSearchTest extends PHPUnit_Framework_TestCase {
 				'fi' => 'φινλανδικά',
 			]
 			],
-			[ 'blah', []
+			[ 'blargh', []
 			],
 			[ 'الفرنسية', [
 				'fr' => 'الفرنسية',
-				'fr-ca' => 'الفرنسية الكندية',
 				'fr-ch' => 'الفرنسية السويسرية',
-				'frm' => 'الفرنسية الوسطى',
 				'fro' => 'الفرنسية القديمة',
-				'crs' => 'الفرنسية الكريولية السيشيلية'
+				'frc' => 'الفرنسية الكاجونية',
+				'crs' => 'الفرنسية الكريولية السيشيلية',
+				'fr-ca' => 'الفرنسية الكندية',
+				'frm' => 'الفرنسية الوسطى',
 			]
 			],
 			[ 'മലയളം', [
@@ -59,7 +63,7 @@ class LanguageSearchTest extends PHPUnit_Framework_TestCase {
 			]
 			],
 			[ 'punja', [
-				'pa' => 'punjabi <èdè punjabi>',
+				'pa' => class_exists( 'LanguageNames' ) ? 'punjabi' : 'punjaabi sennii',
 				'pnb' => 'punjabi western',
 			]
 			],
@@ -72,22 +76,22 @@ class LanguageSearchTest extends PHPUnit_Framework_TestCase {
 			]
 			],
 			[ 'chinese', [
-				'zh-hans' => 'chinese simplified',
-				'zh-hant' => 'chinese traditional',
-				'zh' => 'chinesesch',
+				'zh' => 'chinese',
 				'zh-cn' => 'chinese (china)',
 				'zh-hk' => 'chinese (hong kong)',
 				'zh-min-nan' => 'chinese (min nan)',
 				'zh-sg' => 'chinese (singapore)',
 				'zh-tw' => 'chinese (taiwan)',
-				'cdo' => 'chinese <min dong chinese>',
-				'gan' => 'chinese <isi-gan chinese>',
-				'hak' => 'chinese <isi-hakka chinese>',
-				'lzh' => 'chinesesch <klassescht chinesesch>',
+				'zh-hans' => 'chinese simplified',
+				'zh-hant' => 'chinese traditional',
+				'zh-classical' => 'chinese <classical chinese>',
+				'gan' => 'chinese <gan chinese>',
+				'hak' => 'chinese <hakka chinese>',
 				'nan' => 'chinese <isi-min nan chinese>',
 				'wuu' => 'chinese <isi-wu chinese>',
-				'zh-classical' => 'chinese <classical chinese>',
 				'hsn' => 'chinese <isi-xiang chinese>',
+				'lzh' => 'chinese <literary chinese>',
+				'cdo' => 'chinese <min dong chinese>',
 			]
 			],
 			[ 'finish', [

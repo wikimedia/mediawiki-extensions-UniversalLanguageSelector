@@ -58,11 +58,13 @@ class LanguageNameIndexer extends Maintenance {
 				foreach ( $words as $index => $word ) {
 					$bucket = LanguageNameSearch::getIndex( $word );
 
+					$type = 'prefix';
 					$display = $translation;
 					if ( $index > 0 && count( $words ) > 1 ) {
+						$type = 'infix';
 						$display = "$word <$translation>";
 					}
-					$buckets[$bucket][$display] = $targetLanguage;
+					$buckets[$bucket][$type][$display] = $targetLanguage;
 				}
 			}
 		}
@@ -87,10 +89,25 @@ class LanguageNameIndexer extends Maintenance {
 
 		foreach ( $specialLanguages as $targetLanguage => $translation ) {
 			$bucket = LanguageNameSearch::getIndex( $translation );
-			$buckets[$bucket][$translation] = $targetLanguage;
+			$buckets[$bucket]['prefix'][$translation] = $targetLanguage;
 		}
 
-		$lengths = array_values( array_map( 'count', $buckets ) );
+		$lengths = [];
+		// Sorting the bucket contents gives two benefits:
+		// - more consistent output across environments
+		// - shortest matches appear first, especially exact matches
+		// Sort buckets by index
+		ksort( $buckets );
+		foreach ( $buckets as $index => &$bucketTypes ) {
+			$lengths[] = array_sum( array_map( 'count', $bucketTypes ) );
+			// Ensure 'prefix' is before 'infix';
+			krsort( $bucketTypes );
+			// Ensure each bucket has entries sorted
+			foreach ( $bucketTypes as $type => &$bucket ) {
+				ksort( $bucket );
+			}
+		}
+
 		$count = count( $buckets );
 		$min = min( $lengths );
 		$max = max( $lengths );
@@ -113,7 +130,6 @@ class LanguageNameSearchData {
 
 PHP;
 
-		ksort( $buckets );
 		// Format for short array format
 		$data = var_export( $buckets, true );
 		$data = str_replace( "array (", '[', $data );
