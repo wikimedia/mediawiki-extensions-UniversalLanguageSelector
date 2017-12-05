@@ -9,7 +9,7 @@
 	"uls-desc": "Daje korisniku nekoliko načina da izabere jezik i da prilagodi postavke jezika",
 	"uls-plang-title-languages": "Jezici",
 	"ext-uls-select-language-settings-icon-tooltip": "Postavke jezika",
-	"ext-uls-undo-language-tooltip-text": "Jezik promijenjen, prethodno je bio postavljen $1",
+	"ext-uls-undo-language-tooltip-text": "Jezik promijenjen; prethodno je bio postavljen $1",
 	"ext-uls-language-settings-preferences-link": "Više jezičkih postavki",
 	"uls-betafeature-label": "Sažeti linkovi na druge jezike",
 	"uls-betafeature-desc": "Prikaži kraći spisak s linkovima na druge jezike, samo s jezicima koji su Vam najvažniji.",
