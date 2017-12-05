@@ -293,10 +293,6 @@
 		"otb": [
 			"Jomolhari"
 		],
-		"pa": [
-			"system",
-			"Saab"
-		],
 		"pal": [
 			"Shapour"
 		],
@@ -714,10 +710,6 @@
 		"RailwaySans": {
 			"woff": "RailwaySans/RailwaySans.woff?fda9a",
 			"woff2": "RailwaySans/RailwaySans.woff2?a6c17"
-		},
-		"Saab": {
-			"woff": "Saab/Saab.woff?5c0ec",
-			"woff2": "Saab/Saab.woff2?633bb"
 		},
 		"Saweri": {
 			"woff": "saweri/saweri.woff?fe688",
