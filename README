@@ -20,7 +20,7 @@ See GPL-LICENSE and MIT-LICENSE for details.
 For a very, very quick start add the following lines to LocalSettings.php of
 your MediaWiki setup:
 
-require_once "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php";
+wfLoadExtension( 'UniversalLanguageSelector' );
 
 By default, ULS will appear at personal toolbar position. If you want ULS at
 interlanguage position, add the following line:
