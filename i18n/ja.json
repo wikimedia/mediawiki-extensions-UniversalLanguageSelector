@@ -6,7 +6,8 @@
 			"Sujiniku",
 			"Otokoume",
 			"Kusurija",
-			"にょきにょき"
+			"にょきにょき",
+			"Omotecho"
 		]
 	},
 	"uls-desc": "言語を選択するため/言語設定を調整するための、いくつかの方法を利用者に提供する",
@@ -60,6 +61,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "言語一覧の隣にある言語の設定で、いつでも入力ツールを有効にできます。",
 	"ext-uls-language-settings-applying": "適用しています...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|もう一つ|他 $1}}",
+	"ext-uls-compact-link-info": "すべての言語（あなたを含む利用者の共通の選択肢による基本の選択）",
 	"prefs-languages": "言語",
-	"ext-uls-compact-language-links-preference": "あなたと関係するもの以外折りたたまれたコンパクトな言語間リンクを利用する。"
+	"ext-uls-compact-language-links-preference": "[[$1|折りたたんだコンパクトな言語間リンク]]を使い、あなたと関係するもののみ表示。"
 }
