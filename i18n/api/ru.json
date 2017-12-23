@@ -3,10 +3,12 @@
 		"authors": [
 			"Amire80",
 			"Kaganer",
-			"Okras"
+			"Okras",
+			"Facenapalm"
 		]
 	},
 	"apihelp-languagesearch-description": "Поиск названий языков на любом алфавите.",
+	"apihelp-languagesearch-summary": "Поиск названий языков на любом алфавите.",
 	"apihelp-languagesearch-param-search": "Строка поиска.",
 	"apihelp-languagesearch-param-typos": "Количество орфографических ошибок, которое допускается в искомой строке.",
 	"apihelp-languagesearch-example-1": "Поиск «Te»",
