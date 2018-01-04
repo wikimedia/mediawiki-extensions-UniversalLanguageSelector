@@ -149,7 +149,9 @@
 				var $this = $( this );
 
 				$this.data( 'module' ).render();
-				languageSettings.$window.scrollIntoView();
+				if ( languageSettings.$window.is( ':visible' ) ) {
+					languageSettings.$window.scrollIntoView();
+				}
 				$settingsMenuItems.find( '.menu-section' ).removeClass( 'active' );
 				$this.addClass( 'active' );
 			} );
