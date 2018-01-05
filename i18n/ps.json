@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ahmed-Najib-Biabani-Ibrahimkhel"
+			"Ahmed-Najib-Biabani-Ibrahimkhel",
+			"Baloch Khan"
 		]
 	},
 	"uls-plang-title-languages": "ژبې",
@@ -38,6 +39,7 @@
 	"ext-uls-input-settings-ime-settings": "د $1 لپاره د ننوتنې چلندلارې",
 	"ext-uls-input-settings-ui-language": "د ليکلو لپاره کارېدونکې ژبه",
 	"ext-uls-back-to-input-settings": "د ننوتنې امستنو ته ورگرځېدل",
+	"ext-uls-ime-help": "څنګه کارول کیږي",
 	"ext-uls-disable-input-method": "ولسي ليکدړه کارول",
 	"ext-uls-input-settings-more-languages-tooltip": "نورې ژبې",
 	"jquery-ime-other-languages": "نورې ژبې",
@@ -51,5 +53,7 @@
 	"ext-uls-input-disable-notification-undo": "ناکړل",
 	"ext-uls-input-disable-notification-info-personal": "تاسې د ننوتلو اوزارونه هر وخت د ژبې امستنو څخه چارنولی شی.",
 	"ext-uls-input-disable-notification-info-interlanguage": "تاسې د ننوتلو اوزارونه هر وخت، د ژبې لړليک څنگ ته، د ژب-امستنو څخه چارنولی شی.",
+	"ext-uls-language-settings-applying": "غوښتنه کيږی...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|يوه بله ژبه|$1 نورې ژبي}}",
 	"prefs-languages": "ژبې"
 }
