@@ -10,7 +10,8 @@
 			"Macofe",
 			"Robin van der Vliet",
 			"McDutchie",
-			"Mainframe98"
+			"Mainframe98",
+			"Dinosaur918"
 		]
 	},
 	"uls-desc": "Biedt gebruikers verschillende mogelijkheden om een taal te kiezen en bijbehorende instellingen aan te passen",
@@ -64,6 +65,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "U kunt de invoermethoden weer inschakelen via de taalinstellingen naast de lijst met talen.",
 	"ext-uls-language-settings-applying": "Toepassen...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Nog één|Nog $1}}",
+	"ext-uls-compact-link-info": "Alle talen (selectie op basis van keuzes van u en anderen)",
 	"prefs-languages": "Talen",
 	"ext-uls-compact-language-links-preference": "Een [[$1|compacte talenlijst]] gebruiken, welke voor u relevante talen bevat."
 }
