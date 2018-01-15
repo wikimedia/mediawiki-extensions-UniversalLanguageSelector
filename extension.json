@@ -353,6 +353,9 @@
 		"ext.uls.pt": {
 			"styles": "css/ext.uls.pt.less",
 			"localBasePath": "resources",
+			"skinStyles": {
+				"monobook": "css/ext.uls.pt-monobook.less"
+			},
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.interlanguage": {

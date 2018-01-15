@@ -13,12 +13,16 @@
  */
 .uls-trigger {
 	background: transparent no-repeat scroll left center;
-	.background-image-svg( '../../lib/jquery.uls/images/icon-language.svg', '../../lib/jquery.uls/images/icon-language.png' );
-	padding-left: 30px;
+	.background-image-svg( '../../lib/jquery.uls/images/language.svg', '../../lib/jquery.uls/images/language.png' );
+	// Let the SVG image fit without cropping or stretch
+	background-size: contain;
+	padding-left: 24px;
 }
 
 #pt-uls a.uls-trigger {
-	padding-left: 30px;
+	padding-left: 24px;
+	// Let the SVG image fit without cropping or stretch
+	background-size: contain;
 	/* Fix alignment in vector: https://phabricator.wikimedia.org/T61239 */
 	line-height: 1;
 }
