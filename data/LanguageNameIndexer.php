@@ -76,20 +76,28 @@ class LanguageNameIndexer extends Maintenance {
 		// To resolve this, some languages are added here locally.
 		$specialLanguages = [
 			// Catalan, sometimes searched as "Valencià"
-			'ca' => 'valencia',
+			'ca' => [ 'valencia' ],
+			// Spanish, the transliteration of the autonym is often used for searching
+			'es' => [ 'castellano' ],
+			// Armenian, the transliteration of the autonym is often used for searching
+			'hy' => [ 'hayeren' ],
 			// Georgian, the transliteration of the autonym is often used for searching
-			'ka' => 'kartuli',
+			'ka' => [ 'kartuli', 'qartuli' ],
+			// Japanese, the transliteration of the autonym is often used for searching
+			'ja' => [ 'nihongo', 'にほんご' ],
 			// Western Punjabi, doesn't start with the word "Punjabi" in any language
-			'pnb' => 'punjabi western',
+			'pnb' => [ 'punjabi western' ],
 			// Simplified and Traditional Chinese, because zh-hans and zh-hant
 			// are not mapped to any English name
-			'zh-hans' => 'chinese simplified',
-			'zh-hant' => 'chinese traditional',
+			'zh-hans' => [ 'chinese simplified' ],
+			'zh-hant' => [ 'chinese traditional' ],
 		];
 
-		foreach ( $specialLanguages as $targetLanguage => $translation ) {
-			$bucket = LanguageNameSearch::getIndex( $translation );
-			$buckets[$bucket]['prefix'][$translation] = $targetLanguage;
+		foreach ( $specialLanguages as $targetLanguage => $translations ) {
+			foreach ( $translations as $translation ) {
+				$bucket = LanguageNameSearch::getIndex( $translation );
+				$buckets[$bucket]['prefix'][$translation] = $targetLanguage;
+			}
 		}
 
 		$lengths = [];

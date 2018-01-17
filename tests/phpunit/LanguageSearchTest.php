@@ -67,8 +67,28 @@ class LanguageSearchTest extends PHPUnit_Framework_TestCase {
 				'pnb' => 'punjabi western',
 			]
 			],
+			[ 'castellano', [
+				'es' => 'castellano',
+			]
+			],
+			[ 'hayeren', [
+				'hy' => 'hayeren',
+			]
+			],
 			[ 'kartuli', [
 				'ka' => 'kartuli',
+			]
+			],
+			[ 'qartuli', [
+				'ka' => 'qartuli',
+			]
+			],
+			[ 'nihongo', [
+				'ja' => 'nihongo',
+			]
+			],
+			[ 'にほんご', [
+				'ja' => 'にほんご',
 			]
 			],
 			[ 'valencia', [
