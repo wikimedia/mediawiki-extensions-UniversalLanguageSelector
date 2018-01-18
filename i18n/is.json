@@ -2,9 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Snævar",
-			"Xð"
+			"Xð",
+			"Sveinn í Felli"
 		]
 	},
 	"uls-plang-title-languages": "Tungumálum",
-	"ext-uls-compact-language-links-preference": "Nota styttan tungumála lista, með tungumálum sem eiga við þig."
+	"ext-uls-compact-language-links-preference": "Nota [[$1|styttan tungumálalista]], með tungumálum sem eiga við þig."
 }
