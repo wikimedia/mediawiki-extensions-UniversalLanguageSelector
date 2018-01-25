@@ -17,7 +17,10 @@
  * @licence GNU General Public Licence 2.0 or later
  * @licence MIT License
  */
-require_once __DIR__ . '/../../data/LanguageNameSearch.php';
+
+/**
+ * @covers LanguageNameSearch
+ */
 class LanguageSearchTest extends PHPUnit_Framework_TestCase {
 	/**
 	 * @dataProvider searchDataProvider
