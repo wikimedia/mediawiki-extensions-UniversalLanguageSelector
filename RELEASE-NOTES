@@ -1,0 +1,11 @@
+== UniversalLanguageSelector 2018.01 ==
+Released at 2018-01-30.
+
+=== Noteworthy changes ===
+* User interface and search improvements.
+* Fixed page scroll to the top when the the ULS gear icon is clicked. (T178188)
+
+==== Fonts ====
+* Removed non-default webfonts for some languages. (T180422)
+* Remove the autonym font and tofu detection.
+* ULS no longer serves TTF files to browsers because all recent browsers support the woff format.
