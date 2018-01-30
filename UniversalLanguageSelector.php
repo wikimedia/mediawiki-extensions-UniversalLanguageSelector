@@ -2,7 +2,7 @@
 /**
  * Initialisation file for MediaWiki extension UniversalLanguageSelector.
  *
- * Copyright (C) 2012-2014 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon
+ * Copyright (C) 2012-2018 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon
  * Harris, Niklas Laxström, Pau Giner, Santhosh Thottingal, Siebrand Mazeland
  * and other contributors. See CREDITS for a list.
  *
@@ -14,8 +14,8 @@
  *
  * @file
  * @ingroup Extensions
- * @licence GNU General Public Licence 2.0 or later
- * @licence MIT License
+ * @licence GPL-2.0-or-later
+ * @licence MIT
  */
 
 if ( function_exists( 'wfLoadExtension' ) ) {

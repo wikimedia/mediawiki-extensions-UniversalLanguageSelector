@@ -1,6 +1,6 @@
 {
 	"name": "UniversalLanguageSelector",
-	"version": "2017-10-30",
+	"version": "2018-01-30",
 	"author": [
 		"Alolita Sharma",
 		"Amir Aharoni",
@@ -14,7 +14,7 @@
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector",
 	"descriptionmsg": "uls-desc",
-	"license-name": "GPL-2.0+",
+	"license-name": "GPL-2.0-or-later",
 	"requires": {
 		"MediaWiki": ">= 1.27.0"
 	},
