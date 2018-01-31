@@ -26,18 +26,13 @@
 	 * @return {jQuery}
 	 */
 	function displaySettings() {
-		var $displaySettingsTitle, displaySettingsText, $displaySettings;
-
-		displaySettingsText = $.i18n( 'ext-uls-display-settings-desc' );
-		$displaySettingsTitle = $( '<div data-i18n="ext-uls-display-settings-title">' )
-			.addClass( 'settings-title' )
-			.attr( 'title', displaySettingsText );
-		$displaySettings = $( '<div>' )
+		return $( '<button>' )
 			.addClass( 'display-settings-block' )
-			.prop( 'id', 'display-settings-block' )
-			.append( $displaySettingsTitle.i18n() );
-
-		return $displaySettings;
+			.attr( {
+				title: $.i18n( 'ext-uls-display-settings-desc' ),
+				'data-i18n': 'ext-uls-display-settings-title'
+			} )
+			.i18n();
 	}
 
 	/**
@@ -46,18 +41,13 @@
 	 * @return {jQuery}
 	 */
 	function inputSettings() {
-		var $inputSettingsTitle, inputSettingsText, $inputSettings;
-
-		inputSettingsText = $.i18n( 'ext-uls-input-settings-desc' );
-		$inputSettingsTitle = $( '<div data-i18n="ext-uls-input-settings-title">' )
-			.addClass( 'settings-title' )
-			.attr( 'title', inputSettingsText );
-		$inputSettings = $( '<div>' )
+		return $( '<button>' )
 			.addClass( 'input-settings-block' )
-			.prop( 'id', 'input-settings-block' )
-			.append( $inputSettingsTitle.i18n() );
-
-		return $inputSettings;
+			.attr( {
+				title: $.i18n( 'ext-uls-input-settings-desc' ),
+				'data-i18n': 'ext-uls-input-settings-title'
+			} )
+			.i18n();
 	}
 
 	/**
@@ -91,12 +81,6 @@
 			$.extend( displaySettingsOptions, uls.position() );
 			$displaySettings.languagesettings( displaySettingsOptions ).click();
 		} );
-
-		// On every click
-		$displaySettings.on( 'click', function () {
-			mw.hook( 'mw.uls.settings.open' ).fire( 'uls' );
-			uls.hide();
-		} );
 	}
 
 	/**
@@ -121,51 +105,7 @@
 				top: position.top,
 				left: position.left
 			} ).click();
-		} );
 
-		// On every click
-		$inputSettings.on( 'click', function () {
-			mw.hook( 'mw.uls.settings.open' ).fire( 'uls' );
-			uls.hide();
-		} );
-	}
-
-	/**
-	 * Helper function to make the uls triggers accessible with the keyboard.
-	 *
-	 * @param {jQuery} $target One or more jQuery elements.
-	 * @since 2013.07
-	 */
-	function addAccessibilityFeatures( $target ) {
-		// tabindex=0 makes it appear when tabbing targets.
-		// See also http://www.w3.org/TR/wai-aria/roles#button
-		$target.attr( {
-			tabIndex: 0,
-			role: 'button',
-			'aria-haspopup': true
-		} );
-		// TODO:
-		// * aria-pressed true/false when popup is open
-		// * aria-controls to reference to the popup
-
-		// Remove outline when clicking
-		$target.click( function () {
-			$( this ).css( 'outline', 'none' );
-		} );
-		// Allow outline to appear again if keyboard activated
-		$target.blur( function () {
-			$( this ).css( 'outline', '' );
-		} );
-
-		// Make Enter act the same as clicking. This has the unfortunate side
-		// effect of removing the outline.
-		$target.keydown( function ( event ) {
-			// Enter
-			if ( event.keyCode === 13 ) {
-				$( this ).click();
-				event.preventDefault();
-				event.stopPropagation();
-			}
 		} );
 	}
 
@@ -304,8 +244,8 @@
 	}
 
 	function initInterface() {
-		var $triggers,
-			$pLang,
+		var $pLang,
+			clickHandler,
 			$ulsTrigger = $( '.uls-trigger' ),
 			anonMode = ( mw.user.isAnon() &&
 				!mw.config.get( 'wgULSAnonCanChangeLanguage' ) ),
@@ -316,7 +256,8 @@
 			// The interlanguage links section
 			$pLang = $( '#p-lang' );
 			// Add an element near the interlanguage links header
-			$ulsTrigger = $( '<span>' ).addClass( 'uls-settings-trigger' );
+			$ulsTrigger = $( '<button>' )
+				.addClass( 'uls-settings-trigger' );
 			// Append ULS cog to languages section.
 			$pLang.prepend( $ulsTrigger );
 			// Take care of any other elements with this class.
@@ -333,7 +274,7 @@
 				title: mw.msg( 'ext-uls-select-language-settings-icon-tooltip' )
 			} );
 
-			$ulsTrigger.on( 'click', function ( e, eventParams ) {
+			clickHandler = function ( e, eventParams ) {
 				var languagesettings = $ulsTrigger.data( 'languagesettings' ),
 					languageSettingsOptions;
 
@@ -348,7 +289,7 @@
 						onVisible: function () {
 							var caretRadius,
 								ulsTriggerHeight = this.$element.height(),
-								ulsTriggerWidth = this.$element.width(),
+								ulsTriggerWidth = this.$element[ 0 ].offsetWidth,
 								ulsTriggerOffset = this.$element.offset();
 
 							this.$window.addClass( 'callout' );
@@ -367,10 +308,10 @@
 
 							// The top of the dialog is aligned in relation to
 							// the middle of the trigger, so that middle of the
-							// caret aligns with it. 17 is a random number.
+							// caret aligns with it. 16 is trigger icon height in pixels
 							this.top = ulsTriggerOffset.top +
 								( ulsTriggerHeight / 2 ) -
-								( caretRadius + 17 );
+								( caretRadius + 16 );
 
 							this.position();
 						}
@@ -382,9 +323,9 @@
 
 					e.stopPropagation();
 				}
-			} );
+			};
 		} else if ( anonMode ) {
-			$ulsTrigger.on( 'click', function ( e, eventParams ) {
+			clickHandler = function ( e, eventParams ) {
 				var languagesettings = $ulsTrigger.data( 'languagesettings' );
 
 				e.preventDefault();
@@ -400,9 +341,9 @@
 						$ulsTrigger.trigger( 'click', eventParams );
 					} );
 				}
-			} );
+			};
 		} else {
-			$ulsTrigger.on( 'click', function ( e, eventParams ) {
+			clickHandler = function ( e, eventParams ) {
 				var uls = $ulsTrigger.data( 'uls' );
 
 				e.preventDefault();
@@ -436,12 +377,10 @@
 						}, 0 );
 					} );
 				}
-			} );
+			};
 		}
 
-		// At this point we don't care which kind of trigger it is
-		$triggers = $( '.uls-settings-trigger, .uls-trigger' );
-		addAccessibilityFeatures( $triggers );
+		$ulsTrigger.on( 'click', clickHandler );
 
 		// Bind language settings to preferences page link
 		$( '#uls-preferences-link' )

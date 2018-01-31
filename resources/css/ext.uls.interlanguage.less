@@ -2,12 +2,22 @@
 @import 'mediawiki.mixins';
 
 #p-lang .uls-settings-trigger {
-	background: transparent no-repeat right top;
+	background: transparent no-repeat center top;
 	.background-image-svg( '../images/cog-sprite.svg', '../images/cog-sprite.png' );
-	height: 16px;
-	width: 14px;
+	border: 0;
+	min-height: 16px;
+	min-width: 16px;
 	float: right;
 	cursor: pointer;
+
+	// Remove the dotted border for Firefox
+	&::-moz-focus-inner {
+		border: 0;
+	}
+
+	&:focus {
+		outline: 1px solid #36c;
+	}
 }
 
 .skin-vector #p-lang .uls-settings-trigger {
@@ -16,5 +26,5 @@
 }
 
 #p-lang .uls-settings-trigger:hover {
-	background-position: right -16px;
+	background-position: center -16px;
 }

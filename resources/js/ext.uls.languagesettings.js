@@ -87,6 +87,15 @@
 			this.$window.on( 'click', function ( event ) {
 				event.stopPropagation();
 			} );
+
+			// Map Escape to same action as the close button. This is keyup (and not keydown)
+			// because ULS also listens to keyup and we need to stop propagation.
+			this.$window.on( 'keyup', function ( event ) {
+				if ( event.which === 27 ) {
+					event.stopPropagation();
+					mw.hook( 'mw.uls.settings.cancel' ).fire();
+				}
+			} );
 		},
 
 		render: function () {
@@ -130,7 +139,7 @@
 			$settingsText = $( '<span>' )
 				.addClass( 'settings-text' )
 				.attr( 'data-i18n', module.descriptionI18n );
-			$settingsLink = $( '<div>' )
+			$settingsLink = $( '<button>' )
 				.addClass( moduleName + '-settings-block menu-section' )
 				.prop( 'id', moduleName + '-panel-trigger' )
 				.data( 'module', module )
@@ -194,6 +203,8 @@
 			this.$window.show();
 			this.visible();
 			this.$window.scrollIntoView();
+			// For keyboard navigation, put the focus on an element inside the dialog
+			this.$window.find( '.menu-section.active' ).focus();
 		},
 
 		/**

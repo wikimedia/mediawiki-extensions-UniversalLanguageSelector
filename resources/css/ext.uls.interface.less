@@ -7,16 +7,31 @@
 	padding-left: 10px;
 	line-height: 1.2em;
 	border-radius: 0 0 2px 2px;
-}
 
-#uls-settings-block div.display-settings-block,
-#uls-settings-block div.input-settings-block {
-	display: inline-block;
-	margin: 8px 15px;
-	color: #54595d;
-}
+	> button {
+		background: left top transparent no-repeat;
+		// Support: Safari 3.1-6.1 & Android browser 3-4.3
+		// Don't support `background-size` values in `background` shorthand
+		background-size: 20px auto;
+		color: #54595d;
+		display: inline-block;
+		// Normalize the button
+		margin: 8px 15px;
+		border: 0;
+		padding: 0 0 0 26px;
+		font-size: medium;
+		cursor: pointer;
 
-#uls-settings-block div.display-settings-block:hover,
-#uls-settings-block div.input-settings-block:hover {
-	color: #222;
+		&:hover {
+			color: #222;
+		}
+
+		&.display-settings-block {
+			.background-image-svg( '../images/display.svg', '../images/display.png' );
+		}
+
+		&.input-settings-block {
+			.background-image-svg( '../images/input.svg', '../images/input.png' );
+		}
+	}
 }
