@@ -48,7 +48,7 @@ class LanguageNameSearch {
 			if ( strpos( $name, $searchKey ) === 0 ) {
 				$results[$searchKey] = $name;
 			} else {
-				$results[$searchKey] = "$searchKey <$name>";
+				$results[$searchKey] = "$searchKey – $name";
 			}
 		}
 
