@@ -67,5 +67,6 @@
 	"ext-uls-compact-link-count": "Message next to the list of languages which indicates that there are more languages than the ones shown. Parameter $1 is the number of languages.\n\nIf your language has a singular form for number 1, then the number should be explicitly mentioned. If it's possible in your language, please write \"1 more\" or \"one more\". Another option is to write \"more\" in a way that doesn't depend on a particular number.",
 	"ext-uls-compact-link-info": "A tooltip for a button that shows all available languages next to a short list of relevant languages.",
 	"prefs-languages": "Field set legend for user preferences regarding display of language lists\n{{Identical|Language}}",
-	"ext-uls-compact-language-links-preference": "Label for compact language links user preference"
+	"ext-uls-compact-language-links-preference": "Label for compact language links user preference",
+	"ext-uls-compact-no-results": "Message shown when the language search does not have any results."
 }
