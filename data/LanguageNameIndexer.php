@@ -62,7 +62,7 @@ class LanguageNameIndexer extends Maintenance {
 					$display = $translation;
 					if ( $index > 0 && count( $words ) > 1 ) {
 						$type = 'infix';
-						$display = "$word <$translation>";
+						$display = "$word — $translation";
 					}
 					$buckets[$bucket][$type][$display] = $targetLanguage;
 				}
