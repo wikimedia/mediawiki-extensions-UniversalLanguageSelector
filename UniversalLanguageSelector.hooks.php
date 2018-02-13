@@ -508,7 +508,8 @@ class UniversalLanguageSelectorHooks {
 			],
 			'messages' => [
 				'ext-uls-compact-link-count',
-				'ext-uls-compact-link-info'
+				'ext-uls-compact-link-info',
+				'ext-uls-compact-no-results'
 			],
 			'localBasePath' => __DIR__ . '/resources',
 			'remoteExtPath' => 'UniversalLanguageSelector/resources'

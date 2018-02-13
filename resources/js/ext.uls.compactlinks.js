@@ -191,7 +191,15 @@
 			},
 			languages: ulsLanguageList,
 			// Show common languages
-			quickList: self.getCommonLanguages( languages )
+			quickList: self.getCommonLanguages( languages ),
+			noResultsTemplate: function () {
+				var $defaultTemplate = $.proxy( $.fn.lcd.defaults.noResultsTemplate, this )();
+				// Customize the message
+				$defaultTemplate
+					.find( '.uls-no-results-found-title' )
+					.text( mw.msg( 'ext-uls-compact-no-results' ) );
+				return $defaultTemplate;
+			}
 		} );
 	};
 
