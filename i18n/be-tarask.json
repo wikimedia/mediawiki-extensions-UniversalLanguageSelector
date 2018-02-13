@@ -55,6 +55,7 @@
 	"ext-uls-input-disable-notification-undo": "Скасаваць",
 	"ext-uls-input-disable-notification-info-personal": "Вы можаце ўключыць прылады для ўводу зноў у моўных наладах.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Вы можаце ўключыць прылады для ўводу зноў у моўных наладах побач са сьпісам моваў.",
+	"ext-uls-language-settings-applying": "Дастасоўваем…",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Яшчэ $1}}",
 	"ext-uls-compact-link-info": "Усе мовы (пачатковая выбарка паводле частых Вашых і іншых запытаў)"
 }

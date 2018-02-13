@@ -7,7 +7,8 @@
 			"Helder.wiki",
 			"Dianakc",
 			"Opraco",
-			"Felipe L. Ewald"
+			"Felipe L. Ewald",
+			"Eduardo Addad de Oliveira"
 		]
 	},
 	"uls-desc": "Oferece ao usuário várias maneiras para selecionar um idioma e ajustar as configurações de idioma",
@@ -63,5 +64,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Mais um|$1mais}}",
 	"ext-uls-compact-link-info": "Todos os idiomas (seleção inicial de escolhas comuns por você e outros)",
 	"prefs-languages": "Idiomas",
-	"ext-uls-compact-language-links-preference": "Use uma [[$1|lista de idiomas compactos]], com idiomas relevantes para você."
+	"ext-uls-compact-language-links-preference": "Use uma [[$1|lista de idiomas compactos]], com idiomas relevantes para você.",
+	"ext-uls-compact-no-results": "Esta página não está disponível no idioma que você pesquisou."
 }
