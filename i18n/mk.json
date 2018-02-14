@@ -57,5 +57,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|уште еден|уште $1}}",
 	"ext-uls-compact-link-info": "Сите јазици (првичен избор од вашите и туѓите вообичаени јазици)",
 	"prefs-languages": "Јазици",
-	"ext-uls-compact-language-links-preference": "Користете [[$1|збиен список на јазици]] со јазиците што се однесуваат на вас."
+	"ext-uls-compact-language-links-preference": "Користете [[$1|збиен список на јазици]] со јазиците што се однесуваат на вас.",
+	"ext-uls-compact-no-results": "Страницата не е достапна на јазикот што го барате."
 }

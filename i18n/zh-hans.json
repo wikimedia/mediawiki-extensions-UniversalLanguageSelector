@@ -64,5 +64,6 @@
 	"ext-uls-compact-link-count": "还有$1种语言",
 	"ext-uls-compact-link-info": "所有语言（来自您和其他人共同选择的初始选项）",
 	"prefs-languages": "语言",
-	"ext-uls-compact-language-links-preference": "使用[[$1|紧凑的语言列表]]，它包含与您有关的语言。"
+	"ext-uls-compact-language-links-preference": "使用[[$1|紧凑的语言列表]]，它包含与您有关的语言。",
+	"ext-uls-compact-no-results": "此页面在您搜索的语言中不可用。"
 }

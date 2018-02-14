@@ -74,5 +74,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Une de plus|$1 de plus}}",
 	"ext-uls-compact-link-info": "Toutes les langues (sélection initiale de choix communs par vous et les autres)",
 	"prefs-languages": "Langues",
-	"ext-uls-compact-language-links-preference": "Utilisez une [[$1|liste compacte de langues]], avec celles qui vous concernent."
+	"ext-uls-compact-language-links-preference": "Utilisez une [[$1|liste compacte de langues]], avec celles qui vous concernent.",
+	"ext-uls-compact-no-results": "Cette page n’est pas disponible dans la langue pour laquelle vous recherchez."
 }
