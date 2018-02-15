@@ -59,5 +59,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Una más|$1 más}}",
 	"ext-uls-compact-link-info": "Tolos idiomes (esbilla inicial d'opciones comunes de to y d'otros)",
 	"prefs-languages": "Llingües",
-	"ext-uls-compact-language-links-preference": "Usar una [[$1|llista de llingües compacta]] coles más afayadices pa ti."
+	"ext-uls-compact-language-links-preference": "Usar una [[$1|llista de llingües compacta]] coles más afayadices pa ti.",
+	"ext-uls-compact-no-results": "Esta páxina nun ta disponible na llingua que buscasti."
 }

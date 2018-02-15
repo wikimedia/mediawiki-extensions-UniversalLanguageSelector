@@ -8,7 +8,8 @@
 			"Abanima",
 			"Maroen1990",
 			"Shbib Al-Subaie",
-			"Meno25"
+			"Meno25",
+			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"uls-desc": "يمنح المستخدم عدة طرق لاختيار لغة، وضبط إعدادات اللغة",
@@ -64,5 +65,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|بقية الوصلات: $1}}",
 	"ext-uls-compact-link-info": "كل اللغات (الاختيار الابتدائي من الاختيارات الشائعة بواسطتك وبواسطة آخرين)",
 	"prefs-languages": "اللغات",
-	"ext-uls-compact-language-links-preference": "استخدم [[$1|قائمة اللغات المدمجة]]، لعرض اللغات المتعلقة بك."
+	"ext-uls-compact-language-links-preference": "استخدم [[$1|قائمة اللغات المدمجة]]، لعرض اللغات المتعلقة بك.",
+	"ext-uls-compact-no-results": "هذه الصفحة غير متاحة في اللغة التي بحثت بها."
 }

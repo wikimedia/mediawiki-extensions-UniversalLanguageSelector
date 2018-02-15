@@ -8,7 +8,8 @@
 			"Fúlvio",
 			555,
 			"Macofe",
-			"Opraco"
+			"Opraco",
+			"Athena in Wonderland"
 		]
 	},
 	"uls-desc": "Fornece ao utilizador várias maneiras de selecionar uma língua e ajustar as definições de língua",
@@ -64,5 +65,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Uma outra|$1 outras}}",
 	"ext-uls-compact-link-info": "Todas as línguas (seleção inicial a partir de escolhas comuns, suas e de outros)",
 	"prefs-languages": "Línguas",
-	"ext-uls-compact-language-links-preference": "Usar uma [[$1|lista compacta de línguas]], com as línguas relevantes para si"
+	"ext-uls-compact-language-links-preference": "Usar uma [[$1|lista compacta de línguas]], com as línguas relevantes para si",
+	"ext-uls-compact-no-results": "Esta página não está disponível na língua que pesquisou."
 }
