@@ -21,7 +21,7 @@
 /**
  * @covers LanguageNameSearch
  */
-class LanguageSearchTest extends PHPUnit_Framework_TestCase {
+class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 	/**
 	 * @dataProvider searchDataProvider
 	 */
