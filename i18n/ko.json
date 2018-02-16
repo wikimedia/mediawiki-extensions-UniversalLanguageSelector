@@ -66,5 +66,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|한 개 더 보기|$1개 더 보기}}",
 	"ext-uls-compact-link-info": "모든 언어 (사용자 및 다른 사용자들의 공통 선택 항목 중 초기 선택 항목)",
 	"prefs-languages": "언어",
-	"ext-uls-compact-language-links-preference": "사용자와 관련이 있는 언어들을 위주로 [[$1|간소화된 언어 목록]]을 사용합니다."
+	"ext-uls-compact-language-links-preference": "사용자와 관련이 있는 언어들을 위주로 [[$1|간소화된 언어 목록]]을 사용합니다.",
+	"ext-uls-compact-no-results": "이 문서는 검색된 언어로 읽을 수 없습니다."
 }
