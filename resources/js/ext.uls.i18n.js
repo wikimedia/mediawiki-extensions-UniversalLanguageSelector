@@ -22,10 +22,6 @@
 
 	mw.uls = mw.uls || {};
 
-	// jquery.i18n has CLDRPluralRuleParser but MediaWiki also has the same
-	// parser. Reuse it by aliasing it to window.pluralRuleParser
-	window.pluralRuleParser = mw.libs.pluralRuleParser;
-
 	// JavaScript side i18n initialization
 	$.i18n( {
 		locale: mw.config.get( 'wgUserLanguage' )
