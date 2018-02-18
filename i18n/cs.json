@@ -6,7 +6,8 @@
 			"Matěj Suchánek",
 			"Danny B.",
 			"Kusurija",
-			"Dvorapa"
+			"Dvorapa",
+			"Ilimanaq29"
 		]
 	},
 	"uls-desc": "Nabízí uživateli několik způsobů volby jazyka a úpravy jazykových nastavení",
@@ -62,5 +63,6 @@
 	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|další|další|dalších}}",
 	"ext-uls-compact-link-info": "Všechny jazyky (počáteční výběr ze společných voleb vás a ostatních)",
 	"prefs-languages": "Jazyky",
-	"ext-uls-compact-language-links-preference": "Používat [[$1|kompaktní seznam jazyků]] pouze s jazyky pro vás relevantními"
+	"ext-uls-compact-language-links-preference": "Používat [[$1|kompaktní seznam jazyků]] pouze s jazyky pro vás relevantními",
+	"ext-uls-compact-no-results": "Tato stránka není dostupná v jazyce, který jste hledal/a."
 }
