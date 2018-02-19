@@ -60,5 +60,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|আরও একটি|আরও $1টি}}",
 	"ext-uls-compact-link-info": "সব ভাষাসমূহ (আপনার ও অন্যদের দ্বারা সাধারণ পছন্দ থেকে প্রাথমিক নির্বাচন)",
 	"prefs-languages": "ভাষাসমূহ",
-	"ext-uls-compact-language-links-preference": "আপনার কাছে প্রাসঙ্গিক মনে হয় এমন ভাষাসহ, [[$1|ভাষার একটি ছোট তালিকা]] ব্যবহার করে।"
+	"ext-uls-compact-language-links-preference": "আপনার কাছে প্রাসঙ্গিক মনে হয় এমন ভাষাসহ, [[$1|ভাষার একটি ছোট তালিকা]] ব্যবহার করে।",
+	"ext-uls-compact-no-results": "এই পৃষ্ঠাটি আপনার অনুসন্ধান করা ভাষাতে নেই।"
 }
