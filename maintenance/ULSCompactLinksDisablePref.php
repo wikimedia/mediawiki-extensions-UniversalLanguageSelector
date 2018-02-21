@@ -26,6 +26,8 @@ class ULSCompactLinksDisablePref extends Maintenance {
 		$this->setBatchSize( 100 );
 
 		$this->addOption( 'really', 'Really change the preferences' );
+
+		$this->addOption( 'continue', 'Continue running from this user ID', false, true );
 	}
 
 	public function execute() {
@@ -33,7 +35,8 @@ class ULSCompactLinksDisablePref extends Maintenance {
 
 		$this->really = $this->hasOption( 'really' );
 
-		$lastUserId = 0;
+		$lastUserId = $this->getOption( 'continue', 0 );
+
 		do {
 			$tables = [ 'revision', 'user_properties', 'user_groups' ];
 			$fields = [ 'rev_user', 'isbot' => 'ug_group', 'hasbeta' => 'up_value' ];
