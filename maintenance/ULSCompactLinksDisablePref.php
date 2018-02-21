@@ -31,7 +31,7 @@ class ULSCompactLinksDisablePref extends Maintenance {
 	}
 
 	public function execute() {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = wfGetDB( DB_REPLICA, 'vslow' );
 
 		$this->really = $this->hasOption( 'really' );
 
