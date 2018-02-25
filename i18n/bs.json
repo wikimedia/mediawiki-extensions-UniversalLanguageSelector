@@ -3,7 +3,8 @@
 		"authors": [
 			"DzWiki",
 			"Srdjan m",
-			"Semso98"
+			"Semso98",
+			"Prevodim"
 		]
 	},
 	"uls-desc": "Daje korisniku nekoliko načina da izabere jezik i da prilagodi postavke jezika",
@@ -56,7 +57,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Možete omogućiti alate za unos bilo koje vrijeme na postavke jezika.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Alate za unos možete u svakom trenutku omogućiti u jezičkim postavkama pored spiska jezika.",
 	"ext-uls-language-settings-applying": "Primjenjujem...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Još jedan|Još $1}}",
+	"ext-uls-compact-link-count": "Još {{PLURAL:$1|1=jedan|$1}}",
 	"ext-uls-compact-link-info": "Svi jezici (prvobitni odabir zasnovan je na najčešćim odabirima Vas i drugih korisnika)",
 	"prefs-languages": "Jezici",
 	"ext-uls-compact-language-links-preference": "Koristi [[$1|sažeti spisak jezika]], s jezicima koji su Vam važni."
