@@ -10,7 +10,7 @@
 	],
 	"homepage": "https://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector",
 	"license": [
-		"GPL-2.0+",
+		"GPL-2.0-or-later",
 		"MIT"
 	],
 	"support": {

@@ -4,7 +4,7 @@
  * preference for appropriate users
  *
  * @copyright 2017 Wikimedia Language team and others; see AUTHORS.txt
- * @license GPL-2.0+
+ * @license GPL-2.0-or-later
  * @author Niklas Laxström
  * @author Amir E. Aharoni
  * Based on autodisablePref.php from the VisualEditor repository by Alex Monk

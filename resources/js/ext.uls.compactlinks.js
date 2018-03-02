@@ -13,7 +13,7 @@
  *
  * @file
  * @ingroup Extensions
- * @licence GNU GPL-2.0+
+ * @licence GNU GPL-2.0-or-later
  * @licence MIT License
  */
 

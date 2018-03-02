@@ -5,14 +5,13 @@ Common Licenses
 ---------------
 Apache-2.0
 CC-BY-3.0
-GPL-2.0
-GPL-2.0+
-GPL-2.0-with-font-exception
-GPL-3.0
-GPL-3.0+
-GPL-3.0-with-font-exception
-LGPL-2.0.1+
-LGPL-2.1+
+GPL-2.0-only
+GPL-2.0-or-later
+GPL-2.0-or-later WITH Font-exception-2.0
+GPL-3.0-only
+GPL-3.0-or-later
+GPL-3.0-only WITH Font-exception-2.0
+LGPL-2.1-or-later
 OFL-1.1
 
 Other
