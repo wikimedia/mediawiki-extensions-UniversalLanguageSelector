@@ -145,7 +145,7 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	public static function onEventLoggingRegisterSchemas( array &$schemas ) {
-		$schemas['UniversalLanguageSelector'] = 7327441;
+		$schemas['UniversalLanguageSelector'] = 17799034;
 	}
 
 	/**

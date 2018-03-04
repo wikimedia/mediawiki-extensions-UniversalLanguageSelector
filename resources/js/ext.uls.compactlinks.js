@@ -190,6 +190,7 @@
 				$trigger.removeClass( 'selector-open' );
 			},
 			languages: ulsLanguageList,
+			ulsPurpose: 'compact-language-links',
 			// Show common languages
 			quickList: self.getCommonLanguages( languages ),
 			noResultsTemplate: function () {

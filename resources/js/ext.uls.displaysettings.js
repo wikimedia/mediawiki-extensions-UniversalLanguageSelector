@@ -356,6 +356,7 @@
 					// the apply button
 					displaySettings.markDirty();
 				},
+				ulsPurpose: 'interface-language',
 				quickList: function () {
 					return mw.uls.getFrequentLanguageList();
 				}
