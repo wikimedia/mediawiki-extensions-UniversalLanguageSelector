@@ -197,7 +197,7 @@
 				// Customize the message
 				$defaultTemplate
 					.find( '.uls-no-results-found-title' )
-					.text( mw.msg( 'ext-uls-compact-no-results' ) );
+					.data( 'i18n', 'ext-uls-compact-no-results' );
 				return $defaultTemplate;
 			}
 		} );
