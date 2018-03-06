@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Purodha"
+			"Purodha",
+			"Amire80"
 		]
 	},
 	"uls-desc": "Jit dä Metmaachere ongerscheidlejje Müjjeleschkeite, en Schprohch ußzewähle un Enschtällonge för Schprohche ze maache.",
@@ -54,7 +55,7 @@
 	"ext-uls-input-disable-notification-info-personal": "De besöndere Wärkzüsch för et Enjävve kam_mer zoh jeeder Zigg en de Enschtällonge för de Schprohch widder aanschallde.",
 	"ext-uls-input-disable-notification-info-interlanguage": "De besöndere Wärkzüsch för et Enjävve kam_mer zoh jeeder Zigg en dä Enschtällonge för de Schprohch nävve dä Leß met de Schprohche widder aanschallde.",
 	"ext-uls-language-settings-applying": "Em Jang&nbsp;…",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Noch eine|Noch $1|Keine mih}}.",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Noch eine|Noch $1.}}",
 	"ext-uls-compact-link-info": "Alle Schprohche (Am Aanfang wat ald öff ußjesöhkt wood)",
 	"prefs-languages": "Schprohche",
 	"ext-uls-compact-language-links-preference": "Nämm de kompakte Leß met Schprohche, di för Desch vun Bedüggdeneß sin"
