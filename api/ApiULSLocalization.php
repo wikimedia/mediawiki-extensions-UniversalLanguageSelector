@@ -30,11 +30,7 @@ class ApiULSLocalization extends ApiBase {
 		$params = $this->extractRequestParams();
 		$language = $params['language'];
 		if ( !Language::isValidCode( $language ) ) {
-			if ( is_callable( [ $this, 'dieWithError' ] ) ) {
-				$this->dieWithError( [ 'apierror-invalidlang', 'language' ], 'invalidlanguage' );
-			} else {
-				$this->dieUsage( 'Invalid language', 'invalidlanguage' );
-			}
+			$this->dieWithError( [ 'apierror-invalidlang', 'language' ], 'invalidlanguage' );
 		}
 		$contents = ULSJsonMessageLoader::getMessages( $language );
 		// Output the file's contents raw
