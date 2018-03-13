@@ -367,7 +367,15 @@
 							},
 							onSelect: function ( language ) {
 								mw.uls.changeLanguage( language );
-							}
+							},
+							// Not actually used on sites with the gear icon
+							// in the interlanguage area, because this ULS
+							// will be a container for other ULS panels.
+							// However, this is used on sites with ULS
+							// in the personal bar, and in that case it has the same
+							// purpose as the selector in Display settings,
+							// so it has the same identifier.
+							ulsPurpose: 'interface-language'
 						} );
 
 						// Allow styles to apply first and position to work by

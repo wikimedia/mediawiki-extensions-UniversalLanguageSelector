@@ -293,6 +293,7 @@
 						$input.focus();
 					},
 					languages: mw.ime.getLanguagesWithIME(),
+					ulsPurpose: 'ime-selector',
 					top: $input.offset().top
 				} );
 

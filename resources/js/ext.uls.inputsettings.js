@@ -390,7 +390,8 @@
 					inputSettings.prepareLanguages();
 					inputSettings.markDirty();
 				},
-				languages: mw.ime.getLanguagesWithIME()
+				languages: mw.ime.getLanguagesWithIME(),
+				ulsPurpose: 'input-settings'
 			} );
 
 			$moreLanguagesButton.on( 'click', function () {
