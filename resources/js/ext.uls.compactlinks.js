@@ -134,11 +134,17 @@
 			 * Language selection handler
 			 *
 			 * @param {string} language language code
+			 * @param {Object} event jQuery event object
 			 */
-			onSelect: function ( language ) {
+			onSelect: function ( language, event ) {
 				self.$trigger.removeClass( 'selector-open' );
 				mw.uls.addPreviousLanguage( language );
-				location.href = self.interlanguageList[ language ].href;
+
+				// Switch the current tab to the new language,
+				// unless it was Ctrl-click or Command-click
+				if ( !event.metaKey && !event.shiftKey ) {
+					location.href = self.interlanguageList[ language ].href;
+				}
 			},
 			onVisible: function () {
 				var offset, height, width, triangleWidth;
