@@ -238,14 +238,13 @@
 		 * Log search strings which produce no search results.
 		 *
 		 * @param {jQuery.event} event The original event
-		 * @param {string} context The query string
-		 * @param {string} ulsPurpose The ulsPurpose option of the ULS panel that triggered the event
+		 * @param {Object} data Information about the failed search
 		 */
-		noSearchResults: function ( event, context, ulsPurpose ) {
+		noSearchResults: function ( event, data ) {
 			this.log( {
 				action: 'no-search-results',
-				context: context,
-				ulsPurpose: ulsPurpose,
+				context: data.query,
+				ulsPurpose: data.ulsPurpose,
 				title: mw.config.get( 'wgPageName' )
 			} );
 		}
