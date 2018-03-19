@@ -6,5 +6,6 @@
 		]
 	},
 	"uls-plang-title-languages": "Lingui",
-	"ext-uls-language-settings-preferences-link": "Plusa linguala ajusti"
+	"ext-uls-language-settings-preferences-link": "Plusa linguala ajusti",
+	"ext-uls-compact-language-links-preference": "Uzez [[$1|kompakta listo pri lingui]], nur kun la lingui importanta por vu."
 }
