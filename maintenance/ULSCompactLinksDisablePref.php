@@ -37,28 +37,47 @@ class ULSCompactLinksDisablePref extends Maintenance {
 
 		$lastUserId = $this->getOption( 'continue', 0 );
 
+		if ( class_exists( ActorMigration::class ) ) {
+			$actorQuery = ActorMigration::newMigration()->getJoin( 'rev_user' );
+			$revUser = $actorQuery['fields']['rev_user'];
+		} else {
+			$actorQuery = [
+				'tables' => [],
+				'joins' => [],
+			];
+			$revUser = 'rev_user';
+		}
+
 		do {
-			$tables = [ 'revision', 'user_properties', 'user_groups' ];
-			$fields = [ 'rev_user', 'isbot' => 'ug_group', 'hasbeta' => 'up_value' ];
+			$tables = array_merge(
+				[ 'revision' ],
+				$actorQuery['tables'],
+				[ 'user_properties', 'user_groups' ]
+			);
+			$fields = [
+				'user' => $revUser,
+				'isbot' => 'ug_group',
+				'hasbeta' => 'up_value'
+			];
 			$conds = [
 				'rev_timestamp > ' . $dbr->timestamp( 20170101000000 ),
-				"rev_user > $lastUserId"
+				"$revUser > $lastUserId"
 			];
 			$options = [
-				'GROUP BY' => 'rev_user',
-				'ORDER BY' => 'rev_user',
+				'GROUP BY' => $revUser,
+				'ORDER BY' => 'user',
 				'LIMIT' => $this->mBatchSize,
 			];
 			$joins = [
 				'user_properties' => [
 					'LEFT OUTER JOIN',
-					"rev_user = up_user AND up_property = 'uls-compact-links' AND up_value = 1"
+					"$revUser = up_user AND up_property = 'uls-compact-links' AND up_value = 1"
 				],
 				'user_groups' => [
 					'LEFT OUTER JOIN',
-					"rev_user = ug_user AND ug_group = 'bot'"
+					"$revUser = ug_user AND ug_group = 'bot'"
 				]
-			];
+			] + $actorQuery['joins'];
 
 			if ( !$this->really ) {
 				echo "\n\n" .
@@ -71,7 +90,7 @@ class ULSCompactLinksDisablePref extends Maintenance {
 			$disabled = 0;
 
 			foreach ( $results as $row ) {
-				$lastUserId = $row->rev_user;
+				$lastUserId = $row->user;
 				if ( $row->isbot === 'bot' || $row->hasbeta !== null ) {
 					continue;
 				}
@@ -87,7 +106,7 @@ class ULSCompactLinksDisablePref extends Maintenance {
 
 				$disabled++;
 				// If we ever need to revert, print the affected user ids
-				$this->output( $row->rev_user . " ", 'userids' );
+				$this->output( $row->user . " ", 'userids' );
 			}
 
 			$this->output( "Disabled compact-language-links for $disabled users.\n" );
