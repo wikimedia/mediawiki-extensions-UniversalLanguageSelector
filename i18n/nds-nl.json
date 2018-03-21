@@ -53,7 +53,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Je kunnen de invoermethoden weer anzetten via de taalinstellingen.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Je kunnen de invoermethoden weer anzetten via de taalinstellingen naost de lieste mit talen.",
 	"ext-uls-language-settings-applying": "Toepassen...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Nog ene|Nog $1}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Noch ene|Noch $1}}",
 	"ext-uls-compact-link-info": "Alle talen (eerste seleksie van algemene keuzes emaakt deur joe en aanderen)",
 	"prefs-languages": "Talen",
 	"ext-uls-compact-language-links-preference": "n Kompakte talenlieste gebruken, mit de talen waor jie wat an hebben."
