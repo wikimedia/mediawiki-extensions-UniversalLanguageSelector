@@ -27,6 +27,7 @@
 	"ext-uls-display-settings-anon-same-as-content": "$1 (նույնը ինչ բովանդակությունը)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Մուտք գործեք]] միջերեսի այլ լեզու ընտրելու համար։",
 	"ext-uls-webfonts-settings-title": "Անհրաժեշտության դեպքում ներբեռնել տառատեսակները",
+	"ext-uls-webfonts-settings-info": "Ավտոմատ ներբեռնել բացակայող տառատեսակները և թույլ տար նախընտրելի տառատեսակների ընտրությունը։",
 	"ext-uls-webfonts-settings-info-link": "Հավելյալ տեղեկություն",
 	"ext-uls-webfonts-select-for": "Ընտրեք $1ի տառատեսակը",
 	"ext-uls-webfonts-select-for-ui-info": "Միջերեսի համար օգտագործվող տառատեսակը",

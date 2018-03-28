@@ -59,5 +59,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|વધુ એક|વધુ $1}}",
 	"ext-uls-compact-link-info": "બધી ભાષાઓ ‍‍(તમારા અને અન્યો દ્વારા શરુઆતી સામાન્ય પસંદગીઓ‌)",
 	"prefs-languages": "ભાષાઓ",
-	"ext-uls-compact-language-links-preference": "તમને સંબંધિત ભાષાઓની, [[$1|ટૂંકી ભાષા યાદી]] વાપરો."
+	"ext-uls-compact-language-links-preference": "તમને સંબંધિત ભાષાઓની, [[$1|ટૂંકી ભાષા યાદી]] વાપરો.",
+	"ext-uls-compact-no-results": "આ પાનું તમે શોધેલી ભાષામાં પ્રાપ્ત નથી."
 }
