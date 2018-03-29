@@ -14,8 +14,8 @@
  *
  * @file
  * @ingroup Extensions
- * @licence GNU General Public Licence 2.0 or later
- * @licence MIT License
+ * @license GNU General Public Licence 2.0 or later
+ * @license MIT License
  */
 class LanguageNameSearch {
 	/**

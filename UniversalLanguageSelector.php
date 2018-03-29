@@ -14,8 +14,8 @@
  *
  * @file
  * @ingroup Extensions
- * @licence GPL-2.0-or-later
- * @licence MIT
+ * @license GPL-2.0-or-later
+ * @license MIT
  */
 
 if ( function_exists( 'wfLoadExtension' ) ) {
