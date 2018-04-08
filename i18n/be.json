@@ -1,8 +1,28 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"Artsiom91"
 		]
 	},
-	"uls-plang-title-languages": "Мовы"
+	"uls-plang-title-languages": "Мовы",
+	"ext-uls-select-language-settings-icon-tooltip": "Настройкі мовы",
+	"ext-uls-language-settings-preferences-link": "Дадатковыя настройкі мовы",
+	"ext-uls-display-settings-language-tab": "Мова",
+	"ext-uls-display-settings-fonts-tab": "Шрыфты",
+	"ext-uls-display-settings-desc": "Мова меню і шрыфтаў",
+	"ext-uls-language-settings-title": "Настройкі мовы",
+	"ext-uls-language-settings-apply": "Ужыць настройкі",
+	"ext-uls-language-settings-cancel": "Адмена",
+	"ext-uls-language-buttons-help": "Змяніць мову меню. Мова змесціва не будзе закранутая",
+	"ext-uls-display-settings-ui-language": "Мова адлюстравання",
+	"ext-uls-display-settings-anon-label": "Мова адлюстравання:",
+	"ext-uls-input-settings-title-short": "Увод",
+	"ext-uls-input-settings-desc": "Пішаце на іншай мове?",
+	"ext-uls-input-settings-ui-language": "Мова пісьма",
+	"ext-uls-disable-input-method": "Выкарыстоўваць родную клавіятуру",
+	"ext-uls-input-disable": "Адключыць інструменты ўводу",
+	"ext-uls-input-enable": "Уключыць інструменты ўводу",
+	"prefs-languages": "Мовы",
+	"ext-uls-compact-language-links-preference": "Выкарыстаць [[$1|кампактны спіс моў]] з прыдатнымі для Вас мовамі."
 }
