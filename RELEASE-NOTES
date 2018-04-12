@@ -1,0 +1,7 @@
+== UniversalLanguageSelector 2018.04 ==
+Released at 2018-04-12.
+
+=== Noteworthy changes ===
+* Fixed Ctrl-Clicking in Compact Language Links. ([[phab:T189582|T189582]])
+* ULS trigger and settings are more keyboard accessible now. ([[phab:T52793|T52793]])
+* Language search results are not grouped by region.
