@@ -14,7 +14,7 @@
  *
  * @file
  * @ingroup Extensions
- * @license GNU General Public Licence 2.0 or later
+ * @license GPL-2.0-or-later
  * @license MIT License
  * @since 2013.11
  */
