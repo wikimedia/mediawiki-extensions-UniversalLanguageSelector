@@ -6,10 +6,15 @@
 		]
 	},
 	"uls-plang-title-languages": "Lingui",
+	"ext-uls-select-language-settings-icon-tooltip": "Linguala figurizo",
 	"ext-uls-undo-language-tooltip-text": "Linguo modifikita de $1",
 	"ext-uls-language-settings-preferences-link": "Plusa linguala ajusti",
 	"ext-uls-display-settings-title": "Montrez parametri",
+	"ext-uls-display-settings-fonts-tab": "Fonti",
+	"ext-uls-display-settings-desc": "Selektar linguo uzata por menui e fonti.",
 	"ext-uls-language-buttons-help": "Modifikez la linguo di la menui. La linguo dil kontenajo ne afektesos.",
+	"ext-uls-display-settings-ui-language": "Interfacio*-linguo",
+	"ext-uls-input-settings-desc": "Ka vu skribas en diferanta linguo?",
 	"ext-uls-input-settings-ui-language": "Linguo uzita por skribado",
 	"ext-uls-compact-language-links-preference": "Uzez [[$1|kompakta listo pri lingui]], nur kun la lingui importanta por vu."
 }
