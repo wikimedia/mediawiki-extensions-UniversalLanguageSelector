@@ -12,7 +12,8 @@
 			"McDutchie",
 			"Mainframe98",
 			"Dinosaur918",
-			"Mar(c)"
+			"Mar(c)",
+			"Amire80"
 		]
 	},
 	"uls-desc": "Biedt de gebruiker verschillende manieren om een taal te selecten en de taalinstellingen aan te passen",
@@ -68,5 +69,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Nog één|Nog $1}}",
 	"ext-uls-compact-link-info": "Alle talen (selectie op basis van keuzes van u en anderen)",
 	"prefs-languages": "Talen",
-	"ext-uls-compact-language-links-preference": "Een [[$1|compacte talenlijst]] gebruiken, met voor u relevante talen."
+	"ext-uls-compact-language-links-preference": "Een [[$1|compacte talenlijst]] gebruiken, met voor u relevante talen.",
+	"ext-uls-compact-no-results": "Deze pagina is niet beschikbaar in de taal waarin u zocht."
 }
