@@ -46,5 +46,6 @@
 	"ext-uls-input-disable-notification-undo": "Maak óngedaon",
 	"ext-uls-language-settings-applying": "Toepasse...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Eine mie|$1 mie}}",
-	"prefs-languages": "Spraoke"
+	"prefs-languages": "Spraoke",
+	"ext-uls-compact-no-results": "Dees pagina is neet besjikbaar in de spraok worin se zóchs."
 }

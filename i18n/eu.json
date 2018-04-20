@@ -4,7 +4,8 @@
 			"Xabier Armendaritz",
 			"Subi",
 			"Sator",
-			"Gorkaazk"
+			"Gorkaazk",
+			"Amire80"
 		]
 	},
 	"uls-plang-title-languages": "Hizkuntzak",
@@ -35,5 +36,6 @@
 	"ext-uls-input-disable-notification-undo": "Desegin",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Bat gehiago |$1 gehiago}}",
 	"prefs-languages": "Hizkuntzak",
-	"ext-uls-compact-language-links-preference": "Erabili hizkuntza-zerrenda trinkoa, zuretzat esanguratsuak diren hizkuntzekin soilik."
+	"ext-uls-compact-language-links-preference": "Erabili hizkuntza-zerrenda trinkoa, zuretzat esanguratsuak diren hizkuntzekin soilik.",
+	"ext-uls-compact-no-results": "Orrialde hau ez dago eskuragarri bilatu duzun hizkuntzan."
 }

@@ -55,5 +55,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Eitt til|$1 til}}",
 	"ext-uls-compact-link-info": "Alle språk (utvalet i mergen er basert på vanlege val av deg og andre)",
 	"prefs-languages": "Språk",
-	"ext-uls-compact-language-links-preference": "Bruk ei kompakt språkliste med språk som er relevante for deg."
+	"ext-uls-compact-language-links-preference": "Bruk ei kompakt språkliste med språk som er relevante for deg.",
+	"ext-uls-compact-no-results": "Denne sida er ikkje tilgjengeleg på språket du søkte etter."
 }
