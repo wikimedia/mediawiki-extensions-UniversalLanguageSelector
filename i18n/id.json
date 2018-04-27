@@ -7,7 +7,8 @@
 			"William Surya Permana",
 			"Bennylin",
 			"Xð",
-			"Kenrick95"
+			"Kenrick95",
+			"Gombang"
 		]
 	},
 	"uls-desc": "Memberikan pengguna beberapa cara untuk memilih bahasa dan menyesuaikan pengaturan bahasa",
@@ -63,5 +64,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Satu lagi|$1 lagi}}",
 	"ext-uls-compact-link-info": "Semua bahasa (pilihan awal berasal dari pilihan umum oleh Anda dan orang lain)",
 	"prefs-languages": "Bahasa-bahasa",
-	"ext-uls-compact-language-links-preference": "Gunakan [[$1|daftar bahasa pendek]], dengan bahasa-bahasa yang relevan dengan Anda."
+	"ext-uls-compact-language-links-preference": "Gunakan [[$1|daftar bahasa pendek]], dengan bahasa-bahasa yang relevan dengan Anda.",
+	"ext-uls-compact-no-results": "Halaman ini tidak tersedia dalam bahasa yang Anda cari."
 }
