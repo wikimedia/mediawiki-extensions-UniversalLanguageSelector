@@ -58,5 +58,6 @@
 	"ext-uls-compact-link-count": "Veel {{PLURAL:$1|üks keel|$1 keelt}}",
 	"ext-uls-compact-link-info": "Kõik keeled (esialgne valik sinu ja teiste ühiste valikute põhjal)",
 	"prefs-languages": "Keeled",
-	"ext-uls-compact-language-links-preference": "Kasuta [[$1|kompaktset keeleloendit]], milles on sinu jaoks asjakohased keeled"
+	"ext-uls-compact-language-links-preference": "Kasuta [[$1|kompaktset keeleloendit]], milles on sinu jaoks asjakohased keeled",
+	"ext-uls-compact-no-results": "See lehekülg pole saadaval keeles, mida otsisid."
 }

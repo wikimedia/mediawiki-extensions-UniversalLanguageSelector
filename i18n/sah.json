@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"HalanTul"
 		]
 	},
-	"uls-plang-title-languages": "Тыллар"
+	"uls-desc": "Тылы талар уонна туруорар хас да ньыманы хааччыйар",
+	"uls-plang-title-languages": "Тыллар",
+	"ext-uls-select-language-settings-icon-tooltip": "Тылы туруоруу",
+	"ext-uls-undo-language-tooltip-text": "Инники тыл: $1",
+	"ext-uls-language-settings-preferences-link": "Тыл эбии туруоруулара"
 }
