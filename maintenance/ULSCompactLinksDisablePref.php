@@ -33,7 +33,7 @@ class ULSCompactLinksDisablePref extends Maintenance {
 	public function execute() {
 		$dbr = wfGetDB( DB_REPLICA, 'vslow' );
 
-		$this->really = $this->hasOption( 'really' );
+		$really = $this->hasOption( 'really' );
 
 		$lastUserId = $this->getOption( 'continue', 0 );
 
@@ -79,7 +79,7 @@ class ULSCompactLinksDisablePref extends Maintenance {
 				]
 			] + $actorQuery['joins'];
 
-			if ( !$this->really ) {
+			if ( !$really ) {
 				echo "\n\n" .
 					$dbr->selectSqlText( $tables, $fields, $conds, __METHOD__, $options, $joins ) .
 					"\n";
@@ -98,7 +98,7 @@ class ULSCompactLinksDisablePref extends Maintenance {
 				$user = User::newFromId( $lastUserId );
 				$user->load( User::READ_LATEST );
 
-				if ( $this->really ) {
+				if ( $really ) {
 					$user->setOption( 'compact-language-links', 0 );
 
 					$user->saveSettings();
