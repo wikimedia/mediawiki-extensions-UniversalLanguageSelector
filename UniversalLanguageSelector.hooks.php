@@ -104,7 +104,6 @@ class UniversalLanguageSelectorHooks {
 	/**
 	 * @param OutputPage $out
 	 * @param Skin $skin
-	 * @return bool
 	 * Hook: BeforePageDisplay
 	 */
 	public static function addModules( $out, $skin ) {
@@ -140,8 +139,6 @@ class UniversalLanguageSelectorHooks {
 		} else {
 			$out->addModuleStyles( 'ext.uls.interlanguage' );
 		}
-
-		return true;
 	}
 
 	public static function onEventLoggingRegisterSchemas( array &$schemas ) {
@@ -152,7 +149,6 @@ class UniversalLanguageSelectorHooks {
 	 * @param array &$testModules array of javascript testing modules. 'qunit' is fed
 	 * using tests/qunit/QUnitTestResources.php.
 	 * @param ResourceLoader $resourceLoader
-	 * @return bool
 	 * Hook: ResourceLoaderTestModules
 	 */
 	public static function addTestModules( array &$testModules, ResourceLoader $resourceLoader ) {
@@ -162,8 +158,6 @@ class UniversalLanguageSelectorHooks {
 			'localBasePath' => __DIR__,
 			'remoteExtPath' => 'UniversalLanguageSelector',
 		];
-
-		return true;
 	}
 
 	/**
@@ -171,18 +165,17 @@ class UniversalLanguageSelectorHooks {
 	 * Hook: PersonalUrls
 	 * @param array &$personal_urls
 	 * @param string &$title
-	 * @return true
 	 */
 	public static function addPersonalBarTrigger( array &$personal_urls, &$title ) {
 		global $wgULSPosition;
 
 		if ( $wgULSPosition !== 'personal' ) {
-			return true;
+			return;
 		}
 
 		$context = RequestContext::getMain();
 		if ( !self::isToolbarEnabled( $context->getUser() ) ) {
-			return true;
+			return;
 		}
 
 		// The element id will be 'pt-uls'
@@ -195,8 +188,6 @@ class UniversalLanguageSelectorHooks {
 				'active' => true
 			]
 		] + $personal_urls;
-
-		return true;
 	}
 
 	/**
@@ -232,13 +223,12 @@ class UniversalLanguageSelectorHooks {
 	 * @param User $user
 	 * @param string &$code
 	 * @param IContextSource $context
-	 * @return bool
 	 */
 	public static function getLanguage( User $user, &$code, IContextSource $context ) {
 		global $wgULSAnonCanChangeLanguage, $wgULSLanguageDetection;
 
 		if ( !self::isToolbarEnabled( $user ) ) {
-			return true;
+			return;
 		}
 
 		$request = $context->getRequest();
@@ -247,7 +237,7 @@ class UniversalLanguageSelectorHooks {
 		if ( !$languageToSave && $request->getText( 'uselang' ) ) {
 			// uselang can be used for temporary override of language preference
 			// when setlang is not provided
-			return true;
+			return;
 		}
 
 		// Registered users - simple
@@ -264,12 +254,12 @@ class UniversalLanguageSelectorHooks {
 			}
 
 			// Otherwise just use what is stored in preferences
-			return true;
+			return;
 		}
 
 		// Logged out users - less simple
 		if ( !$wgULSAnonCanChangeLanguage ) {
-			return true;
+			return;
 		}
 
 		// Language change
@@ -277,7 +267,7 @@ class UniversalLanguageSelectorHooks {
 			$request->response()->setCookie( 'language', $languageToSave );
 			$code = $languageToSave;
 
-			return true;
+			return;
 		}
 
 		// Try cookie
@@ -285,7 +275,7 @@ class UniversalLanguageSelectorHooks {
 		if ( Language::isSupportedLanguage( $languageToUse ) ) {
 			$code = $languageToUse;
 
-			return true;
+			return;
 		}
 
 		// As last resort, try Accept-Language headers if allowed
@@ -296,15 +286,11 @@ class UniversalLanguageSelectorHooks {
 				$code = $default;
 			}
 		}
-
-		// Fall back to other hooks or content language
-		return true;
 	}
 
 	/**
 	 * Hook: ResourceLoaderGetConfigVars
 	 * @param array &$vars
-	 * @return bool
 	 */
 	public static function addConfig( &$vars ) {
 		global $wgULSGeoService,
@@ -346,15 +332,12 @@ class UniversalLanguageSelectorHooks {
 		if ( isset( $wgInterwikiSortingSortPrepend ) && $wgInterwikiSortingSortPrepend !== [] ) {
 			$vars['wgULSCompactLinksPrepend'] = $wgInterwikiSortingSortPrepend;
 		}
-
-		return true;
 	}
 
 	/**
 	 * Hook: MakeGlobalVariablesScript
 	 * @param array &$vars
 	 * @param OutputPage $out
-	 * @return bool
 	 */
 	public static function addVariables( &$vars, OutputPage $out ) {
 		global $wgULSAnonCanChangeLanguage;
@@ -383,8 +366,6 @@ class UniversalLanguageSelectorHooks {
 		// An optimization to avoid loading all of uls.data just to get the autonym
 		$langCode = $out->getLanguage()->getCode();
 		$vars['wgULSCurrentAutonym'] = Language::fetchLanguageName( $langCode );
-
-		return true;
 	}
 
 	public static function onGetPreferences( $user, &$preferences ) {
@@ -414,8 +395,6 @@ class UniversalLanguageSelectorHooks {
 				]
 			];
 		}
-
-		return true;
 	}
 
 	public static function onGetBetaFeaturePreferences( $user, &$prefs ) {
@@ -447,7 +426,6 @@ class UniversalLanguageSelectorHooks {
 	 * Hook: SkinTemplateOutputPageBeforeExec
 	 * @param Skin $skin
 	 * @param QuickTemplate $template
-	 * @return bool
 	 */
 	public static function onSkinTemplateOutputPageBeforeExec( Skin $skin,
 		QuickTemplate $template
@@ -455,26 +433,23 @@ class UniversalLanguageSelectorHooks {
 		global $wgULSPosition;
 
 		if ( $wgULSPosition !== 'interlanguage' ) {
-			return true;
+			return;
 		}
 
 		if ( !self::isToolbarEnabled( $skin->getUser() ) ) {
-			return true;
+			return;
 		}
 
 		// Set to an empty array, just to make sure that the section appears
 		if ( $template->get( 'language_urls' ) === false ) {
 			$template->set( 'language_urls', [] );
 		}
-
-		return true;
 	}
 
 	/**
 	 * Add basic webfonts support to the mobile interface (via MobileFrontend extension)
 	 * Hook: EnterMobileMode
 	 * @param MobileContext $context
-	 * @return bool
 	 */
 	public static function onEnterMobileMode( $context ) {
 		global $wgULSEnable, $wgULSMobileWebfontsEnabled;
@@ -483,15 +458,12 @@ class UniversalLanguageSelectorHooks {
 		if ( $wgULSEnable && $wgULSMobileWebfontsEnabled && $context->isBetaGroupMember() ) {
 			$context->getOutput()->addModules( 'ext.uls.webfonts.mobile' );
 		}
-
-		return true;
 	}
 
 	/**
 	 * Conditionally register module ext.uls.eventlogger.
 	 *
 	 * @param ResourceLoader $resourceLoader
-	 * @return bool true
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader $resourceLoader ) {
 		global $wgULSEventLogging, $wgVersion;
