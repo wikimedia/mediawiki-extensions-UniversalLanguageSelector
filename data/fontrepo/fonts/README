@@ -1,9 +1,10 @@
-This is font repository for Universal Language Selector. These fonts are used by jquery.webfonts
-to deliver on demand or based on users preferences. There is a script named "compile-font-repo.php"
-to generate the font repository in JavaScript syntax. It reads this font.ini files.
+This is font repository for Universal Language Selector. These fonts are used
+by jquery.webfonts to deliver on demand or based on users preferences. There is
+a script named "compile-font-repo.php" to generate the font repository in
+JavaScript syntax. It reads this font.ini files.
 
-Each folder contains a font.ini file, which is the description about the font. The fields in the font.ini
-is described below. Use ';' to add any comments.
+Each folder contains a font.ini file, which is the description about the font.
+The fields in the font.ini is described below. Use ';' to add any comments.
 
 languages
 ---------
@@ -35,14 +36,16 @@ Upstream location of font to download.
 
 formats
 -------
-If there are style variants, font.ini should contain file names for each variants(bold, italic etc). Otherwise,
-based on the extension of files, the font compilation script can pick it up.
+If there are style variants, font.ini should contain file names for each
+variants(bold, italic etc). Otherwise, based on the extension of files, the
+font compilation script can pick it up.
 
 Preparing font formats
 -----------------------
+
 1. From the upstream releases, take the TTF versions.
-2. To generate woff format, get https://github.com/googlei18n/sfntly
-3. Use https://github.com/google/woff2 to generate woff2 from ttf. This will produce a compressed woff2 file.
-   Modern browsers support this format.
-4. The eot file format is used only by older IE, but it can be generated using sfntly. Make sure to use -mtx flag to get
-   enhanced compression.
+2. To generate woff format, get: https://github.com/rillig/sfntly
+3. Use https://github.com/google/woff2 to generate woff2 from ttf. This will
+   produce a compressed woff2 file. Modern browsers support this format.
+4. The eot file format is used only by older IE, but it can be generated using
+   sfntly. Make sure to use -mtx flag to get enhanced compression.
