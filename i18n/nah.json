@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"Akapochtli"
 		]
 	},
-	"uls-plang-title-languages": "Tlahtōlli"
+	"uls-plang-title-languages": "Tlahtōlli",
+	"ext-uls-compact-link-count": "{{Plural:$1|occe|$1 ocachi quexquich}}"
 }
