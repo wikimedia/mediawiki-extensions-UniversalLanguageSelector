@@ -59,6 +59,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Vi povas iam ajn ŝalti enigajn ilojn en lingvaj agordoj ĉe lingvolisto.",
 	"ext-uls-language-settings-applying": "Aplikiĝado...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Unu plia|$1 pliaj}}",
+	"ext-uls-compact-link-info": "Ĉiuj lingvoj (komenca elekto de kutimaj opcioj de vi kaj aliaj)",
 	"prefs-languages": "Lingvoj",
 	"ext-uls-compact-language-links-preference": "Uzi [[$1|kompaktan liston de lingvoj]], kun lingvoj konvenaj por vi.",
 	"ext-uls-compact-no-results": "Ĉi tiu paĝo ne estas havebla en la lingvo ke vi serĉis."
