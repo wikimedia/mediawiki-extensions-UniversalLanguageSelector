@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"Fitoschido"
 		]
 	},
-	"uls-plang-title-languages": "Idiomas"
+	"uls-plang-title-languages": "Idiomas",
+	"jquery-ime-help": "Aduya"
 }

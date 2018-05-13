@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"Robin van der Vliet"
 		]
 	},
-	"uls-plang-title-languages": "Linguas"
+	"uls-plang-title-languages": "Linguas",
+	"ext-uls-display-settings-language-tab": "Lingua",
+	"jquery-ime-other-languages": "Otra linguas",
+	"prefs-languages": "Linguas"
 }
