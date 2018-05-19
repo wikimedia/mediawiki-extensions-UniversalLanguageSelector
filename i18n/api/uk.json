@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Piramidion",
-			"Ата"
+			"Ата",
+			"Ahonc"
 		]
 	},
 	"apihelp-languagesearch-description": "Пошук назв мов у будь-якому скрипті.",
-	"apihelp-languagesearch-summary": "Шукати назв мов у будь-якому написанні.",
+	"apihelp-languagesearch-summary": "Пошук назв мов у будь-якому написанні.",
 	"apihelp-languagesearch-param-search": "Рядок пошуку.",
 	"apihelp-languagesearch-param-typos": "Кількість орфографічних помилок, дозволених у рядку пошуку.",
 	"apihelp-languagesearch-example-1": "Пошук «Te»",
