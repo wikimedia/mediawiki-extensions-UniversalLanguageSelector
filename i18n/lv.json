@@ -40,6 +40,7 @@
 	"jquery-ime-other-languages": "Citas valodas",
 	"jquery-ime-help": "Palīdzība",
 	"ext-uls-input-disable": "Atspējot ievades rīkus",
+	"ext-uls-input-enable": "Iespējot ievades rīkus",
 	"ext-uls-input-disable-info": "Ievades rīki ir atspējoti.",
 	"ext-uls-input-settings-noime": "Šai valodai nav pieejama neviena ievades metode.",
 	"ext-uls-input-disable-notification": "Ievades rīki ir tikuši atspējoti",
