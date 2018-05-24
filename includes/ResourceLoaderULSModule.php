@@ -16,7 +16,7 @@
  * @author Niklas Laxström
  * @ingroup Extensions
  * @license GPL-2.0-or-later
- * @license MIT License
+ * @license MIT
  */
 
 /**
