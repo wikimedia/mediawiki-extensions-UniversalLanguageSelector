@@ -57,5 +57,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|'N'otre|otre $1}}",
 	"ext-uls-compact-link-info": "Tutte le lènghe ('u scacchiamende iniziale avène 'mbrà le scacchiaminde comune tue e de l'otre)",
 	"prefs-languages": "Lènghe",
-	"ext-uls-compact-language-links-preference": "Ause 'n'[[$1|elenghe ridotte de lènghe]], cu le lènghe ca so 'mbortande pe te."
+	"ext-uls-compact-language-links-preference": "Ause 'n'[[$1|elenghe ridotte de lènghe]], cu le lènghe ca so 'mbortande pe te.",
+	"ext-uls-compact-no-results": "Sta pàgene non g'è disponibbile jndr'à lènghe ca ste cirche."
 }
