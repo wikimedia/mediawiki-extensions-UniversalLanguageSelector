@@ -76,21 +76,21 @@
 		 */
 		listen: function () {
 			// Register handlers for event logging triggers
-			mw.hook( 'mw.uls.settings.open' ).add( $.proxy( this.ulsSettingsOpen, this ) );
-			mw.hook( 'mw.uls.language.revert' ).add( $.proxy( this.ulsLanguageRevert, this ) );
-			mw.hook( 'mw.uls.ime.enable' ).add( $.proxy( this.enableIME, this ) );
-			mw.hook( 'mw.uls.ime.disable' ).add( $.proxy( this.disableIME, this ) );
-			mw.hook( 'mw.uls.ime.change' ).add( $.proxy( this.changeIME, this ) );
-			mw.hook( 'mw.uls.login.click' ).add( $.proxy( this.loginClick, this ) );
-			mw.hook( 'mw.uls.ime.morelanguages' ).add( $.proxy( this.imeMoreLanguages, this ) );
-			mw.hook( 'mw.uls.interface.morelanguages' ).add( $.proxy( this.interfaceMoreLanguages, this ) );
-			mw.hook( 'mw.uls.interface.language.change' ).add( $.proxy( this.interfaceLanguageChange, this ) );
-			mw.hook( 'mw.uls.font.change' ).add( $.proxy( this.fontChange, this ) );
-			mw.hook( 'mw.uls.webfonts.enable' ).add( $.proxy( this.enableWebfonts, this ) );
-			mw.hook( 'mw.uls.webfonts.disable' ).add( $.proxy( this.disableWebfonts, this ) );
+			mw.hook( 'mw.uls.settings.open' ).add( this.ulsSettingsOpen.bind( this ) );
+			mw.hook( 'mw.uls.language.revert' ).add( this.ulsLanguageRevert.bind( this ) );
+			mw.hook( 'mw.uls.ime.enable' ).add( this.enableIME.bind( this ) );
+			mw.hook( 'mw.uls.ime.disable' ).add( this.disableIME.bind( this ) );
+			mw.hook( 'mw.uls.ime.change' ).add( this.changeIME.bind( this ) );
+			mw.hook( 'mw.uls.login.click' ).add( this.loginClick.bind( this ) );
+			mw.hook( 'mw.uls.ime.morelanguages' ).add( this.imeMoreLanguages.bind( this ) );
+			mw.hook( 'mw.uls.interface.morelanguages' ).add( this.interfaceMoreLanguages.bind( this ) );
+			mw.hook( 'mw.uls.interface.language.change' ).add( this.interfaceLanguageChange.bind( this ) );
+			mw.hook( 'mw.uls.font.change' ).add( this.fontChange.bind( this ) );
+			mw.hook( 'mw.uls.webfonts.enable' ).add( this.enableWebfonts.bind( this ) );
+			mw.hook( 'mw.uls.webfonts.disable' ).add( this.disableWebfonts.bind( this ) );
 
 			$( 'body' ).on( 'noresults.uls', '.uls-menu .uls-languagefilter',
-				$.proxy( this.noSearchResults, this )
+				this.noSearchResults.bind( this )
 			);
 		},
 

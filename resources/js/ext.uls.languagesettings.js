@@ -74,14 +74,14 @@
 
 		// Register all event listeners to the ULS language settings here.
 		listen: function () {
-			this.$element.on( 'click', $.proxy( this.click, this ) );
+			this.$element.on( 'click', this.click.bind( this ) );
 
 			this.$window.find( '#languagesettings-close, button.uls-settings-cancel' )
-				.on( 'click', $.proxy( mw.hook( 'mw.uls.settings.cancel' ).fire, this ) );
+				.on( 'click', mw.hook( 'mw.uls.settings.cancel' ).fire.bind( this ) );
 			this.$window.find( 'button.uls-settings-apply' )
-				.on( 'click', $.proxy( mw.hook( 'mw.uls.settings.apply' ).fire, this ) );
+				.on( 'click', mw.hook( 'mw.uls.settings.apply' ).fire.bind( this ) );
 			// Hide the window when clicked outside
-			$( 'html' ).click( $.proxy( this.hide, this ) );
+			$( 'html' ).click( this.hide.bind( this ) );
 
 			// ... but when clicked on window do not hide.
 			this.$window.on( 'click', function ( event ) {
@@ -168,8 +168,8 @@
 			this.modules[ moduleName ] = module;
 
 			// Register cancel and apply hooks
-			mw.hook( 'mw.uls.settings.cancel' ).add( $.proxy( module.cancel, module ) );
-			mw.hook( 'mw.uls.settings.apply' ).add( $.proxy( module.apply, module ) );
+			mw.hook( 'mw.uls.settings.cancel' ).add( module.cancel.bind( module ) );
+			mw.hook( 'mw.uls.settings.apply' ).add( module.apply.bind( module ) );
 		},
 
 		position: function () {

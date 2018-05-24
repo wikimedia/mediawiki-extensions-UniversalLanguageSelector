@@ -295,7 +295,7 @@
 			// Show common languages
 			quickList: self.getCommonLanguages( languages ),
 			noResultsTemplate: function () {
-				var $defaultTemplate = $.proxy( $.fn.lcd.defaults.noResultsTemplate, this )();
+				var $defaultTemplate = $.fn.lcd.defaults.noResultsTemplate.call( this );
 				// Customize the message
 				$defaultTemplate
 					.find( '.uls-no-results-found-title' )
