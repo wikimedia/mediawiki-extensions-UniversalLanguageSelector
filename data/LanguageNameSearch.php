@@ -34,7 +34,7 @@ class LanguageNameSearch {
 	 *
 	 * @param string $searchKey
 	 * @param int $typos
-	 * @param string $userLanguage Language tag.
+	 * @param string|null $userLanguage Language tag.
 	 * @return array
 	 */
 	public static function search( $searchKey, $typos = 0, $userLanguage = null ) {
