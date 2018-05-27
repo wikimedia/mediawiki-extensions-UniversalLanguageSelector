@@ -17,8 +17,6 @@
  * @licence MIT License
  */
 
-/* eslint-disable no-use-before-define */
-
 ( function ( $, mw ) {
 	'use strict';
 
@@ -49,6 +47,103 @@
 	function convertMediaWikiLanguageCodeToULS( code ) {
 		code = code.toLowerCase();
 		return $.uls.data.isRedirect( code ) || code;
+	}
+
+	/**
+	 * Filter the language list by previous languages.
+	 * Not all previous languages will be present in interlanguage links,
+	 * so we are filtering them.
+	 *
+	 * @param {string[]} languages Language codes
+	 * @return {string[]} List of language codes supported by the article
+	 */
+	function filterByPreviousLanguages( languages ) {
+		var previousLanguages = mw.uls.getPreviousLanguages();
+
+		return $.grep( previousLanguages, function ( language ) {
+			return $.inArray( language, languages ) >= 0;
+		} );
+	}
+
+	/**
+	 * Filter by languages that appear in the Babel box on the user page.
+	 *
+	 * @param {string[]} languages Language codes
+	 * @return {string[]} List of language codes supported by the article
+	 */
+	function filterByBabelLanguages( languages ) {
+		var babelLanguages = mw.config.get( 'wgULSBabelLanguages', [] );
+
+		return $.grep( babelLanguages, function ( language ) {
+			return $.inArray( language, languages ) >= 0;
+		} );
+	}
+
+	/**
+	 * Filter the language list by site picks.
+	 *
+	 * @param {string[]} languages Language codes
+	 * @return {string[]} List of language codes supported by the article
+	 */
+	function filterBySitePicks( languages ) {
+		var picks = mw.config.get( 'wgULSCompactLinksPrepend', [] );
+
+		return $.grep( picks, function ( language ) {
+			return $.inArray( language, languages ) >= 0;
+		} );
+	}
+
+	/**
+	 * Filter the language list by common languages.
+	 * Common languages are the most probable languages predicted by ULS.
+	 *
+	 * @param {string[]} languages Language codes
+	 * @return {string[]} List of language codes supported by the article
+	 */
+	function filterByCommonLanguages( languages ) {
+		var commonLanguages = mw.uls.getFrequentLanguageList();
+
+		return $.grep( commonLanguages, function ( language ) {
+			return $.inArray( language, languages ) >= 0;
+		} );
+	}
+
+	/**
+	 * Filter the language list by globally common languages, i.e.
+	 * this list is not user specific.
+	 *
+	 * @param {string[]} languages Language codes
+	 * @return {string[]} List of language codes supported by the article
+	 */
+	function getExtraCommonLanguages( languages ) {
+		var commonLanguages = [
+			'zh', 'en', 'hi', 'ur', 'es', 'ar', 'ru', 'id', 'ms', 'pt',
+			'fr', 'de', 'bn', 'ja', 'pnb', 'pa', 'jv', 'te', 'ta', 'ko', 'mr', 'tr', 'vi',
+			'it', 'fa', 'sv', 'nl', 'pl'
+		];
+
+		return $.grep( commonLanguages, function ( language ) {
+			return $.inArray( language, languages ) >= 0;
+		} );
+	}
+
+	/**
+	 * Filter the language list by Translate's assistant languages.
+	 * Where available, they're languages deemed useful by the user.
+	 *
+	 * @param {string[]} languages Language codes
+	 * @return {string[]} List of language codes supported by the article
+	 */
+	function filterByAssistantLanguages( languages ) {
+		var assistantLanguages = mw.user.options.get( 'translate-editlangs' );
+
+		if ( assistantLanguages && assistantLanguages !== 'default' ) {
+			return $.grep( assistantLanguages.split( /,\s*/ ), function ( language ) {
+				return $.inArray( language, languages ) >= 0;
+			} );
+		}
+
+		return [];
 	}
 
 	/**
@@ -307,103 +402,6 @@
 
 		return compactLanguages;
 	};
-
-	/**
-	 * Filter the language list by previous languages.
-	 * Not all previous languages will be present in interlanguage links,
-	 * so we are filtering them.
-	 *
-	 * @param {string[]} languages Language codes
-	 * @return {string[]} List of language codes supported by the article
-	 */
-	function filterByPreviousLanguages( languages ) {
-		var previousLanguages = mw.uls.getPreviousLanguages();
-
-		return $.grep( previousLanguages, function ( language ) {
-			return $.inArray( language, languages ) >= 0;
-		} );
-	}
-
-	/**
-	 * Filter by languages that appear in the Babel box on the user page.
-	 *
-	 * @param {string[]} languages Language codes
-	 * @return {string[]} List of language codes supported by the article
-	 */
-	function filterByBabelLanguages( languages ) {
-		var babelLanguages = mw.config.get( 'wgULSBabelLanguages', [] );
-
-		return $.grep( babelLanguages, function ( language ) {
-			return $.inArray( language, languages ) >= 0;
-		} );
-	}
-
-	/**
-	 * Filter the language list by site picks.
-	 *
-	 * @param {string[]} languages Language codes
-	 * @return {string[]} List of language codes supported by the article
-	 */
-	function filterBySitePicks( languages ) {
-		var picks = mw.config.get( 'wgULSCompactLinksPrepend', [] );
-
-		return $.grep( picks, function ( language ) {
-			return $.inArray( language, languages ) >= 0;
-		} );
-	}
-
-	/**
-	 * Filter the language list by common languages.
-	 * Common languages are the most probable languages predicted by ULS.
-	 *
-	 * @param {string[]} languages Language codes
-	 * @return {string[]} List of language codes supported by the article
-	 */
-	function filterByCommonLanguages( languages ) {
-		var commonLanguages = mw.uls.getFrequentLanguageList();
-
-		return $.grep( commonLanguages, function ( language ) {
-			return $.inArray( language, languages ) >= 0;
-		} );
-	}
-
-	/**
-	 * Filter the language list by globally common languages, i.e.
-	 * this list is not user specific.
-	 *
-	 * @param {string[]} languages Language codes
-	 * @return {string[]} List of language codes supported by the article
-	 */
-	function getExtraCommonLanguages( languages ) {
-		var commonLanguages = [
-			'zh', 'en', 'hi', 'ur', 'es', 'ar', 'ru', 'id', 'ms', 'pt',
-			'fr', 'de', 'bn', 'ja', 'pnb', 'pa', 'jv', 'te', 'ta', 'ko', 'mr', 'tr', 'vi',
-			'it', 'fa', 'sv', 'nl', 'pl'
-		];
-
-		return $.grep( commonLanguages, function ( language ) {
-			return $.inArray( language, languages ) >= 0;
-		} );
-	}
-
-	/**
-	 * Filter the language list by Translate's assistant languages.
-	 * Where available, they're languages deemed useful by the user.
-	 *
-	 * @param {string[]} languages Language codes
-	 * @return {string[]} List of language codes supported by the article
-	 */
-	function filterByAssistantLanguages( languages ) {
-		var assistantLanguages = mw.user.options.get( 'translate-editlangs' );
-
-		if ( assistantLanguages && assistantLanguages !== 'default' ) {
-			return $.grep( assistantLanguages.split( /,\s*/ ), function ( language ) {
-				return $.inArray( language, languages ) >= 0;
-			} );
-		}
-
-		return [];
-	}
 
 	/**
 	 * Filter the language list by languages that appear in
