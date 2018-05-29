@@ -58,5 +58,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Кхин $1}}",
 	"ext-uls-compact-link-info": "Берриге меттанаш (дуьххьара хаьржинарш бу ахьа я кхечара лелина меттанаш)",
 	"prefs-languages": "Меттанаш",
-	"ext-uls-compact-language-links-preference": "Лелабе [[$1|компакте болу меттанийн могӀам]] хьайна оьшу меттанаш долуш."
+	"ext-uls-compact-language-links-preference": "Лелабе [[$1|компакте болу меттанийн могӀам]] хьайна оьшу меттанаш долуш.",
+	"ext-uls-compact-no-results": "Ахьа хаьржинчу маттахь иза агӀо тӀекхочуш яц."
 }

@@ -5,5 +5,25 @@
 			"Adam-Yourist"
 		]
 	},
-	"jquery-ime-help": "Новкъoстал"
+	"uls-plang-title-languages": "Метташ",
+	"ext-uls-select-language-settings-icon-tooltip": "Метта оттамаш",
+	"ext-uls-language-settings-preferences-link": "Кхыдола меттаца дувзаденна оттамаш",
+	"ext-uls-display-settings-language-tab": "Мотт",
+	"ext-uls-display-settings-fonts-tab": "Шрифташ",
+	"ext-uls-display-settings-desc": "Меню/шрифта мотт",
+	"ext-uls-language-settings-title": "Метта оттамаш",
+	"ext-uls-language-settings-apply": "ДIачIоагIде оттамаш",
+	"ext-uls-language-settings-cancel": "Юхадаккха",
+	"ext-uls-language-buttons-help": "ДIахувца меню мотт. ОагIонаш чура мотт хувцалургбац.",
+	"ext-uls-display-settings-ui-language": "Интерфейса мотт",
+	"ext-uls-display-settings-anon-label": "Интерфейса мотт:",
+	"ext-uls-input-settings-title": "Яздара оттамаш",
+	"ext-uls-input-settings-title-short": "Яздар",
+	"ext-uls-input-settings-desc": "Кхыча меттал язъю Iа?",
+	"ext-uls-input-settings-ui-language": "Йоазон мотт",
+	"jquery-ime-help": "Новкъoстал",
+	"ext-uls-input-disable": "ДIайоае яздара кечалаш",
+	"ext-uls-input-settings-noime": "Укх меттá раскладка белгалъяь яц.",
+	"prefs-languages": "Метташ",
+	"ext-uls-compact-language-links-preference": "Лелае [[$1|айха йола меттай хьаязъяьр]] хьайна эшаш дола метташ юкъедолаш."
 }
