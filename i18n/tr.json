@@ -7,7 +7,8 @@
 			"Rapsar",
 			"Sayginer",
 			"McAang",
-			"Katpatuka"
+			"Katpatuka",
+			"Hedda"
 		]
 	},
 	"uls-desc": "Kullanıcının bir dil seçmesi ve dil ayarlarını değiştirmesi için seçenekler sağlar.",
@@ -61,6 +62,8 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Dil ayarlarını dil listesinin yanında bulunan giriş araçlarından etkinleştirebilirsiniz.",
 	"ext-uls-language-settings-applying": "Uygulanıyor...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Bir tane daha|$1 tane daha}}",
+	"ext-uls-compact-link-info": "Tüm diller (sizin ve başkalarının ortak tercihlerinden ilk seçim)",
 	"prefs-languages": "Diller",
-	"ext-uls-compact-language-links-preference": "Sadece seni ilgilendiren [[$1|dil listesi]] kullan."
+	"ext-uls-compact-language-links-preference": "Sadece seni ilgilendiren [[$1|dil listesi]] kullan.",
+	"ext-uls-compact-no-results": "Bu sayfa, aradığınız dilde mevcut değil."
 }

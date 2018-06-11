@@ -1,8 +1,20 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sayginer"
+			"Sayginer",
+			"Hedda"
 		]
 	},
-	"apihelp-ulslocalization-param-language": "Dil kodu."
+	"apihelp-languagesearch-description": "Herhangi bir komut dosyasında dil isimlerini arayın.",
+	"apihelp-languagesearch-summary": "Herhangi bir komut dosyasında dil isimlerini arayın.",
+	"apihelp-languagesearch-param-search": "Arama dizisi.",
+	"apihelp-languagesearch-param-typos": "Arama dizisinde izin verilen yazım hatası sayısı.",
+	"apihelp-languagesearch-example-1": "\"Te\" için ara",
+	"apihelp-languagesearch-example-2": "\"ഫി\" için ara",
+	"apihelp-languagesearch-example-3": "\"ഫി\" için ara, bir yazım hatası izin verilmekte",
+	"apihelp-ulslocalization-description": "Verilen dilde ULS lokalizasyonunu alın.",
+	"apihelp-ulslocalization-summary": "Verilen dilde ULS lokalizasyonunu alın.",
+	"apihelp-ulslocalization-param-language": "Dil kodu.",
+	"apihelp-ulslocalization-example-1": "Tamil yerelleştirmesi al",
+	"apihelp-ulslocalization-example-2": "Hintçe yerelleştirmesi al"
 }
