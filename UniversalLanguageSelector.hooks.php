@@ -141,10 +141,6 @@ class UniversalLanguageSelectorHooks {
 		}
 	}
 
-	public static function onEventLoggingRegisterSchemas( array &$schemas ) {
-		$schemas['UniversalLanguageSelector'] = 17799034;
-	}
-
 	/**
 	 * @param array &$testModules array of javascript testing modules. 'qunit' is fed
 	 * using tests/qunit/QUnitTestResources.php.

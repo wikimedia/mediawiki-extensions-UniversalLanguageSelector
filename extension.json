@@ -22,7 +22,6 @@
 	"Hooks": {
 		"BeforePageDisplay": "UniversalLanguageSelectorHooks::addModules",
 		"EnterMobileMode": "UniversalLanguageSelectorHooks::onEnterMobileMode",
-		"EventLoggingRegisterSchemas": "UniversalLanguageSelectorHooks::onEventLoggingRegisterSchemas",
 		"GetBetaFeaturePreferences": "UniversalLanguageSelectorHooks::onGetBetaFeaturePreferences",
 		"GetPreferences": "UniversalLanguageSelectorHooks::onGetPreferences",
 		"LocalUserCreated": "UniversalLanguageSelectorHooks::onLocalUserCreated",
@@ -366,6 +365,9 @@
 			"localBasePath": "lib",
 			"remoteExtPath": "UniversalLanguageSelector/lib"
 		}
+	},
+	"EventLoggingSchemas": {
+		"UniversalLanguageSelector": 17799034
 	},
 	"manifest_version": 1
 }
