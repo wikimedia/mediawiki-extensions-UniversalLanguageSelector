@@ -26,6 +26,7 @@
 	"ext-uls-display-settings-anon-log-in-cta": "Меню өчен башка телне сайлау өчен, [[Special:UserLogin|керегез]].",
 	"ext-uls-webfonts-settings-title": "Кирәк булганда шрифтларны йөкләү",
 	"ext-uls-webfonts-settings-info": "Шрифтлар булмаган очракта аларны автоматик рәвештә йөкләү һәм куллану.",
+	"ext-uls-webfonts-settings-info-link": "Тулырак мәгълүмат",
 	"ext-uls-webfonts-select-for": "$1 өчен шрифт сайлау",
 	"ext-uls-webfonts-select-for-ui-info": "Кулланучының интерфейс шрифты",
 	"ext-uls-webfonts-select-for-content-info": "Текст өчен шрифт",
@@ -50,6 +51,7 @@
 	"ext-uls-input-disable-notification": "Кертү кораллары ябылды",
 	"ext-uls-input-disable-notification-undo": "Кире кагу",
 	"ext-uls-input-disable-notification-info-personal": "Кертү җиһазларын тел көйләнмәләреннән кабызырга мөмкин.",
+	"ext-uls-language-settings-applying": "Куллану...",
 	"ext-uls-compact-link-count": "Башка {{PLURAL:$1|телдә|$1 телдә}}",
 	"prefs-languages": "Телләр",
 	"ext-uls-compact-language-links-preference": "Сезнең өчен мөһим булган телләр исемлеген куллану"
