@@ -1,8 +1,19 @@
 {
 	"@metadata": {
 		"authors": [
-			"Amara-Amaziɣ"
+			"Amara-Amaziɣ",
+			"ⵕⴰⵊⵉ"
 		]
 	},
+	"uls-plang-title-languages": "ⵜⵓⵜⵍⴰⵢⵉⵏ",
+	"ext-uls-display-settings-language-tab": "ⵜⵓⵜⵍⴰⵢⵜ",
+	"ext-uls-display-settings-fonts-tab": "ⵉⵙⵙⴽⵉⵍⵏ",
+	"ext-uls-display-settings-title-short": "ⵙⴽⵏ",
+	"ext-uls-language-settings-cancel": "ⴼⴼⵖ",
+	"ext-uls-webfonts-settings-info-link": "ⵓⴳⴳⴰⵔ ⵉⵏⵖⵎⵉⵙⵏ",
+	"ext-uls-input-settings-more-languages-tooltip": "ⵓⴳⴳⴰⵔ ⵏ ⵜⵓⵜⵍⴰⵢⵉⵏ",
+	"jquery-ime-other-languages": "ⵜⵓⵜⵍⴰⵢⵉⵏ ⵢⴰⴹⵏ",
+	"jquery-ime-help": "ⵜⵉⵡⵉⵙⵉ",
+	"ext-uls-input-disable-notification-undo": "ⵙⵔ",
 	"prefs-languages": "ⵜⵓⵜⵍⴰⵢⵉⵏ"
 }
