@@ -36,7 +36,8 @@
 			availableLanguages = {};
 
 		for ( language in $.ime.languages ) {
-			availableLanguages[ language ] = ulsLanguages[ language ];
+			availableLanguages[ language ] = ulsLanguages[ language ] ||
+				$.uls.data.getAutonym( language );
 		}
 
 		return availableLanguages;
