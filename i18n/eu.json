@@ -57,8 +57,11 @@
 	"ext-uls-input-disable-notification": "Sarrera tresnak desgaituak izan dira",
 	"ext-uls-input-disable-notification-undo": "Desegin",
 	"ext-uls-input-disable-notification-info-personal": "Edozein momentutan gaitu ditzakezu sarrera tresnak hizkuntza ezarpenetarako.",
+	"ext-uls-input-disable-notification-info-interlanguage": "Hizkuntza zerrendaren ondoko hizkuntza ezarpenetatik, edozein momentutan gaitu ditzakezu sarrera tresnak.",
+	"ext-uls-language-settings-applying": "Aplikatzen...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Bat gehiago |$1 gehiago}}",
+	"ext-uls-compact-link-info": "Hizkuntza guztiak (zure eta beste batzuen hasierako aukeraketa ohiko aukeretatik)",
 	"prefs-languages": "Hizkuntzak",
-	"ext-uls-compact-language-links-preference": "Erabili hizkuntza-zerrenda trinkoa, zuretzat esanguratsuak diren hizkuntzekin soilik.",
+	"ext-uls-compact-language-links-preference": "Erabili [[$1|hizkuntza-zerrenda trinkoa]], zuretzat esanguratsuak diren hizkuntzekin soilik.",
 	"ext-uls-compact-no-results": "Orrialde hau ez dago eskuragarri bilatu duzun hizkuntzan."
 }

@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Subi"
+			"Subi",
+			"Amaia"
 		]
 	},
+	"apihelp-languagesearch-example-1": "Bilatu \"Te\"",
+	"apihelp-languagesearch-example-2": "Bilatu \"ഫി\"",
 	"apihelp-ulslocalization-param-language": "Hizkuntza-kodea."
 }
