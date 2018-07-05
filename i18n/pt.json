@@ -10,11 +10,12 @@
 			"Macofe",
 			"Opraco",
 			"Athena in Wonderland",
-			"Eduardo Addad de Oliveira"
+			"Eduardo Addad de Oliveira",
+			"Ldacosta"
 		]
 	},
 	"uls-desc": "Fornece ao utilizador várias maneiras de selecionar uma língua e ajustar as definições de língua",
-	"uls-plang-title-languages": "Línguas",
+	"uls-plang-title-languages": "Idiomas",
 	"ext-uls-select-language-settings-icon-tooltip": "Definições de língua",
 	"ext-uls-undo-language-tooltip-text": "Língua alterada de $1",
 	"ext-uls-language-settings-preferences-link": "Mais definições de língua",
@@ -65,7 +66,7 @@
 	"ext-uls-language-settings-applying": "A aplicar...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Uma outra|$1 outras}}",
 	"ext-uls-compact-link-info": "Todas as línguas (seleção inicial a partir de escolhas comuns, suas e de outros)",
-	"prefs-languages": "Línguas",
+	"prefs-languages": "Idiomas",
 	"ext-uls-compact-language-links-preference": "Usar uma [[$1|lista compacta de línguas]], com as línguas relevantes para si",
 	"ext-uls-compact-no-results": "Esta página não está disponível na língua que pesquisou."
 }
