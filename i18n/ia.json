@@ -9,6 +9,8 @@
 	"ext-uls-select-language-settings-icon-tooltip": "Configuration de lingua",
 	"ext-uls-undo-language-tooltip-text": "Lingua cambiate ab $1",
 	"ext-uls-language-settings-preferences-link": "Altere parametros de lingua",
+	"uls-betafeature-label": "Lista compacte de linguas",
+	"uls-betafeature-desc": "Monstra un version abbreviate del lista de linguas, con solmente le linguas plus relevante pro te.",
 	"ext-uls-display-settings-title": "Optiones de visualisation",
 	"ext-uls-display-settings-language-tab": "Lingua",
 	"ext-uls-display-settings-fonts-tab": "Typos de litteras",
@@ -52,5 +54,9 @@
 	"ext-uls-input-disable-notification-info-personal": "Tu pote activar le instrumentos de entrata a omne momento in le configuration de lingua.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Tu pote activar le instrumentos de entrata a omne momento in le configuration de lingua al latere del lista de linguas.",
 	"ext-uls-language-settings-applying": "Applica...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Un altere|$1 alteres}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Un altere|$1 alteres}}",
+	"ext-uls-compact-link-info": "Tote le linguas (selection initial de linguas frequentemente seligite per te e alteres)",
+	"prefs-languages": "Linguas",
+	"ext-uls-compact-language-links-preference": "Usar un [[$1|lista compacte de linguas]] con le linguas relevante pro te.",
+	"ext-uls-compact-no-results": "Iste pagina non es disponibile in le lingua que tu cerca."
 }

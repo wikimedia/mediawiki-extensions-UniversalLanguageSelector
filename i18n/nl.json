@@ -67,7 +67,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "U kunt de invoermethoden op elk moment via de taalinstellingen (naast de talenlijst) inschakelen.",
 	"ext-uls-language-settings-applying": "Toepassen...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Nog één|Nog $1}}",
-	"ext-uls-compact-link-info": "Alle talen (selectie op basis van keuzes van u en anderen)",
+	"ext-uls-compact-link-info": "Alle talen (eerste selectie op basis van keuzes van u en anderen)",
 	"prefs-languages": "Talen",
 	"ext-uls-compact-language-links-preference": "Een [[$1|compacte talenlijst]] gebruiken, met voor u relevante talen.",
 	"ext-uls-compact-no-results": "Deze pagina is niet beschikbaar in de taal waarin u zocht."
