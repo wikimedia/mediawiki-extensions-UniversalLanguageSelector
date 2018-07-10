@@ -1,0 +1,9 @@
+== UniversalLanguageSelector 2018.07 ==
+Released at 2018-07-10.
+
+=== Noteworthy changes ===
+* Maintenance and localisation updates.
+
+==== Input Methods ====
+* Fixed rule for 'ж' in Serbian keyboard.
+* Added Fon keyboard.
