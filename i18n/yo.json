@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"SAgbley"
 		]
 	},
-	"uls-plang-title-languages": "Àwọn èdè"
+	"uls-plang-title-languages": "Àwọn èdè",
+	"ext-uls-compact-link-count": "$1 siwaju sii"
 }
