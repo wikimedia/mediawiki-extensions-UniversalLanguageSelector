@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sky Harbor"
+		]
+	},
+	"apihelp-languagesearch-description": "Maghanap ng mga pangalan ng wika sa anumang eskrito.",
+	"apihelp-languagesearch-summary": "Maghanap ng mga pangalan ng wika sa anumang eskrito.",
+	"apihelp-ulslocalization-description": "Kunin ang lokalisasyon ng ULS sa ibinigay na wika.",
+	"apihelp-ulslocalization-summary": "Kunin ang lokalisasyon ng ULS sa ibinigay na wika.",
+	"apihelp-ulslocalization-param-language": "Kodigo ng wika.",
+	"apihelp-ulslocalization-example-1": "Kunin ang lokalisasyon sa Tamil",
+	"apihelp-ulslocalization-example-2": "Kunin ang lokalisasyon sa Hindi"
+}
