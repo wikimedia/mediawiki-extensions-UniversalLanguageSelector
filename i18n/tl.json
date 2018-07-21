@@ -11,6 +11,8 @@
 	"ext-uls-select-language-settings-icon-tooltip": "Mga kagustuhan sa wika",
 	"ext-uls-undo-language-tooltip-text": "Ipinalit ang wika mula sa $1",
 	"ext-uls-language-settings-preferences-link": "Karagdagang kagustuhang pang-wika",
+	"uls-betafeature-label": "Mga kompaktong kawing panwika",
+	"uls-betafeature-desc": "Ipakita ang isang mas maigsing bersiyon ng talaan ng mga wika, kung saan makikita lamang ang mga wikang mas may kaugnayan sa inyo.",
 	"ext-uls-display-settings-language-tab": "Wika",
 	"ext-uls-display-settings-fonts-tab": "Estilo ng titik",
 	"ext-uls-display-settings-desc": "Itakda ang wikang ginagamit para sa mga menu at estilo ng titik.",
@@ -35,5 +37,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Isa pa|$1 pa}}",
 	"ext-uls-compact-link-info": "Lahat ng wika (unang seleksiyon mula sa mga karaniwang pagpili mo at ng iba)",
 	"prefs-languages": "Mga wika",
+	"ext-uls-compact-language-links-preference": "Gumamit ng isang [[$1|talaang kompakto ng mga wika]], na may mga wikang may kaugnayan sa inyo.",
 	"ext-uls-compact-no-results": "Hindi makunan ang pahinang ito sa wikang hinahanapan mo."
 }
