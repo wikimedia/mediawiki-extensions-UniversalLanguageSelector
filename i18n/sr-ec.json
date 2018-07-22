@@ -60,7 +60,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Можете омогућити алатке за унос у било које време на подешавањима језика поред списка језика.",
 	"ext-uls-language-settings-applying": "Примењујем...",
 	"ext-uls-compact-link-count": "Још {{PLURAL:$1|1=један|$1}} {{PLURAL:$1|језик|језика}}",
-	"ext-uls-compact-link-info": "Сви језици (првобитни одабир заснован је на најчешћим одабирима Вас и других корисника)",
+	"ext-uls-compact-link-info": "Сви језици (првобитни избор је заснован на најчешћим одабирима Вас и других корисника)",
 	"prefs-languages": "Језици",
 	"ext-uls-compact-language-links-preference": "Користи [[$1|сажет списак језика]], са језицима који су Вама битни.",
 	"ext-uls-compact-no-results": "Ова страница није доступна на језику који тражите."

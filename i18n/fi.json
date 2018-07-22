@@ -7,7 +7,8 @@
 			"Olli",
 			"Pxos",
 			"Stryn",
-			"Alluk."
+			"Alluk.",
+			"01miki10"
 		]
 	},
 	"uls-desc": "Tarjoaa useita tapoja kielen valitsemiseen ja kieliasetusten hienosäätöön",
@@ -62,5 +63,6 @@
 	"ext-uls-language-settings-applying": "Tallennetaan...",
 	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|muu kieli|muuta kieltä}}",
 	"prefs-languages": "Kielet",
-	"ext-uls-compact-language-links-preference": "Käytä kompaktia kielilistaa, joka näyttää sinulle tärkeimmät kielet."
+	"ext-uls-compact-language-links-preference": "Käytä [[$1|kompaktia kielilistaa]], joka näyttää sinulle tärkeimmät kielet.",
+	"ext-uls-compact-no-results": "Tämä sivu ei ole saatavilla etsimälläsi kielellä."
 }
