@@ -56,5 +56,6 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "भाषेच्या यादीशेजारी असलेल्या क्षेपन साधनांचा (टायपींग/इनपुट टुल्स) वापर आपण   'भाषा मांडण्या'(लॅंग्वेज सेटींग्ज)तुन कधीही पुर्ववत् करु शकता.",
 	"ext-uls-language-settings-applying": "लागू करीत आहे...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|एक अधिक|$1 अधिक}}",
+	"prefs-languages": "भाषा",
 	"ext-uls-compact-language-links-preference": "आपल्याशी संबंधित भाषांची, आटोपशीर भाषा यादी वापरा."
 }
