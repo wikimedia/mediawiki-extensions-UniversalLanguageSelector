@@ -312,7 +312,8 @@ class UniversalLanguageSelectorHooks {
 		$vars['wgULSWebfontsEnabled'] = $wgULSWebfontsEnabled;
 		$vars['wgULSPosition'] = $wgULSPosition;
 		$vars['wgULSAnonCanChangeLanguage'] = $wgULSAnonCanChangeLanguage;
-		$vars['wgULSEventLogging'] = $wgULSEventLogging && class_exists( 'ResourceLoaderSchemaModule' );
+		$vars['wgULSEventLogging'] = $wgULSEventLogging
+			&& ExtensionRegistry::getInstance()->isLoaded( 'EventLogging' );
 		$vars['wgULSImeSelectors'] = $wgULSImeSelectors;
 		$vars['wgULSNoImeSelectors'] = $wgULSNoImeSelectors;
 		$vars['wgULSNoWebfontsSelectors'] = $wgULSNoWebfontsSelectors;
