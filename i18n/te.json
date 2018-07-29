@@ -3,13 +3,17 @@
 		"authors": [
 			"Veeven",
 			"Arjunaraoc",
-			"రహ్మానుద్దీన్"
+			"రహ్మానుద్దీన్",
+			"Chaduvari"
 		]
 	},
+	"uls-desc": "భాషను ఎంచుకుని, భాష సెట్టింగులను మార్చుకునేందుకు వాడుకరికి అనేక మార్గాలను చూపిస్తుంది",
 	"uls-plang-title-languages": "భాషలు",
 	"ext-uls-select-language-settings-icon-tooltip": "భాషా అమరికలు",
 	"ext-uls-undo-language-tooltip-text": "భాషను $1 నుండి మార్చారు",
 	"ext-uls-language-settings-preferences-link": "మరిన్ని భాషా అమరికలు",
+	"uls-betafeature-label": "సంక్షిప్త భాషా లింకులు",
+	"uls-betafeature-desc": "మీకు సంబంధించిన భాషలతో మాత్రమే కూడిన చిన్న జాబితా చూపిస్తుంది.",
 	"ext-uls-display-settings-title": "ప్రదర్శన అమరికలు",
 	"ext-uls-display-settings-language-tab": "భాష",
 	"ext-uls-display-settings-fonts-tab": "ఖతులు",
@@ -23,7 +27,9 @@
 	"ext-uls-display-settings-ui-language": "ప్రదర్శనా భాష",
 	"ext-uls-display-settings-anon-label": "ప్రదర్శనా భాష:",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (విషయపు భాషే)",
+	"ext-uls-display-settings-anon-log-in-cta": "మెనూలో వేరే భాషను ఎంచుకునేందుకు [[Special:UserLogin|లాగినవండి]].",
 	"ext-uls-webfonts-settings-info-link": "మరింత సమాచారం",
+	"ext-uls-webfonts-select-for": "$1 కు ఫాంటును ఎంచుకోండి",
 	"ext-uls-webfonts-select-for-ui-info": "వాడుకరి ముఖాంతరానికి వాడాల్సిన ఖతి",
 	"ext-uls-webfonts-select-for-content-info": "విషయానికి వాడాల్సిన ఖతి",
 	"ext-uls-back-to-display-settings": "తిరిగి ప్రదర్శన అమరికలకు",
@@ -38,5 +44,9 @@
 	"jquery-ime-other-languages": "ఇతర భాషలు",
 	"jquery-ime-help": "సహాయం",
 	"ext-uls-input-disable-notification-undo": "రద్దుచెయ్యి",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|మరొక్కటి|ఇంకా $1}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|మరొక్కటి|ఇంకా $1}}",
+	"ext-uls-compact-link-info": "భాషలన్నీ (మీరు, ఇతరులూ ఎంచుకున్నవాటి నుంచి ఎంచినవి)",
+	"prefs-languages": "భాషలు",
+	"ext-uls-compact-language-links-preference": "మీకు సంబంధించిన భాషలు కలిగిన ఒక [[$1|సంగ్రహ భాషా జాబితా]] వాడండి.",
+	"ext-uls-compact-no-results": "మీరు వెతికిన భాషలో ఈ పేజీ లేదు."
 }
