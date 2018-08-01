@@ -3,7 +3,8 @@
 		"authors": [
 			"Sky Harbor",
 			"AnakngAraw",
-			"Xð"
+			"Xð",
+			"Jojit fb"
 		]
 	},
 	"uls-desc": "Nagbibigay sa tagagamit ng ilang mga paraan upang makapili ng isang wika at upang mabago ang mga katakdaan ng wika",
@@ -21,7 +22,7 @@
 	"ext-uls-language-settings-cancel": "Huwag ituloy",
 	"ext-uls-language-buttons-help": "Palitan ang wika ng mga menu.  Hindi maaapektuhan ang wika ng nilalaman.",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (pareho ng nilalaman)",
-	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Lumagda]] upang mamili ng ibang wika para sa mga menu.",
+	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Mag-login]] upang mamili ng ibang wika para sa mga menu.",
 	"ext-uls-webfonts-settings-info-link": "Karagdagang impormasyon",
 	"ext-uls-webfonts-select-for": "Mamili ng estilo ng titik para sa $1",
 	"ext-uls-webfonts-select-for-content-info": "Estilo ng titik na ginagamit para sa nilalaman",
