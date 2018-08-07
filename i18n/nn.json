@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Njardarlogar"
+			"Njardarlogar",
+			"Jon Harald Søby"
 		]
 	},
 	"uls-desc": "Gjev brukaren fleire måtar å velja eit språk på og dessutan å endra språkinnstillingane",
@@ -9,6 +10,8 @@
 	"ext-uls-select-language-settings-icon-tooltip": "Språkinnstillingar",
 	"ext-uls-undo-language-tooltip-text": "Språk endra frå $1",
 	"ext-uls-language-settings-preferences-link": "Fleire språkinnstillingar",
+	"uls-betafeature-label": "Kompakte språklenkjer",
+	"uls-betafeature-desc": "Vis ein kortare versjon av språklista, med berre dei språka som er mest relevante for deg.",
 	"ext-uls-display-settings-title": "Visingsinnstillingar",
 	"ext-uls-display-settings-language-tab": "Språk",
 	"ext-uls-display-settings-fonts-tab": "Skrifttypar",
@@ -22,9 +25,9 @@
 	"ext-uls-display-settings-ui-language": "Visingsspråk",
 	"ext-uls-display-settings-anon-label": "Visingsspråk:",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (same som innhaldet)",
-	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Skriv deg inn]] for å velja eit anna språk for menyane.",
+	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Logg inn]] for å velja eit anna språk for menyane.",
 	"ext-uls-webfonts-settings-title": "Last ned skrifttypar når det tarvst",
-	"ext-uls-webfonts-settings-info": "Internettskrifttypar vil verta lasta ned for å visa tekst i særskilde skriftsystem.",
+	"ext-uls-webfonts-settings-info": "Last ned manglande skrifttypar automatisk og tillat veljing av føretrekte skrifttypar.",
 	"ext-uls-webfonts-settings-info-link": "Meir informasjon",
 	"ext-uls-webfonts-select-for": "Vel skrifttype for $1",
 	"ext-uls-webfonts-select-for-ui-info": "Skrifttype nytta for brukargrensesnittet",
@@ -55,6 +58,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Eitt til|$1 til}}",
 	"ext-uls-compact-link-info": "Alle språk (utvalet i mergen er basert på vanlege val av deg og andre)",
 	"prefs-languages": "Språk",
-	"ext-uls-compact-language-links-preference": "Bruk ei kompakt språkliste med språk som er relevante for deg.",
+	"ext-uls-compact-language-links-preference": "Bruk ei [[$1|kompakt språkliste]] med språk som er relevante for deg.",
 	"ext-uls-compact-no-results": "Denne sida er ikkje tilgjengeleg på språket du søkte etter."
 }
