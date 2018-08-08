@@ -6,7 +6,8 @@
 			"Elisardojm",
 			"Macofe",
 			"Navhy",
-			"Banjo"
+			"Banjo",
+			"Maria zaos"
 		]
 	},
 	"uls-desc": "Dá ao usuario varios xeitos de seleccionar unha lingua e de axustar as preferencias da mesma",
@@ -63,5 +64,5 @@
 	"ext-uls-compact-link-info": "Todas as linguas (selección inicial de opcións comúns súas e doutros)",
 	"prefs-languages": "Linguas",
 	"ext-uls-compact-language-links-preference": "Usar unha [[$1|lista de linguas compacta]], con linguas relevantes para vostede.",
-	"ext-uls-compact-no-results": "Esta páxina non está dispoñible na lingua para a que procurou."
+	"ext-uls-compact-no-results": "Esta páxina non está dispoñible na lingua en que procurou."
 }
