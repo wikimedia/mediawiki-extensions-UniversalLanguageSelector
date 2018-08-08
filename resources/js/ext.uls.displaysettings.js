@@ -339,7 +339,7 @@
 					if ( parseInt( $parent.css( 'top' ), 10 ) ) {
 						this.$menu.css( 'top', $parent.css( 'top' ) );
 					}
-					// If the ULS is shown in the the sidebar,
+					// If the ULS is shown in the sidebar,
 					// add a caret pointing to the icon
 					if ( displaySettings.$parent.$window.hasClass( 'callout' ) ) {
 						this.$menu.addClass( 'callout callout--languageselection' );
