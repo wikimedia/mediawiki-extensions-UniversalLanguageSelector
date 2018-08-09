@@ -19,7 +19,8 @@
  */
 
 /**
- * @covers LanguageNameSearch
+ * @covers \LanguageNameSearch
+ * @covers \LanguageNameSearchData
  */
 class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 	/**
