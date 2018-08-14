@@ -157,24 +157,6 @@
 			// hide the tooltip when clicked on it
 			$( '.uls-tipsy' ).on( 'click', hideTipsy );
 
-			// Event handler for links in the tooltip.
-			// It looks like the tipsy is always created from scratch so that
-			// there wont be multiple event handlers bound to same click.
-			$( 'a.uls-prevlang-link' ).on( 'click.ulstipsy', function ( event ) {
-				var deferred = $.Deferred();
-
-				event.preventDefault();
-				deferred.done( function () {
-					mw.uls.changeLanguage( event.target.lang );
-				} );
-
-				mw.hook( 'mw.uls.language.revert' ).fire( deferred );
-
-				// Delay is zero if event logging is not enabled
-				window.setTimeout( function () {
-					deferred.resolve();
-				}, mw.config.get( 'wgULSEventLogging' ) * 500 );
-			} );
 			tipsyTimer = window.setTimeout( hideTipsy, timeout );
 		}
 
@@ -203,9 +185,12 @@
 			$floatableContainer: $ulsTrigger,
 			position: ulsPopupPosition,
 			$content: ( function () {
-				var link = $( '<a>' ).text( previousAutonym )
-					.attr( {
-						href: '#',
+				var messageKey, $link;
+
+				$link = $( '<a>' )
+					.text( previousAutonym )
+					.prop( {
+						href: '',
 						'class': 'uls-prevlang-link',
 						lang: previousLang,
 						// We could get dir from uls.data,
@@ -213,16 +198,30 @@
 						// and 'auto' is safe enough in this context.
 						// T130390: must use attr
 						dir: 'auto'
+					} )
+					.on( 'click', function ( event ) {
+						var deferred = $.Deferred();
+
+						event.preventDefault();
+						deferred.done( function () {
+							mw.uls.changeLanguage( event.target.lang );
+						} );
+
+						mw.hook( 'mw.uls.language.revert' ).fire( deferred );
+
+						// Delay is zero if event logging is not enabled
+						window.setTimeout( function () {
+							deferred.resolve();
+						}, mw.config.get( 'wgULSEventLogging' ) * 500 );
 					} );
 
-				// Get the html of the link by wrapping it in div first
-				link = $( '<div>' ).html( link ).html();
+				if ( mw.storage.get( 'uls-gp' ) === '1' ) {
+					messageKey = 'ext-uls-undo-language-tooltip-text-local';
+				} else {
+					messageKey = 'ext-uls-undo-language-tooltip-text';
+				}
 
-				return $( '<p>' )
-					.html(
-						mw.message( 'ext-uls-undo-language-tooltip-text', '$1' )
-							.escaped().replace( '$1', link )
-					);
+				return $( '<p>' ).append( mw.message( messageKey, $link ).parseDom() );
 			}() )
 		} );
 

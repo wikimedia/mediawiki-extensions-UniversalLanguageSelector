@@ -50,23 +50,49 @@
 		}
 
 		deferred.done( function () {
-			var api;
+			var api = new mw.Api();
 
 			if ( mw.user.isAnon() ) {
 				changeLanguageAnon();
 				return;
 			}
 
-			api = new mw.Api();
-			api.saveOption( 'language', language )
-				.done( function () {
-					location.reload();
-				} )
-				.fail( function () {
-					// Set options failed. Maybe the user has logged off.
-					// Continue like anonymous user and set cookie.
-					changeLanguageAnon();
+			// TODO We can avoid doing this query if we know global preferences are not enabled
+			api.get( {
+				action: 'query',
+				meta: 'globalpreferences',
+				gprprop: 'preferences'
+			} ).then( function ( res ) {
+				// Check whether global preferences are in use. If they are not, `res.query` is
+				// an empty object. `res` will also contain warnings about unknown parameters.
+				try {
+					return !!res.query.globalpreferences.preferences.language;
+				} catch ( e ) {
+					return false;
+				}
+			} ).then( function ( hasGlobalPreference ) {
+				var apiModule;
+
+				if ( hasGlobalPreference ) {
+					apiModule = 'globalpreferenceoverrides';
+					mw.storage.set( 'uls-gp', '1' );
+				} else {
+					apiModule = 'options';
+					mw.storage.remove( 'uls-gp' );
+				}
+
+				return api.postWithToken( 'csrf', {
+					action: apiModule,
+					optionname: 'language',
+					optionvalue: language
 				} );
+			} ).done( function () {
+				location.reload();
+			} ).fail( function () {
+				// Setting the option failed. Maybe the user has logged off.
+				// Continue like anonymous user and set cookie.
+				changeLanguageAnon();
+			} );
 		} );
 
 		mw.hook( 'mw.uls.interface.language.change' ).fire( language, deferred );

@@ -168,11 +168,11 @@
 				"vector": "css/ext.uls-vector.less"
 			},
 			"dependencies": [
+				"jquery.uls.data",
 				"mediawiki.api",
-				"mediawiki.api.options",
 				"mediawiki.cookie",
-				"mediawiki.user",
-				"jquery.uls.data"
+				"mediawiki.storage",
+				"mediawiki.user"
 			],
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
@@ -215,6 +215,7 @@
 				"uls-plang-title-languages",
 				"ext-uls-select-language-settings-icon-tooltip",
 				"ext-uls-undo-language-tooltip-text",
+				"ext-uls-undo-language-tooltip-text-local",
 				"ext-uls-language-settings-preferences-link"
 			],
 			"localBasePath": "resources",

@@ -14,6 +14,7 @@
 	"uls-ime-helppage": "https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/$1",
 	"ext-uls-select-language-settings-icon-tooltip": "Language settings",
 	"ext-uls-undo-language-tooltip-text": "Language changed from $1",
+	"ext-uls-undo-language-tooltip-text-local": "Language changed for this wiki. Check your [[Special:GlobalPreferences|global preferences]] to change language for all wikis.",
 	"ext-uls-language-settings-preferences-link": "More language settings",
 	"uls-betafeature-label": "Compact language links",
 	"uls-betafeature-desc": "Show a shorter version of the language list, with just the languages that are more relevant to you.",
