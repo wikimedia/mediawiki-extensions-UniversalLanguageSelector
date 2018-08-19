@@ -343,7 +343,7 @@ class UniversalLanguageSelectorHooks {
 		$user = $out->getUser();
 		$loggedIn = $user->isLoggedIn();
 
-		// Do not output accept languages if there is risk it will get cached accross requests
+		// Do not output accept languages if there is risk it will get cached across requests
 		if ( $wgULSAnonCanChangeLanguage || $loggedIn ) {
 			$vars['wgULSAcceptLanguageList'] = array_keys( $out->getRequest()->getAcceptLang() );
 		}
