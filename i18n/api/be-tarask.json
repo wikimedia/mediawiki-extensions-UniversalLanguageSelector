@@ -12,6 +12,8 @@
 	"apihelp-languagesearch-example-1": "Шукаць «Te»",
 	"apihelp-languagesearch-example-2": "Шукаць «ഫി»",
 	"apihelp-languagesearch-example-3": "Шукаць «ഫി», дапушчальная адна памылка",
+	"apihelp-ulslocalization-description": "Атрымаць лякалізацыю ULS на пададзенай мове.",
+	"apihelp-ulslocalization-summary": "Атрымаць лякалізацыю ULS на пададзенай мове.",
 	"apihelp-ulslocalization-param-language": "Код мовы.",
 	"apihelp-ulslocalization-example-1": "Атрымаць тамільскую лякалізацыю",
 	"apihelp-ulslocalization-example-2": "Атрымаць індуісцкую лякалізацыю"
