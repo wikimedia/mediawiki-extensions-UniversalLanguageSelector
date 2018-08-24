@@ -60,8 +60,8 @@
 	function filterByPreviousLanguages( languages ) {
 		var previousLanguages = mw.uls.getPreviousLanguages();
 
-		return $.grep( previousLanguages, function ( language ) {
-			return $.inArray( language, languages ) >= 0;
+		return previousLanguages.filter( function ( language ) {
+			return languages.indexOf( language ) >= 0;
 		} );
 	}
 
@@ -74,8 +74,8 @@
 	function filterByBabelLanguages( languages ) {
 		var babelLanguages = mw.config.get( 'wgULSBabelLanguages', [] );
 
-		return $.grep( babelLanguages, function ( language ) {
-			return $.inArray( language, languages ) >= 0;
+		return babelLanguages.filter( function ( language ) {
+			return languages.indexOf( language ) >= 0;
 		} );
 	}
 
@@ -88,8 +88,8 @@
 	function filterBySitePicks( languages ) {
 		var picks = mw.config.get( 'wgULSCompactLinksPrepend', [] );
 
-		return $.grep( picks, function ( language ) {
-			return $.inArray( language, languages ) >= 0;
+		return picks.filter( function ( language ) {
+			return languages.indexOf( language ) >= 0;
 		} );
 	}
 
@@ -103,8 +103,8 @@
 	function filterByCommonLanguages( languages ) {
 		var commonLanguages = mw.uls.getFrequentLanguageList();
 
-		return $.grep( commonLanguages, function ( language ) {
-			return $.inArray( language, languages ) >= 0;
+		return commonLanguages.filter( function ( language ) {
+			return languages.indexOf( language ) >= 0;
 		} );
 	}
 
@@ -122,8 +122,8 @@
 			'it', 'fa', 'sv', 'nl', 'pl'
 		];
 
-		return $.grep( commonLanguages, function ( language ) {
-			return $.inArray( language, languages ) >= 0;
+		return commonLanguages.filter( function ( language ) {
+			return languages.indexOf( language ) >= 0;
 		} );
 	}
 
@@ -138,8 +138,8 @@
 		var assistantLanguages = mw.user.options.get( 'translate-editlangs' );
 
 		if ( assistantLanguages && assistantLanguages !== 'default' ) {
-			return $.grep( assistantLanguages.split( /,\s*/ ), function ( language ) {
-				return $.inArray( language, languages ) >= 0;
+			return assistantLanguages.split( /,\s*/ ).filter( function ( language ) {
+				return languages.indexOf( language ) >= 0;
 			} );
 		}
 
