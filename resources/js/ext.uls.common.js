@@ -107,13 +107,15 @@
 	 * @since 2016.05
 	 */
 	mw.uls.addPreviousLanguage = function ( language ) {
-		var languages = mw.uls.getPreviousLanguages();
+		var languages = mw.uls.getPreviousLanguages(),
+			index = languages.indexOf( language );
 
 		// Avoid duplicates
-		languages = $.map( languages, function ( element ) {
-			return element === language ? undefined : element;
-		} );
+		if ( index !== -1 ) {
+			languages.splice( index, 1 );
+		}
 		languages.unshift( language );
+
 		mw.uls.setPreviousLanguages( languages );
 	};
 
@@ -167,21 +169,17 @@
 			list = list.concat( $.uls.data.getLanguagesInTerritory( countryCode ) );
 		}
 
-		$.each( list, function ( i, v ) {
-			if ( $.inArray( v, unique ) === -1 ) {
-				unique.push( v );
+		list.forEach( function ( lang ) {
+			if ( unique.indexOf( lang ) === -1 ) {
+				unique.push( lang );
 			}
 		} );
 
 		// Filter out unknown and unsupported languages
-		unique = $.grep( unique, function ( langCode ) {
+		unique = unique.filter( function ( langCode ) {
 			// If the language is already known and defined, just use it.
 			// $.uls.data.getAutonym will resolve redirects if any.
-			if ( $.uls.data.getAutonym( langCode ) !== langCode ) {
-				return true;
-			}
-
-			return false;
+			return $.uls.data.getAutonym( langCode ) !== langCode;
 		} );
 
 		return unique;
