@@ -242,23 +242,23 @@
 			// after selecting a different language
 			$languages.empty();
 
-			// Selected IME language may be different, and it must
-			// be present, too
+			// Selected IME language may be different, and it must be present, too
 			if ( $.uls.data.languages[ selectedImeLanguage ] &&
-				$.inArray( selectedImeLanguage, languagesForButtons ) === -1 ) {
+				languagesForButtons.indexOf( selectedImeLanguage ) === -1
+			) {
 				languagesForButtons.push( selectedImeLanguage );
 			}
 
 			// UI language must always be present
 			if ( this.uiLanguage !== this.contentLanguage &&
 				$.uls.data.languages[ this.uiLanguage ] &&
-				$.inArray( this.uiLanguage, languagesForButtons ) === -1 ) {
+				languagesForButtons.indexOf( this.uiLanguage ) === -1 ) {
 				languagesForButtons.push( this.uiLanguage );
 			}
 
 			for ( lang in suggestedLanguages ) {
 				// Skip already found languages
-				if ( $.inArray( suggestedLanguages[ lang ], languagesForButtons ) > -1 ) {
+				if ( languagesForButtons.indexOf( suggestedLanguages[ lang ] ) > -1 ) {
 					continue;
 				}
 

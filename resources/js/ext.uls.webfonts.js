@@ -91,7 +91,7 @@
 
 				defaultFont = repository.defaultFont( language );
 
-				if ( classes && $.inArray( 'autonym', classes ) >= 0 ) {
+				if ( classes && classes.indexOf( 'autonym' ) >= 0 ) {
 					// Do not load font for showing autonym.
 					return null;
 				}

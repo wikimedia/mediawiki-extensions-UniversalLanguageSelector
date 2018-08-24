@@ -232,7 +232,7 @@
 
 			for ( lang in suggestedLanguages ) {
 				// Skip already found languages
-				if ( $.inArray( suggestedLanguages[ lang ], languagesForButtons ) > -1 ) {
+				if ( languagesForButtons.indexOf( suggestedLanguages[ lang ] ) > -1 ) {
 					continue;
 				}
 

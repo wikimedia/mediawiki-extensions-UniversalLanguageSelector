@@ -51,9 +51,9 @@
 		previousIMELanguages = $.ime.preferences.getPreviousLanguages() || [];
 		imeLanguageList = previousIMELanguages.concat( mw.uls.getFrequentLanguageList() );
 
-		$.each( imeLanguageList, function ( i, v ) {
-			if ( $.inArray( v, unique ) === -1 ) {
-				unique.push( v );
+		imeLanguageList.forEach( function ( lang ) {
+			if ( unique.indexOf( lang ) === -1 ) {
+				unique.push( lang );
 			}
 		} );
 
