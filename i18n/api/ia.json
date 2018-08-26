@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"apihelp-languagesearch-description": "Cercar nomines de lingua in non importa qual systema de scriptura.",
+	"apihelp-languagesearch-summary": "Cercar nomines de lingua in non importa qual systema de scriptura.",
+	"apihelp-languagesearch-param-search": "Le texto a cercar.",
+	"apihelp-languagesearch-param-typos": "Numero de errores orthographic permittite in le texto a cercar.",
+	"apihelp-languagesearch-example-1": "Cercar \"Te\"",
+	"apihelp-languagesearch-example-2": "Cercar \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Cercar \"ഫി\", permittente un error orthographic",
+	"apihelp-ulslocalization-description": "Obtener le localisation de ULS in le lingua specificate.",
+	"apihelp-ulslocalization-summary": "Obtener le localisation de ULS in le lingua specificate.",
+	"apihelp-ulslocalization-param-language": "Codice de lingua.",
+	"apihelp-ulslocalization-example-1": "Obtener le localisation in tamil",
+	"apihelp-ulslocalization-example-2": "Obtener le localisation in hindi"
+}
