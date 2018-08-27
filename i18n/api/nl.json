@@ -5,10 +5,11 @@
 			"Robin van der Vliet",
 			"Siebrand",
 			"Sjoerddebruin",
-			"McDutchie"
+			"McDutchie",
+			"Goefie"
 		]
 	},
-	"apihelp-languagesearch-description": "Zoeken naar taalnamen in elk schriftsysteem.",
+	"apihelp-languagesearch-description": "Zoeken naar namen van talen in elk script",
 	"apihelp-languagesearch-param-search": "Zoekterm.",
 	"apihelp-languagesearch-example-1": "Zoeken naar \"Te\"",
 	"apihelp-languagesearch-example-2": "Zoeken naar \"ഫി\"",
