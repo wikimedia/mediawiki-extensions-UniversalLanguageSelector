@@ -123,7 +123,7 @@
 				"ext.uls.languagesettings",
 				"ext.uls.mediawiki",
 				"ext.uls.webfonts",
-				"mediawiki.api.parse",
+				"mediawiki.api",
 				"mediawiki.ui.checkbox",
 				"mediawiki.ui.button",
 				"mediawiki.user"
@@ -237,8 +237,7 @@
 			"scripts": "js/ext.uls.preferences.js",
 			"dependencies": [
 				"mediawiki.user",
-				"mediawiki.api",
-				"mediawiki.api.options"
+				"mediawiki.api"
 			],
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"

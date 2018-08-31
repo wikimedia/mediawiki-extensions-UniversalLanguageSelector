@@ -462,7 +462,7 @@ class UniversalLanguageSelectorHooks {
 	 * @param ResourceLoader $resourceLoader
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader $resourceLoader ) {
-		global $wgULSEventLogging;
+		global $wgULSEventLogging, $wgVersion;
 
 		$modules = [];
 		$modules['ext.uls.compactlinks'] = [
@@ -482,6 +482,11 @@ class UniversalLanguageSelectorHooks {
 			'localBasePath' => __DIR__ . '/resources',
 			'remoteExtPath' => 'UniversalLanguageSelector/resources'
 		];
+		if ( version_compare( $wgVersion, '1.32', '<' ) ) {
+			// Support: MediaWiki 1.31 and earlier (T200168)
+			$modules['ext.uls.displaysettings']['dependencies'][] = 'mediawiki.api.parse';
+			$modules['ext.uls.preferences']['dependencies'][] = 'mediawiki.api.options';
+		}
 
 		if ( $wgULSEventLogging ) {
 			$modules['ext.uls.eventlogger'] = [
