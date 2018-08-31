@@ -223,6 +223,14 @@ class UniversalLanguageSelectorHooks {
 	public static function getLanguage( User $user, &$code, IContextSource $context ) {
 		global $wgULSAnonCanChangeLanguage, $wgULSLanguageDetection;
 
+		if ( $wgULSLanguageDetection ) {
+			// Vary any caching based on the header value. Note that
+			// we need to vary regardless of whether we end up using
+			// the header or not, so that requests without the header
+			// don't show up for people with it.
+			$context->getOutput()->addVaryHeader( 'Accept-Language' );
+		}
+
 		if ( !self::isToolbarEnabled( $user ) ) {
 			return;
 		}
@@ -276,6 +284,8 @@ class UniversalLanguageSelectorHooks {
 
 		// As last resort, try Accept-Language headers if allowed
 		if ( $wgULSLanguageDetection ) {
+			// We added a Vary header at the top of this function,
+			// since we're depending upon the Accept-Language header
 			$preferred = $request->getAcceptLang();
 			$default = self::getDefaultLanguage( $preferred );
 			if ( $default !== '' ) {
