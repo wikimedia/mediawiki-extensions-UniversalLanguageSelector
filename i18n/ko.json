@@ -18,6 +18,7 @@
 	"uls-plang-title-languages": "언어",
 	"ext-uls-select-language-settings-icon-tooltip": "언어 설정",
 	"ext-uls-undo-language-tooltip-text": "언어가 $1에서 바뀌었습니다",
+	"ext-uls-undo-language-tooltip-text-local": "이 위키의 언어가 변경되었습니다. 모든 위키의 언어를 변경하려면 [[Special:GlobalPreferences|통합 계정 설정]]을 확인하십시오.",
 	"ext-uls-language-settings-preferences-link": "자세한 언어 설정",
 	"uls-betafeature-label": "언어 링크 단축",
 	"uls-betafeature-desc": "사용자와 관련 있는 언어로 간소화된 언어 목록을 보여줍니다.",

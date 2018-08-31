@@ -10,6 +10,7 @@
 	"uls-plang-title-languages": "Мовы",
 	"ext-uls-select-language-settings-icon-tooltip": "Моўныя налады",
 	"ext-uls-undo-language-tooltip-text": "Папярэдняя мова — $1",
+	"ext-uls-undo-language-tooltip-text-local": "Мова зьмененая для гэтай вікі. Глядзіце вашыя [[Special:GlobalPreferences|глябальныя налады]], каб зьмяніць мову для ўсіх вікі.",
 	"ext-uls-language-settings-preferences-link": "Больш моўных наладаў",
 	"uls-betafeature-label": "Кампактныя моўныя спасылкі",
 	"uls-betafeature-desc": "Паказвае скарочаную вэрсію сьпісу моўных спасылак, якія зьяўляюцца больш адпаведнымі для вас.",

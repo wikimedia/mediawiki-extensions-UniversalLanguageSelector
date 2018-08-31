@@ -11,6 +11,7 @@
 	"uls-plang-title-languages": "Sprachen",
 	"ext-uls-select-language-settings-icon-tooltip": "Spracheinstellungen",
 	"ext-uls-undo-language-tooltip-text": "Sprache geändert von $1",
+	"ext-uls-undo-language-tooltip-text-local": "Die Sprache wurde für dieses Wiki geändert. Gehe zu deinen [[Special:GlobalPreferences|globalen Einstellungen]], um die Sprache für alle Wikis zu ändern.",
 	"ext-uls-language-settings-preferences-link": "Weitere Spracheinstellungen",
 	"uls-betafeature-label": "Kompakte Sprachlinks",
 	"uls-betafeature-desc": "Zeigt eine kürzere Version der Sprachenliste mit den für dich relevanten Sprachen an.",

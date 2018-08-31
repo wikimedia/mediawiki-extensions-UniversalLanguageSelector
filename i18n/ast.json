@@ -10,6 +10,7 @@
 	"uls-plang-title-languages": "Llingües",
 	"ext-uls-select-language-settings-icon-tooltip": "Preferencies de llingua",
 	"ext-uls-undo-language-tooltip-text": "La llingua camudó dende $1",
+	"ext-uls-undo-language-tooltip-text-local": "Cambióse d'idioma pa esta wiki. Comprueba les [[Special:GlobalPreferences|preferencies globales]] pa cambiar l'idioma pa toles wikis.",
 	"ext-uls-language-settings-preferences-link": "Más preferencies de llingua",
 	"uls-betafeature-label": "Enllaces de llingües compactos",
 	"uls-betafeature-desc": "Amuesa una versión más curtia de la llista de llingües, sólo coles más relevantes pa vusté.",

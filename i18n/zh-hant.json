@@ -17,6 +17,7 @@
 	"uls-plang-title-languages": "語言",
 	"ext-uls-select-language-settings-icon-tooltip": "語言設定",
 	"ext-uls-undo-language-tooltip-text": "語言已從 $1 變更",
+	"ext-uls-undo-language-tooltip-text-local": "已更改此 wiki 的語言。請檢查您的[[Special:GlobalPreferences|全域設定]]來對所有 wiki 更改語言。",
 	"ext-uls-language-settings-preferences-link": "更多語言設定",
 	"uls-betafeature-label": "簡潔版語言連結",
 	"uls-betafeature-desc": "顯示較簡潔的語言清單，僅顯示與您相關的語言。",
