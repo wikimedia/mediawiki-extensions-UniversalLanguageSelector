@@ -462,7 +462,7 @@ class UniversalLanguageSelectorHooks {
 	 * @param ResourceLoader $resourceLoader
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader $resourceLoader ) {
-		global $wgULSEventLogging, $wgVersion;
+		global $wgULSEventLogging;
 
 		$modules = [];
 		$modules['ext.uls.compactlinks'] = [
@@ -482,10 +482,6 @@ class UniversalLanguageSelectorHooks {
 			'localBasePath' => __DIR__ . '/resources',
 			'remoteExtPath' => 'UniversalLanguageSelector/resources'
 		];
-		if ( version_compare( $wgVersion, '1.29', '<' ) ) {
-			// Support: MediaWiki 1.28 and earlier (T162590)
-			$modules['ext.uls.compactlinks']['dependencies'][] = 'es5-shim';
-		}
 
 		if ( $wgULSEventLogging ) {
 			$modules['ext.uls.eventlogger'] = [
