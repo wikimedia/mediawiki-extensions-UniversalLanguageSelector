@@ -105,18 +105,14 @@
 
 			// Get the name of all registered modules and list them in left side menu.
 			// Sort the modules based on id
-			modules = $.map( $.fn.languagesettings.modules, function ( element, index ) {
-				return index;
-			} ).sort();
-			$.each( modules, function ( index, moduleName ) {
-				if ( $.fn.languagesettings.modules.hasOwnProperty( moduleName ) ) {
-					if ( !defaultModule ) {
-						defaultModule = moduleName;
-					}
-
-					// Call render function on the current setting module.
-					languageSettings.initModule( moduleName, defaultModule === moduleName );
+			modules = Object.keys( $.fn.languagesettings.modules ).sort();
+			modules.forEach( function ( moduleName ) {
+				if ( !defaultModule ) {
+					defaultModule = moduleName;
 				}
+
+				// Call render function on the current setting module.
+				languageSettings.initModule( moduleName, defaultModule === moduleName );
 			} );
 		},
 

@@ -40,9 +40,9 @@
 			$langselector = $( 'select#language' );
 
 			function listFonts( fonts ) {
-				$.merge( fonts, [ 'Sans', 'Serif' ] );
+				fonts.push( 'Sans', 'Serif' );
 				$fontSelector.find( 'option' ).remove();
-				$.each( fonts, function ( key, font ) {
+				fonts.forEach( function ( font ) {
 					$fontSelector.append( $( "<option></option>" )
 						.attr( "value", font ).text( font ) );
 				} );
@@ -50,7 +50,7 @@
 			}
 
 			listFonts( fonts );
-			$.each( languages, function ( lang, language ) {
+			languages.forEach( function ( language ) {
 				$langselector.append( $( "<option></option>" )
 					.attr( 'value', language )
 					.text( language + " - " + $.uls.data.getAutonym( language ) ) );
