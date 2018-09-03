@@ -473,23 +473,6 @@ class UniversalLanguageSelectorHooks {
 		global $wgULSEventLogging, $wgVersion;
 
 		$modules = [];
-		$modules['ext.uls.compactlinks'] = [
-			'scripts' => 'js/ext.uls.compactlinks.js',
-			'styles' => 'css/ext.uls.compactlinks.less',
-			'dependencies' => [
-				'mediawiki.jqueryMsg',
-				'mediawiki.language',
-				'mediawiki.ui.button',
-				'ext.uls.init'
-			],
-			'messages' => [
-				'ext-uls-compact-link-count',
-				'ext-uls-compact-link-info',
-				'ext-uls-compact-no-results'
-			],
-			'localBasePath' => __DIR__ . '/resources',
-			'remoteExtPath' => 'UniversalLanguageSelector/resources'
-		];
 		$modules['ext.uls.displaysettings'] = [
 			'scripts' => 'js/ext.uls.displaysettings.js',
 			'styles' => 'css/ext.uls.displaysettings.less',

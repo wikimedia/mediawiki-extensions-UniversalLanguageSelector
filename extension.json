@@ -277,6 +277,23 @@
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
+		"ext.uls.compactlinks":  {
+			"scripts": "js/ext.uls.compactlinks.js",
+			"styles": "css/ext.uls.compactlinks.less",
+			"dependencies": [
+				"mediawiki.jqueryMsg",
+				"mediawiki.language",
+				"mediawiki.ui.button",
+				"ext.uls.init"
+			],
+			"messages": [
+				"ext-uls-compact-link-count",
+				"ext-uls-compact-link-info",
+				"ext-uls-compact-no-results"
+			],
+			"localBasePath": "resources",
+			"remoteExtPath": "UniversalLanguageSelector/resources"
+		},
 		"jquery.uls": {
 			"targets": [ "desktop", "mobile" ],
 			"scripts": [
