@@ -15,13 +15,15 @@
 			"Jack who built the house",
 			"Mouse21",
 			"Ole Yves",
-			"Stjn"
+			"Stjn",
+			"Vlad5250"
 		]
 	},
 	"uls-desc": "Даёт пользователю несколько способов выбрать язык и произвести установки языка",
 	"uls-plang-title-languages": "Языки",
 	"ext-uls-select-language-settings-icon-tooltip": "Установки языка",
 	"ext-uls-undo-language-tooltip-text": "Предыдущий язык: $1",
+	"ext-uls-undo-language-tooltip-text-local": "Язык изменён для этой вики. Проверьте ваши [[Special:GlobalPreferences|глобальные настройки]], чтобы изменить язык на всех вики.",
 	"ext-uls-language-settings-preferences-link": "Дополнительные установки языка",
 	"uls-betafeature-label": "Компактный список языковых ссылок",
 	"uls-betafeature-desc": "Показывает сокращённый вариант списка языков, включающий только наиболее актуальные для вас языки.",

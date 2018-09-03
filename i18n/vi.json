@@ -9,6 +9,7 @@
 	"uls-plang-title-languages": "Ngôn ngữ",
 	"ext-uls-select-language-settings-icon-tooltip": "Tùy chọn ngôn ngữ",
 	"ext-uls-undo-language-tooltip-text": "Đã đổi ngôn ngữ từ $1",
+	"ext-uls-undo-language-tooltip-text-local": "Ngôn ngữ wiki này đã thay đổi. Kiểm tra [[Special:GlobalPreferences|tùy chọn toàn cục]] để thay đổi ngôn ngữ tại tất cả các wiki.",
 	"ext-uls-language-settings-preferences-link": "Thêm tùy chọn ngôn ngữ",
 	"uls-betafeature-label": "Danh sách liên kết ngôn ngữ thu gọn",
 	"uls-betafeature-desc": "Thu gọn danh sách các liên kết giữa ngôn ngữ để chỉ hiển thị các ngôn ngữ mà bạn có thể muốn sử dụng.",
@@ -58,5 +59,6 @@
 	"ext-uls-compact-link-count": "$1 nữa",
 	"ext-uls-compact-link-info": "Tất cả các ngôn ngữ (lựa chọn sơ bộ từ các ngôn ngữ thường được chọn bởi bạn và người khác)",
 	"prefs-languages": "Ngôn ngữ",
-	"ext-uls-compact-language-links-preference": "[[$1|Danh sách ngôn ngữ ngắn gọn]] chỉ có các ngôn ngữ quan trọng đối với bạn"
+	"ext-uls-compact-language-links-preference": "[[$1|Danh sách ngôn ngữ ngắn gọn]] chỉ có các ngôn ngữ quan trọng đối với bạn",
+	"ext-uls-compact-no-results": "Trang này không có sẵn trong ngôn ngữ bạn đang tìm."
 }
