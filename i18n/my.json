@@ -1,14 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ninjastrikers"
+			"Ninjastrikers",
+			"Dr Lotus Black"
 		]
 	},
 	"uls-plang-title-languages": "ဘာသာစကားများ",
 	"ext-uls-select-language-settings-icon-tooltip": "ဘာသာစကား အပြင်အဆင်များ",
 	"ext-uls-undo-language-tooltip-text": "$1 မှ ဘာသာစကား ပြောင်းလဲခဲ့သည်",
+	"ext-uls-undo-language-tooltip-text-local": "ဤဝီကီအတွက် ဘာသာစကား ပြောင်းလဲသွားပါသည်။ ဝီကီအားလုံးအတွက် ဘာသာစကားပြောင်းလဲရန်  [[Special:GlobalPreferences|ဂလိုဘယ် ရွေးချယ်စရာများ]]ကို စစ်ဆေးပါ။",
 	"ext-uls-language-settings-preferences-link": "နောက်ထပ် ဘာသာစကား အပြင်အဆင်များ",
 	"uls-betafeature-label": "ချုံ့ထားသော ဘာသာစကားလင့်ခ်များ",
+	"uls-betafeature-desc": "သင်နှင့်ပို၍ဆက်စပ်မှုရှိသာ ဘာသာစကားနှင့် ဘာသာစကားစာရင်း၏ အတိုကောက်ဗားရှင်းကို ဖော်ပြပါ။",
 	"ext-uls-display-settings-title": "ပြသမှု အပြင်အဆင်များ",
 	"ext-uls-display-settings-language-tab": "ဘာသာစကား",
 	"ext-uls-display-settings-fonts-tab": "ဖောင့်များ",
@@ -38,10 +41,18 @@
 	"ext-uls-input-settings-ui-language": "ရေးသားရန်အတွက် အသုံးပြုသော ဘာသာစကား",
 	"ext-uls-back-to-input-settings": "ထည့်သွင်းမှု အပြင်အဆင်များဆီသို့ ပြန်သွားရန်",
 	"ext-uls-ime-help": "မည်သို့ အသုံးပြုမည်နည်း",
+	"ext-uls-disable-input-method": "မိခင်ကီးဘုတ်ကို အသုံးပြုမည်",
 	"ext-uls-input-settings-more-languages-tooltip": "နောက်ထပ် ဘာသာစကားများ",
 	"jquery-ime-other-languages": "အခြားဘာသာစကားများ",
+	"jquery-ime-disable-text": "မိခင်ကီးဘုတ်ကို အသုံးပြုမည်",
 	"jquery-ime-help": "အကူအညီ",
+	"ext-uls-input-disable": "ထည့်သွင်းကိရိယာများ ပိတ်ရန်",
+	"ext-uls-input-enable": "ထည့်သွင်းကိရိယာများ ဖွင့်ရန်",
+	"ext-uls-input-disable-info": "ထည့်သွင်းကိရိယာများ ပိတ်ထားသည်",
+	"ext-uls-input-settings-noime": "ဤဘာသာစကားအတွက် ထည့်သွင်းနည်းလမ်းများ မရရှိနိုင်ပါ။",
+	"ext-uls-input-disable-notification": "ထည့်သွင်းကိရိယာများမှာ ပိတ်ထားပြီးဖြစ်သည်",
 	"ext-uls-input-disable-notification-undo": "နောက်ပြန် ပြန်ပြင်ရန်",
+	"ext-uls-input-disable-notification-info-personal": "ထည့်သွင်းကိရိယာများကို ဘာသာစကား အပြင်အဆင်များမှ မည်သည့်အချိန်တွင်မဆို ဖွင့်နိုင်ပါသည်။",
 	"ext-uls-language-settings-applying": "သတ်မှတ်နေသည်...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|နောက်ထပ် တစ်ခု|နောက်ထပ် $1 ခု}}",
 	"ext-uls-compact-link-info": "ဘာသာစကား အားလုံး (သင်နှင့် အခြားသူများ၏ ယေဘုယျ ရွေးချယ်ချက်များမှ အစောပိုင်း ရွေးချယ်မှုများ)",
