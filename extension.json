@@ -107,12 +107,38 @@
 	},
 	"callback": "UniversalLanguageSelectorHooks::setVersionConstant",
 	"ResourceModules": {
-		"ext.uls.languagenames": {
-			"class": "ResourceLoaderULSModule"
+		"ext.uls.common": {
+			"targets": [ "desktop", "mobile" ],
+			"scripts": "js/ext.uls.common.js",
+			"styles": "css/ext.uls.less",
+			"skinStyles": {
+				"monobook": "css/ext.uls-monobook.css",
+				"vector": "css/ext.uls-vector.less"
+			},
+			"dependencies": [
+				"jquery.uls.data",
+				"mediawiki.api",
+				"mediawiki.cookie",
+				"mediawiki.storage",
+				"mediawiki.user"
+			],
+			"localBasePath": "resources",
+			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
-		"ext.uls.messages": {
-			"class": "ResourceLoaderULSJsonMessageModule",
-			"dependencies": "ext.uls.i18n",
+		"ext.uls.compactlinks":  {
+			"scripts": "js/ext.uls.compactlinks.js",
+			"styles": "css/ext.uls.compactlinks.less",
+			"dependencies": [
+				"mediawiki.jqueryMsg",
+				"mediawiki.language",
+				"mediawiki.ui.button",
+				"ext.uls.init"
+			],
+			"messages": [
+				"ext-uls-compact-link-count",
+				"ext-uls-compact-link-info",
+				"ext-uls-compact-no-results"
+			],
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
@@ -120,6 +146,16 @@
 			"scripts": "js/ext.uls.geoclient.js",
 			"dependencies": [
 				"mediawiki.cookie"
+			],
+			"localBasePath": "resources",
+			"remoteExtPath": "UniversalLanguageSelector/resources"
+		},
+		"ext.uls.i18n": {
+			"targets": [ "desktop", "mobile" ],
+			"scripts": "js/ext.uls.i18n.js",
+			"dependencies": [
+				"jquery.i18n",
+				"mediawiki.util"
 			],
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
@@ -143,34 +179,6 @@
 		"ext.uls.init": {
 			"targets": [ "desktop" ],
 			"dependencies": [ "ext.uls.common" ]
-		},
-		"ext.uls.common": {
-			"targets": [ "desktop", "mobile" ],
-			"scripts": "js/ext.uls.common.js",
-			"styles": "css/ext.uls.less",
-			"skinStyles": {
-				"monobook": "css/ext.uls-monobook.css",
-				"vector": "css/ext.uls-vector.less"
-			},
-			"dependencies": [
-				"jquery.uls.data",
-				"mediawiki.api",
-				"mediawiki.cookie",
-				"mediawiki.storage",
-				"mediawiki.user"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
-		},
-		"ext.uls.i18n": {
-			"targets": [ "desktop", "mobile" ],
-			"scripts": "js/ext.uls.i18n.js",
-			"dependencies": [
-				"jquery.i18n",
-				"mediawiki.util"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.inputsettings": {
 			"scripts": "js/ext.uls.inputsettings.js",
@@ -205,6 +213,14 @@
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
+		"ext.uls.interlanguage": {
+			"styles": "css/ext.uls.interlanguage.less",
+			"localBasePath": "resources",
+			"remoteExtPath": "UniversalLanguageSelector/resources"
+		},
+		"ext.uls.languagenames": {
+			"class": "ResourceLoaderULSModule"
+		},
 		"ext.uls.languagesettings": {
 			"scripts": "js/ext.uls.languagesettings.js",
 			"styles": "css/ext.uls.languagesettings.less",
@@ -215,6 +231,39 @@
 				"mediawiki.ui.button"
 			],
 			"localBasePath": "resources",
+			"remoteExtPath": "UniversalLanguageSelector/resources"
+		},
+		"ext.uls.mediawiki": {
+			"targets": [ "desktop", "mobile" ],
+			"scripts": "js/ext.uls.mediawiki.js",
+			"dependencies": [
+				"ext.uls.common",
+				"ext.uls.languagenames",
+				"ext.uls.messages",
+				"jquery.uls",
+				"jquery.uls.grid",
+				"mediawiki.util"
+			],
+			"localBasePath": "resources",
+			"remoteExtPath": "UniversalLanguageSelector/resources"
+		},
+		"ext.uls.messages": {
+			"class": "ResourceLoaderULSJsonMessageModule",
+			"dependencies": "ext.uls.i18n",
+			"localBasePath": "resources",
+			"remoteExtPath": "UniversalLanguageSelector/resources"
+		},
+		"ext.uls.preferencespage": {
+			"styles": "css/ext.uls.preferencespage.less",
+			"localBasePath": "resources",
+			"remoteExtPath": "UniversalLanguageSelector/resources"
+		},
+		"ext.uls.pt": {
+			"styles": "css/ext.uls.pt.less",
+			"localBasePath": "resources",
+			"skinStyles": {
+				"monobook": "css/ext.uls.pt-monobook.less"
+			},
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.webfonts": {
@@ -235,15 +284,6 @@
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
-		"ext.uls.webfonts.repository": {
-			"scripts": "js/ext.uls.webfonts.repository.js",
-			"targets": [
-				"desktop",
-				"mobile"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
-		},
 		"ext.uls.webfonts.mobile": {
 			"scripts": "js/ext.uls.webfonts.mobile.js",
 			"targets": [
@@ -256,42 +296,20 @@
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
+		"ext.uls.webfonts.repository": {
+			"scripts": "js/ext.uls.webfonts.repository.js",
+			"targets": [
+				"desktop",
+				"mobile"
+			],
+			"localBasePath": "resources",
+			"remoteExtPath": "UniversalLanguageSelector/resources"
+		},
 		"jquery.ime": {
 			"scripts": "jquery.ime/jquery.ime.js",
 			"styles": "jquery.ime/css/jquery.ime.css",
 			"localBasePath": "lib",
 			"remoteExtPath": "UniversalLanguageSelector/lib"
-		},
-		"ext.uls.mediawiki": {
-			"targets": [ "desktop", "mobile" ],
-			"scripts": "js/ext.uls.mediawiki.js",
-			"dependencies": [
-				"ext.uls.common",
-				"ext.uls.languagenames",
-				"ext.uls.messages",
-				"jquery.uls",
-				"jquery.uls.grid",
-				"mediawiki.util"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
-		},
-		"ext.uls.compactlinks":  {
-			"scripts": "js/ext.uls.compactlinks.js",
-			"styles": "css/ext.uls.compactlinks.less",
-			"dependencies": [
-				"mediawiki.jqueryMsg",
-				"mediawiki.language",
-				"mediawiki.ui.button",
-				"ext.uls.init"
-			],
-			"messages": [
-				"ext-uls-compact-link-count",
-				"ext-uls-compact-link-info",
-				"ext-uls-compact-no-results"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"jquery.uls": {
 			"targets": [ "desktop", "mobile" ],
@@ -338,24 +356,6 @@
 			],
 			"localBasePath": "lib",
 			"remoteExtPath": "UniversalLanguageSelector/lib"
-		},
-		"ext.uls.pt": {
-			"styles": "css/ext.uls.pt.less",
-			"localBasePath": "resources",
-			"skinStyles": {
-				"monobook": "css/ext.uls.pt-monobook.less"
-			},
-			"remoteExtPath": "UniversalLanguageSelector/resources"
-		},
-		"ext.uls.interlanguage": {
-			"styles": "css/ext.uls.interlanguage.less",
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
-		},
-		"ext.uls.preferencespage": {
-			"styles": "css/ext.uls.preferencespage.less",
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"rangy.core": {
 			"scripts": "rangy/rangy-core.js",
