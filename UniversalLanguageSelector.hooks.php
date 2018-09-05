@@ -261,25 +261,23 @@ class UniversalLanguageSelectorHooks {
 			return;
 		}
 
-		// Logged out users - less simple
-		if ( !$wgULSAnonCanChangeLanguage ) {
-			return;
-		}
+		// If using cookie storage for anons is OK, read/write from that
+		if ( $wgULSAnonCanChangeLanguage ) {
+			// Language change
+			if ( Language::isSupportedLanguage( $languageToSave ) ) {
+				$request->response()->setCookie( 'language', $languageToSave );
+				$code = $languageToSave;
 
-		// Language change
-		if ( Language::isSupportedLanguage( $languageToSave ) ) {
-			$request->response()->setCookie( 'language', $languageToSave );
-			$code = $languageToSave;
+				return;
+			}
 
-			return;
-		}
+			// Try cookie
+			$languageToUse = $request->getCookie( 'language', null, '' );
+			if ( Language::isSupportedLanguage( $languageToUse ) ) {
+				$code = $languageToUse;
 
-		// Try cookie
-		$languageToUse = $request->getCookie( 'language', null, '' );
-		if ( Language::isSupportedLanguage( $languageToUse ) ) {
-			$code = $languageToUse;
-
-			return;
+				return;
+			}
 		}
 
 		// As last resort, try Accept-Language headers if allowed

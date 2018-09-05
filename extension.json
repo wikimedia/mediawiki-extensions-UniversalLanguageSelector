@@ -67,7 +67,7 @@
 		"ULSEnableAnon": true,
 		"@ULSAnonCanChangeLanguage": "Allow anonymous users to change language with cookie and setlang query parameter. Do not use if you are caching anonymous page views without taking cookies into account. Does not have any effect if either of $wgULSEnable or $wgULSEnableAnon is set to false. @since 2013.04",
 		"ULSAnonCanChangeLanguage": true,
-		"@ULSLanguageDetection": "Try to use preferred interface language for anonymous users. Do not use if you are caching anonymous page views without taking Accept-Language into account. Does not have any effect if any of $wgULSEnable, $wgULSEnableAnon or $wgULSAnonCanChangeLanguage is set to false.",
+		"@ULSLanguageDetection": "Try to use preferred interface language for anonymous users. Do not use if you are caching anonymous page views without taking Accept-Language into account. Does not have any effect if any of $wgULSEnable, or $wgULSEnableAnon is set to false.",
 		"ULSLanguageDetection": true,
 		"@ULSIMEEnabled": "Enable the input methods feature for all users by default. Can be controlled by the user.",
 		"ULSIMEEnabled": true,
