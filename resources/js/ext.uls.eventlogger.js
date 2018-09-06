@@ -27,23 +27,18 @@
 	 * @since 2013.08
 	 */
 	function ULSEventLogger() {
-		this.logEventQueue = $.Callbacks( 'memory once' );
 		this.init();
 		this.listen();
 	}
 
 	ULSEventLogger.prototype = {
 		init: function () {
-			var eventLogger = this;
-
 			mw.eventLog.setDefaults( 'UniversalLanguageSelector', {
 				version: 1,
 				token: mw.user.id(),
 				contentLanguage: mw.config.get( 'wgContentLanguage' ),
 				interfaceLanguage: mw.config.get( 'wgUserLanguage' )
 			} );
-
-			eventLogger.logEventQueue.fire();
 		},
 
 		/**
@@ -62,11 +57,9 @@
 
 			schema = schema || 'UniversalLanguageSelector';
 
-			this.logEventQueue.add( function () {
-				mw.eventLog.logEvent( schema, event )
-					.done( deferred.resolve )
-					.fail( deferred.reject );
-			} );
+			mw.eventLog.logEvent( schema, event )
+				.done( deferred.resolve )
+				.fail( deferred.reject );
 
 			return deferred.promise();
 		},
