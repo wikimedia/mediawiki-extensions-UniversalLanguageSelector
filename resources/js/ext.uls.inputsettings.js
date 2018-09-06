@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function ( $, mw ) {
+( function () {
 	'use strict';
 
 	var template = '<div class="uls-input-settings">' +
@@ -591,4 +591,4 @@
 		input: InputSettings
 	} );
 
-}( jQuery, mediaWiki ) );
+}() );

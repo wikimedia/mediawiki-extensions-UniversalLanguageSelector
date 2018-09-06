@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function ( $, mw ) {
+( function () {
 	'use strict';
 
 	var ulsPreferences;
@@ -138,4 +138,5 @@
 			mw.loader.using( 'ext.uls.webfonts.fonts', mw.webfonts.setup );
 		}
 	} );
-}( jQuery, mediaWiki ) );
+
+}() );

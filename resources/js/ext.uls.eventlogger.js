@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function ( $, mw ) {
+( function () {
 	'use strict';
 
 	/**
@@ -245,4 +245,4 @@
 
 	mw.uls = mw.uls || {};
 	mw.uls.eventlogger = new ULSEventLogger();
-}( jQuery, mediaWiki ) );
+}() );

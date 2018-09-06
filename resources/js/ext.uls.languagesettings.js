@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function ( $, mw ) {
+( function () {
 	'use strict';
 
 	var closeRow, settingsMenu, settingsPanel, windowTemplate, panelsRow, buttonsRow;
@@ -314,4 +314,5 @@
 	};
 
 	$.fn.languagesettings.Constructor = LanguageSettings;
-}( jQuery, mediaWiki ) );
+
+}() );

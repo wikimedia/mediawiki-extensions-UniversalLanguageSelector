@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function ( $, mw ) {
+( function () {
 	'use strict';
 
 	var template = '<div class="uls-display-settings">' +
@@ -733,4 +733,4 @@
 	$.fn.languagesettings.modules = $.extend( $.fn.languagesettings.modules, {
 		display: DisplaySettings
 	} );
-}( jQuery, mediaWiki ) );
+}() );

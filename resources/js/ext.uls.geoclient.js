@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function ( $, mw ) {
+( function () {
 	'use strict';
 
 	var geo,
@@ -44,4 +44,5 @@
 		window.Geo = data;
 		mw.cookie.set( 'ULSGeo', JSON.stringify( data ), cacheAge );
 	} );
-}( jQuery, mediaWiki ) );
+
+}() );

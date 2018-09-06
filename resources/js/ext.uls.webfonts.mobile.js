@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function ( $, mw ) {
+( function () {
 	'use strict';
 
 	var mediawikiFontRepository;
@@ -47,4 +47,5 @@
 
 		$( 'body' ).webfonts();
 	} );
-}( jQuery, mediaWiki ) );
+
+}() );

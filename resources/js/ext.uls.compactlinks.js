@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function ( $, mw ) {
+( function () {
 	'use strict';
 
 	var DEFAULT_LIST_SIZE = 9;
@@ -527,4 +527,4 @@
 		$( createCompactList );
 	}
 
-}( jQuery, mediaWiki ) );
+}() );

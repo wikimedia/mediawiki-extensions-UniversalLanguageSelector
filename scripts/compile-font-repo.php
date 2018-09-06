@@ -34,10 +34,10 @@ class CompileFontRepo extends Maintenance {
 		$json = FormatJson::encode( $list, "\t" );
 		$js = <<<JAVASCRIPT
 // Do not edit! This file is generated from data/fontrepo by scripts/compile-font-repo.php
-( function ( $ ) {
+( function () {
 	$.webfonts = $.webfonts || {};
 	$.webfonts.repository = $json;
-}( jQuery ) );
+}() );
 
 JAVASCRIPT;
 		file_put_contents( "$base/resources/js/ext.uls.webfonts.repository.js", $js );

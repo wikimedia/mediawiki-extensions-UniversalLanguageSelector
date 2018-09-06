@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function ( $, mw ) {
+( function () {
 	'use strict';
 
 	/**
@@ -448,4 +448,5 @@
 	} else {
 		$( init );
 	}
-}( jQuery, mediaWiki ) );
+
+}() );

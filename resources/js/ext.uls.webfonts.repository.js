@@ -1,5 +1,5 @@
 // Do not edit! This file is generated from data/fontrepo by scripts/compile-font-repo.php
-( function ( $ ) {
+( function () {
 	$.webfonts = $.webfonts || {};
 	$.webfonts.repository = {
 	"base": "../data/fontrepo/fonts/",
@@ -761,4 +761,4 @@
 		}
 	}
 };
-}( jQuery ) );
+}() );

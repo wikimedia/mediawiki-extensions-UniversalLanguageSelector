@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function ( $, mw ) {
+( function () {
 	'use strict';
 
 	/*
@@ -211,4 +211,4 @@
 		return unique;
 	};
 
-}( jQuery, mediaWiki ) );
+}() );

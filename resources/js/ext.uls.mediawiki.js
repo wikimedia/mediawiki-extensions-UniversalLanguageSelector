@@ -17,7 +17,7 @@
  * @licence MIT License
  */
 
-( function ( $, mw ) {
+( function () {
 	'use strict';
 
 	// MediaWiki overrides for ULS defaults
@@ -30,4 +30,5 @@
 	$.fn.uls.Constructor.prototype.render = function () {
 		this.$languageFilter.addClass( 'noime' );
 	};
-}( jQuery, mediaWiki ) );
+
+}() );
