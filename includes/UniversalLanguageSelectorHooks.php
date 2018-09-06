@@ -461,46 +461,4 @@ class UniversalLanguageSelectorHooks {
 			$context->getOutput()->addModules( 'ext.uls.webfonts.mobile' );
 		}
 	}
-
-	/**
-	 * Conditionally register modules.
-	 *
-	 * @param ResourceLoader $resourceLoader
-	 */
-	public static function onResourceLoaderRegisterModules( ResourceLoader $resourceLoader ) {
-		global $wgVersion;
-
-		$modules = [];
-		$modules['ext.uls.displaysettings'] = [
-			'scripts' => 'js/ext.uls.displaysettings.js',
-			'styles' => 'css/ext.uls.displaysettings.less',
-			'dependencies' => [
-				'ext.uls.languagesettings',
-				'ext.uls.mediawiki',
-				'ext.uls.webfonts',
-				'mediawiki.api',
-				'mediawiki.ui.checkbox',
-				'mediawiki.ui.button',
-				'mediawiki.user'
-			],
-			'localBasePath' => __DIR__ . '/../resources',
-			'remoteExtPath' => 'UniversalLanguageSelector/resources'
-		];
-		$modules['ext.uls.preferences'] = [
-			'scripts' => 'js/ext.uls.preferences.js',
-			'dependencies' => [
-				'mediawiki.user',
-				'mediawiki.api'
-			],
-			'localBasePath' => __DIR__ . '/../resources',
-			'remoteExtPath' => 'UniversalLanguageSelector/resources'
-		];
-		if ( version_compare( $wgVersion, '1.32', '<' ) ) {
-			// Support: MediaWiki 1.31 and earlier (T200168)
-			$modules['ext.uls.displaysettings']['dependencies'][] = 'mediawiki.api.parse';
-			$modules['ext.uls.preferences']['dependencies'][] = 'mediawiki.api.options';
-		}
-
-		$resourceLoader->register( $modules );
-	}
 }
