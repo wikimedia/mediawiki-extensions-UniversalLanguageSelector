@@ -13,5 +13,10 @@
     "grunt-svgmin": "5.0.0",
     "stylelint": "8.2.0",
     "stylelint-config-wikimedia": "0.4.2"
-  }
+  },
+  "eslintIgnore": [
+    "lib/**",
+    "resources/js/ext.uls.webfonts.repository.js",
+    "vendor/**"
+  ]
 }

@@ -10,13 +10,7 @@ module.exports = function ( grunt ) {
 
 	grunt.initConfig( {
 		eslint: {
-			all: [
-				'**/*.js',
-				'!lib/**',
-				'!node_modules/**',
-				'!vendor/**',
-				'!resources/js/ext.uls.webfonts.repository.js'
-			]
+			all: '.'
 		},
 		stylelint: {
 			options: {
