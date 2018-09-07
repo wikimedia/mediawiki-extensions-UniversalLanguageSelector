@@ -23,16 +23,25 @@
 	var DEFAULT_LIST_SIZE = 9;
 
 	/**
-	 * Concatenate two arrays, remove duplicates
-	 *
-	 * @param {Array} a First array
-	 * @param {Array} b Second array
-	 * @return {Array} Resulting array
+	 * @param {Array} target
+	 * @param {Array} source
+	 * @param {string|string[]|undefined} items Language code, or list of language codes
 	 */
-	function concatWithoutDuplicates( a, b ) {
-		return a.concat( b.filter( function ( item ) {
-			return a.indexOf( item ) < 0;
-		} ) );
+	function addMatchWithoutDuplicate( target, source, items ) {
+		var i;
+		if ( items === undefined ) {
+			return;
+		}
+		items = !Array.isArray( items ) ? [ items ] : items;
+		for ( i = 0; i < items.length; i++ ) {
+			if (
+				// Only add if unique and matches source
+				target.indexOf( items[ i ] ) === -1 &&
+				source.indexOf( items[ i ] ) !== -1
+			) {
+				target.push( items[ i ] );
+			}
+		}
 	}
 
 	/**
@@ -50,98 +59,85 @@
 	}
 
 	/**
-	 * Filter the language list by previous languages.
-	 * Not all previous languages will be present in interlanguage links,
-	 * so we are filtering them.
+	 * Get user-defined assistant languages on wikis with Translate extension.
 	 *
-	 * @param {string[]} languages Language codes
-	 * @return {string[]} List of language codes supported by the article
+	 * Where available, they're languages deemed useful by the user.
+	 *
+	 * @return {string[]|undefined} Language codes
 	 */
-	function filterByPreviousLanguages( languages ) {
-		var previousLanguages = mw.uls.getPreviousLanguages();
+	function getAssistantLanguages() {
+		var assistantLanguages = mw.user.options.get( 'translate-editlangs' );
+		if ( !assistantLanguages || assistantLanguages === 'default' ) {
+			return;
+		}
 
-		return previousLanguages.filter( function ( language ) {
-			return languages.indexOf( language ) >= 0;
-		} );
+		return assistantLanguages.split( /,\s*/ );
 	}
 
 	/**
-	 * Filter by languages that appear in the Babel box on the user page.
+	 * Get previously selected languages.
 	 *
-	 * @param {string[]} languages Language codes
-	 * @return {string[]} List of language codes supported by the article
+	 * Previous languages are a good suggestion because the user has
+	 * explicitly chosen them in the past.
+	 *
+	 * @return {string[]} Language codes
 	 */
-	function filterByBabelLanguages( languages ) {
-		var babelLanguages = mw.config.get( 'wgULSBabelLanguages' ) || [];
-
-		return babelLanguages.filter( function ( language ) {
-			return languages.indexOf( language ) >= 0;
-		} );
+	function getPreviousLanguages() {
+		return mw.uls.getPreviousLanguages();
 	}
 
 	/**
-	 * Filter the language list by site picks.
+	 * Get languages from the Babel box on the user's user page.
 	 *
-	 * @param {string[]} languages Language codes
-	 * @return {string[]} List of language codes supported by the article
+	 * @return {string[]|undefined} Language codes
 	 */
-	function filterBySitePicks( languages ) {
-		var picks = mw.config.get( 'wgULSCompactLinksPrepend' ) || [];
-		return picks.filter( function ( language ) {
-			return languages.indexOf( language ) >= 0;
-		} );
+	function getBabelLanguages() {
+		return mw.config.get( 'wgULSBabelLanguages' );
 	}
 
 	/**
-	 * Filter the language list by common languages.
-	 * Common languages are the most probable languages predicted by ULS.
+	 * Get site-specific highlighted languags. Mostly used on Wikimedia sites.
 	 *
-	 * @param {string[]} languages Language codes
-	 * @return {string[]} List of language codes supported by the article
+	 * @return {string[]|undefined} Language codes
 	 */
-	function filterByCommonLanguages( languages ) {
-		var commonLanguages = mw.uls.getFrequentLanguageList();
-
-		return commonLanguages.filter( function ( language ) {
-			return languages.indexOf( language ) >= 0;
-		} );
+	function getSitePicks() {
+		return mw.config.get( 'wgULSCompactLinksPrepend' );
 	}
 
 	/**
-	 * Filter the language list by globally common languages, i.e.
-	 * this list is not user specific.
+	 * Get probable languages predicted by ULS.
 	 *
-	 * @param {string[]} languages Language codes
-	 * @return {string[]} List of language codes supported by the article
+	 * @return {string[]} Language codes
 	 */
-	function getExtraCommonLanguages( languages ) {
-		var commonLanguages = [
+	function getCommonLanguages() {
+		return mw.uls.getFrequentLanguageList();
+	}
+
+	/**
+	 * Get globally common languages.
+	 *
+	 * These are not user-specific. This helps to avoid biasing the compact list
+	 * to language codes that sort to the beginning of the alphabet in the
+	 * final stage.
+	 *
+	 * @return {string[]} Language codes
+	 */
+	function getExtraCommonLanguages() {
+		return [
 			'zh', 'en', 'hi', 'ur', 'es', 'ar', 'ru', 'id', 'ms', 'pt',
 			'fr', 'de', 'bn', 'ja', 'pnb', 'pa', 'jv', 'te', 'ta', 'ko', 'mr', 'tr', 'vi',
 			'it', 'fa', 'sv', 'nl', 'pl'
 		];
-
-		return commonLanguages.filter( function ( language ) {
-			return languages.indexOf( language ) >= 0;
-		} );
 	}
 
 	/**
-	 * Filter the language list by Translate's assistant languages.
-	 * Where available, they're languages deemed useful by the user.
+	 * The final strategy is the original interlanguage list.
 	 *
 	 * @param {string[]} languages Language codes
-	 * @return {string[]} List of language codes supported by the article
+	 * @return {string[]} Language codes
 	 */
-	function filterByAssistantLanguages( languages ) {
-		var assistantLanguages = mw.user.options.get( 'translate-editlangs' );
-		if ( !assistantLanguages || assistantLanguages === 'default' ) {
-			return [];
-		}
-
-		return assistantLanguages.split( /,\s*/ ).filter( function ( language ) {
-			return languages.indexOf( language ) >= 0;
-		} );
+	function getFinalFallback( languages ) {
+		return languages;
 	}
 
 	/**
@@ -348,36 +344,29 @@
 
 	/**
 	 * Get compacting strategies.
+	 *
 	 * The items will be executed in the given order till the required
-	 * compact size is achieved. Each item should be an array and should
-	 * take the whole language list as argument.
+	 * compact size is achieved. Each strategy is given two arrays: `candidates`
+	 * and `languages`. The candidates array is a list the callback should add to.
+	 * The languages list contains language codes actually available for the current
+	 * page, the callback may use this to optimise their search for candidates,
+	 * although compact() will filter out irrelevant candidates so strategies should
+	 * only use this if it helps narrow their search for candidates, avoid needless
+	 * filtering that compact() will do already.
 	 *
 	 * @return {Function[]} Array of compacting functions
 	 */
 	CompactInterlanguageList.prototype.getCompactStrategies = function () {
 		return [
-			// Add user-defined assistant languages on wikis with Translate extension.
-			filterByAssistantLanguages,
-			// Add previously selected languages.
-			// Previous languages are always the better suggestion
-			// because the user has explicitly chosen them.
-			filterByPreviousLanguages,
-			// User's languages in the Babel box on the user page
-			filterByBabelLanguages,
-			// Site specific highlights, mostly used on Wikimedia sites
-			filterBySitePicks,
-			// Add all common languages to the beginning of array.
-			// These are the most probable languages predicted by ULS.
-			this.getCommonLanguages,
-			// Add languages that are present in the article content.
-			this.filterByLangsInText,
-			// Add languages in which there are featured articles.
-			this.filterByBadges,
-			// Some global fallbacks to avoid showing languages in the beginning of the alphabet
+			getAssistantLanguages,
+			getPreviousLanguages,
+			getBabelLanguages,
+			getSitePicks,
+			getCommonLanguages,
+			this.getLangsInText,
+			this.getLangsWithBadges,
 			getExtraCommonLanguages,
-			// Finally add the whole languages array too.
-			// We will remove duplicates and cut down to required size.
-			this.finalFallback
+			getFinalFallback
 		];
 	};
 
@@ -388,14 +377,15 @@
 	 * @return {Array} Compacted array
 	 */
 	CompactInterlanguageList.prototype.compact = function ( languages ) {
-		var i, strategies,
+		var i, strategies, found,
 			compactLanguages = [];
 
 		strategies = this.getCompactStrategies();
 		for ( i = 0; i < strategies.length; i++ ) {
-			compactLanguages = concatWithoutDuplicates(
-				compactLanguages, strategies[ i ].call( this, languages )
-			);
+			found = strategies[ i ]( languages );
+			// Add language codes from 'found' that are also in 'languages'
+			// to 'compactLanguages' (if not already in there).
+			addMatchWithoutDuplicate( compactLanguages, languages, found );
 			if ( compactLanguages.length >= this.compactSize ) {
 				// We have more than enough items. Stop here.
 				compactLanguages = compactLanguages.slice( 0, this.compactSize );
@@ -407,22 +397,21 @@
 	};
 
 	/**
-	 * Filter the language list by languages that appear in
-	 * the page's text. This is done by looking for HTML elements with
-	 * a "lang" attribute—they are likely to appear in a foreign name,
-	 * for example.
+	 * Get language codes that are used in the page's text content.
+	 *
+	 * This is done by looking for HTML elements with a "lang" attribute—they
+	 * are likely to appear in a foreign name, for example.
 	 *
 	 * The reader doesn't necessarily know this language, but it
 	 * appears relevant to the page.
 	 *
-	 * @param {string[]} languages Language codes
-	 * @return {string[]} List of language codes supported by the article
+	 * @return {string[]} Language codes
 	 */
-	CompactInterlanguageList.prototype.filterByLangsInText = function ( languages ) {
+	CompactInterlanguageList.prototype.getLangsInText = function () {
 		var languagesInText = [];
 		$.each( document.querySelectorAll( '#mw-content-text [lang]' ), function ( i, el ) {
 			var lang = convertMediaWikiLanguageCodeToULS( el.lang );
-			if ( languagesInText.indexOf( lang ) === -1 && languages.indexOf( lang ) >= 0 ) {
+			if ( languagesInText.indexOf( lang ) === -1 ) {
 				languagesInText.push( lang );
 			}
 		} );
@@ -431,16 +420,15 @@
 	};
 
 	/**
-	 * Filter the language list by languages the page in which
-	 * has any kind of a badge, such as "featured article".
-	 * The "badge-*" classes are added by Wikibase.
+	 * Get languages in which a related page has any kind of a badge,
+	 * such as "featured article". The "badge-*" classes are added by Wikibase.
 	 *
 	 * The reader doesn't necessarily know this language, but it
 	 * appears relevant to the page.
 	 *
-	 * @return {Array} List of language codes in which there are articles with badges
+	 * @return {string[]} Language codes
 	 */
-	CompactInterlanguageList.prototype.filterByBadges = function () {
+	CompactInterlanguageList.prototype.getLangsWithBadges = function () {
 		return $.map(
 			document.querySelectorAll( '#p-lang [class*="badge"]' ),
 			function ( el ) {
@@ -480,14 +468,13 @@
 	 */
 	CompactInterlanguageList.prototype.getCommonLanguages = function ( languages ) {
 		if ( this.commonInterlanguageList === null ) {
-			this.commonInterlanguageList = filterByCommonLanguages( languages );
+			this.commonInterlanguageList = mw.uls.getFrequentLanguageList()
+				.filter( function ( language ) {
+					return languages.indexOf( language ) >= 0;
+				} );
 		}
 
 		return this.commonInterlanguageList;
-	};
-
-	CompactInterlanguageList.prototype.finalFallback = function ( languages ) {
-		return languages;
 	};
 
 	/**
@@ -524,9 +511,9 @@
 	 * Summary:
 	 * - DOM Queries: 5 + 1N
 	 *   * createCompactList (1 querySelector)
-	 *   * filterByBadges (1N querySelector, 1 querySelectorAll)
+	 *   * getLangsWithBadges (1N querySelector, 1 querySelectorAll)
 	 *   * getInterlanguageList (1 querySelectorAll)
-	 *   * filterByLangsInText (1 querySelectorAll)
+	 *   * getLangsInText (1 querySelectorAll)
 	 *   * hideOriginal (1 querySelectorAll)
 	 * - DOM Writes: 1 + 2N
 	 *   * addTrigger (1 appendChild)
