@@ -210,12 +210,14 @@
 	 * @param {jQuery} $trigger Element to use as trigger.
 	 */
 	CompactInterlanguageList.prototype.createSelector = function ( $trigger ) {
-		var languages = Object.keys( this.interlanguageList ),
+		var languages,
 			self = this,
 			ulsLanguageList = {};
 
-		languages.forEach( function ( languageCode ) {
-			ulsLanguageList[ languageCode ] = this.interlanguageList[ languageCode ].autonym;
+		languages = $.map( this.interlanguageList, function ( language, languageCode ) {
+			ulsLanguageList[ languageCode ] = language.autonym;
+
+			return languageCode;
 		} );
 
 		// Attach ULS to the trigger
@@ -327,7 +329,9 @@
 		var language, languages, compactLanguages, i,
 			compactedList = {};
 
-		languages = Object.keys( this.interlanguageList );
+		languages = $.map( this.interlanguageList, function ( item, languageCode ) {
+			return languageCode;
+		} );
 
 		compactLanguages = this.compact( languages );
 

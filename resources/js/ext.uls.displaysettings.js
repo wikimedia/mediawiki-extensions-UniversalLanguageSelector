@@ -456,7 +456,7 @@
 
 			// Get the saved font using the fontSelector defined in mw.webfonts.setup
 			savedFont = this.$webfonts.getFont( language );
-			fonts.forEach( function ( font ) {
+			$.each( fonts, function ( key, font ) {
 				var $fontOption;
 
 				if ( font !== 'system' ) {
