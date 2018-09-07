@@ -59,8 +59,8 @@
 		"compact-language-links": true
 	},
 	"config": {
-		"@ULSGeoService": "ULS can use a geolocation service to suggest languages based on the country the user is vising from. If set to true, it will query a free geoip service. Setting this to false will prevent built-in geolocation from being used. You can provide your own geolocation by setting window.Geo to an object which has key \"country_code\" or \"country\".",
-		"ULSGeoService": true,
+		"@ULSGeoService": "ULS can use a geolocation service to suggest languages based on the country the user is vising from. If set to an URL it will query that service which must return an object which has key \"country_code\" or \"country\". For example https://api.ipstack.com/check?access_key=yourkey&fields=country_code. Setting this to false will prevent built-in geolocation from being used. You can also provide your own geolocation by assigning such object to window.Geo.",
+		"ULSGeoService": false,
 		"@ULSEnable": "Enable language selection, compact language links, input methods and webfonts for everyone, unless the behavior is overridden by the configuration variables below. Even if false the classes and resource loader modules are registered for the use of other extensions. Language changing via cookie or setlang query parameter is not possible.",
 		"ULSEnable": true,
 		"@ULSEnableAnon": "Equivalent to $wgULSEnable for anonymous users only. Does not have any effect if $wgULSEnable is false.",

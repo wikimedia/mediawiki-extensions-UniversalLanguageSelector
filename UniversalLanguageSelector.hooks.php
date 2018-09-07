@@ -125,7 +125,7 @@ class UniversalLanguageSelectorHooks {
 			$out->addModules( 'ext.uls.compactlinks' );
 		}
 
-		if ( $wgULSGeoService ) {
+		if ( is_string( $wgULSGeoService ) ) {
 			$out->addModules( 'ext.uls.geoclient' );
 		}
 
@@ -309,10 +309,7 @@ class UniversalLanguageSelectorHooks {
 
 		// Place constant stuff here (not depending on request context)
 
-		if ( $wgULSGeoService === true ) {
-			$wgULSGeoService = 'https://freegeoip.net/json/?callback=?';
-		}
-		if ( $wgULSGeoService ) {
+		if ( is_string( $wgULSGeoService ) ) {
 			$vars['wgULSGeoService'] = $wgULSGeoService;
 		}
 
