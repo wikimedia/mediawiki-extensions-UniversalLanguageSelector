@@ -200,8 +200,7 @@
 				"uls-plang-title-languages",
 				"ext-uls-select-language-settings-icon-tooltip",
 				"ext-uls-undo-language-tooltip-text",
-				"ext-uls-undo-language-tooltip-text-local",
-				"ext-uls-language-settings-preferences-link"
+				"ext-uls-undo-language-tooltip-text-local"
 			],
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
@@ -350,6 +349,11 @@
 		},
 		"ext.uls.interlanguage": {
 			"styles": "css/ext.uls.interlanguage.less",
+			"localBasePath": "resources",
+			"remoteExtPath": "UniversalLanguageSelector/resources"
+		},
+		"ext.uls.preferencespage": {
+			"styles": "css/ext.uls.preferencespage.less",
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},

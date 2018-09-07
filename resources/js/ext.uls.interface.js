@@ -382,7 +382,6 @@
 
 		// Bind language settings to preferences page link
 		$( '#uls-preferences-link' )
-			.text( mw.msg( 'ext-uls-language-settings-preferences-link' ) )
 			.click( function () {
 				$ulsTrigger.trigger( 'click', {
 					source: 'preferences'

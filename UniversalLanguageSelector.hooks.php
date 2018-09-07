@@ -139,6 +139,10 @@ class UniversalLanguageSelectorHooks {
 		} else {
 			$out->addModuleStyles( 'ext.uls.interlanguage' );
 		}
+
+		if ( $out->getTitle()->isSpecial( 'Preferences' ) ) {
+			$out->addModuleStyles( 'ext.uls.preferencespage' );
+		}
 	}
 
 	/**
@@ -381,9 +385,10 @@ class UniversalLanguageSelectorHooks {
 			'type' => 'info',
 			'raw' => true,
 			'section' => 'personal/i18n',
-			'default' => "<a id='uls-preferences-link' href='#'></a>",
-			// The above link will have text set from javascript. Just to avoid
-			// showing the link when javascript is disabled.
+			// We use this class to hide this from no-JS users
+			'cssclass' => 'uls-preferences-link-wrapper',
+			'default' => "<a id='uls-preferences-link' href='#'>" .
+				wfMessage( 'ext-uls-language-settings-preferences-link' )->escaped() . "</a>",
 		];
 
 		if ( $wgULSCompactLanguageLinksBetaFeature === false ) {
