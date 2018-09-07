@@ -72,7 +72,7 @@
 	 * @return {string[]} List of language codes supported by the article
 	 */
 	function filterByBabelLanguages( languages ) {
-		var babelLanguages = mw.config.get( 'wgULSBabelLanguages', [] );
+		var babelLanguages = mw.config.get( 'wgULSBabelLanguages' ) || [];
 
 		return babelLanguages.filter( function ( language ) {
 			return languages.indexOf( language ) >= 0;
@@ -86,8 +86,7 @@
 	 * @return {string[]} List of language codes supported by the article
 	 */
 	function filterBySitePicks( languages ) {
-		var picks = mw.config.get( 'wgULSCompactLinksPrepend', [] );
-
+		var picks = mw.config.get( 'wgULSCompactLinksPrepend' ) || [];
 		return picks.filter( function ( language ) {
 			return languages.indexOf( language ) >= 0;
 		} );
@@ -136,27 +135,37 @@
 	 */
 	function filterByAssistantLanguages( languages ) {
 		var assistantLanguages = mw.user.options.get( 'translate-editlangs' );
-
-		if ( assistantLanguages && assistantLanguages !== 'default' ) {
-			return assistantLanguages.split( /,\s*/ ).filter( function ( language ) {
-				return languages.indexOf( language ) >= 0;
-			} );
+		if ( !assistantLanguages || assistantLanguages === 'default' ) {
+			return [];
 		}
 
-		return [];
+		return assistantLanguages.split( /,\s*/ ).filter( function ( language ) {
+			return languages.indexOf( language ) >= 0;
+		} );
 	}
 
 	/**
 	 * @class
 	 * @constructor
-	 * @param {string|jQuery} interlanguageList Selector for interlanguage list
+	 * @param {HTMLElement} listElement Interlanguage list element
 	 * @param {Object} options
 	 */
-	function CompactInterlanguageList( interlanguageList, options ) {
-		this.$interlanguageList = $( interlanguageList );
+	function CompactInterlanguageList( listElement, options ) {
+		this.listElement = listElement;
 		this.options = options || {};
-		this.interlanguageList = {};
-		this.compactList = {};
+
+		/**
+		 * @private
+		 * @property {Object} interlanguageList
+		 */
+		this.interlanguageList = null;
+
+		/**
+		 * @private
+		 * @property {Object} interlanguageList
+		 */
+		this.compactList = null;
+
 		this.commonInterlanguageList = null;
 		this.$trigger = null;
 		this.compactSize = 0;
@@ -176,7 +185,6 @@
 		if ( this.listSize <= max ) {
 			// Not enough languages to compact the list
 			mw.hook( 'mw.uls.compactlinks.initialized' ).fire( false );
-
 			return;
 		}
 
@@ -311,7 +319,7 @@
 
 		this.$trigger.one( 'click', function () {
 			// Load the ULS now.
-			mw.loader.using( 'ext.uls.mediawiki' ).done( function () {
+			mw.loader.using( 'ext.uls.mediawiki' ).then( function () {
 				self.createSelector( self.$trigger );
 				self.$trigger.click();
 			} );
@@ -324,11 +332,10 @@
 	 * @return {Object}
 	 */
 	CompactInterlanguageList.prototype.getCompactList = function () {
-		var language, languages, compactLanguages, i,
-			compactedList = {};
+		var language, languages, compactLanguages, i, compactedList;
 
+		compactedList = {};
 		languages = Object.keys( this.interlanguageList );
-
 		compactLanguages = this.compact( languages );
 
 		for ( i = 0; i < compactLanguages.length; i++ ) {
@@ -413,9 +420,8 @@
 	 */
 	CompactInterlanguageList.prototype.filterByLangsInText = function ( languages ) {
 		var languagesInText = [];
-
-		$( '#mw-content-text [lang]' ).each( function ( i, el ) {
-			var lang = convertMediaWikiLanguageCodeToULS( $( el ).attr( 'lang' ) );
+		$.each( document.querySelectorAll( '#mw-content-text [lang]' ), function ( i, el ) {
+			var lang = convertMediaWikiLanguageCodeToULS( el.lang );
 			if ( languagesInText.indexOf( lang ) === -1 && languages.indexOf( lang ) >= 0 ) {
 				languagesInText.push( lang );
 			}
@@ -435,11 +441,14 @@
 	 * @return {Array} List of language codes in which there are articles with badges
 	 */
 	CompactInterlanguageList.prototype.filterByBadges = function () {
-		return $( '#p-lang' ).find( '[class*="badge"]' ).map( function ( i, el ) {
-			return convertMediaWikiLanguageCodeToULS(
-				$( el ).find( '.interlanguage-link-target' ).attr( 'lang' )
-			);
-		} ).toArray();
+		return $.map(
+			document.querySelectorAll( '#p-lang [class*="badge"]' ),
+			function ( el ) {
+				return convertMediaWikiLanguageCodeToULS(
+					el.querySelector( '.interlanguage-link-target' ).lang
+				);
+			}
+		);
 	};
 
 	/**
@@ -451,13 +460,12 @@
 	CompactInterlanguageList.prototype.getInterlanguageList = function () {
 		var interlanguageList = {};
 
-		this.$interlanguageList.find( '.interlanguage-link-target' ).each( function () {
-			var langCode = convertMediaWikiLanguageCodeToULS( this.getAttribute( 'lang' ) );
-
+		$.each( this.listElement.querySelectorAll( '.interlanguage-link-target' ), function ( i, el ) {
+			var langCode = convertMediaWikiLanguageCodeToULS( el.lang );
 			interlanguageList[ langCode ] = {
-				href: this.getAttribute( 'href' ),
-				autonym: $( this ).text(),
-				element: this
+				href: el.href,
+				autonym: el.textContent,
+				element: el
 			};
 		} );
 
@@ -486,29 +494,55 @@
 	 * Hide the original interlanguage list
 	 */
 	CompactInterlanguageList.prototype.hideOriginal = function () {
-		this.$interlanguageList.find( '.interlanguage-link' ).css( 'display', 'none' );
+		var links = this.listElement.querySelectorAll( '.interlanguage-link' ),
+			i = links.length;
+		while ( i-- ) {
+			links[ i ].style.display = 'none';
+		}
 	};
 
 	/**
 	 * Add the trigger at the bottom of the language list
 	 */
 	CompactInterlanguageList.prototype.addTrigger = function () {
-		var $trigger;
+		var trigger = document.createElement( 'button' );
+		trigger.className = 'mw-interlanguage-selector mw-ui-button';
+		trigger.title = mw.message( 'ext-uls-compact-link-info' ).plain();
+		// Use text() because the message needs {{PLURAL:}}
+		trigger.textContent = mw.message(
+			'ext-uls-compact-link-count',
+			mw.language.convertNumber( this.listSize - this.compactSize )
+		).text();
 
-		$trigger = $( '<button>' )
-			.addClass( 'mw-interlanguage-selector mw-ui-button' )
-			.prop( 'title', mw.msg( 'ext-uls-compact-link-info' ) )
-			.text( mw.msg(
-				'ext-uls-compact-link-count',
-				mw.language.convertNumber( this.listSize - this.compactSize )
-			) );
-
-		this.$interlanguageList.append( $trigger );
-		this.$trigger = $trigger;
+		this.listElement.appendChild( trigger );
+		this.$trigger = $( trigger );
 	};
 
+	/**
+	 * Performance cost of calling createCompactList(), as of 2018-09-10.
+	 *
+	 * Summary:
+	 * - DOM Queries: 5 + 1N
+	 *   * createCompactList (1 querySelector)
+	 *   * filterByBadges (1N querySelector, 1 querySelectorAll)
+	 *   * getInterlanguageList (1 querySelectorAll)
+	 *   * filterByLangsInText (1 querySelectorAll)
+	 *   * hideOriginal (1 querySelectorAll)
+	 * - DOM Writes: 1 + 2N
+	 *   * addTrigger (1 appendChild)
+	 *   * hideOriginal (1N Element.style)
+	 *   * render (1N Element.style)
+	 * - Misc: 1
+	 *   * addTrigger (1 mw.Message#parser)
+	 */
 	function createCompactList() {
-		var compactList = new CompactInterlanguageList( $( '#p-lang ul' ), {
+		var listElement, compactList;
+		listElement = document.querySelector( '#p-lang ul' );
+		if ( !listElement ) {
+			// Not all namespaces/pages/actions have #p-lang.
+			return;
+		}
+		compactList = new CompactInterlanguageList( listElement, {
 			// Compact the list to this size
 			max: 9
 		} );

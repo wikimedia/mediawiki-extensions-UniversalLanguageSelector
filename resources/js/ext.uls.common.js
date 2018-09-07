@@ -180,35 +180,34 @@
 	 * @return {Array} List of language codes without duplicates.
 	 */
 	mw.uls.getFrequentLanguageList = function ( countryCode ) {
-		var unique = [],
-			list = [
-				mw.config.get( 'wgUserLanguage' ),
-				mw.config.get( 'wgContentLanguage' ),
-				mw.uls.getBrowserLanguage()
-			]
-				.concat( mw.uls.getPreviousLanguages() )
-				.concat( mw.uls.getAcceptLanguageList() );
+		var i, j, lang,
+			ret = [],
+			lists = [
+				[
+					mw.config.get( 'wgUserLanguage' ),
+					mw.config.get( 'wgContentLanguage' ),
+					mw.uls.getBrowserLanguage()
+				],
+				mw.uls.getPreviousLanguages(),
+				mw.uls.getAcceptLanguageList()
+			];
 
 		countryCode = countryCode || mw.uls.getCountryCode();
-
 		if ( countryCode ) {
-			list = list.concat( $.uls.data.getLanguagesInTerritory( countryCode ) );
+			lists.push( $.uls.data.getLanguagesInTerritory( countryCode ) );
 		}
 
-		list.forEach( function ( lang ) {
-			if ( unique.indexOf( lang ) === -1 ) {
-				unique.push( lang );
+		for ( i = 0; i < lists.length; i++ ) {
+			for ( j = 0; j < lists[ i ].length; j++ ) {
+				lang = lists[ i ][ j ];
+				// Make flat, make unique, and ignore unknown/unsupported languages
+				if ( ret.indexOf( lang ) === -1 && $.uls.data.getAutonym( lang ) !== lang ) {
+					ret.push( lang );
+				}
 			}
-		} );
+		}
 
-		// Filter out unknown and unsupported languages
-		unique = unique.filter( function ( langCode ) {
-			// If the language is already known and defined, just use it.
-			// $.uls.data.getAutonym will resolve redirects if any.
-			return $.uls.data.getAutonym( langCode ) !== langCode;
-		} );
-
-		return unique;
+		return ret;
 	};
 
 }() );
