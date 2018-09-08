@@ -4,7 +4,8 @@
 			"Mantak111",
 			"Salpusnis",
 			"Kusurija",
-			"Hugo.arg"
+			"Hugo.arg",
+			"Manvydasz"
 		]
 	},
 	"uls-desc": "Suteikia vartotojui keliais būdais, pasirinkti kalbą ir sureguliuoti kalbos parametrus.",
@@ -59,5 +60,6 @@
 	"ext-uls-language-settings-applying": "Taikant...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Viena daugiau|$1 daugiau}}",
 	"prefs-languages": "Kalbos",
-	"ext-uls-compact-language-links-preference": "Naudoti suskleistą kalbų sąrašą, rodantį tik jums svarbias kalbas."
+	"ext-uls-compact-language-links-preference": "Naudoti suskleistą kalbų sąrašą, rodantį tik jums svarbias kalbas.",
+	"ext-uls-compact-no-results": "Šis puslapis nepasiekiamas jūsų pateikta kalba."
 }

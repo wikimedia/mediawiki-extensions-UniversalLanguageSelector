@@ -8,13 +8,15 @@
 			"Sayginer",
 			"McAang",
 			"Katpatuka",
-			"Hedda"
+			"Hedda",
+			"By erdo can"
 		]
 	},
 	"uls-desc": "Kullanıcının bir dil seçmesi ve dil ayarlarını değiştirmesi için seçenekler sağlar.",
 	"uls-plang-title-languages": "Diller",
 	"ext-uls-select-language-settings-icon-tooltip": "Dil ayarları",
 	"ext-uls-undo-language-tooltip-text": "Dil, $1 dilinden değiştirildi.",
+	"ext-uls-undo-language-tooltip-text-local": "Bu viki için dil değişti. Tüm vikilerin dilini değiştirmek için  [[Special:GlobalPreferences|küresel tercihlerinizi]] kontrol edin.",
 	"ext-uls-language-settings-preferences-link": "Daha fazla dil ayarları",
 	"uls-betafeature-label": "Daraltılmış dil bağlantıları",
 	"uls-betafeature-desc": "Yalnızca sizinle daha alakalı olan dillerin yer aldığı, daha kısa bir dil listesi görüntüler.",
