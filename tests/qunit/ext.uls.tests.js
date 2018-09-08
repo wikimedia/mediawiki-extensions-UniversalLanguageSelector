@@ -63,7 +63,9 @@
 			assert.ok( successSave, 'Options saving API did not produce an error.' );
 			// Delete old options
 			prefs.set( prefName, undefined );
-			prefs.save( done );
+			prefs.save( function () {
+				done();
+			} );
 		} );
 	} );
 
