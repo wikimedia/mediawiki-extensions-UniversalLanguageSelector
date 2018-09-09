@@ -10,6 +10,7 @@
 	"uls-plang-title-languages": "Språk",
 	"ext-uls-select-language-settings-icon-tooltip": "Språkinnstillinger",
 	"ext-uls-undo-language-tooltip-text": "Språk endret fra $1",
+	"ext-uls-undo-language-tooltip-text-local": "Språk endret på denne wikien. Sjekk de [[Special:GlobalPreferences|globale innstillingene]] dine for å endre språk på alle wikier.",
 	"ext-uls-language-settings-preferences-link": "Flere språkinnstillinger",
 	"uls-betafeature-label": "Kompakte språklenker",
 	"uls-betafeature-desc": "Vis en kortere utgave av språklisten, med kun språk som er relevante for deg.",
