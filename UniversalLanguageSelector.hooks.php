@@ -387,7 +387,7 @@ class UniversalLanguageSelectorHooks {
 			'section' => 'personal/i18n',
 			// We use this class to hide this from no-JS users
 			'cssclass' => 'uls-preferences-link-wrapper',
-			'default' => "<a id='uls-preferences-link' href='#'>" .
+			'default' => "<a id='uls-preferences-link' role='button' tabindex='0'>" .
 				wfMessage( 'ext-uls-language-settings-preferences-link' )->escaped() . "</a>",
 		];
 

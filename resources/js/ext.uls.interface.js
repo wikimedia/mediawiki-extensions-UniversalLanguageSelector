@@ -382,10 +382,15 @@
 
 		// Bind language settings to preferences page link
 		$( '#uls-preferences-link' )
-			.click( function () {
-				$ulsTrigger.trigger( 'click', {
-					source: 'preferences'
-				} );
+			.on( 'click keypress', function ( e ) {
+				if (
+					e.type === 'click' ||
+					e.type === 'keypress' && e.which === 13
+				) {
+					$ulsTrigger.trigger( 'click', {
+						source: 'preferences'
+					} );
+				}
 
 				return false;
 			} );
