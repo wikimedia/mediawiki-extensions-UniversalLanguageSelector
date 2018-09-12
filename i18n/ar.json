@@ -9,13 +9,15 @@
 			"Maroen1990",
 			"Shbib Al-Subaie",
 			"Meno25",
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"ديفيد"
 		]
 	},
 	"uls-desc": "يمنح المستخدم عدة طرق لاختيار لغة، وضبط إعدادات اللغة",
 	"uls-plang-title-languages": "لغات",
 	"ext-uls-select-language-settings-icon-tooltip": "إعدادات اللغة",
 	"ext-uls-undo-language-tooltip-text": "غيرت اللغة من $1",
+	"ext-uls-undo-language-tooltip-text-local": "تغيرت اللغة لهذا الويكي، تحقق من [[Special:GlobalPreferences|التفضيلات العالمية]] لتغيير اللغة لجميع الويكيات.",
 	"ext-uls-language-settings-preferences-link": "المزيد من إعدادات اللغة",
 	"uls-betafeature-label": "وصلات اللغة المدمجة",
 	"uls-betafeature-desc": "تقوم بإظهار قائمة مختصرة للغات، حيث تعمل الخاصية على إظهار اللغات التي تهمك أكثر.",
