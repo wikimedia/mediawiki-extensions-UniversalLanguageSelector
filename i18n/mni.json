@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Awangba Mangang"
+		]
+	},
+	"uls-plang-title-languages": "ꯂꯣꯟꯁꯤꯡ",
+	"ext-uls-select-language-settings-icon-tooltip": "ꯂꯣꯟ ꯁꯦꯝꯐꯝꯁꯤꯡ",
+	"ext-uls-undo-language-tooltip-text": "$1 ꯗꯒꯤ ꯍꯣꯡꯉꯛꯄ ꯂꯣꯟ",
+	"ext-uls-language-settings-preferences-link": "ꯂꯣꯟ ꯁꯦꯝꯐꯝꯁꯤꯡ ꯋꯥꯠꯂꯤ",
+	"uls-betafeature-label": "ꯁꯨꯞꯆꯤꯟꯕ ꯂꯣꯟ ꯁꯝꯅꯕꯁꯤꯡ",
+	"ext-uls-display-settings-language-tab": "ꯂꯣꯟ",
+	"ext-uls-display-settings-fonts-tab": "ꯃꯌꯦꯛ",
+	"ext-uls-display-settings-title-short": "ꯎꯨꯠꯄ",
+	"ext-uls-language-settings-title": "ꯂꯣꯟ ꯁꯦꯝꯐꯝꯁꯤꯡ",
+	"ext-uls-language-settings-apply": "ꯁꯦꯝꯐꯝꯁꯤꯡ ꯅ ꯇꯧꯍꯟꯕ",
+	"ext-uls-language-settings-cancel": "ꯇꯣꯛꯄ",
+	"ext-uls-display-settings-anon-label": "ꯂꯣꯟ ꯎꯨꯠꯄ:",
+	"ext-uls-display-settings-anon-same-as-content": "$1(ꯑꯌꯥꯎꯕꯗꯨ ꯆꯞ ꯃꯥꯅꯅ)",
+	"ext-uls-ime-help": "ꯀꯃꯥꯏꯅ ꯁꯤꯖꯤꯟꯅꯒꯅꯤ",
+	"jquery-ime-help": "ꯃꯇꯦꯡ",
+	"ext-uls-input-disable-notification-undo": "ꯇꯧꯗꯕ",
+	"prefs-languages": "ꯂꯣꯟꯁꯤꯁ"
+}

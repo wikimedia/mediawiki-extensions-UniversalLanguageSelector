@@ -8,6 +8,7 @@
 	"uls-plang-title-languages": "Lènghe",
 	"ext-uls-select-language-settings-icon-tooltip": "'Mbostaziune de lènghe",
 	"ext-uls-undo-language-tooltip-text": "Lènghe cangiate da $1",
+	"ext-uls-undo-language-tooltip-text-local": "Lènghe cangiate pe sta uicchi. Condrolle le [[Special:GlobalPreferences|preferenze globbale]] tune pe cangià 'a lènghe pe tutte le uicchi.",
 	"ext-uls-language-settings-preferences-link": "Otre 'mbostaziune d'a lènghe",
 	"uls-betafeature-label": "Collegaminde inderuicchi a fiche",
 	"uls-betafeature-desc": "Fà 'ndrucà ìna versione cchiù corte de l'elenghe de le inderuicchi, ca sò le collegaminde a le otre lènghe addò 'a pàgene jè disponibbile, limitate a chidde cchiù 'mbortande pe te.",

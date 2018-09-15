@@ -14,6 +14,7 @@
 	"uls-plang-title-languages": "Jazyky",
 	"ext-uls-select-language-settings-icon-tooltip": "Jazyková nastavení",
 	"ext-uls-undo-language-tooltip-text": "Jazyk změněn z $1",
+	"ext-uls-undo-language-tooltip-text-local": "Jazyk změněn pro tuto wiki. Pro změnu jazyka na všech wiki se podívejte na své [[Special:GlobalPreferences|globální nastavení]].",
 	"ext-uls-language-settings-preferences-link": "Další jazyková nastavení",
 	"uls-betafeature-label": "Kompaktní mezijazykové odkazy",
 	"uls-betafeature-desc": "Zobrazuje kratší verzi seznamu jazyků, obsahující jen jazyky, které jsou pro vás důležité.",
