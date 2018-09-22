@@ -51,11 +51,11 @@
 	"ext-uls-input-settings-noime": "Cara lebon ora cumepak kanggo basa iki.",
 	"ext-uls-input-disable-notification": "Piranti lebon wis dipatèni",
 	"ext-uls-input-disable-notification-undo": "Undur",
-	"ext-uls-input-disable-notification-info-personal": "Sampéyan bisa nguripaké piranti lebon sawayah-wayah sarana setèlan basa.",
-	"ext-uls-input-disable-notification-info-interlanguage": "Sampéyan bisa nguripaké piranti lebon sawayah-wayah sarana setèlan basa ing sandhingé pratélan basa.",
+	"ext-uls-input-disable-notification-info-personal": "Panjenengan bisa nguripaké piranti lebon sawayah-wayah sarana setèlan basa.",
+	"ext-uls-input-disable-notification-info-interlanguage": "Panjenengan bisa nguripaké piranti lebon sawayah-wayah sarana setèlan basa ing sandhingé pratélan basa.",
 	"ext-uls-language-settings-applying": "Ngecakaké...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Siji liyané|$1 liyané}}",
-	"ext-uls-compact-link-info": "Kabèh basa (pilihan iki dipilih déning sampéyan lan liyané)",
+	"ext-uls-compact-link-info": "Kabèh basa (pilihan iki dipilih déning panjenengan lan liyané)",
 	"prefs-languages": "Basa",
 	"ext-uls-compact-language-links-preference": "Anggo pratélan basa ringkes mawa basa sing wigati kanggomu."
 }
