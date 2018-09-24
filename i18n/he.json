@@ -10,7 +10,7 @@
 	"uls-desc": "נותן למשתמשים מספר דרכים לבחור שפה ולכוונן את הגדרות השפה",
 	"uls-plang-title-languages": "שפות",
 	"ext-uls-select-language-settings-icon-tooltip": "הגדרות שפה",
-	"ext-uls-undo-language-tooltip-text": "השפה השתנתה מ{{GRAMMAR:תחילית|$1}}",
+	"ext-uls-undo-language-tooltip-text": "השפה השתנתה מ־$1",
 	"ext-uls-undo-language-tooltip-text-local": "השפה שונתה באתר הוויקי הזה. נא לבדוק את [[Special:GlobalPreferences|ההעדפות הגלובליות]] שלך כדי לשנות את השפה בכל אתרי הוויקי.",
 	"ext-uls-language-settings-preferences-link": "הגדרות שפה נוספות",
 	"uls-betafeature-label": "רשימת קישורי שפה מקוצרת",
