@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Awangba Mangang"
+		]
+	},
+	"apihelp-languagesearch-description": "ꯂꯣꯟ ꯃꯃꯤꯡꯁꯤꯡ ꯃꯌꯦꯛ ꯑꯃꯥꯍꯦꯛꯇꯒꯤ ꯗ ꯊꯤꯕꯥ ꯫",
+	"apihelp-languagesearch-summary": "ꯂꯣꯟ ꯃꯃꯤꯡꯁꯤꯡ ꯃꯌꯦꯛ ꯑꯃꯥꯍꯦꯛꯇꯒꯤ ꯗ ꯊꯤꯕꯥ ꯫",
+	"apihelp-languagesearch-param-search": "ꯊꯤꯅꯕ ꯃꯔꯤ ꯫",
+	"apihelp-languagesearch-param-typos": "ꯊꯤꯅꯕ ꯃꯔꯤꯗ(ꯂꯪ) ꯗ ꯁꯣꯏꯕ ꯌꯥꯕ ꯋꯥꯆꯨꯝ ꯃꯁꯤꯡ ꯫",
+	"apihelp-languagesearch-example-1": "\"Te\" ꯒꯤ ꯊꯤꯕꯥ",
+	"apihelp-languagesearch-example-2": " \"ഫി\" ꯒꯤ ꯊꯤꯕꯥ",
+	"apihelp-languagesearch-example-3": "\"ഫി\" ꯒꯤ ꯊꯤꯕꯥ,  allowing one typo",
+	"apihelp-ulslocalization-description": "ꯑꯄꯤꯕ ꯂꯣꯟ ꯑꯗꯨ ꯌꯨꯑꯦꯜꯑꯦꯁ ꯀꯤ ꯂꯣꯀꯦꯜꯂꯥꯏꯖꯦꯁꯟ ꯐꯪꯕ ꯫",
+	"apihelp-ulslocalization-summary": "ꯑꯄꯤꯕ ꯂꯣꯟ ꯑꯗꯨ ꯌꯨꯑꯦꯜꯑꯦꯁ ꯀꯤ ꯂꯣꯀꯦꯜꯂꯥꯏꯖꯦꯁꯟ ꯐꯪꯕ ꯫",
+	"apihelp-ulslocalization-param-language": "ꯂꯣꯟ ꯀꯣꯗ ꯫",
+	"apihelp-ulslocalization-example-1": "ꯇꯥꯃꯤꯜ ꯂꯣꯀꯦꯜꯂꯥꯏꯖꯦꯁꯟ ꯐꯪꯕ",
+	"apihelp-ulslocalization-example-2": "ꯍꯤꯟꯗꯤ ꯂꯣꯀꯦꯜꯂꯥꯏꯖꯦꯁꯟ ꯐꯪꯕ"
+}
