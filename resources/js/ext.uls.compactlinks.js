@@ -423,9 +423,6 @@
 	 * Get languages in which a related page has any kind of a badge,
 	 * such as "featured article". The "badge-*" classes are added by Wikibase.
 	 *
-	 * The reader doesn't necessarily know this language, but it
-	 * appears relevant to the page.
-	 *
 	 * @return {string[]} Language codes
 	 */
 	CompactInterlanguageList.prototype.getLangsWithBadges = function () {
@@ -440,10 +437,9 @@
 	};
 
 	/**
-	 * Find out the existing languages supported
-	 * by the article and fetch their href.
+	 * Get the list of languages links.
 	 *
-	 * @return {Object} List of existing language codes and their hrefs
+	 * @return {Object} Map of language codes to data
 	 */
 	CompactInterlanguageList.prototype.getInterlanguageList = function () {
 		var interlanguageList = {};
@@ -478,7 +474,9 @@
 	};
 
 	/**
-	 * Hide the original interlanguage list
+	 * Hide languages in the interlanguage list.
+	 *
+	 * The most relevant ones are unhidden in #render.
 	 */
 	CompactInterlanguageList.prototype.hideOriginal = function () {
 		var links = this.listElement.querySelectorAll( '.interlanguage-link' ),
