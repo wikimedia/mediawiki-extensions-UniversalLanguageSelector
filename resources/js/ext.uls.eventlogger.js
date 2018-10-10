@@ -27,20 +27,17 @@
 	 * @since 2013.08
 	 */
 	function ULSEventLogger() {
-		this.init();
+		this.eventDefault = {
+			version: 1,
+			token: mw.user.id(),
+			contentLanguage: mw.config.get( 'wgContentLanguage' ),
+			interfaceLanguage: mw.config.get( 'wgUserLanguage' )
+		};
+		this.schemaDefault = 'UniversalLanguageSelector';
 		this.listen();
 	}
 
 	ULSEventLogger.prototype = {
-		init: function () {
-			mw.eventLog.setDefaults( 'UniversalLanguageSelector', {
-				version: 1,
-				token: mw.user.id(),
-				contentLanguage: mw.config.get( 'wgContentLanguage' ),
-				interfaceLanguage: mw.config.get( 'wgUserLanguage' )
-			} );
-		},
-
 		/**
 		 * Local wrapper for 'mw.eventLog.logEvent'
 		 *
@@ -49,13 +46,17 @@
 		 * @return {jQuery.Promise} jQuery Promise object for the logging call
 		 */
 		log: function ( event, schema ) {
-			// We need to create our own deferred for two reasons:
+			// FIXME: We need to create our own deferred for two reasons:
 			//  - logEvent might not be executed immediately
 			//  - we cannot reject a promise returned by it
 			// So we proxy the original promises status updates.
 			var deferred = $.Deferred();
 
-			schema = schema || 'UniversalLanguageSelector';
+			schema = schema || this.schemaDefault;
+
+			if ( schema === this.schemaDefault ) {
+				event = $.extend( {}, this.eventBase, event );
+			}
 
 			mw.eventLog.logEvent( schema, event )
 				.done( deferred.resolve )
