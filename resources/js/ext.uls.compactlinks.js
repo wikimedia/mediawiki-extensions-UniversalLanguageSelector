@@ -172,8 +172,7 @@
 	 * Initialize the plugin
 	 */
 	CompactInterlanguageList.prototype.init = function () {
-		var self = this,
-			max = this.options.max || DEFAULT_LIST_SIZE;
+		var max = this.options.max || DEFAULT_LIST_SIZE;
 
 		this.interlanguageList = this.getInterlanguageList();
 		this.listSize = Object.keys( this.interlanguageList ).length;
@@ -186,11 +185,11 @@
 
 		// If we're only a bit beyond max, limit to 7 instead of 9.
 		// FIXME: This assumes the max is 9.
-		self.compactSize = ( self.listSize <= 12 ) ? 7 : max;
-		self.compactList = self.getCompactList();
-		self.hideOriginal();
-		self.render();
-		self.listen();
+		this.compactSize = ( this.listSize <= 12 ) ? 7 : max;
+		this.compactList = this.getCompactList();
+		this.hideOriginal();
+		this.render();
+		this.listen();
 	};
 
 	/**
@@ -200,7 +199,7 @@
 		var language;
 
 		for ( language in this.compactList ) {
-			this.compactList[ language ].element.parentNode.style.display = '';
+			this.compactList[ language ].parentNode.style.display = '';
 		}
 
 		this.addTrigger();
@@ -218,8 +217,8 @@
 			self = this,
 			ulsLanguageList = {};
 
-		$.each( this.interlanguageList, function ( languageCode, language ) {
-			ulsLanguageList[ languageCode ] = language.autonym;
+		$.each( this.interlanguageList, function ( languageCode, el ) {
+			ulsLanguageList[ languageCode ] = el.textContent;
 		} );
 
 		// Attach ULS to the trigger
@@ -274,20 +273,20 @@
 				$trigger.addClass( 'selector-open' );
 			},
 			languageDecorator: function ( $languageLink, language ) {
-				var data = self.interlanguageList[ language ];
+				var element = self.interlanguageList[ language ];
 				// Set href, text, and tooltip exactly same as what was in
 				// interlanguage link. The ULS autonym might be different in some
 				// cases like sr. In ULS it is "српски", while in interlanguage links
 				// it is "српски / srpski"
 				$languageLink
 					.prop( {
-						href: data.href,
-						title: data.element.title
+						href: element.href,
+						title: element.title
 					} )
-					.text( data.autonym );
+					.text( element.textContent );
 
 				// This code is to support badges used in Wikimedia
-				$languageLink.parent().addClass( data.element.parentNode.className );
+				$languageLink.parent().addClass( element.parentNode.className );
 			},
 			onCancel: function () {
 				$trigger.removeClass( 'selector-open' );
@@ -439,18 +438,14 @@
 	/**
 	 * Get the list of languages links.
 	 *
-	 * @return {Object} Map of language codes to data
+	 * @return {Object} Map of language codes to elements.
 	 */
 	CompactInterlanguageList.prototype.getInterlanguageList = function () {
 		var interlanguageList = {};
 
 		$.each( this.listElement.querySelectorAll( '.interlanguage-link-target' ), function ( i, el ) {
 			var langCode = convertMediaWikiLanguageCodeToULS( el.lang );
-			interlanguageList[ langCode ] = {
-				href: el.href,
-				autonym: el.textContent,
-				element: el
-			};
+			interlanguageList[ langCode ] = el;
 		} );
 
 		return interlanguageList;
