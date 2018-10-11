@@ -213,14 +213,14 @@
 	 * @param {jQuery} $trigger Element to use as trigger.
 	 */
 	CompactInterlanguageList.prototype.createSelector = function ( $trigger ) {
-		var languages = Object.keys( this.interlanguageList ),
+		var languageCode,
+			languages = Object.keys( this.interlanguageList ),
 			self = this,
 			ulsLanguageList = {};
 
-		// eslint-disable-next-line jquery/no-each-util
-		$.each( this.interlanguageList, function ( languageCode, el ) {
-			ulsLanguageList[ languageCode ] = el.textContent;
-		} );
+		for ( languageCode in this.interlanguageList ) {
+			ulsLanguageList[ languageCode ] = this.interlanguageList[ languageCode ].textContent;
+		}
 
 		// Attach ULS to the trigger
 		$trigger.uls( {
