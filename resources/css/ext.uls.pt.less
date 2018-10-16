@@ -1,6 +1,14 @@
+/* stylelint-disable indentation, selector-max-id */
 @import 'mediawiki.mixins';
 
-/* stylelint-disable selector-max-id */
+// Similar to from Vector's 'personalMenu.less' file.
+@font-size-browser: 16; // Assumed browser default of `16px`
+// ULS personal tool menu
+@background-position-menu-uls-icon: left ( 1 / @font-size-browser / @font-size-menu-uls );
+@background-size-menu-uls-icon: 16 / @font-size-browser / @font-size-menu-uls;
+@padding-top-menu-uls-icon: 4 / @font-size-browser / @font-size-menu-uls;
+@padding-left-menu-uls-icon: 20 / @font-size-browser / @font-size-menu-uls;
+@font-size-menu-uls: 0.75em;
 
 /*
  * The trigger can be placed in the personal toolbar near the username
@@ -12,19 +20,38 @@
  * Copied from jquery.uls.css with the path changed.
  */
 .uls-trigger {
-	background: transparent no-repeat scroll left center;
+	background: no-repeat left center;
 	.background-image-svg( '../../lib/jquery.uls/images/language.svg', '../../lib/jquery.uls/images/language.png' );
 	// Let the SVG image fit without cropping or stretch
 	background-size: contain;
 	padding-left: 24px;
 }
 
-#pt-uls a.uls-trigger {
-	padding-left: 1.25em;
-	// Let the SVG image fit without cropping or stretch
-	background-size: 1.15em;
-	/* Fix alignment in vector: https://phabricator.wikimedia.org/T61239 */
-	line-height: 1;
+#pt-uls {
+	padding-top: 0 !important; // stylelint-disable-line declaration-no-important
+
+	.uls-trigger {
+		background-image: none;
+		// Same values as Vector's `#p-personal li`.
+		display: inline-block;
+		padding-top: 0.5em !important; // stylelint-disable-line declaration-no-important
+		padding-left: 0;
+
+		// Putting the icon in before in order to apply `opacity`.
+		&:before {
+			content: '';
+			.background-image-svg( '../../lib/jquery.uls/images/language.svg', '../../lib/jquery.uls/images/language.png' );
+			// Same values as Vector's `#pt-userpage a`.
+			background-position: @background-position-menu-uls-icon;
+			// Support Edge: Can't be `contain`, see T207075.
+			background-repeat: no-repeat;
+			background-size: @background-size-menu-uls-icon @background-size-menu-uls-icon;
+			padding-top: @padding-top-menu-uls-icon;
+			padding-left: @padding-left-menu-uls-icon;
+			 // Equals `#555`, closest to `#54595d` on background-color `#fff`.
+			opacity: 0.67;
+		}
+	}
 }
 
 /* Opera for some inexplicable reason confuses right and left padding with */
