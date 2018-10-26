@@ -2,9 +2,9 @@
 /**
  * Hooks for UniversalLanguageSelector extension.
  *
- * Copyright (C) 2012 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
- * Niklas Laxström, Pau Giner, Santhosh Thottingal, Siebrand Mazeland and other
- * contributors. See CREDITS for a list.
+ * Copyright (C) 2012-2018 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon
+ * Harris, Niklas Laxström, Pau Giner, Santhosh Thottingal, Siebrand Mazeland
+ * and other contributors. See CREDITS for a list.
  *
  * UniversalLanguageSelector is dual licensed GPLv2 or later and MIT. You don't
  * have to do anything special to choose one license or the other and you don't
@@ -24,7 +24,7 @@ class UniversalLanguageSelectorHooks {
 	 * Used when extension registration in use which skips the main php file
 	 */
 	public static function setVersionConstant() {
-		define( 'ULS_VERSION', '2017-07-25' );
+		define( 'ULS_VERSION', '2018-10-26' );
 	}
 
 	/**
