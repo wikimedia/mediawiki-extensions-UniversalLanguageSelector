@@ -1,0 +1,13 @@
+== UniversalLanguageSelector 2018.10 ==
+Released at 2018-10-29.
+
+=== Noteworthy changes ===
+* Remove PHP entry point. Please update your configuration!
+* Support UI language change when Global Preferences are present. (T198206)
+* Drop support for discontinued freegeoip.net.
+* Correct alignment of cog in interlanguage links in Vector skin.
+* ULS now sends Vary: Accept-Language header.
+* Performance optimizations.
+
+==== Input Methods ====
+* Update Sarjom Baha layout.
