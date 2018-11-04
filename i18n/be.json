@@ -25,6 +25,8 @@
 	"jquery-ime-help": "Даведка",
 	"ext-uls-input-disable": "Адключыць інструменты ўводу",
 	"ext-uls-input-enable": "Уключыць інструменты ўводу",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Яшчэ $1}}",
+	"ext-uls-compact-link-info": "Усе мовы (першапачатова выбраны тыя мовы, якія часцей ужываліся Вамі і іншымі)",
 	"prefs-languages": "Мовы",
 	"ext-uls-compact-language-links-preference": "Выкарыстаць [[$1|кампактны спіс моў]] з прыдатнымі для Вас мовамі."
 }

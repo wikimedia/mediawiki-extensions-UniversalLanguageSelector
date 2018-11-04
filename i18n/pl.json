@@ -9,7 +9,8 @@
 			"Nemo bis",
 			"Peter Bowman",
 			"Woytecr",
-			"Sethakill"
+			"Sethakill",
+			"Railfail536"
 		]
 	},
 	"uls-desc": "Daje użytkownikowi kilka sposobów, aby wybrać język i dostosować ustawienia języka",
@@ -65,5 +66,6 @@
 	"ext-uls-language-settings-applying": "Realizacja w toku...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Jeden więcej|$1 więcej}}",
 	"prefs-languages": "Języki",
-	"ext-uls-compact-language-links-preference": "Używaj [[$1|kompaktowej listy języków]] z językami najbardziej Ci odpowiadającymi."
+	"ext-uls-compact-language-links-preference": "Używaj [[$1|kompaktowej listy języków]] z językami najbardziej Ci odpowiadającymi.",
+	"ext-uls-compact-no-results": "Ta strona nie jest dostępna w języku którego szukasz."
 }
