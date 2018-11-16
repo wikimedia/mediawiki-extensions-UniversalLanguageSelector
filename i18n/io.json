@@ -18,9 +18,12 @@
 	"ext-uls-language-settings-cancel": "Anular",
 	"ext-uls-language-buttons-help": "Modifikez la linguo di la menui. La linguo dil kontenajo ne afektesos.",
 	"ext-uls-display-settings-ui-language": "Interfacio*-linguo",
+	"ext-uls-webfonts-settings-info-link": "Plusa informo",
 	"ext-uls-input-settings-title-short": "Eniro",
 	"ext-uls-input-settings-desc": "Ka vu deziras skribar en diferanta linguo?",
 	"ext-uls-input-settings-ui-language": "Linguo uzita por skribado",
+	"ext-uls-input-settings-more-languages-tooltip": "Plusa lingui",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Un plusa|plusa $1}}",
 	"prefs-languages": "Lingui",
 	"ext-uls-compact-language-links-preference": "Uzez [[$1|kompakta listo pri lingui]], nur kun la lingui importanta por vu."
 }
