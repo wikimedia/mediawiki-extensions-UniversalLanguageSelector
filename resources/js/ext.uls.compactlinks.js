@@ -217,6 +217,7 @@
 			self = this,
 			ulsLanguageList = {};
 
+		// eslint-disable-next-line jquery/no-each-util
 		$.each( this.interlanguageList, function ( languageCode, el ) {
 			ulsLanguageList[ languageCode ] = el.textContent;
 		} );
@@ -408,7 +409,7 @@
 	 */
 	CompactInterlanguageList.prototype.getLangsInText = function () {
 		var languagesInText = [];
-		$.each( document.querySelectorAll( '#mw-content-text [lang]' ), function ( i, el ) {
+		Array.prototype.forEach.call( document.querySelectorAll( '#mw-content-text [lang]' ), function ( el ) {
 			var lang = convertMediaWikiLanguageCodeToULS( el.lang );
 			if ( languagesInText.indexOf( lang ) === -1 ) {
 				languagesInText.push( lang );
@@ -425,7 +426,7 @@
 	 * @return {string[]} Language codes
 	 */
 	CompactInterlanguageList.prototype.getLangsWithBadges = function () {
-		return $.map(
+		return Array.prototype.map.call(
 			document.querySelectorAll( '#p-lang [class*="badge"]' ),
 			function ( el ) {
 				return convertMediaWikiLanguageCodeToULS(
@@ -443,7 +444,7 @@
 	CompactInterlanguageList.prototype.getInterlanguageList = function () {
 		var interlanguageList = {};
 
-		$.each( this.listElement.querySelectorAll( '.interlanguage-link-target' ), function ( i, el ) {
+		Array.prototype.forEach.call( this.listElement.querySelectorAll( '.interlanguage-link-target' ), function ( el ) {
 			var langCode = convertMediaWikiLanguageCodeToULS( el.lang );
 			interlanguageList[ langCode ] = el;
 		} );
