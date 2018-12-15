@@ -655,19 +655,17 @@
 		 * modules.
 		 */
 		apply: function () {
-			var displaySettings = this;
-
-			if ( !displaySettings.dirty ) {
+			if ( !this.dirty ) {
 				// No changes to save in this module.
 				return;
 			}
 
-			displaySettings.$parent.setBusy( true );
+			this.$parent.setBusy( true );
 			// Save the preferences
 			mw.webfonts.preferences.save( function ( result ) {
 				var newWebfontsEnable, oldWebfontsEnable, webfontsEvent,
 					newRegistry = mw.webfonts.preferences.registry,
-					oldRegistry = displaySettings.savedRegistry.registry,
+					oldRegistry = this.savedRegistry.registry,
 					newFonts = newRegistry.fonts || {},
 					oldFonts = oldRegistry.fonts || {};
 
@@ -684,25 +682,25 @@
 					mw.hook( webfontsEvent ).fire( 'displaysettings' );
 				}
 
-				if ( newFonts[ displaySettings.uiLanguage ] !== oldFonts[ displaySettings.uiLanguage ] ) {
+				if ( newFonts[ this.uiLanguage ] !== oldFonts[ this.uiLanguage ] ) {
 					mw.hook( 'mw.uls.font.change' ).fire(
-						'interface', displaySettings.uiLanguage, newFonts[ displaySettings.uiLanguage ]
+						'interface', this.uiLanguage, newFonts[ this.uiLanguage ]
 					);
 				}
 
-				if ( newFonts[ displaySettings.contentLanguage ] !== oldFonts[ displaySettings.contentLanguage ] ) {
+				if ( newFonts[ this.contentLanguage ] !== oldFonts[ this.contentLanguage ] ) {
 					mw.hook( 'mw.uls.font.change' ).fire(
-						'content', displaySettings.contentLanguage, newFonts[ displaySettings.contentLanguage ]
+						'content', this.contentLanguage, newFonts[ this.contentLanguage ]
 					);
 				}
 
 				// closure for not losing the scope
-				displaySettings.onSave( result );
-				displaySettings.dirty = false;
+				this.onSave( result );
+				this.dirty = false;
 				// Update the back-up preferences for the case of canceling
-				displaySettings.savedRegistry = $.extend( true, {}, mw.webfonts.preferences );
-				displaySettings.$parent.setBusy( false );
-			} );
+				this.savedRegistry = $.extend( true, {}, mw.webfonts.preferences );
+				this.$parent.setBusy( false );
+			}.bind( this ) );
 		},
 
 		/**

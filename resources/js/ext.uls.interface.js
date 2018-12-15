@@ -272,47 +272,49 @@
 					if ( !languagesettings.shown ) {
 						mw.hook( 'mw.uls.settings.open' ).fire( eventParams && eventParams.source || 'interlanguage' );
 					}
-				} else {
-					// Initialize the Language settings window
-					languageSettingsOptions = {
-						defaultModule: 'display',
-						onVisible: function () {
-							var caretRadius,
-								ulsTriggerHeight = this.$element.height(),
-								ulsTriggerWidth = this.$element[ 0 ].offsetWidth,
-								ulsTriggerOffset = this.$element.offset();
 
-							this.$window.addClass( 'callout' );
-
-							// Same as border width in mixins.less, or near enough
-							caretRadius = 12;
-
-							if ( ulsTriggerOffset.left > $( window ).width() / 2 ) {
-								this.left = ulsTriggerOffset.left - this.$window.width() - caretRadius;
-								this.$window.removeClass( 'selector-left' ).addClass( 'selector-right' );
-
-							} else {
-								this.left = ulsTriggerOffset.left + ulsTriggerWidth + caretRadius;
-								this.$window.removeClass( 'selector-right' ).addClass( 'selector-left' );
-							}
-
-							// The top of the dialog is aligned in relation to
-							// the middle of the trigger, so that middle of the
-							// caret aligns with it. 16 is trigger icon height in pixels
-							this.top = ulsTriggerOffset.top +
-								( ulsTriggerHeight / 2 ) -
-								( caretRadius + 16 );
-
-							this.position();
-						}
-					};
-
-					mw.loader.using( mw.uls.languageSettingsModules, function () {
-						$ulsTrigger.languagesettings( languageSettingsOptions ).click();
-					} );
-
-					e.stopPropagation();
+					return;
 				}
+
+				// Initialize the Language settings window
+				languageSettingsOptions = {
+					defaultModule: 'display',
+					onVisible: function () {
+						var caretRadius,
+							ulsTriggerHeight = this.$element.height(),
+							ulsTriggerWidth = this.$element[ 0 ].offsetWidth,
+							ulsTriggerOffset = this.$element.offset();
+
+						this.$window.addClass( 'callout' );
+
+						// Same as border width in mixins.less, or near enough
+						caretRadius = 12;
+
+						if ( ulsTriggerOffset.left > $( window ).width() / 2 ) {
+							this.left = ulsTriggerOffset.left - this.$window.width() - caretRadius;
+							this.$window.removeClass( 'selector-left' ).addClass( 'selector-right' );
+
+						} else {
+							this.left = ulsTriggerOffset.left + ulsTriggerWidth + caretRadius;
+							this.$window.removeClass( 'selector-right' ).addClass( 'selector-left' );
+						}
+
+						// The top of the dialog is aligned in relation to
+						// the middle of the trigger, so that middle of the
+						// caret aligns with it. 16 is trigger icon height in pixels
+						this.top = ulsTriggerOffset.top +
+							( ulsTriggerHeight / 2 ) -
+							( caretRadius + 16 );
+
+						this.position();
+					}
+				};
+
+				mw.loader.using( mw.uls.languageSettingsModules, function () {
+					$ulsTrigger.languagesettings( languageSettingsOptions ).click();
+				} );
+
+				e.stopPropagation();
 			};
 		} else if ( anonMode ) {
 			clickHandler = function ( e, eventParams ) {

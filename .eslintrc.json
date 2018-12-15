@@ -6,8 +6,5 @@
 	"globals": {
 		"mw": false,
 		"OO": false
-	},
-	"rules": {
-		"max-len": 0
 	}
 }
