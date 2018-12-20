@@ -11,9 +11,11 @@
 			"Máté"
 		]
 	},
+	"uls-desc": "Többféle módot kínál a felhasználónak nyelv kiválasztására és a nyelvi beállítások módosítására",
 	"uls-plang-title-languages": "Nyelvek",
 	"ext-uls-select-language-settings-icon-tooltip": "Nyelvi beállítások",
 	"ext-uls-undo-language-tooltip-text": "A nyelv megváltozott erről: $1",
+	"ext-uls-undo-language-tooltip-text-local": "A nyelv megváltozott ezen a wikin. Látogasd meg a [[Special:GlobalPreferences|globális beállításaidat]] az összes wiki nyelvének módosításához.",
 	"ext-uls-language-settings-preferences-link": "További nyelvi beállítások",
 	"uls-betafeature-label": "Rövidített interwiki lista",
 	"uls-betafeature-desc": "A nyelvi hivatkozások listájának rövidebb változatát mutatja, csak a számodra fontosabb nyelvekkel.",
@@ -48,6 +50,7 @@
 	"ext-uls-disable-input-method": "Alapételmezett billentyűzet használata",
 	"ext-uls-input-settings-more-languages-tooltip": "További nyelvek",
 	"jquery-ime-other-languages": "További nyelvek",
+	"jquery-ime-disable-text": "Natív billentyűzet használata",
 	"jquery-ime-help": "Súgó",
 	"ext-uls-input-disable": "Beviteli eszközök letiltása",
 	"ext-uls-input-enable": "Beviteli eszközök engedélyezése",
@@ -60,5 +63,6 @@
 	"ext-uls-language-settings-applying": "Alkalmazás…",
 	"ext-uls-compact-link-count": "$1 további",
 	"prefs-languages": "Nyelvek",
-	"ext-uls-compact-language-links-preference": "A nyelvközi hivatkozások megjelenítése egy kompakt listában, csak a neked releváns nyelvekkel."
+	"ext-uls-compact-language-links-preference": "A nyelvközi hivatkozások megjelenítése egy [[$1|kompakt listában]], csak a neked releváns nyelvekkel.",
+	"ext-uls-compact-no-results": "Ez a lap nem érhető el az általad keresett nyelven."
 }
