@@ -8,6 +8,7 @@
 	"uls-plang-title-languages": "ភាសា",
 	"ext-uls-select-language-settings-icon-tooltip": "ការកំណត់ភាសា",
 	"ext-uls-undo-language-tooltip-text": "ភាសាបានផ្លាស់ប្ដូរពី $1",
+	"ext-uls-undo-language-tooltip-text-local": "ភាសាត្រូវបានផ្លាស់ប្ដូរសម្រាប់វិគីនេះ។ ពិនិត្យ[[Special:GlobalPreferences|ចំណង់ចំណូលចិត្តសាកល]]របស់អ្នក ដើម្បីផ្លាស់ប្ដូរភាសាសម្រាប់វិគីទាំងអស់។",
 	"ext-uls-language-settings-preferences-link": "ការកំណត់ភាសាបន្ថែមទៀត",
 	"uls-betafeature-label": "តំណភ្ជាប់ភាសាសង្ខេប",
 	"uls-betafeature-desc": "បង្ហាញទម្រង់ខ្លីរបស់បញ្ជីភាសា ដោយបង្ហាញតែភាសាណាដែលទាក់ទិននឹងអ្នក។",
@@ -55,6 +56,8 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "អ្នកអាចបើកអោយប្រើឧបករណ៍វាយបញ្ចូលពេលណាក៏បាន ដោយចូលទៅកាន់ការកំណត់ភាសា​ដែលនៅក្បែរបញ្ជីភាសា។",
 	"ext-uls-language-settings-applying": "កំពុងអនុវត្ត...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|មួយទៀត|$1 ទៀត}}",
+	"ext-uls-compact-link-info": "ភាសាទាំងអស់ (ការជ្រើសរើសដំបូងពីជម្រើសរួមរបស់អ្នកនិងអ្នកដទៃទៀត)",
 	"prefs-languages": "ភាសា",
-	"ext-uls-compact-language-links-preference": "ប្រើ[[$1|បញ្ជីភាសាខ្នាតខ្លី]] ដែលមានតែភាសាទាក់ទិននឹងអ្នក។"
+	"ext-uls-compact-language-links-preference": "ប្រើ[[$1|បញ្ជីភាសាខ្នាតខ្លី]] ដែលមានតែភាសាទាក់ទិននឹងអ្នក។",
+	"ext-uls-compact-no-results": "ទំព័រនេះគ្មានក្នុងភាសាដែលអ្នកបានស្វែងរកទេ។"
 }
