@@ -14,6 +14,7 @@
 	"uls-plang-title-languages": "Linguas",
 	"ext-uls-select-language-settings-icon-tooltip": "Opcións de lingua",
 	"ext-uls-undo-language-tooltip-text": "A lingua cambiou desde o $1",
+	"ext-uls-undo-language-tooltip-text-local": "Cambiouse a lingua para esta wiki. Comprobe as súas [[Special:GlobalPreferences|preferencias globais]] para cambiar a lingua para tódalas wikis.",
 	"ext-uls-language-settings-preferences-link": "Máis opcións de lingua",
 	"uls-betafeature-label": "Ligazóns lingüísticas compactas",
 	"uls-betafeature-desc": "Amosar unha versión máis curta da lista de linguas, unicamente coas linguas máis relevantes para vostede.",
