@@ -15,9 +15,9 @@
 	"apihelp-languagesearch-example-1": "Rechercher « Te »",
 	"apihelp-languagesearch-example-2": "Rechercher « ഫി »",
 	"apihelp-languagesearch-example-3": "Rechercher « ഫി », avec une erreur autorisée",
-	"apihelp-ulslocalization-description": "Obtenir la localisation de ULS dans la langue donnée.",
+	"apihelp-ulslocalization-description": "Obtenir la régionalisation de ULS dans la langue donnée.",
 	"apihelp-ulslocalization-summary": "Obtenir la traduction de ULS dans la langue donnée.",
 	"apihelp-ulslocalization-param-language": "Code de langue.",
-	"apihelp-ulslocalization-example-1": "Obtenir la localisation en Tamil",
+	"apihelp-ulslocalization-example-1": "Obtenir la régionalisation en Tamil",
 	"apihelp-ulslocalization-example-2": "Obtenir la régionalisation en hindi"
 }
