@@ -1,0 +1,14 @@
+== UniversalLanguageSelector 2019.01 ==
+Released at 2019-01-22.
+
+=== Noteworthy changes ===
+* Maintenance updates only.
+
+==== Input Methods ====
+* Added Tilde layouts for Hausa, Igbo, and Yoruba.
+* Added Ewe layout.
+* Fixed Fon tilde input method.
+* Added a transliteration layout for the Ho language in the Warang Citi alphabet.
+* Enable the Palochka layout for Ingush.
+* Fixed the Blin / Tigre / Tigrinya GeezIM layouts.
+* Fixed the Santali Ol Chiki InScript 2 layout.
