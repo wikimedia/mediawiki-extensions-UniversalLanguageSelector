@@ -115,9 +115,6 @@ class UniversalLanguageSelectorHooks {
 			$out->addModules( 'ext.uls.eventlogger' );
 		}
 
-		// If the extension is enabled, basic features (API, language data) available.
-		$out->addModules( 'ext.uls.init' );
-
 		// Soft dependency to Wikibase client. Don't enable CLL if links are managed manually.
 		$excludedLinks = $out->getProperty( 'noexternallanglinks' );
 		$override = is_array( $excludedLinks ) && in_array( '*', $excludedLinks );
