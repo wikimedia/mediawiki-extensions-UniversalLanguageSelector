@@ -6,13 +6,15 @@
 			"Mirzali",
 			"Kumkumuk",
 			"1917 Ekim Devrimi",
-			"Gırd"
+			"Gırd",
+			"Orbot707"
 		]
 	},
 	"uls-desc": "Karberi rê seba weçinıtışê zıwani û vurnayışê eyarê zıwani ra weçinıkan peyda keno",
 	"uls-plang-title-languages": "Zıwani",
 	"ext-uls-select-language-settings-icon-tooltip": "Eyarê zıwani",
 	"ext-uls-undo-language-tooltip-text": "Zıwan $1 ra açarniya",
+	"ext-uls-undo-language-tooltip-text-local": "Seba na wiki zıwan vuriyê . Zıwanê wikiya pêroyi in vurnayışi rê [[Special:GlobalPreferences|tercihanê globali]] kontrol bıkerê .",
 	"ext-uls-language-settings-preferences-link": "Dahana véşi zıwani",
 	"uls-betafeature-label": "Gıreyê zıwaniyê tengkerdeyi",
 	"uls-betafeature-desc": " Ebe zıwananê ke şıma rê muhimê, yew verziyonê lista zıwaniyo kılmi mocneno.",
@@ -62,5 +64,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|vêşêr|$1 vêşêr}}",
 	"ext-uls-compact-link-info": "Zıwani pêro (hetê to û ê binan ra ke kamcin yeno hesab wa ey weçine)",
 	"prefs-languages": "Zıwani",
-	"ext-uls-compact-language-links-preference": "Yew lista serkerdiye be zıwananê eleqedaran ra bıgurene."
+	"ext-uls-compact-language-links-preference": "Teyna zıwanê ke to aleqedar kenê  [[$1|a lista zıwani]] bıkarne.",
+	"ext-uls-compact-no-results": "Na pel zıwano ke şıma cıgeyrenê a zıwan de mewcud niya"
 }
