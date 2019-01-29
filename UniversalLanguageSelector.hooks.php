@@ -164,16 +164,20 @@ class UniversalLanguageSelectorHooks {
 	 * Add some tabs for navigation for users who do not use Ajax interface.
 	 * Hook: PersonalUrls
 	 * @param array &$personal_urls
-	 * @param string &$title
+	 * @param Title &$title
+	 * @param SkinTemplate $context SkinTemplate object providing context
 	 */
-	public static function addPersonalBarTrigger( array &$personal_urls, &$title ) {
+	public static function addPersonalBarTrigger(
+		array &$personal_urls,
+		&$title,
+		SkinTemplate $context
+	) {
 		global $wgULSPosition;
 
 		if ( $wgULSPosition !== 'personal' ) {
 			return;
 		}
 
-		$context = RequestContext::getMain();
 		if ( !self::isToolbarEnabled( $context->getUser() ) ) {
 			return;
 		}
