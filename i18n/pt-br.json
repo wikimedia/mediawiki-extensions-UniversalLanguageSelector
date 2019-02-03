@@ -63,7 +63,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Você pode habilitar as ferramentas de entrada de texto a qualquer momento a partir das configurações de idioma.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Você pode habilitar as ferramentas de entrada de texto a qualquer momento a partir das configurações de idioma próximo da lista de idiomas.",
 	"ext-uls-language-settings-applying": "Aplicando…",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Mais um|$1mais}}",
+	"ext-uls-compact-link-count": "Mais {{PLURAL:$1|um|$1}}",
 	"ext-uls-compact-link-info": "Todos os idiomas (seleção inicial de escolhas comuns por você e outros)",
 	"prefs-languages": "Idiomas",
 	"ext-uls-compact-language-links-preference": "Usar uma [[$1|lista de idiomas compactos]], com idiomas relevantes para você.",
