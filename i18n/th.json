@@ -10,8 +10,9 @@
 	"uls-plang-title-languages": "ภาษา",
 	"ext-uls-select-language-settings-icon-tooltip": "การตั้งค่าภาษา",
 	"ext-uls-undo-language-tooltip-text": "เปลี่ยนภาษาจาก $1 แล้ว",
+	"ext-uls-undo-language-tooltip-text-local": "เปลี่ยนภาษาสำหรับวิกินี้แล้ว ตรวจสอบ[[Special:GlobalPreferences|ค่ากำหนดทั่วโลก]]ของคุณเพื่อเปลี่ยนภาษาสำหรับวิกิทั้งหมด",
 	"ext-uls-language-settings-preferences-link": "การตั้งค่าภาษาเพิ่มเติม",
-	"uls-betafeature-label": "ลิงก์ข้ามภาษาแบบพกพา",
+	"uls-betafeature-label": "ลิงก์ภาษาแบบพกพา",
 	"uls-betafeature-desc": "แสดงรายการภาษาแบบสั้น โดยแสดงเพียงภาษาที่สัมพันธ์กับคุณมากที่สุด",
 	"ext-uls-display-settings-title": "การตั้งค่าการแสดงผล",
 	"ext-uls-display-settings-language-tab": "ภาษา",
@@ -26,7 +27,7 @@
 	"ext-uls-display-settings-ui-language": "ภาษาที่แสดง",
 	"ext-uls-display-settings-anon-label": "ภาษาที่แสดง:",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (เหมือนกับเนื้อหา)",
-	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|ล็อกอิน]]เพื่อเลือกภาษาอื่นสำหรับเมนู",
+	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|เข้าสู่ระบบ]]เพื่อเลือกภาษาอื่นสำหรับเมนู",
 	"ext-uls-webfonts-settings-title": "ดาวน์โหลดแบบอักษรเมื่อจำเป็น",
 	"ext-uls-webfonts-settings-info": "ดาวน์โหลดแบบอักษรที่ขาดไปโดยอัตโนมัติและอนุญาตการเลือกแบบอักษรที่ต้องการ",
 	"ext-uls-webfonts-settings-info-link": "ข้อมูลเพิ่มเติม",
@@ -57,6 +58,8 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "คุณสามารถเปิดใช้งานเครื่องมือป้อนข้อมูลได้ทุกเมื่อจากการตั้งค่าภาษาถัดจากรายการภาษา",
 	"ext-uls-language-settings-applying": "กำลังใช้...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|เพิ่มเติมอีกหนึ่งภาษา|เพิ่มเติมอีก $1 ภาษา}}",
+	"ext-uls-compact-link-info": "ภาษาทั้งหมด (ที่เลือกไว้ตั้งแต่แรกจากตัวเลือกธรรมดาโดยคุณและคนอื่นๆ)",
 	"prefs-languages": "ภาษา",
-	"ext-uls-compact-language-links-preference": "ใช้ [[$1|รายการภาษาแบบกระชับ]] โดยมีภาษาที่เกี่ยวข้องกับคุณ"
+	"ext-uls-compact-language-links-preference": "ใช้ [[$1|รายการภาษาแบบกระชับ]] โดยมีภาษาที่เกี่ยวข้องกับคุณ",
+	"ext-uls-compact-no-results": "หน้านี้ไม่มีในภาษาที่คุณค้นหา"
 }
