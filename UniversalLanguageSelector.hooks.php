@@ -514,11 +514,15 @@ class UniversalLanguageSelectorHooks {
 				'scripts' => 'js/ext.uls.eventlogger.js',
 				'dependencies' => [
 					'mediawiki.user',
-					'schema.UniversalLanguageSelector',
+					'ext.eventLogging',
 				],
 				'localBasePath' => __DIR__ . '/resources',
 				'remoteExtPath' => 'UniversalLanguageSelector/resources',
 			];
+			if ( version_compare( $wgVersion, '1.33', '<' ) ) {
+				// Support: EventLogging REL1_32 and earlier (T209629)
+				$modules['ext.uls.eventlogger']['dependencies'][] = 'schema.UniversalLanguageSelector';
+			}
 		}
 
 		$resourceLoader->register( $modules );
