@@ -24,6 +24,7 @@
 	 * ULS Event logger
 	 * See https://meta.wikimedia.org/wiki/Schema:UniversalLanguageSelector
 	 *
+	 * @private
 	 * @since 2013.08
 	 */
 	function ULSEventLogger() {
@@ -43,26 +44,16 @@
 		 *
 		 * @param {Object} event Event action and optional fields
 		 * @param {string} schema The schema; 'UniversalLanguageSelector' is the default
-		 * @return {jQuery.Promise} jQuery Promise object for the logging call
+		 * @return {jQuery.Promise} Promise object for the logging call
 		 */
 		log: function ( event, schema ) {
-			// FIXME: We need to create our own deferred for two reasons:
-			//  - logEvent might not be executed immediately
-			//  - we cannot reject a promise returned by it
-			// So we proxy the original promises status updates.
-			var deferred = $.Deferred();
-
 			schema = schema || this.schemaDefault;
 
 			if ( schema === this.schemaDefault ) {
 				event = $.extend( {}, this.eventBase, event );
 			}
 
-			mw.eventLog.logEvent( schema, event )
-				.done( deferred.resolve )
-				.fail( deferred.reject );
-
-			return deferred.promise();
+			return mw.eventLog.logEvent( schema, event );
 		},
 
 		/**
@@ -244,6 +235,8 @@
 		}
 	};
 
-	mw.uls = mw.uls || {};
-	mw.uls.eventlogger = new ULSEventLogger();
+	/**
+	 * @private
+	 */
+	module.exports = new ULSEventLogger();
 }() );
