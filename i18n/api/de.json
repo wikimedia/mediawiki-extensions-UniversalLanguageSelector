@@ -13,6 +13,7 @@
 	"apihelp-languagesearch-example-2": "Sucht nach „ഫി“",
 	"apihelp-languagesearch-example-3": "Sucht nach „ഫി“, erlaubt einen Tippfehler",
 	"apihelp-ulslocalization-description": "Ruft die Lokalisierung von ULS in der vorgegebenen Sprache ab.",
+	"apihelp-ulslocalization-summary": "Ruft die Lokalisierung von ULS in der angegebenen Sprache ab.",
 	"apihelp-ulslocalization-param-language": "Sprachcode.",
 	"apihelp-ulslocalization-example-1": "Ruft die Tamil-Lokalisierung ab",
 	"apihelp-ulslocalization-example-2": "Ruft die Hindi-Lokalisierung ab"
