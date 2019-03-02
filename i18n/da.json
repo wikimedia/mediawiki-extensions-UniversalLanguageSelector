@@ -5,7 +5,8 @@
 			"Christian List",
 			"Peter Alberti",
 			"Cgtdk",
-			"Sarrus"
+			"Sarrus",
+			"Weblars"
 		]
 	},
 	"uls-desc": "Giver brugeren forskellige måder at vælge et sprog og at justere indstillingerne for sproget",
@@ -43,8 +44,8 @@
 	"ext-uls-input-settings-ime-settings": "Indtastningsmetoder for $1",
 	"ext-uls-input-settings-ui-language": "Sprog, der skrives på",
 	"ext-uls-back-to-input-settings": "Tilbage til indtastningsindstillinger",
-	"ext-uls-ime-help": "Hvordan man bruger",
-	"ext-uls-disable-input-method": "Brug standardtastatur",
+	"ext-uls-ime-help": "Vejledning",
+	"ext-uls-disable-input-method": "Sprogspecifikt tastatur (standard)",
 	"ext-uls-input-settings-more-languages-tooltip": "Flere sprog",
 	"jquery-ime-other-languages": "Andre sprog",
 	"jquery-ime-disable-text": "Brug standardtastatur",
