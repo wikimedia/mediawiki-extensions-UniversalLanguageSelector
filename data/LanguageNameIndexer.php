@@ -156,5 +156,5 @@ PHP;
 	}
 }
 
-$maintClass = 'LanguageNameIndexer';
+$maintClass = LanguageNameIndexer::class;
 require_once RUN_MAINTENANCE_IF_MAIN;

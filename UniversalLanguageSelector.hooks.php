@@ -69,7 +69,7 @@ class UniversalLanguageSelectorHooks {
 		if ( $wgULSCompactLanguageLinksBetaFeature === true &&
 			$wgInterwikiMagic === true &&
 			$wgHideInterlanguageLinks === false &&
-			class_exists( 'BetaFeatures' ) &&
+			class_exists( BetaFeatures::class ) &&
 			BetaFeatures::isFeatureEnabled( $user, 'uls-compact-links' )
 		) {
 			// Compact language links is a beta feature in this wiki. Check the user's

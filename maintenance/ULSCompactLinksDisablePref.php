@@ -117,5 +117,5 @@ class ULSCompactLinksDisablePref extends Maintenance {
 	}
 }
 
-$maintClass = "ULSCompactLinksDisablePref";
+$maintClass = ULSCompactLinksDisablePref::class;
 require_once RUN_MAINTENANCE_IF_MAIN;
