@@ -155,7 +155,7 @@ class UniversalLanguageSelectorHooks {
 		$testModules['qunit']['ext.uls.tests'] = [
 			'scripts' => [ 'tests/qunit/ext.uls.tests.js' ],
 			'dependencies' => [ 'jquery.uls', 'ext.uls.init', 'ext.uls.preferences' ],
-			'localBasePath' => __DIR__,
+			'localBasePath' => dirname( __DIR__ ),
 			'remoteExtPath' => 'UniversalLanguageSelector',
 		];
 	}
@@ -491,7 +491,7 @@ class UniversalLanguageSelectorHooks {
 				'mediawiki.ui.button',
 				'mediawiki.user'
 			],
-			'localBasePath' => __DIR__ . '/resources',
+			'localBasePath' => __DIR__ . '/../resources',
 			'remoteExtPath' => 'UniversalLanguageSelector/resources'
 		];
 		$modules['ext.uls.preferences'] = [
@@ -500,7 +500,7 @@ class UniversalLanguageSelectorHooks {
 				'mediawiki.user',
 				'mediawiki.api'
 			],
-			'localBasePath' => __DIR__ . '/resources',
+			'localBasePath' => __DIR__ . '/../resources',
 			'remoteExtPath' => 'UniversalLanguageSelector/resources'
 		];
 		if ( version_compare( $wgVersion, '1.32', '<' ) ) {
@@ -516,7 +516,7 @@ class UniversalLanguageSelectorHooks {
 					'mediawiki.user',
 					'ext.eventLogging',
 				],
-				'localBasePath' => __DIR__ . '/resources',
+				'localBasePath' => __DIR__ . '/../resources',
 				'remoteExtPath' => 'UniversalLanguageSelector/resources',
 			];
 			if ( version_compare( $wgVersion, '1.33', '<' ) ) {
