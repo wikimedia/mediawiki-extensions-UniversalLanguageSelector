@@ -3,7 +3,8 @@
 		"authors": [
 			"Akmalzhon",
 			"CoderSI",
-			"Sociologist"
+			"Sociologist",
+			"Nataev"
 		]
 	},
 	"uls-plang-title-languages": "Tillar",
@@ -15,5 +16,5 @@
 	"ext-uls-display-settings-anon-label": "Displey tili",
 	"jquery-ime-other-languages": "Boshqa tillarda",
 	"jquery-ime-help": "Yordam",
-	"ext-uls-compact-link-count": "Yana {{PLURAL:$1|bitta tilda|$1 ta tillarda}}"
+	"ext-uls-compact-link-count": "Yana {{PLURAL:$1|bitta tilda|$1 ta tilda}}"
 }
