@@ -1,6 +1,11 @@
 /*!
  * ULS Event logger
  *
+ * See https://meta.wikimedia.org/wiki/Schema:UniversalLanguageSelector
+ *
+ * @private
+ * @since 2013.08
+ *
  * Copyright (C) 2012-2013 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
  * Niklas Laxström, Pau Giner, Santhosh Thottingal, Siebrand Mazeland and other
  * contributors. See CREDITS for a list.
@@ -20,223 +25,201 @@
 ( function () {
 	'use strict';
 
-	/**
-	 * ULS Event logger
-	 * See https://meta.wikimedia.org/wiki/Schema:UniversalLanguageSelector
-	 *
-	 * @private
-	 * @since 2013.08
-	 */
-	function ULSEventLogger() {
-		this.eventDefault = {
-			version: 1,
-			token: mw.user.id(),
-			contentLanguage: mw.config.get( 'wgContentLanguage' ),
-			interfaceLanguage: mw.config.get( 'wgUserLanguage' )
-		};
-		this.schemaDefault = 'UniversalLanguageSelector';
-		this.listen();
-	}
-
-	ULSEventLogger.prototype = {
-		/**
-		 * Local wrapper for 'mw.eventLog.logEvent'
-		 *
-		 * @param {Object} event Event action and optional fields
-		 * @param {string} schema The schema; 'UniversalLanguageSelector' is the default
-		 * @return {jQuery.Promise} Promise object for the logging call
-		 */
-		log: function ( event, schema ) {
-			schema = schema || this.schemaDefault;
-
-			if ( schema === this.schemaDefault ) {
-				event = $.extend( {}, this.eventBase, event );
-			}
-
-			return mw.eventLog.logEvent( schema, event );
-		},
-
-		/**
-		 * Listen for event logging
-		 */
-		listen: function () {
-			// Register handlers for event logging triggers
-			mw.hook( 'mw.uls.settings.open' ).add( this.ulsSettingsOpen.bind( this ) );
-			mw.hook( 'mw.uls.language.revert' ).add( this.ulsLanguageRevert.bind( this ) );
-			mw.hook( 'mw.uls.ime.enable' ).add( this.enableIME.bind( this ) );
-			mw.hook( 'mw.uls.ime.disable' ).add( this.disableIME.bind( this ) );
-			mw.hook( 'mw.uls.ime.change' ).add( this.changeIME.bind( this ) );
-			mw.hook( 'mw.uls.login.click' ).add( this.loginClick.bind( this ) );
-			mw.hook( 'mw.uls.ime.morelanguages' ).add( this.imeMoreLanguages.bind( this ) );
-			mw.hook( 'mw.uls.interface.morelanguages' ).add( this.interfaceMoreLanguages.bind( this ) );
-			mw.hook( 'mw.uls.interface.language.change' ).add( this.interfaceLanguageChange.bind( this ) );
-			mw.hook( 'mw.uls.font.change' ).add( this.fontChange.bind( this ) );
-			mw.hook( 'mw.uls.webfonts.enable' ).add( this.enableWebfonts.bind( this ) );
-			mw.hook( 'mw.uls.webfonts.disable' ).add( this.disableWebfonts.bind( this ) );
-
-			$( 'body' ).on( 'noresults.uls', '.uls-menu .uls-languagefilter',
-				this.noSearchResults.bind( this )
-			);
-		},
-
-		/**
-		 * Log language settings open
-		 *
-		 * @param {string} context Where it was opened from
-		 */
-		ulsSettingsOpen: function ( context ) {
-			this.log( {
-				action: 'settings-open',
-				context: context
-			} );
-		},
-
-		/**
-		 * Log language revert
-		 *
-		 * @param {jQuery.Deferred} deferred
-		 */
-		ulsLanguageRevert: function ( deferred ) {
-			this.log( { action: 'ui-lang-revert' } ).always( deferred.resolve() );
-		},
-
-		/**
-		 * Log IME disabling
-		 *
-		 * @param {string} context Where the setting was changed.
-		 */
-		disableIME: function ( context ) {
-			this.log( { action: 'ime-disable', context: context } );
-		},
-
-		/**
-		 * Log IME enabling
-		 *
-		 * @param {string} context Where the setting was changed.
-		 */
-		enableIME: function ( context ) {
-			this.log( { action: 'ime-enable', context: context } );
-		},
-
-		/**
-		 * Log IME change
-		 *
-		 * @param {string} inputMethod
-		 */
-		changeIME: function ( inputMethod ) {
-			this.log( {
-				action: 'ime-change',
-				inputMethod: inputMethod
-			} );
-		},
-
-		/**
-		 * Log login link click in display settings.
-		 *
-		 * @param {jQuery.Deferred} deferred
-		 */
-		loginClick: function ( deferred ) {
-			this.log( { action: 'login-click' } ).always( deferred.resolve );
-		},
-
-		/**
-		 * More languages item in IME menu is clicked
-		 */
-		imeMoreLanguages: function () {
-			this.log( {
-				action: 'more-languages-access',
-				context: 'ime'
-			} );
-		},
-
-		/**
-		 * Log interface language change
-		 *
-		 * @param {string} language language code
-		 * @param {jQuery.Deferred} deferred
-		 */
-		interfaceLanguageChange: function ( language, deferred ) {
-			var logParams = {
-				action: 'language-change',
-				context: 'interface',
-				interfaceLanguage: language
-			};
-
-			this.log( logParams ).always( deferred.resolve );
-		},
-
-		/**
-		 * More languages in display settings is clicked
-		 */
-		interfaceMoreLanguages: function () {
-			this.log( {
-				action: 'more-languages-access',
-				context: 'interface'
-			} );
-		},
-
-		/**
-		 * Log font preference changes
-		 *
-		 * @param {string} context Either 'interface' or 'content'
-		 * @param {string} language
-		 * @param {string} font
-		 */
-		fontChange: function ( context, language, font ) {
-			var logParams = {
-				action: 'font-change',
-				context: context
-			};
-
-			if ( context === 'interface' ) {
-				$.extend( logParams, {
-					interfaceFont: font,
-					// Override in case the user changed the ui language but hasn't applied it yet
-					interfaceLanguage: language
-				} );
-			} else {
-				logParams.contentFont = font;
-			}
-
-			this.log( logParams );
-		},
-
-		/**
-		 * Log webfonts disabling
-		 *
-		 * @param {string} context Where the setting was changed.
-		 */
-		disableWebfonts: function ( context ) {
-			this.log( { action: 'webfonts-disable', context: context } );
-		},
-
-		/**
-		 * Log webfonts enabling
-		 *
-		 * @param {string} context Where the setting was changed.
-		 */
-		enableWebfonts: function ( context ) {
-			this.log( { action: 'webfonts-enable', context: context } );
-		},
-
-		/**
-		 * Log search strings which produce no search results.
-		 *
-		 * @param {jQuery.event} event The original event
-		 * @param {Object} data Information about the failed search
-		 */
-		noSearchResults: function ( event, data ) {
-			this.log( {
-				action: 'no-search-results',
-				context: data.query,
-				ulsPurpose: data.ulsPurpose,
-				title: mw.config.get( 'wgPageName' )
-			} );
-		}
+	var eventDefault = {
+		version: 1,
+		token: mw.user.id(),
+		contentLanguage: mw.config.get( 'wgContentLanguage' ),
+		interfaceLanguage: mw.config.get( 'wgUserLanguage' )
 	};
 
 	/**
-	 * @private
+	 * Local wrapper for 'mw.eventLog.logEvent'
+	 *
+	 * @param {Object} event Event action and optional fields
+	 * @return {jQuery.Promise} Promise object for the logging call
 	 */
-	module.exports = new ULSEventLogger();
+	function log( event ) {
+		event = $.extend( {}, eventDefault, event );
+		return mw.eventLog.logEvent( 'UniversalLanguageSelector', event );
+	}
+
+	/**
+	 * Log language settings open
+	 *
+	 * @param {string} context Where it was opened from
+	 */
+	function ulsSettingsOpen( context ) {
+		log( {
+			action: 'settings-open',
+			context: context
+		} );
+	}
+
+	/**
+	 * Log language revert
+	 *
+	 * @param {jQuery.Deferred} deferred
+	 */
+	function ulsLanguageRevert( deferred ) {
+		log( { action: 'ui-lang-revert' } ).always( deferred.resolve() );
+	}
+
+	/**
+	 * Log IME disabling
+	 *
+	 * @param {string} context Where the setting was changed.
+	 */
+	function disableIME( context ) {
+		log( { action: 'ime-disable', context: context } );
+	}
+
+	/**
+	 * Log IME enabling
+	 *
+	 * @param {string} context Where the setting was changed.
+	 */
+	function enableIME( context ) {
+		log( { action: 'ime-enable', context: context } );
+	}
+
+	/**
+	 * Log IME change
+	 *
+	 * @param {string} inputMethod
+	 */
+	function changeIME( inputMethod ) {
+		log( {
+			action: 'ime-change',
+			inputMethod: inputMethod
+		} );
+	}
+
+	/**
+	 * Log login link click in display settings.
+	 *
+	 * @param {jQuery.Deferred} deferred
+	 */
+	function loginClick( deferred ) {
+		log( { action: 'login-click' } ).always( deferred.resolve );
+	}
+
+	/**
+	 * Log when "More languages" item in IME menu is clicked.
+	 */
+	function imeMoreLanguages() {
+		log( {
+			action: 'more-languages-access',
+			context: 'ime'
+		} );
+	}
+
+	/**
+	 * Log interface language change
+	 *
+	 * @param {string} language language code
+	 * @param {jQuery.Deferred} deferred
+	 */
+	function interfaceLanguageChange( language, deferred ) {
+		var logParams = {
+			action: 'language-change',
+			context: 'interface',
+			interfaceLanguage: language
+		};
+
+		log( logParams ).always( deferred.resolve );
+	}
+
+	/**
+	 * More languages in display settings is clicked
+	 */
+	function interfaceMoreLanguages() {
+		log( {
+			action: 'more-languages-access',
+			context: 'interface'
+		} );
+	}
+
+	/**
+	 * Log font preference changes
+	 *
+	 * @param {string} context Either 'interface' or 'content'
+	 * @param {string} language
+	 * @param {string} font
+	 */
+	function fontChange( context, language, font ) {
+		var logParams = {
+			action: 'font-change',
+			context: context
+		};
+
+		if ( context === 'interface' ) {
+			logParams.interfaceFont = font;
+			// Override in case the user changed the ui language but hasn't applied it yet
+			logParams.interfaceLanguage = language;
+		} else {
+			logParams.contentFont = font;
+		}
+
+		log( logParams );
+	}
+
+	/**
+	 * Log webfonts disabling
+	 *
+	 * @param {string} context Where the setting was changed.
+	 */
+	function disableWebfonts( context ) {
+		log( { action: 'webfonts-disable', context: context } );
+	}
+
+	/**
+	 * Log webfonts enabling
+	 *
+	 * @param {string} context Where the setting was changed.
+	 */
+	function enableWebfonts( context ) {
+		log( { action: 'webfonts-enable', context: context } );
+	}
+
+	/**
+	 * Log search strings which produce no search results.
+	 *
+	 * @param {jQuery.event} event The original event
+	 * @param {Object} data Information about the failed search
+	 */
+	function noSearchResults( event, data ) {
+		log( {
+			action: 'no-search-results',
+			context: data.query,
+			ulsPurpose: data.ulsPurpose,
+			title: mw.config.get( 'wgPageName' )
+		} );
+	}
+
+	/**
+	 * Start listening for event logging
+	 */
+	function listen() {
+		// Register handlers for event logging triggers
+		mw.hook( 'mw.uls.settings.open' ).add( ulsSettingsOpen );
+		mw.hook( 'mw.uls.language.revert' ).add( ulsLanguageRevert );
+		mw.hook( 'mw.uls.ime.enable' ).add( enableIME );
+		mw.hook( 'mw.uls.ime.disable' ).add( disableIME );
+		mw.hook( 'mw.uls.ime.change' ).add( changeIME );
+		mw.hook( 'mw.uls.login.click' ).add( loginClick );
+		mw.hook( 'mw.uls.ime.morelanguages' ).add( imeMoreLanguages );
+		mw.hook( 'mw.uls.interface.morelanguages' ).add( interfaceMoreLanguages );
+		mw.hook( 'mw.uls.interface.language.change' ).add( interfaceLanguageChange );
+		mw.hook( 'mw.uls.font.change' ).add( fontChange );
+		mw.hook( 'mw.uls.webfonts.enable' ).add( enableWebfonts );
+		mw.hook( 'mw.uls.webfonts.disable' ).add( disableWebfonts );
+
+		$( 'body' ).on(
+			'noresults.uls',
+			'.uls-menu .uls-languagefilter',
+			noSearchResults
+		);
+	}
+
+	listen();
 }() );
