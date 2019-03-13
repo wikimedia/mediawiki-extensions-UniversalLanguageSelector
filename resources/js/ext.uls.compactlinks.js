@@ -317,7 +317,7 @@
 			// Load the ULS now.
 			mw.loader.using( 'ext.uls.mediawiki' ).then( function () {
 				self.createSelector( self.$trigger );
-				self.$trigger.click();
+				self.$trigger.trigger( 'click' );
 			} );
 		} );
 	};

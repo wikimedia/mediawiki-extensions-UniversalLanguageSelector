@@ -126,7 +126,7 @@
 		save: function ( callback ) {
 			var ulsPreferences = this;
 
-			callback = callback || $.noop;
+			callback = callback || function () {};
 			if ( this.isAnon ) {
 				// Anonymous user. Save preferences in local storage
 				preferenceStore().set( this.preferenceName, this.preferences );

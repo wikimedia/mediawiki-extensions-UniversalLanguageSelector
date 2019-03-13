@@ -81,7 +81,7 @@
 			this.$window.find( 'button.uls-settings-apply' )
 				.on( 'click', mw.hook( 'mw.uls.settings.apply' ).fire.bind( this ) );
 			// Hide the window when clicked outside
-			$( 'html' ).click( this.hide.bind( this ) );
+			$( 'html' ).on( 'click', this.hide.bind( this ) );
 
 			// ... but when clicked on window do not hide.
 			this.$window.on( 'click', function ( event ) {
@@ -189,18 +189,18 @@
 				this.initialized = true;
 			}
 			// Close other modal windows which listen to click events outside them
-			$( 'html' ).click();
+			$( 'html' ).trigger( 'click' );
 			this.i18n();
 			// Every time we show this window, make sure the current
 			// settings panels is up-to-date. So just click on active menu item.
-			this.$window.find( '.settings-menu-items > .active' ).click();
+			this.$window.find( '.settings-menu-items > .active' ).trigger( 'click' );
 
 			this.shown = true;
 			this.$window.show();
 			this.visible();
 			this.$window.scrollIntoView();
 			// For keyboard navigation, put the focus on an element inside the dialog
-			this.$window.find( '.menu-section.active' ).focus();
+			this.$window.find( '.menu-section.active' ).trigger( 'focus' );
 		},
 
 		/**

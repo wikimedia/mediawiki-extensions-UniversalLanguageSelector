@@ -150,7 +150,7 @@
 				defaultModule: 'input',
 				onClose: function () {
 					// on close of input settings, keep focus in input area.
-					imeselector.$element.focus();
+					imeselector.$element.trigger( 'focus' );
 				},
 				top: imeselector.$element.offset().top
 			} );
@@ -291,7 +291,7 @@
 				$ulsTrigger.uls( {
 					onSelect: function ( language ) {
 						$input.data( 'imeselector' ).selectLanguage( language );
-						$input.focus();
+						$input.trigger( 'focus' );
 					},
 					languages: mw.ime.getLanguagesWithIME(),
 					ulsPurpose: 'ime-selector',
@@ -308,7 +308,7 @@
 						title: $.i18n( 'ext-uls-ime-help' )
 					} )
 					.addClass( 'ime-perime-help' )
-					.click( function ( event ) {
+					.on( 'click', function ( event ) {
 						event.stopPropagation();
 					} );
 			}

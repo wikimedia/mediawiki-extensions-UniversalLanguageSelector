@@ -79,7 +79,7 @@
 				};
 			}
 			$.extend( displaySettingsOptions, uls.position() );
-			$displaySettings.languagesettings( displaySettingsOptions ).click();
+			$displaySettings.languagesettings( displaySettingsOptions ).trigger( 'click' );
 		} );
 	}
 
@@ -104,7 +104,7 @@
 				},
 				top: position.top,
 				left: position.left
-			} ).click();
+			} ).trigger( 'click' );
 
 		} );
 	}
@@ -182,7 +182,7 @@
 					.text( previousAutonym )
 					.prop( {
 						href: '',
-						'class': 'uls-prevlang-link',
+						class: 'uls-prevlang-link',
 						lang: previousLang,
 						// We could get dir from uls.data,
 						// but we are trying to avoid loading it
@@ -311,7 +311,7 @@
 				};
 
 				mw.loader.using( mw.uls.languageSettingsModules, function () {
-					$ulsTrigger.languagesettings( languageSettingsOptions ).click();
+					$ulsTrigger.languagesettings( languageSettingsOptions ).trigger( 'click' );
 				} );
 
 				e.stopPropagation();

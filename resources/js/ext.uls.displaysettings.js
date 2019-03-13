@@ -185,7 +185,7 @@
 						var deferred = new $.Deferred();
 
 						$loginCta.html( parsedCta ); // The parsed CTA is HTML
-						$loginCta.find( 'a' ).click( function ( event ) {
+						$loginCta.find( 'a' ).on( 'click', function ( event ) {
 							event.preventDefault();
 							// Because browsers navigate away when clicking a link,
 							// we are overriding the normal click behavior to allow
@@ -301,7 +301,7 @@
 						$back = $( '<div>' )
 							.addClass( 'uls-icon-back' );
 
-					$back.click( function () {
+					$back.on( 'click', function () {
 						uls.hide();
 						displaySettings.$parent.show();
 					} );

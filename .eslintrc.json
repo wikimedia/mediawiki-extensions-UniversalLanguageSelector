@@ -10,5 +10,8 @@
 	"globals": {
 		"mw": false,
 		"OO": false
+	},
+	"rules": {
+		"no-jquery/no-global-selector": "off"
 	}
 }

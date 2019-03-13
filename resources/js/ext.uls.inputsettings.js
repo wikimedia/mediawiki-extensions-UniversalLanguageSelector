@@ -173,7 +173,8 @@
 
 			$imeLabel = $( '<label>' ).attr( 'for', imeId );
 
-			$inputMethodItem = $( '<input type="radio">' ).attr( {
+			$inputMethodItem = $( '<input>' ).attr( {
+				type: 'radio',
 				name: 'ime',
 				id: imeId,
 				value: imeId
@@ -306,7 +307,7 @@
 				$button.on( 'click', buttonHandler( $button ) );
 
 				if ( language === selectedImeLanguage ) {
-					$button.click();
+					$button.trigger( 'click' );
 				}
 			}
 
@@ -339,7 +340,7 @@
 							.i18n()
 							.text( ' ' );
 
-					$back.click( function () {
+					$back.on( 'click', function () {
 						uls.hide();
 						inputSettings.$parent.show();
 					} );
