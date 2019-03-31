@@ -3,11 +3,14 @@
 		"authors": [
 			"Kening Aldgilles",
 			"Robin0van0der0vliet",
-			"Robin van der Vliet"
+			"Robin van der Vliet",
+			"PiefPafPier"
 		]
 	},
 	"uls-plang-title-languages": "Talen",
+	"ext-uls-undo-language-tooltip-text": "Taal feroare fan $1",
 	"ext-uls-language-settings-preferences-link": "Mear taalynstellingen",
+	"ext-uls-display-settings-title": "Werjefte-ynstellings",
 	"ext-uls-display-settings-language-tab": "Taal",
 	"ext-uls-language-settings-title": "Taalynstellingen",
 	"ext-uls-language-settings-apply": "Ynstellingen tapasse",
@@ -16,7 +19,11 @@
 	"ext-uls-display-settings-ui-language": "Taal sjen litte",
 	"ext-uls-display-settings-anon-label": "Taal sjen litte:",
 	"ext-uls-webfonts-settings-info-link": "Mear ynformaasje",
+	"ext-uls-back-to-display-settings": "Werom nei werjefte-ynstellings",
+	"ext-uls-input-settings-title": "Ynfierynstellings",
 	"ext-uls-input-settings-title-short": "Ynfier",
+	"ext-uls-input-settings-ui-language": "Taal foar ynfier",
+	"ext-uls-back-to-input-settings": "Werom nei ynfierynstellings",
 	"ext-uls-input-settings-more-languages-tooltip": "Mear talen",
 	"jquery-ime-other-languages": "Oare talen",
 	"jquery-ime-help": "Help",
