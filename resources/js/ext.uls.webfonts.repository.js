@@ -78,6 +78,13 @@
 		"cr": [
 			"OskiEast"
 		],
+		"cu": [
+			"system",
+			"Fedorovsk",
+			"Menaion",
+			"Monomakh",
+			"Ponomar"
+		],
 		"cy": [
 			"system",
 			"ComicNeue",
@@ -467,6 +474,10 @@
 			"woff": "EstrangeloEdessa/SyrCOMEdessa.woff?c4484",
 			"woff2": "EstrangeloEdessa/SyrCOMEdessa.woff2?3e525"
 		},
+		"Fedorovsk": {
+			"woff": "Fedorovsk/FedorovskUnicode.woff?1659d",
+			"woff2": "Fedorovsk/FedorovskUnicode.woff2?245e3"
+		},
 		"FreeFont-Thaana": {
 			"woff": "FreeFontThana/FreeFont-Thaana.woff?0f06e",
 			"woff2": "FreeFontThana/FreeFont-Thaana.woff2?ad021",
@@ -589,9 +600,17 @@
 			"woff": "LinuxLibertine/LinLibertine_RIah.woff?1c058",
 			"woff2": "LinuxLibertine/LinLibertine_RIah.woff2?4e887"
 		},
+		"Menaion": {
+			"woff": "Menaion/MenaionUnicode.woff?50cc6",
+			"woff2": "Menaion/MenaionUnicode.woff2?da37b"
+		},
 		"Miriam CLM": {
 			"woff": "MiriamCLM/MiriamCLM-Book.woff?28216",
 			"woff2": "MiriamCLM/MiriamCLM-Book.woff2?f3942"
+		},
+		"Monomakh": {
+			"woff": "Monomakh/MonomakhUnicode.woff?0a8b3",
+			"woff2": "Monomakh/MonomakhUnicode.woff2?ee286"
 		},
 		"Myanmar3": {
 			"woff": "Myanmar3/Myanmar3.woff?60817",
@@ -706,6 +725,10 @@
 			"fontweight": "bold",
 			"woff": "Phetsarath/Phetsarath-Bold.woff?8c43d",
 			"woff2": "Phetsarath/Phetsarath-Bold.woff2?2d5a1"
+		},
+		"Ponomar": {
+			"woff": "Ponomar/PonomarUnicode.woff?05ed0",
+			"woff2": "Ponomar/PonomarUnicode.woff2?ea5c5"
 		},
 		"RailwaySans": {
 			"woff": "RailwaySans/RailwaySans.woff?fda9a",
