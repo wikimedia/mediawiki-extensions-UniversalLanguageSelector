@@ -1,10 +1,20 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robin van der Vliet"
+			"Robin van der Vliet",
+			"PiefPafPier"
 		]
 	},
+	"apihelp-languagesearch-description": "Taalnammen sykjen yn elts skrift.",
+	"apihelp-languagesearch-summary": "Taalnammen sykjen yn elts skrift.",
+	"apihelp-languagesearch-param-search": "Sykterm.",
+	"apihelp-languagesearch-param-typos": "Tal fan tastiene staveringsflaters yn in sykterm.",
 	"apihelp-languagesearch-example-1": "Sykje nei \"Te\"",
 	"apihelp-languagesearch-example-2": "Sykje nei \"ഫി\"",
-	"apihelp-ulslocalization-param-language": "Taalkoade."
+	"apihelp-languagesearch-example-3": "Sykje nei \"ഫി\", ien typflater tasteand",
+	"apihelp-ulslocalization-description": "Krij de taaloanpassing fan ULS yn de opjûne taal.",
+	"apihelp-ulslocalization-summary": "Krij de taaloanpassing fan ULS yn de opjûne taal.",
+	"apihelp-ulslocalization-param-language": "Taalkoade.",
+	"apihelp-ulslocalization-example-1": "Krij de taaloanpassing foar it Tamylsk",
+	"apihelp-ulslocalization-example-2": "Krij de taaloanpassing foar it Hindy"
 }
