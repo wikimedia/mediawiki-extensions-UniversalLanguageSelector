@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kareyac"
+		]
+	},
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Եւս մեկը|$1 եւս}}"
+}
