@@ -1,8 +1,20 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"Azniv Stepanian"
 		]
 	},
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Եւս մեկը|$1 եւս}}"
+	"uls-plang-title-languages": "Լեզուներ",
+	"ext-uls-display-settings-language-tab": "Լեզու",
+	"ext-uls-display-settings-title-short": "Ցուցադրել",
+	"ext-uls-language-settings-cancel": "Չեղարկել",
+	"ext-uls-display-settings-ui-language": "Ցուցադրութեան լեզու",
+	"ext-uls-display-settings-anon-label": "Ցուցադրութեան լեզու․",
+	"ext-uls-input-settings-ui-language": "Գրելու համար գործածուող լեզու",
+	"ext-uls-ime-help": "Ինչպէս գործածել",
+	"jquery-ime-help": "Օգնութիւն",
+	"ext-uls-input-disable-notification-undo": "Յետարկել",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Եւս մեկը|$1 եւս}}",
+	"prefs-languages": "Լեզուներ"
 }
