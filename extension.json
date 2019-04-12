@@ -90,7 +90,8 @@
 		"@ULSNoImeSelectors": "Array of jQuery selectors of elements on which IME must not be enabled. @since 2013.07",
 		"ULSNoImeSelectors": [
 			"#wpCaptchaWord",
-			".ve-ce-surface-paste"
+			".ve-ce-surface-paste",
+			".ve-ce-surface-readOnly [contenteditable]"
 		],
 		"@ULSNoWebfontsSelectors": "Array of jQuery selectors of elements on which webfonts must not be applied. By default exclude elements with .autonym because that style set font as Autonym @since 2013.09",
 		"ULSNoWebfontsSelectors": [
