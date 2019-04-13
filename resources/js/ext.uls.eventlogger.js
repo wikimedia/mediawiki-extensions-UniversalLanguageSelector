@@ -100,7 +100,8 @@
 	 * @param {jQuery.Deferred} deferred
 	 */
 	function loginClick( deferred ) {
-		log( { action: 'login-click' } ).always( deferred.resolve );
+		log( { action: 'login-click' } );
+		deferred.resolve();
 	}
 
 	/**
@@ -126,7 +127,8 @@
 			interfaceLanguage: language
 		};
 
-		log( logParams ).always( deferred.resolve );
+		log( logParams );
+		deferred.resolve();
 	}
 
 	/**
