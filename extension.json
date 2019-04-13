@@ -110,7 +110,10 @@
 	"ResourceModules": {
 		"ext.uls.common": {
 			"targets": [ "desktop", "mobile" ],
-			"scripts": "js/ext.uls.common.js",
+			"scripts": [
+				"js/ext.uls.eventlogger.js",
+				"js/ext.uls.common.js"
+			],
 			"styles": "css/ext.uls.less",
 			"skinStyles": {
 				"monobook": "css/ext.uls-monobook.css",

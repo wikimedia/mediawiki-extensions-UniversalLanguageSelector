@@ -107,13 +107,7 @@ class UniversalLanguageSelectorHooks {
 	 * Hook: BeforePageDisplay
 	 */
 	public static function addModules( $out, $skin ) {
-		global $wgULSPosition, $wgULSGeoService, $wgULSEventLogging;
-
-		// If EventLogging integration is enabled, load the schema module
-		// and the event logging functions module
-		if ( $wgULSEventLogging ) {
-			$out->addModules( 'ext.uls.eventlogger' );
-		}
+		global $wgULSPosition, $wgULSGeoService;
 
 		// Soft dependency to Wikibase client. Don't enable CLL if links are managed manually.
 		$excludedLinks = $out->getProperty( 'noexternallanglinks' );
@@ -468,12 +462,12 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	/**
-	 * Conditionally register module ext.uls.eventlogger.
+	 * Conditionally register modules.
 	 *
 	 * @param ResourceLoader $resourceLoader
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader $resourceLoader ) {
-		global $wgULSEventLogging, $wgVersion;
+		global $wgVersion;
 
 		$modules = [];
 		$modules['ext.uls.displaysettings'] = [
@@ -504,17 +498,6 @@ class UniversalLanguageSelectorHooks {
 			// Support: MediaWiki 1.31 and earlier (T200168)
 			$modules['ext.uls.displaysettings']['dependencies'][] = 'mediawiki.api.parse';
 			$modules['ext.uls.preferences']['dependencies'][] = 'mediawiki.api.options';
-		}
-
-		if ( $wgULSEventLogging ) {
-			$modules['ext.uls.eventlogger'] = [
-				'scripts' => 'js/ext.uls.eventlogger.js',
-				'dependencies' => [
-					'mediawiki.user',
-				],
-				'localBasePath' => __DIR__ . '/../resources',
-				'remoteExtPath' => 'UniversalLanguageSelector/resources',
-			];
 		}
 
 		$resourceLoader->register( $modules );
