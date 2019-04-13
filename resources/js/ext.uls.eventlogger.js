@@ -25,22 +25,22 @@
 ( function () {
 	'use strict';
 
-	var eventDefault = {
-		version: 1,
-		token: mw.user.id(),
-		contentLanguage: mw.config.get( 'wgContentLanguage' ),
-		interfaceLanguage: mw.config.get( 'wgUserLanguage' )
-	};
-
 	/**
-	 * Local wrapper for 'mw.eventLog.logEvent'
+	 * Try to emit an EventLogging event with schema 'UniversalLanguageSelector'.
+	 *
+	 * If EventLogging is not installed, this simply does nothing.
 	 *
 	 * @param {Object} event Event action and optional fields
-	 * @return {jQuery.Promise} Promise object for the logging call
 	 */
 	function log( event ) {
-		event = $.extend( {}, eventDefault, event );
-		return mw.eventLog.logEvent( 'UniversalLanguageSelector', event );
+		event = $.extend( {
+			version: 1,
+			token: mw.user.id(),
+			contentLanguage: mw.config.get( 'wgContentLanguage' ),
+			interfaceLanguage: mw.config.get( 'wgUserLanguage' )
+		}, event );
+
+		mw.track( 'event.UniversalLanguageSelector', event );
 	}
 
 	/**
