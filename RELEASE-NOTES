@@ -1,0 +1,15 @@
+== UniversalLanguageSelector 2019.04 ==
+Released at 2019-04-25.
+
+=== Noteworthy changes ===
+* Various performance fixes.
+* Maintenance and localization updates.
+
+==== Input Methods ====
+* New tilde-based layouts for several languages of Africa: Kabyle, Kabiye,
+  Kikuyu, Luganda, Lingala, Malagasy, Northern Sotho, Koyraboro Senni, Sango,
+  Sotho, Venda.
+* Added Latin Pinyin transliteration keyboard 
+
+==== Fonts ====
+* Added fonts for Church Slavonic. (T156843)
