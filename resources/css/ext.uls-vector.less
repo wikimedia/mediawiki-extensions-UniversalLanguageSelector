@@ -1,15 +1,26 @@
 @import 'mediawiki.mixins';
+// All but `font-size` are WikimediaUI theme values and overwrite jquery.uls library.
 
-// We need higher specificity due to loading order of LESS files and jQuery.ULS
+// We need higher specificity due to loading order of LESS files and jquery.uls.
 .skin-vector {
 	.uls-menu {
 		border-color: #c8ccd1;
-		.box-shadow( 0 2px 2px 0 rgba( 0, 0, 0, 0.25 ) ); // Overwrite lib/jquery.uls
-		font-size: 0.875em; // not inherited from `.mw-body-content`, as we insert at `body`
+		.box-shadow( 0 2px 2px 0 rgba( 0, 0, 0, 0.25 ) );
+		// Not inherited from `.mw-body-content`, as we insert at `body`.
+		font-size: 0.875em;
 	}
 
 	.uls-search {
 		border-bottom-color: #c8ccd1;
+	}
+
+	.uls-search-label {
+		opacity: 0.51;
+		.transition( opacity 250ms );
+	}
+
+	.uls-search-wrapper:hover .uls-search-label {
+		opacity: 0.87;
 	}
 
 	.uls-filtersuggestion {
