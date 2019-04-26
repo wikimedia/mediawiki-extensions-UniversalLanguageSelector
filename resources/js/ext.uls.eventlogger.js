@@ -61,7 +61,8 @@
 	 * @param {jQuery.Deferred} deferred
 	 */
 	function ulsLanguageRevert( deferred ) {
-		log( { action: 'ui-lang-revert' } ).always( deferred.resolve() );
+		log( { action: 'ui-lang-revert' } );
+		deferred.resolve();
 	}
 
 	/**
