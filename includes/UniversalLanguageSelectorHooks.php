@@ -248,11 +248,12 @@ class UniversalLanguageSelectorHooks {
 			// Language change
 			if ( Language::isSupportedLanguage( $languageToSave ) ) {
 				// Apply immediately
-				$user->setOption( 'language', $languageToSave );
+				$updateUser = $user->getInstanceForUpdate();
+				$updateUser->setOption( 'language', $languageToSave );
 				$code = $languageToSave;
 				// Promise to sync the DB on post-send
-				DeferredUpdates::addCallableUpdate( function () use ( $user ) {
-					$user->saveSettings();
+				DeferredUpdates::addCallableUpdate( function () use ( $updateUser ) {
+					$updateUser->saveSettings();
 				} );
 			}
 
