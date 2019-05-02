@@ -33,7 +33,7 @@ class UniversalLanguageSelectorHooks {
 	 * @param User $user
 	 * @return bool
 	 */
-	public static function isToolbarEnabled( $user ) {
+	private static function isToolbarEnabled( User $user ) {
 		global $wgULSEnable, $wgULSEnableAnon;
 
 		if ( !$wgULSEnable ) {
@@ -52,7 +52,7 @@ class UniversalLanguageSelectorHooks {
 	 * @param User $user
 	 * @return bool
 	 */
-	public static function isCompactLinksEnabled( $user ) {
+	private static function isCompactLinksEnabled( User $user ) {
 		global $wgULSEnable, $wgInterwikiMagic,
 			$wgULSCompactLinksEnableAnon,
 			$wgHideInterlanguageLinks, $wgULSCompactLanguageLinksBetaFeature;
@@ -106,7 +106,7 @@ class UniversalLanguageSelectorHooks {
 	 * @param Skin $skin
 	 * Hook: BeforePageDisplay
 	 */
-	public static function addModules( $out, $skin ) {
+	public static function addModules( OutputPage $out, $skin ) {
 		global $wgULSPosition, $wgULSGeoService;
 
 		// Soft dependency to Wikibase client. Don't enable CLL if links are managed manually.
@@ -296,7 +296,7 @@ class UniversalLanguageSelectorHooks {
 	 * Hook: ResourceLoaderGetConfigVars
 	 * @param array &$vars
 	 */
-	public static function addConfig( &$vars ) {
+	public static function addConfig( array &$vars ) {
 		global $wgULSGeoService,
 			$wgULSIMEEnabled, $wgULSWebfontsEnabled,
 			$wgULSPosition, $wgULSNoWebfontsSelectors,
@@ -340,7 +340,7 @@ class UniversalLanguageSelectorHooks {
 	 * @param array &$vars
 	 * @param OutputPage $out
 	 */
-	public static function addVariables( &$vars, OutputPage $out ) {
+	public static function addVariables( array &$vars, OutputPage $out ) {
 		global $wgULSAnonCanChangeLanguage;
 
 		// Place request context dependent stuff here
@@ -369,7 +369,7 @@ class UniversalLanguageSelectorHooks {
 		$vars['wgULSCurrentAutonym'] = Language::fetchLanguageName( $langCode );
 	}
 
-	public static function onGetPreferences( $user, &$preferences ) {
+	public static function onGetPreferences( $user, array &$preferences ) {
 		global $wgULSCompactLanguageLinksBetaFeature;
 
 		$preferences['uls-preferences'] = [
@@ -399,7 +399,7 @@ class UniversalLanguageSelectorHooks {
 		}
 	}
 
-	public static function onGetBetaFeaturePreferences( $user, &$prefs ) {
+	public static function onGetBetaFeaturePreferences( $user, array &$prefs ) {
 		global $wgExtensionAssetsPath, $wgULSCompactLanguageLinksBetaFeature,
 			$wgHideInterlanguageLinks, $wgInterwikiMagic;
 
@@ -453,7 +453,7 @@ class UniversalLanguageSelectorHooks {
 	 * Hook: EnterMobileMode
 	 * @param MobileContext $context
 	 */
-	public static function onEnterMobileMode( $context ) {
+	public static function onEnterMobileMode( MobileContext $context ) {
 		global $wgULSEnable, $wgULSMobileWebfontsEnabled;
 
 		// Currently only supported in mobile Beta mode
