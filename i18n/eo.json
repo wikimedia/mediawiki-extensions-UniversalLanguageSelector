@@ -5,13 +5,15 @@
 			"Robin van der Vliet",
 			"Gamliel Fishkin",
 			"Macofe",
-			"Amire80"
+			"Amire80",
+			"Mirin"
 		]
 	},
 	"uls-desc": "Proponas al uzanto kelkajn manierojn por elekti lingvon kaj modifi lingvajn agordojn",
 	"uls-plang-title-languages": "Lingvoj",
 	"ext-uls-select-language-settings-icon-tooltip": "Lingvaj agordoj",
 	"ext-uls-undo-language-tooltip-text": "Lingvo ŝanĝita de $1",
+	"ext-uls-undo-language-tooltip-text-local": "Ŝanĝis lingvon de tiu vikio. Kontrolu viajn [[Special:GlobalPreferences|mallokajn agordojn]] por ŝanĝi lingvojn de ĉiuj vikioj.",
 	"ext-uls-language-settings-preferences-link": "Pliaj lingvaj agordoj",
 	"uls-betafeature-label": "Kompaktaj lingvaj ligiloj",
 	"uls-betafeature-desc": "Montri malpli longan version de lingvaj ligiloj kun ligiloj nur al tiujn lingvoj, kiuj estas iom signifaj por vi.",
