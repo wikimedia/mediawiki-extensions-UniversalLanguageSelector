@@ -312,11 +312,11 @@
 					uls.$menu.find( '.uls-search-wrapper' ).wrap( $wrap );
 					uls.$menu.find( '.uls-search-wrapper-wrapper' ).prepend( $back );
 
-					if ( $( '.uls-settings-trigger' ).offset().left > $( window ).width() / 2 ) {
-						uls.$menu.removeClass( 'selector-left' ).addClass( 'selector-right' );
-					} else {
-						uls.$menu.removeClass( 'selector-right' ).addClass( 'selector-left' );
-					}
+					// Copy callout related classes from parent
+					// eslint-disable-next-line no-jquery/no-class-state
+					uls.$menu.toggleClass( 'selector-left', displaySettings.$parent.$window.hasClass( 'selector-left' ) );
+					// eslint-disable-next-line no-jquery/no-class-state
+					uls.$menu.toggleClass( 'selector-right', displaySettings.$parent.$window.hasClass( 'selector-right' ) );
 				},
 				onVisible: function () {
 					var $parent;

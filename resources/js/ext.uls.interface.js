@@ -296,7 +296,6 @@
 						if ( ulsTriggerOffset.left > $( window ).width() / 2 ) {
 							this.left = ulsTriggerOffset.left - this.$window.width() - caretRadius;
 							this.$window.removeClass( 'selector-left' ).addClass( 'selector-right' );
-
 						} else {
 							this.left = ulsTriggerOffset.left + ulsTriggerWidth + caretRadius;
 							this.$window.removeClass( 'selector-right' ).addClass( 'selector-left' );
