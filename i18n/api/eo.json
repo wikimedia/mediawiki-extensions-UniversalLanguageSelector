@@ -1,11 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robin van der Vliet"
+			"Robin van der Vliet",
+			"Mirin"
 		]
 	},
 	"apihelp-languagesearch-param-search": "Serĉa ĉeno.",
+	"apihelp-languagesearch-param-typos": "Nombro de literumaj eraroj permesataj en la serĉa teksto.",
 	"apihelp-languagesearch-example-1": "Serĉi por \"Te\"",
 	"apihelp-languagesearch-example-2": "Serĉi por \"ഫി\"",
-	"apihelp-ulslocalization-param-language": "Lingva kodo."
+	"apihelp-ulslocalization-param-language": "Lingva kodo.",
+	"apihelp-ulslocalization-example-1": "Akiri tradukon en tamula lingvo",
+	"apihelp-ulslocalization-example-2": "Akiri tradukon en hindia lingvo"
 }
