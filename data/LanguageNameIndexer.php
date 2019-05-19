@@ -36,12 +36,26 @@ class LanguageNameIndexer extends Maintenance {
 		// Avoid local configuration leaking to this script
 		$wgExtraLanguageNames = [];
 
-		$languages = Language::fetchLanguageNames( null, 'all' );
+		$languageNames = [];
+		// Add languages from language-data
+		$ulsLanguages = $this->getLanguageData()[ 'languages' ];
+		foreach ( $ulsLanguages as $languageCode => $languageEntry ) {
+			// Redirect have only one item
+			if ( isset( $languageEntry[ 2 ] ) ) {
+				$languageNames[ 'autonyms' ][ $languageCode ] = $languageEntry[ 2 ];
+			}
+		}
+
+		// Languages and their names in different languages from Names.php and the cldr extension
+		// This comes after $ulsLanguages so that for example the als/gsw mixup is using the code
+		// used in the Wikimedia world.
+		$mwLanguages = Language::fetchLanguageNames( null, 'all' );
+		foreach ( array_keys( $mwLanguages ) as $languageCode ) {
+			$languageNames[ $languageCode ] = LanguageNames::getNames( $languageCode, 0, 2 );
+		}
 
 		$buckets = [];
-		foreach ( $languages as $sourceLanguage => $autonym ) {
-			$translations = LanguageNames::getNames( $sourceLanguage, 0, 2 );
-
+		foreach ( $languageNames as $translations ) {
 			foreach ( $translations as $targetLanguage => $translation ) {
 				// Remove directionality markers used in Names.php: users are not
 				// going to type these.
@@ -126,6 +140,15 @@ class LanguageNameIndexer extends Maintenance {
 		$this->output( " - average size is $avg entries\n" );
 
 		$this->generateFile( $buckets );
+	}
+
+	private function getLanguageData() {
+		$file = __DIR__ . '/../lib/jquery.uls/src/jquery.uls.data.js';
+		$contents = file_get_contents( $file );
+		preg_match( '/.*\$\.uls\.data = (.*?)} \( jQuery \)/s', $contents, $matches );
+		$json = $matches[ 1 ];
+		$data = json_decode( $json, true );
+		return $data;
 	}
 
 	private function generateFile( array $buckets ) {
