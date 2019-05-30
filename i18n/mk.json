@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bjankuloski06"
+			"Bjankuloski06",
+			"Vlad5250"
 		]
 	},
 	"uls-desc": "Му дава на корисникот неколку начини за избор на јазик и прилагодување на јазичните поставки",
 	"uls-plang-title-languages": "Јазици",
 	"ext-uls-select-language-settings-icon-tooltip": "Јазични поставки",
-	"ext-uls-undo-language-tooltip-text": "Јазикот сменет од изворниот $1",
+	"ext-uls-undo-language-tooltip-text": "Јазикот е сменет од $1",
 	"ext-uls-undo-language-tooltip-text-local": "Јазикот е сменет за ова вики. Проверете си ги [[Special:GlobalPreferences|глобалните нагодувања]] за да го измените јазикот за сите викија.",
 	"ext-uls-language-settings-preferences-link": "Уште јазични поставки",
 	"uls-betafeature-label": "Збиени јазични врски",
