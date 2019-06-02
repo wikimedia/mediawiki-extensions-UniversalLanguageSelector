@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"NoiX180"
+		]
+	},
+	"uls-plang-title-languages": "Basa",
+	"ext-uls-undo-language-tooltip-text": "Basa kauahin saking $1",
+	"ext-uls-display-settings-language-tab": "Basa",
+	"ext-uls-webfonts-settings-info-link": "Pidarta lianan",
+	"jquery-ime-other-languages": "Basa tiosan",
+	"jquery-ime-help": "Wantuan",
+	"prefs-languages": "Basa"
+}

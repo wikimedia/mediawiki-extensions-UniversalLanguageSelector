@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gitartha.bordoloi"
+			"Gitartha.bordoloi",
+			"Simbu123"
 		]
 	},
 	"uls-desc": "ব্যৱহাৰকাৰীক ভাষা নিৰ্বাচন কৰিবলৈ আৰু ভাষাৰ ছেটিং সলাবলৈ বিভিন্ন উপায় দিয়ে",
-	"uls-plang-title-languages": "ভাষাসমূহ"
+	"uls-plang-title-languages": "ভাষাসমূহ",
+	"ext-uls-select-language-settings-icon-tooltip": "ভাষাৰ ছেটিংসমূহ",
+	"ext-uls-language-settings-preferences-link": "অধিক ভাষাৰ ছেটিংসমূহ"
 }
