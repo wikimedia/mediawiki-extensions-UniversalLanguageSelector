@@ -18,7 +18,7 @@ require_once "$IP/maintenance/Maintenance.php";
 class GenerateFontTestPage extends Maintenance {
 	public function __construct() {
 		parent::__construct();
-		$this->mDescription = 'Creates a HTML page with text for all fonts.';
+		$this->addDescription( 'Creates a HTML page with text for all fonts.' );
 	}
 
 	public function execute() {

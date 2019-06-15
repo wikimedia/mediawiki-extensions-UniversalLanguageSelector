@@ -21,8 +21,8 @@ class ULSCompactLinksDisablePref extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->requireExtension( 'UniversalLanguageSelector' );
-		$this->mDescription = 'Disables the UniversalLanguageSelector compact-language-links ' .
-			'preference for appropriate users.';
+		$this->addDescription( 'Disables the UniversalLanguageSelector compact-language-links ' .
+			'preference for appropriate users.' );
 		$this->setBatchSize( 100 );
 
 		$this->addOption( 'really', 'Really change the preferences' );

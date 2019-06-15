@@ -18,7 +18,7 @@ require_once "$IP/maintenance/Maintenance.php";
 class CompileFontRepo extends Maintenance {
 	public function __construct() {
 		parent::__construct();
-		$this->mDescription = 'Creates JavaScript font repository.';
+		$this->addDescription( 'Creates JavaScript font repository.' );
 	}
 
 	public function execute() {
