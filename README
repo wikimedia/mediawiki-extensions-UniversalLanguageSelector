@@ -27,7 +27,7 @@ interlanguage position, add the following line:
 
 $wgULSPosition = 'interlanguage';
 
-== For Developers ==
+== Developers ==
 The MediaWiki Universal Language Selector project uses jquery.uls:
  https://github.com/wikimedia/jquery.uls
 

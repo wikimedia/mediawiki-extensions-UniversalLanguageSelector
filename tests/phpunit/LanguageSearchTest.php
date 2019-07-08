@@ -120,7 +120,7 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 				'cdo' => 'chinese — min dong chinese',
 			]
 			],
-			[ 'finish', [
+			[ 'finnisj', [
 				'fi' => 'finnish'
 			]
 			],
