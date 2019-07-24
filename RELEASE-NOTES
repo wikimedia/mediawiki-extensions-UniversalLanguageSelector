@@ -1,0 +1,14 @@
+== UniversalLanguageSelector 2019.07 ==
+Released at 2019-07-24.
+
+=== Noteworthy changes ===
+* UniversalLanguageSelector now requires MediaWiki >= 1.32.0. Please upgrade!
+
+==== Input Methods ====
+* Added Afrikaans, N'Ko and Vai syllabary keyboards.
+* Added new input methods for languages of Africa without the need for
+  replacement or key combinations: Akan (ak, tw), Bambara (bm), Dagbani (dag),
+  Dinka (din), Fula (ff), Ga (gaa) and Wolof (wo).
+* Fixed the combining character in Yoruba Alt method.
+* Minor fixes in existing layouts with replacements and key combinations for
+  Akan, Dagbani, Dinka, Fula, and Ga.
