@@ -1,14 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ильнар"
+			"Ильнар",
+			"Ерней"
 		]
 	},
 	"uls-plang-title-languages": "Телләр",
 	"ext-uls-select-language-settings-icon-tooltip": "Тел көйләнмәләре",
 	"ext-uls-undo-language-tooltip-text": "Алдагы тел: $1",
+	"ext-uls-undo-language-tooltip-text-local": "Бу викида тел үзгәртелән. Барлык викиларда телне үзгәртү өчен үзегезнең [[Special:GlobalPreferences|гомуми көйләнмәләрегезне]] тикшерегез әле.",
 	"ext-uls-language-settings-preferences-link": "Өстәмә тел көйләнмәләре",
-	"uls-betafeature-label": "Тел сылтамасының җыйнаклы исемлеге",
+	"uls-betafeature-label": "Тел сылтамаларының җыйнак исемлеге",
 	"uls-betafeature-desc": "Тел сылтамаларының сезнең өчен кирәкле булган кыскача исемлеген күрсәтә.",
 	"ext-uls-display-settings-title": "Күрсәтү көйләнмәләре",
 	"ext-uls-display-settings-language-tab": "Тел",
@@ -17,7 +19,7 @@
 	"ext-uls-display-settings-desc": "Меню һәм шрифт теле",
 	"ext-uls-language-settings-title": "Тел көйләнмәләре",
 	"ext-uls-language-settings-apply": "Көйләнмәләрне саклау",
-	"ext-uls-language-settings-cancel": "Баш тарту",
+	"ext-uls-language-settings-cancel": "Кире алу",
 	"ext-uls-language-buttons-help": "Меню телен үзгәртү. Эчтәлекнең теле үзгәртелмәячәк.",
 	"ext-uls-display-settings-font-settings": "Шрифт көйләнмәләре",
 	"ext-uls-display-settings-ui-language": "Сайланган тел",
@@ -43,7 +45,7 @@
 	"ext-uls-input-settings-more-languages-tooltip": "Башка телләр",
 	"jquery-ime-other-languages": "Башка телләрдә",
 	"jquery-ime-disable-text": "Төп көймәләрне куллану",
-	"jquery-ime-help": "Ярдәм",
+	"jquery-ime-help": "Белешмә",
 	"ext-uls-input-disable": "Кертү мөмкинлеген бетерү",
 	"ext-uls-input-enable": "Кертү коралларын ачу",
 	"ext-uls-input-disable-info": "Кертү кораллары ябык",
@@ -51,8 +53,8 @@
 	"ext-uls-input-disable-notification": "Кертү кораллары ябылды",
 	"ext-uls-input-disable-notification-undo": "Кире кагу",
 	"ext-uls-input-disable-notification-info-personal": "Кертү җиһазларын тел көйләнмәләреннән кабызырга мөмкин.",
-	"ext-uls-language-settings-applying": "Куллану...",
+	"ext-uls-language-settings-applying": "Куллану бара…",
 	"ext-uls-compact-link-count": "Башка {{PLURAL:$1|телдә|$1 телдә}}",
 	"prefs-languages": "Телләр",
-	"ext-uls-compact-language-links-preference": "Сезнең өчен мөһим булган телләр исемлеген куллану"
+	"ext-uls-compact-language-links-preference": "Сезгә туры килә торган [[$1|телләр җыйнак исемлеге]] кулланырга."
 }
