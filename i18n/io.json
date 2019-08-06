@@ -23,6 +23,7 @@
 	"ext-uls-input-settings-desc": "Ka vu deziras skribar en diferanta linguo?",
 	"ext-uls-input-settings-ui-language": "Linguo uzita por skribado",
 	"ext-uls-input-settings-more-languages-tooltip": "Plusa lingui",
+	"ext-uls-input-disable-notification-undo": "Desfacez",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Un plusa|plusa $1}}",
 	"prefs-languages": "Lingui",
 	"ext-uls-compact-language-links-preference": "Uzez [[$1|kompakta listo pri lingui]], nur kun la lingui importanta por vu."
