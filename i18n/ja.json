@@ -7,13 +7,15 @@
 			"Otokoume",
 			"Kusurija",
 			"にょきにょき",
-			"Omotecho"
+			"Omotecho",
+			"Afaz"
 		]
 	},
 	"uls-desc": "言語を選択するため/言語設定を調整するための、いくつかの方法を利用者に提供する",
 	"uls-plang-title-languages": "言語",
 	"ext-uls-select-language-settings-icon-tooltip": "言語の設定",
 	"ext-uls-undo-language-tooltip-text": "言語を$1から変更しました。",
+	"ext-uls-undo-language-tooltip-text-local": "このウィキの言語を変更しました。[[Special:GlobalPreferences|グローバル個人設定]]ですべてのウィキの言語を変更できます。",
 	"ext-uls-language-settings-preferences-link": "言語のその他の設定",
 	"uls-betafeature-label": "言語リンクを短縮",
 	"uls-betafeature-desc": "他言語リストを短くし、あなたに関係がある言語だけ表示するようにする。",
