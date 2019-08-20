@@ -8,7 +8,8 @@
 			"Dorgan",
 			"Bináris",
 			"BanKris",
-			"Máté"
+			"Máté",
+			"Bencemac"
 		]
 	},
 	"uls-desc": "Többféle módot kínál a felhasználónak nyelv kiválasztására és a nyelvi beállítások módosítására",
@@ -34,6 +35,7 @@
 	"ext-uls-display-settings-anon-same-as-content": "$1 (ugyanaz, mint a tartalom)",
 	"ext-uls-display-settings-anon-log-in-cta": "A menük nyelvének megváltoztatásához [[Special:UserLogin|jelentkezz be]]",
 	"ext-uls-webfonts-settings-title": "Töltse le a hiányzó betűkészleteket",
+	"ext-uls-webfonts-settings-info": "Hiányzó betűtípusok automatikus letöltése és preferált típusok engedélyezése.",
 	"ext-uls-webfonts-settings-info-link": "További információk",
 	"ext-uls-webfonts-select-for": "Betűtípus kiválasztása ehhez: $1",
 	"ext-uls-webfonts-select-for-ui-info": "A felhasználói felülethez használt betűtípus",
