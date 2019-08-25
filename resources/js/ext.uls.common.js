@@ -180,7 +180,7 @@
 	 * @return {Array} List of language codes without duplicates.
 	 */
 	mw.uls.getFrequentLanguageList = function ( countryCode ) {
-		var i, j, lang, target,
+		var i, j, lang,
 			ret = [],
 			lists = [
 				[
@@ -200,11 +200,6 @@
 		for ( i = 0; i < lists.length; i++ ) {
 			for ( j = 0; j < lists[ i ].length; j++ ) {
 				lang = lists[ i ][ j ];
-				target = $.uls.data.isRedirect( lang );
-				if ( target ) {
-					lang = target;
-				}
-
 				// Make flat, make unique, and ignore unknown/unsupported languages
 				if ( ret.indexOf( lang ) === -1 && $.uls.data.getAutonym( lang ) !== lang ) {
 					ret.push( lang );

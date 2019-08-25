@@ -90,34 +90,4 @@
 			'Tagalog is one of the languages presented to users in the Philippines.'
 		);
 	} );
-
-	QUnit.test( 'Add redirect target', function ( assert ) {
-		var i, foundTagalog, languages, foundFil;
-
-		foundTagalog = false;
-		foundFil = false;
-		mw.uls.getBrowserLanguage = function () {
-			return 'fil';
-		};
-
-		languages = mw.uls.getFrequentLanguageList();
-
-		for ( i = 0; i < languages.length; i++ ) {
-			if ( languages[ i ] === 'tl' ) {
-				foundTagalog = true;
-			}
-
-			if ( languages[ i ] === 'fil' ) {
-				foundFil = true;
-			}
-		}
-		assert.ok(
-			foundTagalog,
-			'Tagalog is one of the languages presented to users when "fil" language is requested'
-		);
-		assert.notOk(
-			foundFil,
-			'"fil" language is redirected to Tagalog'
-		);
-	} );
 }() );
