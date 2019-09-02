@@ -56,7 +56,7 @@
 	"ext-uls-input-disable-notification": "'E strumiente 'e scrittura so' state stutate",
 	"ext-uls-input-disable-notification-undo": "Sfàjere",
 	"ext-uls-input-disable-notification-info-personal": "Vuje putite appiccià 'e strumiente 'e scrittura 'a ll'impostaziune 'e llengua.",
-	"ext-uls-input-disable-notification-info-interlanguage": "Vuje putite appiccià 'e tool dint'a qualsiasi mumento d' 'e preferenze 'e llengua aropp'a l'elenco 'e llengue",
+	"ext-uls-input-disable-notification-info-interlanguage": "Vuje putite appiccià 'e strumiente quanno vulite d' 'e preferenze 'e llengua azziccato a l'elenco d'ê llengue",
 	"ext-uls-language-settings-applying": "Apprecanno...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|N'ata|N'ati $1}}"
 }
