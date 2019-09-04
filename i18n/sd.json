@@ -13,7 +13,7 @@
 	"ext-uls-undo-language-tooltip-text": "$1 کان مٽايل ٻولي",
 	"ext-uls-language-settings-preferences-link": "وڌيڪ ٻوليءَ جون ترتيبون",
 	"uls-betafeature-label": "ڳتل ٻوليءَ جا ڳنڍڻا",
-	"uls-betafeature-desc": "ٻوليءَ جي فھرست جو ننڍو ورزين ڏيکاريو، صرف انھن ٻولين سان جيڪي توھان لاءِ وڌيڪ لاڳاپيل آھن.",
+	"uls-betafeature-desc": "ٻوليءَ جي فھرست جو ننڍو ورزين ڏيکاريو، رڳو انھن ٻولين سان جيڪي اوھان لاءِ وڌيڪ مناسب آھن.",
 	"ext-uls-display-settings-title": "ڊسپلي ترتيبون",
 	"ext-uls-display-settings-language-tab": "ٻولي",
 	"ext-uls-display-settings-fonts-tab": "فونٽ",
@@ -60,5 +60,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|ھڪ وڌيڪ|$1 وڌيڪ}}",
 	"ext-uls-compact-link-info": "سڀ ٻوليون (توھان ۽ ٻين جي عام اختيارن مان شروعاتي چونڊ)",
 	"prefs-languages": "ٻوليون",
-	"ext-uls-compact-language-links-preference": "توھان سان لاڳاپيل ٻولين لاءِ [[$1|ٻولين جي ڳتيل فھرست]] استعمال ڪريو."
+	"ext-uls-compact-language-links-preference": "توھان سان لاڳاپيل ٻولين لاءِ [[$1|ٻولين جي ڳتيل فھرست]] استعمال ڪريو.",
+	"ext-uls-compact-no-results": "توھان جنھن ٻوليءَ لاءِ ڳوليو ان ۾ ھي صفحو موجود ناھي."
 }
