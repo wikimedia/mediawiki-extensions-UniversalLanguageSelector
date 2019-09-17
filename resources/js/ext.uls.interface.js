@@ -227,6 +227,7 @@
 		// manually show the tooltip
 		$ulsTrigger.on( 'mouseover', function () {
 			// show only if the ULS panel is not shown
+			// eslint-disable-next-line no-jquery/no-sizzle
 			if ( !$( '.uls-menu:visible' ).length ) {
 				showTipsy( 3000 );
 			}

@@ -154,6 +154,7 @@
 				var $this = $( this );
 
 				$this.data( 'module' ).render();
+				// eslint-disable-next-line no-jquery/no-sizzle
 				if ( languageSettings.$window.is( ':visible' ) ) {
 					languageSettings.$window.scrollIntoView();
 				}

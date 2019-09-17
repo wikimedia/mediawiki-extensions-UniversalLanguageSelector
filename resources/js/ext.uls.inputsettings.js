@@ -363,6 +363,7 @@
 					this.$menu.find( '.uls-languagefilter' )
 						.prop( 'placeholder', $.i18n( 'ext-uls-input-settings-ui-language' ) );
 
+					// eslint-disable-next-line no-jquery/no-class-state
 					if ( !inputSettings.$parent.$window.hasClass( 'callout' ) ) {
 						// callout menus will have position rules. others use
 						// default position
@@ -379,6 +380,7 @@
 						this.$menu.css( 'top', $parent.css( 'top' ) );
 					}
 
+					// eslint-disable-next-line no-jquery/no-class-state
 					if ( inputSettings.$parent.$window.hasClass( 'callout' ) ) {
 						this.$menu.addClass( 'callout callout--languageselection' );
 					} else {

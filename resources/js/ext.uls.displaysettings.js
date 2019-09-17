@@ -324,6 +324,7 @@
 					this.$menu.find( '.uls-languagefilter' )
 						.prop( 'placeholder', $.i18n( 'ext-uls-display-settings-ui-language' ) );
 
+					// eslint-disable-next-line no-jquery/no-class-state
 					if ( !displaySettings.$parent.$window.hasClass( 'callout' ) ) {
 						// Callout menus will have position rules.
 						// Others use the default position.
@@ -341,6 +342,7 @@
 					}
 					// If the ULS is shown in the sidebar,
 					// add a caret pointing to the icon
+					// eslint-disable-next-line no-jquery/no-class-state
 					if ( displaySettings.$parent.$window.hasClass( 'callout' ) ) {
 						this.$menu.addClass( 'callout callout--languageselection' );
 					} else {
@@ -557,6 +559,7 @@
 							displaySettings.prepareUIFonts();
 
 							displaySettings.i18n();
+							// eslint-disable-next-line no-jquery/no-sizzle
 							displaySettings.$webfonts.apply( $uiFontSelector.find( 'option:selected' ) );
 							displaySettings.$webfonts.refresh();
 
@@ -577,7 +580,7 @@
 			$uiFontSelector.on( 'change', function () {
 				displaySettings.markDirty();
 				mw.webfonts.preferences.setFont( displaySettings.uiLanguage,
-					$( this ).find( 'option:selected' ).val()
+					$( this ).val()
 				);
 				displaySettings.$webfonts.refresh();
 			} );
@@ -585,7 +588,7 @@
 			$contentFontSelector.on( 'change', function () {
 				displaySettings.markDirty();
 				mw.webfonts.preferences.setFont( displaySettings.contentLanguage,
-					$( this ).find( 'option:selected' ).val()
+					$( this ).val()
 				);
 				displaySettings.$webfonts.refresh();
 			} );
@@ -593,6 +596,7 @@
 			$tabButtons.on( 'click', function () {
 				var $button = $( this );
 
+				// eslint-disable-next-line no-jquery/no-class-state
 				if ( $button.hasClass( 'mw-ui-pressed' ) ) {
 					return;
 				}
@@ -600,6 +604,7 @@
 				displaySettings.$template.find( '.ext-uls-sub-panel' ).each( function () {
 					var $subPanel = $( this );
 
+					// eslint-disable-next-line no-jquery/no-class-state
 					if ( $subPanel.hasClass( $button.attr( 'id' ) ) ) {
 						$subPanel.removeClass( 'hide' );
 					} else {

@@ -15,7 +15,7 @@ module.exports = function ( grunt ) {
 				cache: true
 			},
 			all: [
-				'**/*.js{,on}',
+				'**/*.{js,json}',
 				'!lib/**',
 				'!resources/js/ext.uls.webfonts.repository.js',
 				'!{vendor,node_modules}/**'
