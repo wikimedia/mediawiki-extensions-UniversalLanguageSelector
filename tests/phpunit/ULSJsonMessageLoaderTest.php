@@ -11,19 +11,18 @@ use ULSJsonMessageLoader;
  * @author Thiemo Kreuz
  */
 class ULSJsonMessageLoaderTest extends \PHPUnit\Framework\TestCase {
-	use \PHPUnit4And6Compat;
 
 	public function testGetFilenamesWithBadInput() {
 		$instance = new ULSJsonMessageLoader();
 
-		$this->setExpectedException( \Exception::class );
+		$this->expectException( \Exception::class );
 		$instance->getFilenames( null );
 	}
 
 	public function testGetMessagesWithBadInput() {
 		$instance = new ULSJsonMessageLoader();
 
-		$this->setExpectedException( \Exception::class );
+		$this->expectException( \Exception::class );
 		$instance->getMessages( null );
 	}
 

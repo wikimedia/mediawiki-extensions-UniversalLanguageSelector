@@ -11,7 +11,6 @@ use \FontRepoCompiler;
  * @author Thiemo Kreuz
  */
 class FontRepoCompilerTest extends \PHPUnit\Framework\TestCase {
-	use \PHPUnit4And6Compat;
 
 	public function testGetLanguages() {
 		$instance = new FontRepoCompiler( '', '' );

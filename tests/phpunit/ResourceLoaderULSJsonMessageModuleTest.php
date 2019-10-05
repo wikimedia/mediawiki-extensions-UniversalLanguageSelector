@@ -11,7 +11,6 @@ use ResourceLoaderULSJsonMessageModule;
  * @author Thiemo Kreuz
  */
 class ResourceLoaderULSJsonMessageModuleTest extends \PHPUnit\Framework\TestCase {
-	use \PHPUnit4And6Compat;
 
 	public function testAllReturnValues() {
 		$instance = new ResourceLoaderULSJsonMessageModule();
