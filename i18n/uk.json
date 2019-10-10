@@ -7,7 +7,8 @@
 			"Ата",
 			"Юрій Булка",
 			"SteveR",
-			"Piramidion"
+			"Piramidion",
+			"NickK"
 		]
 	},
 	"uls-desc": "Надає користувачу декілька способів вибрати мову та налаштувати мовні параметри.",
@@ -61,7 +62,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Ви можете увімкнути знаряддя вводу в будь-який момент через налаштування мови.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Ви можете увімкнути знаряддя вводу в будь-який момент через налаштування мови біля переліку мов.",
 	"ext-uls-language-settings-applying": "Застосування...",
-	"ext-uls-compact-link-count": "Ще {{PLURAL:$1|одна|$1}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ще $1}}",
 	"ext-uls-compact-link-info": "Усі мови (початковий вибір з поширених виборів Вами та іншими)",
 	"prefs-languages": "Мови",
 	"ext-uls-compact-language-links-preference": "Використовувати [[$1|компактний список мов]], з мовами, що є релевантними для Вас.",
