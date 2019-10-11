@@ -2,7 +2,7 @@
 
 namespace UniversalLanguageSelector\Tests;
 
-use \FontRepoCompiler;
+use FontRepoCompiler;
 
 /**
  * @covers \FontRepoCompiler
