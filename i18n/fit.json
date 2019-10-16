@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pyscowicz"
+		]
+	},
+	"ext-uls-select-language-settings-icon-tooltip": "Kieli-inställninkit",
+	"ext-uls-language-settings-preferences-link": "Lissää kieli inställninkejä",
+	"ext-uls-display-settings-title": "Näyttöinställninkit",
+	"ext-uls-language-settings-title": "Kieli-inställninkit",
+	"ext-uls-language-settings-cancel": "Lopeta",
+	"ext-uls-display-settings-font-settings": "Kirjasininställninkit",
+	"ext-uls-input-settings-title": "Kirjotusinställninkit",
+	"ext-uls-input-settings-more-languages-tooltip": "Lissää kieliä",
+	"jquery-ime-help": "Apua",
+	"ext-uls-input-disable-notification-undo": "Kumota"
+}
