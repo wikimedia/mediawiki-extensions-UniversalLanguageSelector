@@ -4,5 +4,6 @@
 			"The Discoverer"
 		]
 	},
-	"uls-plang-title-languages": "Bhaso"
+	"uls-plang-title-languages": "Bhaso",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Anik ek|Anik $1}}"
 }
