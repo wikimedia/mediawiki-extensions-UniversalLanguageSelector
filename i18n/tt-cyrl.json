@@ -26,7 +26,7 @@
 	"ext-uls-display-settings-anon-label": "Сайланган тел:",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (эчтәлектәге кебек)",
 	"ext-uls-display-settings-anon-log-in-cta": "Меню өчен башка телне сайлау өчен, [[Special:UserLogin|керегез]].",
-	"ext-uls-webfonts-settings-title": "Кирәк булганда шрифтларны йөкләү",
+	"ext-uls-webfonts-settings-title": "Кирәк булганда шрифтларны күчереп алу",
 	"ext-uls-webfonts-settings-info": "Шрифтлар булмаган очракта аларны автоматик рәвештә йөкләү һәм куллану.",
 	"ext-uls-webfonts-settings-info-link": "Тулырак мәгълүмат",
 	"ext-uls-webfonts-select-for": "$1 өчен шрифт сайлау",
