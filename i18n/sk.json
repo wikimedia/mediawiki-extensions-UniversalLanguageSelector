@@ -3,14 +3,15 @@
 		"authors": [
 			"Sudo77(new)",
 			"KuboF",
-			"Teslaton"
+			"Teslaton",
+			"Luky001"
 		]
 	},
 	"uls-desc": "Ponúka používateľovi niekoľko spôsobov výberu jazyka a úpravy jazykových nastavení",
 	"uls-plang-title-languages": "Jazyky",
 	"ext-uls-select-language-settings-icon-tooltip": "Jazykové nastavenia",
 	"ext-uls-undo-language-tooltip-text": "Jazyk zmenený z $1",
-	"ext-uls-language-settings-preferences-link": "Dalšie jazykové nastavenia",
+	"ext-uls-language-settings-preferences-link": "Ďalšie jazykové nastavenia",
 	"uls-betafeature-label": "Kompaktné medzijazykové odkazy",
 	"uls-betafeature-desc": "Zobrazovať kratšiu verziu zoznamu jazykov, obsahujúcu len jazyky, ktoré sú pre vás dôležité.",
 	"ext-uls-display-settings-title": "Nastavenia zobrazenia",
