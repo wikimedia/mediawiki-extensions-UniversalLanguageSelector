@@ -15,14 +15,14 @@ class ULSJsonMessageLoaderTest extends \PHPUnit\Framework\TestCase {
 	public function testGetFilenamesWithBadInput() {
 		$instance = new ULSJsonMessageLoader();
 
-		$this->expectException( \Exception::class );
+		$this->expectException( \TypeError::class );
 		$instance->getFilenames( null );
 	}
 
 	public function testGetMessagesWithBadInput() {
 		$instance = new ULSJsonMessageLoader();
 
-		$this->expectException( \Exception::class );
+		$this->expectException( \TypeError::class );
 		$instance->getMessages( null );
 	}
 

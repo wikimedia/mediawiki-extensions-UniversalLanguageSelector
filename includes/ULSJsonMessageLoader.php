@@ -26,7 +26,7 @@ class ULSJsonMessageLoader {
 	 * @param string $language Language code.
 	 * @return string[]
 	 */
-	public static function getFilenames( $language ) {
+	public static function getFilenames( string $language ) {
 		$filenames = [];
 
 		$languages = Language::getFallbacksFor( $language );
@@ -54,7 +54,7 @@ class ULSJsonMessageLoader {
 	 * @param string $language Language code.
 	 * @return array
 	 */
-	public static function getMessages( $language ) {
+	public static function getMessages( string $language ) {
 		$contents = [];
 
 		foreach ( self::getFilenames( $language ) as $filename ) {
