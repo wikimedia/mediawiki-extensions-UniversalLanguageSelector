@@ -66,5 +66,5 @@
 	"ext-uls-compact-link-info": "すべての言語（あなたを含む利用者の共通の選択肢による基本の選択）",
 	"prefs-languages": "言語",
 	"ext-uls-compact-language-links-preference": "[[$1|折りたたんだコンパクトな言語間リンク]]を使い、自分に関係のあるもののみ表示。",
-	"ext-uls-compact-no-results": "このページはご利用の言語では提供されていません。"
+	"ext-uls-compact-no-results": "このページは、検索した言語では提供されていません。"
 }
