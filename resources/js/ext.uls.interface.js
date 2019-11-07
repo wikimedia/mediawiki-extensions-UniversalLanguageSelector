@@ -140,15 +140,15 @@
 
 			// if the mouse is over the tooltip, do not hide
 			$( '.uls-tipsy' ).on( 'mouseover', function () {
-				window.clearTimeout( tipsyTimer );
+				clearTimeout( tipsyTimer );
 			} ).on( 'mouseout', function () {
-				tipsyTimer = window.setTimeout( hideTipsy, timeout );
+				tipsyTimer = setTimeout( hideTipsy, timeout );
 			} );
 
 			// hide the tooltip when clicked on it
 			$( '.uls-tipsy' ).on( 'click', hideTipsy );
 
-			tipsyTimer = window.setTimeout( hideTipsy, timeout );
+			tipsyTimer = setTimeout( hideTipsy, timeout );
 		}
 
 		// remove any existing popups
@@ -201,7 +201,7 @@
 						mw.hook( 'mw.uls.language.revert' ).fire( deferred );
 
 						// Delay is zero if event logging is not enabled
-						window.setTimeout( function () {
+						setTimeout( function () {
 							deferred.resolve();
 						}, mw.config.get( 'wgULSEventLogging' ) * 500 );
 					} );
@@ -221,7 +221,7 @@
 		ulsPopup.$element.appendTo( 'body' );
 
 		// The interlanguage position needs some time to settle down
-		window.setTimeout( function () {
+		setTimeout( function () {
 			// Show the tipsy tooltip on page load.
 			showTipsy( 6000 );
 		}, 700 );
@@ -375,7 +375,7 @@
 
 						// Allow styles to apply first and position to work by
 						// delaying the activation after them.
-						window.setTimeout( function () {
+						setTimeout( function () {
 							$ulsTrigger.trigger( 'click', eventParams );
 						}, 0 );
 					} );

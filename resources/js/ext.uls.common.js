@@ -98,7 +98,7 @@
 		mw.hook( 'mw.uls.interface.language.change' ).fire( language, deferred );
 
 		// Delay is zero if event logging is not enabled
-		window.setTimeout( function () {
+		setTimeout( function () {
 			deferred.resolve();
 		}, mw.config.get( 'wgULSEventLogging' ) * 500 );
 

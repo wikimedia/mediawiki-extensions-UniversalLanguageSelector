@@ -197,13 +197,13 @@
 							// if event logging is enabled, in can resole the promise
 							// immediately to avoid extra delays.
 							deferred.done( function () {
-								window.location.href = event.target.href;
+								location.href = event.target.href;
 							} );
 
 							mw.hook( 'mw.uls.login.click' ).fire( deferred );
 
 							// Delay is zero if event logging is not enabled
-							window.setTimeout( function () {
+							setTimeout( function () {
 								deferred.resolve();
 							}, mw.config.get( 'wgULSEventLogging' ) * 500 );
 						} );
