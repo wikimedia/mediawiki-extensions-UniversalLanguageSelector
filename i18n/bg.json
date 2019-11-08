@@ -9,9 +9,11 @@
 			"StanProg"
 		]
 	},
+	"uls-desc": "Предоставя на потребителя няколко начина за избор на език и за промяна на езиковите настройки",
 	"uls-plang-title-languages": "Езици",
 	"ext-uls-select-language-settings-icon-tooltip": "Езикови настройки",
 	"ext-uls-undo-language-tooltip-text": "Предишен език: $1",
+	"ext-uls-undo-language-tooltip-text-local": "Езикът на това уики е променен. Вижте [[Special:GlobalPreferences|глобалните предпочитания]] за да промените езика за всички уикита.",
 	"ext-uls-language-settings-preferences-link": "Допълнителни езикови настройки",
 	"uls-betafeature-label": "Компактен списък на езикови връзки",
 	"uls-betafeature-desc": "Показва съкратен вариант на списъка с езици, само с тези, които са по-подходящи за вас.",
@@ -43,6 +45,7 @@
 	"ext-uls-input-settings-ime-settings": "Методи за въвеждане на вход на $1",
 	"ext-uls-input-settings-ui-language": "Език за писане",
 	"ext-uls-back-to-input-settings": "Обратно към входящите настройки",
+	"ext-uls-ime-help": "Начин на употреба",
 	"ext-uls-disable-input-method": "Използване на оригиналната клавиатура",
 	"ext-uls-input-settings-more-languages-tooltip": "Още езици",
 	"jquery-ime-other-languages": "Други езици",
@@ -58,6 +61,8 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Можете да разрешите инструментите за въвеждане по всяко време от езиковите настройки до списъка с езици.",
 	"ext-uls-language-settings-applying": "Прилагане...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Още $1}}",
+	"ext-uls-compact-link-info": "Всички езици (първоначалният избор е от най-често използваните от Вас и другите)",
 	"prefs-languages": "Езици",
-	"ext-uls-compact-language-links-preference": "Използване на [[$1|компактен списък на езиците]], имащи отношение към вас."
+	"ext-uls-compact-language-links-preference": "Използване на [[$1|компактен списък на езиците]], имащи отношение към вас.",
+	"ext-uls-compact-no-results": "Тази страница не е налична на избрания от вас език."
 }
