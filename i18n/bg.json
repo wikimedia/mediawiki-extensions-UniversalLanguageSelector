@@ -6,14 +6,15 @@
 			"Termininja",
 			"Borislav",
 			"Vodnokon4e",
-			"StanProg"
+			"StanProg",
+			"Ted Masters"
 		]
 	},
 	"uls-desc": "Предоставя на потребителя няколко начина за избор на език и за промяна на езиковите настройки",
 	"uls-plang-title-languages": "Езици",
 	"ext-uls-select-language-settings-icon-tooltip": "Езикови настройки",
 	"ext-uls-undo-language-tooltip-text": "Предишен език: $1",
-	"ext-uls-undo-language-tooltip-text-local": "Езикът на това уики е променен. Вижте [[Special:GlobalPreferences|глобалните предпочитания]] за да промените езика за всички уикита.",
+	"ext-uls-undo-language-tooltip-text-local": "Езикът на това уики е променен. Вижте [[Special:GlobalPreferences|глобалните предпочитания]], за да промените езика за всички уикита.",
 	"ext-uls-language-settings-preferences-link": "Допълнителни езикови настройки",
 	"uls-betafeature-label": "Компактен списък на езикови връзки",
 	"uls-betafeature-desc": "Показва съкратен вариант на списъка с езици, само с тези, които са по-подходящи за вас.",
