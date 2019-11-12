@@ -212,6 +212,8 @@
 					messageKey = 'ext-uls-undo-language-tooltip-text';
 				}
 
+				// Message keys listed above
+				// eslint-disable-next-line mediawiki/msg-doc
 				return $( '<p>' ).append( mw.message( messageKey, $link ).parseDom() );
 			}() )
 		} );
