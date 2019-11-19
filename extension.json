@@ -34,7 +34,8 @@
 	},
 	"APIModules": {
 		"languagesearch": "ApiLanguageSearch",
-		"ulslocalization": "ApiULSLocalization"
+		"ulslocalization": "ApiULSLocalization",
+		"ulssetlang": "ApiULSSetLanguage"
 	},
 	"MessagesDirs": {
 		"UniversalLanguageSelector": [
@@ -45,6 +46,7 @@
 	"AutoloadClasses": {
 		"ApiLanguageSearch": "includes/api/ApiLanguageSearch.php",
 		"ApiULSLocalization": "includes/api/ApiULSLocalization.php",
+		"ApiULSSetLanguage": "includes/api/ApiULSSetLanguage.php",
 		"FontRepoCompiler": "includes/FontRepoCompiler.php",
 		"LanguageNameSearch": "data/LanguageNameSearch.php",
 		"LanguageNameSearchData": "data/LanguageNameSearchData.php",
@@ -338,6 +340,33 @@
 			"skinStyles": {
 				"monobook": "css/ext.uls.pt-monobook.less"
 			},
+			"remoteExtPath": "UniversalLanguageSelector/resources"
+		},
+		"ext.uls.setlang": {
+			"styles": [
+				"css/ext.uls.dialog.less",
+				"css/ext.uls.setlang.less"
+			],
+			"scripts": [
+				"js/ext.uls.dialog.js",
+				"js/ext.uls.setlang.js"
+			],
+			"dependencies": [
+				"mediawiki.api",
+				"mediawiki.ui.button",
+				"mediawiki.notify",
+				"mediawiki.Uri"
+			],
+			"messages": [
+				"ext-uls-setlang-error",
+				"ext-uls-setlang-unknown-error",
+				"ext-uls-setlang-heading",
+				"ext-uls-setlang-message",
+				"ext-uls-setlang-accept",
+				"ext-uls-setlang-cancel",
+				"ext-uls-setlang-loading"
+			],
+			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.webfonts": {

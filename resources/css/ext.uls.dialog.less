@@ -1,0 +1,40 @@
+@uls-dialog-width: 480px;
+
+.uls-dialog {
+	position: absolute;
+	z-index: 500;
+	display: none;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-color: rgba( 0, 0, 0, 0.2 );
+	box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.2 );
+	background-clip: padding-box;
+	width: @uls-dialog-width;
+	top: 30%;
+	left: 50%;
+	margin-left: -( @uls-dialog-width / 2 );
+	margin-top: -40px;
+	padding: 16px;
+
+	@media screen and ( max-width: 599px ) {
+		width: 100%;
+		left: 0;
+		margin-left: 0;
+		box-sizing: border-box;
+	}
+}
+
+.uls-overlay {
+	height: 100vh;
+	width: 100vw;
+	background-color: #54595d;
+	opacity: 0.87;
+	display: none;
+	z-index: 300;
+	position: absolute;
+	top: 0;
+}
+
+.uls-no-overflow {
+	overflow: hidden;
+}

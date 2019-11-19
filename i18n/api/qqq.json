@@ -18,5 +18,9 @@
 	"apihelp-ulslocalization-summary": "{{doc-apihelp-summary|ulslocalization}}",
 	"apihelp-ulslocalization-param-language": "{{doc-apihelp-param|ulslocalization|language}}\n{{Identical|Language code}}",
 	"apihelp-ulslocalization-example-1": "{{doc-apihelp-example|ulslocalization}}",
-	"apihelp-ulslocalization-example-2": "{{doc-apihelp-example|ulslocalization}}"
+	"apihelp-ulslocalization-example-2": "{{doc-apihelp-example|ulslocalization}}",
+	"apihelp-ulssetlang-description": "{{doc-apihelp-description|ulssetlang}}",
+	"apihelp-ulssetlang-summary": "{{doc-apihelp-summary|ulssetlang}}",
+	"apihelp-ulssetlang-param-languagecode": "{{doc-apihelp-param|ulssetlang|languagecode}}",
+	"apierror-ulssetlang-anon-notallowed": "{{doc-apierror}}"
 }

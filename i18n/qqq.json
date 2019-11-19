@@ -69,5 +69,12 @@
 	"ext-uls-compact-link-info": "A tooltip for a button that shows all available languages next to a short list of relevant languages.",
 	"prefs-languages": "Field set legend for user preferences regarding display of language lists\n{{Identical|Language}}",
 	"ext-uls-compact-language-links-preference": "Label for compact language links user preference",
-	"ext-uls-compact-no-results": "Message shown when the language search does not have any results."
+	"ext-uls-compact-no-results": "Message shown when the language search does not have any results.",
+	"ext-uls-setlang-error": "Error message shown to the user when saving the preferred language fails. Parameters:\n* $1 - Error information from the API. If none provided, then {{msg-mw|ext-uls-setlang-unknown-error}} is shown.",
+	"ext-uls-setlang-unknown-error": "Error message shown when the API does not return error information. \n\nPreceded by the notification message {{msg-mw|ext-uls-setlang-error}}.",
+	"ext-uls-setlang-message": "Message shown to the user on the set language preference dialog. Parameters:\n* $1 - Language name\n* $2 - Language code",
+	"ext-uls-setlang-heading": "Message shown as heading to the user on the set language preference dialog. Parameters:\n* $1 - Language name",
+	"ext-uls-setlang-accept": "Button label for accepting the suggested language in language preference dialog.",
+	"ext-uls-setlang-loading": "Button label displayed while the API call is in progress after the user clicks on the accept button. See {{msg-mw|ext-uls-setlang-accept}}.",
+	"ext-uls-setlang-cancel": "Button label for cancel on the language preference dialog."
 }

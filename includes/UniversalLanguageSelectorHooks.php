@@ -18,6 +18,8 @@
  * @license MIT
  */
 
+use MediaWiki\MediaWikiServices;
+
 class UniversalLanguageSelectorHooks {
 
 	/**
@@ -134,6 +136,38 @@ class UniversalLanguageSelectorHooks {
 		if ( $out->getTitle()->isSpecial( 'Preferences' ) ) {
 			$out->addModuleStyles( 'ext.uls.preferencespage' );
 		}
+
+		self::handleSetLang( $out );
+	}
+
+	/**
+	 * Handle setlang query parameter; and decide if the setlang related scripts
+	 * have to be loaded.
+	 * @param OutputPage $out
+	 * @return void
+	 */
+	protected static function handleSetLang( OutputPage $out ): void {
+		$languageToSet = self::getSetLang( $out );
+
+		if ( !$languageToSet ) {
+			return;
+		}
+
+		MediaWikiServices::getInstance()->getStatsdDataFactory()
+				->increment( 'uls.setlang_used' );
+
+		$user = $out->getUser();
+		if ( $user->isAnon() && !$out->getConfig()->get( 'ULSAnonCanChangeLanguage' ) ) {
+			// User is anon, and cannot change language, return.
+			return;
+		}
+
+		if ( $out->getLanguage()->getCode() === $languageToSet ) {
+			// If we are already using the preferred language, don't bother.
+			return;
+		}
+
+		$out->addModules( 'ext.uls.setlang' );
 	}
 
 	/**
@@ -236,42 +270,18 @@ class UniversalLanguageSelectorHooks {
 
 		$request = $context->getRequest();
 
-		$languageToSave = $request->getText( 'setlang' );
-		if ( !$languageToSave && $request->getText( 'uselang' ) ) {
+		if (
 			// uselang can be used for temporary override of language preference
-			// when setlang is not provided
+			$request->getText( 'uselang' ) ||
+			// Registered user: use preferences
+			!$user->isAnon()
+		) {
 			return;
 		}
 
-		// Registered users - simple
-		if ( !$user->isAnon() ) {
-			// Language change
-			if ( Language::isSupportedLanguage( $languageToSave ) ) {
-				// Apply immediately
-				$updateUser = $user->getInstanceForUpdate();
-				$updateUser->setOption( 'language', $languageToSave );
-				$code = $languageToSave;
-				// Promise to sync the DB on post-send
-				DeferredUpdates::addCallableUpdate( function () use ( $updateUser ) {
-					$updateUser->saveSettings();
-				} );
-			}
-
-			// Otherwise just use what is stored in preferences
-			return;
-		}
-
-		// If using cookie storage for anons is OK, read/write from that
+		// If using cookie storage for anons is OK, read from that
 		if ( $wgULSAnonCanChangeLanguage ) {
-			// Language change
-			if ( Language::isSupportedLanguage( $languageToSave ) ) {
-				$request->response()->setCookie( 'language', $languageToSave );
-				$code = $languageToSave;
-
-				return;
-			}
-
-			// Try cookie
+			// Try to set the language based on the cookie
 			$languageToUse = $request->getCookie( 'language', null, '' );
 			if ( Language::isSupportedLanguage( $languageToUse ) ) {
 				$code = $languageToUse;
@@ -341,15 +351,12 @@ class UniversalLanguageSelectorHooks {
 	 * @param OutputPage $out
 	 */
 	public static function addVariables( array &$vars, OutputPage $out ) {
-		global $wgULSAnonCanChangeLanguage;
-
 		// Place request context dependent stuff here
-
 		$user = $out->getUser();
 		$loggedIn = $user->isLoggedIn();
 
 		// Do not output accept languages if there is risk it will get cached across requests
-		if ( $wgULSAnonCanChangeLanguage || $loggedIn ) {
+		if ( $out->getConfig()->get( 'ULSAnonCanChangeLanguage' ) || $loggedIn ) {
 			$vars['wgULSAcceptLanguageList'] = array_keys( $out->getRequest()->getAcceptLang() );
 		}
 
@@ -367,6 +374,13 @@ class UniversalLanguageSelectorHooks {
 		// An optimization to avoid loading all of uls.data just to get the autonym
 		$langCode = $out->getLanguage()->getCode();
 		$vars['wgULSCurrentAutonym'] = Language::fetchLanguageName( $langCode );
+
+		$setLangCode = self::getSetLang( $out );
+		if ( $setLangCode ) {
+			$vars['wgULSCurrentLangCode'] = $langCode;
+			$vars['wgULSSetLangCode'] = $setLangCode;
+			$vars['wgULSSetLangName'] = Language::fetchLanguageName( $setLangCode );
+		}
 	}
 
 	public static function onGetPreferences( $user, array &$preferences ) {
@@ -460,5 +474,14 @@ class UniversalLanguageSelectorHooks {
 		if ( $wgULSEnable && $wgULSMobileWebfontsEnabled && $context->isBetaGroupMember() ) {
 			$context->getOutput()->addModules( 'ext.uls.webfonts.mobile' );
 		}
+	}
+
+	private static function getSetLang( OutputPage $out ): ?string {
+		$setLangCode = $out->getRequest()->getText( 'setlang' );
+		if ( $setLangCode && Language::isSupportedLanguage( $setLangCode ) ) {
+			return $setLangCode;
+		}
+
+		return null;
 	}
 }

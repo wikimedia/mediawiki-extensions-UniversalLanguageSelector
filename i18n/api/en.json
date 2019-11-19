@@ -19,5 +19,9 @@
 	"apihelp-ulslocalization-summary": "Get the localization of ULS in the given language.",
 	"apihelp-ulslocalization-param-language": "Language code.",
 	"apihelp-ulslocalization-example-1": "Get Tamil localization",
-	"apihelp-ulslocalization-example-2": "Get Hindi localization"
+	"apihelp-ulslocalization-example-2": "Get Hindi localization",
+	"apihelp-ulssetlang-description": "Update user's preferred interface language.",
+	"apihelp-ulssetlang-summary": "Update user's preferred interface language.",
+	"apihelp-ulssetlang-param-languagecode": "The preferred language code.",
+	"apierror-ulssetlang-anon-notallowed": "Anonymous users are not allowed to change the interface language."
 }
