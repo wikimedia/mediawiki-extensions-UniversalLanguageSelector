@@ -58,57 +58,94 @@
 		"compact-language-links": true
 	},
 	"config": {
-		"@ULSGeoService": "ULS can use a geolocation service to suggest languages based on the country the user is vising from. If set to an URL it will query that service which must return an object which has key \"country_code\" or \"country\". For example https://api.ipstack.com/check?access_key=yourkey&fields=country_code. Setting this to false will prevent built-in geolocation from being used. You can also provide your own geolocation by assigning such object to window.Geo.",
-		"ULSGeoService": false,
-		"@ULSEnable": "Enable language selection, compact language links, input methods and webfonts for everyone, unless the behavior is overridden by the configuration variables below. Even if false the classes and resource loader modules are registered for the use of other extensions. Language changing via cookie or setlang query parameter is not possible.",
-		"ULSEnable": true,
-		"@ULSEnableAnon": "Equivalent to $wgULSEnable for anonymous users only. Does not have any effect if $wgULSEnable is false.",
-		"ULSEnableAnon": true,
-		"@ULSAnonCanChangeLanguage": "Allow anonymous users to change language with cookie and setlang query parameter. Do not use if you are caching anonymous page views without taking cookies into account. Does not have any effect if either of $wgULSEnable or $wgULSEnableAnon is set to false. @since 2013.04",
-		"ULSAnonCanChangeLanguage": true,
-		"@ULSLanguageDetection": "Try to use preferred interface language for anonymous users. Do not use if you are caching anonymous page views without taking Accept-Language into account. Does not have any effect if any of $wgULSEnable, or $wgULSEnableAnon is set to false.",
-		"ULSLanguageDetection": true,
-		"@ULSIMEEnabled": "Enable the input methods feature for all users by default. Can be controlled by the user.",
-		"ULSIMEEnabled": true,
-		"@ULSWebfontsEnabled": "Enable the webfonts feature for all users by default. Can be controlled by the user. @since 2014.02",
-		"ULSWebfontsEnabled": true,
-		"@ULSMobileWebfontsEnabled": "Set whether webfont support is loaded within the mobile interface (via the MobileFrontend extension).",
-		"ULSMobileWebfontsEnabled": false,
-		"@ULSPosition": "The location and the form of the language selection trigger.  The possible values are: (a) \"personal\"- as a link near the username or the log in link in the personal toolbar (default). (b) \"interlanguage\": as an icon near the header of the list of interlanguage  links in the sidebar.",
-		"ULSPosition": "personal",
-		"@ULSEventLogging": "Whether to use EventLogging. The EventLogging extension must be installed if this option is enabled. @since 2013.06",
-		"ULSEventLogging": false,
-		"@ULSImeSelectors": "Array of jQuery selectors of elements on which IME should be enabled. @since 2013.11",
-		"ULSImeSelectors": [
-			"input:not([type])",
-			"input[type=text]",
-			"input[type=search]",
-			"textarea",
-			"[contenteditable]"
-		],
-		"@ULSNoImeSelectors": "Array of jQuery selectors of elements on which IME must not be enabled. @since 2013.07",
-		"ULSNoImeSelectors": [
-			"#wpCaptchaWord",
-			".ve-ce-surface-paste",
-			".ve-ce-surface-readOnly [contenteditable]"
-		],
-		"@ULSNoWebfontsSelectors": "Array of jQuery selectors of elements on which webfonts must not be applied. By default exclude elements with .autonym because that style set font as Autonym @since 2013.09",
-		"ULSNoWebfontsSelectors": [
-			"#p-lang li.interlanguage-link > a"
-		],
-		"@ULSFontRepositoryBasePath": "Base path of ULS font repository. If not set, will be set to 'UniversalLanguageSelector/data/fontrepo/fonts/', relative to $wgExtensionAssetsPath. @since 2013.10",
-		"ULSFontRepositoryBasePath": false,
-		"ULSCompactLanguageLinksBetaFeature": true,
-		"@ULSCompactLanguageLinksBetaFeature": "Set compact interlanguage links as beta feature or not. If set false, compact interlanguage links will be available by default to all users.",
-		"ULSCompactLinksForNewAccounts": false,
-		"@ULSCompactLinksForNewAccounts": "Enable compact interlanguage links for new user accounts.",
-		"ULSCompactLinksEnableAnon": false,
-		"@ULSCompactLinksEnableAnon": "Enable compact interlanguage links for anonymous users."
+		"ULSGeoService": {
+			"description": "ULS can use a geolocation service to suggest languages based on the country the user is vising from. If set to an URL it will query that service which must return an object which has key \"country_code\" or \"country\". For example https://api.ipstack.com/check?access_key=yourkey&fields=country_code. Setting this to false will prevent built-in geolocation from being used. You can also provide your own geolocation by assigning such object to window.Geo.",
+			"value": false
+		},
+		"ULSEnable": {
+			"description": "Enable language selection, compact language links, input methods and webfonts for everyone, unless the behavior is overridden by the configuration variables below. Even if false the classes and resource loader modules are registered for the use of other extensions. Language changing via cookie or setlang query parameter is not possible.",
+			"value": true
+		},
+		"ULSEnableAnon": {
+			"description": "Equivalent to $wgULSEnable for anonymous users only. Does not have any effect if $wgULSEnable is false.",
+			"value": true
+		},
+		"ULSAnonCanChangeLanguage": {
+			"description": "Allow anonymous users to change language with cookie and setlang query parameter. Do not use if you are caching anonymous page views without taking cookies into account. Does not have any effect if either of $wgULSEnable or $wgULSEnableAnon is set to false. @since 2013.04",
+			"value": true
+		},
+		"ULSLanguageDetection": {
+			"description": "Try to use preferred interface language for anonymous users. Do not use if you are caching anonymous page views without taking Accept-Language into account. Does not have any effect if any of $wgULSEnable, or $wgULSEnableAnon is set to false.",
+			"value": true
+		},
+		"ULSIMEEnabled": {
+			"description": "Enable the input methods feature for all users by default. Can be controlled by the user.",
+			"value": true
+		},
+		"ULSWebfontsEnabled": {
+			"description": "Enable the webfonts feature for all users by default. Can be controlled by the user. @since 2014.02",
+			"value": true
+		},
+		"ULSMobileWebfontsEnabled": {
+			"description": "Set whether webfont support is loaded within the mobile interface (via the MobileFrontend extension).",
+			"value": false
+		},
+		"ULSPosition": {
+			"description": "The location and the form of the language selection trigger.  The possible values are: (a) \"personal\"- as a link near the username or the log in link in the personal toolbar (default). (b) \"interlanguage\": as an icon near the header of the list of interlanguage  links in the sidebar.",
+			"value": "personal"
+		},
+		"ULSEventLogging": {
+			"description": "Whether to use EventLogging. The EventLogging extension must be installed if this option is enabled. @since 2013.06",
+			"value": false
+		},
+		"ULSImeSelectors": {
+			"description": "Array of jQuery selectors of elements on which IME should be enabled. @since 2013.11",
+			"value": [
+				"input:not([type])",
+				"input[type=text]",
+				"input[type=search]",
+				"textarea",
+				"[contenteditable]"
+			]
+		},
+		"ULSNoImeSelectors": {
+			"description": "Array of jQuery selectors of elements on which IME must not be enabled. @since 2013.07",
+			"value": [
+				"#wpCaptchaWord",
+				".ve-ce-surface-paste",
+				".ve-ce-surface-readOnly [contenteditable]"
+			]
+		},
+		"ULSNoWebfontsSelectors": {
+			"description": "Array of jQuery selectors of elements on which webfonts must not be applied. By default exclude elements with .autonym because that style set font as Autonym @since 2013.09",
+			"value": [
+				"#p-lang li.interlanguage-link > a"
+			]
+		},
+		"ULSFontRepositoryBasePath": {
+			"description": "Base path of ULS font repository. If not set, will be set to 'UniversalLanguageSelector/data/fontrepo/fonts/', relative to $wgExtensionAssetsPath. @since 2013.10",
+			"value": false
+		},
+		"ULSCompactLanguageLinksBetaFeature": {
+			"description": "Set compact interlanguage links as beta feature or not. If set false, compact interlanguage links will be available by default to all users.",
+			"value": true
+		},
+		"ULSCompactLinksForNewAccounts": {
+			"description": "Enable compact interlanguage links for new user accounts.",
+			"value": false
+		},
+		"ULSCompactLinksEnableAnon": {
+			"description": "Enable compact interlanguage links for anonymous users.",
+			"value": false
+		}
 	},
 	"callback": "UniversalLanguageSelectorHooks::setVersionConstant",
 	"ResourceModules": {
 		"ext.uls.common": {
-			"targets": [ "desktop", "mobile" ],
+			"targets": [
+				"desktop",
+				"mobile"
+			],
 			"scripts": [
 				"js/ext.uls.eventlogger.js",
 				"js/ext.uls.common.js"
@@ -128,7 +165,7 @@
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
-		"ext.uls.compactlinks":  {
+		"ext.uls.compactlinks": {
 			"scripts": "js/ext.uls.compactlinks.js",
 			"styles": "css/ext.uls.compactlinks.less",
 			"dependencies": [
@@ -169,7 +206,10 @@
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.i18n": {
-			"targets": [ "desktop", "mobile" ],
+			"targets": [
+				"desktop",
+				"mobile"
+			],
 			"scripts": "js/ext.uls.i18n.js",
 			"dependencies": [
 				"jquery.i18n",
@@ -195,8 +235,12 @@
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.init": {
-			"targets": [ "desktop" ],
-			"dependencies": [ "ext.uls.common" ]
+			"targets": [
+				"desktop"
+			],
+			"dependencies": [
+				"ext.uls.common"
+			]
 		},
 		"ext.uls.inputsettings": {
 			"scripts": "js/ext.uls.inputsettings.js",
@@ -252,7 +296,10 @@
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.mediawiki": {
-			"targets": [ "desktop", "mobile" ],
+			"targets": [
+				"desktop",
+				"mobile"
+			],
 			"scripts": "js/ext.uls.mediawiki.js",
 			"dependencies": [
 				"ext.uls.common",
@@ -339,7 +386,10 @@
 			"remoteExtPath": "UniversalLanguageSelector/lib"
 		},
 		"jquery.uls": {
-			"targets": [ "desktop", "mobile" ],
+			"targets": [
+				"desktop",
+				"mobile"
+			],
 			"scripts": [
 				"jquery.uls/src/jquery.uls.core.js",
 				"jquery.uls/src/jquery.uls.lcd.js",
@@ -370,7 +420,10 @@
 			"remoteExtPath": "UniversalLanguageSelector/lib"
 		},
 		"jquery.uls.grid": {
-			"targets": [ "desktop", "mobile" ],
+			"targets": [
+				"desktop",
+				"mobile"
+			],
 			"styles": "jquery.uls/css/jquery.uls.grid.css",
 			"localBasePath": "lib",
 			"remoteExtPath": "UniversalLanguageSelector/lib"
@@ -390,8 +443,12 @@
 			"remoteExtPath": "UniversalLanguageSelector/lib"
 		}
 	},
-	"EventLoggingSchemas": {
-		"UniversalLanguageSelector": 17799034
+	"attributes": {
+		"EventLogging": {
+			"Schemas": {
+				"UniversalLanguageSelector": 17799034
+			}
+		}
 	},
-	"manifest_version": 1
+	"manifest_version": 2
 }
