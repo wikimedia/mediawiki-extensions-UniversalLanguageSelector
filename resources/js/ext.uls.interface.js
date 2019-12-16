@@ -218,7 +218,7 @@
 			}() )
 		} );
 
-		ulsPopup.$element.appendTo( 'body' );
+		ulsPopup.$element.appendTo( document.body );
 
 		// The interlanguage position needs some time to settle down
 		setTimeout( function () {
@@ -435,9 +435,9 @@
 	function initIme() {
 		var imeSelector = mw.config.get( 'wgULSImeSelectors' ).join( ', ' );
 
-		$( 'body' ).on( 'focus.imeinit', imeSelector, function () {
+		$( document.body ).on( 'focus.imeinit', imeSelector, function () {
 			var $input = $( this );
-			$( 'body' ).off( '.imeinit' );
+			$( document.body ).off( '.imeinit' );
 			mw.loader.using( 'ext.uls.ime', function () {
 				mw.ime.setup();
 				mw.ime.handleFocus( $input );

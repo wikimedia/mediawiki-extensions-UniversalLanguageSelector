@@ -226,7 +226,7 @@
 		var imeSelectors = mw.config.get( 'wgULSImeSelectors' ).join( ', ' );
 
 		mw.ime.init();
-		$( 'body' ).on( 'focus.ime', imeSelectors, function () {
+		$( document.body ).on( 'focus.ime', imeSelectors, function () {
 			mw.ime.handleFocus( $( this ) );
 		} );
 	};

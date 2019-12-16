@@ -32,7 +32,7 @@
 		// MediaWiki specific overrides for jquery.webfonts
 		$.extend( $.fn.webfonts.defaults, {
 			repository: mediawikiFontRepository,
-			fontStack: $( 'body' ).css( 'font-family' ).split( /, /g ),
+			fontStack: $( document.body ).css( 'font-family' ).split( /, /g ),
 			fontSelector: function ( repository, language ) {
 				var font = repository.defaultFont( language );
 
@@ -45,7 +45,7 @@
 			}
 		} );
 
-		$( 'body' ).webfonts();
+		$( document.body ).webfonts();
 	} );
 
 }() );

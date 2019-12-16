@@ -121,7 +121,7 @@
 		 */
 		render: function () {
 			this.$parent.$settingsPanel.empty();
-			this.$webfonts = $( 'body' ).data( 'webfonts' );
+			this.$webfonts = $( document.body ).data( 'webfonts' );
 			this.$parent.$settingsPanel.append( this.$template );
 			this.prepareLanguages();
 			this.prepareUIFonts();
@@ -551,7 +551,7 @@
 
 						// Allow the webfonts library to finish loading
 						setTimeout( function () {
-							displaySettings.$webfonts = $( 'body' ).data( 'webfonts' );
+							displaySettings.$webfonts = $( document.body ).data( 'webfonts' );
 
 							mw.webfonts.preferences.enable();
 

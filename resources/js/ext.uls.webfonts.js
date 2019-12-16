@@ -72,7 +72,7 @@
 		// MediaWiki specific overrides for jquery.webfonts
 		$.extend( $.fn.webfonts.defaults, {
 			repository: mediawikiFontRepository,
-			fontStack: $( 'body' ).css( 'font-family' ).split( /, /g ),
+			fontStack: $( document.body ).css( 'font-family' ).split( /, /g ),
 			/**
 			 * Returns a suitable font from font repository based
 			 * on the given language and html classes and user preference.
@@ -127,7 +127,7 @@
 		// This is important because webfonts behavior depends on the font-family
 		// property values set by stylesheets.
 		setTimeout( function () {
-			$( 'body' ).webfonts();
+			$( document.body ).webfonts();
 		}, 0 );
 	};
 

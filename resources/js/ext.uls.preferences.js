@@ -147,10 +147,10 @@
 
 	mw.uls = mw.uls || {};
 	mw.uls.preferences = function () {
-		var data = $( 'body' ).data( 'preferences' );
+		var data = $( document.body ).data( 'preferences' );
 
 		if ( !data ) {
-			$( 'body' ).data( 'preferences', ( data = new ULSPreferences() ) );
+			$( document.body ).data( 'preferences', ( data = new ULSPreferences() ) );
 		}
 		return data;
 	};

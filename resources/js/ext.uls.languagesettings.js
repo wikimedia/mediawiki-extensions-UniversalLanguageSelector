@@ -68,7 +68,7 @@
 		constructor: LanguageSettings,
 
 		init: function () {
-			$( 'body' ).append( this.$window );
+			$( document.body ).append( this.$window );
 			this.hide();
 		},
 

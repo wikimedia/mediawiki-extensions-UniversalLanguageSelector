@@ -80,11 +80,11 @@
 		 */
 		render: function () {
 			var $enabledOnly,
-				webfonts = $( 'body' ).data( 'webfonts' );
+				webfonts = $( document.body ).data( 'webfonts' );
 
 			this.dirty = false;
 			this.$parent.$settingsPanel.empty();
-			this.$imes = $( 'body' ).data( 'ime' );
+			this.$imes = $( document.body ).data( 'ime' );
 			this.$parent.$settingsPanel.append( this.$template );
 			$enabledOnly = this.$template.find( '.enabled-only' );
 			if ( $.ime.preferences.isEnabled() ) {

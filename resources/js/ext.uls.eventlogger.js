@@ -217,7 +217,7 @@
 		mw.hook( 'mw.uls.webfonts.enable' ).add( enableWebfonts );
 		mw.hook( 'mw.uls.webfonts.disable' ).add( disableWebfonts );
 
-		$( 'body' ).on(
+		$( document.body ).on(
 			'noresults.uls',
 			'.uls-menu .uls-languagefilter',
 			noSearchResults
