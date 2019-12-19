@@ -146,7 +146,7 @@ class UniversalLanguageSelectorHooks {
 	 * @param OutputPage $out
 	 * @return void
 	 */
-	protected static function handleSetLang( OutputPage $out ): void {
+	protected static function handleSetLang( OutputPage $out ) {
 		$languageToSet = self::getSetLang( $out );
 
 		if ( !$languageToSet ) {
@@ -476,7 +476,7 @@ class UniversalLanguageSelectorHooks {
 		}
 	}
 
-	private static function getSetLang( OutputPage $out ): ?string {
+	private static function getSetLang( OutputPage $out ) {
 		$setLangCode = $out->getRequest()->getText( 'setlang' );
 		if ( $setLangCode && Language::isSupportedLanguage( $setLangCode ) ) {
 			return $setLangCode;
