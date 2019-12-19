@@ -51,6 +51,11 @@
 		return uri.toString();
 	}
 
+	function removeSetlangFromHistory() {
+		var urlWithoutSetlang = removeParam( 'setlang' );
+		history.replaceState( null, 'no-setlang-url', urlWithoutSetlang );
+	}
+
 	function updateLanguage( langCode ) {
 		var api = new mw.Api();
 		return api.postWithToken( 'csrf', {
@@ -93,8 +98,7 @@
 		} );
 
 		$cancelBtn.on( 'click', function () {
-			var urlWithoutSetlang = removeParam( 'setlang' );
-			history.replaceState( null, 'no-setlang-url', urlWithoutSetlang );
+			removeSetlangFromHistory();
 			ulsDialog.close();
 		} );
 	}
@@ -106,6 +110,7 @@
 			$ulsDialog, ulsSetLangDialog;
 
 		if ( currentLangCode === setLangCode ) {
+			removeSetlangFromHistory();
 			return;
 		}
 

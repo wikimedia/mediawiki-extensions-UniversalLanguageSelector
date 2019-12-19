@@ -162,11 +162,6 @@ class UniversalLanguageSelectorHooks {
 			return;
 		}
 
-		if ( $out->getLanguage()->getCode() === $languageToSet ) {
-			// If we are already using the preferred language, don't bother.
-			return;
-		}
-
 		$out->addModules( 'ext.uls.setlang' );
 	}
 
