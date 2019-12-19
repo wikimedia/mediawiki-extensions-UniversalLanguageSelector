@@ -39,7 +39,13 @@ class ApiULSSetLanguage extends ApiBase {
 		if ( $user->isAnon() ) {
 			if ( $this->getConfig()->get( 'ULSAnonCanChangeLanguage' ) ) {
 				// Anonymous users can change language.
-				$request->response()->setCookie( 'language', $languageCode );
+				// Use a cookie that also can changed by JavaScript.
+				$request->response()->setCookie(
+					'language',
+					$languageCode,
+					0,
+					[ 'httpOnly' => false ]
+				);
 				return;
 			}
 
