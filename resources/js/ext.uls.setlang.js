@@ -94,7 +94,7 @@
 
 		$cancelBtn.on( 'click', function () {
 			var urlWithoutSetlang = removeParam( 'setlang' );
-			history.pushState( null, 'no-setlang-url', urlWithoutSetlang );
+			history.replaceState( null, 'no-setlang-url', urlWithoutSetlang );
 			ulsDialog.close();
 		} );
 	}
