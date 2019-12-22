@@ -18,5 +18,9 @@
 	"apihelp-ulslocalization-summary": "取得指定語言的在地化 ULS。",
 	"apihelp-ulslocalization-param-language": "語言代碼。",
 	"apihelp-ulslocalization-example-1": "取得泰米爾語本地化",
-	"apihelp-ulslocalization-example-2": "取得印度語本地化"
+	"apihelp-ulslocalization-example-2": "取得印度語本地化",
+	"apihelp-ulssetlang-description": "更新使用者的首選介面語言。",
+	"apihelp-ulssetlang-summary": "更新使用者的首選介面語言。",
+	"apihelp-ulssetlang-param-languagecode": "首選語言代碼。",
+	"apierror-ulssetlang-anon-notallowed": "匿名使用者不被允許更改介面語言。"
 }
