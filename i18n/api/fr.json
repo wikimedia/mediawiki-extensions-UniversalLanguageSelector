@@ -20,5 +20,9 @@
 	"apihelp-ulslocalization-summary": "Obtenir la traduction de ULS dans la langue donnée.",
 	"apihelp-ulslocalization-param-language": "Code de langue.",
 	"apihelp-ulslocalization-example-1": "Obtenir la régionalisation en Tamil",
-	"apihelp-ulslocalization-example-2": "Obtenir la régionalisation en hindi"
+	"apihelp-ulslocalization-example-2": "Obtenir la régionalisation en hindi",
+	"apihelp-ulssetlang-description": "Mettre à jour la langue d’interface préférée de l’utilisateur.",
+	"apihelp-ulssetlang-summary": "Mettre à jour la langue d’interface préférée de l’utilisateur.",
+	"apihelp-ulssetlang-param-languagecode": "Le code de la langue préférée.",
+	"apierror-ulssetlang-anon-notallowed": "Les utilisateurs anonymes ne sont pas autorisés à modifier la langue de l’interface."
 }

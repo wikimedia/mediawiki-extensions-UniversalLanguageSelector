@@ -60,5 +60,12 @@
 	"ext-uls-compact-link-info": "Сите јазици (првичен избор од вашите и туѓите вообичаени јазици)",
 	"prefs-languages": "Јазици",
 	"ext-uls-compact-language-links-preference": "Употреба на [[$1|збиен список на јазиците]] што се однесуваат на вас.",
-	"ext-uls-compact-no-results": "Страницата не е достапна на јазикот што го барате."
+	"ext-uls-compact-no-results": "Страницата не е достапна на јазикот што го барате.",
+	"ext-uls-setlang-error": "Се јави грешка при менувањето на претпочитаниот јазик. Грешка: $1",
+	"ext-uls-setlang-unknown-error": "Непозната грешка",
+	"ext-uls-setlang-message": "Врската која ја проследивте побара посредникот да се прикажува на <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "Да го сменам јазикот на посредникот?",
+	"ext-uls-setlang-accept": "Прифати промена",
+	"ext-uls-setlang-loading": "Применувам...",
+	"ext-uls-setlang-cancel": "Не менувај"
 }

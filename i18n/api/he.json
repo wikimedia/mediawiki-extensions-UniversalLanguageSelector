@@ -15,5 +15,9 @@
 	"apihelp-ulslocalization-summary": "קבלת תרגומי ממשק של בורר השפות האוניברסלי בשפה הנתונה.",
 	"apihelp-ulslocalization-param-language": "קוד שפה.",
 	"apihelp-ulslocalization-example-1": "קבלת תרגום לטמילית",
-	"apihelp-ulslocalization-example-2": "קבלת תרגום להינדי"
+	"apihelp-ulslocalization-example-2": "קבלת תרגום להינדי",
+	"apihelp-ulssetlang-description": "לעדכן את שפת הממשק המועדפת של המשתמש.",
+	"apihelp-ulssetlang-summary": "לעדכן את שפת הממשק המועדפת של המשתמש.",
+	"apihelp-ulssetlang-param-languagecode": "קוד השפה המועדפת.",
+	"apierror-ulssetlang-anon-notallowed": "משתמשים אלמוניים אינם מורשים לשנות את שפת הממשק."
 }

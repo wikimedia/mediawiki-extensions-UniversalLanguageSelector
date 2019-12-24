@@ -6,12 +6,17 @@
 			"Siebrand",
 			"Sjoerddebruin",
 			"McDutchie",
-			"Goefie"
+			"Goefie",
+			"Elroy"
 		]
 	},
 	"apihelp-languagesearch-description": "Zoeken naar namen van talen in elk script",
 	"apihelp-languagesearch-param-search": "Zoekterm.",
 	"apihelp-languagesearch-example-1": "Zoeken naar \"Te\"",
 	"apihelp-languagesearch-example-2": "Zoeken naar \"ഫി\"",
-	"apihelp-ulslocalization-param-language": "Taalcode."
+	"apihelp-ulslocalization-param-language": "Taalcode.",
+	"apihelp-ulssetlang-description": "Door de gebruiker ingestelde taal bijwerken.",
+	"apihelp-ulssetlang-summary": "Door de gebruiker ingestelde taal bijwerken.",
+	"apihelp-ulssetlang-param-languagecode": "De code van de voorkeurstaal.",
+	"apierror-ulssetlang-anon-notallowed": "Anonieme gebruikers mogen de omgevingstaal niet wijzigen."
 }

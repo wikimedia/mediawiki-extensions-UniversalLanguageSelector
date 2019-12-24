@@ -62,5 +62,12 @@
 	"ext-uls-compact-link-info": "כל השפות (הבחירה הראשונית מגיעה מבחירות נפוצות שלך ושל אחרים)",
 	"prefs-languages": "שפות",
 	"ext-uls-compact-language-links-preference": "שימוש ב[[$1|רשימת שפות מקוצרת]], המציגה שפות שרלוונטיות עבורך.",
-	"ext-uls-compact-no-results": "הדף הזה אינו זמין בשפה שחיפשת."
+	"ext-uls-compact-no-results": "הדף הזה אינו זמין בשפה שחיפשת.",
+	"ext-uls-setlang-error": "אירעה שגיאה בעת עדכון השפה המועדפת שלך. שגיאה: $1",
+	"ext-uls-setlang-unknown-error": "שגיאה בלתי־ידועה",
+	"ext-uls-setlang-message": "הקישור שלחצת עליו ביקש שהממשק יוצג בשפה <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "שלנות את שפת הממשק?",
+	"ext-uls-setlang-accept": "לקבל את השינויים",
+	"ext-uls-setlang-loading": "החלה...",
+	"ext-uls-setlang-cancel": "לא לשנות"
 }

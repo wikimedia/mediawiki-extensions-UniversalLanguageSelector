@@ -67,5 +67,6 @@
 	"ext-uls-compact-link-info": "Todos os idiomas (seleção inicial de escolhas comuns por você e outros)",
 	"prefs-languages": "Idiomas",
 	"ext-uls-compact-language-links-preference": "Usar uma [[$1|lista de idiomas compactos]], com idiomas relevantes para você.",
-	"ext-uls-compact-no-results": "Esta página não está disponível no idioma que você pesquisou."
+	"ext-uls-compact-no-results": "Esta página não está disponível no idioma que você pesquisou.",
+	"ext-uls-setlang-loading": "Aplicando…"
 }

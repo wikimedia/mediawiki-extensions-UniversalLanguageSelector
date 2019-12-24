@@ -68,5 +68,12 @@
 	"ext-uls-compact-link-info": "كل اللغات (الاختيار الابتدائي من الاختيارات الشائعة بواسطتك وبواسطة آخرين)",
 	"prefs-languages": "اللغات",
 	"ext-uls-compact-language-links-preference": "استخدم [[$1|قائمة اللغات المدمجة]]، لعرض اللغات المتعلقة بك.",
-	"ext-uls-compact-no-results": "هذه الصفحة غير متاحة في اللغة التي بحثت بها."
+	"ext-uls-compact-no-results": "هذه الصفحة غير متاحة في اللغة التي بحثت بها.",
+	"ext-uls-setlang-error": "حدث خطأ أثناء تحديث لغتك المفضلة، الخطأ: $1",
+	"ext-uls-setlang-unknown-error": "خطأ غير معروف",
+	"ext-uls-setlang-message": "طلب الرابط الذي اتبعته عرض الواجهة في <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "تغيير لغة الواجهة؟",
+	"ext-uls-setlang-accept": "اقبل التغيير",
+	"ext-uls-setlang-loading": "جارٍ التطبيق...",
+	"ext-uls-setlang-cancel": "لا تغير"
 }

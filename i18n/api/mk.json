@@ -15,5 +15,9 @@
 	"apihelp-ulslocalization-summary": "Дај превод на универзалниот јазичен избрач на дадениот јазик.",
 	"apihelp-ulslocalization-param-language": "Јазичен код.",
 	"apihelp-ulslocalization-example-1": "Дај превод на тамилски",
-	"apihelp-ulslocalization-example-2": "Дај превод на хинди"
+	"apihelp-ulslocalization-example-2": "Дај превод на хинди",
+	"apihelp-ulssetlang-description": "Менување на претпочитаниот јазик на посредникот.",
+	"apihelp-ulssetlang-summary": "Менување на претпочитаниот јазик на посредникот.",
+	"apihelp-ulssetlang-param-languagecode": "Код на претпочитаниот јазик.",
+	"apierror-ulssetlang-anon-notallowed": "На анонимните корисници не им е дозволено да го менуваат јазикот на посредникот."
 }

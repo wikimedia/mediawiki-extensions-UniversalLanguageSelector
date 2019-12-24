@@ -3,7 +3,8 @@
 		"authors": [
 			"Abanima",
 			"Maroen1990",
-			"Meno25"
+			"Meno25",
+			"ديفيد"
 		]
 	},
 	"apihelp-languagesearch-description": "ابحث عن أسماء اللغات بأي كتابة كانت.",
@@ -17,5 +18,9 @@
 	"apihelp-ulslocalization-summary": "الحصول على ترجمة ULS باللغة المعطاة.",
 	"apihelp-ulslocalization-param-language": "كود اللغة.",
 	"apihelp-ulslocalization-example-1": "الحصول على تعريب التاميلية",
-	"apihelp-ulslocalization-example-2": "الحصول على تعريب الهندية"
+	"apihelp-ulslocalization-example-2": "الحصول على تعريب الهندية",
+	"apihelp-ulssetlang-description": "تحديث لغة واجهة المستخدم المفضلة.",
+	"apihelp-ulssetlang-summary": "تحديث لغة واجهة المستخدم المفضلة.",
+	"apihelp-ulssetlang-param-languagecode": "رمز اللغة المفضلة.",
+	"apierror-ulssetlang-anon-notallowed": "لا يُسمَح للمستخدمين المجهولين بتغيير لغة الواجهة."
 }
