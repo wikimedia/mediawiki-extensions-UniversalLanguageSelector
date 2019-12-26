@@ -68,5 +68,10 @@
 	"prefs-languages": "Idiomas",
 	"ext-uls-compact-language-links-preference": "Usar uma [[$1|lista de idiomas compactos]], com idiomas relevantes para você.",
 	"ext-uls-compact-no-results": "Esta página não está disponível no idioma que você pesquisou.",
-	"ext-uls-setlang-loading": "Aplicando…"
+	"ext-uls-setlang-error": "Ocorreu um erro ao atualizar seu idioma preferido. Erro: $1",
+	"ext-uls-setlang-unknown-error": "Erro desconhecido",
+	"ext-uls-setlang-heading": "Alterar idioma da interface?",
+	"ext-uls-setlang-accept": "Aceitar alterações",
+	"ext-uls-setlang-loading": "Aplicando…",
+	"ext-uls-setlang-cancel": "Não mudar"
 }

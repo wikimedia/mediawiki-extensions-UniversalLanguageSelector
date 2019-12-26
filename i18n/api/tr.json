@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Sayginer",
-			"Hedda"
+			"Hedda",
+			"BaRaN6161 TURK"
 		]
 	},
 	"apihelp-languagesearch-description": "Herhangi bir komut dosyasında dil isimlerini arayın.",
@@ -16,5 +17,9 @@
 	"apihelp-ulslocalization-summary": "Verilen dilde ULS lokalizasyonunu alın.",
 	"apihelp-ulslocalization-param-language": "Dil kodu.",
 	"apihelp-ulslocalization-example-1": "Tamil yerelleştirmesi al",
-	"apihelp-ulslocalization-example-2": "Hintçe yerelleştirmesi al"
+	"apihelp-ulslocalization-example-2": "Hintçe yerelleştirmesi al",
+	"apihelp-ulssetlang-description": "Kullanıcının tercih ettiği arayüz dilini güncelleyin.",
+	"apihelp-ulssetlang-summary": "Kullanıcının tercih ettiği arayüz dilini güncelleyin.",
+	"apihelp-ulssetlang-param-languagecode": "Tercih edilen dil kodu.",
+	"apierror-ulssetlang-anon-notallowed": "Anonim kullanıcıların arayüz dilini değiştirmesine izin verilmez."
 }

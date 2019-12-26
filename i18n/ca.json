@@ -4,7 +4,8 @@
 			"Pginer",
 			"Vriullop",
 			"Fitoschido",
-			"Macofe"
+			"Macofe",
+			"Bombolla"
 		]
 	},
 	"uls-desc": "Dóna a l'usuari diverses maneres per seleccionar una llengua i ajustar la seva configuració",
@@ -60,5 +61,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Una més|$1 més}}",
 	"ext-uls-compact-link-info": "Totes les llengües (selecció inicial d'opcions més comunes vostres i d'altres)",
 	"prefs-languages": "Llengües",
-	"ext-uls-compact-language-links-preference": "Utilitza una [[$1|llista de llengües compacta]] amb aquelles més rellevants per a mi."
+	"ext-uls-compact-language-links-preference": "Utilitza una [[$1|llista de llengües compacta]] amb aquelles més rellevants per a mi.",
+	"ext-uls-setlang-unknown-error": "Error desconegut"
 }

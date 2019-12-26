@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Dianakc",
-			"Felipe L. Ewald"
+			"Felipe L. Ewald",
+			"Eduardo Addad de Oliveira"
 		]
 	},
 	"apihelp-languagesearch-description": "Procure nomes de idiomas em qualquer script.",
@@ -16,5 +17,9 @@
 	"apihelp-ulslocalization-summary": "Obtenha a localização do ULS no idioma indicado.",
 	"apihelp-ulslocalization-param-language": "Código da linguagem.",
 	"apihelp-ulslocalization-example-1": "Obter localização Tamil",
-	"apihelp-ulslocalization-example-2": "Obter localização Hindi"
+	"apihelp-ulslocalization-example-2": "Obter localização Hindi",
+	"apihelp-ulssetlang-description": "Atualize o idioma de interface preferido do usuário.",
+	"apihelp-ulssetlang-summary": "Atualize o idioma de interface preferido do usuário.",
+	"apihelp-ulssetlang-param-languagecode": "O código do idioma preferido.",
+	"apierror-ulssetlang-anon-notallowed": "Usuários anônimos não têm permissão para alterar o idioma da interface."
 }

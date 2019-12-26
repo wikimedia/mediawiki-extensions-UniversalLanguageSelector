@@ -9,7 +9,8 @@
 			"McAang",
 			"Katpatuka",
 			"Hedda",
-			"By erdo can"
+			"By erdo can",
+			"BaRaN6161 TURK"
 		]
 	},
 	"uls-desc": "Kullanıcının bir dil seçmesi ve dil ayarlarını değiştirmesi için seçenekler sağlar.",
@@ -67,5 +68,12 @@
 	"ext-uls-compact-link-info": "Tüm diller (sizin ve başkalarının ortak tercihlerinden ilk seçim)",
 	"prefs-languages": "Diller",
 	"ext-uls-compact-language-links-preference": "Sadece seni ilgilendiren [[$1|dil listesi]] kullan.",
-	"ext-uls-compact-no-results": "Bu sayfa, aradığınız dilde mevcut değil."
+	"ext-uls-compact-no-results": "Bu sayfa, aradığınız dilde mevcut değil.",
+	"ext-uls-setlang-error": "Tercih ettiğiniz dil güncellenirken bir hata oluştu. Hata: $1",
+	"ext-uls-setlang-unknown-error": "Bilinmeyen hata",
+	"ext-uls-setlang-message": "İzlediğiniz bağlantı arayüzün <strong>$1 ($2)</strong> içinde gösterilmesini istedi",
+	"ext-uls-setlang-heading": "Arayüz dili değiştirilsin mi?",
+	"ext-uls-setlang-accept": "Değişikliği kabul et",
+	"ext-uls-setlang-loading": "Uygulanıyor...",
+	"ext-uls-setlang-cancel": "Değiştirme"
 }

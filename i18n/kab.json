@@ -1,8 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"K Messaoudi"
 		]
 	},
-	"uls-plang-title-languages": "Tutlayin"
+	"uls-plang-title-languages": "Tutlayin",
+	"ext-uls-setlang-error": "Tella-d tuccḍa mi d-yella usmiren n tutlayt i tesmenyifeḍ. Tuccḍa:$1",
+	"ext-uls-setlang-unknown-error": "Tuccḍa ur nettwassen ara",
+	"ext-uls-setlang-message": "Aseɣwen i tḍefreḍ yesra ad yettwasken ugrudem deg <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "Beddel agrudem n tutlayt?",
+	"ext-uls-setlang-accept": "Qbel abeddel",
+	"ext-uls-setlang-loading": "Asnes...",
+	"ext-uls-setlang-cancel": "Ur ttbeddil ara"
 }

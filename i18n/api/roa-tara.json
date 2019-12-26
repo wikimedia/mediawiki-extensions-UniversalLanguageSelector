@@ -15,5 +15,9 @@
 	"apihelp-ulslocalization-summary": "Pigghie 'a localizzazione de ULS jndr'à lènga scacchiate.",
 	"apihelp-ulslocalization-param-language": "Codece d'a Lènghe.",
 	"apihelp-ulslocalization-example-1": "Pigghie 'a localizzazione Tamil",
-	"apihelp-ulslocalization-example-2": "Pigghie 'a localizzazione Hindi"
+	"apihelp-ulslocalization-example-2": "Pigghie 'a localizzazione Hindi",
+	"apihelp-ulssetlang-description": "Aggiorne 'a lènghe de l'inderfacce preferite de l'utende.",
+	"apihelp-ulssetlang-summary": "Aggiorne 'a lènghe de l'inderfacce preferite de l'utende.",
+	"apihelp-ulssetlang-param-languagecode": "'U codece d'a lènghe preferite.",
+	"apierror-ulssetlang-anon-notallowed": "Le utinde anonime non ge ponne cangià 'a lènghe de l'inderfacce."
 }

@@ -62,5 +62,12 @@
 	"ext-uls-compact-link-info": "Alle Sprachen (erste Auswahl der häufigen Auswahlen von dir und anderen)",
 	"prefs-languages": "Sprachen",
 	"ext-uls-compact-language-links-preference": "Eine [[$1|kompakte Sprachliste]] mit für dich relevanten Sprachen verwenden.",
-	"ext-uls-compact-no-results": "Diese Seite ist nicht in der gewünschten Sprache verfügbar."
+	"ext-uls-compact-no-results": "Diese Seite ist nicht in der gewünschten Sprache verfügbar.",
+	"ext-uls-setlang-error": "Es gab einen Fehler, als deine bevorzugte Sprache gespeichert werden sollte. Fehler: $1",
+	"ext-uls-setlang-unknown-error": "Unbekannter Fehler",
+	"ext-uls-setlang-message": "Der Link, dem du gefolgt bist, möchte die angezeigte Benutzersprache auf <strong>$1 ($2)</strong> ändern",
+	"ext-uls-setlang-heading": "Benutzersprache ändern?",
+	"ext-uls-setlang-accept": "Änderung akzeptieren",
+	"ext-uls-setlang-loading": "Anwenden …",
+	"ext-uls-setlang-cancel": "Nicht ändern"
 }

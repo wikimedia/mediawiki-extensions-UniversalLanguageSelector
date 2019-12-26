@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"K Messaoudi"
+		]
+	},
+	"apihelp-ulssetlang-description": "Smiren agrudem n tutlayt i yesmenyif useqdac",
+	"apihelp-ulssetlang-summary": "Smiren agrudem n tutlayt i yesmenyif useqdac",
+	"apihelp-ulssetlang-param-languagecode": "Tangalt n tutlayt n uɣbalu.",
+	"apierror-ulssetlang-anon-notallowed": "Iseqdacen ur nettwassen ara ur ttusirgen ara ad beddlen tutlayt n ugrudem."
+}
