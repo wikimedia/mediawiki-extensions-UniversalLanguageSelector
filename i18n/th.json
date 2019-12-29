@@ -3,7 +3,8 @@
 		"authors": [
 			"Xð",
 			"Ans",
-			"Aefgh39622"
+			"Aefgh39622",
+			"Nitisart Jungtrakungrat"
 		]
 	},
 	"uls-desc": "ให้ผู้ใช้​เลือก​ภาษาและปรับการตั้งค่าภาษาได้หลายวิธี",
@@ -61,5 +62,6 @@
 	"ext-uls-compact-link-info": "ภาษาทั้งหมด (ที่เลือกไว้ตั้งแต่แรกจากตัวเลือกธรรมดาโดยคุณและคนอื่นๆ)",
 	"prefs-languages": "ภาษา",
 	"ext-uls-compact-language-links-preference": "ใช้ [[$1|รายการภาษาแบบกระชับ]] โดยมีภาษาที่เกี่ยวข้องกับคุณ",
-	"ext-uls-compact-no-results": "หน้านี้ไม่มีในภาษาที่คุณค้นหา"
+	"ext-uls-compact-no-results": "หน้านี้ไม่มีในภาษาที่คุณค้นหา",
+	"ext-uls-setlang-unknown-error": "เกิดข้อผิดพลาดโดยไม่ทราบสาเหตุ"
 }

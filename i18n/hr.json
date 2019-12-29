@@ -61,5 +61,8 @@
 	"ext-uls-compact-link-info": "Svi jezici (izbor na temelju Vaših odabira i odabira drugih suradnika)",
 	"prefs-languages": "Jezici",
 	"ext-uls-compact-language-links-preference": "Uključi [[$1|sažeti popis jezika]] s jezicima koji su Vam važni",
-	"ext-uls-compact-no-results": "Ova stranica nije dostupna na jeziku koji ste tražili."
+	"ext-uls-compact-no-results": "Ova stranica nije dostupna na jeziku koji ste tražili.",
+	"ext-uls-setlang-heading": "Želite li promijeniti jezik sučelja?",
+	"ext-uls-setlang-loading": "Primjenjuje se...",
+	"ext-uls-setlang-cancel": "Nemoj promijeniti"
 }

@@ -63,5 +63,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Et mere|$1 mere}}",
 	"prefs-languages": "Sprog",
 	"ext-uls-compact-language-links-preference": "Brug en kompakt sprogliste med sprog, der er relevante for dig.",
-	"ext-uls-setlang-unknown-error": "Ukendt fejl"
+	"ext-uls-setlang-unknown-error": "Ukendt fejl",
+	"ext-uls-setlang-accept": "Accepter ændring",
+	"ext-uls-setlang-cancel": "Ændre ikke"
 }

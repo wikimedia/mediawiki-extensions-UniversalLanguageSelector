@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Anakmalaysia",
-			"Xabier Armendaritz"
+			"Xabier Armendaritz",
+			"CyberTroopers"
 		]
 	},
 	"uls-desc": "Membolehkan pengguna memilih bahasa dan mengubah tetapan bahasa dengan pelbagai cara",
@@ -53,5 +54,11 @@
 	"ext-uls-input-disable-notification-info-personal": "Anda boleh menghidupkan peralatan input pada bila-bila masa dari tetapan bahasa.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Anda boleh menghidupkan peralatan input pada bila-bila masa dari tetapan bahasa dekat dengan senarai bahasa.",
 	"ext-uls-language-settings-applying": "Tetapan sedang ditukar...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Satu lagi|$1 lagi}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Satu lagi|$1 lagi}}",
+	"ext-uls-setlang-error": "Terdapat ralat semasa mengemas kini bahasa pilihan anda. Ralat: $1",
+	"ext-uls-setlang-unknown-error": "Ralat tidak diketahui",
+	"ext-uls-setlang-heading": "Ubah bahasa antara muka?",
+	"ext-uls-setlang-accept": "Terima perubahan",
+	"ext-uls-setlang-loading": "Menetapkan...",
+	"ext-uls-setlang-cancel": "Jangan ubah"
 }

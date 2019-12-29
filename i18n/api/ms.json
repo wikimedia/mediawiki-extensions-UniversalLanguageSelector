@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"CyberTroopers"
+		]
+	},
+	"apihelp-ulssetlang-description": "Kemaskini bahasa antara muka pilihan pengguna.",
+	"apihelp-ulssetlang-summary": "Kemaskini bahasa antara muka pilihan pengguna.",
+	"apihelp-ulssetlang-param-languagecode": "Kod bahasa pilihan.",
+	"apierror-ulssetlang-anon-notallowed": "Pengguna tanpa nama tidak dibenarkan menukar bahasa antara muka."
+}

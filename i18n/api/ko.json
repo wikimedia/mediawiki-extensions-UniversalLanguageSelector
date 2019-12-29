@@ -14,5 +14,6 @@
 	"apihelp-ulslocalization-summary": "주어진 언어로 ULS의 지역화를 가져옵니다.",
 	"apihelp-ulslocalization-param-language": "언어 코드입니다.",
 	"apihelp-ulslocalization-example-1": "타밀어 지역화 가져오기",
-	"apihelp-ulslocalization-example-2": "힌디어 지역화 가져오기"
+	"apihelp-ulslocalization-example-2": "힌디어 지역화 가져오기",
+	"apihelp-ulssetlang-param-languagecode": "선호하는 언어 코드입니다."
 }

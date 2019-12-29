@@ -8,7 +8,8 @@
 			"Liuxinyu970226",
 			"Shizhao",
 			"Li3939108",
-			"Shirayuki"
+			"Shirayuki",
+			"沈澄心"
 		]
 	},
 	"uls-desc": "为用户提供多种方法来选择语言和调整语言设置",
@@ -65,5 +66,8 @@
 	"ext-uls-compact-link-info": "所有语言（来自您和其他人共同选择的初始选项）",
 	"prefs-languages": "语言",
 	"ext-uls-compact-language-links-preference": "使用[[$1|紧凑的语言列表]]，它包含与您有关的语言。",
-	"ext-uls-compact-no-results": "此页面在您搜索的语言中不可用。"
+	"ext-uls-compact-no-results": "此页面在您搜索的语言中不可用。",
+	"ext-uls-setlang-unknown-error": "未知错误",
+	"ext-uls-setlang-loading": "正在应用...",
+	"ext-uls-setlang-cancel": "不更改"
 }

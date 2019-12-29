@@ -66,5 +66,8 @@
 	"ext-uls-compact-link-info": "Todos los idiomas (selección inicial de opciones comunes tuyas y de otros)",
 	"prefs-languages": "Idiomas",
 	"ext-uls-compact-language-links-preference": "Usar una [[$1|lista de idiomas compacta]], con idiomas relevantes para ti.",
-	"ext-uls-compact-no-results": "Esta página no está disponible en el idioma que buscabas."
+	"ext-uls-compact-no-results": "Esta página no está disponible en el idioma que buscabas.",
+	"ext-uls-setlang-error": "Se produjo un error al actualizar el idioma preferido. Error: $1",
+	"ext-uls-setlang-unknown-error": "Error desconocido",
+	"ext-uls-setlang-cancel": "No cambiar"
 }
