@@ -63,5 +63,10 @@
 	"ext-uls-compact-link-info": "Alla språk (urval baserat på vanliga val av dig och andra)",
 	"prefs-languages": "Språk",
 	"ext-uls-compact-language-links-preference": "Använd en [[$1|kompakt språklista]] med språk som är relevanta för dig.",
-	"ext-uls-compact-no-results": "Denna sida finns inte tillgänglig på språket du sökte efter."
+	"ext-uls-compact-no-results": "Denna sida finns inte tillgänglig på språket du sökte efter.",
+	"ext-uls-setlang-unknown-error": "Okänt fel",
+	"ext-uls-setlang-heading": "Ändra gränssnittsspråk?",
+	"ext-uls-setlang-accept": "Acceptera ändring",
+	"ext-uls-setlang-loading": "Tillämpar...",
+	"ext-uls-setlang-cancel": "Ändra inte"
 }

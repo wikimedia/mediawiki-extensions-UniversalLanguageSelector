@@ -70,6 +70,7 @@
 	"ext-uls-compact-no-results": "Esta página não está disponível no idioma que você pesquisou.",
 	"ext-uls-setlang-error": "Ocorreu um erro ao atualizar seu idioma preferido. Erro: $1",
 	"ext-uls-setlang-unknown-error": "Erro desconhecido",
+	"ext-uls-setlang-message": "O link que você seguiu solicitou que a interface fosse mostrada em <strong>$1 ($2)</strong>",
 	"ext-uls-setlang-heading": "Alterar idioma da interface?",
 	"ext-uls-setlang-accept": "Aceitar alterações",
 	"ext-uls-setlang-loading": "Aplicando…",

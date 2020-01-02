@@ -16,5 +16,9 @@
 	"apihelp-ulslocalization-summary": "Hent lokaliseringen av ULS på det gitte språket.",
 	"apihelp-ulslocalization-param-language": "Språkkode",
 	"apihelp-ulslocalization-example-1": "Hent lokalisering på tamilsk",
-	"apihelp-ulslocalization-example-2": "Hent lokalisering på hindu"
+	"apihelp-ulslocalization-example-2": "Hent lokalisering på hindu",
+	"apihelp-ulssetlang-description": "Oppdater brukerens foretrukne grensesnittspråk.",
+	"apihelp-ulssetlang-summary": "Oppdater brukerens foretrukne grensesnittspråk.",
+	"apihelp-ulssetlang-param-languagecode": "Språkkoden til det foretrukne språket.",
+	"apierror-ulssetlang-anon-notallowed": "Anonyme brukere kan ikke endre grensesnittspråk."
 }

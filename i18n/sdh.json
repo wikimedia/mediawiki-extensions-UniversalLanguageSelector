@@ -1,12 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kurdbuddha"
+			"Kurdbuddha",
+			"Paraw2"
 		]
 	},
 	"uls-plang-title-languages": "زوانەیل",
 	"ext-uls-display-settings-language-tab": "زوان",
 	"ext-uls-display-settings-fonts-tab": "فۆنتەیل",
 	"jquery-ime-other-languages": "زوانەیل ترەک",
-	"jquery-ime-help": "کۆمەک"
+	"jquery-ime-help": "کۆمەک",
+	"ext-uls-setlang-unknown-error": "هەڵەێ نەناسیاێ",
+	"ext-uls-setlang-heading": "تواید زوان پەیوەندییەگانت بگووڕنید؟",
+	"ext-uls-setlang-accept": "قەبوول گووڕانکاریەگە",
+	"ext-uls-setlang-cancel": "نەگووڕنەی"
 }
