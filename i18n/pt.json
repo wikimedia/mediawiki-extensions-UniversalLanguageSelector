@@ -11,7 +11,8 @@
 			"Opraco",
 			"Athena in Wonderland",
 			"Eduardo Addad de Oliveira",
-			"Ldacosta"
+			"Ldacosta",
+			"Mansil"
 		]
 	},
 	"uls-desc": "Fornece ao utilizador várias maneiras de selecionar uma língua e ajustar as definições de língua",
@@ -69,5 +70,12 @@
 	"ext-uls-compact-link-info": "Todas as línguas (seleção inicial a partir de escolhas comuns, suas e de outros)",
 	"prefs-languages": "Línguas",
 	"ext-uls-compact-language-links-preference": "Usar uma [[$1|lista compacta de línguas]], com as línguas relevantes para si",
-	"ext-uls-compact-no-results": "Esta página não está disponível na língua que pesquisou."
+	"ext-uls-compact-no-results": "Esta página não está disponível na língua que pesquisou.",
+	"ext-uls-setlang-error": "Ocorreu um erro ao atualizar a sua língua preferida. Erro: $1",
+	"ext-uls-setlang-unknown-error": "Erro desconhecido",
+	"ext-uls-setlang-message": "A hiperligação que seguiu pediu que a interface fosse apresentada em <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "Alterar língua da interface?",
+	"ext-uls-setlang-accept": "Aceitar alteração",
+	"ext-uls-setlang-loading": "A aplicar...",
+	"ext-uls-setlang-cancel": "Não alterar"
 }

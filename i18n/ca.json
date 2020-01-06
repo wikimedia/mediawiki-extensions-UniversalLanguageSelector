@@ -62,5 +62,6 @@
 	"ext-uls-compact-link-info": "Totes les llengües (selecció inicial d'opcions més comunes vostres i d'altres)",
 	"prefs-languages": "Llengües",
 	"ext-uls-compact-language-links-preference": "Utilitza una [[$1|llista de llengües compacta]] amb aquelles més rellevants per a mi.",
-	"ext-uls-setlang-unknown-error": "Error desconegut"
+	"ext-uls-setlang-unknown-error": "Error desconegut",
+	"ext-uls-setlang-loading": "S’està aplicant…"
 }

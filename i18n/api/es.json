@@ -14,5 +14,6 @@
 	"apihelp-ulslocalization-description": "Obtener la localización de ULS en el idioma especificado.",
 	"apihelp-ulslocalization-param-language": "Código de idioma.",
 	"apihelp-ulslocalization-example-1": "Recuperar la traducción al tamil",
-	"apihelp-ulslocalization-example-2": "Recuperar la traducción al hindi"
+	"apihelp-ulslocalization-example-2": "Recuperar la traducción al hindi",
+	"apihelp-ulssetlang-param-languagecode": "El código del idioma preferido."
 }
