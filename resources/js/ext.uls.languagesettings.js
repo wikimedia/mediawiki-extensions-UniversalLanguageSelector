@@ -81,7 +81,7 @@
 			this.$window.find( 'button.uls-settings-apply' )
 				.on( 'click', mw.hook( 'mw.uls.settings.apply' ).fire.bind( this ) );
 			// Hide the window when clicked outside
-			$( 'html' ).on( 'click', this.hide.bind( this ) );
+			$( document.documentElement ).on( 'click', this.hide.bind( this ) );
 
 			// ... but when clicked on window do not hide.
 			this.$window.on( 'click', function ( event ) {
@@ -190,7 +190,7 @@
 				this.initialized = true;
 			}
 			// Close other modal windows which listen to click events outside them
-			$( 'html' ).trigger( 'click' );
+			$( document.documentElement ).trigger( 'click' );
 			this.i18n();
 			// Every time we show this window, make sure the current
 			// settings panels is up-to-date. So just click on active menu item.

@@ -162,7 +162,7 @@
 				ulsPopupPosition = 'after';
 			}
 			// Reverse for RTL
-			if ( $( 'html' ).prop( 'dir' ) === 'rtl' ) {
+			if ( $( document.documentElement ).prop( 'dir' ) === 'rtl' ) {
 				ulsPopupPosition = ( ulsPopupPosition === 'after' ) ? 'before' : 'after';
 			}
 		} else {
