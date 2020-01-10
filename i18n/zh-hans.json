@@ -68,6 +68,7 @@
 	"ext-uls-compact-language-links-preference": "使用[[$1|紧凑的语言列表]]，它包含与您有关的语言。",
 	"ext-uls-compact-no-results": "此页面在您搜索的语言中不可用。",
 	"ext-uls-setlang-unknown-error": "未知错误",
+	"ext-uls-setlang-heading": "更改界面语言？",
 	"ext-uls-setlang-loading": "正在应用...",
 	"ext-uls-setlang-cancel": "不更改"
 }
