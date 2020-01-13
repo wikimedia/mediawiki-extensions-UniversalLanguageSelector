@@ -65,5 +65,9 @@
 	"ext-uls-compact-link-info": "Zıwani pêro (hetê to û ê binan ra ke kamcin yeno hesab wa ey weçine)",
 	"prefs-languages": "Zıwani",
 	"ext-uls-compact-language-links-preference": "Teyna zıwanê ke to aleqedar kenê  [[$1|a lista zıwani]] bıkarne.",
-	"ext-uls-compact-no-results": "Na pel zıwano ke şıma cıgeyrenê a zıwan de mewcud niya"
+	"ext-uls-compact-no-results": "Na pel zıwano ke şıma cıgeyrenê a zıwan de mewcud niya",
+	"ext-uls-setlang-unknown-error": "Xetaya nêzanıtiye",
+	"ext-uls-setlang-accept": "Vurnayışa qebul bıkerê",
+	"ext-uls-setlang-loading": "Dezgeyeno...",
+	"ext-uls-setlang-cancel": "Mevurne"
 }
