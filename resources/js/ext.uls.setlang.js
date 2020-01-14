@@ -73,9 +73,12 @@
 		return uri.toString();
 	}
 
-	function removeSetlangFromHistory() {
-		var urlWithoutSetlang = removeParam( 'setlang' );
-		history.replaceState( null, 'no-setlang-url', urlWithoutSetlang );
+	function removeSetLangFromHistory() {
+		var urlWithoutSetLang = removeParam( 'setlang' );
+		if ( urlWithoutSetLang === mw.Uri().toString() ) {
+			return;
+		}
+		history.replaceState( null, 'no-setlang-url', urlWithoutSetLang );
 	}
 
 	function updateLanguage( langCode ) {
@@ -120,7 +123,6 @@
 		} );
 
 		$cancelBtn.on( 'click', function () {
-			removeSetlangFromHistory();
 			ulsDialog.close();
 		} );
 	}
@@ -132,7 +134,7 @@
 			$ulsDialog, ulsSetLangDialog;
 
 		if ( currentLangCode === setLangCode ) {
-			removeSetlangFromHistory();
+			removeSetLangFromHistory();
 			return;
 		}
 
@@ -140,7 +142,8 @@
 		$ulsDialog = createSetLangDialog( setLangName, setLangCode );
 		ulsSetLangDialog = new mw.uls.Dialog( {
 			container: $ulsDialog,
-			hasOverlay: true
+			hasOverlay: true,
+			afterClose: removeSetLangFromHistory
 		} );
 
 		addSetLangDialogEvents( ulsSetLangDialog );
