@@ -58,27 +58,24 @@
 	}
 
 	function toggleLoading( $btnSubmit, isLoading ) {
-		if ( isLoading ) {
-			$btnSubmit.text( mw.msg( 'ext-uls-setlang-loading' ) );
-		} else {
-			$btnSubmit.text( mw.msg( 'ext-uls-setlang-accept' ) );
-		}
-
-		$btnSubmit.prop( 'disabled', isLoading );
+		$btnSubmit
+			.text( mw.msg( isLoading ? 'ext-uls-setlang-loading' : 'ext-uls-setlang-accept' ) )
+			.prop( 'disabled', isLoading );
 	}
 
-	function removeParam( key ) {
+	/**
+	 * @return {string}
+	 */
+	function currentUrlWithoutSetLang() {
 		var uri = new mw.Uri();
-		delete uri.query[ key ];
+		delete uri.query.setlang;
 		return uri.toString();
 	}
 
 	function removeSetLangFromHistory() {
-		var urlWithoutSetLang = removeParam( 'setlang' );
-		if ( urlWithoutSetLang === mw.Uri().toString() ) {
-			return;
+		if ( 'setlang' in mw.Uri().query ) {
+			history.replaceState( null, 'no-setlang-url', currentUrlWithoutSetLang() );
 		}
-		history.replaceState( null, 'no-setlang-url', urlWithoutSetLang );
 	}
 
 	function updateLanguage( langCode ) {
@@ -88,7 +85,7 @@
 			languagecode: langCode,
 			formatversion: 2
 		} ).done( function () {
-			location.replace( removeParam( 'setlang' ) );
+			location.replace( currentUrlWithoutSetLang() );
 		} ).fail( function ( code, result ) {
 			var apiErrorInfo = mw.msg( 'ext-uls-setlang-unknown-error' );
 			if ( result.error && result.error.info ) {

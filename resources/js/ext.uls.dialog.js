@@ -24,8 +24,7 @@
 	'use strict';
 
 	var ULSDialog = function ( options ) {
-		var noop = function () { },
-			$dialog = options.container,
+		var $dialog = options.container,
 			hasOverlay = options.hasOverlay,
 			$overlay,
 			// Source: https://github.com/ghosh/Micromodal/blob/master/lib/src/index.js#L4
@@ -42,8 +41,8 @@
 				'[contenteditable]',
 				'[tabindex]:not([tabindex^="-"])'
 			],
-			afterClose = options.afterClose || noop,
-			afterOpen = options.afterOpen || noop;
+			afterOpen = options.afterOpen,
+			afterClose = options.afterClose;
 
 		function getFocusableNodes() {
 			return $dialog.find( FOCUSABLE_NODES.join( ', ' ) );
@@ -159,14 +158,18 @@
 			addEvents();
 			showOverlay();
 			focusFirstNodeOrOverlay();
-			afterOpen();
+			if ( afterOpen ) {
+				afterOpen();
+			}
 		}
 
 		function close() {
 			$dialog.hide();
 			removeEvents();
 			hideOverlay();
-			afterClose();
+			if ( afterClose ) {
+				afterClose();
+			}
 		}
 
 		function elem() {
