@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"1AnuraagPandey"
+			"1AnuraagPandey",
+			"Ajeetsinghawadhi"
 		]
 	},
 	"uls-desc": "सदस्य कय भाषा चुनय मा औ भाषा विकल्प बदलय कय कयु तरीका देत है",
@@ -52,5 +53,8 @@
 	"ext-uls-input-disable-notification-info-personal": "भाषा सेटिंग्स में जाइकय कब्बो भी आप इनपुट औजार कय सक्रिय कै सका जात है।",
 	"ext-uls-input-disable-notification-info-interlanguage": "भाषा सूची कय आगे भाषा सेटिंग्स में जाइकय आप कब्बो भी इनपुट औजार कय सक्रिय कै सका जात है।",
 	"ext-uls-language-settings-applying": "लागू होत है...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|एक्ठु अउर|$1 अउर}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|एक्ठु अउर|$1 अउर}}",
+	"prefs-languages": "भाषाएं",
+	"ext-uls-setlang-loading": "लागू होत है...",
+	"ext-uls-setlang-cancel": "बदला ना"
 }
