@@ -3,7 +3,8 @@
 		"authors": [
 			"Kumkumuk",
 			"Mirzali",
-			"Orbot707"
+			"Orbot707",
+			"1917 Ekim Devrimi"
 		]
 	},
 	"apihelp-languagesearch-description": "Nameyê zıwani nuşteyê raştameyeyi de geyreno cı.",
@@ -18,5 +19,8 @@
 	"apihelp-ulslocalization-param-language": "Kodê zıwani.",
 	"apihelp-ulslocalization-example-1": "Lokalizasyonê Tamili ano",
 	"apihelp-ulslocalization-example-2": "Lokalizasyonê Hindi ano",
-	"apihelp-ulssetlang-param-languagecode": "Weçineyaye kodê zıwani"
+	"apihelp-ulssetlang-description": "Verrıyê tercihê zıwanê karberi rocane kerê",
+	"apihelp-ulssetlang-summary": "Verrıyê tercihê zıwanê karberi rocane kerê",
+	"apihelp-ulssetlang-param-languagecode": "Weçineyaye kodê zıwani",
+	"apierror-ulssetlang-anon-notallowed": "Karberanê anoniman rê verrıyê zıwani vurnayışi rê mısade nêdeyayo"
 }
