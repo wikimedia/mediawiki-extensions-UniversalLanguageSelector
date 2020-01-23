@@ -87,10 +87,8 @@
 		} ).done( function () {
 			location.replace( currentUrlWithoutSetLang() );
 		} ).fail( function ( code, result ) {
-			var apiErrorInfo = mw.msg( 'ext-uls-setlang-unknown-error' );
-			if ( result.error && result.error.info ) {
-				apiErrorInfo = result.error.info;
-			}
+			var apiErrorInfo = result.error && result.error.info ||
+				mw.msg( 'ext-uls-setlang-unknown-error' );
 			mw.notify(
 				mw.msg( 'ext-uls-setlang-error', apiErrorInfo ),
 				{
