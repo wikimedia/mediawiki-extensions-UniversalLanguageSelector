@@ -1,0 +1,10 @@
+== UniversalLanguageSelector 2020.01 ==
+Released at 2020-01-23.
+
+=== Noteworthy changes ===
+* Put overhauled icon on baseline and unify code with Vector's. ([[phab:T207075|Phab:T207075]])
+* Update setlang to display confirmation dialog to change language. ([[phab:T63115|Phab:T63115]])
+* Removed IE6/7 support.
+
+=== Input Methods ===
+* Fixed Jna Gunintham issue in Telugu Transliteration keyboard.
