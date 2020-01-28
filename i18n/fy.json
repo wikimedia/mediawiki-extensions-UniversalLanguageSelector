@@ -54,7 +54,7 @@
 	"ext-uls-input-disable-info": "De ynfiermiddels binne útskeakele.",
 	"ext-uls-input-settings-noime": "Der binne gjin ynfiermetoaden beskikber foar dizze taal.",
 	"ext-uls-input-disable-notification": "Ynfiermiddels binne útskeakele",
-	"ext-uls-input-disable-notification-undo": "Ungedien meitsjen",
+	"ext-uls-input-disable-notification-undo": "Ungedien meitsje",
 	"ext-uls-input-disable-notification-info-personal": "Jo kinne de ynfiermiddels altyd ynskeakelje by de taalynstellings.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Jo kinne de ynfiermiddels altyd ynskeakelje by de taalynstellings neist de talelist.",
 	"ext-uls-language-settings-applying": "Tapasse ...",
@@ -62,5 +62,12 @@
 	"ext-uls-compact-link-info": "Alle talen (begjinseleksje nei de foarkarren fan jo en oaren)",
 	"prefs-languages": "Talen",
 	"ext-uls-compact-language-links-preference": "In [[$1|kompakte talelist]] brûke mei foar jo relevante talen.",
-	"ext-uls-compact-no-results": "Dizze side is net beskikber yn 'e taal dy't jo sochten."
+	"ext-uls-compact-no-results": "Dizze side is net beskikber yn 'e taal dy't jo sochten.",
+	"ext-uls-setlang-error": "Der wie in flater by it ferwurkjen fan jo taalkar. Flater: $1",
+	"ext-uls-setlang-unknown-error": "Unbekende flater",
+	"ext-uls-setlang-message": "De ferwizing dy't jo folgen, wol it meidoggeroerflak werjaan yn <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "Taal meidoggeroerflak feroarje?",
+	"ext-uls-setlang-accept": "Feroaring akseptearje",
+	"ext-uls-setlang-loading": "Tapasse ...",
+	"ext-uls-setlang-cancel": "Net feroarje"
 }

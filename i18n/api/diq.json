@@ -20,7 +20,7 @@
 	"apihelp-ulslocalization-example-1": "Lokalizasyonê Tamili ano",
 	"apihelp-ulslocalization-example-2": "Lokalizasyonê Hindi ano",
 	"apihelp-ulssetlang-description": "Verrıyê tercihê zıwanê karberi rocane kerê",
-	"apihelp-ulssetlang-summary": "Verrıyê tercihê zıwanê karberi rocane kerê",
+	"apihelp-ulssetlang-summary": "Verriyê tercihê zıwanê karberi rocane kerê",
 	"apihelp-ulssetlang-param-languagecode": "Weçineyaye kodê zıwani",
 	"apierror-ulssetlang-anon-notallowed": "Karberanê anoniman rê verrıyê zıwani vurnayışi rê mısade nêdeyayo"
 }
