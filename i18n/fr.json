@@ -20,13 +20,14 @@
 			"Trizek (WMF)",
 			"Aboulouei1",
 			"Verdy p",
-			"Thibaut120094"
+			"Thibaut120094",
+			"Pols12"
 		]
 	},
 	"uls-desc": "Donne à l’utilisateur plusieurs manières de sélectionner une langue et d’ajuster ses paramètres de langue",
 	"uls-plang-title-languages": "Langues",
 	"ext-uls-select-language-settings-icon-tooltip": "Paramètres de langue",
-	"ext-uls-undo-language-tooltip-text": "Langue modifiée de $1",
+	"ext-uls-undo-language-tooltip-text": "Langue modifiée. Avant : $1",
 	"ext-uls-undo-language-tooltip-text-local": "La langue a changé pour ce wiki. Vérifiez vos [[Special:GlobalPreferences|préférences globales]] pour modifier la langue sur tous les wikis.",
 	"ext-uls-language-settings-preferences-link": "Plus de paramètres de langue",
 	"uls-betafeature-label": "Compacter les liens de langue",
