@@ -4,7 +4,8 @@
 			"Lloffiwr",
 			"Muddyb Blast Producer",
 			"Muddyb",
-			"Xð"
+			"Xð",
+			"Yasen igra"
 		]
 	},
 	"uls-plang-title-languages": "Lugha",
@@ -51,5 +52,9 @@
 	"ext-uls-input-disable-notification": "Zana za kuingiza zimelemazwa.",
 	"ext-uls-input-disable-notification-undo": "Tengua",
 	"ext-uls-input-disable-notification-info-personal": "Unaweza kuwezesha zana za kuingiza wakati wowote kwa kupitia mipangilio ya lugha.",
-	"ext-uls-input-disable-notification-info-interlanguage": "Unaweza kuwezesha zana za kuingiza wakati wowote kwa kupitia mipangilio ya lugha iliyopo kando ya orodha ya lugha."
+	"ext-uls-input-disable-notification-info-interlanguage": "Unaweza kuwezesha zana za kuingiza wakati wowote kwa kupitia mipangilio ya lugha iliyopo kando ya orodha ya lugha.",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Moja zaidi|$1 zaidi}}",
+	"ext-uls-compact-link-info": "Lugha zote (uchaguo wa mwanzo kwenye chaguo zinazotumika na wewe na wengine)",
+	"ext-uls-setlang-error": "Hitilafu inaonekana unaposasisha lugha unayopenda. Hitilafu: $1",
+	"ext-uls-setlang-unknown-error": "Hitilafu isiyojulikana"
 }
