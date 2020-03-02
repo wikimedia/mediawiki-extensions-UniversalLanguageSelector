@@ -31,5 +31,6 @@
 	"ext-uls-input-enable": "आगत उपकरणहरू सक्षम",
 	"ext-uls-input-disable-notification-undo": "पूर्ववत गर्ने",
 	"ext-uls-language-settings-applying": "लागू ...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|एक थप|$1 थप}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|एक थप|$1 थप}}",
+	"prefs-languages": "भाषाहरू"
 }

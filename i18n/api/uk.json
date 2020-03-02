@@ -17,5 +17,9 @@
 	"apihelp-ulslocalization-summary": "Отримати локалізацію ULS вказаною мовою.",
 	"apihelp-ulslocalization-param-language": "Код мови.",
 	"apihelp-ulslocalization-example-1": "Отримати локалізацію тамільською",
-	"apihelp-ulslocalization-example-2": "Отримати локалізацію хінді"
+	"apihelp-ulslocalization-example-2": "Отримати локалізацію хінді",
+	"apihelp-ulssetlang-description": "Оновити пріоритетну мову інтерфейсу для користувача.",
+	"apihelp-ulssetlang-summary": "Оновити пріоритетну мову інтерфейсу для користувача.",
+	"apihelp-ulssetlang-param-languagecode": "Код пріоритетної мови.",
+	"apierror-ulssetlang-anon-notallowed": "Анонімні користувачі не можуть змінювати мову інтерфейсу."
 }
