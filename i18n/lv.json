@@ -53,6 +53,7 @@
 	"prefs-languages": "Valodas",
 	"ext-uls-compact-language-links-preference": "Izmantot [[$1|kompakto valodu sarakstu]] ar tev atbilstošajām valodām.",
 	"ext-uls-compact-no-results": "Šī lapa nav pieejama tevis atrastajā valodā.",
+	"ext-uls-setlang-error": "Iestatot tavu izvēlēto valodu, notika kļūda: $1",
 	"ext-uls-setlang-unknown-error": "Nezināma kļūda",
 	"ext-uls-setlang-heading": "Mainīt saskarnes valodu?",
 	"ext-uls-setlang-accept": "Pieņemt izmaiņas",
