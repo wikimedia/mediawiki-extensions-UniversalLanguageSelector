@@ -34,6 +34,10 @@
 			"East Syriac Adiabene",
 			"SertoUrhoy"
 		],
+		"ban-bali": [
+			"Vimala",
+			"Pustaka Bali"
+		],
 		"bbc": [
 			"system",
 			"Pangururan"
@@ -192,6 +196,10 @@
 			"ComicNeue",
 			"OpenDyslexic"
 		],
+		"id-bali": [
+			"Vimala",
+			"Pustaka Bali"
+		],
 		"ii": [
 			"Nuosu SIL"
 		],
@@ -213,6 +221,10 @@
 		],
 		"jv-java": [
 			"Tuladha Jejeg"
+		],
+		"kaw-bali": [
+			"Vimala",
+			"Pustaka Bali"
 		],
 		"kbg": [
 			"Jomolhari"
@@ -268,6 +280,10 @@
 			"ComicNeue",
 			"OpenDyslexic"
 		],
+		"ms-bali": [
+			"Vimala",
+			"Pustaka Bali"
+		],
 		"muk": [
 			"Jomolhari"
 		],
@@ -313,6 +329,14 @@
 		"pt": [
 			"system",
 			"OpenDyslexic"
+		],
+		"sa-bali": [
+			"Vimala",
+			"Pustaka Bali"
+		],
+		"sas-bali": [
+			"Vimala",
+			"Pustaka Bali"
 		],
 		"saz": [
 			"Pagul"
@@ -730,6 +754,10 @@
 			"woff": "Ponomar/PonomarUnicode.woff?05ed0",
 			"woff2": "Ponomar/PonomarUnicode.woff2?ea5c5"
 		},
+		"Pustaka Bali": {
+			"woff": "PustakaBali/PustakaBali.woff?95412",
+			"woff2": "PustakaBali/PustakaBali.woff2?9090d"
+		},
 		"RailwaySans": {
 			"woff": "RailwaySans/RailwaySans.woff?fda9a",
 			"woff2": "RailwaySans/RailwaySans.woff2?a6c17"
@@ -777,6 +805,10 @@
 		"UnifrakturMaguntia": {
 			"woff": "UnifrakturMaguntia/UnifrakturMaguntia.woff?6ad8f",
 			"woff2": "UnifrakturMaguntia/UnifrakturMaguntia.woff2?23272"
+		},
+		"Vimala": {
+			"woff": "Vimala/Vimala.woff?e387b",
+			"woff2": "Vimala/Vimala.woff2?70690"
 		},
 		"lklug": {
 			"woff": "lklug/lklug.woff?57de7",
