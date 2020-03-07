@@ -71,9 +71,9 @@
 		],
 		"ckb": [
 			"system",
+			"Amiri",
 			"Lateef",
-			"Scheherazade",
-			"Amiri"
+			"Scheherazade"
 		],
 		"cr": [
 			"OskiEast"
@@ -703,8 +703,8 @@
 			"woff2": "OskiEast/oskieitalic.woff2?2745f"
 		},
 		"Padauk": {
-			"woff": "Padauk/Padauk-Regular.woff?544be",
-			"woff2": "Padauk/Padauk-Regular.woff2?97419"
+			"woff": "Padauk/Padauk-Regular.woff?e67df",
+			"woff2": "Padauk/Padauk-Regular.woff2?a9b3f"
 		},
 		"Pagul": {
 			"woff": "Pagul/Pagul.woff?4d3bf",
