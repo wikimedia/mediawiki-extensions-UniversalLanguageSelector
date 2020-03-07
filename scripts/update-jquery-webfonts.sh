@@ -8,7 +8,7 @@ CLONEDIR="$BASEDIR/vendor/jquery.wefonts"
 
 UPSTREAM="https://github.com/wikimedia/jquery.webfonts.git"
 
-echo "Getting latest jquery.wefonts from $UPSTREAM"
+echo "Getting latest jquery.webfonts from $UPSTREAM"
 
 if [ -d "$CLONEDIR" ]; then
 	pushd "$CLONEDIR"
