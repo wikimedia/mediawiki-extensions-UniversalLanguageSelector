@@ -28,6 +28,7 @@
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Pieslēdzies]], lai izvēlētos atšķirīgu valodu izvēlnēm.",
 	"ext-uls-webfonts-settings-title": "Lejupielādēt fontus pēc nepieciešamības",
 	"ext-uls-webfonts-settings-info-link": "Vairāk informācijas",
+	"ext-uls-webfonts-select-for": "Izvēlies fontu priekš $1",
 	"ext-uls-webfonts-select-for-ui-info": "Saskarnei izmantotais fonts",
 	"ext-uls-webfonts-select-for-content-info": "Saturam izmantotais fonts",
 	"ext-uls-webfonts-system-font": "Sistēmas fonts",
