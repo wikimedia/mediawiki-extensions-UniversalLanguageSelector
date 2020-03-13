@@ -25,6 +25,7 @@
 	"jquery-ime-help": "Новкъoстал",
 	"ext-uls-input-disable": "ДIайоае яздара кечалаш",
 	"ext-uls-input-settings-noime": "Укх меттá раскладка белгалъяь яц.",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Кхы $1}}",
 	"prefs-languages": "Метташ",
 	"ext-uls-compact-language-links-preference": "Лелае [[$1|айха йола меттай хьаязъяьр]] хьайна эшаш дола метташ юкъедолаш."
 }
