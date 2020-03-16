@@ -36,6 +36,7 @@
 		],
 		"ban-bali": [
 			"Vimala",
+			"Kadiri",
 			"Pustaka Bali"
 		],
 		"bbc": [
@@ -198,6 +199,7 @@
 		],
 		"id-bali": [
 			"Vimala",
+			"Kadiri",
 			"Pustaka Bali"
 		],
 		"ii": [
@@ -224,6 +226,7 @@
 		],
 		"kaw-bali": [
 			"Vimala",
+			"Kadiri",
 			"Pustaka Bali"
 		],
 		"kbg": [
@@ -282,6 +285,7 @@
 		],
 		"ms-bali": [
 			"Vimala",
+			"Kadiri",
 			"Pustaka Bali"
 		],
 		"muk": [
@@ -332,10 +336,12 @@
 		],
 		"sa-bali": [
 			"Vimala",
+			"Kadiri",
 			"Pustaka Bali"
 		],
 		"sas-bali": [
 			"Vimala",
+			"Kadiri",
 			"Pustaka Bali"
 		],
 		"saz": [
@@ -587,6 +593,10 @@
 			"woff": "Junicode/Junicode-Italic.woff?c458b",
 			"woff2": "Junicode/Junicode-Italic.woff2?3fe39"
 		},
+		"Kadiri": {
+			"woff": "Kadiri/Kadiri.woff?1b711",
+			"woff2": "Kadiri/Kadiri.woff2?a266a"
+		},
 		"KhmerOS": {
 			"woff": "KhmerOS/KhmerOS.woff?2ef9e",
 			"woff2": "KhmerOS/KhmerOS.woff2?34973"
@@ -755,8 +765,8 @@
 			"woff2": "Ponomar/PonomarUnicode.woff2?ea5c5"
 		},
 		"Pustaka Bali": {
-			"woff": "PustakaBali/PustakaBali.woff?95412",
-			"woff2": "PustakaBali/PustakaBali.woff2?9090d"
+			"woff": "PustakaBali/PustakaBali.woff?cb41e",
+			"woff2": "PustakaBali/PustakaBali.woff2?743c0"
 		},
 		"RailwaySans": {
 			"woff": "RailwaySans/RailwaySans.woff?fda9a",
