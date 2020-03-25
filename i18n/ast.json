@@ -61,5 +61,12 @@
 	"ext-uls-compact-link-info": "Tolos idiomes (esbilla inicial d'opciones comunes de to y d'otros)",
 	"prefs-languages": "Llingües",
 	"ext-uls-compact-language-links-preference": "Usar una [[$1|llista de llingües compacta]] coles más afayadices pa ti.",
-	"ext-uls-compact-no-results": "Esta páxina nun ta disponible na llingua que buscasti."
+	"ext-uls-compact-no-results": "Esta páxina nun ta disponible na llingua que buscasti.",
+	"ext-uls-setlang-error": "Asocedió un error al anovar l'idioma preferíu. Error: $1",
+	"ext-uls-setlang-unknown-error": "Fallu desconocíu",
+	"ext-uls-setlang-message": "L'enllaz que siguisti solicitó que la interfaz s'amuese en <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "¿Quies camudar l'idioma de la interfaz?",
+	"ext-uls-setlang-accept": "Aceptar el cambéu",
+	"ext-uls-setlang-loading": "Aplicando...",
+	"ext-uls-setlang-cancel": "Nun camudar"
 }
