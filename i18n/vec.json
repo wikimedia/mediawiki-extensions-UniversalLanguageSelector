@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"GatoSelvadego"
+			"GatoSelvadego",
+			"Fierodelveneto"
 		]
 	},
 	"uls-desc": "Fornise ai utenti difarenti modi de sełesionar na lengua e de sistemar łe inpostasion de ła lengua",
@@ -16,7 +17,7 @@
 	"ext-uls-display-settings-desc": "Inposta ła lengua doparà par menù e caratari",
 	"ext-uls-language-settings-title": "Inpostasion par ła lengua",
 	"ext-uls-language-settings-apply": "Àplica inpostasion",
-	"ext-uls-language-settings-cancel": "Łasa star",
+	"ext-uls-language-settings-cancel": "Descançełare",
 	"ext-uls-language-buttons-help": "Canbia ła lengua dei menù. Ła lengua dei contegnùi no ła vegnarà canbià.",
 	"ext-uls-display-settings-font-settings": "Inpostasion par tipo de caratari",
 	"ext-uls-display-settings-ui-language": "Lengua de vixuałixasion",
