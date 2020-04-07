@@ -1,13 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Borislav",
 			"DCLXVI",
 			"Spiritia",
-			"Termininja",
-			"Borislav",
-			"Vodnokon4e",
 			"StanProg",
-			"Ted Masters"
+			"Ted Masters",
+			"Termininja",
+			"Vodnokon4e"
 		]
 	},
 	"uls-desc": "Предоставя на потребителя няколко начина за избор на език и за промяна на езиковите настройки",

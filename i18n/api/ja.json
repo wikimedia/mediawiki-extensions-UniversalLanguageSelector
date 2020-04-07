@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"Omotecho",
 			"Otokoume",
-			"Sujiniku",
-			"Omotecho"
+			"Sujiniku"
 		]
 	},
 	"apihelp-languagesearch-description": "任意のスクリプトで言語を検索。",

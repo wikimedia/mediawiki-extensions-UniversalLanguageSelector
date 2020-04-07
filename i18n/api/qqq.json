@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Brad Jorsch",
 			"Liuxinyu970226",
-			"Siebrand",
 			"Nemo bis",
-			"Brad Jorsch"
+			"Siebrand"
 		]
 	},
 	"apihelp-languagesearch-description": "{{doc-apihelp-description|languagesearch}}",

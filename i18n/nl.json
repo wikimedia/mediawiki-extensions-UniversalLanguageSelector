@@ -1,20 +1,20 @@
 {
 	"@metadata": {
 		"authors": [
-			"Siebrand",
-			"Wiki13",
-			"Southparkfan",
-			"Arent",
-			"SPQRobin",
-			"Sjoerddebruin",
-			"Macofe",
-			"Robin van der Vliet",
-			"McDutchie",
-			"Mainframe98",
-			"Dinosaur918",
-			"Mar(c)",
 			"Amire80",
-			"Elroy"
+			"Arent",
+			"Dinosaur918",
+			"Elroy",
+			"Macofe",
+			"Mainframe98",
+			"Mar(c)",
+			"McDutchie",
+			"Robin van der Vliet",
+			"SPQRobin",
+			"Siebrand",
+			"Sjoerddebruin",
+			"Southparkfan",
+			"Wiki13"
 		]
 	},
 	"uls-desc": "Biedt de gebruiker verschillende manieren om een taal te selecten en de taalinstellingen aan te passen",

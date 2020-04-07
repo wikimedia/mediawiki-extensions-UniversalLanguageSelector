@@ -1,13 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Elroy",
+			"Goefie",
 			"Macofe",
+			"McDutchie",
 			"Robin van der Vliet",
 			"Siebrand",
-			"Sjoerddebruin",
-			"McDutchie",
-			"Goefie",
-			"Elroy"
+			"Sjoerddebruin"
 		]
 	},
 	"apihelp-languagesearch-description": "Zoeken naar namen van talen in elk script",

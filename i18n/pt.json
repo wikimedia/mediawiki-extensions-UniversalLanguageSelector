@@ -1,18 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
-			"Luckas",
-			"Malafaya",
-			"Hamilton Abreu",
-			"Vitorvicentevalente",
-			"Fúlvio",
-			555,
-			"Macofe",
-			"Opraco",
 			"Athena in Wonderland",
 			"Eduardo Addad de Oliveira",
+			"Fúlvio",
+			"Hamilton Abreu",
 			"Ldacosta",
-			"Mansil"
+			"Luckas",
+			"Macofe",
+			"Malafaya",
+			"Mansil",
+			"Opraco",
+			"Vitorvicentevalente",
+			555
 		]
 	},
 	"uls-desc": "Fornece ao utilizador várias maneiras de selecionar uma língua e ajustar as definições de língua",

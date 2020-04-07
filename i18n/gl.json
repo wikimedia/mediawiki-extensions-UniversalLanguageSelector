@@ -1,14 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Toliño",
-			"Nemo bis",
-			"Elisardojm",
-			"Macofe",
-			"Navhy",
 			"Banjo",
+			"Elisardojm",
+			"Iváns",
+			"Macofe",
 			"Maria zaos",
-			"Iváns"
+			"Nemo bis",
+			"Toliño"
 		]
 	},
 	"uls-desc": "Dá ao usuario varios xeitos de seleccionar unha lingua e de axustar as preferencias da mesma",

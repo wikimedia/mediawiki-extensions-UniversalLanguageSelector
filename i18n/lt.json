@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mantak111",
-			"Salpusnis",
-			"Kusurija",
 			"Hugo.arg",
-			"Manvydasz"
+			"Kusurija",
+			"Mantak111",
+			"Manvydasz",
+			"Salpusnis"
 		]
 	},
 	"uls-desc": "Suteikia vartotojui keliais būdais, pasirinkti kalbą ir sureguliuoti kalbos parametrus.",

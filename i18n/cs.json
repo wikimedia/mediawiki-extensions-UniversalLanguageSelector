@@ -1,13 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Littledogboy",
-			"Mormegil",
-			"Matěj Suchánek",
 			"Danny B.",
-			"Kusurija",
 			"Dvorapa",
-			"Ilimanaq29"
+			"Ilimanaq29",
+			"Kusurija",
+			"Littledogboy",
+			"Matěj Suchánek",
+			"Mormegil"
 		]
 	},
 	"uls-desc": "Nabízí uživateli několik způsobů volby jazyka a úpravy jazykových nastavení",

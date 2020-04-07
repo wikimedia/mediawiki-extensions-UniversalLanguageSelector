@@ -1,16 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"R-Joe",
-			"Tgr",
-			"BáthoryPéter",
-			"Tacsipacsi",
-			"Dorgan",
-			"Bináris",
 			"BanKris",
-			"Máté",
 			"Bencemac",
-			"Csega"
+			"Bináris",
+			"BáthoryPéter",
+			"Csega",
+			"Dorgan",
+			"Máté",
+			"R-Joe",
+			"Tacsipacsi",
+			"Tgr"
 		]
 	},
 	"uls-desc": "Többféle módot kínál a felhasználónak nyelv kiválasztására és a nyelvi beállítások módosítására",

@@ -2,12 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
-			"Raoli",
 			"Darth Kule",
-			"Nemo bis",
 			"F. Cosoleto",
 			"Macofe",
-			"Matteocng"
+			"Matteocng",
+			"Nemo bis",
+			"Raoli"
 		]
 	},
 	"uls-desc": "Fornisce agli utenti diversi modi di selezionare una lingua e sistemare le impostazioni della lingua",

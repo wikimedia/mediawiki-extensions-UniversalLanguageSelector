@@ -1,17 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
-			"Matma Rex",
-			"Rezonansowy",
-			"WTM",
-			"Chrumps",
 			"BeginaFelicysym",
+			"Chrumps",
+			"Matma Rex",
 			"Nemo bis",
 			"Peter Bowman",
-			"Woytecr",
-			"Sethakill",
+			"Rail",
 			"Railfail536",
-			"Rail"
+			"Rezonansowy",
+			"Sethakill",
+			"WTM",
+			"Woytecr"
 		]
 	},
 	"uls-desc": "Daje użytkownikowi kilka sposobów, aby wybrać język i dostosować ustawienia języka",
