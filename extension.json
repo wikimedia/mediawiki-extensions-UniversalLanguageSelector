@@ -323,9 +323,8 @@
 		"ext.uls.preferences": {
 			"scripts": "js/ext.uls.preferences.js",
 			"dependencies": [
-				"mediawiki.api",
 				"mediawiki.user",
-				"mediawiki.storage"
+				"mediawiki.api"
 			],
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"

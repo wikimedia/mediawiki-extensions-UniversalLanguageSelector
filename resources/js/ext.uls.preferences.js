@@ -21,11 +21,51 @@
 ( function () {
 	'use strict';
 
-	var ULSPreferences, instance;
+	var ULSPreferences;
+
+	/**
+	 * Wrapper for localStorage, falls back to cookie
+	 * when localStorage not supported by browser.
+	 *
+	 * @return {Object}
+	 */
+	function preferenceStore() {
+
+		// If value is detected, set new or modify store
+		return {
+			/*
+			 * Set the value to the given key
+			 * @param {string} key
+			 * @param {Object} value value to be set
+			 */
+			set: function ( key, value ) {
+				// Convert object values to JSON
+				if ( typeof value === 'object' ) {
+					value = JSON.stringify( value );
+				}
+
+				try {
+					localStorage.setItem( key, value );
+				} catch ( e ) {}
+			},
+			/*
+			 * Returns the value of the given key
+			 * @param {string} key
+			 * @return {Object} value of the key
+			 */
+			get: function ( key ) {
+				var data;
+
+				try {
+					data = JSON.parse( localStorage.getItem( key ) );
+				} catch ( e ) {}
+
+				return data;
+			}
+		};
+	}
 
 	ULSPreferences = function () {
-		// This violates coding conventions for localstorage:
-		// https://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript#Keys
 		this.preferenceName = 'uls-preferences';
 		this.username = mw.user.getName();
 		this.isAnon = mw.user.isAnon();
@@ -34,19 +74,28 @@
 	};
 
 	ULSPreferences.prototype = {
+		/**
+		 * Initialize
+		 */
 		init: function () {
+			var options;
+
 			if ( this.isAnon ) {
-				this.preferences = mw.storage.getObject( this.preferenceName );
+				this.preferences = preferenceStore().get( this.preferenceName );
 			} else {
+				options = mw.user.options.get( this.preferenceName );
+				if ( !options ) {
+					options = '{}';
+				}
+				// Try to parse JSON
 				try {
-					this.preferences = JSON.parse( mw.user.options.get( this.preferenceName ) );
+					this.preferences = JSON.parse( options );
 				} catch ( e ) {
+					this.preferences = {};
 				}
 			}
 
-			if ( !$.isPlainObject( this.preferences ) ) {
-				this.preferences = {};
-			}
+			this.preferences = this.preferences || {};
 		},
 
 		/**
@@ -75,22 +124,22 @@
 		 * @param {Function} callback
 		 */
 		save: function ( callback ) {
-			var self = this;
+			var ulsPreferences = this;
 
 			callback = callback || function () {};
 			if ( this.isAnon ) {
 				// Anonymous user. Save preferences in local storage
-				mw.storage.setObject( this.preferenceName, this.preferences );
+				preferenceStore().set( this.preferenceName, this.preferences );
 				callback.call( this, true );
 			} else {
 				// Logged in user. Use MW APIs to change preferences
 				new mw.Api().saveOption(
-					this.preferenceName,
-					JSON.stringify( this.preferences )
+					ulsPreferences.preferenceName,
+					JSON.stringify( ulsPreferences.preferences )
 				).done( function () {
-					callback.call( self, true );
+					callback.call( this, true );
 				} ).fail( function () {
-					callback.call( self, false );
+					callback.call( this, false );
 				} );
 			}
 		}
@@ -98,8 +147,12 @@
 
 	mw.uls = mw.uls || {};
 	mw.uls.preferences = function () {
-		instance = instance || new ULSPreferences();
-		return instance;
+		var data = $( document.body ).data( 'preferences' );
+
+		if ( !data ) {
+			$( document.body ).data( 'preferences', ( data = new ULSPreferences() ) );
+		}
+		return data;
 	};
 
 }() );
