@@ -33,7 +33,7 @@
 		width: 100%;
 		/* Using border instead of outline for focus (outline doesn't have enough space) */
 		outline: 0;
-		color: #222;
+		color: #202122;
 		padding: 5px 0 5px 42px;
 		border: 1px solid transparent;
 		background: left 15px top 6px transparent no-repeat;
@@ -74,27 +74,27 @@
 		}
 
 		&:hover .settings-text {
-			color: #222;
+			color: #202122;
 		}
 
 		&.display-settings-block {
-			.background-image-svg( '../images/display.svg', '../images/display.png' );
+			background-image: url( ../images/display.svg );
 		}
 
 		&.input-settings-block {
-			.background-image-svg( '../images/input.svg', '../images/input.png' );
+			background-image: url( ../images/input.svg );
 		}
 	}
 }
 
 #languagesettings-settings-panel {
 	padding: 0 15px;
-	color: #222;
+	color: #202122;
 	background: #fff;
 }
 
 #languagesettings-settings-panel h3 {
-	color: #222;
+	color: #202122;
 	padding-top: 15px;
 	margin-top: 1pt;
 	line-height: 20pt;
@@ -102,7 +102,7 @@
 }
 
 #languagesettings-settings-panel h4 {
-	color: #222;
+	color: #202122;
 	font-size: 12pt;
 }
 
@@ -146,7 +146,7 @@
 }
 
 .checkbox strong {
-	color: #222;
+	color: #202122;
 }
 
 label.checkbox input[ type='checkbox' ] {
@@ -158,9 +158,9 @@ label.checkbox input[ type='checkbox' ] {
 }
 
 .uls-icon-close {
-	background: transparent no-repeat center center;
-	.background-image-svg( '../images/close.svg', '../images/close.png' );
-	background-size: 16px 16px; // Support: Android Browser <= 4.3, doesn't accept it as part of `background` shorthand
+	background: transparent url( ../images/close.svg ) no-repeat center center;
+	// Support: Android Browser <= 4.3, doesn't accept `background-size` as part of `background` shorthand.
+	background-size: 16px 16px;
 	float: right;
 	padding: 16px;
 	cursor: pointer;
