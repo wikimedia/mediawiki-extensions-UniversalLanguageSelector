@@ -4,6 +4,7 @@
 			"Armin1392",
 			"Calak",
 			"Ebraminio",
+			"FarsiNevis",
 			"Ladsgroup",
 			"Mahan",
 			"Mehran",
@@ -65,5 +66,11 @@
 	"ext-uls-compact-link-info": "همه زبان‌ها (انتخاب اولیه از انتخاب‌های مشترک شما و دیگران)",
 	"prefs-languages": "زبان‌ها",
 	"ext-uls-compact-language-links-preference": "استفاده از [[$1|فهرست فشرده زبان]]، همراه با زبان‌های مرتبط با شما",
-	"ext-uls-compact-no-results": "این صفحه در زبانی که جستجو کرده‌اید قابل دسترس نیست."
+	"ext-uls-compact-no-results": "این صفحه در زبانی که جستجو کرده‌اید قابل دسترس نیست.",
+	"ext-uls-setlang-error": "خطایی در هنگام روزآمدسازی زبان ترجیحی‌تان رخ داد. خطا: $1",
+	"ext-uls-setlang-unknown-error": "خطای ناشناخته",
+	"ext-uls-setlang-heading": "زبان رابط کاربری را تغییر می‌دهید؟",
+	"ext-uls-setlang-accept": "پذیرفتن تغییرات",
+	"ext-uls-setlang-loading": "در حال اعمال...",
+	"ext-uls-setlang-cancel": "تغییر نده"
 }
