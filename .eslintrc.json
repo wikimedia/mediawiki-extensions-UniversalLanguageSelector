@@ -9,6 +9,7 @@
 		"OO": false
 	},
 	"rules": {
-		"no-jquery/no-global-selector": "off"
+		"no-jquery/no-global-selector": "off",
+		"mediawiki/class-doc": "warn"
 	}
 }
