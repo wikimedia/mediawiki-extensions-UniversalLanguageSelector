@@ -15,7 +15,7 @@
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector",
 	"descriptionmsg": "uls-desc",
-	"license-name": "GPL-2.0-or-later",
+	"license-name": "GPL-2.0-or-later OR MIT",
 	"requires": {
 		"MediaWiki": ">= 1.32.0"
 	},
