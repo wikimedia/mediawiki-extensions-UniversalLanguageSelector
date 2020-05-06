@@ -59,7 +59,7 @@
 	"ext-uls-compact-link-count": "Ancon {{PLURAL:$1|un-a|$1}}",
 	"ext-uls-compact-link-info": "Tutte e lengue (selession inissiâ de sernie comun-e to e di atri)",
 	"prefs-languages": "Lengoe",
-	"ext-uls-compact-language-links-preference": "A l'adoeuvia 'na [[$1|lista reduta de lengue]], co-e lengue pe ti relevante.",
+	"ext-uls-compact-language-links-preference": "Adœuvia 'na [[$1|lista reduta de lengue]], co-e lengue pe ti relevante.",
 	"ext-uls-compact-no-results": "Sta paggina chie a no l'è disponibbile inta lengoa inta quæ ti l'hæ sercâ.",
 	"ext-uls-setlang-error": "Gh'è stæt'in aro inte l'agiornamento de to lengoe preferie. Aro: $1",
 	"ext-uls-setlang-unknown-error": "Aro sconosciûo",
