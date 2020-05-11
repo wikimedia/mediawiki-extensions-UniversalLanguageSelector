@@ -166,21 +166,6 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	/**
-	 * @param array &$testModules array of javascript testing modules. 'qunit' is fed
-	 * using tests/qunit/QUnitTestResources.php.
-	 * @param ResourceLoader $resourceLoader
-	 * Hook: ResourceLoaderTestModules
-	 */
-	public static function addTestModules( array &$testModules, ResourceLoader $resourceLoader ) {
-		$testModules['qunit']['ext.uls.tests'] = [
-			'scripts' => [ 'tests/qunit/ext.uls.tests.js' ],
-			'dependencies' => [ 'jquery.uls', 'ext.uls.init', 'ext.uls.preferences' ],
-			'localBasePath' => dirname( __DIR__ ),
-			'remoteExtPath' => 'UniversalLanguageSelector',
-		];
-	}
-
-	/**
 	 * Add some tabs for navigation for users who do not use Ajax interface.
 	 * Hook: PersonalUrls
 	 * @param array &$personal_urls

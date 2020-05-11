@@ -17,7 +17,7 @@
 	"descriptionmsg": "uls-desc",
 	"license-name": "GPL-2.0-or-later OR MIT",
 	"requires": {
-		"MediaWiki": ">= 1.32.0"
+		"MediaWiki": ">= 1.33.0"
 	},
 	"Hooks": {
 		"BeforePageDisplay": "UniversalLanguageSelectorHooks::addModules",
@@ -28,7 +28,6 @@
 		"MakeGlobalVariablesScript": "UniversalLanguageSelectorHooks::addVariables",
 		"PersonalUrls": "UniversalLanguageSelectorHooks::addPersonalBarTrigger",
 		"ResourceLoaderGetConfigVars": "UniversalLanguageSelectorHooks::addConfig",
-		"ResourceLoaderTestModules": "UniversalLanguageSelectorHooks::addTestModules",
 		"SkinTemplateOutputPageBeforeExec": "UniversalLanguageSelectorHooks::onSkinTemplateOutputPageBeforeExec",
 		"UserGetLanguageObject": "UniversalLanguageSelectorHooks::getLanguage"
 	},
@@ -471,6 +470,18 @@
 			"localBasePath": "lib",
 			"remoteExtPath": "UniversalLanguageSelector/lib"
 		}
+	},
+	"QUnitTestModule": {
+		"localBasePath": "tests/qunit",
+		"remoteExtPath": "UniversalLanguageSelector/tests/qunit",
+		"scripts": [
+			"ext.uls.tests.js"
+		],
+		"dependencies": [
+			"jquery.uls",
+			"ext.uls.init",
+			"ext.uls.preferences"
+		]
 	},
 	"attributes": {
 		"EventLogging": {
