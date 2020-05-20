@@ -26,7 +26,15 @@ class UniversalLanguageSelectorHooks {
 	 * Used when extension registration in use which skips the main php file
 	 */
 	public static function setVersionConstant() {
+		global $wgHooks;
 		define( 'ULS_VERSION', '2018-10-26' );
+		// The SkinAfterPortlet hook was introduced in version >= 1.35.
+		// It is the same as BaseTemplateAfterPortlet with the exception of its parameters.
+		if ( interface_exists( MediaWiki\Skins\Hook\SkinAfterPortletHook::class ) ) {
+			$wgHooks['SkinAfterPortlet'][] = "UniversalLanguageSelectorHooks::onSkinAfterPortlet";
+		} else {
+			$wgHooks['BaseTemplateAfterPortlet'][] = "UniversalLanguageSelectorHooks::onBaseTemplateAfterPortlet";
+		}
 	}
 
 	/**
@@ -476,14 +484,33 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	/**
-	 * Hook: SkinTemplateOutputPageBeforeExec
-	 * @param Skin $skin
 	 * @param QuickTemplate $template
+	 * @param string $name
+	 * @param string &$content
 	 */
-	public static function onSkinTemplateOutputPageBeforeExec( Skin $skin,
-		QuickTemplate $template
+	public static function onBaseTemplateAfterPortlet(
+		QuickTemplate $template,
+		string $name,
+		string &$content
+	) {
+		self::onSkinAfterPortlet( $template->getSkin(), $name, $content );
+	}
+
+	/**
+	 * @param Skin $skin
+	 * @param string $name
+	 * @param string &$content
+	 */
+	public static function onSkinAfterPortlet(
+		Skin $skin,
+		string $name,
+		string &$content
 	) {
 		global $wgULSPosition;
+
+		if ( $name !== 'lang' ) {
+			return;
+		}
 
 		if ( $wgULSPosition !== 'interlanguage' ) {
 			return;
@@ -493,9 +520,17 @@ class UniversalLanguageSelectorHooks {
 			return;
 		}
 
-		// Set to an empty array, just to make sure that the section appears
-		if ( $template->get( 'language_urls' ) === false ) {
-			$template->set( 'language_urls', [] );
+		// An empty span will force the language portal to always display in
+		// the skins that support it! e.g. Vector.
+		if ( count( $skin->getLanguages() ) === 0 ) {
+			// If no languages force it on.
+			$content .= Html::element(
+				'span',
+				[
+					'class' => 'uls-after-portlet-link',
+				],
+				''
+			);
 		}
 	}
 

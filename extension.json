@@ -29,7 +29,6 @@
 		"PersonalUrls": "UniversalLanguageSelectorHooks::addPersonalBarTrigger",
 		"ResourceLoaderGetConfigVars": "UniversalLanguageSelectorHooks::addConfig",
 		"ResourceLoaderRegisterModules": "UniversalLanguageSelectorHooks::onResourceLoaderRegisterModules",
-		"SkinTemplateOutputPageBeforeExec": "UniversalLanguageSelectorHooks::onSkinTemplateOutputPageBeforeExec",
 		"UserGetLanguageObject": "UniversalLanguageSelectorHooks::getLanguage"
 	},
 	"APIModules": {
