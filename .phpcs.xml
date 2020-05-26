@@ -6,6 +6,7 @@
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic" />
 	</rule>
 	<file>.</file>
-	<arg name="extensions" value="php,php5,inc" />
+	<arg name="extensions" value="php" />
 	<arg name="encoding" value="UTF-8" />
+	<exclude-pattern>data/LanguageNameSearchData\.php</exclude-pattern>
 </ruleset>
