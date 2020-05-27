@@ -28,6 +28,7 @@
 		"MakeGlobalVariablesScript": "UniversalLanguageSelectorHooks::addVariables",
 		"PersonalUrls": "UniversalLanguageSelectorHooks::addPersonalBarTrigger",
 		"ResourceLoaderGetConfigVars": "UniversalLanguageSelectorHooks::addConfig",
+		"ResourceLoaderRegisterModules": "UniversalLanguageSelectorHooks::onResourceLoaderRegisterModules",
 		"SkinTemplateOutputPageBeforeExec": "UniversalLanguageSelectorHooks::onSkinTemplateOutputPageBeforeExec",
 		"UserGetLanguageObject": "UniversalLanguageSelectorHooks::getLanguage"
 	},
@@ -219,22 +220,6 @@
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
-		"ext.uls.ime": {
-			"scripts": "js/ext.uls.ime.js",
-			"dependencies": [
-				"ext.uls.common",
-				"ext.uls.preferences",
-				"ext.uls.mediawiki",
-				"ext.uls.messages",
-				"jquery.ime",
-				"mediawiki.notify"
-			],
-			"messages": [
-				"uls-ime-helppage"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
-		},
 		"ext.uls.init": {
 			"targets": [
 				"desktop"
@@ -339,33 +324,6 @@
 			"skinStyles": {
 				"monobook": "css/ext.uls.pt-monobook.less"
 			},
-			"remoteExtPath": "UniversalLanguageSelector/resources"
-		},
-		"ext.uls.setlang": {
-			"styles": [
-				"css/ext.uls.dialog.less",
-				"css/ext.uls.setlang.less"
-			],
-			"scripts": [
-				"js/ext.uls.dialog.js",
-				"js/ext.uls.setlang.js"
-			],
-			"dependencies": [
-				"mediawiki.api",
-				"mediawiki.ui.button",
-				"mediawiki.notify",
-				"mediawiki.Uri"
-			],
-			"messages": [
-				"ext-uls-setlang-error",
-				"ext-uls-setlang-unknown-error",
-				"ext-uls-setlang-heading",
-				"ext-uls-setlang-message",
-				"ext-uls-setlang-accept",
-				"ext-uls-setlang-cancel",
-				"ext-uls-setlang-loading"
-			],
-			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.webfonts": {

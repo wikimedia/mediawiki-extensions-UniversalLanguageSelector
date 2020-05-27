@@ -166,6 +166,63 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	/**
+	 * @param ResourceLoader $resourceLoader
+	 */
+	public static function onResourceLoaderRegisterModules( ResourceLoader $resourceLoader ) {
+		global $wgVersion;
+
+		// Support: MediaWiki 1.34
+		$hasOldNotify = version_compare( $wgVersion, '1.35', '<' );
+
+		$tpl = [
+			'localBasePath' => dirname( __DIR__ ) . '/resources',
+			'remoteExtPath' => 'UniversalLanguageSelector/resources',
+		];
+
+		$modules = [
+			"ext.uls.ime" => $tpl + [
+				"scripts" => "js/ext.uls.ime.js",
+				"dependencies" => array_merge( [
+					"ext.uls.common",
+					"ext.uls.preferences",
+					"ext.uls.mediawiki",
+					"ext.uls.messages",
+					"jquery.ime",
+				], $hasOldNotify ? [ 'mediawiki.notify' ] : [] ),
+				"messages" => [
+					"uls-ime-helppage"
+				],
+			],
+			"ext.uls.setlang" => $tpl + [
+				"styles" => [
+					"css/ext.uls.dialog.less",
+					"css/ext.uls.setlang.less"
+				],
+				"scripts" => [
+					"js/ext.uls.dialog.js",
+					"js/ext.uls.setlang.js"
+				],
+				"dependencies" => array_merge( [
+					"mediawiki.api",
+					"mediawiki.ui.button",
+					"mediawiki.Uri"
+				], $hasOldNotify ? [ 'mediawiki.notify' ] : [] ),
+				"messages" => [
+					"ext-uls-setlang-error",
+					"ext-uls-setlang-unknown-error",
+					"ext-uls-setlang-heading",
+					"ext-uls-setlang-message",
+					"ext-uls-setlang-accept",
+					"ext-uls-setlang-cancel",
+					"ext-uls-setlang-loading"
+				],
+			],
+		];
+
+		$resourceLoader->register( $modules );
+	}
+
+	/**
 	 * Add some tabs for navigation for users who do not use Ajax interface.
 	 * Hook: PersonalUrls
 	 * @param array &$personal_urls
