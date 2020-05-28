@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Diki Ananta",
 			"NoiX180"
 		]
 	},
@@ -29,7 +30,7 @@
 	"ext-uls-webfonts-settings-info": "Undhuh otomatis fon sing durung ana lan idinaké milih fon sing dikarepaké.",
 	"ext-uls-webfonts-settings-info-link": "Katerangan lanjutan",
 	"ext-uls-webfonts-select-for": "Pilih fon tumrap $1",
-	"ext-uls-webfonts-select-for-ui-info": "Fon kanggo antarmuka",
+	"ext-uls-webfonts-select-for-ui-info": "Fon kanggo mukantara naraguna",
 	"ext-uls-webfonts-select-for-content-info": "Fon kanggo isi",
 	"ext-uls-webfonts-system-font": "Fon sistem",
 	"ext-uls-back-to-display-settings": "Bali menyang setèlan pajangan",
