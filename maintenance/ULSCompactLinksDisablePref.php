@@ -13,6 +13,8 @@
  * @ingroup Maintenance
  */
 
+use MediaWiki\MediaWikiServices;
+
 require_once getenv( 'MW_INSTALL_PATH' ) !== false
 	? getenv( 'MW_INSTALL_PATH' ) . '/maintenance/Maintenance.php'
 	: __DIR__ . '/../../../maintenance/Maintenance.php';
@@ -32,6 +34,7 @@ class ULSCompactLinksDisablePref extends Maintenance {
 
 	public function execute() {
 		$dbr = wfGetDB( DB_REPLICA, 'vslow' );
+		$lbFactory = MediaWikiServices::getInstance()->getDBLoadBalancerFactory();
 
 		$really = $this->hasOption( 'really' );
 
@@ -110,7 +113,7 @@ class ULSCompactLinksDisablePref extends Maintenance {
 			}
 
 			$this->output( "Disabled compact-language-links for $disabled users.\n" );
-			wfWaitForSlaves();
+			$lbFactory->waitForReplication();
 		} while ( $results->numRows() === $this->mBatchSize );
 
 		$this->output( "done.\n" );
