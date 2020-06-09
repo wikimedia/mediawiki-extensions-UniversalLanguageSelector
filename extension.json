@@ -242,6 +242,7 @@
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.interface": {
+			"targets": [ "desktop", "mobile" ],
 			"scripts": "js/ext.uls.interface.js",
 			"styles": "css/ext.uls.interface.less",
 			"dependencies": [
@@ -261,6 +262,7 @@
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.interlanguage": {
+			"targets": [ "desktop", "mobile" ],
 			"styles": "css/ext.uls.interlanguage.less",
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
@@ -304,6 +306,10 @@
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.preferences": {
+			"targets": [
+				"desktop",
+				"mobile"
+			],
 			"scripts": "js/ext.uls.preferences.js",
 			"dependencies": [
 				"mediawiki.user",
@@ -318,6 +324,7 @@
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.pt": {
+			"targets": [ "desktop", "mobile" ],
 			"styles": "css/ext.uls.pt.less",
 			"localBasePath": "resources",
 			"skinStyles": {
@@ -326,6 +333,7 @@
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.webfonts": {
+			"targets": [ "desktop", "mobile" ],
 			"scripts": "js/ext.uls.webfonts.js",
 			"dependencies": [
 				"ext.uls.common",

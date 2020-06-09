@@ -116,8 +116,12 @@ class UniversalLanguageSelectorHooks {
 	 * @param Skin $skin
 	 * Hook: BeforePageDisplay
 	 */
-	public static function addModules( OutputPage $out, $skin ) {
+	public static function addModules( OutputPage $out, Skin $skin ) {
 		global $wgULSPosition, $wgULSGeoService;
+		$unsupportedSkins = [ 'minerva' ];
+		if ( in_array( $skin->getSkinName(), $unsupportedSkins ) ) {
+			return;
+		}
 
 		// Soft dependency to Wikibase client. Don't enable CLL if links are managed manually.
 		$excludedLinks = $out->getProperty( 'noexternallanglinks' );
