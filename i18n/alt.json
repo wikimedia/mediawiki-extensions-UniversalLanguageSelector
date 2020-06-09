@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Altai uul"
+		]
+	},
+	"ext-uls-select-language-settings-icon-tooltip": "Тилдиҥ јазалталары",
+	"ext-uls-undo-language-tooltip-text": "$1 тилдеҥ тил солынды",
+	"ext-uls-language-settings-title": "Тилдиҥ јазалталары",
+	"ext-uls-language-settings-apply": "Јазалталарды бӱдӱрер",
+	"ext-uls-language-settings-cancel": "Токтоду"
+}
