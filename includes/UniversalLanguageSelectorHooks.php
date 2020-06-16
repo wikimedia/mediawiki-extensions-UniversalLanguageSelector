@@ -135,6 +135,9 @@ class UniversalLanguageSelectorHooks {
 			$out->addModules( 'ext.uls.interface' );
 		}
 
+		// This is added here, and not in addConfig to allow skins and extensions to vary it
+		// For example, ContentTranslation special pages depend on being able to change it.
+		$out->addJsConfigVars( 'wgULSPosition', $wgULSPosition );
 		if ( $wgULSPosition === 'personal' ) {
 			$out->addModuleStyles( 'ext.uls.pt' );
 		} else {
@@ -354,7 +357,7 @@ class UniversalLanguageSelectorHooks {
 	public static function addConfig( array &$vars ) {
 		global $wgULSGeoService,
 			$wgULSIMEEnabled, $wgULSWebfontsEnabled,
-			$wgULSPosition, $wgULSNoWebfontsSelectors,
+			$wgULSNoWebfontsSelectors,
 			$wgULSAnonCanChangeLanguage,
 			$wgULSEventLogging,
 			$wgULSImeSelectors, $wgULSNoImeSelectors,
@@ -370,7 +373,6 @@ class UniversalLanguageSelectorHooks {
 
 		$vars['wgULSIMEEnabled'] = $wgULSIMEEnabled;
 		$vars['wgULSWebfontsEnabled'] = $wgULSWebfontsEnabled;
-		$vars['wgULSPosition'] = $wgULSPosition;
 		$vars['wgULSAnonCanChangeLanguage'] = $wgULSAnonCanChangeLanguage;
 		$vars['wgULSEventLogging'] = $wgULSEventLogging
 			&& ExtensionRegistry::getInstance()->isLoaded( 'EventLogging' );
