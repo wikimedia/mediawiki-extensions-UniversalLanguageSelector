@@ -5,10 +5,11 @@
 			"Kusurija",
 			"Mantak111",
 			"Manvydasz",
-			"Salpusnis"
+			"Salpusnis",
+			"Tomasdd"
 		]
 	},
-	"uls-desc": "Suteikia vartotojui keliais būdais, pasirinkti kalbą ir sureguliuoti kalbos parametrus.",
+	"uls-desc": "Suteikia vartotojui keliais būdais pasirinkti kalbą ir sureguliuoti kalbos parametrus.",
 	"uls-plang-title-languages": "Kalbos",
 	"ext-uls-select-language-settings-icon-tooltip": "Kalbos nustatymai",
 	"ext-uls-undo-language-tooltip-text": "Kalba pakeista iš $1",
@@ -60,6 +61,10 @@
 	"ext-uls-language-settings-applying": "Taikant...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Viena daugiau|$1 daugiau}}",
 	"prefs-languages": "Kalbos",
-	"ext-uls-compact-language-links-preference": "Naudoti suskleistą kalbų sąrašą, rodantį tik jums svarbias kalbas.",
-	"ext-uls-compact-no-results": "Šis puslapis nepasiekiamas jūsų pateikta kalba."
+	"ext-uls-compact-language-links-preference": "Naudoti [[$1|suskleistą kalbų sąrašą]], rodantį tik jums svarbias kalbas.",
+	"ext-uls-compact-no-results": "Šis puslapis nepasiekiamas jūsų pateikta kalba.",
+	"ext-uls-setlang-unknown-error": "Nežinoma klaida",
+	"ext-uls-setlang-accept": "Patvirtinti pakeitimą",
+	"ext-uls-setlang-loading": "Pritaikoma...",
+	"ext-uls-setlang-cancel": "Nekeisti"
 }
