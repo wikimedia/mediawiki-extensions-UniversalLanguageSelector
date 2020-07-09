@@ -235,7 +235,7 @@
 	 * Loads necessary dependencies, checks input for validity and
 	 * adds the ime menu for elements that should have it.
 	 *
-	 * @param {jquery.Element} $input
+	 * @param {jQuery} $input
 	 * @since 2013.11
 	 */
 	mw.ime.handleFocus = function ( $input ) {
@@ -272,7 +272,7 @@
 	/**
 	 * Just adds ime menu to any input element.
 	 *
-	 * @param {jquery.Element} $input
+	 * @param {jQuery} $input
 	 * @since 2013.11
 	 */
 	mw.ime.addIme = function ( $input ) {

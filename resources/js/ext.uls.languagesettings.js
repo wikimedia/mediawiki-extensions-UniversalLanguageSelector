@@ -136,6 +136,9 @@
 				.addClass( 'settings-text' )
 				.attr( 'data-i18n', module.descriptionI18n );
 			$settingsLink = $( '<button>' )
+				// The following classes are used here:
+				// * display-settings-block
+				// * input-settings-block
 				.addClass( moduleName + '-settings-block menu-section' )
 				.prop( 'id', moduleName + '-panel-trigger' )
 				.data( 'module', module )

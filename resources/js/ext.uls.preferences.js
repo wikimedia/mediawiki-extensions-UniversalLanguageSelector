@@ -102,7 +102,7 @@
 		 * Set the preference
 		 *
 		 * @param {string} key
-		 * @param {mixed} value
+		 * @param {Mixed} value
 		 */
 		set: function ( key, value ) {
 			this.preferences[ key ] = value;
