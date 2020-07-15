@@ -67,7 +67,7 @@
 	"ext-uls-compact-link-count": "還有 $1 種語言",
 	"ext-uls-compact-link-info": "所有語言（來自您和其他人共同選擇的初始選項）",
 	"prefs-languages": "語言",
-	"ext-uls-compact-language-links-preference": "使用[[$1|較簡潔的語言列表]]，包括與您相關的語言。",
+	"ext-uls-compact-language-links-preference": "使用[[$1|較簡潔的語言清單]]，包括與您相關的語言。",
 	"ext-uls-compact-no-results": "此頁面在您所搜尋的語言不可用。",
 	"ext-uls-setlang-error": "在更新您的首選語言時發生錯誤：$1",
 	"ext-uls-setlang-unknown-error": "不明錯誤",
