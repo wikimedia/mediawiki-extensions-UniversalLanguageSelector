@@ -486,6 +486,8 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	/**
+	 * Kept for backward compatability with MW < 1.35, and older versions of skins
+	 * such as Vector and Timeless
 	 * @param QuickTemplate $template
 	 * @param string $name
 	 * @param string &$content
@@ -495,7 +497,20 @@ class UniversalLanguageSelectorHooks {
 		string $name,
 		string &$content
 	) {
-		self::onSkinAfterPortlet( $template->getSkin(), $name, $content );
+		global $wgULSPosition;
+
+		if ( $wgULSPosition !== 'interlanguage' ) {
+			return;
+		}
+
+		if ( !self::isToolbarEnabled( $template->getSkin()->getUser() ) ) {
+			return;
+		}
+
+		// Set to an empty array, just to make sure that the section appears
+		if ( $template->get( 'language_urls' ) === false ) {
+			$template->set( 'language_urls', [] );
+		}
 	}
 
 	/**
