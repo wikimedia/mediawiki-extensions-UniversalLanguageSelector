@@ -27,7 +27,7 @@ class UniversalLanguageSelectorHooks {
 	 */
 	public static function setVersionConstant() {
 		global $wgHooks;
-		define( 'ULS_VERSION', '2018-10-26' );
+		define( 'ULS_VERSION', '2020-07-20' );
 		// The SkinAfterPortlet hook was introduced in version >= 1.35.
 		// It is the same as BaseTemplateAfterPortlet with the exception of its parameters.
 		if ( interface_exists( MediaWiki\Skins\Hook\SkinAfterPortletHook::class ) ) {
