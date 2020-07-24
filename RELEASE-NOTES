@@ -1,0 +1,8 @@
+== UniversalLanguageSelector 2020.07 ==
+Released at 2020-07-24.
+
+=== Noteworthy changes ===
+* SkinTemplateOutputPageBeforeExec is deprecated, use SkinAfterPortlet instead. ([[phab:T253178|phab:T253178]])
+
+=== Input Methods ===
+* Added Baoulé tilde keyboard.
