@@ -20,8 +20,7 @@
  * Copied from jquery.uls.css with the path changed.
  */
 .uls-trigger {
-	background: no-repeat left center;
-	.background-image-svg( '../../lib/jquery.uls/images/language.svg', '../../lib/jquery.uls/images/language.png' );
+	background: no-repeat url( ../../lib/jquery.uls/images/language.svg ) left center;
 	// Let the SVG image fit without cropping or stretch
 	background-size: contain;
 	padding-left: 24px;
@@ -40,7 +39,7 @@
 		// Putting the icon in before in order to apply `opacity`.
 		&:before {
 			content: '';
-			.background-image-svg( '../../lib/jquery.uls/images/language.svg', '../../lib/jquery.uls/images/language.png' );
+			background-image: url( ../../lib/jquery.uls/images/language.svg );
 			// Same values as Vector's `#pt-userpage a`.
 			background-position: @background-position-menu-uls-icon;
 			// Support Edge: Can't be `contain`, see T207075.
