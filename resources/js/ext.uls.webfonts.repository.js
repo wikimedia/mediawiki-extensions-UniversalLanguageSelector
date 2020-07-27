@@ -76,9 +76,9 @@
 		],
 		"ckb": [
 			"system",
-			"Amiri",
 			"Lateef",
-			"Scheherazade"
+			"Scheherazade",
+			"Amiri"
 		],
 		"cr": [
 			"OskiEast"
@@ -594,8 +594,8 @@
 			"woff2": "Junicode/Junicode-Italic.woff2?3fe39"
 		},
 		"Kadiri": {
-			"woff": "Kadiri/Kadiri.woff?1b711",
-			"woff2": "Kadiri/Kadiri.woff2?a266a"
+			"woff": "Kadiri/Kadiri.woff?98297",
+			"woff2": "Kadiri/Kadiri.woff2?0cfa1"
 		},
 		"KhmerOS": {
 			"woff": "KhmerOS/KhmerOS.woff?2ef9e",
@@ -765,8 +765,8 @@
 			"woff2": "Ponomar/PonomarUnicode.woff2?ea5c5"
 		},
 		"Pustaka Bali": {
-			"woff": "PustakaBali/PustakaBali.woff?cb41e",
-			"woff2": "PustakaBali/PustakaBali.woff2?743c0"
+			"woff": "PustakaBali/PustakaBali.woff?7c072",
+			"woff2": "PustakaBali/PustakaBali.woff2?6b142"
 		},
 		"RailwaySans": {
 			"woff": "RailwaySans/RailwaySans.woff?fda9a",
@@ -817,8 +817,8 @@
 			"woff2": "UnifrakturMaguntia/UnifrakturMaguntia.woff2?23272"
 		},
 		"Vimala": {
-			"woff": "Vimala/Vimala.woff?e387b",
-			"woff2": "Vimala/Vimala.woff2?70690"
+			"woff": "Vimala/Vimala.woff?f75ba",
+			"woff2": "Vimala/Vimala.woff2?a3b10"
 		},
 		"lklug": {
 			"woff": "lklug/lklug.woff?57de7",
