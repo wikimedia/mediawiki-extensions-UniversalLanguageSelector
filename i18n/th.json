@@ -4,6 +4,7 @@
 			"Aefgh39622",
 			"Ans",
 			"Nitisart Jungtrakungrat",
+			"Patsagorn Y.",
 			"Xð"
 		]
 	},
@@ -63,5 +64,11 @@
 	"prefs-languages": "ภาษา",
 	"ext-uls-compact-language-links-preference": "ใช้ [[$1|รายการภาษาแบบกระชับ]] โดยมีภาษาที่เกี่ยวข้องกับคุณ",
 	"ext-uls-compact-no-results": "หน้านี้ไม่มีในภาษาที่คุณค้นหา",
-	"ext-uls-setlang-unknown-error": "เกิดข้อผิดพลาดโดยไม่ทราบสาเหตุ"
+	"ext-uls-setlang-error": "เกิดข้อผิดพลาดกับการอัปเดตตามภาษาที่คุณเลือก ข้อผิดพลาด: $1",
+	"ext-uls-setlang-unknown-error": "เกิดข้อผิดพลาดโดยไม่ทราบสาเหตุ",
+	"ext-uls-setlang-message": "ลิงก์ที่คุณตามมามีคำขอเปลี่ยนภาษาอินเตอร์เฟซให้เป็นภาษา <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "เปลี่ยนภาษาของอินเตอร์เฟซหรือไม่?",
+	"ext-uls-setlang-accept": "ยอมรับการเปลี่ยนแปลง",
+	"ext-uls-setlang-loading": "กำลังปรับใช้...",
+	"ext-uls-setlang-cancel": "ไม่ต้องเปลี่ยนตาม"
 }
