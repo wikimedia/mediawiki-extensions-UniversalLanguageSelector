@@ -69,7 +69,7 @@
 	"ext-uls-setlang-unknown-error": "অজানা ত্রুটি",
 	"ext-uls-setlang-message": "আপনার অনুসরণ করা লিঙ্কটি ইন্টারফেসকে <strong>$1 ($2)</strong> ভাষায় দেখানোর অনুরোধ করেছিল।",
 	"ext-uls-setlang-heading": "ইন্টারফেসের ভাষা পরিবর্তন করবেন?",
-	"ext-uls-setlang-accept": "পরিবর্তন গ্রহণ",
+	"ext-uls-setlang-accept": "পরিবর্তন গ্রহণ করুন",
 	"ext-uls-setlang-loading": "প্রয়োগ হচ্ছে...",
-	"ext-uls-setlang-cancel": "অপরিবর্তীত"
+	"ext-uls-setlang-cancel": "পরিবর্তন করবেন না"
 }
