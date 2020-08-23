@@ -437,6 +437,12 @@ class UniversalLanguageSelectorHooks {
 	public static function onGetPreferences( $user, array &$preferences ) {
 		global $wgULSCompactLanguageLinksBetaFeature;
 
+		// T259037: Does not work well on Minerva
+		$skin = RequestContext::getMain()->getSkin();
+		if ( $skin->getSkinName() === 'minerva' ) {
+			return;
+		}
+
 		$preferences['uls-preferences'] = [
 			'type' => 'api',
 		];
