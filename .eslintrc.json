@@ -7,6 +7,7 @@
 	],
 	"rules": {
 		"no-jquery/no-global-selector": "off",
-		"mediawiki/class-doc": "warn"
+		"mediawiki/class-doc": "warn",
+		"no-shadow": "warn"
 	}
 }
