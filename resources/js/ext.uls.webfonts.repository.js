@@ -76,9 +76,9 @@
 		],
 		"ckb": [
 			"system",
+			"Amiri",
 			"Lateef",
-			"Scheherazade",
-			"Amiri"
+			"Scheherazade"
 		],
 		"cr": [
 			"OskiEast"
@@ -124,6 +124,10 @@
 		"et": [
 			"system",
 			"OpenDyslexic"
+		],
+		"eu": [
+			"system",
+			"GochiHand"
 		],
 		"fa": [
 			"system",
@@ -531,6 +535,10 @@
 			"fontstyle": "italic",
 			"woff": "GentiumPlus/GentiumPlus-I.woff?ab550",
 			"woff2": "GentiumPlus/GentiumPlus-I.woff2?35b11"
+		},
+		"GochiHand": {
+			"woff": "GochiHand/GochiHand-Regular.woff?310cc",
+			"woff2": "GochiHand/GochiHand-Regular.woff2?b6160"
 		},
 		"Hanuman": {
 			"woff": "Hanuman/Hanuman.woff?d5078",
