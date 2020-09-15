@@ -47,5 +47,3 @@ Preparing font formats
 2. To generate woff format, get: https://github.com/rillig/sfntly
 3. Use https://github.com/google/woff2 to generate woff2 from ttf. This will
    produce a compressed woff2 file. Modern browsers support this format.
-4. The eot file format is used only by older IE, but it can be generated using
-   sfntly. Make sure to use -mtx flag to get enhanced compression.
