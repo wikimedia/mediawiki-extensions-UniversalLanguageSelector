@@ -4,5 +4,9 @@
 			"Papuass"
 		]
 	},
-	"apihelp-ulslocalization-param-language": "Valodas kods."
+	"apihelp-ulslocalization-param-language": "Valodas kods.",
+	"apihelp-ulssetlang-description": "Mainīt dalībnieka vēlamo saskarnes valodu.",
+	"apihelp-ulssetlang-summary": "Mainīt dalībnieka vēlamo saskarnes valodu.",
+	"apihelp-ulssetlang-param-languagecode": "Vēlamās valodas kods.",
+	"apierror-ulssetlang-anon-notallowed": "Anonīmiem dalībniekiem nav atļauts mainīt saskarnes valodu."
 }
