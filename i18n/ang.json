@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Gott wisst",
+			"Heahwrita",
 			"Xð"
 		]
 	},
@@ -20,7 +21,7 @@
 	"ext-uls-display-settings-font-settings": "Stæfcynna setednessa",
 	"ext-uls-display-settings-ui-language": "Īwunge sprǣc",
 	"ext-uls-display-settings-anon-label": "Īwunge sprǣc:",
-	"ext-uls-display-settings-anon-same-as-content": "Englisc (gelīc þǣre innunge)",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (gelic þære innunge)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Inmelda]] to cēosenne ōðre sprǣce on getalum.",
 	"ext-uls-webfonts-select-for": "Cēos stæfcynn for $1",
 	"ext-uls-webfonts-select-for-ui-info": "Stæfcynn þe bēo gebrocen on gewealdes andwlitan",
