@@ -19,6 +19,7 @@
 
 ( function () {
 	'use strict';
+	var languageSettingsModules = [ 'ext.uls.displaysettings' ];
 
 	/**
 	 * Construct the display settings link
@@ -195,7 +196,9 @@
 
 						event.preventDefault();
 						deferred.done( function () {
-							mw.uls.changeLanguage( event.target.lang );
+							mw.loader.using( [ 'ext.uls.common' ] ).then( function () {
+								mw.uls.changeLanguage( event.target.lang );
+							} );
 						} );
 
 						mw.hook( 'mw.uls.language.revert' ).fire( deferred );
@@ -312,7 +315,7 @@
 					}
 				};
 
-				mw.loader.using( mw.uls.languageSettingsModules, function () {
+				mw.loader.using( languageSettingsModules, function () {
 					$ulsTrigger.languagesettings( languageSettingsOptions ).trigger( 'click' );
 				} );
 
@@ -329,7 +332,7 @@
 						mw.hook( 'mw.uls.settings.open' ).fire( eventParams && eventParams.source || 'personal' );
 					}
 				} else {
-					mw.loader.using( mw.uls.languageSettingsModules, function () {
+					mw.loader.using( languageSettingsModules, function () {
 						$ulsTrigger.languagesettings();
 
 						$ulsTrigger.trigger( 'click', eventParams );
@@ -354,7 +357,7 @@
 							},
 							onReady: function () {
 								var uls = this;
-								mw.loader.using( mw.uls.languageSettingsModules, function () {
+								mw.loader.using( languageSettingsModules, function () {
 									addDisplaySettings( uls );
 									addInputSettings( uls );
 								} );
@@ -427,7 +430,9 @@
 			mw.storage.set( 'uls-previous-language-code', currentLanguage );
 			mw.storage.set( 'uls-previous-language-autonym', currentAutonym );
 			// Store this language in a list of frequently used languages
-			mw.uls.addPreviousLanguage( currentLanguage );
+			mw.loader.using( [ 'ext.uls.common' ] ).then( function () {
+				mw.uls.addPreviousLanguage( currentLanguage );
+			} );
 		}
 	}
 

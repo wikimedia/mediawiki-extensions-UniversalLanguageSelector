@@ -135,7 +135,10 @@
 		mw.webfonts.preferences.load();
 
 		if ( mw.webfonts.preferences.isEnabled() ) {
-			mw.loader.using( 'ext.uls.webfonts.fonts', mw.webfonts.setup );
+			// Queue to next idle period to optimize loading.
+			mw.requestIdleCallback( function () {
+				mw.loader.using( 'ext.uls.webfonts.fonts' ).then( mw.webfonts.setup );
+			} );
 		}
 	} );
 

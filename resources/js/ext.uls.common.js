@@ -32,7 +32,6 @@
 
 	mw.uls = mw.uls || {};
 	mw.uls.previousLanguagesStorageKey = 'uls-previous-languages';
-	mw.uls.languageSettingsModules = [ 'ext.uls.displaysettings' ];
 
 	/**
 	 * Change the language of wiki using API or set cookie and reload the page

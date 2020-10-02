@@ -232,7 +232,6 @@
 			"scripts": "js/ext.uls.interface.js",
 			"styles": "css/ext.uls.interface.less",
 			"dependencies": [
-				"ext.uls.common",
 				"mediawiki.jqueryMsg",
 				"mediawiki.storage",
 				"mediawiki.user",
@@ -279,6 +278,7 @@
 				"ext.uls.languagenames",
 				"ext.uls.messages",
 				"jquery.uls",
+				"ext.uls.webfonts",
 				"jquery.uls.grid",
 				"mediawiki.util"
 			],
@@ -322,7 +322,6 @@
 			"targets": [ "desktop", "mobile" ],
 			"scripts": "js/ext.uls.webfonts.js",
 			"dependencies": [
-				"ext.uls.common",
 				"ext.uls.preferences",
 				"jquery.client"
 			],

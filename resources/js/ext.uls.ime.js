@@ -20,7 +20,8 @@
 ( function () {
 	'use strict';
 
-	var mwImeRulesPath, inputSelector, inputPreferences, ulsIMEPreferences, customHelpLink;
+	var mwImeRulesPath, inputSelector, inputPreferences, ulsIMEPreferences, customHelpLink,
+		languageSettingsModules = [ 'ext.uls.displaysettings' ];
 
 	mwImeRulesPath = mw.config.get( 'wgExtensionAssetsPath' ) +
 		'/UniversalLanguageSelector/lib/jquery.ime/';
@@ -145,7 +146,7 @@
 
 		// Apparently we depend on some styles which are loaded with
 		// these modules. This needs refactoring.
-		mw.loader.using( mw.uls.languageSettingsModules, function () {
+		mw.loader.using( languageSettingsModules, function () {
 			$moreSettingsLink.languagesettings( {
 				defaultModule: 'input',
 				onClose: function () {

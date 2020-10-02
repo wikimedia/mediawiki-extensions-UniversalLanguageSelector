@@ -117,11 +117,36 @@
 		constructor: DisplaySettings,
 
 		/**
+		 * Loads the webfonts module sets the `webfonts` property when its safe to do so
+		 */
+		setupWebFonts: function () {
+			var d = $.Deferred();
+			mw.loader.using( [ 'ext.uls.webfonts.fonts' ] ).then( function () {
+				if ( this.isWebFontsEnabled ) {
+					mw.webfonts.setup();
+				}
+
+				// Allow the webfonts library to finish loading (hack)
+				setTimeout( function () {
+					this.$webfonts = $( document.body ).data( 'webfonts' );
+					d.resolve();
+				}.bind( this ), 1 );
+			}.bind( this ) );
+			return d;
+		},
+		/**
 		 * Render the module into a given target
 		 */
 		render: function () {
+			this.setupWebFonts().then( function () {
+				this.renderAfterDependenciesLoaded();
+			}.bind( this ) );
+		},
+		/**
+		 * Render the module into a given target after all
+		 */
+		renderAfterDependenciesLoaded: function () {
 			this.$parent.$settingsPanel.empty();
-			this.$webfonts = $( document.body ).data( 'webfonts' );
 			this.$parent.$settingsPanel.append( this.$template );
 			this.prepareLanguages();
 			this.prepareUIFonts();
@@ -546,25 +571,18 @@
 				displaySettings.markDirty();
 
 				if ( this.checked ) {
-					mw.loader.using( 'ext.uls.webfonts.fonts', function () {
-						mw.webfonts.setup();
+					displaySettings.setupWebFonts().then( function () {
+						mw.webfonts.preferences.enable();
 
-						// Allow the webfonts library to finish loading
-						setTimeout( function () {
-							displaySettings.$webfonts = $( document.body ).data( 'webfonts' );
+						displaySettings.prepareContentFonts();
+						displaySettings.prepareUIFonts();
 
-							mw.webfonts.preferences.enable();
+						displaySettings.i18n();
+						// eslint-disable-next-line no-jquery/no-sizzle
+						displaySettings.$webfonts.apply( $uiFontSelector.find( 'option:selected' ) );
+						displaySettings.$webfonts.refresh();
 
-							displaySettings.prepareContentFonts();
-							displaySettings.prepareUIFonts();
-
-							displaySettings.i18n();
-							// eslint-disable-next-line no-jquery/no-sizzle
-							displaySettings.$webfonts.apply( $uiFontSelector.find( 'option:selected' ) );
-							displaySettings.$webfonts.refresh();
-
-							$fontSelectors.removeClass( 'hide' );
-						}, 1 );
+						$fontSelectors.removeClass( 'hide' );
 					} );
 				} else {
 					$fontSelectors.addClass( 'hide' );
