@@ -24,7 +24,6 @@
 		"EnterMobileMode": "UniversalLanguageSelectorHooks::onEnterMobileMode",
 		"GetBetaFeaturePreferences": "UniversalLanguageSelectorHooks::onGetBetaFeaturePreferences",
 		"GetPreferences": "UniversalLanguageSelectorHooks::onGetPreferences",
-		"LocalUserCreated": "UniversalLanguageSelectorHooks::onLocalUserCreated",
 		"MakeGlobalVariablesScript": "UniversalLanguageSelectorHooks::addVariables",
 		"PersonalUrls": "UniversalLanguageSelectorHooks::addPersonalBarTrigger",
 		"ResourceLoaderGetConfigVars": "UniversalLanguageSelectorHooks::addConfig",
@@ -130,14 +129,6 @@
 		"ULSCompactLanguageLinksBetaFeature": {
 			"description": "Set compact interlanguage links as beta feature or not. If set false, compact interlanguage links will be available by default to all users.",
 			"value": true
-		},
-		"ULSCompactLinksForNewAccounts": {
-			"description": "Enable compact interlanguage links for new user accounts.",
-			"value": false
-		},
-		"ULSCompactLinksEnableAnon": {
-			"description": "Enable compact interlanguage links for anonymous users.",
-			"value": false
 		}
 	},
 	"callback": "UniversalLanguageSelectorHooks::setVersionConstant",

@@ -64,16 +64,11 @@ class UniversalLanguageSelectorHooks {
 	 */
 	private static function isCompactLinksEnabled( User $user ) {
 		global $wgULSEnable, $wgInterwikiMagic,
-			$wgULSCompactLinksEnableAnon,
 			$wgHideInterlanguageLinks, $wgULSCompactLanguageLinksBetaFeature;
 
 		// Whether any user visible features are enabled
 		if ( !$wgULSEnable ) {
 			return false;
-		}
-
-		if ( $user->isAnon() && $wgULSCompactLinksEnableAnon ) {
-			return true;
 		}
 
 		if ( $wgULSCompactLanguageLinksBetaFeature === true &&
@@ -94,21 +89,6 @@ class UniversalLanguageSelectorHooks {
 		}
 
 		return false;
-	}
-
-	/**
-	 * Sets user preference to enable the Compact language links if the
-	 * user account is new.
-	 *
-	 * To be removed once no longer needed.
-	 * @param User $user
-	 * @param bool $autoCreate
-	 */
-	public static function onLocalUserCreated( User $user, $autoCreate ) {
-		if ( RequestContext::getMain()->getConfig()->get( 'ULSCompactLinksForNewAccounts' ) ) {
-			$user->setOption( 'compact-language-links', 1 );
-			$user->saveSettings();
-		}
 	}
 
 	/**
