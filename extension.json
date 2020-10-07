@@ -175,13 +175,22 @@
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.displaysettings": {
-			"scripts": "js/ext.uls.displaysettings.js",
-			"styles": "css/ext.uls.displaysettings.less",
+			"scripts": [
+				"js/ext.uls.inputsettings.js",
+				"js/ext.uls.displaysettings.js"
+			],
+			"styles": [
+				"css/ext.uls.inputsettings.less",
+				"css/ext.uls.displaysettings.less"
+			],
 			"dependencies": [
+				"ext.uls.ime",
+				"jquery.ime",
 				"ext.uls.languagesettings",
 				"ext.uls.mediawiki",
 				"ext.uls.webfonts",
 				"mediawiki.api",
+				"mediawiki.ui.radio",
 				"mediawiki.ui.checkbox",
 				"mediawiki.ui.button",
 				"mediawiki.user"
@@ -217,20 +226,6 @@
 			"dependencies": [
 				"ext.uls.common"
 			]
-		},
-		"ext.uls.inputsettings": {
-			"scripts": "js/ext.uls.inputsettings.js",
-			"styles": "css/ext.uls.inputsettings.less",
-			"dependencies": [
-				"ext.uls.ime",
-				"ext.uls.languagesettings",
-				"ext.uls.mediawiki",
-				"jquery.ime",
-				"mediawiki.ui.button",
-				"mediawiki.ui.radio"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.interface": {
 			"targets": [ "desktop", "mobile" ],
