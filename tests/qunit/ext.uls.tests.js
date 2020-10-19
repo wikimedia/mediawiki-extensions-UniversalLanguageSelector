@@ -40,7 +40,7 @@
 		// Here it's used as a meaningless word, to test
 		// the preferences without changing anything useful.
 		prefName = 'gofanim';
-		prefs = mw.uls.preferences();
+		prefs = require( 'ext.uls.preferences' )();
 		prefsToSave = {};
 
 		prefsToSave[ prefName ] = {

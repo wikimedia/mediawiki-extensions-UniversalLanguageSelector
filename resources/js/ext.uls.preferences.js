@@ -145,8 +145,7 @@
 		}
 	};
 
-	mw.uls = mw.uls || {};
-	mw.uls.preferences = function () {
+	module.exports = function () {
 		var data = $( document.body ).data( 'preferences' );
 
 		if ( !data ) {

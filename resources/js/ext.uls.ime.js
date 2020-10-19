@@ -21,13 +21,14 @@
 	'use strict';
 
 	var mwImeRulesPath, inputSelector, inputPreferences, ulsIMEPreferences, customHelpLink,
+		getULSPreferences = require( 'ext.uls.preferences' ),
 		languageSettingsModules = [ 'ext.uls.displaysettings' ];
 
 	mwImeRulesPath = mw.config.get( 'wgExtensionAssetsPath' ) +
 		'/UniversalLanguageSelector/lib/jquery.ime/';
 	inputSelector = 'input:not([type]), input[type=text], input[type=search], textarea, [contenteditable]';
 
-	inputPreferences = mw.uls.preferences();
+	inputPreferences = getULSPreferences();
 
 	mw.ime = mw.ime || {};
 
@@ -74,7 +75,7 @@
 			// we don't want to save isDirty field.
 			this.registry.isDirty = undefined;
 			// get updated copy of preferences
-			inputPreferences = mw.uls.preferences();
+			inputPreferences = getULSPreferences();
 			inputPreferences.set( 'ime', this.registry );
 			inputPreferences.save( callback );
 			// reset the dirty bit

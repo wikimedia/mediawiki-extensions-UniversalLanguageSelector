@@ -20,10 +20,10 @@
 ( function () {
 	'use strict';
 
-	var ulsPreferences;
+	var getULSPreferences = require( 'ext.uls.preferences' ),
+		ulsPreferences = getULSPreferences();
 
 	mw.webfonts = mw.webfonts || {};
-	ulsPreferences = mw.uls.preferences();
 	mw.webfonts.preferences = {
 		registry: {
 			fonts: {},
@@ -52,7 +52,7 @@
 
 		save: function ( callback ) {
 			// get updated copy of preferences
-			ulsPreferences = mw.uls.preferences();
+			ulsPreferences = getULSPreferences();
 			ulsPreferences.set( 'webfonts', this.registry );
 			ulsPreferences.save( callback );
 		},
