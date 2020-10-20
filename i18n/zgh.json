@@ -2,13 +2,16 @@
 	"@metadata": {
 		"authors": [
 			"Amara-Amaziɣ",
+			"Hakim1bal",
 			"ⵕⴰⵊⵉ"
 		]
 	},
 	"uls-plang-title-languages": "ⵜⵓⵜⵍⴰⵢⵉⵏ",
+	"ext-uls-select-language-settings-icon-tooltip": "ⵜⵉⵙⵖⴰⵍ ⵏ ⵜⵓⵜⵍⴰⵢⵜ",
 	"ext-uls-display-settings-language-tab": "ⵜⵓⵜⵍⴰⵢⵜ",
 	"ext-uls-display-settings-fonts-tab": "ⵉⵙⵙⴽⵉⵍⵏ",
 	"ext-uls-display-settings-title-short": "ⵙⴽⵏ",
+	"ext-uls-language-settings-title": "ⵜⵉⵙⵖⴰⵍ ⵏ ⵜⵓⵜⵍⴰⵢⵜ",
 	"ext-uls-language-settings-cancel": "ⴼⴼⵖ",
 	"ext-uls-webfonts-settings-info-link": "ⵓⴳⴳⴰⵔ ⵉⵏⵖⵎⵉⵙⵏ",
 	"ext-uls-input-settings-more-languages-tooltip": "ⵓⴳⴳⴰⵔ ⵏ ⵜⵓⵜⵍⴰⵢⵉⵏ",
