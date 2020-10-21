@@ -103,6 +103,35 @@
 		} catch ( e ) {}
 	};
 
+	/**
+	 * Normalize a language code for ULS usage.
+	 *
+	 * MediaWiki language codes (especially on WMF sites) are inconsistent
+	 * with ULS codes. We need to use ULS codes to access the proper data.
+	 *
+	 * @param {string} code
+	 * @return {string} Normalized language code
+	 */
+	mw.uls.convertMediaWikiLanguageCodeToULS = function ( code ) {
+		code = code.toLowerCase();
+		return $.uls.data.isRedirect( code ) || code;
+	};
+
+	/**
+	 * @param {Element[]} nodes to parse
+	 * @return {Object} that maps language codes to the corresponding DOM elements
+	 */
+	mw.uls.getInterlanguageListFromNodes = function ( nodes ) {
+		var interlanguageList = {};
+
+		Array.prototype.forEach.call( nodes, function ( el ) {
+			var langCode = mw.uls.convertMediaWikiLanguageCodeToULS( el.lang );
+			interlanguageList[ langCode ] = el;
+		} );
+
+		return interlanguageList;
+	};
+
 	mw.uls.getPreviousLanguages = function () {
 		var previousLanguages = [];
 

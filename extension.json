@@ -158,7 +158,10 @@
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.compactlinks": {
-			"scripts": "js/ext.uls.compactlinks.js",
+			"packageFiles": [
+				"js/ext.uls.compactlinks.js",
+				"js/ext.uls.launch.js"
+			],
 			"styles": "css/ext.uls.compactlinks.less",
 			"dependencies": [
 				"mediawiki.jqueryMsg",
