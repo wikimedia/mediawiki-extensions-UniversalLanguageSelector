@@ -163,8 +163,8 @@
 			"dependencies": [
 				"mediawiki.jqueryMsg",
 				"mediawiki.language",
-				"mediawiki.ui.button",
-				"ext.uls.init"
+				"ext.uls.common",
+				"mediawiki.ui.button"
 			],
 			"messages": [
 				"ext-uls-compact-link-count",
@@ -218,14 +218,6 @@
 			],
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
-		},
-		"ext.uls.init": {
-			"targets": [
-				"desktop"
-			],
-			"dependencies": [
-				"ext.uls.common"
-			]
 		},
 		"ext.uls.interface": {
 			"targets": [ "desktop", "mobile" ],
@@ -429,7 +421,7 @@
 		],
 		"dependencies": [
 			"jquery.uls",
-			"ext.uls.init",
+			"ext.uls.common",
 			"ext.uls.preferences"
 		]
 	},
