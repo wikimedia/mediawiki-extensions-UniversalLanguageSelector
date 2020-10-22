@@ -192,21 +192,12 @@
 						dir: 'auto'
 					} )
 					.on( 'click', function ( event ) {
-						var deferred = $.Deferred();
+						// Track if event logging is enabled
+						mw.hook( 'mw.uls.language.revert' ).fire();
 
-						event.preventDefault();
-						deferred.done( function () {
-							mw.loader.using( [ 'ext.uls.common' ] ).then( function () {
-								mw.uls.changeLanguage( event.target.lang );
-							} );
+						mw.loader.using( [ 'ext.uls.common' ] ).then( function () {
+							mw.uls.changeLanguage( event.target.lang );
 						} );
-
-						mw.hook( 'mw.uls.language.revert' ).fire( deferred );
-
-						// Delay is zero if event logging is not enabled
-						setTimeout( function () {
-							deferred.resolve();
-						}, mw.config.get( 'wgULSEventLogging' ) * 500 );
 					} );
 
 				if ( mw.storage.get( 'uls-gp' ) === '1' ) {

@@ -57,12 +57,9 @@
 
 	/**
 	 * Log language revert
-	 *
-	 * @param {jQuery.Deferred} deferred
 	 */
-	function ulsLanguageRevert( deferred ) {
+	function ulsLanguageRevert() {
 		log( { action: 'ui-lang-revert' } );
-		deferred.resolve();
 	}
 
 	/**
@@ -97,12 +94,9 @@
 
 	/**
 	 * Log login link click in display settings.
-	 *
-	 * @param {jQuery.Deferred} deferred
 	 */
-	function loginClick( deferred ) {
+	function loginClick() {
 		log( { action: 'login-click' } );
-		deferred.resolve();
 	}
 
 	/**
@@ -119,9 +113,8 @@
 	 * Log interface language change
 	 *
 	 * @param {string} language language code
-	 * @param {jQuery.Deferred} deferred
 	 */
-	function interfaceLanguageChange( language, deferred ) {
+	function interfaceLanguageChange( language ) {
 		var logParams = {
 			action: 'language-change',
 			context: 'interface',
@@ -129,7 +122,6 @@
 		};
 
 		log( logParams );
-		deferred.resolve();
 	}
 
 	/**

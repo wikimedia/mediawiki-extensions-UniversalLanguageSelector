@@ -207,30 +207,14 @@
 
 				new mw.Api().parse( $.i18n( 'ext-uls-display-settings-anon-log-in-cta' ) )
 					.done( function ( parsedCta ) {
-						var deferred = new $.Deferred();
-
-						$loginCta.html( parsedCta ); // The parsed CTA is HTML
-						$loginCta.find( 'a' ).on( 'click', function ( event ) {
-							event.preventDefault();
-							// Because browsers navigate away when clicking a link,
-							// we are overriding the normal click behavior to allow
-							// the event be logged first - currently there is no
-							// local queue for events. Since the hook system does not
-							// allow returning values, we have this ugly hack
-							// for event logging to delay the page loading if event logging
-							// is enabled. The promise is passed to the hook, so that
-							// if event logging is enabled, in can resole the promise
-							// immediately to avoid extra delays.
-							deferred.done( function () {
-								location.href = event.target.href;
-							} );
-
-							mw.hook( 'mw.uls.login.click' ).fire( deferred );
-
-							// Delay is zero if event logging is not enabled
-							setTimeout( function () {
-								deferred.resolve();
-							}, mw.config.get( 'wgULSEventLogging' ) * 500 );
+						// The parsed CTA is HTML
+						$loginCta.html( parsedCta );
+						$loginCta.find( 'a' ).on( 'click', function () {
+							// If EventLogging is installed and enabled for ULS, give it a
+							// chance to log this event. There is no promise provided and in
+							// most browsers this will use the Beacon API in the background.
+							// In older browsers, this event will likely get lost.
+							mw.hook( 'mw.uls.login.click' );
 						} );
 					} );
 
