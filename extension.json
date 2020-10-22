@@ -159,8 +159,7 @@
 		},
 		"ext.uls.compactlinks": {
 			"packageFiles": [
-				"js/ext.uls.compactlinks.js",
-				"js/ext.uls.launch.js"
+				"js/ext.uls.compactlinks.js"
 			],
 			"styles": "css/ext.uls.compactlinks.less",
 			"dependencies": [
@@ -224,7 +223,10 @@
 		},
 		"ext.uls.interface": {
 			"targets": [ "desktop", "mobile" ],
-			"scripts": "js/ext.uls.interface.js",
+			"packageFiles": [
+				"js/ext.uls.interface.js",
+				"js/ext.uls.launch.js"
+			],
 			"styles": "css/ext.uls.interface.less",
 			"dependencies": [
 				"mediawiki.jqueryMsg",

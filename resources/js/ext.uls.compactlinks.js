@@ -20,8 +20,7 @@
 ( function () {
 	'use strict';
 
-	var DEFAULT_LIST_SIZE = 9,
-		launchULS = require( './ext.uls.launch.js' );
+	var DEFAULT_LIST_SIZE = 9;
 
 	/**
 	 * @param {Array} target
@@ -179,7 +178,6 @@
 		this.compactList = this.getCompactList();
 		this.hideOriginal();
 		this.render();
-		this.listen();
 	};
 
 	/**
@@ -195,33 +193,6 @@
 		this.addTrigger();
 
 		mw.hook( 'mw.uls.compactlinks.initialized' ).fire( true );
-	};
-
-	/**
-	 * Attaches the actual selector to the trigger.
-	 *
-	 * @param {jQuery} $trigger Element to use as trigger.
-	 */
-	CompactInterlanguageList.prototype.createSelector = function ( $trigger ) {
-		launchULS(
-			$trigger,
-			this.interlanguageList
-		);
-	};
-
-	/**
-	 * Bind to event handlers and listen for events
-	 */
-	CompactInterlanguageList.prototype.listen = function () {
-		var self = this;
-
-		this.$trigger.one( 'click', function () {
-			// Load the ULS now.
-			mw.loader.using( 'ext.uls.mediawiki' ).then( function () {
-				self.createSelector( self.$trigger );
-				self.$trigger.trigger( 'click' );
-			} );
-		} );
 	};
 
 	/**

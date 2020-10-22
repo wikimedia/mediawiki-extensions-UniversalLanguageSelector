@@ -106,9 +106,10 @@ class UniversalLanguageSelectorHooks {
 		// Soft dependency to Wikibase client. Don't enable CLL if links are managed manually.
 		$excludedLinks = $out->getProperty( 'noexternallanglinks' );
 		$override = is_array( $excludedLinks ) && in_array( '*', $excludedLinks );
-		if ( !$override && self::isCompactLinksEnabled( $out->getUser() ) ) {
-			$out->addModules( 'ext.uls.compactlinks' );
-		}
+		$config = [
+			'wgULSPosition' => $wgULSPosition,
+			'wgULSCompactLinksEnabled' => !$override && self::isCompactLinksEnabled( $out->getUser() ),
+		];
 
 		if ( is_string( $wgULSGeoService ) ) {
 			$out->addModules( 'ext.uls.geoclient' );
@@ -121,7 +122,8 @@ class UniversalLanguageSelectorHooks {
 
 		// This is added here, and not in addConfig to allow skins and extensions to vary it
 		// For example, ContentTranslation special pages depend on being able to change it.
-		$out->addJsConfigVars( 'wgULSPosition', $wgULSPosition );
+		$out->addJsConfigVars( $config );
+
 		if ( $wgULSPosition === 'personal' ) {
 			$out->addModuleStyles( 'ext.uls.pt' );
 		} else {

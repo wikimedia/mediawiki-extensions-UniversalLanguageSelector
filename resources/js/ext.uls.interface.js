@@ -19,7 +19,8 @@
 
 ( function () {
 	'use strict';
-	var languageSettingsModules = [ 'ext.uls.displaysettings' ];
+	var languageSettingsModules = [ 'ext.uls.displaysettings' ],
+		launchULS = require( './ext.uls.launch.js' );
 
 	/**
 	 * Construct the display settings link
@@ -442,10 +443,59 @@
 		} );
 	}
 
+	/**
+	 * Compact the language list if necessary
+	 */
+	function compactLanguageLinksList() {
+		if (
+			// Allow skins to register their own button, in which case no need to compact
+			!document.querySelector( '.mw-interlanguage-selector' ) && (
+				// This line is for cached HTML where the JS config variable is not available
+				// it can be removed a week after this code has been in production.
+				mw.loader.getState( 'ext.uls.compactlinks' ) !== 'registered' ||
+				mw.config.get( 'wgULSCompactLinksEnabled' )
+			)
+		) {
+			mw.loader.using( 'ext.uls.compactlinks' );
+		}
+	}
+
+	/**
+	 * Event handler for the language button
+	 * @param {jQuery.Event} ev
+	 */
+	function clickLanguageButton( ev ) {
+		var $target = $( ev.currentTarget );
+		ev.preventDefault();
+		// Load the ULS now.
+		mw.loader.using( 'ext.uls.mediawiki' ).then( function () {
+			launchULS(
+				$target,
+				mw.uls.getInterlanguageListFromNodes(
+					document.querySelectorAll( '#p-lang .interlanguage-link-target' )
+				)
+			);
+			$target.trigger( 'click' );
+		} );
+	}
+	/**
+	 * Sets up the interlanguage selector button if present
+	 */
+	function initInterlanguageSelector() {
+		// Special handling for Timeless which stops propagation on links in this menu
+		if ( $( '.sidebar-inner' ).length ) {
+			$( '.sidebar-inner #p-lang' ).one( 'click', '.mw-interlanguage-selector', clickLanguageButton );
+		} else {
+			$( document ).one( 'click', '.mw-interlanguage-selector', clickLanguageButton );
+		}
+	}
+
 	function init() {
 		initInterface();
 		initTooltip();
 		initIme();
+		compactLanguageLinksList();
+		initInterlanguageSelector();
 	}
 
 	// Early execute of init
