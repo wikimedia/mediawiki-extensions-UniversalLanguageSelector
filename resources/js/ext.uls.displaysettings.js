@@ -110,6 +110,7 @@
 		this.$webfonts = null;
 		this.$parent = $parent;
 		this.savedRegistry = $.extend( true, {}, mw.webfonts.preferences );
+		this.dirty = false;
 	}
 
 	DisplaySettings.prototype = {
@@ -157,7 +158,6 @@
 			// might not be.
 			this.preview( this.uiLanguage );
 			this.listen();
-			this.dirty = false;
 		},
 
 		prepareWebfontsCheckbox: function () {
