@@ -192,6 +192,8 @@
 						dir: 'auto'
 					} )
 					.on( 'click', function ( event ) {
+						event.preventDefault();
+
 						// Track if event logging is enabled
 						mw.hook( 'mw.uls.language.revert' ).fire();
 
