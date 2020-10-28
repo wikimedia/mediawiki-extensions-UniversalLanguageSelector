@@ -21,7 +21,7 @@
 	"ext-uls-input-settings-more-languages-tooltip": "ተወሳኺ ቋንቋታት",
 	"jquery-ime-other-languages": "ካልኦት ቋንቋታት",
 	"jquery-ime-help": "ሓገዝ",
-	"ext-uls-input-disable-notification-undo": "ፈትሐ",
+	"ext-uls-input-disable-notification-undo": "ምለስ",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|ሓደ ተወሳኺ|$1 ተወሳኺ}}",
 	"prefs-languages": "ቋንቋታት",
 	"ext-uls-setlang-unknown-error": "ዘይፍሉጥ ጌገ"
