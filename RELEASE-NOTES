@@ -1,0 +1,16 @@
+== UniversalLanguageSelector 2020.10 ==
+Released at 2020-10-28.
+
+=== Highlights ===
+* Performance fixes.
+* ULS now defines unsupported skins ({{Phabricator|T237036}}, {{Phabricator|T235712}})
+* Hide ULS language settings in Minerva skin ({{Phabricator|T259037}})
+* Remove configuration variables: <code>ULSCompactLinksForNewAccounts</code>
+and <code>ULSCompactLinksEnableAnon</code> ({{Gerrit|632721}})
+
+=== Input Methods ===
+* Add the macron character to the Igbo tilde keyboard.
+
+=== Fonts ===
+* Updated Bali fonts to fix spacing issue. ({{Gerrit|616598}})
+* Added GochiHand font. ({{Gerrit|625664}})
