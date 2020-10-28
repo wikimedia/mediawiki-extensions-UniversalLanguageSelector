@@ -537,7 +537,7 @@
 		 */
 		markDirty: function () {
 			this.dirty = true;
-			this.$parent.$window.find( 'button.uls-settings-apply' ).prop( 'disabled', false );
+			this.$parent.enableApplyButton();
 		},
 
 		/**
