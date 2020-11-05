@@ -52,11 +52,15 @@ function launchULS( $trigger, languagesObject ) {
 			$trigger.removeClass( 'selector-open' );
 			mw.uls.addPreviousLanguage( language );
 
-			// Switch the current tab to the new language,
-			// unless it was Ctrl-click or Command-click
-			if ( !event.metaKey && !event.shiftKey ) {
-				location.href = languagesObject[ language ].href;
+			// Switch the current tab to the new language, unless it was
+			// {Ctrl,Shift,Command} activation on a link
+			if (
+				event.target instanceof HTMLAnchorElement &&
+				( event.metaKey || event.shiftKey || event.ctrlKey )
+			) {
+				return;
 			}
+			location.href = languagesObject[ language ].href;
 		},
 		onVisible: function () {
 			var offset, height, width, triangleWidth;
