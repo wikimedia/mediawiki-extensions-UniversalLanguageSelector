@@ -444,23 +444,6 @@
 	}
 
 	/**
-	 * Compact the language list if necessary
-	 */
-	function compactLanguageLinksList() {
-		if (
-			// Allow skins to register their own button, in which case no need to compact
-			!document.querySelector( '.mw-interlanguage-selector' ) && (
-				// This line is for cached HTML where the JS config variable is not available
-				// it can be removed a week after this code has been in production.
-				mw.loader.getState( 'ext.uls.compactlinks' ) !== 'registered' ||
-				mw.config.get( 'wgULSCompactLinksEnabled' )
-			)
-		) {
-			mw.loader.using( 'ext.uls.compactlinks' );
-		}
-	}
-
-	/**
 	 * Event handler for the language button
 	 * @param {jQuery.Event} ev
 	 */
@@ -494,7 +477,6 @@
 		initInterface();
 		initTooltip();
 		initIme();
-		compactLanguageLinksList();
 		initInterlanguageSelector();
 	}
 

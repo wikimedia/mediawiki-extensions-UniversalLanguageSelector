@@ -102,14 +102,23 @@ class UniversalLanguageSelectorHooks {
 		if ( in_array( $skin->getSkinName(), $unsupportedSkins ) ) {
 			return;
 		}
-
 		// Soft dependency to Wikibase client. Don't enable CLL if links are managed manually.
 		$excludedLinks = $out->getProperty( 'noexternallanglinks' );
 		$override = is_array( $excludedLinks ) && in_array( '*', $excludedLinks );
 		$config = [
 			'wgULSPosition' => $wgULSPosition,
-			'wgULSCompactLinksEnabled' => !$override && self::isCompactLinksEnabled( $out->getUser() ),
 		];
+
+		// Load compact links if no mw-interlanguage-selector element is present in the page HTML.
+		// We use the same mechanism as Skin::getDefaultModules and check the HTML for the presence in the HTML,
+		// using the class as the heuristic.
+		// Note if the element is rendered by the skin, its assumed that no collapsing is needed.
+		// See T264824 for more information.
+		if ( !$override && self::isCompactLinksEnabled( $out->getUser() ) &&
+			strpos( $out->getHTML(), 'mw-interlanguage-selector' ) === false
+		) {
+			$out->addModules( 'ext.uls.compactlinks' );
+		}
 
 		if ( is_string( $wgULSGeoService ) ) {
 			$out->addModules( 'ext.uls.geoclient' );
