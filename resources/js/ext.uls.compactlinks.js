@@ -329,11 +329,9 @@
 	 */
 	CompactInterlanguageList.prototype.getLangsWithBadges = function () {
 		return Array.prototype.map.call(
-			document.querySelectorAll( '#p-lang [class*="badge"]' ),
+			document.querySelectorAll( '#p-lang [class*="badge"] a.interlanguage-link-target' ),
 			function ( el ) {
-				return mw.uls.convertMediaWikiLanguageCodeToULS(
-					el.querySelector( '.interlanguage-link-target' ).lang
-				);
+				return mw.uls.convertMediaWikiLanguageCodeToULS( el.lang );
 			}
 		);
 	};
