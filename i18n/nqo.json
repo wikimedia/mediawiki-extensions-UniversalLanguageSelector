@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Lancine.kounfantoh.fofana",
 			"Youssoufkadialy"
 		]
 	},
@@ -8,7 +9,10 @@
 	"uls-plang-title-languages": "ߞߊ߲ ߠߎ߬",
 	"ext-uls-select-language-settings-icon-tooltip": "ߞߊ߲ ߟߊ߬ߓߍ߲߬ߢߐ߰ߡߦߊ߬ߘߊ ߟߎ߬",
 	"ext-uls-undo-language-tooltip-text": "ߞߊ߲ ߓߘߊ߫ ߡߊߝߊ߬ߟߋ߲߬ ߞߊ߬ ߓߐ߫ $1 ߘߐ߫",
+	"ext-uls-undo-language-tooltip-text-local": "ߞߊ߲ ߓߘߊ߫ ߡߊߝߊ߬ߟߋ߲߬ ߥߞߌ ߣߌ߲߬ ߠߊ߫.ߌ ߟߊ߫ [[Special:GlobalPreferences|global preferences]] ߟߎ߬ ߝߛߍ߬ߝߛߍ߫ ߞߊ߬ ߞߊ߲ ߡߊߝߊ߬ߟߋ߲߬ ߥߞߌ ߟߎ߬ ߓߍ߯ ߟߊ߫.",
 	"ext-uls-language-settings-preferences-link": "ߞߊ߲ ߟߊ߬ߓߍ߲߬ߢߐ߰ߡߦߊ߬ߘߊ ߡߊߞߊ߬ߝߏ߬",
+	"uls-betafeature-label": "ߞߊ߲ ߛߘߌ߬ߜߋ߲߬ ߘߐߜߙߐ߬ߣߍ߲ ߠߎ߬",
+	"uls-betafeature-desc": "ߞߊ߲ ߦߌߟߡߊ߫ ߛߎߘߎ߲ ߠߎ߬ ߛߙߍߘߍ ߦߌ߬ߘߊ߬߸ ߌ ߟߊ߫ ߞߊ߲߫ ߠߊߓߊ߯ߙߕߊ ߟߎ߬ ߘߌ߫ ߓߘߍߞߍ߭.",
 	"ext-uls-display-settings-title": "ߟߊ߬ߓߍ߲߬ߢߐ߰ߡߦߊ߬ߘߊ ߟߎ߫ ߦߌ߬ߘߊ߬",
 	"ext-uls-display-settings-language-tab": "ߞߊ߲",
 	"ext-uls-display-settings-fonts-tab": "ߛߓߍߛߋ߲ ߠߎ߬",
@@ -24,8 +28,10 @@
 	"ext-uls-display-settings-anon-same-as-content": "$1( ߦߴߊ߬ ߦߋ߫ ߞߣߐߘߐ ߘߐ߫ ߢߊ ߡߍ߲)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|ߜߊ߲߬ߞߎ߲߬ߠߌ߲ ]] ߞߊ߲߫ ߜߘߍ߫ ߛߎߥߊ߲ߘߌ ߦߌ߬ߘߊ߬ߥߟߊ ߦߋ߫.",
 	"ext-uls-webfonts-settings-title": "ߛߓߍߛߋ߲ ߠߎ߬ ߟߊߖߌ߰ ߣߴߌ ߡߊ߬ߞߏ߬ ߦߴߊ߬ ߟߊ߫",
+	"ext-uls-webfonts-settings-info": "ߞߟߏ߫ ߞߐߢߌ߬ߣߊ߬ߣߍ߲ ߠߎ߬ ߟߊߖߌ߰ ߌ ߞߎ߲߬ ߞߍߒߖߘߍߦߋߓߟߏߡߊ߬߸ ߊ߬ ߣߌ߫ ߞߊ߬ ߛߓߍߟߌ߫ ߝߌ߬ߛߊ߬ߡߊ߲߬ߕߋ ߟߎ߬ ߓߊߕߐ߬ߡߐ߲ ߠߊߘߌ߬ߢߍ߬.",
 	"ext-uls-webfonts-settings-info-link": "ߞߟߊ߬ ߡߊߞߊ߬ߝߏ߬ߟߌ",
 	"ext-uls-webfonts-select-for": "ߛߓߍߛߋ߲߫ ߛߎߥߊ߲ߘߌ߫ $1 ߦߋ߫",
+	"ext-uls-webfonts-select-for-ui-info": "ߛߓߍߟߌ߫ ߟߊߓߊ߯ߙߊߣߍ߲ ߠߎ߬ ߟߊ߬ߓߊ߰ߙߊ߬ߟߊ ߟߊ߫ ߢߐ߲߯ߕߍߞߣߍ ߘߐ߫",
 	"ext-uls-webfonts-select-for-content-info": "ߛߓߍߛߋ߲߫ ߠߊߓߊ߯ߙߊߣߍ߲ ߞߣߐߘߐ ߦߋ߫",
 	"ext-uls-webfonts-system-font": "ߛߓߍߛߋ߲߫ ߞߊ߲ߞߋ",
 	"ext-uls-back-to-display-settings": "ߞߐߛߊߦߌ߲ߠߌ ߞߊߕߙߍ߬ ߦߌ߬ߘߊ߬ߗߏ߮ ߟߊ߬ߓߍ߲߬ߢߐ߰ߡߦߊ߬ߘߊ ߡߊ߬",
@@ -48,7 +54,18 @@
 	"ext-uls-input-disable-notification": "ߟߊ߬ߘߏ߲߬ߠߌ߬ ߖߐ߯ߙߊ߲ ߠߎ߫ ߣߌߒߕߊ߲ߧߊ߫ ߘߊ߫ ߞߊ߬ ߓߊ߲߫",
 	"ext-uls-input-disable-notification-undo": "ߘߐ߬ߛߊ߬ߟߌ",
 	"ext-uls-input-disable-notification-info-personal": "ߌ ߘߴߛߋ߫ ߞߊ߬ ߟߊ߬ߘߏ߲߬ߠߌ߬ ߖߐ߯ߙߊ߲ ߠߎ߬ ߣߌߞߎߣߎ߲ߦߊ߫ ߞߊ߲ ߟߊ߬ߓߍ߲߬ߢߐ߰ߡߦߊ߬ߘߊ ߞߣߐ߫ ߕߎ߬ߡߊ߬ ߓߍ߯.",
+	"ext-uls-input-disable-notification-info-interlanguage": "ߌ ߘߌ߫ ߛߋ߫ ߝߙߊ߬ߒ߬ߞߊ߲߬ߠߌ߲߬ ߖߐ߯ߙߊ߲ ߠߊߞߎߣߎ߲߫ ߠߊ߫ ߥߊ߯ߕߌ ߓߍ߯ ߟߊ߫ ߞߊ߲ ߟߊ߬ߓߍ߲߬ߢߐ߲߰ߡߦߊ߬ߘߊ ߞߣߐ߫߸ ߊ߬ ߣߴߏ߬ ߞߐ߫ ߞߊ߲ ߛߙߍߘߍ ߘߐ߫.",
 	"ext-uls-language-settings-applying": "ߟߥߊߟߌߟߌ ߦߋ߫ ߛߋ߲߬ߠߊ߫...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ߘߏ߫ ߜߘߍ߫|$1 ߜߘߍ߫}}",
+	"ext-uls-compact-link-info": "ߞߊ߲ ߡߍ߲ ߠߎ߬ ߓߍ߯ (ߟߊߞߊ߬ߝߏ߬ߣߍ߲߬ ߦߋ߫ ߓߊߕߐߡߐ߲ߠߌ߲߫ ߓߟߏߡߊ߬ ߖߊ߬ߡߊ ߟߊ߫ ߛߎߥߊ߲ߘߟߌ ߘߐ߫ ߌߟߋ ߣߌ߫ ߡߐ߰ ߜߘߍ ߟߎ߬ ߓߟߏ߫)",
 	"prefs-languages": "ߞߊ߲ ߠߎ߬",
-	"ext-uls-compact-no-results": "ߞߐߜߍ ߣߌ߲߬ ߕߴߦߋ߲߬ ߌ ߟߊ߫ ߢߌߣߌ߲ߣߌ߲߫ ߞߊ߲ ߘߐ߫."
+	"ext-uls-compact-language-links-preference": "[[$1|ߞߊ߲ ߛߘߌ߬ߜߋ߲߬ ߘߐߜߙߐ߬ߣߍ߲]] ߘߏ߫ ߟߊߓߊ߯ߙߊ߫߸ ߌ ߟߊ߫ ߞߊ߲߫ ߠߊߓߊ߯ߙߕߊ ߟߎ߬ ߘߐ߫ ߓߘߍߞߍ߭.",
+	"ext-uls-compact-no-results": "ߞߐߜߍ ߣߌ߲߬ ߕߴߦߋ߲߬ ߌ ߟߊ߫ ߢߌߣߌ߲ߣߌ߲߫ ߞߊ߲ ߘߐ߫.",
+	"ext-uls-setlang-error": "ߝߎ߬ߕߎ߲߬ߕߌ ߘߏ߫ ߕߎ߲߬ ߦߴߊ߬ ߘߐ߫ ߌ ߟߊ߫ ߞߊ߲ ߝߌ߬ߛߊ߬ߡߊ߲߬ߕߋ ߟߎ߬ ߟߏ߲ߘߐߦߊ߫ ߕߎߡߊ ߟߊ߫. ߝߎ߬ߕߎ߲߬ߕߌ: $1",
+	"ext-uls-setlang-unknown-error": "ߝߎ߬ߕߎ߲߬ߕߌ߬ ߡߊߟߐ߲ߓߊߟߌ",
+	"ext-uls-setlang-message": "ߛߘߌ߬ߜߋ߲ ߡߍ߲ ߠߊߓߊ߬ߕߏ߬ߣߍ߲߬ ߌ ߓߟߏ߫߸ ߏ߬ ߦߴߊ߬ ߢߌߣߌ߲߫ ߠߊ߫ ߞߏ߫ ߞߊ߬ ߢߐ߲߯ߕߍߞߣߍ ߦߌ߬ߘߊ߬ <strong>$1 ($2)</strong> ߘߐ߫",
+	"ext-uls-setlang-heading": "ߞߊ߬ ߢߐ߲߯ߕߍߞߣߍ ߞߊ߲ ߡߊߝߊ߬ߟߋ߲߬؟",
+	"ext-uls-setlang-accept": "ߡߝߊ߬ߟߋ߲߬ߠߌ߲ ߟߊߡߌ߬ߘߊ߬",
+	"ext-uls-setlang-loading": "ߟߥߊߟߌߟߌ ߦߋ߫ ߛߋ߲߬ߠߊ߫...",
+	"ext-uls-setlang-cancel": "ߊ߬ ߞߊ߫ ߡߊߝߊ߬ߟߋ߲߫ ߘߋ߬"
 }
