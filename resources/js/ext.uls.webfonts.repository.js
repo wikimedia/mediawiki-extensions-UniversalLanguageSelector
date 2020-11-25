@@ -76,9 +76,9 @@
 		],
 		"ckb": [
 			"system",
-			"Amiri",
 			"Lateef",
-			"Scheherazade"
+			"Scheherazade",
+			"Amiri"
 		],
 		"cr": [
 			"OskiEast"
@@ -188,6 +188,10 @@
 			"Alef",
 			"Miriam CLM",
 			"Taamey Frank CLM"
+		],
+		"hoc": [
+			"system",
+			"Boyo Gagrai"
 		],
 		"hu": [
 			"system",
@@ -473,6 +477,9 @@
 		"Artaxerxes": {
 			"woff": "Artaxerxes/Artaxerxes.woff?c1ed7",
 			"woff2": "Artaxerxes/Artaxerxes.woff2?7a96e"
+		},
+		"Boyo Gagrai": {
+			"woff2": "BoyoGagrai/BoyoGagrai.woff2?d1060"
 		},
 		"CharisSIL": {
 			"woff": "CharisSIL/CharisSIL-R.woff?3a622",
