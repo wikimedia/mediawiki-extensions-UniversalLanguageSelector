@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Abbas dhothar",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "بولیاں"
+	"uls-plang-title-languages": "بولیاں",
+	"ext-uls-webfonts-settings-info-link": "ہور جانکاری",
+	"ext-uls-input-settings-more-languages-tooltip": "ہور بولیاں",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|اک ہور|$1 ہور}}"
 }
