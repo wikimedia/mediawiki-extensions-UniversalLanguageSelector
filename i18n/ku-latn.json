@@ -3,12 +3,13 @@
 		"authors": [
 			"Bikarhêner",
 			"George Animal",
-			"Ghybu"
+			"Ghybu",
+			"Guherto"
 		]
 	},
 	"uls-plang-title-languages": "Ziman",
 	"ext-uls-select-language-settings-icon-tooltip": "Eyarên ziman",
-	"ext-uls-undo-language-tooltip-text": "Ziman hate guherandin ji $1",
+	"ext-uls-undo-language-tooltip-text": "Ziman ji $1 hate guhartin",
 	"ext-uls-display-settings-title": "Hevyazên ekranê",
 	"ext-uls-display-settings-language-tab": "Ziman",
 	"ext-uls-display-settings-fonts-tab": "Tîp",
