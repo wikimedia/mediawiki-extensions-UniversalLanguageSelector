@@ -17,7 +17,7 @@
 	"descriptionmsg": "uls-desc",
 	"license-name": "GPL-2.0-or-later OR MIT",
 	"requires": {
-		"MediaWiki": ">= 1.33.0"
+		"MediaWiki": ">= 1.34.0"
 	},
 	"Hooks": {
 		"BeforePageDisplay": "UniversalLanguageSelectorHooks::addModules",

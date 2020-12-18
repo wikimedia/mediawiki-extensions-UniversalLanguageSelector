@@ -395,7 +395,7 @@ class UniversalLanguageSelectorHooks {
 	public static function addVariables( array &$vars, OutputPage $out ) {
 		// Place request context dependent stuff here
 		$user = $out->getUser();
-		$loggedIn = $user->isLoggedIn();
+		$loggedIn = $user->isRegistered();
 
 		// Do not output accept languages if there is risk it will get cached across requests
 		if ( $out->getConfig()->get( 'ULSAnonCanChangeLanguage' ) || $loggedIn ) {
