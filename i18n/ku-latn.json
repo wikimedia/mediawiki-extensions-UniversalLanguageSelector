@@ -43,5 +43,6 @@
 	"ext-uls-input-disable": "Amûrên têxistinê bêçalakî bike",
 	"ext-uls-input-enable": "Amûrên têxistinê çalak bike",
 	"ext-uls-input-disable-notification-undo": "Betal bike",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Yek zêdetir|$1 zêdetir}}",
 	"prefs-languages": "Ziman"
 }

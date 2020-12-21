@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ghaly",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "اللغات"
+	"uls-plang-title-languages": "اللغات",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|لينك|$1 اكتر}}"
 }

@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Akamycoco",
 			"Hitaypayan"
 		]
 	},
@@ -31,5 +32,6 @@
 	"ext-uls-input-enable": "Gyahiy qayqaya’ na bbiru’ sa qsahuy",
 	"ext-uls-input-disable-notification-undo": "Psbzih",
 	"ext-uls-language-settings-applying": "Siy galiy...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|kya na’ $1 gluw na ini’ ptnaq kay’}}",
 	"prefs-languages": "Kay’"
 }
