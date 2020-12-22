@@ -30,7 +30,9 @@
 	"ext-uls-webfonts-settings-info": "Cyok ma̠ng lyulyuut ku nwai shyia̠ a̠ni di̠ mi̠n beang a̠ghyang a ki nghwon nkhai lyulyuut lan cat.",
 	"ext-uls-webfonts-settings-info-link": "Á̠ghyang nkhang",
 	"ext-uls-webfonts-select-for": "Khai lyuut mat $1",
+	"ext-uls-webfonts-select-for-ui-info": "Lyuut nang á̠ nnyia̠ ta̠m di̠ tyannwuan a̠tyuta̠m",
 	"ext-uls-webfonts-select-for-content-info": "Lyuut a̠si̠ kyangmami",
+	"ext-uls-webfonts-system-font": "Lyuut sistem",
 	"ext-uls-back-to-display-settings": "Bwuok a̠nat a̠yaaseti tsa",
 	"ext-uls-input-settings-title": "A̠yaaseti nwuai",
 	"ext-uls-input-settings-title-short": "Nwuai",
@@ -60,6 +62,8 @@
 	"ext-uls-compact-no-results": "Peji jini nwai nshyia̠ da̠ a̠lyem ka nang a zop a̠ni.",
 	"ext-uls-setlang-error": "Ghyuap zama nshyia̠ ma̠nang a nshyim a̠lyem lan cat ang ka. Ghyuap: $1",
 	"ext-uls-setlang-unknown-error": "A̠kace nghyuap",
+	"ext-uls-setlang-message": "A̠fwop wu nang a nkhwi a̠ni cat á̠ ntsa tyannwuan ji mami <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "Shai a̠lyem tyannwuan a?",
 	"ext-uls-setlang-accept": "Shim a̠shai",
 	"ext-uls-setlang-loading": "Tyei di̠n ta̠m...",
 	"ext-uls-setlang-cancel": "Yok shai bah"
