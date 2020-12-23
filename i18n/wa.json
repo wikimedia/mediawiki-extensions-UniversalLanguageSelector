@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Reptilien.19831209BE1",
 			"Srtxg"
 		]
 	},
@@ -8,5 +9,6 @@
 	"ext-uls-select-language-settings-icon-tooltip": "Tchuzes di lingaedje",
 	"ext-uls-undo-language-tooltip-text": "Lingaedje candjî di $1",
 	"ext-uls-language-settings-preferences-link": "Co ds ôtes parametes di lingaedje",
-	"ext-uls-language-settings-title": "Tchuzes di lingaedje"
+	"ext-uls-language-settings-title": "Tchuzes di lingaedje",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ene|$1}} di pus"
 }
