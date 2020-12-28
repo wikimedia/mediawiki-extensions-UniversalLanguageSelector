@@ -2,8 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Geopoet",
+			"Kunokuno",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Mga Lengguwahe"
+	"uls-plang-title-languages": "Mga Lengguwahe",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Saro pa|$1 saro pa}}"
 }

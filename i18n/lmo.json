@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Salvemm el lombard",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Lèngue"
+	"uls-plang-title-languages": "Lengove",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|un'altra|$1 anmò}}"
 }
