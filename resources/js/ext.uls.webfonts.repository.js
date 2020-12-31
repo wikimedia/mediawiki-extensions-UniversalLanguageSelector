@@ -584,8 +584,8 @@
 			"woff2": "Jomolhari/Jomolhari.woff2?f448a"
 		},
 		"Junicode": {
-			"woff": "Junicode/Junicode.woff?dc7ef",
-			"woff2": "Junicode/Junicode.woff2?7e6d6",
+			"woff": "Junicode/Junicode.woff?19f4e",
+			"woff2": "Junicode/Junicode.woff2?1a244",
 			"variants": {
 				"bold": "Junicode Bold",
 				"bolditalic": "Junicode Bold Italic",
@@ -594,19 +594,19 @@
 		},
 		"Junicode Bold": {
 			"fontweight": "bold",
-			"woff": "Junicode/Junicode-Bold.woff?f7ef4",
-			"woff2": "Junicode/Junicode-Bold.woff2?d5d04"
+			"woff": "Junicode/Junicode-Bold.woff?c77c1",
+			"woff2": "Junicode/Junicode-Bold.woff2?94fed"
 		},
 		"Junicode Bold Italic": {
 			"fontweight": "bold",
 			"fontstyle": "italic",
-			"woff": "Junicode/Junicode-BoldItalic.woff?3cec9",
-			"woff2": "Junicode/Junicode-BoldItalic.woff2?80351"
+			"woff": "Junicode/Junicode-BoldItalic.woff?23d9c",
+			"woff2": "Junicode/Junicode-BoldItalic.woff2?4f1cd"
 		},
 		"Junicode Italic": {
 			"fontstyle": "italic",
-			"woff": "Junicode/Junicode-Italic.woff?c458b",
-			"woff2": "Junicode/Junicode-Italic.woff2?3fe39"
+			"woff": "Junicode/Junicode-Italic.woff?66b80",
+			"woff2": "Junicode/Junicode-Italic.woff2?b2597"
 		},
 		"Kadiri": {
 			"woff": "Kadiri/Kadiri.woff?98297",
