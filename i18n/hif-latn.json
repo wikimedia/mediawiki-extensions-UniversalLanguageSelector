@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Girmitya",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Bhasa"
+	"uls-plang-title-languages": "Bhasa",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ek aur|$1 Aur}}"
 }
