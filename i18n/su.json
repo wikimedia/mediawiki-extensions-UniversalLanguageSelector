@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kandar",
 			"Uchup19"
 		]
 	},
-	"ext-uls-language-settings-cancel": "Bolay"
+	"ext-uls-language-settings-cancel": "Bolay",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Hiji deui|$1 deui}}"
 }
