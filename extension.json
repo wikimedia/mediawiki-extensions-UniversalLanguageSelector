@@ -433,7 +433,7 @@
 	"attributes": {
 		"EventLogging": {
 			"Schemas": {
-				"UniversalLanguageSelector": 17799034
+				"UniversalLanguageSelector": "/analytics/legacy/universallanguageselector/1.0.0"
 			}
 		}
 	},
