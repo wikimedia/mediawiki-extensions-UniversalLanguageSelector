@@ -295,8 +295,9 @@
 			],
 			"scripts": "js/ext.uls.preferences.js",
 			"dependencies": [
+				"mediawiki.api",
 				"mediawiki.user",
-				"mediawiki.api"
+				"mediawiki.storage"
 			],
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
