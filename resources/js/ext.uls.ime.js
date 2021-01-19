@@ -84,6 +84,19 @@
 
 		load: function () {
 			this.registry = inputPreferences.get( 'ime' ) || this.registry;
+			// Some validation in case the stored preferences are corrupt
+			if ( typeof this.registry.language !== 'string' ) {
+				this.registry.language = null;
+			}
+			if ( !Array.isArray( this.registry.previousLanguages ) ) {
+				this.registry.previousLanguages = [];
+			}
+			if ( !Array.isArray( this.registry.previousInputMethods ) ) {
+				this.registry.previousInputMethods = [];
+			}
+			if ( !$.isPlainObject( this.registry.imes ) ) {
+				this.registry.imes = {};
+			}
 		},
 
 		disable: function () {
