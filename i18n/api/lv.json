@@ -4,6 +4,7 @@
 			"Papuass"
 		]
 	},
+	"apihelp-languagesearch-description": "Meklē valodu nosaukumus jebkurā rakstībā.",
 	"apihelp-ulslocalization-param-language": "Valodas kods.",
 	"apihelp-ulssetlang-description": "Mainīt dalībnieka vēlamo saskarnes valodu.",
 	"apihelp-ulssetlang-summary": "Mainīt dalībnieka vēlamo saskarnes valodu.",

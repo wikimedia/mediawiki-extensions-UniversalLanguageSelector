@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Abdullahi",
 			"Abshirdheere",
 			"Xð"
 		]
 	},
 	"uls-plang-title-languages": "Afafka",
 	"ext-uls-language-settings-preferences-link": "Dooqyo dheeraad ah e luqada",
-	"uls-betafeature-label": "Linkiyada af isku dhegan"
+	"uls-betafeature-label": "Linkiyada af isku dhegan",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Hal kale|$1 dheeraad}}"
 }
