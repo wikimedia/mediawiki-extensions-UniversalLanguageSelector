@@ -1,0 +1,13 @@
+== UniversalLanguageSelector 2021.01 ==
+Released at 2021-01-28.
+
+=== Noteworthy changes ===
+* Code refactoring & performance improvements
+* Improve handling of opening links to new tab/window for compact language links
+({{Gerrit|639474}})
+* Allow skins to register their own button and disable compact language links
+({{Phabricator|T264824}})
+
+=== Fonts ===
+* Add Boyo Gagrai for the Ho language in the Warang Citi script
+({{Phabricator|T233301}})
