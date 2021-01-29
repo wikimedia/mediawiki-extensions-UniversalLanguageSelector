@@ -57,6 +57,7 @@
 	"ext-uls-compact-no-results": "Šī lapa nav pieejama tevis atrastajā valodā.",
 	"ext-uls-setlang-error": "Iestatot tavu izvēlēto valodu, notika kļūda: $1",
 	"ext-uls-setlang-unknown-error": "Nezināma kļūda",
+	"ext-uls-setlang-message": "Izmantotā saite pieprasīja saskarni rādīt <strong>$1 ($2)</strong> valodā",
 	"ext-uls-setlang-heading": "Mainīt saskarnes valodu?",
 	"ext-uls-setlang-accept": "Pieņemt izmaiņas",
 	"ext-uls-setlang-loading": "Pielieto...",
