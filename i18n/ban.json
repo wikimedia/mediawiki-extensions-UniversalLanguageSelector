@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Chinamoonroll",
 			"NoiX180"
 		]
 	},
@@ -10,5 +11,6 @@
 	"ext-uls-webfonts-settings-info-link": "Pidarta lianan",
 	"jquery-ime-other-languages": "Basa tiosan",
 	"jquery-ime-help": "Wantuan",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Asiki malih|$1 malih}}",
 	"prefs-languages": "Basa"
 }

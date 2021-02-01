@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Marwan Mohamad",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Bahasa"
+	"uls-plang-title-languages": "Bahasa",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Tuwawupo |$1 pe'eentapo}}"
 }
