@@ -236,6 +236,8 @@
 	function initInterface() {
 		var $pLang,
 			clickHandler,
+			// T273928: No change to the heading should be made in modern Vector when the language button is present
+			changeHeadingAllowed = mw.config.get( 'skin' ) !== 'vector' || $( '#p-lang-btn' ).length > 0,
 			$ulsTrigger = $( '.uls-trigger' ),
 			anonMode = ( mw.user.isAnon() &&
 				!mw.config.get( 'wgULSAnonCanChangeLanguage' ) ),
@@ -243,7 +245,7 @@
 
 		if ( ulsPosition === 'interlanguage' ) {
 			// TODO: Refactor this block
-			// The interlanguage links section
+			// The interlanguage links section.
 			$pLang = $( '#p-lang' );
 			// Add an element near the interlanguage links header
 			$ulsTrigger = $( '<button>' )
@@ -253,7 +255,7 @@
 			// Take care of any other elements with this class.
 			$ulsTrigger = $( '.uls-settings-trigger' );
 
-			if ( !$pLang.find( 'div ul' ).children().length ) {
+			if ( !$pLang.find( 'div ul' ).children().length && changeHeadingAllowed ) {
 				// Replace the title of the interlanguage links area
 				// if there are no interlanguage links
 				$pLang.find( 'h3' )
@@ -452,10 +454,11 @@
 		ev.preventDefault();
 		// Load the ULS now.
 		mw.loader.using( 'ext.uls.mediawiki' ).then( function () {
+			var parent = document.querySelectorAll( '.mw-portlet-lang, #p-lang' )[ 0 ];
 			launchULS(
 				$target,
 				mw.uls.getInterlanguageListFromNodes(
-					document.querySelectorAll( '#p-lang .interlanguage-link-target' )
+					parent ? parent.querySelectorAll( '.interlanguage-link-target' ) : []
 				)
 			);
 			$target.trigger( 'click' );
