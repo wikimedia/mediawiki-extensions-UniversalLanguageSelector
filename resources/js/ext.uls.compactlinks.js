@@ -338,18 +338,19 @@
 	};
 
 	/**
-	 * Performance cost of calling createCompactList(), as of 2018-09-10.
+	 * Performance cost of calling createCompactList(), as of 2021-02-10.
 	 *
 	 * Summary:
-	 * - DOM Queries: 5 + 1N
+	 * - DOM Queries: 5
 	 *   * createCompactList (1 querySelector)
-	 *   * getLangsWithBadges (1N querySelector, 1 querySelectorAll)
+	 *   * CompactInterlanguageList constructor (1 querySelectorAll)
+	 *   * getLangsWithBadges (1 querySelectorAll)
 	 *   * getLangsInText (1 querySelectorAll)
 	 *   * hideOriginal (1 querySelectorAll)
 	 * - DOM Writes: 1 + 2N
 	 *   * addTrigger (1 appendChild)
 	 *   * hideOriginal (1N Element.style)
-	 *   * render (1N Element.style)
+	 *   * render (1N Element.style) // N defaults to 9
 	 * - Misc: 1
 	 *   * addTrigger (1 mw.Message#parser)
 	 */
