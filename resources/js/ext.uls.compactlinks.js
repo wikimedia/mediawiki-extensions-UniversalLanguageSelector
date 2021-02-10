@@ -317,23 +317,6 @@
 	};
 
 	/**
-	 * Get common languages - the most probable languages predicted by ULS.
-	 *
-	 * @param {string[]} languages Language codes
-	 * @return {string[]} List of all common language codes
-	 */
-	CompactInterlanguageList.prototype.getCommonLanguages = function ( languages ) {
-		if ( this.commonInterlanguageList === null ) {
-			this.commonInterlanguageList = mw.uls.getFrequentLanguageList()
-				.filter( function ( language ) {
-					return languages.indexOf( language ) >= 0;
-				} );
-		}
-
-		return this.commonInterlanguageList;
-	};
-
-	/**
 	 * Hide languages in the interlanguage list.
 	 *
 	 * The most relevant ones are unhidden in #render.
