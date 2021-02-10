@@ -308,15 +308,6 @@
 	};
 
 	/**
-	 * Get the list of languages links.
-	 *
-	 * @return {Object} Map of language codes to elements.
-	 */
-	CompactInterlanguageList.prototype.getInterlanguageList = function () {
-		return this.interlanguageList;
-	};
-
-	/**
 	 * Hide languages in the interlanguage list.
 	 *
 	 * The most relevant ones are unhidden in #render.
@@ -353,7 +344,6 @@
 	 * - DOM Queries: 5 + 1N
 	 *   * createCompactList (1 querySelector)
 	 *   * getLangsWithBadges (1N querySelector, 1 querySelectorAll)
-	 *   * getInterlanguageList (1 querySelectorAll)
 	 *   * getLangsInText (1 querySelectorAll)
 	 *   * hideOriginal (1 querySelectorAll)
 	 * - DOM Writes: 1 + 2N
