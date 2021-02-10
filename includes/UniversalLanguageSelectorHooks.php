@@ -348,8 +348,9 @@ class UniversalLanguageSelectorHooks {
 	/**
 	 * Hook: ResourceLoaderGetConfigVars
 	 * @param array &$vars
+	 * @param string $skin
 	 */
-	public static function addConfig( array &$vars ) {
+	public static function addConfig( array &$vars, $skin ) {
 		global $wgULSGeoService,
 			$wgULSIMEEnabled, $wgULSWebfontsEnabled,
 			$wgULSNoWebfontsSelectors,
@@ -360,6 +361,8 @@ class UniversalLanguageSelectorHooks {
 			$wgExtensionAssetsPath,
 			$wgInterwikiSortingSortPrepend;
 
+		$extRegistry = ExtensionRegistry::getInstance();
+		$skinConfig = $extRegistry->getAttribute( 'UniversalLanguageSelectorSkinConfig' )[ $skin ] ?? [];
 		// Place constant stuff here (not depending on request context)
 
 		if ( is_string( $wgULSGeoService ) ) {
@@ -369,11 +372,11 @@ class UniversalLanguageSelectorHooks {
 		$vars['wgULSIMEEnabled'] = $wgULSIMEEnabled;
 		$vars['wgULSWebfontsEnabled'] = $wgULSWebfontsEnabled;
 		$vars['wgULSAnonCanChangeLanguage'] = $wgULSAnonCanChangeLanguage;
-		$vars['wgULSEventLogging'] = $wgULSEventLogging
-			&& ExtensionRegistry::getInstance()->isLoaded( 'EventLogging' );
+		$vars['wgULSEventLogging'] = $wgULSEventLogging && $extRegistry->isLoaded( 'EventLogging' );
 		$vars['wgULSImeSelectors'] = $wgULSImeSelectors;
 		$vars['wgULSNoImeSelectors'] = $wgULSNoImeSelectors;
 		$vars['wgULSNoWebfontsSelectors'] = $wgULSNoWebfontsSelectors;
+		$vars['wgULSDisplaySettingsInInterlanguage'] = $skinConfig['ULSDisplaySettingsInInterlanguage'] ?? false;
 
 		if ( is_string( $wgULSFontRepositoryBasePath ) ) {
 			$vars['wgULSFontRepositoryBasePath'] = $wgULSFontRepositoryBasePath;

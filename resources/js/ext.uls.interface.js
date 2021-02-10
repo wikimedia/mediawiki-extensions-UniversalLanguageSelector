@@ -53,6 +53,19 @@
 	}
 
 	/**
+	 * For Vector: Check whether the classic Vector or "new" vector ([[mw:Desktop_improvements]]) is enabled based
+	 * on the contents of the page.
+	 * For other skins, check if ULSDisplayInputAndDisplaySettingsInInterlanguage contains the current skin.
+	 * @return {bool}
+	 */
+	function isUsingStandaloneLanguageButton() {
+		var skin = mw.config.get( 'skin' );
+		// special handling for Vector. This can be removed when Vector is split into 2 separate skins.
+		return skin === 'vector' ? $( '#p-lang-btn' ).length > 0 :
+			mw.config.get( 'wgULSDisplaySettingsInInterlanguage' );
+	}
+
+	/**
 	 * Add display settings link to the settings bar in ULS
 	 *
 	 * @param {Object} uls The ULS object
@@ -233,11 +246,22 @@
 		} );
 	}
 
+	/**
+	 * Adds display and input settings to the ULS dialog after loading their code.
+	 * @param {ULS} uls instance
+	 */
+	function loadDisplayAndInputSettings( uls ) {
+		return mw.loader.using( languageSettingsModules ).then( function () {
+			addDisplaySettings( uls );
+			addInputSettings( uls );
+		} );
+	}
+
 	function initInterface() {
 		var $pLang,
 			clickHandler,
 			// T273928: No change to the heading should be made in modern Vector when the language button is present
-			changeHeadingAllowed = mw.config.get( 'skin' ) !== 'vector' || $( '#p-lang-btn' ).length > 0,
+			isButton = isUsingStandaloneLanguageButton(),
 			$ulsTrigger = $( '.uls-trigger' ),
 			anonMode = ( mw.user.isAnon() &&
 				!mw.config.get( 'wgULSAnonCanChangeLanguage' ) ),
@@ -255,7 +279,7 @@
 			// Take care of any other elements with this class.
 			$ulsTrigger = $( '.uls-settings-trigger' );
 
-			if ( !$pLang.find( 'div ul' ).children().length && changeHeadingAllowed ) {
+			if ( !$pLang.find( 'div ul' ).children().length && isButton ) {
 				// Replace the title of the interlanguage links area
 				// if there are no interlanguage links
 				$pLang.find( 'h3' )
@@ -352,11 +376,7 @@
 								return mw.uls.getFrequentLanguageList();
 							},
 							onReady: function () {
-								var uls = this;
-								mw.loader.using( languageSettingsModules, function () {
-									addDisplaySettings( uls );
-									addInputSettings( uls );
-								} );
+								loadDisplayAndInputSettings( this );
 							},
 							onSelect: function ( language ) {
 								mw.uls.changeLanguage( language );
@@ -450,7 +470,8 @@
 	 * @param {jQuery.Event} ev
 	 */
 	function clickLanguageButton( ev ) {
-		var $target = $( ev.currentTarget );
+		var uls,
+			$target = $( ev.currentTarget );
 		ev.preventDefault();
 		// Load the ULS now.
 		mw.loader.using( 'ext.uls.mediawiki' ).then( function () {
@@ -461,7 +482,13 @@
 					parent ? parent.querySelectorAll( '.interlanguage-link-target' ) : []
 				)
 			);
+			uls = $target.data( 'uls' );
 			$target.trigger( 'click' );
+			// In New Vector the settings cog is currently not shown. To provide access these are added to
+			// the footer of the ULS dialog (T274396)
+			if ( isUsingStandaloneLanguageButton() ) {
+				loadDisplayAndInputSettings( uls );
+			}
 		} );
 	}
 	/**
