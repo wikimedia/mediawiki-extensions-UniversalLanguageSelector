@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Patriot Kur",
-			"Xð"
+			"Xð",
+			"Гусейн"
 		]
 	},
 	"uls-plang-title-languages": "Zıvonon",
-	"ext-uls-language-settings-cancel": "Ləğv karde"
+	"ext-uls-language-settings-cancel": "Ləğv karde",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|İ gılən|$1 həniyən}}"
 }

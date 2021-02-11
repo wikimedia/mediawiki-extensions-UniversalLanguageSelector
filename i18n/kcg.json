@@ -56,7 +56,7 @@
 	"ext-uls-input-disable-notification-info-personal": "A maai khwuk nkyangta̱m nwuai na kuzang jen neet a̱yaaseti a̱lyem ba.",
 	"ext-uls-input-disable-notification-info-interlanguage": "A maai khwuk nkyangta̱m nwuai na kuzang jen neet a̱yaaseti a̱lyem ba ba̱ shyia̱ kpa̱mkpaan lis a̱lyem hu.",
 	"ext-uls-language-settings-applying": "Á̱ tyei di̱n ta̱m...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|A̱nyiung bwat|Á̱ghyang $1}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|A̱nyiung bwat|$1 mbwat}}",
 	"ext-uls-compact-link-info": "A̱mgba̱m lilyem (khai a̱tsan neet a̱yaakhai nci̱ri̱ng ang na ma̱ng si̱ á̱ghyang á̱niet)",
 	"prefs-languages": "Lilyem",
 	"ext-uls-compact-language-links-preference": "Nyia̱ ta̱m ma̱ng [[$1|a̱bada̱dei lis a̱lyem]], ma̱ng lilyem nang a lyen a̱ni.",
