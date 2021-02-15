@@ -3,6 +3,7 @@
 		"authors": [
 			"Adrianbblk",
 			"Minisarm",
+			"NGC 54",
 			"Strainu"
 		]
 	},
@@ -10,6 +11,7 @@
 	"uls-plang-title-languages": "Limbi",
 	"ext-uls-select-language-settings-icon-tooltip": "Setări de limbă",
 	"ext-uls-undo-language-tooltip-text": "Limba schimbată din $1",
+	"ext-uls-undo-language-tooltip-text-local": "Limba schimbată pentru acest wiki. Verificați-vă [[Special:GlobalPreferences|preferințele globale]] pentru a schimba limba pentru toate wiki-urile.",
 	"ext-uls-language-settings-preferences-link": "Mai multe setări de limbă",
 	"uls-betafeature-label": "Legături interlinguale compacte",
 	"uls-betafeature-desc": "Afișează o versiune trunchiată a listei de legături interlinguale, care conține doar limbile relevante pentru dumneavoastră.",
@@ -23,7 +25,7 @@
 	"ext-uls-language-settings-cancel": "Revocare",
 	"ext-uls-language-buttons-help": "Modifică limba meniurilor. Limba conținutului nu va fi afectată.",
 	"ext-uls-display-settings-font-settings": "Setări font",
-	"ext-uls-display-settings-ui-language": "Limbă afișare",
+	"ext-uls-display-settings-ui-language": "Limbă care să fie afișată",
 	"ext-uls-display-settings-anon-label": "Limba interfeței:",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (asemenea conținutului)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Autentificați-vă]] pentru a alege o altă limbă pentru meniuri.",
@@ -59,5 +61,13 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Încă una|Încă $1}}",
 	"ext-uls-compact-link-info": "Toate limbile (selecție inițială cu alegerile obișnuite ale dumneavoastră și ale altor utilizatori)",
 	"prefs-languages": "Limbi",
-	"ext-uls-compact-language-links-preference": "Folosiți o [[$1|listă compactă de limbi]], ce conține doar limbile relevante pentru dumneavoastră."
+	"ext-uls-compact-language-links-preference": "Folosiți o [[$1|listă compactă de limbi]], ce conține doar limbile relevante pentru dumneavoastră.",
+	"ext-uls-compact-no-results": "Această pagină nu este disponibilă în limba pe care ați căutat-o.",
+	"ext-uls-setlang-error": "A apărut o eroare la actualizare limbii dvs. preferate. Eroare: $1",
+	"ext-uls-setlang-unknown-error": "Eroare necunoscută",
+	"ext-uls-setlang-message": "legătura pe care ați urmat-o a solicitat interfeței să fie afișată în <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "Schimbați limba interfeței?",
+	"ext-uls-setlang-accept": "Acceptați schimbarea",
+	"ext-uls-setlang-loading": "Se aplică...",
+	"ext-uls-setlang-cancel": "Nu schimbați"
 }
