@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"Äberlausitzer"
 		]
 	},
-	"uls-plang-title-languages": "Sproache"
+	"uls-plang-title-languages": "Sproache",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Anne weitere|$1 weitere}}"
 }
