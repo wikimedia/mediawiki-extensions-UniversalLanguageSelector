@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Foavi33"
+		]
+	},
+	"ext-uls-compact-link-count": "{{PLURAL:$1|emu ele|$1 ele}}"
+}
