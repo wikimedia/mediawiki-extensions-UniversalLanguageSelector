@@ -5,7 +5,13 @@
 		]
 	},
 	"apihelp-languagesearch-description": "Meklē valodu nosaukumus jebkurā rakstībā.",
+	"apihelp-languagesearch-summary": "Meklē valodu nosaukumus jebkurā rakstībā.",
+	"apihelp-languagesearch-example-1": "Meklēt \"Te\"",
+	"apihelp-languagesearch-example-2": "Meklēt \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Meklēt \"ഫി\", atļaujot vienu kļūdu",
 	"apihelp-ulslocalization-param-language": "Valodas kods.",
+	"apihelp-ulslocalization-example-1": "Iegūt tamilu lokalizāciju",
+	"apihelp-ulslocalization-example-2": "Iegūt hindi lokalizāciju",
 	"apihelp-ulssetlang-description": "Mainīt dalībnieka vēlamo saskarnes valodu.",
 	"apihelp-ulssetlang-summary": "Mainīt dalībnieka vēlamo saskarnes valodu.",
 	"apihelp-ulssetlang-param-languagecode": "Vēlamās valodas kods.",
