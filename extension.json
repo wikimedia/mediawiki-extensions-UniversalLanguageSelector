@@ -94,10 +94,6 @@
 			"description": "The location and the form of the language selection trigger.  The possible values are: (a) \"personal\"- as a link near the username or the log in link in the personal toolbar (default). (b) \"interlanguage\": as an icon near the header of the list of interlanguage  links in the sidebar.",
 			"value": "personal"
 		},
-		"ULSEventLogging": {
-			"description": "Whether to use EventLogging. The EventLogging extension must be installed if this option is enabled. @since 2013.06",
-			"value": false
-		},
 		"ULSImeSelectors": {
 			"description": "Array of jQuery selectors of elements on which IME should be enabled. @since 2013.11",
 			"value": [
@@ -139,7 +135,6 @@
 				"mobile"
 			],
 			"scripts": [
-				"js/ext.uls.eventlogger.js",
 				"js/ext.uls.common.js"
 			],
 			"styles": "css/ext.uls.less",
@@ -430,13 +425,6 @@
 			"ext.uls.common",
 			"ext.uls.preferences"
 		]
-	},
-	"attributes": {
-		"EventLogging": {
-			"Schemas": {
-				"UniversalLanguageSelector": "/analytics/legacy/universallanguageselector/1.0.0"
-			}
-		}
 	},
 	"manifest_version": 2
 }

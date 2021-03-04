@@ -355,7 +355,6 @@ class UniversalLanguageSelectorHooks {
 			$wgULSIMEEnabled, $wgULSWebfontsEnabled,
 			$wgULSNoWebfontsSelectors,
 			$wgULSAnonCanChangeLanguage,
-			$wgULSEventLogging,
 			$wgULSImeSelectors, $wgULSNoImeSelectors,
 			$wgULSFontRepositoryBasePath,
 			$wgExtensionAssetsPath,
@@ -372,7 +371,6 @@ class UniversalLanguageSelectorHooks {
 		$vars['wgULSIMEEnabled'] = $wgULSIMEEnabled;
 		$vars['wgULSWebfontsEnabled'] = $wgULSWebfontsEnabled;
 		$vars['wgULSAnonCanChangeLanguage'] = $wgULSAnonCanChangeLanguage;
-		$vars['wgULSEventLogging'] = $wgULSEventLogging && $extRegistry->isLoaded( 'EventLogging' );
 		$vars['wgULSImeSelectors'] = $wgULSImeSelectors;
 		$vars['wgULSNoImeSelectors'] = $wgULSNoImeSelectors;
 		$vars['wgULSNoWebfontsSelectors'] = $wgULSNoWebfontsSelectors;
