@@ -9,6 +9,7 @@
 	"uls-plang-title-languages": "Lengue",
 	"ext-uls-select-language-settings-icon-tooltip": "Inpostasion par ła lengua",
 	"ext-uls-undo-language-tooltip-text": "Lengua canbià da $1",
+	"ext-uls-undo-language-tooltip-text-local": "Łéngua canbiada par sta wiki. Rivarda łe to [[Special:GlobalPreferences|prefarense globałi]] par canbiar ła łéngua de tute łe wiki.",
 	"ext-uls-language-settings-preferences-link": "Altre inpostasion par ła lengua",
 	"ext-uls-display-settings-title": "Inpostasion de vixuałixasion",
 	"ext-uls-display-settings-language-tab": "Lengua",
