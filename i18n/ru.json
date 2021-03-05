@@ -75,6 +75,7 @@
 	"prefs-languages": "Языки",
 	"ext-uls-compact-language-links-preference": "Использовать [[$1|компактный список языков]] с подходящими вам языками.",
 	"ext-uls-compact-no-results": "Эта страница недоступна на выбранном вами языке.",
+	"ext-uls-setlang-unknown-error": "Неизвестная ошибка",
 	"ext-uls-setlang-accept": "Подтвердить изменение",
 	"ext-uls-setlang-loading": "Применение…"
 }
