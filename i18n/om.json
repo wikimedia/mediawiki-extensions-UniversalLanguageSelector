@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Maammee",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Afaan"
+	"uls-plang-title-languages": "Afaan",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Kan biroo tokko|Kanneen biroo $1}}"
 }
