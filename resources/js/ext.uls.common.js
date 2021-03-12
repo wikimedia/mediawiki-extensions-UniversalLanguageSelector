@@ -39,25 +39,36 @@
 	 * @param {string} language Language code.
 	 */
 	mw.uls.changeLanguage = function ( language ) {
+		mw.uls.setLanguage( language ).then( function () {
+			location.reload();
+		} );
+	};
+
+	/**
+	 * Change the language of wiki using API or set cookie.
+	 *
+	 * @param {string} language Language code.
+	 * @return {jQuery.Promise}
+	 */
+	mw.uls.setLanguage = function ( language ) {
 		var api = new mw.Api();
 
 		function changeLanguageAnon() {
 			if ( mw.config.get( 'wgULSAnonCanChangeLanguage' ) ) {
 				mw.cookie.set( 'language', language );
-				location.reload();
 			}
+			return $.Deferred().resolve();
 		}
 
 		// Track if event logging is enabled
 		mw.hook( 'mw.uls.interface.language.change' ).fire( language );
 
 		if ( mw.user.isAnon() ) {
-			changeLanguageAnon();
-			return;
+			return changeLanguageAnon();
 		}
 
 		// TODO We can avoid doing this query if we know global preferences are not enabled
-		api.get( {
+		return api.get( {
 			action: 'query',
 			meta: 'globalpreferences',
 			gprprop: 'preferences'
@@ -85,12 +96,10 @@
 				optionname: 'language',
 				optionvalue: language
 			} );
-		} ).done( function () {
-			location.reload();
-		} ).fail( function () {
+		} ).catch( function () {
 			// Setting the option failed. Maybe the user has logged off.
 			// Continue like anonymous user and set cookie.
-			changeLanguageAnon();
+			return changeLanguageAnon();
 		} );
 	};
 
