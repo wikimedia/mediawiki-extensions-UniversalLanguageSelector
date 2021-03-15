@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Mnam23",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Bahasa"
+	"uls-plang-title-languages": "Bahasa",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Sabuting lagi|$1 lagi}}"
 }

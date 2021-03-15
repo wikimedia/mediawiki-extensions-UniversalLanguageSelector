@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Usingha",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "ঠার"
+	"uls-plang-title-languages": "ঠার",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|আরকউ আহান|আরকউ $1হান}}"
 }
