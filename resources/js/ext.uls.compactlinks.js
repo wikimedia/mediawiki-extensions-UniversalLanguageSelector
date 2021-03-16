@@ -327,6 +327,7 @@
 	 */
 	CompactInterlanguageList.prototype.addTrigger = function () {
 		var trigger = document.createElement( 'button' );
+		// TODO: Should we have a different class name where the CLS styles are attached?
 		trigger.className = 'mw-interlanguage-selector mw-ui-button';
 		trigger.title = mw.message( 'ext-uls-compact-link-info' ).plain();
 		// Use text() because the message needs {{PLURAL:}}

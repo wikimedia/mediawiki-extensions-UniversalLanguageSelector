@@ -477,20 +477,27 @@
 		ev.preventDefault();
 
 		mw.loader.using( 'ext.uls.mediawiki' ).then( function () {
-			var $target, parent, languageNodes, uls;
+			var $target, parent, languageNodes, standalone, uls;
 
 			$target = $( ev.currentTarget );
 			parent = document.querySelectorAll( '.mw-portlet-lang, #p-lang' )[ 0 ];
 			languageNodes = parent ? parent.querySelectorAll( '.interlanguage-link-target' ) : [];
+			standalone = isUsingStandaloneLanguageButton();
 
 			// Setup click handler for ULS
-			launchULS( $target, mw.uls.getInterlanguageListFromNodes( languageNodes ) );
+			launchULS(
+				$target,
+				mw.uls.getInterlanguageListFromNodes( languageNodes ),
+				// Using this as heuristic for now. May need to reconsider later. Enables
+				// behavior sepcific to compact language links.
+				!standalone
+			);
 			// Trigger the click handler to open ULS
 			$target.trigger( 'click' );
 			// Provide access to display and input settings if this entry point is the single point
 			// of access to all language settings.
 			uls = $target.data( 'uls' );
-			if ( isUsingStandaloneLanguageButton() ) {
+			if ( standalone ) {
 				loadDisplayAndInputSettings( uls );
 			}
 		} );
