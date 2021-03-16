@@ -466,40 +466,48 @@
 	}
 
 	/**
-	 * Event handler for the language button
+	 * Load and open ULS for content language selection.
+	 *
+	 * This dialog is primarily for selecting the language of the content, but may also provide
+	 * access to display and input settings if isUsingStandaloneLanguageButton() returns true.
+	 *
 	 * @param {jQuery.Event} ev
 	 */
-	function clickLanguageButton( ev ) {
-		var uls,
-			$target = $( ev.currentTarget );
+	function loadContentLanguageSelector( ev ) {
 		ev.preventDefault();
-		// Load the ULS now.
+
 		mw.loader.using( 'ext.uls.mediawiki' ).then( function () {
-			var parent = document.querySelectorAll( '.mw-portlet-lang, #p-lang' )[ 0 ];
-			launchULS(
-				$target,
-				mw.uls.getInterlanguageListFromNodes(
-					parent ? parent.querySelectorAll( '.interlanguage-link-target' ) : []
-				)
-			);
-			uls = $target.data( 'uls' );
+			var $target, parent, languageNodes, uls;
+
+			$target = $( ev.currentTarget );
+			parent = document.querySelectorAll( '.mw-portlet-lang, #p-lang' )[ 0 ];
+			languageNodes = parent ? parent.querySelectorAll( '.interlanguage-link-target' ) : [];
+
+			// Setup click handler for ULS
+			launchULS( $target, mw.uls.getInterlanguageListFromNodes( languageNodes ) );
+			// Trigger the click handler to open ULS
 			$target.trigger( 'click' );
-			// In New Vector the settings cog is currently not shown. To provide access these are added to
-			// the footer of the ULS dialog (T274396)
+			// Provide access to display and input settings if this entry point is the single point
+			// of access to all language settings.
+			uls = $target.data( 'uls' );
 			if ( isUsingStandaloneLanguageButton() ) {
 				loadDisplayAndInputSettings( uls );
 			}
 		} );
 	}
-	/**
-	 * Sets up the interlanguage selector button if present
-	 */
-	function initInterlanguageSelector() {
-		// Special handling for Timeless which stops propagation on links in this menu
+
+	/** Setup lazy-loading for content language selector */
+	function initContentLanguageSelectorClickHandler() {
+		// FIXME: In Timeless ULS is embedded in a menu which stops event propagation
 		if ( $( '.sidebar-inner' ).length ) {
-			$( '.sidebar-inner #p-lang' ).one( 'click', '.mw-interlanguage-selector', clickLanguageButton );
+			$( '.sidebar-inner #p-lang' )
+				.one( 'click', '.mw-interlanguage-selector', loadContentLanguageSelector );
 		} else {
-			$( document ).one( 'click', '.mw-interlanguage-selector', clickLanguageButton );
+			// This button may be created by the new Vector skin, or ext.uls.compactlinks module
+			// if there are many languages. Warning: Both this module and ext.uls.compactlinks
+			// module may run simultaneously. Using event delegation to avoid race conditions where
+			// the trigger may be created after this code.
+			$( document ).one( 'click', '.mw-interlanguage-selector', loadContentLanguageSelector );
 		}
 	}
 
@@ -507,7 +515,7 @@
 		initInterface();
 		initTooltip();
 		initIme();
-		initInterlanguageSelector();
+		initContentLanguageSelectorClickHandler();
 	}
 
 	// Early execute of init

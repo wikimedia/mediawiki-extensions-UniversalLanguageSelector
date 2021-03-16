@@ -321,7 +321,9 @@
 	};
 
 	/**
-	 * Add the trigger at the bottom of the language list
+	 * Add the trigger at the bottom of the language list.
+	 *
+	 * Click handler is setup in ext.uls.interface module.
 	 */
 	CompactInterlanguageList.prototype.addTrigger = function () {
 		var trigger = document.createElement( 'button' );
