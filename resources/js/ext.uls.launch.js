@@ -76,8 +76,8 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 			width = $trigger.outerWidth();
 			height = $trigger.outerHeight();
 
-			if ( offset.left > $( window ).width() / 2 ) {
-				// Trigger is on the right side of the viewport.
+			if ( offset.left + ( width / 2 ) > $( window ).width() / 2 ) {
+				// Midpoint of the trigger is on the right side of the viewport.
 				this.$menu.css( {
 					left: 'auto',
 					// Right edge of the dialog aligns with the right edge of the trigger.
@@ -85,7 +85,7 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 					top: offset.top + height
 				} );
 			} else {
-				// Trigger is on the left side of the viewport.
+				// Midpoint of the trigger is on the left side of the viewport.
 				this.$menu.css( {
 					// Left edge of the dialog aligns with the left edge of the trigger.
 					left: offset.left,
