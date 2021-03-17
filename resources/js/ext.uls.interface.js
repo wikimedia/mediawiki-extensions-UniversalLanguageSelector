@@ -140,7 +140,7 @@
 			ulsPosition = mw.config.get( 'wgULSPosition' );
 
 		$ulsTrigger = ( ulsPosition === 'interlanguage' ) ?
-			$( '.uls-settings-trigger' ) :
+			$( '.uls-settings-trigger, .mw-interlanguage-selector' ) :
 			$( '.uls-trigger' );
 
 		function hideTipsy() {
