@@ -474,13 +474,17 @@
 				// behavior sepcific to compact language links.
 				!standalone
 			);
-			// Trigger the click handler to open ULS
-			$target.trigger( 'click' );
-			// Provide access to display and input settings if this entry point is the single point
-			// of access to all language settings.
-			uls = $target.data( 'uls' );
+
+			// Trigger the click handler to open ULS once ready
 			if ( standalone ) {
-				loadDisplayAndInputSettings( uls );
+				// Provide access to display and input settings if this entry point is the single point
+				// of access to all language settings.
+				uls = $target.data( 'uls' );
+				loadDisplayAndInputSettings( uls ).always( function () {
+					$target.trigger( 'click' );
+				} );
+			} else {
+				$target.trigger( 'click' );
 			}
 		} );
 	}
