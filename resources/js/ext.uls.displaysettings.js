@@ -302,8 +302,7 @@
 			$languages.append( $moreLanguagesButton );
 			// Show the long language list to select a language for display settings
 			$moreLanguagesButton.uls( {
-				left: displaySettings.$parent.left,
-				top: displaySettings.$parent.top,
+				onPosition: this.$parent.position.bind( this.$parent ),
 				onReady: function () {
 					var $wrap,
 						uls = this,
@@ -328,8 +327,6 @@
 					uls.$menu.toggleClass( 'selector-right', displaySettings.$parent.$window.hasClass( 'selector-right' ) );
 				},
 				onVisible: function () {
-					var $parent;
-
 					this.$menu.find( '.uls-languagefilter' )
 						.prop( 'placeholder', $.i18n( 'ext-uls-display-settings-ui-language' ) );
 
@@ -340,15 +337,6 @@
 						return;
 					}
 
-					$parent = $( '#language-settings-dialog' );
-
-					// Re-position the element according to the window that called it
-					if ( parseInt( $parent.css( 'left' ), 10 ) ) {
-						this.$menu.css( 'left', $parent.css( 'left' ) );
-					}
-					if ( parseInt( $parent.css( 'top' ), 10 ) ) {
-						this.$menu.css( 'top', $parent.css( 'top' ) );
-					}
 					// If the ULS is shown in the sidebar,
 					// add a caret pointing to the icon
 					// eslint-disable-next-line no-jquery/no-class-state

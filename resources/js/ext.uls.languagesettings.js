@@ -174,12 +174,16 @@
 		},
 
 		position: function () {
+			if ( this.options.onPosition ) {
+				return this.options.onPosition.call( this );
+			}
+
 			this.top = this.top || this.$element.offset().top + this.$element.outerHeight();
 			this.left = this.left || '25%';
-			this.$window.css( {
+			return {
 				top: this.top,
 				left: this.left
-			} );
+			};
 		},
 
 		i18n: function () {
@@ -187,7 +191,7 @@
 		},
 
 		show: function () {
-			this.position();
+			this.$window.css( this.position() );
 
 			if ( !this.initialized ) {
 				this.render();
@@ -311,9 +315,10 @@
 		template: windowTemplate,
 		defaultModule: false, // Name of the default module
 		onClose: null, // An onClose event handler.
-		top: null, // Top position of this window
-		left: null, // Left position of this window
-		onVisible: null // A callback that runs after the ULS panel becomes visible
+		top: null, // DEPRECATED: Top position of this window
+		left: null, // DEPRECATED: Left position of this window
+		onVisible: null, // A callback that runs after the ULS panel becomes visible
+		onPosition: null // A callback that allows positioning the dialog
 	};
 
 	$.fn.languagesettings.Constructor = LanguageSettings;

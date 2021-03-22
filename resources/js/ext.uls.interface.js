@@ -74,27 +74,14 @@
 		var $displaySettings = displaySettings();
 
 		uls.$menu.find( '#uls-settings-block' ).append( $displaySettings );
-
 		// Initialize the trigger
 		$displaySettings.one( 'click', function () {
-			var displaySettingsOptions = {
-					defaultModule: 'display'
-				},
-				ulsPosition = mw.config.get( 'wgULSPosition' ),
-				anonMode = ( mw.user.isAnon() &&
-					!mw.config.get( 'wgULSAnonCanChangeLanguage' ) );
-
-			// If the ULS trigger is shown in the top personal menu,
-			// closing the display settings must show the main ULS
-			// languages list, unless we are in anon mode and thus
-			// cannot show the language list
-			if ( ulsPosition === 'personal' && !anonMode ) {
-				displaySettingsOptions.onClose = function () {
-					uls.show();
-				};
-			}
-			$.extend( displaySettingsOptions, uls.position() );
-			$displaySettings.languagesettings( displaySettingsOptions ).trigger( 'click' );
+			$displaySettings.languagesettings( {
+				defaultModule: 'display',
+				onClose: uls.show.bind( uls ),
+				onPosition: uls.position.bind( uls ),
+				onVisible: uls.hide.bind( uls )
+			} ).trigger( 'click' );
 		} );
 	}
 
@@ -107,20 +94,14 @@
 		var $inputSettings = inputSettings();
 
 		uls.$menu.find( '#uls-settings-block' ).append( $inputSettings );
-
 		// Initialize the trigger
 		$inputSettings.one( 'click', function () {
-			var position = uls.position();
-
 			$inputSettings.languagesettings( {
 				defaultModule: 'input',
-				onClose: function () {
-					uls.show();
-				},
-				top: position.top,
-				left: position.left
+				onClose: uls.show.bind( uls ),
+				onPosition: uls.position.bind( uls ),
+				onVisible: uls.hide.bind( uls )
 			} ).trigger( 'click' );
-
 		} );
 	}
 
@@ -305,33 +286,34 @@
 				// Initialize the Language settings window
 				languageSettingsOptions = {
 					defaultModule: 'display',
-					onVisible: function () {
-						var caretRadius,
+					onPosition: function () {
+						var caretRadius, top, left,
 							ulsTriggerHeight = this.$element.height(),
 							ulsTriggerWidth = this.$element[ 0 ].offsetWidth,
 							ulsTriggerOffset = this.$element.offset();
-
-						this.$window.addClass( 'callout' );
 
 						// Same as border width in mixins.less, or near enough
 						caretRadius = 12;
 
 						if ( ulsTriggerOffset.left > $( window ).width() / 2 ) {
-							this.left = ulsTriggerOffset.left - this.$window.width() - caretRadius;
+							left = ulsTriggerOffset.left - this.$window.width() - caretRadius;
 							this.$window.removeClass( 'selector-left' ).addClass( 'selector-right' );
 						} else {
-							this.left = ulsTriggerOffset.left + ulsTriggerWidth + caretRadius;
+							left = ulsTriggerOffset.left + ulsTriggerWidth + caretRadius;
 							this.$window.removeClass( 'selector-right' ).addClass( 'selector-left' );
 						}
 
 						// The top of the dialog is aligned in relation to
 						// the middle of the trigger, so that middle of the
 						// caret aligns with it. 16 is trigger icon height in pixels
-						this.top = ulsTriggerOffset.top +
+						top = ulsTriggerOffset.top +
 							( ulsTriggerHeight / 2 ) -
 							( caretRadius + 16 );
 
-						this.position();
+						return { top: top, left: left };
+					},
+					onVisible: function () {
+						this.$window.addClass( 'callout' );
 					}
 				};
 

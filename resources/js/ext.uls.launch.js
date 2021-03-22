@@ -62,14 +62,11 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 			}
 			location.href = languagesObject[ language ].href;
 		},
-		onVisible: function () {
+		onPosition: function () {
 			// Override the default positioning. See https://phabricator.wikimedia.org/T276248
 			// Default positioning of jquery.uls is middle of the screen under the trigger.
 			// This code aligns it under the trigger and to the trigger edge depending on which
 			// side of the page the trigger is - should work automatically for both LTR and RTL.
-			//
-			// FIXME: make position() overrideable in ULS to avoid doing this after the dialog
-			// has been made visible
 			var offset, height, width;
 			// These are for the trigger.
 			offset = $trigger.offset();
@@ -78,22 +75,21 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 
 			if ( offset.left + ( width / 2 ) > $( window ).width() / 2 ) {
 				// Midpoint of the trigger is on the right side of the viewport.
-				this.$menu.css( {
-					left: 'auto',
+				return {
 					// Right edge of the dialog aligns with the right edge of the trigger.
 					right: $( window ).width() - ( offset.left + width ),
 					top: offset.top + height
-				} );
+				};
 			} else {
 				// Midpoint of the trigger is on the left side of the viewport.
-				this.$menu.css( {
+				return {
 					// Left edge of the dialog aligns with the left edge of the trigger.
 					left: offset.left,
-					right: 'auto',
 					top: offset.top + height
-				} );
+				};
 			}
-
+		},
+		onVisible: function () {
 			$trigger.addClass( 'selector-open' );
 		},
 		languageDecorator: function ( $languageLink, language ) {
@@ -138,9 +134,9 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 			// This class enables the caret
 			this.$menu.addClass( 'interlanguage-uls-menu' );
 		};
-		ulsConfig.onVisible = function () {
+		ulsConfig.onPosition = function () {
 			// Compact language links specific positioning with a caret
-			var offset, height, width, triangleWidth;
+			var top, left, offset, height, width, triangleWidth;
 			// The panel is positioned carefully so that our pointy triangle,
 			// which is implemented as a square box rotated 45 degrees with
 			// rotation origin in the middle. See the corresponding style file.
@@ -156,20 +152,19 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 			// selector-{left,right} control which side the caret appears.
 			// It needs to match the positioning of the dialog.
 			if ( offset.left > $( window ).width() / 2 ) {
-				this.left = offset.left - this.$menu.outerWidth() - triangleWidth;
+				left = offset.left - this.$menu.outerWidth() - triangleWidth;
 				this.$menu.removeClass( 'selector-left' ).addClass( 'selector-right' );
 			} else {
-				this.left = offset.left + width + triangleWidth;
+				left = offset.left + width + triangleWidth;
 				this.$menu.removeClass( 'selector-right' ).addClass( 'selector-left' );
 			}
 			// Offset from the middle of the trigger
-			this.top = offset.top + ( height / 2 ) - 27;
+			top = offset.top + ( height / 2 ) - 27;
 
-			this.$menu.css( {
-				left: this.left,
-				top: this.top
-			} );
-			$trigger.addClass( 'selector-open' );
+			return {
+				left: left,
+				top: top
+			};
 		};
 	}
 
