@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Adeliine",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Keeleq"
+	"uls-plang-title-languages": "Keeleq",
+	"ext-uls-compact-link-count": "Viil {{PLURAL:$1|üts kiil|$1 kiilt}}"
 }
