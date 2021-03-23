@@ -52,6 +52,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Μπορείτε να ενεργοποιήσετε τα εργαλεία εισαγωγής, ανά πάσα στιγμή από τις ρυθμίσεις γλώσσας.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Μπορείτε να ενεργοποιήσετε τα εργαλεία εισαγωγής, ανά πάσα στιγμή από τις ρυθμίσεις γλώσσας δίπλα από τη λίστα γλωσσών.",
 	"ext-uls-language-settings-applying": "Εφαρμογή...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Μία ακόμη|$1 ακόμη}}",
 	"prefs-languages": "Γλώσσες",
 	"ext-uls-compact-language-links-preference": "Χρήση μιας συμπαγούς λίστας γλωσσών, με γλώσσες που είναι σχετικές με εσάς."
 }
