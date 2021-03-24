@@ -461,7 +461,7 @@
 		mw.loader.using( 'ext.uls.mediawiki' ).then( function () {
 			var $target, parent, languageNodes, standalone, uls;
 
-			$target = $( ev.currentTarget );
+			$target = $( ev.target );
 			parent = document.querySelectorAll( '.mw-portlet-lang, #p-lang' )[ 0 ];
 			languageNodes = parent ? parent.querySelectorAll( '.interlanguage-link-target' ) : [];
 			standalone = isUsingStandaloneLanguageButton();
