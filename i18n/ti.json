@@ -20,6 +20,8 @@
 	"ext-uls-webfonts-settings-info-link": "ተወሳኺ ሓበሬታ",
 	"ext-uls-input-settings-title": "መእተዊ ኣቀማምጣታት",
 	"ext-uls-input-settings-title-short": "መእተዊ",
+	"ext-uls-input-settings-desc": "ብካልእ ቋንቋ ዲኻ ትጽሕፍ?",
+	"ext-uls-input-settings-ui-language": "ንምጽሓፍ ዝተጠቀመ ቋንቋ",
 	"ext-uls-input-settings-more-languages-tooltip": "ተወሳኺ ቋንቋታት",
 	"jquery-ime-other-languages": "ካልኦት ቋንቋታት",
 	"jquery-ime-help": "ሓገዝ",
@@ -31,5 +33,6 @@
 	"prefs-languages": "ቋንቋታት",
 	"ext-uls-setlang-unknown-error": "ዘይተፈልጠ ጌጋ",
 	"ext-uls-setlang-accept": "ለውጢ ተቐበል",
-	"ext-uls-setlang-loading": "የተግብር ኣሎ..."
+	"ext-uls-setlang-loading": "የተግብር ኣሎ...",
+	"ext-uls-setlang-cancel": "ኣይትለወጥ"
 }
