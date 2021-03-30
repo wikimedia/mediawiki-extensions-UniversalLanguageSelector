@@ -85,7 +85,14 @@ class UniversalLanguageSelectorHooks {
 		if ( $wgULSCompactLanguageLinksBetaFeature === false ) {
 			// Compact language links is a default feature in this wiki.
 			// Check user preference
-			return $user->getBoolOption( 'compact-language-links' );
+			$services = MediaWikiServices::getInstance();
+			if ( method_exists( $services, 'getUserOptionsLookup' ) ) {
+				// MW 1.35 +
+				return $services->getUserOptionsLookup()
+					->getBoolOption( $user, 'compact-language-links' );
+			} else {
+				return $user->getBoolOption( 'compact-language-links' );
+			}
 		}
 
 		return false;
