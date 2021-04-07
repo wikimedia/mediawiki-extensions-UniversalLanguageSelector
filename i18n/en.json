@@ -64,7 +64,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|One more|$1 more}}",
 	"ext-uls-compact-link-info": "All languages (initial selection from common choices by you and others)",
 	"prefs-languages": "Languages",
-	"ext-uls-compact-language-links-preference":  "Use a [[$1|compact language list]], with languages relevant to you.",
+	"ext-uls-compact-language-links-preference": "Use a [[$1|compact language list]], with languages relevant to you.",
 	"ext-uls-compact-no-results": "This page is not available in the language you searched for.",
 	"ext-uls-setlang-error": "There was an error while updating your preferred language. Error: $1",
 	"ext-uls-setlang-unknown-error": "Unknown error",

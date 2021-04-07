@@ -131,7 +131,7 @@
 	 * @constructor
 	 * @param {HTMLElement} listElement Interlanguage list element
 	 * @param {Object} [options]
-	 * @param {Number} [options.max] maximum number of languages to show
+	 * @param {number} [options.max] maximum number of languages to show
 	 * in the compacted list. This defaults to DEFAULT_LIST_SIZE.
 	 */
 	function CompactInterlanguageList( listElement, options ) {

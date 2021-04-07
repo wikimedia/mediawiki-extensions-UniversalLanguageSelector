@@ -56,6 +56,7 @@
 	 * For Vector: Check whether the classic Vector or "new" vector ([[mw:Desktop_improvements]]) is enabled based
 	 * on the contents of the page.
 	 * For other skins, check if ULSDisplayInputAndDisplaySettingsInInterlanguage contains the current skin.
+	 *
 	 * @return {bool}
 	 */
 	function isUsingStandaloneLanguageButton() {
@@ -229,6 +230,7 @@
 
 	/**
 	 * Adds display and input settings to the ULS dialog after loading their code.
+	 *
 	 * @param {ULS} uls instance
 	 */
 	function loadDisplayAndInputSettings( uls ) {

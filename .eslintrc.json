@@ -1,13 +1,14 @@
 {
 	"root": true,
 	"extends": [
-		"wikimedia/client",
+		"wikimedia/client-es5",
 		"wikimedia/jquery",
 		"wikimedia/mediawiki"
 	],
 	"rules": {
 		"no-jquery/no-global-selector": "off",
 		"mediawiki/class-doc": "warn",
-		"no-shadow": "warn"
+		"no-shadow": "warn",
+		"compat/compat": "warn"
 	}
 }
