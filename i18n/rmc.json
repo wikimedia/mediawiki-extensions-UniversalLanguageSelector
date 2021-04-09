@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Adehertogh"
+		]
+	},
+	"ext-uls-display-settings-language-tab": "Čhib",
+	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|aver}}"
+}
