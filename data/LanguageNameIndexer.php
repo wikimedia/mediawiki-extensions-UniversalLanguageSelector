@@ -145,7 +145,7 @@ class LanguageNameIndexer extends Maintenance {
 	private function getLanguageData() {
 		$file = __DIR__ . '/../lib/jquery.uls/src/jquery.uls.data.js';
 		$contents = file_get_contents( $file );
-		if ( !preg_match( '/.*\$\.uls\.data = (.*?)} \( jQuery \)/s', $contents, $matches ) ) {
+		if ( !preg_match( '/.*\$\.uls\.data\s*=\s*(.*?)\s*}\s*\(\s*jQuery\s*\)/s', $contents, $matches ) ) {
 			throw new LogicException( 'Syntax error in jquery.uls.data.js?' );
 		}
 		$json = $matches[ 1 ];
