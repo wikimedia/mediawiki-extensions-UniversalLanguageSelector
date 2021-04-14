@@ -125,6 +125,17 @@
 			$( '.uls-settings-trigger, .mw-interlanguage-selector' ) :
 			$( '.uls-trigger' );
 
+		// Fallback if no entry point is present
+		if ( !$ulsTrigger.length ) {
+			$ulsTrigger = $( '#pt-preferences' );
+		}
+
+		// Skip tooltip if there is no element to attach the tooltip to.
+		// It will cause errors otherwise.
+		if ( !$ulsTrigger.length ) {
+			return;
+		}
+
 		function hideTipsy() {
 			ulsPopup.toggle( false );
 		}
