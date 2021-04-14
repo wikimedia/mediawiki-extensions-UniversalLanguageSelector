@@ -160,15 +160,7 @@
 		}
 
 		if ( ulsPosition === 'interlanguage' ) {
-			if ( $ulsTrigger.offset().left > $( window ).width() / 2 ) {
-				ulsPopupPosition = 'before';
-			} else {
-				ulsPopupPosition = 'after';
-			}
-			// Reverse for RTL
-			if ( $( document.documentElement ).prop( 'dir' ) === 'rtl' ) {
-				ulsPopupPosition = ( ulsPopupPosition === 'after' ) ? 'before' : 'after';
-			}
+			ulsPopupPosition = 'after';
 		} else {
 			ulsPopupPosition = 'below';
 		}
