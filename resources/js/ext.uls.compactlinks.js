@@ -82,7 +82,7 @@
 	}
 
 	/**
-	 * Get site-specific highlighted languags. Mostly used on Wikimedia sites.
+	 * Get site-specific highlighted languages. Mostly used on Wikimedia sites.
 	 *
 	 * @return {string[]|undefined} Language codes
 	 */

@@ -1,5 +1,5 @@
 /*!
- * Loaded when setlang query paramter is set on the page.
+ * Loaded when setlang query parameter is set on the page.
  *
  * @private
  * @since 2020.01

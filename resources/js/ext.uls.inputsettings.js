@@ -64,7 +64,6 @@
 		this.$template = $( template );
 		this.uiLanguage = this.getInterfaceLanguage();
 		this.contentLanguage = this.getContentLanguage();
-		this.$imes = null;
 		this.$parent = $parent;
 		// ime system is lazy loaded, make sure it is initialized
 		mw.ime.init();
@@ -84,7 +83,6 @@
 
 			this.dirty = false;
 			this.$parent.$settingsPanel.empty();
-			this.$imes = $( document.body ).data( 'ime' );
 			this.$parent.$settingsPanel.append( this.$template );
 			$enabledOnly = this.$template.find( '.enabled-only' );
 			if ( $.ime.preferences.isEnabled() ) {

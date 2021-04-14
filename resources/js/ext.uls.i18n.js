@@ -31,7 +31,7 @@
 	$.i18n.fallbacks = {};
 
 	/**
-	 * Load localization messags for a locale to the jquery.i18n
+	 * Load localization messages for a locale to the jquery.i18n
 	 * messagestore.
 	 * Also called by RL module ResourceLoaderULSJsonMessageModule
 	 *

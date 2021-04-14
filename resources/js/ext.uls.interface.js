@@ -151,10 +151,7 @@
 				clearTimeout( tipsyTimer );
 			} ).on( 'mouseout', function () {
 				tipsyTimer = setTimeout( hideTipsy, timeout );
-			} );
-
-			// hide the tooltip when clicked on it
-			$( '.uls-tipsy' ).on( 'click', hideTipsy );
+			} ).on( 'click', hideTipsy );
 
 			tipsyTimer = setTimeout( hideTipsy, timeout );
 		}
@@ -472,7 +469,7 @@
 				$target,
 				mw.uls.getInterlanguageListFromNodes( languageNodes ),
 				// Using this as heuristic for now. May need to reconsider later. Enables
-				// behavior sepcific to compact language links.
+				// behavior specific to compact language links.
 				!standalone
 			);
 
