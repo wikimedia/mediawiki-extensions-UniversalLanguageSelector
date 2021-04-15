@@ -14,10 +14,7 @@ module.exports = function ( grunt ) {
 				fix: grunt.option( 'fix' )
 			},
 			all: [
-				'**/*.{js,json}',
-				'!lib/**',
-				'!resources/js/ext.uls.webfonts.repository.js',
-				'!{vendor,node_modules}/**'
+				'.'
 			]
 		},
 		stylelint: {
