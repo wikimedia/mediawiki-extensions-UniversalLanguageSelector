@@ -159,10 +159,6 @@
 			tipsyTimer = setTimeout( hideTipsy, timeout );
 		}
 
-		// remove any existing popups
-		if ( ulsPopup ) {
-			ulsPopup.$element.remove();
-		}
 		if ( ulsPosition === 'interlanguage' ) {
 			if ( $ulsTrigger.offset().left > $( window ).width() / 2 ) {
 				ulsPopupPosition = 'before';
