@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Fitoschido",
+			"Willtron",
 			"Xð"
 		]
 	},
 	"uls-plang-title-languages": "Idiomas",
-	"jquery-ime-help": "Aduya"
+	"jquery-ime-help": "Aduya",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Uno más|$1 más}}"
 }
