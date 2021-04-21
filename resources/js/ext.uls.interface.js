@@ -454,12 +454,12 @@
 	 * @param {jQuery.Event} ev
 	 */
 	function loadContentLanguageSelector( ev ) {
+		var $target = $( ev.currentTarget );
 		ev.preventDefault();
 
 		mw.loader.using( 'ext.uls.mediawiki' ).then( function () {
-			var $target, parent, languageNodes, standalone, uls;
+			var parent, languageNodes, standalone, uls;
 
-			$target = $( ev.target );
 			parent = document.querySelectorAll( '.mw-portlet-lang, #p-lang' )[ 0 ];
 			languageNodes = parent ? parent.querySelectorAll( '.interlanguage-link-target' ) : [];
 			standalone = isUsingStandaloneLanguageButton();
