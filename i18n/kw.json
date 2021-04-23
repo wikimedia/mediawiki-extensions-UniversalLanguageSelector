@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"GwikorFrank",
 			"Nrowe",
 			"Xð"
 		]
@@ -43,7 +44,7 @@
 	"ext-uls-input-disable": "Dialosegi toulys ynworra",
 	"ext-uls-input-enable": "Galosegi toulys ynworra",
 	"ext-uls-input-disable-info": "Dialosegys yw toulys ynworra",
-	"ext-uls-input-settings-noime": "Nyns eus fordh ynworra vyth kavadow rag an yeth-ma.",
+	"ext-uls-input-settings-noime": "Nyns eus fordh-ynworra vyth kavadow rag an yeth ma.",
 	"ext-uls-input-disable-notification": "Dialosegys re beu toulys ynworra",
 	"ext-uls-input-disable-notification-undo": "Diswul",
 	"ext-uls-input-disable-notification-info-personal": "Hwi a yll galosegi an toulys ynworra orth termyn vyth y'n settyansow yeth.",
