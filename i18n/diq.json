@@ -61,7 +61,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Eyaranê zıwani şıma çı wext ke wazenê, şıma şenê hacetanê cıkewtışi ra feal kerê.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Eyaranê zıwani şıma şenê, hacetanê ke leweyê lista zıwani derê, feal kerê.",
 	"ext-uls-language-settings-applying": "Dezgeyeno...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|vêşêr|$1 vêşêr}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Yew zêde|$1 zêde}}",
 	"ext-uls-compact-link-info": "Zıwani pêro (hetê to û ê binan ra ke kamcin yeno hesab wa ey weçine)",
 	"prefs-languages": "Zıwani",
 	"ext-uls-compact-language-links-preference": "Teyna zıwanê ke to aleqedar kenê  [[$1|a lista zıwani]] bıkarne.",
