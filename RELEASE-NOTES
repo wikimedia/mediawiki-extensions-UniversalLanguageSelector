@@ -1,0 +1,9 @@
+== UniversalLanguageSelector 2021.04 ==
+Released at 2021-04-29.
+
+=== Noteworthy changes ===
+* Ensure ULS supports modern Vector ({{Phab|T273232}},{{Phab|T273928}})
+* Maintenance and localization updates.
+
+=== Fonts ===
+* Update Junicode to 1.002 ({{Phab|T173573}})
