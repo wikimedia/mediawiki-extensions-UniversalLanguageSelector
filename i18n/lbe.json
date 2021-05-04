@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Soul Train",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Мазру"
+	"uls-plang-title-languages": "Мазру",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ттигу ца $1}}"
 }
