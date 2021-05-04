@@ -473,6 +473,8 @@
 				!standalone
 			);
 
+			mw.hook( 'mw.uls.compact_language_links.open' ).fire();
+
 			// Trigger the click handler to open ULS once ready
 			if ( standalone ) {
 				// Provide access to display and input settings if this entry point is the single point
