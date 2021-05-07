@@ -26,7 +26,19 @@ class UniversalLanguageSelectorHooks {
 	 * Used when extension registration in use which skips the main php file
 	 */
 	public static function setVersionConstant() {
+		global $wgHooks, $wgVersion;
+
 		define( 'ULS_VERSION', '2020-07-20' );
+
+		// For MediaWiki < 1.37, there is no `user-interface-preferences` menu. We use
+		// the PersonalUrls hook to make sure the language button is added.
+		// In MediaWiki > 1.37, the personal urls was split out into multiple new menus,
+		// In the new format, the `user-interface-preferences` is the most relevant place to put
+		// this button. Using the SkinTemplateNavigation::Universal hook will ensure the button is
+		// added to the correct menu.
+		if ( version_compare( $wgVersion, '1.37', '<' ) ) {
+			$wgHooks['PersonalUrls'][] = "UniversalLanguageSelectorHooks::onPersonalUrls";
+		}
 	}
 
 	/**
@@ -168,27 +180,56 @@ class UniversalLanguageSelectorHooks {
 	 * Add some tabs for navigation for users who do not use Ajax interface.
 	 * Hook: PersonalUrls
 	 * @param array &$personal_urls
-	 * @param Title &$title
-	 * @param SkinTemplate $context SkinTemplate object providing context
+	 * @param Title $title
+	 * @param SkinTemplate $skin
 	 */
-	public static function addPersonalBarTrigger(
+	public static function onPersonalUrls( &$personal_urls, $title, SkinTemplate $skin ) {
+		$personal_urls = self::addPersonalBarTrigger(
+			$personal_urls,
+			$skin
+		);
+	}
+
+	/**
+	 * @param SkinTemplate $skin
+	 * @param array &$links
+	 */
+	public static function onSkinTemplateNavigationUniversal( SkinTemplate $skin, array &$links ) {
+		// In modern skins which separate out the user menu,
+		// e.g. Vector. (T282196)
+		// this should appear in the `user-interface-preferences` menu.
+		// For older skins not separating out the user menu this will be prepended.
+		if ( isset( $links['user-interface-preferences'] ) ) {
+			$links['user-interface-preferences'] = self::addPersonalBarTrigger(
+				$links['user-interface-preferences'],
+				$skin
+			);
+		}
+	}
+
+	/**
+	 * Add some tabs for navigation for users who do not use Ajax interface.
+	 * @param array &$personal_urls
+	 * @param SkinTemplate $context SkinTemplate object providing context
+	 * @return array of modified personal urls
+	 */
+	private static function addPersonalBarTrigger(
 		array &$personal_urls,
-		&$title,
 		SkinTemplate $context
 	) {
 		global $wgULSPosition;
 
 		if ( $wgULSPosition !== 'personal' ) {
-			return;
+			return $personal_urls;
 		}
 
 		if ( !self::isToolbarEnabled( $context->getUser() ) ) {
-			return;
+			return $personal_urls;
 		}
 
 		// The element id will be 'pt-uls'
 		$langCode = $context->getLanguage()->getCode();
-		$personal_urls = [
+		return [
 			'uls' => [
 				'text' => Language::fetchLanguageName( $langCode ),
 				'href' => '#',

@@ -25,9 +25,9 @@
 		"GetBetaFeaturePreferences": "UniversalLanguageSelectorHooks::onGetBetaFeaturePreferences",
 		"GetPreferences": "UniversalLanguageSelectorHooks::onGetPreferences",
 		"MakeGlobalVariablesScript": "UniversalLanguageSelectorHooks::addVariables",
-		"PersonalUrls": "UniversalLanguageSelectorHooks::addPersonalBarTrigger",
 		"ResourceLoaderGetConfigVars": "UniversalLanguageSelectorHooks::addConfig",
 		"SkinAfterPortlet": "UniversalLanguageSelectorHooks::onSkinAfterPortlet",
+		"SkinTemplateNavigation::Universal": "UniversalLanguageSelectorHooks::onSkinTemplateNavigationUniversal",
 		"UserGetLanguageObject": "UniversalLanguageSelectorHooks::getLanguage"
 	},
 	"APIModules": {
