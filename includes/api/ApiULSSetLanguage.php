@@ -55,7 +55,7 @@ class ApiULSSetLanguage extends ApiBase {
 		$updateUser = $user->getInstanceForUpdate();
 		$updateUser->setOption( 'language', $languageCode );
 		// Sync the DB on post-send
-		DeferredUpdates::addCallableUpdate( function () use ( $updateUser ) {
+		DeferredUpdates::addCallableUpdate( static function () use ( $updateUser ) {
 			$updateUser->saveSettings();
 		} );
 	}
