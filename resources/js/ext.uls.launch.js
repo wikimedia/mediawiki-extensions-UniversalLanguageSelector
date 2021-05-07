@@ -3,7 +3,7 @@
  */
 
 /* eslint-disable no-implicit-globals */
-var commonInterlanguageList;
+var commonInterlanguageList = null;
 
 /**
  * @param {string[]} languageCodes array of language codes available
