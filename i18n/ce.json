@@ -49,7 +49,7 @@
 	"ext-uls-input-disable": "ДӀабайа яздаран гӀирс",
 	"ext-uls-input-enable": "ДӀаэца яздаран гӀирс",
 	"ext-uls-input-disable-info": "Яздаран гӀирс дӀабайина.",
-	"ext-uls-input-settings-noime": "ХӀокху меттан раскладкаш билгалйина яц.",
+	"ext-uls-input-settings-noime": "ХӀокху меттан раскладкаш билгалйина йац.",
 	"ext-uls-input-disable-notification": "Яздаран гӀирс дӀабайина.",
 	"ext-uls-input-disable-notification-undo": "Цаоьшу",
 	"ext-uls-input-disable-notification-info-personal": "Яздаран гӀирс лело йиш ю муьлхачу хенахь мотт хуьйцу гӀирсан чохь.",
@@ -59,5 +59,5 @@
 	"ext-uls-compact-link-info": "Берриге меттанаш (дуьххьара хаьржинарш бу ахьа я кхечара лелина меттанаш)",
 	"prefs-languages": "Меттанаш",
 	"ext-uls-compact-language-links-preference": "Лелабе [[$1|компакте болу меттанийн могӀам]] хьайна оьшу меттанаш долуш.",
-	"ext-uls-compact-no-results": "Ахьа хаьржинчу маттахь иза агӀо тӀекхочуш яц."
+	"ext-uls-compact-no-results": "Ахьа хаьржинчу маттахь иза агӀо тӀекхочуш йац."
 }
