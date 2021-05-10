@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
+			"J budissin",
 			"Michawiki"
 		]
 	},
@@ -55,5 +56,11 @@
 	"ext-uls-input-disable-notification-info-personal": "Móžeš zapodawanske nastroje kóždy čas z rěčnych nastajenjow zmóžnić.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Móžeš zapodawanske nastroje kóždy čas z rěčnych nastajenjow pódla lisćiny rěčow zmóžnić.",
 	"ext-uls-language-settings-applying": "Nałožuje so...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Jedna dalša|$1 dalšej|$1 dalše|$1 dalšich}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Jedna dalša|$1 dalšej|$1 dalše|$1 dalšich}}",
+	"prefs-languages": "Rěče",
+	"ext-uls-compact-no-results": "Tuta strona njeje w požadanej rěči přistupna.",
+	"ext-uls-setlang-unknown-error": "Njeznaty zmylk",
+	"ext-uls-setlang-heading": "Rěč powjercha změnić?",
+	"ext-uls-setlang-accept": "Změnu přiwzać",
+	"ext-uls-setlang-cancel": "Njezměnić"
 }
