@@ -91,6 +91,8 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 		},
 		onVisible: function () {
 			$trigger.addClass( 'selector-open' );
+
+			mw.hook( 'mw.uls.compact_language_links.open' ).fire();
 		},
 		languageDecorator: function ( $languageLink, language ) {
 			var element = languagesObject[ language ];
