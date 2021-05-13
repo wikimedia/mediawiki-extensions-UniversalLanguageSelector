@@ -17,7 +17,7 @@
 	"descriptionmsg": "uls-desc",
 	"license-name": "GPL-2.0-or-later OR MIT",
 	"requires": {
-		"MediaWiki": ">= 1.34.0"
+		"MediaWiki": ">= 1.35.0"
 	},
 	"Hooks": {
 		"BeforePageDisplay": "UniversalLanguageSelectorHooks::addModules",
@@ -27,7 +27,7 @@
 		"MakeGlobalVariablesScript": "UniversalLanguageSelectorHooks::addVariables",
 		"PersonalUrls": "UniversalLanguageSelectorHooks::addPersonalBarTrigger",
 		"ResourceLoaderGetConfigVars": "UniversalLanguageSelectorHooks::addConfig",
-		"ResourceLoaderRegisterModules": "UniversalLanguageSelectorHooks::onResourceLoaderRegisterModules",
+		"SkinAfterPortlet": "UniversalLanguageSelectorHooks::onSkinAfterPortlet",
 		"UserGetLanguageObject": "UniversalLanguageSelectorHooks::getLanguage"
 	},
 	"APIModules": {
@@ -171,6 +171,21 @@
 			"localBasePath": "resources",
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
+		"ext.uls.ime": {
+			"localBasePath": "resources",
+			"scripts": "js/ext.uls.ime.js",
+			"dependencies": [
+				"ext.uls.common",
+				"ext.uls.preferences",
+				"ext.uls.mediawiki",
+				"ext.uls.messages",
+				"jquery.ime"
+			],
+			"messages": [
+				"uls-ime-helppage"
+			],
+			"remoteExtPath": "UniversalLanguageSelector/resources"
+		},
 		"ext.uls.displaysettings": {
 			"scripts": [
 				"js/ext.uls.inputsettings.js",
@@ -309,6 +324,32 @@
 			"skinStyles": {
 				"monobook": "css/ext.uls.pt-monobook.less"
 			},
+			"remoteExtPath": "UniversalLanguageSelector/resources"
+		},
+		"ext.uls.setlang": {
+			"localBasePath": "resources",
+			"styles": [
+				"css/ext.uls.dialog.less",
+				"css/ext.uls.setlang.less"
+			],
+			"scripts": [
+				"js/ext.uls.dialog.js",
+				"js/ext.uls.setlang.js"
+			],
+			"dependencies": [
+				"mediawiki.api",
+				"mediawiki.ui.button",
+				"mediawiki.Uri"
+			],
+			"messages": [
+				"ext-uls-setlang-error",
+				"ext-uls-setlang-unknown-error",
+				"ext-uls-setlang-heading",
+				"ext-uls-setlang-message",
+				"ext-uls-setlang-accept",
+				"ext-uls-setlang-cancel",
+				"ext-uls-setlang-loading"
+			],
 			"remoteExtPath": "UniversalLanguageSelector/resources"
 		},
 		"ext.uls.webfonts": {

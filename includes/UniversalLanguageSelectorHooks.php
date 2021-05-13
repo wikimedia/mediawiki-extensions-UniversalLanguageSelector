@@ -26,15 +26,7 @@ class UniversalLanguageSelectorHooks {
 	 * Used when extension registration in use which skips the main php file
 	 */
 	public static function setVersionConstant() {
-		global $wgHooks;
 		define( 'ULS_VERSION', '2020-07-20' );
-		// The SkinAfterPortlet hook was introduced in version >= 1.35.
-		// It is the same as BaseTemplateAfterPortlet with the exception of its parameters.
-		if ( interface_exists( MediaWiki\Skins\Hook\SkinAfterPortletHook::class ) ) {
-			$wgHooks['SkinAfterPortlet'][] = "UniversalLanguageSelectorHooks::onSkinAfterPortlet";
-		} else {
-			$wgHooks['BaseTemplateAfterPortlet'][] = "UniversalLanguageSelectorHooks::onBaseTemplateAfterPortlet";
-		}
 	}
 
 	/**
@@ -85,14 +77,8 @@ class UniversalLanguageSelectorHooks {
 		if ( $wgULSCompactLanguageLinksBetaFeature === false ) {
 			// Compact language links is a default feature in this wiki.
 			// Check user preference
-			$services = MediaWikiServices::getInstance();
-			if ( method_exists( $services, 'getUserOptionsLookup' ) ) {
-				// MW 1.35 +
-				return $services->getUserOptionsLookup()
-					->getBoolOption( $user, 'compact-language-links' );
-			} else {
-				return $user->getBoolOption( 'compact-language-links' );
-			}
+			return MediaWikiServices::getInstance()->getUserOptionsLookup()
+				->getBoolOption( $user, 'compact-language-links' );
 		}
 
 		return false;
@@ -176,63 +162,6 @@ class UniversalLanguageSelectorHooks {
 		}
 
 		$out->addModules( 'ext.uls.setlang' );
-	}
-
-	/**
-	 * @param ResourceLoader $resourceLoader
-	 */
-	public static function onResourceLoaderRegisterModules( ResourceLoader $resourceLoader ) {
-		global $wgVersion;
-
-		// Support: MediaWiki 1.34
-		$hasOldNotify = version_compare( $wgVersion, '1.35', '<' );
-
-		$tpl = [
-			'localBasePath' => dirname( __DIR__ ) . '/resources',
-			'remoteExtPath' => 'UniversalLanguageSelector/resources',
-		];
-
-		$modules = [
-			"ext.uls.ime" => $tpl + [
-				"scripts" => "js/ext.uls.ime.js",
-				"dependencies" => array_merge( [
-					"ext.uls.common",
-					"ext.uls.preferences",
-					"ext.uls.mediawiki",
-					"ext.uls.messages",
-					"jquery.ime",
-				], $hasOldNotify ? [ 'mediawiki.notify' ] : [] ),
-				"messages" => [
-					"uls-ime-helppage"
-				],
-			],
-			"ext.uls.setlang" => $tpl + [
-				"styles" => [
-					"css/ext.uls.dialog.less",
-					"css/ext.uls.setlang.less"
-				],
-				"scripts" => [
-					"js/ext.uls.dialog.js",
-					"js/ext.uls.setlang.js"
-				],
-				"dependencies" => array_merge( [
-					"mediawiki.api",
-					"mediawiki.ui.button",
-					"mediawiki.Uri"
-				], $hasOldNotify ? [ 'mediawiki.notify' ] : [] ),
-				"messages" => [
-					"ext-uls-setlang-error",
-					"ext-uls-setlang-unknown-error",
-					"ext-uls-setlang-heading",
-					"ext-uls-setlang-message",
-					"ext-uls-setlang-accept",
-					"ext-uls-setlang-cancel",
-					"ext-uls-setlang-loading"
-				],
-			],
-		];
-
-		$resourceLoader->register( $modules );
 	}
 
 	/**
@@ -491,34 +420,6 @@ class UniversalLanguageSelectorHooks {
 				'discussion-link' =>
 					'https://www.mediawiki.org/wiki/Talk:Universal_Language_Selector/Compact_Language_Links',
 			];
-		}
-	}
-
-	/**
-	 * Kept for backward compatability with MW < 1.35, and older versions of skins
-	 * such as Vector and Timeless
-	 * @param QuickTemplate $template
-	 * @param string $name
-	 * @param string &$content
-	 */
-	public static function onBaseTemplateAfterPortlet(
-		QuickTemplate $template,
-		string $name,
-		string &$content
-	) {
-		global $wgULSPosition;
-
-		if ( $wgULSPosition !== 'interlanguage' ) {
-			return;
-		}
-
-		if ( !self::isToolbarEnabled( $template->getSkin()->getUser() ) ) {
-			return;
-		}
-
-		// Set to an empty array, just to make sure that the section appears
-		if ( $template->get( 'language_urls' ) === false ) {
-			$template->set( 'language_urls', [] );
 		}
 	}
 
