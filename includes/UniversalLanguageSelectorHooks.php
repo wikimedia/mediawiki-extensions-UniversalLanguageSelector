@@ -112,6 +112,7 @@ class UniversalLanguageSelectorHooks {
 		$override = is_array( $excludedLinks ) && in_array( '*', $excludedLinks );
 		$config = [
 			'wgULSPosition' => $wgULSPosition,
+			'wgULSisCompactLinksEnabled' => self::isCompactLinksEnabled( $out->getUser() ),
 		];
 
 		// Load compact links if no mw-interlanguage-selector element is present in the page HTML.

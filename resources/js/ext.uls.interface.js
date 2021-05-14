@@ -245,6 +245,15 @@
 				!mw.config.get( 'wgULSAnonCanChangeLanguage' ) ),
 			configPosition = mw.config.get( 'wgULSPosition' );
 
+		if ( !mw.config.get( 'wgULSisCompactLinksEnabled' ) ) {
+			// The wgULSisCompactLinksEnabled flag when disabled will not render a language button to the page
+			// Skins can control where the button is placed, by adding an element with mw-interlanguage-selector to the page,
+			// the display of which is not impacted by this flag. To signal to these skins that the language button should be
+			// disabled, the class is removed.
+			$( '.mw-interlanguage-selector' ).removeClass( 'mw-interlanguage-selector' );
+			return;
+		}
+
 		if ( configPosition === 'interlanguage' ) {
 			// TODO: Refactor this block
 			// The interlanguage links section.
