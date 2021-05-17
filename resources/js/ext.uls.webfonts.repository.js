@@ -5,7 +5,7 @@
 	"base": "../data/fontrepo/fonts/",
 	"languages": {
 		"adx": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"af": [
 			"system",
@@ -51,10 +51,10 @@
 			"Siyam Rupali"
 		],
 		"bo": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"bod": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"bpy": [
 			"Siyam Rupali"
@@ -104,13 +104,13 @@
 			"OpenDyslexic"
 		],
 		"dre": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"dv": [
 			"FreeFont-Thaana"
 		],
 		"dz": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"en": [
 			"system",
@@ -169,7 +169,7 @@
 			"OpenDyslexic"
 		],
 		"goe": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"got": [
 			"system",
@@ -198,7 +198,7 @@
 			"OpenDyslexic"
 		],
 		"hut": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"id": [
 			"system",
@@ -238,10 +238,10 @@
 			"Pustaka Bali"
 		],
 		"kbg": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"khg": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"km": [
 			"KhmerOSbattambang",
@@ -251,17 +251,17 @@
 			"Suwannaphum"
 		],
 		"kte": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"lb": [
 			"system",
 			"OpenDyslexic"
 		],
 		"lbj": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"lhm": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"li": [
 			"system",
@@ -271,13 +271,13 @@
 			"Phetsarath"
 		],
 		"loy": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"luk": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"lya": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"mak": [
 			"Saweri"
@@ -297,7 +297,7 @@
 			"Pustaka Bali"
 		],
 		"muk": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"my": [
 			"TharLon",
@@ -323,10 +323,10 @@
 			"OpenDyslexic"
 		],
 		"ola": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"otb": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"pal": [
 			"Shapour"
@@ -385,10 +385,10 @@
 			"SertoUrhoy"
 		],
 		"tcn": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"thw": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"ti": [
 			"AbyssinicaSIL"
@@ -406,7 +406,7 @@
 			"OpenDyslexic"
 		],
 		"tsk": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"ur": [
 			"system",
@@ -418,14 +418,14 @@
 			"OpenDyslexic"
 		],
 		"xct": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		],
 		"yi": [
 			"system",
 			"Alef"
 		],
 		"zau": [
-			"Jomolhari"
+			"BabelStoneTibetan"
 		]
 	},
 	"fonts": {
@@ -477,6 +477,10 @@
 		"Artaxerxes": {
 			"woff": "Artaxerxes/Artaxerxes.woff?c1ed7",
 			"woff2": "Artaxerxes/Artaxerxes.woff2?7a96e"
+		},
+		"BabelStoneTibetan": {
+			"woff": "BabelStoneTibetan/BabelStoneTibetan.woff?3660c",
+			"woff2": "BabelStoneTibetan/BabelStoneTibetan.woff2?d5d9d"
 		},
 		"Boyo Gagrai": {
 			"woff2": "BoyoGagrai/BoyoGagrai.woff2?d1060"
@@ -578,10 +582,6 @@
 		"Iranian Serif": {
 			"woff": "IranianSerif/irseri.woff?d153b",
 			"woff2": "IranianSerif/irseri.woff2?2e4dd"
-		},
-		"Jomolhari": {
-			"woff": "Jomolhari/Jomolhari.woff?3a60b",
-			"woff2": "Jomolhari/Jomolhari.woff2?f448a"
 		},
 		"Junicode": {
 			"woff": "Junicode/Junicode.woff?19f4e",
