@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Bosogo",
 			"Growingup",
 			"Викиней"
 		]
@@ -32,5 +33,6 @@
 	"ext-uls-input-settings-ui-language": "Жазуу тили",
 	"ext-uls-input-settings-more-languages-tooltip": "Кошумча тилдер",
 	"jquery-ime-other-languages": "Башка тилдерде",
-	"jquery-ime-help": "Жардам"
+	"jquery-ime-help": "Жардам",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|дагы бир|дагы $1}}"
 }
