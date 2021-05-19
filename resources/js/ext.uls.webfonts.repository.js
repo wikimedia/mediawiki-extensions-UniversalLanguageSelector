@@ -5,7 +5,7 @@
 	"base": "../data/fontrepo/fonts/",
 	"languages": {
 		"adx": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"af": [
 			"system",
@@ -51,10 +51,10 @@
 			"Siyam Rupali"
 		],
 		"bo": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"bod": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"bpy": [
 			"Siyam Rupali"
@@ -104,13 +104,13 @@
 			"OpenDyslexic"
 		],
 		"dre": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"dv": [
 			"FreeFont-Thaana"
 		],
 		"dz": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"en": [
 			"system",
@@ -169,7 +169,7 @@
 			"OpenDyslexic"
 		],
 		"goe": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"got": [
 			"system",
@@ -198,7 +198,7 @@
 			"OpenDyslexic"
 		],
 		"hut": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"id": [
 			"system",
@@ -238,10 +238,10 @@
 			"Pustaka Bali"
 		],
 		"kbg": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"khg": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"km": [
 			"KhmerOSbattambang",
@@ -251,17 +251,17 @@
 			"Suwannaphum"
 		],
 		"kte": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"lb": [
 			"system",
 			"OpenDyslexic"
 		],
 		"lbj": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"lhm": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"li": [
 			"system",
@@ -271,13 +271,13 @@
 			"Phetsarath"
 		],
 		"loy": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"luk": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"lya": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"mak": [
 			"Saweri"
@@ -297,7 +297,7 @@
 			"Pustaka Bali"
 		],
 		"muk": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"my": [
 			"TharLon",
@@ -323,10 +323,10 @@
 			"OpenDyslexic"
 		],
 		"ola": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"otb": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"pal": [
 			"Shapour"
@@ -385,10 +385,10 @@
 			"SertoUrhoy"
 		],
 		"tcn": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"thw": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"ti": [
 			"AbyssinicaSIL"
@@ -406,7 +406,7 @@
 			"OpenDyslexic"
 		],
 		"tsk": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"ur": [
 			"system",
@@ -418,14 +418,14 @@
 			"OpenDyslexic"
 		],
 		"xct": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		],
 		"yi": [
 			"system",
 			"Alef"
 		],
 		"zau": [
-			"BabelStoneTibetan"
+			"BabelStoneTibetanSlim"
 		]
 	},
 	"fonts": {
@@ -478,9 +478,9 @@
 			"woff": "Artaxerxes/Artaxerxes.woff?c1ed7",
 			"woff2": "Artaxerxes/Artaxerxes.woff2?7a96e"
 		},
-		"BabelStoneTibetan": {
-			"woff": "BabelStoneTibetan/BabelStoneTibetan.woff?3660c",
-			"woff2": "BabelStoneTibetan/BabelStoneTibetan.woff2?d5d9d"
+		"BabelStoneTibetanSlim": {
+			"woff": "BabelStoneTibetanSlim/BabelStoneTibetanSlim.woff?c48ba",
+			"woff2": "BabelStoneTibetanSlim/BabelStoneTibetanSlim.woff2?46398"
 		},
 		"Boyo Gagrai": {
 			"woff2": "BoyoGagrai/BoyoGagrai.woff2?d1060"
