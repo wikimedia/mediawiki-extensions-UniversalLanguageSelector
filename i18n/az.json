@@ -3,6 +3,7 @@
 		"authors": [
 			"Dağlı95",
 			"Interfase",
+			"NMW03",
 			"Wertuose"
 		]
 	},
@@ -10,6 +11,7 @@
 	"ext-uls-select-language-settings-icon-tooltip": "Dilin təyin edilməsi",
 	"ext-uls-undo-language-tooltip-text": "Əvvəlki dil: $1",
 	"ext-uls-language-settings-preferences-link": "Daha çox dil parametri",
+	"ext-uls-display-settings-title": "Görünüş parametrləri",
 	"ext-uls-display-settings-language-tab": "Dil",
 	"ext-uls-display-settings-fonts-tab": "Şriftlər",
 	"ext-uls-display-settings-title-short": "Görünüş",
@@ -21,8 +23,16 @@
 	"ext-uls-display-settings-ui-language": "Görüntü dili",
 	"ext-uls-display-settings-anon-label": "Görüntü dili:",
 	"ext-uls-webfonts-settings-info-link": "Əlavə məlumat",
+	"ext-uls-input-settings-title": "Yazılış parametrləri",
+	"ext-uls-input-settings-desc": "Başqa dildə yazırsınız?",
+	"ext-uls-input-settings-ui-language": "Dil",
+	"ext-uls-disable-input-method": "Klaviaturanı istifadə et",
 	"ext-uls-input-settings-more-languages-tooltip": "Əlavə dillər",
 	"jquery-ime-help": "Kömək",
+	"ext-uls-input-disable": "Yazı alətlərini söndürün",
+	"ext-uls-input-enable": "Yazı alətlərini yandırın",
+	"ext-uls-input-disable-info": "Yazı alətləri söndürülüb.",
+	"ext-uls-input-disable-notification": "Yazı alətləri söndürüldü.",
 	"ext-uls-input-disable-notification-undo": "Geri qaytar",
 	"ext-uls-language-settings-applying": "Tətbiq edilir...",
 	"ext-uls-compact-link-count": "Daha {{PLURAL:$1|1 dil|$1 dil}}",
