@@ -92,7 +92,8 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 		onVisible: function () {
 			$trigger.addClass( 'selector-open' );
 
-			mw.hook( 'mw.uls.compact_language_links.open' ).fire();
+			// Note well that this hook is unstable.
+			mw.hook( 'mw.uls.compact_language_links.open' ).fire( $trigger );
 		},
 		languageDecorator: function ( $languageLink, language ) {
 			var element = languagesObject[ language ];
