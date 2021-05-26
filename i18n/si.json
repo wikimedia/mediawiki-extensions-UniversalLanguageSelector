@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Sahan.ssw",
+			"Shwetha",
 			"පසිඳු කාවින්ද"
 		]
 	},
@@ -36,5 +37,6 @@
 	"ext-uls-input-disable": "යෙදවුම් මෙවලම් අක්‍රිය කරන්න",
 	"ext-uls-input-enable": "යෙදවුම් මෙවලම් සක්‍රිය කරන්න",
 	"ext-uls-input-disable-info": "යෙදවුම් මෙවලම් අක්‍රියයි.",
-	"ext-uls-input-settings-noime": "මෙම භාෂාව සඳහා ආදාන ක්‍රම කිසිවක් ලබා ගත නොහැක."
+	"ext-uls-input-settings-noime": "මෙම භාෂාව සඳහා ආදාන ක්‍රම කිසිවක් ලබා ගත නොහැක.",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|තවද එකක්|තවත් $1 ක්}}"
 }
