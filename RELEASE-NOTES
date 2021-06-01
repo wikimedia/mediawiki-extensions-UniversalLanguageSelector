@@ -1,0 +1,5 @@
+== UniversalLanguageSelector 2021.06 ==
+Released at 2021-06-01.
+
+=== Noteworthy changes ===
+* Restore suggested languages to compact languages button. ({{Phab|T282037}})
