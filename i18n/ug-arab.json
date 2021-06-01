@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Sahran",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "تىللار"
+	"uls-plang-title-languages": "تىللار",
+	"ext-uls-compact-link-count": "يەنە {{PLURAL:$1|بىر تىل|$1 تىل}}"
 }
