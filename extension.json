@@ -128,6 +128,10 @@
 		}
 	},
 	"callback": "UniversalLanguageSelectorHooks::setVersionConstant",
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "UniversalLanguageSelector/resources"
+	},
 	"ResourceModules": {
 		"ext.uls.common": {
 			"targets": [
@@ -148,9 +152,7 @@
 				"mediawiki.cookie",
 				"mediawiki.storage",
 				"mediawiki.user"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			]
 		},
 		"ext.uls.compactlinks": {
 			"packageFiles": [
@@ -167,12 +169,9 @@
 				"ext-uls-compact-link-count",
 				"ext-uls-compact-link-info",
 				"ext-uls-compact-no-results"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			]
 		},
 		"ext.uls.ime": {
-			"localBasePath": "resources",
 			"scripts": "js/ext.uls.ime.js",
 			"dependencies": [
 				"ext.uls.common",
@@ -183,8 +182,7 @@
 			],
 			"messages": [
 				"uls-ime-helppage"
-			],
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			]
 		},
 		"ext.uls.displaysettings": {
 			"scripts": [
@@ -206,17 +204,13 @@
 				"mediawiki.ui.checkbox",
 				"mediawiki.ui.button",
 				"mediawiki.user"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			]
 		},
 		"ext.uls.geoclient": {
 			"scripts": "js/ext.uls.geoclient.js",
 			"dependencies": [
 				"mediawiki.cookie"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			]
 		},
 		"ext.uls.i18n": {
 			"targets": [
@@ -227,9 +221,7 @@
 			"dependencies": [
 				"jquery.i18n",
 				"mediawiki.util"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			]
 		},
 		"ext.uls.interface": {
 			"targets": [ "desktop", "mobile" ],
@@ -249,15 +241,11 @@
 				"ext-uls-select-language-settings-icon-tooltip",
 				"ext-uls-undo-language-tooltip-text",
 				"ext-uls-undo-language-tooltip-text-local"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			]
 		},
 		"ext.uls.interlanguage": {
 			"targets": [ "desktop", "mobile" ],
-			"styles": "css/ext.uls.interlanguage.less",
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			"styles": "css/ext.uls.interlanguage.less"
 		},
 		"ext.uls.languagenames": {
 			"class": "ResourceLoaderULSModule"
@@ -270,9 +258,7 @@
 				"ext.uls.preferences",
 				"jquery.uls.grid",
 				"mediawiki.ui.button"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			]
 		},
 		"ext.uls.mediawiki": {
 			"targets": [
@@ -288,15 +274,11 @@
 				"ext.uls.webfonts",
 				"jquery.uls.grid",
 				"mediawiki.util"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			]
 		},
 		"ext.uls.messages": {
 			"class": "ResourceLoaderULSJsonMessageModule",
-			"dependencies": "ext.uls.i18n",
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			"dependencies": "ext.uls.i18n"
 		},
 		"ext.uls.preferences": {
 			"targets": [
@@ -308,26 +290,19 @@
 				"mediawiki.api",
 				"mediawiki.user",
 				"mediawiki.storage"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			]
 		},
 		"ext.uls.preferencespage": {
-			"styles": "css/ext.uls.preferencespage.less",
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			"styles": "css/ext.uls.preferencespage.less"
 		},
 		"ext.uls.pt": {
 			"targets": [ "desktop", "mobile" ],
 			"styles": "css/ext.uls.pt.less",
-			"localBasePath": "resources",
 			"skinStyles": {
 				"monobook": "css/ext.uls.pt-monobook.less"
-			},
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			}
 		},
 		"ext.uls.setlang": {
-			"localBasePath": "resources",
 			"styles": [
 				"css/ext.uls.dialog.less",
 				"css/ext.uls.setlang.less"
@@ -349,8 +324,7 @@
 				"ext-uls-setlang-accept",
 				"ext-uls-setlang-cancel",
 				"ext-uls-setlang-loading"
-			],
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			]
 		},
 		"ext.uls.webfonts": {
 			"targets": [ "desktop", "mobile" ],
@@ -358,17 +332,13 @@
 			"dependencies": [
 				"ext.uls.preferences",
 				"jquery.client"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			]
 		},
 		"ext.uls.webfonts.fonts": {
 			"dependencies": [
 				"jquery.webfonts",
 				"ext.uls.webfonts.repository"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			]
 		},
 		"ext.uls.webfonts.mobile": {
 			"scripts": "js/ext.uls.webfonts.mobile.js",
@@ -378,18 +348,14 @@
 			"dependencies": [
 				"jquery.webfonts",
 				"ext.uls.webfonts.repository"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			]
 		},
 		"ext.uls.webfonts.repository": {
 			"scripts": "js/ext.uls.webfonts.repository.js",
 			"targets": [
 				"desktop",
 				"mobile"
-			],
-			"localBasePath": "resources",
-			"remoteExtPath": "UniversalLanguageSelector/resources"
+			]
 		},
 		"jquery.ime": {
 			"scripts": "jquery.ime/jquery.ime.js",
