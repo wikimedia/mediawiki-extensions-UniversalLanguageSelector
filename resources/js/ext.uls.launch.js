@@ -60,6 +60,9 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 			) {
 				return;
 			}
+
+			mw.hook( 'mw.uls.interface.language.change' ).fire( language );
+
 			location.href = languagesObject[ language ].href;
 		},
 		onPosition: function () {
