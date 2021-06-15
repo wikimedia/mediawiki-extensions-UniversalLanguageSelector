@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Nepaboy",
+			"SatyamMishra",
 			"Xð"
 		]
 	},
@@ -46,5 +47,6 @@
 	"ext-uls-input-disable-notification": "इनपुट औजार कुल निष्क्रिय बा",
 	"ext-uls-input-disable-notification-undo": "पूर्ववत",
 	"ext-uls-input-disable-notification-info-personal": "भाषा सेटिंग्स में जाके कभी भी रउआ इनपुट औजार के सक्रिय कर सकत बानी।",
-	"ext-uls-input-disable-notification-info-interlanguage": "भाषा सूची के आगे भाषा सेटिंग्स में जाके रउआ कभी भी इनपुट औजार के सक्रिय कर सकत बानी।"
+	"ext-uls-input-disable-notification-info-interlanguage": "भाषा सूची के आगे भाषा सेटिंग्स में जाके रउआ कभी भी इनपुट औजार के सक्रिय कर सकत बानी।",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|एगो अउरी|$1 अउरी}}"
 }
