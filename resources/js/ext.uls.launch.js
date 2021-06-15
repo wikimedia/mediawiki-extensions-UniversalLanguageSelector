@@ -61,7 +61,10 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 				return;
 			}
 
-			mw.hook( 'mw.uls.interface.language.change' ).fire( language );
+			// TODO: The name of this hook should probably be changed to reflect that it covers
+			// both the user changing their interface language and the user switching to a
+			// different language.
+			mw.hook( 'mw.uls.interface.language.change' ).fire( language, 'content-language-switcher' );
 
 			location.href = languagesObject[ language ].href;
 		},
