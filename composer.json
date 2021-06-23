@@ -14,8 +14,7 @@
 		"MIT"
 	],
 	"support": {
-		"issues": "https://phabricator.wikimedia.org/tag/mediawiki-extensions-universallanguageselector/",
-		"irc": "irc://irc.freenode.net/mediawiki-i18n"
+		"issues": "https://phabricator.wikimedia.org/tag/mediawiki-extensions-universallanguageselector/"
 	},
 	"require": {
 		"php": ">=7.1",
