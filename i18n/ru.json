@@ -77,5 +77,6 @@
 	"ext-uls-compact-no-results": "Эта страница недоступна на выбранном вами языке.",
 	"ext-uls-setlang-unknown-error": "Неизвестная ошибка",
 	"ext-uls-setlang-accept": "Подтвердить изменение",
-	"ext-uls-setlang-loading": "Применение…"
+	"ext-uls-setlang-loading": "Применение…",
+	"ext-uls-setlang-cancel": "Не менять"
 }
