@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Amara-Amaziɣ",
+			"Brahim-essaidi",
 			"Hakim1bal",
 			"ⵕⴰⵊⵉ"
 		]
@@ -18,5 +19,6 @@
 	"jquery-ime-other-languages": "ⵜⵓⵜⵍⴰⵢⵉⵏ ⵢⴰⴹⵏ",
 	"jquery-ime-help": "ⵜⵉⵡⵉⵙⵉ",
 	"ext-uls-input-disable-notification-undo": "ⵙⵔ",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ⵢⴰⵜ ⵢⴰⴹⵏ|$1 ⵢⴰⴹⵏⵉⵏ}}",
 	"prefs-languages": "ⵜⵓⵜⵍⴰⵢⵉⵏ"
 }
