@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Robin Owain",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Languages"
+	"uls-plang-title-languages": "Languages",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Un arall|$1 arall}}"
 }
