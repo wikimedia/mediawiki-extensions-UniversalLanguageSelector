@@ -42,22 +42,14 @@ class UniversalLanguageSelectorHooks {
 	}
 
 	/**
-	 * Whether ULS user toolbar (language selection and settings) is enabled.
-	 *
-	 * @param User $user
+	 * Whether user visible ULS features are enabled (language changing, input methods, web
+	 * fonts, language change undo tooltip).
 	 * @return bool
 	 */
-	private static function isToolbarEnabled( User $user ) {
-		global $wgULSEnable, $wgULSEnableAnon;
+	private static function isEnabled(): bool {
+		global $wgULSEnable;
 
-		if ( !$wgULSEnable ) {
-			return false;
-		}
-		if ( !$wgULSEnableAnon && $user->isAnon() ) {
-			return false;
-		}
-
-		return true;
+		return (bool)$wgULSEnable;
 	}
 
 	/**
@@ -130,7 +122,7 @@ class UniversalLanguageSelectorHooks {
 			$out->addModules( 'ext.uls.geoclient' );
 		}
 
-		if ( self::isToolbarEnabled( $out->getUser() ) ) {
+		if ( self::isEnabled() ) {
 			// Enable UI language selection for the user.
 			$out->addModules( 'ext.uls.interface' );
 		}
@@ -224,7 +216,7 @@ class UniversalLanguageSelectorHooks {
 			return $personal_urls;
 		}
 
-		if ( !self::isToolbarEnabled( $context->getUser() ) ) {
+		if ( !self::isEnabled() ) {
 			return $personal_urls;
 		}
 
@@ -285,7 +277,7 @@ class UniversalLanguageSelectorHooks {
 			$context->getOutput()->addVaryHeader( 'Accept-Language' );
 		}
 
-		if ( !self::isToolbarEnabled( $user ) ) {
+		if ( !self::isEnabled() ) {
 			return;
 		}
 
@@ -485,7 +477,7 @@ class UniversalLanguageSelectorHooks {
 			return;
 		}
 
-		if ( !self::isToolbarEnabled( $skin->getUser() ) ) {
+		if ( !self::isEnabled() ) {
 			return;
 		}
 

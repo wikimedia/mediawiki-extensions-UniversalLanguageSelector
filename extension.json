@@ -66,16 +66,12 @@
 			"description": "Enable language selection, compact language links, input methods and webfonts for everyone, unless the behavior is overridden by the configuration variables below. Even if false the classes and resource loader modules are registered for the use of other extensions. Language changing via cookie or setlang query parameter is not possible.",
 			"value": true
 		},
-		"ULSEnableAnon": {
-			"description": "Equivalent to $wgULSEnable for anonymous users only. Does not have any effect if $wgULSEnable is false.",
-			"value": true
-		},
 		"ULSAnonCanChangeLanguage": {
-			"description": "Allow anonymous users to change language with cookie and setlang query parameter. Do not use if you are caching anonymous page views without taking cookies into account. Does not have any effect if either of $wgULSEnable or $wgULSEnableAnon is set to false. @since 2013.04",
+			"description": "Allow anonymous users to change language with cookie and setlang query parameter. Do not use if you are caching anonymous page views without taking cookies into account. Does not have any effect if $wgULSEnable is set to false. @since 2013.04",
 			"value": true
 		},
 		"ULSLanguageDetection": {
-			"description": "Try to use preferred interface language for anonymous users. Do not use if you are caching anonymous page views without taking Accept-Language into account. Does not have any effect if any of $wgULSEnable, or $wgULSEnableAnon is set to false.",
+			"description": "Try to use preferred interface language for anonymous users. Do not use if you are caching anonymous page views without taking Accept-Language into account. Does not have any effect if $wgULSEnable is set to false.",
 			"value": true
 		},
 		"ULSIMEEnabled": {
