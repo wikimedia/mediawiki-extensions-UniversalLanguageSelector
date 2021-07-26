@@ -1,0 +1,11 @@
+== UniversalLanguageSelector 2021.07 ==
+Released at 2021-07-26.
+
+=== Noteworthy changes ===
+* '''BREAKING CHANGE''': UniversalLanguageSelector extension now requires MediaWiki 1.35 or above.
+* MODERN VECTOR: Position language menu below language button  ({{phab|T276248}})
+* Update jquery.uls and jquery.ime from upstream
+* Fix "Suggested language list not available for ULS version in new language button". ({{phab|T282037}})
+* MODERN VECTOR: Fix "ULS settings window can’t be opened with the preferences link on new Vector". ({{phab|T282956}})
+* Fix "ULS preferences tool link cannot be opened when compact languages disabled" ({{phab|T286574}})
+* Localisation updates.
