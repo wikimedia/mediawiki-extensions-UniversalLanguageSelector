@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Akamycoco",
 			"Vickylin77s"
 		]
 	},
 	"ext-uls-language-settings-cancel": "Sawaden miforic",
 	"jquery-ime-help": "o pakafana’",
-	"ext-uls-input-disable-notification-undo": " patikor"
+	"ext-uls-input-disable-notification-undo": " patikor",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|matongal ko adihay}}"
 }
