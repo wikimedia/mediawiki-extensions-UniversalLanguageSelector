@@ -3,6 +3,7 @@
 		"authors": [
 			"Andriykopanytsia",
 			"Base",
+			"DDPAT",
 			"NickK",
 			"Piramidion",
 			"RLuts",
@@ -67,7 +68,7 @@
 	"prefs-languages": "Мови",
 	"ext-uls-compact-language-links-preference": "Використовувати [[$1|компактний список мов]], з мовами, що є релевантними для Вас.",
 	"ext-uls-compact-no-results": "Ця сторінка недоступна тією мовою, якою Ви проводили пошук.",
-	"ext-uls-setlang-error": "Виникла помилка при оновленні мови, якій ви віддаєте перевагу. Помилка: $1",
+	"ext-uls-setlang-error": "Сталася помилка при оновленні мови, якій ви віддаєте перевагу. Помилка: $1",
 	"ext-uls-setlang-unknown-error": "Невідома помилка",
 	"ext-uls-setlang-message": "Посилання, за яким ви перейшли, надіслало запит на показ інтерфейсу такою мовою: <strong>$1 ($2)</strong>",
 	"ext-uls-setlang-heading": "Змінити мову інтерфейсу?",
