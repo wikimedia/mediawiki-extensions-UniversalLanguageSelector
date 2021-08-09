@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"BadDog",
 			"Conquistador"
 		]
 	},
@@ -8,5 +9,6 @@
 	"ext-uls-select-language-settings-icon-tooltip": "Postavke jezika",
 	"ext-uls-language-settings-title": "Postavke jezika",
 	"ext-uls-language-settings-cancel": "Otkaži",
-	"jquery-ime-other-languages": "Drugi jezici"
+	"jquery-ime-other-languages": "Drugi jezici",
+	"ext-uls-compact-link-count": "Još {{PLURAL:$1|1=jedan|$1}}"
 }
