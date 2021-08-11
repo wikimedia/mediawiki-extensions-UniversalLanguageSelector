@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Gmelfi",
 			"Pippinu",
 			"Xð"
@@ -48,5 +49,6 @@
 	"ext-uls-input-disable-notification": "Li strummenta di scrittura foru disabbilitati",
 	"ext-uls-input-disable-notification-undo": "Annulla",
 	"ext-uls-input-disable-notification-info-personal": "È pussibbili attivari quannegghiè li strummenta di scrittura a pàrtiri dê mpustazzioni dâ lingua.",
-	"ext-uls-input-disable-notification-info-interlanguage": "È pussibbili attivari quannegghiè li strummenta di scrittura a pàrtiri dê mpustazzioni dâ lingua, vicinu a l'alencu dê lingui."
+	"ext-uls-input-disable-notification-info-interlanguage": "È pussibbili attivari quannegghiè li strummenta di scrittura a pàrtiri dê mpustazzioni dâ lingua, vicinu a l'alencu dê lingui.",
+	"prefs-languages": "Lingui"
 }
