@@ -33,7 +33,12 @@
 	"APIModules": {
 		"languagesearch": "ApiLanguageSearch",
 		"ulslocalization": "ApiULSLocalization",
-		"ulssetlang": "ApiULSSetLanguage"
+		"ulssetlang": {
+			"class": "ApiULSSetLanguage",
+			"services": [
+				"UserOptionsManager"
+			]
+		}
 	},
 	"MessagesDirs": {
 		"UniversalLanguageSelector": [

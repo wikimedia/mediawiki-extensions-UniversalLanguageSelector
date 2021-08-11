@@ -18,10 +18,29 @@
  * @license MIT
  */
 
+use MediaWiki\User\UserOptionsManager;
+
 /**
  * @ingroup API
  */
 class ApiULSSetLanguage extends ApiBase {
+	/** @var UserOptionsManager */
+	private $userOptionsManager;
+
+	/**
+	 * @param ApiMain $main
+	 * @param string $action
+	 * @param UserOptionsManager $userOptionsManager
+	 */
+	public function __construct(
+		ApiMain $main,
+		$action,
+		UserOptionsManager $userOptionsManager
+	) {
+		parent::__construct( $main, $action );
+		$this->userOptionsManager = $userOptionsManager;
+	}
+
 	public function execute() {
 		$request = $this->getRequest();
 		if ( !$request->wasPosted() ) {
@@ -53,7 +72,7 @@ class ApiULSSetLanguage extends ApiBase {
 		}
 
 		$updateUser = $user->getInstanceForUpdate();
-		$updateUser->setOption( 'language', $languageCode );
+		$this->userOptionsManager->setOption( $updateUser, 'language', $languageCode );
 		// Sync the DB on post-send
 		DeferredUpdates::addCallableUpdate( static function () use ( $updateUser ) {
 			$updateUser->saveSettings();

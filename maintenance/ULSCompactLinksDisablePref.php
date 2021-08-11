@@ -34,7 +34,9 @@ class ULSCompactLinksDisablePref extends Maintenance {
 
 	public function execute() {
 		$dbr = wfGetDB( DB_REPLICA, 'vslow' );
-		$lbFactory = MediaWikiServices::getInstance()->getDBLoadBalancerFactory();
+		$services = MediaWikiServices::getInstance();
+		$lbFactory = $services->getDBLoadBalancerFactory();
+		$userOptionsManager = $services->getUserOptionsManager();
 
 		$really = $this->hasOption( 'really' );
 
@@ -102,7 +104,7 @@ class ULSCompactLinksDisablePref extends Maintenance {
 				$user->load( User::READ_LATEST );
 
 				if ( $really ) {
-					$user->setOption( 'compact-language-links', 0 );
+					$userOptionsManager->setOption( $user, 'compact-language-links', 0 );
 
 					$user->saveSettings();
 				}
