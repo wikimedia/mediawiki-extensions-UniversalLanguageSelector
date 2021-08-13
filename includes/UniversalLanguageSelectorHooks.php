@@ -26,7 +26,7 @@ class UniversalLanguageSelectorHooks {
 	 * Used when extension registration in use which skips the main php file
 	 */
 	public static function setVersionConstant() {
-		global $wgHooks, $wgVersion;
+		global $wgHooks;
 
 		define( 'ULS_VERSION', '2020-07-20' );
 
@@ -36,7 +36,7 @@ class UniversalLanguageSelectorHooks {
 		// In the new format, the `user-interface-preferences` is the most relevant place to put
 		// this button. Using the SkinTemplateNavigation::Universal hook will ensure the button is
 		// added to the correct menu.
-		if ( version_compare( $wgVersion, '1.37', '<' ) ) {
+		if ( version_compare( MW_VERSION, '1.37', '<' ) ) {
 			$wgHooks['PersonalUrls'][] = "UniversalLanguageSelectorHooks::onPersonalUrls";
 		}
 	}
