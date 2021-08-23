@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"ChoiChong"
+		]
+	},
+	"ext-uls-compact-link-count": "{{PLURAL:$1|他ぬ $1 口}}"
+}

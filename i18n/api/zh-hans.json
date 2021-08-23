@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"FakeGreenHand",
 			"Liuxinyu970226"
 		]
 	},
@@ -15,5 +16,9 @@
 	"apihelp-ulslocalization-summary": "获取指定语言的ULS本地化。",
 	"apihelp-ulslocalization-param-language": "语言代码。",
 	"apihelp-ulslocalization-example-1": "获得泰米尔语本地化",
-	"apihelp-ulslocalization-example-2": "获得印地语本地化"
+	"apihelp-ulslocalization-example-2": "获得印地语本地化",
+	"apihelp-ulssetlang-description": "更新用户的首选界面语言。",
+	"apihelp-ulssetlang-summary": "更新用户的首选界面语言。",
+	"apihelp-ulssetlang-param-languagecode": "首选语言代码。",
+	"apierror-ulssetlang-anon-notallowed": "匿名用户不允许修改界面语言。"
 }

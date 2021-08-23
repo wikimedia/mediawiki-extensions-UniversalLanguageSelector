@@ -9,5 +9,6 @@
 	"ext-uls-display-settings-language-tab": "Kielâ",
 	"ext-uls-language-settings-title": "Kielâasâttâsah",
 	"jquery-ime-other-languages": "Eres kielah",
-	"prefs-languages": "Kielah"
+	"prefs-languages": "Kielah",
+	"ext-uls-setlang-unknown-error": "Tubdâmettum feilâ"
 }

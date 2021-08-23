@@ -9,7 +9,8 @@
 			"Olli",
 			"Pxos",
 			"Pyscowicz",
-			"Stryn"
+			"Stryn",
+			"Yupik"
 		]
 	},
 	"uls-desc": "Tarjoaa useita tapoja kielen valitsemiseen ja kieliasetusten hienosäätöön",
@@ -65,5 +66,6 @@
 	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|muu kieli|muuta kieltä}}",
 	"prefs-languages": "Kielet",
 	"ext-uls-compact-language-links-preference": "Käytä [[$1|kompaktia kielilistaa]], joka näyttää sinulle tärkeimmät kielet.",
-	"ext-uls-compact-no-results": "Tämä sivu ei ole saatavilla etsimälläsi kielellä."
+	"ext-uls-compact-no-results": "Tämä sivu ei ole saatavilla etsimälläsi kielellä.",
+	"ext-uls-setlang-unknown-error": "Tuntematon virhe"
 }
