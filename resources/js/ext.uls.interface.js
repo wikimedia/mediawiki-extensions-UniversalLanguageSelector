@@ -439,8 +439,23 @@
 	 * @param {jQuery.Event} ev
 	 */
 	function loadContentLanguageSelector( ev ) {
-		var $target = $( ev.currentTarget );
+		var targetNode = ev.currentTarget,
+			$target = $( targetNode );
 		ev.preventDefault();
+		// Special handling for checkboxes
+		if (
+			targetNode &&
+			targetNode.tagName === 'INPUT' &&
+			targetNode.getAttribute( 'type' ) === 'checkbox'
+		) {
+			// Disabled checked status. If the ULS button is also a checkbox, we can
+			// conclude that it's using the checkbox hack.
+			// Setting checked to false disables the default behavior of that checkbox.
+			targetNode.checked = false;
+			$target.on( 'click', function () {
+				targetNode.checked = false;
+			} );
+		}
 
 		// Avoid reinitializing ULS multiple times for an element
 		if ( $target.attr( 'data-uls-loaded' ) ) {
