@@ -300,7 +300,18 @@
 			"targets": [ "desktop", "mobile" ],
 			"styles": "css/ext.uls.pt.less",
 			"skinStyles": {
-				"monobook": "css/ext.uls.pt-monobook.less"
+				"default": [
+					"css/ext.uls.pt.less",
+					"css/ext.uls.pt-default.less"
+				],
+				"vector": [
+					"css/ext.uls.pt-vector.less"
+				],
+				"monobook": [
+					"css/ext.uls.pt.less",
+					"css/ext.uls.pt-default.less",
+					"css/ext.uls.pt-monobook.less"
+				]
 			}
 		},
 		"ext.uls.setlang": {

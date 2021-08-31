@@ -1,0 +1,16 @@
+/* stylelint-disable selector-max-id */
+/* Opera for some inexplicable reason confuses right and left padding with */
+/* RTL text direction here (bug T47142). x:-o-prefocus won't match anything, */
+/* but will make other browsers ignore this rule. */
+/* stylelint-disable selector-type-no-unknown */
+x:-o-prefocus,
+body.rtl li#pt-uls {
+	/* @noflip */
+	direction: ltr;
+}
+/* stylelint-enable selector-type-no-unknown */
+
+/* Don't show it to users who disabled JS */
+.client-nojs #pt-uls {
+	display: none;
+}

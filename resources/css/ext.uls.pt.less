@@ -24,13 +24,6 @@
 	// Let the SVG image fit without cropping or stretch
 	background-size: contain;
 	padding-left: 24px;
-
-	// Certain skins upgrade this to mw-ui-button. Background and padding should not apply.
-	// e.g. Modern Vector
-	&.mw-ui-button {
-		background: none;
-		padding-left: 12px;
-	}
 }
 
 #pt-uls {
@@ -58,20 +51,4 @@
 			opacity: 0.67;
 		}
 	}
-}
-
-/* Opera for some inexplicable reason confuses right and left padding with */
-/* RTL text direction here (bug T47142). x:-o-prefocus won't match anything, */
-/* but will make other browsers ignore this rule. */
-/* stylelint-disable selector-type-no-unknown */
-x:-o-prefocus,
-body.rtl li#pt-uls {
-	/* @noflip */
-	direction: ltr;
-}
-/* stylelint-enable selector-type-no-unknown */
-
-/* Don't show it to users who disabled JS */
-.client-nojs #pt-uls {
-	display: none;
 }
