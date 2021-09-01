@@ -24,6 +24,13 @@
 	// Let the SVG image fit without cropping or stretch
 	background-size: contain;
 	padding-left: 24px;
+
+	// Certain skins upgrade this to mw-ui-button. Background and padding should not apply.
+	// e.g. Modern Vector
+	&.mw-ui-button {
+		background: none;
+		padding-left: 12px;
+	}
 }
 
 #pt-uls {

@@ -226,7 +226,11 @@ class UniversalLanguageSelectorHooks {
 			'uls' => [
 				'text' => Language::fetchLanguageName( $langCode ),
 				'href' => '#',
-				'class' => 'uls-trigger',
+				// Skin meta data to allow skin (e.g. Vector) to add icons
+				'icon' => 'wikimedia-language',
+				// Skin meta data to allow skin (e.g. Vector) to convert to button.
+				'button' => true,
+				'link-class' => [ 'uls-trigger' ],
 				'active' => true
 			]
 		] + $personal_urls;
