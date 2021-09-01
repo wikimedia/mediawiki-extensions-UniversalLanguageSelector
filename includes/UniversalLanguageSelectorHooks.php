@@ -132,10 +132,7 @@ class UniversalLanguageSelectorHooks {
 		$out->addJsConfigVars( $config );
 
 		if ( $wgULSPosition === 'personal' ) {
-			$out->addModuleStyles( [
-				'mediawiki.ui.button',
-				'ext.uls.pt'
-			] );
+			$out->addModuleStyles( 'ext.uls.pt' );
 		} else {
 			$out->addModuleStyles( 'ext.uls.interlanguage' );
 		}
@@ -229,8 +226,7 @@ class UniversalLanguageSelectorHooks {
 			'uls' => [
 				'text' => Language::fetchLanguageName( $langCode ),
 				'href' => '#',
-				'link-class' => 'mw-ui-icon mw-ui-icon-before',
-				'class' => 'uls-trigger mw-ui-button mw-ui-quiet',
+				'class' => 'uls-trigger',
 				'active' => true
 			]
 		] + $personal_urls;

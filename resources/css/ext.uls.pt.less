@@ -19,29 +19,23 @@
  * A hack to load the icon before the rest of the module is lazy-loaded.
  * Copied from jquery.uls.css with the path changed.
  */
-.uls-trigger a:before {
+.uls-trigger {
 	background: no-repeat url( ../../lib/jquery.uls/images/language.svg ) left center;
+	// Let the SVG image fit without cropping or stretch
+	background-size: contain;
+	padding-left: 24px;
 }
 
-.vector-user-links {
-	.uls-trigger {
-		// Disable additional icon on load.
-		background-image: none;
-		// Can be removed when no longer need to override rule in jquery.uls.css
-		padding-left: 12px;
-	}
-}
-
-// Vector modern = ca-uls
-// Other skins = pt-uls
 #pt-uls {
-	.mw-ui-button {
-		display: inline;
-		padding: 0;
-		border: 0;
-	}
+	padding-top: 0 !important; // stylelint-disable-line declaration-no-important
 
 	.uls-trigger {
+		background-image: none;
+		// Same values as Vector's `#p-personal li`.
+		display: inline-block;
+		padding-top: 0.5em !important; // stylelint-disable-line declaration-no-important
+		padding-left: 0;
+
 		// Putting the icon in before in order to apply `opacity`.
 		&:before {
 			content: '';
@@ -56,12 +50,6 @@
 			 // Equals `#555`, closest to `#54595d` on background-color `#fff`.
 			opacity: 0.67;
 		}
-	}
-}
-
-.skin-vector {
-	#ca-uls span {
-		font-size: 0.875em;
 	}
 }
 
