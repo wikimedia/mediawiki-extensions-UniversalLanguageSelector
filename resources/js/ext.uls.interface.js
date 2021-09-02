@@ -20,8 +20,8 @@
 ( function () {
 	'use strict';
 	var languageSettingsModules = [ 'ext.uls.displaysettings' ],
-		launchULS = require( './ext.uls.launch.js' );
-
+		launchULS = require( './ext.uls.launch.js' ),
+		ActionsMenu = require( './ext.uls.actions.menu.js' );
 	/**
 	 * Construct the display settings link
 	 *
@@ -61,6 +61,126 @@
 	function isUsingStandaloneLanguageButton() {
 		// Checking for the ULS language button id returns true for Vector, false for other skins.
 		return $( '#p-lang-btn' ).length > 0 || mw.config.get( 'wgULSDisplaySettingsInInterlanguage' );
+	}
+
+	/**
+	 * @return {jQuery}
+	 */
+	function createActionsMenuTrigger() {
+		var classes = [ 'mw-ui-button', 'mw-ui-quiet', 'uls-language-actions-button' ];
+		return $( '<button>' ).addClass( classes );
+	}
+
+	/**
+	 * @param {jQuery} actionsMenuTrigger
+	 * @param {number} menuItemsCount
+	 */
+	function setActionsMenuTriggerIconClass( actionsMenuTrigger, menuItemsCount ) {
+		var iconClass, iconClasses = {
+			single: 'uls-language-actions-button--single',
+			multiple: 'uls-language-actions-button--multiple'
+		};
+		if ( menuItemsCount > 1 ) {
+			iconClass = iconClasses.multiple;
+		} else {
+			iconClass = iconClasses.single;
+		}
+		iconClasses = Object.keys( iconClasses ).map( function ( key ) {
+			return iconClasses[ key ];
+		} );
+		// reset icon classes
+		// The following classes are being removed here (if present):
+		// * uls-language-actions-button--multiple
+		// * uls-language-actions-button--single
+		actionsMenuTrigger.removeClass( iconClasses );
+		// One of the following classes are being added here:
+		// * uls-language-actions-button--multiple
+		// OR
+		// * uls-language-actions-button--single
+		actionsMenuTrigger.addClass( iconClass );
+	}
+
+	/**
+	 * @param {jQuery} $element
+	 * @param {Function} onCloseHandler
+	 * @param {Object} uls
+	 */
+	function openLanguageSettings( $element, onCloseHandler, uls ) {
+		mw.loader.using( languageSettingsModules ).then( function () {
+			$element.languagesettings( {
+				defaultModule: 'display',
+				onClose: onCloseHandler,
+				onPosition: uls.position.bind( uls ),
+				onVisible: uls.hide.bind( uls )
+			} ).trigger( 'click' );
+		} );
+	}
+	/**
+	 * Add language actions menu
+	 *
+	 * @param {Object} uls The ULS object
+	 */
+	function addActionsMenuTrigger( uls ) {
+		var actionsMenuDialog;
+
+		function openActionsMenuEventHandler( event ) {
+			event.stopPropagation();
+
+			function onMenuClose() {
+				actionsMenuDialog.hide();
+				uls.show();
+			}
+			openLanguageSettings( $( event.target ), onMenuClose, uls );
+		}
+
+		var languageSettingsMenuItem = {
+			name: 'languageSettings',
+			icon: 'settings',
+			text: $.i18n( 'ext-uls-actions-menu-language-settings-item-label' ),
+			handler: openActionsMenuEventHandler
+		};
+
+		require( './ext.uls.actions.menu.items.registry.js' );
+		var actionItemsRegistry = mw.uls.ActionsMenuItemsRegistry;
+		actionItemsRegistry.register( languageSettingsMenuItem );
+		// first hide #uls-settings-block div since it's unused, and it causes
+		// an unwanted extra border to show up at the bottom of the menu
+		uls.$menu.find( '#uls-settings-block' ).eq( 0 ).hide();
+
+		var $actionsMenuTrigger = createActionsMenuTrigger();
+		setActionsMenuTriggerIconClass( $actionsMenuTrigger, actionItemsRegistry.size() );
+
+		function registerTriggerListener() {
+			$actionsMenuTrigger.off( 'click' );
+			$actionsMenuTrigger.on( 'click', function () {
+				var menuItemsLength = actionItemsRegistry.size();
+
+				if ( menuItemsLength === 1 ) {
+					openLanguageSettings( $actionsMenuTrigger, uls.show.bind( uls ), uls );
+					$actionsMenuTrigger.off( 'click' );
+				} else if ( menuItemsLength > 1 ) {
+					actionsMenuDialog = actionsMenuDialog || new ActionsMenu( {
+						actions: actionItemsRegistry.getItems(),
+						onPosition: uls.position.bind( uls ),
+						onClose: uls.show.bind( uls )
+					} );
+					actionsMenuDialog.render();
+					uls.hide();
+				}
+			} );
+		}
+		function onActionItemAdded( item ) {
+			var itemsLength = actionItemsRegistry.size();
+			setActionsMenuTriggerIconClass( $actionsMenuTrigger, itemsLength );
+			registerTriggerListener();
+			if ( actionsMenuDialog ) {
+				actionsMenuDialog.renderAction( item );
+			}
+		}
+		actionItemsRegistry.on( 'register', onActionItemAdded );
+		uls.$menu.append( $actionsMenuTrigger );
+
+		registerTriggerListener();
 	}
 
 	/**
@@ -495,9 +615,8 @@
 				// Provide access to display and input settings if this entry point is the single
 				// point of access to all language settings.
 				uls = $target.data( 'uls' );
-				loadDisplayAndInputSettings( uls ).always( function () {
-					$target.trigger( 'click' );
-				} );
+				addActionsMenuTrigger( uls );
+				$target.trigger( 'click' );
 			} else {
 				$target.trigger( 'click' );
 			}

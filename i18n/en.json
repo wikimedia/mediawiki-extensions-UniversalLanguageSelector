@@ -72,5 +72,7 @@
 	"ext-uls-setlang-heading": "Change interface language?",
 	"ext-uls-setlang-accept": "Accept change",
 	"ext-uls-setlang-loading": "Applying...",
-	"ext-uls-setlang-cancel": "Don't change"
+	"ext-uls-setlang-cancel": "Don't change",
+	"ext-uls-actions-menu-header": "More options",
+	"ext-uls-actions-menu-language-settings-item-label": "Open language settings"
 }

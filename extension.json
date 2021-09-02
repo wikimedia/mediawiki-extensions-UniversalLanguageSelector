@@ -243,20 +243,30 @@
 			"targets": [ "desktop", "mobile" ],
 			"packageFiles": [
 				"js/ext.uls.interface.js",
-				"js/ext.uls.launch.js"
+				"js/ext.uls.launch.js",
+				"js/ext.uls.actions.menu.js",
+				"js/ext.uls.actions.menu.item.js",
+				"js/ext.uls.actions.menu.items.registry.js"
 			],
-			"styles": "css/ext.uls.interface.less",
+			"styles": [
+				"css/ext.uls.interface.less",
+				"css/ext.uls.actions.menu.less"
+			],
 			"dependencies": [
 				"mediawiki.jqueryMsg",
 				"mediawiki.storage",
 				"mediawiki.user",
-				"ext.uls.webfonts"
+				"ext.uls.webfonts",
+				"oojs-ui-widgets",
+				"oojs-ui.styles.icons-interactions"
 			],
 			"messages": [
 				"uls-plang-title-languages",
 				"ext-uls-select-language-settings-icon-tooltip",
 				"ext-uls-undo-language-tooltip-text",
-				"ext-uls-undo-language-tooltip-text-local"
+				"ext-uls-undo-language-tooltip-text-local",
+				"ext-uls-actions-menu-language-settings-item-label",
+				"ext-uls-actions-menu-header"
 			]
 		},
 		"ext.uls.interlanguage": {

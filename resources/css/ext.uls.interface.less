@@ -36,6 +36,23 @@
 	}
 }
 
+.mw-ui-button.uls-language-actions-button {
+	position: absolute;
+	bottom: 0;
+	// set a value that doesn't cause overlap with scrollbar
+	right: 16px;
+	background: center transparent no-repeat;
+	min-width: unset;
+
+	&--single {
+		background-image: url( ../images/cog.svg );
+	}
+
+	&--multiple {
+		background-image: url( ../images/ellipsis.svg );
+	}
+}
+
 .uls-tipsy.uls-tipsy {
 	z-index: 1000;
 }
