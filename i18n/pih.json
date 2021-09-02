@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"MinecraftAustralia",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Laenghwij"
+	"uls-plang-title-languages": "Laenghwij",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Wan mor|$1 mor}}"
 }
