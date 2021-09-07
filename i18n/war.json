@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"MinecraftAustralia",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Mga yinaknan"
+	"uls-plang-title-languages": "Mga yinaknan",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Isa pa|$1 pa}}"
 }
