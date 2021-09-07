@@ -442,12 +442,19 @@
 		var $target = $( ev.currentTarget );
 		ev.preventDefault();
 
+		// Avoid reinitializing ULS multiple times for an element
+		if ( $target.attr( 'data-uls-loaded' ) ) {
+			return;
+		}
+
 		mw.loader.using( 'ext.uls.mediawiki' ).then( function () {
 			var parent, languageNodes, standalone, uls;
 
 			parent = document.querySelectorAll( '.mw-portlet-lang, #p-lang' )[ 0 ];
 			languageNodes = parent ? parent.querySelectorAll( '.interlanguage-link-target' ) : [];
 			standalone = isUsingStandaloneLanguageButton();
+
+			$target.attr( 'data-uls-loaded', true );
 
 			// Setup click handler for ULS
 			launchULS(
@@ -483,7 +490,8 @@
 			// if there are many languages. Warning: Both this module and ext.uls.compactlinks
 			// module may run simultaneously. Using event delegation to avoid race conditions where
 			// the trigger may be created after this code.
-			$( document ).one( 'click', '.mw-interlanguage-selector', loadContentLanguageSelector );
+			$( document ).on( 'click', '.mw-interlanguage-selector', loadContentLanguageSelector );
+
 		}
 	}
 
