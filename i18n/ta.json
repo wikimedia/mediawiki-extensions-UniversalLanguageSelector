@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Balajijagadesh",
+			"Kanags",
 			"Karthi.dr",
 			"Logicwiki",
 			"MinecraftAustralia",
@@ -55,6 +56,6 @@
 	"ext-uls-input-disable-notification-info-personal": "உள்ளீட்டுக் கருவிகளை எந்நேரமும் மொழி அமைப்புக்களில் செயலாக்கலாம்.",
 	"ext-uls-input-disable-notification-info-interlanguage": "உள்ளீட்டுக் கருவிகளை எந்நேரத்திலும் மொழிப்பட்டியலிற்கு அடுத்ததாக உள்ள மொழி அமைப்புக்களில் செயலாக்கலாம்.",
 	"ext-uls-language-settings-applying": "செயற்படுத்தப்படுகிறது...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|ஒரு மணி|$1 மணிகள்}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|மேலும் ஒன்று|மேலும் $1}}",
 	"prefs-languages": "மொழிகள்"
 }
