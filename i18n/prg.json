@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nērtiks Jōrgesuns"
+		]
+	},
+	"ext-uls-compact-link-count": "{{PLURAL:$1|$1 tūls}}"
+}
