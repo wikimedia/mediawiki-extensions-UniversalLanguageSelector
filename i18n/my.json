@@ -58,5 +58,9 @@
 	"ext-uls-compact-link-info": "ဘာသာစကား အားလုံး (သင်နှင့် အခြားသူများ၏ ယေဘုယျ ရွေးချယ်ချက်များမှ အစောပိုင်း ရွေးချယ်မှုများ)",
 	"prefs-languages": "ဘာသာစကားများ",
 	"ext-uls-compact-language-links-preference": "သင့်အတွက် ဆီလျော်သော ဘာသာစကားများ ပါဝင်သည့် [[$1|ချုံ့ထားသော ဘာသာစကား စာရင်း]] တစ်ခုကို အသုံးပြုပါ။",
-	"ext-uls-compact-no-results": "သင်ရှာဖွေသော ဘာသာစကားတွင် ဤစာမျက်နှာအား မရရှိနိုင်ပါ။"
+	"ext-uls-compact-no-results": "သင်ရှာဖွေသော ဘာသာစကားတွင် ဤစာမျက်နှာအား မရရှိနိုင်ပါ။",
+	"ext-uls-setlang-unknown-error": "အမည်မသိအမှား",
+	"ext-uls-setlang-accept": "ပြောင်းလဲမှုကို လက်ခံရန်",
+	"ext-uls-setlang-loading": "သတ်မှတ်နေသည်...",
+	"ext-uls-setlang-cancel": "မပြောင်းလဲပါနှင့်"
 }
