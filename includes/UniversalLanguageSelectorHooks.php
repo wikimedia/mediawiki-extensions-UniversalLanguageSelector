@@ -18,6 +18,7 @@
  * @license MIT
  */
 
+use MediaWiki\Extension\BetaFeatures\BetaFeatures;
 use MediaWiki\MediaWikiServices;
 
 class UniversalLanguageSelectorHooks {
