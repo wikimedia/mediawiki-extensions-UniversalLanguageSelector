@@ -23,9 +23,6 @@ use MediaWiki\MediaWikiServices;
 
 class UniversalLanguageSelectorHooks {
 
-	/**
-	 * Used when extension registration in use which skips the main php file
-	 */
 	public static function setVersionConstant() {
 		global $wgHooks;
 
