@@ -346,24 +346,20 @@
 				"jquery.client"
 			]
 		},
-		"ext.uls.webfonts.fonts": {
-			"dependencies": [
-				"jquery.webfonts",
-				"ext.uls.webfonts.repository"
-			]
-		},
 		"ext.uls.webfonts.mobile": {
 			"scripts": "js/ext.uls.webfonts.mobile.js",
 			"targets": [
 				"mobile"
 			],
 			"dependencies": [
-				"jquery.webfonts",
 				"ext.uls.webfonts.repository"
 			]
 		},
 		"ext.uls.webfonts.repository": {
-			"scripts": "js/ext.uls.webfonts.repository.js",
+			"scripts": [
+				"../lib/jquery.webfonts/src/jquery.webfonts.js",
+				"js/ext.uls.webfonts.repository.js"
+			],
 			"targets": [
 				"desktop",
 				"mobile"
@@ -415,15 +411,6 @@
 				"mobile"
 			],
 			"styles": "jquery.uls/css/jquery.uls.grid.css",
-			"localBasePath": "lib",
-			"remoteExtPath": "UniversalLanguageSelector/lib"
-		},
-		"jquery.webfonts": {
-			"scripts": "jquery.webfonts/src/jquery.webfonts.js",
-			"targets": [
-				"desktop",
-				"mobile"
-			],
 			"localBasePath": "lib",
 			"remoteExtPath": "UniversalLanguageSelector/lib"
 		},

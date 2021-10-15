@@ -122,7 +122,7 @@
 		 */
 		setupWebFonts: function () {
 			var d = $.Deferred();
-			mw.loader.using( [ 'ext.uls.webfonts.fonts' ] ).then( function () {
+			mw.loader.using( [ 'ext.uls.webfonts.repository' ] ).then( function () {
 				if ( this.isWebFontsEnabled ) {
 					mw.webfonts.setup();
 				}
