@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Weather Top Wizard"
+		]
+	},
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Taha fakalahi|$1 fakalahi}}"
+}

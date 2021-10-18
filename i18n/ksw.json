@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jaeminlovetaejoon",
 			"SawJaemin"
 		]
 	},
+	"ext-uls-undo-language-tooltip-text": "$1ကျိာ် မ့ၢ်ကျိာ်လၢညါတကျိာ်",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|အါထီၣ် တခါ|အါထီၣ် $1}}"
 }
