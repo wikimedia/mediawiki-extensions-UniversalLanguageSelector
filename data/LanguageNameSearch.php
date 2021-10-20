@@ -41,6 +41,11 @@ class LanguageNameSearch {
 		$results = [];
 		$searchKey = mb_strtolower( $searchKey );
 
+		if ( mb_strlen( $searchKey ) > 100 ) {
+			// Searching with long search keys for language names is not useful. So, return early.
+			return [];
+		}
+
 		// Always prefer exact language code match
 		if ( Language::isKnownLanguageTag( $searchKey ) ) {
 			$name = mb_strtolower( Language::fetchLanguageName( $searchKey, $userLanguage ) );
