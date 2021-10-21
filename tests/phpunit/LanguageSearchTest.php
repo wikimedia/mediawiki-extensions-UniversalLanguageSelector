@@ -118,6 +118,7 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 				'hsn' => 'chinese — isi-xiang chinese',
 				'lzh' => 'chinese — literary chinese',
 				'cdo' => 'chinese — min dong chinese',
+				'cdo-hani' => 'chinese — min dong chinese (hanji)'
 			]
 			],
 			[ 'finnisj', [
