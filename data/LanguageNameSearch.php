@@ -29,7 +29,7 @@ class LanguageNameSearch {
 	 * The returned language name for autocompletion is the first one that
 	 * matches in this list:
 	 * 1: exact match in [user, autonym, any other language]
-	 * 2: prefix match in [user, autonum, any other language]
+	 * 2: prefix match in [user, autonym, any other language]
 	 * 3: inline match in [user, autonym, any other language]
 	 *
 	 * @param string $searchKey
