@@ -341,6 +341,7 @@
 			],
 			"dependencies": [
 				"mediawiki.api",
+				"mediawiki.jqueryMsg",
 				"mediawiki.ui.button",
 				"mediawiki.Uri"
 			],

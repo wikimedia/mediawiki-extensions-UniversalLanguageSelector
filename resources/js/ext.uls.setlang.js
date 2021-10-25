@@ -31,12 +31,12 @@
 	}
 
 	function getMessage( languageName, languageCode ) {
-		return $( '<p>' ).html(
+		return $( '<p>' ).append(
 			mw.message(
 				'ext-uls-setlang-message',
 				languageName,
 				languageCode
-			).parse()
+			).parseDom()
 		);
 	}
 
