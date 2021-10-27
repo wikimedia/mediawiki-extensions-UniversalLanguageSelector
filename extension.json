@@ -20,15 +20,26 @@
 		"MediaWiki": ">= 1.35.0"
 	},
 	"Hooks": {
-		"BeforePageDisplay": "UniversalLanguageSelectorHooks::addModules",
-		"EnterMobileMode": "UniversalLanguageSelectorHooks::onEnterMobileMode",
-		"GetBetaFeaturePreferences": "UniversalLanguageSelectorHooks::onGetBetaFeaturePreferences",
-		"GetPreferences": "UniversalLanguageSelectorHooks::onGetPreferences",
-		"MakeGlobalVariablesScript": "UniversalLanguageSelectorHooks::addVariables",
-		"ResourceLoaderGetConfigVars": "UniversalLanguageSelectorHooks::addConfig",
-		"SkinAfterPortlet": "UniversalLanguageSelectorHooks::onSkinAfterPortlet",
-		"SkinTemplateNavigation::Universal": "UniversalLanguageSelectorHooks::onSkinTemplateNavigationUniversal",
-		"UserGetLanguageObject": "UniversalLanguageSelectorHooks::getLanguage"
+		"BeforePageDisplay": "main",
+		"EnterMobileMode": "main",
+		"GetBetaFeaturePreferences": "main",
+		"GetPreferences": "main",
+		"MakeGlobalVariablesScript": "main",
+		"ResourceLoaderGetConfigVars": "main",
+		"SkinAfterPortlet": "main",
+		"SkinTemplateNavigation::Universal": "main",
+		"UserGetLanguageObject": "main"
+	},
+	"HookHandlers": {
+		"main": {
+			"class": "UniversalLanguageSelectorHooks",
+			"services": [
+				"MainConfig",
+				"UserOptionsLookup",
+				"StatsdDataFactory",
+				"LanguageNameUtils"
+			]
+		}
 	},
 	"APIModules": {
 		"languagesearch": "ApiLanguageSearch",
