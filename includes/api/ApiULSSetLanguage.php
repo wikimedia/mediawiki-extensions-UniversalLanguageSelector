@@ -72,6 +72,7 @@ class ApiULSSetLanguage extends ApiBase {
 		}
 
 		$updateUser = $user->getInstanceForUpdate();
+		// @phan-suppress-next-line SecurityCheck-SQLInjection False positive caused by T290563
 		$this->userOptionsManager->setOption( $updateUser, 'language', $languageCode );
 		// Sync the DB on post-send
 		DeferredUpdates::addCallableUpdate( static function () use ( $updateUser ) {
