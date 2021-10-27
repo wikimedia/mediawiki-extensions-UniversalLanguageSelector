@@ -18,10 +18,28 @@
  * @license MIT
  */
 
+use MediaWiki\Languages\LanguageNameUtils;
+
 /**
  * @ingroup API
  */
 class ApiULSLocalization extends ApiBase {
+	/** @var LanguageNameUtils */
+	private $languageNameUtils;
+
+	/**
+	 * @param ApiMain $main
+	 * @param string $action
+	 * @param LanguageNameUtils $languageNameUtils
+	 */
+	public function __construct(
+		ApiMain $main,
+		$action,
+		LanguageNameUtils $languageNameUtils
+	) {
+		parent::__construct( $main, $action );
+		$this->languageNameUtils = $languageNameUtils;
+	}
 
 	public function execute() {
 		$this->getMain()->setCacheMode( 'public' );
@@ -29,7 +47,7 @@ class ApiULSLocalization extends ApiBase {
 
 		$params = $this->extractRequestParams();
 		$language = $params['language'];
-		if ( !Language::isValidCode( $language ) ) {
+		if ( !$this->languageNameUtils->isValidCode( $language ) ) {
 			$this->dieWithError( [ 'apierror-invalidlang', 'language' ], 'invalidlanguage' );
 		}
 		$contents = ULSJsonMessageLoader::getMessages( $language );

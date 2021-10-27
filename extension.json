@@ -32,7 +32,12 @@
 	},
 	"APIModules": {
 		"languagesearch": "ApiLanguageSearch",
-		"ulslocalization": "ApiULSLocalization",
+		"ulslocalization": {
+			"class": "ApiULSLocalization",
+			"services": [
+				"LanguageNameUtils"
+			]
+		},
 		"ulssetlang": {
 			"class": "ApiULSSetLanguage",
 			"services": [
