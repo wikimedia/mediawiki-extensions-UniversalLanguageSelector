@@ -1,0 +1,10 @@
+== UniversalLanguageSelector 2021.10 ==
+Released at 2021-10-28.
+
+=== Noteworthy changes ===
+* '''SECURITY''': Language name search: Avoid searching for very long search
+keys ([[gerrit:c/mediawiki/extensions/UniversalLanguageSelector/+/732274|Gerrit]], [[phab:T293749|Phabricator]])
+* Improve support for the new Vector Skin
+* Remove configuration <code>ULSEnableAnon</code> ([[gerrit:c/mediawiki/extensions/UniversalLanguageSelector/+/707229|Gerrit]]) 
+* Add support for multiple ULS buttons ([[gerrit:c/mediawiki/extensions/UniversalLanguageSelector/+/719325|Gerrit]])
+* Localisation and maintenance updates.
