@@ -60,6 +60,7 @@
 	"ext-uls-compact-language-links-preference": "သင့်အတွက် ဆီလျော်သော ဘာသာစကားများ ပါဝင်သည့် [[$1|ချုံ့ထားသော ဘာသာစကား စာရင်း]] တစ်ခုကို အသုံးပြုပါ။",
 	"ext-uls-compact-no-results": "သင်ရှာဖွေသော ဘာသာစကားတွင် ဤစာမျက်နှာအား မရရှိနိုင်ပါ။",
 	"ext-uls-setlang-unknown-error": "အမည်မသိအမှား",
+	"ext-uls-setlang-heading": "အသွင်အပြင်ဘာသာစကားကို ပြောင်းလဲမည်လော။",
 	"ext-uls-setlang-accept": "ပြောင်းလဲမှုကို လက်ခံရန်",
 	"ext-uls-setlang-loading": "သတ်မှတ်နေသည်...",
 	"ext-uls-setlang-cancel": "မပြောင်းလဲပါနှင့်"
