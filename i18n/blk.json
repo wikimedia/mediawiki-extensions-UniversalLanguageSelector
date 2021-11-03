@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Khun Kt",
 			"咽頭べさ"
 		]
 	},
@@ -10,7 +11,7 @@
 	"ext-uls-undo-language-tooltip-text": "အဝ်ႏ $1 ပြောင်ꩻလုဲင်ႏထိုꩻ ဘာႏသာႏငဝ်းငွါ",
 	"ext-uls-undo-language-tooltip-text-local": "ဝီခီယိုအတာႏ ဘာႏသာႏငဝ်းငွါ ပြောင်ꩻလုဲင်ႏထိုꩻလဲဉ်းသွူ။ အီႏပြောင်ꩻလုဲင်ႏ ဝီခီကားကအဝ်ႏ ဘာႏသာႏငဝ်းငွါတာႏ စဲစ်ဆေꩻသွော့  [[Special:GlobalPreferences|ဂလိုဗယ် လွိုက်ရွေꩻခရာႏဖုံႏ]]ယိုသြ။",
 	"ext-uls-language-settings-preferences-link": "ထဲင်းယင်း ဘာႏသာႏငဝ်းငွါ အပွိုင်အဆင်ဖုံႏ",
-	"uls-betafeature-label": "မာꩻအဲဉျနခါꩻဒါန ဘာနသာနငဝျးငှါလိဉျ့ဖုံႏ",
+	"uls-betafeature-label": "မာꩻအဲဉ်ႏ ဘာႏသာႏငဝ်းငွါလိဉ့်ဖုံႏ",
 	"uls-betafeature-desc": "တောမ်ႏနာꩻ ဆွိုက်စပ်မုꩻကအဝ်ႏဒါႏ ဘာႏသာႏငဝ်းငွါတောမ်ႏ ဘာႏသာႏငဝ်းငွါစာႏရင်ꩻဖုံႏယို အွောန်ႏနယ်သွော့ ဗာႏသိဉ်းအဒွောင်ႏသြ။",
 	"ext-uls-display-settings-title": "အွောန်ႏနယ် အပွိုင်အဆင်ဖုံႏ",
 	"ext-uls-display-settings-language-tab": "ဘာႏသာႏငဝ်းငွါ",
