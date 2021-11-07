@@ -702,8 +702,8 @@
 			"woff2": "NuosuSIL/NuosuSIL.woff2?223bb"
 		},
 		"OpenDyslexic": {
-			"woff": "OpenDyslexic/OpenDyslexic-Regular.woff?7a21f",
-			"woff2": "OpenDyslexic/OpenDyslexic-Regular.woff2?104a3",
+			"woff": "OpenDyslexic/OpenDyslexic-Regular.woff?e7081",
+			"woff2": "OpenDyslexic/OpenDyslexic-Regular.woff2?209dd",
 			"variants": {
 				"bold": "OpenDyslexic Bold",
 				"bolditalic": "OpenDyslexic BoldItalic",
@@ -712,19 +712,19 @@
 		},
 		"OpenDyslexic Bold": {
 			"fontweight": "bold",
-			"woff": "OpenDyslexic/OpenDyslexic-Bold.woff?75b90",
-			"woff2": "OpenDyslexic/OpenDyslexic-Bold.woff2?42307"
+			"woff": "OpenDyslexic/OpenDyslexic-Bold.woff?cfd3b",
+			"woff2": "OpenDyslexic/OpenDyslexic-Bold.woff2?df553"
 		},
 		"OpenDyslexic BoldItalic": {
 			"fontweight": "bold",
 			"fontstyle": "italic",
-			"woff": "OpenDyslexic/OpenDyslexic-BoldItalic.woff?570d3",
-			"woff2": "OpenDyslexic/OpenDyslexic-BoldItalic.woff2?12f7e"
+			"woff": "OpenDyslexic/OpenDyslexic-BoldI-talic.woff",
+			"woff2": "OpenDyslexic/OpenDyslexic-Bold-Italic.woff2?b08af"
 		},
 		"OpenDyslexic Italic": {
 			"fontstyle": "italic",
-			"woff": "OpenDyslexic/OpenDyslexic-Italic.woff?9fa06",
-			"woff2": "OpenDyslexic/OpenDyslexic-Italic.woff2?14d96"
+			"woff": "OpenDyslexic/OpenDyslexic-Italic.woff?999a0",
+			"woff2": "OpenDyslexic/OpenDyslexic-Italic.woff2?7415e"
 		},
 		"OskiEast": {
 			"woff": "OskiEast/oskie.woff?10d59",
