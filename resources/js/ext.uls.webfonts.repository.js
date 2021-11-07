@@ -250,6 +250,10 @@
 			"Nokora Regular",
 			"Suwannaphum"
 		],
+		"ks": [
+			"system",
+			"AwamiNastaliq"
+		],
 		"kte": [
 			"BabelStoneTibetanSlim"
 		],
@@ -410,6 +414,7 @@
 		],
 		"ur": [
 			"system",
+			"AwamiNastaliq",
 			"Hussaini Nastaleeq",
 			"NafeesWeb"
 		],
@@ -477,6 +482,10 @@
 		"Artaxerxes": {
 			"woff": "Artaxerxes/Artaxerxes.woff?c1ed7",
 			"woff2": "Artaxerxes/Artaxerxes.woff2?7a96e"
+		},
+		"AwamiNastaliq": {
+			"woff": "AwamiNastaliq/AwamiNastaliq-Regular.woff?84ee4",
+			"woff2": "AwamiNastaliq/AwamiNastaliq-Regular.woff2?226c1"
 		},
 		"BabelStoneTibetanSlim": {
 			"woff": "BabelStoneTibetanSlim/BabelStoneTibetanSlim.woff?c48ba",
