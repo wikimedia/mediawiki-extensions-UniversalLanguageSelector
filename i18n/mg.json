@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jagwar",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Fiteny"
+	"uls-plang-title-languages": "Fiteny",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Iray fanampiny|$1 fanampiny}}"
 }
