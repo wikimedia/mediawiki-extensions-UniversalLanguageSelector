@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\MediaWikiServices;
+
 /**
  * Cross-Language Language name search
  *
@@ -46,9 +49,11 @@ class LanguageNameSearch {
 			return [];
 		}
 
+		$languageNameUtils = MediaWikiServices::getInstance()->getLanguageNameUtils();
+
 		// Always prefer exact language code match
-		if ( Language::isKnownLanguageTag( $searchKey ) ) {
-			$name = mb_strtolower( Language::fetchLanguageName( $searchKey, $userLanguage ) );
+		if ( $languageNameUtils->isKnownLanguageTag( $searchKey ) ) {
+			$name = mb_strtolower( $languageNameUtils->getLanguageName( $searchKey, $userLanguage ) );
 			// Check if language code is a prefix of the name
 			if ( strpos( $name, $searchKey ) === 0 ) {
 				$results[$searchKey] = $name;
@@ -79,8 +84,8 @@ class LanguageNameSearch {
 				// Once we find a match, figure out the best name to display to the user
 				// If $userLanguage is not provided (null), it is the same as autonym
 				$candidates = [
-					mb_strtolower( Language::fetchLanguageName( $code, $userLanguage ) ),
-					mb_strtolower( Language::fetchLanguageName( $code, null ) ),
+					mb_strtolower( $languageNameUtils->getLanguageName( $code, $userLanguage ) ),
+					mb_strtolower( $languageNameUtils->getLanguageName( $code, null ) ),
 					$name
 				];
 
