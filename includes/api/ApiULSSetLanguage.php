@@ -18,6 +18,7 @@
  * @license MIT
  */
 
+use MediaWiki\Languages\LanguageNameUtils;
 use MediaWiki\User\UserOptionsManager;
 use Wikimedia\ParamValidator\ParamValidator;
 
@@ -27,19 +28,24 @@ use Wikimedia\ParamValidator\ParamValidator;
 class ApiULSSetLanguage extends ApiBase {
 	/** @var UserOptionsManager */
 	private $userOptionsManager;
+	/** @var LanguageNameUtils */
+	private $languageNameUtils;
 
 	/**
 	 * @param ApiMain $main
 	 * @param string $action
 	 * @param UserOptionsManager $userOptionsManager
+	 * @param LanguageNameUtils $languageNameUtils
 	 */
 	public function __construct(
 		ApiMain $main,
 		$action,
-		UserOptionsManager $userOptionsManager
+		UserOptionsManager $userOptionsManager,
+		LanguageNameUtils $languageNameUtils
 	) {
 		parent::__construct( $main, $action );
 		$this->userOptionsManager = $userOptionsManager;
+		$this->languageNameUtils = $languageNameUtils;
 	}
 
 	public function execute() {
@@ -49,7 +55,7 @@ class ApiULSSetLanguage extends ApiBase {
 		}
 
 		$languageCode = $request->getText( 'languagecode' );
-		if ( !Language::isSupportedLanguage( $languageCode ) ) {
+		if ( !$this->languageNameUtils->isSupportedLanguage( $languageCode ) ) {
 			$this->dieWithError(
 				[ 'apierror-invalidlang', $this->encodeParamName( 'languagecode' ) ]
 			);
