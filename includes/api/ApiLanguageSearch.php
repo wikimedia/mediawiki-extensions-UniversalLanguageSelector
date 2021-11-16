@@ -18,6 +18,8 @@
  * @license MIT
  */
 
+use Wikimedia\ParamValidator\ParamValidator;
+
 /**
  * @ingroup API
  */
@@ -34,12 +36,12 @@ class ApiLanguageSearch extends ApiBase {
 	public function getAllowedParams() {
 		return [
 			'search' => [
-				ApiBase::PARAM_REQUIRED => true
+				ParamValidator::PARAM_REQUIRED => true
 			],
 			'typos' => [
-				ApiBase::PARAM_REQUIRED => false,
-				ApiBase::PARAM_TYPE => 'integer',
-				ApiBase::PARAM_DFLT => 1
+				ParamValidator::PARAM_REQUIRED => false,
+				ParamValidator::PARAM_TYPE => 'integer',
+				ParamValidator::PARAM_DEFAULT => 1
 			],
 		];
 	}

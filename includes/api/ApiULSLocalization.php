@@ -19,6 +19,7 @@
  */
 
 use MediaWiki\Languages\LanguageNameUtils;
+use Wikimedia\ParamValidator\ParamValidator;
 
 /**
  * @ingroup API
@@ -66,8 +67,8 @@ class ApiULSLocalization extends ApiBase {
 	public function getAllowedParams() {
 		return [
 			'language' => [
-				ApiBase::PARAM_REQUIRED => true,
-				ApiBase::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_REQUIRED => true,
+				ParamValidator::PARAM_TYPE => 'string',
 			],
 		];
 	}

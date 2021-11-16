@@ -19,6 +19,7 @@
  */
 
 use MediaWiki\User\UserOptionsManager;
+use Wikimedia\ParamValidator\ParamValidator;
 
 /**
  * @ingroup API
@@ -83,7 +84,7 @@ class ApiULSSetLanguage extends ApiBase {
 	public function getAllowedParams() {
 		return [
 			'languagecode' => [
-				ApiBase::PARAM_REQUIRED => true,
+				ParamValidator::PARAM_REQUIRED => true,
 			]
 		];
 	}
