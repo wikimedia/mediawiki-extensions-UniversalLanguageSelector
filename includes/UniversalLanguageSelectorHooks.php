@@ -136,7 +136,7 @@ class UniversalLanguageSelectorHooks implements
 	 * Hook: BeforePageDisplay
 	 */
 	public function onBeforePageDisplay( $out, $skin ): void {
-		$unsupportedSkins = [ 'minerva' ];
+		$unsupportedSkins = [ 'minerva', 'apioutput' ];
 		if ( in_array( $skin->getSkinName(), $unsupportedSkins ) ) {
 			return;
 		}
