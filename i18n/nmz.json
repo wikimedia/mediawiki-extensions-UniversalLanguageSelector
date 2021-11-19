@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"GastonJeremiah"
+		]
+	},
+	"ext-uls-compact-link-count": "{{PLURAL:$1|faht|$1 faht}}"
+}
