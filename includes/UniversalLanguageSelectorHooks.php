@@ -169,8 +169,8 @@ class UniversalLanguageSelectorHooks implements
 			$out->addModules( 'ext.uls.interface' );
 		}
 
-		// This is added here, and not in addConfig to allow skins and extensions to vary it
-		// For example, ContentTranslation special pages depend on being able to change it.
+		// This is added here, and not in onResourceLoaderGetConfigVars to allow skins and extensions
+		// to vary it. For example, ContentTranslation special pages depend on being able to change it.
 		$out->addJsConfigVars( $config );
 
 		if ( $this->config->get( 'ULSPosition' ) === 'personal' ) {
