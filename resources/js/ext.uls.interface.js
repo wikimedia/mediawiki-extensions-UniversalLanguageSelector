@@ -320,8 +320,7 @@
 		var $trigger = $( '.uls-trigger' );
 		var clickHandler;
 
-		var anonMode = ( mw.user.isAnon() && !mw.config.get( 'wgULSAnonCanChangeLanguage' ) );
-		if ( anonMode ) {
+		if ( !userCanChangeLanguage() ) {
 			clickHandler = function ( e ) {
 				var languagesettings = $trigger.data( 'languagesettings' );
 
