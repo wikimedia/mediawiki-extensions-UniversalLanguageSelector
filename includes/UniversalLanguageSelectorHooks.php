@@ -143,9 +143,10 @@ class UniversalLanguageSelectorHooks implements
 		// Soft dependency to Wikibase client. Don't enable CLL if links are managed manually.
 		$excludedLinks = $out->getProperty( 'noexternallanglinks' );
 		$override = is_array( $excludedLinks ) && in_array( '*', $excludedLinks );
+		$isCompactLinksEnabled = $this->isCompactLinksEnabled( $out->getUser() );
 		$config = [
 			'wgULSPosition' => $this->config->get( 'ULSPosition' ),
-			'wgULSisCompactLinksEnabled' => $this->isCompactLinksEnabled( $out->getUser() ),
+			'wgULSisCompactLinksEnabled' => $isCompactLinksEnabled,
 		];
 
 		// Load compact links if no mw-interlanguage-selector element is present in the page HTML.
@@ -153,7 +154,7 @@ class UniversalLanguageSelectorHooks implements
 		// using the class as the heuristic.
 		// Note if the element is rendered by the skin, its assumed that no collapsing is needed.
 		// See T264824 for more information.
-		if ( !$override && $this->isCompactLinksEnabled( $out->getUser() ) &&
+		if ( !$override && $isCompactLinksEnabled &&
 			strpos( $out->getHTML(), 'mw-interlanguage-selector' ) === false
 		) {
 			$out->addModules( 'ext.uls.compactlinks' );
