@@ -126,6 +126,7 @@
 			"description": "Array of jQuery selectors of elements on which IME must not be enabled. @since 2013.07",
 			"value": [
 				"#wpCaptchaWord",
+				".ace_text-input",
 				".ve-ce-surface-paste",
 				".ve-ce-surface-readOnly [contenteditable]"
 			]
