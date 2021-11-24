@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jaeminlovetaejoon",
+			"SawJaemin"
+		]
+	},
+	"ext-uls-select-language-settings-icon-tooltip": "ကျိာ် စဲတ့ၢ်",
+	"ext-uls-undo-language-tooltip-text": "$1ကျိာ် မ့ၢ်ကျိာ်လၢညါတကျိာ်",
+	"ext-uls-language-settings-preferences-link": "ကျိာ် စဲတ့ၢ်တဖၣ် အါထီၣ်",
+	"ext-uls-language-settings-title": "ကျိာ် စဲတ့ၢ်",
+	"ext-uls-display-settings-ui-language": "ကျိာ်ပာ်ဖျါ",
+	"ext-uls-display-settings-anon-label": "ကျိာ်ပာ်ဖျါ -",
+	"ext-uls-input-settings-title": "တၢ်ဟ့ၣ်နုၤ စဲတ့ၢ်",
+	"jquery-ime-help": "တၢ်မၤစၢၤ",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|အါထီၣ် တခါ|အါထီၣ် $1}}",
+	"ext-uls-compact-link-info": "ကျိာ်ခဲလၢာ် (တၢ်ဃုထၢလၢနၤဒီးပှအဂၤသ့ၣ်တဖၣ်အတၢ်ထၢစိလီၤကတၢၢ်)"
+}

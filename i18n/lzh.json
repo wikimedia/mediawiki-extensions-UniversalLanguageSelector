@@ -3,11 +3,12 @@
 		"authors": [
 			"Itsmine",
 			"Jason924tw",
-			"Xð"
+			"Xð",
+			"列维劳德"
 		]
 	},
 	"uls-plang-title-languages": "語言",
 	"ext-uls-display-settings-language-tab": "語",
-	"ext-uls-compact-link-count": "尚有$1",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|尚有$1}}",
 	"ext-uls-compact-link-info": "外文"
 }

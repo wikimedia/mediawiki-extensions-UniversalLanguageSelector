@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Noktonissian"
+		]
+	},
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ᨳᩯ᩠ᨾ 1 ᨽᩣᩈᩣ|ᨳᩯ᩠ᨾ $1 ᨽᩣᩈᩣ}}",
+	"ext-uls-setlang-unknown-error": "ᨾᩦᨤ᩠ᩅᩣ᩠ᨾᨹᩥ᩠ᨯᨽᩖᩣ᩠ᨯᨴᩦ᩵ᨷᩴᩁᩪ᩶ᨲᩫ᩠᩶ᨶᩉᩮ᩠ᨲᩩ",
+	"ext-uls-setlang-cancel": "ᩀ᩵ᩣᨻᩱᨸᩖ᩠᩵ᨿᩁᨴ᩠ᩅ᩠ᨿ"
+}
