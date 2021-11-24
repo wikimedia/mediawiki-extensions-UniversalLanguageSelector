@@ -73,27 +73,38 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 			// Default positioning of jquery.uls is middle of the screen under the trigger.
 			// This code aligns it under the trigger and to the trigger edge depending on which
 			// side of the page the trigger is - should work automatically for both LTR and RTL.
-			var offset, height, width;
+			var isInVectorStickyHeader, offset, height, width, positionCSS;
+			// T295391 Used to add fixed positioning for Vector sticky header.
+			isInVectorStickyHeader = $trigger.attr( 'id' ) === 'p-lang-btn-sticky-header';
 			// These are for the trigger.
-			offset = $trigger.offset();
+			offset = ( isInVectorStickyHeader ) ?
+				$trigger.get( 0 ).getBoundingClientRect() :
+				$trigger.offset();
 			width = $trigger.outerWidth();
 			height = $trigger.outerHeight();
 
 			if ( offset.left + ( width / 2 ) > $( window ).width() / 2 ) {
 				// Midpoint of the trigger is on the right side of the viewport.
-				return {
+				positionCSS = {
 					// Right edge of the dialog aligns with the right edge of the trigger.
 					right: $( window ).width() - ( offset.left + width ),
 					top: offset.top + height
 				};
 			} else {
 				// Midpoint of the trigger is on the left side of the viewport.
-				return {
+				positionCSS = {
 					// Left edge of the dialog aligns with the left edge of the trigger.
 					left: offset.left,
 					top: offset.top + height
 				};
 			}
+
+			if ( isInVectorStickyHeader ) {
+				positionCSS.zIndex = 5;
+				positionCSS.position = 'fixed';
+			}
+
+			return positionCSS;
 		},
 		onVisible: function () {
 			$trigger.addClass( 'selector-open' );
