@@ -175,6 +175,7 @@ PHP;
 		// Remove newlines after =>s
 		$data = preg_replace( '/(=>)\s+(\[)/m', '\1 \2', $data );
 		// Convert spaces to tabs. Since we are not top-level need more tabs.
+		$data = preg_replace( '/^      /m', "\t\t\t\t", $data );
 		$data = preg_replace( '/^    /m', "\t\t\t", $data );
 		$data = preg_replace( '/^  /m', "\t\t", $data );
 
