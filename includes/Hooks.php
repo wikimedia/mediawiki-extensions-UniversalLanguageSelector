@@ -18,6 +18,14 @@
  * @license MIT
  */
 
+namespace UniversalLanguageSelector;
+
+use Babel;
+use Config;
+use ExtensionRegistry;
+use Html;
+use IBufferingStatsdDataFactory;
+use IContextSource;
 use MediaWiki\Extension\BetaFeatures\BetaFeatures;
 use MediaWiki\Hook\BeforePageDisplayHook;
 use MediaWiki\Hook\MakeGlobalVariablesScriptHook;
@@ -28,11 +36,18 @@ use MediaWiki\Preferences\Hook\GetPreferencesHook;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderGetConfigVarsHook;
 use MediaWiki\Skins\Hook\SkinAfterPortletHook;
 use MediaWiki\User\UserOptionsLookup;
+use MobileContext;
+use OutputPage;
+use RequestContext;
+use Skin;
+use SkinTemplate;
+use Title;
+use User;
 
 /**
  * @phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
  */
-class UniversalLanguageSelectorHooks implements
+class Hooks implements
 	BeforePageDisplayHook,
 	PersonalUrlsHook,
 	UserGetLanguageObjectHook,
@@ -84,7 +99,7 @@ class UniversalLanguageSelectorHooks implements
 		// this button. Using the SkinTemplateNavigation::Universal hook will ensure the button is
 		// added to the correct menu.
 		if ( version_compare( MW_VERSION, '1.37', '<' ) ) {
-			$wgHooks['PersonalUrls'][] = "UniversalLanguageSelectorHooks::onPersonalUrls";
+			$wgHooks['PersonalUrls'][] = "UniversalLanguageSelector\\Hooks::onPersonalUrls";
 		}
 	}
 

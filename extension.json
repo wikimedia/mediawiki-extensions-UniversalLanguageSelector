@@ -32,7 +32,7 @@
 	},
 	"HookHandlers": {
 		"main": {
-			"class": "UniversalLanguageSelectorHooks",
+			"class": "UniversalLanguageSelector\\Hooks",
 			"services": [
 				"MainConfig",
 				"UserOptionsLookup",
@@ -42,15 +42,15 @@
 		}
 	},
 	"APIModules": {
-		"languagesearch": "ApiLanguageSearch",
+		"languagesearch": "UniversalLanguageSelector\\Api\\ApiLanguageSearch",
 		"ulslocalization": {
-			"class": "ApiULSLocalization",
+			"class": "UniversalLanguageSelector\\Api\\ApiULSLocalization",
 			"services": [
 				"LanguageNameUtils"
 			]
 		},
 		"ulssetlang": {
-			"class": "ApiULSSetLanguage",
+			"class": "UniversalLanguageSelector\\Api\\ApiULSSetLanguage",
 			"services": [
 				"UserOptionsManager",
 				"LanguageNameUtils"
@@ -64,16 +64,11 @@
 		]
 	},
 	"AutoloadClasses": {
-		"ApiLanguageSearch": "includes/api/ApiLanguageSearch.php",
-		"ApiULSLocalization": "includes/api/ApiULSLocalization.php",
-		"ApiULSSetLanguage": "includes/api/ApiULSSetLanguage.php",
-		"FontRepoCompiler": "includes/FontRepoCompiler.php",
 		"LanguageNameSearch": "data/LanguageNameSearch.php",
-		"LanguageNameSearchData": "data/LanguageNameSearchData.php",
-		"ResourceLoaderULSJsonMessageModule": "includes/ResourceLoaderULSJsonMessageModule.php",
-		"ResourceLoaderULSModule": "includes/ResourceLoaderULSModule.php",
-		"ULSJsonMessageLoader": "includes/ULSJsonMessageLoader.php",
-		"UniversalLanguageSelectorHooks": "includes/UniversalLanguageSelectorHooks.php"
+		"LanguageNameSearchData": "data/LanguageNameSearchData.php"
+	},
+	"AutoloadNamespaces": {
+		"UniversalLanguageSelector\\": "includes/"
 	},
 	"DefaultUserOptions": {
 		"uls-preferences": "",
@@ -146,7 +141,7 @@
 			"value": false
 		}
 	},
-	"callback": "UniversalLanguageSelectorHooks::setVersionConstant",
+	"callback": "UniversalLanguageSelector\\Hooks::setVersionConstant",
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
 		"remoteExtPath": "UniversalLanguageSelector/resources"
@@ -267,7 +262,7 @@
 			"styles": "css/ext.uls.interlanguage.less"
 		},
 		"ext.uls.languagenames": {
-			"class": "ResourceLoaderULSModule"
+			"class": "UniversalLanguageSelector\\ResourceLoaderULSModule"
 		},
 		"ext.uls.languagesettings": {
 			"scripts": "js/ext.uls.languagesettings.js",
@@ -296,7 +291,7 @@
 			]
 		},
 		"ext.uls.messages": {
-			"class": "ResourceLoaderULSJsonMessageModule",
+			"class": "UniversalLanguageSelector\\ResourceLoaderULSJsonMessageModule",
 			"dependencies": "ext.uls.i18n"
 		},
 		"ext.uls.preferences": {

@@ -18,7 +18,13 @@
  * @license MIT
  */
 
+namespace UniversalLanguageSelector\Api;
+
+use ApiBase;
+use ApiFormatRaw;
+use ApiMain;
 use MediaWiki\Languages\LanguageNameUtils;
+use UniversalLanguageSelector\ULSJsonMessageLoader;
 use Wikimedia\ParamValidator\ParamValidator;
 
 /**

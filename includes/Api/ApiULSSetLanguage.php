@@ -18,6 +18,11 @@
  * @license MIT
  */
 
+namespace UniversalLanguageSelector\Api;
+
+use ApiBase;
+use ApiMain;
+use DeferredUpdates;
 use MediaWiki\Languages\LanguageNameUtils;
 use MediaWiki\User\UserOptionsManager;
 use Wikimedia\ParamValidator\ParamValidator;
@@ -79,7 +84,6 @@ class ApiULSSetLanguage extends ApiBase {
 		}
 
 		$updateUser = $user->getInstanceForUpdate();
-		// @phan-suppress-next-line SecurityCheck-SQLInjection False positive caused by T290563
 		$this->userOptionsManager->setOption( $updateUser, 'language', $languageCode );
 		// Sync the DB on post-send
 		DeferredUpdates::addCallableUpdate( static function () use ( $updateUser ) {

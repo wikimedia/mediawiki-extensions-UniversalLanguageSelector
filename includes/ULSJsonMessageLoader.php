@@ -19,6 +19,10 @@
  * @since 2013.11
  */
 
+namespace UniversalLanguageSelector;
+
+use Language;
+
 class ULSJsonMessageLoader {
 	/**
 	 * Returns all message files that are used to load messages for the given

@@ -19,6 +19,13 @@
  * @license MIT
  */
 
+namespace UniversalLanguageSelector;
+
+use Language;
+use ResourceLoader;
+use ResourceLoaderContext;
+use ResourceLoaderModule;
+
 /**
  * ResourceLoader module for UniversalLanguageSelector
  */

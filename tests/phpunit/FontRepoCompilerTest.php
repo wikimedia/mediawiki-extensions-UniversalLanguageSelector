@@ -2,10 +2,10 @@
 
 namespace UniversalLanguageSelector\Tests;
 
-use FontRepoCompiler;
+use UniversalLanguageSelector\FontRepoCompiler;
 
 /**
- * @covers \FontRepoCompiler
+ * @covers \UniversalLanguageSelector\FontRepoCompiler
  *
  * @license GPL-2.0-or-later
  * @author Thiemo Kreuz

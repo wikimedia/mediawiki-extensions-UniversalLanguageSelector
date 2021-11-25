@@ -2,10 +2,10 @@
 
 namespace UniversalLanguageSelector\Tests;
 
-use ULSJsonMessageLoader;
+use UniversalLanguageSelector\ULSJsonMessageLoader;
 
 /**
- * @covers \ULSJsonMessageLoader
+ * @covers \UniversalLanguageSelector\ULSJsonMessageLoader
  *
  * @license GPL-2.0-or-later
  * @author Thiemo Kreuz

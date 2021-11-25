@@ -18,6 +18,10 @@
  * @license MIT
  */
 
+namespace UniversalLanguageSelector\Api;
+
+use ApiBase;
+use LanguageNameSearch;
 use Wikimedia\ParamValidator\ParamValidator;
 
 /**

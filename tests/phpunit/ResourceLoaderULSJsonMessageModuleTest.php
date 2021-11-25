@@ -2,10 +2,10 @@
 
 namespace UniversalLanguageSelector\Tests;
 
-use ResourceLoaderULSJsonMessageModule;
+use UniversalLanguageSelector\ResourceLoaderULSJsonMessageModule;
 
 /**
- * @covers \ResourceLoaderULSJsonMessageModule
+ * @covers \UniversalLanguageSelector\ResourceLoaderULSJsonMessageModule
  *
  * @license GPL-2.0-or-later
  * @author Thiemo Kreuz

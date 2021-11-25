@@ -2,10 +2,10 @@
 
 namespace UniversalLanguageSelector\Tests;
 
-use ResourceLoaderULSModule;
+use UniversalLanguageSelector\ResourceLoaderULSModule;
 
 /**
- * @covers \ResourceLoaderULSModule
+ * @covers \UniversalLanguageSelector\ResourceLoaderULSModule
  *
  * @license GPL-2.0-or-later
  * @author Thiemo Kreuz

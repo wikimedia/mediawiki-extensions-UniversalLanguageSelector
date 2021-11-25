@@ -7,6 +7,12 @@
  * @author Santhosh Thottingal
  */
 
+namespace UniversalLanguageSelector;
+
+use ResourceLoaderContext;
+use ResourceLoaderModule;
+use Xml;
+
 /**
  * ResourceLoader module for client-side loading of json-based localization.
  */

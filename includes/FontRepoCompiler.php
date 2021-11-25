@@ -1,7 +1,12 @@
 <?php
 
+namespace UniversalLanguageSelector;
+
+use OutputPage;
+
 /**
  * This class parses font specification ini files to a central list.
+ *
  * @author Niklas Laxström
  * @since 2016.04
  */
