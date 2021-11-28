@@ -339,8 +339,8 @@ class UniversalLanguageSelectorHooks implements
 		if (
 			// uselang can be used for temporary override of language preference
 			$request->getText( 'uselang' ) ||
-			// Registered user: use preferences
-			!$user->isAnon()
+			// Registered user: use preferences, only when safe to load - T267445
+			( $user->isSafeToLoad() && $user->isRegistered() )
 		) {
 			return;
 		}
