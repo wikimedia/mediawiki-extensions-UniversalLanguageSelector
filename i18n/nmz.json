@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"GastonJeremiah"
 		]
 	},
-	"ext-uls-compact-link-count": "{{PLURAL:$1|faht|$1 faht}}"
+	"uls-plang-title-languages": "Laam",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Faht|$1 faht}}"
 }
