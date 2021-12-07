@@ -16,5 +16,6 @@
 	"ext-uls-webfonts-settings-info-link": "Altris informazions",
 	"ext-uls-input-settings-more-languages-tooltip": "Altris lenghis",
 	"jquery-ime-other-languages": "Altris lenghis",
-	"jquery-ime-help": "Jutori"
+	"jquery-ime-help": "Jutori",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Une altre|$1 altris}}"
 }

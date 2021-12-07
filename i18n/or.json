@@ -47,5 +47,6 @@
 	"ext-uls-input-disable-notification": "ଇନପୁଟ ଟୁଲ ଅଚଳ କରାଯାଇଛି",
 	"ext-uls-input-disable-notification-undo": "ପଛକୁ ଫେରିବା",
 	"ext-uls-input-disable-notification-info-personal": "ଭାଷା ସେଟିଙ୍ଗରୁ ଇନପୁଟ ଟୁଲ ସବୁବେଳେ ସଚଳ କରିପାରିବେ ।",
-	"ext-uls-input-disable-notification-info-interlanguage": "ଭାଷା ସେଟିଙ୍ଗରୁ ଇନପୁଟ ଟୁଲ ସବୁବେଳେ ସଚଳ କରିପାରିବେ ଓ ଭାଷା ବାଛିପାରିବେ ।"
+	"ext-uls-input-disable-notification-info-interlanguage": "ଭାଷା ସେଟିଙ୍ଗରୁ ଇନପୁଟ ଟୁଲ ସବୁବେଳେ ସଚଳ କରିପାରିବେ ଓ ଭାଷା ବାଛିପାରିବେ ।",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ଆଉ ଗୋଟେ|$1 ଅଧିକ}}"
 }

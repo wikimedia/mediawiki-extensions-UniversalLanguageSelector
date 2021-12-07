@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ukabia"
+			"Ukabia",
+			"Uzoma Ozurumba"
 		]
 	},
 	"ext-uls-language-settings-cancel": "Hapụ̀",
 	"jquery-ime-other-languages": "Asụ̀sụ̀ ndị ọ̀zọ",
-	"ext-uls-input-disable-notification-undo": "Me la àzụ"
+	"ext-uls-input-disable-notification-undo": "Me la àzụ",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|otu ọzọ|$1 ọzọ}}"
 }

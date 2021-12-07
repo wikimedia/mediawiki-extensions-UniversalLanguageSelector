@@ -9,13 +9,15 @@
 			"Yfdyh000",
 			"Zhangjintao",
 			"Zhuyifei1999",
-			"沈澄心"
+			"沈澄心",
+			"Tranve"
 		]
 	},
 	"uls-desc": "为用户提供多种方法来选择语言和调整语言设置",
 	"uls-plang-title-languages": "语言",
 	"ext-uls-select-language-settings-icon-tooltip": "语言设置",
 	"ext-uls-undo-language-tooltip-text": "语言已更改自$1",
+	"ext-uls-undo-language-tooltip-text-local": "本wiki的语言已更改。检查您的[[Special:GlobalPreferences|全域参数设置]]以更改所有wiki的语言。",
 	"ext-uls-language-settings-preferences-link": "更多语言设置",
 	"uls-betafeature-label": "紧凑语言链接",
 	"uls-betafeature-desc": "显示语言列表的简短版本，这些语言与您的语言相关。",
@@ -65,10 +67,13 @@
 	"ext-uls-compact-link-count": "还有$1种语言",
 	"ext-uls-compact-link-info": "所有语言（来自您和其他人共同选择的初始选项）",
 	"prefs-languages": "语言",
-	"ext-uls-compact-language-links-preference": "使用[[$1|紧凑的语言列表]]，它包含与您有关的语言。",
+	"ext-uls-compact-language-links-preference": "使用[[$1|紧凑的语言列表]]，该列表包含与您相关的语言。",
 	"ext-uls-compact-no-results": "此页面在您搜索的语言中不可用。",
+	"ext-uls-setlang-error": "更新您的首选语言时出错。错误：$1",
 	"ext-uls-setlang-unknown-error": "未知错误",
+	"ext-uls-setlang-message": "您点击的链接要求用<strong>$1($2)</strong>显示界面",
 	"ext-uls-setlang-heading": "更改界面语言？",
+	"ext-uls-setlang-accept": "接受更改",
 	"ext-uls-setlang-loading": "正在应用...",
 	"ext-uls-setlang-cancel": "不更改"
 }

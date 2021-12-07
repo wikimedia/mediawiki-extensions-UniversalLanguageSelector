@@ -3,7 +3,8 @@
 		"authors": [
 			"Gmelfi",
 			"Pippinu",
-			"Xð"
+			"Xð",
+			"Ajeje Brazorf"
 		]
 	},
 	"uls-plang-title-languages": "Lingui",
@@ -24,6 +25,7 @@
 	"ext-uls-display-settings-anon-label": "Lingua di visualizzazioni:",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (come lu cuntinutu)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Trasi]] pi silizziunari na lingua sparti pô minù.",
+	"ext-uls-webfonts-settings-info-link": "Chiossai nfurmazzioni",
 	"ext-uls-webfonts-select-for": "Selezziona tipu di carattiri per $1",
 	"ext-uls-webfonts-select-for-ui-info": "Tipu di carattiri usatu pâ ntirfaccia utenti",
 	"ext-uls-webfonts-select-for-content-info": "Tipu di caratteri usatu pô cuntinutu",
@@ -48,5 +50,10 @@
 	"ext-uls-input-disable-notification": "Li strummenta di scrittura foru disabbilitati",
 	"ext-uls-input-disable-notification-undo": "Annulla",
 	"ext-uls-input-disable-notification-info-personal": "È pussibbili attivari quannegghiè li strummenta di scrittura a pàrtiri dê mpustazzioni dâ lingua.",
-	"ext-uls-input-disable-notification-info-interlanguage": "È pussibbili attivari quannegghiè li strummenta di scrittura a pàrtiri dê mpustazzioni dâ lingua, vicinu a l'alencu dê lingui."
+	"ext-uls-input-disable-notification-info-interlanguage": "È pussibbili attivari quannegghiè li strummenta di scrittura a pàrtiri dê mpustazzioni dâ lingua, vicinu a l'alencu dê lingui.",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Un'àutra|Àutre $1}}",
+	"prefs-languages": "Lingui",
+	"ext-uls-setlang-unknown-error": "Erruri scanusciutu",
+	"ext-uls-setlang-heading": "Cancia la lingua dâ ntirfaccia?",
+	"ext-uls-setlang-cancel": "Nun canciari"
 }

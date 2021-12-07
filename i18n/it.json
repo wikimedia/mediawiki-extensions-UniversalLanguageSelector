@@ -7,7 +7,8 @@
 			"Macofe",
 			"Matteocng",
 			"Nemo bis",
-			"Raoli"
+			"Raoli",
+			"Sakretsu"
 		]
 	},
 	"uls-desc": "Fornisce agli utenti diversi modi di selezionare una lingua e sistemare le impostazioni della lingua",
@@ -64,6 +65,7 @@
 	"ext-uls-compact-link-info": "Tutte le lingue (selezione iniziale tra le scelte comuni tue e degli altri)",
 	"prefs-languages": "Lingue",
 	"ext-uls-compact-language-links-preference": "Utilizza un [[$1|elenco ridotto di lingue]], con le lingue per te rilevanti.",
+	"ext-uls-compact-no-results": "La pagina non è disponibile nella lingua che hai cercato.",
 	"ext-uls-setlang-unknown-error": "Errore sconosciuto",
 	"ext-uls-setlang-cancel": "Non modificare"
 }

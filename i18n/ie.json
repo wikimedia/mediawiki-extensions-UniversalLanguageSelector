@@ -2,9 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Mithridates",
-			"Xð"
+			"Xð",
+			"Renan"
 		]
 	},
 	"uls-plang-title-languages": "Lingues",
+	"jquery-ime-help": "Auxilie",
+	"ext-uls-input-disable-notification-undo": "Anullar",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Un plu|$1 plu}}"
 }

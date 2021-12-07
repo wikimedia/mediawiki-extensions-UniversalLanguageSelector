@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tofeiku"
+		]
+	},
+	"uls-desc": "ممبري ڤڠݢونا ببراڤ چارا مميليه بهاس دان مڽسوايکن تتڤن بهاس",
+	"uls-plang-title-languages": "بهاس",
+	"ext-uls-select-language-settings-icon-tooltip": "تتڤن بهاس",
+	"ext-uls-undo-language-tooltip-text": "بهاس دأوبه درڤد $1",
+	"ext-uls-language-settings-preferences-link": "لبيه تتڤن بهاس",
+	"ext-uls-display-settings-title": "تتڤن ڤاڤرن",
+	"ext-uls-display-settings-language-tab": "بهاس",
+	"ext-uls-display-settings-fonts-tab": "فون",
+	"ext-uls-display-settings-title-short": "ڤاڤرن",
+	"ext-uls-language-settings-title": "تتڤن بهاس",
+	"ext-uls-language-settings-cancel": "بطل",
+	"ext-uls-display-settings-font-settings": "تتڤن فون",
+	"ext-uls-display-settings-ui-language": "بهاس ڤاڤرن",
+	"ext-uls-display-settings-anon-label": "بهاس ڤاڤرن:",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (سام سڤرتي کاندوڠن)",
+	"ext-uls-webfonts-settings-title": "موات تورون فون اڤابيلا دڤرلوکن",
+	"ext-uls-webfonts-system-font": "فون سيستم",
+	"ext-uls-back-to-display-settings": "کمبالي کتتڤن ڤاڤرن",
+	"ext-uls-input-settings-title": "تتڤن اينڤوت",
+	"ext-uls-input-settings-title-short": "اينڤوت",
+	"ext-uls-input-settings-desc": "منوليس دالم بهاس يڠ برلاءينن؟",
+	"ext-uls-input-settings-ui-language": "بهاس يڠ دݢوناکن اونتوق منوليس",
+	"ext-uls-back-to-input-settings": "کمبالي کتتڤن اينڤوت",
+	"ext-uls-ime-help": "چارا ݢونا",
+	"jquery-ime-other-languages": "بهاس لاءين",
+	"jquery-ime-help": "بنتوان",
+	"ext-uls-input-disable": "لومڤوهکن الت اينڤوت",
+	"ext-uls-input-enable": "بوليهکن الت اينڤوت",
+	"ext-uls-input-disable-notification-undo": "بوات اصل",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ساتو لاݢي$1 لاݢي}}",
+	"prefs-languages": "بهاس",
+	"ext-uls-setlang-unknown-error": "رالت تيدق دکتاهوءي",
+	"ext-uls-setlang-heading": "اوبه بهاس انتارا موک؟",
+	"ext-uls-setlang-accept": "تريما ڤروبهن",
+	"ext-uls-setlang-cancel": "جاڠن اوبه"
+}

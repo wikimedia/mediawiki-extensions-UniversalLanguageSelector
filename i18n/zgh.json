@@ -3,7 +3,8 @@
 		"authors": [
 			"Amara-Amaziɣ",
 			"Hakim1bal",
-			"ⵕⴰⵊⵉ"
+			"ⵕⴰⵊⵉ",
+			"Brahim-essaidi"
 		]
 	},
 	"uls-plang-title-languages": "ⵜⵓⵜⵍⴰⵢⵉⵏ",
@@ -18,5 +19,6 @@
 	"jquery-ime-other-languages": "ⵜⵓⵜⵍⴰⵢⵉⵏ ⵢⴰⴹⵏ",
 	"jquery-ime-help": "ⵜⵉⵡⵉⵙⵉ",
 	"ext-uls-input-disable-notification-undo": "ⵙⵔ",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ⵢⴰⵜ ⵢⴰⴹⵏ|$1 ⵢⴰⴹⵏⵉⵏ}}",
 	"prefs-languages": "ⵜⵓⵜⵍⴰⵢⵉⵏ"
 }

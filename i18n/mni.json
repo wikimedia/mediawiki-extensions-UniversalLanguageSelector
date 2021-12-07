@@ -38,6 +38,7 @@
 	"jquery-ime-help": "ꯃꯇꯦꯡ",
 	"ext-uls-input-disable": "ꯍꯥꯞꯆꯤꯟꯅꯕ ꯈꯨꯠꯂꯥꯏꯁꯤꯡ ꯌꯥꯍꯟꯒꯅꯨ",
 	"ext-uls-input-enable": "ꯍꯥꯞꯆꯤꯟꯅꯕ ꯈꯨꯠꯂꯥꯏꯁꯤꯡ ꯌꯥꯍꯟꯂꯨ",
+	"ext-uls-input-disable-info": "ꯍꯥꯞꯆꯤꯟꯂꯛꯄ ꯈꯨꯠꯂꯥꯏ ꯌꯥꯗꯔꯦ ꯫",
 	"ext-uls-input-disable-notification-undo": "ꯇꯧꯗꯕ",
 	"ext-uls-language-settings-applying": "ꯊꯥꯖꯤꯟꯂꯤ...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|꯱ ꯋꯥꯠꯂꯤ|$1 ꯋꯥꯠꯂꯤ}}",

@@ -5,6 +5,7 @@
 			"Ninjastrikers"
 		]
 	},
+	"uls-desc": "ဘာသာစကား အပြင်အဆင်များ ချိန်ညှိရန်နှင့် ဘာသာစကား ရွေးချယ်ရန်အတွက် အသုံးပြုသူအား နည်းလမ်းများပြသပေးသည်",
 	"uls-plang-title-languages": "ဘာသာစကားများ",
 	"ext-uls-select-language-settings-icon-tooltip": "ဘာသာစကား အပြင်အဆင်များ",
 	"ext-uls-undo-language-tooltip-text": "$1 မှ ဘာသာစကား ပြောင်းလဲခဲ့သည်",
@@ -53,10 +54,18 @@
 	"ext-uls-input-disable-notification": "ထည့်သွင်းကိရိယာများမှာ ပိတ်ထားပြီးဖြစ်သည်",
 	"ext-uls-input-disable-notification-undo": "နောက်ပြန် ပြန်ပြင်ရန်",
 	"ext-uls-input-disable-notification-info-personal": "ထည့်သွင်းကိရိယာများကို ဘာသာစကား အပြင်အဆင်များမှ မည်သည့်အချိန်တွင်မဆို ဖွင့်နိုင်ပါသည်။",
+	"ext-uls-input-disable-notification-info-interlanguage": "သင့်အနေဖြင့် ဘာသာစကား စာရင်း၏ ဘေးရှိ ဘာသာစကား အပြင်အဆင်မှ တဆင့် ထည့်သွင်းကိရိယာများအား အချိန်မရွေး ဖွင့်နိုင်ပါသည်။",
 	"ext-uls-language-settings-applying": "သတ်မှတ်နေသည်...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|နောက်ထပ် တစ်ခု|နောက်ထပ် $1 ခု}}",
 	"ext-uls-compact-link-info": "ဘာသာစကား အားလုံး (သင်နှင့် အခြားသူများ၏ ယေဘုယျ ရွေးချယ်ချက်များမှ အစောပိုင်း ရွေးချယ်မှုများ)",
 	"prefs-languages": "ဘာသာစကားများ",
 	"ext-uls-compact-language-links-preference": "သင့်အတွက် ဆီလျော်သော ဘာသာစကားများ ပါဝင်သည့် [[$1|ချုံ့ထားသော ဘာသာစကား စာရင်း]] တစ်ခုကို အသုံးပြုပါ။",
-	"ext-uls-compact-no-results": "သင်ရှာဖွေသော ဘာသာစကားတွင် ဤစာမျက်နှာအား မရရှိနိုင်ပါ။"
+	"ext-uls-compact-no-results": "သင်ရှာဖွေသော ဘာသာစကားတွင် ဤစာမျက်နှာအား မရရှိနိုင်ပါ။",
+	"ext-uls-setlang-error": "သင်၏ အလိုရှိရာ ဘာသာစကားအား မွမ်းမံနေစဉ် အမှားတစ်ခု တွေ့ကြုံခဲ့ရသည် - $1",
+	"ext-uls-setlang-unknown-error": "အမည်မသိအမှား",
+	"ext-uls-setlang-message": "<strong>$1 ($2)</strong> တွင် ပြသပေးရန် တောင်းဆိုထားသော အသွင်အပြင်အတွက် လင့်ခ်",
+	"ext-uls-setlang-heading": "အသွင်အပြင်ဘာသာစကားကို ပြောင်းလဲမည်လော။",
+	"ext-uls-setlang-accept": "ပြောင်းလဲမှုကို လက်ခံရန်",
+	"ext-uls-setlang-loading": "သတ်မှတ်နေသည်...",
+	"ext-uls-setlang-cancel": "မပြောင်းလဲပါနှင့်"
 }

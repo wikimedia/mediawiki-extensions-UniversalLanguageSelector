@@ -5,5 +5,6 @@
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "ЧӀалар"
+	"uls-plang-title-languages": "ЧӀалар",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Мад $1}}"
 }

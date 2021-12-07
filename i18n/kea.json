@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Waldyrious"
+		]
+	},
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Más un|Más $1}}"
+}

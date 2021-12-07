@@ -10,6 +10,7 @@
 	"uls-plang-title-languages": "ભાષાઓ",
 	"ext-uls-select-language-settings-icon-tooltip": "ભાષા ગોઠવણીઓ",
 	"ext-uls-undo-language-tooltip-text": "$1 માંથી ભાષા બદલવામાં આવી",
+	"ext-uls-undo-language-tooltip-text-local": "આ વિકિ માટે ભાષા બદલાઇ ગઇ છે. તમે [[Special:GlobalPreferences|વૈશ્વિક પસંદગી]] પર જઇને બધી વિકિ માટે ભાષા બદલી શકો છો.",
 	"ext-uls-language-settings-preferences-link": "વધુ ભાષા ગોઠવણીઓ",
 	"uls-betafeature-label": "ટૂંકી ભાષા કડીઓ",
 	"uls-betafeature-desc": "તમને સંબંધિત ભાષાઓની જ, ભાષા કડીઓનું ટૂંકી આવૃત્તિ દર્શાવે છે.",
@@ -60,5 +61,12 @@
 	"ext-uls-compact-link-info": "બધી ભાષાઓ ‍‍(તમારા અને અન્યો દ્વારા શરુઆતી સામાન્ય પસંદગીઓ‌)",
 	"prefs-languages": "ભાષાઓ",
 	"ext-uls-compact-language-links-preference": "તમને સંબંધિત ભાષાઓની, [[$1|ટૂંકી ભાષા યાદી]] વાપરો.",
-	"ext-uls-compact-no-results": "આ પાનું તમે શોધેલી ભાષામાં પ્રાપ્ત નથી."
+	"ext-uls-compact-no-results": "આ પાનું તમે શોધેલી ભાષામાં પ્રાપ્ત નથી.",
+	"ext-uls-setlang-error": "તમારી ભાષા બદલતી વખતે ક્ષતિ આવી છે. ક્ષતિ: $1",
+	"ext-uls-setlang-unknown-error": "અજાણી ક્ષતિ",
+	"ext-uls-setlang-message": "તમે અનુસરેલી કડીએ <strong>$1 ($2)</strong>માં દર્શાવેલ દેખાવ બદલવાની વિનંતી કરી છે",
+	"ext-uls-setlang-heading": "ભાષા બદલશો?",
+	"ext-uls-setlang-accept": "ફેરફાર સ્વીકારો",
+	"ext-uls-setlang-loading": "લાગુ પાડે છે...",
+	"ext-uls-setlang-cancel": "બદલશો નહીં"
 }

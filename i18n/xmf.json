@@ -2,8 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Silovan",
-			"Xð"
+			"Xð",
+			"Narazeni"
 		]
 	},
-	"uls-plang-title-languages": "ნინეფი"
+	"uls-plang-title-languages": "ნინეფი",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ხოლო ართი|ხოლო $1}}"
 }

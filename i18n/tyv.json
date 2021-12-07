@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Agilight"
+		]
+	},
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Оон база|Немей $1}}"
+}

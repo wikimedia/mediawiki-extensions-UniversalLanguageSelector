@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Robertjamal12"
+		]
+	},
+	"uls-plang-title-languages": "Kasa ahorow",
+	"uls-betafeature-desc": "Yi kasa ahorow no mu kakra bi kyerɛ, nea ɛho hia wo no paa.",
+	"ext-uls-display-settings-language-tab": "Kasa",
+	"ext-uls-language-settings-cancel": "Twa mu",
+	"ext-uls-webfonts-settings-info-link": "Nkyerɛkyerɛmu a ɛdi hɔ",
+	"ext-uls-input-settings-desc": "Wo kyerɛw wɔ kasa foforo mu anaa?",
+	"ext-uls-input-settings-ui-language": "Kasa a yɛ de kyerɛw",
+	"ext-uls-ime-help": "Sɛnea wo di bɛ yɛ adwuma",
+	"ext-uls-input-settings-more-languages-tooltip": "Kasa ahorow pii",
+	"jquery-ime-other-languages": "Wɔ kasa ahorow mu",
+	"jquery-ime-help": "Mmoa",
+	"ext-uls-input-disable-notification-undo": "Siesie",
+	"ext-uls-language-settings-applying": "Yɛre yɛ nea wo pɛ...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Baako bio|$1 bio}}",
+	"ext-uls-compact-link-info": "Kasa ahorow nyinaa (nea amanfo anaa wo adikan afa da)",
+	"prefs-languages": "Kasa ahorow",
+	"ext-uls-setlang-accept": "Gye nsesae no tu mu",
+	"ext-uls-setlang-loading": "Yɛre yɛ nea wo pɛ...",
+	"ext-uls-setlang-cancel": "Mɛn sesa"
+}
