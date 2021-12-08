@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Misteld"
+			"Misteld",
+			"Samatics"
 		]
 	},
+	"uls-plang-title-languages": "Ogbè lẹ",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Dopodogọ|$1 dogọ}}"
 }
