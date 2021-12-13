@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"NGC 54"
+		]
+	},
+	"apihelp-languagesearch-description": "Căutați după nume de limbi în orice script.",
+	"apihelp-languagesearch-summary": "Căutați după nume de limbi în orice script.",
+	"apihelp-languagesearch-param-search": "Șir de căutare.",
+	"apihelp-languagesearch-param-typos": "Numărul de greșeli de scriere permise în șirul de căutare.",
+	"apihelp-languagesearch-example-1": "Căutați după „Te”",
+	"apihelp-languagesearch-example-2": "Căutați după „ഫി”",
+	"apihelp-languagesearch-example-3": "Căutați după „ഫി”, permițând o greșeală de scriere",
+	"apihelp-ulslocalization-description": "Obțineți localizare extensiei ULS în limba dată.",
+	"apihelp-ulslocalization-summary": "Obțineți localizare extensiei ULS în limba dată.",
+	"apihelp-ulslocalization-param-language": "Codul limbii.",
+	"apihelp-ulslocalization-example-1": "Obțineți localizarea în tamilă",
+	"apihelp-ulslocalization-example-2": "Obțineți localizarea în hindi",
+	"apihelp-ulssetlang-description": "Actualizează limba preferată a interfeței a utilizatorului.",
+	"apihelp-ulssetlang-summary": "Actualizează limba preferată a interfeței a utilizatorului.",
+	"apihelp-ulssetlang-param-languagecode": "Codul limbii preferate.",
+	"apierror-ulssetlang-anon-notallowed": "Utilizatorii anonimi nu au voie să schimbe limba interfeței."
+}

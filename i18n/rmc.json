@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Adehertogh"
+		]
+	},
+	"uls-plang-title-languages": "Čhiba",
+	"ext-uls-display-settings-language-tab": "Čhib",
+	"ext-uls-input-settings-more-languages-tooltip": "Buter čhiba",
+	"jquery-ime-other-languages": "Aver čhiba",
+	"jquery-ime-help": "Ažutipen",
+	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|aver}}",
+	"prefs-languages": "Čhiba"
+}

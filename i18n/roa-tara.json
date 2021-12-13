@@ -59,5 +59,12 @@
 	"ext-uls-compact-link-info": "Tutte le lènghe ('u scacchiamende iniziale avène 'mbrà le scacchiaminde comune tue e de l'otre)",
 	"prefs-languages": "Lènghe",
 	"ext-uls-compact-language-links-preference": "Ause 'n'[[$1|elenghe ridotte de lènghe]], cu le lènghe ca so 'mbortande pe te.",
-	"ext-uls-compact-no-results": "Sta pàgene non g'è disponibbile jndr'à lènghe ca ste cirche."
+	"ext-uls-compact-no-results": "Sta pàgene non g'è disponibbile jndr'à lènghe ca ste cirche.",
+	"ext-uls-setlang-error": "Ha assute 'n'errore mendre ste carecave 'a lènga preferita toje. Errore: $1",
+	"ext-uls-setlang-unknown-error": "Errore scanusciute",
+	"ext-uls-setlang-message": "'U colelgamende ca ste seguive ave cercate 'u 'ndrucamende de l'inderfacce jndr'à <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "Cange 'a ènghe de l'inderfacce?",
+	"ext-uls-setlang-accept": "Accette 'u cangiamende",
+	"ext-uls-setlang-loading": "Stoche a appleche...",
+	"ext-uls-setlang-cancel": "Nò cangià"
 }

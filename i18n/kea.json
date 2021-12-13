@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Waldyrious"
+		]
+	},
+	"uls-plang-title-languages": "Línguas",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Más un|Más $1}}"
+}

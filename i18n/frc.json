@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beunice"
+		]
+	},
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Une|$1}} de plus"
+}

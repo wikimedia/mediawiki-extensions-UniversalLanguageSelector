@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jun Misugi"
+		]
+	},
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Eene weidorre|$1 weidorre}}"
+}

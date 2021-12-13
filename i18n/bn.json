@@ -5,7 +5,8 @@
 			"Aftabuzzaman",
 			"Bellayet",
 			"Nasir8891",
-			"আফতাবুজ্জামান"
+			"আফতাবুজ্জামান",
+			"Tanayb"
 		]
 	},
 	"uls-desc": "ব্যবহারকারীকে ভাষা নির্বাচন এবং ভাষা সম্পর্কিত সেটিং সমন্বয়ের বিভিন্ন উপায় দেয়",
@@ -63,5 +64,12 @@
 	"ext-uls-compact-link-info": "সব ভাষাসমূহ (আপনার ও অন্যদের দ্বারা সাধারণ পছন্দ থেকে প্রাথমিক নির্বাচন)",
 	"prefs-languages": "ভাষাসমূহ",
 	"ext-uls-compact-language-links-preference": "আপনার কাছে প্রাসঙ্গিক মনে হয় এমন ভাষাসহ, [[$1|ভাষার একটি ছোট তালিকা]] ব্যবহার করে।",
-	"ext-uls-compact-no-results": "এই পৃষ্ঠাটি আপনার অনুসন্ধান করা ভাষাতে নেই।"
+	"ext-uls-compact-no-results": "এই পৃষ্ঠাটি আপনার অনুসন্ধান করা ভাষাতে নেই।",
+	"ext-uls-setlang-error": "আপনার পছন্দসই ভাষা হালনাগাদ করার সময় একটি ত্রুটি হয়েছিল। ত্রুটি: $1",
+	"ext-uls-setlang-unknown-error": "অজানা ত্রুটি",
+	"ext-uls-setlang-message": "আপনার অনুসরণ করা লিঙ্কটি ইন্টারফেসকে <strong>$1 ($2)</strong> ভাষায় দেখানোর অনুরোধ করেছিল।",
+	"ext-uls-setlang-heading": "ইন্টারফেসের ভাষা পরিবর্তন করবেন?",
+	"ext-uls-setlang-accept": "পরিবর্তন গ্রহণ করুন",
+	"ext-uls-setlang-loading": "প্রয়োগ হচ্ছে...",
+	"ext-uls-setlang-cancel": "পরিবর্তন করবেন না"
 }

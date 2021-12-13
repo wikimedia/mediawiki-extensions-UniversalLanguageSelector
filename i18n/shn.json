@@ -12,5 +12,6 @@
 	"ext-uls-language-settings-title": "ၵၢၼ်တင်ႈ ၽႃႇသႃႇၵႂၢမ်း",
 	"ext-uls-display-settings-ui-language": "ၼႄၽႃႇသႃႇၵႂၢမ်း",
 	"ext-uls-back-to-display-settings": "ႁူၼ်ၸူး ၵၢၼ်တင်ႈၽၢင်ယဵမ်ႈ",
-	"ext-uls-input-disable-notification-info-personal": "လုၵ်ႉတီႈၵၢၼ်တင်ႈ ၽႃႇသႃႇၵႂၢမ်းသေ ၸဝ်ႈၵဝ်ႇ ၸၢင်ႈပိုတ်ႇၸႂ်ႉ ၶိူင်ႈပေႃႉလိၵ်ႈလႆႈၵူႈၶၢဝ်း။"
+	"ext-uls-input-disable-notification-info-personal": "လုၵ်ႉတီႈၵၢၼ်တင်ႈ ၽႃႇသႃႇၵႂၢမ်းသေ ၸဝ်ႈၵဝ်ႇ ၸၢင်ႈပိုတ်ႇၸႂ်ႉ ၶိူင်ႈပေႃႉလိၵ်ႈလႆႈၵူႈၶၢဝ်း။",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ထႅင်ႈဢၼ်ၼိုင်ႈ|ထႅင်ႈ $1}}"
 }

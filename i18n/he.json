@@ -7,7 +7,7 @@
 			"Yona b"
 		]
 	},
-	"uls-desc": "נותן למשתמשים מספר דרכים לבחור שפה ולכוונן את הגדרות השפה",
+	"uls-desc": "נותן למשתמשים כמה דרכים לבחור שפה ולכוונן את הגדרות השפה",
 	"uls-plang-title-languages": "שפות",
 	"ext-uls-select-language-settings-icon-tooltip": "הגדרות שפה",
 	"ext-uls-undo-language-tooltip-text": "השפה השתנתה. השפה הקודמת הייתה $1",
@@ -66,7 +66,7 @@
 	"ext-uls-setlang-error": "אירעה שגיאה בעת עדכון השפה המועדפת שלך. שגיאה: $1",
 	"ext-uls-setlang-unknown-error": "שגיאה בלתי־ידועה",
 	"ext-uls-setlang-message": "הקישור שלחצת עליו ביקש שהממשק יוצג בשפה <strong>$1 ($2)</strong>",
-	"ext-uls-setlang-heading": "שלנות את שפת הממשק?",
+	"ext-uls-setlang-heading": "לשנות את שפת הממשק?",
 	"ext-uls-setlang-accept": "לקבל את השינויים",
 	"ext-uls-setlang-loading": "החלה...",
 	"ext-uls-setlang-cancel": "לא לשנות"

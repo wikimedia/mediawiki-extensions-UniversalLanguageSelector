@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Iohanen"
+		]
+	},
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Een weidere|$1 weidere}}"
+}

@@ -6,7 +6,8 @@
 			"KuboF",
 			"Macofe",
 			"Mirin",
-			"Robin van der Vliet"
+			"Robin van der Vliet",
+			"NMaia"
 		]
 	},
 	"uls-desc": "Proponas al uzanto kelkajn manierojn por elekti lingvon kaj modifi lingvajn agordojn",
@@ -64,5 +65,6 @@
 	"ext-uls-compact-link-info": "Ĉiuj lingvoj (komenca elekto de kutimaj opcioj de vi kaj aliaj)",
 	"prefs-languages": "Lingvoj",
 	"ext-uls-compact-language-links-preference": "Uzi [[$1|kompaktan liston de lingvoj]], kun lingvoj konvenaj por vi.",
-	"ext-uls-compact-no-results": "Ĉi tiu paĝo ne estas havebla en la lingvo kiun vi serĉis."
+	"ext-uls-compact-no-results": "Ĉi tiu paĝo ne estas havebla en la lingvo kiun vi serĉis.",
+	"ext-uls-setlang-heading": "Ĉu ŝanĝi la fasadan lingvon?"
 }

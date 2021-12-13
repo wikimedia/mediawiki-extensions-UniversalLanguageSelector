@@ -53,6 +53,7 @@
 	"ext-uls-input-disable-notification": "איינגאב געצייג זענען געווארן אומאקטיוויזירט",
 	"ext-uls-input-disable-notification-undo": "אַנולירן",
 	"ext-uls-input-disable-notification-info-personal": "איר קענט אקטיוויזירן די איינגאב געצייג אבי ווען פון די שפראך שטעלונגען.",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|נאך איינס|$1 נאך}}",
 	"prefs-languages": "שפּראַכן",
 	"ext-uls-compact-language-links-preference": "ניצן א [[$1|קאמפאקטע שפראכן־ליסטע]], מיט שפראכן רעלעוואנט צו אייך."
 }

@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"ChoiChong"
+		]
+	},
+	"ext-uls-compact-link-count": "还有{{PLURAL:$1|$1只语言}}"
+}

@@ -4,7 +4,8 @@
 			"Aefgh39622",
 			"Ans",
 			"Nitisart Jungtrakungrat",
-			"Xð"
+			"Xð",
+			"Patsagorn Y."
 		]
 	},
 	"uls-desc": "ให้ผู้ใช้​เลือก​ภาษาและปรับการตั้งค่าภาษาได้หลายวิธี",
@@ -58,10 +59,16 @@
 	"ext-uls-input-disable-notification-info-personal": "คุณสามารถเปิดใช้งานเครื่องมือป้อนข้อมูลได้ทุกเมื่อจากการตั้งค่าภาษา",
 	"ext-uls-input-disable-notification-info-interlanguage": "คุณสามารถเปิดใช้งานเครื่องมือป้อนข้อมูลได้ทุกเมื่อจากการตั้งค่าภาษาถัดจากรายการภาษา",
 	"ext-uls-language-settings-applying": "กำลังใช้...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|เพิ่มเติมอีกหนึ่งภาษา|เพิ่มเติมอีก $1 ภาษา}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|อีก 1 ภาษา|อีก $1 ภาษา}}",
 	"ext-uls-compact-link-info": "ภาษาทั้งหมด (ที่เลือกไว้ตั้งแต่แรกจากตัวเลือกธรรมดาโดยคุณและคนอื่นๆ)",
 	"prefs-languages": "ภาษา",
 	"ext-uls-compact-language-links-preference": "ใช้ [[$1|รายการภาษาแบบกระชับ]] โดยมีภาษาที่เกี่ยวข้องกับคุณ",
 	"ext-uls-compact-no-results": "หน้านี้ไม่มีในภาษาที่คุณค้นหา",
-	"ext-uls-setlang-unknown-error": "เกิดข้อผิดพลาดโดยไม่ทราบสาเหตุ"
+	"ext-uls-setlang-error": "เกิดข้อผิดพลาดกับการอัปเดตตามภาษาที่คุณเลือก ข้อผิดพลาด: $1",
+	"ext-uls-setlang-unknown-error": "เกิดข้อผิดพลาดโดยไม่ทราบสาเหตุ",
+	"ext-uls-setlang-message": "ลิงก์ที่คุณตามมามีคำขอเปลี่ยนภาษาอินเตอร์เฟซให้เป็นภาษา <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "เปลี่ยนภาษาของอินเตอร์เฟซหรือไม่?",
+	"ext-uls-setlang-accept": "ยอมรับการเปลี่ยนแปลง",
+	"ext-uls-setlang-loading": "กำลังปรับใช้...",
+	"ext-uls-setlang-cancel": "ไม่ต้องเปลี่ยนตาม"
 }

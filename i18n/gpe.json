@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"DaSupremo"
+		]
+	},
+	"ext-uls-compact-link-count": "{{PLURAL:$1|One more|$1 more}}"
+}

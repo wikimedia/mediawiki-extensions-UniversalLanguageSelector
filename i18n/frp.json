@@ -35,5 +35,6 @@
 	"ext-uls-input-disable": "Dèsactivar los outils de mètoda d’entrâ",
 	"ext-uls-input-enable": "Activar los outils de mètoda d’entrâ",
 	"ext-uls-input-disable-info": "Los outils de mètoda d’entrâ sont dèsactivâs.",
-	"ext-uls-input-settings-noime": "Niona mètoda d’entrâ est disponibla por ceta lengoua."
+	"ext-uls-input-settings-noime": "Niona mètoda d’entrâ est disponibla por ceta lengoua.",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Yona|$1}} de més"
 }

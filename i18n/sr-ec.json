@@ -62,6 +62,6 @@
 	"ext-uls-compact-link-count": "Још {{PLURAL:$1|1=један|$1}} {{PLURAL:$1|језик|језика}}",
 	"ext-uls-compact-link-info": "Сви језици (првобитан избор је заснован на најчешћим одабирима вас и других)",
 	"prefs-languages": "Језици",
-	"ext-uls-compact-language-links-preference": "Користи [[$1|компактан списак језика]], с језицима који су вама релевантни.",
+	"ext-uls-compact-language-links-preference": "Користи [[$1|сажети списак језика]], с језицима који су Вам важни.",
 	"ext-uls-compact-no-results": "Ова страница није доступна на језику који тражите."
 }

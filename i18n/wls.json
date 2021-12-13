@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lea.Fakauvea"
+		]
+	},
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Hoko atu|$1 hoko atu}}"
+}

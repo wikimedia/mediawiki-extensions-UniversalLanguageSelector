@@ -52,5 +52,6 @@
 	"ext-uls-input-disable-notification-undo": "Buté 'me ch'a l'era",
 	"ext-uls-input-disable-notification-info-personal": "A peul ativé j'utiss d'imission an qualsëssìa moment an soe ampostassion ëd lenga.",
 	"ext-uls-input-disable-notification-info-interlanguage": "A peul ativé j'utiss d'imission an qualsëssìa moment ant j'ampostassion ëd lenga da banda dla lista dle lenghe.",
-	"ext-uls-language-settings-applying": "Ativassion an cors..."
+	"ext-uls-language-settings-applying": "Ativassion an cors...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|un ëd pi|$1 ëd pi}}"
 }
