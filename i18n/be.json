@@ -2,11 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Artsiom91",
-			"Xð"
+			"Xð",
+			"ZlyiLev"
 		]
 	},
 	"uls-plang-title-languages": "Мовы",
 	"ext-uls-select-language-settings-icon-tooltip": "Настройкі мовы",
+	"ext-uls-undo-language-tooltip-text": "Папярэдняя мова: $1",
 	"ext-uls-language-settings-preferences-link": "Дадатковыя настройкі мовы",
 	"ext-uls-display-settings-language-tab": "Мова",
 	"ext-uls-display-settings-fonts-tab": "Шрыфты",
