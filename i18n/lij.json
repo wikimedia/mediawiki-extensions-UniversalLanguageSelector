@@ -57,7 +57,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Ti poeu abilitâ i strumenti de scritua quande ti voeu da-e impostassioin da lengua.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Ti poeu abilitâ i strumenti de scritua quande ti voeu da-e impostassioin da lengua, rente a-a lista de lengoe.",
 	"ext-uls-language-settings-applying": "Apricassion in corso...",
-	"ext-uls-compact-link-count": "Ancón {{PLURAL:$1|In'âtra|Âtre $1}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|'N'âtra|Âtre $1}}",
 	"ext-uls-compact-link-info": "Tutte e lengue (selession inissiâ de sernie comun-e to e di atri)",
 	"prefs-languages": "Lengoe",
 	"ext-uls-compact-language-links-preference": "Adœuvia 'na [[$1|lista reduta de lengue]], co-e lengue pe ti relevante.",
