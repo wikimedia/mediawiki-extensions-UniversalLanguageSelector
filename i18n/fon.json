@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mahuton"
+			"Mahuton",
+			"Àlɔ̀ tɛ́"
 		]
 	},
+	"uls-plang-title-languages": "Gbé lɛ́",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Ɖokpo|$1}} gɔnan"
 }
