@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Carma Citrawati"
+			"Carma Citrawati",
+			"Joseagush"
 		]
 	},
+	"uls-desc": "ᬳᬢᬸᬭᬶᬦ᭄ᬲᬂᬳᬗᬗ᭄ᬕᬾᬘᬭᬫᬗ᭄ᬤᬧ᭄ᬭᬲᬶᬤᬫᬶᬮᬶᬄᬪᬱᬫᬶᬯᬄᬜᭂᬲᬸᬯᬳᬶᬬᬂᬲᭂᬢᬾᬮᬦ᭄ᬪᬱ᭞",
+	"uls-plang-title-languages": "ᬪᬵᬱ",
+	"ext-uls-select-language-settings-icon-tooltip": "ᬲᭂᬢᬾᬮᬦ᭄ᬪᬱ",
+	"ext-uls-undo-language-tooltip-text": "ᬪᬱᬓᬳᬸᬯᬳᬶᬦ᭄ᬲᬓᬶᬂ$1",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|ᬫᬮᬶᬄᬳᬲᬶᬓᬶ|$1 ᬫᬮᬶᬄ}}"
 }
