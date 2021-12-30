@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Fraxinus.cs",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Абызшәа"
+	"uls-plang-title-languages": "Абызшәа",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Даҽа $1}}"
 }
