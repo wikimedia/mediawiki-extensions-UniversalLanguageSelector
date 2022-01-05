@@ -562,6 +562,7 @@
 			initContentLanguageSelectorClickHandler();
 		} else {
 			$( '.mw-interlanguage-selector' ).removeClass( 'mw-interlanguage-selector' );
+			document.body.classList.add( 'mw-interlanguage-selector-disabled' );
 		}
 	}
 
