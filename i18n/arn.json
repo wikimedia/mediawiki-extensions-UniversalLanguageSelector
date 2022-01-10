@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Manke ruLpa"
+		]
+	},
+	"uls-plang-title-languages": "Zungun",
+	"ext-uls-display-settings-language-tab": "Zungun",
+	"ext-uls-display-settings-fonts-tab": "Wirin",
+	"ext-uls-display-settings-title-short": "Pengelün",
+	"ext-uls-display-settings-desc": "Zullinge chi zungun mülelu wirin mew ka menu mew",
+	"ext-uls-language-settings-cancel": "Katrüntun",
+	"ext-uls-input-settings-desc": "Wirintulelu ka zungun mew?",
+	"ext-uls-ime-help": "Chumngeci püneael",
+	"ext-uls-input-settings-more-languages-tooltip": "Zoy zungun",
+	"jquery-ime-other-languages": "Kake zungun",
+	"jquery-ime-help": "Kellun",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ka Kiñe|$1lewey}}",
+	"prefs-languages": "Zungun",
+	"ext-uls-setlang-unknown-error": "Kimngenolu welulkan",
+	"ext-uls-setlang-accept": "Kalepe may",
+	"ext-uls-setlang-loading": "Femkülepelu...",
+	"ext-uls-setlang-cancel": "Kalekilpe"
+}
