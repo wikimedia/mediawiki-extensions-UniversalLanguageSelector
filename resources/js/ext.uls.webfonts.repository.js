@@ -545,16 +545,29 @@
 			"woff2": "FreeFontThana/FreeFont-Thaana-Bold.woff2?eaf55"
 		},
 		"GentiumPlus": {
-			"woff": "GentiumPlus/GentiumPlus-R.woff?1abc3",
-			"woff2": "GentiumPlus/GentiumPlus-R.woff2?aa576",
+			"woff": "GentiumPlus/GentiumPlus-Regular.woff?7a020",
+			"woff2": "GentiumPlus/GentiumPlus-Regular.woff2?b04c9",
 			"variants": {
+				"bold": "GentiumPlus Bold",
+				"bolditalic": "GentiumPlus Bold Italic",
 				"italic": "GentiumPlus Italic"
 			}
 		},
+		"GentiumPlus Bold": {
+			"fontweight": "bold",
+			"woff": "GentiumPlus/GentiumPlus-Bold.woff?2d222",
+			"woff2": "GentiumPlus/GentiumPlus-Bold.woff2?264f1"
+		},
+		"GentiumPlus Bold Italic": {
+			"fontweight": "bold",
+			"fontstyle": "italic",
+			"woff": "GentiumPlus/GentiumPlus-BoldItalic.woff?e8674",
+			"woff2": "GentiumPlus/GentiumPlus-BoldItalic.woff2?191d0"
+		},
 		"GentiumPlus Italic": {
 			"fontstyle": "italic",
-			"woff": "GentiumPlus/GentiumPlus-I.woff?ab550",
-			"woff2": "GentiumPlus/GentiumPlus-I.woff2?35b11"
+			"woff": "GentiumPlus/GentiumPlus-Italic.woff?14b0e",
+			"woff2": "GentiumPlus/GentiumPlus-Italic.woff2?8cd7c"
 		},
 		"GochiHand": {
 			"woff": "GochiHand/GochiHand-Regular.woff?310cc",
