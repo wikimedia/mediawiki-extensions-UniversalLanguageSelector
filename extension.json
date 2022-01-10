@@ -158,7 +158,8 @@
 			"styles": "css/ext.uls.less",
 			"skinStyles": {
 				"monobook": "css/ext.uls-monobook.css",
-				"vector": "css/ext.uls-vector.less"
+				"vector": "css/ext.uls-vector.less",
+				"vector-2022": "css/ext.uls-vector.less"
 			},
 			"dependencies": [
 				"jquery.uls.data",
@@ -318,6 +319,9 @@
 					"css/ext.uls.pt-default.less"
 				],
 				"vector": [
+					"css/ext.uls.pt-vector.less"
+				],
+				"vector-2022": [
 					"css/ext.uls.pt-vector.less"
 				],
 				"monobook": [
