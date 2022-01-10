@@ -6,6 +6,11 @@
  * @file
  */
 
+namespace UniversalLanguageSelector;
+
+use FormatJson;
+use Maintenance;
+
 // Standard boilerplate to define $IP
 if ( getenv( 'MW_INSTALL_PATH' ) !== false ) {
 	$IP = getenv( 'MW_INSTALL_PATH' );
@@ -46,5 +51,5 @@ JAVASCRIPT;
 	}
 }
 
-$maintClass = 'CompileFontRepo';
+$maintClass = 'UniversalLanguageSelector\CompileFontRepo';
 require_once RUN_MAINTENANCE_IF_MAIN;
