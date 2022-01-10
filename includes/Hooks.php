@@ -277,29 +277,18 @@ class Hooks implements
 		// The element id will be 'pt-uls'
 		$langCode = $context->getLanguage()->getCode();
 
-		if ( version_compare( MW_VERSION, '1.36', '<' ) ) {
-			return [
-				'uls' => [
-					'text' => $this->languageNameUtils->getLanguageName( $langCode ),
-					'href' => '#',
-					'class' => 'uls-trigger',
-					'active' => true
-				]
-			] + $personal_urls;
-		} else {
-			return [
-				'uls' => [
-					'text' => $this->languageNameUtils->getLanguageName( $langCode ),
-					'href' => '#',
-					// Skin meta data to allow skin (e.g. Vector) to add icons
-					'icon' => 'wikimedia-language',
-					// Skin meta data to allow skin (e.g. Vector) to convert to button.
-					'button' => true,
-					'link-class' => [ 'uls-trigger' ],
-					'active' => true
-				]
-			] + $personal_urls;
-		}
+		return [
+			'uls' => [
+				'text' => $this->languageNameUtils->getLanguageName( $langCode ),
+				'href' => '#',
+				// Skin meta data to allow skin (e.g. Vector) to add icons
+				'icon' => 'wikimedia-language',
+				// Skin meta data to allow skin (e.g. Vector) to convert to button.
+				'button' => true,
+				'link-class' => [ 'uls-trigger' ],
+				'active' => true
+			]
+		] + $personal_urls;
 	}
 
 	/**
