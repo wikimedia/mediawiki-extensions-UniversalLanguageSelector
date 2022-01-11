@@ -37,6 +37,7 @@
 	"ext-uls-input-settings-title": "Ievades iestatījumi",
 	"ext-uls-input-settings-title-short": "Ievade",
 	"ext-uls-input-settings-desc": "Raksti citā valodā?",
+	"ext-uls-input-settings-ime-settings": "Ievades metodes $1 valodai",
 	"ext-uls-input-settings-ui-language": "Rakstīšanai izmantotā valoda",
 	"ext-uls-back-to-input-settings": "Atpakaļ uz ievades iestatījumiem",
 	"ext-uls-ime-help": "Kā lietot",
