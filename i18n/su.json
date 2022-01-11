@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Daud I.F. Argana",
 			"Kandar",
 			"Uchup19"
 		]
 	},
+	"uls-plang-title-languages": "Basa",
 	"ext-uls-language-settings-cancel": "Bolay",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Hiji deui|$1 deui}}"
 }
