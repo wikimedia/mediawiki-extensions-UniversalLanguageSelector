@@ -53,17 +53,14 @@
 	}
 
 	/**
-	 * For Vector: Check whether the classic Vector or "new" vector ([[mw:Desktop_improvements]]) is enabled based
-	 * on the contents of the page.
-	 * For other skins, check if ULSDisplayInputAndDisplaySettingsInInterlanguage contains the current skin.
+	 * For Vector, check if the language button id exists.
+	 * For other skins, check wgULSDisplaySettingsInInterlanguage for the current skin.
 	 *
 	 * @return {boolean}
 	 */
 	function isUsingStandaloneLanguageButton() {
-		var skin = mw.config.get( 'skin' );
-		// special handling for Vector.
-		return skin === 'vector' ? $( '#p-lang-btn' ).length > 0 :
-			mw.config.get( 'wgULSDisplaySettingsInInterlanguage' );
+		// Checking for the ULS language button id returns true for Vector, false for other skins.
+		return $( '#p-lang-btn' ).length > 0 || mw.config.get( 'wgULSDisplaySettingsInInterlanguage' );
 	}
 
 	/**
