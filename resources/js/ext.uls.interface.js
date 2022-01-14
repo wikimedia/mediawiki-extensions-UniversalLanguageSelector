@@ -378,6 +378,10 @@
 		}
 
 		$trigger.on( 'click', clickHandler );
+		// Optimization: Prefetch the Resource loader modules for ULS on mouseover
+		$trigger.one( 'mouseover', function () {
+			mw.loader.load( languageSettingsModules );
+		} );
 	}
 
 	function initLanguageChangeUndoTooltip() {
