@@ -15,9 +15,12 @@
 	"ext-uls-input-settings-more-languages-tooltip": "Zoy zungun",
 	"jquery-ime-other-languages": "Kake zungun",
 	"jquery-ime-help": "Kellun",
+	"ext-uls-input-disable-notification-undo": "Wüñoelün",
+	"ext-uls-language-settings-applying": "Femkapelu...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Ka Kiñe|$1lewey}}",
 	"prefs-languages": "Zungun",
 	"ext-uls-setlang-unknown-error": "Kimngenolu welulkan",
+	"ext-uls-setlang-heading": "Welukünuaymi mülewe ñi zungun?",
 	"ext-uls-setlang-accept": "Kalepe may",
 	"ext-uls-setlang-loading": "Femkülepelu...",
 	"ext-uls-setlang-cancel": "Kalekilpe"
