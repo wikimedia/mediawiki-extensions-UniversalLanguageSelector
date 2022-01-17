@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gilbert Ndihokubwayo"
+		]
+	},
+	"uls-plang-title-languages": "Indimi",
+	"ext-uls-compact-link-count": "$1({{PLURAL:$2|ijambo|amajambo}} $2)"
+}
