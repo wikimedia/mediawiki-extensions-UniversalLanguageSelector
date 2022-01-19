@@ -55,5 +55,5 @@
 	"ext-uls-input-disable-notification-info-personal": "Джазыу адырланы хар заманда да тил джарашдырыуладан джандырыргъа боллукъду.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Джазыу адырланы хар заманда да тил тизимни къатындагъы тил джарашдырыуладан джандырыргъа боллукъду.",
 	"ext-uls-language-settings-applying": "Сингдирилиую...",
-	"ext-uls-compact-link-count": "Энтда {{PLURAL:$1|бир тилде|$1 тилде}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Энтда бир|Дагъыда $1}}"
 }
