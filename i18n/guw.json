@@ -1,10 +1,25 @@
 {
 	"@metadata": {
 		"authors": [
+			"Joshateji",
 			"Misteld",
 			"Samatics"
 		]
 	},
+	"uls-desc": "Ehe nọ gọalọna nọtẹn lọ zantọ nado mọ aliho voovo lẹ nado dè ogbè dé podọ bosọ diọ tẹnmẹ sọgbe hẹ nujlomẹ ogbè tọn lẹ",
 	"uls-plang-title-languages": "Ogbè lẹ",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Dopodogọ|$1 dogọ}}"
+	"ext-uls-undo-language-tooltip-text": "Ogbè ko diọ sọn $1",
+	"ext-uls-undo-language-tooltip-text-local": "Ogbè ada wiki tọn ehe ko yin didiọ. Pọn [[Special:GlobalPreferences|nujlomẹ lẹ lẹdo aihọnpe]] towe nado diọ ogbè na ada wiki tọn lẹpo.",
+	"uls-betafeature-desc": "Do todohukanji ogbè tọn he ma ṣù hia, he mẹ ogbè he yin nujọnu na we hugan lẹ wẹ yin didohia.",
+	"ext-uls-display-settings-language-tab": "Ogbè",
+	"ext-uls-display-settings-fonts-tab": "Wunmẹ wekun tọn",
+	"ext-uls-display-settings-title-short": "Awusọhia",
+	"ext-uls-display-settings-desc": "Dè ogbè he yin yiyizan na titotowhinnu lẹ po wunmẹ wekun tọn lẹ po.",
+	"ext-uls-language-settings-cancel": "Hònupla",
+	"ext-uls-webfonts-settings-info-link": "Nudọnamẹ dogọ",
+	"ext-uls-input-settings-more-languages-tooltip": "Ogbè dogọ lẹ",
+	"jquery-ime-other-languages": "Ogbè devo lẹ",
+	"jquery-ime-help": "Alọgọ",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Dopodogọ|$1 dogọ}}",
+	"prefs-languages": "Ogbè lẹ"
 }
