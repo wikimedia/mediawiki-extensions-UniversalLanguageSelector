@@ -25,6 +25,7 @@
 		"GetBetaFeaturePreferences": "main",
 		"GetPreferences": "main",
 		"MakeGlobalVariablesScript": "main",
+		"PersonalUrls": "main",
 		"ResourceLoaderGetConfigVars": "main",
 		"SkinAfterPortlet": "main",
 		"SkinTemplateNavigation::Universal": "main",

@@ -88,19 +88,7 @@ class Hooks implements
 	}
 
 	public static function setVersionConstant() {
-		global $wgHooks;
-
 		define( 'ULS_VERSION', '2020-07-20' );
-
-		// For MediaWiki < 1.37, there is no `user-interface-preferences` menu. We use
-		// the PersonalUrls hook to make sure the language button is added.
-		// In MediaWiki > 1.37, the personal urls was split out into multiple new menus,
-		// In the new format, the `user-interface-preferences` is the most relevant place to put
-		// this button. Using the SkinTemplateNavigation::Universal hook will ensure the button is
-		// added to the correct menu.
-		if ( version_compare( MW_VERSION, '1.37', '<' ) ) {
-			$wgHooks['PersonalUrls'][] = "UniversalLanguageSelector\\Hooks::onPersonalUrls";
-		}
 	}
 
 	/**
@@ -233,6 +221,16 @@ class Hooks implements
 	 * @param SkinTemplate $skin
 	 */
 	public function onPersonalUrls( &$personal_urls, &$title, $skin ): void {
+		// For MediaWiki < 1.37, there is no `user-interface-preferences` menu. We use
+		// the PersonalUrls hook to make sure the language button is added.
+		// In MediaWiki >= 1.37, the personal urls was split out into multiple new menus,
+		// In the new format, the `user-interface-preferences` is the most relevant place to put
+		// this button. Using the SkinTemplateNavigation::Universal hook will ensure the button is
+		// added to the correct menu.
+		if ( version_compare( MW_VERSION, '1.37', '>=' ) ) {
+			return;
+		}
+
 		$personal_urls = $this->addPersonalBarTrigger(
 			$personal_urls,
 			$skin
