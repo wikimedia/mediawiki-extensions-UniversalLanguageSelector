@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Gilbert Ndihokubwayo"
+		]
+	},
+	"uls-desc": "Bitanga k'uwukoresha inzira nyinshi zo guhitamwo ururimi no guhindura ururimi",
+	"uls-plang-title-languages": "Indimi",
+	"ext-uls-undo-language-tooltip-text": "Ururimi rwahindutse kuva kuri $1",
+	"ext-uls-undo-language-tooltip-text-local": "Ururimi rwahindutse kuri ino wiki. Raba [[Special:GlobalPreferences|global preferences]] yawe kugirango uhindure ururimi kuri wiki zose.",
+	"uls-betafeature-label": "Imbuga zo guhuza ururimi",
+	"uls-betafeature-desc": "Yerekana igice kigufi c'urutonde rw'indimi, hamwe n'indimi zikuraba cane zonyene.",
+	"ext-uls-display-settings-language-tab": "Ururimi",
+	"ext-uls-display-settings-title-short": "Ishushanyo",
+	"ext-uls-language-settings-cancel": "Futa",
+	"ext-uls-language-buttons-help": "Hindura imvugo y'intonde. Ururimi rw'ibirimwo ntirukorwako.",
+	"ext-uls-display-settings-ui-language": "Yerekana ururimi",
+	"ext-uls-display-settings-anon-label": "Yerekana ururimi",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (cokimwe n'ibirimwo)",
+	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|kwinjira]] kugirango ucagure ururimi rutandukanye rwo kuntonde.",
+	"ext-uls-webfonts-settings-info-link": "Ayandi makuru",
+	"ext-uls-input-settings-title-short": "Kwinjiza",
+	"ext-uls-input-settings-desc": "Kwandika mu rundi rurimi?",
+	"ext-uls-input-settings-ime-settings": "Uburyo bwo kwinjiza kuri $1",
+	"ext-uls-input-settings-ui-language": "Ururimi rukoreshwa mukwandika",
+	"ext-uls-ime-help": "Ingene bikoreshwa",
+	"ext-uls-disable-input-method": "Koresha clavier kavukire",
+	"ext-uls-input-settings-more-languages-tooltip": "Izindi ndimi nyinshi",
+	"jquery-ime-other-languages": "Izindi ndimi",
+	"jquery-ime-disable-text": "Koresha clavier kavukire",
+	"jquery-ime-help": "Ubufasha",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Urundi|$1 izindi}}"
+}
