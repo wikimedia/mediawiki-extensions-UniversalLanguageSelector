@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Андрей Саг."
+			"Андрей Саг.",
+			"Jolka Kaj"
 		]
 	},
+	"uls-plang-title-languages": "Тіллер",
 	"ext-uls-setlang-unknown-error": "Таныбас алҷаас"
 }

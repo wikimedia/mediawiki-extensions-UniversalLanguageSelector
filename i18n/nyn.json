@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kakonjo"
+			"Kakonjo",
+			"Amire80"
 		]
 	},
-	"uls-plang-title-languages": "Endimi"
+	"uls-plang-title-languages": "Endimi",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Orundi rumwe|$1 ezindi}}"
 }
