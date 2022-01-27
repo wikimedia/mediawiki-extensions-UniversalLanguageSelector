@@ -1,0 +1,11 @@
+== UniversalLanguageSelector 2022.01 ==
+Released at 2022-01-27.
+
+=== Noteworthy changes ===
+* Remove backward compatibility for MW <= 1.35
+* Localisation and maintenance updates.
+
+=== Font updates ===
+* Add Awami Nastaliq font ({{phab|T290510}}, {{gerrit|737206}})
+* Update OpenDyslexic ({{gerrit|737207}})
+* Update GentiumPlus font ({{phab|T298613}}, {{gerrit|737206}})
