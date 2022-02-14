@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Agilight"
+			"Agilight",
+			"Riverman"
 		]
 	},
+	"uls-plang-title-languages": "Дылдар",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Оон база|Немей $1}}"
 }

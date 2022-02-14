@@ -4,5 +4,6 @@
 			"ObaTango"
 		]
 	},
+	"uls-plang-title-languages": "Idioma",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Un mas|$1 mas}}"
 }

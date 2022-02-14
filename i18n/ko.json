@@ -72,6 +72,7 @@
 	"ext-uls-compact-no-results": "이 문서는 검색된 언어로 읽을 수 없습니다.",
 	"ext-uls-setlang-error": "선호하는 언어를 업데이트하는 중 오류가 발생했습니다. 오류: $1",
 	"ext-uls-setlang-unknown-error": "알 수 없는 오류",
+	"ext-uls-setlang-message": "당신이 따라온 링크가 인터페이스를 <strong>$1 ($2)</strong>로 표시하도록 요청했습니다",
 	"ext-uls-setlang-heading": "인터페이스 언어를 변경하시겠습니까?",
 	"ext-uls-setlang-accept": "변경 수락",
 	"ext-uls-setlang-loading": "적용 중...",
