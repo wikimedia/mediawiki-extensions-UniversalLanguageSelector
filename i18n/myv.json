@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Rueter",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Кельть"
+	"uls-plang-title-languages": "Кельть",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Лия кель|$1 лия кельть}}"
 }
