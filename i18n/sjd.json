@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Meerrahtar"
+			"Meerrahtar",
+			"Merrahtar"
 		]
 	},
+	"uls-plang-title-languages": "Кӣл",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Вя̄л $1}}"
 }

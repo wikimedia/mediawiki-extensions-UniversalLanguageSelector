@@ -4,7 +4,8 @@
 			"Dağlı95",
 			"Interfase",
 			"NMW03",
-			"Wertuose"
+			"Wertuose",
+			"Toghrul Rahimli"
 		]
 	},
 	"uls-plang-title-languages": "Dillər",
@@ -36,5 +37,6 @@
 	"ext-uls-input-disable-notification-undo": "Geri qaytar",
 	"ext-uls-language-settings-applying": "Tətbiq edilir...",
 	"ext-uls-compact-link-count": "Daha {{PLURAL:$1|1 dil|$1 dil}}",
+	"prefs-languages": "Dillər",
 	"ext-uls-compact-language-links-preference": "Yalnız özünüzə maraqlı olan [[$1|yığcam dil siyahısını]] istifadə etmək."
 }
