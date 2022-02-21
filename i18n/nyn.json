@@ -5,6 +5,11 @@
 			"Kakonjo"
 		]
 	},
+	"uls-desc": "Hereza Omukozesa emiringo mingi y'okutorana orurimi nana okuhindura setingi za endimi",
 	"uls-plang-title-languages": "Endimi",
+	"ext-uls-select-language-settings-icon-tooltip": "Setingi za endimi",
+	"ext-uls-undo-language-tooltip-text": "Orurimi ruhindwirwe kuruga $1",
+	"ext-uls-undo-language-tooltip-text-local": "Orurimi ruhindwirwe orwa wiki egyi. Kyebera [[Special:GlobalPreferences|ebirikwendwa omunsi]] ku hindura orurimi rwa wiki zoona.",
+	"ext-uls-language-settings-preferences-link": "Ezindi setingi za endimi",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Orundi rumwe|$1 ezindi}}"
 }
