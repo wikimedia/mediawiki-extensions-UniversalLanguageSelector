@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Keresturec"
+		]
+	},
+	"uls-plang-title-languages": "Язики",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Єден вецей|$1 вецей}}"
+}
