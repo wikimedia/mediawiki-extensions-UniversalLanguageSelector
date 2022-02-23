@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Numulunj pilgae",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Кяльхне"
+	"uls-plang-title-languages": "Кяльхне",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|тага фкя|тага $1}}"
 }
