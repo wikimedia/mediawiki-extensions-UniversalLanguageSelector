@@ -3,9 +3,10 @@
 		"authors": [
 			"Geopoet",
 			"Kunokuno",
-			"Xð"
+			"Xð",
+			"Daramlagon"
 		]
 	},
-	"uls-plang-title-languages": "Mga Lengguwahe",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Saro pa|$1 saro pa}}"
+	"uls-plang-title-languages": "Lenggwahe",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Saro pa|$1 pa}}"
 }
