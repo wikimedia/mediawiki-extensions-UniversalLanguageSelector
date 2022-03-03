@@ -117,7 +117,6 @@
 			switch ( event.key ) {
 				case 'Esc':
 				case 'Escape':
-					// eslint-disable-next-line no-use-before-define
 					close();
 					event.preventDefault();
 					break;

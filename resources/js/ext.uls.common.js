@@ -192,6 +192,7 @@
 	};
 
 	mw.uls.getAcceptLanguageList = function () {
+		// eslint-disable-next-line compat/compat
 		return mw.config.get( 'wgULSAcceptLanguageList' ) || window.navigator.languages || [];
 	};
 

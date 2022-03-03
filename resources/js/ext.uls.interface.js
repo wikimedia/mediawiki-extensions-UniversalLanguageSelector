@@ -221,7 +221,7 @@
 	/**
 	 * Adds display and input settings to the ULS dialog after loading their code.
 	 *
-	 * @param {ULS} uls instance
+	 * @param {Object} uls The ULS instance
 	 * @return {jQuery.Promise}
 	 */
 	function loadDisplayAndInputSettings( uls ) {

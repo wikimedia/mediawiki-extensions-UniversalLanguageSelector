@@ -119,6 +119,8 @@
 
 		/**
 		 * Loads the webfonts module sets the `webfonts` property when its safe to do so
+		 *
+		 * @return {jQuery.Promise}
 		 */
 		setupWebFonts: function () {
 			var d = $.Deferred();
@@ -133,7 +135,7 @@
 					d.resolve();
 				}.bind( this ), 1 );
 			}.bind( this ) );
-			return d;
+			return d.promise();
 		},
 		/**
 		 * Render the module into a given target

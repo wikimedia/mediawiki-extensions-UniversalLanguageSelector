@@ -271,16 +271,16 @@
 
 			function buttonHandler( button ) {
 				return function () {
-					var language = button.data( 'language' );
+					var selectedLang = button.data( 'language' );
 
-					if ( language !== $.ime.preferences.getLanguage() ) {
+					if ( selectedLang !== $.ime.preferences.getLanguage() ) {
 						inputSettings.markDirty();
-						$.ime.preferences.setLanguage( language );
+						$.ime.preferences.setLanguage( selectedLang );
 					}
 					// Mark the button selected
 					$( '.uls-ui-languages .mw-ui-button' ).removeClass( 'mw-ui-pressed' );
 					button.addClass( 'mw-ui-pressed' );
-					inputSettings.prepareInputmethods( language );
+					inputSettings.prepareInputmethods( selectedLang );
 				};
 			}
 

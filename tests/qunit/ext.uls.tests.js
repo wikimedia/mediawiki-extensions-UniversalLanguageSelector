@@ -23,7 +23,7 @@
 	QUnit.module( 'ext.uls', QUnit.newMwEnvironment() );
 
 	QUnit.test( 'Initial check', function ( assert ) {
-		assert.ok( $.fn.uls, '$.fn.uls is defined' );
+		assert.strictEqual( typeof $.fn.uls, 'function', '$.fn.uls is defined' );
 	} );
 
 	QUnit.test( 'Custom langdb', function ( assert ) {
@@ -60,7 +60,7 @@
 
 		done = assert.async();
 		prefs.save( function ( successSave ) {
-			assert.ok( successSave, 'Options saving API did not produce an error.' );
+			assert.true( successSave, 'Options saving API did not produce an error.' );
 			// Delete old options
 			prefs.set( prefName, undefined );
 			prefs.save( function () {
@@ -85,7 +85,7 @@
 				break;
 			}
 		}
-		assert.ok(
+		assert.true(
 			foundTagalog,
 			'Tagalog is one of the languages presented to users in the Philippines.'
 		);
