@@ -329,10 +329,13 @@
 					}
 				} else {
 					mw.loader.using( languageSettingsModules, function () {
-						$trigger.languagesettings();
-
-						$trigger.trigger( 'click' );
+						$trigger.languagesettings( { autoOpen: true } );
+						mw.hook( 'mw.uls.settings.open' ).fire( 'personal' );
 					} );
+					// Stop propagating the event to avoid closing the languagesettings dialog
+					// when the event propagates to the document click handler inside
+					// languagesettings
+					e.stopPropagation();
 				}
 			};
 		} else {

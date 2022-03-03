@@ -63,6 +63,10 @@
 		this.$applyButton = this.$window.find( '.uls-settings-apply' );
 		this.init();
 		this.listen();
+
+		if ( options.autoOpen ) {
+			this.show();
+		}
 	}
 
 	LanguageSettings.prototype = {
@@ -318,7 +322,8 @@
 		top: null, // DEPRECATED: Top position of this window
 		left: null, // DEPRECATED: Left position of this window
 		onVisible: null, // A callback that runs after the ULS panel becomes visible
-		onPosition: null // A callback that allows positioning the dialog
+		onPosition: null, // A callback that allows positioning the dialog,
+		autoOpen: false // A boolean that determines if dialog should auto-open after initialization
 	};
 
 	$.fn.languagesettings.Constructor = LanguageSettings;
