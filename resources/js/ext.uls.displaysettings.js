@@ -34,7 +34,7 @@
 		'</div>' +
 
 		// Begin display language sub-panel
-		'<div class="ext-uls-sub-panel uls-display-settings-language-tab">' +
+		'<div class="uls-sub-panel uls-display-settings-language-tab">' +
 
 		// "Display language", title above the buttons row
 		'<div class="row">' +
@@ -54,7 +54,7 @@
 		'</div>' +
 
 		// Begin font settings section, hidden by default
-		'<div class="ext-uls-sub-panel uls-display-settings-fonts-tab hide">' +
+		'<div class="uls-sub-panel uls-display-settings-fonts-tab hide">' +
 
 		// "Font settings" title
 		'<div class="row">' +
@@ -593,7 +593,7 @@
 					return;
 				}
 
-				displaySettings.$template.find( '.ext-uls-sub-panel' ).each( function () {
+				displaySettings.$template.find( '.uls-sub-panel' ).each( function () {
 					var $subPanel = $( this );
 
 					// eslint-disable-next-line no-jquery/no-class-state

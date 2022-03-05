@@ -45,7 +45,7 @@
 		'<div class="twelve columns">' +
 		'<div class="uls-input-settings-inputmethods-list">' +
 		// "Input settings for language xyz" title
-		'<h4 class="ext-uls-input-settings-imes-title"></h4>' +
+		'<h4 class="uls-input-settings-imes-title"></h4>' +
 		'</div>' +
 		'</div>' +
 		'</div>' +
@@ -118,7 +118,7 @@
 
 			imes = $.ime.languages[ language ];
 
-			$imeListTitle = this.$template.find( '.ext-uls-input-settings-imes-title' );
+			$imeListTitle = this.$template.find( '.uls-input-settings-imes-title' );
 			$imeListContainer = this.$template.find( '.uls-input-settings-inputmethods-list' );
 
 			$imeListContainer.empty();
