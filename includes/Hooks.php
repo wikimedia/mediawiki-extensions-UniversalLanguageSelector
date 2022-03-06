@@ -20,12 +20,12 @@
 
 namespace UniversalLanguageSelector;
 
-use Babel;
 use Config;
 use ExtensionRegistry;
 use Html;
 use IBufferingStatsdDataFactory;
 use IContextSource;
+use MediaWiki\Babel\Babel;
 use MediaWiki\Extension\BetaFeatures\BetaFeatures;
 use MediaWiki\Hook\BeforePageDisplayHook;
 use MediaWiki\Hook\MakeGlobalVariablesScriptHook;
