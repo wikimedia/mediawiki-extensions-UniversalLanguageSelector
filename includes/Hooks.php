@@ -422,7 +422,7 @@ class Hooks implements
 			$vars['wgULSAcceptLanguageList'] = array_keys( $out->getRequest()->getAcceptLang() );
 		}
 
-		if ( $loggedIn && class_exists( Babel::class ) ) {
+		if ( $loggedIn && ExtensionRegistry::getInstance()->isLoaded( 'Babel' ) ) {
 			$userLanguageInfo = Babel::getCachedUserLanguageInfo( $user );
 
 			// This relies on the fact that Babel levels are 'N' and
