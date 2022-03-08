@@ -42,5 +42,6 @@
 	"ext-uls-input-enable": "گیریش یولو آراجلارینی ایشه سال",
 	"ext-uls-input-disable-info": "گیریش یولو آراجلاری ایشدن دوشدولر.",
 	"ext-uls-input-settings-noime": "هئچ گیریش یول‌لاری بو دیل اوچون ال‌ده یوخدور.",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|۱ داها دیل|$1 داها دیل}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|۱ داها دیل|$1 داها دیل}}",
+	"prefs-languages": "دیل‌لر"
 }
