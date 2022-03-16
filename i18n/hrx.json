@@ -4,5 +4,6 @@
 			"Iohanen"
 		]
 	},
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Een weidere|$1 weidere}}"
+	"uls-plang-title-languages": "Sproche",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Een weidre|$1 weidre}}"
 }
