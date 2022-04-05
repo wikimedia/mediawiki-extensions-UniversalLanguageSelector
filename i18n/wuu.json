@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Benojan",
+			"StarrySky",
 			"飞舞回堂前"
 		]
 	},
+	"uls-plang-title-languages": "闲话",
 	"ext-uls-undo-language-tooltip-text-local": "箇个wiki个话版本变訤。想变一切wiki个话版本，走尔[[Special:GlobalPreferences|统一个中意较]]里望望向。",
 	"ext-uls-compact-link-count": "还有$1种闲话"
 }
