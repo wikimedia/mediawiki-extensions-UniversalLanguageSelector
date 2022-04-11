@@ -69,5 +69,7 @@
 	"ext-uls-setlang-heading": "Benutzersprache ändern?",
 	"ext-uls-setlang-accept": "Änderung akzeptieren",
 	"ext-uls-setlang-loading": "Anwenden …",
-	"ext-uls-setlang-cancel": "Nicht ändern"
+	"ext-uls-setlang-cancel": "Nicht ändern",
+	"ext-uls-actions-menu-header": "Weitere Optionen",
+	"ext-uls-actions-menu-language-settings-item-label": "Spracheinstellungen öffnen"
 }

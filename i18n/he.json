@@ -69,5 +69,7 @@
 	"ext-uls-setlang-heading": "לשנות את שפת הממשק?",
 	"ext-uls-setlang-accept": "לקבל את השינויים",
 	"ext-uls-setlang-loading": "החלה...",
-	"ext-uls-setlang-cancel": "לא לשנות"
+	"ext-uls-setlang-cancel": "לא לשנות",
+	"ext-uls-actions-menu-header": "אפשרויות נוספות",
+	"ext-uls-actions-menu-language-settings-item-label": "פתיחת הגדרות שפה"
 }
