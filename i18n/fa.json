@@ -10,6 +10,7 @@
 			"Mahan",
 			"Mehran",
 			"Mjbmr",
+			"Mojtabakd",
 			"Reza1615"
 		]
 	},
@@ -73,5 +74,7 @@
 	"ext-uls-setlang-heading": "زبان رابط کاربری را تغییر می‌دهید؟",
 	"ext-uls-setlang-accept": "پذیرفتن تغییرات",
 	"ext-uls-setlang-loading": "در حال اعمال...",
-	"ext-uls-setlang-cancel": "تغییر نده"
+	"ext-uls-setlang-cancel": "تغییر نده",
+	"ext-uls-actions-menu-header": "گزینه‌های بیشتر",
+	"ext-uls-actions-menu-language-settings-item-label": "تنظیمات زبان را باز کن"
 }

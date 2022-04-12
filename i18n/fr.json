@@ -86,5 +86,7 @@
 	"ext-uls-setlang-heading": "Modifier la langue de l’interface ?",
 	"ext-uls-setlang-accept": "Accepter la modification",
 	"ext-uls-setlang-loading": "Application…",
-	"ext-uls-setlang-cancel": "Ne pas modifier"
+	"ext-uls-setlang-cancel": "Ne pas modifier",
+	"ext-uls-actions-menu-header": "Plus d’options",
+	"ext-uls-actions-menu-language-settings-item-label": "Ouvrir les paramètres de langue"
 }

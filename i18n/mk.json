@@ -67,5 +67,7 @@
 	"ext-uls-setlang-heading": "Да го сменам јазикот на посредникот?",
 	"ext-uls-setlang-accept": "Прифати промена",
 	"ext-uls-setlang-loading": "Применувам...",
-	"ext-uls-setlang-cancel": "Не менувај"
+	"ext-uls-setlang-cancel": "Не менувај",
+	"ext-uls-actions-menu-header": "Повеќе можности",
+	"ext-uls-actions-menu-language-settings-item-label": "Отвори јазични поставки"
 }
