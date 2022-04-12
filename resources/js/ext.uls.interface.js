@@ -22,6 +22,8 @@
 	var languageSettingsModules = [ 'ext.uls.displaysettings' ],
 		launchULS = require( './ext.uls.launch.js' ),
 		ActionsMenu = require( './ext.uls.actions.menu.js' );
+	require( './ext.uls.actions.menu.items.registry.js' );
+
 	/**
 	 * Construct the display settings link
 	 *
@@ -140,7 +142,6 @@
 			handler: openActionsMenuEventHandler
 		};
 
-		require( './ext.uls.actions.menu.items.registry.js' );
 		var actionItemsRegistry = mw.uls.ActionsMenuItemsRegistry;
 		actionItemsRegistry.register( languageSettingsMenuItem );
 		// first hide #uls-settings-block div since it's unused, and it causes
