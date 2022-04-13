@@ -12,7 +12,7 @@
 	"ext-uls-language-settings-title": "Kielâasâttâsah",
 	"jquery-ime-other-languages": "Eres kielah",
 	"jquery-ime-help": "Iše",
-	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|eres kielâ|eres kiellâd}}",
+	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|eres kielâ|eres kielâ|eres kielâ|eres kiellâd}}",
 	"prefs-languages": "Kielah",
 	"ext-uls-compact-language-links-preference": "Keevti [[$1|kompakt kielâlisto]], mii čáittá tunjin merhâšittee kielâid.",
 	"ext-uls-setlang-unknown-error": "Tubdâmettum feilâ"
