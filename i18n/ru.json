@@ -6,6 +6,7 @@
 			"Iltever",
 			"Jack who built the house",
 			"Kaganer",
+			"Kareyac",
 			"Mailman",
 			"Mix Gerder",
 			"Mouse21",
@@ -79,5 +80,6 @@
 	"ext-uls-setlang-heading": "Сменить язык интерфейса?",
 	"ext-uls-setlang-accept": "Подтвердить изменение",
 	"ext-uls-setlang-loading": "Применение…",
-	"ext-uls-setlang-cancel": "Не менять"
+	"ext-uls-setlang-cancel": "Не менять",
+	"ext-uls-actions-menu-header": "Больше возможностей"
 }
