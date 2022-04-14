@@ -48,5 +48,7 @@
 	"ext-uls-compact-link-info": "భాషలన్నీ (మీరు, ఇతరులూ ఎంచుకున్నవాటి నుంచి ఎంచినవి)",
 	"prefs-languages": "భాషలు",
 	"ext-uls-compact-language-links-preference": "మీకు సంబంధించిన భాషలు కలిగిన ఒక [[$1|సంగ్రహ భాషా జాబితా]] వాడండి.",
-	"ext-uls-compact-no-results": "మీరు వెతికిన భాషలో ఈ పేజీ లేదు."
+	"ext-uls-compact-no-results": "మీరు వెతికిన భాషలో ఈ పేజీ లేదు.",
+	"ext-uls-actions-menu-header": "మరిన్ని వికల్పాలు",
+	"ext-uls-actions-menu-language-settings-item-label": "భాషా అమరికలను తెరువు"
 }
