@@ -76,5 +76,7 @@
 	"ext-uls-setlang-heading": "인터페이스 언어를 변경하시겠습니까?",
 	"ext-uls-setlang-accept": "변경 수락",
 	"ext-uls-setlang-loading": "적용 중...",
-	"ext-uls-setlang-cancel": "변경하지 않음"
+	"ext-uls-setlang-cancel": "변경하지 않음",
+	"ext-uls-actions-menu-header": "옵션 더 보기",
+	"ext-uls-actions-menu-language-settings-item-label": "언어 설정 열기"
 }

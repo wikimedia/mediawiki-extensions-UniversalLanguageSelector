@@ -68,5 +68,7 @@
 	"ext-uls-setlang-heading": "Mainīt saskarnes valodu?",
 	"ext-uls-setlang-accept": "Pieņemt izmaiņas",
 	"ext-uls-setlang-loading": "Pielieto...",
-	"ext-uls-setlang-cancel": "Nemainīt"
+	"ext-uls-setlang-cancel": "Nemainīt",
+	"ext-uls-actions-menu-header": "Vairāk iespēju",
+	"ext-uls-actions-menu-language-settings-item-label": "Atvērt valodas iestatījumus"
 }
