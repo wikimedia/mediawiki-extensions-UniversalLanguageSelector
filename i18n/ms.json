@@ -3,6 +3,7 @@
 		"authors": [
 			"Anakmalaysia",
 			"CyberTroopers",
+			"Tofeiku",
 			"Xabier Armendaritz"
 		]
 	},
@@ -65,5 +66,7 @@
 	"ext-uls-setlang-heading": "Ubah bahasa antara muka?",
 	"ext-uls-setlang-accept": "Terima perubahan",
 	"ext-uls-setlang-loading": "Menetapkan...",
-	"ext-uls-setlang-cancel": "Jangan ubah"
+	"ext-uls-setlang-cancel": "Jangan ubah",
+	"ext-uls-actions-menu-header": "Lebih pilihan",
+	"ext-uls-actions-menu-language-settings-item-label": "Buka tetapan bahasa"
 }
