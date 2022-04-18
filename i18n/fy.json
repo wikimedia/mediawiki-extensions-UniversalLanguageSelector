@@ -11,7 +11,7 @@
 	"uls-plang-title-languages": "Talen",
 	"ext-uls-select-language-settings-icon-tooltip": "Taalynstellings",
 	"ext-uls-undo-language-tooltip-text": "Taal feroare fan $1",
-	"ext-uls-undo-language-tooltip-text-local": "Taal foar dizze wiki feroare. Kontrolearje jo [[Special:GlobalPreferences|globale ynstellings]] en feroarje de taal foar alle wiki's.",
+	"ext-uls-undo-language-tooltip-text-local": "Taal foar dizze wiki feroare. Kontrolearje jo [[Special:GlobalPreferences|globale ynstellings]] om 'e taal foar alle wiki's te feroarjen.",
 	"ext-uls-language-settings-preferences-link": "Mear taalynstellings",
 	"uls-betafeature-label": "Kompakte taalkeppelings",
 	"uls-betafeature-desc": "Lit in bekoarte talelist sjen, mei de talen dy't foar jo relevanter binne.",
