@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"LesVisages",
 			"Robin van der Vliet"
 		]
 	},
+	"uls-plang-title-languages": "toki",
 	"ext-uls-display-settings-language-tab": "toki",
 	"jquery-ime-other-languages": "toki ante"
 }
