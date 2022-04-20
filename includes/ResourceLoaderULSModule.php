@@ -35,7 +35,7 @@ class ResourceLoaderULSModule extends ResourceLoaderModule {
 	/**
 	 * Get all the dynamic data for the content language to an array.
 	 *
-	 * @param string $languageCode Language code
+	 * @param string $languageCode
 	 * @return array
 	 */
 	private function getData( $languageCode ) {

@@ -205,7 +205,7 @@ class Hooks implements
 		$this->statsdDataFactory->increment( 'uls.setlang_used' );
 
 		$user = $out->getUser();
-		if ( $user->isAnon() && !$out->getConfig()->get( 'ULSAnonCanChangeLanguage' ) ) {
+		if ( !$user->isRegistered() && !$out->getConfig()->get( 'ULSAnonCanChangeLanguage' ) ) {
 			// User is anon, and cannot change language, return.
 			return;
 		}
@@ -290,7 +290,7 @@ class Hooks implements
 	}
 
 	/**
-	 * @param array $preferred
+	 * @param float[] $preferred
 	 * @return string
 	 */
 	protected function getDefaultLanguage( array $preferred ) {
