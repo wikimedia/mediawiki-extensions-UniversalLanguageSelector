@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Akapochtli",
+			"Languaeditor",
 			"Xð"
 		]
 	},
 	"uls-plang-title-languages": "Tlahtolli",
-	"ext-uls-language-settings-cancel": "Moxitiniz",
+	"ext-uls-language-settings-cancel": "Xikxolewa",
 	"ext-uls-compact-link-count": "{{Plural:$1|occe|$1 ocachi quexquich}}"
 }

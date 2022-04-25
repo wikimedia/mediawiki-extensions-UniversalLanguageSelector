@@ -74,5 +74,7 @@
 	"ext-uls-setlang-heading": "Ubah bahasa antarmuka?",
 	"ext-uls-setlang-accept": "Terima perubahan",
 	"ext-uls-setlang-loading": "Menerapkan...",
-	"ext-uls-setlang-cancel": "Jangan ubah"
+	"ext-uls-setlang-cancel": "Jangan ubah",
+	"ext-uls-actions-menu-header": "Opsi lainnya",
+	"ext-uls-actions-menu-language-settings-item-label": "Buka setelah bahasa"
 }
