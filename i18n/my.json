@@ -67,5 +67,7 @@
 	"ext-uls-setlang-heading": "အသွင်အပြင်ဘာသာစကားကို ပြောင်းလဲမည်လော။",
 	"ext-uls-setlang-accept": "ပြောင်းလဲမှုကို လက်ခံရန်",
 	"ext-uls-setlang-loading": "သတ်မှတ်နေသည်...",
-	"ext-uls-setlang-cancel": "မပြောင်းလဲပါနှင့်"
+	"ext-uls-setlang-cancel": "မပြောင်းလဲပါနှင့်",
+	"ext-uls-actions-menu-header": "နောက်ထပ် ရွေးချယ်စရာများ",
+	"ext-uls-actions-menu-language-settings-item-label": "ဘာသာစကား အပြင်အဆင်များ ဖွင့်ရန်"
 }
