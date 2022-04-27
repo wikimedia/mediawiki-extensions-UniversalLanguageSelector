@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"RebecaRwanda"
+		]
+	},
+	"uls-plang-title-languages": "Indimi",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Urundi|$1 izindi}}"
+}

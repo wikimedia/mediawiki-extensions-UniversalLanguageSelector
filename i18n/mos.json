@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Abdul Fatawu 352"
+			"Abdul Fatawu 352",
+			"Amire80",
+			"Hasslaebetch"
 		]
 	},
-	"uls-plang-title-languages": "Goama"
+	"uls-plang-title-languages": "Goama",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Yemde paas|$1 paas}}"
 }
