@@ -7,7 +7,7 @@
 		this.options = options;
 		this.$template = $( ActionsMenu.template );
 		this.actionItems = options.actions.map( function ( action ) {
-			return new ActionsMenuItem( action.icon, action.text, action.handler );
+			return new ActionsMenuItem( action.icon, action.text, action.handler, action.href );
 		} );
 		this.rendered = false;
 		this.shown = false;
@@ -65,14 +65,14 @@
 				actionItem = new ActionsMenuItem(
 					actionItem.icon,
 					actionItem.text,
-					actionItem.handler
+					actionItem.handler,
+					actionItem.href
 				);
 			}
 			var actionButton = actionItem.render();
 			this.$template.find( '.uls-language-action-items' ).prepend(
 				actionButton.$element
 			);
-			actionButton.$element.one( 'click', actionItem.handler );
 		},
 
 		i18n: function () {
