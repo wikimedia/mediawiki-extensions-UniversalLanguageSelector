@@ -5,6 +5,7 @@
 		]
 	},
 	"uls-plang-title-languages": "ᨽᩣᩈᩣ",
+	"ext-uls-select-language-settings-icon-tooltip": "ᨠᩣ᩠ᩁᨲᩢ᩠᩶ᨦᨣ᩵ᩤᨽᩣᩈᩣ",
 	"ext-uls-display-settings-language-tab": "ᨽᩣᩈᩣ",
 	"ext-uls-display-settings-fonts-tab": "ᨷᩯ᩠ᨷᩋᩢᨠ᩠ᨡᩁ",
 	"ext-uls-display-settings-title-short": "ᨻᩮ᩠ᨿᩡᨹᩫ᩠ᩃ",
@@ -13,6 +14,7 @@
 	"ext-uls-language-settings-cancel": "ᩃᩮᩥ᩠ᨠᩃ᩶ᩣ᩠ᨦ",
 	"ext-uls-display-settings-font-settings": "ᨠᩣ᩠ᩁᨲᩢ᩠᩶ᨦᨣ᩵ᩤᨷᩯ᩠ᨷᩋᩢᨠ᩠ᨡᩁ",
 	"ext-uls-display-settings-ui-language": "ᨽᩣᩈᩣᨴᩦ᩵ᨻᩮ᩠ᨿᩡ",
+	"ext-uls-webfonts-system-font": "ᨷᩯ᩠ᨷᩋᩢᨠ᩠ᨡᩁᨲᩣ᩠ᨾᩁᨷᩫ᩠ᨷ",
 	"ext-uls-ime-help": "ᩅᩥᨵᩦᨩᩲ᩶",
 	"ext-uls-disable-input-method": "ᨩᩲ᩶ᨸᩯ᩠᩶ᨶᨲᩮᩢ᩠ᨠᨣᩮᩢ᩶ᩣᨯᩮᩥ᩠ᨾᨡᩬᨦᨣᩕᩮᩬᩥ᩵ᨦ",
 	"ext-uls-input-settings-more-languages-tooltip": "ᨾᩦᨽᩣᩈᩣᩋᩨ᩠᩵ᨶᨳᩯ᩠ᨾ",
@@ -20,6 +22,9 @@
 	"jquery-ime-disable-text": "ᨩᩲ᩶ᨸᩯ᩠᩶ᨶᨲᩮᩢ᩠ᨠᨣᩮᩢ᩶ᩣᨯᩮᩥ᩠ᨾᨡᩬᨦᨣᩕᩮᩬᩥ᩵ᨦ",
 	"ext-uls-input-disable-notification-undo": "ᨿᩬ᩶ᩁᨠᩣ᩠ᩁᨠ᩠ᨴᩣᩴ",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|ᨳᩯ᩠ᨾ 1 ᨽᩣᩈᩣ|ᨳᩯ᩠ᨾ $1 ᨽᩣᩈᩣ}}",
+	"prefs-languages": "ᨽᩣᩈᩣ",
+	"ext-uls-compact-no-results": "ᨷᩴ᩵ᨾᩦᩉ᩠ᨶ᩶ᩣᨶᩦ᩶ᨶᩲᨽᩣᩈᩣᨴᩦ᩵ᨴ᩵ᩤ᩠ᨶᨪᩰᩬᩡᩉᩣ",
 	"ext-uls-setlang-unknown-error": "ᨾᩦᨤ᩠ᩅᩣ᩠ᨾᨹᩥ᩠ᨯᨽᩖᩣ᩠ᨯᨴᩦ᩵ᨷᩴᩁᩪ᩶ᨲᩫ᩠᩶ᨶᩉᩮ᩠ᨲᩩ",
+	"ext-uls-setlang-accept": "ᨿᩬᨾᩁᩢ᩠ᨷᨠᩣ᩠ᩁᨸᩖ᩠᩵ᨿᩁᨷᩕᩯ",
 	"ext-uls-setlang-cancel": "ᩀ᩵ᩣᨻᩱᨸᩖ᩠᩵ᨿᩁᨴ᩠ᩅ᩠ᨿ"
 }
