@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"ChoiChong"
+			"ChoiChong",
+			"春春眠眠"
 		]
 	},
+	"uls-plang-title-languages": "言葉（くとぅば）",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|他ぬ $1 口}}"
 }
