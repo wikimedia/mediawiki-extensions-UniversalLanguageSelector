@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"TayfunEt.",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Tiller"
+	"uls-plang-title-languages": "Tiller",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|bir dane daa|$1 daa}}"
 }
