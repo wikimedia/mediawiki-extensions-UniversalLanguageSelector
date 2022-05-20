@@ -48,6 +48,7 @@ class ResourceLoaderULSModule extends ResourceLoaderModule {
 	}
 
 	/**
+	 * @suppress PhanParamSignatureRealMismatchParamType, UnusedSuppression -- T308443
 	 * @param ResourceLoaderContext $context
 	 * @return string JavaScript code
 	 */

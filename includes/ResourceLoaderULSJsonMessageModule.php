@@ -20,6 +20,7 @@ class ResourceLoaderULSJsonMessageModule extends ResourceLoaderModule {
 	/**
 	 * Part of the ResourceLoader module interface.
 	 * Declares the core ext.uls.i18n module as a dependency.
+	 * @suppress PhanParamSignatureRealMismatchParamType, UnusedSuppression -- T308443
 	 * @param ResourceLoaderContext|null $context
 	 * @return string[] Module names.
 	 */
@@ -36,6 +37,7 @@ class ResourceLoaderULSJsonMessageModule extends ResourceLoaderModule {
 	}
 
 	/**
+	 * @suppress PhanParamSignatureRealMismatchParamType, UnusedSuppression -- T308443
 	 * @param ResourceLoaderContext $context
 	 * @return array
 	 */
@@ -56,6 +58,7 @@ class ResourceLoaderULSJsonMessageModule extends ResourceLoaderModule {
 	/**
 	 * Get the message strings for the current UI language. Uses
 	 * mw.uls.loadLocalization to register them on the frontend.
+	 * @suppress PhanParamSignatureRealMismatchParamType, UnusedSuppression -- T308443
 	 * @param ResourceLoaderContext $context
 	 * @return string JavaScript code.
 	 */
