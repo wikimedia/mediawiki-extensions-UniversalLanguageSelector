@@ -1,4 +1,5 @@
 {
+	"name": "UniversalLanguageSelector",
 	"private": true,
 	"scripts": {
 		"minify-svg": "svgo --config=.svgo.config.js --quiet --recursive --folder resources/images/",
@@ -6,12 +7,12 @@
 	},
 	"devDependencies": {
 		"eslint-config-wikimedia": "0.22.1",
-		"grunt": "1.4.1",
+		"grunt": "1.5.2",
 		"grunt-banana-checker": "0.9.0",
 		"grunt-eslint": "24.0.0",
 		"grunt-stylelint": "0.17.0",
 		"postcss-less": "6.0.0",
-		"stylelint-config-wikimedia": "0.11.1",
+		"stylelint-config-wikimedia": "0.13.0",
 		"svgo": "2.8.0"
 	},
 	"eslintIgnore": [
