@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Azorbli",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Gbewo"
+	"uls-plang-title-languages": "Gbewo",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ɖeka|$1}} kple bubuwo"
 }
