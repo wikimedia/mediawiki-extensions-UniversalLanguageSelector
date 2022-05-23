@@ -10,7 +10,9 @@
 			"Mehran",
 			"Mjbmr",
 			"Reza1615",
-			"Jeeputer"
+			"Jeeputer",
+			"Beginneruser",
+			"Mojtabakd"
 		]
 	},
 	"uls-desc": "به کاربر راه‌های مختلفی برای انتخاب زبان و تنظیم تنظیمات زبان  می‌دهد",
@@ -33,7 +35,7 @@
 	"ext-uls-display-settings-ui-language": "نمایش زبان",
 	"ext-uls-display-settings-anon-label": "نمایش زبان",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (به مانند مطالب)",
-	"ext-uls-display-settings-anon-log-in-cta": " [[Special:UserLogin|ورود]] برای انتخاب زبان متفاوتی برای منوها.",
+	"ext-uls-display-settings-anon-log-in-cta": "برای انتخاب یک زبان متفاوت برای منوها [[Special:UserLogin|به سامانه وارد شوید]].",
 	"ext-uls-webfonts-settings-title": "دریافت قلم‌های مورد نیاز",
 	"ext-uls-webfonts-settings-info": "دریافت خودکار قلم‌های ناموجود و اجازهٔ انتخاب قلم‌های ترجیح‌داده‌شده.",
 	"ext-uls-webfonts-settings-info-link": "اطلاعات بیشتر",

@@ -4,13 +4,17 @@
 			"Fohanno",
 			"Fulup",
 			"VIGNERON",
-			"Y-M D"
+			"Y-M D",
+			"Huñvreüs"
 		]
 	},
+	"uls-desc": "Reiñ a ra d’an implijer meur a zoare da zibab ur yezh ha da gemmañ e zibarzhioù yezh",
 	"uls-plang-title-languages": "Yezhoù",
 	"ext-uls-select-language-settings-icon-tooltip": "Arventennoù ar yezh",
 	"ext-uls-undo-language-tooltip-text": "Yezh kemmet eus $1",
+	"ext-uls-undo-language-tooltip-text-local": "Yezh kemmet evit ar wiki-mañ. Kit d’ho [[Special:GlobalPreferences|penndibaboù hollek]] evit kemmañ ar yezh war an holl wikioù.",
 	"ext-uls-language-settings-preferences-link": "Muioc'h a arventennoù yezh",
+	"uls-betafeature-label": "Liammoù yezh fetis",
 	"ext-uls-display-settings-title": "Diskwel an arventennoù",
 	"ext-uls-display-settings-language-tab": "Yezh",
 	"ext-uls-display-settings-fonts-tab": "Fontoù",
