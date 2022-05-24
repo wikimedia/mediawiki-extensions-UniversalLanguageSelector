@@ -4,13 +4,18 @@
 			"Fohanno",
 			"Fulup",
 			"VIGNERON",
-			"Y-M D"
+			"Y-M D",
+			"Huñvreüs"
 		]
 	},
+	"uls-desc": "Reiñ a ra d’an implijer meur a zoare da zibab ur yezh ha da gemmañ e zibarzhioù yezh",
 	"uls-plang-title-languages": "Yezhoù",
 	"ext-uls-select-language-settings-icon-tooltip": "Arventennoù ar yezh",
 	"ext-uls-undo-language-tooltip-text": "Yezh kemmet eus $1",
+	"ext-uls-undo-language-tooltip-text-local": "Yezh kemmet evit ar wiki-mañ. Kit d’ho [[Special:GlobalPreferences|penndibaboù hollek]] evit kemmañ ar yezh war an holl wikioù.",
 	"ext-uls-language-settings-preferences-link": "Muioc'h a arventennoù yezh",
+	"uls-betafeature-label": "Liammoù yezh fetis",
+	"uls-betafeature-desc": "Diskwel ur stumm berroc’h eus roll ar yezhoù, gant ar yezhoù dereatañ evidoc’h hepken.",
 	"ext-uls-display-settings-title": "Diskwel an arventennoù",
 	"ext-uls-display-settings-language-tab": "Yezh",
 	"ext-uls-display-settings-fonts-tab": "Fontoù",
@@ -25,7 +30,7 @@
 	"ext-uls-display-settings-anon-label": "Yezhoù diskwel :",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (evel evit an danvez)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Kevreañ]] evit dibab ur yezh all evit al lañserioù.",
-	"ext-uls-webfonts-settings-title": "Pellgargañ ar font pa vez ezhomm",
+	"ext-uls-webfonts-settings-title": "Pellgargañ ar fontoù pa vez ezhomm",
 	"ext-uls-webfonts-settings-info-link": "Muioc'h a ditouroù",
 	"ext-uls-webfonts-select-for": "Dibab ar font evit $1",
 	"ext-uls-webfonts-select-for-ui-info": "Font implijet evit an etrefas",
@@ -47,5 +52,13 @@
 	"ext-uls-input-enable": "Gweredekaat an ostilhoù bizskrivañ",
 	"ext-uls-input-disable-notification-undo": "Dizober",
 	"ext-uls-language-settings-applying": "O lakaat e pleustr...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Unan|$1}} ouzhpenn"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Unan|$1}} ouzhpenn",
+	"prefs-languages": "Yezhoù",
+	"ext-uls-compact-language-links-preference": "Ober gant ur [[$1|roll yezhoù fetis]], gant yezhoù dereat evidoc’h.",
+	"ext-uls-compact-no-results": "N’eus ket eus ar bajenn-mañ er yezh ho peus klasket.",
+	"ext-uls-setlang-unknown-error": "Fazi dianav",
+	"ext-uls-setlang-heading": "Kemmañ yezh an etrefas?",
+	"ext-uls-setlang-accept": "Degemer ar c'hemm-mañ",
+	"ext-uls-setlang-loading": "O lakaat e pleustr…",
+	"ext-uls-setlang-cancel": "Chom hep kemmañ"
 }
