@@ -5,5 +5,5 @@
 		]
 	},
 	"uls-plang-title-languages": "МацӀал",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Цо нухалъ|$1 нухалъ}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Жеги $1}}"
 }
