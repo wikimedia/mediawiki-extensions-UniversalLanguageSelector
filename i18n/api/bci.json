@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kjeanclaude"
+		]
+	},
+	"apihelp-languagesearch-description": "Kounndè aniein douman moun nga bé wo ndè mma klouaa noun.",
+	"apihelp-languagesearch-summary": "Kounndè aniein douman moun nga bé wo ndè mma klouaa noun.",
+	"apihelp-languagesearch-param-search": "Liké nga bé kounndè i noun ndè mma.",
+	"apihelp-languagesearch-param-typos": "Ndè mma nga bé sa to fouan sou moun, bé klouaa bé nouan nga bé kplin sou kè ô tran liké nga bé kounndè i noun ndè mma moun bé noun.",
+	"apihelp-languagesearch-example-1": "Kounndè \"Te\"",
+	"apihelp-languagesearch-example-2": "Kounndè \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Kounndè \"ഫി\", bé kloua pkli'n satofouanlè koungba sou",
+	"apihelp-ulslocalization-description": "Kounndè ULS nvlé noun tranwlè i aniein nga bé fa man ni noun.",
+	"apihelp-ulslocalization-summary": "Kounndè ULS nvlé noun tranwlè i aniein nga bé fa man ni noun.",
+	"apihelp-ulslocalization-param-language": "Aniein i codi.",
+	"apihelp-ulslocalization-example-1": "Kounndè Tamil nvlé noun tranwlè",
+	"apihelp-ulslocalization-example-2": "Kounndè Hindi nvlé noun tranwlè",
+	"apihelp-ulssetlang-description": "Nian katchi conti léfouè i klounklo sou floua boué aniein.",
+	"apihelp-ulssetlang-summary": "Nian katchi conti léfouè i klounklo sou floua boué aniein.",
+	"apihelp-ulssetlang-param-languagecode": "Klounklo sou aniein i codi.",
+	"apierror-ulssetlang-anon-notallowed": "Bé kpli'n man sou kè sran nga ba wlou man noun moun bé katchi floua boué aniein."
+}

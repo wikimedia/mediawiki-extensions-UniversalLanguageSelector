@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Ebenoffen1",
-			"Stephen Essoun"
+			"Stephen Essoun",
+			"Kwamevaughan"
 		]
 	},
 	"uls-desc": "Ɔma ohyia kor a ɔdze adze bi dze dwuma akwannya bɛbere ma ɔfa kasa a ɔpɛ na ɔdandan ne dwumadze nso.",
@@ -12,17 +13,21 @@
 	"ext-uls-undo-language-tooltip-text-local": "Kasa aw'asesa ɛfi dɛm wiki yi mu. Hwɛ wo [[Special:GlobalPreferences|global preferences]] kɔ kasa a w'dandan mu ma wiki nyenaa.",
 	"ext-uls-language-settings-preferences-link": "Kasa bɛbree ndandan mu",
 	"uls-betafeature-label": "Kasa dzen nketaho dzi",
+	"uls-betafeature-desc": "Yi kasa ahorow yi mu kakra bi kyerɛ, dza ohia wo",
 	"ext-uls-display-settings-title": "Da nhyehyɛɛ no edzi",
 	"ext-uls-display-settings-language-tab": "Kasa",
 	"ext-uls-display-settings-fonts-tab": "Akyerɛwamba nhyehyɛɛ",
 	"ext-uls-display-settings-title-short": "Da no edzi",
+	"ext-uls-display-settings-desc": "Sesa menu na nsaano nkyerɛwee kasa no.",
 	"ext-uls-language-settings-title": "Kasa nhyehyɛɛ",
 	"ext-uls-language-settings-apply": "Fa nhyehyɛɛ no dzi dwuma",
 	"ext-uls-language-settings-cancel": "Twa mu",
+	"ext-uls-language-buttons-help": "Sesa menu kasa no. No mu nsɛm no rennsesa.",
 	"ext-uls-display-settings-font-settings": "Akyerɛw nhyehyɛɛ",
 	"ext-uls-display-settings-ui-language": "Da kasa no edzi",
 	"ext-uls-display-settings-anon-label": "Da kasa no edzi",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (tse dɛ dza w'kyerɛw no)",
+	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Log in]] na sesa kasa fofor ma menus no.",
 	"ext-uls-webfonts-settings-title": "Twe akyerɛw no bir a ɛhyia",
 	"ext-uls-webfonts-settings-info": "Twe nkyerɛw a w'ayew no bir a nnkɔyɛ bebiara na ma nkyerɛw ndandan mu ho akwan nya.",
 	"ext-uls-webfonts-settings-info-link": "Nkyerɛkyerɛ mu bɛbree",
@@ -32,7 +37,9 @@
 	"ext-uls-webfonts-system-font": "Efir akyerɛw adze",
 	"ext-uls-back-to-display-settings": "kɔ bia a mfɔnyi nhyehyɛɛ no wɔ no",
 	"ext-uls-input-settings-title": "Fa nhyehyɛɛ no hyehyɛ mu",
+	"ext-uls-input-settings-desc": "Ɛrekyerɛw wɔ kasa fofor mu a?",
 	"ext-uls-input-settings-ui-language": "Kasa a wɔdze kyerɛw",
+	"ext-uls-back-to-input-settings": "San kɔ nhyehyɛe a ɛdze hyɛ mu no",
 	"ext-uls-ime-help": "Mbrɛ wɔ dze dzi dwuma",
 	"ext-uls-disable-input-method": "Fa kiibɔɔdo a ipɛ",
 	"ext-uls-input-settings-more-languages-tooltip": "Kasa bɛbree",
@@ -46,5 +53,15 @@
 	"ext-uls-input-disable-notification-info-personal": "Ibotum ama ndzemba a wɔ dze dzi dwuma no akwannya bir biara wɔ kasa nhyehyɛɛ no mu.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Ibotum ama ndzɛmba a wɔ dze dzi dwuma no akwannya bir biara wɔ kasa nhyehhɛɛ no mu wɔ kasa kuw no nkyɛn.",
 	"ext-uls-language-settings-applying": "Dze ridzi dwuma...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|kor so|$1 bio}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|kor so|$1 bio}}",
+	"ext-uls-compact-link-info": "Kasa nyinara (ma edzikan fae nna ma obiara so fae)",
+	"prefs-languages": "Kasa",
+	"ext-uls-compact-language-links-preference": "Fa [[$1|compact language list]], kasa a ohia wo.",
+	"ext-uls-compact-no-results": "Kasa a efaɛ no nnyi krataa yi mu.",
+	"ext-uls-setlang-error": "Asɛm sii wɔ mber a ɛre sesa kasa a epɛ no. Error: $1",
+	"ext-uls-setlang-unknown-error": "asɛm a yennim",
+	"ext-uls-setlang-heading": "Sesa interface kasa no?",
+	"ext-uls-setlang-accept": "Gye nsesa no tum",
+	"ext-uls-setlang-loading": "Dze ridzi dwuma...",
+	"ext-uls-setlang-cancel": "Mɛn sesa"
 }
