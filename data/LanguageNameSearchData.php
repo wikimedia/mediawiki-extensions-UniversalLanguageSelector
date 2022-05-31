@@ -4135,6 +4135,7 @@ class LanguageNameSearchData {
 				'cajun — tiếng pháp cajun' => 'frc',
 				'cajwn — ffrangeg cajwn' => 'frc',
 				'cajún — francés cajún' => 'frc',
+				'campidanesu — sardu campidanesu' => 'sro',
 				'canada — bekee ndị canada' => 'en-ca',
 				'canada — ffrangeg canada' => 'fr-ca',
 				'canada — fụrench ndị canada' => 'fr-ca',
@@ -5580,7 +5581,6 @@ class LanguageNameSearchData {
 				'eastern frisian' => 'frs',
 				'eastern mari' => 'mhr',
 				'eastern pwo' => 'kjp',
-				'eastern yiddish' => 'ydd',
 				'eastlands' => 'et',
 				'eastoinis' => 'et',
 				'eastóinis' => 'et',
@@ -5619,6 +5619,7 @@ class LanguageNameSearchData {
 				'efique' => 'efi',
 				'efiščina' => 'efi',
 				'efík' => 'efi',
+				'efịk' => 'efi',
 				'egipci antic' => 'egy',
 				'egipcio antiguo' => 'egy',
 				'egipski arabski' => 'arz',
@@ -8494,6 +8495,7 @@ class LanguageNameSearchData {
 		104 => [
 			'prefix' => [
 				'hacá' => 'hak',
+				'hadza' => 'hts',
 				'hagyományos kínai' => 'zh-hant',
 				'haicéis' => 'hak',
 				'haida' => 'hai',
@@ -12397,7 +12399,7 @@ class LanguageNameSearchData {
 				'kojraboro seni' => 'ses',
 				'kojraboro senni' => 'ses',
 				'kojraçinisht' => 'khq',
-				'kokborok (tripuri)' => 'trp',
+				'kokborok' => 'trp',
 				'koktaw' => 'cho',
 				'kologniyaan' => 'ksh',
 				'kolognų' => 'ksh',
@@ -18450,7 +18452,6 @@ class LanguageNameSearchData {
 				'ost-cree' => 'crl',
 				'ostfriesesch' => 'frs',
 				'ostfriesisch' => 'frs',
-				'ostjiddisch' => 'ydd',
 				'ostmari' => 'mhr',
 				'osztrák német' => 'de-at',
 				'oszét' => 'os',
@@ -18706,6 +18707,8 @@ class LanguageNameSearchData {
 				'panjabi occidental' => 'lah',
 				'panjabigiella' => 'pa',
 				'panjobcha' => 'pa',
+				'pannonian rusyn' => 'rsk',
+				'pannonisch-russinisch' => 'rsk',
 				'panqasinan' => 'pag',
 				'panschaabesch' => 'pa',
 				'panxabí' => 'pa',
@@ -20049,6 +20052,7 @@ class LanguageNameSearchData {
 				'rumagnòl — emiliàn e rumagnòl' => 'eml',
 				'rundi — tiếng rundi' => 'rn',
 				'rushiyaa — afaan rushiyaa' => 'ru',
+				'rusyn — pannonian rusyn' => 'rsk',
 				'ruwanda — èdè ruwanda' => 'rw',
 				'rwa — lugha ya rwa' => 'rwk',
 				'rwa — tiếng rwa' => 'rwk',
@@ -20391,6 +20395,7 @@ class LanguageNameSearchData {
 				'sardsch' => 'sc',
 				'sardski' => 'sc',
 				'sardu' => 'sc',
+				'sardu campidanesu' => 'sro',
 				'sardu sassarés' => 'sdc',
 				'sardunya dili' => 'sc',
 				'sardyński' => 'sc',
@@ -27032,7 +27037,6 @@ class LanguageNameSearchData {
 				'yi — sichuan yi' => 'ii',
 				'yi — sijuwan yi' => 'ii',
 				'yi — siçuan yi' => 'ii',
-				'yiddish — eastern yiddish' => 'ydd',
 				'yiddish — tiếng yiddish' => 'yi',
 				'yiddish — yaren yiddish' => 'yi',
 				'yiddishi — èdè yiddishi' => 'yi',
@@ -28311,11 +28315,6 @@ class LanguageNameSearchData {
 		611 => [
 			'prefix' => [
 				'ɣetoɖoƒe frisiagbe' => 'fy',
-			],
-		],
-		660 => [
-			'prefix' => [
-				'ʔucināguci' => 'ryu',
 			],
 		],
 		699 => [
@@ -38574,7 +38573,6 @@ class LanguageNameSearchData {
 				'شرقی — چینی مین شرقی' => 'cdo',
 				'شرقی — کانادایی شرقی (خط لاتینی)' => 'ike-latn',
 				'شرقی — کانادایی شرقی (هجاهای بومی)' => 'ike-cans',
-				'شرقی — ییدیشی شرقی' => 'ydd',
 				'شمالی — انده‌بله‌ای شمالی' => 'nd',
 				'شمالی — سامی شمالی' => 'se',
 				'شمالی — سوتویی شمالی' => 'nso',
@@ -40882,7 +40880,6 @@ class LanguageNameSearchData {
 				'یۆنانی' => 'el',
 				'یی سیچوان' => 'ii',
 				'ییدیش' => 'yi',
-				'ییدیشی شرقی' => 'ydd',
 				'یێمبا' => 'ybb',
 			],
 			'infix' => [
@@ -53766,6 +53763,7 @@ class LanguageNameSearchData {
 				'ᠮᠠᠨᠵᡠ ᡤᡳᠰᡠᠨ' => 'mnc',
 				'ᠮᠣᠩᠭᠣᠯ' => 'mvf',
 				'ᠰᡞᠪᡝ ᡤᡞᠰᡠᠨ' => 'sjo',
+				'ᥖᥭᥰᥖᥬᥳᥑᥨᥒᥰ' => 'tdd',
 				'ᨅᨔ ᨕᨘᨁᨗ' => 'bug',
 				'ᨣᩤᩴᨾᩮᩬᩥᨦ' => 'nod',
 				'ᨣᩴᩤᨾᩮᩥᩬᨦ' => 'nod',
@@ -53945,6 +53943,7 @@ class LanguageNameSearchData {
 		],
 		12000 => [
 			'prefix' => [
+				'うちなーぐち' => 'ryu',
 				'にほんご' => 'ja',
 				'アイスランド語' => 'is',
 				'アイヌ語' => 'ain',
