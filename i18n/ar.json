@@ -76,5 +76,6 @@
 	"ext-uls-setlang-accept": "اقبل التغيير",
 	"ext-uls-setlang-loading": "جارٍ التطبيق...",
 	"ext-uls-setlang-cancel": "لا تغير",
-	"ext-uls-actions-menu-header": "المزيد من الخيارات"
+	"ext-uls-actions-menu-header": "المزيد من الخيارات",
+	"ext-uls-actions-menu-language-settings-item-label": "افتح إعدادات اللغة"
 }
