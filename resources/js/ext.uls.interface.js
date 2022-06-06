@@ -180,8 +180,10 @@
 		}
 		actionItemsRegistry.on( 'register', onActionItemAdded );
 		uls.$menu.append( $actionsMenuTrigger );
-
-		registerTriggerListener();
+		// Action menu items need OOUI widgets. Load them and register trigger event handler.
+		mw.loader.using( [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-interactions' ] ).done( function () {
+			registerTriggerListener();
+		} );
 	}
 
 	/**

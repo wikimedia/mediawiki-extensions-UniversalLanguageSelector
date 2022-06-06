@@ -256,9 +256,7 @@
 				"mediawiki.jqueryMsg",
 				"mediawiki.storage",
 				"mediawiki.user",
-				"ext.uls.webfonts",
-				"oojs-ui-widgets",
-				"oojs-ui.styles.icons-interactions"
+				"ext.uls.webfonts"
 			],
 			"messages": [
 				"uls-plang-title-languages",
