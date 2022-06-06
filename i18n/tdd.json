@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"咽頭べさ"
+		]
+	},
+	"uls-desc": "ᥙᥢᥴᥝᥭᥳᥘᥩᥐᥰᥘᥣᥭᥰᥚᥧᥲᥓᥬᥳᥖᥪᥰᥘᥣᥭᥴᥘᥣᥭᥰ ᥖᥩᥢᥲᥖᥣᥱᥘᥫᥐᥲ ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ ᥘᥦᥲ ᥖᥩᥢᥲᥖᥣᥱᥛᥦᥰᥒᥤᥐᥣᥢᥴᥖᥒᥲᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ",
+	"uls-plang-title-languages": "ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ",
+	"ext-uls-select-language-settings-icon-tooltip": "ᥐᥣᥢᥴᥖᥒᥲ ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ",
+	"ext-uls-language-settings-preferences-link": "ᥐᥣᥢᥴᥖᥒᥲ ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ ᥢᥛᥴᥘᥫᥴ",
+	"ext-uls-display-settings-language-tab": "ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ",
+	"ext-uls-display-settings-title-short": "ᥚᥣᥒᥴᥕᥥᥛᥲ",
+	"ext-uls-display-settings-desc": "ᥛᥐᥰᥛᥢᥲᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ ᥟᥢᥴᥓᥬᥳᥝᥭᥳ ᥖᥩᥢᥲᥖᥣᥱ ᥛᥦᥢᥰᥢᥧᥰ ᥘᥦᥲ ᥜᥩᥢᥳ",
+	"ext-uls-language-settings-title": "ᥐᥣᥢᥴᥖᥒᥲ ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ",
+	"ext-uls-language-settings-cancel": "ᥟᥛᥱᥞᥥᥖᥰ",
+	"ext-uls-display-settings-ui-language": "ᥢᥦᥴᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ",
+	"ext-uls-back-to-display-settings": "ᥞᥨᥢᥴᥓᥧᥰ ᥐᥣᥢᥴᥖᥒᥲᥚᥣᥒᥴᥕᥥᥛᥲ",
+	"ext-uls-input-disable-notification-info-personal": "ᥘᥧᥐᥳᥖᥤᥲᥐᥣᥢᥴᥖᥒᥲ ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰᥔᥥᥴ ᥓᥝᥲᥐᥝᥱ ᥓᥣᥒᥲᥙᥪᥖᥱᥓᥬᥳ ᥑᥫᥒᥲᥙᥩᥳᥘᥤᥐᥲᥘᥭᥲᥐᥧᥲᥑᥣᥝᥰ.",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ᥗᥦᥒᥲᥟᥢᥴᥢᥪᥒᥲ|ᥗᥦᥒᥲ $1}}",
+	"prefs-languages": "ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ"
+}
