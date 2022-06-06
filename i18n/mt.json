@@ -12,7 +12,7 @@
 	"ext-uls-display-settings-language-tab": "Lingwa",
 	"ext-uls-display-settings-fonts-tab": "Tipi",
 	"ext-uls-display-settings-title-short": "Viżwal",
-	"ext-uls-display-settings-desc": "Iddefenixxi l-lingwa wżata għall-menus u t-tipi.",
+	"ext-uls-display-settings-desc": "Ispeċifika l-lingwa wżata għall-menus u t-tipi.",
 	"ext-uls-language-settings-title": "Konfigurazzjoni tal-lingwa",
 	"ext-uls-language-settings-cancel": "Ħassar",
 	"ext-uls-language-buttons-help": "Biddel il-lingwa tal-menus. Il-lingwa tal-kontenut mhux se tinbidel.",
@@ -38,5 +38,6 @@
 	"ext-uls-input-disable-info": "L-għodda tal-kitba huma diżattivati.",
 	"ext-uls-input-settings-noime": "L-ebda metodu ta' kitba mhu disponibbli għal din il-lingwa.",
 	"ext-uls-input-disable-notification": "L-għodda tal-kitba ġew diżattivati",
-	"ext-uls-input-disable-notification-undo": "Reġġa' lura"
+	"ext-uls-input-disable-notification-undo": "Reġġa' lura",
+	"ext-uls-actions-menu-language-settings-item-label": "Iftaħ il-konfigurazzjoni tal-lingwa"
 }

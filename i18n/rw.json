@@ -3,14 +3,15 @@
 		"authors": [
 			"Amire80",
 			"Germain92",
-			"RebecaRwanda"
+			"RebecaRwanda",
+			"Rodrigue"
 		]
 	},
 	"uls-desc": "Biha umukoresha inzira nyinshi zo guhitamo ururimi ndetse no guhindura igenamiterere y'ururimi",
 	"uls-plang-title-languages": "Indimi",
 	"ext-uls-select-language-settings-icon-tooltip": "Igenamiterere y'ururimi",
 	"ext-uls-undo-language-tooltip-text": "Ururimi rwahindutse kuva $1",
-	"ext-uls-undo-language-tooltip-text-local": "Ururimi rwahinduwe kuri iyi Wiki. suzuma ibyawe [[Special:GlobalPreferences|global preferences]] kugirango uhindure ururimi kuri Wikis zose.",
+	"ext-uls-undo-language-tooltip-text-local": "Ururimi rwahindutse kuri iyi Wiki. genzura [[Special:GlobalPreferences|Ibyifuzo by'isi yose]] yawe kugirango uhindure ururimi kuri Wiki zose.",
 	"ext-uls-language-settings-preferences-link": "Indimi nyinshi",
 	"uls-betafeature-label": "Guhuza ururimi",
 	"uls-betafeature-desc": "Yerekana igice kigufi cy'urutonde rw'indimi, hamwe nizindi ndimi zikureba cyane.",
@@ -60,7 +61,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Urundi|$1 izindi}}",
 	"ext-uls-compact-link-info": "Indimi zose (Uguhitamo kwambere mu mahitamo rusange yawe cyangwa ayabandi)",
 	"prefs-languages": "Indimi",
-	"ext-uls-compact-language-links-preference": "Koresha [[$1|compact language list]], hamwe n'indimi wahisemo.",
+	"ext-uls-compact-language-links-preference": "Koresha [[$1|urutonde rw'indimi ]], hamwe n'indimi ushaka guhitamo.",
 	"ext-uls-compact-no-results": "Uru rupapuro ntiruboneka mu rurimi washakishijemo.",
 	"ext-uls-setlang-error": "Habayemo kwibeshya mugihe cyo kuvugurura ururimi ukunda. Ikosa: $1",
 	"ext-uls-setlang-unknown-error": "Ikosa ritazwi",
