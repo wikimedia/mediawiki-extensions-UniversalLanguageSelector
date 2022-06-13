@@ -3,6 +3,7 @@
 		"authors": [
 			"Ebenoffen1",
 			"Kwamevaughan",
+			"Leonard Nketsia",
 			"Stephen Essoun"
 		]
 	},
@@ -53,7 +54,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Ibotum ama ndzemba a wɔ dze dzi dwuma no akwannya bir biara wɔ kasa nhyehyɛɛ no mu.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Ibotum ama ndzɛmba a wɔ dze dzi dwuma no akwannya bir biara wɔ kasa nhyehhɛɛ no mu wɔ kasa kuw no nkyɛn.",
 	"ext-uls-language-settings-applying": "Dze ridzi dwuma...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|kor so|$1 bio}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|kor so|$1 binom so}}",
 	"ext-uls-compact-link-info": "Kasa nyinara (ma edzikan fae nna ma obiara so fae)",
 	"prefs-languages": "Kasa",
 	"ext-uls-compact-language-links-preference": "Fa [[$1|compact language list]], kasa a ohia wo.",
