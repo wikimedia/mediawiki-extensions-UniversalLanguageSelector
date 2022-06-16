@@ -50,5 +50,5 @@ JAVASCRIPT;
 	}
 }
 
-$maintClass = 'UniversalLanguageSelector\CompileFontRepo';
+$maintClass = CompileFontRepo::class;
 require_once RUN_MAINTENANCE_IF_MAIN;

@@ -101,5 +101,5 @@ HTML;
 	}
 }
 
-$maintClass = 'UniversalLanguageSelector\GenerateFontTestPage';
+$maintClass = GenerateFontTestPage::class;
 require_once RUN_MAINTENANCE_IF_MAIN;
