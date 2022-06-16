@@ -27,7 +27,7 @@
 	"ext-uls-display-settings-anon-same-as-content": "$1 (чулацаман санна)",
 	"ext-uls-display-settings-anon-log-in-cta": "Меню мотт харжа [[Special:UserLogin|системин чугӀо]].",
 	"ext-uls-webfonts-settings-title": "Оьшуш хилахь схьаэца шрифташ",
-	"ext-uls-webfonts-settings-info": "Ша чуяха йоцу шрифташ, гӀоли шрифташ харжа магийта.",
+	"ext-uls-webfonts-settings-info": "Доцуш долу шрифташ авто чудаха, гӀоли шрифташ харжа магийта.",
 	"ext-uls-webfonts-settings-info-link": "Кхин тӀе хаам",
 	"ext-uls-webfonts-select-for": "Шрифт харжар цу $1",
 	"ext-uls-webfonts-select-for-ui-info": "Декъашхочун интерфейсан шрифт",

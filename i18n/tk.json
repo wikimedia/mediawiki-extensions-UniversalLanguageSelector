@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"TayfunEt."
 		]
 	},
-	"uls-plang-title-languages": "Diller"
+	"uls-plang-title-languages": "Diller",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ýene-de bir|$1 has köp}}",
+	"prefs-languages": "Diller"
 }
