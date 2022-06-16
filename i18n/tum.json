@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tumbuka Arch"
+		]
+	},
+	"uls-plang-title-languages": "Viyowoyelo",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|chimoza|$1 vinandi}}"
+}
