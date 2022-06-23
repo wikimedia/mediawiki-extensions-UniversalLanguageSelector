@@ -21,7 +21,8 @@
 	'use strict';
 	var languageSettingsModules = [ 'ext.uls.displaysettings' ],
 		launchULS = require( './ext.uls.launch.js' ),
-		ActionsMenu = require( './ext.uls.actions.menu.js' );
+		ActionsMenu = require( './ext.uls.actions.menu.js' ),
+		ActionsMenuItem = require( './ext.uls.actions.menu.item.js' );
 	require( './ext.uls.actions.menu.items.registry.js' );
 
 	/**
@@ -102,6 +103,10 @@
 		actionsMenuTrigger.addClass( iconClass );
 	}
 
+	function hideLanguageSettingsFooter( uls ) {
+		uls.$menu.find( '#uls-settings-block' ).eq( 0 ).hide();
+	}
+
 	/**
 	 * @param {jQuery} $element
 	 * @param {Function} onCloseHandler
@@ -117,6 +122,71 @@
 			} ).trigger( 'click' );
 		} );
 	}
+
+	/**
+	 * Provide entry points to create article in other languages. T290436
+	 *
+	 * @param {Object} uls The ULS object
+	 */
+	function addEmptyState( uls ) {
+		var $emptyStateContainer = $( '<section>' ).addClass( 'uls-empty-state' );
+
+		function openActionsMenuEventHandler( event ) {
+			event.stopPropagation();
+			function onMenuClose() {
+				uls.show();
+			}
+			openLanguageSettings( $( event.target ), onMenuClose, uls );
+		}
+
+		var languageSettingsMenuItem = {
+			name: 'languageSettings',
+			icon: 'settings',
+			text: $.i18n( 'ext-uls-actions-menu-language-settings-item-label' ),
+			handler: openActionsMenuEventHandler
+		};
+
+		var actionItemsRegistry = mw.uls.ActionsMenuItemsRegistry;
+		actionItemsRegistry.register( languageSettingsMenuItem );
+
+		var $actionsMenuTrigger = createActionsMenuTrigger();
+		setActionsMenuTriggerIconClass( $actionsMenuTrigger, actionItemsRegistry.size() );
+		var $header = $( '<h3>' )
+			.addClass( 'uls-empty-state__header' )
+			.text( $.i18n( 'ext-uls-empty-state-header' ) );
+		var $desc = $( '<p>' )
+			.addClass( 'uls-empty-state__desc' )
+			.text( $.i18n( 'ext-uls-empty-state-desc' ) );
+		$emptyStateContainer.append( $header, $desc );
+		uls.$resultsView.append( $emptyStateContainer );
+
+		var actionItems = actionItemsRegistry.getItems();
+
+		if ( actionItems.length > 1 ) {
+			// languageSettingsMenuItem will be always there.
+			// If other actions available, change text
+			$header.text( $.i18n( 'ext-uls-empty-state-header-actions-available' ) );
+			$desc.text( $.i18n( 'ext-uls-empty-state-desc-actions-available' ) );
+		}
+
+		// Action menu items need OOUI widgets. Load them and register trigger event handler.
+		mw.loader.using( [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-interactions' ] ).done( function () {
+			var $actionsList = $( '<ul>' ).addClass( 'uls-language-action-items' );
+			actionItems.forEach( function ( actionItem ) {
+				var actionButton = new ActionsMenuItem(
+					actionItem.icon,
+					actionItem.text,
+					actionItem.handler,
+					actionItem.href
+				).render();
+				$actionsList.append( $( '<li>' ).append( actionButton.$element ) );
+			} );
+
+			$emptyStateContainer.append( $actionsList );
+		} );
+
+	}
+
 	/**
 	 * Add language actions menu
 	 *
@@ -144,9 +214,6 @@
 
 		var actionItemsRegistry = mw.uls.ActionsMenuItemsRegistry;
 		actionItemsRegistry.register( languageSettingsMenuItem );
-		// first hide #uls-settings-block div since it's unused, and it causes
-		// an unwanted extra border to show up at the bottom of the menu
-		uls.$menu.find( '#uls-settings-block' ).eq( 0 ).hide();
 
 		var $actionsMenuTrigger = createActionsMenuTrigger();
 		setActionsMenuTriggerIconClass( $actionsMenuTrigger, actionItemsRegistry.size() );
@@ -618,7 +685,16 @@
 				// Provide access to display and input settings if this entry point is the single
 				// point of access to all language settings.
 				uls = $target.data( 'uls' );
-				addActionsMenuTrigger( uls );
+				// first hide #uls-settings-block div since it's unused, and it causes
+				// an unwanted extra border to show up at the bottom of the menu
+				hideLanguageSettingsFooter( uls );
+				if ( languageNodes.length ) {
+					addActionsMenuTrigger( uls );
+				} else {
+					// There are no languages - The article exist only the current language wiki
+					// Provide entry points to create article in other languages. T290436
+					addEmptyState( uls );
+				}
 				$target.trigger( 'click' );
 			} else {
 				$target.trigger( 'click' );

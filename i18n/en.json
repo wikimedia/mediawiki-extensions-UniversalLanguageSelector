@@ -74,5 +74,9 @@
 	"ext-uls-setlang-loading": "Applying...",
 	"ext-uls-setlang-cancel": "Don't change",
 	"ext-uls-actions-menu-header": "More options",
-	"ext-uls-actions-menu-language-settings-item-label": "Open language settings"
+	"ext-uls-actions-menu-language-settings-item-label": "Open language settings",
+	"ext-uls-empty-state-header": "No languages yet",
+	"ext-uls-empty-state-desc": "No languages are available for now",
+	"ext-uls-empty-state-header-actions-available": "No languages yet. Add a new one?",
+	"ext-uls-empty-state-desc-actions-available": " Make the content available in more languages."
 }

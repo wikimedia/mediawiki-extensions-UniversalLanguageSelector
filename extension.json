@@ -265,7 +265,12 @@
 				"ext-uls-undo-language-tooltip-text",
 				"ext-uls-undo-language-tooltip-text-local",
 				"ext-uls-actions-menu-language-settings-item-label",
-				"ext-uls-actions-menu-header"
+				"ext-uls-actions-menu-header",
+				"ext-uls-actions-menu-language-settings-item-label",
+				"ext-uls-empty-state-header",
+				"ext-uls-empty-state-desc",
+				"ext-uls-empty-state-header-actions-available",
+				"ext-uls-empty-state-desc-actions-available"
 			]
 		},
 		"ext.uls.interlanguage": {
