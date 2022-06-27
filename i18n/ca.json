@@ -4,6 +4,7 @@
 			"Bombolla",
 			"Fitoschido",
 			"Macofe",
+			"Paucabot",
 			"Pginer",
 			"Vriullop"
 		]
@@ -64,5 +65,6 @@
 	"ext-uls-compact-language-links-preference": "Utilitza una [[$1|llista de llengües compacta]] amb aquelles més rellevants per a mi.",
 	"ext-uls-setlang-unknown-error": "Error desconegut",
 	"ext-uls-setlang-heading": "Voleu canviar la llengua de la interfície?",
-	"ext-uls-setlang-loading": "S’està aplicant…"
+	"ext-uls-setlang-loading": "S’està aplicant…",
+	"ext-uls-actions-menu-language-settings-item-label": "Preferències de llengua"
 }
