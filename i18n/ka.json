@@ -4,13 +4,15 @@
 			"David1010",
 			"Otogi",
 			"Tokoko",
-			"გიორგიმელა"
+			"გიორგიმელა",
+			"Გიო ოქრო"
 		]
 	},
 	"uls-desc": "აძლევს მომხმარებელს ენის არჩევისა და კონფიგურაციის საშუალებას",
 	"uls-plang-title-languages": "ენები",
 	"ext-uls-select-language-settings-icon-tooltip": "ენის პარამეტრები",
 	"ext-uls-undo-language-tooltip-text": "წინა ენა: $1",
+	"ext-uls-undo-language-tooltip-text-local": "ამ ვიკისათვის ენა შეიცვალა. შეამოწმეთ საკუთარი [[Special:GlobalPreferences|გლობალური კონფიგურაცია]], რათა ყველა ვიკისათვის შეცვალოთ ენა.",
 	"ext-uls-language-settings-preferences-link": "მეტი ენის პარამეტრები",
 	"uls-betafeature-label": "ენის კომპაქტური ბმულები",
 	"uls-betafeature-desc": "აჩვენებს საერთაშორისო ბმულების შემოკლებულ ვარიანტს; ჩანს მხოლოდ თქვენთვის უფრო შესაბამისი ენათშორისი ბმულები.",
@@ -52,8 +54,21 @@
 	"ext-uls-input-enable": "საწერი ხელწასყოების ჩართვა",
 	"ext-uls-input-disable-info": "საწერი ხელსაწყოები გამორთულია.",
 	"ext-uls-input-settings-noime": "წერის მეთოდები ამ ენისათვის არ არის განსაზღვრული.",
+	"ext-uls-input-disable-notification": "შეყვანის ხელსაწყოები გამოირთო",
 	"ext-uls-input-disable-notification-undo": "დაბრუნება",
+	"ext-uls-input-disable-notification-info-personal": "შეყვანის ხელსაწყოების ჩართვა ნებისმიერ დროს შეიძლება ენის პარამეტრებიდან.",
+	"ext-uls-input-disable-notification-info-interlanguage": "შეყვანის ხელსაწყოების ჩართვა ნებისმიერ დროს შეიძლება ენის პარამეტრებიდან (ენების სიის გვერდით).",
+	"ext-uls-language-settings-applying": "მიღება...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|კიდევ ერთი|კიდევ $1}}",
+	"ext-uls-compact-link-info": "ყველა ენა (თავდაპირველად შერჩეულები — თქვენ და სხვა მომხმარებლების მიერ ყველაზე ხშირად გამოყენებულები)",
 	"prefs-languages": "ენები",
-	"ext-uls-compact-language-links-preference": "თქვენთან დაკავშირებული ენების კომპაქტური სიის გამოყენება."
+	"ext-uls-compact-language-links-preference": "თქვენთან დაკავშირებული [[$1|ენების კომპაქტური სიის]] გამოყენება.",
+	"ext-uls-compact-no-results": "ეს გვერდი თქვენ მიერ არჩეულლ ენაზე მიუწვდომელია.",
+	"ext-uls-setlang-error": "თქვენი უპირატესი ენის განახლების დროს შეცდომა დაფიქსირდა. შეცდომა: $1",
+	"ext-uls-setlang-unknown-error": "უცნობი შეცდომა",
+	"ext-uls-setlang-message": "ბმული, რომელზეც გადახვედით, ინტერფეისის ენად მოითხოვს შემდეგს: <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "შეიცვალოს ინტერფეისის ენა?",
+	"ext-uls-setlang-accept": "ცვლილების დადასტურება",
+	"ext-uls-setlang-loading": "მიღება...",
+	"ext-uls-setlang-cancel": "არ შეიცვალოს"
 }
