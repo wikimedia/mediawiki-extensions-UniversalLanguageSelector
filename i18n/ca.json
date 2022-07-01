@@ -66,5 +66,6 @@
 	"ext-uls-setlang-unknown-error": "Error desconegut",
 	"ext-uls-setlang-heading": "Voleu canviar la llengua de la interfície?",
 	"ext-uls-setlang-loading": "S’està aplicant…",
+	"ext-uls-actions-menu-header": "Més opcions",
 	"ext-uls-actions-menu-language-settings-item-label": "Preferències de llengua"
 }

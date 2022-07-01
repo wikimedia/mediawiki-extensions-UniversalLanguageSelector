@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Amire80"
+			"Amire80",
+			"Tomas Armando Moz"
 		]
 	},
+	"uls-plang-title-languages": "Mattaava",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|emosa yoowaatta|$1 yoowaatta}}"
 }
