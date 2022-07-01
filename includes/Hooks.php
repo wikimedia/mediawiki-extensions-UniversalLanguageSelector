@@ -29,7 +29,6 @@ use MediaWiki\Babel\Babel;
 use MediaWiki\Extension\BetaFeatures\BetaFeatures;
 use MediaWiki\Hook\BeforePageDisplayHook;
 use MediaWiki\Hook\MakeGlobalVariablesScriptHook;
-use MediaWiki\Hook\PersonalUrlsHook;
 use MediaWiki\Hook\UserGetLanguageObjectHook;
 use MediaWiki\Languages\LanguageNameUtils;
 use MediaWiki\Preferences\Hook\GetPreferencesHook;
@@ -41,7 +40,6 @@ use OutputPage;
 use RequestContext;
 use Skin;
 use SkinTemplate;
-use Title;
 use User;
 
 /**
@@ -49,7 +47,6 @@ use User;
  */
 class Hooks implements
 	BeforePageDisplayHook,
-	PersonalUrlsHook,
 	UserGetLanguageObjectHook,
 	ResourceLoaderGetConfigVarsHook,
 	MakeGlobalVariablesScriptHook,
@@ -211,30 +208,6 @@ class Hooks implements
 		}
 
 		$out->addModules( 'ext.uls.setlang' );
-	}
-
-	/**
-	 * Add some tabs for navigation for users who do not use Ajax interface.
-	 * Hook: PersonalUrls
-	 * @param array &$personal_urls
-	 * @param Title &$title
-	 * @param SkinTemplate $skin
-	 */
-	public function onPersonalUrls( &$personal_urls, &$title, $skin ): void {
-		// For MediaWiki < 1.37, there is no `user-interface-preferences` menu. We use
-		// the PersonalUrls hook to make sure the language button is added.
-		// In MediaWiki >= 1.37, the personal urls was split out into multiple new menus,
-		// In the new format, the `user-interface-preferences` is the most relevant place to put
-		// this button. Using the SkinTemplateNavigation::Universal hook will ensure the button is
-		// added to the correct menu.
-		if ( version_compare( MW_VERSION, '1.37', '>=' ) ) {
-			return;
-		}
-
-		$personal_urls = $this->addPersonalBarTrigger(
-			$personal_urls,
-			$skin
-		);
 	}
 
 	/**
