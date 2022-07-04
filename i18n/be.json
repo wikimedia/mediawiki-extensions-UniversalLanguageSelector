@@ -3,6 +3,7 @@
 		"authors": [
 			"Artsiom91",
 			"Tomato Cream",
+			"Tīgelika",
 			"Xð",
 			"ZlyiLev"
 		]
@@ -71,5 +72,9 @@
 	"ext-uls-setlang-loading": "Ужыванне...",
 	"ext-uls-setlang-cancel": "Не мяняць",
 	"ext-uls-actions-menu-header": "Больш магчымасцей",
-	"ext-uls-actions-menu-language-settings-item-label": "Адкрыць моўныя налады"
+	"ext-uls-actions-menu-language-settings-item-label": "Адкрыць моўныя налады",
+	"ext-uls-empty-state-header": "Моваў пакуль няма",
+	"ext-uls-empty-state-desc": "Зараз няма даступных моваў",
+	"ext-uls-empty-state-header-actions-available": "Моваў пакуль няма. Дадаць новую?",
+	"ext-uls-empty-state-desc-actions-available": "Зрабіце змест даступным на дадатковых мовах."
 }

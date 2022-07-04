@@ -67,5 +67,8 @@
 	"prefs-languages": "Kielet",
 	"ext-uls-compact-language-links-preference": "Käytä [[$1|kompaktia kielilistaa]], joka näyttää sinulle tärkeimmät kielet.",
 	"ext-uls-compact-no-results": "Tämä sivu ei ole saatavilla etsimälläsi kielellä.",
-	"ext-uls-setlang-unknown-error": "Tuntematon virhe"
+	"ext-uls-setlang-unknown-error": "Tuntematon virhe",
+	"ext-uls-empty-state-header": "Ei vielä kieliä",
+	"ext-uls-empty-state-desc": "Kieliä ei ole tällä hetkellä saatavilla",
+	"ext-uls-empty-state-header-actions-available": "Ei vielä kieliä. Lisätäänkö uusi?"
 }

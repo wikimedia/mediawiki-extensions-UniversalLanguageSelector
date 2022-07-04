@@ -71,5 +71,9 @@
 	"ext-uls-setlang-loading": "Anwenden …",
 	"ext-uls-setlang-cancel": "Nicht ändern",
 	"ext-uls-actions-menu-header": "Weitere Optionen",
-	"ext-uls-actions-menu-language-settings-item-label": "Spracheinstellungen öffnen"
+	"ext-uls-actions-menu-language-settings-item-label": "Spracheinstellungen öffnen",
+	"ext-uls-empty-state-header": "Bisher keine Sprachen",
+	"ext-uls-empty-state-desc": "Zurzeit sind keine Sprachen verfügbar",
+	"ext-uls-empty-state-header-actions-available": "Noch keine Sprachen. Eine neue Sprache hinzufügen?",
+	"ext-uls-empty-state-desc-actions-available": "Bereitstellung der Inhalte in mehreren Sprachen."
 }

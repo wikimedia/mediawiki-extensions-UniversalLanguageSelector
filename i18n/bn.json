@@ -71,5 +71,11 @@
 	"ext-uls-setlang-heading": "ইন্টারফেসের ভাষা পরিবর্তন করবেন?",
 	"ext-uls-setlang-accept": "পরিবর্তন গ্রহণ করুন",
 	"ext-uls-setlang-loading": "প্রয়োগ হচ্ছে...",
-	"ext-uls-setlang-cancel": "পরিবর্তন করবেন না"
+	"ext-uls-setlang-cancel": "পরিবর্তন করবেন না",
+	"ext-uls-actions-menu-header": "আরও বিকল্প",
+	"ext-uls-actions-menu-language-settings-item-label": "ভাষা সেটিং খুলুন",
+	"ext-uls-empty-state-header": "এখনো কোনও ভাষা নেই",
+	"ext-uls-empty-state-desc": "আপাতত কোনও ভাষা উপলব্ধ নেই",
+	"ext-uls-empty-state-header-actions-available": "এখনো কোনো ভাষা নেই। নতুন একটি যোগ করবেন?",
+	"ext-uls-empty-state-desc-actions-available": "বিষয়বস্তুটি আরও ভাষায় উপলব্ধ করুন।"
 }

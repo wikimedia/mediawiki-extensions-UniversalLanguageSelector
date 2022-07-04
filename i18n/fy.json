@@ -71,5 +71,9 @@
 	"ext-uls-setlang-loading": "Tapasse ...",
 	"ext-uls-setlang-cancel": "Net feroarje",
 	"ext-uls-actions-menu-header": "Mear opsjes",
-	"ext-uls-actions-menu-language-settings-item-label": "Taalynstellings iepenje"
+	"ext-uls-actions-menu-language-settings-item-label": "Taalynstellings iepenje",
+	"ext-uls-empty-state-header": "Noch gjin talen",
+	"ext-uls-empty-state-desc": "Op it stuit binne der gjin talen beskikber",
+	"ext-uls-empty-state-header-actions-available": "Noch gjin talen. In nijenien tafoegje?",
+	"ext-uls-empty-state-desc-actions-available": "Meitsje de ynhâld yn mear talen beskikber."
 }

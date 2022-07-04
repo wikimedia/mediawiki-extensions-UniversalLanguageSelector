@@ -69,5 +69,9 @@
 	"ext-uls-compact-no-results": "La pagina non è disponibile nella lingua che hai cercato.",
 	"ext-uls-setlang-unknown-error": "Errore sconosciuto",
 	"ext-uls-setlang-cancel": "Non modificare",
-	"ext-uls-actions-menu-header": "Altre opzioni"
+	"ext-uls-actions-menu-header": "Altre opzioni",
+	"ext-uls-empty-state-header": "Nessuna lingua ancora",
+	"ext-uls-empty-state-desc": "Non sono disponibili lingue per ora",
+	"ext-uls-empty-state-header-actions-available": "Nessuna lingua ancora. Aggiungerne una nuova?",
+	"ext-uls-empty-state-desc-actions-available": "Rendi il contenuto disponibile in più lingue."
 }

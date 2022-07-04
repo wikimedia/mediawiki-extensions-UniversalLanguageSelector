@@ -65,5 +65,9 @@
 	"ext-uls-setlang-unknown-error": "Onbekannte Feeler",
 	"ext-uls-setlang-heading": "Sprooch vum Interface änneren?",
 	"ext-uls-setlang-accept": "Ännerung akzeptéieren",
-	"ext-uls-setlang-cancel": "Net änneren"
+	"ext-uls-setlang-cancel": "Net änneren",
+	"ext-uls-empty-state-header": "Nach keng Sproochen",
+	"ext-uls-empty-state-desc": "Et sinn den Ament keng Sproochen disponibel",
+	"ext-uls-empty-state-header-actions-available": "Nach keng Sproochen. Eng neien derbäisetzen?",
+	"ext-uls-empty-state-desc-actions-available": "Maacht den Inhalt a méi Sproochen disponibel."
 }

@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Tumbuka Arch"
 		]
 	},
@@ -14,11 +15,11 @@
 	"ext-uls-display-settings-language-tab": "Chiyowoyelo",
 	"ext-uls-display-settings-fonts-tab": "Malemba",
 	"ext-uls-display-settings-title-short": "Display",
-	"ext-uls-display-settings-desc": "Ẇikani chiyowoyelo cha menyu na malemba.",
+	"ext-uls-display-settings-desc": "Ŵikani chiyowoyelo cha menyu na malemba.",
 	"ext-uls-language-settings-title": "Kunozga chiyowoyelo",
-	"ext-uls-language-settings-apply": "Ẇika ma settings",
+	"ext-uls-language-settings-apply": "Ŵika ma settings",
 	"ext-uls-language-settings-cancel": "Leka",
-	"ext-uls-language-buttons-help": "Sintha chiyowoyelo cha menyu.Vyakulemba vinangikenge chala.",
+	"ext-uls-language-buttons-help": "Sintha chiyowoyelo cha menyu. Vyakulemba vinangikenge chala.",
 	"ext-uls-display-settings-font-settings": "Vakunozgelo malemba",
 	"ext-uls-display-settings-ui-language": "Chiyowoyelo cha kuoneska",
 	"ext-uls-display-settings-anon-label": "Chiyowoyelo chakuoneska:",
