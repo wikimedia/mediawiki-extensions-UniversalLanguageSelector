@@ -91,6 +91,6 @@
 	"ext-uls-actions-menu-language-settings-item-label": "Ouvrir les paramètres de langue",
 	"ext-uls-empty-state-header": "Pas encore de langues",
 	"ext-uls-empty-state-desc": "Aucune langue n’est disponible pour le moment",
-	"ext-uls-empty-state-header-actions-available": "Pas encore de langues. Ajouter une nouvelle ?",
+	"ext-uls-empty-state-header-actions-available": "Pas encore de langues. En ajouter une nouvelle ?",
 	"ext-uls-empty-state-desc-actions-available": "Rendre le contenu disponible dans plus de langues."
 }

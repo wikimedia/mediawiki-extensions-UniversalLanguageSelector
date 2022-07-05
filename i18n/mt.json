@@ -2,12 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Chrisportelli",
+			"ToniSant",
 			"Xð"
 		]
 	},
 	"uls-plang-title-languages": "Lingwi",
 	"ext-uls-select-language-settings-icon-tooltip": "Konfigurazzjoni tal-lingwa",
 	"ext-uls-undo-language-tooltip-text": "Il-lingwa nbidlet minn $1",
+	"uls-betafeature-desc": "Uri verżjoni iqsar tal-lista tal-lingwi, li tinkludi l-lingwi li huma l-aktar rilevanti għalik.",
 	"ext-uls-display-settings-title": "Konfigurazzjoni tal-viżwal",
 	"ext-uls-display-settings-language-tab": "Lingwa",
 	"ext-uls-display-settings-fonts-tab": "Tipi",
