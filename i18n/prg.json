@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nērtiks Jōrgesuns"
+			"Nērtiks Jōrgesuns",
+			"Tīgelika"
 		]
 	},
+	"uls-plang-title-languages": "Billas",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|$1 tūls}}"
 }
