@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Amire80"
+			"Amire80",
+			"Teitei Para"
 		]
 	},
-	"uls-plang-title-languages": "Reihchâzy"
+	"uls-plang-title-languages": "Reihchâzy",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|sâkha via|$1 ahluh via}}"
 }
