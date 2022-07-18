@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Lea.Fakauvea"
+			"Lea.Fakauvea",
+			"Lea.fakauvea"
 		]
 	},
+	"uls-plang-title-languages": "Lea",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Hoko atu|$1 hoko atu}}"
 }
