@@ -2,9 +2,17 @@
 	"@metadata": {
 		"authors": [
 			"Xð",
-			"Jun Misugi"
+			"Jun Misugi",
+			"F Samaritani"
 		]
 	},
 	"uls-plang-title-languages": "Linghi",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Una in più|$1 in più}}"
+	"ext-uls-display-settings-language-tab": "Lìnga",
+	"ext-uls-language-settings-cancel": "Canzillà",
+	"jquery-ime-other-languages": "Althri lìnghi",
+	"jquery-ime-help": "Aggiuddu",
+	"ext-uls-input-disable-notification-undo": "Annulla",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Una in più|$1 in più}}",
+	"prefs-languages": "Lìnghi",
+	"ext-uls-setlang-unknown-error": "Errori ischunisciddu"
 }
