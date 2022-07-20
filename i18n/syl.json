@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"এম আবু সাঈদ"
+			"এম আবু সাঈদ",
+			"ꠢꠣꠍꠘ ꠞꠣꠎꠣ"
 		]
 	},
+	"uls-plang-title-languages": "ꠝꠣꠔ ꠅꠇꠟ",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|One more|$1 more}}"
 }

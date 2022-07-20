@@ -2,7 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
-			"Teitei Para"
+			"Teitei Para",
+			"Laitei",
+			"Taytay"
 		]
 	},
 	"uls-desc": "Reihchâ taopathinazy paraih awpa nata reihchâ atly awpa ta hmâhtuhpa hnota lâpi hluhpi a pie",
@@ -21,7 +23,7 @@
 	"ext-uls-language-settings-title": "Reihchâ taopathinazy",
 	"ext-uls-language-settings-apply": "Taopathinazy thla teh",
 	"ext-uls-language-settings-cancel": "Châvei",
-	"ext-uls-language-buttons-help": "inu reihchâ pathlai teh. Achhôhbie reihchâ hnoh deikua cha phahnai hlei aw vei.",
+	"ext-uls-language-buttons-help": "Minu reihchâ pathlai teh. Achhôhbie reihchâ hnoh deikua cha phahnai hlei aw vei.",
 	"ext-uls-display-settings-font-settings": "Faut taopathinazy",
 	"ext-uls-display-settings-ui-language": "Hmôna reihchâ",
 	"ext-uls-display-settings-anon-label": "Hmôna reihchâ:",
@@ -39,7 +41,7 @@
 	"ext-uls-input-settings-title-short": "Khôna",
 	"ext-uls-input-settings-desc": "Reihchâ hropa sâkha ta rohna",
 	"ext-uls-input-settings-ime-settings": "$1 châta khôna dâh",
-	"ext-uls-input-settings-ui-language": "Rona châta hmâpa reihchâz",
+	"ext-uls-input-settings-ui-language": "Rona châta hmâpa reihchâ",
 	"ext-uls-back-to-input-settings": "Khôna taopathinazy lâ kua teh",
 	"ext-uls-ime-help": "Hmâna dâh",
 	"ext-uls-disable-input-method": "Pikhei kibaw hmâh teh",
@@ -66,6 +68,6 @@
 	"ext-uls-setlang-message": "<strong>$1 ($2)</strong> lia palâ awpa ta ahawpa chhôhhmia châta link",
 	"ext-uls-setlang-heading": "Chhôhhmia reihchâ pathlai?",
 	"ext-uls-setlang-accept": "Âthlaina apyh teh",
-	"ext-uls-setlang-loading": "Thlana...",
+	"ext-uls-setlang-loading": "Thla hai...",
 	"ext-uls-setlang-cancel": "Pathlai khâ"
 }
