@@ -67,5 +67,11 @@
 	"ext-uls-setlang-heading": "ইণ্টাৰফে'চ ভাষা পৰিবৰ্তন কৰিব নেকি?",
 	"ext-uls-setlang-accept": "পৰিবৰ্তন গ্ৰহণ কৰক",
 	"ext-uls-setlang-loading": "প্ৰয়োগ কৰা হৈছে...",
-	"ext-uls-setlang-cancel": "সলনি নকৰিব"
+	"ext-uls-setlang-cancel": "সলনি নকৰিব",
+	"ext-uls-actions-menu-header": "অধিক বিকল্প",
+	"ext-uls-actions-menu-language-settings-item-label": "ভাষাৰ ছেটিংসমূহ খোলক",
+	"ext-uls-empty-state-header": "এতিয়াও কোনো ভাষা নাই",
+	"ext-uls-empty-state-desc": "এতিয়া কোনো ভাষা উপলব্ধ নহয়",
+	"ext-uls-empty-state-header-actions-available": "এতিয়া কোনো ভাষা উপলব্ধ নহয়। নতুন এটা যোগ কৰক?",
+	"ext-uls-empty-state-desc-actions-available": "বিষয়বস্তু অধিক ভাষাত উপলব্ধ কৰাওক।"
 }
