@@ -76,5 +76,6 @@
 	"ext-uls-setlang-heading": "Arayüz dili değiştirilsin mi?",
 	"ext-uls-setlang-accept": "Değişikliği kabul et",
 	"ext-uls-setlang-loading": "Uygulanıyor...",
-	"ext-uls-setlang-cancel": "Değiştirme"
+	"ext-uls-setlang-cancel": "Değiştirme",
+	"ext-uls-empty-state-header": "Henüz dil yok"
 }
