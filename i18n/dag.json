@@ -2,8 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Hidrash",
+			"Musahfm",
 			"Sir Amugi"
 		]
 	},
+	"uls-plang-title-languages": "Bala",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|n gari zaɣ'yini|$1 bɔbgu}}"
 }

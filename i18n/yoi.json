@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kainuguni"
+		]
+	},
+	"uls-plang-title-languages": "物言",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|他ぬ $1 ぬ物言}}"
+}

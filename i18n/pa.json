@@ -2,21 +2,22 @@
 	"@metadata": {
 		"authors": [
 			"Babanwalia",
+			"Bgo eiu",
 			"Jimidar",
 			"Satdeep gill"
 		]
 	},
 	"uls-desc": "ਵਰਤੋਂਕਾਰ ਨੂੰ ਭਾਸ਼ਾਂ ਚੁਣਨ ਅਤੇ ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ ਠੀਕ ਕਰਨ ਲਈ ਕਈ ਤਰੀਕੇ ਸੌਂਪਦਾ ਹੈ",
-	"uls-plang-title-languages": "ਬੋਲੀਆਂ",
-	"ext-uls-select-language-settings-icon-tooltip": "ਬੋਲੀ ਦੀਆਂ ਸੈਟਿੰਗਾਂ",
+	"uls-plang-title-languages": "ਭਾਸ਼ਾਵਾਂ",
+	"ext-uls-select-language-settings-icon-tooltip": "ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ",
 	"ext-uls-undo-language-tooltip-text": "ਭਾਸ਼ਾ $1 ਤੋਂ ਬਦਲੀ ਗਈ",
-	"ext-uls-language-settings-preferences-link": "ਬੋਲੀ ਦੀਆਂ ਹੋਰ ਸੈਟਿੰਗਾਂ",
+	"ext-uls-language-settings-preferences-link": "ਹੋਰ ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ",
 	"ext-uls-display-settings-title": "ਪ੍ਰਦਰਸ਼ਨੀ ਸੈਟਿੰਗਾਂ",
 	"ext-uls-display-settings-language-tab": "ਭਾਸ਼ਾ",
 	"ext-uls-display-settings-fonts-tab": "ਫ਼ੌਂਟ",
 	"ext-uls-display-settings-title-short": "ਪ੍ਰਦਰਸ਼ਨੀ",
 	"ext-uls-display-settings-desc": "ਮੀਨੂ ਅਤੇ ਫ਼ੌਂਤ ਲਈ ਵਰਤੀ ਜਾਂਦੀ ਭਾਸ਼ਾ ਸੈੱਟ ਕਰੋ।",
-	"ext-uls-language-settings-title": "ਬੋਲੀ ਦੀਆਂ ਸੈਟਿੰਗਾਂ",
+	"ext-uls-language-settings-title": "ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ",
 	"ext-uls-language-settings-apply": "ਸੈਟਿੰਗਾਂ ਲਾਗੂ ਕਰੋ",
 	"ext-uls-language-settings-cancel": "ਰੱਦ ਕਰੋ",
 	"ext-uls-language-buttons-help": "ਮੀਨੂ ਦੀ ਭਾਸ਼ਾ ਬਦਲੋ। ਸਮੱਗਰੀ ਦੀ ਭਾਸ਼ਾ ਨੂੰ ਕੋਈ ਫ਼ਰਕ ਨਹੀਂ ਪਵੇਗਾ।",
@@ -37,7 +38,7 @@
 	"ext-uls-input-settings-ui-language": "ਲਿਖਾਈ ਲਈ ਵਰਤੀ ਭਾਸ਼ਾ",
 	"ext-uls-back-to-input-settings": "ਇਨਪੁਟ ਸੈਟਿੰਗਾਂ ਵੱਲ ਵਾਪਸ",
 	"ext-uls-disable-input-method": "ਦੇਸੀ ਕੀਬੋਰਡ ਵਰਤੋ",
-	"ext-uls-input-settings-more-languages-tooltip": "ਹੋਰ ਬੋਲੀਆਂ",
+	"ext-uls-input-settings-more-languages-tooltip": "ਹੋਰ ਭਾਸ਼ਾਵਾਂ",
 	"jquery-ime-other-languages": "ਹੋਰ ਬੋਲੀਆਂ",
 	"jquery-ime-disable-text": "ਦੇਸੀ ਕੀਬੋਰਡ ਵਰਤੋ",
 	"jquery-ime-help": "ਮਦਦ",
@@ -49,5 +50,6 @@
 	"ext-uls-input-disable-notification-undo": "ਅਣਕਿੱਤਾ ਕਰੋ",
 	"ext-uls-input-disable-notification-info-personal": "ਤੁਸੀਂ ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ ਤੋਂ ਕਿਸੇ ਵੀ ਵਕਤ ਇਨਪੁਟ ਜ਼ਰੀਏ ਚਾਲੂ ਕਰ ਸਕਦੇ ਹੋ।",
 	"ext-uls-input-disable-notification-info-interlanguage": "ਤੁਸੀਂ ਭਾਸ਼ਾ ਸੂਚੀ ਦੇ ਅੱਗੇ ਦਿੱਤੀਆਂ ਗਈਆਂ ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ ਤੋਂ ਕਿਸੇ ਵੀ ਵਕਤ ਇਨਪੁਟ ਜ਼ਰੀਏ ਚਾਲੂ ਕਰ ਸਕਦੇ ਹੋ।",
-	"prefs-languages": "ਬੋਲੀਆਂ"
+	"ext-uls-compact-link-count": "{{PLURAL:$1| ਇੱਕ ਹੋਰ | $1 ਹੋਰ}}",
+	"prefs-languages": "ਭਾਸ਼ਾਵਾਂ"
 }

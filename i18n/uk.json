@@ -75,5 +75,11 @@
 	"ext-uls-setlang-heading": "Змінити мову інтерфейсу?",
 	"ext-uls-setlang-accept": "Прийняти зміну",
 	"ext-uls-setlang-loading": "Застосування...",
-	"ext-uls-setlang-cancel": "Не змінювати"
+	"ext-uls-setlang-cancel": "Не змінювати",
+	"ext-uls-actions-menu-header": "Більше опцій",
+	"ext-uls-actions-menu-language-settings-item-label": "Відкрити налаштування мов",
+	"ext-uls-empty-state-header": "Ще немає мов",
+	"ext-uls-empty-state-desc": "Наразі немає доступних мов",
+	"ext-uls-empty-state-header-actions-available": "Ще немає мов. Додати нову?",
+	"ext-uls-empty-state-desc-actions-available": "Зробіть вміст доступним більшою кількістю мов."
 }

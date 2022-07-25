@@ -1,11 +1,24 @@
 {
 	"@metadata": {
 		"authors": [
+			"Saurmandal",
 			"Sfic"
 		]
 	},
-	"apihelp-languagesearch-param-search": "स्ट्रिंग खोजें",
-	"apihelp-languagesearch-example-1": "\"Te\" हेतु खोजें",
-	"apihelp-languagesearch-example-2": "\"ഫി\" हेतु खोजें",
-	"apihelp-ulslocalization-param-language": "भाषा कोड"
+	"apihelp-languagesearch-description": "किसी भी लिपि में भाषा का नाम खोजता है।",
+	"apihelp-languagesearch-summary": "किसी भी लिपि में भाषा का नाम खोजें।",
+	"apihelp-languagesearch-param-search": "खोजने के लिए स्ट्रिंग।",
+	"apihelp-languagesearch-param-typos": "खोज के स्ट्रिंग में वर्तनी त्रुटियों की अनुमोदित संख्या।",
+	"apihelp-languagesearch-example-1": "\"Te\" खोजें",
+	"apihelp-languagesearch-example-2": "\"ഫി\" खोजें",
+	"apihelp-languagesearch-example-3": "\"ഫി\" खोजें, जिसमें एक वर्तनी है",
+	"apihelp-ulslocalization-description": "निर्दिष्ट भाषा में ULS का स्थानीयकरण प्राप्त करता है।",
+	"apihelp-ulslocalization-summary": "निर्दिष्ट भाषा में ULS का स्थानीयकरण प्राप्त करें।",
+	"apihelp-ulslocalization-param-language": "भाषा कोड।",
+	"apihelp-ulslocalization-example-1": "तमिल स्थानीयकरण पाएँ",
+	"apihelp-ulslocalization-example-2": "हिन्दी स्थानीयकरण पाएँ",
+	"apihelp-ulssetlang-description": "सदस्य के प्राथमिक इंटरफ़ेस भाषा को बदलता है।",
+	"apihelp-ulssetlang-summary": "सदस्य के प्राथमिक इंटरफ़ेस भाषा को बदलें।",
+	"apihelp-ulssetlang-param-languagecode": "प्राथमिक भाषा कोड।",
+	"apierror-ulssetlang-anon-notallowed": "गुमनाम सदस्य इंटरफ़ेस की भाषा नहीं बदल सकते।"
 }
