@@ -54,5 +54,6 @@
 	"ext-uls-input-disable-notification-info-personal": "Dü könst a werktjüügen tu skriiwen tu arke tidj uun a spriakiinstelangen aktiwiare.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Dü könst a werktjüügen tu skriiwen tu arke tidj uun a spriakiinstelangen üüb sidj faan det spriakenlist aktiwiare.",
 	"ext-uls-language-settings-applying": "Brüken ...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Ian muar|$1 muar}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ian muar|$1 muar}}",
+	"ext-uls-actions-menu-header": "Muar ütjwool"
 }
