@@ -28,6 +28,8 @@ class LanguageNameIndexer extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->addDescription( 'Script to create language names index.' );
+		$this->requireExtension( 'UniversalLanguageSelector' );
+		$this->requireExtension( 'CLDR' );
 	}
 
 	public function execute() {
