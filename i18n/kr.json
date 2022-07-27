@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aliyu shaba"
+			"Aliyu shaba",
+			"Mohammedbama123"
 		]
 	},
-	"uls-plang-title-languages": "Yarenza",
+	"uls-plang-title-languages": "Telam",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|One more|$1 more}}"
 }

@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"咽頭べさ"
+			"咽頭べさ",
+			"Aey Tai Nuea"
 		]
 	},
 	"uls-desc": "ᥙᥢᥴᥝᥭᥳᥘᥩᥐᥰᥘᥣᥭᥰᥚᥧᥲᥓᥬᥳᥖᥪᥰᥘᥣᥭᥴᥘᥣᥭᥰ ᥖᥩᥢᥲᥖᥣᥱᥘᥫᥐᥲ ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ ᥘᥦᥲ ᥖᥩᥢᥲᥖᥣᥱᥛᥦᥰᥒᥤᥐᥣᥢᥴᥖᥒᥲᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ",
-	"uls-plang-title-languages": "ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ",
+	"uls-plang-title-languages": "ᥚᥣᥱ ᥔᥣᥱ ᥑᥣᥛᥰ",
 	"ext-uls-select-language-settings-icon-tooltip": "ᥐᥣᥢᥴᥖᥒᥲ ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ",
 	"ext-uls-language-settings-preferences-link": "ᥐᥣᥢᥴᥖᥒᥲ ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ ᥢᥛᥴᥘᥫᥴ",
 	"ext-uls-display-settings-language-tab": "ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ",
@@ -16,6 +17,6 @@
 	"ext-uls-display-settings-ui-language": "ᥢᥦᥴᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ",
 	"ext-uls-back-to-display-settings": "ᥞᥨᥢᥴᥓᥧᥰ ᥐᥣᥢᥴᥖᥒᥲᥚᥣᥒᥴᥕᥥᥛᥲ",
 	"ext-uls-input-disable-notification-info-personal": "ᥘᥧᥐᥳᥖᥤᥲᥐᥣᥢᥴᥖᥒᥲ ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰᥔᥥᥴ ᥓᥝᥲᥐᥝᥱ ᥓᥣᥒᥲᥙᥪᥖᥱᥓᥬᥳ ᥑᥫᥒᥲᥙᥩᥳᥘᥤᥐᥲᥘᥭᥲᥐᥧᥲᥑᥣᥝᥰ.",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|ᥗᥦᥒᥲᥟᥢᥴᥢᥪᥒᥲ|ᥗᥦᥒᥲ $1}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ᥗᥦᥒᥲ ᥟᥢ ᥘᥫᥒ|ᥗᥦᥒᥲ $1}}",
 	"prefs-languages": "ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ"
 }
