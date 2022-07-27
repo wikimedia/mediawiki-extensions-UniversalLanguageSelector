@@ -485,7 +485,8 @@ class Hooks implements
 			return;
 		}
 
-		if ( $this->config->get( 'ULSPosition' ) !== 'interlanguage' ) {
+		// @todo: document what this block is for.
+		if ( $skin->getSkinName() !== 'vector-2022' && $this->config->get( 'ULSPosition' ) !== 'interlanguage' ) {
 			return;
 		}
 
@@ -494,7 +495,7 @@ class Hooks implements
 		}
 
 		// An empty span will force the language portal to always display in
-		// the skins that support it! e.g. Vector.
+		// the skins that support it! e.g. Vector. (T275147)
 		if ( count( $skin->getLanguages() ) === 0 ) {
 			// If no languages force it on.
 			$content .= Html::element(
