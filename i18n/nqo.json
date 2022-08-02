@@ -71,5 +71,7 @@
 	"ext-uls-actions-menu-header": "ߢߣߊߕߊߟߌ߫ ߜߘߍ ߟߎ߫",
 	"ext-uls-actions-menu-language-settings-item-label": "ߞߊ߲ ߟߊ߬ߓߍ߲߬ߢߐ߲߰ߡߦߊ߬ߘߊ ߘߊߦߍ߬ߟߍ߫",
 	"ext-uls-empty-state-header": "ߞߊ߲߫ ߕߴߦߋ߲߬ ߡߎߣߎ߲߬",
-	"ext-uls-empty-state-desc": "ߞߊ߲߫ ߛߌ߫ ߕߴߦߋ߲߬ ߥߊ߯ߕߌ ߣߌ߲߬ ߠߊ߫ ߕߊ߲߬"
+	"ext-uls-empty-state-desc": "ߞߊ߲߫ ߛߌ߫ ߕߴߦߋ߲߬ ߥߊ߯ߕߌ ߣߌ߲߬ ߠߊ߫ ߕߊ߲߬",
+	"ext-uls-empty-state-header-actions-available": "ߞߊ߲߫ ߕߴߦߋ߲߬ ߡߎߣߎ߲߬߸ ߞߊ߬ ߞߎߘߊ ߘߏ߫ ߝߊ߬ߙߊ߫؟",
+	"ext-uls-empty-state-desc-actions-available": "ߞߣߐߘߐ ߞߍ߫ ߡߊ߬ߛߐ߬ߘߐ߲߬ߕߊ ߘߌ߫ ߞߊ߲߫ ߜߘߍ߫ ߟߎ߫ ߘߐ߫."
 }
