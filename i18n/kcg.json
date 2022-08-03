@@ -69,5 +69,9 @@
 	"ext-uls-setlang-loading": "Á̱ tyei di̱n ta̱m...",
 	"ext-uls-setlang-cancel": "Yok shai bah",
 	"ext-uls-actions-menu-header": "Khai nkyang njhyang",
-	"ext-uls-actions-menu-language-settings-item-label": "Khwuk a̱yaaseti a̱lyem"
+	"ext-uls-actions-menu-language-settings-item-label": "Khwuk a̱yaaseti a̱lyem",
+	"ext-uls-empty-state-header": "Á̱ ka̱n mbyia̱ lilyem bah",
+	"ext-uls-empty-state-desc": "Lilyem nshyia̱ bah",
+	"ext-uls-empty-state-header-actions-available": "Á̱ ka̱n mbyia̱ lilyem bah. A na mbeang a̱nyiung a?",
+	"ext-uls-empty-state-desc-actions-available": " Tyia̱ kyangmami hu ku shyia̱ di̱ lilyem ma̱ a̱di̱di̱t."
 }
