@@ -1,8 +1,35 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"Amire80"
 		]
 	},
-	"uls-plang-title-languages": "Lang"
+	"uls-plang-title-languages": "Lang yo",
+	"ext-uls-select-language-settings-icon-tooltip": "Preferans lang",
+	"ext-uls-undo-language-tooltip-text": "Lang chanje soti nan $1",
+	"ext-uls-undo-language-tooltip-text-local": "Lang chanje pou wiki sa a. Souple, gade [[Special:GlobalPreferences|preferans global ou]] pou chanje lang pou tout wikis.",
+	"ext-uls-language-settings-preferences-link": "Plis preferans lang",
+	"uls-betafeature-label": "Lyen langaj konpak yo",
+	"uls-betafeature-desc": "Montre yon vèsyon ki pi kout nan lis lang lan, ak jis lang yo ki pi enpòtan pou ou.",
+	"ext-uls-display-settings-title": "Preferans ekspozisyon",
+	"ext-uls-display-settings-language-tab": "Lang",
+	"ext-uls-display-settings-fonts-tab": "Font yo",
+	"ext-uls-display-settings-title-short": "Ekspozisyon",
+	"ext-uls-display-settings-desc": "Defini langaj pou meni yo ak font yo.",
+	"ext-uls-language-settings-title": "Preferans lang",
+	"ext-uls-language-settings-apply": "Aplike preferans yo",
+	"ext-uls-language-settings-cancel": "Anile",
+	"ext-uls-language-buttons-help": "Chanje lang meni yo. Lang kontni p ap afekte.",
+	"ext-uls-display-settings-font-settings": "Preferans font",
+	"ext-uls-display-settings-ui-language": "Lang ekspozisyon",
+	"ext-uls-display-settings-anon-label": "Lang ekspozisyon :",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (menm ak kontni)",
+	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Konekte ou]] pou chwazi yon lòt lang pou meni yo.",
+	"ext-uls-webfonts-settings-title": "Telechaje font yo lè sa nesesè",
+	"ext-uls-webfonts-settings-info-link": "Plis enfomasyon",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Youn ankò|$1 plis}}",
+	"prefs-languages": "Lang yo",
+	"ext-uls-compact-language-links-preference": "Itilizè yon [[$1|lis lang konpak]], ak lang ki enpòtan pou ou.",
+	"ext-uls-compact-no-results": "Paj sa a pa disponib nan lang ou te fouye a."
 }
