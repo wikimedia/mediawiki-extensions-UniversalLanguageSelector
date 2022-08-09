@@ -1,12 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
-			"Chrumps"
+			"Chrumps",
+			"Msz2001"
 		]
 	},
+	"apihelp-languagesearch-description": "Szukaj nazw języków zapisywanych dowolnym pismem.",
+	"apihelp-languagesearch-summary": "Szukaj nazw języków zapisywanych dowolnym pismem.",
 	"apihelp-languagesearch-param-search": "Wyszukaj tekst.",
+	"apihelp-languagesearch-param-typos": "Dozwolona liczba literówek w wyszukiwanym ciągu.",
 	"apihelp-languagesearch-example-1": "Wyszukaj „Te”",
 	"apihelp-languagesearch-example-2": "Wyszukaj „ഫി”",
 	"apihelp-languagesearch-example-3": "Wyszukaj „ഫി”, dopuszczalna jedna literówka",
-	"apihelp-ulslocalization-param-language": "Kod języka."
+	"apihelp-ulslocalization-param-language": "Kod języka.",
+	"apihelp-ulssetlang-param-languagecode": "Preferowany kod języka.",
+	"apierror-ulssetlang-anon-notallowed": "Anonimowi użytkownicy nie mogą zmieniać języka interfejsu."
 }
