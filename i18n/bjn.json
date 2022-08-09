@@ -7,7 +7,15 @@
 		]
 	},
 	"uls-plang-title-languages": "Basa",
+	"ext-uls-select-language-settings-icon-tooltip": "Pangaturan basa",
+	"ext-uls-display-settings-desc": "Pangaturan basa gasan ménu wan fon",
+	"ext-uls-language-settings-title": "Pangaturan basa",
+	"ext-uls-language-settings-apply": "Tarapakan pangaturan",
 	"ext-uls-language-settings-cancel": "Pasahakan",
+	"ext-uls-language-buttons-help": "Maubah basa ménu. Basa kontén pacangan kada tapangaruh.",
+	"ext-uls-display-settings-ui-language": "Tampaian basa",
+	"ext-uls-display-settings-anon-label": "Tampaian basa:",
+	"ext-uls-input-settings-desc": "Manulis dalam basa lain?",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Sabuting lagi|$1 lagi}}",
 	"ext-uls-compact-link-info": "Samunyaan basa (pilihan awal asalnya matan pilihan umum ulih Pian wan urang lain)"
 }
