@@ -3,7 +3,8 @@
 		"authors": [
 			"Amire80",
 			"Fwolff",
-			"Naudefj"
+			"Naudefj",
+			"Rooiratel"
 		]
 	},
 	"uls-desc": "Bied gebruikers verskillende maniere om 'n taal te kies en bybehorende instellings aan te pas",
@@ -60,5 +61,7 @@
 	"ext-uls-compact-link-info": "Alle tale (beginlys met algemene keuses van andere)",
 	"prefs-languages": "Tale",
 	"ext-uls-compact-language-links-preference": "Wys 'n [[$1|kompakte lys tale]] wat slegs relevante tale bevat.",
-	"ext-uls-compact-no-results": "Dié bladsy is nie beskikbaar in die taal waarin u gesoek het nie."
+	"ext-uls-compact-no-results": "Dié bladsy is nie beskikbaar in die taal waarin u gesoek het nie.",
+	"ext-uls-empty-state-header": "Nog geen tale nie",
+	"ext-uls-empty-state-header-actions-available": "Nog geen tale nie. Voeg 'n nuwe een by?"
 }
