@@ -11,7 +11,8 @@
 			"Rezonansowy",
 			"Sethakill",
 			"WTM",
-			"Woytecr"
+			"Woytecr",
+			"Msz2001"
 		]
 	},
 	"uls-desc": "Daje użytkownikowi kilka sposobów, aby wybrać język i dostosować ustawienia języka",
@@ -66,7 +67,15 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Możesz w dowolnym momencie włączyć narzędzia wprowadzania tekstu w ustawieniach języka, obok listy języków.",
 	"ext-uls-language-settings-applying": "Realizacja w toku...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Jeden więcej|$1 więcej}}",
+	"ext-uls-compact-link-info": "Wszystkie języki (wstępny wybór spośród typowych wyborów dokonanych przez Ciebie i innych)",
 	"prefs-languages": "Języki",
 	"ext-uls-compact-language-links-preference": "Używaj [[$1|kompaktowej listy języków]] z językami najbardziej Ci odpowiadającymi.",
-	"ext-uls-compact-no-results": "Ta strona nie jest dostępna w języku którego szukasz."
+	"ext-uls-compact-no-results": "Ta strona nie jest dostępna w języku którego szukasz.",
+	"ext-uls-setlang-error": "Wystąpił błąd podczas aktualizowania preferowanego języka. Błąd: $1",
+	"ext-uls-setlang-unknown-error": "Nieznany błąd",
+	"ext-uls-setlang-message": "Użyty przez Ciebie link zażądał wyświetlenia interfejsu w języku <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "Zmienić język interfejsu?",
+	"ext-uls-setlang-accept": "Zaakceptuj zmianę",
+	"ext-uls-setlang-loading": "Realizacja w toku...",
+	"ext-uls-setlang-cancel": "Nie zmieniaj"
 }
