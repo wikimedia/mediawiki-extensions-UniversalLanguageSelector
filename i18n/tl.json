@@ -9,7 +9,7 @@
 		]
 	},
 	"uls-desc": "Nagbibigay ng mga paraan sa tagagamit para makapili ng wika at para maisaayos ang wika",
-	"uls-plang-title-languages": "Wika",
+	"uls-plang-title-languages": "Mga wika",
 	"ext-uls-select-language-settings-icon-tooltip": "Pagsasaayos sa wika",
 	"ext-uls-undo-language-tooltip-text": "Ipinalit ang wika mula $1",
 	"ext-uls-undo-language-tooltip-text-local": "Pinalitan ang wika para sa wiki na ito. Tingnan mo ang iyong [[Special:GlobalPreferences|pandaigdigang pagsasaayos]] para palitan ang wika para sa lahat ng wiki.",
