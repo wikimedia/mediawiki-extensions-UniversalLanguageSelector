@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Arystanbek"
+			"Arystanbek",
+			"СеніңШешең"
 		]
 	},
 	"uls-plang-title-languages": "Тілдер",
@@ -53,5 +54,5 @@
 	"ext-uls-input-disable-notification-info-personal": "Сіз тіл баптауларынан кез келген уақытта енгізу құралдарын қоса аласыз.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Сіз тіл баптаулары тіл тізімі қатарынан кез келген уақытта енгізу құралдарын қоса аласыз.",
 	"ext-uls-language-settings-applying": "Қолданылуда...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|тағы бір тілде|тағы $1 тілде}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Тағы бір|Тағы $1}}"
 }
