@@ -59,7 +59,7 @@ class ApiULSSetLanguage extends ApiBase {
 			$this->dieWithError( [ 'apierror-mustbeposted', $request->getText( 'action' ) ] );
 		}
 
-		$languageCode = $request->getText( 'languagecode' );
+		$languageCode = $request->getRawVal( 'languagecode', '' );
 		if ( !$this->languageNameUtils->isSupportedLanguage( $languageCode ) ) {
 			$this->dieWithError(
 				[ 'apierror-invalidlang', $this->encodeParamName( 'languagecode' ) ]

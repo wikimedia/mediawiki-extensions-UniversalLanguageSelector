@@ -313,7 +313,7 @@ class Hooks implements
 
 		if (
 			// uselang can be used for temporary override of language preference
-			$request->getText( 'uselang' ) ||
+			$request->getRawVal( 'uselang' ) ||
 			// Registered user: use preferences, only when safe to load - T267445
 			( $user->isSafeToLoad() && $user->isRegistered() )
 		) {
@@ -524,7 +524,7 @@ class Hooks implements
 	}
 
 	private function getSetLang( OutputPage $out ): ?string {
-		$setLangCode = $out->getRequest()->getText( 'setlang' );
+		$setLangCode = $out->getRequest()->getRawVal( 'setlang' );
 		if ( $setLangCode && $this->languageNameUtils->isSupportedLanguage( $setLangCode ) ) {
 			return $setLangCode;
 		}
