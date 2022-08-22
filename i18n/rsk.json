@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Keresturec"
+			"Keresturec",
+			"Vlad5250"
 		]
 	},
 	"uls-desc": "Понука хасновательови даскельо способи же би вибрал язик и же би намесцел язиково опциї",
@@ -66,5 +67,6 @@
 	"ext-uls-setlang-heading": "Пременїц язик интерфейса?",
 	"ext-uls-setlang-accept": "Прилап пременку",
 	"ext-uls-setlang-loading": "Применьованє…",
-	"ext-uls-setlang-cancel": "Нє меняц"
+	"ext-uls-setlang-cancel": "Нє меняц",
+	"ext-uls-actions-menu-language-settings-item-label": "Отвор намесцаня язика"
 }
