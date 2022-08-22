@@ -16,7 +16,8 @@
 			"ShinePhantom",
 			"Stjn",
 			"Vlad5250",
-			"Умар"
+			"Умар",
+			"Kareyac"
 		]
 	},
 	"uls-desc": "Даёт пользователю несколько способов выбрать язык и произвести установки языка",
@@ -35,7 +36,7 @@
 	"ext-uls-language-settings-title": "Установки языка",
 	"ext-uls-language-settings-apply": "Применить установки",
 	"ext-uls-language-settings-cancel": "Отмена",
-	"ext-uls-language-buttons-help": "Изменить язык меню. Язык содержимого не будет затронут.",
+	"ext-uls-language-buttons-help": "Изменить язык меню. Это не затронет содержание страниц сайта.",
 	"ext-uls-display-settings-font-settings": "Установки шрифта",
 	"ext-uls-display-settings-ui-language": "Язык отображения",
 	"ext-uls-display-settings-anon-label": "Язык отображения:",
