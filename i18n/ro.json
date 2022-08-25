@@ -69,5 +69,11 @@
 	"ext-uls-setlang-heading": "Schimbați limba interfeței?",
 	"ext-uls-setlang-accept": "Acceptați schimbarea",
 	"ext-uls-setlang-loading": "Se aplică...",
-	"ext-uls-setlang-cancel": "Nu schimbați"
+	"ext-uls-setlang-cancel": "Nu schimbați",
+	"ext-uls-actions-menu-header": "Mai multe opțiuni",
+	"ext-uls-actions-menu-language-settings-item-label": "Deschide setările limbii",
+	"ext-uls-empty-state-header": "Încă nicio limbă",
+	"ext-uls-empty-state-desc": "Nicio limbă nu este momentan disponibilă",
+	"ext-uls-empty-state-header-actions-available": "Încă nicio limbă. Adăugați una nouă?",
+	"ext-uls-empty-state-desc-actions-available": " Faceți conținutul disponibil în mai multe limbi."
 }
