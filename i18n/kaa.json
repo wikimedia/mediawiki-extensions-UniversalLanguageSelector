@@ -1,8 +1,29 @@
 {
 	"@metadata": {
 		"authors": [
+			"Inabat Allanova",
+			"Nurlan",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Tiller"
+	"uls-plang-title-languages": "Tiller",
+	"ext-uls-select-language-settings-icon-tooltip": "Til sazlamaları",
+	"ext-uls-undo-language-tooltip-text": "Til $1 den ózgertirildi",
+	"ext-uls-undo-language-tooltip-text-local": "Bul wiki ushın til ózgertirildi. Barlıq wikilar tilin ózgertiw ushın [[Special:GlobalPreferences|global sazlamalardı]] tekseriń.",
+	"ext-uls-language-settings-preferences-link": "Basqa til sazlamaları",
+	"uls-betafeature-label": "Íqsham til siltemeleri",
+	"uls-betafeature-desc": "Tek sizge kóbirek uyqas tiller diziminiń qısqalaw versiyasın kórsetiń.",
+	"ext-uls-display-settings-title": "Displey sazlamaları",
+	"ext-uls-display-settings-language-tab": "Til",
+	"ext-uls-display-settings-fonts-tab": "Shriftler",
+	"ext-uls-display-settings-title-short": "Displey",
+	"ext-uls-display-settings-desc": "Menyular hám shriftler ushın paydalanılatuǵın tildi ornatıń.",
+	"ext-uls-language-settings-title": "Til sazlamaları",
+	"ext-uls-language-settings-apply": "Sazlamalardı qollaw",
+	"ext-uls-language-settings-cancel": "Biykar etiw",
+	"ext-uls-language-buttons-help": "Menyular tilin ózgertiriń. Kontent tiline tásir etpeydi.",
+	"ext-uls-display-settings-font-settings": "Jurnal sazlamaları",
+	"ext-uls-display-settings-ui-language": "Displey tili",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (kontent penen birdey)",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Taǵı birew|$1 taǵı}}"
 }
