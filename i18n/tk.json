@@ -6,6 +6,16 @@
 		]
 	},
 	"uls-plang-title-languages": "Diller",
+	"ext-uls-select-language-settings-icon-tooltip": "Dil sazlamalary",
+	"ext-uls-language-settings-preferences-link": "Has köp dil sazlamalary",
+	"uls-betafeature-label": "Ykjam dil baglanyşyklary",
+	"uls-betafeature-desc": "Diňe size has degişli diller bilen dil sanawynyň has gysga görnüşini görkeziň.",
+	"ext-uls-display-settings-title": "Sazlamalary görkeziň",
+	"ext-uls-display-settings-language-tab": "Dil",
+	"ext-uls-display-settings-fonts-tab": "Şriftler",
+	"ext-uls-display-settings-title-short": "Ekran",
+	"ext-uls-display-settings-desc": "Menýular we şriftler üçin ulanylýan dili düzüň.",
+	"ext-uls-language-settings-title": "Dil sazlamalary",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Ýene-de bir|$1 has köp}}",
 	"prefs-languages": "Diller"
 }

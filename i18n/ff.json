@@ -4,5 +4,6 @@
 			"Musaddam Idriss"
 		]
 	},
-	"uls-plang-title-languages": "Ɗemngal"
+	"uls-plang-title-languages": "Ɗemngal",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|go'o hooti|$1 hooti}}"
 }
