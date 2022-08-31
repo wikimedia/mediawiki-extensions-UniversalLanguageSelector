@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Metalhead64",
-			"Tiin"
+			"Tiin",
+			"ThisCarthing"
 		]
 	},
 	"apihelp-languagesearch-description": "Sucht nach Sprachnamen in beliebiger Schrift.",
@@ -16,5 +17,6 @@
 	"apihelp-ulslocalization-summary": "Ruft die Lokalisierung von ULS in der angegebenen Sprache ab.",
 	"apihelp-ulslocalization-param-language": "Sprachcode.",
 	"apihelp-ulslocalization-example-1": "Ruft die Tamil-Lokalisierung ab",
-	"apihelp-ulslocalization-example-2": "Ruft die Hindi-Lokalisierung ab"
+	"apihelp-ulslocalization-example-2": "Ruft die Hindi-Lokalisierung ab",
+	"apihelp-ulssetlang-param-languagecode": "Der bevorzugte Sprachcode."
 }
