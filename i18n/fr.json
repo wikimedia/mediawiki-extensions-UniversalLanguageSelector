@@ -48,7 +48,7 @@
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Se connecter]] pour sélectionner une autre langue pour les menus.",
 	"ext-uls-webfonts-settings-title": "Télécharger les polices si nécessaire",
 	"ext-uls-webfonts-settings-info": "Télécharger automatiquement les polices manquantes et permettre la sélection des polices préférées.",
-	"ext-uls-webfonts-settings-info-link": "Plus d’informations",
+	"ext-uls-webfonts-settings-info-link": "Davantage d’informations",
 	"ext-uls-webfonts-select-for": "Sélectionner une police pour $1",
 	"ext-uls-webfonts-select-for-ui-info": "Police utilisée pour l’interface utilisateur",
 	"ext-uls-webfonts-select-for-content-info": "Police utilisée pour le contenu",
