@@ -76,10 +76,17 @@
 	"prefs-languages": "Языки",
 	"ext-uls-compact-language-links-preference": "Использовать [[$1|компактный список языков]] с подходящими вам языками.",
 	"ext-uls-compact-no-results": "Эта страница недоступна на выбранном вами языке.",
+	"ext-uls-setlang-error": "При обновлении предпочитаемого языка произошла ошибка. Сообщение: $1",
 	"ext-uls-setlang-unknown-error": "Неизвестная ошибка",
+	"ext-uls-setlang-message": "Ссылка, по которой вы перешли, требовала, чтобы интерфейс отображался на языке «<strong>$1 ( $2 )</strong>»",
 	"ext-uls-setlang-heading": "Сменить язык интерфейса?",
 	"ext-uls-setlang-accept": "Подтвердить изменение",
 	"ext-uls-setlang-loading": "Применение…",
 	"ext-uls-setlang-cancel": "Не менять",
-	"ext-uls-actions-menu-header": "Больше возможностей"
+	"ext-uls-actions-menu-header": "Больше возможностей",
+	"ext-uls-actions-menu-language-settings-item-label": "Открыть языковые настройки",
+	"ext-uls-empty-state-header": "Языков пока нет",
+	"ext-uls-empty-state-desc": "На данный момент нет доступных языков",
+	"ext-uls-empty-state-header-actions-available": "Языков пока нет. Добавить новый?",
+	"ext-uls-empty-state-desc-actions-available": "Сделайте контент доступным на большем количестве языков."
 }
