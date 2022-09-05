@@ -9,6 +9,7 @@
 	"uls-plang-title-languages": "Keeled",
 	"ext-uls-select-language-settings-icon-tooltip": "Keelesätted",
 	"ext-uls-undo-language-tooltip-text": "Keel vahetatud, enne: $1",
+	"ext-uls-undo-language-tooltip-text-local": "Keel muudetud selles vikis. Mine [[Special:GlobalPreferences|globaalsetesse eelistustesse]], et muuta keel kõigis vikides.",
 	"ext-uls-language-settings-preferences-link": "Veel keelesätteid",
 	"uls-betafeature-label": "Kompaktsed keelelingid",
 	"uls-betafeature-desc": "Näitab keelelinkide lühemat versiooni, milles on vaid sinu jaoks enam huvi pakkuvad keeled.",
@@ -59,5 +60,10 @@
 	"ext-uls-compact-link-info": "Kõik keeled (esialgne valik sinu ja teiste ühiste valikute põhjal)",
 	"prefs-languages": "Keeled",
 	"ext-uls-compact-language-links-preference": "Kasuta [[$1|kompaktset keeleloendit]], milles on sinu jaoks asjakohased keeled",
-	"ext-uls-compact-no-results": "See lehekülg pole saadaval keeles, mida otsisid."
+	"ext-uls-compact-no-results": "See lehekülg pole saadaval keeles, mida otsisid.",
+	"ext-uls-setlang-message": "Järgnesid lingile, mis soovib liidese kuvamist järgmises keeles: <strong>$1 ($2)</strong>.",
+	"ext-uls-setlang-heading": "Kas muudad liidese keelt?",
+	"ext-uls-setlang-accept": "Nõustu muutmisega",
+	"ext-uls-setlang-loading": "Rakendamine...",
+	"ext-uls-setlang-cancel": "Ära muuda"
 }

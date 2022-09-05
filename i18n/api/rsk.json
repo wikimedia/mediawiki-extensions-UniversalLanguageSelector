@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"apihelp-languagesearch-example-1": "Глєданє „Te“",
+	"apihelp-languagesearch-example-2": "Глєданє „ഫി“",
+	"apihelp-ulslocalization-param-language": "Язиков код.",
+	"apihelp-ulssetlang-param-languagecode": "Код преферованого язика.",
+	"apierror-ulssetlang-anon-notallowed": "Анонимним хасновательом нє допущене пременїц язик интерфейса."
+}

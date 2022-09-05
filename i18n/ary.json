@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ideophagous"
+			"Ideophagous",
+			"Reda Benkhadra"
 		]
 	},
+	"uls-plang-title-languages": "لوغات",
 	"jquery-ime-help": "معاونة"
 }
