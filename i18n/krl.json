@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ilja.mos"
+		]
+	},
+	"uls-plang-title-languages": "Kielet",
+	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|muu kieli|muuta kieltä}}"
+}
