@@ -342,6 +342,10 @@
 			"system",
 			"OpenDyslexic"
 		],
+		"pnb": [
+			"system",
+			"Hussaini Nastaleeq"
+		],
 		"pt": [
 			"system",
 			"OpenDyslexic"
@@ -586,8 +590,8 @@
 			"woff2": "Hanuman/Hanumanb.woff2?1b52d"
 		},
 		"Hussaini Nastaleeq": {
-			"woff": "HussainiNastaleeq/hussaini-nastaleeq.woff?5c44b",
-			"woff2": "HussainiNastaleeq/hussaini-nastaleeq.woff2?2b174"
+			"woff": "HussainiNastaleeq/hussaini-nastaleeq.woff?3fb01",
+			"woff2": "HussainiNastaleeq/hussaini-nastaleeq.woff2?a4024"
 		},
 		"Iranian Sans": {
 			"woff": "IranianSans/irsans.woff?ec963",
