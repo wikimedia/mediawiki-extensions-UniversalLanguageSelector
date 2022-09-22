@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ahmedadeljaff"
+		]
+	},
+	"uls-plang-title-languages": "لغة",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|بقية الوصل: $1}}"
+}
