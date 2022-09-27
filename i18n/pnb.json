@@ -7,7 +7,7 @@
 		]
 	},
 	"uls-desc": "بولی ترتیباں",
-	"uls-plang-title-languages": "بھاشاواں",
+	"uls-plang-title-languages": "بولیاں",
 	"ext-uls-select-language-settings-icon-tooltip": "بولی ترتیباں",
 	"ext-uls-undo-language-tooltip-text": "بھاشا $1 توں بدلی گئی",
 	"ext-uls-language-settings-preferences-link": "ہور بولی ترتیباں",
@@ -49,7 +49,7 @@
 	"ext-uls-input-disable-notification-undo": "اݨکتا کرو",
 	"ext-uls-input-disable-notification-info-personal": "تسیں بھاشا سیٹنگاں توں کسے وی ورت اِنپوٹ زریۓ چالو کر سکدے ہو۔",
 	"ext-uls-input-disable-notification-info-interlanguage": "تسیں بھاشا سوچی دے اگے دتیاں گئیاں بھاشا سیٹنگاں توں کسے وی وکت اِنپوٹ زریۓ چال کر سکدے ہو۔",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|ہور $1 بولیاں}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|اِکّ ہور|$1 ہور}}",
 	"prefs-languages": "بولیاں",
 	"ext-uls-setlang-unknown-error": "انجان غلطی",
 	"ext-uls-setlang-heading": "انٹرفیس بولی بدلو؟",

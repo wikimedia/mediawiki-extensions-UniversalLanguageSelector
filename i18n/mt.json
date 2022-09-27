@@ -40,5 +40,6 @@
 	"ext-uls-input-disable-info": "L-għodda tal-kitba huma diżattivati.",
 	"ext-uls-input-settings-noime": "L-ebda metodu ta' kitba mhu disponibbli għal din il-lingwa.",
 	"ext-uls-input-disable-notification": "L-għodda tal-kitba ġew diżattivati",
-	"ext-uls-input-disable-notification-undo": "Reġġa' lura"
+	"ext-uls-input-disable-notification-undo": "Reġġa' lura",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Oħra|$1 oħra}}"
 }

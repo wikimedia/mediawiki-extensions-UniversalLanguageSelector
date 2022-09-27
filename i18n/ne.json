@@ -44,7 +44,7 @@
 	"jquery-ime-help": "सहायता",
 	"ext-uls-input-disable": "आगत उपकरणहरू असक्षम गर्नुहोस्",
 	"ext-uls-input-enable": "आगत उपकरणहरू सक्षम",
-	"ext-uls-input-disable-notification-undo": "पूर्ववत गर्ने",
+	"ext-uls-input-disable-notification-undo": "रद्द गर्नुहोस्",
 	"ext-uls-language-settings-applying": "लागू ...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|एक थप|$1 थप}}",
 	"prefs-languages": "भाषाहरू",
