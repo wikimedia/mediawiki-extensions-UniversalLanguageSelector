@@ -11,6 +11,7 @@
 	"uls-plang-title-languages": "Jeziki",
 	"ext-uls-select-language-settings-icon-tooltip": "Jezikovne nastavitve",
 	"ext-uls-undo-language-tooltip-text": "Sprememba jezika iz $1.",
+	"ext-uls-undo-language-tooltip-text-local": "Jezik za ta viki je spremenjen. Če želite jezik spremeniti za vse vikije, preverite svoje [[Special:GlobalPreferences|globalne nastavitve]].",
 	"ext-uls-language-settings-preferences-link": "Več jezikovnih nastavitev",
 	"uls-betafeature-label": "Strnjene jezikovne povezave",
 	"uls-betafeature-desc": "Prikaži krajšo različico seznama jezikov, samo z jeziki, ki so za vas bolj primerni.",
@@ -61,5 +62,9 @@
 	"ext-uls-compact-link-info": "Vsi jeziki (izbor na podlagi tvojih odločitev in odločitev drugih)",
 	"prefs-languages": "Jeziki",
 	"ext-uls-compact-language-links-preference": "Uporaba [[$1|kompaktnega seznama jezikov]], ki so relevantni za vas.",
-	"ext-uls-compact-no-results": "Ta stran ni na voljo v jeziku, ki si ga iskal."
+	"ext-uls-compact-no-results": "Ta stran ni na voljo v jeziku, ki si ga iskal.",
+	"ext-uls-setlang-unknown-error": "Neznana napaka",
+	"ext-uls-setlang-message": "Povezava, ki ste ji sledili, je zahtevala prikaz vmesnika v jeziku <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-loading": "Izvajam ...",
+	"ext-uls-setlang-cancel": "Ne spremeni"
 }
