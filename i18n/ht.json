@@ -28,8 +28,13 @@
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Konekte ou]] pou chwazi yon lòt lang pou meni yo.",
 	"ext-uls-webfonts-settings-title": "Telechaje font yo lè sa nesesè",
 	"ext-uls-webfonts-settings-info-link": "Plis enfomasyon",
+	"jquery-ime-help": "Èd",
+	"ext-uls-input-disable-notification-undo": "Defè",
+	"ext-uls-language-settings-applying": "Ap aplike...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Youn ankò|$1 plis}}",
 	"prefs-languages": "Lang yo",
 	"ext-uls-compact-language-links-preference": "Itilizè yon [[$1|lis lang konpak]], ak lang yo ki enpòtan pou ou.",
-	"ext-uls-compact-no-results": "Paj sa a pa disponib nan lang ou te chèche a."
+	"ext-uls-compact-no-results": "Paj sa a pa disponib nan lang ou te chèche a.",
+	"ext-uls-setlang-loading": "Ap aplike...",
+	"ext-uls-setlang-cancel": "Pa chanje"
 }
