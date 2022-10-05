@@ -7,7 +7,7 @@
 			"Yerpo"
 		]
 	},
-	"uls-desc": "Daje uporabniku več načinov izbire jezika in prilagoditve jezikovnih nastavitev",
+	"uls-desc": "Uporabniku omogoča več načinov izbire jezika in prilagoditve jezikovnih nastavitev",
 	"uls-plang-title-languages": "Jeziki",
 	"ext-uls-select-language-settings-icon-tooltip": "Jezikovne nastavitve",
 	"ext-uls-undo-language-tooltip-text": "Sprememba jezika iz $1.",
