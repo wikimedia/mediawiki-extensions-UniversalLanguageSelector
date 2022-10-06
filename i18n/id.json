@@ -9,7 +9,8 @@
 			"Kenrick95",
 			"William Surya Permana",
 			"Xð",
-			"පසිඳු කාවින්ද"
+			"පසිඳු කාවින්ද",
+			"Veracious"
 		]
 	},
 	"uls-desc": "Memberikan pengguna beberapa cara untuk memilih bahasa dan menyesuaikan pengaturan bahasa",
@@ -76,5 +77,9 @@
 	"ext-uls-setlang-loading": "Menerapkan...",
 	"ext-uls-setlang-cancel": "Jangan ubah",
 	"ext-uls-actions-menu-header": "Opsi lainnya",
-	"ext-uls-actions-menu-language-settings-item-label": "Buka setelah bahasa"
+	"ext-uls-actions-menu-language-settings-item-label": "Buka setelah bahasa",
+	"ext-uls-empty-state-header": "Belum ada bahasa",
+	"ext-uls-empty-state-desc": "Tidak ada bahasa yang tersedia untuk saat ini",
+	"ext-uls-empty-state-header-actions-available": "Belum ada bahasa. Tambahkan yang baru?",
+	"ext-uls-empty-state-desc-actions-available": "Jadikan konten ini tersedia dalam lebih banyak bahasa."
 }

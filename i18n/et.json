@@ -68,6 +68,8 @@
 	"ext-uls-setlang-cancel": "Ära muuda",
 	"ext-uls-actions-menu-header": "Veel suvandeid",
 	"ext-uls-actions-menu-language-settings-item-label": "Ava keelesätted",
+	"ext-uls-empty-state-header": "Keeli pole veel",
+	"ext-uls-empty-state-desc": "Praegu pole ühtegi keelt saadaval.",
 	"ext-uls-empty-state-header-actions-available": "Keeli pole veel. Kas lisad ühe?",
 	"ext-uls-empty-state-desc-actions-available": "Tee sisu kättesaadavaks rohkemates keeltes."
 }
