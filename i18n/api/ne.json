@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"बडा काजी"
+		]
+	},
+	"apihelp-ulslocalization-param-language": "भाषा कोड।",
+	"apihelp-ulslocalization-example-1": "तमिल स्थानीयकरण प्राप्त गर्नुहोस्",
+	"apihelp-ulslocalization-example-2": "हिन्दी स्थानीयकरण प्राप्त गर्नुहोस्"
+}
