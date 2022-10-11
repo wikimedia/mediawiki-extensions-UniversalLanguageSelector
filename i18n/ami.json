@@ -3,12 +3,13 @@
 		"authors": [
 			"Akamycoco",
 			"Vickylin77s",
-			"嚴美鳳"
+			"嚴美鳳",
+			"Amire80"
 		]
 	},
 	"uls-plang-title-languages": "o sowal.",
 	"ext-uls-language-settings-cancel": "Sawaden miforic",
 	"jquery-ime-help": "o pakafana’",
-	"ext-uls-input-disable-notification-undo": " patikor",
+	"ext-uls-input-disable-notification-undo": "patikor",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|matongal ko adihay}}"
 }
