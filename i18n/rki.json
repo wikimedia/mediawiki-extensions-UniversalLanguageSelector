@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"YaThaWinTha"
+		]
+	},
+	"uls-plang-title-languages": "ဘာသာစကား",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|နောက်ထပ် တစ်ခု|နောက်ထပ် $1 ခု}}"
+}
