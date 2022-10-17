@@ -54,5 +54,10 @@
 	"ext-uls-setlang-unknown-error": "انجان غلطی",
 	"ext-uls-setlang-heading": "انٹرفیس بولی بدلو؟",
 	"ext-uls-setlang-accept": "تبدیلی قبول",
-	"ext-uls-setlang-cancel": "نا بدلو"
+	"ext-uls-setlang-cancel": "نا بدلو",
+	"ext-uls-actions-menu-header": "ہور چݨیاں",
+	"ext-uls-actions-menu-language-settings-item-label": "بولی دیاں سیٹنگاں کھُلھیو",
+	"ext-uls-empty-state-header": "حالیہ کوئی بولیاں نہیں اے",
+	"ext-uls-empty-state-desc": "حالیہ اِتھے کوئی چݨیا نہیں اے",
+	"ext-uls-empty-state-header-actions-available": "حالیہ کوئی بولیاں نہیں اے۔ نویں پایو؟"
 }
