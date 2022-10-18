@@ -63,5 +63,10 @@
 	"ext-uls-compact-link-info": "Сви језици (првобитан избор је заснован на најчешћим одабирима вас и других)",
 	"prefs-languages": "Језици",
 	"ext-uls-compact-language-links-preference": "Користи [[$1|сажети списак језика]], с језицима који су Вам важни.",
-	"ext-uls-compact-no-results": "Ова страница није доступна на језику који тражите."
+	"ext-uls-compact-no-results": "Ова страница није доступна на језику који тражите.",
+	"ext-uls-setlang-unknown-error": "Непозната грешка",
+	"ext-uls-setlang-heading": "Променити језик интерфејса?",
+	"ext-uls-setlang-accept": "Прихвати промену",
+	"ext-uls-setlang-loading": "Примењивање…",
+	"ext-uls-setlang-cancel": "Не мењај"
 }
