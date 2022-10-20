@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tejoebāsa",
+			"YaThaWinTha"
+		]
+	},
+	"uls-desc": "ဘာသာစကားတစ်ခုကို ရွီးချယ်ရန်နန့် ဘာသာစကားဆက်တင်တိကို ချိန်ညှိဖို့သုံးစွဲသူအား နည်းလမ်းတိတ၀ ပီးသည်။",
+	"uls-plang-title-languages": "ဘာသာစကား",
+	"ext-uls-select-language-settings-icon-tooltip": "ဘာသာစကား ဆက်တင်တိ",
+	"ext-uls-undo-language-tooltip-text": "ဘာသာစကားကို $1 မှ ပြောင်းခသည်။",
+	"ext-uls-undo-language-tooltip-text-local": "ဒေဝီကီအတွက် ဘာသာစကားပြောင်းထားသည်။  ဝီကီအားလုံးအတွက် ဘာသာစကားပြောင်းဖို့ သင်ဧ့ [[Special:GlobalPreferences|global preferences]] ကို စစ်ဆေးပါ။",
+	"ext-uls-language-settings-preferences-link": "နောက်ထပ် ဘာသာစကား ဆက်တင်တိ",
+	"uls-betafeature-label": "ကျစ်လစ်တေ ဘာသာစကားလင့်ခ်တိ",
+	"uls-betafeature-desc": "သင်နန့် ပိုသက်ဆိုင်ရေ ဘာသာစကားတိနန့်ရာ ဘာသာစကားစရင်းဧ့ ပိုတိုသောဗားရှင်းကို ပြပါ။",
+	"ext-uls-display-settings-title": "ပြသဖို့ ဆက်တင်တိ",
+	"ext-uls-display-settings-language-tab": "ဘာသာစကား",
+	"ext-uls-display-settings-fonts-tab": "ဖောင့်တိ",
+	"ext-uls-display-settings-title-short": "ပြသမှု",
+	"ext-uls-display-settings-desc": "မီနူးတိနန့် ဖောင့်များအတွက် အသုံးပြုရေ ဘာသာစကားကို သတ်မှတ်ပါ။",
+	"ext-uls-language-settings-title": "ဘာသာစကား ဆက်တင်တိ",
+	"ext-uls-language-settings-apply": "ဆက်တင်တိကို အသုံးပြုပါ။",
+	"ext-uls-language-settings-cancel": "ပယ်ဖျက်ပါ",
+	"ext-uls-language-buttons-help": "မီနူးတိဧ့ ဘာသာစကားကို ပြောင်းပါ။  အကြောင်းအရာဘာသာစကားကို ထိခိုက်ဖို့ဟုတ်ပါ။",
+	"ext-uls-display-settings-font-settings": "ဖောင့် ဆက်တင်တိ",
+	"ext-uls-display-settings-ui-language": "ပြသ‌ရေ ဘာသာစကား",
+	"ext-uls-display-settings-anon-label": "ပြသရေ ဘာသာစကား-",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (အကြောင်းအရာပိုင်)",
+	"ext-uls-display-settings-anon-log-in-cta": "မီနူးတိအတွက် တခြားဘာသာစကားတစ်ခုကို ရွီးချယ်ဖို့ [[Special:UserLogin|Log in]]။",
+	"ext-uls-webfonts-settings-title": "လိုအပ်ပါက ဖောင့်တိကို ဒေါင်းလုဒ်လုပ်ပါ။",
+	"ext-uls-webfonts-settings-info": "ပျောက်ဆုံးနီ‌ရေဖောင့်တိကို အလိုအလိုလိုဒေါင်းလုဒ်လုပ်ပြီး နှစ်သက်‌တေဖောင့်တိကို ရွီးချယ်ခွင့်ပြုပါ။",
+	"ext-uls-webfonts-settings-info-link": "အချက်အလက်ပို",
+	"ext-uls-webfonts-select-for": "$1 အတွက် ဖောင့်ကို ရွီးပါ။",
+	"ext-uls-webfonts-select-for-ui-info": "အသုံးပြုသူ အင်တာဖေ့စ်အတွက် အသုံးပြုရေ ဖောင့်",
+	"ext-uls-webfonts-select-for-content-info": "အကြောင်းအရာအတွက် အသုံးပြုရေ ဖောင့်",
+	"ext-uls-webfonts-system-font": "စနစ်ဖောင့်",
+	"ext-uls-back-to-display-settings": "ပြသဖို့ ဆက်တင်တိပသို့ ပြန်လားပါ",
+	"ext-uls-input-settings-title": "ထည့်သွင်းခြင်း ဆက်တင်တိ",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|နောက်ထပ် တစ်ခု|နောက်ထပ် $1 ခု}}"
+}
