@@ -149,8 +149,6 @@
 		var actionItemsRegistry = mw.uls.ActionsMenuItemsRegistry;
 		actionItemsRegistry.register( languageSettingsMenuItem );
 
-		var $actionsMenuTrigger = createActionsMenuTrigger();
-		setActionsMenuTriggerIconClass( $actionsMenuTrigger, actionItemsRegistry.size() );
 		var $header = $( '<h3>' )
 			.addClass( 'uls-empty-state__header' )
 			.text( $.i18n( 'ext-uls-empty-state-header' ) );
