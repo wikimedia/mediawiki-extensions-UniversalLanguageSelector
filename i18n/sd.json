@@ -61,5 +61,7 @@
 	"ext-uls-compact-link-info": "سڀ ٻوليون (توھان ۽ ٻين جي عام اختيارن مان شروعاتي چونڊ)",
 	"prefs-languages": "ٻوليون",
 	"ext-uls-compact-language-links-preference": "توھان سان لاڳاپيل ٻولين لاءِ [[$1|ٻولين جي ڳتيل فھرست]] استعمال ڪريو.",
-	"ext-uls-compact-no-results": "توھان جنھن ٻوليءَ لاءِ ڳوليو ان ۾ ھي صفحو موجود ناھي."
+	"ext-uls-compact-no-results": "توھان جنھن ٻوليءَ لاءِ ڳوليو ان ۾ ھي صفحو موجود ناھي.",
+	"ext-uls-actions-menu-header": "وڌيڪ چارا",
+	"ext-uls-actions-menu-language-settings-item-label": "ٻوليءَ جون ترتيبون کوليو"
 }
