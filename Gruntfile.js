@@ -18,9 +18,6 @@ module.exports = function ( grunt ) {
 			]
 		},
 		stylelint: {
-			options: {
-				customSyntax: 'postcss-less'
-			},
 			src: [
 				'**/*.css',
 				'**/*.less',
