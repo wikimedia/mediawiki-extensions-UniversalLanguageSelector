@@ -67,5 +67,11 @@
 	"ext-uls-setlang-heading": "Gentosin antarmuka basa?",
 	"ext-uls-setlang-accept": "Tampi gentosan",
 	"ext-uls-setlang-loading": "Nerapang...",
-	"ext-uls-setlang-cancel": "Sampunang ngentosin"
+	"ext-uls-setlang-cancel": "Sampunang ngentosin",
+	"ext-uls-actions-menu-header": "Opsi liyanan",
+	"ext-uls-actions-menu-language-settings-item-label": "Buka setélan basa",
+	"ext-uls-empty-state-header": "Durung wénten basa",
+	"ext-uls-empty-state-desc": "Ten wénten basa sané kasedia antuk sané mangkin",
+	"ext-uls-empty-state-header-actions-available": "Durung wénten basa. Wewehin sané anyar?",
+	"ext-uls-empty-state-desc-actions-available": "Dadosang kontén puniki kasedia ring langkung basa."
 }
