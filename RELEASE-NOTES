@@ -1,0 +1,6 @@
+== UniversalLanguageSelector 2022.10 ==
+Released at 2022-10-28.
+
+=== Noteworthy changes ===
+* Localisation and maintenance updates.
+* Add Western Punjabi to Nastaleeq font ({{phab|T118677}}, {{gerrit|820907}})
