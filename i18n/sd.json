@@ -11,6 +11,7 @@
 	"uls-plang-title-languages": "ٻوليون",
 	"ext-uls-select-language-settings-icon-tooltip": "ٻوليءَ جو ترتيبون",
 	"ext-uls-undo-language-tooltip-text": "$1 کان مٽايل ٻولي",
+	"ext-uls-undo-language-tooltip-text-local": "هن وڪي لاءِ ٻولي تبديل ڪئي وئي آھي. سڀني وڪيز جي ٻولي تبديل ڪرڻ لاءِ پنھنجيون [[Special:GlobalPreferences|عالمي ترجيحون]] چڪاسيو.",
 	"ext-uls-language-settings-preferences-link": "وڌيڪ ٻوليءَ جون ترتيبون",
 	"uls-betafeature-label": "ڳتل ٻوليءَ جا ڳنڍڻا",
 	"uls-betafeature-desc": "ٻوليءَ جي فھرست جو ننڍو ورزين ڏيکاريو، رڳو انھن ٻولين سان جيڪي اوھان لاءِ وڌيڪ مناسب آھن.",
@@ -61,5 +62,12 @@
 	"ext-uls-compact-link-info": "سڀ ٻوليون (توھان ۽ ٻين جي عام اختيارن مان شروعاتي چونڊ)",
 	"prefs-languages": "ٻوليون",
 	"ext-uls-compact-language-links-preference": "توھان سان لاڳاپيل ٻولين لاءِ [[$1|ٻولين جي ڳتيل فھرست]] استعمال ڪريو.",
-	"ext-uls-compact-no-results": "توھان جنھن ٻوليءَ لاءِ ڳوليو ان ۾ ھي صفحو موجود ناھي."
+	"ext-uls-compact-no-results": "توھان جنھن ٻوليءَ لاءِ ڳوليو ان ۾ ھي صفحو موجود ناھي.",
+	"ext-uls-setlang-error": "توھان جي ترجيحي ٻوليءَ جي تجديد ڪرڻ وقت ڪا چُڪ پيش آئي. چُڪَ: $1",
+	"ext-uls-setlang-unknown-error": "اڻڄاتل چُڪَ",
+	"ext-uls-setlang-message": "توهان جنھن ڳنڍڻي جي پيروي ڪئي آهي ان انٽرفيس <strong>$1 ($2)</strong> ۾ ڏيکارڻ جي درخواست ڪئي آھي",
+	"ext-uls-setlang-heading": "انٽرفيس جي ٻولي بدلايون؟",
+	"ext-uls-setlang-accept": "بدلاءُ قبول ڪريو",
+	"ext-uls-setlang-loading": "لاڳو ڪندي...",
+	"ext-uls-setlang-cancel": "نہ بدلايو"
 }
