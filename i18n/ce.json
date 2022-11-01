@@ -9,6 +9,7 @@
 	"uls-plang-title-languages": "Меттанаш",
 	"ext-uls-select-language-settings-icon-tooltip": "Мотт дIахIоттор",
 	"ext-uls-undo-language-tooltip-text": "Хьалхара мотт: $1",
+	"ext-uls-undo-language-tooltip-text-local": "ХӀокху викина мотт хийцина. Йерриг викеш чохь мотт хийца хьажа хьан [[Special:GlobalPreferences|глобалан нисдаран гӀирс]] чу.",
 	"ext-uls-language-settings-preferences-link": "Кхин мотт дIахIоттор",
 	"uls-betafeature-label": "Меттанийн хьажоргийн боца могӀа",
 	"uls-betafeature-desc": "Гайта меттанийн боца могӀа, хьона кест-кеста йоьшуш болу меттанаш бен хира бац.",
@@ -59,5 +60,12 @@
 	"ext-uls-compact-link-info": "Берриге меттанаш (дуьххьара хаьржинарш бу ахьа йа кхечара лелина меттанаш)",
 	"prefs-languages": "Меттанаш",
 	"ext-uls-compact-language-links-preference": "Лелабе [[$1|компакте болу меттанийн могӀам]] хьайна оьшу меттанаш долуш.",
-	"ext-uls-compact-no-results": "Ахьа хаьржинчу маттахь иза агӀо тӀекхочуш йац."
+	"ext-uls-compact-no-results": "Ахьа хаьржинчу маттахь иза агӀо тӀекхочуш йац.",
+	"ext-uls-setlang-error": "Хаьржина мотт карлабоккхуш гӀалат нисделла. Хаам: $1",
+	"ext-uls-setlang-unknown-error": "Девзаш доцу гӀалат",
+	"ext-uls-setlang-message": "Хьо кху чу кхаьчначу хьажорго, тӀедуьллу, интерфейс «<strong>$1 ( $2 )</strong>» маттахь хилар",
+	"ext-uls-setlang-heading": "Интерфейсан мотт хийца?",
+	"ext-uls-setlang-accept": "Бакъбе хийцамаш",
+	"ext-uls-setlang-loading": "ДӀахӀоттор…",
+	"ext-uls-setlang-cancel": "Ма хийца"
 }
