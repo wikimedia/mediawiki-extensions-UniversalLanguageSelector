@@ -101,14 +101,17 @@ class Hooks implements
 	 * Whether ULS Compact interlanguage links enabled
 	 *
 	 * @param User $user
+	 * @param Skin $skin
 	 * @return bool
 	 */
-	private function isCompactLinksEnabled( User $user ) {
+	private function isCompactLinksEnabled( User $user, Skin $skin ) {
 		// Whether any user visible features are enabled
 		if ( !$this->config->get( 'ULSEnable' ) ) {
 			return false;
 		}
-
+		if ( $skin->getSkinName() === 'vector-2022' ) {
+			return true;
+		}
 		if ( $this->config->get( 'ULSCompactLanguageLinksBetaFeature' ) === true &&
 			$this->config->get( 'InterwikiMagic' ) === true &&
 			$this->config->get( 'HideInterlanguageLinks' ) === false &&
@@ -143,7 +146,7 @@ class Hooks implements
 		// Soft dependency to Wikibase client. Don't enable CLL if links are managed manually.
 		$excludedLinks = $out->getProperty( 'noexternallanglinks' );
 		$override = is_array( $excludedLinks ) && in_array( '*', $excludedLinks );
-		$isCompactLinksEnabled = $this->isCompactLinksEnabled( $out->getUser() );
+		$isCompactLinksEnabled = $this->isCompactLinksEnabled( $out->getUser(), $skin );
 		$config = [
 			'wgULSPosition' => $this->config->get( 'ULSPosition' ),
 			'wgULSisCompactLinksEnabled' => $isCompactLinksEnabled,
