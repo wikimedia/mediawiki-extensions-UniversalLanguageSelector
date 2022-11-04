@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Bdijkstra",
 			"Servien"
 		]
 	},
@@ -58,6 +59,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Noch eyne|Noch $1}}",
 	"ext-uls-compact-link-info": "Alle språken (eyrste selekty baseerd up algemeyne köäses van ju en anderen)",
 	"prefs-languages": "Språken",
-	"ext-uls-compact-language-links-preference": "Een [[$1|kompakte språkenlyste]] gebruken, mid de språken wår jy wat an hebbet.",
+	"ext-uls-compact-language-links-preference": "Een [[$1|kompakte språkenlyste]] gebruken, mid en paar höövdspråken",
 	"ext-uls-compact-no-results": "Disse syde is neet beskikbår in de språke wår jy in söcht."
 }
