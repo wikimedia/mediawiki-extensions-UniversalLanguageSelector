@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Lookruk",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "ພາສາ"
+	"uls-plang-title-languages": "ພາສາ",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ອັນໜຶ່ງ|$1 ອັນ}}"
 }
