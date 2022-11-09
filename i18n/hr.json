@@ -66,6 +66,7 @@
 	"ext-uls-compact-no-results": "Ova stranica nije dostupna na jeziku koji ste tražili.",
 	"ext-uls-setlang-unknown-error": "Nepoznata pogreška",
 	"ext-uls-setlang-heading": "Želite li promijeniti jezik sučelja?",
+	"ext-uls-setlang-accept": "Prihvati izmjenu",
 	"ext-uls-setlang-loading": "Primjenjuje se...",
 	"ext-uls-setlang-cancel": "Nemoj promijeniti"
 }
