@@ -105,11 +105,21 @@ class LanguageNameSearch {
 		return $results;
 	}
 
+	/**
+	 * @param string $name
+	 * @param string $searchKey
+	 * @param int $typos
+	 * @return bool
+	 */
 	public static function matchNames( $name, $searchKey, $typos ) {
 		return strrpos( $name, $searchKey, -strlen( $name ) ) !== false
 			|| ( $typos > 0 && self::levenshteinDistance( $name, $searchKey ) <= $typos );
 	}
 
+	/**
+	 * @param string $name
+	 * @return int
+	 */
 	public static function getIndex( $name ) {
 		$codepoint = self::getCodepoint( $name );
 

@@ -30,6 +30,7 @@ use ResourceLoaderModule;
  * ResourceLoader module for UniversalLanguageSelector
  */
 class ResourceLoaderULSModule extends ResourceLoaderModule {
+	/** @var string[] */
 	protected $targets = [ 'desktop', 'mobile' ];
 
 	/**

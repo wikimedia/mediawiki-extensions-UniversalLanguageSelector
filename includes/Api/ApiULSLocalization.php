@@ -48,6 +48,9 @@ class ApiULSLocalization extends ApiBase {
 		$this->languageNameUtils = $languageNameUtils;
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function execute() {
 		$this->getMain()->setCacheMode( 'public' );
 		$this->getMain()->setCacheMaxAge( 2419200 );
@@ -63,6 +66,9 @@ class ApiULSLocalization extends ApiBase {
 		$this->getResult()->addValue( null, 'mime', 'application/json' );
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function getCustomPrinter() {
 		return new ApiFormatRaw(
 			$this->getMain(),
@@ -70,6 +76,9 @@ class ApiULSLocalization extends ApiBase {
 		);
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function getAllowedParams() {
 		return [
 			'language' => [
@@ -91,6 +100,9 @@ class ApiULSLocalization extends ApiBase {
 		];
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function isInternal() {
 		// Try to scare people away from using this externally
 		return true;

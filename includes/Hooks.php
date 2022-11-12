@@ -421,6 +421,11 @@ class Hooks implements
 		}
 	}
 
+	/**
+	 * @param User $user User whose preferences are being modified
+	 * @param array &$preferences Preferences description array, to be fed to an HTMLForm object
+	 * @return bool|void True or no return value to continue or false to abort
+	 */
 	public function onGetPreferences( $user, &$preferences ) {
 		// T259037: Does not work well on Minerva
 		$skin = RequestContext::getMain()->getSkin();
@@ -455,6 +460,10 @@ class Hooks implements
 		}
 	}
 
+	/**
+	 * @param User $user
+	 * @param array[] &$prefs
+	 */
 	public function onGetBetaFeaturePreferences( $user, array &$prefs ) {
 		if ( $this->config->get( 'ULSCompactLanguageLinksBetaFeature' ) === true &&
 			$this->config->get( 'InterwikiMagic' ) === true &&
@@ -526,6 +535,10 @@ class Hooks implements
 		}
 	}
 
+	/**
+	 * @param OutputPage $out
+	 * @return string|null
+	 */
 	private function getSetLang( OutputPage $out ): ?string {
 		$setLangCode = $out->getRequest()->getRawVal( 'setlang' );
 		if ( $setLangCode && $this->languageNameUtils->isSupportedLanguage( $setLangCode ) ) {

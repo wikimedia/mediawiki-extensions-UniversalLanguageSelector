@@ -144,6 +144,9 @@ class LanguageNameIndexer extends Maintenance {
 		$this->generateFile( $buckets );
 	}
 
+	/**
+	 * @return array
+	 */
 	private function getLanguageData() {
 		$file = __DIR__ . '/../lib/jquery.uls/src/jquery.uls.data.js';
 		$contents = file_get_contents( $file );
@@ -158,6 +161,9 @@ class LanguageNameIndexer extends Maintenance {
 		return $data;
 	}
 
+	/**
+	 * @param array $buckets
+	 */
 	private function generateFile( array $buckets ) {
 		$template = <<<'PHP'
 <?php

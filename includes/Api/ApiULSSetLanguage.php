@@ -53,6 +53,9 @@ class ApiULSSetLanguage extends ApiBase {
 		$this->languageNameUtils = $languageNameUtils;
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function execute() {
 		$request = $this->getRequest();
 		if ( !$request->wasPosted() ) {
@@ -91,6 +94,9 @@ class ApiULSSetLanguage extends ApiBase {
 		} );
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function getAllowedParams() {
 		return [
 			'languagecode' => [
@@ -99,11 +105,17 @@ class ApiULSSetLanguage extends ApiBase {
 		];
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function isInternal() {
 		// Try to scare people away from using this externally
 		return true;
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function needsToken() {
 		return 'csrf';
 	}

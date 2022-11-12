@@ -28,6 +28,9 @@ use Wikimedia\ParamValidator\ParamValidator;
  * @ingroup API
  */
 class ApiLanguageSearch extends ApiBase {
+	/**
+	 * @inheritDoc
+	 */
 	public function execute() {
 		$params = $this->extractRequestParams();
 		$search = $params['search'];
@@ -37,6 +40,9 @@ class ApiLanguageSearch extends ApiBase {
 		$result->addValue( null, $this->getModuleName(), $searches );
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function getAllowedParams() {
 		return [
 			'search' => [
