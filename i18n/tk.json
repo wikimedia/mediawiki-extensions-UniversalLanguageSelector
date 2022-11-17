@@ -16,6 +16,12 @@
 	"ext-uls-display-settings-title-short": "Ekran",
 	"ext-uls-display-settings-desc": "Menýular we şriftler üçin ulanylýan dili düzüň.",
 	"ext-uls-language-settings-title": "Dil sazlamalary",
+	"ext-uls-display-settings-font-settings": "Şrift sazlamalary",
+	"ext-uls-input-settings-title": "Giriş sazlamalary",
+	"ext-uls-input-settings-more-languages-tooltip": "Has köp dil",
+	"jquery-ime-other-languages": "Başga diller",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Ýene-de bir|$1 has köp}}",
-	"prefs-languages": "Diller"
+	"prefs-languages": "Diller",
+	"ext-uls-setlang-heading": "Interfeýs dilini üýtgediňmi?",
+	"ext-uls-actions-menu-language-settings-item-label": "Dil sazlamalaryny açyň"
 }

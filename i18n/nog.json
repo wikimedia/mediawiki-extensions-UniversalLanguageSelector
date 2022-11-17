@@ -4,5 +4,6 @@
 			"TayfunEt."
 		]
 	},
-	"uls-plang-title-languages": "Тиллер"
+	"uls-plang-title-languages": "Тиллер",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Тагы $1 тилде}}"
 }
