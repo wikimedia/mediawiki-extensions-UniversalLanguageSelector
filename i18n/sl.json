@@ -59,7 +59,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Orodja za vnos lahko v jezikovnih nastavitvah poleg seznama jezikov omogočite kadarkoli.",
 	"ext-uls-language-settings-applying": "Uveljavljanje ...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|1=Še en|Še $1}}",
-	"ext-uls-compact-link-info": "Vsi jeziki (izbor na podlagi tvojih odločitev in odločitev drugih)",
+	"ext-uls-compact-link-info": "Vsi jeziki (izbor na podlagi vaših odločitev in odločitev drugih)",
 	"prefs-languages": "Jeziki",
 	"ext-uls-compact-language-links-preference": "Uporaba [[$1|kompaktnega seznama jezikov]], ki so relevantni za vas.",
 	"ext-uls-compact-no-results": "Ta stran ni na voljo v jeziku, ki si ga iskal.",
