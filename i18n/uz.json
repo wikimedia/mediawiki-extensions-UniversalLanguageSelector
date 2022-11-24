@@ -47,5 +47,7 @@
 	"ext-uls-setlang-heading": "Interfeys tili oʻzgartirilsinmi?",
 	"ext-uls-setlang-accept": "Oʻzgarishni qabul qilish",
 	"ext-uls-setlang-loading": "Qoʻllanilmoqda...",
-	"ext-uls-setlang-cancel": "Oʻzgartirilmasin"
+	"ext-uls-setlang-cancel": "Oʻzgartirilmasin",
+	"ext-uls-actions-menu-header": "Koʻproq opsiyalar",
+	"ext-uls-actions-menu-language-settings-item-label": "Til sozlamalarini ochish"
 }
