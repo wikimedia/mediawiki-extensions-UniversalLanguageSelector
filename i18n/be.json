@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Artsiom91",
+			"Maksim L.",
 			"Tomato Cream",
 			"Tīgelika",
 			"Xð",
@@ -46,7 +47,7 @@
 	"ext-uls-back-to-input-settings": "Вярнуцца да наладаў уводу",
 	"ext-uls-ime-help": "Як карыстацца",
 	"ext-uls-disable-input-method": "Выкарыстоўваць родную клавіятуру",
-	"ext-uls-input-settings-more-languages-tooltip": "Болей моваў",
+	"ext-uls-input-settings-more-languages-tooltip": "Болей моў",
 	"jquery-ime-other-languages": "Іншыя мовы",
 	"jquery-ime-disable-text": "Ужываць сістэмную клавіятуру",
 	"jquery-ime-help": "Даведка",
@@ -57,7 +58,7 @@
 	"ext-uls-input-disable-notification": "Прылады для ўводу былі выключаныя",
 	"ext-uls-input-disable-notification-undo": "Вярнуць",
 	"ext-uls-input-disable-notification-info-personal": "Вы можаце ўключыць прылады для ўводу зноў у моўных наладах.",
-	"ext-uls-input-disable-notification-info-interlanguage": "Вы можаце ўключыць прылады для ўводу зноў у моўных наладах побач са спісам моваў.",
+	"ext-uls-input-disable-notification-info-interlanguage": "Вы можаце ўключыць прылады для ўводу зноў у моўных наладах побач са спісам моў.",
 	"ext-uls-language-settings-applying": "Ужыванне...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Яшчэ $1}}",
 	"ext-uls-compact-link-info": "Усе мовы (першапачатова выбраны тыя мовы, якія часцей ужываліся Вамі і іншымі)",
@@ -73,8 +74,8 @@
 	"ext-uls-setlang-cancel": "Не мяняць",
 	"ext-uls-actions-menu-header": "Больш магчымасцей",
 	"ext-uls-actions-menu-language-settings-item-label": "Адкрыць моўныя налады",
-	"ext-uls-empty-state-header": "Моваў пакуль няма",
-	"ext-uls-empty-state-desc": "Зараз няма даступных моваў",
-	"ext-uls-empty-state-header-actions-available": "Моваў пакуль няма. Дадаць новую?",
+	"ext-uls-empty-state-header": "Моў пакуль няма",
+	"ext-uls-empty-state-desc": "Зараз няма даступных моў",
+	"ext-uls-empty-state-header-actions-available": "Моў пакуль няма. Дадаць новую?",
 	"ext-uls-empty-state-desc-actions-available": "Зрабіце змест даступным на дадатковых мовах."
 }
