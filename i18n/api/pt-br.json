@@ -4,7 +4,8 @@
 			"Dianakc",
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
-			"Felipe L. Ewald"
+			"Felipe L. Ewald",
+			"Fúlvio"
 		]
 	},
 	"apihelp-languagesearch-description": "Procure nomes de idiomas em qualquer script.",
@@ -16,7 +17,7 @@
 	"apihelp-languagesearch-example-3": "Pesquisar por \"ഫി\", permitindo um erro ortográfico",
 	"apihelp-ulslocalization-description": "Obtenha a localização do ULS no idioma indicado.",
 	"apihelp-ulslocalization-summary": "Obtenha a localização do ULS no idioma indicado.",
-	"apihelp-ulslocalization-param-language": "Código da linguagem.",
+	"apihelp-ulslocalization-param-language": "Código do idioma.",
 	"apihelp-ulslocalization-example-1": "Obter localização Tamil",
 	"apihelp-ulslocalization-example-2": "Obter localização Hindi",
 	"apihelp-ulssetlang-description": "Atualize o idioma de interface preferido do usuário.",
