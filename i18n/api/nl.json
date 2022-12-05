@@ -7,7 +7,8 @@
 			"McDutchie",
 			"Robin van der Vliet",
 			"Siebrand",
-			"Sjoerddebruin"
+			"Sjoerddebruin",
+			"HanV"
 		]
 	},
 	"apihelp-languagesearch-description": "Zoeken naar namen van talen in elk script",
@@ -18,5 +19,5 @@
 	"apihelp-ulssetlang-description": "Door de gebruiker ingestelde taal bijwerken.",
 	"apihelp-ulssetlang-summary": "Door de gebruiker ingestelde taal bijwerken.",
 	"apihelp-ulssetlang-param-languagecode": "De code van de voorkeurstaal.",
-	"apierror-ulssetlang-anon-notallowed": "Anonieme gebruikers mogen de omgevingstaal niet wijzigen."
+	"apierror-ulssetlang-anon-notallowed": "Anonieme gebruikers mogen de taal van de interface niet wijzigen."
 }
