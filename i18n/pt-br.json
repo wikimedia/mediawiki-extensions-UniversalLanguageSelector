@@ -10,7 +10,8 @@
 			"Jaideraf",
 			"Luckas",
 			"Opraco",
-			"TheEduGobi"
+			"TheEduGobi",
+			"Fúlvio"
 		]
 	},
 	"uls-desc": "Oferece ao usuário várias maneiras para selecionar um idioma e ajustar as configurações de idioma",
@@ -75,5 +76,11 @@
 	"ext-uls-setlang-heading": "Alterar idioma da interface?",
 	"ext-uls-setlang-accept": "Aceitar alterações",
 	"ext-uls-setlang-loading": "Aplicando…",
-	"ext-uls-setlang-cancel": "Não mudar"
+	"ext-uls-setlang-cancel": "Não mudar",
+	"ext-uls-actions-menu-header": "Mais opções",
+	"ext-uls-actions-menu-language-settings-item-label": "Abrir configurações de idioma",
+	"ext-uls-empty-state-header": "Ainda não há idiomas",
+	"ext-uls-empty-state-desc": "Nenhum idioma está disponível no momento",
+	"ext-uls-empty-state-header-actions-available": "Ainda não há idiomas. Quer adicionar um novo?",
+	"ext-uls-empty-state-desc-actions-available": " Disponibilize o conteúdo em mais idiomas."
 }
