@@ -5,7 +5,8 @@
 			"Ans",
 			"Nitisart Jungtrakungrat",
 			"Patsagorn Y.",
-			"Xð"
+			"Xð",
+			"Ekminarin"
 		]
 	},
 	"uls-desc": "ให้ผู้ใช้​เลือก​ภาษาและปรับการตั้งค่าภาษาได้หลายวิธี",
@@ -70,5 +71,9 @@
 	"ext-uls-setlang-heading": "เปลี่ยนภาษาของอินเตอร์เฟซหรือไม่?",
 	"ext-uls-setlang-accept": "ยอมรับการเปลี่ยนแปลง",
 	"ext-uls-setlang-loading": "กำลังปรับใช้...",
-	"ext-uls-setlang-cancel": "ไม่ต้องเปลี่ยนตาม"
+	"ext-uls-setlang-cancel": "ไม่ต้องเปลี่ยนตาม",
+	"ext-uls-actions-menu-header": "ตัวเลือกเพิ่ม",
+	"ext-uls-actions-menu-language-settings-item-label": "เปิดการตั้งค่าภาษา",
+	"ext-uls-empty-state-header": "ยังไม่มีภาษา",
+	"ext-uls-empty-state-desc": "ขณะนี้ยังไม่มีภาษาที่ใช้งานได้"
 }

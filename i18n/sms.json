@@ -26,6 +26,7 @@
 	"ext-uls-input-disable-notification-undo": "Kååʹmet",
 	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|jeeʹres ǩiõll|jeeʹres ǩiõl|jeeʹres ǩiõllâd}}",
 	"prefs-languages": "Ǩiõl",
+	"ext-uls-setlang-unknown-error": "Toobdteʹmes vââʹǩǩ",
 	"ext-uls-setlang-accept": "Priim muttâz",
 	"ext-uls-actions-menu-language-settings-item-label": "Ääʹved ǩiõllasetõõzzid"
 }
