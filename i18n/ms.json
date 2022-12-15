@@ -61,12 +61,19 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Satu lagi|$1 lagi}}",
 	"ext-uls-compact-link-info": "Semua bahasa (pilihan awal berdasarkan oleh pilihan umum oleh anda dan orang lain)",
 	"prefs-languages": "Bahasa",
+	"ext-uls-compact-language-links-preference": "Guna [[$1|senarai bahasa padat]] dengan bahasa yang berkaitan dengan anda.",
+	"ext-uls-compact-no-results": "Laman ini tidak tersedia dalam bahasa yang anda cari",
 	"ext-uls-setlang-error": "Terdapat ralat semasa mengemas kini bahasa pilihan anda. Ralat: $1",
 	"ext-uls-setlang-unknown-error": "Ralat tidak diketahui",
+	"ext-uls-setlang-message": "Pautan yang anda ikuti meminta antara muka ditunjukkan dalam <strong>$1 ($2)</strong>",
 	"ext-uls-setlang-heading": "Ubah bahasa antara muka?",
 	"ext-uls-setlang-accept": "Terima perubahan",
 	"ext-uls-setlang-loading": "Menetapkan...",
 	"ext-uls-setlang-cancel": "Jangan ubah",
 	"ext-uls-actions-menu-header": "Lebih pilihan",
-	"ext-uls-actions-menu-language-settings-item-label": "Buka tetapan bahasa"
+	"ext-uls-actions-menu-language-settings-item-label": "Buka tetapan bahasa",
+	"ext-uls-empty-state-header": "Belum ada bahasa",
+	"ext-uls-empty-state-desc": "Tiada bahasa tersedia buat masa ini",
+	"ext-uls-empty-state-header-actions-available": "Belum ada bahasa. Tambah yang baru?",
+	"ext-uls-empty-state-desc-actions-available": "Jadikan kandungan tersedia dalam lebih banyak bahasa."
 }
