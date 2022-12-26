@@ -14,7 +14,7 @@
 	"uls-plang-title-languages": "Linguas",
 	"ext-uls-select-language-settings-icon-tooltip": "Opcións de lingua",
 	"ext-uls-undo-language-tooltip-text": "A lingua cambiou desde o $1",
-	"ext-uls-undo-language-tooltip-text-local": "Cambiouse a lingua para esta wiki. Comprobe as súas [[Special:GlobalPreferences|preferencias globais]] para cambiar a lingua para tódalas wikis.",
+	"ext-uls-undo-language-tooltip-text-local": "Cambiouse a lingua para este wiki. Comprobe as súas [[Special:GlobalPreferences|preferencias globais]] para cambiar a lingua para tódolos wikis.",
 	"ext-uls-language-settings-preferences-link": "Máis opcións de lingua",
 	"uls-betafeature-label": "Ligazóns lingüísticas compactas",
 	"uls-betafeature-desc": "Amosar unha versión máis curta da lista de linguas, unicamente coas linguas máis relevantes para vostede.",
@@ -62,8 +62,15 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Pode activar as ferramentas de entrada en calquera momento desde as opcións de lingua, ao carón da lista de linguas.",
 	"ext-uls-language-settings-applying": "Aplicando...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|$1 máis}}",
-	"ext-uls-compact-link-info": "Todas as linguas (selección inicial de opcións comúns súas e doutros)",
+	"ext-uls-compact-link-info": "Todas as linguas (selección inicial de opcións comúns súas e doutras persoas)",
 	"prefs-languages": "Linguas",
 	"ext-uls-compact-language-links-preference": "Usar unha [[$1|lista de linguas compacta]], con linguas relevantes para vostede.",
-	"ext-uls-compact-no-results": "Esta páxina non está dispoñible na lingua en que procurou."
+	"ext-uls-compact-no-results": "Esta páxina non está dispoñible na lingua na que fixo a procura.",
+	"ext-uls-setlang-error": "Produciuse un erro ao actualizar a súa lingua preferida. Erro: $1",
+	"ext-uls-setlang-unknown-error": "Erro descoñecido",
+	"ext-uls-setlang-message": "A ligazón que seguiu solicitou que a interface se mostrase en <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "Quere cambiar a lingua da interface?",
+	"ext-uls-setlang-accept": "Aceptar o cambio",
+	"ext-uls-setlang-loading": "Aplicando...",
+	"ext-uls-setlang-cancel": "Non cambiar"
 }

@@ -65,5 +65,12 @@
 	"ext-uls-compact-link-info": "Všechny jazyky (počáteční výběr ze společných voleb vás a ostatních)",
 	"prefs-languages": "Jazyky",
 	"ext-uls-compact-language-links-preference": "Používat [[$1|kompaktní seznam jazyků]] pouze s jazyky pro vás relevantními",
-	"ext-uls-compact-no-results": "Tato stránka není dostupná v jazyce, který jste hledal/a."
+	"ext-uls-compact-no-results": "Tato stránka není dostupná v jazyce, který jste hledal/a.",
+	"ext-uls-setlang-error": "Při aktualizaci vašeho preferovaného jazyka došlo k chybě. Chyba: $1",
+	"ext-uls-setlang-unknown-error": "Neznámá chyba",
+	"ext-uls-setlang-message": "Odkaz, který jste následovali, vynutil zobrazení rozhraní v jazyce <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "Změnit jazyk rozhraní?",
+	"ext-uls-setlang-accept": "Přijmout změnu",
+	"ext-uls-setlang-loading": "Provádí se…",
+	"ext-uls-setlang-cancel": "Neměnit"
 }
