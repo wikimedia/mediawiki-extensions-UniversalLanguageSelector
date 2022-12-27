@@ -21,7 +21,8 @@
 
 namespace UniversalLanguageSelector;
 
-use Language;
+use MediaWiki\Languages\LanguageNameUtils;
+use MediaWiki\MediaWikiServices;
 use ResourceLoader;
 use ResourceLoaderContext;
 use ResourceLoaderModule;
@@ -41,9 +42,9 @@ class ResourceLoaderULSModule extends ResourceLoaderModule {
 	 */
 	private function getData( $languageCode ) {
 		$vars = [];
-		$vars['wgULSLanguages'] = Language::fetchLanguageNames(
+		$vars['wgULSLanguages'] = MediaWikiServices::getInstance()->getLanguageNameUtils()->getLanguageNames(
 			$languageCode,
-			'mwfile'
+			LanguageNameUtils::SUPPORTED
 		);
 		return $vars;
 	}
