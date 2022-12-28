@@ -21,7 +21,7 @@
 
 namespace UniversalLanguageSelector;
 
-use Language;
+use MediaWiki\MediaWikiServices;
 
 class ULSJsonMessageLoader {
 	/**
@@ -33,7 +33,7 @@ class ULSJsonMessageLoader {
 	public static function getFilenames( string $language ) {
 		$filenames = [];
 
-		$languages = Language::getFallbacksFor( $language );
+		$languages = MediaWikiServices::getInstance()->getLanguageFallback()->getAll( $language );
 		// Prepend the requested language code
 		// to load them all in one loop
 		array_unshift( $languages, $language );
