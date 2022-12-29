@@ -270,7 +270,8 @@ class Hooks implements
 	 * @return string
 	 */
 	protected function getDefaultLanguage( array $preferred ) {
-		$supported = $this->languageNameUtils->getLanguageNames( LanguageNameUtils::AUTONYMS, 'mwfile' );
+		$supported = $this->languageNameUtils
+			->getLanguageNames( LanguageNameUtils::AUTONYMS, LanguageNameUtils::SUPPORTED );
 
 		// look for a language that is acceptable to the client
 		// and known to the wiki.

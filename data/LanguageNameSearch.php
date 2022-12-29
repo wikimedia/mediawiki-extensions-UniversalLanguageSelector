@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Languages\LanguageNameUtils;
 use MediaWiki\MediaWikiServices;
 
 /**
@@ -82,7 +83,7 @@ class LanguageNameSearch {
 				// If $userLanguage is not provided (null), it is the same as autonym
 				$candidates = [
 					mb_strtolower( $languageNameUtils->getLanguageName( $code, $userLanguage ) ),
-					mb_strtolower( $languageNameUtils->getLanguageName( $code, null ) ),
+					mb_strtolower( $languageNameUtils->getLanguageName( $code, LanguageNameUtils::AUTONYMS ) ),
 					$name
 				];
 
