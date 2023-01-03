@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amoramah",
 			"Ayire Adongo"
 		]
 	},
+	"uls-plang-title-languages": "Yetɔgum",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Ayima le tira|$1 le tira}}"
 }
