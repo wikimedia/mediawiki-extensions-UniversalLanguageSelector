@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Musaddam Idriss"
+			"Musaddam Idriss",
+			"Ibrahima Malal Sarr"
 		]
 	},
 	"uls-plang-title-languages": "Ɗemngal",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|go'o hooti|$1 hooti}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|goɗngal|$1 goɗɗe}}"
 }

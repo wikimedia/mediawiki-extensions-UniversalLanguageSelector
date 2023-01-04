@@ -52,5 +52,21 @@
 	"ext-uls-input-enable": "ထည့်သွင်းကိရိယာတိ ဖွင့်ပါ",
 	"ext-uls-input-disable-info": "ထည့်သွင်းကိရိယာတိ ပိတ်ထား​ရေ",
 	"ext-uls-input-settings-noime": "ဒေဘာသာစကားအတွက် ထည့်သွင်းနည်းလမ်းတိ မရနိုင်ပါသိမ့်။",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|နောက်ထပ် တစ်ခု|နောက်ထပ် $1 ခု}}"
+	"ext-uls-input-disable-notification": "ထည့်သွင်းကိရိယာတိမှာ ပိတ်ထားပြီးဖြစ်ရေ",
+	"ext-uls-input-disable-notification-undo": "နောက်တဆင့်ဆုတ်",
+	"ext-uls-input-disable-notification-info-personal": "ထည့်သွင်းကိရိယာတိကို ဘာသာစကား အပြင်အဆင်တိမှ ဇာအချိန်တွင်မဆို ဖွင့်နိုင်ပါရေ။",
+	"ext-uls-input-disable-notification-info-interlanguage": "မင်းအနိန်နန့် ဘာသာစကား စာရင်းဧ့ ဘေးမှာဟိရေ ဘာသာစကား အပြင်အဆင်က တဆင့် ထည့်သွင်းကိရိယာတိအား အချိန်မရွီး ဖွင့်နိုင်ပါရေ။",
+	"ext-uls-language-settings-applying": "သတ်မှတ်နီရေ...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|နောက်ထပ် တစ်ခု|နောက်ထပ် $1 ခု}}",
+	"ext-uls-compact-link-info": "ဘာသာစကား အားလုံး (သင်နန့် အခြားလူတိဧ့ ယေဘုယျ ရွေးချယ်ချက်တိမှ အစောပိုင်း ရွေးချယ်မှုတိ)",
+	"prefs-languages": "ဘာသာစကား",
+	"ext-uls-compact-language-links-preference": "မင့်အတွက် ဆီလျော်ရေ ဘာသာစကားတိ ပါဝင်ရေ [[$1|ချုံ့ထားရေ ဘာသာစကား စာရင်း]] တစ်ခုကို အသုံးပြုပါ။",
+	"ext-uls-compact-no-results": "သင်ရှာဖွေရေ ဘာသာစကားတွင် ဒေစာမျက်နှာအား မရရှိနိုင်ပါ။",
+	"ext-uls-setlang-error": "မင့်ဧ့ အလိုဟိရာ ဘာသာစကားအား မွမ်းမံနီစဉ် အမှားတစ်ခု တွေ့ကြုံခရရေ - $1",
+	"ext-uls-setlang-unknown-error": "နာမည်မသိရေအမှား",
+	"ext-uls-setlang-message": "<strong>$1 ($2)</strong> တွင် ပြသပီးရန် တောင်းဆိုထားရေ အသွင်အပြင်အတွက် လင့်ခ်",
+	"ext-uls-setlang-heading": "အသွင်အပြင်ဘာသာစကားကို ပြောင်းလဲပါဖို့လား။",
+	"ext-uls-setlang-accept": "ပြောင်းလဲမှုကို လက်ခံရန်",
+	"ext-uls-setlang-loading": "သတ်မှတ်နီရေ...",
+	"ext-uls-setlang-cancel": "မပြောင်းလဲပါကေ့"
 }
