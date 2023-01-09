@@ -170,10 +170,6 @@ class Hooks implements
 		if ( $this->isEnabled() ) {
 			// Enable UI language selection for the user.
 			$out->addModules( 'ext.uls.interface' );
-
-			$templateData = $skin->getTemplateData();
-			$isLanguageSelectorEmpty = $templateData[ 'data-lang-btn' ][ 'is-language-selector-empty' ] ?? false;
-			$config[ 'wgULSisLanguageSelectorEmpty' ] = $isLanguageSelectorEmpty;
 		}
 
 		// This is added here, and not in onResourceLoaderGetConfigVars to allow skins and extensions

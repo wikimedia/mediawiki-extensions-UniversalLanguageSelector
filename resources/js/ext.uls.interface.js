@@ -717,58 +717,7 @@
 		}
 	}
 
-	/**
-	 * The new Vector 2022 skin uses a less prominent language button for non-content pages.
-	 * For these pages, the ULS should not be displayed, but a dropdown with an appropriate message
-	 * should appear. The UniversalLanguageSelector extension should add a button to open the
-	 * language settings, inside this dropdown.
-	 * This method adds this button inside the dropdown.
-	 */
-	function addLanguageSettingsToNonContentPages() {
-		var $languageBtn = $( '#p-lang-btn' );
-		var clickHandler = function ( event ) {
-			event.stopPropagation();
-
-			mw.loader.using( languageSettingsModules ).then( function () {
-				$( event.target ).languagesettings( {
-					autoOpen: true,
-					onPosition: function () {
-						var offset = $languageBtn.offset();
-						var top = offset.top + $languageBtn.outerHeight();
-						var right = $( window ).width() - offset.left - $languageBtn.outerWidth();
-						return { top: top, right: right };
-					}
-				} );
-			} );
-		};
-		// the first time the language button is clicked inside a non-content page,
-		// we should add the "Open language settings" button inside the dropdown
-		$languageBtn.one( 'mouseover', function () {
-			mw.loader.using( [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-interactions', 'ext.uls.messages' ] )
-				.done( function () {
-					var actionButton = new ActionsMenuItem(
-						'settings',
-						$.i18n( 'ext-uls-actions-menu-language-settings-item-label' ),
-						clickHandler,
-						null
-					).render();
-
-					actionButton.$element.addClass( 'empty-language-selector__language-settings-button' );
-					var $emptyLanguageSelectorBody = $( '.mw-portlet-empty-language-selector-body' );
-					$emptyLanguageSelectorBody.after( actionButton.$element );
-				} );
-		} );
-	}
-
 	function init() {
-		// if it's not Vector skin, nothing to be done here
-		if ( mw.config.get( 'skin' ) === 'vector-2022' && mw.config.get( 'wgULSisLanguageSelectorEmpty' ) ) {
-			// if this is a non-content page, we should add the "Open language settings" button
-			// inside the language dropdown
-			addLanguageSettingsToNonContentPages();
-			// TODO: should we return after here?
-		}
-
 		initLanguageChangeUndoTooltip();
 		initIme();
 
