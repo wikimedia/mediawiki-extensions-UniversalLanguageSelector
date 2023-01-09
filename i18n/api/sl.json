@@ -4,5 +4,8 @@
 			"Eleassar"
 		]
 	},
+	"apihelp-languagesearch-param-search": "Iskalni niz.",
+	"apihelp-languagesearch-example-1": "Poišči »Te«",
+	"apihelp-languagesearch-example-2": "Poišči »ഫി«",
 	"apihelp-ulslocalization-param-language": "Oznaka jezika."
 }
