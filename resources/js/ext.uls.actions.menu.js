@@ -77,7 +77,7 @@
 
 		i18n: function () {
 			this.$template.find( '.uls-language-actions-title strong' )
-				.text( $.i18n( 'ext-uls-actions-menu-header' ) );
+				.text( $.i18n( 'ext-uls-add-languages-button-label' ) );
 		},
 
 		hide: function () {

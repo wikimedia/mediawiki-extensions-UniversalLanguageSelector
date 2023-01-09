@@ -77,10 +77,10 @@
 	"ext-uls-setlang-accept": "Button label for accepting the suggested language in language preference dialog.",
 	"ext-uls-setlang-loading": "Button label displayed while the API call is in progress after the user clicks on the accept button. See {{msg-mw|ext-uls-setlang-accept}}.",
 	"ext-uls-setlang-cancel": "Button label for cancel on the language preference dialog.",
-	"ext-uls-actions-menu-header": "Title of the dialog that contains the quick actions menu, that opens when user clicks on the settings icon inside content language selector",
 	"ext-uls-actions-menu-language-settings-item-label": "Label of the button that opens the language settings inside the quick actions menu of the content language selector.",
 	"ext-uls-empty-state-header": "Header text shown in languages selector when there are no languages to select",
 	"ext-uls-empty-state-desc": "Description text shown in languages selector when there are no languages to select",
 	"ext-uls-empty-state-header-actions-available": "Header text shown in languages selector when there are no languages to select, but selector provides ways to create new.",
-	"ext-uls-empty-state-desc-actions-available": "Description text shown in languages selector when there are no languages to select, but selector provides ways to create new."
+	"ext-uls-empty-state-desc-actions-available": "Description text shown in languages selector when there are no languages to select, but selector provides ways to create new.",
+	"ext-uls-add-languages-button-label": "Label of the button"
 }

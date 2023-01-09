@@ -1,55 +1,74 @@
 /* stylelint-disable selector-max-id */
 @import 'mediawiki.mixins';
+@import 'mediawiki.ui/variables.less';
 
 #uls-settings-block {
-	background-color: #f8f9fa;
-	border-top: 1px solid #c8ccd1;
-	padding-left: 10px;
-	line-height: 1.2em;
-	border-radius: 0 0 2px 2px;
+	&.uls-settings-block--vector-2022 {
+		display: flex;
+		justify-content: space-between;
+		padding: 8px 12px;
 
-	> button {
-		background: left top transparent no-repeat;
-		// Support: Safari 3.1-6.1 & Android browser 3-4.3
-		// Don't support `background-size` values in `background` shorthand
-		background-size: 20px auto;
-		color: #54595d;
-		display: inline-block;
-		// Normalize the button
-		margin: 8px 15px;
-		border: 0;
-		padding: 0 0 0 26px;
-		font-size: medium;
-		cursor: pointer;
-
-		&:hover {
-			color: #202122;
+		// override grid styles, as we use flexbox here
+		&.row {
+			&:before,
+			&:after {
+				content: none;
+			}
 		}
 
-		&.display-settings-block {
-			background-image: url( ../images/display.svg );
+		&.uls-settings-block--with-add-languages {
+			background-color: @colorGray15;
+			border-top: 1px solid @colorGray12;
 		}
 
-		&.input-settings-block {
-			background-image: url( ../images/input.svg );
+		> button {
+			&.uls-add-languages-button {
+				background: transparent url( ../images/add.svg ) no-repeat left center;
+				margin-right: 32px;
+				padding-left: 32px;
+			}
+
+			&.uls-language-settings-button {
+				background: transparent url( ../images/cog.svg ) no-repeat center;
+				margin-left: auto;
+				min-width: unset;
+				border: 0;
+			}
 		}
 	}
-}
 
-.mw-ui-button.uls-language-actions-button {
-	position: absolute;
-	bottom: 0;
-	// set a value that doesn't cause overlap with scrollbar
-	right: 16px;
-	background: center transparent no-repeat;
-	min-width: unset;
+	&:not( .uls-settings-block--vector-2022 ) {
+		background-color: @colorGray15;
+		border-top: 1px solid @colorGray12;
+		padding-left: 10px;
+		line-height: 1.2em;
+		border-radius: 0 0 2px 2px;
 
-	&--single {
-		background-image: url( ../images/cog.svg );
-	}
+		> button {
+			background: left top transparent no-repeat;
+			// Support: Safari 3.1-6.1 & Android browser 3-4.3
+			// Don't support `background-size` values in `background` shorthand
+			background-size: 20px auto;
+			color: @colorGray5;
+			display: inline-block;
+			margin: 8px 15px;
+			border: 0;
+			padding: 0 0 0 26px;
+			font-size: medium;
+			cursor: pointer;
 
-	&--multiple {
-		background-image: url( ../images/ellipsis.svg );
+			&:hover {
+				color: @colorGray2;
+			}
+
+			&.display-settings-block {
+				background-image: url( ../images/display.svg );
+			}
+
+			&.input-settings-block {
+				background-image: url( ../images/input.svg );
+			}
+		}
 	}
 }
 
@@ -62,7 +81,7 @@
 
 	.uls-empty-state__header,
 	.uls-empty-state__desc {
-		color: #54595d;
+		color: @colorGray5;
 	}
 
 	.uls-language-action-items {
