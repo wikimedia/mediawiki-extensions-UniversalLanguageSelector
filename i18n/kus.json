@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Awinimi"
+		]
+	},
+	"uls-plang-title-languages": "Pian'ad nam",
+	"ext-uls-undo-language-tooltip-text": "Pian'ad n tiaki yi $1",
+	"ext-uls-display-settings-language-tab": "Pian'ad",
+	"ext-uls-language-settings-cancel": "Saam",
+	"ext-uls-webfonts-settings-info-link": "Labaya pamm",
+	"ext-uls-ime-help": "Lin tʋm siem",
+	"ext-uls-input-settings-more-languages-tooltip": "Pian'ad nam pamm",
+	"jquery-ime-other-languages": "Pian'ad nam sieba",
+	"jquery-ime-help": "Sʋŋʋr",
+	"prefs-languages": "Pian'ad nam",
+	"ext-uls-setlang-accept": "Si'akim tiakir",
+	"ext-uls-setlang-cancel": "Da tiakɛ",
+	"ext-uls-empty-state-header": "Pian'ad nan kai",
+	"ext-uls-empty-state-desc": "Pian'ad nam kai nananna",
+	"ext-uls-empty-state-header-actions-available": "Pian'ad nan kai. Paasim bʋn paal"
+}

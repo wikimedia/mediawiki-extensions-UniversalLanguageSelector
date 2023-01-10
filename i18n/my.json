@@ -69,5 +69,9 @@
 	"ext-uls-setlang-loading": "သတ်မှတ်နေသည်...",
 	"ext-uls-setlang-cancel": "မပြောင်းလဲပါနှင့်",
 	"ext-uls-actions-menu-header": "နောက်ထပ် ရွေးချယ်စရာများ",
-	"ext-uls-actions-menu-language-settings-item-label": "ဘာသာစကား အပြင်အဆင်များ ဖွင့်ရန်"
+	"ext-uls-actions-menu-language-settings-item-label": "ဘာသာစကား အပြင်အဆင်များ ဖွင့်ရန်",
+	"ext-uls-empty-state-header": "ဘာသာစကားမရှိသေးပါ",
+	"ext-uls-empty-state-desc": "ယခုအချိန်တွင် မည်သည့်ဘာသာစကားမျှ မရနိုင်ပါ",
+	"ext-uls-empty-state-header-actions-available": "ဘာသာစကားမရှိသေးပါ။ အသစ်တစ်ခုထည့်မလား။",
+	"ext-uls-empty-state-desc-actions-available": "အကြောင်းအရာကို ဘာသာစကားများ ပိုမိုရရှိအောင်လုပ်ပါ။"
 }
