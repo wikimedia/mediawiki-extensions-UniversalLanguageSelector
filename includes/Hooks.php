@@ -170,6 +170,12 @@ class Hooks implements
 		if ( $this->isEnabled() ) {
 			// Enable UI language selection for the user.
 			$out->addModules( 'ext.uls.interface' );
+
+			$title = $out->getTitle();
+			$isContentPage = $title && $title->exists() && $title->isContentPage();
+			// if current page is not a content page, we should use a different layout inside ULS
+			// according to T316559. Add JS config variable here, to let frontend know, when this is the case
+			$config[ 'wgULSisLanguageSelectorEmpty' ] = !$isContentPage;
 		}
 
 		// This is added here, and not in onResourceLoaderGetConfigVars to allow skins and extensions
