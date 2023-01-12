@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"AgnesAbah"
+			"AgnesAbah",
+			"Amire80"
 		]
 	},
 	"uls-plang-title-languages": "Amí Íchi",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|oka manyu|$1 manyu}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Oka manyu|$1 manyu}}"
 }
