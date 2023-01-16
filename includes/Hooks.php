@@ -172,10 +172,10 @@ class Hooks implements
 			$out->addModules( 'ext.uls.interface' );
 
 			$title = $out->getTitle();
-			$isContentPage = $title && $title->exists() && $title->isContentPage();
-			// if current page is not a content page, we should use a different layout inside ULS
+			$isMissingPage = !$title || !$title->exists();
+			// if current page doesn't exist or if it's a talk page, we should use a different layout inside ULS
 			// according to T316559. Add JS config variable here, to let frontend know, when this is the case
-			$config[ 'wgULSisLanguageSelectorEmpty' ] = !$isContentPage;
+			$config[ 'wgULSisLanguageSelectorEmpty' ] = $isMissingPage || $title->isTalkPage();
 		}
 
 		// This is added here, and not in onResourceLoaderGetConfigVars to allow skins and extensions
