@@ -138,3 +138,7 @@
 	bottom: 0;
 	left: 0;
 }
+
+.uls-language-option--highlighted {
+	background-color: #eaeff7;
+}
