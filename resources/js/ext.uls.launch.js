@@ -121,7 +121,8 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 			$languageLink
 				.prop( {
 					href: element.href,
-					title: element.title
+					title: element.title,
+					hreflang: element.hreflang
 				} )
 				.text( element.textContent );
 
