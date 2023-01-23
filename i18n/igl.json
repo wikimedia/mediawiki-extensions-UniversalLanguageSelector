@@ -5,6 +5,26 @@
 			"Amire80"
 		]
 	},
+	"uls-desc": "Jé nwu éné éku kí téné ichí lugbó wéwé kpaí kí néké nwí chétins ichí ché",
 	"uls-plang-title-languages": "Amí Íchi",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Oka manyu|$1 manyu}}"
+	"ext-uls-select-language-settings-icon-tooltip": "Chettins ichí",
+	"ext-uls-undo-language-tooltip-text": "Ichí kpaílo kwí $1",
+	"ext-uls-language-settings-preferences-link": "Chettins wéwé ichí",
+	"uls-betafeature-label": "Amí línkí ichí dúdama",
+	"ext-uls-display-settings-title": "Dí Chettins ñwa",
+	"ext-uls-display-settings-language-tab": "Ichí",
+	"ext-uls-display-settings-fonts-tab": "Amí Únana",
+	"ext-uls-display-settings-title-short": "Dú ñwa",
+	"ext-uls-language-settings-title": "Chettins ichí",
+	"ext-uls-language-settings-cancel": "Kpalú",
+	"ext-uls-display-settings-font-settings": "Chettins Únana",
+	"ext-uls-display-settings-ui-language": "Dí ichí ñwa",
+	"ext-uls-display-settings-anon-label": "Dí ichí ñwa",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (í dabí ewñ ólà)",
+	"ext-uls-ime-help": "Alù mádù chéku",
+	"jquery-ime-other-languages": "Amí ichí ómuné",
+	"jquery-ime-help": "Abune",
+	"ext-uls-input-disable-notification-undo": "dabiwubi",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Oka manyu|$1 manyu}}",
+	"prefs-languages": "Íchi:"
 }
