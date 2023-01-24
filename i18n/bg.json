@@ -65,5 +65,9 @@
 	"ext-uls-compact-link-info": "Всички езици (първоначалният избор е от най-често използваните от Вас и другите)",
 	"prefs-languages": "Езици",
 	"ext-uls-compact-language-links-preference": "Използване на [[$1|компактен списък на езиците]], имащи отношение към вас.",
-	"ext-uls-compact-no-results": "Тази страница не е налична на избрания от вас език."
+	"ext-uls-compact-no-results": "Тази страница не е налична на избрания от вас език.",
+	"ext-uls-actions-menu-header": "Допълнителни опции",
+	"ext-uls-actions-menu-language-settings-item-label": "Отваряне на езиковите настройки",
+	"ext-uls-empty-state-header": "Все още няма езици",
+	"ext-uls-empty-state-desc": "Засега няма налични езици"
 }
