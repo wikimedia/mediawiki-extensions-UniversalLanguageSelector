@@ -77,7 +77,6 @@
 	"ext-uls-setlang-accept": "接受更改",
 	"ext-uls-setlang-loading": "套用中…",
 	"ext-uls-setlang-cancel": "不更改",
-	"ext-uls-actions-menu-header": "更多選項",
 	"ext-uls-actions-menu-language-settings-item-label": "開啟語言設定",
 	"ext-uls-empty-state-header": "還沒有語言",
 	"ext-uls-empty-state-desc": "現在沒有可用的語言",

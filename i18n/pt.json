@@ -78,10 +78,10 @@
 	"ext-uls-setlang-accept": "Aceitar alteração",
 	"ext-uls-setlang-loading": "A aplicar...",
 	"ext-uls-setlang-cancel": "Não alterar",
-	"ext-uls-actions-menu-header": "Mais opções",
 	"ext-uls-actions-menu-language-settings-item-label": "Abrir as definições de língua",
 	"ext-uls-empty-state-header": "Ainda não há línguas",
 	"ext-uls-empty-state-desc": "Por agora não há nenhuma língua disponível",
 	"ext-uls-empty-state-header-actions-available": "Ainda não há línguas. Adicionar uma nova?",
-	"ext-uls-empty-state-desc-actions-available": "Disponibilize o conteúdo em mais línguas."
+	"ext-uls-empty-state-desc-actions-available": "Disponibilize o conteúdo em mais línguas.",
+	"ext-uls-add-languages-button-label": "Adicionar línguas"
 }

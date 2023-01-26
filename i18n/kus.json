@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Awinimi"
+			"Awinimi",
+			"Bugirbiig"
 		]
 	},
 	"uls-plang-title-languages": "Pian'ad nam",
@@ -14,10 +15,12 @@
 	"ext-uls-input-settings-more-languages-tooltip": "Pian'ad nam pamm",
 	"jquery-ime-other-languages": "Pian'ad nam sieba",
 	"jquery-ime-help": "Sʋŋʋr",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ayinne paas|$1 paas}}",
 	"prefs-languages": "Pian'ad nam",
 	"ext-uls-setlang-accept": "Si'akim tiakir",
 	"ext-uls-setlang-cancel": "Da tiakɛ",
 	"ext-uls-empty-state-header": "Pian'ad nan kai",
 	"ext-uls-empty-state-desc": "Pian'ad nam kai nananna",
-	"ext-uls-empty-state-header-actions-available": "Pian'ad nan kai. Paasim bʋn paal"
+	"ext-uls-empty-state-header-actions-available": "Pian'ad nan kai. Paasim bʋn paal",
+	"ext-uls-add-languages-button-label": "Paasim Pian'ad"
 }

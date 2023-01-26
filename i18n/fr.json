@@ -87,7 +87,6 @@
 	"ext-uls-setlang-accept": "Accepter la modification",
 	"ext-uls-setlang-loading": "Application...",
 	"ext-uls-setlang-cancel": "Ne pas changer",
-	"ext-uls-actions-menu-header": "Plus d’options",
 	"ext-uls-actions-menu-language-settings-item-label": "Ouvrir les paramètres de langue",
 	"ext-uls-empty-state-header": "Pas encore de langues",
 	"ext-uls-empty-state-desc": "Aucune langue n’est disponible pour le moment",

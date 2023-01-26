@@ -70,10 +70,10 @@
 	"ext-uls-setlang-accept": "לקבל את השינויים",
 	"ext-uls-setlang-loading": "החלה...",
 	"ext-uls-setlang-cancel": "לא לשנות",
-	"ext-uls-actions-menu-header": "אפשרויות נוספות",
 	"ext-uls-actions-menu-language-settings-item-label": "פתיחת הגדרות שפה",
 	"ext-uls-empty-state-header": "עדיין אין שפות",
 	"ext-uls-empty-state-desc": "אין שפות זמינות כעת",
 	"ext-uls-empty-state-header-actions-available": "עדיין אין שפות. להוסיף אחת חדשה?",
-	"ext-uls-empty-state-desc-actions-available": "לגרום לתוכן להיות זמין ביותר שפות."
+	"ext-uls-empty-state-desc-actions-available": "לגרום לתוכן להיות זמין ביותר שפות.",
+	"ext-uls-add-languages-button-label": "הוספת שפות"
 }

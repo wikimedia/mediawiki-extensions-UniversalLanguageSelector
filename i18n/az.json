@@ -42,7 +42,6 @@
 	"ext-uls-compact-link-count": "Daha {{PLURAL:$1|1 dil|$1 dil}}",
 	"prefs-languages": "Dillər",
 	"ext-uls-compact-language-links-preference": "Yalnız özünüzə maraqlı olan [[$1|yığcam dil siyahısını]] istifadə etmək.",
-	"ext-uls-actions-menu-header": "Daha çox",
 	"ext-uls-actions-menu-language-settings-item-label": "Dil parametrləri göstər",
 	"ext-uls-empty-state-header": "Hələ heç bir dil yoxdur",
 	"ext-uls-empty-state-desc": "Hələlik heç bir dil mövcud deyil",

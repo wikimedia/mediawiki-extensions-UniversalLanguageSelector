@@ -70,10 +70,10 @@
 	"ext-uls-setlang-accept": "Sprejmi spremembo",
 	"ext-uls-setlang-loading": "Izvajam ...",
 	"ext-uls-setlang-cancel": "Ne spremeni",
-	"ext-uls-actions-menu-header": "Več možnosti",
 	"ext-uls-actions-menu-language-settings-item-label": "Odpri jezikovne nastavitve",
 	"ext-uls-empty-state-header": "Ni še jezikov",
 	"ext-uls-empty-state-desc": "Za zdaj ni na voljo še noben jezik",
 	"ext-uls-empty-state-header-actions-available": "Ni še jezikov. Želite dodati novega?",
-	"ext-uls-empty-state-desc-actions-available": "Zagotovite vsebino v več jezikih."
+	"ext-uls-empty-state-desc-actions-available": "Zagotovite vsebino v več jezikih.",
+	"ext-uls-add-languages-button-label": "Dodaj jezike"
 }

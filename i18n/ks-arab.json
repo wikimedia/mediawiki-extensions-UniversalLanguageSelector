@@ -16,6 +16,5 @@
 	"ext-uls-input-disable-notification-undo": "رَد",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|اَکھ بیٚیہِ|$1 بیٚیہِ}}",
 	"prefs-languages": "زَبانہٕ",
-	"ext-uls-setlang-unknown-error": "نامعلوٗم غَلطی",
-	"ext-uls-actions-menu-header": "صَفہٕ یَختِیار"
+	"ext-uls-setlang-unknown-error": "نامعلوٗم غَلطی"
 }
