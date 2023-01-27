@@ -20,5 +20,6 @@
 	"jquery-ime-help": "مدد",
 	"ext-uls-input-disable-notification-undo": "واپس",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|ہک ٻئی|$1 ٻیاں}}",
-	"prefs-languages": "زباناں"
+	"prefs-languages": "زباناں",
+	"ext-uls-add-languages-button-label": "زباناں شامل کرو"
 }

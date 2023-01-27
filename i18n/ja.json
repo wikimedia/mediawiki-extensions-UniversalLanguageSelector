@@ -78,5 +78,6 @@
 	"ext-uls-setlang-cancel": "変更しない",
 	"ext-uls-actions-menu-language-settings-item-label": "言語設定画面を開く",
 	"ext-uls-empty-state-header-actions-available": "他言語版はまだありません。追加しますか？",
-	"ext-uls-empty-state-desc-actions-available": " 多くの言語でコンテンツが読めるようになります。"
+	"ext-uls-empty-state-desc-actions-available": " 多くの言語でコンテンツが読めるようになります。",
+	"ext-uls-add-languages-button-label": "言語を追加"
 }

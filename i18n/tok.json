@@ -8,7 +8,7 @@
 	},
 	"uls-plang-title-languages": "toki",
 	"ext-uls-select-language-settings-icon-tooltip": "nasin mi ilo toki",
-	"ext-uls-undo-language-tooltip-text": "sina ante e toki tan $1",
+	"ext-uls-undo-language-tooltip-text": "sina ante e toki tan toki $1",
 	"ext-uls-display-settings-title": "nasin lukin",
 	"ext-uls-display-settings-language-tab": "toki",
 	"ext-uls-display-settings-fonts-tab": "sitelen toki",
