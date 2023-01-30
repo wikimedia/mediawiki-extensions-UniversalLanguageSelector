@@ -17,6 +17,7 @@
 	"uls-plang-title-languages": "Kielet",
 	"ext-uls-select-language-settings-icon-tooltip": "Kieliasetukset",
 	"ext-uls-undo-language-tooltip-text": "Kieli vaihdettu kielestä $1",
+	"ext-uls-undo-language-tooltip-text-local": "Tämän wikin kieli vaihdettu. Tarkista [[Special:GlobalPreferences|järjestelmänlaajuiset asetuksesi]] vaihtaaksesi kielen kaikkiin wikeihin.",
 	"ext-uls-language-settings-preferences-link": "Lisää kieliasetuksia",
 	"uls-betafeature-label": "Kielilinkit tiivistetysti",
 	"uls-betafeature-desc": "Näytä lyhyempi versio kielilinkkilistasta, sisältäen vain kielet, jotka ovat osuvampia sinulle.",
@@ -64,8 +65,14 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "Syöttötoiminnot voi ottaa milloin tahansa käyttöön kieliasetuksissa kieliluettelon vierestä.",
 	"ext-uls-language-settings-applying": "Tallennetaan...",
 	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|muu kieli|muuta kieltä}}",
+	"ext-uls-compact-link-info": "Kaikki kielet (alkuperäinen valinta sinun ja muiden yleisistä valinnoista)",
 	"prefs-languages": "Kielet",
 	"ext-uls-compact-language-links-preference": "Käytä [[$1|kompaktia kielilistaa]], joka näyttää sinulle tärkeimmät kielet.",
 	"ext-uls-compact-no-results": "Tämä sivu ei ole saatavilla etsimälläsi kielellä.",
-	"ext-uls-setlang-unknown-error": "Tuntematon virhe"
+	"ext-uls-setlang-error": "Ensisijaisen kielen päivityksessä tapahtui virhe. Virhe: $1",
+	"ext-uls-setlang-unknown-error": "Tuntematon virhe",
+	"ext-uls-setlang-heading": "Vaihda käyttöliittymän kieli?",
+	"ext-uls-setlang-accept": "Hyväksy vaihtaminen",
+	"ext-uls-setlang-loading": "Tallennetaan...",
+	"ext-uls-setlang-cancel": "Älä vaihda"
 }

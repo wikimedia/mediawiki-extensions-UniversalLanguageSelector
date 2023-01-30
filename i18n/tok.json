@@ -2,10 +2,24 @@
 	"@metadata": {
 		"authors": [
 			"Robin van der Vliet",
-			"LesVisages"
+			"LesVisages",
+			"Tbodt"
 		]
 	},
 	"uls-plang-title-languages": "toki",
+	"ext-uls-select-language-settings-icon-tooltip": "nasin mi ilo toki",
+	"ext-uls-undo-language-tooltip-text": "sina ante e toki tan toki $1",
+	"ext-uls-display-settings-title": "nasin lukin",
 	"ext-uls-display-settings-language-tab": "toki",
+	"ext-uls-display-settings-fonts-tab": "sitelen toki",
+	"ext-uls-display-settings-title-short": "lukin",
+	"ext-uls-display-settings-desc": "o ante e ni: ilo li toki seme kepeken nasin sitelen seme",
+	"ext-uls-language-settings-apply": "o kepeken ni",
+	"ext-uls-language-settings-cancel": "o weka",
+	"ext-uls-language-buttons-help": "o ante e ni: ilo li kepeken toki seme. lipu li awen toki sama.",
+	"ext-uls-display-settings-ui-language": "toki lukin",
+	"ext-uls-webfonts-select-for": "toki $1 la o wile e nasin sitelen",
+	"ext-uls-input-settings-title": "nasin sitelen",
+	"ext-uls-input-settings-title-short": "sitelen",
 	"jquery-ime-other-languages": "toki ante"
 }
