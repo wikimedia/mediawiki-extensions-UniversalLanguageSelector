@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajiniyaz Nurniyazov",
 			"Inabat Allanova",
 			"Nurlan",
 			"Xð"
@@ -25,5 +26,6 @@
 	"ext-uls-display-settings-font-settings": "Jurnal sazlamaları",
 	"ext-uls-display-settings-ui-language": "Displey tili",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (kontent penen birdey)",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Taǵı birew|$1 taǵı}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Taǵı birew|$1 taǵı}}",
+	"ext-uls-add-languages-button-label": "Tillerdi qosıw"
 }

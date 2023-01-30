@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"BadDog",
-			"Conquistador"
+			"Conquistador",
+			"Vlad5250"
 		]
 	},
 	"uls-plang-title-languages": "Jezici",
@@ -10,5 +11,6 @@
 	"ext-uls-language-settings-title": "Postavke jezika",
 	"ext-uls-language-settings-cancel": "Otkaži",
 	"jquery-ime-other-languages": "Drugi jezici",
-	"ext-uls-compact-link-count": "Još {{PLURAL:$1|1=jedan|$1}}"
+	"ext-uls-compact-link-count": "Još {{PLURAL:$1|1=jedan|$1}}",
+	"ext-uls-add-languages-button-label": "Dodaj jezike"
 }
