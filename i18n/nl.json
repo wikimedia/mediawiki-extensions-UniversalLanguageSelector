@@ -79,5 +79,6 @@
 	"ext-uls-setlang-heading": "De omgevingstaal wijzigen?",
 	"ext-uls-setlang-accept": "Wijziging aanvaarden",
 	"ext-uls-setlang-loading": "Toepassen...",
-	"ext-uls-setlang-cancel": "Niet wijzigen"
+	"ext-uls-setlang-cancel": "Niet wijzigen",
+	"ext-uls-add-languages-button-label": "Talen toevoegen"
 }
