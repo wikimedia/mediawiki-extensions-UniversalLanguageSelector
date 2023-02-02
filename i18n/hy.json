@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"23artashes",
+			"Kareyac",
 			"M hamlet",
 			"Xelgen",
 			"Դավիթ Սարոյան",
@@ -63,5 +64,6 @@
 	"ext-uls-actions-menu-language-settings-item-label": "Բացել լեզվի կարգավորումները",
 	"ext-uls-empty-state-header": "Լեզուներ դեռ չկան",
 	"ext-uls-empty-state-desc": "Տվյալ պահին մատչելի լեզուներ չկան",
-	"ext-uls-empty-state-header-actions-available": "Լեզուներ դեռ չկան։ Ավելացնե՞լ։"
+	"ext-uls-empty-state-header-actions-available": "Լեզուներ դեռ չկան։ Ավելացնե՞լ։",
+	"ext-uls-add-languages-button-label": "Ավելացնել լեզուներ"
 }
