@@ -82,5 +82,6 @@
 	"ext-uls-empty-state-header": "Jeszcze nie ma języków",
 	"ext-uls-empty-state-desc": "Żadne języki nie są jeszcze dostępne",
 	"ext-uls-empty-state-header-actions-available": "Żadne języki nie są jeszcze dostępne. Dodać nowy?",
-	"ext-uls-empty-state-desc-actions-available": " Udostępnij zawartość w kolejnych językach."
+	"ext-uls-empty-state-desc-actions-available": " Udostępnij zawartość w kolejnych językach.",
+	"ext-uls-add-languages-button-label": "Dodaj języki"
 }
