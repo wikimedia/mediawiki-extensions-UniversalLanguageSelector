@@ -74,5 +74,6 @@
 	"ext-uls-empty-state-header": "Încă nicio limbă",
 	"ext-uls-empty-state-desc": "Nicio limbă nu este momentan disponibilă",
 	"ext-uls-empty-state-header-actions-available": "Încă nicio limbă. Adăugați una nouă?",
-	"ext-uls-empty-state-desc-actions-available": " Faceți conținutul disponibil în mai multe limbi."
+	"ext-uls-empty-state-desc-actions-available": " Faceți conținutul disponibil în mai multe limbi.",
+	"ext-uls-add-languages-button-label": "Adăugare limbi"
 }

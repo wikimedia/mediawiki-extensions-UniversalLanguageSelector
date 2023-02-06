@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Blahma",
 			"KuboF",
 			"Luky001",
 			"Sudo77(new)",
@@ -61,5 +62,6 @@
 	"ext-uls-compact-language-links-preference": "Používať [[$1|kompaktný zoznam jazykov]] s jazykmi relevantnými pre vás.",
 	"ext-uls-actions-menu-language-settings-item-label": "Otvoriť jazykové nastavenia",
 	"ext-uls-empty-state-header": "Zatiaľ žiadne jazyky",
-	"ext-uls-empty-state-desc": "Momentálne nie sú dostupné žiadne jazyky"
+	"ext-uls-empty-state-desc": "Momentálne nie sú dostupné žiadne jazyky",
+	"ext-uls-add-languages-button-label": "Pridať jazyky"
 }

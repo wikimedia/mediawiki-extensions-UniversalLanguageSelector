@@ -6,6 +6,7 @@
 			"Gorkaazk",
 			"Sator",
 			"Subi",
+			"Theklan",
 			"Xabier Armendaritz"
 		]
 	},
@@ -13,6 +14,7 @@
 	"uls-plang-title-languages": "Hizkuntzak",
 	"ext-uls-select-language-settings-icon-tooltip": "Hizkuntza ezarpenak",
 	"ext-uls-undo-language-tooltip-text": "Hizkuntza $1-(e)tik aldatu da.",
+	"ext-uls-undo-language-tooltip-text-local": "Hizkuntza aldatu da wiki honetarako. Begiratu zure [[Special:GlobalPreferences|hobespen globalak]] wiki guztien hizkuntza aldatzeko.",
 	"ext-uls-language-settings-preferences-link": "Hizkuntza ezarpen gehiago",
 	"uls-betafeature-label": "Hizkuntza zerrenda mugatua",
 	"uls-betafeature-desc": "Hizkuntza zerrendaren bertsio laburrago bat erakutsi, zuretzat garrantzitsuagoak diren hizkuntzak baino ez dituena.",
@@ -63,5 +65,17 @@
 	"ext-uls-compact-link-info": "Hizkuntza guztiak (zure eta beste batzuen hasierako aukeraketa ohiko aukeretatik)",
 	"prefs-languages": "Hizkuntzak",
 	"ext-uls-compact-language-links-preference": "Erabili [[$1|hizkuntza-zerrenda trinkoa]], zuretzat esanguratsuak diren hizkuntzekin soilik.",
-	"ext-uls-compact-no-results": "Orrialde hau ez dago eskuragarri bilatu duzun hizkuntzan."
+	"ext-uls-compact-no-results": "Orrialde hau ez dago eskuragarri bilatu duzun hizkuntzan.",
+	"ext-uls-setlang-error": "Errore bat gertatu da hobetsi duzun hizkuntza eguneratzean. Errorea: $1",
+	"ext-uls-setlang-unknown-error": "Errore ezezaguna",
+	"ext-uls-setlang-heading": "Interfazearen hizkuntza aldatu?",
+	"ext-uls-setlang-accept": "Onartu aldaketa",
+	"ext-uls-setlang-loading": "Aplikatzen...",
+	"ext-uls-setlang-cancel": "Ez aldatu",
+	"ext-uls-actions-menu-language-settings-item-label": "Hizkuntza hobespenak ireki",
+	"ext-uls-empty-state-header": "Oraindik ez dago hizkuntzarik",
+	"ext-uls-empty-state-desc": "Momentuz ez dago hizkuntzarik erabilgarri",
+	"ext-uls-empty-state-header-actions-available": "Oraindik ez dago hizkuntzarik. Berri bat gehitu?",
+	"ext-uls-empty-state-desc-actions-available": "Edukia hizkuntza gehiagotan eskuragarri jarri.",
+	"ext-uls-add-languages-button-label": "Hizkuntzak gehitu"
 }

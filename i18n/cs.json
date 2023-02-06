@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Blahma",
 			"Danny B.",
 			"Dvorapa",
 			"Ilimanaq29",
@@ -77,5 +78,6 @@
 	"ext-uls-empty-state-header": "Zatím žádné jazyky",
 	"ext-uls-empty-state-desc": "Momentálně nejsou k dispozici žádné jazyky",
 	"ext-uls-empty-state-header-actions-available": "Zatím žádné jazyky. Přidat nový?",
-	"ext-uls-empty-state-desc-actions-available": "Zpřístupněte obsah ve více jazycích."
+	"ext-uls-empty-state-desc-actions-available": "Zpřístupněte obsah ve více jazycích.",
+	"ext-uls-add-languages-button-label": "Přidat jazyky"
 }

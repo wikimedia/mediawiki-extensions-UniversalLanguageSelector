@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
+			"Blahma",
 			"Gamliel Fishkin",
 			"KuboF",
 			"Macofe",
@@ -66,5 +67,6 @@
 	"prefs-languages": "Lingvoj",
 	"ext-uls-compact-language-links-preference": "Uzi [[$1|kompaktan liston de lingvoj]], kun lingvoj konvenaj por vi.",
 	"ext-uls-compact-no-results": "Ĉi tiu paĝo ne estas havebla en la lingvo kiun vi serĉis.",
-	"ext-uls-setlang-heading": "Ĉu ŝanĝi la fasadan lingvon?"
+	"ext-uls-setlang-heading": "Ĉu ŝanĝi la fasadan lingvon?",
+	"ext-uls-add-languages-button-label": "Aldoni lingvojn"
 }

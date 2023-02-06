@@ -20,6 +20,7 @@
 	"ext-uls-language-settings-title": "भाषाको विकल्पहरू",
 	"ext-uls-language-settings-apply": "लागू सेटिंगहरू",
 	"ext-uls-language-settings-cancel": "रद्द गर्नुहोस्",
+	"ext-uls-language-buttons-help": "मेनुको भाषा परिवर्तन गर्नुहोस्। सामग्री भाषा प्रभावित हुनेछैन।",
 	"ext-uls-display-settings-font-settings": "फन्ट सेटिंगहरू",
 	"ext-uls-display-settings-ui-language": "भाषा प्रदर्शन गर्नुहोस्",
 	"ext-uls-display-settings-anon-label": "भाषा प्रदर्शन गर्नुहोस्:",
@@ -57,5 +58,6 @@
 	"ext-uls-empty-state-header": "अहिलेसम्म कुनै भाषाहरू छैनन्",
 	"ext-uls-empty-state-desc": "अहिलेको लागि कुनै भाषाहरू उपलब्ध छैनन्",
 	"ext-uls-empty-state-header-actions-available": "अझै कुनै भाषा छैन। एउटा नयाँ थप्नुहोस्?",
-	"ext-uls-empty-state-desc-actions-available": "थप भाषाहरूमा सामग्री उपलब्ध गराउनुहोस्।"
+	"ext-uls-empty-state-desc-actions-available": "थप भाषाहरूमा सामग्री उपलब्ध गराउनुहोस्।",
+	"ext-uls-add-languages-button-label": "भाषाहरू थप्नुहोस्"
 }

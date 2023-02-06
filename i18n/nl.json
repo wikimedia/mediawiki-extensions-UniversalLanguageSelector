@@ -80,5 +80,6 @@
 	"ext-uls-setlang-accept": "Wijziging aanvaarden",
 	"ext-uls-setlang-loading": "Toepassen...",
 	"ext-uls-setlang-cancel": "Niet wijzigen",
+	"ext-uls-actions-menu-language-settings-item-label": "Taalinstellingen openen",
 	"ext-uls-add-languages-button-label": "Talen toevoegen"
 }

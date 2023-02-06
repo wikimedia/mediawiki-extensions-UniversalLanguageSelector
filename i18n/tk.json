@@ -23,5 +23,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Ýene-de bir|$1 has köp}}",
 	"prefs-languages": "Diller",
 	"ext-uls-setlang-heading": "Interfeýs dilini üýtgediňmi?",
-	"ext-uls-actions-menu-language-settings-item-label": "Dil sazlamalaryny açyň"
+	"ext-uls-actions-menu-language-settings-item-label": "Dil sazlamalaryny açyň",
+	"ext-uls-add-languages-button-label": "Dil goşuň"
 }
