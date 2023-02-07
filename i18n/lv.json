@@ -73,5 +73,6 @@
 	"ext-uls-empty-state-header": "Vēl nav valodu",
 	"ext-uls-empty-state-desc": "Pagaidām neviena valoda nav pieejama",
 	"ext-uls-empty-state-header-actions-available": "Vēl nav valodu. Vai pievienot jaunu?",
-	"ext-uls-empty-state-desc-actions-available": "Padari saturu pieejamu vairāk valodās."
+	"ext-uls-empty-state-desc-actions-available": "Padari saturu pieejamu vairāk valodās.",
+	"ext-uls-add-languages-button-label": "Pievienot valodas"
 }
