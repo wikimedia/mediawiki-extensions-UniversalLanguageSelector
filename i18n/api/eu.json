@@ -10,5 +10,6 @@
 	"apihelp-languagesearch-example-1": "Bilatu \"Te\"",
 	"apihelp-languagesearch-example-2": "Bilatu \"ഫി\"",
 	"apihelp-languagesearch-example-3": "Bilatu \"ഫി\", akats bat baimenduz",
-	"apihelp-ulslocalization-param-language": "Hizkuntza-kodea."
+	"apihelp-ulslocalization-param-language": "Hizkuntza-kodea.",
+	"apierror-ulssetlang-anon-notallowed": "Erabiltzaile anonimoek ezin dute interfazearen hizkuntza aldatu."
 }
