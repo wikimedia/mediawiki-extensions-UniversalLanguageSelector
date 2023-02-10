@@ -72,5 +72,6 @@
 	"ext-uls-empty-state-header": "এতিয়াও কোনো ভাষা নাই",
 	"ext-uls-empty-state-desc": "এতিয়া কোনো ভাষা উপলব্ধ নহয়",
 	"ext-uls-empty-state-header-actions-available": "এতিয়া কোনো ভাষা উপলব্ধ নহয়। নতুন এটা যোগ কৰক?",
-	"ext-uls-empty-state-desc-actions-available": "বিষয়বস্তু অধিক ভাষাত উপলব্ধ কৰাওক।"
+	"ext-uls-empty-state-desc-actions-available": "বিষয়বস্তু অধিক ভাষাত উপলব্ধ কৰাওক।",
+	"ext-uls-add-languages-button-label": "ভাষা যোগ কৰক"
 }

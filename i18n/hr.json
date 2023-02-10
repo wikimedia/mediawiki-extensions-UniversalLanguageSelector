@@ -69,5 +69,6 @@
 	"ext-uls-setlang-accept": "Prihvati izmjenu",
 	"ext-uls-setlang-loading": "Primjenjuje se...",
 	"ext-uls-setlang-cancel": "Nemoj promijeniti",
-	"ext-uls-actions-menu-language-settings-item-label": "Otvori jezične postavke"
+	"ext-uls-actions-menu-language-settings-item-label": "Otvori jezične postavke",
+	"ext-uls-add-languages-button-label": "Dodajte druge jezike"
 }
