@@ -10,6 +10,9 @@
 	"ext-uls-display-settings-title-short": "Pengelün",
 	"ext-uls-display-settings-desc": "Zullinge chi zungun mülelu wirin mew ka menu mew",
 	"ext-uls-language-settings-cancel": "Katrüntun",
+	"ext-uls-display-settings-ui-language": "Pengelkünun ñi zungun",
+	"ext-uls-display-settings-anon-label": "Pengelkünun ñi zungun:",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (fey ñi nieel itrokom)",
 	"ext-uls-input-settings-desc": "Wirintulelu ka zungun mew?",
 	"ext-uls-ime-help": "Chumngeci püneael",
 	"ext-uls-input-settings-more-languages-tooltip": "Zoy zungun",
@@ -23,5 +26,8 @@
 	"ext-uls-setlang-heading": "Welukünuaymi mülewe ñi zungun?",
 	"ext-uls-setlang-accept": "Kalepe may",
 	"ext-uls-setlang-loading": "Femkülepelu...",
-	"ext-uls-setlang-cancel": "Kalekilpe"
+	"ext-uls-setlang-cancel": "Kalekilpe",
+	"ext-uls-empty-state-header": "Mülelay kewünh",
+	"ext-uls-empty-state-desc": "Petu mülelay zungun",
+	"ext-uls-add-languages-button-label": "Püñamtun zungun"
 }

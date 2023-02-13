@@ -51,5 +51,6 @@
 	"ext-uls-input-disable-notification-info-personal": "Droëneuh jeuët neupeuudép peukakaih pasoë pajan mantöng nibak neuatô bahsa",
 	"ext-uls-input-disable-notification-info-interlanguage": "Droëneuh jeuët neupeuudép peukakaih pasoë baranggajan nibak neuatô bahsa nyang na bak binèh dapeuta bahsa",
 	"ext-uls-language-settings-applying": "Peujak...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Saboh treuk|$1 lom}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Saboh treuk|$1 lom}}",
+	"ext-uls-add-languages-button-label": "Tamah bahsa"
 }
