@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Artsiom91",
+			"Kareyac",
 			"Maksim L.",
 			"Tomato Cream",
 			"Tīgelika",
@@ -76,5 +77,6 @@
 	"ext-uls-empty-state-header": "Моў пакуль няма",
 	"ext-uls-empty-state-desc": "Зараз няма даступных моў",
 	"ext-uls-empty-state-header-actions-available": "Моў пакуль няма. Дадаць новую?",
-	"ext-uls-empty-state-desc-actions-available": "Зрабіце змест даступным на дадатковых мовах."
+	"ext-uls-empty-state-desc-actions-available": "Зрабіце змест даступным на дадатковых мовах.",
+	"ext-uls-add-languages-button-label": "Дадаць мовы"
 }
