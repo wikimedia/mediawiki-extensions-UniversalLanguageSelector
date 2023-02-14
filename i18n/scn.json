@@ -55,5 +55,7 @@
 	"prefs-languages": "Lingui",
 	"ext-uls-setlang-unknown-error": "Erruri scanusciutu",
 	"ext-uls-setlang-heading": "Cancia la lingua dâ ntirfaccia?",
-	"ext-uls-setlang-cancel": "Nun canciari"
+	"ext-uls-setlang-cancel": "Nun canciari",
+	"ext-uls-actions-menu-language-settings-item-label": "Apri li mpustazzioni dâ lingua",
+	"ext-uls-empty-state-header": "Ancora nudda lingua"
 }
