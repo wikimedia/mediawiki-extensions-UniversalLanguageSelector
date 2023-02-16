@@ -75,5 +75,6 @@
 	"ext-uls-empty-state-header": "Yezh ebet c’hoazh",
 	"ext-uls-empty-state-desc": "N’eo yezh ebet hegerz evit poent",
 	"ext-uls-empty-state-header-actions-available": "Yezh ebet c’hoazh. Ouzhpennañ unan nevez?",
-	"ext-uls-empty-state-desc-actions-available": "Lakaat an endalc’h hegerz e muioc’h yezhoù."
+	"ext-uls-empty-state-desc-actions-available": "Lakaat an endalc’h hegerz e muioc’h yezhoù.",
+	"ext-uls-add-languages-button-label": "Ouzhpennañ yezhoù"
 }
