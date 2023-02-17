@@ -4,6 +4,7 @@
 			"Byrial",
 			"Cgtdk",
 			"Christian List",
+			"Dipsacus fullonum",
 			"Peter Alberti",
 			"Saederup92",
 			"Sarrus",
@@ -78,5 +79,6 @@
 	"ext-uls-empty-state-header": "Ingen sprog endnu",
 	"ext-uls-empty-state-desc": "Ingen sprog er tilgængelige i øjeblikket",
 	"ext-uls-empty-state-header-actions-available": "Ingen sprog endnu. Vil du tilføje et ny?",
-	"ext-uls-empty-state-desc-actions-available": "Gør indholdet tilgængeligt på flere sprog."
+	"ext-uls-empty-state-desc-actions-available": "Gør indholdet tilgængeligt på flere sprog.",
+	"ext-uls-add-languages-button-label": "Tilføj sprog"
 }
