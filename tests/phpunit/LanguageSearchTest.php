@@ -43,6 +43,7 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 			[ 'മല', [
 				'mg' => 'മലഗാസി',
 				'ml' => 'മലയാളം',
+				'pqm' => 'മലിസീറ്റ്-പസാമക്വുഡി',
 				'ms' => 'മലെയ്',
 			]
 			],
