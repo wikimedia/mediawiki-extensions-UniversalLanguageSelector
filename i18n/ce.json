@@ -72,5 +72,6 @@
 	"ext-uls-empty-state-header": "Меттанаш цкъачунна бац",
 	"ext-uls-empty-state-desc": "Цкъачунна тӀекхочуш меттанаш бац",
 	"ext-uls-empty-state-header-actions-available": "Меттанаш цкъачунна бац. ТӀетоха керланиг?",
-	"ext-uls-empty-state-desc-actions-available": "Контент дукха меттанашкахь тӀекхочуш йе."
+	"ext-uls-empty-state-desc-actions-available": "Контент дукха меттанашкахь тӀекхочуш йе.",
+	"ext-uls-add-languages-button-label": "ТӀетоха меттанаш"
 }
