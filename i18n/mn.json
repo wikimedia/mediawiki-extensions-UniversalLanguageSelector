@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Mongol",
-			"Xð"
+			"Xð",
+			"Chinneeb"
 		]
 	},
 	"uls-plang-title-languages": "Хэл",
-	"uls-betafeature-desc": "Өөрт илүү хамааралтай хэлний жагсаалтын богино хувилбарыг харуулах"
+	"uls-betafeature-desc": "Өөрт илүү хамааралтай хэлний жагсаалтын богино хувилбарыг харуулах",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|1 хэлээр|$1 хэлээр}}"
 }

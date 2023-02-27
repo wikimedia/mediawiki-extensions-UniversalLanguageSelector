@@ -3,7 +3,8 @@
 		"authors": [
 			"Robby",
 			"Soued031",
-			"Xabier Armendaritz"
+			"Xabier Armendaritz",
+			"Volvox"
 		]
 	},
 	"uls-desc": "Gëtt dem Benotzer verschidde Méiglechkeete fir eng Sprooch erauszesichen an d'Parameter vun der Sprooch festzeleeën",
@@ -60,7 +61,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Eng méi|$1 méi}}",
 	"ext-uls-compact-link-info": "All Sproochen (éischte Choix aus den heefegste Choixe vun Iech an Aneren)",
 	"prefs-languages": "Sproochen",
-	"ext-uls-compact-language-links-preference": "Benotzt eng  [[$1|kompakt Lëscht vu Sproochen]], mat de Sproochen déi fir Iech relevant sinn.",
+	"ext-uls-compact-language-links-preference": "Benotzt eng  [[$1|kompakt Lëscht vu Sprooche]] mat deene Sproochen, déi fir Iech relevant sinn.",
 	"ext-uls-compact-no-results": "Dës Säit ass net an där Sprooch disponibel an där Dir gesicht hutt.",
 	"ext-uls-setlang-unknown-error": "Onbekannte Feeler",
 	"ext-uls-setlang-heading": "Sprooch vum Interface änneren?",

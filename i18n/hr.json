@@ -10,9 +10,11 @@
 			"Ponor"
 		]
 	},
+	"uls-desc": "Omogućuje suradniku nekoliko načina odabira jezika i postavljanja jezičnih postavki",
 	"uls-plang-title-languages": "Jezici",
 	"ext-uls-select-language-settings-icon-tooltip": "Jezične postavke",
 	"ext-uls-undo-language-tooltip-text": "Jezik promijenjen, prethodno je bio postavljen $1",
+	"ext-uls-undo-language-tooltip-text-local": "Za ovaj je wiki promijenjen jezik. Ako želite promijeniti jezik za sve wikije, provjerite [[Special:GlobalPreferences|global postavke]].",
 	"ext-uls-language-settings-preferences-link": "Više jezičnih postavki",
 	"uls-betafeature-label": "Sažete poveznice na druge jezike",
 	"uls-betafeature-desc": "Kraći popis s poveznicama na druge jezike, samo s jezicima koji su Vam najvažniji.",
@@ -64,7 +66,9 @@
 	"prefs-languages": "Jezici",
 	"ext-uls-compact-language-links-preference": "Uključi [[$1|sažeti popis jezika]] s jezicima koji su mi važni",
 	"ext-uls-compact-no-results": "Ova stranica nije dostupna na jeziku koji ste tražili.",
+	"ext-uls-setlang-error": "Dogodila se greška prilikom ažuriranja željenog jezika. Greška: $1",
 	"ext-uls-setlang-unknown-error": "Nepoznata pogreška",
+	"ext-uls-setlang-message": "Poveznica koju ste slijedili zahtijevala je sučelje na jeziku <strong>$1 ($2)</strong>",
 	"ext-uls-setlang-heading": "Želite li promijeniti jezik sučelja?",
 	"ext-uls-setlang-accept": "Prihvati izmjenu",
 	"ext-uls-setlang-loading": "Primjenjuje se...",

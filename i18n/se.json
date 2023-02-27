@@ -1,17 +1,19 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yupik"
+			"Yupik",
+			"Kimberli Mäkäräinen (WMNO)"
 		]
 	},
 	"uls-plang-title-languages": "Gielat",
 	"ext-uls-display-settings-language-tab": "Giella",
 	"ext-uls-display-settings-fonts-tab": "Fonttat",
 	"ext-uls-display-settings-title-short": "Čájet",
+	"ext-uls-language-settings-cancel": "Šluhtte",
 	"ext-uls-webfonts-settings-info-link": "Lassedieđut",
 	"jquery-ime-other-languages": "Eará gielat",
 	"jquery-ime-help": "Veahkki",
 	"prefs-languages": "Gielat",
-	"ext-uls-setlang-unknown-error": "Dovdameahttun feaila",
+	"ext-uls-setlang-unknown-error": "Dovdameahttun meattáhus",
 	"ext-uls-setlang-heading": "Háliidatgo don molsut geavahanlavtta giela?"
 }
