@@ -15,6 +15,8 @@
 	"ext-uls-language-buttons-help": "Maubah basa ménu. Basa kontén pacangan kada tapangaruh.",
 	"ext-uls-display-settings-ui-language": "Tampaian basa",
 	"ext-uls-display-settings-anon-label": "Tampaian basa:",
+	"ext-uls-webfonts-settings-title": "Unduh fon amun parlu.",
+	"ext-uls-webfonts-settings-info": "Unduh fon nang kurang sacara utumatis wan ijinakan pamilihan fon nang dikatujui.",
 	"ext-uls-input-settings-desc": "Manulis dalam basa lain?",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Sabuting lagi|$1 lagi}}",
 	"ext-uls-compact-link-info": "Samunyaan basa (pilihan awal asalnya matan pilihan umum ulih Pian wan urang lain)"

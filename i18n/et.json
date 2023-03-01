@@ -70,5 +70,6 @@
 	"ext-uls-empty-state-header": "Keeli pole veel",
 	"ext-uls-empty-state-desc": "Praegu pole ühtegi keelt saadaval.",
 	"ext-uls-empty-state-header-actions-available": "Keeli pole veel. Kas lisad ühe?",
-	"ext-uls-empty-state-desc-actions-available": "Tee sisu kättesaadavaks rohkemates keeltes."
+	"ext-uls-empty-state-desc-actions-available": "Tee sisu kättesaadavaks rohkemates keeltes.",
+	"ext-uls-add-languages-button-label": "Lisa keeled"
 }
