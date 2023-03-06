@@ -69,6 +69,8 @@
 	"prefs-languages": "Nyelvek",
 	"ext-uls-compact-language-links-preference": "A nyelvközi hivatkozások megjelenítése egy [[$1|kompakt listában]], csak a neked releváns nyelvekkel.",
 	"ext-uls-compact-no-results": "Ez a lap nem érhető el az általad keresett nyelven.",
+	"ext-uls-setlang-error": "Hiba történt az előnyben részesített nyelved frissítése közben: $1",
+	"ext-uls-setlang-unknown-error": "Ismeretlen hiba",
 	"ext-uls-setlang-loading": "Alkalmazás…",
 	"ext-uls-add-languages-button-label": "Nyelvek hozzáadása"
 }
