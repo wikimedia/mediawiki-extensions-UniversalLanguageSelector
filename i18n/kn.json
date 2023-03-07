@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Akoppad",
-			"VASANTH S.N."
+			"VASANTH S.N.",
+			"~aanzx"
 		]
 	},
 	"uls-desc": "ಬಳಕೆದಾರರಿಗೆ ಭಾಷೆಯನ್ನು ಆರಿಸಲು ಮತ್ತು ಭಾಷೆಯ ವ್ಯವಸ್ಥೆಗಳನ್ನು ಹೊಂದಿಸಲು ಹಲವಾರು ಮಾರ್ಗಗಳನ್ನು ನೀಡುತ್ತದೆ",
@@ -39,5 +40,6 @@
 	"ext-uls-input-disable-notification": "ಒಳಗೆ ಸೇರಿಸುವ ಸಲಕರಣೆಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿಲಾಗಿದೆ",
 	"ext-uls-input-disable-notification-undo": "ಕಳಚು",
 	"ext-uls-input-disable-notification-info-personal": "ನೀವು ಒಳಗೆ ಹಾಕುವ ಸಾದನಗಳನ್ನು ಭಾಷೆಯ ಭಂಗಿಯಲ್ಲಿ ಯಾವಾಗ ಬೇಕಾದರೂ ಸಕ್ರಿಯಗೊಳಿಸಬಹದು",
-	"ext-uls-input-disable-notification-info-interlanguage": "ಭಾಷೆಗಳ ಪಟ್ಟಿಯ ಪಕ್ಕದಲ್ಲಿರುವ ಭಾಷೆಯ ಭಂಗಿಯಯಿಂದ ನೀವು ಒಳಗೆ ಹಾಕುವ ಸಾದನಗಳನ್ನು ಯಾವಾಗ ಬೇಕಾದರೂ ಸಕ್ರಿಯಗೊಳಿಸಬಹದು"
+	"ext-uls-input-disable-notification-info-interlanguage": "ಭಾಷೆಗಳ ಪಟ್ಟಿಯ ಪಕ್ಕದಲ್ಲಿರುವ ಭಾಷೆಯ ಭಂಗಿಯಯಿಂದ ನೀವು ಒಳಗೆ ಹಾಕುವ ಸಾದನಗಳನ್ನು ಯಾವಾಗ ಬೇಕಾದರೂ ಸಕ್ರಿಯಗೊಳಿಸಬಹದು",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ಇನ್ನೂ ಒಂದು|$1 ಹೆಚ್ಚು}}"
 }
