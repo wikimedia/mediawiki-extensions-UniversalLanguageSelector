@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"भारत्पराक्रमि"
+		]
+	},
+	"uls-plang-title-languages": "भाषाएँ",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|एक और भाषा|$1 और भाषाएँ}}"
+}
