@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Har-wradim",
-			"פוילישער"
+			"פוילישער",
+			"Pacha Tchernof"
 		]
 	},
 	"uls-desc": "גיט דעם באניצער עטלעכע וועגן אויסצוקלויבן א שפראך און אנצופאסן שפראך־איינשטעלונגען",
@@ -13,7 +14,7 @@
 	"uls-betafeature-label": "קאמפאקטע שפראכלינקען",
 	"uls-betafeature-desc": "ווייזן א קערצערע ווערסיע פון דער שפראכן־ליסטע, מיט נאר די שפראכן וואס זענען מער רעלעוואנט צו אייך.",
 	"ext-uls-display-settings-title": "אויסשטעל איינשטעלונגען",
-	"ext-uls-display-settings-language-tab": "שפראַך",
+	"ext-uls-display-settings-language-tab": "שפּראַך",
 	"ext-uls-display-settings-fonts-tab": "פֿאנטן",
 	"ext-uls-display-settings-title-short": "אויסשטעלונג",
 	"ext-uls-display-settings-desc": "שפראַך פֿאר מעניוס און פֿאנטן",
@@ -53,7 +54,7 @@
 	"ext-uls-input-disable-notification": "איינגאב געצייג זענען געווארן אומאקטיוויזירט",
 	"ext-uls-input-disable-notification-undo": "אַנולירן",
 	"ext-uls-input-disable-notification-info-personal": "איר קענט אקטיוויזירן די איינגאב געצייג אבי ווען פון די שפראך שטעלונגען.",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|נאך איינס|$1 נאך}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|נאָך איינס|$1 נאָך}}",
 	"prefs-languages": "שפּראַכן",
 	"ext-uls-compact-language-links-preference": "ניצן א [[$1|קאמפאקטע שפראכן־ליסטע]], מיט שפראכן רעלעוואנט צו אייך."
 }

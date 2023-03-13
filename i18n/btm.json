@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"IHLubis"
+		]
+	},
+	"uls-plang-title-languages": "Saro",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Sada nai|$1ulakan}}"
+}

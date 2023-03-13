@@ -10,7 +10,8 @@
 			"Máté",
 			"R-Joe",
 			"Tacsipacsi",
-			"Tgr"
+			"Tgr",
+			"Eukarióta"
 		]
 	},
 	"uls-desc": "Többféle módot kínál a felhasználónak nyelv kiválasztására és a nyelvi beállítások módosítására",
@@ -68,5 +69,11 @@
 	"prefs-languages": "Nyelvek",
 	"ext-uls-compact-language-links-preference": "A nyelvközi hivatkozások megjelenítése egy [[$1|kompakt listában]], csak a neked releváns nyelvekkel.",
 	"ext-uls-compact-no-results": "Ez a lap nem érhető el az általad keresett nyelven.",
-	"ext-uls-setlang-loading": "Alkalmazás…"
+	"ext-uls-setlang-error": "Hiba történt az előnyben részesített nyelved frissítése közben: $1",
+	"ext-uls-setlang-unknown-error": "Ismeretlen hiba",
+	"ext-uls-setlang-message": "Olyan hivatkozást nyitottál meg, ami a felületnyelvet a következőre szeretné állítani: <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "Felületnyelv módosítása?",
+	"ext-uls-setlang-accept": "Változtatás elfogadása",
+	"ext-uls-setlang-loading": "Alkalmazás…",
+	"ext-uls-setlang-cancel": "Elutasítás"
 }
