@@ -71,5 +71,14 @@
 	"ext-uls-compact-no-results": "Ez a lap nem érhető el az általad keresett nyelven.",
 	"ext-uls-setlang-error": "Hiba történt az előnyben részesített nyelved frissítése közben: $1",
 	"ext-uls-setlang-unknown-error": "Ismeretlen hiba",
-	"ext-uls-setlang-loading": "Alkalmazás…"
+	"ext-uls-setlang-message": "Olyan hivatkozást nyitottál meg, ami a felületnyelvet a következőre szeretné állítani: <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "Felületnyelv módosítása?",
+	"ext-uls-setlang-accept": "Változtatás elfogadása",
+	"ext-uls-setlang-loading": "Alkalmazás…",
+	"ext-uls-setlang-cancel": "Elutasítás",
+	"ext-uls-actions-menu-language-settings-item-label": "Nyelvi beállítások megnyitása",
+	"ext-uls-empty-state-header": "Még nincsenek nyelvek",
+	"ext-uls-empty-state-desc": "Egyelőre nem állnak rendelkezésre nyelvek",
+	"ext-uls-empty-state-header-actions-available": "Még nincsenek nyelvek. Hozzáadsz egy újat?",
+	"ext-uls-empty-state-desc-actions-available": "Tedd elérhetővé a tartalmat több nyelven."
 }

@@ -60,5 +60,6 @@
 	"ext-uls-compact-link-info": "Alle språken (eyrste selekty baseerd up algemeyne köäses van ju en anderen)",
 	"prefs-languages": "Språken",
 	"ext-uls-compact-language-links-preference": "Een [[$1|kompakte språkenlyste]] gebruken, mid en paar höövdspråken",
-	"ext-uls-compact-no-results": "Disse syde is neet beskikbår in de språke wår jy in söcht."
+	"ext-uls-compact-no-results": "Disse syde is neet beskikbår in de språke wår jy in söcht.",
+	"ext-uls-actions-menu-language-settings-item-label": "Språkinstellingen losdoon"
 }
