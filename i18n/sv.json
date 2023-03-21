@@ -71,5 +71,10 @@
 	"ext-uls-setlang-heading": "Ändra gränssnittsspråk?",
 	"ext-uls-setlang-accept": "Acceptera ändring",
 	"ext-uls-setlang-loading": "Tillämpar...",
-	"ext-uls-setlang-cancel": "Ändra inte"
+	"ext-uls-setlang-cancel": "Ändra inte",
+	"ext-uls-actions-menu-language-settings-item-label": "Öppna språkinställningar",
+	"ext-uls-empty-state-header": "Inga språk ännu",
+	"ext-uls-empty-state-desc": "Inga språk är tillgängliga för närvarande",
+	"ext-uls-empty-state-header-actions-available": "Inga språk ännu. Lägg till ett nytt?",
+	"ext-uls-empty-state-desc-actions-available": "Gör innehållet tillgängligt på fler språk."
 }
