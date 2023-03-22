@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Angpradesh"
+			"Angpradesh",
+			"Proabscorp!"
 		]
 	},
 	"uls-plang-title-languages": "भाषा सिनी",
+	"ext-uls-undo-language-tooltip-text": "भाषा $1 सँ बदलौ गेलै",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|एगो आरू|$1 आरू}}"
 }
