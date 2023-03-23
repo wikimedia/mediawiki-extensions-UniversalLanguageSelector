@@ -35,7 +35,6 @@ use MediaWiki\Preferences\Hook\GetPreferencesHook;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderGetConfigVarsHook;
 use MediaWiki\Skins\Hook\SkinAfterPortletHook;
 use MediaWiki\User\UserOptionsLookup;
-use MobileContext;
 use OutputPage;
 use RequestContext;
 use Skin;
@@ -524,21 +523,6 @@ class Hooks implements
 				],
 				''
 			);
-		}
-	}
-
-	/**
-	 * Add basic webfonts support to the mobile interface (via MobileFrontend extension)
-	 * Hook: EnterMobileMode
-	 * @param MobileContext $context
-	 */
-	public function onEnterMobileMode( MobileContext $context ) {
-		// Currently only supported in mobile Beta mode
-		if ( $this->config->get( 'ULSEnable' ) &&
-			$this->config->get( 'ULSMobileWebfontsEnabled' ) &&
-			$context->isBetaGroupMember()
-		) {
-			$context->getOutput()->addModules( 'ext.uls.webfonts.mobile' );
 		}
 	}
 

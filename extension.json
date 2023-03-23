@@ -21,7 +21,6 @@
 	},
 	"Hooks": {
 		"BeforePageDisplay": "main",
-		"EnterMobileMode": "main",
 		"GetBetaFeaturePreferences": "main",
 		"GetPreferences": "main",
 		"MakeGlobalVariablesScript": "main",
@@ -98,10 +97,6 @@
 		"ULSWebfontsEnabled": {
 			"description": "Enable the webfonts feature for all users by default. Can be controlled by the user. @since 2014.02",
 			"value": true
-		},
-		"ULSMobileWebfontsEnabled": {
-			"description": "Set whether webfont support is loaded within the mobile interface (via the MobileFrontend extension).",
-			"value": false
 		},
 		"ULSPosition": {
 			"description": "The location and the form of the language selection trigger.  The possible values are: (a) \"personal\"- as a link near the username or the log in link in the personal toolbar (default). (b) \"interlanguage\": as an icon near the header of the list of interlanguage  links in the sidebar.",
@@ -375,15 +370,6 @@
 			"dependencies": [
 				"ext.uls.preferences",
 				"jquery.client"
-			]
-		},
-		"ext.uls.webfonts.mobile": {
-			"scripts": "js/ext.uls.webfonts.mobile.js",
-			"targets": [
-				"mobile"
-			],
-			"dependencies": [
-				"ext.uls.webfonts.repository"
 			]
 		},
 		"ext.uls.webfonts.repository": {
