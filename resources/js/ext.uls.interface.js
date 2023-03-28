@@ -26,36 +26,6 @@
 	require( './ext.uls.actions.menu.items.registry.js' );
 
 	/**
-	 * Construct the display settings link
-	 *
-	 * @return {jQuery}
-	 */
-	function displaySettings() {
-		return $( '<button>' )
-			.addClass( 'display-settings-block' )
-			.attr( {
-				title: $.i18n( 'ext-uls-display-settings-desc' ),
-				'data-i18n': 'ext-uls-display-settings-title'
-			} )
-			.i18n();
-	}
-
-	/**
-	 * Construct the input settings link
-	 *
-	 * @return {jQuery}
-	 */
-	function inputSettings() {
-		return $( '<button>' )
-			.addClass( 'input-settings-block' )
-			.attr( {
-				title: $.i18n( 'ext-uls-input-settings-desc' ),
-				'data-i18n': 'ext-uls-input-settings-title'
-			} )
-			.i18n();
-	}
-
-	/**
 	 * For Vector, check if the language button id exists.
 	 * For other skins, check wgULSDisplaySettingsInInterlanguage for the current skin.
 	 *
@@ -157,13 +127,10 @@
 	}
 
 	/**
-	 * Add the button that opens the "Add languages" menu (that contain options
-	 * like "Translate this page" and "Edit language links") and the button that
-	 * opens the "Language settings" menu.
-	 *
 	 * @param {Object} uls The ULS object
+	 * @return {jQuery}
 	 */
-	function addActionsMenuTriggers( uls ) {
+	function addLanguageSettingsTrigger( uls ) {
 		var $ulsSettingsBlock = uls.$menu.find( '#uls-settings-block' ).eq( 0 );
 		$ulsSettingsBlock.addClass( 'uls-settings-block--vector-2022' );
 
@@ -172,6 +139,19 @@
 			openLanguageSettings( $languageSettingsMenuButton, uls.show.bind( uls ), uls );
 		} );
 		$ulsSettingsBlock.append( $languageSettingsMenuButton );
+
+		return $ulsSettingsBlock;
+	}
+
+	/**
+	 * Add the button that opens the "Add languages" menu (that contain options
+	 * like "Translate this page" and "Edit language links") and the button that
+	 * opens the "Language settings" menu.
+	 *
+	 * @param {Object} uls The ULS object
+	 */
+	function addActionsMenuTriggers( uls ) {
+		var $ulsSettingsBlock = addLanguageSettingsTrigger( uls );
 
 		var actionItemsRegistry = mw.uls.ActionsMenuItemsRegistry;
 		actionItemsRegistry.on( 'register', onActionItemAdded );
@@ -211,46 +191,6 @@
 				addLanguagesMenuDialog.renderAction( item );
 			}
 		}
-	}
-
-	/**
-	 * Add display settings link to the settings bar in ULS
-	 *
-	 * @param {Object} uls The ULS object
-	 */
-	function addDisplaySettings( uls ) {
-		var $displaySettings = displaySettings();
-
-		uls.$menu.find( '#uls-settings-block' ).append( $displaySettings );
-		// Initialize the trigger
-		$displaySettings.one( 'click', function () {
-			$displaySettings.languagesettings( {
-				defaultModule: 'display',
-				onClose: uls.show.bind( uls ),
-				onPosition: uls.position.bind( uls ),
-				onVisible: uls.hide.bind( uls )
-			} ).trigger( 'click' );
-		} );
-	}
-
-	/**
-	 * Add input settings link to the settings bar in ULS
-	 *
-	 * @param {Object} uls The ULS object
-	 */
-	function addInputSettings( uls ) {
-		var $inputSettings = inputSettings();
-
-		uls.$menu.find( '#uls-settings-block' ).append( $inputSettings );
-		// Initialize the trigger
-		$inputSettings.one( 'click', function () {
-			$inputSettings.languagesettings( {
-				defaultModule: 'input',
-				onClose: uls.show.bind( uls ),
-				onPosition: uls.position.bind( uls ),
-				onVisible: uls.hide.bind( uls )
-			} ).trigger( 'click' );
-		} );
 	}
 
 	function userCanChangeLanguage() {
@@ -365,19 +305,6 @@
 			if ( !$( '.uls-menu:visible' ).length ) {
 				showTipsy( 3000 );
 			}
-		} );
-	}
-
-	/**
-	 * Adds display and input settings to the ULS dialog after loading their code.
-	 *
-	 * @param {Object} uls The ULS instance
-	 * @return {jQuery.Promise}
-	 */
-	function loadDisplayAndInputSettings( uls ) {
-		return mw.loader.using( languageSettingsModules ).then( function () {
-			addDisplaySettings( uls );
-			addInputSettings( uls );
 		} );
 	}
 
@@ -534,7 +461,7 @@
 								return positionCSS;
 							},
 							onReady: function () {
-								loadDisplayAndInputSettings( this );
+								addLanguageSettingsTrigger( this );
 							},
 							onSelect: function ( language ) {
 								mw.uls.changeLanguage( language );

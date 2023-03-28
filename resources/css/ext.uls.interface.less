@@ -3,6 +3,10 @@
 @import 'mediawiki.ui/variables.less';
 
 #uls-settings-block {
+	// set default background color to #fcfcfc, to match ULS-LCD background color (inside jquery.uls.lcd.ss)
+	// TODO: There is no design token for this color. We should fix to use a design token here.
+	background-color: #fcfcfc;
+
 	&.uls-settings-block--vector-2022 {
 		display: flex;
 		justify-content: space-between;
