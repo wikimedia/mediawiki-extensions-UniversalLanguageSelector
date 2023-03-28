@@ -1,9 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ahmedadeljaff"
+			"Ahmedadeljaff",
+			"MRidhaAJ"
 		]
 	},
+	"uls-desc": "ينطي للنفر هواي طرق يختار بيها لغة، ويضبط إعداداتها",
 	"uls-plang-title-languages": "لغة",
+	"ext-uls-select-language-settings-icon-tooltip": "إعدادات اللغة",
+	"ext-uls-undo-language-tooltip-text": "اللغة تغيرت من $1",
+	"ext-uls-undo-language-tooltip-text-local": "تغيرت لغة هاذ الويكي، تحقق من [[Special:GlobalPreferences|التفضيلات العالمية]] حتى تغير لغة كل الويكيات.",
+	"ext-uls-language-settings-preferences-link": "بعد إعدادات لغة",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|بقية الوصل: $1}}"
 }

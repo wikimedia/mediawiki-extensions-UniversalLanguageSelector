@@ -3,7 +3,8 @@
 		"authors": [
 			"Danmichaelo",
 			"Jeblad",
-			"Jon Harald Søby"
+			"Jon Harald Søby",
+			"EdoAug"
 		]
 	},
 	"uls-desc": "Gir brukeren flere måter å velge språk på og endre språkinnstillinger",
@@ -56,7 +57,7 @@
 	"ext-uls-input-disable-notification-undo": "Angre",
 	"ext-uls-input-disable-notification-info-personal": "Du kan når som helst slå på inndataverktøy fra språkinnstillingene.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Du kan når som helst slå på inndataverktøy fra språkinnstillingene ved siden av språklisten.",
-	"ext-uls-language-settings-applying": "Tar i bruk…",
+	"ext-uls-language-settings-applying": "Tar i bruk …",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|En til|$1 flere}}",
 	"ext-uls-compact-link-info": "Alle språk (innledende utvalg fra felles valg av deg og andre)",
 	"prefs-languages": "Språk",
