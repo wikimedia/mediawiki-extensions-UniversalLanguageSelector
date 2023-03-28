@@ -504,6 +504,35 @@
 							quickList: function () {
 								return mw.uls.getFrequentLanguageList();
 							},
+							// partially copied from ext.uls.lauch
+							onPosition: function () {
+								// Default positioning of jquery.uls is middle of the screen under
+								// the trigger. This code aligns it under the trigger and to the
+								// trigger edge depending on which side of the page the trigger is
+								// It should work automatically both LTR and RTL.
+								var offset, height, width, positionCSS;
+								offset = $trigger.offset();
+								width = $trigger.outerWidth();
+								height = $trigger.outerHeight();
+
+								if ( offset.left + ( width / 2 ) > $( window ).width() / 2 ) {
+									// Midpoint of the trigger is on the right side of the viewport.
+									positionCSS = {
+										// Right dialog edge aligns with right edge of the trigger.
+										right: $( window ).width() - ( offset.left + width ),
+										top: offset.top + height
+									};
+								} else {
+									// Midpoint of the trigger is on the left side of the viewport.
+									positionCSS = {
+										// Left dialog edge aligns with left edge of the trigger.
+										left: offset.left,
+										top: offset.top + height
+									};
+								}
+
+								return positionCSS;
+							},
 							onReady: function () {
 								loadDisplayAndInputSettings( this );
 							},
