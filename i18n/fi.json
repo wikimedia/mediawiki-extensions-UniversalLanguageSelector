@@ -71,6 +71,7 @@
 	"ext-uls-compact-no-results": "Tämä sivu ei ole saatavilla etsimälläsi kielellä.",
 	"ext-uls-setlang-error": "Ensisijaisen kielen päivityksessä tapahtui virhe. Virhe: $1",
 	"ext-uls-setlang-unknown-error": "Tuntematon virhe",
+	"ext-uls-setlang-message": "Seuraamasi linkki pyysi käyttöliittymän näyttämistä kielellä <strong>$1 ($2)</strong>",
 	"ext-uls-setlang-heading": "Vaihda käyttöliittymän kieli?",
 	"ext-uls-setlang-accept": "Hyväksy vaihtaminen",
 	"ext-uls-setlang-loading": "Tallennetaan...",

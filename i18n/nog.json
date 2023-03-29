@@ -5,5 +5,11 @@
 		]
 	},
 	"uls-plang-title-languages": "Тиллер",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Тагы $1 тилде}}"
+	"ext-uls-display-settings-language-tab": "Тил",
+	"ext-uls-ime-help": "Кандай кулланув",
+	"ext-uls-input-settings-more-languages-tooltip": "Тагы тиллер",
+	"jquery-ime-other-languages": "Баска тиллер",
+	"jquery-ime-help": "Ярдам",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Тагы $1 тилде}}",
+	"prefs-languages": "Тиллер"
 }
