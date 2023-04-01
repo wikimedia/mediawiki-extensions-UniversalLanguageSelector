@@ -1,21 +1,23 @@
+// TODO: Replace with @import 'mediawiki.skin.variables.less'; with MW core LTS v1.42 dependency.
+@import '../../lib/codex-design-tokens/theme-wikimedia-ui-legacy.less';
 @import 'ext.uls.mixins.less';
 
 /* Overrides to follow MediaWiki style */
 .uls-menu {
-	border-radius: 2px;
+	border-radius: @border-radius-base;
 	/* Ensure base font size is same in different skins */
 	font-size: medium;
 }
 
 .uls-search,
 .uls-language-settings-close-block {
-	border-top-right-radius: 2px;
-	border-top-left-radius: 2px;
+	border-top-right-radius: @border-radius-base;
+	border-top-left-radius: @border-radius-base;
 }
 
 .uls-language-list {
-	border-bottom-right-radius: 2px;
-	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: @border-radius-base;
+	border-bottom-left-radius: @border-radius-base;
 }
 
 .uls-menu.callout {
@@ -43,8 +45,8 @@
 	display: block;
 	position: absolute;
 	left: 0;
-	border-right: 1px solid #c8ccd1;
-	opacity: 0.8;
+	border-right: @border-width-base @border-style-base @border-color-subtle;
+	opacity: @opacity-icon-base;
 }
 
 .uls-icon-back:hover {
@@ -54,13 +56,13 @@
 
 .uls-menu .uls-no-results-view {
 	.uls-no-found-more {
-		background-color: #fff;
+		background-color: @background-color-base;
 	}
 
 	h3 {
 		padding: 0 28px;
 		margin: 0;
-		color: #54595d;
+		color: @color-subtle;
 		font-size: 1em;
 		font-weight: normal;
 	}

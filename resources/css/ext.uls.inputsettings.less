@@ -1,3 +1,5 @@
+// TODO: Replace with @import 'mediawiki.skin.variables.less'; with MW core LTS v1.42 dependency.
+@import '../../lib/codex-design-tokens/theme-wikimedia-ui-legacy.less';
 @import 'mediawiki.mixins';
 
 .imelabel {
@@ -17,9 +19,9 @@
 
 .uls-ime-menu-settings-item {
 	background-color: #f8f9fa;
-	color: #202122;
-	border-top: 1px solid #c8ccd1;
-	border-radius: 0 0 2px 2px;
+	color: @color-base;
+	border-top: @border-width-base @border-style-base @border-color-subtle;
+	border-radius: 0 0 @border-radius-base @border-radius-base;
 	margin-top: 6px;
 	padding: 4px 2px;
 	position: relative;
@@ -37,7 +39,7 @@
 .uls-ime-more-settings-link {
 	background: transparent url( ../images/cog.svg ) no-repeat center top;
 	background-size: auto 14px;
-	border-left: 1px solid #c8ccd1;
+	border-left: @border-width-base @border-style-base @border-color-subtle;
 	width: 22px;
 	height: 14px;
 	position: absolute;
@@ -46,8 +48,8 @@
 }
 
 .uls-ime-menu-settings-item > a:hover {
-	background-color: #f8f9fa;
-	color: #000;
+	background-color: @background-color-interactive-subtle;
+	color: @color-emphasized;
 }
 
 .uls-input-settings-imes-title:empty {
@@ -56,7 +58,7 @@
 
 .uls-input-settings-disable-info,
 .uls-input-settings-no-inputmethods {
-	color: #54595d;
+	color: @color-subtle;
 	padding-top: 10px;
 	padding-bottom: 15px;
 	font-size: 11pt;
@@ -67,9 +69,9 @@
 	width: 0;
 	height: 0;
 	border-top: 0;
-	border-right: 8px solid transparent;
-	border-left: 8px solid transparent;
-	border-bottom: 8px solid #f8f9fa;
+	border-right: 8px @border-style-base @border-color-transparent;
+	border-left: 8px @border-style-base @border-color-transparent;
+	border-bottom: 8px @border-style-base #f8f9fa;
 	content: '';
 	position: relative;
 	vertical-align: bottom;
@@ -99,7 +101,8 @@
 }
 
 .uls-ime-notification-bubble .link {
-	color: #36c;
+	// TODO: Replace with `@color-link` with skin variables.
+	color: @color-progressive;
 	cursor: pointer;
 }
 
@@ -120,7 +123,7 @@
 	top: 0;
 	bottom: 0;
 	right: 4px;
-	opacity: 0.81;
+	opacity: @opacity-icon-base;
 	padding: 0;
 	background: transparent url( ../images/help.svg ) no-repeat right center;
 	background-size: 16px 16px;

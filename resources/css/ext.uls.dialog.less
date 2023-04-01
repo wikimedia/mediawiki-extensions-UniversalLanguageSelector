@@ -1,11 +1,13 @@
+// TODO: Replace with @import 'mediawiki.skin.variables.less'; with MW core LTS v1.42 dependency.
+@import '../../lib/codex-design-tokens/theme-wikimedia-ui-legacy.less';
 @uls-dialog-width: 480px;
 
 .uls-dialog {
 	position: fixed;
 	z-index: 500;
 	display: none;
-	background-color: #fff;
-	border: 1px solid #ccc;
+	background-color: @background-color-base;
+	border: @border-width-base @border-style-base @border-color-subtle;
 	border-color: rgba( 0, 0, 0, 0.2 );
 	box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.2 );
 	background-clip: padding-box;

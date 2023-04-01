@@ -1,3 +1,5 @@
+// TODO: Replace with @import 'mediawiki.skin.variables.less'; with MW core LTS v1.42 dependency.
+@import '../../lib/codex-design-tokens/theme-wikimedia-ui-legacy.less';
 @import 'mediawiki.mixins';
 
 .uls-display-settings-tab-switcher {
@@ -7,13 +9,13 @@
 .uls-button-group {
 	display: inline-block;
 	position: relative;
-	padding: 0 0 0 0;
+	padding: 0;
 	left: -20px;
 	z-index: 1;
 }
 
 .uls-sub-panel {
-	border-top: 1px solid #eaecf0;
+	border-top: @border-width-base @border-style-base #eaecf0;
 	padding-top: 25px;
 	top: -20px;
 	position: relative;
@@ -25,12 +27,12 @@
 }
 
 .uls-font-item {
-	border-bottom: 1px solid #eaecf0;
+	border-bottom: @border-width-base @border-style-base #eaecf0;
 	background: #f8f9fa;
 	padding: 10px 0;
 
 	&:first-child {
-		border-top: 1px solid #eaecf0;
+		border-top: @border-width-base @border-style-base #eaecf0;
 	}
 }
 
@@ -43,12 +45,12 @@
 /* stylelint-enable selector-max-id */
 
 .uls-font-label {
-	color: #54595d;
+	color: @color-subtle;
 	font-size: 10pt;
 }
 
 .uls-font-label strong {
-	color: #202122;
+	color: @color-base;
 }
 
 .uls-display-settings-anon-label {

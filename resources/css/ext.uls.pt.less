@@ -1,4 +1,5 @@
-/* stylelint-disable indentation, selector-max-id */
+// TODO: Replace with @import 'mediawiki.skin.variables.less'; with MW core LTS v1.42 dependency.
+@import '../../lib/codex-design-tokens/theme-wikimedia-ui-legacy.less';
 @import 'mediawiki.mixins';
 
 // Similar to from Vector's 'personalMenu.less' file.
@@ -26,6 +27,7 @@
 	padding-left: 24px;
 }
 
+/* stylelint-disable indentation, selector-max-id */
 #pt-uls {
 	padding-top: 0 !important; // stylelint-disable-line declaration-no-important
 
@@ -48,7 +50,7 @@
 			padding-top: @padding-top-menu-uls-icon;
 			padding-left: @padding-left-menu-uls-icon;
 			 // Equals `#555`, closest to `#54595d` on background-color `#fff`.
-			opacity: 0.67;
+			opacity: @opacity-icon-subtle;
 		}
 	}
 }

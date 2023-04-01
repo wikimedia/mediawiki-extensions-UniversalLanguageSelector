@@ -2,6 +2,7 @@
 	"name": "UniversalLanguageSelector",
 	"private": true,
 	"scripts": {
+		"build-lib": "./scripts/build.sh",
 		"minify-svg": "svgo --config=.svgo.config.js --quiet --recursive --folder resources/images/",
 		"test": "grunt test"
 	},
@@ -13,7 +14,8 @@
 		"grunt-stylelint": "0.18.0",
 		"postcss-less": "6.0.0",
 		"stylelint-config-wikimedia": "0.14.0",
-		"svgo": "2.8.0"
+		"svgo": "2.8.0",
+		"@wikimedia/codex-design-tokens": "0.9.1"
 	},
 	"eslintIgnore": [
 		"lib/**",

@@ -1,8 +1,10 @@
+// TODO: Replace with @import 'mediawiki.skin.variables.less'; with MW core LTS v1.42 dependency.
+@import '../../lib/codex-design-tokens/theme-wikimedia-ui-legacy.less';
 @import 'mediawiki.mixins';
 
 /* stylelint-disable selector-max-id */
 .uls-menu h3 {
-	border-bottom: medium none;
+	border-bottom: 0;
 	font-size: 14pt;
 	line-height: 1.5em;
 	margin-bottom: 10px;
@@ -18,7 +20,7 @@
 	}
 
 	h1 {
-		color: #000;
+		color: @color-emphasized;
 		font-size: 16pt;
 		line-height: 20pt;
 		margin-top: 0;
@@ -33,9 +35,9 @@
 		width: 100%;
 		/* Using border instead of outline for focus (outline doesn't have enough space) */
 		outline: 0;
-		color: #202122;
+		color: @color-base;
 		padding: 5px 0 5px 42px;
-		border: 1px solid transparent;
+		border: @border-width-base @border-style-base @border-color-transparent;
 		background: left 15px top 6px transparent no-repeat;
 		background-size: 20px auto;
 		cursor: pointer;
@@ -48,12 +50,12 @@
 		/* Active "tab" has thicker always visible left border. background-position
 		 * and padding must be tweaked to avoid the image from moving */
 		&.active {
-			color: #000;
 			background-color: #fff;
+			color: @color-emphasized;
 			padding-left: 40px;
 			background-position: left 13px top 6px;
 			border-left-width: 3px;
-			border-left-color: #36c;
+			border-left-color: @border-color-progressive;
 		}
 
 		&:hover {
@@ -61,7 +63,7 @@
 		}
 
 		&:focus {
-			border-color: #36c;
+			border-color: @background-color-progressive--focus;
 		}
 
 		.settings-title {
@@ -69,12 +71,12 @@
 		}
 
 		.settings-text {
-			color: #54595d;
+			color: @color-subtle;
 			font-size: 9pt;
 		}
 
 		&:hover .settings-text {
-			color: #202122;
+			color: @color-base;
 		}
 
 		&.display-settings-block {
@@ -88,13 +90,13 @@
 }
 
 #languagesettings-settings-panel {
+	background-color: @background-color-base;
+	color: @color-base;
 	padding: 0 15px;
-	color: #202122;
-	background: #fff;
 }
 
 #languagesettings-settings-panel h3 {
-	color: #202122;
+	color: @color-base;
 	padding-top: 15px;
 	margin-top: 1pt;
 	line-height: 20pt;
@@ -102,7 +104,7 @@
 }
 
 #languagesettings-settings-panel h4 {
-	color: #202122;
+	color: @color-base;
 	font-size: 12pt;
 }
 
@@ -113,11 +115,11 @@
 }
 
 .uls-language-settings-close-block {
-	background: #fff;
+	background: @background-color-base;
 }
 
 .language-settings-buttons {
-	border-top: 1px solid #eaecf0;
+	border-top: @border-width-base @border-style-base #eaecf0;
 	margin-top: 25px;
 	padding: 15px;
 	width: auto;
@@ -130,15 +132,15 @@
 
 .uls-ui-languages p,
 .checkbox {
-	color: #54595d;
+	color: @color-subtle;
 	font-size: 10pt;
 }
 
 /* mediawiki.ui does not have a pressed state style. */
 #languagesettings-panels .mw-ui-pressed {
-	background-color: #2a4b8d;
-	color: #fff;
-	border-color: #2a4b8d;
+	background-color: @background-color-progressive--active;
+	color: @color-inverted;
+	border-color: @border-color-progressive--active;
 }
 
 .checkbox input[ type='checkbox' ] {
@@ -146,7 +148,7 @@
 }
 
 .checkbox strong {
-	color: #202122;
+	color: @color-base;
 }
 
 label.checkbox input[ type='checkbox' ] {

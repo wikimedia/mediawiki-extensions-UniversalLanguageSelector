@@ -1,7 +1,8 @@
-/* stylelint-disable selector-max-id */
+// TODO: Replace with @import 'mediawiki.skin.variables.less'; with MW core LTS v1.42 dependency.
+@import '../../lib/codex-design-tokens/theme-wikimedia-ui-legacy.less';
 @import 'mediawiki.mixins';
-@import 'mediawiki.ui/variables.less';
 
+/* stylelint-disable selector-max-id */
 #uls-settings-block {
 	// set default background color to #fcfcfc, to match ULS-LCD background color (inside jquery.uls.lcd.ss)
 	// TODO: There is no design token for this color. We should fix to use a design token here.
@@ -21,8 +22,8 @@
 		}
 
 		&.uls-settings-block--with-add-languages {
-			background-color: @colorGray15;
-			border-top: 1px solid @colorGray12;
+			background-color: #f8f9fa;
+			border-top: @border-width-base @border-style-base @border-color-subtle;
 		}
 
 		> button {
@@ -42,18 +43,18 @@
 	}
 
 	&:not( .uls-settings-block--vector-2022 ) {
-		background-color: @colorGray15;
-		border-top: 1px solid @colorGray12;
+		background-color: #f8f9fa;
+		border-top: @border-width-base @border-style-base @border-color-subtle;
 		padding-left: 10px;
 		line-height: 1.2em;
-		border-radius: 0 0 2px 2px;
+		border-radius: 0 0 @border-radius-base @border-radius-base;
 
 		> button {
 			background: left top transparent no-repeat;
 			// Support: Safari 3.1-6.1 & Android browser 3-4.3
 			// Don't support `background-size` values in `background` shorthand
 			background-size: 20px auto;
-			color: @colorGray5;
+			color: @color-subtle;
 			display: inline-block;
 			margin: 8px 15px;
 			border: 0;
@@ -62,7 +63,8 @@
 			cursor: pointer;
 
 			&:hover {
-				color: @colorGray2;
+				// TODO: This shouldn't be `@color-base`.
+				color: #202122;
 			}
 
 			&.display-settings-block {
@@ -85,7 +87,7 @@
 
 	.uls-empty-state__header,
 	.uls-empty-state__desc {
-		color: @colorGray5;
+		color: @color-subtle;
 	}
 
 	.uls-language-action-items {
