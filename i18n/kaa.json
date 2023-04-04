@@ -3,7 +3,8 @@
 		"authors": [
 			"Inabat Allanova",
 			"Nurlan",
-			"Xð"
+			"Xð",
+			"Ajiniyaz Nurniyazov"
 		]
 	},
 	"uls-plang-title-languages": "Tiller",
@@ -21,9 +22,12 @@
 	"ext-uls-language-settings-title": "Til sazlamaları",
 	"ext-uls-language-settings-apply": "Sazlamalardı qollaw",
 	"ext-uls-language-settings-cancel": "Biykar etiw",
-	"ext-uls-language-buttons-help": "Menyular tilin ózgertiriń. Kontent tiline tásir etpeydi.",
+	"ext-uls-language-buttons-help": "Menyular tilin ózgertiwińiz múmkin. Ol kontent tiline tásir etpeydi.",
 	"ext-uls-display-settings-font-settings": "Jurnal sazlamaları",
 	"ext-uls-display-settings-ui-language": "Displey tili",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (kontent penen birdey)",
+	"ext-uls-webfonts-settings-title": "Zárúrlik tuwılǵanda shriftlerdi júklep alıw.",
+	"ext-uls-input-settings-title-short": "Engiziw",
+	"ext-uls-input-settings-desc": "Basqa tilde jazasız ba?",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Taǵı birew|$1 taǵı}}"
 }

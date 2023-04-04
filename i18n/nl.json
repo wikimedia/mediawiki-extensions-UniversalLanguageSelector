@@ -80,5 +80,9 @@
 	"ext-uls-setlang-accept": "Wijziging aanvaarden",
 	"ext-uls-setlang-loading": "Toepassen...",
 	"ext-uls-setlang-cancel": "Niet wijzigen",
-	"ext-uls-actions-menu-language-settings-item-label": "Taalinstellingen openen"
+	"ext-uls-actions-menu-language-settings-item-label": "Taalinstellingen openen",
+	"ext-uls-empty-state-header": "Nog geen talen",
+	"ext-uls-empty-state-desc": "Op dit moment zijn er geen talen beschikbaar",
+	"ext-uls-empty-state-header-actions-available": "Geen talen beschikbaar. Een nieuwe toevoegen?",
+	"ext-uls-empty-state-desc-actions-available": "Maak deze inhoud beschikbaar in meer talen."
 }

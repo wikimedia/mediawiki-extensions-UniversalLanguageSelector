@@ -5,12 +5,16 @@
 		]
 	},
 	"uls-plang-title-languages": "زَبانہٕ",
+	"ext-uls-select-language-settings-icon-tooltip": "زَبانہٕ طرٕز",
 	"ext-uls-undo-language-tooltip-text": "$1 پؠٹھ آے زَبان بَدلاونہٕ",
 	"ext-uls-display-settings-language-tab": "زَبان",
 	"ext-uls-display-settings-fonts-tab": "فانٹ",
+	"ext-uls-language-settings-title": "زَبانہٕ طرٕز",
+	"ext-uls-language-settings-apply": "طَرٕز کٔرِو لوگوٗ",
 	"ext-uls-language-settings-cancel": "مَنسوٗخ",
 	"ext-uls-webfonts-settings-info-link": "مزیٖد معلوٗمات",
 	"ext-uls-webfonts-system-font": "سِسٹَم فانٹ",
+	"ext-uls-input-settings-title": "اَندراج طرٕز",
 	"ext-uls-input-settings-title-short": "اَندراج",
 	"ext-uls-ime-help": "اِستِمال کِتھ پٲٹھؠ کَرو",
 	"ext-uls-disable-input-method": "ذٲتی کی بوڈ کٔرِو اِستِمال",
@@ -27,6 +31,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|اَکھ بیٚیہِ|$1 بیٚیہِ}}",
 	"prefs-languages": "زَبانہٕ",
 	"ext-uls-setlang-unknown-error": "نامعلوٗم غَلطی",
+	"ext-uls-setlang-heading": "اِنٹَرفیس زَبان بَدلٲوِو۔",
 	"ext-uls-setlang-loading": "لوگوٗ کَران...",
 	"ext-uls-actions-menu-header": "صَفہٕ یَختِیار"
 }
