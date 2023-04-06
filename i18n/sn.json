@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Masiziva"
+		]
+	},
+	"uls-plang-title-languages": "Mitauro",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|nerimwe basi| $1 mamwe}}"
+}

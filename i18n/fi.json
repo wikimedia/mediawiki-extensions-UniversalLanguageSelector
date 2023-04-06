@@ -71,6 +71,7 @@
 	"ext-uls-compact-no-results": "Tämä sivu ei ole saatavilla etsimälläsi kielellä.",
 	"ext-uls-setlang-error": "Ensisijaisen kielen päivityksessä tapahtui virhe. Virhe: $1",
 	"ext-uls-setlang-unknown-error": "Tuntematon virhe",
+	"ext-uls-setlang-message": "Seuraamasi linkki pyysi käyttöliittymän näyttämistä kielellä <strong>$1 ($2)</strong>",
 	"ext-uls-setlang-heading": "Vaihda käyttöliittymän kieli?",
 	"ext-uls-setlang-accept": "Hyväksy vaihtaminen",
 	"ext-uls-setlang-loading": "Tallennetaan...",
@@ -79,5 +80,6 @@
 	"ext-uls-empty-state-header": "Ei vielä kieliä",
 	"ext-uls-empty-state-desc": "Kieliä ei ole tällä hetkellä saatavilla",
 	"ext-uls-empty-state-header-actions-available": "Ei vielä kieliä. Lisätäänkö uusi?",
-	"ext-uls-empty-state-desc-actions-available": "Tuo sisältö saataville muille kielille."
+	"ext-uls-empty-state-desc-actions-available": "Tuo sisältö saataville muille kielille.",
+	"ext-uls-add-languages-button-label": "Lisää kieliä"
 }
