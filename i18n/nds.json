@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Servien"
+			"Servien",
+			"Wikiundeplattsnacker"
 		]
 	},
 	"uls-plang-title-languages": "Spraken",
@@ -30,5 +31,6 @@
 	"jquery-ime-other-languages": "Annere Spraken",
 	"jquery-ime-help": "Hülp",
 	"ext-uls-input-disable-notification-undo": "Rutnehmen",
-	"ext-uls-language-settings-applying": "Anwennen..."
+	"ext-uls-language-settings-applying": "Anwennen...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Een  mehr|$1 mehr}}"
 }
