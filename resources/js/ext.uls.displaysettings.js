@@ -226,7 +226,7 @@
 			suggestedLanguages = this.frequentLanguageList()
 				// Common world languages, for the case that there are
 				// too few suggested languages
-				.concat( [ 'en', 'zh', 'fr' ] );
+				.concat( [ 'en', 'zh-hans', 'zh-hant', 'fr' ] );
 
 			// Content language is always on the first button
 			languagesForButtons = [ this.contentLanguage ];
