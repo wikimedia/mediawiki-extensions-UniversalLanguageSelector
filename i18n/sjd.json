@@ -9,5 +9,6 @@
 	"ext-uls-undo-language-tooltip-text": "Э̄ввтлэсь кӣлл: $1",
 	"jquery-ime-other-languages": "Мудта кӣл",
 	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|е̄ресь кӣлл|е̄ресь кӣл|е̄ресь кӣллэ}}",
+	"prefs-languages": "Кӣл",
 	"ext-uls-add-languages-button-label": "Лажьхэ кӣлэтҍ"
 }
