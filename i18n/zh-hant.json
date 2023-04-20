@@ -30,7 +30,7 @@
 	"ext-uls-language-settings-title": "語言設定",
 	"ext-uls-language-settings-apply": "套用設定",
 	"ext-uls-language-settings-cancel": "取消",
-	"ext-uls-language-buttons-help": "更改選單使用的語言，不會影響內容語言。",
+	"ext-uls-language-buttons-help": "變更選單使用的語言，不會影響內容語言。",
 	"ext-uls-display-settings-font-settings": "字型設定",
 	"ext-uls-display-settings-ui-language": "顯示語言",
 	"ext-uls-display-settings-anon-label": "顯示語言：",
@@ -80,7 +80,7 @@
 	"ext-uls-actions-menu-language-settings-item-label": "開啟語言設定",
 	"ext-uls-empty-state-header": "還沒有語言",
 	"ext-uls-empty-state-desc": "現在沒有可用的語言",
-	"ext-uls-empty-state-header-actions-available": "還沒有語言。添加一個新的？",
+	"ext-uls-empty-state-header-actions-available": "還沒有語言。新增？",
 	"ext-uls-empty-state-desc-actions-available": "以更多語言來讓內容可用。",
-	"ext-uls-add-languages-button-label": "添加語言"
+	"ext-uls-add-languages-button-label": "新增語言"
 }
