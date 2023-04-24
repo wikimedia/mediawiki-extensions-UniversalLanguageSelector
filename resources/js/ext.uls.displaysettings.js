@@ -199,8 +199,7 @@
 						$( '<p>' ).append(
 							$( '<span>' )
 								.addClass( 'uls-display-settings-anon-label' )
-								// .html() is needed for correct parsing of the nbsp
-								.html( $.i18n( 'ext-uls-display-settings-anon-label' ) + '&#160;' ),
+								.text( $.i18n( 'ext-uls-display-settings-anon-label' ) + '\u00A0' ),
 							$( '<span>' )
 								.text( $.i18n( 'ext-uls-display-settings-anon-same-as-content', autonym ) )
 						),
