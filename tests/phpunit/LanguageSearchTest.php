@@ -69,7 +69,8 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 			],
 			[ 'punja', [
 				'pa' => class_exists( LanguageNames::class ) ? 'punjabi' : 'punjaabi sennii',
-				'pnb' => 'punjabi western',
+				'pa-guru' => 'punjabi (gurmukhi-skrift)',
+				'pnb' => 'punjabi western'
 			]
 			],
 			[ 'castellano', [
