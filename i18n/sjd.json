@@ -6,5 +6,9 @@
 		]
 	},
 	"uls-plang-title-languages": "Кӣл",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Вя̄л $1}}"
+	"ext-uls-undo-language-tooltip-text": "Э̄ввтлэсь кӣлл: $1",
+	"ext-uls-input-settings-ui-language": "Кырьйхэм кӣлл",
+	"jquery-ime-other-languages": "Мудта кӣл",
+	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|мудта кӣлл|мудта кӣл|мудта кӣллэ}}",
+	"prefs-languages": "Кӣл"
 }
