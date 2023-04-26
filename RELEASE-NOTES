@@ -1,0 +1,7 @@
+== UniversalLanguageSelector 2023.04 ==
+Released at 2023-04-26.
+
+=== Highlights ===
+* Localisation and maintenance updates.
+* Fix issues with up/down keys navigation for the ULS menu ({{phab|T328956}})
+* Remove ULSMobileWebfontsEnabled configuration option ({{phab|T332837}})
