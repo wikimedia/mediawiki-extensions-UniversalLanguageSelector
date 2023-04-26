@@ -10,7 +10,8 @@
 			"Liuxinyu970226",
 			"Simon Shek",
 			"Spring Roll Conan",
-			"Waihorace"
+			"Waihorace",
+			"Winston Sung"
 		]
 	},
 	"uls-desc": "為使用者提供多種方法來選擇語言和調整語言設定",
@@ -29,7 +30,7 @@
 	"ext-uls-language-settings-title": "語言設定",
 	"ext-uls-language-settings-apply": "套用設定",
 	"ext-uls-language-settings-cancel": "取消",
-	"ext-uls-language-buttons-help": "更改選單使用的語言，不會影響內容語言。",
+	"ext-uls-language-buttons-help": "變更選單使用的語言，不會影響內容語言。",
 	"ext-uls-display-settings-font-settings": "字型設定",
 	"ext-uls-display-settings-ui-language": "顯示語言",
 	"ext-uls-display-settings-anon-label": "顯示語言：",
