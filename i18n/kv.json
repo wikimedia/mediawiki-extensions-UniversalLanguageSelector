@@ -2,9 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Enye Lav",
-			"Xð"
+			"Xð",
+			"Merrahtar"
 		]
 	},
-	"uls-plang-title-languages": "Кыв",
+	"uls-plang-title-languages": "Кывъяс",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Нӧшта $1}}"
 }
