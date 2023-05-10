@@ -329,9 +329,6 @@
 				"vector": [
 					"css/ext.uls.pt-vector.less"
 				],
-				"vector-2022": [
-					"css/ext.uls.pt-vector.less"
-				],
 				"monobook": [
 					"css/ext.uls.pt.less",
 					"css/ext.uls.pt-default.less",
