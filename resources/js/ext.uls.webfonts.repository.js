@@ -459,8 +459,8 @@
 			"woff2": "Alef/Alef-Bold.woff2?7c873"
 		},
 		"Amiri": {
-			"woff": "amiri/amiri-regular.woff?e8973",
-			"woff2": "amiri/amiri-regular.woff2?1f55e",
+			"woff": "amiri/Amiri-Regular.woff?3d608",
+			"woff2": "amiri/Amiri-Regular.woff2?62666",
 			"variants": {
 				"bold": "Amiri Bold",
 				"bolditalic": "Amiri Bold Italic",
@@ -469,19 +469,19 @@
 		},
 		"Amiri Bold": {
 			"fontweight": "bold",
-			"woff": "amiri/amiri-bold.woff?63eb0",
-			"woff2": "amiri/amiri-bold.woff2?a0e74"
+			"woff": "amiri/Amiri-Bold.woff?00982",
+			"woff2": "amiri/Amiri-Bold.woff2?ffea9"
 		},
 		"Amiri Bold Italic": {
 			"fontweight": "bold",
 			"fontstyle": "italic",
-			"woff": "amiri/amiri-boldslanted.woff?44410",
-			"woff2": "amiri/amiri-boldslanted.woff2?b0128"
+			"woff": "amiri/Amiri-BoldItalic.woff?52cb9",
+			"woff2": "amiri/Amiri-BoldItalic.woff2?c947c"
 		},
 		"Amiri Italic": {
 			"fontstyle": "italic",
-			"woff": "amiri/amiri-slanted.woff?7d658",
-			"woff2": "amiri/amiri-slanted.woff2?a90a0"
+			"woff": "amiri/Amiri-Italic.woff?dd356",
+			"woff2": "amiri/Amiri-Italic.woff2?2803c"
 		},
 		"Artaxerxes": {
 			"woff": "Artaxerxes/Artaxerxes.woff?c1ed7",
