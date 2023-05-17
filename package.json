@@ -14,6 +14,7 @@
 		"grunt-eslint": "24.0.1",
 		"grunt-stylelint": "0.18.0",
 		"postcss-less": "6.0.0",
+		"sfnt2woff": "^1.0.1",
 		"stylelint-config-wikimedia": "0.14.0",
 		"svgo": "2.8.0"
 	},

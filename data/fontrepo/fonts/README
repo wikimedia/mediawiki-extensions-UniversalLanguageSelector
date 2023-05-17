@@ -44,6 +44,7 @@ Preparing font formats
 -----------------------
 
 1. From the upstream releases, take the TTF versions.
-2. To generate woff format, get: https://github.com/rillig/sfntly
-3. Use https://github.com/google/woff2 to generate woff2 from ttf. This will
-   produce a compressed woff2 file. Modern browsers support this format.
+2. Use sfnt2woff to generate woff files
+$ ls *.ttf | xargs -n1 ../../../../node_modules/sfnt2woff/cli.js
+3. Use https://github.com/google/woff2 to generate woff2 files
+$ ls *.ttf | xargs -n1 /path/to/woff2/woff2_compress
