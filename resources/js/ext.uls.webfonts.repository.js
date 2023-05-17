@@ -488,8 +488,16 @@
 			"woff2": "Artaxerxes/Artaxerxes.woff2?7a96e"
 		},
 		"AwamiNastaliq": {
-			"woff": "AwamiNastaliq/AwamiNastaliq-Regular.woff?84ee4",
-			"woff2": "AwamiNastaliq/AwamiNastaliq-Regular.woff2?226c1"
+			"woff": "AwamiNastaliq/AwamiNastaliq-Regular.woff?f83de",
+			"woff2": "AwamiNastaliq/AwamiNastaliq-Regular.woff2?1a7ce",
+			"variants": {
+				"bold": "AwamiNastaliq Bold"
+			}
+		},
+		"AwamiNastaliq Bold": {
+			"fontweight": "bold",
+			"woff": "AwamiNastaliq/AwamiNastaliq-Bold.woff?c480f",
+			"woff2": "AwamiNastaliq/AwamiNastaliq-Bold.woff2?2a4eb"
 		},
 		"BabelStoneTibetanSlim": {
 			"woff": "BabelStoneTibetanSlim/BabelStoneTibetanSlim.woff?c48ba",
