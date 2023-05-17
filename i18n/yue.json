@@ -5,10 +5,12 @@
 			"Moon0319",
 			"Shinjiman",
 			"Xð",
-			"Al12si"
+			"Al12si",
+			"Hello903hello"
 		]
 	},
 	"uls-plang-title-languages": "話",
 	"ext-uls-language-settings-preferences-link": "其他語言設定",
-	"ext-uls-compact-link-count": "重有$1種"
+	"ext-uls-compact-link-count": "重有$1種",
+	"prefs-languages": "語言"
 }
