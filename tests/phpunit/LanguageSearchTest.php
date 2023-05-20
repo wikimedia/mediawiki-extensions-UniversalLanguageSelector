@@ -34,7 +34,7 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 		$this->assertSame( $expected, $actual );
 	}
 
-	public function searchDataProvider() {
+	public static function searchDataProvider() {
 		return [
 			[ 'ഹിന്ദി', [
 				'hi' => 'ഹിന്ദി'
