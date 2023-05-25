@@ -72,5 +72,6 @@
 	"ext-uls-empty-state-header": "ဘာသာစကားမရှိသေးပါ",
 	"ext-uls-empty-state-desc": "ယခုအချိန်တွင် မည်သည့်ဘာသာစကားမျှ မရနိုင်ပါ",
 	"ext-uls-empty-state-header-actions-available": "ဘာသာစကားမရှိသေးပါ။ အသစ်တစ်ခုထည့်မလား။",
-	"ext-uls-empty-state-desc-actions-available": "အကြောင်းအရာကို ဘာသာစကားများ ပိုမိုရရှိအောင်လုပ်ပါ။"
+	"ext-uls-empty-state-desc-actions-available": "အကြောင်းအရာကို ဘာသာစကားများ ပိုမိုရရှိအောင်လုပ်ပါ။",
+	"ext-uls-add-languages-button-label": "ဘာသာစကားများ ထည့်သွင်းရန်"
 }
