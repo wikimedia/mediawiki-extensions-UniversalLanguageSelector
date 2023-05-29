@@ -25,6 +25,7 @@ use ExtensionRegistry;
 use Html;
 use IBufferingStatsdDataFactory;
 use IContextSource;
+use LanguageCode;
 use MediaWiki\Babel\Babel;
 use MediaWiki\Extension\BetaFeatures\BetaFeatures;
 use MediaWiki\Hook\BeforePageDisplayHook;
@@ -254,11 +255,11 @@ class Hooks implements
 		}
 
 		// The element id will be 'pt-uls'
-		$langCode = $context->getLanguage()->getCode();
+		$mwLangCode = $context->getLanguage()->getCode();
 
 		return [
 			'uls' => [
-				'text' => $this->languageNameUtils->getLanguageName( $langCode ),
+				'text' => $this->languageNameUtils->getLanguageName( $mwLangCode ),
 				'href' => '#',
 				// Skin meta data to allow skin (e.g. Vector) to add icons
 				'icon' => 'wikimedia-language',
@@ -271,28 +272,53 @@ class Hooks implements
 	}
 
 	/**
-	 * @param float[] $preferred
-	 * @return string
+	 * @param float[] $preferred Mapping of
+	 *  'Preferred languages by lowercased BCP 47 language codes' => 'weight'
+	 * @return string MediaWiki internal language code or empty string if there's no matched
+	 *  language code
 	 */
 	protected function getDefaultLanguage( array $preferred ) {
+		/** @var array supported List of Supported languages by MediaWiki internal language codes */
 		$supported = $this->languageNameUtils
 			->getLanguageNames( LanguageNameUtils::AUTONYMS, LanguageNameUtils::SUPPORTED );
 
-		// look for a language that is acceptable to the client
+		// Convert BCP 47 language code to MediaWiki internal language code and
+		// look for a MediaWiki internal language code that is acceptable to the client
 		// and known to the wiki.
-		foreach ( $preferred as $code => $weight ) {
-			if ( isset( $supported[$code] ) ) {
-				return $code;
+		// @begin Note: Remove this when minimum supported version is 1.40
+		if ( method_exists( LanguageCode::class, 'bcp47ToInternal' ) ) {
+			// @end
+			foreach ( $preferred as $bcp47LangCode => $weight ) {
+				$mwLangCode = LanguageCode::bcp47ToInternal( $bcp47LangCode );
+				if ( isset( $supported[$mwLangCode] ) ) {
+					return $mwLangCode;
+				}
+			}
+			// @begin Note: Remove this when minimum supported version is 1.40
+		} else {
+			static $invertedLookup = [];
+			foreach ( LanguageCode::getNonstandardLanguageCodeMapping() as $internal => $bcp47 ) {
+				$invertedLookup[strtolower( $bcp47 )] = $internal;
+			}
+			foreach ( $preferred as $bcp47LangCode => $weight ) {
+				$mwLangCode = $invertedLookup[$bcp47LangCode] ?? $bcp47LangCode;
+				if ( isset( $supported[$mwLangCode] ) ) {
+					return $mwLangCode;
+				}
 			}
 		}
+		// @end
 
-		// Some browsers might only send codes like de-de.
-		// Try with bare code.
-		foreach ( $preferred as $code => $weight ) {
-			$parts = explode( '-', $code, 2 );
-			$code = $parts[0];
-			if ( isset( $supported[$code] ) ) {
-				return $code;
+		// Some browsers might:
+		// - Sent codes like 'zh-hant-tw':
+		//   FIXME: Try 'zh-tw', 'zh-hant', 'zh' respectively
+		// - Only send codes like 'de-de':
+		//   Try with bare code 'de'
+		foreach ( $preferred as $bcp47LangCode => $weight ) {
+			$parts = explode( '-', $bcp47LangCode, 2 );
+			$mwLangCode = $parts[0];
+			if ( isset( $supported[$mwLangCode] ) ) {
+				return $mwLangCode;
 			}
 		}
 
