@@ -4,7 +4,8 @@
 			"Divec",
 			"Lloffiwr",
 			"Nemo bis",
-			"Robin Owain"
+			"Robin Owain",
+			"Afalau"
 		]
 	},
 	"uls-desc": "Yn cynnig sawl ffordd i'r defnyddiwr allu dewis iaith a newid gosodiadau iaith",
@@ -29,7 +30,7 @@
 	"ext-uls-display-settings-anon-same-as-content": "$1 (yr un fath â'r cynnwys)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Mewngofnodwch]] er mwyn dewis iaith arall i'r dewislenni.",
 	"ext-uls-webfonts-settings-title": "Llwytho ffontiau i lawr pan fo angen",
-	"ext-uls-webfonts-settings-info": "Lawrlwytho ffontiau sydd yn eisiau yn awtomatig, a galluogi dewis ffontiau.",
+	"ext-uls-webfonts-settings-info": "Lawrlwytho ffontiau sydd ar goll yn awtomatig, a galluogi dewis ffontiau.",
 	"ext-uls-webfonts-settings-info-link": "Rhagor o wybodaeth",
 	"ext-uls-webfonts-select-for": "Dewis ffont ar gyfer $1",
 	"ext-uls-webfonts-select-for-ui-info": "Ffont y rhyngwyneb",
