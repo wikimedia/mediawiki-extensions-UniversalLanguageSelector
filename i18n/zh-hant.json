@@ -11,7 +11,8 @@
 			"Simon Shek",
 			"Spring Roll Conan",
 			"Waihorace",
-			"Winston Sung"
+			"Winston Sung",
+			"SunAfterRain"
 		]
 	},
 	"uls-desc": "為使用者提供多種方法來選擇語言和調整語言設定",
@@ -82,5 +83,5 @@
 	"ext-uls-empty-state-header": "還沒有語言",
 	"ext-uls-empty-state-desc": "現在沒有可用的語言",
 	"ext-uls-empty-state-header-actions-available": "還沒有語言。新增？",
-	"ext-uls-empty-state-desc-actions-available": "以更多語言來讓內容可用。"
+	"ext-uls-empty-state-desc-actions-available": "為該內容添加更多語言版本。"
 }
