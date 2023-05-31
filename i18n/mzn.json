@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"محک"
 		]
 	},
-	"uls-plang-title-languages": "زوون"
+	"uls-plang-title-languages": "زوون",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ات‌چی دیگه|$1 دیگه}}"
 }
