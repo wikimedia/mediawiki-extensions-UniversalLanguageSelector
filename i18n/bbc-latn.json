@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Bennylin",
 			"Salomo Christian Hutajulu"
 		]
 	},
+	"uls-plang-title-languages": "Parhataan",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Sada nai|$1 nai}}"
 }
