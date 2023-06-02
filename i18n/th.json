@@ -74,5 +74,6 @@
 	"ext-uls-setlang-cancel": "ไม่ต้องเปลี่ยนตาม",
 	"ext-uls-actions-menu-language-settings-item-label": "เปิดการตั้งค่าภาษา",
 	"ext-uls-empty-state-header": "ยังไม่มีภาษา",
-	"ext-uls-empty-state-desc": "ขณะนี้ยังไม่มีภาษาที่ใช้งานได้"
+	"ext-uls-empty-state-desc": "ขณะนี้ยังไม่มีภาษาที่ใช้งานได้",
+	"ext-uls-add-languages-button-label": "เพิ่มภาษา"
 }
