@@ -15,5 +15,6 @@
 	"jquery-ime-help": "Veahkki",
 	"prefs-languages": "Gielat",
 	"ext-uls-setlang-unknown-error": "Dovdameahttun meattáhus",
-	"ext-uls-setlang-heading": "Háliidatgo don molsut geavahanlavtta giela?"
+	"ext-uls-setlang-heading": "Háliidatgo don molsut geavahanlavtta giela?",
+	"ext-uls-add-languages-button-label": "Lasit gielaid"
 }
