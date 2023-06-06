@@ -12,6 +12,7 @@
 	"uls-plang-title-languages": "Jezici",
 	"ext-uls-select-language-settings-icon-tooltip": "Postavke jezika",
 	"ext-uls-undo-language-tooltip-text": "Jezik promijenjen; prethodno je bio postavljen $1",
+	"ext-uls-undo-language-tooltip-text-local": "Jezik promijenjen za ovaj wiki. Provjerite [[Special:GlobalPreferences|globalne postavke]] ako želite da se promjena odnosi na sve wikije.",
 	"ext-uls-language-settings-preferences-link": "Više jezičkih postavki",
 	"uls-betafeature-label": "Sažeti linkovi na druge jezike",
 	"uls-betafeature-desc": "Prikaži kraći spisak s linkovima na druge jezike, samo s jezicima koji su Vam najvažniji.",
@@ -61,5 +62,18 @@
 	"ext-uls-compact-link-count": "Još {{PLURAL:$1|1=jedan|$1}}",
 	"ext-uls-compact-link-info": "Svi jezici (prvobitni odabir zasnovan je na najčešćim odabirima Vas i drugih korisnika)",
 	"prefs-languages": "Jezici",
-	"ext-uls-compact-language-links-preference": "Koristi [[$1|sažeti spisak jezika]], s jezicima koji su Vam važni."
+	"ext-uls-compact-language-links-preference": "Koristi [[$1|sažeti spisak jezika]], s jezicima koji su Vam važni.",
+	"ext-uls-compact-no-results": "Stranica nije dostupna na jeziku koji ste stražili.",
+	"ext-uls-setlang-error": "Dogodila se greška prilikom ažuriranja željenog jezika. Greška: $1",
+	"ext-uls-setlang-unknown-error": "Nepoznata greška",
+	"ext-uls-setlang-message": "Link koji ste upotrijebili zahtijeva da se interfejs prikaže na jeziku <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "Želite li promijeniti jezik interfejsa?",
+	"ext-uls-setlang-accept": "Prihvati promjenu",
+	"ext-uls-setlang-loading": "Primjenjujem...",
+	"ext-uls-setlang-cancel": "Ne mijenjaj",
+	"ext-uls-actions-menu-language-settings-item-label": "Otvori jezičke postavke",
+	"ext-uls-empty-state-header": "Nema drugih jezika",
+	"ext-uls-empty-state-desc": "Trenutno nema drugih jezika",
+	"ext-uls-empty-state-header-actions-available": "Nema drugih jezika. Želite li dodati novi?",
+	"ext-uls-empty-state-desc-actions-available": " Učinite sadržaj dostupnim na više jezika."
 }
