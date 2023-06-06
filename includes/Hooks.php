@@ -140,12 +140,12 @@ class Hooks implements
 	 */
 	public function onBeforePageDisplay( $out, $skin ): void {
 		$unsupportedSkins = [ 'minerva', 'apioutput' ];
-		if ( in_array( $skin->getSkinName(), $unsupportedSkins ) ) {
+		if ( in_array( $skin->getSkinName(), $unsupportedSkins, true ) ) {
 			return;
 		}
 		// Soft dependency to Wikibase client. Don't enable CLL if links are managed manually.
 		$excludedLinks = $out->getProperty( 'noexternallanglinks' );
-		$override = is_array( $excludedLinks ) && in_array( '*', $excludedLinks );
+		$override = is_array( $excludedLinks ) && in_array( '*', $excludedLinks, true );
 		$isCompactLinksEnabled = $this->isCompactLinksEnabled( $out->getUser(), $skin );
 		$config = [
 			'wgULSPosition' => $this->config->get( 'ULSPosition' ),
