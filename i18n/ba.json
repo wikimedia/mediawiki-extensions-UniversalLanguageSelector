@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Kaganer",
+			"Sagan",
 			"Азат Хәлилов",
 			"Айбикә",
 			"Ләйсән"
@@ -29,5 +30,6 @@
 	"ext-uls-webfonts-settings-info-link": "Өҫтәмә мәғлүмәт",
 	"ext-uls-webfonts-select-for-ui-info": "Ҡулланыусының интерфейс шрифты",
 	"jquery-ime-other-languages": "Башҡа телдәр",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Берҙән күберәк|$1 күберәк}}",
 	"prefs-languages": "Телдәр"
 }
