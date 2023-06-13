@@ -2,9 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Agilight",
-			"Riverman"
+			"Riverman",
+			"Karak-Kyzyl"
 		]
 	},
 	"uls-plang-title-languages": "Дылдар",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Оон база|Немей $1}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Оон база|немей $1}}"
 }

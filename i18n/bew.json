@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bangrapip"
+		]
+	},
+	"uls-plang-title-languages": "Basa",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Atu lagi|$1 lagi}}"
+}
