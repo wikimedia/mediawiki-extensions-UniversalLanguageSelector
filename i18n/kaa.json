@@ -30,5 +30,6 @@
 	"ext-uls-input-settings-title-short": "Ornatıw",
 	"ext-uls-input-settings-desc": "Basqa tilde jazasız ba?",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Taǵı birew|$1 taǵı}}",
+	"prefs-languages": "Tiller",
 	"ext-uls-add-languages-button-label": "Tillerdi qosıw"
 }
