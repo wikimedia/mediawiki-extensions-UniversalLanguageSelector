@@ -529,9 +529,19 @@ class Hooks implements
 			return;
 		}
 
-		// @todo: document what this block is for.
-		if ( $skin->getSkinName() !== 'vector-2022' && $this->config->get( 'ULSPosition' ) !== 'interlanguage' ) {
+		// The ULS settings cog is only needed on projects which show the ULS button in the sidebar
+		// e.g. it is shown in the personal menu
+		if ( $this->config->get( 'ULSPosition' ) !== 'interlanguage' ) {
 			return;
+		}
+
+		// For Vector 2022, the ULS settings cog is not needed for projects
+		// where a dedicated language button in the header (VectorLanguageInHeader is true).
+		if ( $skin->getSkinName() === 'vector-2022' ) {
+			$languageInHeaderConfig = $skin->getConfig()->get( 'VectorLanguageInHeader' );
+			if ( $languageInHeaderConfig[ $skin->getUser()->isAnon() ? 'logged_out' : 'logged_in' ] ?? true ) {
+				return;
+			}
 		}
 
 		if ( !$this->isEnabled() ) {
