@@ -29,5 +29,6 @@
 	"ext-uls-webfonts-settings-title": "Zárúrlik tuwılǵanda shriftlerdi júklep alıw.",
 	"ext-uls-input-settings-title-short": "Ornatıw",
 	"ext-uls-input-settings-desc": "Basqa tilde jazasız ba?",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Taǵı birew|$1 taǵı}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Taǵı birew|$1 taǵı}}",
+	"prefs-languages": "Tiller"
 }

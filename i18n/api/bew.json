@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bangrapip"
+		]
+	},
+	"apihelp-languagesearch-description": "Cari nama basa paké hurup apa aja.",
+	"apihelp-languagesearch-summary": "Cari nama basa paké hurup apa aja.",
+	"apihelp-languagesearch-param-search": "Cari kèteng.",
+	"apihelp-languagesearch-param-typos": "Jumblah salah èjaan nyang diboléin di kèteng penyarian.",
+	"apihelp-languagesearch-example-1": "Cari \"Te\"",
+	"apihelp-languagesearch-example-2": "Cari \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Cari \"ഫി\", ngeboléin atu salah ketik",
+	"apihelp-ulslocalization-description": "Dapetin penglokalan ULS di basa nyang dimaksud.",
+	"apihelp-ulslocalization-summary": "Dapetin penglokalan ULS di basa nyang dimaksud.",
+	"apihelp-ulslocalization-param-language": "Kode basa.",
+	"apihelp-ulslocalization-example-1": "Dapetin penglokalan basa Tamil",
+	"apihelp-ulslocalization-example-2": "Dapetin penglokalan basa Hindi",
+	"apihelp-ulssetlang-description": "Perbaruin pemaké punya basa antermuka nyang didemenin.",
+	"apihelp-ulssetlang-summary": "Perbaruin pemaké punya basa antermuka nyang didemenin.",
+	"apihelp-ulssetlang-param-languagecode": "Kode basa nyang didemenin.",
+	"apierror-ulssetlang-anon-notallowed": "Pemaké sondernama kaga' diboléin ngrobah basa antermuka."
+}
