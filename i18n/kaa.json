@@ -27,7 +27,10 @@
 	"ext-uls-display-settings-ui-language": "Displey tili",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (kontent penen birdey)",
 	"ext-uls-webfonts-settings-title": "Zárúrlik tuwılǵanda shriftlerdi júklep alıw.",
+	"ext-uls-webfonts-settings-info": "Kerekli háripti avtomalıq túrde júklep alıw hám qálegen háripti tańlawǵa ruqsat beriw.",
+	"ext-uls-webfonts-settings-info-link": "Kóbirek maǵlıwmat",
 	"ext-uls-input-settings-title-short": "Ornatıw",
 	"ext-uls-input-settings-desc": "Basqa tilde jazasız ba?",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Taǵı birew|$1 taǵı}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Taǵı birew|$1 taǵı}}",
+	"prefs-languages": "Tiller"
 }
