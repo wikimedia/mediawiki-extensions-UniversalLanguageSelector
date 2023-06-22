@@ -80,5 +80,6 @@
 	"ext-uls-empty-state-header": "Ще немає мов",
 	"ext-uls-empty-state-desc": "Наразі немає доступних мов",
 	"ext-uls-empty-state-header-actions-available": "Ще немає мов. Додати нову?",
-	"ext-uls-empty-state-desc-actions-available": "Зробіть вміст доступним більшою кількістю мов."
+	"ext-uls-empty-state-desc-actions-available": "Зробіть вміст доступним більшою кількістю мов.",
+	"ext-uls-add-languages-button-label": "Додати мови"
 }
