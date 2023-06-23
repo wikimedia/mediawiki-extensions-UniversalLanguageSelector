@@ -535,11 +535,14 @@ class Hooks implements
 			return;
 		}
 
+		$hasLanguages = $skin->getLanguages() !== [];
 		// For Vector 2022, the ULS settings cog is not needed for projects
-		// where a dedicated language button in the header (VectorLanguageInHeader is true).
+		// where a dedicated language button in the header ($wgVectorLanguageInHeader is true).
 		if ( $skin->getSkinName() === 'vector-2022' ) {
 			$languageInHeaderConfig = $skin->getConfig()->get( 'VectorLanguageInHeader' );
-			if ( $languageInHeaderConfig[ $skin->getUser()->isAnon() ? 'logged_out' : 'logged_in' ] ?? true ) {
+			$languageInHeader = $languageInHeaderConfig[
+				$skin->getUser()->isAnon() ? 'logged_out' : 'logged_in' ] ?? true;
+			if ( $hasLanguages && $languageInHeader ) {
 				return;
 			}
 		}
@@ -550,13 +553,11 @@ class Hooks implements
 
 		// An empty span will force the language portal to always display in
 		// the skins that support it! e.g. Vector. (T275147)
-		if ( count( $skin->getLanguages() ) === 0 ) {
+		if ( !$hasLanguages ) {
 			// If no languages force it on.
 			$content .= Html::element(
 				'span',
-				[
-					'class' => 'uls-after-portlet-link',
-				],
+				[ 'class' => 'uls-after-portlet-link', ],
 				''
 			);
 		}
