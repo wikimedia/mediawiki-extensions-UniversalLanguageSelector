@@ -190,7 +190,7 @@
 			this.compactList[ language ].parentNode.style.display = '';
 		}
 
-		mw.loader.using( 'mediawiki.ui.button' ).then( function () {
+		mw.loader.using( '@wikimedia/codex' ).then( function () {
 			this.addTrigger();
 		}.bind( this ) );
 
@@ -330,7 +330,7 @@
 	CompactInterlanguageList.prototype.addTrigger = function () {
 		var trigger = document.createElement( 'button' );
 		// TODO: Should we have a different class name where the CLS styles are attached?
-		trigger.className = 'mw-interlanguage-selector mw-ui-button';
+		trigger.className = 'mw-interlanguage-selector cdx-button';
 		trigger.title = mw.message( 'ext-uls-compact-link-info' ).plain();
 		// Use text() because the message needs {{PLURAL:}}
 		trigger.textContent = mw.message(

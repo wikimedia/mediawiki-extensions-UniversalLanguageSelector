@@ -9,7 +9,8 @@
 .uls-button-group {
 	display: inline-block;
 	position: relative;
-	padding: 0;
+	// The 1px are needed to handle overflow in .cdx-button-group in 1.39
+	padding: 1px 0 0 1px;
 	left: -20px;
 	z-index: 1;
 }

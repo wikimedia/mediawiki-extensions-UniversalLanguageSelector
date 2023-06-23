@@ -172,7 +172,8 @@
 			"dependencies": [
 				"mediawiki.jqueryMsg",
 				"mediawiki.language",
-				"ext.uls.common"
+				"ext.uls.common",
+				"@wikimedia/codex"
 			],
 			"messages": [
 				"ext-uls-compact-link-count",
@@ -209,9 +210,7 @@
 				"ext.uls.mediawiki",
 				"ext.uls.webfonts",
 				"mediawiki.api",
-				"mediawiki.ui.radio",
-				"mediawiki.ui.checkbox",
-				"mediawiki.ui.button",
+				"@wikimedia/codex",
 				"mediawiki.user"
 			]
 		},
@@ -279,7 +278,7 @@
 				"ext.uls.messages",
 				"ext.uls.preferences",
 				"jquery.uls.grid",
-				"mediawiki.ui.button"
+				"@wikimedia/codex"
 			]
 		},
 		"ext.uls.mediawiki": {
@@ -347,7 +346,7 @@
 			"dependencies": [
 				"mediawiki.api",
 				"mediawiki.jqueryMsg",
-				"mediawiki.ui.button",
+				"@wikimedia/codex",
 				"mediawiki.Uri"
 			],
 			"messages": [
