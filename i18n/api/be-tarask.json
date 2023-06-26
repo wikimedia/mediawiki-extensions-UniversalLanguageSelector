@@ -5,14 +5,12 @@
 			"Renessaince"
 		]
 	},
-	"apihelp-languagesearch-description": "Пошук назваў моваў любым альфабэтам.",
 	"apihelp-languagesearch-summary": "Пошук назваў моваў любым альфабэтам.",
 	"apihelp-languagesearch-param-search": "Радок пошуку.",
 	"apihelp-languagesearch-param-typos": "Колькасьць памылак артаграфіі, дазволеных у радку пошуку.",
 	"apihelp-languagesearch-example-1": "Шукаць «Te»",
 	"apihelp-languagesearch-example-2": "Шукаць «ഫി»",
 	"apihelp-languagesearch-example-3": "Шукаць «ഫി», дапушчальная адна памылка",
-	"apihelp-ulslocalization-description": "Атрымаць лякалізацыю ULS на пададзенай мове.",
 	"apihelp-ulslocalization-summary": "Атрымаць лякалізацыю ULS на пададзенай мове.",
 	"apihelp-ulslocalization-param-language": "Код мовы.",
 	"apihelp-ulslocalization-example-1": "Атрымаць тамільскую лякалізацыю",

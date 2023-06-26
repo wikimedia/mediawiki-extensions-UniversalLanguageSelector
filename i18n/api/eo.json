@@ -5,14 +5,12 @@
 			"Robin van der Vliet"
 		]
 	},
-	"apihelp-languagesearch-description": "Serĉi nomojn de lingvoj en ajna skribsistemo.",
 	"apihelp-languagesearch-summary": "Serĉi nomojn de lingvoj en ajna skribsistemo.",
 	"apihelp-languagesearch-param-search": "Serĉa ĉeno.",
 	"apihelp-languagesearch-param-typos": "Nombro de literumaj eraroj permesataj en la serĉa teksto.",
 	"apihelp-languagesearch-example-1": "Serĉi por \"Te\"",
 	"apihelp-languagesearch-example-2": "Serĉi por \"ഫി\"",
 	"apihelp-languagesearch-example-3": "Serĉi por \"ഫി\", kun maksimume unu tajperaro",
-	"apihelp-ulslocalization-description": "Akiri tradukon de Universala Lingvo-Elektilo en la donita lingvo.",
 	"apihelp-ulslocalization-summary": "Akiri tradukon de Universala Lingvo-Elektilo en la donita lingvo.",
 	"apihelp-ulslocalization-param-language": "Lingva kodo.",
 	"apihelp-ulslocalization-example-1": "Akiri tradukon en tamula lingvo",

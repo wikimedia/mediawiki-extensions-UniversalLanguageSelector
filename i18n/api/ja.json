@@ -6,14 +6,12 @@
 			"Sujiniku"
 		]
 	},
-	"apihelp-languagesearch-description": "任意のスクリプトで言語を検索。",
 	"apihelp-languagesearch-summary": "任意のスクリプトで言語名を検索。",
 	"apihelp-languagesearch-param-search": "検索文字列。",
 	"apihelp-languagesearch-param-typos": "検索文字列で受容される間違った文字表記の数。",
 	"apihelp-languagesearch-example-1": "「Te」を検索",
 	"apihelp-languagesearch-example-2": "「ഫി」を検索",
 	"apihelp-languagesearch-example-3": "「ഫി」を検索、誤字は1つ以内",
-	"apihelp-ulslocalization-description": "ULSの当該言語訳を取得。",
 	"apihelp-ulslocalization-summary": "ULSの当該言語訳を取得。",
 	"apihelp-ulslocalization-param-language": "言語コード",
 	"apihelp-ulslocalization-example-1": "タミル語に翻訳",

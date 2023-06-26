@@ -6,19 +6,16 @@
 			"Sayginer"
 		]
 	},
-	"apihelp-languagesearch-description": "Herhangi bir betikte dil isimlerini arayın.",
 	"apihelp-languagesearch-summary": "Herhangi bir betikte dil isimlerini arayın.",
 	"apihelp-languagesearch-param-search": "Arama dizisi.",
 	"apihelp-languagesearch-param-typos": "Arama dizisinde izin verilen yazım hatası sayısı.",
 	"apihelp-languagesearch-example-1": "\"Te\" için ara",
 	"apihelp-languagesearch-example-2": "\"ഫി\" için ara",
 	"apihelp-languagesearch-example-3": "\"ഫി\" için arama yapın",
-	"apihelp-ulslocalization-description": "Verilen dilde ULS yerelleştirmeyi alın.",
 	"apihelp-ulslocalization-summary": "Verilen dilde ULS yerelleştirmeyi alın.",
 	"apihelp-ulslocalization-param-language": "Dil kodu.",
 	"apihelp-ulslocalization-example-1": "Tamil yerelleştirmesi alın",
 	"apihelp-ulslocalization-example-2": "Hintçe yerelleştirmesi alın",
-	"apihelp-ulssetlang-description": "Kullanıcının tercih ettiği arayüz dilini güncelleyin.",
 	"apihelp-ulssetlang-summary": "Kullanıcının tercih ettiği arayüz dilini güncelleyin.",
 	"apihelp-ulssetlang-param-languagecode": "Tercih edilen dil kodu.",
 	"apierror-ulssetlang-anon-notallowed": "Anonim kullanıcıların arayüz dilini değiştirmesine izin verilmez."

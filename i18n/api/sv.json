@@ -6,19 +6,16 @@
 			"WikiPhoenix"
 		]
 	},
-	"apihelp-languagesearch-description": "Sök efter språknamn i valfritt skriftsystem.",
 	"apihelp-languagesearch-summary": "Sök efter språknamn i valfritt skriftsystem.",
 	"apihelp-languagesearch-param-search": "Söksträng.",
 	"apihelp-languagesearch-param-typos": "Antalet felstavningar som tillåts i söksträngen.",
 	"apihelp-languagesearch-example-1": "Sök efter \"Te\"",
 	"apihelp-languagesearch-example-2": "Sök efter \"ഫി\"",
 	"apihelp-languagesearch-example-3": "Sök efter \"ഫി\", tillåter ett stavfel",
-	"apihelp-ulslocalization-description": "Få lokalanpassningen av ULS på ett visst språk.",
 	"apihelp-ulslocalization-summary": "Få lokalanpassningen av ULS på ett visst språk.",
 	"apihelp-ulslocalization-param-language": "Språkkod.",
 	"apihelp-ulslocalization-example-1": "Få lokalanpassning för Tamil",
 	"apihelp-ulslocalization-example-2": "Få lokalanpassning för Hindi",
-	"apihelp-ulssetlang-description": "Uppdatera användarens föredragna gränssnittsspråk.",
 	"apihelp-ulssetlang-summary": "Uppdatera det språk som användaren valt för gränssnittet.",
 	"apihelp-ulssetlang-param-languagecode": "Den föredragna språkkoden.",
 	"apierror-ulssetlang-anon-notallowed": "Anonyma användare tillåts inte ändra gränssnittsspråket."

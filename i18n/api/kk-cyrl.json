@@ -4,7 +4,6 @@
 			"Arystanbek"
 		]
 	},
-	"apihelp-languagesearch-description": "Кез келген шрифттегі тіл атауларын іздеу.",
 	"apihelp-languagesearch-param-search": "Іздеу жолы.",
 	"apihelp-languagesearch-param-typos": "Іздеу жолында дұрыс жазу ережесін бұзуына рұқсат етілген саны",
 	"apihelp-languagesearch-example-1": "«Te» үшін іздеу",

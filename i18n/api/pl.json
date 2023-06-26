@@ -5,7 +5,6 @@
 			"Msz2001"
 		]
 	},
-	"apihelp-languagesearch-description": "Szukaj nazw języków zapisywanych dowolnym pismem.",
 	"apihelp-languagesearch-summary": "Szukaj nazw języków zapisywanych dowolnym pismem.",
 	"apihelp-languagesearch-param-search": "Wyszukaj tekst.",
 	"apihelp-languagesearch-param-typos": "Dozwolona liczba literówek w wyszukiwanym ciągu.",

@@ -4,14 +4,12 @@
 			"Sky Harbor"
 		]
 	},
-	"apihelp-languagesearch-description": "Maghanap ng mga pangalan ng wika sa anumang eskrito.",
 	"apihelp-languagesearch-summary": "Maghanap ng mga pangalan ng wika sa anumang eskrito.",
 	"apihelp-languagesearch-param-search": "Linya ng paghahanap.",
 	"apihelp-languagesearch-param-typos": "Bilang ng mga kamalian sa pagbabaybay na pinapahintulutan sa linya ng paghahanap.",
 	"apihelp-languagesearch-example-1": "Maghanap para sa \"Te\"",
 	"apihelp-languagesearch-example-2": "Maghanap para sa \"ഫി\"",
 	"apihelp-languagesearch-example-3": "Maghanap para sa \"ഫി\", na maaaring may isang kamalian sa pagbabaybay",
-	"apihelp-ulslocalization-description": "Kunin ang lokalisasyon ng ULS sa ibinigay na wika.",
 	"apihelp-ulslocalization-summary": "Kunin ang lokalisasyon ng ULS sa ibinigay na wika.",
 	"apihelp-ulslocalization-param-language": "Kodigo ng wika.",
 	"apihelp-ulslocalization-example-1": "Kunin ang lokalisasyon sa Tamil",

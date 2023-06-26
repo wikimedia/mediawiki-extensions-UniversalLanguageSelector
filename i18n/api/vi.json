@@ -5,18 +5,15 @@
 			"Minh Nguyen"
 		]
 	},
-	"apihelp-languagesearch-description": "Tìm kiếm tên ngôn ngữ trong bất kỳ tập lệnh nào.",
 	"apihelp-languagesearch-summary": "Tìm kiếm tên ngôn ngữ trong bất kỳ tập lệnh nào.",
 	"apihelp-languagesearch-param-search": "Chuỗi tìm kiếm.",
 	"apihelp-languagesearch-param-typos": "Số lỗi chính tả được cho phép trong chuỗi tìm kiếm.",
 	"apihelp-languagesearch-example-1": "Tìm kiếm cho “Te”",
 	"apihelp-languagesearch-example-2": "Tìm kiếm cho “ഫി”",
 	"apihelp-languagesearch-example-3": "Tìm kiếm cho “ഫി” mà cho phép một lỗi chính tả",
-	"apihelp-ulslocalization-description": "Lấy bản dịch ULS trong ngôn ngữ được chỉ định.",
 	"apihelp-ulslocalization-param-language": "Chuỗi ngôn ngữ.",
 	"apihelp-ulslocalization-example-1": "Lấy bản dịch tiếng Tamil",
 	"apihelp-ulslocalization-example-2": "Lấy bản dịch tiếng Hindi",
-	"apihelp-ulssetlang-description": "Cập nhật ngôn ngữ giao diện ưa thích của người dùng.",
 	"apihelp-ulssetlang-summary": "Cập nhật ngôn ngữ giao diện ưa thích của người dùng.",
 	"apihelp-ulssetlang-param-languagecode": "Mã ngôn ngữ ưa thích.",
 	"apierror-ulssetlang-anon-notallowed": "Người dùng ẩn danh không được phép thay đổi ngôn ngữ giao diện."

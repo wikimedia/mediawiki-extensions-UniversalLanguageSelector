@@ -6,14 +6,12 @@
 			"Toliño"
 		]
 	},
-	"apihelp-languagesearch-description": "Procurar nomes de lingua en calquera script.",
 	"apihelp-languagesearch-summary": "Procurar nomes de lingua en calquera script.",
 	"apihelp-languagesearch-param-search": "Cadea de procura.",
 	"apihelp-languagesearch-param-typos": "Número de erros ortográficos permitidos na cadea de procura.",
 	"apihelp-languagesearch-example-1": "Procurar \"Te\"",
 	"apihelp-languagesearch-example-2": "Procurar \"ഫി\"",
 	"apihelp-languagesearch-example-3": "Procurar \"ഫി\", permitindo un erro ortográfico",
-	"apihelp-ulslocalization-description": "Obter a localización do ULS na lingua dada.",
 	"apihelp-ulslocalization-summary": "Obter a localización do ULS na lingua dada.",
 	"apihelp-ulslocalization-param-language": "Código da lingua.",
 	"apihelp-ulslocalization-example-1": "Obter a localización en támil",

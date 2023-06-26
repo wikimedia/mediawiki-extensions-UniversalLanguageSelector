@@ -4,19 +4,16 @@
 			"Eleassar"
 		]
 	},
-	"apihelp-languagesearch-description": "Poišče imena jezikov v kateri koli pisavi.",
 	"apihelp-languagesearch-summary": "Poišče imena jezikov v kateri koli pisavi.",
 	"apihelp-languagesearch-param-search": "Iskalni niz.",
 	"apihelp-languagesearch-param-typos": "Dovoljeno število črkovalnih napak v iskalnem nizu.",
 	"apihelp-languagesearch-example-1": "Poišči »Te«",
 	"apihelp-languagesearch-example-2": "Poišči »ഫി«",
 	"apihelp-languagesearch-example-3": "Poišče »ഫി«, kar dopušča eno tipkarsko napako",
-	"apihelp-ulslocalization-description": "Pridobi lokalizacijo ULS v predloženem jeziku.",
 	"apihelp-ulslocalization-summary": "Pridobi lokalizacijo ULS v predloženem jeziku.",
 	"apihelp-ulslocalization-param-language": "Oznaka jezika.",
 	"apihelp-ulslocalization-example-1": "Pridobi tamilsko lokalizacijo",
 	"apihelp-ulslocalization-example-2": "Pridobi hindijsko lokalizacijo",
-	"apihelp-ulssetlang-description": "Posodobite želeni jezik uporabniškega vmesnika.",
 	"apihelp-ulssetlang-summary": "Posodobite želeni jezik uporabniškega vmesnika.",
 	"apihelp-ulssetlang-param-languagecode": "Oznaka prednostnega jezika.",
 	"apierror-ulssetlang-anon-notallowed": "Anonimnim uporabnikom ni dovoljeno spreminjati jezika vmesnika."

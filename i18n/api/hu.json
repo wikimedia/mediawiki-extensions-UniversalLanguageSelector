@@ -6,14 +6,12 @@
 			"Tacsipacsi"
 		]
 	},
-	"apihelp-languagesearch-description": "Nyelvnevek keresése bármilyen írásrendszerrel.",
 	"apihelp-languagesearch-summary": "Nyelvnevek keresése bármilyen írásrendszerrel.",
 	"apihelp-languagesearch-param-search": "A keresőkifejezés.",
 	"apihelp-languagesearch-param-typos": "A keresőkifejezésben megengedett elgépelések száma.",
 	"apihelp-languagesearch-example-1": "Keresés a „Te” kifejezésre",
 	"apihelp-languagesearch-example-2": "Keresés „ഫി” kifejezésre",
 	"apihelp-languagesearch-example-3": "Keresés „ഫി” kifejezésre, egy elgépelést megengedve",
-	"apihelp-ulslocalization-description": "Az ULS fordításának lekérése egy adott nyelven.",
 	"apihelp-ulslocalization-summary": "Az ULS fordításának lekérése egy adott nyelven.",
 	"apihelp-ulslocalization-param-language": "Nyelvkód.",
 	"apihelp-ulslocalization-example-1": "Tamil fordítás lekérése",

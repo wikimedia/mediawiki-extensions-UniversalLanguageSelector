@@ -7,19 +7,16 @@
 			"Orbot707"
 		]
 	},
-	"apihelp-languagesearch-description": "Nameyê zıwani nuşteyê raştameyeyi de geyreno cı.",
 	"apihelp-languagesearch-summary": "Yew dosyaya kodi miyan de nameyê zıwanan cı geyre.",
 	"apihelp-languagesearch-param-search": "Rêza cıgeyrayışi.",
 	"apihelp-languagesearch-param-typos": "Amora cerğkerdena ratenanê xetayanê imla",
 	"apihelp-languagesearch-example-1": "\"Te\" de bıvin",
 	"apihelp-languagesearch-example-2": "\"ഫി\" de bıvin",
 	"apihelp-languagesearch-example-3": "Qandé  „ഫി“, inlanrê mısade bıgi",
-	"apihelp-ulslocalization-description": "Zıwano daye ra lokalizasyonê ULSi bıgê.",
 	"apihelp-ulslocalization-summary": "Lokalizasyonê ULSi zıwananê diyayeyan de cı geyre.",
 	"apihelp-ulslocalization-param-language": "Kodê zıwani.",
 	"apihelp-ulslocalization-example-1": "Lokalizasyonê Tamili ano",
 	"apihelp-ulslocalization-example-2": "Lokalizasyonê Hindi ano",
-	"apihelp-ulssetlang-description": "Verrıyê tercihê zıwanê karberi rocane kerê",
 	"apihelp-ulssetlang-summary": "Verriyê tercihê zıwanê karberi rocane kerê",
 	"apihelp-ulssetlang-param-languagecode": "Weçineyaye kodê zıwani",
 	"apierror-ulssetlang-anon-notallowed": "Karberanê anoniman rê verrıyê zıwani vurnayışi rê mısade nêdeyayo"

@@ -10,19 +10,16 @@
 			"Wladek92"
 		]
 	},
-	"apihelp-languagesearch-description": "Rechercher les noms de langue dans n’importe quel script.",
 	"apihelp-languagesearch-summary": "Rechercher des noms de langage dans n’importe quel script.",
 	"apihelp-languagesearch-param-search": "Chaîne recherchée.",
 	"apihelp-languagesearch-param-typos": "Nombre de fautes d’orthographe permises dans la chaîne de recherche.",
 	"apihelp-languagesearch-example-1": "Rechercher « Te »",
 	"apihelp-languagesearch-example-2": "Rechercher « ഫി » (''phi'' écrit en malayalam)",
 	"apihelp-languagesearch-example-3": "Rechercher « ഫി » (''phi'' écrit en malayalam), avec une erreur autorisée",
-	"apihelp-ulslocalization-description": "Obtenir la régionalisation de ULS dans la langue donnée.",
 	"apihelp-ulslocalization-summary": "Obtenir la traduction de ULS dans la langue donnée.",
 	"apihelp-ulslocalization-param-language": "Code de langue.",
 	"apihelp-ulslocalization-example-1": "Obtenir la régionalisation en tamoul",
 	"apihelp-ulslocalization-example-2": "Obtenir la régionalisation en hindi",
-	"apihelp-ulssetlang-description": "Mettre à jour la langue d’interface préférée de l’utilisateur.",
 	"apihelp-ulssetlang-summary": "Mettre à jour la langue d’interface préférée de l’utilisateur.",
 	"apihelp-ulssetlang-param-languagecode": "Le code de la langue préférée.",
 	"apierror-ulssetlang-anon-notallowed": "Les utilisateurs anonymes ne peuvent pas modifier la langue de l’interface."

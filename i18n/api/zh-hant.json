@@ -8,19 +8,16 @@
 			"Winston Sung"
 		]
 	},
-	"apihelp-languagesearch-description": "在任何字母裡搜尋語言名稱。",
 	"apihelp-languagesearch-summary": "在任何字母裡搜尋語言名稱。",
 	"apihelp-languagesearch-param-search": "搜尋字串。",
 	"apihelp-languagesearch-param-typos": "允許於搜尋字串中的拼寫錯誤數量。",
 	"apihelp-languagesearch-example-1": "搜尋 \"Te\"",
 	"apihelp-languagesearch-example-2": "搜尋 \"ഫി\"",
 	"apihelp-languagesearch-example-3": "搜尋 \"ഫി\"，可允許一個錯字",
-	"apihelp-ulslocalization-description": "取得指定語言的在地化 ULS。",
 	"apihelp-ulslocalization-summary": "取得指定語言的在地化 ULS。",
 	"apihelp-ulslocalization-param-language": "語言代碼。",
 	"apihelp-ulslocalization-example-1": "取得泰米爾語本地化",
 	"apihelp-ulslocalization-example-2": "取得印度語本地化",
-	"apihelp-ulssetlang-description": "更新使用者的偏好介面語言。",
 	"apihelp-ulssetlang-summary": "更新使用者的偏好介面語言。",
 	"apihelp-ulssetlang-param-languagecode": "首選語言代碼。",
 	"apierror-ulssetlang-anon-notallowed": "匿名使用者不被允許更改介面語言。"

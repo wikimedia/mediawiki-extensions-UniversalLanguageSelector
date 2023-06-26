@@ -5,13 +5,11 @@
 			"Macofe"
 		]
 	},
-	"apihelp-languagesearch-description": "Buscar nombres de idiomas en cualquier sistema de escritura.",
 	"apihelp-languagesearch-param-search": "Buscar cadena.",
 	"apihelp-languagesearch-param-typos": "Número de faltas de ortografía permitidas en la cadena de búsqueda.",
 	"apihelp-languagesearch-example-1": "Buscar \"Te\"",
 	"apihelp-languagesearch-example-2": "Buscar \"ഫി\"",
 	"apihelp-languagesearch-example-3": "Buscar \"ഫി\", permitiendo un error tipográfico",
-	"apihelp-ulslocalization-description": "Obtener la localización de ULS en el idioma especificado.",
 	"apihelp-ulslocalization-param-language": "Código de idioma.",
 	"apihelp-ulslocalization-example-1": "Recuperar la traducción al tamil",
 	"apihelp-ulslocalization-example-2": "Recuperar la traducción al hindi",
