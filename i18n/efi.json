@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Samatics"
+			"Samatics",
+			"Emmikweok"
 		]
 	},
-	"uls-plang-title-languages": "Mme usem"
+	"uls-plang-title-languages": "Mme usem",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Kiet en̄wen|$1 en̄wen}}"
 }
