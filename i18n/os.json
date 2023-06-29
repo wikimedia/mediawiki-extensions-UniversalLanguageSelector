@@ -4,7 +4,8 @@
 			"Amikeco",
 			"Bouron",
 			"Xaris333",
-			"Xð"
+			"Xð",
+			"Таймураз"
 		]
 	},
 	"uls-desc": "Архайæгæн дæтты цалдæр фадат æвзаг равзарынæн æмæ йын уаг сæвæрынæн",
@@ -41,5 +42,6 @@
 	"ext-uls-input-disable": "Фыссыны фадæтты фæрæзтæ ахицæн кæнын",
 	"ext-uls-input-enable": "Фыссыны фадæтты фæрæзтæ баиу кæнын",
 	"ext-uls-input-disable-info": "Фыссыны фадæтты фæрæзтæ хицæн сты.",
-	"ext-uls-input-settings-noime": "Ницы фыссыны фадат ис ацы æвзагæн."
+	"ext-uls-input-settings-noime": "Ницы фыссыны фадат ис ацы æвзагæн.",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|æмæ ма $1}}"
 }
