@@ -8,7 +8,7 @@
 		]
 	},
 	"uls-desc": "Бә иштирокәкә дојдә ҹурбәҹурә чәм черә бәбе зывони выжније ијән әј чәмисә ној",
-	"uls-plang-title-languages": "Zıvonon",
+	"uls-plang-title-languages": "Zyvonon",
 	"ext-uls-select-language-settings-icon-tooltip": "Зывони чәмисә ној",
 	"ext-uls-undo-language-tooltip-text": "Навынә zıvon $1",
 	"ext-uls-undo-language-tooltip-text-local": "Бо ым вики zıvon овахтә быә. Осә быкәнә шымә [[Special:GlobalPreferences|глобәлә сәбәро]], быдә һар викијонәдә зывони овахте.",
@@ -58,7 +58,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Дәшәҹо диләгон пекарде бәбе һар вахтәдә бә зывони сәбәроәдә.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Дәшәҹо диләгон пекардә бәбе һар вахтәдә бә зывонон сәбәроәдә че зывонон сијоһи тоно.",
 	"ext-uls-language-settings-applying": "Око дој...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|И гылән|$1 һәнијән}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|I gylə|$1 hənijən}}",
 	"ext-uls-compact-link-info": "һәммә зывонон (иминә выжын - зывононин, комон рәјрә око дојдәјон шымә ијән ҹо кәсон)",
 	"prefs-languages": "Zıvonon",
 	"ext-uls-compact-language-links-preference": "Око дој [[$1|зывоно компакт сијоһи]] де бә шымә дамә зывонон.",
