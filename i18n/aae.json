@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Martindimaggio"
+		]
+	},
+	"uls-plang-title-languages": "Gljuhë",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Gnatrë|Tjerë $1}}"
+}
