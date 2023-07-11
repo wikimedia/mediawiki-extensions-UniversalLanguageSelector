@@ -58,5 +58,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Gallwch alluogi'r offer mewnbynnu unrhyw bryd, drwy'r gosodiadau iaith.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Gallwch alluogi'r offer mewnbynnu unrhyw bryd drwy'r gosodiadau iaith, wrth ymyl rhestr yr ieithoedd.",
 	"ext-uls-language-settings-applying": "Wrthi'n gosod...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Un arall|$1 eraill}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Un arall|$1 eraill}}",
+	"prefs-languages": "Ieithoedd",
+	"ext-uls-compact-language-links-preference": "Defnyddio [[$1|rhestr ieithoedd gryno]], ag ieithoedd sy'n berthnasol ichi."
 }
