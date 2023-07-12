@@ -1,5 +1,6 @@
 .uls-trigger {
 	background: url( ../images/language.svg ) no-repeat left center;
+	padding-left: 24px;
 }
 
 .uls-menu {
