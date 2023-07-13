@@ -190,7 +190,9 @@
 			this.compactList[ language ].parentNode.style.display = '';
 		}
 
-		this.addTrigger();
+		mw.loader.using( 'mediawiki.ui.button' ).then( function () {
+			this.addTrigger();
+		} );
 
 		mw.hook( 'mw.uls.compactlinks.initialized' ).fire( true );
 	};
