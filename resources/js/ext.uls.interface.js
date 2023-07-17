@@ -578,7 +578,7 @@
 
 		ev.preventDefault();
 
-		mw.loader.using( 'ext.uls.mediawiki' ).then( function () {
+		mw.loader.using( [ 'ext.uls.mediawiki', 'mediawiki.ui.button' ] ).then( function () {
 			var parent, languageNodes, standalone, uls;
 
 			parent = document.querySelectorAll( '.mw-portlet-lang, #p-lang' )[ 0 ];

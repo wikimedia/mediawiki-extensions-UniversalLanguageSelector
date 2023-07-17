@@ -172,8 +172,7 @@
 			"dependencies": [
 				"mediawiki.jqueryMsg",
 				"mediawiki.language",
-				"ext.uls.common",
-				"mediawiki.ui.button"
+				"ext.uls.common"
 			],
 			"messages": [
 				"ext-uls-compact-link-count",
