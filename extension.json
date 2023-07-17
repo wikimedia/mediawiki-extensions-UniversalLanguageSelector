@@ -157,7 +157,6 @@
 				"vector-2022": "css/ext.uls-vector.less"
 			},
 			"dependencies": [
-				"mediawiki.ui.button",
 				"jquery.uls.data",
 				"mediawiki.api",
 				"mediawiki.cookie",
@@ -173,7 +172,8 @@
 			"dependencies": [
 				"mediawiki.jqueryMsg",
 				"mediawiki.language",
-				"ext.uls.common"
+				"ext.uls.common",
+				"mediawiki.ui.button"
 			],
 			"messages": [
 				"ext-uls-compact-link-count",
