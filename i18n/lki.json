@@ -3,7 +3,8 @@
 		"authors": [
 			"Arash71",
 			"Hosseinblue",
-			"Lakzon"
+			"Lakzon",
+			"Amire80"
 		]
 	},
 	"uls-desc": "به کاربر راه‌های مختلفی برای انتخاب زبان و تنظیم تنظیمات زبان  می‌دهد",
@@ -24,7 +25,7 @@
 	"ext-uls-language-buttons-help": "تغییر زبان منوها. زبان متن‌های ویکی تغییر نمی‌یابد.",
 	"ext-uls-display-settings-font-settings": "تنظیمات قلم",
 	"ext-uls-display-settings-ui-language": "نمایش زوون",
-	"ext-uls-display-settings-anon-label": ":نمایش زوون",
+	"ext-uls-display-settings-anon-label": "نمایش زوون:",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (به مانند مطالب)",
 	"ext-uls-display-settings-anon-log-in-cta": " [[Special:UserLogin|ورود]] برای انتخاب زبان متفاوتی برای منوها.",
 	"ext-uls-webfonts-settings-title": "دریافت قلم‌های مورد نیاز",
