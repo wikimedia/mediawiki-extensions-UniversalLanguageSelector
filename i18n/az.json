@@ -8,9 +8,11 @@
 			"Wertuose"
 		]
 	},
+	"uls-desc": "İstifadəçiyə dil seçmək və dil parametrlərini tənzimləmək üçün bir neçə yol təqdim edir",
 	"uls-plang-title-languages": "Dillər",
 	"ext-uls-select-language-settings-icon-tooltip": "Dilin təyin edilməsi",
 	"ext-uls-undo-language-tooltip-text": "Əvvəlki dil: $1",
+	"ext-uls-undo-language-tooltip-text-local": "Bu viki üçün dil dəyişdirilib. Bütün vikilərin dilini dəyişmək üçün [[Special:GlobalPreferences|qlobal nizamlamalarınıza]] baxın.",
 	"ext-uls-language-settings-preferences-link": "Daha çox dil parametri",
 	"ext-uls-display-settings-title": "Görünüş parametrləri",
 	"ext-uls-display-settings-language-tab": "Dil",
