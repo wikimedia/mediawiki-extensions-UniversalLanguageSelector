@@ -9,7 +9,7 @@
 	"uls-desc": "Колдонуучуга тил тандоонун бир нече жолун берип, тил ырастоолорду аткарууга мүмкүн кылат.",
 	"uls-plang-title-languages": "Тилдер",
 	"ext-uls-select-language-settings-icon-tooltip": "Тилдин жөндөөлөрү",
-	"ext-uls-undo-language-tooltip-text": "Мурдагы тили: $1",
+	"ext-uls-undo-language-tooltip-text": "Мурдагы тил: $1",
 	"ext-uls-language-settings-preferences-link": "Кошумча тил ырастоолору",
 	"ext-uls-display-settings-title": "Көрүнүш ырастоолору",
 	"ext-uls-display-settings-language-tab": "Тили",
@@ -19,7 +19,7 @@
 	"ext-uls-language-settings-title": "Тилдин жөндөөлөрү",
 	"ext-uls-language-settings-apply": "Ырастоолорду колдонуу",
 	"ext-uls-language-settings-cancel": "Жокко чыгаруу",
-	"ext-uls-language-buttons-help": "Менюнун тилин өзгөртүү, Мазмундун тили өзгөртүлбөйт.",
+	"ext-uls-language-buttons-help": "Интерфейс тилин өзгөртүү. Мазмундун тилине таасир этилбейт.",
 	"ext-uls-display-settings-font-settings": "Шрифт ырастоолору",
 	"ext-uls-display-settings-ui-language": "Көрүнүш тили",
 	"ext-uls-display-settings-anon-label": "Көрүнүш тили",
@@ -34,5 +34,6 @@
 	"ext-uls-input-settings-more-languages-tooltip": "Кошумча тилдер",
 	"jquery-ime-other-languages": "Башка тилдерде",
 	"jquery-ime-help": "Жардам",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|дагы бир|дагы $1}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|дагы бир|дагы $1}}",
+	"prefs-languages": "Тилдер"
 }
