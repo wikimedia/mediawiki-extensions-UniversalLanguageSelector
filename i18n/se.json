@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Yupik",
-			"Kimberli Mäkäräinen (WMNO)"
+			"Kimberli Mäkäräinen (WMNO)",
+			"Caden99"
 		]
 	},
 	"uls-plang-title-languages": "Gielat",
@@ -29,6 +30,7 @@
 	"jquery-ime-other-languages": "Eará gielat",
 	"jquery-ime-help": "Veahkki",
 	"ext-uls-input-disable-notification-undo": "Gáđa",
+	"ext-uls-compact-link-count": "{{PLURAL:$1.Ovtta eanet. $1 eanet}}",
 	"prefs-languages": "Gielat",
 	"ext-uls-setlang-unknown-error": "Dovdameahttun meattáhus",
 	"ext-uls-setlang-heading": "Háliidatgo don molsut geavahanlavtta giela?"
