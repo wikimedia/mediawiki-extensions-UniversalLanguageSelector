@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Winston Sung"
+		]
+	},
+	"uls-desc": "Daje korisniku nekoliko načina da izabere jezik i da prilagodi postavke jezika",
+	"uls-plang-title-languages": "Jezici",
+	"ext-uls-select-language-settings-icon-tooltip": "Postavke jezika",
+	"ext-uls-language-settings-title": "Postavke jezika",
+	"ext-uls-language-settings-cancel": "Otkaži",
+	"jquery-ime-other-languages": "Drugi jezici",
+	"ext-uls-compact-link-count": "Još {{PLURAL:$1|1=jedan|$1}}"
+}
