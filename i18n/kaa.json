@@ -29,8 +29,16 @@
 	"ext-uls-webfonts-settings-title": "Zárúrlik tuwılǵanda shriftlerdi júklep alıw.",
 	"ext-uls-webfonts-settings-info": "Kerekli háripti avtomalıq túrde júklep alıw hám qálegen háripti tańlawǵa ruqsat beriw.",
 	"ext-uls-webfonts-settings-info-link": "Kóbirek maǵlıwmat",
+	"ext-uls-input-settings-title": "Engiziw sazlawları",
 	"ext-uls-input-settings-title-short": "Ornatıw",
 	"ext-uls-input-settings-desc": "Basqa tilde jazasız ba?",
+	"ext-uls-input-settings-ui-language": "Jazıw ushın qollanılǵan til",
+	"ext-uls-ime-help": "Qalay qollanıladı",
+	"ext-uls-disable-input-method": "Jergilikli klaviaturanı qollanıw",
+	"jquery-ime-other-languages": "Basqa tiller",
+	"jquery-ime-disable-text": "Jergilikli klaviaturanı qollanıw",
+	"ext-uls-input-disable": "Engiziw quralların óshiriw",
+	"ext-uls-input-enable": "Engiziw quralların qosıw",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Taǵı birew|$1 taǵı}}",
 	"prefs-languages": "Tiller"
 }
