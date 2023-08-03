@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"El-hussain14"
+		]
+	},
+	"uls-plang-title-languages": "bòo",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ngodom|$1 ngodom}}"
+}
