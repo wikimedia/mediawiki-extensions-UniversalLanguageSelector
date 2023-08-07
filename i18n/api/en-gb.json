@@ -5,5 +5,6 @@
 		]
 	},
 	"apihelp-ulslocalization-summary": "Get the localisation of ULS in the given language.",
-	"apihelp-ulslocalization-example-1": "Get Tamil localisation"
+	"apihelp-ulslocalization-example-1": "Get Tamil localisation",
+	"apihelp-ulslocalization-example-2": "Get Hindi localisation"
 }
