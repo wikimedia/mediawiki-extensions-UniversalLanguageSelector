@@ -9,6 +9,7 @@
 			"Larjona",
 			"Macofe",
 			"MarcoAurelio",
+			"No se",
 			"Ovruni",
 			"Pginer",
 			"Vivaelcelta"
@@ -77,5 +78,8 @@
 	"ext-uls-setlang-accept": "Aceptar cambio",
 	"ext-uls-setlang-loading": "Aplicando…",
 	"ext-uls-setlang-cancel": "No cambiar",
+	"ext-uls-actions-menu-language-settings-item-label": "Abrir opciones de idioma",
+	"ext-uls-empty-state-header-actions-available": "Aún no hay idiomas. Agregar uno nuevo?",
+	"ext-uls-empty-state-desc-actions-available": " Haz que el contenido esté disponible en más idiomas.",
 	"ext-uls-add-languages-button-label": "Añadir idiomas"
 }
