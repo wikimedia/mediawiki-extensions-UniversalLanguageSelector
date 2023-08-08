@@ -10,7 +10,9 @@
 			"Macofe",
 			"Ovruni",
 			"Pginer",
-			"Vivaelcelta"
+			"Vivaelcelta",
+			"MarcoAurelio",
+			"No se"
 		]
 	},
 	"uls-desc": "Ofrece al usuario varias formas para seleccionar un idioma y ajustar su configuración",
@@ -75,5 +77,8 @@
 	"ext-uls-setlang-heading": "¿Quieres cambiar el idioma de la interfaz?",
 	"ext-uls-setlang-accept": "Aceptar cambio",
 	"ext-uls-setlang-loading": "Aplicando…",
-	"ext-uls-setlang-cancel": "No cambiar"
+	"ext-uls-setlang-cancel": "No cambiar",
+	"ext-uls-actions-menu-language-settings-item-label": "Abrir opciones de idioma",
+	"ext-uls-empty-state-header-actions-available": "Aún no hay idiomas. Agregar uno nuevo?",
+	"ext-uls-empty-state-desc-actions-available": " Haz que el contenido esté disponible en más idiomas."
 }
