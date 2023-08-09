@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Athram Rajkumar"
+		]
+	},
+	"ext-uls-compact-link-count": "{{PLURAL:$1|పెన ఒక్కోద్|$1 పెన}}"
+}
