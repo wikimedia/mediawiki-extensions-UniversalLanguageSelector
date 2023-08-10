@@ -194,7 +194,7 @@
 	}
 
 	function userCanChangeLanguage() {
-		return mw.config.get( 'wgULSAnonCanChangeLanguage' ) || !mw.user.isAnon();
+		return mw.config.get( 'wgULSAnonCanChangeLanguage' ) || mw.uls.isNamed();
 	}
 
 	/**

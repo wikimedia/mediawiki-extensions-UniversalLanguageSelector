@@ -28,20 +28,22 @@
 		// https://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript#Keys
 		this.preferenceName = 'uls-preferences';
 		this.username = mw.user.getName();
-		this.isAnon = mw.user.isAnon();
+		// For MW < 1.40. ext.uls.isNamed is inlined here to avoid dependency on ext.uls.common.
+		this.isNamed = typeof mw.user.isNamed === 'function' ? mw.user.isNamed() : !mw.user.isAnon();
 		this.preferences = null;
 		this.init();
 	};
 
 	ULSPreferences.prototype = {
 		init: function () {
-			if ( this.isAnon ) {
-				this.preferences = mw.storage.getObject( this.preferenceName );
-			} else {
+			if ( this.isNamed ) {
 				try {
 					this.preferences = JSON.parse( mw.user.options.get( this.preferenceName ) );
 				} catch ( e ) {
 				}
+
+			} else {
+				this.preferences = mw.storage.getObject( this.preferenceName );
 			}
 
 			if ( !$.isPlainObject( this.preferences ) ) {
@@ -78,12 +80,8 @@
 			var self = this;
 
 			callback = callback || function () {};
-			if ( this.isAnon ) {
-				// Anonymous user. Save preferences in local storage
-				mw.storage.setObject( this.preferenceName, this.preferences );
-				callback.call( this, true );
-			} else {
-				// Logged in user. Use MW APIs to change preferences
+			if ( this.isNamed ) {
+				// Registered user. Use MW APIs to change preferences
 				new mw.Api().saveOption(
 					this.preferenceName,
 					JSON.stringify( this.preferences )
@@ -92,6 +90,10 @@
 				} ).fail( function () {
 					callback.call( self, false );
 				} );
+			} else {
+				// Anonymous user. Save preferences in local storage
+				mw.storage.setObject( this.preferenceName, this.preferences );
+				callback.call( this, true );
 			}
 		}
 	};

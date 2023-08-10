@@ -63,7 +63,7 @@
 		// Track if event logging is enabled
 		mw.hook( 'mw.uls.interface.language.change' ).fire( language );
 
-		if ( mw.user.isAnon() ) {
+		if ( !mw.uls.isNamed() ) {
 			return changeLanguageAnon();
 		}
 
@@ -237,6 +237,15 @@
 		}
 
 		return ret;
+	};
+
+	/**
+	 * Determine if a user is named. Wrapper method is needed since mw.user.isNamed() was added in MW 1.40
+	 * For MW < 1.40
+	 * @returns {boolean}
+	 */
+	mw.uls.isNamed = function () {
+		return typeof mw.user.isNamed === 'function' ? mw.user.isNamed() : !mw.user.isAnon();
 	};
 
 }() );
