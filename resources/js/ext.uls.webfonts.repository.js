@@ -48,7 +48,8 @@
 			"OpenDyslexic"
 		],
 		"bn": [
-			"Siyam Rupali"
+			"Siyam Rupali",
+			"TiroBangla"
 		],
 		"bo": [
 			"BabelStoneTibetanSlim"
@@ -496,8 +497,8 @@
 		},
 		"AwamiNastaliq Bold": {
 			"fontweight": "bold",
-			"woff": "AwamiNastaliq/AwamiNastaliq-Bold.woff?c480f",
-			"woff2": "AwamiNastaliq/AwamiNastaliq-Bold.woff2?2a4eb"
+			"woff": "AwamiNastaliq/AwamiNastaliq-Bold.woff",
+			"woff2": "AwamiNastaliq/AwamiNastaliq-Bold.woff2"
 		},
 		"BabelStoneTibetanSlim": {
 			"woff": "BabelStoneTibetanSlim/BabelStoneTibetanSlim.woff?c48ba",
@@ -856,6 +857,18 @@
 		"TharLon": {
 			"woff": "TharLon/TharLon.woff?0df3e",
 			"woff2": "TharLon/TharLon.woff2?9012f"
+		},
+		"TiroBangla": {
+			"woff": "TiroBangla/TiroBangla-Regular.woff?85533",
+			"woff2": "TiroBangla/TiroBangla-Regular.woff2?436e2",
+			"variants": {
+				"italic": "TiroBangla Italic"
+			}
+		},
+		"TiroBangla Italic": {
+			"fontstyle": "italic",
+			"woff": "TiroBangla/TiroBangla-Italic.woff?9f7be",
+			"woff2": "TiroBangla/TiroBangla-Italic.woff2?12e77"
 		},
 		"Tuladha Jejeg": {
 			"woff": "TuladhaJejeg/TuladhaJejeg_gr.woff?7ebe2",
