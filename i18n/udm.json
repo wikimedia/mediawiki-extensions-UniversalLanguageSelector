@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Kaganer",
-			"Kotwys"
+			"Kotwys",
+			"Света Поторочина"
 		]
 	},
 	"uls-desc": "Юзчилы кыл бырйыны но кыл пуктэтъёсты тупатыны кӧня ке амалъёс сётэ",
@@ -20,7 +21,7 @@
 	"ext-uls-display-settings-desc": "Менюослэн но шрифтъёслэн кылзы",
 	"ext-uls-language-settings-title": "Кылъёслы настройкаос",
 	"ext-uls-language-settings-apply": "Пуктэтъёсты кутоно",
-	"ext-uls-language-settings-cancel": "Берытсконо",
+	"ext-uls-language-settings-cancel": "Берланьтон",
 	"ext-uls-language-buttons-help": "Менюлэсь кылзэ воштоно. Пуштрослэн кылыз уз воштӥськы.",
 	"ext-uls-display-settings-font-settings": "Шрифт пуктэтъёс",
 	"ext-uls-display-settings-ui-language": "Возьматон кыл",
