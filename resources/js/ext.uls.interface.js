@@ -194,7 +194,9 @@
 	}
 
 	function userCanChangeLanguage() {
-		return mw.config.get( 'wgULSAnonCanChangeLanguage' ) || mw.uls.isNamed();
+		return mw.config.get( 'wgULSAnonCanChangeLanguage' ) ||
+			// mw.user.isNamed() added in MW 1.40. Remove after MLEB drop support for MW < 1.40
+			typeof mw.user.isNamed === 'function' ? mw.user.isNamed() : !mw.user.isAnon();
 	}
 
 	/**
