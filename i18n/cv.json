@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Astahar",
 			"Chuvash2014"
 		]
 	},
 	"uls-plang-title-languages": "Чĕлхесем",
-	"jquery-ime-other-languages": "Урăх чĕлхесем"
+	"jquery-ime-other-languages": "Урăх чĕлхесем",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Туллирех|Тата $1}}"
 }

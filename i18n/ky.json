@@ -37,5 +37,7 @@
 	"jquery-ime-help": "Жардам",
 	"ext-uls-input-disable-notification-undo": "Жокко чыгаруу",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|дагы бир|дагы $1}}",
-	"prefs-languages": "Тилдер"
+	"prefs-languages": "Тилдер",
+	"ext-uls-setlang-unknown-error": "Белгисиз ката",
+	"ext-uls-setlang-accept": "Өзгөртүүнү ырастоо"
 }
