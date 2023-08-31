@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"Moshtank"
 		]
 	},
-	"uls-plang-title-languages": "زبانان"
+	"uls-plang-title-languages": "زبانان",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|یک دگہ برے|$1 زبانے}}"
 }
