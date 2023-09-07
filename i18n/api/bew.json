@@ -17,7 +17,7 @@
 	"apihelp-ulslocalization-example-1": "Dapetin penglokalan basa Tamil",
 	"apihelp-ulslocalization-example-2": "Dapetin penglokalan basa Hindi",
 	"apihelp-ulssetlang-description": "Perbaruin pemaké punya basa antermuka nyang didemenin.",
-	"apihelp-ulssetlang-summary": "Perbaruin pemaké punya basa antermuka nyang didemenin.",
+	"apihelp-ulssetlang-summary": "Perbaruin pemaké punya basa telampangan nyang didemenin.",
 	"apihelp-ulssetlang-param-languagecode": "Kode basa nyang didemenin.",
-	"apierror-ulssetlang-anon-notallowed": "Pemaké sondernama kaga' diboléin ngrobah basa antermuka."
+	"apierror-ulssetlang-anon-notallowed": "Pemaké sondernama kaga' diboléin ngrobah basa telampangan."
 }

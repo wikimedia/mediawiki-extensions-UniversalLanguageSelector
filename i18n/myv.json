@@ -2,9 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Rueter",
-			"Xð"
+			"Xð",
+			"Сантяй"
 		]
 	},
 	"uls-plang-title-languages": "Кельть",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Лия кель|$1 лия кельть}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Таго вейке|таго $1}}"
 }

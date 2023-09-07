@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Musaddam Idriss"
+		]
+	},
+	"uls-plang-title-languages": "Boo",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Nadi waadi|$1 nadi}}"
+}
