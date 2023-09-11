@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Benojan",
 			"Winston Sung"
 		]
 	},
 	"uls-plang-title-languages": "閒話",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|還有$1種閒話}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|還有$1種話}}"
 }
