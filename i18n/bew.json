@@ -30,7 +30,7 @@
 	"ext-uls-webfonts-settings-info": "Comot otomatis gaya tulisan nyang kaga' ada èn boléin milih hodeng hurup kedemenan.",
 	"ext-uls-webfonts-settings-info-link": "Inpormasi lebi lanjut",
 	"ext-uls-webfonts-select-for": "Pilih hodeng hurup bakal $1",
-	"ext-uls-webfonts-select-for-ui-info": "Hodeng hurup nyang dipilih bakal antermuka",
+	"ext-uls-webfonts-select-for-ui-info": "Hodeng hurup nyang dipilih bakal telampangan",
 	"ext-uls-webfonts-select-for-content-info": "Hodeng hurup nyang dipaké bakal isi",
 	"ext-uls-webfonts-system-font": "Hodeng hurup sistim",
 	"ext-uls-back-to-display-settings": "Balik ke setèlan pampangan",
@@ -63,7 +63,7 @@
 	"ext-uls-setlang-error": "Ngablu pas merbaruin lu punya basa pilihan. Kengabluan: $1",
 	"ext-uls-setlang-unknown-error": "Kengabluan nyang kaga' ditauin",
 	"ext-uls-setlang-message": "Sènggètan nyang lu ikutin minta' antermukanya dikasi unjuk di <strong>$1 ($2)</strong>",
-	"ext-uls-setlang-heading": "Ganti basa antermuka?",
+	"ext-uls-setlang-heading": "Ganti basa telampangan?",
 	"ext-uls-setlang-accept": "Terima perobahan",
 	"ext-uls-setlang-loading": "Nerepin...",
 	"ext-uls-setlang-cancel": "Jangan dirobah"
