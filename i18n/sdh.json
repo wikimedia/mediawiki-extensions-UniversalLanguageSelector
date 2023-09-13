@@ -2,16 +2,18 @@
 	"@metadata": {
 		"authors": [
 			"Kurdbuddha",
-			"Paraw2"
+			"Paraw2",
+			"TerranBoy"
 		]
 	},
 	"uls-plang-title-languages": "زوانەیل",
 	"ext-uls-display-settings-language-tab": "زوان",
 	"ext-uls-display-settings-fonts-tab": "فۆنتەیل",
 	"jquery-ime-other-languages": "زوانەیل ترەک",
-	"jquery-ime-help": "کۆمەک",
-	"ext-uls-setlang-unknown-error": "هەڵەێ نەناسیاێ",
+	"jquery-ime-help": "دەسمیەت",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|زوانێگ تر|$1 زوان تر}}",
+	"ext-uls-setlang-unknown-error": "هەڵەێ نەزانریاێ",
 	"ext-uls-setlang-heading": "تواید زوان پەیوەندییەگانت بگووڕنید؟",
-	"ext-uls-setlang-accept": "قەبوول گووڕانکاریەگە",
+	"ext-uls-setlang-accept": "قەبوول ئاڵشتکاریەگە",
 	"ext-uls-setlang-cancel": "نەگووڕنەی"
 }
