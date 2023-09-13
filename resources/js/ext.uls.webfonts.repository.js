@@ -497,8 +497,8 @@
 		},
 		"AwamiNastaliq Bold": {
 			"fontweight": "bold",
-			"woff": "AwamiNastaliq/AwamiNastaliq-Bold.woff",
-			"woff2": "AwamiNastaliq/AwamiNastaliq-Bold.woff2"
+			"woff": "AwamiNastaliq/AwamiNastaliq-Bold.woff?c480f",
+			"woff2": "AwamiNastaliq/AwamiNastaliq-Bold.woff2?2a4eb"
 		},
 		"BabelStoneTibetanSlim": {
 			"woff": "BabelStoneTibetanSlim/BabelStoneTibetanSlim.woff?c48ba",
