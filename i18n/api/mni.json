@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Awangba Mangang"
+			"Awangba Mangang",
+			"Amire80"
 		]
 	},
 	"apihelp-languagesearch-description": "ꯂꯣꯟ ꯃꯃꯤꯡꯁꯤꯡ ꯃꯌꯦꯛ ꯑꯃꯥꯍꯦꯛꯇꯒꯤ ꯗ ꯊꯤꯕꯥ ꯫",
@@ -10,7 +11,7 @@
 	"apihelp-languagesearch-param-typos": "ꯊꯤꯅꯕ ꯃꯔꯤꯗ(ꯂꯪ) ꯗ ꯁꯣꯏꯕ ꯌꯥꯕ ꯋꯥꯆꯨꯝ ꯃꯁꯤꯡ ꯫",
 	"apihelp-languagesearch-example-1": "\"Te\" ꯒꯤ ꯊꯤꯕꯥ",
 	"apihelp-languagesearch-example-2": " \"ഫി\" ꯒꯤ ꯊꯤꯕꯥ",
-	"apihelp-languagesearch-example-3": "\"ഫി\" ꯒꯤ ꯊꯤꯕꯥ,  allowing one typo",
+	"apihelp-languagesearch-example-3": "\"ഫി\" ꯒꯤ ꯊꯤꯕꯥ, allowing one typo",
 	"apihelp-ulslocalization-description": "ꯑꯄꯤꯕ ꯂꯣꯟ ꯑꯗꯨ ꯌꯨꯑꯦꯜꯑꯦꯁ ꯀꯤ ꯂꯣꯀꯦꯜꯂꯥꯏꯖꯦꯁꯟ ꯐꯪꯕ ꯫",
 	"apihelp-ulslocalization-summary": "ꯑꯄꯤꯕ ꯂꯣꯟ ꯑꯗꯨ ꯌꯨꯑꯦꯜꯑꯦꯁ ꯀꯤ ꯂꯣꯀꯦꯜꯂꯥꯏꯖꯦꯁꯟ ꯐꯪꯕ ꯫",
 	"apihelp-ulslocalization-param-language": "ꯂꯣꯟ ꯀꯣꯗ ꯫",
