@@ -74,7 +74,7 @@
 
 	function removeSetLangFromHistory() {
 		if ( 'setlang' in mw.Uri().query ) {
-			history.replaceState( null, 'no-setlang-url', currentUrlWithoutSetLang() );
+			history.replaceState( null, '', currentUrlWithoutSetLang() );
 		}
 	}
 
