@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Benel",
-			"Bunukwiki"
+			"Bunukwiki",
+			"Amire80"
 		]
 	},
 	"apihelp-languagesearch-description": "i amahicahica tu Script kilim kamu kalungangan.",
@@ -12,5 +13,5 @@
 	"apihelp-languagesearch-example-2": "kilim tu \"ഫി\"",
 	"apihelp-ulslocalization-param-language": "kamu a kodo.",
 	"apihelp-ulslocalization-example-1": "maala kamu nu Taymil sanuniyazu’en",
-	"apihelp-ulslocalization-example-2": "maala kamu nu intu  sanuniyazu’en"
+	"apihelp-ulslocalization-example-2": "maala kamu nu intu sanuniyazu’en"
 }
