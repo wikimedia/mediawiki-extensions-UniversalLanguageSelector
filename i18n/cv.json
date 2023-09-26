@@ -6,6 +6,25 @@
 		]
 	},
 	"uls-plang-title-languages": "Чĕлхесем",
+	"ext-uls-display-settings-language-tab": "Чӗлхе",
+	"ext-uls-display-settings-fonts-tab": "Шрифтсем",
+	"ext-uls-display-settings-title-short": "Епле курӑнӗ",
+	"ext-uls-display-settings-desc": "Менюпе шрифтсен чӗлхи",
+	"ext-uls-language-settings-title": "Чӗлхе ӗнерлевӗсем",
+	"ext-uls-webfonts-system-font": "Система шрифчӗ",
+	"ext-uls-ime-help": "Епле усӑ курмалла",
+	"ext-uls-disable-input-method": "Девайс клавиатурипе усӑ курмалла",
+	"ext-uls-input-settings-more-languages-tooltip": "Ытти чӗлхесем",
 	"jquery-ime-other-languages": "Урăх чĕлхесем",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Туллирех|Тата $1}}"
+	"jquery-ime-help": "Пулăшу",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Туллирех|Тата $1}}",
+	"ext-uls-setlang-accept": "Улшӑнӑва ҫирӗплет",
+	"ext-uls-setlang-loading": "Ҫирӗплететпӗр…",
+	"ext-uls-setlang-cancel": "Улӑштармалла мар",
+	"ext-uls-actions-menu-language-settings-item-label": "Чӗлхе ӗнерлевӗсене уҫ",
+	"ext-uls-empty-state-header": "Чӗлхесем хальлӗхе ҫук",
+	"ext-uls-empty-state-desc": "Хальлӗхе суйламалли чӗлхесем ҫук",
+	"ext-uls-empty-state-header-actions-available": "Чӗлхесем хальлӗхе ҫук. Ҫӗннине хушасшӑн-и?",
+	"ext-uls-empty-state-desc-actions-available": "Контентпа ытларах чӗлхепе паллашма май тӑвӑр.",
+	"ext-uls-add-languages-button-label": "Чӗлхесем хуш"
 }
