@@ -4,5 +4,6 @@
 			"FunLater"
 		]
 	},
-	"uls-plang-title-languages": "لغات"
+	"uls-plang-title-languages": "لغات",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|بعد في}} $1"
 }
