@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ukhant Erdemt"
+			"Ukhant Erdemt",
+			"Алия"
 		]
 	},
 	"uls-plang-title-languages": "Келмүд",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|One more|$1 more}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|нег келәр|$1 келәр}}"
 }
