@@ -77,5 +77,6 @@
 	"ext-uls-empty-state-header": "Aínda non hai linguas",
 	"ext-uls-empty-state-desc": "Non hai linguas dispoñibles polo momento",
 	"ext-uls-empty-state-header-actions-available": "Aínda non hai linguas. Quere engadir unha nova?",
-	"ext-uls-empty-state-desc-actions-available": "Faga que o contido estea dispoñible en máis linguas."
+	"ext-uls-empty-state-desc-actions-available": "Faga que o contido estea dispoñible en máis linguas.",
+	"ext-uls-add-languages-button-label": "Engadir linguas"
 }
