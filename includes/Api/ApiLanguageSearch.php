@@ -69,4 +69,11 @@ class ApiLanguageSearch extends ApiBase {
 				=> 'apihelp-languagesearch-example-3',
 		];
 	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function getHelpUrls() {
+		return 'https://www.mediawiki.org/wiki/Special:MyLanguage/API:Languagesearch';
+	}
 }
