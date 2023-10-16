@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"Баир Балданов"
 		]
 	},
-	"uls-plang-title-languages": "Хэлэнүүд"
+	"uls-plang-title-languages": "Хэлэнүүд",
+	"ext-uls-compact-link-count": "{{PLURAL:$1| үшөө нэгэн|$1 үшөө}}"
 }
