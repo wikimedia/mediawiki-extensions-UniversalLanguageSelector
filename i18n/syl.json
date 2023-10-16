@@ -7,5 +7,12 @@
 	},
 	"uls-plang-title-languages": "ꠝꠣꠔ ꠅꠇꠟ",
 	"ext-uls-display-settings-language-tab": "ꠜꠣꠡꠣ",
+	"ext-uls-display-settings-fonts-tab": "ꠚꠘ꠆ꠐꠣꠁꠘ",
+	"ext-uls-display-settings-title-short": "ꠖꠦꠈꠣꠘꠤ",
+	"ext-uls-language-settings-cancel": "ꠛꠣꠖ",
+	"ext-uls-display-settings-font-settings": "ꠚꠘ꠆ꠐꠞ ꠌꠦꠐꠤꠋ",
+	"ext-uls-webfonts-settings-info-link": "ꠀꠞꠅ ꠔꠁꠔ꠆ꠔ",
+	"ext-uls-ime-help": "ꠇꠤꠟꠣꠘ ꠛꠦꠛꠀꠞ",
+	"jquery-ime-help": "ꠡꠣꠁꠎ꠆ꠎ",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|ꠀꠞꠧꠇꠐꠣ|$1 ꠀꠞꠧ}}"
 }
