@@ -33,8 +33,13 @@
 	"ext-uls-input-disable-notification-undo": "Gáđa",
 	"ext-uls-compact-link-count": "{{PLURAL:$1.Ovtta eanet. $1 eanet}}",
 	"prefs-languages": "Gielat",
+	"ext-uls-compact-no-results": "Dát siidu ii gávdnon gillii maid ohcet.",
 	"ext-uls-setlang-unknown-error": "Dovdameahttun meattáhus",
 	"ext-uls-setlang-heading": "Háliidatgo don molsut geavahanlavtta giela?",
+	"ext-uls-setlang-accept": "Dohkket molsuma",
+	"ext-uls-setlang-cancel": "Ale molsso",
 	"ext-uls-actions-menu-language-settings-item-label": "Raba giellaásahusaid",
+	"ext-uls-empty-state-header": "Eai vel gielat",
+	"ext-uls-empty-state-header-actions-available": "Eai vel gielat. Háliidatgo lasihit ođđa giela?",
 	"ext-uls-add-languages-button-label": "Lasit gielaid"
 }
