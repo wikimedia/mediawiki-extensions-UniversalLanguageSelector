@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Jolka Kaj",
+			"Oxianboal",
 			"Андрей Саг."
 		]
 	},
 	"uls-plang-title-languages": "Тіллер",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Хоза $1}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Хоза|$1 хоза}}",
 	"ext-uls-setlang-unknown-error": "Таныбас алҷаас"
 }
