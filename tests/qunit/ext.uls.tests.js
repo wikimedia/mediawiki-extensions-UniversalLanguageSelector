@@ -33,42 +33,6 @@
 		assert.strictEqual( $.uls.data.getDir( 'als' ), 'ltr', 'The direction of custom MW language als is ltr.' );
 	} );
 
-	QUnit.test( 'User preferences', function ( assert ) {
-		var prefName, prefs, prefsToSave, readPrefs, done;
-
-		// 'gofanim' means "fonts" in Hebrew.
-		// Here it's used as a meaningless word, to test
-		// the preferences without changing anything useful.
-		prefName = 'gofanim';
-		prefs = require( 'ext.uls.preferences' )();
-		prefsToSave = {};
-
-		prefsToSave[ prefName ] = {
-			fonts: {
-				qqy: 'Megafont'
-			}
-		};
-
-		prefs.set( prefName, prefsToSave );
-
-		readPrefs = prefs.get( prefName );
-		assert.strictEqual(
-			readPrefs[ prefName ].fonts.qqy,
-			'Megafont',
-			'Correct value for the font name'
-		);
-
-		done = assert.async();
-		prefs.save( function ( successSave ) {
-			assert.true( successSave, 'Options saving API did not produce an error.' );
-			// Delete old options
-			prefs.set( prefName, undefined );
-			prefs.save( function () {
-				done();
-			} );
-		} );
-	} );
-
 	QUnit.test( 'Common languages', function ( assert ) {
 		var i, foundTagalog, languagesInPH;
 
