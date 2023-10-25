@@ -37,7 +37,8 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 	public static function searchDataProvider() {
 		return [
 			[ 'ഹിന്ദി', [
-				'hi' => 'ഹിന്ദി'
+				'hi' => 'ഹിന്ദി',
+				'hi-latn' => 'ഹിന്ദി (ലാറ്റിൻ)'
 			]
 			],
 			[ 'മല', [
@@ -120,7 +121,10 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 				'hsn' => 'chinese — isi-xiang chinese',
 				'lzh' => 'chinese — literary chinese',
 				'cdo' => 'chinese — min dong chinese',
-				'cdo-hani' => 'chinese — min dong chinese (hanji)'
+				'cdo-hani' => 'chinese — min dong chinese (hanji)',
+				'wuu-hans' => 'chinese — wu chinese (simplified)',
+				'wuu-hant' => 'chinese — wu chinese (traditional)',
+
 			]
 			],
 			[ 'finnisj', [
