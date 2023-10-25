@@ -39,7 +39,9 @@ class LanguageNameIndexer extends Maintenance {
 		global $wgExtraLanguageNames;
 
 		// Avoid local configuration leaking to this script
-		$wgExtraLanguageNames = [];
+		if ( $wgExtraLanguageNames !== [] ) {
+			$this->fatalError( 'You have entries in $wgExtraLanguageNames. Needs to be empty for this script.' );
+		}
 
 		$languageNames = [];
 		// Add languages from language-data
