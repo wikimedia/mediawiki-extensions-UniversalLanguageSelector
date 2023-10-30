@@ -3,7 +3,8 @@
 		"authors": [
 			"Esbardu",
 			"Macofe",
-			"Xuacu"
+			"Xuacu",
+			"YoaR"
 		]
 	},
 	"uls-desc": "Ufre al usuariu delles maneres pa seleicionar una llingua y axustar la configuración de llingua",
@@ -21,7 +22,7 @@
 	"ext-uls-display-settings-desc": "Configurar la llingua pa los menús y les fontes.",
 	"ext-uls-language-settings-title": "Preferencies de llingua",
 	"ext-uls-language-settings-apply": "Aplicar la configuración",
-	"ext-uls-language-settings-cancel": "Encaboxar",
+	"ext-uls-language-settings-cancel": "Zarrar",
 	"ext-uls-language-buttons-help": "Camuda la llingua de los menús. Nun afeutará a la llingua del conteníu.",
 	"ext-uls-display-settings-font-settings": "Preferencies de tipografía",
 	"ext-uls-display-settings-ui-language": "Llingua de la interfaz",
