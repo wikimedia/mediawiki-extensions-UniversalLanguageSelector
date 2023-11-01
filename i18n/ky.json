@@ -12,7 +12,7 @@
 	"ext-uls-undo-language-tooltip-text": "Мурдагы тил: $1",
 	"ext-uls-language-settings-preferences-link": "Кошумча тил ырастоолору",
 	"ext-uls-display-settings-title": "Көрүнүш ырастоолору",
-	"ext-uls-display-settings-language-tab": "Тили",
+	"ext-uls-display-settings-language-tab": "Тил",
 	"ext-uls-display-settings-fonts-tab": "Шрифттер",
 	"ext-uls-display-settings-title-short": "Көрүнүш",
 	"ext-uls-display-settings-desc": "Меню жана шрифттердин тили",
@@ -39,5 +39,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|дагы бир|дагы $1}}",
 	"prefs-languages": "Тилдер",
 	"ext-uls-setlang-unknown-error": "Белгисиз ката",
-	"ext-uls-setlang-accept": "Өзгөртүүнү ырастоо"
+	"ext-uls-setlang-accept": "Өзгөртүүнү ырастоо",
+	"ext-uls-actions-menu-language-settings-item-label": "Тил параметрлерин ачуу"
 }

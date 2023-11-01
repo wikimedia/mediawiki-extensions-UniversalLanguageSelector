@@ -4,9 +4,9 @@
 			"McDutchie"
 		]
 	},
-	"uls-desc": "Da al usator plure manieras de seliger un lingua e adjustar le configuration de lingua",
+	"uls-desc": "Da al usator plure manieras de seliger un lingua e adjustar le parametros de lingua",
 	"uls-plang-title-languages": "Linguas",
-	"ext-uls-select-language-settings-icon-tooltip": "Configuration de lingua",
+	"ext-uls-select-language-settings-icon-tooltip": "Parametros de lingua",
 	"ext-uls-undo-language-tooltip-text": "Lingua cambiate ab $1",
 	"ext-uls-undo-language-tooltip-text-local": "Le lingua de iste wiki ha cambiate. Usa le [[Special:GlobalPreferences|preferentias global]] pro cambiar le lingua pro tote le wikis.",
 	"ext-uls-language-settings-preferences-link": "Altere parametros de lingua",
@@ -17,7 +17,7 @@
 	"ext-uls-display-settings-fonts-tab": "Typos de litteras",
 	"ext-uls-display-settings-title-short": "Visualisation",
 	"ext-uls-display-settings-desc": "Definir le lingua usate pro menus e typos de litteras.",
-	"ext-uls-language-settings-title": "Configuration de lingua",
+	"ext-uls-language-settings-title": "Parametros de lingua",
 	"ext-uls-language-settings-apply": "Applicar configuration",
 	"ext-uls-language-settings-cancel": "Cancellar",
 	"ext-uls-language-buttons-help": "Cambia le lingua de menus. Le lingua de contento non essera cambiate.",
