@@ -20,7 +20,7 @@
 	"uls-desc": "Biedt de gebruiker verschillende manieren om een taal te selecten en de taalinstellingen aan te passen",
 	"uls-plang-title-languages": "Talen",
 	"ext-uls-select-language-settings-icon-tooltip": "Taalinstellingen",
-	"ext-uls-undo-language-tooltip-text": "Taal gewijzigd van $1",
+	"ext-uls-undo-language-tooltip-text": "Taal gewijzigd vanuit het $1",
 	"ext-uls-undo-language-tooltip-text-local": "Taal voor deze wiki gewijzigd. Bekijk uw [[Special:GlobalPreferences|globale voorkeuren]] om de taal voor alle wiki's te wijzigen.",
 	"ext-uls-language-settings-preferences-link": "Meer taalinstellingen",
 	"uls-betafeature-label": "Compacte taalkoppelingen",
