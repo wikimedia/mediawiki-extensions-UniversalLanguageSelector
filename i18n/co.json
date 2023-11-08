@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Paulu",
-			"Xð"
+			"Xð",
+			"Jun Misugi"
 		]
 	},
 	"uls-plang-title-languages": "Lingue",
-	"ext-uls-input-settings-desc": "Scrivi in una lingua sfarente?"
+	"ext-uls-input-settings-desc": "Scrivi in una lingua sfarente?",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Una di più|$1 di più}}"
 }
