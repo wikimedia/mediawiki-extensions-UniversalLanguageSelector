@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"Римма"
 		]
 	},
-	"uls-plang-title-languages": "Кыввез"
+	"uls-plang-title-languages": "Кыввез",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|эшӧ ӧтік|$1 эшӧ}}"
 }

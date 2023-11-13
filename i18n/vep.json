@@ -10,5 +10,5 @@
 	"ext-uls-select-language-settings-icon-tooltip": "Kelen azotandad",
 	"ext-uls-language-settings-title": "Kelen azotandad",
 	"jquery-ime-other-languages": "Toižed keled",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|üks' kel'|$1 kelid\n}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Völ üks'|$1 enamba}}"
 }
