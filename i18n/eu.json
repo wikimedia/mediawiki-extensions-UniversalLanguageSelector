@@ -68,6 +68,7 @@
 	"ext-uls-compact-no-results": "Orrialde hau ez dago eskuragarri bilatu duzun hizkuntzan.",
 	"ext-uls-setlang-error": "Errore bat gertatu da hobetsi duzun hizkuntza eguneratzean. Errorea: $1",
 	"ext-uls-setlang-unknown-error": "Errore ezezaguna",
+	"ext-uls-setlang-message": "Klikatu duzun estekak eskatzen du webgune hau <strong>$1 ($2)</strong> hizkuntzan erakustea.",
 	"ext-uls-setlang-heading": "Interfazearen hizkuntza aldatu?",
 	"ext-uls-setlang-accept": "Onartu aldaketa",
 	"ext-uls-setlang-loading": "Aplikatzen...",
