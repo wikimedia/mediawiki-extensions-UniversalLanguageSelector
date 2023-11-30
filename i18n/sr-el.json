@@ -59,7 +59,7 @@
 	"ext-uls-input-disable-notification-info-personal": "Možete omogućiti alate za unos u bilo koje vreme na podešavanjima jezika.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Možete omogućiti alatke za unos u bilo koje vreme na podešavanjima jezika pored spiska jezika.",
 	"ext-uls-language-settings-applying": "Primenjivanje…",
-	"ext-uls-compact-link-count": "Još {{PLURAL:$1|1=jedan|$1}} jezik{{PLURAL:$1||a}}",
+	"ext-uls-compact-link-count": "Još {{PLURAL:$1|1=jedan|$1}} {{PLURAL:$1|jezik|jezika}}",
 	"ext-uls-compact-link-info": "Svi jezici (prvobitan izbor je zasnovan na najčešćim odabirima vas i drugih)",
 	"prefs-languages": "Jezici",
 	"ext-uls-compact-language-links-preference": "Koristi [[$1|sažeti spisak jezika]], s jezicima koji su Vam važni.",
