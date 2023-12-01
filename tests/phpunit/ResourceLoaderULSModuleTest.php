@@ -2,6 +2,7 @@
 
 namespace UniversalLanguageSelector\Tests;
 
+use MediaWiki\ResourceLoader\Context;
 use UniversalLanguageSelector\ResourceLoaderULSModule;
 
 /**
@@ -15,7 +16,7 @@ class ResourceLoaderULSModuleTest extends \PHPUnit\Framework\TestCase {
 	public function testAllReturnValues() {
 		$instance = new ResourceLoaderULSModule();
 
-		$context = $this->createMock( \ResourceLoaderContext::class );
+		$context = $this->createMock( Context::class );
 		$context->method( 'getLanguage' )
 			->willReturn( 'en' );
 
