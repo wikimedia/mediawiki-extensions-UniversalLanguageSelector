@@ -27,8 +27,16 @@
 		locale: mw.config.get( 'wgUserLanguage' )
 	} );
 
-	// ApiULSLocalization handles fallback in ULS
-	$.i18n.fallbacks = {};
+	/**
+	 * T53923: Fix JavaScript error with language fallbacks.
+	 * ULS use ApiULSLocalization to handle language fallbacks.
+	 *
+	 * T348376: Fix JavaScript language fallback mapping being
+	 * overridden.
+	 * This should not override the original mapping, as it's not
+	 * only used by ULS.
+	 */
+	$.i18n.fallbacks = $.i18n.fallbacks || {};
 
 	/**
 	 * Load localization messages for a locale to the jquery.i18n
