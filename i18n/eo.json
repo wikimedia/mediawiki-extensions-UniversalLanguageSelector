@@ -7,7 +7,9 @@
 			"Macofe",
 			"Mirin",
 			"Robin van der Vliet",
-			"NMaia"
+			"NMaia",
+			"Blahma",
+			"Ziko"
 		]
 	},
 	"uls-desc": "Proponas al uzanto kelkajn manierojn por elekti lingvon kaj modifi lingvajn agordojn",
@@ -66,5 +68,11 @@
 	"prefs-languages": "Lingvoj",
 	"ext-uls-compact-language-links-preference": "Uzi [[$1|kompaktan liston de lingvoj]], kun lingvoj konvenaj por vi.",
 	"ext-uls-compact-no-results": "Ĉi tiu paĝo ne estas havebla en la lingvo kiun vi serĉis.",
-	"ext-uls-setlang-heading": "Ĉu ŝanĝi la fasadan lingvon?"
+	"ext-uls-setlang-error": "Okazis eraro dum la ĝisdatigo de via preferata lingvo. Eraro: $1",
+	"ext-uls-setlang-unknown-error": "Nekonata eraro",
+	"ext-uls-setlang-message": "La ligilo, kiun vi sekvis, petis, ke la interfaco estu montrata en <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "Ĉu ŝanĝi la fasadan lingvon?",
+	"ext-uls-setlang-accept": "Akceptu ŝanĝon",
+	"ext-uls-setlang-loading": "Aplikante...",
+	"ext-uls-setlang-cancel": "Ne ŝanĝu"
 }
