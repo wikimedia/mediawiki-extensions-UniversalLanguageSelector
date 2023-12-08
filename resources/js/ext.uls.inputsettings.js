@@ -54,7 +54,7 @@
 		'<div class="row">' +
 		'<div class="twelve columns uls-input-settings-disable-info"></div>' +
 		'<div class="ten columns uls-input-settings-toggle">' +
-		'<button class="mw-ui-button mw-ui-progressive active uls-input-toggle-button"></button>' +
+		'<button class="cdx-button cdx-button--type-primary cdx-button--action-progressive active uls-input-toggle-button"></button>' +
 		'</div>' +
 		'</div>';
 
@@ -169,10 +169,11 @@
 				return $();
 			}
 
-			$imeLabel = $( '<label>' ).attr( 'for', imeId );
+			$imeLabel = $( '<label>' ).attr( 'for', imeId ).addClass( 'cdx-radio__label' );
 
 			$inputMethodItem = $( '<input>' ).attr( {
 				type: 'radio',
+				class: 'cdx-radio__input',
 				name: 'ime',
 				id: imeId,
 				value: imeId
@@ -211,9 +212,10 @@
 				$helplink
 			);
 
+			var $icon = $( '<span>' ).addClass( 'cdx-radio__icon' );
 			return $( '<div>' )
-				.addClass( 'mw-ui-radio' )
-				.append( $inputMethodItem, $imeLabel );
+				.addClass( 'cdx-radio' )
+				.append( $inputMethodItem, $icon, $imeLabel );
 		},
 
 		/**
@@ -278,8 +280,8 @@
 						$.ime.preferences.setLanguage( selectedLang );
 					}
 					// Mark the button selected
-					$( '.uls-ui-languages .mw-ui-button' ).removeClass( 'mw-ui-pressed' );
-					button.addClass( 'mw-ui-pressed' );
+					$( '.uls-ui-languages .cdx-button' ).removeClass( 'uls-cdx-button-pressed' );
+					button.addClass( 'uls-cdx-button-pressed' );
 					inputSettings.prepareInputmethods( selectedLang );
 				};
 			}
@@ -290,7 +292,7 @@
 			for ( i = 0; i < SUGGESTED_LANGUAGES_NUMBER; i++ ) {
 				language = languagesForButtons[ i ];
 				$button = $( '<button>' )
-					.addClass( 'mw-ui-button uls-language-button autonym' )
+					.addClass( 'cdx-button uls-language-button autonym' )
 					.text( $.uls.data.getAutonym( language ) )
 					.prop( {
 						lang: language,
@@ -322,7 +324,7 @@
 			$languages = this.$template.find( '.uls-ui-languages' );
 			$moreLanguagesButton = $( '<button>' )
 				.prop( 'class', 'uls-more-languages' )
-				.addClass( 'mw-ui-button' ).text( '...' );
+				.addClass( 'cdx-button' ).text( '...' );
 
 			$languages.append( $moreLanguagesButton );
 			// Show the long language list to select a language for ime settings

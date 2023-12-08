@@ -209,9 +209,6 @@
 				"ext.uls.mediawiki",
 				"ext.uls.webfonts",
 				"mediawiki.api",
-				"mediawiki.ui.radio",
-				"mediawiki.ui.checkbox",
-				"mediawiki.ui.button",
 				"mediawiki.user"
 			]
 		},
@@ -278,8 +275,7 @@
 			"dependencies": [
 				"ext.uls.messages",
 				"ext.uls.preferences",
-				"jquery.uls.grid",
-				"mediawiki.ui.button"
+				"jquery.uls.grid"
 			]
 		},
 		"ext.uls.mediawiki": {
@@ -347,7 +343,7 @@
 			"dependencies": [
 				"mediawiki.api",
 				"mediawiki.jqueryMsg",
-				"mediawiki.ui.button",
+				"@wikimedia/codex",
 				"mediawiki.Uri"
 			],
 			"messages": [

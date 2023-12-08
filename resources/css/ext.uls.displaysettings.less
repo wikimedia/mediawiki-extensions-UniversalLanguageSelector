@@ -2,16 +2,21 @@
 @import '../../lib/codex-design-tokens/theme-wikimedia-ui-legacy.less';
 @import 'mediawiki.mixins';
 
-.uls-display-settings-tab-switcher {
-	text-align: center;
-}
-
 .uls-button-group {
 	display: inline-block;
 	position: relative;
-	padding: 0;
+	// The 1px are needed to handle overflow in .cdx-button-group in 1.39
+	padding: 1px 0 0 1px;
 	left: -20px;
-	z-index: 1;
+}
+
+.uls-display-settings-tab-switcher {
+	text-align: center;
+
+	/** cdx-button-group adds a z-index of 0; increase specificity to override that */
+	.uls-button-group {
+		z-index: 1;
+	}
 }
 
 .uls-sub-panel {

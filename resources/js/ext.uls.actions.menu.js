@@ -15,7 +15,7 @@
 
 	ActionsMenu.template = '<div class="uls-menu uls-language-actions-dialog">' +
 			'<div class="uls-language-actions-title">' +
-				'<button class="mw-ui-button mw-ui-quiet uls-language-actions-close"></button>' +
+				'<button class="cdx-button cdx-button--weight-quiet uls-language-actions-close"></button>' +
 				'<span> <strong></strong> </span>' +
 			'</div>' +
 			'<div class="uls-language-action-items"></div>' +

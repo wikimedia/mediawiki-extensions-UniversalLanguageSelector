@@ -121,7 +121,14 @@
 	 * @return {jQuery}
 	 */
 	function createMenuButton( buttonClass ) {
-		var classes = [ 'mw-ui-button', 'mw-ui-quiet', buttonClass ];
+		// cdx-button--type-quiet is needed for 1.39 support.
+		// Please remove when support is no longer needed.
+		var classes = [
+			'cdx-button',
+			'cdx-button--weight-quiet',
+			'cdx-button--type-quiet',
+			buttonClass
+		];
 		// eslint-disable-next-line mediawiki/class-doc
 		return $( '<button>' ).addClass( classes );
 	}
@@ -580,7 +587,7 @@
 
 		ev.preventDefault();
 
-		mw.loader.using( [ 'ext.uls.mediawiki', 'mediawiki.ui.button' ] ).then( function () {
+		mw.loader.using( [ 'ext.uls.mediawiki', '@wikimedia/codex' ] ).then( function () {
 			var parent, languageNodes, standalone, uls;
 
 			parent = document.querySelectorAll( '.mw-portlet-lang, #p-lang' )[ 0 ];

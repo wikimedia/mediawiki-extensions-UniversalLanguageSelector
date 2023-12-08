@@ -134,6 +134,24 @@ class Hooks implements
 	}
 
 	/**
+	 * Adds Codex styles in a way that is compatible with MLEB.
+	 *
+	 * @param OutputPage $out
+	 */
+	private function loadCodexStyles( OutputPage $out ) {
+		if ( version_compare( MW_VERSION, '1.41', '<' ) ) {
+			// codex-search-styles was added in 1.41 so in older versions for MLEB support
+			// we load the full module.
+			$out->addModuleStyles( '@wikimedia/codex' );
+		} else {
+			// Only needed for skins that do not load Codex.
+			if ( !in_array( $out->getSkin()->getSkinName(), [ 'minerva', 'vector-2022' ] ) ) {
+				$out->addModuleStyles( 'codex-search-styles' );
+			}
+		}
+	}
+
+	/**
 	 * @param OutputPage $out
 	 * @param Skin $skin
 	 * Hook: BeforePageDisplay
@@ -161,6 +179,8 @@ class Hooks implements
 			strpos( $out->getHTML(), 'mw-interlanguage-selector' ) === false
 		) {
 			$out->addModules( 'ext.uls.compactlinks' );
+			// Add styles for the default button in the page.
+			$this->loadCodexStyles( $out );
 		}
 
 		if ( is_string( $this->config->get( 'ULSGeoService' ) ) ) {
@@ -170,6 +190,7 @@ class Hooks implements
 		if ( $this->isEnabled() ) {
 			// Enable UI language selection for the user.
 			$out->addModules( 'ext.uls.interface' );
+			$this->loadCodexStyles( $out );
 
 			$title = $out->getTitle();
 			$isMissingPage = !$title || !$title->exists();

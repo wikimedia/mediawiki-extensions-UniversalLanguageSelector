@@ -22,7 +22,7 @@
 
 	var mwImeRulesPath, inputSelector, inputPreferences, ulsIMEPreferences, customHelpLink,
 		getULSPreferences = require( 'ext.uls.preferences' ),
-		languageSettingsModules = [ 'ext.uls.displaysettings' ];
+		languageSettingsModules = [ 'ext.uls.displaysettings', '@wikimedia/codex' ];
 
 	mwImeRulesPath = mw.config.get( 'wgExtensionAssetsPath' ) +
 		'/UniversalLanguageSelector/lib/jquery.ime/';
