@@ -42,11 +42,11 @@
 
 	function getButtons() {
 		$cancelBtn = $( '<button>' )
-			.addClass( 'cdx-button uls-setlang-cancel' )
+			.addClass( 'mw-ui-button uls-setlang-cancel' )
 			.text( mw.msg( 'ext-uls-setlang-cancel' ) );
 
 		$acceptBtn = $( '<button>' )
-			.addClass( 'cdx-button cdx-button--action-progressive active uls-setlang-apply' )
+			.addClass( 'mw-ui-button mw-ui-progressive active uls-setlang-apply' )
 			.text( mw.msg( 'ext-uls-setlang-accept' ) );
 
 		return $( '<div>' )
