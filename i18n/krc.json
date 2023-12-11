@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Ernác",
-			"Iltever"
+			"Iltever",
+			"Къарачайлы"
 		]
 	},
 	"uls-desc": "Къошулуучугъа тил сайларгъа эмда тил джарашдырыуланы тюрлендирирге талай амал береди",
@@ -28,7 +29,7 @@
 	"ext-uls-display-settings-anon-log-in-cta": "Менюлагъа башха тил сайлар ючюн [[Special:UserLogin|кирген этигиз]].",
 	"ext-uls-webfonts-settings-title": "Керек болгъанда шрифтлени джюкле",
 	"ext-uls-webfonts-settings-info": "Болмагъан шрифтлени автомат халда джюклеу эмда изленнген шрифтлени сайларгъа эркинлик бериу.",
-	"ext-uls-webfonts-settings-info-link": "Къошакъ билги",
+	"ext-uls-webfonts-settings-info-link": "Аслам информация",
 	"ext-uls-webfonts-select-for": "$1 ючюн шрифт сайла",
 	"ext-uls-webfonts-select-for-ui-info": "Къошулуучуну интерфейсини шрифти",
 	"ext-uls-webfonts-select-for-content-info": "Текст ючюн шрифт",
@@ -51,7 +52,7 @@
 	"ext-uls-input-disable-info": "Джазыу адырла джукъландыла.",
 	"ext-uls-input-settings-noime": "Бу тил ючюн клавиатураны халы айгъакъланмагъанды.",
 	"ext-uls-input-disable-notification": "Джазыу адырла джукъландыла.",
-	"ext-uls-input-disable-notification-undo": "Ызына ал",
+	"ext-uls-input-disable-notification-undo": "Кери ал",
 	"ext-uls-input-disable-notification-info-personal": "Джазыу адырланы хар заманда да тил джарашдырыуладан джандырыргъа боллукъду.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Джазыу адырланы хар заманда да тил тизимни къатындагъы тил джарашдырыуладан джандырыргъа боллукъду.",
 	"ext-uls-language-settings-applying": "Сингдирилиую...",
