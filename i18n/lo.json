@@ -7,6 +7,6 @@
 		]
 	},
 	"uls-plang-title-languages": "ພາສາ",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|ອັນໜຶ່ງ|$1 ອັນ}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ອີກ 1 ພາສາ|ອີກ $1 ພາສາ}}",
 	"ext-uls-add-languages-button-label": "ເພີ່ມພາສາ"
 }
