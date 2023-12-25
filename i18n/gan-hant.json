@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"ZhuofanWu"
 		]
 	},
-	"uls-plang-title-languages": "語言"
+	"uls-plang-title-languages": "語言",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|還有 $1 種語言}}"
 }
