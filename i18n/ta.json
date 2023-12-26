@@ -9,7 +9,8 @@
 			"Sank",
 			"Santhosh.thottingal",
 			"Siddhan",
-			"Xð"
+			"Xð",
+			"Fahimrazick"
 		]
 	},
 	"uls-desc": "பயனருக்கு மொழியை மாற்றவும் மொழி அமைப்புகளை மாற்றவும் செய்ய பல வழிகளை தருகின்றது",
@@ -31,7 +32,7 @@
 	"ext-uls-webfonts-settings-title": "தேவையெனில் எழுத்துருவை பதிவிறக்கு",
 	"ext-uls-webfonts-settings-info": "சிறப்பான எழுத்துவடிவங்கள் கொண்ட உரையை காண்பிக்க இணைய எழுத்துருக்கள் பதிவிறக்கப் படும்",
 	"ext-uls-webfonts-settings-info-link": "மேலதிக தகவல்கள்",
-	"ext-uls-webfonts-select-for": "$1 க்கு எழுத்துருவை தேர்வு செய்க",
+	"ext-uls-webfonts-select-for": "$1 இற்கான எழுத்துருவைத் தெரிவு செய்",
 	"ext-uls-webfonts-select-for-ui-info": "இடைமுகப்பு பயன்படுத்தும் எழுத்துரு",
 	"ext-uls-webfonts-select-for-content-info": "உள்ளடக்கத்திற்கான எழுத்துரு",
 	"ext-uls-webfonts-system-font": "கணினி எழுத்துரு",
