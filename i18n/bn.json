@@ -6,7 +6,8 @@
 			"Bellayet",
 			"Nasir8891",
 			"Tanayb",
-			"আফতাবুজ্জামান"
+			"আফতাবুজ্জামান",
+			"Aishik Rehman"
 		]
 	},
 	"uls-desc": "ব্যবহারকারীকে ভাষা নির্বাচন এবং ভাষা সম্পর্কিত সেটিং সমন্বয়ের বিভিন্ন উপায় দেয়",
@@ -16,7 +17,7 @@
 	"ext-uls-undo-language-tooltip-text-local": "এই উইকির জন্য ভাষা পরিবর্তন করা হয়েছে। সকল উইকির জন্য ভাষা পরিবর্তন করতে আপনার [[Special:GlobalPreferences|বৈশ্বিক পছন্দগুলি]] দেখুন।",
 	"ext-uls-language-settings-preferences-link": "আরও ভাষা সেটিং",
 	"uls-betafeature-label": "সংক্ষেপিত ভাষা সংযোগ",
-	"uls-betafeature-desc": "অন্যান্য ভাষাসমূহের সাথে ভাষার তালিকার একটি সংক্ষিপ্ত সংস্করণ দেখাবে, যা আপনার কাছে আরো বেশি প্রাসঙ্গিক।",
+	"uls-betafeature-desc": "অন্যান্য ভাষাসমূহের সাথে ভাষার তালিকার একটি সংক্ষিপ্ত সংস্করণ দেখাবে, যা আপনার কাছে আরও বেশি প্রাসঙ্গিক।",
 	"ext-uls-display-settings-title": "প্রদর্শন সেটিং",
 	"ext-uls-display-settings-language-tab": "ভাষা",
 	"ext-uls-display-settings-fonts-tab": "ফন্ট",
