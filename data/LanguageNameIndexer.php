@@ -107,6 +107,8 @@ class LanguageNameIndexer extends Maintenance {
 			'ka' => [ 'kartuli', 'qartuli' ],
 			// Japanese, the transliteration of the autonym is often used for searching
 			'ja' => [ 'nihongo', 'にほんご' ],
+			// Mon, renamed in core MediaWiki's Names.php (T352776)
+			'mnw' => [ 'ဘာသာ မန်' ],
 			// Western Punjabi, doesn't start with the word "Punjabi" in any language
 			'pnb' => [ 'punjabi western' ],
 			// Simplified and Traditional Chinese, because zh-hans and zh-hant
