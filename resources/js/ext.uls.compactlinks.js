@@ -189,10 +189,13 @@
 		for ( language in this.compactList ) {
 			this.compactList[ language ].parentNode.style.display = '';
 		}
-
-		mw.loader.using( '@wikimedia/codex' ).then( function () {
-			this.addTrigger();
-		}.bind( this ) );
+		// If there is an interlanguage selector in the page already
+		// there is no need to add a trigger and Codex styles (T353850).
+		if ( !$( '.mw-interlanguage-selector' ).length ) {
+			mw.loader.using( '@wikimedia/codex' ).then( function () {
+				this.addTrigger();
+			}.bind( this ) );
+		}
 
 		mw.hook( 'mw.uls.compactlinks.initialized' ).fire( true );
 	};

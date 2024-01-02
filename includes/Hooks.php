@@ -171,13 +171,11 @@ class Hooks implements
 		];
 
 		// Load compact links if no mw-interlanguage-selector element is present in the page HTML.
-		// We use the same mechanism as Skin::getDefaultModules and check the HTML for the presence in the HTML,
-		// using the class as the heuristic.
 		// Note if the element is rendered by the skin, its assumed that no collapsing is needed.
 		// See T264824 for more information.
-		if ( !$override && $isCompactLinksEnabled &&
-			strpos( $out->getHTML(), 'mw-interlanguage-selector' ) === false
-		) {
+		// Note for Vector 2022, this skin is loaded as it tightly-coupled with ext.uls.interface
+		// A client side check avoids loading @wikimedia/codex for that skin.
+		if ( !$override && $isCompactLinksEnabled ) {
 			$out->addModules( 'ext.uls.compactlinks' );
 			// Add styles for the default button in the page.
 			$this->loadCodexStyles( $out );
