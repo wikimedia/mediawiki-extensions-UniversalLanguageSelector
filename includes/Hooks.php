@@ -98,6 +98,18 @@ class Hooks implements
 	}
 
 	/**
+	 * Checks whether language is in header.
+	 *
+	 * @param Skin $skin
+	 * @return bool
+	 */
+	private function isLanguageInHeader( Skin $skin ): bool {
+		$languageInHeaderConfig = $skin->getConfig()->get( 'VectorLanguageInHeader' );
+		$userStatus = $skin->getUser()->isAnon() ? 'logged_out' : 'logged_in';
+		return $languageInHeaderConfig[ $userStatus ] ?? true;
+	}
+
+	/**
 	 * Whether ULS Compact interlanguage links enabled
 	 *
 	 * @param User $user
@@ -110,7 +122,7 @@ class Hooks implements
 			return false;
 		}
 		if ( $skin->getSkinName() === 'vector-2022' ) {
-			return true;
+			return !$this->isLanguageInHeader( $skin );
 		}
 		if ( $this->config->get( 'ULSCompactLanguageLinksBetaFeature' ) === true &&
 			$this->config->get( 'InterwikiMagic' ) === true &&
@@ -165,9 +177,11 @@ class Hooks implements
 		$excludedLinks = $out->getProperty( 'noexternallanglinks' );
 		$override = is_array( $excludedLinks ) && in_array( '*', $excludedLinks, true );
 		$isCompactLinksEnabled = $this->isCompactLinksEnabled( $out->getUser(), $skin );
+		$isVector2022LanguageInHeader = $skin->getSkinName() === 'vector-2022' && $this->isLanguageInHeader( $skin );
 		$config = [
 			'wgULSPosition' => $this->config->get( 'ULSPosition' ),
 			'wgULSisCompactLinksEnabled' => $isCompactLinksEnabled,
+			'wgVector2022LanguageInHeader' => $isVector2022LanguageInHeader
 		];
 
 		// Load compact links if no mw-interlanguage-selector element is present in the page HTML.

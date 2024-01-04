@@ -727,11 +727,12 @@
 			initPersonalEntryPoint();
 		}
 
+		// whether to load compact language links
 		var compact = mw.config.get( 'wgULSisCompactLinksEnabled' );
-		// The scope of the compact language links user preference has been expanded to also
-		// determine whether to show the omni box or not. Compact language links is already not
-		// loaded server side, so this is only relevant for the omnibox.
-		if ( compact ) {
+		// whether to show the omni box or not
+		var languageInHeader = mw.config.get( 'wgVector2022LanguageInHeader' );
+
+		if ( compact || languageInHeader ) {
 			// Init compact languages OR omni selector using the mw-interlanguage-selector class
 			initContentLanguageSelectorClickHandler();
 		} else {
