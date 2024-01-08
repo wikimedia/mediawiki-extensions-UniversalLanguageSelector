@@ -75,5 +75,7 @@
 	"ext-uls-actions-menu-header": "ตัวเลือกเพิ่ม",
 	"ext-uls-actions-menu-language-settings-item-label": "เปิดการตั้งค่าภาษา",
 	"ext-uls-empty-state-header": "ยังไม่มีภาษา",
-	"ext-uls-empty-state-desc": "ขณะนี้ยังไม่มีภาษาที่ใช้งานได้"
+	"ext-uls-empty-state-desc": "ขณะนี้ยังไม่มีภาษาที่ใช้งานได้",
+	"ext-uls-empty-state-header-actions-available": "ยังไม่มีภาษา เพิ่มใหม่?",
+	"ext-uls-empty-state-desc-actions-available": "ทำเนื้อหาให้พร้อมใช้งานในภาษาต่าง ๆ มากขึ้น"
 }
