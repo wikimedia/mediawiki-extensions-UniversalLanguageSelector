@@ -5,7 +5,13 @@
 			"Chuvash2014"
 		]
 	},
+	"uls-desc": "Хутшӑнакана чӗлхене суйлама тата чӗлхе ӗнерлевне палӑртма темиҫе мел парать",
 	"uls-plang-title-languages": "Чĕлхесем",
+	"ext-uls-select-language-settings-icon-tooltip": "Чӗлхе ӗнерлевӗсем",
+	"ext-uls-undo-language-tooltip-text": "Малтанхи чӗлхе: $1",
+	"ext-uls-undo-language-tooltip-text-local": "Ку викири чӗлхене улӑштартӑр. Мӗнпур викире чӗлхене улӑштарма хӑвӑрӑн [[Special:GlobalPreferences|глобаллӑ ӗнерлевсене]] тӗрӗслӗр.",
+	"ext-uls-language-settings-preferences-link": "Чӗлхен хушма ӗнерлевӗсем",
+	"uls-betafeature-label": "Чӗлхе каҫисен кӗскетнӗ списокӗ",
 	"ext-uls-display-settings-language-tab": "Чӗлхе",
 	"ext-uls-display-settings-fonts-tab": "Шрифтсем",
 	"ext-uls-display-settings-title-short": "Епле курӑнӗ",
