@@ -4,5 +4,6 @@
 			"Ahiise2"
 		]
 	},
-	"uls-plang-title-languages": "Endimi"
+	"uls-plang-title-languages": "Endimi",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Orundi rumu|Ezindi $1}}"
 }
