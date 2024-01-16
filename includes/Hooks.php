@@ -121,6 +121,8 @@ class Hooks implements
 		if ( !$this->config->get( 'ULSEnable' ) ) {
 			return false;
 		}
+		// Compact links should be disabled in Vector 2022 skin,
+		// when the language button is displayed at the top of the content
 		if ( $skin->getSkinName() === 'vector-2022' ) {
 			return !$this->isLanguageInHeader( $skin );
 		}
@@ -184,11 +186,6 @@ class Hooks implements
 			'wgVector2022LanguageInHeader' => $isVector2022LanguageInHeader
 		];
 
-		// Load compact links if no mw-interlanguage-selector element is present in the page HTML.
-		// Note if the element is rendered by the skin, its assumed that no collapsing is needed.
-		// See T264824 for more information.
-		// Note for Vector 2022, this skin is loaded as it tightly-coupled with ext.uls.interface
-		// A client side check avoids loading @wikimedia/codex for that skin.
 		if ( !$override && $isCompactLinksEnabled ) {
 			$out->addModules( 'ext.uls.compactlinks' );
 			// Add styles for the default button in the page.
