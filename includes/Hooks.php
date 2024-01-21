@@ -315,29 +315,12 @@ class Hooks implements
 		// Convert BCP 47 language code to MediaWiki internal language code and
 		// look for a MediaWiki internal language code that is acceptable to the client
 		// and known to the wiki.
-		// @begin Note: Remove this when minimum supported version is 1.40
-		if ( method_exists( LanguageCode::class, 'bcp47ToInternal' ) ) {
-			// @end
-			foreach ( $preferred as $bcp47LangCode => $weight ) {
-				$mwLangCode = LanguageCode::bcp47ToInternal( $bcp47LangCode );
-				if ( isset( $supported[$mwLangCode] ) ) {
-					return $mwLangCode;
-				}
-			}
-			// @begin Note: Remove this when minimum supported version is 1.40
-		} else {
-			static $invertedLookup = [];
-			foreach ( LanguageCode::getNonstandardLanguageCodeMapping() as $internal => $bcp47 ) {
-				$invertedLookup[strtolower( $bcp47 )] = $internal;
-			}
-			foreach ( $preferred as $bcp47LangCode => $weight ) {
-				$mwLangCode = $invertedLookup[$bcp47LangCode] ?? $bcp47LangCode;
-				if ( isset( $supported[$mwLangCode] ) ) {
-					return $mwLangCode;
-				}
+		foreach ( $preferred as $bcp47LangCode => $weight ) {
+			$mwLangCode = LanguageCode::bcp47ToInternal( $bcp47LangCode );
+			if ( isset( $supported[$mwLangCode] ) ) {
+				return $mwLangCode;
 			}
 		}
-		// @end
 
 		// Some browsers might:
 		// - Sent codes like 'zh-hant-tw':

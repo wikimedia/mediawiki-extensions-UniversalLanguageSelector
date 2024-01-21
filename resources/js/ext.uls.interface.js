@@ -121,12 +121,9 @@
 	 * @return {jQuery}
 	 */
 	function createMenuButton( buttonClass ) {
-		// cdx-button--type-quiet is needed for 1.39 support.
-		// Please remove when support is no longer needed.
 		var classes = [
 			'cdx-button',
 			'cdx-button--weight-quiet',
-			'cdx-button--type-quiet',
 			buttonClass
 		];
 		// eslint-disable-next-line mediawiki/class-doc

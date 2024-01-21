@@ -130,19 +130,16 @@
 	margin-left: 15px;
 }
 
-// This can be removed when 1.39 support is dropped.
-.uls-input-settings-inputmethods-list .cdx-radio__label,
-.checkbox.cdx-checkbox__label {
-	padding-left: ~'calc(1.25em + 8px)';
-}
-
 .uls-ui-languages p,
 .checkbox {
 	color: @color-subtle;
 	font-size: 10pt;
 }
 
-/* @todo: Amend to use Codex when 1.39 support is no longer needed. */
+/*
+ * @todo: ULS settings dialog uses buttons as tabs. Amend to use Tabs component
+ * from Codex when 1.39 support is no longer needed.
+ */
 #languagesettings-panels .uls-cdx-button-pressed {
 	background-color: @background-color-progressive--active;
 	color: @color-inverted;

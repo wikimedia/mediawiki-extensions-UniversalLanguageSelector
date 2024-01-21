@@ -189,7 +189,7 @@
 				lang, i, language, $button, autonym;
 
 			// Don't let anonymous users change interface language
-			if ( !anonsAllowed && !mw.uls.isNamed() ) {
+			if ( !anonsAllowed && !mw.user.isNamed() ) {
 				$loginCta = $( '<p>' )
 					.attr( 'id', 'uls-display-settings-anon-log-in-cta' );
 				autonym = $.uls.data.getAutonym( this.contentLanguage );

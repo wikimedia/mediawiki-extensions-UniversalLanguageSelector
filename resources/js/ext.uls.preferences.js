@@ -28,8 +28,7 @@
 		// https://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript#Keys
 		this.preferenceName = 'uls-preferences';
 		this.username = mw.user.getName();
-		// For MW < 1.40. ext.uls.isNamed is inlined here to avoid dependency on ext.uls.common.
-		this.isNamed = typeof mw.user.isNamed === 'function' ? mw.user.isNamed() : !mw.user.isAnon();
+		this.isNamed = mw.user.isNamed();
 		this.preferences = null;
 		this.init();
 	};
