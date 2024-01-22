@@ -22,7 +22,6 @@ namespace UniversalLanguageSelector;
 
 use Config;
 use ExtensionRegistry;
-use Html;
 use IBufferingStatsdDataFactory;
 use IContextSource;
 use LanguageCode;
@@ -31,6 +30,7 @@ use MediaWiki\Extension\BetaFeatures\BetaFeatures;
 use MediaWiki\Hook\BeforePageDisplayHook;
 use MediaWiki\Hook\MakeGlobalVariablesScriptHook;
 use MediaWiki\Hook\UserGetLanguageObjectHook;
+use MediaWiki\Html\Html;
 use MediaWiki\Languages\LanguageNameUtils;
 use MediaWiki\Preferences\Hook\GetPreferencesHook;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderGetConfigVarsHook;
