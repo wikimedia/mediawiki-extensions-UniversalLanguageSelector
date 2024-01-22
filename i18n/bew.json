@@ -49,7 +49,7 @@
 	"ext-uls-input-disable": "Matiin peranti masupan",
 	"ext-uls-input-enable": "Nyalain peranti masupan",
 	"ext-uls-input-disable-info": "Peranti masupan dimatiin.",
-	"ext-uls-input-settings-noime": "Kaga' ada cara masupan nyang kesedia bakal ni basa.",
+	"ext-uls-input-settings-noime": "Kaga' ada cara masupan nyang derak bakal ni basa.",
 	"ext-uls-input-disable-notification": "Cara masupan dimatiin",
 	"ext-uls-input-disable-notification-undo": "Balikin",
 	"ext-uls-input-disable-notification-info-personal": "Lu bisa nyalain peranti masupan kapan aja deri penyetèlan basa.",
@@ -59,7 +59,7 @@
 	"ext-uls-compact-link-info": "Semua basa (pilihan awal deri pilihan umum lu punya atawa orang laèn punya)",
 	"prefs-languages": "Basa",
 	"ext-uls-compact-language-links-preference": "Paké [[$1|daptar basa ringkes]], dengen basa nyang nyambung ama lu.",
-	"ext-uls-compact-no-results": "Ni halaman kaga' kesedia di basa lu punya cari.",
+	"ext-uls-compact-no-results": "Ni halaman kaga' derak di basa lu punya cari.",
 	"ext-uls-setlang-error": "Ngablu pas merbaruin lu punya basa pilihan. Kengabluan: $1",
 	"ext-uls-setlang-unknown-error": "Kengabluan nyang kaga' ditauin",
 	"ext-uls-setlang-message": "Sènggètan nyang lu ikutin minta' antermukanya dikasi unjuk di <strong>$1 ($2)</strong>",
@@ -69,7 +69,7 @@
 	"ext-uls-setlang-cancel": "Jangan dirobah",
 	"ext-uls-actions-menu-language-settings-item-label": "Buka setèlan basa",
 	"ext-uls-empty-state-header": "Belon ada basa",
-	"ext-uls-empty-state-desc": "Kaga' ada basa nyang kesedia sekarang",
+	"ext-uls-empty-state-desc": "Kaga' ada basa nyang derak sekarang",
 	"ext-uls-empty-state-header-actions-available": "Belon ada basa. Tambah baru?",
-	"ext-uls-empty-state-desc-actions-available": "Keja isi kesedia di lebi banyak basa."
+	"ext-uls-empty-state-desc-actions-available": "Keja isi derak di lebi banyak basa."
 }
