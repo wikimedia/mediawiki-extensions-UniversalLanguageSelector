@@ -29,14 +29,6 @@ class ResourceLoaderULSJsonMessageModule extends Module {
 	}
 
 	/**
-	 * Get supported mobile targets
-	 * @return string[] supported targets
-	 */
-	public function getTargets() {
-		return [ 'desktop', 'mobile' ];
-	}
-
-	/**
 	 * @suppress PhanParamSignatureRealMismatchParamType, UnusedSuppression -- T308443
 	 * @param Context $context
 	 * @return array

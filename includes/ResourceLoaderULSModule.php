@@ -31,9 +31,6 @@ use MediaWiki\ResourceLoader\ResourceLoader;
  * ResourceLoader module for UniversalLanguageSelector
  */
 class ResourceLoaderULSModule extends Module {
-	/** @var string[] */
-	protected $targets = [ 'desktop', 'mobile' ];
-
 	/**
 	 * Get all the dynamic data for the content language to an array.
 	 *

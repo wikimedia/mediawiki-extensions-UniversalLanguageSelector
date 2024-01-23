@@ -143,10 +143,6 @@
 	},
 	"ResourceModules": {
 		"ext.uls.common": {
-			"targets": [
-				"desktop",
-				"mobile"
-			],
 			"scripts": [
 				"js/ext.uls.common.js"
 			],
@@ -219,10 +215,6 @@
 			]
 		},
 		"ext.uls.i18n": {
-			"targets": [
-				"desktop",
-				"mobile"
-			],
 			"scripts": "js/ext.uls.i18n.js",
 			"dependencies": [
 				"jquery.i18n",
@@ -230,7 +222,6 @@
 			]
 		},
 		"ext.uls.interface": {
-			"targets": [ "desktop", "mobile" ],
 			"packageFiles": [
 				"js/ext.uls.interface.js",
 				"js/ext.uls.launch.js",
@@ -263,7 +254,6 @@
 			]
 		},
 		"ext.uls.interlanguage": {
-			"targets": [ "desktop", "mobile" ],
 			"styles": "css/ext.uls.interlanguage.less"
 		},
 		"ext.uls.languagenames": {
@@ -279,10 +269,6 @@
 			]
 		},
 		"ext.uls.mediawiki": {
-			"targets": [
-				"desktop",
-				"mobile"
-			],
 			"scripts": "js/ext.uls.mediawiki.js",
 			"dependencies": [
 				"ext.uls.common",
@@ -299,10 +285,6 @@
 			"dependencies": "ext.uls.i18n"
 		},
 		"ext.uls.preferences": {
-			"targets": [
-				"desktop",
-				"mobile"
-			],
 			"scripts": "js/ext.uls.preferences.js",
 			"dependencies": [
 				"mediawiki.api",
@@ -314,7 +296,6 @@
 			"styles": "css/ext.uls.preferencespage.less"
 		},
 		"ext.uls.pt": {
-			"targets": [ "desktop", "mobile" ],
 			"styles": "css/ext.uls.pt.less",
 			"skinStyles": {
 				"default": [
@@ -357,7 +338,6 @@
 			]
 		},
 		"ext.uls.webfonts": {
-			"targets": [ "desktop", "mobile" ],
 			"scripts": "js/ext.uls.webfonts.js",
 			"dependencies": [
 				"ext.uls.preferences",
@@ -368,10 +348,6 @@
 			"scripts": [
 				"../lib/jquery.webfonts/src/jquery.webfonts.js",
 				"js/ext.uls.webfonts.repository.js"
-			],
-			"targets": [
-				"desktop",
-				"mobile"
 			]
 		},
 		"jquery.ime": {
@@ -381,10 +357,6 @@
 			"remoteExtPath": "UniversalLanguageSelector/lib"
 		},
 		"jquery.uls": {
-			"targets": [
-				"desktop",
-				"mobile"
-			],
 			"scripts": [
 				"jquery.uls/src/jquery.uls.core.js",
 				"jquery.uls/src/jquery.uls.lcd.js",
@@ -407,18 +379,10 @@
 				"jquery.uls/src/jquery.uls.data.js",
 				"jquery.uls/src/jquery.uls.data.utils.js"
 			],
-			"targets": [
-				"desktop",
-				"mobile"
-			],
 			"localBasePath": "lib",
 			"remoteExtPath": "UniversalLanguageSelector/lib"
 		},
 		"jquery.uls.grid": {
-			"targets": [
-				"desktop",
-				"mobile"
-			],
 			"styles": "jquery.uls/css/jquery.uls.grid.css",
 			"localBasePath": "lib",
 			"remoteExtPath": "UniversalLanguageSelector/lib"

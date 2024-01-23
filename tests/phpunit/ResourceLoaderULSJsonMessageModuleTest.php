@@ -21,7 +21,6 @@ class ResourceLoaderULSJsonMessageModuleTest extends \PHPUnit\Framework\TestCase
 			->willReturn( 'en' );
 
 		$this->assertContainsOnly( 'string', $instance->getDependencies(), 'dependencies' );
-		$this->assertContainsOnly( 'string', $instance->getTargets(), 'targets' );
 
 		$summary = $instance->getDefinitionSummary( $context );
 		$lastElement = end( $summary );
