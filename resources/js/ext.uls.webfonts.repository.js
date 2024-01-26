@@ -257,7 +257,8 @@
 		],
 		"ks": [
 			"system",
-			"AwamiNastaliq"
+			"AwamiNastaliq",
+			"NotoNastaliqUrdu"
 		],
 		"kte": [
 			"BabelStoneTibetanSlim"
@@ -425,7 +426,8 @@
 			"system",
 			"AwamiNastaliq",
 			"Hussaini Nastaleeq",
-			"NafeesWeb"
+			"NafeesWeb",
+			"NotoNastaliqUrdu"
 		],
 		"wa": [
 			"system",
@@ -743,6 +745,17 @@
 			"fontweight": "bold",
 			"woff": "NotoSerifHentaigana/NotoSerifHentaigana-Bold.woff?58245",
 			"woff2": "NotoSerifHentaigana/NotoSerifHentaigana-Bold.woff2?f9e64"
+		},
+		"NotoNastaliqUrdu": {
+			"woff": "NotoNastaliqUrdu/NotoNastaliqUrdu-Regular.woff?7414e",
+			"woff2": "NotoNastaliqUrdu/NotoNastaliqUrdu-Regular.woff2?62ea7",
+			"variants": {
+				"bold": "NotoNastaliqUrdu Bold"
+			}
+		},
+		"NotoNastaliqUrdu Bold": {
+			"woff": "NotoNastaliqUrdu/NotoNastaliqUrdu-Bold.woff?3f54d",
+			"woff2": "NotoNastaliqUrdu/NotoNastaliqUrdu-Bold.woff2?a8aac"
 		},
 		"NotoSansSundanese Regular": {
 			"woff": "NotoSansSundanese/NotoSansSundanese-Regular.woff?a8907",
