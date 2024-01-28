@@ -20,5 +20,6 @@
 	"prefs-languages": "Kielah",
 	"ext-uls-compact-language-links-preference": "Keevti [[$1|kompakt kielâlisto]], mii čáittá tunjin merhâšittee kielâid.",
 	"ext-uls-setlang-unknown-error": "Tubdâmettum feilâ",
-	"ext-uls-setlang-heading": "Halijdah-uv tun molsođ kevttimloovtâ kielâ?"
+	"ext-uls-setlang-heading": "Halijdah-uv tun molsođ kevttimloovtâ kielâ?",
+	"ext-uls-add-languages-button-label": "Lasseet kielâid"
 }
