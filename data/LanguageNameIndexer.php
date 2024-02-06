@@ -65,9 +65,6 @@ class LanguageNameIndexer extends Maintenance {
 		$buckets = [];
 		foreach ( $languageNames as $translations ) {
 			foreach ( $translations as $targetLanguage => $translation ) {
-				// Remove directionality markers used in Names.php: users are not
-				// going to type these.
-				$translation = str_replace( "\xE2\x80\x8E", '', $translation );
 				$translation = mb_strtolower( $translation );
 				$translation = trim( $translation );
 
