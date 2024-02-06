@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"Như Gây Mê"
 		]
 	},
-	"uls-plang-title-languages": "Pinulongan"
+	"uls-plang-title-languages": "Pinulongan",
+	"ext-uls-compact-link-count": "{{PLURAL:$1| Usa pa| $1 pa}}"
 }
