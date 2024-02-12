@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Denayadennis"
+			"Denayadennis",
+			"Amire80"
 		]
 	},
 	"uls-plang-title-languages": "Kutujin",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Geleŋ köti |$1 Jore\n}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Geleŋ köti|$1 jore}}"
 }
