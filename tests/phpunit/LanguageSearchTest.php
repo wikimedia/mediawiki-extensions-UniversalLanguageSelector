@@ -18,6 +18,8 @@
  * @license MIT
  */
 
+use MediaWiki\Extension\CLDR\LanguageNames;
+
 /**
  * @covers \LanguageNameSearch
  * @covers \LanguageNameSearchData
