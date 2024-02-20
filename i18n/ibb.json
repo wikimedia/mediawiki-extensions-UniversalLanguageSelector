@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Okon Ibiono"
+			"Okon Ibiono",
+			"Uduakumana"
 		]
 	},
-	"uls-plang-title-languages": "Ikọ"
+	"uls-plang-title-languages": "Ikọ",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ked ñwen|$1 añwen}}‎"
 }
