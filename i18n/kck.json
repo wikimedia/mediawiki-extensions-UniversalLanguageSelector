@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"MthulisiNcube"
+		]
+	},
+	"uls-plang-title-languages": "Ndimi",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|kumwe kun'ompela |$1 kumwe}}"
+}
