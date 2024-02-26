@@ -13,7 +13,7 @@
 	"uls-desc": "Даје кориснику неколико начина да изабере језик и да прилагоди подешавања језика",
 	"uls-plang-title-languages": "Језици",
 	"ext-uls-select-language-settings-icon-tooltip": "Подешавања језика",
-	"ext-uls-undo-language-tooltip-text": "Језик промењен са $1",
+	"ext-uls-undo-language-tooltip-text": "Пређашњи језик $1",
 	"ext-uls-undo-language-tooltip-text-local": "Језик промењен за овај вики. Језик за све викије можете подесити у [[Special:GlobalPreferences|глобалним подешавањима]].",
 	"ext-uls-language-settings-preferences-link": "Још језичких подешавања",
 	"uls-betafeature-label": "Сажете везе ка другим језицима",
