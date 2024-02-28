@@ -3,13 +3,14 @@
 		"authors": [
 			"Snævar",
 			"Sveinn í Felli",
-			"Xð"
+			"Xð",
+			"Stefán Örvar Sigmundsson"
 		]
 	},
 	"uls-plang-title-languages": "Tungumálum",
 	"ext-uls-select-language-settings-icon-tooltip": "Tungumálastillingar",
 	"ext-uls-undo-language-tooltip-text": "Tungumáli breytt úr $1",
-	"ext-uls-undo-language-tooltip-text-local": "Tungumáli var breytt fyrir þetta wiki. Athugaðu [[Special:GlobalPreferences|víðværar kjörstillingar]] til að breyta tungumálinu á öllum wiki-svæðum.",
+	"ext-uls-undo-language-tooltip-text-local": "Tungumáli breytt fyrir þennan wiki. Athugaðu [[Special:GlobalPreferences|altæku kjörstillingarnar]] þínar til að breyta tungumálinu fyrir alla wiki.",
 	"ext-uls-language-settings-preferences-link": "Fleiri tungumálastillingar",
 	"uls-betafeature-label": "Þjappaðir tungumálatenglar",
 	"uls-betafeature-desc": "Nota stytta útgáfu tungumálalistans, einungis með tungumálum sem eiga betur við þig.",
