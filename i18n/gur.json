@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Ayire Adongo",
-			"Amoramah"
+			"Amoramah",
+			"Atalata Gumah"
 		]
 	},
 	"uls-desc": "Bo'ori tuntuna la fɔla zo'e zo'e ti a ta'am loe yeletɔgum gee maalum ŋmɛresɛ yeletɔgum la",
@@ -31,6 +32,7 @@
 	"ext-uls-webfonts-settings-info": "Ve'e gulesegɔ katɛ n zuni se'em la gee loe fu boti sɛla",
 	"ext-uls-webfonts-settings-info-link": "Lasebaarɛ zo'e zo'e",
 	"ext-uls-webfonts-select-for": "Loe gulesegɔ katɛ n zuni se'em bo $1",
+	"ext-uls-webfonts-select-for-content-info": "Font la ti ba dikɛ tuna yelezuo la",
 	"ext-uls-back-to-display-settings": "Lebe pa'alɛ maalegɔ",
 	"ext-uls-input-settings-title": "Input maalegɔ",
 	"ext-uls-input-settings-title-short": "Input",
@@ -60,6 +62,7 @@
 	"ext-uls-compact-no-results": "Pɛgedina wa ka boi bɔ'ɔra yeletɔgum la ti fu ɛ la",
 	"ext-uls-setlang-error": "Tuure n wa'am fu eeri ni yeletɔgum sebo puan la na. Tuure: $1",
 	"ext-uls-setlang-unknown-error": "Tu ka baŋɛ tuure la",
+	"ext-uls-setlang-heading": "Tee Tɔgum la",
 	"ext-uls-setlang-accept": "To'e teere",
 	"ext-uls-setlang-loading": "Dikeri ita...",
 	"ext-uls-setlang-cancel": "Da tee",

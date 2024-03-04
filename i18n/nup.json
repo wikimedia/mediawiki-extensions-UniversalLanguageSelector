@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Misbahu umar"
+			"Misbahu umar",
+			"Amire80"
 		]
 	},
-	"uls-plang-title-languages": "ezhimizhi"
+	"uls-plang-title-languages": "ezhimizhi",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Nni be|$1 be}}"
 }
