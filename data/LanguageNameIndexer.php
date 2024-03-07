@@ -80,7 +80,12 @@ class LanguageNameIndexer extends Maintenance {
 
 					$type = 'prefix';
 					$display = $translation;
-					if ( $index > 0 && count( $words ) > 1 ) {
+					if ( $index > 0 ) {
+						// Avoid creating infix entries for short strings like punctuation, articles, prepositions...
+						if ( mb_strlen( $word ) < 3 ) {
+							continue;
+						}
+
 						$type = 'infix';
 						$display = "$word — $translation";
 					}
