@@ -7,5 +7,7 @@
 	},
 	"uls-plang-title-languages": "Lang",
 	"ext-uls-select-language-settings-icon-tooltip": "Paramèt a lang",
+	"ext-uls-display-settings-language-tab": "Lang",
+	"ext-uls-language-settings-cancel": "Annilé",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Yonn|$1 Yonn ankò}}"
 }
