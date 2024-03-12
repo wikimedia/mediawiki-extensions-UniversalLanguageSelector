@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"Nadezhda"
 		]
 	},
-	"uls-plang-title-languages": "Йӹлмӹвлӓ"
+	"uls-plang-title-languages": "Йӹлмӹвлӓ",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Эче иктӹ|эче $1}}"
 }

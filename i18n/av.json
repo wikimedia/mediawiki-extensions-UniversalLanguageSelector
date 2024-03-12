@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Omarov M."
+			"Omarov M.",
+			"Augustus A C"
 		]
 	},
 	"uls-plang-title-languages": "МацӀал",
+	"jquery-ime-help": "Квеки",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Жеги $1}}"
 }
