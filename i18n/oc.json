@@ -37,5 +37,7 @@
 	"prefs-languages": "Lengas",
 	"ext-uls-compact-language-links-preference": "Utilizar una lista de lengas compacta, amb las lengas pertinentas per vos.",
 	"ext-uls-actions-menu-language-settings-item-label": "Preferéncias de lenga",
+	"ext-uls-empty-state-header": "Cap de lenga encara",
+	"ext-uls-empty-state-desc": "Cap de lenga es disponible pel moment",
 	"ext-uls-add-languages-button-label": "Apondre una lenga"
 }
