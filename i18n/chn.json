@@ -4,6 +4,6 @@
 			"POSSUM chowg"
 		]
 	},
-	"uls-plang-title-languages": "Kanawi ləlang",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|ixt wəx̣t|$1 wəx̣t}}"
+	"uls-plang-title-languages": "kʰanawi ləlang",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|wəx̣t ixt|wəx̣t $1}}"
 }
