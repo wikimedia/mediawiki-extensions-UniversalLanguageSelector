@@ -4,5 +4,10 @@
 			"Winston Sung"
 		]
 	},
-	"uls-plang-title-languages": "語言"
+	"uls-plang-title-languages": "語言",
+	"ext-uls-select-language-settings-icon-tooltip": "語言設定",
+	"ext-uls-display-settings-language-tab": "語言",
+	"ext-uls-language-settings-cancel": "取消",
+	"jquery-ime-help": "說明",
+	"prefs-languages": "語言"
 }
