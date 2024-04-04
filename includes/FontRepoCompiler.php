@@ -99,7 +99,7 @@ class FontRepoCompiler {
 				$languages[$code] = [ 'system' ];
 			}
 
-			if ( strpos( $rcode, '*' ) !== false ) {
+			if ( str_contains( $rcode, '*' ) ) {
 				if ( $languages[$code][0] === 'system' ) {
 					unset( $languages[$code][0] );
 				}

@@ -56,7 +56,7 @@ class LanguageNameSearch {
 		if ( $languageNameUtils->isKnownLanguageTag( $searchKey ) ) {
 			$name = mb_strtolower( $languageNameUtils->getLanguageName( $searchKey, $userLanguage ) );
 			// Check if language code is a prefix of the name
-			if ( strpos( $name, $searchKey ) === 0 ) {
+			if ( str_starts_with( $name, $searchKey ) ) {
 				$results[$searchKey] = $name;
 			} else {
 				$results[$searchKey] = "$searchKey – $name";
