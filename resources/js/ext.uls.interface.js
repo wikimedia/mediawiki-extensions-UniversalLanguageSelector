@@ -578,6 +578,7 @@
 		if ( $target.attr( 'data-uls-loaded' ) ) {
 			return;
 		}
+		$target.attr( 'data-uls-loaded', true );
 
 		ev.preventDefault();
 
@@ -587,8 +588,6 @@
 			parent = document.querySelectorAll( '.mw-portlet-lang, #p-lang' )[ 0 ];
 			languageNodes = parent ? parent.querySelectorAll( '.interlanguage-link-target' ) : [];
 			standalone = isUsingStandaloneLanguageButton();
-
-			$target.attr( 'data-uls-loaded', true );
 
 			// Setup click handler for ULS
 			launchULS(
