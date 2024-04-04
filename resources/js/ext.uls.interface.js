@@ -87,9 +87,7 @@
 		$emptyStateContainer.append( $header, $desc );
 		uls.$resultsView.append( $emptyStateContainer );
 
-		var actionItems = actionItemsRegistry.getItems();
-
-		if ( actionItems.length > 1 ) {
+		if ( actionItemsRegistry.size() > 1 ) {
 			// languageSettingsMenuItem will be always there.
 			// If other actions available, change text
 			$header.text( $.i18n( 'ext-uls-empty-state-header-actions-available' ) );
@@ -99,7 +97,7 @@
 		// Action menu items need OOUI widgets. Load them and register trigger event handler.
 		mw.loader.using( [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-interactions' ] ).done( function () {
 			var $actionsList = $( '<ul>' ).addClass( 'uls-language-action-items' );
-			actionItems.forEach( function ( actionItem ) {
+			actionItemsRegistry.getItems().forEach( function ( actionItem ) {
 				var actionButton = new ActionsMenuItem(
 					actionItem.icon,
 					actionItem.text,
@@ -111,7 +109,6 @@
 
 			$emptyStateContainer.append( $actionsList );
 		} );
-
 	}
 
 	/**
@@ -185,7 +182,7 @@
 			} );
 		};
 
-		if ( actionItemsRegistry.getItems().length ) {
+		if ( actionItemsRegistry.size() ) {
 			prependAddLanguagesMenuButton();
 		}
 		function onActionItemAdded( itemName, item ) {
