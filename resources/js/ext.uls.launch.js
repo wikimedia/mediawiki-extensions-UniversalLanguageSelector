@@ -157,34 +157,34 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 		};
 		ulsConfig.onPosition = function () {
 			// Compact language links specific positioning with a caret
-			var top, left, offset, height, width, triangleWidth;
+			var left;
 			// The panel is positioned carefully so that our pointy triangle,
 			// which is implemented as a square box rotated 45 degrees with
 			// rotation origin in the middle. See the corresponding style file.
 
 			// These are for the trigger
-			offset = $trigger.offset();
-			width = $trigger.outerWidth();
-			height = $trigger.outerHeight();
+			var offset = $trigger.offset(),
+				width = $trigger.outerWidth(),
+				height = $trigger.outerHeight();
 
 			// Triangle width is: who knows now, but this still looks fine.
-			triangleWidth = 12;
+			var triangleWidth = 12;
 
+			var isRight = offset.left > $( window ).width() / 2;
 			// selector-{left,right} control which side the caret appears.
 			// It needs to match the positioning of the dialog.
-			if ( offset.left > $( window ).width() / 2 ) {
-				left = offset.left - this.$menu.outerWidth() - triangleWidth;
-				this.$menu.removeClass( 'selector-left' ).addClass( 'selector-right' );
+			this.$menu.toggleClass( 'selector-left', !isRight )
+				.toggleClass( 'selector-right', isRight );
+			if ( isRight ) {
+				left = -this.$menu.outerWidth() - triangleWidth;
 			} else {
-				left = offset.left + width + triangleWidth;
-				this.$menu.removeClass( 'selector-right' ).addClass( 'selector-left' );
+				left = width + triangleWidth;
 			}
-			// Offset from the middle of the trigger
-			top = offset.top + ( height / 2 ) - 27;
 
 			return {
-				left: left,
-				top: top
+				left: offset.left + left,
+				// Offset from the middle of the trigger
+				top: offset.top + ( height / 2 ) - 27
 			};
 		};
 	}

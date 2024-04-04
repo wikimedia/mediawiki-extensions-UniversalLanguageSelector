@@ -481,8 +481,7 @@
 			// uls-ui-font-selector-label
 			// uls-content-font-selector-label
 			$fontLabel = this.$template.find( '#' + target + '-font-selector-label' );
-			$fontLabel.empty();
-			$fontLabel.append( $( '<strong>' ) );
+			$fontLabel.empty().append( $( '<strong>' ) );
 
 			// Possible messages:
 			// ext-uls-webfonts-select-for-ui-info
