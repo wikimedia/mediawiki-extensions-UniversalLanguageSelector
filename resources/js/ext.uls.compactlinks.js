@@ -152,7 +152,6 @@
 		 */
 		this.compactList = null;
 
-		this.commonInterlanguageList = null;
 		this.$trigger = null;
 		this.compactSize = 0;
 		this.listSize = 0;
