@@ -6,10 +6,11 @@
 			"Къарачайлы"
 		]
 	},
-	"uls-desc": "Къошулуучугъа тил сайларгъа эмда тил джарашдырыуланы тюрлендирирге талай амал береди",
+	"uls-desc": "Хайырланыучугъа тил сайларгъа эмда тил джарашдырыуланы тюрлендирирге талай амал береди",
 	"uls-plang-title-languages": "Тилле",
 	"ext-uls-select-language-settings-icon-tooltip": "Тил джарашдырыула",
 	"ext-uls-undo-language-tooltip-text": "Алгъыннгы тил: $1",
+	"ext-uls-undo-language-tooltip-text-local": "Бу вики ючюн тил тюрлендирилди. Бютеу викилени тиллерин тюрлендирир ючюн [[Special:GlobalPreferences|глобал джарашдырыуланы]] тинт.",
 	"ext-uls-language-settings-preferences-link": "Къошакъ тил джарашдырыула",
 	"uls-betafeature-label": "Тил джибериулени компакт тизмеси",
 	"uls-betafeature-desc": "Тил джибериулени тизмесини, къуру сизге керекли болгъан тилле бла, къысха вариантын кёргюзтеди.",
@@ -56,5 +57,21 @@
 	"ext-uls-input-disable-notification-info-personal": "Джазыу адырланы хар заманда да тил джарашдырыуладан джандырыргъа боллукъду.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Джазыу адырланы хар заманда да тил тизимни къатындагъы тил джарашдырыуладан джандырыргъа боллукъду.",
 	"ext-uls-language-settings-applying": "Сингдирилиую...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Энтда бир|Дагъыда $1}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Энтда бир|Дагъыда $1}}",
+	"ext-uls-compact-link-info": "Бютеу тилле (сизни эмда башхаланы ортакъ сайлауларындан биринчи сайлау)",
+	"prefs-languages": "Тилле",
+	"ext-uls-compact-language-links-preference": "Къуру сеннге келишген [[$1|тил тизмени]] хайырлан.",
+	"ext-uls-compact-no-results": "Бу бет, сиз излеген тилде джокъду.",
+	"ext-uls-setlang-error": "Сиз сайлагъан тил джангыртылгъан заманда халат болду. Халат:$1",
+	"ext-uls-setlang-unknown-error": "Билинмеген халат",
+	"ext-uls-setlang-message": "Кёчдюгюз джибериу, интерфейсни <strong>$1 ($2)</strong> ичинде кёрюнюрюн изледи",
+	"ext-uls-setlang-heading": "Интерфейс тилни алмашдырылсынмы?",
+	"ext-uls-setlang-accept": "Тюрлениуню къабыл эт",
+	"ext-uls-setlang-loading": "Сингдирилиую...",
+	"ext-uls-setlang-cancel": "Тюрлендирме",
+	"ext-uls-actions-menu-language-settings-item-label": "Тил джарашдырыуланы ач",
+	"ext-uls-empty-state-header": "Алкъын тил джокъду",
+	"ext-uls-empty-state-desc": "Бусагъатда сайларча тил джокъду",
+	"ext-uls-empty-state-header-actions-available": "Алкъын тил джокъду. Джангысын къошайыкъмы?",
+	"ext-uls-empty-state-desc-actions-available": "Контенти аслам тилде хайырланырча эт."
 }

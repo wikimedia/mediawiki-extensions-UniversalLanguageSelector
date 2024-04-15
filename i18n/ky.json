@@ -20,7 +20,7 @@
 	"ext-uls-language-settings-apply": "Колдонуу",
 	"ext-uls-language-settings-cancel": "Жокко чыгаруу",
 	"ext-uls-language-buttons-help": "Интерфейс тилин өзгөртүү. Мазмундун тилине таасир этилбейт.",
-	"ext-uls-display-settings-font-settings": "Шрифт ырастоолору",
+	"ext-uls-display-settings-font-settings": "Шрифт параметрлери",
 	"ext-uls-display-settings-ui-language": "Интерфейс тили",
 	"ext-uls-display-settings-anon-label": "Интерфейс тили:",
 	"ext-uls-display-settings-anon-same-as-content": "Кыргызча (мазмундук тил катары)",
@@ -40,5 +40,7 @@
 	"prefs-languages": "Тилдер",
 	"ext-uls-setlang-unknown-error": "Белгисиз ката",
 	"ext-uls-setlang-accept": "Өзгөртүүнү ырастоо",
-	"ext-uls-actions-menu-language-settings-item-label": "Тил параметрлерин ачуу"
+	"ext-uls-actions-menu-language-settings-item-label": "Тил параметрлерин ачуу",
+	"ext-uls-empty-state-header-actions-available": "Башка тилдерде жеткиликтүү эмес.",
+	"ext-uls-empty-state-desc-actions-available": "Мазмунду башка тилдерде жеткиликтүү кылыңыз."
 }
