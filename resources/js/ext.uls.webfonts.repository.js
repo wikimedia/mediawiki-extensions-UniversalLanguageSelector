@@ -226,6 +226,10 @@
 			"system",
 			"OskiEast"
 		],
+		"ja": [
+			"system",
+			"Noto Serif Hentaigana"
+		],
 		"jv": [
 			"system",
 			"Tuladha Jejeg"
@@ -727,6 +731,18 @@
 			"variants": {
 				"bold": "Nokora Bold"
 			}
+		},
+		"Noto Serif Hentaigana": {
+			"woff": "NotoSerifHentaigana/NotoSerifHentaigana-Regular.woff?339f3",
+			"woff2": "NotoSerifHentaigana/NotoSerifHentaigana-Regular.woff2?79828",
+			"variants": {
+				"bold": "Noto Serif Hentaigana Bold"
+			}
+		},
+		"Noto Serif Hentaigana Bold": {
+			"fontweight": "bold",
+			"woff": "NotoSerifHentaigana/NotoSerifHentaigana-Bold.woff?58245",
+			"woff2": "NotoSerifHentaigana/NotoSerifHentaigana-Bold.woff2?f9e64"
 		},
 		"NotoSansSundanese Regular": {
 			"woff": "NotoSansSundanese/NotoSansSundanese-Regular.woff?a8907",
