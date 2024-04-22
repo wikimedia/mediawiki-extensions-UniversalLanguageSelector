@@ -5,5 +5,6 @@
 		]
 	},
 	"uls-plang-title-languages": "Endimi",
+	"ext-uls-undo-language-tooltip-text": "Orulimi ruhindwirwe kuruga $1",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Orundi rumu|Ezindi $1}}"
 }
