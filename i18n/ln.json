@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"Bergerdias"
 		]
 	},
-	"uls-plang-title-languages": "Nkótá"
+	"uls-desc": "Epesaka mosaleli banzela mingi ya kopona monoko mpe kobongisa ba paramètres ya monoko",
+	"uls-plang-title-languages": "Nkótá",
+	"ext-uls-select-language-settings-icon-tooltip": "Ndenge ya koloba",
+	"ext-uls-undo-language-tooltip-text": "Monoko ebongwanaki uta na $1"
 }
