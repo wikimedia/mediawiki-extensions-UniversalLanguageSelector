@@ -1,0 +1,6 @@
+== UniversalLanguageSelector 2024.04 ==
+Released at 2024-04-25.
+
+=== Noteworthy changes ===
+* When searching for languages, don't match on short infix terms ({{phab|T358862}})
+* Localisation and maintenance updates.
