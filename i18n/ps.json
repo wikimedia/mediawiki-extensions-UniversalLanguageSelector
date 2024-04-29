@@ -3,7 +3,8 @@
 		"authors": [
 			"Ahmed-Najib-Biabani-Ibrahimkhel",
 			"Amjad Khan",
-			"Baloch Khan"
+			"Baloch Khan",
+			"Af420"
 		]
 	},
 	"uls-plang-title-languages": "ژبې",
@@ -56,5 +57,8 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "تاسې د ننوتلو اوزارونه هر وخت، د ژبې لړليک څنگ ته، د ژب-امستنو څخه چارنولی شی.",
 	"ext-uls-language-settings-applying": "غوښتنه کيږی...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|يوه بله ژبه|$1 نورې ژبي}}",
-	"prefs-languages": "ژبې"
+	"prefs-languages": "ژبې",
+	"ext-uls-actions-menu-language-settings-item-label": "د ژبې سیټینګ خلاصول",
+	"ext-uls-empty-state-header-actions-available": "تر اوسه هیڅ ژبه نسته؟ بله ژبه ورګډه کړئ",
+	"ext-uls-empty-state-desc-actions-available": "همدغه مالومات په نورو ژبو کي چمتو کړئ"
 }

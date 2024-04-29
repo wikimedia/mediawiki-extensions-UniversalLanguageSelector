@@ -67,5 +67,7 @@
 	"ext-uls-setlang-heading": "Voleu canviar la llengua de la interfície?",
 	"ext-uls-setlang-loading": "S’està aplicant…",
 	"ext-uls-actions-menu-header": "Més opcions",
-	"ext-uls-actions-menu-language-settings-item-label": "Preferències de llengua"
+	"ext-uls-actions-menu-language-settings-item-label": "Preferències de llengua",
+	"ext-uls-empty-state-header": "Cap altra llengua",
+	"ext-uls-empty-state-desc": "No hi ha cap altra llengua disponible per ara"
 }
