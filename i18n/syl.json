@@ -5,7 +5,14 @@
 			"ꠢꠣꠍꠘ ꠞꠣꠎꠣ"
 		]
 	},
+	"uls-desc": "ꠛꠦꠛꠀꠞꠇꠞ꠆ꠞꠣꠞꠦ ꠄꠉꠥ ꠜꠣꠡꠣ ꠛꠣꠍꠣꠞ ꠟꠣꠉꠤ ꠀꠞ ꠜꠣꠡꠣ ꠍꠦꠐꠤꠋꠍ ꠡꠣꠝꠘ꠆ꠎꠂꠡ꠆ꠡ ꠇꠞꠣꠞ ꠟꠣꠉꠤ ꠛꠤꠜꠤꠘ꠆ꠘ ꠃꠙꠣꠄ ꠖꠦꠄ",
 	"uls-plang-title-languages": "ꠝꠣꠔ ꠅꠇꠟ",
+	"ext-uls-select-language-settings-icon-tooltip": "ꠜꠣꠡꠣ ꠐꠤꠇꠐꠣꠇ",
+	"ext-uls-undo-language-tooltip-text": "ꠜꠣꠡꠣ $1 ꠕꠘꠦ ꠛꠖꠟꠤꠉꠦꠍꠦ",
+	"ext-uls-undo-language-tooltip-text-local": "ꠁ ꠃꠁꠇꠤꠞ ꠟꠣꠉꠤ ꠜꠣꠡꠣ ꠙꠞꠤꠛꠞ꠆ꠔꠘ ꠇꠞꠣ ꠅꠁꠍꠦ ⁕ ꠢꠇꠟ ꠃꠁꠇꠤꠞ ꠜꠣꠡꠣ ꠙꠞꠤꠛꠞ꠆ꠔꠘ ꠇꠞꠔꠦ ꠀꠙꠘꠣꠞ [[Special:GlobalPreferences|ꠖꠥꠘꠤꠀꠛꠤ ꠙꠍꠘ]] ꠖꠦꠈꠂꠘ ⁕",
+	"ext-uls-language-settings-preferences-link": "ꠀꠞꠅ ꠜꠣꠡꠣ ꠐꠤꠇꠐꠣꠇ",
+	"uls-betafeature-label": "ꠇꠝ꠆ꠙꠦꠇ꠆ꠐ ꠜꠣꠡꠣꠞ ꠟꠉ",
+	"uls-betafeature-desc": "ꠜꠣꠡꠣꠞ ꠔꠣꠟꠤꠇꠣꠞ ꠄꠉꠥ ꠡꠋꠇ꠆ꠇꠤꠙ꠆ꠔ ꠡꠋꠡ꠆ꠇꠞꠘ ꠖꠦꠈꠣꠁꠘ ꠨ ꠈꠣꠟꠤ ꠀꠙꠘꠣꠞ ꠟꠉꠦ ꠀꠞꠅ ꠙ꠆ꠞꠣꠡꠘ꠆ꠉꠤꠇ ꠜꠣꠡꠣꠁꠘ꠆ꠞꠔ ꠟꠉꠦ ⁕",
 	"ext-uls-display-settings-language-tab": "ꠜꠣꠡꠣ",
 	"ext-uls-display-settings-fonts-tab": "ꠚꠘ꠆ꠐꠣꠁꠘ",
 	"ext-uls-display-settings-title-short": "ꠖꠦꠈꠣꠘꠤ",
