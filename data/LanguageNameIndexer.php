@@ -113,6 +113,11 @@ class LanguageNameIndexer extends Maintenance {
 			'ja' => [ 'nihongo', 'にほんご' ],
 			// Mon, renamed in core MediaWiki's Names.php (T352776)
 			'mnw' => [ 'ဘာသာ မန်' ],
+			// Palembang, also known as "Musi".
+			// Writing this as two words ensures that it has a unique key,
+			// so that Moore (mos), which is known as "musi" in one of the languages,
+			// can also be found
+			'mui' => [ 'musi palembang' ],
 			// Western Punjabi, doesn't start with the word "Punjabi" in any language
 			'pnb' => [ 'punjabi western' ],
 			// Simplified and Traditional Chinese, because zh-hans and zh-hant

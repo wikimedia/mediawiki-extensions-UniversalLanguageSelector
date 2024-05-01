@@ -76,6 +76,15 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 				'pnb' => 'punjabi western'
 			]
 			],
+			[ 'musi', [
+				'mos' => 'mosi',
+				'mui' => class_exists( LanguageNames::class ) ? 'musi' : 'musi palembang',
+			]
+			],
+			[ 'palembang', [
+				'mui' => 'palembang',
+			]
+			],
 			[ 'castellano', [
 				'es' => 'castellano',
 			]

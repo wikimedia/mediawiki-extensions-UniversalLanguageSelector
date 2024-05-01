@@ -20808,6 +20808,7 @@ class LanguageNameSearchData {
 				'muscogeera' => 'mus',
 				'muse krií lángwej' => 'crm',
 				'musi' => 'mos',
+				'musi palembang' => 'mui',
 				'muskogee' => 'mus',
 				'muskogee-schpraach' => 'mus',
 				'muskogee-sprache' => 'mus',
