@@ -446,8 +446,8 @@
 	},
 	"fonts": {
 		"AbyssinicaSIL": {
-			"woff": "AbyssinicaSIL/AbyssinicaSIL-R.woff?893c7",
-			"woff2": "AbyssinicaSIL/AbyssinicaSIL-R.woff2?361f7"
+			"woff": "AbyssinicaSIL/AbyssinicaSIL-R.woff?10e4b",
+			"woff2": "AbyssinicaSIL/AbyssinicaSIL-R.woff2?2942e"
 		},
 		"Akkadian": {
 			"woff": "Akkadian/Akkadian.woff?fc09d",
