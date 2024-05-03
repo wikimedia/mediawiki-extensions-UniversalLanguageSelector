@@ -904,8 +904,8 @@
 			"woff2": "TuladhaJejeg/TuladhaJejeg_gr.woff2?8d13d"
 		},
 		"UnifrakturMaguntia": {
-			"woff": "UnifrakturMaguntia/UnifrakturMaguntia.woff?6ad8f",
-			"woff2": "UnifrakturMaguntia/UnifrakturMaguntia.woff2?23272"
+			"woff": "UnifrakturMaguntia/UnifrakturMaguntia.woff?cfde0",
+			"woff2": "UnifrakturMaguntia/UnifrakturMaguntia.woff2?ee15f"
 		},
 		"Vimala": {
 			"woff": "Vimala/Vimala.woff?f75ba",
