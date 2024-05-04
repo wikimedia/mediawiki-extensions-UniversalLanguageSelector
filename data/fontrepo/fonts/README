@@ -43,8 +43,5 @@ font compilation script can pick it up.
 Preparing font formats
 -----------------------
 
-1. From the upstream releases, take the TTF versions.
-2. Use sfnt2woff to generate woff files
-$ ls *.ttf | xargs -n1 ../../../../node_modules/sfnt2woff/cli.js
-3. Use https://github.com/google/woff2 to generate woff2 files
+Use https://github.com/google/woff2 to generate woff2 files from ttf if needed
 $ ls *.ttf | xargs -n1 /path/to/woff2/woff2_compress

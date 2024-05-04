@@ -39,7 +39,7 @@ class FontRepoCompilerTest extends \PHPUnit\Framework\TestCase {
 		$givenInfo = [
 			'fontweight' => 'dummyFontWeight',
 			'fontstyle' => 'dummyFontStyle',
-			'woff' => 'Alef-Regular.woff',
+			'woff2' => 'Alef-Regular.woff2',
 			'bold' => 'dummyBold',
 			'bolditalic' => 'dummyBoldItalic',
 			'italic' => 'dummyItalic',
@@ -49,7 +49,7 @@ class FontRepoCompilerTest extends \PHPUnit\Framework\TestCase {
 		$this->assertSame( [
 			'fontweight' => 'dummyFontWeight',
 			'fontstyle' => 'dummyFontStyle',
-			'woff' => 'Alef/Alef-Regular.woff?2b430',
+			'woff2' => 'Alef/Alef-Regular.woff2?a2499',
 			'variants' => [
 				'bold' => 'dummyBold',
 				'bolditalic' => 'dummyBoldItalic',
@@ -63,7 +63,6 @@ class FontRepoCompilerTest extends \PHPUnit\Framework\TestCase {
 
 		$result = $instance->getFontInfo( [], __DIR__ . '/../../data/fontrepo/fonts/Alef' );
 		$this->assertSame( [
-			'woff' => 'Alef/Alef-Regular.woff?2b430',
 			'woff2' => 'Alef/Alef-Regular.woff2?a2499',
 		], $result );
 	}

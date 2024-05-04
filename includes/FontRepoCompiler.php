@@ -127,15 +127,15 @@ class FontRepoCompiler {
 			$info['fontstyle'] = $font['fontstyle'];
 		}
 
-		foreach ( [ 'woff', 'woff2' ] as $format ) {
+		foreach ( [ 'woff2' ] as $format ) {
 			if ( isset( $font[$format] ) ) {
 				$info[$format] = OutputPage::transformFilePath( $fontdir, $fontpath, $font[$format] );
 			}
 		}
 
 		// If font formats are not explicitly defined, scan the directory.
-		if ( !isset( $info['woff'] ) ) {
-			foreach ( glob( "$fontpath/*.{woff,woff2}", GLOB_BRACE ) as $fontfile ) {
+		if ( !isset( $info['woff2'] ) ) {
+			foreach ( glob( "$fontpath/*.woff2", GLOB_BRACE ) as $fontfile ) {
 				$type = substr( $fontfile, strrpos( $fontfile, '.' ) + 1 );
 				$info[$type] = OutputPage::transformFilePath( $fontdir, $fontpath, basename( $fontfile ) );
 			}
