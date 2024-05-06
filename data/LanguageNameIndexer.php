@@ -26,7 +26,6 @@ require_once "$IP/maintenance/Maintenance.php";
 
 use MediaWiki\Extension\CLDR\LanguageNames;
 use MediaWiki\Languages\LanguageNameUtils;
-use MediaWiki\MediaWikiServices;
 
 class LanguageNameIndexer extends Maintenance {
 	public function __construct() {
@@ -57,7 +56,7 @@ class LanguageNameIndexer extends Maintenance {
 		// Languages and their names in different languages from Names.php and the cldr extension
 		// This comes after $ulsLanguages so that for example the als/gsw mixup is using the code
 		// used in the Wikimedia world.
-		$mwLanguages = MediaWikiServices::getInstance()->getLanguageNameUtils()
+		$mwLanguages = $this->getServiceContainer()->getLanguageNameUtils()
 			->getLanguageNames( LanguageNameUtils::AUTONYMS, LanguageNameUtils::ALL );
 		foreach ( array_keys( $mwLanguages ) as $languageCode ) {
 			$languageNames[ $languageCode ] = LanguageNames::getNames( $languageCode, 0, 2 );
