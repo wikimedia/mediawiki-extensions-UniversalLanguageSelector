@@ -13,6 +13,7 @@
 			"Umherirrender"
 		]
 	},
+	"uls-extensionname": "{{name}}",
 	"uls-desc": "{{desc|name=UniversalLanguageSelector|url=https://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector}}",
 	"uls-plang-title-languages": "A title for the are in the sidebar in which the interlanguage links are supposed to appear.\nThis title is shown when there are no interlanguage links there, but an icon that enables the ULS is shown.\n{{Identical|Language}}",
 	"uls-ime-helppage": "{{notranslate}}\nTarget page for ime helps. Parameters:\n* $1 - ime id. Intended for wiki local customization. e.g. cyrl-palochka",

@@ -9,6 +9,7 @@
 		],
 		"message-documentation": "qqq"
 	},
+	"uls-extensionname": "Universal&shy;Language&shy;Selector",
 	"uls-desc": "Gives the user several ways to select a language and to adjust language settings",
 	"uls-plang-title-languages": "Languages",
 	"uls-ime-helppage": "https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/$1",
