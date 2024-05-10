@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Aram",
 			"Asoxor",
 			"Calak",
 			"Lost Whispers",
@@ -13,6 +14,7 @@
 	"ext-uls-select-language-settings-icon-tooltip": "ڕێکخستنەکانی زمان",
 	"ext-uls-undo-language-tooltip-text": "زمان گۆڕدرا لە $1",
 	"ext-uls-language-settings-preferences-link": "ڕێکخستنەکانی زیاتری زمان",
+	"uls-betafeature-desc": "وەشانێکی کورتتری پێڕستی زمانەکە، تەنیا بەو زمانانەی کە زیاتر پەیوەندییان بە تۆوە ھەیە پیشان بدە.",
 	"ext-uls-display-settings-title": "ڕێکخستنەکانی پێشاندان",
 	"ext-uls-display-settings-language-tab": "زمان",
 	"ext-uls-display-settings-fonts-tab": "فۆنتەکان",
@@ -28,6 +30,7 @@
 	"ext-uls-display-settings-anon-same-as-content": "$1 (وەکوو ناوەرۆک)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|بچۆ ژوورەوە]] بۆ ھەڵبژاردنی زمانێکی تر بۆ ڕووکار.",
 	"ext-uls-webfonts-settings-title": "ئەگەر پێویست بوو فۆنتەکان داگرە",
+	"ext-uls-webfonts-settings-info": "بە شێوەیەکی خۆگەڕ ئەو فۆنتانەی کە نین داگرە و ڕێگە بە ھەڵبژاردنی فۆنتە پەسەندکراوەکان بدە.",
 	"ext-uls-webfonts-settings-info-link": "زانیاریی زیاتر",
 	"ext-uls-webfonts-select-for": "فۆنت ھەڵبژێرە بۆ $1",
 	"ext-uls-webfonts-select-for-ui-info": "فۆنتی بەکارگیراو بۆ ڕووکاری بەکارھێنەر",
@@ -54,7 +57,21 @@
 	"ext-uls-input-disable-notification-undo": "پووچەڵکردنەوە",
 	"ext-uls-input-disable-notification-info-personal": "ھەر کات ویستت دەتوانی ئامرازەکانی تەختەکلیل لە بەشی ڕێکخستنەکانی زمان چالاک بکەی.",
 	"ext-uls-input-disable-notification-info-interlanguage": "ھەر کات ویستت دەتوانی ئامرازەکانی تەختەکلیل لە بەشی ڕێکخستنەکانی زمان لە لای پێرستی زمانەکان چالاک بکەی.",
+	"ext-uls-language-settings-applying": "جێبەجێ دەکرێت...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|زمانێکی تر|$1 زمانی تر}}",
 	"prefs-languages": "زمانەکان",
-	"ext-uls-compact-language-links-preference": "بەکارھێنانی [[$1|پێرستێکی پتەوی زمانەکان]] بەو زمانانەوەی کە دەیانناسیت"
+	"ext-uls-compact-language-links-preference": "بەکارھێنانی [[$1|پێرستێکی پتەوی زمانەکان]] بەو زمانانەوەی کە دەیانناسیت",
+	"ext-uls-compact-no-results": "ئەم پەڕە بەو زمانەی کە تۆ بۆی گەڕاویت بەردەست نییە.",
+	"ext-uls-setlang-error": "لەکاتی نوێکردنەوەی زمانە پەسەندکراوەکەت ھەڵەیەک ڕووی دا. ھەڵە: $1",
+	"ext-uls-setlang-unknown-error": "ھەڵەی نەزانراو",
+	"ext-uls-setlang-heading": "زمانی ڕووکار دەگۆڕی؟",
+	"ext-uls-setlang-accept": "گۆڕانکاری جێبەجێ بکە",
+	"ext-uls-setlang-loading": "جێبەجێ دەکرێت...",
+	"ext-uls-setlang-cancel": "مەگۆڕە",
+	"ext-uls-actions-menu-language-settings-item-label": "ڕێکخستنەکانی زمان بکەوە",
+	"ext-uls-empty-state-header": "ھێشتا ھیچ زمانێک نییە",
+	"ext-uls-empty-state-desc": "بۆ ئێستا ھیچ زمانێک بەردەست نییە",
+	"ext-uls-empty-state-header-actions-available": "ھێشتا ھیچ زمانێک نییە. دانەیەکی نوێ زیاد دەکەی؟",
+	"ext-uls-empty-state-desc-actions-available": "ناوەڕۆکەکە بە زمانگەلی زیاتر بەردەست بخە.",
+	"ext-uls-add-languages-button-label": "زمانەکان زیاد بکە"
 }
