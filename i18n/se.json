@@ -10,7 +10,7 @@
 	"uls-plang-title-languages": "Gielat",
 	"ext-uls-select-language-settings-icon-tooltip": "Giellaásahusat",
 	"ext-uls-undo-language-tooltip-text": "Giella rievddai gielas $1",
-	"ext-uls-language-settings-preferences-link": "Eambbo giellaásahusat ",
+	"ext-uls-language-settings-preferences-link": "Eambbo giellaásahusat",
 	"ext-uls-display-settings-language-tab": "Giella",
 	"ext-uls-display-settings-fonts-tab": "Fonttat",
 	"ext-uls-display-settings-title-short": "Šearbma",
@@ -46,7 +46,7 @@
 	"ext-uls-setlang-cancel": "Ale molsso",
 	"ext-uls-actions-menu-language-settings-item-label": "Raba giellaásahusaid",
 	"ext-uls-empty-state-header": "Eai vel gielat",
-	"ext-uls-empty-state-desc": "Eará gielat eai leat olámuttos dal ",
+	"ext-uls-empty-state-desc": "Eará gielat eai leat olámuttos dal",
 	"ext-uls-empty-state-header-actions-available": "Eai vel gielat. Háliidatgo lasihit ođđa giela?",
 	"ext-uls-add-languages-button-label": "Lasit gielaid"
 }
