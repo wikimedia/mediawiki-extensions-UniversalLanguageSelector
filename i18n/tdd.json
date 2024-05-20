@@ -2,21 +2,22 @@
 	"@metadata": {
 		"authors": [
 			"Aey Tai Nuea",
-			"咽頭べさ"
+			"咽頭べさ",
+			"AeyTaiNuea"
 		]
 	},
-	"uls-desc": "ᥙᥢᥴᥝᥭᥳᥘᥩᥐᥰᥘᥣᥭᥰᥚᥧᥲᥓᥬᥳᥖᥪᥰᥘᥣᥭᥴᥘᥣᥭᥰ ᥖᥩᥢᥲᥖᥣᥱᥘᥫᥐᥲ ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ ᥘᥦᥲ ᥖᥩᥢᥲᥖᥣᥱᥛᥦᥰᥒᥤᥐᥣᥢᥴᥖᥒᥲᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ",
+	"uls-desc": "ᥙᥢ ᥝᥭᥳ ᥘᥩᥐᥴ ᥘᥣᥭᥰ ᥚᥧᥱ ᥓᥬᥳ ᥖᥪᥰ ᥘᥣᥭᥴ ᥘᥣᥭᥰ ᥖᥩᥢᥲ ᥖᥣᥱ ᥘᥫᥐ ᥚᥣᥱ ᥔᥣᥱ ᥑᥣᥛᥰ ᥘᥦᥰ ᥖᥩᥢᥲ ᥖᥣᥱ ᥛᥥᥰ ᥘᥤ ᥐᥣᥢ ᥖᥒᥲ ᥚᥣᥱ ᥔᥣᥱ ᥑᥣᥛᥰ",
 	"uls-plang-title-languages": "ᥚᥣᥱ ᥔᥣᥱ ᥑᥣᥛᥰ",
-	"ext-uls-select-language-settings-icon-tooltip": "ᥐᥣᥢᥴᥖᥒᥲ ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ",
+	"ext-uls-select-language-settings-icon-tooltip": "ᥐᥣᥢ ᥖᥒᥲ ᥚᥣᥱ ᥔᥣᥱ ᥑᥣᥛᥰ",
 	"ext-uls-language-settings-preferences-link": "ᥐᥣᥢ ᥖᥒᥲ ᥚᥣᥱ ᥔᥣᥱ ᥑᥣᥛᥰ ᥘᥛᥴ ᥘᥫᥴ",
-	"ext-uls-display-settings-language-tab": "ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ",
+	"ext-uls-display-settings-language-tab": "ᥚᥣᥱ ᥔᥣᥱ ᥑᥣᥛᥰ",
 	"ext-uls-display-settings-title-short": "ᥚᥣᥒᥴᥕᥥᥛᥲ",
 	"ext-uls-display-settings-desc": "ᥛᥐᥰᥛᥢᥲᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ ᥟᥢᥴᥓᥬᥳᥝᥭᥳ ᥖᥩᥢᥲᥖᥣᥱ ᥛᥦᥢᥰᥢᥧᥰ ᥘᥦᥲ ᥜᥩᥢᥳ",
-	"ext-uls-language-settings-title": "ᥐᥣᥢᥴᥖᥒᥲ ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ",
+	"ext-uls-language-settings-title": "ᥐᥣᥢ ᥖᥒᥲ ᥚᥣᥱ ᥔᥣᥱ ᥑᥣᥛᥰ",
 	"ext-uls-language-settings-cancel": "ᥟᥛᥱᥞᥥᥖᥰ",
 	"ext-uls-display-settings-ui-language": "ᥢᥦᥴᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ",
 	"ext-uls-back-to-display-settings": "ᥞᥨᥢᥴᥓᥧᥰ ᥐᥣᥢᥴᥖᥒᥲᥚᥣᥒᥴᥕᥥᥛᥲ",
 	"ext-uls-input-disable-notification-info-personal": "ᥘᥧᥐᥳᥖᥤᥲᥐᥣᥢᥴᥖᥒᥲ ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰᥔᥥᥴ ᥓᥝᥲᥐᥝᥱ ᥓᥣᥒᥲᥙᥪᥖᥱᥓᥬᥳ ᥑᥫᥒᥲᥙᥩᥳᥘᥤᥐᥲᥘᥭᥲᥐᥧᥲᥑᥣᥝᥰ.",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|ᥗᥦᥒᥲ ᥟᥢ ᥘᥫᥒ|ᥗᥦᥒᥲ $1}}",
-	"prefs-languages": "ᥚᥣᥱᥔᥣᥱᥐᥣᥛᥰ"
+	"prefs-languages": "ᥚᥣᥱ ᥔᥣᥱ ᥑᥣᥛᥰ"
 }

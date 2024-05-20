@@ -46,7 +46,7 @@
 	"ext-uls-input-disable": "Disabbilita li strummenta di scrittura",
 	"ext-uls-input-enable": "Abbilita li strummenta di scrittura",
 	"ext-uls-input-disable-info": "Li strummenta di scrittura sunnu disabbilitati.",
-	"ext-uls-input-settings-noime": "Nuddu metudu di scrittura è dispunibbili pi sta lingua.",
+	"ext-uls-input-settings-noime": "Nuḍḍu metudu di scrittura è dispunibbili pi sta lingua.",
 	"ext-uls-input-disable-notification": "Li strummenta di scrittura foru disabbilitati",
 	"ext-uls-input-disable-notification-undo": "Annulla",
 	"ext-uls-input-disable-notification-info-personal": "È pussibbili attivari quannegghiè li strummenta di scrittura a pàrtiri dê mpustazzioni dâ lingua.",
@@ -57,5 +57,5 @@
 	"ext-uls-setlang-heading": "Cancia la lingua dâ ntirfaccia?",
 	"ext-uls-setlang-cancel": "Nun canciari",
 	"ext-uls-actions-menu-language-settings-item-label": "Apri li mpustazzioni dâ lingua",
-	"ext-uls-empty-state-header": "Ancora nudda lingua"
+	"ext-uls-empty-state-header": "Ancora nuḍḍa lingua"
 }

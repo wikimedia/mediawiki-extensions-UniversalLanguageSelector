@@ -4,12 +4,15 @@
 			"Yupik",
 			"Kimberli Mäkäräinen (WMNO)",
 			"Caden99",
-			"Lea-Christine Sara"
+			"Lea-Christine Sara",
+			"Amire80"
 		]
 	},
+	"uls-desc": "Addá geavaheaddjái máŋga vugiid válljet giela ja muddet giellaásahusaid",
 	"uls-plang-title-languages": "Gielat",
 	"ext-uls-select-language-settings-icon-tooltip": "Giellaásahusat",
 	"ext-uls-undo-language-tooltip-text": "Giella rievddai gielas $1",
+	"ext-uls-undo-language-tooltip-text-local": "Dán wiki giella lea molsojuvvon. Dárkkis iežat [[Special:GlobalPreferences|vuogádatviidosaš ásahusaid]] vai beasat molsut giela buot wikiin.",
 	"ext-uls-language-settings-preferences-link": "Eambbo giellaásahusat",
 	"ext-uls-display-settings-language-tab": "Giella",
 	"ext-uls-display-settings-fonts-tab": "Fonttat",
@@ -22,7 +25,9 @@
 	"ext-uls-display-settings-font-settings": "Fontaásahusat",
 	"ext-uls-display-settings-ui-language": "Geavahanlavtta giella",
 	"ext-uls-display-settings-anon-label": "Geavahanlavtta giella:",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (seamma go sisdoalu)",
 	"ext-uls-display-settings-anon-log-in-cta": "Don fertet [[Special:UserLogin|logget sisa]] vai beasat válljet eará giela fáluide.",
+	"ext-uls-webfonts-settings-title": "Viečča fonttaid dárbbu mielde",
 	"ext-uls-webfonts-settings-info-link": "Lassedieđut",
 	"ext-uls-webfonts-select-for": "Vállje fontta gillii $1",
 	"ext-uls-webfonts-select-for-ui-info": "Geavahanlavtta fonta",
