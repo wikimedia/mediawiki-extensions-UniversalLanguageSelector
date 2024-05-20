@@ -5,5 +5,13 @@
 		]
 	},
 	"uls-plang-title-languages": "Giela",
+	"ext-uls-select-language-settings-icon-tooltip": "Giellahiebadime",
+	"ext-uls-language-settings-preferences-link": "Ienap giellahiebadime",
+	"ext-uls-display-settings-language-tab": "Giella",
+	"ext-uls-language-settings-title": "Giellahiebadime",
+	"ext-uls-language-settings-apply": "Ane hiebadimijt",
+	"ext-uls-language-settings-cancel": "Buŧŧki",
+	"ext-uls-input-settings-ui-language": "Tjállemgiella",
+	"ext-uls-input-settings-more-languages-tooltip": "Ienap giela",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Akkta ienap|$1 iednabu}}"
 }
