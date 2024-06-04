@@ -141,6 +141,7 @@
 		} );
 		$ulsSettingsBlock.append( $languageSettingsMenuButton );
 
+		uls.$menu.addClass( 'notheme' ); // T365990
 		return $ulsSettingsBlock;
 	}
 
