@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			555,
 			"Athena in Wonderland",
 			"Eduardo Addad de Oliveira",
 			"Fúlvio",
@@ -11,8 +12,7 @@
 			"Malafaya",
 			"Mansil",
 			"Opraco",
-			"Vitorvicentevalente",
-			555
+			"Vitorvicentevalente"
 		]
 	},
 	"uls-desc": "Fornece ao utilizador várias maneiras de selecionar uma língua e ajustar as definições de língua",
