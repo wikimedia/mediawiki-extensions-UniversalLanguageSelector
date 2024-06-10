@@ -13,7 +13,7 @@
 		this.shown = false;
 	}
 
-	ActionsMenu.template = '<div class="uls-menu uls-language-actions-dialog">' +
+	ActionsMenu.template = '<div class="uls-menu uls-language-actions-dialog notheme">' +
 			'<div class="uls-language-actions-title">' +
 				'<button class="cdx-button cdx-button--weight-quiet uls-language-actions-close"></button>' +
 				'<span> <strong></strong> </span>' +

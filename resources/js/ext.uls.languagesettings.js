@@ -44,7 +44,7 @@
 		settingsMenu +
 		settingsPanel +
 		'</div>';
-	windowTemplate = '<div style="display: block;" id="language-settings-dialog" class="language-settings-dialog grid uls-menu uls-wide">' +
+	windowTemplate = '<div style="display: block;" id="language-settings-dialog" class="language-settings-dialog grid uls-menu uls-wide notheme">' +
 		closeRow +
 		panelsRow +
 		buttonsRow +
