@@ -13,7 +13,7 @@
 	"uls-plang-title-languages": "ภาษา",
 	"ext-uls-select-language-settings-icon-tooltip": "การตั้งค่าภาษา",
 	"ext-uls-undo-language-tooltip-text": "เปลี่ยนภาษาจาก $1 แล้ว",
-	"ext-uls-undo-language-tooltip-text-local": "เปลี่ยนภาษาสำหรับวิกินี้แล้ว ตรวจสอบ[[Special:GlobalPreferences|ค่ากำหนดทั่วโลก]]ของคุณเพื่อเปลี่ยนภาษาสำหรับวิกิทั้งหมด",
+	"ext-uls-undo-language-tooltip-text-local": "เปลี่ยนภาษาสำหรับวิกินี้แล้ว ตรวจสอบ[[Special:GlobalPreferences|การตั้งค่าส่วนกลาง]]ของคุณเพื่อเปลี่ยนภาษาสำหรับวิกิทั้งหมด",
 	"ext-uls-language-settings-preferences-link": "การตั้งค่าภาษาเพิ่มเติม",
 	"uls-betafeature-label": "ลิงก์ภาษาแบบพกพา",
 	"uls-betafeature-desc": "แสดงรายการภาษาแบบสั้น โดยแสดงเพียงภาษาที่สัมพันธ์กับคุณมากที่สุด",
