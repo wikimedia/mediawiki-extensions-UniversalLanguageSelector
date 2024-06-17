@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"IJzeren Jan"
+		]
+	},
+	"uls-plang-title-languages": "Jezyky",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ješče jedin|ješče $1}}"
+}
