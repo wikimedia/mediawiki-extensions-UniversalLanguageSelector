@@ -141,7 +141,7 @@
 		} );
 		$ulsSettingsBlock.append( $languageSettingsMenuButton );
 
-		uls.$menu.addClass( 'notheme' ); // T365990
+		uls.$menu.addClass( 'notheme skin-invert' ); // T365990
 		return $ulsSettingsBlock;
 	}
 
