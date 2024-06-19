@@ -4,5 +4,6 @@
 			"Song GK"
 		]
 	},
-	"uls-plang-title-languages": "Jaku"
+	"uls-plang-title-languages": "Jaku",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Siti agi|$1 agi}}"
 }
