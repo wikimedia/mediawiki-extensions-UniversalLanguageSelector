@@ -590,7 +590,7 @@
 	};
 
 	// Register this module to language settings modules
-	$.fn.languagesettings.modules = $.extend( $.fn.languagesettings.modules, {
+	$.fn.languagesettings.modules = Object.assign( $.fn.languagesettings.modules, {
 		input: InputSettings
 	} );
 

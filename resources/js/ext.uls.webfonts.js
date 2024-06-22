@@ -58,7 +58,7 @@
 		},
 
 		load: function () {
-			mw.webfonts.preferences.registry = $.extend( this.registry,
+			mw.webfonts.preferences.registry = Object.assign( this.registry,
 				ulsPreferences.get( 'webfonts' ) );
 		}
 	};
@@ -70,7 +70,7 @@
 		mediawikiFontRepository.base = mw.config.get( 'wgULSFontRepositoryBasePath' );
 
 		// MediaWiki specific overrides for jquery.webfonts
-		$.extend( $.fn.webfonts.defaults, {
+		Object.assign( $.fn.webfonts.defaults, {
 			repository: mediawikiFontRepository,
 			fontStack: $( document.body ).css( 'font-family' ).split( /, /g ),
 			/**

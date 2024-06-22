@@ -215,9 +215,9 @@
 			return;
 		}
 		// Extend the ime preference system
-		$.extend( $.ime.preferences, ulsIMEPreferences );
+		Object.assign( $.ime.preferences, ulsIMEPreferences );
 		// MediaWiki specific overrides for jquery.ime
-		$.extend( $.ime.defaults, {
+		Object.assign( $.ime.defaults, {
 			imePath: mwImeRulesPath
 		} );
 

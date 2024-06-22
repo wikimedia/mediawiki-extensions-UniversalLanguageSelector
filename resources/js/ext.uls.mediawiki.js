@@ -21,7 +21,7 @@
 	'use strict';
 
 	// MediaWiki overrides for ULS defaults
-	$.fn.uls.defaults = $.extend( $.fn.uls.defaults, {
+	$.fn.uls.defaults = Object.assign( $.fn.uls.defaults, {
 		languages: mw.config.get( 'wgULSLanguages' ) || {},
 		searchAPI: mw.util.wikiScript( 'api' ) + '?action=languagesearch&format=json&formatversion=2'
 	} );

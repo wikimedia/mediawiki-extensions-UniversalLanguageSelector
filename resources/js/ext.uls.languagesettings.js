@@ -52,7 +52,7 @@
 
 	function LanguageSettings( element, options ) {
 		this.$element = $( element );
-		this.options = $.extend( {}, $.fn.languagesettings.defaults, options );
+		this.options = Object.assign( {}, $.fn.languagesettings.defaults, options );
 		this.$window = $( this.options.template );
 		this.shown = false;
 		this.initialized = false;
