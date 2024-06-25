@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Qiorly"
+		]
+	},
+	"uls-plang-title-languages": "Језыкы",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|јешче једин|јешче $1}}"
+}

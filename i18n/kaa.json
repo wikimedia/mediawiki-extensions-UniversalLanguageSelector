@@ -39,6 +39,8 @@
 	"jquery-ime-disable-text": "Jergilikli klaviaturanı qollanıw",
 	"ext-uls-input-disable": "Engiziw quralların óshiriw",
 	"ext-uls-input-enable": "Engiziw quralların qosıw",
+	"ext-uls-input-disable-notification": "Kirgiziw quralları óshirildi",
+	"ext-uls-input-disable-notification-undo": "Biykarlaw",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Taǵı birew|Taǵı $1}}",
 	"prefs-languages": "Tiller",
 	"ext-uls-add-languages-button-label": "Tillerdi qosıw"
