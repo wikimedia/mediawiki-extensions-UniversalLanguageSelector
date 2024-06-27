@@ -27,7 +27,7 @@
 	"ext-uls-display-settings-ui-language": "Displey tili",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (kontent penen birdey)",
 	"ext-uls-webfonts-settings-title": "Zárúrlik tuwılǵanda shriftlerdi júklep alıw.",
-	"ext-uls-webfonts-settings-info": "Kerekli háripti avtomalıq túrde júklep alıw hám qálegen háripti tańlawǵa ruqsat beriw.",
+	"ext-uls-webfonts-settings-info": "Kerekli háripti avtomatlıq túrde júklep alıw hám qálegen háripti tańlawǵa ruqsat beriw.",
 	"ext-uls-webfonts-settings-info-link": "Kóbirek maǵlıwmat",
 	"ext-uls-input-settings-title": "Engiziw sazlawları",
 	"ext-uls-input-settings-title-short": "Ornatıw",
@@ -39,6 +39,8 @@
 	"jquery-ime-disable-text": "Jergilikli klaviaturanı qollanıw",
 	"ext-uls-input-disable": "Engiziw quralların óshiriw",
 	"ext-uls-input-enable": "Engiziw quralların qosıw",
+	"ext-uls-input-disable-notification": "Kirgiziw quralları óshirildi",
+	"ext-uls-input-disable-notification-undo": "Biykarlaw",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Taǵı birew|Taǵı $1}}",
 	"prefs-languages": "Tiller",
 	"ext-uls-add-languages-button-label": "Tillerdi qosıw"
