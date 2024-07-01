@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Nemo bis",
-			"Умар"
+			"Умар",
+			"Исмаил Садуев"
 		]
 	},
 	"uls-desc": "Декъашхойн таро хуьлуьйту масийтта кепара мотт харжа а, мотт дIахIотто а",
@@ -43,7 +44,7 @@
 	"ext-uls-back-to-input-settings": "Йуха гӀо",
 	"ext-uls-ime-help": "Муха лелайо",
 	"ext-uls-disable-input-method": "Лелайе шен пилгу",
-	"ext-uls-input-settings-more-languages-tooltip": "Лелолуш долу меттанаш",
+	"ext-uls-input-settings-more-languages-tooltip": "Кхидолу меттанаш",
 	"jquery-ime-other-languages": "Кхин меттанаш",
 	"jquery-ime-disable-text": "Лелайе шен пилгу",
 	"jquery-ime-help": "ГӀо",

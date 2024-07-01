@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Malafaya",
-			"Xð"
+			"Xð",
+			"Morozof"
 		]
 	},
 	"uls-plang-title-languages": "Püks",
-	"ext-uls-input-settings-desc": "Penol-li püko votik?"
+	"ext-uls-input-settings-desc": "Penol-li püko votik?",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Nog bal|$1 more}}"
 }
