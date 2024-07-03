@@ -153,15 +153,9 @@ class Hooks implements
 	 * @param OutputPage $out
 	 */
 	private function loadCodexStyles( OutputPage $out ) {
-		if ( version_compare( MW_VERSION, '1.41', '<' ) ) {
-			// codex-search-styles was added in 1.41 so in older versions for MLEB support
-			// we load the full module.
-			$out->addModuleStyles( '@wikimedia/codex' );
-		} else {
-			// Only needed for skins that do not load Codex.
-			if ( !in_array( $out->getSkin()->getSkinName(), [ 'minerva', 'vector-2022' ] ) ) {
-				$out->addModuleStyles( 'codex-search-styles' );
-			}
+		// Only needed for skins that do not load Codex.
+		if ( !in_array( $out->getSkin()->getSkinName(), [ 'minerva', 'vector-2022' ] ) ) {
+			$out->addModuleStyles( 'codex-search-styles' );
 		}
 	}
 
