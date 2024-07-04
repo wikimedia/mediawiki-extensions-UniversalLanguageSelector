@@ -2,7 +2,7 @@
 
 namespace UniversalLanguageSelector;
 
-use OutputPage;
+use MediaWiki\Output\OutputPage;
 
 /**
  * This class parses font specification ini files to a central list.
