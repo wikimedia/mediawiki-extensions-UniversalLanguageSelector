@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Umar Asiya"
+			"Umar Asiya",
+			"Zakaria Tunsung"
 		]
 	},
-	"uls-plang-title-languages": "Tiri"
+	"uls-plang-title-languages": "Kɔkɔɛ",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|paahi boŋyeni|$1 paahi}}"
 }
