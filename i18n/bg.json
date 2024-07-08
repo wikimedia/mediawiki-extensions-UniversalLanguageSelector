@@ -69,5 +69,7 @@
 	"ext-uls-actions-menu-header": "Допълнителни опции",
 	"ext-uls-actions-menu-language-settings-item-label": "Отваряне на езиковите настройки",
 	"ext-uls-empty-state-header": "Все още няма езици",
-	"ext-uls-empty-state-desc": "Засега няма налични езици"
+	"ext-uls-empty-state-desc": "Засега няма налични езици",
+	"ext-uls-empty-state-header-actions-available": "Все още няма езици. Добавяне на нов?",
+	"ext-uls-empty-state-desc-actions-available": "Направете съдържанието достъпно на повече езици."
 }
