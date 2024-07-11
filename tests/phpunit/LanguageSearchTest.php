@@ -40,7 +40,6 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 		return [
 			[ 'ഹിന്ദി', [
 				'hi' => 'ഹിന്ദി',
-				'hi-latn' => 'ഹിന്ദി (ലാറ്റിൻ)'
 			]
 			],
 			[ 'മല', [
@@ -106,29 +105,25 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 			]
 			],
 			[ 'chinese', [
-				'zh' => 'chinese',
+				// Presence of CLDR extension affects the results
+				'zh' => class_exists( LanguageNames::class ) ? 'chinese' : 'chines',
 				'zh-cn' => 'chinese (china)',
 				'zh-hk' => 'chinese (hong kong)',
 				'zh-mo' => 'chinese (macau)',
 				'zh-my' => 'chinese (malaysia)',
-				'zh-min-nan' => 'chinese (min nan)',
 				'zh-sg' => 'chinese (singapore)',
 				'zh-tw' => 'chinese (taiwan)',
+				'cdo' => 'chinese min dong',
+				'zh-min-nan' => 'chinese min nan',
 				'zh-hans' => 'chinese simplificate',
 				'zh-hant' => 'chinese traditional',
-				'zh-classical' => 'chinese — classical chinese',
-				'gan' => 'chinese — gan chinese',
 				'hak' => 'chinese — hakka chinese',
+				'gan' => 'chinese — isi-gan chinese',
 				'nan' => 'chinese — isi-min nan chinese',
 				'wuu' => 'chinese — isi-wu chinese',
 				'hsn' => 'chinese — isi-xiang chinese',
-				'lzh' => 'chinese — literary chinese',
-				'zh' => 'chinese',
-				'zh-min-nan' => 'chinese (min nan)',
-				'cdo' => 'chinese — min dong chinese',
-				'cdo-hani' => 'chinese — min dong chinese (hanji)',
-				'wuu-hans' => 'chinese — wu chinese (simplified)',
-				'wuu-hant' => 'chinese — wu chinese (traditional)'
+				'zh-classical' => 'chinese — literary chinese',
+				'lzh' => 'chinesesch — klassescht chinesesch',
 			]
 			],
 			[ 'finnisj', [

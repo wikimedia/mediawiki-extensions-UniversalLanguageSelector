@@ -101,6 +101,8 @@ class LanguageNameIndexer extends Maintenance {
 		$specialLanguages = [
 			// Catalan, sometimes searched as "Valencià"
 			'ca' => [ 'valencia' ],
+			// Compatibility with the old name and other Chinese varieties
+			'cdo' => [ 'chinese min dong' ],
 			// Spanish, the transliteration of the autonym is often used for searching
 			'es' => [ 'castellano' ],
 			// Armenian, the transliteration of the autonym is often used for searching
@@ -117,6 +119,8 @@ class LanguageNameIndexer extends Maintenance {
 			// are not mapped to any English name
 			'zh-hans' => [ 'chinese simplified' ],
 			'zh-hant' => [ 'chinese traditional' ],
+			// Compatibility with the old name and other Chinese varieties
+			'zh-min-nan' => [ 'chinese min nan' ],
 		];
 
 		foreach ( $specialLanguages as $targetLanguage => $translations ) {
