@@ -63,7 +63,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|อีก 1 ภาษา|อีก $1 ภาษา}}",
 	"ext-uls-compact-link-info": "ภาษาทั้งหมด (ที่เลือกไว้ตั้งแต่แรกจากตัวเลือกธรรมดาโดยคุณและคนอื่นๆ)",
 	"prefs-languages": "ภาษา",
-	"ext-uls-compact-language-links-preference": "ใช้ [[$1|รายการภาษาแบบกระชับ]] โดยมีภาษาที่เกี่ยวข้องกับคุณ",
+	"ext-uls-compact-language-links-preference": "ใช้[[$1|รายการภาษาแบบกระชับ]]โดยมีภาษาที่เกี่ยวข้องกับคุณ",
 	"ext-uls-compact-no-results": "หน้านี้ไม่มีในภาษาที่คุณค้นหา",
 	"ext-uls-setlang-error": "เกิดข้อผิดพลาดกับการอัปเดตตามภาษาที่คุณเลือก ข้อผิดพลาด: $1",
 	"ext-uls-setlang-unknown-error": "เกิดข้อผิดพลาดโดยไม่ทราบสาเหตุ",
