@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"IJzeren Jan"
+		]
+	},
+	"apihelp-languagesearch-summary": "Iskati nazvy jezykov na kojem-nebud pismu.",
+	"apihelp-languagesearch-param-search": "Redok teksta za iskanje.",
+	"apihelp-languagesearch-param-typos": "Kolikost ortografičnyh pogrěšek dopustimyh v redku teksta za iskanje.",
+	"apihelp-languagesearch-example-1": "Iskati «Te»",
+	"apihelp-languagesearch-example-2": "Iskati «ഫി»",
+	"apihelp-languagesearch-example-3": "Iskati «ഫി», dopuščaje se jedna pogrěška",
+	"apihelp-ulslocalization-summary": "Dobyti lokalizaciju universalnogo jezyčnogo selektora (ULS) na danom jezyku.",
+	"apihelp-ulslocalization-param-language": "Kod jezyka.",
+	"apihelp-ulslocalization-example-1": "Dobyti tamilsku lokalizaciju",
+	"apihelp-ulslocalization-example-2": "Dobyti hindijsku lokalizaciju",
+	"apihelp-ulssetlang-summary": "Obnoviti prědpočitajemy jezyk interfejsa koristnika.",
+	"apihelp-ulssetlang-param-languagecode": "Kod prědpočitajemogo jezyka.",
+	"apierror-ulssetlang-anon-notallowed": "Anonimnym koristnikam ne dozvoljaje se izměnu jezyka interfejsa."
+}
