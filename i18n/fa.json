@@ -39,7 +39,7 @@
 	"ext-uls-display-settings-anon-same-as-content": "$1 (مثل محتوا)",
 	"ext-uls-display-settings-anon-log-in-cta": "برای انتخاب یک زبان متفاوت برای منوها [[Special:UserLogin|به سامانه وارد شوید]].",
 	"ext-uls-webfonts-settings-title": "دریافت قلم‌های مورد نیاز",
-	"ext-uls-webfonts-settings-info": "دریافت خودکار قلم‌های ناموجود و اجازهٔ انتخاب قلم‌های ترجیح‌داده‌شده.",
+	"ext-uls-webfonts-settings-info": "بارگیری خودکار قلم‌های ناموجود و اجازهٔ انتخاب قلم‌های دلخواه.",
 	"ext-uls-webfonts-settings-info-link": "اطلاعات بیشتر",
 	"ext-uls-webfonts-select-for": "انتخاب قلم برای $1",
 	"ext-uls-webfonts-select-for-ui-info": "قلم مورد استفادهٔ رابط کاربری",
