@@ -12,13 +12,15 @@
 			"Mehran",
 			"Mjbmr",
 			"Mojtabakd",
-			"Reza1615"
+			"Reza1615",
+			"Ebrahim"
 		]
 	},
 	"uls-desc": "به کاربر راه‌های مختلفی برای انتخاب زبان و تنظیم تنظیمات زبان  می‌دهد",
 	"uls-plang-title-languages": "زبان‌ها",
 	"ext-uls-select-language-settings-icon-tooltip": "تنظیمات زبان",
 	"ext-uls-undo-language-tooltip-text": "تغییر زبان از $1",
+	"ext-uls-undo-language-tooltip-text-local": "زبان این ویکی تغییر کرد. [[Special:GlobalPreferences|نرجیحات سراسری]] را برای تغییر زبان همهٔ ویکی‌ها بررسی کنید.",
 	"ext-uls-language-settings-preferences-link": "تنظیمات بیشتر زبان",
 	"uls-betafeature-label": "پیوندهای زبانی فشرده",
 	"uls-betafeature-desc": "نمایش یک نسخه کوتاه‌تر فهرست زبان، با فقط زبانی که بیشتر به شما مربوط است.",
@@ -72,13 +74,15 @@
 	"ext-uls-compact-no-results": "این صفحه در زبانی که جستجو کرده‌اید قابل دسترس نیست.",
 	"ext-uls-setlang-error": "خطایی در هنگام روزآمدسازی زبان ترجیحی‌تان رخ داد. خطا: $1",
 	"ext-uls-setlang-unknown-error": "خطای ناشناخته",
-	"ext-uls-setlang-heading": "زبان رابط کاربری را تغییر می‌دهید؟",
+	"ext-uls-setlang-message": "پیوندی که دنبال کرده‌اید درخواست کرده که رابط کاربری در <strong>$1 ($2)</strong> نمایان شود",
+	"ext-uls-setlang-heading": "تغییر رابط زبان؟",
 	"ext-uls-setlang-accept": "پذیرفتن تغییرات",
 	"ext-uls-setlang-loading": "در حال اعمال...",
 	"ext-uls-setlang-cancel": "تغییر نده",
 	"ext-uls-actions-menu-header": "گزینه‌های بیشتر",
 	"ext-uls-actions-menu-language-settings-item-label": "تنظیمات زبان را باز کن",
 	"ext-uls-empty-state-header": "هنوز زبانی موجود نیست",
-	"ext-uls-empty-state-header-actions-available": "هنوز زبانی موجود نیست. می‌خواهید یکی اضافه کنید؟",
+	"ext-uls-empty-state-desc": "زبانی در حال حاضر موجود نیست",
+	"ext-uls-empty-state-header-actions-available": "هنوز زبانی موجود نیست. می‌خواهید یک جدید بیافزایید؟",
 	"ext-uls-empty-state-desc-actions-available": "محتوا را به زبان‌های بیشتری در دسترس قرار دهید."
 }
