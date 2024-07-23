@@ -99,6 +99,8 @@ class LanguageNameIndexer extends Maintenance {
 		// by people who search in English.
 		// To resolve this, some languages are added here locally.
 		$specialLanguages = [
+			// Abron / Brong / Bono (T369464)
+			'abr' => [ 'bono', 'brong' ],
 			// Catalan, sometimes searched as "Valencià"
 			'ca' => [ 'valencia' ],
 			// Compatibility with the old name and other Chinese varieties
@@ -111,6 +113,8 @@ class LanguageNameIndexer extends Maintenance {
 			'ka' => [ 'kartuli', 'qartuli' ],
 			// Japanese, the transliteration of the autonym is often used for searching
 			'ja' => [ 'nihongo', 'にほんご' ],
+			// Chiluvale (T368856)
+			'lue' => [ 'luvale, chi-' ],
 			// Mon, renamed in core MediaWiki's Names.php (T352776)
 			'mnw' => [ 'ဘာသာ မန်' ],
 			// Palembang, also known as "Musi".
@@ -122,6 +126,10 @@ class LanguageNameIndexer extends Maintenance {
 			'pnb' => [ 'punjabi western' ],
 			// Tai Nuea (T367377)
 			'tdd' => [ 'ᥖᥭᥰᥖᥬᥳᥑᥨᥒᥰ' ],
+			// Chitonga (T368856)
+			'toi' => [ 'tonga, chi-' ],
+			// Waale (T368046) - support alternate spellings of the name
+			'wlx' => [ 'waali', 'waalii' ],
 			// Simplified and Traditional Chinese, because zh-hans and zh-hant
 			// are not mapped to any English name
 			'zh-hans' => [ 'chinese simplified' ],
