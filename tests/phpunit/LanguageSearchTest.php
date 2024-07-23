@@ -38,79 +38,10 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 
 	public static function searchDataProvider() {
 		return [
-			[ 'ഹിന്ദി', [
-				'hi' => 'ഹിന്ദി',
-			]
-			],
-			[ 'മല', [
-				'mg' => 'മലഗാസി',
-				'ml' => 'മലയാളം',
-				'pqm' => 'മലിസീറ്റ്-പസാമക്വുഡി',
-				'ms' => 'മലെയ്',
-			]
-			],
-			[ 'Φινλαν', [
-				'fi' => 'φινλανδικά',
-			]
-			],
 			[ 'blargh', []
-			],
-			[ 'الفرنسية', [
-				'fr' => 'الفرنسية',
-				'fr-ch' => 'الفرنسية السويسرية',
-				'fro' => 'الفرنسية القديمة',
-				'frc' => 'الفرنسية الكاجونية',
-				'crs' => 'الفرنسية الكريولية السيشيلية',
-				'fr-ca' => 'الفرنسية الكندية',
-				'frm' => 'الفرنسية الوسطى',
-			]
-			],
-			[ 'മലയളം', [
-				'ml' => 'മലയാളം',
-			]
-			],
-			[ 'punja', [
-				// Presence of CLDR extension affects the results
-				'pa' => class_exists( LanguageNames::class ) ? 'punjabi' : 'punjaabi sennii',
-				'pa-guru' => 'punjabi (gurmukhi-skrift)',
-				'pnb' => 'punjabi western'
-			]
-			],
-			[ 'musi', [
-				'mos' => 'mosi',
-				'mui' => class_exists( LanguageNames::class ) ? 'musi' : 'musi palembang',
-			]
-			],
-			[ 'palembang', [
-				'mui' => 'palembang',
-			]
 			],
 			[ 'castellano', [
 				'es' => 'castellano',
-			]
-			],
-			[ 'hayeren', [
-				'hy' => 'hayeren',
-			]
-			],
-			[ 'kartuli', [
-				'ka' => 'kartuli',
-			]
-			],
-			[ 'qartuli', [
-				'ka' => 'qartuli',
-			]
-			],
-			[ 'nihongo', [
-				'ja' => 'nihongo',
-			]
-			],
-			[ 'にほんご', [
-				'ja' => 'にほんご',
-			]
-			],
-			[ 'valencia', [
-				'ca' => 'valencia',
 			]
 			],
 			[ 'chinese', [
@@ -137,6 +68,75 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 			],
 			[ 'finnisj', [
 				'fi' => 'finnish'
+			]
+			],
+			[ 'hayeren', [
+				'hy' => 'hayeren',
+			]
+			],
+			[ 'kartuli', [
+				'ka' => 'kartuli',
+			]
+			],
+			[ 'nihongo', [
+				'ja' => 'nihongo',
+			]
+			],
+			[ 'musi', [
+				'mos' => 'mosi',
+				'mui' => class_exists( LanguageNames::class ) ? 'musi' : 'musi palembang',
+			]
+			],
+			[ 'palembang', [
+				'mui' => 'palembang',
+			]
+			],
+			[ 'punja', [
+				// Presence of CLDR extension affects the results
+				'pa' => class_exists( LanguageNames::class ) ? 'punjabi' : 'punjaabi sennii',
+				'pa-guru' => 'punjabi (gurmukhi-skrift)',
+				'pnb' => 'punjabi western'
+			]
+			],
+			[ 'qartuli', [
+				'ka' => 'qartuli',
+			]
+			],
+			[ 'valencia', [
+				'ca' => 'valencia',
+			]
+			],
+			[ 'Φινλαν', [
+				'fi' => 'φινλανδικά',
+			]
+			],
+			[ 'الفرنسية', [
+				'fr' => 'الفرنسية',
+				'fr-ch' => 'الفرنسية السويسرية',
+				'fro' => 'الفرنسية القديمة',
+				'frc' => 'الفرنسية الكاجونية',
+				'crs' => 'الفرنسية الكريولية السيشيلية',
+				'fr-ca' => 'الفرنسية الكندية',
+				'frm' => 'الفرنسية الوسطى',
+			]
+			],
+			[ 'മല', [
+				'mg' => 'മലഗാസി',
+				'ml' => 'മലയാളം',
+				'pqm' => 'മലിസീറ്റ്-പസാമക്വുഡി',
+				'ms' => 'മലെയ്',
+			]
+			],
+			[ 'മലയളം', [
+				'ml' => 'മലയാളം',
+			]
+			],
+			[ 'ഹിന്ദി', [
+				'hi' => 'ഹിന്ദി',
+			]
+			],
+			[ 'にほんご', [
+				'ja' => 'にほんご',
 			]
 			],
 		];
