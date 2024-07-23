@@ -9,9 +9,9 @@
 
 namespace UniversalLanguageSelector;
 
+use MediaWiki\Html\Html;
 use MediaWiki\ResourceLoader\Context;
 use MediaWiki\ResourceLoader\Module;
-use Xml;
 
 /**
  * ResourceLoader module for client-side loading of json-based localization.
@@ -58,6 +58,6 @@ class ResourceLoaderULSJsonMessageModule extends Module {
 		$code = $context->getLanguage();
 		$params = [ $code, ULSJsonMessageLoader::getMessages( $code ) ];
 
-		return Xml::encodeJsCall( 'mw.uls.loadLocalization', $params );
+		return Html::encodeJsCall( 'mw.uls.loadLocalization', $params );
 	}
 }
