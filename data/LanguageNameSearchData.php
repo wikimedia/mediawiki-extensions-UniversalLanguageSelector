@@ -66706,6 +66706,7 @@ class LanguageNameSearchData {
 				'ᠮᠣᠩᠭᠣᠯ' => 'mvf',
 				'ᠰᡞᠪᡝ ᡤᡞᠰᡠᠨ' => 'sjo',
 				'ᥖᥭᥰ ᥖᥬᥲ ᥑᥨᥒᥰ' => 'tdd',
+				'ᥖᥭᥰᥖᥬᥳᥑᥨᥒᥰ' => 'tdd',
 				'ᨅᨔ ᨕᨘᨁᨗ' => 'bug-bugi',
 				'ᨆᨀᨔᨑ' => 'mak-bugi',
 				'ᨣᩤᩴᨾᩮᩬᩥᨦ' => 'nod',

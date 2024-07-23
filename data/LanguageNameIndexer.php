@@ -120,6 +120,8 @@ class LanguageNameIndexer extends Maintenance {
 			'mui' => [ 'musi palembang' ],
 			// Western Punjabi, doesn't start with the word "Punjabi" in any language
 			'pnb' => [ 'punjabi western' ],
+			// Tai Nuea (T367377)
+			'tdd' => [ 'ᥖᥭᥰᥖᥬᥳᥑᥨᥒᥰ' ],
 			// Simplified and Traditional Chinese, because zh-hans and zh-hant
 			// are not mapped to any English name
 			'zh-hans' => [ 'chinese simplified' ],
