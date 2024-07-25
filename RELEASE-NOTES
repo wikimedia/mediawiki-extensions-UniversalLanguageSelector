@@ -1,0 +1,8 @@
+== UniversalLanguageSelector 2024.07 ==
+Released at 2024-07-25.
+
+=== Noteworthy changes ===
+* Localisation and maintenance updates.
+* Fix duplicated elements in Universal Language Selector ({{phab|T358637}})
+* Improve support for dark theme ({{phab|T366738}})
+* Deprecated WOFF webfont for ULS ({{phab|T318167}})
