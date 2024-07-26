@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Don Alessandro",
 			"Ерней",
 			"Ильнар"
 		]
@@ -40,7 +41,7 @@
 	"ext-uls-input-settings-ime-settings": "$1 өчен көймәләр",
 	"ext-uls-input-settings-ui-language": "Хат теле",
 	"ext-uls-back-to-input-settings": "Кертү көйләнмәләренә кайту",
-	"ext-uls-ime-help": "Ничек кулланырга",
+	"ext-uls-ime-help": "Ничек кулланыла",
 	"ext-uls-disable-input-method": "Төп көймәләрне куллану",
 	"ext-uls-input-settings-more-languages-tooltip": "Башка телләр",
 	"jquery-ime-other-languages": "Башка телләрдә",
@@ -56,5 +57,5 @@
 	"ext-uls-language-settings-applying": "Куллану бара…",
 	"ext-uls-compact-link-count": "Башка {{PLURAL:$1|телдә|$1 телдә}}",
 	"prefs-languages": "Телләр",
-	"ext-uls-compact-language-links-preference": "Сезгә туры килә торган [[$1|телләр җыйнак исемлеге]] кулланырга."
+	"ext-uls-compact-language-links-preference": "Сезгә туры килә торган [[$1|телләр җыйнак исемлеге]] куллану."
 }
