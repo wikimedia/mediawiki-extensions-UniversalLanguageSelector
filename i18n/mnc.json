@@ -2,8 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
-			"Foavi33"
+			"Foavi33",
+			"Chulsu463"
 		]
 	},
+	"uls-plang-title-languages": "gisun",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Emu ele|$1 ele}}"
 }
