@@ -16,5 +16,5 @@
 	"apihelp-ulslocalization-example-2": "Dobyti hindijsku lokalizaciju",
 	"apihelp-ulssetlang-summary": "Obnoviti prědpočitajemy jezyk interfejsa koristnika.",
 	"apihelp-ulssetlang-param-languagecode": "Kod prědpočitajemogo jezyka.",
-	"apierror-ulssetlang-anon-notallowed": "Anonimnym koristnikam ne dozvoljaje se izměnu jezyka interfejsa."
+	"apierror-ulssetlang-anon-notallowed": "Anonimnym koristnikam ne dozvaljaje se izměnu jezyka interfejsa."
 }
