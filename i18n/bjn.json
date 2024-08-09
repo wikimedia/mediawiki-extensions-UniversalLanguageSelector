@@ -25,6 +25,7 @@
 	"ext-uls-input-settings-noime": "Kada tasadia métode input gasan basa ini.",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Sabuting lagi|$1 lagi}}",
 	"ext-uls-compact-link-info": "Samunyaan basa (pilihan awal asalnya matan pilihan umum ulih Pian wan urang lain)",
+	"ext-uls-compact-language-links-preference": "Pakai [[$1|daptar basa handap]], lawan basa-basa nang rasuk lawan Pian.",
 	"ext-uls-compact-no-results": "Laman ini kada tasadia dalam basa nang Pian gagai.",
 	"ext-uls-empty-state-header": "Balum ada basa",
 	"ext-uls-empty-state-header-actions-available": "Balum ada basa. Tambahakan nang hanyar?",
