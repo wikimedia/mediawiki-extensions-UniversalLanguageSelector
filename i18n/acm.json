@@ -14,13 +14,13 @@
 	"uls-betafeature-label": "وصلات اللغة المدمجة",
 	"uls-betafeature-desc": "تطلع قائمة مختصره للغات، وتشتغل الخاصية عاللغات اللي تهمك أكثر.",
 	"ext-uls-display-settings-title": "إعدادات العرض",
-	"ext-uls-display-settings-language-tab": "لغة",
+	"ext-uls-display-settings-language-tab": "لغه",
 	"ext-uls-display-settings-fonts-tab": "خطوط",
 	"ext-uls-display-settings-title-short": "عرض",
 	"ext-uls-display-settings-desc": "حدد لغة القوائم والخطوط.",
 	"ext-uls-language-settings-title": "إعدادات اللغة",
 	"ext-uls-language-settings-apply": "طبق الإعدادات",
-	"ext-uls-language-settings-cancel": "ألغي",
+	"ext-uls-language-settings-cancel": "الغي",
 	"ext-uls-language-buttons-help": "غير لغة القوائم. ما تتغير لغة المحتوى.",
 	"ext-uls-display-settings-font-settings": "إعدادات الخط",
 	"ext-uls-display-settings-ui-language": "لغة العرض",
@@ -72,6 +72,6 @@
 	"ext-uls-empty-state-header": "ماكو لغات",
 	"ext-uls-empty-state-desc": "ماكو لغات متاحة حالياً",
 	"ext-uls-empty-state-header-actions-available": "ماكو لغات لحد هسه. تحط وحده جديده؟",
-	"ext-uls-empty-state-desc-actions-available": "سوي المحتوى متاح بلغات اكثر.",
+	"ext-uls-empty-state-desc-actions-available": "سوي المحتوى موجود بلغات زياده.",
 	"ext-uls-add-languages-button-label": "حط لغات"
 }
