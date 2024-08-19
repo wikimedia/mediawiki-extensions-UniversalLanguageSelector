@@ -26,6 +26,7 @@ require_once "$IP/maintenance/Maintenance.php";
 
 use MediaWiki\Extension\CLDR\LanguageNames;
 use MediaWiki\Languages\LanguageNameUtils;
+use MediaWiki\MainConfigNames;
 
 class LanguageNameIndexer extends Maintenance {
 	public function __construct() {
@@ -36,10 +37,8 @@ class LanguageNameIndexer extends Maintenance {
 	}
 
 	public function execute() {
-		global $wgExtraLanguageNames;
-
 		// Avoid local configuration leaking to this script
-		if ( $wgExtraLanguageNames !== [] ) {
+		if ( $this->getConfig()->get( MainConfigNames::ExtraLanguageNames ) !== [] ) {
 			$this->fatalError( 'You have entries in $wgExtraLanguageNames. Needs to be empty for this script.' );
 		}
 
