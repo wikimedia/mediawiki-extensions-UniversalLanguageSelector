@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Valentine Badu"
+			"Valentine Badu",
+			"Amire80"
 		]
 	},
-	"uls-plang-title-languages": "Neɛ"
+	"uls-plang-title-languages": "Neɛ",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Dɔɔnwo $1|Dɔɔnwo $1}}"
 }
