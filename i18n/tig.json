@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bbeshir"
+			"Bbeshir",
+			"IdrisSeid"
 		]
 	},
-	"uls-plang-title-languages": "ሉቃት"
+	"uls-plang-title-languages": "ሉቃት",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ሐቴ ዝያዳ|$1 ዝያድ}}"
 }

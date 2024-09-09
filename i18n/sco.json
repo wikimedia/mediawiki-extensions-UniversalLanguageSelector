@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"CiphriusKane",
 			"John Reid",
 			"MJL"
 		]
@@ -42,7 +43,7 @@
 	"ext-uls-input-settings-more-languages-tooltip": "Mair leids",
 	"jquery-ime-other-languages": "Ither leids",
 	"jquery-ime-disable-text": "Uise nateeve keybuird",
-	"jquery-ime-help": "Heelp",
+	"jquery-ime-help": "Help",
 	"ext-uls-input-disable": "Disable inpit tuils",
 	"ext-uls-input-enable": "Enable inpit tuils",
 	"ext-uls-input-disable-info": "Inpit tuils ar disabled.",
