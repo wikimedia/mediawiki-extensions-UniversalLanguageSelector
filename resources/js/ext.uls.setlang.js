@@ -67,13 +67,13 @@
 	 * @return {string}
 	 */
 	function currentUrlWithoutSetLang() {
-		var uri = new mw.Uri();
-		delete uri.query.setlang;
-		return uri.toString();
+		var url = new URL( location.href );
+		url.searchParams.remove( 'setlang' );
+		return url.toString();
 	}
 
 	function removeSetLangFromHistory() {
-		if ( 'setlang' in mw.Uri().query ) {
+		if ( new URL( location.href ).searchParams.has( 'setlang' ) ) {
 			history.replaceState( null, '', currentUrlWithoutSetLang() );
 		}
 	}

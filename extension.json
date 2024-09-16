@@ -326,7 +326,7 @@
 				"mediawiki.api",
 				"mediawiki.jqueryMsg",
 				"@wikimedia/codex",
-				"mediawiki.Uri"
+				"web2017-polyfills"
 			],
 			"messages": [
 				"ext-uls-setlang-error",
