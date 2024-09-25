@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kambai Akau"
+			"Kambai Akau",
+			"Kuzayet"
 		]
 	},
-	"uls-plang-title-languages": "Na̱ryem"
+	"uls-plang-title-languages": "Na̱ryem",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|A̱yiring ba̱t|$1 Ba̱t}}"
 }
