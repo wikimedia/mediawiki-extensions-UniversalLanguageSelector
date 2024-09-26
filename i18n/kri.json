@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"122112ê"
+			"122112ê",
+			"Protostar"
 		]
 	},
-	"uls-plang-title-languages": "Langwej dɛn",
+	"uls-plang-title-languages": "Langwejdɛm",
 	"ext-uls-compact-link-count": "{{PLURAL:$1| Wan mɔ| $1 mɔ}}"
 }

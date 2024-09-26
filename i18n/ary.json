@@ -7,6 +7,7 @@
 	},
 	"uls-plang-title-languages": "لوغات",
 	"jquery-ime-help": "معاونة",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|وحدة خرة|$1 خرين}}",
 	"ext-uls-empty-state-header-actions-available": "ماكاينين تا لوغات دابا. زيد لوغة جديدة؟",
 	"ext-uls-add-languages-button-label": "زيد لوغات"
 }
