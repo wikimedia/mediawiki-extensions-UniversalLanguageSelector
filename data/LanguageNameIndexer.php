@@ -114,6 +114,28 @@ class LanguageNameIndexer extends Maintenance {
 			'ja' => [ 'nihongo', 'にほんご' ],
 			// Chiluvale (T368856)
 			'lue' => [ 'luvale, chi-' ],
+			// Tigrinya: variant names in Hebrew,
+			// to ensure they can be found in different spellings
+			'ti' => [
+				'טגריניה',
+				'טגרינית',
+				'טיגריניה',
+				'טיגרינית',
+				'תגריניה',
+				'תגרינית',
+				'תיגריניה',
+			],
+			// Tigre: variant names in Hebrew,
+			// to ensure they can be found in different spellings
+			'tig' => [
+				'טגרה',
+				'טגרית',
+				'טיגרה',
+				'תגרה',
+				'תגרית',
+				'תיגרה',
+				'תיגרית',
+			],
 			// Mon, renamed in core MediaWiki's Names.php (T352776)
 			'mnw' => [ 'ဘာသာ မန်' ],
 			// Palembang, also known as "Musi".
