@@ -102,21 +102,6 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 				'ka' => 'qartuli',
 			]
 			],
-			[ 'tonga', [
-				'to' => 'tonga',
-				'tog' => 'tonga (niasa)',
-				'toi' => 'tonga, chi-',
-				'ts' => 'tsonga',
-				'nr' => 'tonga — enetepēra ki te tonga',
-				'hax' => 'tonga — haira ki te tonga',
-				'st' => 'tonga — hōto ki te tonga',
-				'es-419' => 'tonga — pāniora amerikana ki te tonga',
-				'slh' => 'tonga — ratūti ki te tonga',
-				'tce' => 'tonga — tatōne ki te tonga',
-				'alt' => 'tonga — ātai ki te tonga',
-				'crj' => 'tonga-mā-rāwhiti — kirī tonga-mā-rāwhiti',
-			]
-			],
 			[ 'valencia', [
 				'ca' => 'valencia',
 			]

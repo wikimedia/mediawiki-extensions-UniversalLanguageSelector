@@ -125,8 +125,6 @@ class LanguageNameIndexer extends Maintenance {
 			'pnb' => [ 'punjabi western' ],
 			// Tai Nuea (T367377)
 			'tdd' => [ 'ᥖᥭᥰᥖᥬᥳᥑᥨᥒᥰ' ],
-			// Chitonga (T368856)
-			'toi' => [ 'tonga, chi-' ],
 			// Waale (T368046) - support alternate spellings of the name
 			'wlx' => [ 'waali', 'waalii' ],
 			// Simplified and Traditional Chinese, because zh-hans and zh-hant
