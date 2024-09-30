@@ -3,9 +3,10 @@
 		"authors": [
 			"Amire80",
 			"Chulsu463",
-			"Foavi33"
+			"Foavi33",
+			"MiiCii"
 		]
 	},
-	"uls-plang-title-languages": "gisun",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Emu ele|$1 ele}}"
+	"uls-plang-title-languages": "Gisun",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|$1 hacin -i gisun bi}}"
 }
