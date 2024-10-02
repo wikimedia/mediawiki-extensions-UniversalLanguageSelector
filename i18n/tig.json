@@ -6,5 +6,13 @@
 		]
 	},
 	"uls-plang-title-languages": "ሉቃት",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|ሐቴ ዝያዳ|$1 ዝያድ}}"
+	"ext-uls-display-settings-language-tab": "ሉቀት",
+	"jquery-ime-other-languages": "ብዕድ ሉቃት",
+	"jquery-ime-help": "ሰዳየት",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ሐቴ ዝያዳ|$1 ዝያድ}}",
+	"prefs-languages": "ሉቃት",
+	"ext-uls-setlang-unknown-error": "ለይትኣመራ ገጋ",
+	"ext-uls-empty-state-header": "ኣስክ ኣዜ ሉቀት ይኣለቡኒ",
+	"ext-uls-empty-state-desc": "ኣዜ ሉቀት ይኣለቡኒ",
+	"ext-uls-add-languages-button-label": "ኩሉ ሉቃት"
 }
