@@ -8,5 +8,5 @@
 		]
 	},
 	"uls-plang-title-languages": "Gisun",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|$1 hacin -i gisun bi}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|kemubi $1 hacingga gisun bi}}"
 }
