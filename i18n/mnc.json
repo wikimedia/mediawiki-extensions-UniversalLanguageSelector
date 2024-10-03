@@ -7,6 +7,10 @@
 			"MiiCii"
 		]
 	},
+	"uls-desc": "Baitalasi de hacingga arga be alibufi gisun be sonjoro, gisun -i sindabun be teksilere",
 	"uls-plang-title-languages": "Gisun",
+	"ext-uls-select-language-settings-icon-tooltip": "Gisun -i sindabun",
+	"ext-uls-undo-language-tooltip-text": "Gisun be $1 ci halahabi",
+	"ext-uls-undo-language-tooltip-text-local": "Ere Uiki -i gisun emgeri halabuhabi. [[Special:GlobalPreferences|Gubci jalan jecen -i adanara ton -i sindabun]] be baicafi, gubci Uiki -i gisun be halakini.",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|kemubi $1 hacingga gisun bi}}"
 }
