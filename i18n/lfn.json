@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Elefentiste",
 			"Mafcadio",
 			"Robin van der Vliet",
 			"Xð"
@@ -10,5 +11,6 @@
 	"ext-uls-display-settings-language-tab": "Lingua",
 	"jquery-ime-other-languages": "Otra linguas",
 	"jquery-ime-help": "Aida",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Un plu|$1 plu}}",
 	"prefs-languages": "Linguas"
 }
