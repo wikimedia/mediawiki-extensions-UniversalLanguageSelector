@@ -2,8 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Flixtey",
-			"Jwale2"
+			"Jwale2",
+			"NanaYawBotar"
 		]
 	},
-	"uls-plang-title-languages": "Wiemɔi"
+	"uls-plang-title-languages": "Wiemɔi",
+	"ext-uls-compact-link-count": "{{PLURAL:$1| Ekome ekoŋŋ| $1 ekoŋŋ}}"
 }

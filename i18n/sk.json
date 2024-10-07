@@ -4,7 +4,8 @@
 			"KuboF",
 			"Luky001",
 			"Sudo77(new)",
-			"Teslaton"
+			"Teslaton",
+			"Blahma"
 		]
 	},
 	"uls-desc": "Ponúka používateľovi niekoľko spôsobov výberu jazyka a úpravy jazykových nastavení",
@@ -61,5 +62,7 @@
 	"ext-uls-compact-language-links-preference": "Používať [[$1|kompaktný zoznam jazykov]] s jazykmi relevantnými pre vás.",
 	"ext-uls-actions-menu-language-settings-item-label": "Otvoriť jazykové nastavenia",
 	"ext-uls-empty-state-header": "Zatiaľ žiadne jazyky",
-	"ext-uls-empty-state-desc": "Momentálne nie sú dostupné žiadne jazyky"
+	"ext-uls-empty-state-desc": "Momentálne nie sú dostupné žiadne jazyky",
+	"ext-uls-empty-state-header-actions-available": "Zatiaľ žiadne jazyky. Pridať nový?",
+	"ext-uls-empty-state-desc-actions-available": "Sprístupnite obsah vo viacerých jazykoch."
 }
