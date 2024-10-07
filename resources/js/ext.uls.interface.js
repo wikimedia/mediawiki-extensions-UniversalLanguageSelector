@@ -505,7 +505,7 @@
 		previousLanguage = mw.storage.get( 'uls-previous-language-code' );
 		currentLanguage = mw.config.get( 'wgUserLanguage' );
 		previousAutonym = mw.storage.get( 'uls-previous-language-autonym' );
-		currentAutonym = mw.config.get( 'wgULSCurrentAutonym' );
+		currentAutonym = require( '../data.json' ).currentAutonym;
 
 		// If storage is empty, i.e. first visit, then store the current language
 		// immediately so that we know when it changes.

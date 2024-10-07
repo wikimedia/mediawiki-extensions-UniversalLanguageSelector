@@ -32,8 +32,10 @@ use MediaWiki\Hook\MakeGlobalVariablesScriptHook;
 use MediaWiki\Hook\UserGetLanguageObjectHook;
 use MediaWiki\Html\Html;
 use MediaWiki\Languages\LanguageNameUtils;
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Preferences\Hook\GetPreferencesHook;
+use MediaWiki\ResourceLoader\Context;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderGetConfigVarsHook;
 use MediaWiki\Skins\Hook\SkinAfterPortletHook;
 use MediaWiki\User\User;
@@ -448,13 +450,9 @@ class Hooks implements
 			$vars['wgULSBabelLanguages'] = array_keys( $userLanguageInfo );
 		}
 
-		// An optimization to avoid loading all of uls.data just to get the autonym
-		$langCode = $out->getLanguage()->getCode();
-		$vars['wgULSCurrentAutonym'] = $this->languageNameUtils->getLanguageName( $langCode );
-
 		$setLangCode = $this->getSetLang( $out );
 		if ( $setLangCode ) {
-			$vars['wgULSCurrentLangCode'] = $langCode;
+			$vars['wgULSCurrentLangCode'] = $out->getLanguage()->getCode();
 			$vars['wgULSSetLangCode'] = $setLangCode;
 			$vars['wgULSSetLangName'] = $this->languageNameUtils->getLanguageName( $setLangCode );
 		}
@@ -582,4 +580,28 @@ class Hooks implements
 
 		return null;
 	}
+
+	/**
+	 * @param Context $context
+	 * @param Config $config
+	 * @return array
+	 */
+	public static function getModuleData( Context $context, Config $config ): array {
+		$languageNameUtils = MediaWikiServices::getInstance()->getLanguageNameUtils();
+		return [
+			'currentAutonym' => $languageNameUtils->getLanguageName( $context->getLanguage() ),
+		];
+	}
+
+	/**
+	 * @param Context $context
+	 * @param Config $config
+	 * @return array
+	 */
+	public static function getModuleDataSummary( Context $context, Config $config ): array {
+		return [
+			'currentAutonym' => $context->getLanguage(),
+		];
+	}
+
 }

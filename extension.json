@@ -228,7 +228,12 @@
 				"js/ext.uls.launch.js",
 				"js/ext.uls.actions.menu.js",
 				"js/ext.uls.actions.menu.item.js",
-				"js/ext.uls.actions.menu.items.registry.js"
+				"js/ext.uls.actions.menu.items.registry.js",
+				{
+					"name": "data.json",
+					"callback": "UniversalLanguageSelector\\Hooks::getModuleData",
+					"versionCallback": "UniversalLanguageSelector\\Hooks::getModuleDataSummary"
+				}
 			],
 			"styles": [
 				"css/ext.uls.interface.less",
