@@ -68,7 +68,7 @@
 	 */
 	function currentUrlWithoutSetLang() {
 		var url = new URL( location.href );
-		url.searchParams.remove( 'setlang' );
+		url.searchParams.delete( 'setlang' );
 		return url.toString();
 	}
 
