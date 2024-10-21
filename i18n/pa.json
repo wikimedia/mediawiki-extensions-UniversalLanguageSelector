@@ -61,7 +61,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "ਤੁਸੀਂ ਭਾਸ਼ਾ ਸੂਚੀ ਦੇ ਅੱਗੇ ਦਿੱਤੀਆਂ ਗਈਆਂ ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ ਤੋਂ ਕਿਸੇ ਵੀ ਵਕਤ ਇਨਪੁਟ ਜ਼ਰੀਏ ਚਾਲੂ ਕਰ ਸਕਦੇ ਹੋ।",
 	"ext-uls-language-settings-applying": "ਲਾਗੂ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1| ਇੱਕ ਹੋਰ | $1 ਹੋਰ}}",
-	"ext-uls-compact-link-info": "ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ (ਤੁਹਾਡੇ ਅਤੇ ਹੋਰਾਂ ਦੁਆਰਾ ਆਮ ਚੋਣਾਂ ਵਿੱਚੋਂ ਸ਼ੁਰੂਆਤੀ ਚੋਣ)",
+	"ext-uls-compact-link-info": "ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ (ਤੁਹਾਡੇ ਅਤੇ ਹੋਰਾਂ ਵੱਲੋਂ ਆਮ ਚੋਣਾਂ ਵਿੱਚੋਂ ਸ਼ੁਰੂਆਤੀ ਚੋਣ)",
 	"prefs-languages": "ਭਾਸ਼ਾਵਾਂ",
 	"ext-uls-compact-language-links-preference": "ਤੁਹਾਡੇ ਨਾਲ ਸੰਬੰਧਿਤ ਭਾਸ਼ਾਵਾਂ ਦੇ ਨਾਲ, ਇੱਕ [[$1|ਸੰਕੁਚਿਤ ਭਾਸ਼ਾ ਸੂਚੀ]] ਦੀ ਵਰਤੋਂ ਕਰੋ।",
 	"ext-uls-compact-no-results": "ਇਹ ਸਫ਼ਾ ਉਸ ਭਾਸ਼ਾ ਵਿੱਚ ਉਪਲਬਧ ਨਹੀਂ ਹੈ ਜਿਸ ਦੀ ਤੁਸੀਂ ਭਾਲ ਕੀਤੀ ਸੀ।",
