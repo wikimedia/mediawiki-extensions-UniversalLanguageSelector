@@ -181,10 +181,9 @@
 	 */
 	mw.uls.getBrowserLanguage = function () {
 		// language is the standard property.
-		// userLanguage is only for IE and returns system locale.
 		// Empty string is a fallback in case both are undefined
 		// to avoid runtime error with split().
-		return ( window.navigator.language || window.navigator.userLanguage || '' ).split( '-' )[ 0 ];
+		return ( window.navigator.language || '' ).split( '-' )[ 0 ];
 	};
 
 	mw.uls.getCountryCode = function () {
