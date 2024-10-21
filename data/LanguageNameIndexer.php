@@ -104,6 +104,8 @@ class LanguageNameIndexer extends Maintenance {
 			'ca' => [ 'valencia' ],
 			// Compatibility with the old name and other Chinese varieties
 			'cdo' => [ 'chinese min dong' ],
+			// Older name, see T375891
+			'dtp' => [ 'bundu-liwan, dusun' ],
 			// Spanish, the transliteration of the autonym is often used for searching
 			'es' => [ 'castellano' ],
 			// Armenian, the transliteration of the autonym is often used for searching
