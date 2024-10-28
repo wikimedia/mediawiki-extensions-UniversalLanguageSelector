@@ -6,12 +6,20 @@
 		]
 	},
 	"uls-plang-title-languages": "ሉቃት",
+	"ext-uls-undo-language-tooltip-text": "ሉቀት ቀየረትምን $1",
 	"ext-uls-display-settings-language-tab": "ሉቀት",
+	"ext-uls-display-settings-title-short": "መርኣዪ",
+	"ext-uls-language-settings-cancel": "ኣትርፍ",
+	"ext-uls-webfonts-settings-info-link": "ወሰክ ሐብሬ",
+	"ext-uls-input-settings-title-short": "ማእተዪ",
+	"ext-uls-input-settings-ime-settings": "ገበይ ማእተዪ ናይ $1",
+	"ext-uls-input-settings-more-languages-tooltip": "ለሐሰያ ሉቃት",
 	"jquery-ime-other-languages": "ብዕድ ሉቃት",
 	"jquery-ime-help": "ሰዳየት",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|ሐቴ ዝያዳ|$1 ዝያድ}}",
 	"prefs-languages": "ሉቃት",
 	"ext-uls-setlang-unknown-error": "ለይትኣመራ ገጋ",
+	"ext-uls-setlang-cancel": "ኢትቀይርዎኒ",
 	"ext-uls-empty-state-header": "ኣስክ ኣዜ ሉቀት ይኣለቡኒ",
 	"ext-uls-empty-state-desc": "ኣዜ ሉቀት ይኣለቡኒ"
 }
