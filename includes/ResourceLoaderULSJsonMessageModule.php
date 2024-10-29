@@ -24,7 +24,7 @@ class ResourceLoaderULSJsonMessageModule extends Module {
 	 * @param Context|null $context
 	 * @return string[] Module names.
 	 */
-	public function getDependencies( Context $context = null ) {
+	public function getDependencies( ?Context $context = null ) {
 		return [ 'ext.uls.i18n' ];
 	}
 
