@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bangsa Manusia"
+		]
+	},
+	"uls-plang-title-languages": "Manga basa",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Isa pan|$1 pan}}"
+}
