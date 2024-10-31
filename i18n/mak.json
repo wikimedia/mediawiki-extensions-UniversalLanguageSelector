@@ -4,5 +4,6 @@
 			"Han4299"
 		]
 	},
-	"uls-plang-title-languages": "Basa"
+	"uls-plang-title-languages": "Basa",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Sekrepa pole|$1 pole}}"
 }
