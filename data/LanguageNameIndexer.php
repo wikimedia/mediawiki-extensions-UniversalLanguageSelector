@@ -116,6 +116,8 @@ class LanguageNameIndexer extends Maintenance {
 			'ja' => [ 'nihongo', 'にほんご' ],
 			// Chiluvale (T368856)
 			'lue' => [ 'luvale, chi-' ],
+			// Shan (T377856)
+			'shn' => [ 'ၽႃႇသႃႇတႆး', 'လိၵ်ႈတႆး' ],
 			// Tigrinya: variant names in Hebrew,
 			// to ensure they can be found in different spellings
 			'ti' => [
