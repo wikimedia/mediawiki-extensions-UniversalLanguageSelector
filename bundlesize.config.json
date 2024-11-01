@@ -6,5 +6,9 @@
 	{
 		"resourceModule": "ext.uls.interface",
 		"maxSize": "6.1 kB"
+	},
+	{
+		"resourceModule": "ext.uls.pt",
+		"maxSize": "0.5 kB"
 	}
 ]
