@@ -1,7 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Winston Sung"
+			"Winston Sung",
+			"BadDog",
+			"Conquistador",
+			"Vlad5250"
 		]
 	},
 	"uls-desc": "Daje korisniku nekoliko načina da izabere jezik i da prilagodi postavke jezika",
