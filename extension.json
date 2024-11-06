@@ -119,6 +119,7 @@
 				"#wpCaptchaWord",
 				".ace_text-input",
 				".ve-ce-surface-paste",
+				".ve-ce-surface-clipboardHandler",
 				".ve-ce-surface-readOnly [contenteditable]"
 			]
 		},
