@@ -22,7 +22,7 @@
 
 ( function () {
 	'use strict';
-	var $cancelBtn, $acceptBtn;
+	let $cancelBtn, $acceptBtn;
 
 	function getHeading( languageName ) {
 		return $( '<h4>' ).text(
@@ -67,7 +67,7 @@
 	 * @return {string}
 	 */
 	function currentUrlWithoutSetLang() {
-		var url = new URL( location.href );
+		const url = new URL( location.href );
 		url.searchParams.delete( 'setlang' );
 		return url.toString();
 	}
@@ -79,7 +79,7 @@
 	}
 
 	function updateLanguage( langCode ) {
-		var api = new mw.Api();
+		const api = new mw.Api();
 		return api.postWithToken( 'csrf', {
 			action: 'ulssetlang',
 			languagecode: langCode,
@@ -87,7 +87,7 @@
 		} ).done( () => {
 			location.replace( currentUrlWithoutSetLang() );
 		} ).fail( ( code, result ) => {
-			var apiErrorInfo = result.error && result.error.info ||
+			const apiErrorInfo = result.error && result.error.info ||
 				mw.msg( 'ext-uls-setlang-unknown-error' );
 			mw.notify(
 				mw.msg( 'ext-uls-setlang-error', apiErrorInfo ),
@@ -123,7 +123,7 @@
 	}
 
 	$( () => {
-		var setLangCode = mw.config.get( 'wgULSSetLangCode' ),
+		let setLangCode = mw.config.get( 'wgULSSetLangCode' ),
 			setLangName = mw.config.get( 'wgULSSetLangName' ),
 			currentLangCode = mw.config.get( 'wgULSCurrentLangCode' ),
 			$ulsDialog, ulsSetLangDialog;

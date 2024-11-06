@@ -20,7 +20,7 @@
 ( function () {
 	'use strict';
 
-	var closeRow, settingsMenu, settingsPanel, windowTemplate, panelsRow, buttonsRow;
+	let closeRow, settingsMenu, settingsPanel, windowTemplate, panelsRow, buttonsRow;
 
 	closeRow = '<div class="row">' +
 		'<div class="uls-language-settings-close-block eight columns offset-by-four"><span id="languagesettings-close" class="uls-icon-close"></span></div>' +
@@ -104,7 +104,7 @@
 		},
 
 		render: function () {
-			var modules,
+			let modules,
 				languageSettings = this,
 				defaultModule = this.options.defaultModule;
 
@@ -129,7 +129,7 @@
 		 * @param {boolean} active boolean Make this module active and show by default
 		 */
 		initModule: function ( moduleName, active ) {
-			var $settingsTitle, $settingsText, $settingsLink,
+			let $settingsTitle, $settingsText, $settingsLink,
 				languageSettings = this,
 				module = new $.fn.languagesettings.modules[ moduleName ]( languageSettings ),
 				$settingsMenuItems = languageSettings.$window.find( '.settings-menu-items' );
@@ -159,7 +159,7 @@
 			$settingsMenuItems.append( $settingsLink );
 
 			$settingsLink.on( 'click', function () {
-				var $this = $( this );
+				const $this = $( this );
 
 				$this.data( 'module' ).render();
 				// eslint-disable-next-line no-jquery/no-sizzle
@@ -300,7 +300,7 @@
 
 	$.fn.languagesettings = function ( option ) {
 		return this.each( function () {
-			var $this = $( this ),
+			let $this = $( this ),
 				data = $this.data( 'languagesettings' ),
 				options = typeof option === 'object' && option;
 

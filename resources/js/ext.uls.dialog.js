@@ -23,8 +23,8 @@
 ( function () {
 	'use strict';
 
-	var ULSDialog = function ( options ) {
-		var $dialog = options.container,
+	const ULSDialog = function ( options ) {
+		let $dialog = options.container,
 			hasOverlay = options.hasOverlay,
 			$overlay,
 			// Source: https://github.com/ghosh/Micromodal/blob/master/lib/src/index.js#L4
@@ -71,7 +71,7 @@
 		}
 
 		function maintainFocus( event ) {
-			var $focusableNodes = getFocusableNodes(),
+			let $focusableNodes = getFocusableNodes(),
 				focusedItemIndex;
 
 			if ( !hasOverlay ) {

@@ -7,6 +7,6 @@
 	],
 	"rules": {
 		"no-jquery/no-global-selector": "off",
-		"no-var": "off"
+		"prefer-const": "off"
 	}
 }

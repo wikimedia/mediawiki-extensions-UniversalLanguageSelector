@@ -20,7 +20,7 @@
 ( function () {
 	'use strict';
 
-	var template = '<div class="uls-display-settings">' +
+	const template = '<div class="uls-display-settings">' +
 
 		// Tab switcher buttons
 		'<div class="row">' +
@@ -124,7 +124,7 @@
 		 * @return {jQuery.Promise}
 		 */
 		setupWebFonts: function () {
-			var d = $.Deferred();
+			const d = $.Deferred();
 			mw.loader.using( [ 'ext.uls.webfonts.repository', '@wikimedia/codex' ] ).then( () => {
 				if ( this.isWebFontsEnabled ) {
 					mw.webfonts.setup();
@@ -164,7 +164,7 @@
 		},
 
 		prepareWebfontsCheckbox: function () {
-			var webFontsEnabled = this.isWebFontsEnabled();
+			const webFontsEnabled = this.isWebFontsEnabled();
 
 			if ( !webFontsEnabled ) {
 				$( '#uls-display-settings-font-selectors' ).addClass( 'hide' );
@@ -181,7 +181,7 @@
 		 * Prepare the UI language selector
 		 */
 		prepareLanguages: function () {
-			var $loginCta,
+			let $loginCta,
 				displaySettings = this,
 				SUGGESTED_LANGUAGES_NUMBER = 3,
 				anonsAllowed = mw.config.get( 'wgULSAnonCanChangeLanguage' ),
@@ -293,7 +293,7 @@
 		 * Prepare the more languages button. It is a ULS trigger
 		 */
 		prepareMoreLanguages: function () {
-			var $languages, $moreLanguagesButton,
+			let $languages, $moreLanguagesButton,
 				displaySettings = this;
 
 			$languages = this.$template.find( 'div.uls-ui-languages' );
@@ -306,7 +306,7 @@
 			$moreLanguagesButton.uls( {
 				onPosition: this.$parent.position.bind( this.$parent ),
 				onReady: function () {
-					var $wrap,
+					let $wrap,
 						uls = this,
 						$back = $( '<div>' )
 							.addClass( 'uls-icon-back' );
@@ -375,7 +375,7 @@
 		 * @param {string} language Language code
 		 */
 		preview: function ( language ) {
-			var displaySettings = this;
+			const displaySettings = this;
 
 			// Reset the language and font for the panel.
 			this.$template.attr( 'lang', language )
@@ -422,7 +422,7 @@
 		 * @param {string} target 'ui' or 'content'
 		 */
 		prepareFontSelector: function ( target ) {
-			var language, fonts, $fontSelector, savedFont,
+			let language, fonts, $fontSelector, savedFont,
 				$systemFont, $fontLabel, $fontsSection;
 
 			// Get the language code from the right property -
@@ -458,7 +458,7 @@
 			// Get the saved font using the fontSelector defined in mw.webfonts.setup
 			savedFont = this.$webfonts.getFont( language );
 			fonts.forEach( ( font ) => {
-				var $fontOption;
+				let $fontOption;
 
 				if ( font !== 'system' ) {
 					$fontOption = $( '<option>' ).attr( 'value', font ).text( font );
@@ -533,13 +533,13 @@
 		 * Register general event listeners
 		 */
 		listen: function () {
-			var displaySettings = this,
+			const displaySettings = this,
 				$contentFontSelector = this.$template.find( '#content-font-selector' ),
 				$uiFontSelector = this.$template.find( '#ui-font-selector' ),
 				$tabButtons = displaySettings.$template.find( '.uls-display-settings-tab-switcher button' );
 
 			$( '#webfonts-enable-checkbox' ).on( 'click', function () {
-				var $fontSelectors = $( '#uls-display-settings-font-selectors' );
+				const $fontSelectors = $( '#uls-display-settings-font-selectors' );
 
 				displaySettings.markDirty();
 
@@ -585,7 +585,7 @@
 			} );
 
 			$tabButtons.on( 'click', function () {
-				var $button = $( this );
+				const $button = $( this );
 
 				// eslint-disable-next-line no-jquery/no-class-state
 				if ( $button.hasClass( 'uls-cdx-button-pressed' ) ) {
@@ -593,7 +593,7 @@
 				}
 
 				displaySettings.$template.find( '.uls-sub-panel' ).each( function () {
-					var $subPanel = $( this );
+					const $subPanel = $( this );
 
 					// eslint-disable-next-line no-jquery/no-class-state
 					if ( $subPanel.hasClass( $button.attr( 'id' ) ) ) {
@@ -659,7 +659,7 @@
 			this.$parent.setBusy( true );
 			// Save the preferences
 			mw.webfonts.preferences.save( ( result ) => {
-				var newWebfontsEnable, oldWebfontsEnable, webfontsEvent,
+				let newWebfontsEnable, oldWebfontsEnable, webfontsEvent,
 					newRegistry = mw.webfonts.preferences.registry,
 					oldRegistry = this.savedRegistry.registry,
 					newFonts = newRegistry.fonts || {},

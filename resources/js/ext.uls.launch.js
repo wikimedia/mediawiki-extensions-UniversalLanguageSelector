@@ -3,7 +3,7 @@
  */
 
 /* eslint-disable no-implicit-globals */
-var commonInterlanguageList = null;
+let commonInterlanguageList = null;
 
 /**
  * @param {string[]} languageCodes array of language codes available
@@ -23,7 +23,7 @@ function filterForCommonLanguagesForUser( languageCodes ) {
  * @return {Object} mapping language codes to the textContent of DOMElements
  */
 function languageObjectTextContent( languagesObject ) {
-	var newLanguageObject = {};
+	const newLanguageObject = {};
 	Object.keys( languagesObject ).forEach( ( langCode ) => {
 		newLanguageObject[ langCode ] = languagesObject[ langCode ].textContent;
 	} );
@@ -39,7 +39,7 @@ function languageObjectTextContent( languagesObject ) {
  * @param {boolean} forCLS Whether to enable compact language links specific behavior
  */
 function launchULS( $trigger, languagesObject, forCLS ) {
-	var ulsConfig = {
+	const ulsConfig = {
 		/**
 		 * Language selection handler
 		 *
@@ -71,7 +71,7 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 			// Default positioning of jquery.uls is middle of the screen under the trigger.
 			// This code aligns it under the trigger and to the trigger edge depending on which
 			// side of the page the trigger is - should work automatically for both LTR and RTL.
-			var isInVectorStickyHeader, offset, height, width, positionCSS;
+			let isInVectorStickyHeader, offset, height, width, positionCSS;
 			// T295391 Used to add fixed positioning for Vector sticky header.
 			isInVectorStickyHeader = $trigger.attr( 'id' ) === 'p-lang-btn-sticky-header';
 			// These are for the trigger.
@@ -111,7 +111,7 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 			mw.hook( 'mw.uls.compact_language_links.open' ).fire( $trigger );
 		},
 		languageDecorator: function ( $languageLink, language ) {
-			var element = languagesObject[ language ];
+			const element = languagesObject[ language ];
 			// Set href, text, and tooltip exactly same as what was in
 			// interlanguage link. The ULS autonym might be different in some
 			// cases like sr. In ULS it is "српски", while in interlanguage links
@@ -138,7 +138,7 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 			Object.keys( languagesObject )
 		),
 		noResultsTemplate: function () {
-			var $defaultTemplate = $.fn.lcd.defaults.noResultsTemplate.call( this );
+			const $defaultTemplate = $.fn.lcd.defaults.noResultsTemplate.call( this );
 			// Customize the message
 			$defaultTemplate
 				.find( '.uls-no-results-found-title' )
@@ -155,20 +155,20 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 		};
 		ulsConfig.onPosition = function () {
 			// Compact language links specific positioning with a caret
-			var left;
+			let left;
 			// The panel is positioned carefully so that our pointy triangle,
 			// which is implemented as a square box rotated 45 degrees with
 			// rotation origin in the middle. See the corresponding style file.
 
 			// These are for the trigger
-			var offset = $trigger.offset(),
+			const offset = $trigger.offset(),
 				width = $trigger.outerWidth(),
 				height = $trigger.outerHeight();
 
 			// Triangle width is: who knows now, but this still looks fine.
-			var triangleWidth = 12;
+			const triangleWidth = 12;
 
-			var isRight = offset.left > $( window ).width() / 2;
+			const isRight = offset.left > $( window ).width() / 2;
 			// selector-{left,right} control which side the caret appears.
 			// It needs to match the positioning of the dialog.
 			this.$menu.toggleClass( 'selector-left', !isRight )

@@ -20,7 +20,7 @@
 ( function () {
 	'use strict';
 
-	var geo,
+	let geo,
 		cacheAge = 60 * 60 * 8, // 8 hours
 		service = mw.config.get( 'wgULSGeoService' );
 

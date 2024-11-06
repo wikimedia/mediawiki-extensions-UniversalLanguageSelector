@@ -19,7 +19,7 @@
 
 ( function () {
 	'use strict';
-	var languageSettingsModules = [ 'ext.uls.displaysettings' ],
+	const languageSettingsModules = [ 'ext.uls.displaysettings' ],
 		launchULS = require( './ext.uls.launch.js' ),
 		ActionsMenu = require( './ext.uls.actions.menu.js' ),
 		ActionsMenuItem = require( './ext.uls.actions.menu.item.js' );
@@ -58,7 +58,7 @@
 	 * @param {Object} uls The ULS object
 	 */
 	function addEmptyState( uls ) {
-		var $emptyStateContainer = $( '<section>' ).addClass( 'uls-empty-state' );
+		const $emptyStateContainer = $( '<section>' ).addClass( 'uls-empty-state' );
 
 		function openActionsMenuEventHandler( event ) {
 			event.stopPropagation();
@@ -68,20 +68,20 @@
 			openLanguageSettings( $( event.target ), onMenuClose, uls );
 		}
 
-		var languageSettingsMenuItem = {
+		const languageSettingsMenuItem = {
 			name: 'languageSettings',
 			icon: 'settings',
 			text: $.i18n( 'ext-uls-actions-menu-language-settings-item-label' ),
 			handler: openActionsMenuEventHandler
 		};
 
-		var actionItemsRegistry = mw.uls.ActionsMenuItemsRegistry;
+		const actionItemsRegistry = mw.uls.ActionsMenuItemsRegistry;
 		actionItemsRegistry.register( languageSettingsMenuItem );
 
-		var $header = $( '<h3>' )
+		const $header = $( '<h3>' )
 			.addClass( 'uls-empty-state__header' )
 			.text( $.i18n( 'ext-uls-empty-state-header' ) );
-		var $desc = $( '<p>' )
+		const $desc = $( '<p>' )
 			.addClass( 'uls-empty-state__desc' )
 			.text( $.i18n( 'ext-uls-empty-state-desc' ) );
 		$emptyStateContainer.append( $header, $desc );
@@ -96,9 +96,9 @@
 
 		// Action menu items need OOUI widgets. Load them and register trigger event handler.
 		mw.loader.using( [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-interactions' ] ).done( () => {
-			var $actionsList = $( '<ul>' ).addClass( 'uls-language-action-items' );
+			const $actionsList = $( '<ul>' ).addClass( 'uls-language-action-items' );
 			actionItemsRegistry.getItems().forEach( ( actionItem ) => {
-				var actionButton = new ActionsMenuItem(
+				const actionButton = new ActionsMenuItem(
 					actionItem.icon,
 					actionItem.text,
 					actionItem.handler,
@@ -118,7 +118,7 @@
 	 * @return {jQuery}
 	 */
 	function createMenuButton( buttonClass ) {
-		var classes = [
+		const classes = [
 			'cdx-button',
 			'cdx-button--weight-quiet',
 			buttonClass
@@ -132,10 +132,10 @@
 	 * @return {jQuery}
 	 */
 	function addLanguageSettingsTrigger( uls ) {
-		var $ulsSettingsBlock = uls.$menu.find( '#uls-settings-block' ).eq( 0 );
+		const $ulsSettingsBlock = uls.$menu.find( '#uls-settings-block' ).eq( 0 );
 		$ulsSettingsBlock.addClass( 'uls-settings-block--vector-2022' );
 
-		var $languageSettingsMenuButton = createMenuButton( 'uls-language-settings-button' );
+		const $languageSettingsMenuButton = createMenuButton( 'uls-language-settings-button' );
 		$languageSettingsMenuButton.one( 'click', () => {
 			openLanguageSettings( $languageSettingsMenuButton, uls.show.bind( uls ), uls );
 		} );
@@ -153,15 +153,15 @@
 	 * @param {Object} uls The ULS object
 	 */
 	function addActionsMenuTriggers( uls ) {
-		var $ulsSettingsBlock = addLanguageSettingsTrigger( uls );
+		const $ulsSettingsBlock = addLanguageSettingsTrigger( uls );
 
-		var actionItemsRegistry = mw.uls.ActionsMenuItemsRegistry;
+		const actionItemsRegistry = mw.uls.ActionsMenuItemsRegistry;
 		actionItemsRegistry.on( 'register', onActionItemAdded );
 
-		var addLanguagesMenuDialog;
-		var $addLanguagesMenuButton;
+		let addLanguagesMenuDialog;
+		let $addLanguagesMenuButton;
 
-		var prependAddLanguagesMenuButton = function () {
+		const prependAddLanguagesMenuButton = function () {
 			$addLanguagesMenuButton = createMenuButton( 'uls-add-languages-button' ).attr( {
 				'data-i18n': 'ext-uls-add-languages-button-label'
 			} ).i18n();
@@ -207,7 +207,7 @@
 	 * @param {string} previousAutonym
 	 */
 	function showUndoTooltip( previousLang, previousAutonym ) {
-		var trigger, popup, popupPosition,
+		let trigger, popup, popupPosition,
 			configPosition = mw.config.get( 'wgULSPosition' ),
 			triggerSelector = ( configPosition === 'interlanguage' ) ?
 				'.uls-settings-trigger, .mw-interlanguage-selector' :
@@ -227,7 +227,7 @@
 		}
 
 		function showTipsy( timeout ) {
-			var tipsyTimer = 0;
+			let tipsyTimer = 0;
 
 			popup.toggle( true );
 			popup.toggleClipping( false );
@@ -255,7 +255,7 @@
 			$floatableContainer: $( trigger ),
 			position: popupPosition,
 			$content: ( function () {
-				var messageKey, $link;
+				let messageKey, $link;
 
 				$link = $( '<a>' )
 					.text( previousAutonym )
@@ -321,9 +321,9 @@
 	}
 
 	function initInterlanguageEntryPoint() {
-		var $pLang = $( '#p-lang' );
+		const $pLang = $( '#p-lang' );
 
-		var $trigger = $( '<button>' )
+		const $trigger = $( '<button>' )
 			.addClass( 'uls-settings-trigger' )
 			.prop( 'title', mw.msg( 'ext-uls-select-language-settings-icon-tooltip' ) );
 
@@ -336,8 +336,8 @@
 			$pLang.find( 'h3' ).text( mw.msg( 'uls-plang-title-languages' ) );
 		}
 
-		var clickHandler = function ( e ) {
-			var languagesettings = $trigger.data( 'languagesettings' ),
+		const clickHandler = function ( e ) {
+			let languagesettings = $trigger.data( 'languagesettings' ),
 				languageSettingsOptions;
 
 			if ( languagesettings ) {
@@ -352,7 +352,7 @@
 			languageSettingsOptions = {
 				defaultModule: 'display',
 				onPosition: function () {
-					var caretRadius, top, left,
+					let caretRadius, top, left,
 						ulsTriggerHeight = this.$element.height(),
 						ulsTriggerWidth = this.$element[ 0 ].offsetWidth,
 						ulsTriggerOffset = this.$element.offset();
@@ -393,12 +393,12 @@
 	}
 
 	function initPersonalEntryPoint() {
-		var $trigger = $( '.uls-trigger' );
-		var clickHandler;
+		const $trigger = $( '.uls-trigger' );
+		let clickHandler;
 
 		if ( !userCanChangeLanguage() ) {
 			clickHandler = function ( e ) {
-				var languagesettings = $trigger.data( 'languagesettings' );
+				const languagesettings = $trigger.data( 'languagesettings' );
 
 				e.preventDefault();
 
@@ -419,7 +419,7 @@
 			};
 		} else {
 			clickHandler = function ( e, eventParams ) {
-				var uls = $trigger.data( 'uls' );
+				const uls = $trigger.data( 'uls' );
 
 				e.preventDefault();
 
@@ -439,7 +439,7 @@
 								// the trigger. This code aligns it under the trigger and to the
 								// trigger edge depending on which side of the page the trigger is
 								// It should work automatically both LTR and RTL.
-								var offset, height, width, positionCSS;
+								let offset, height, width, positionCSS;
 								offset = $trigger.offset();
 								width = $trigger.outerWidth();
 								height = $trigger.outerHeight();
@@ -496,7 +496,7 @@
 	}
 
 	function initLanguageChangeUndoTooltip() {
-		var previousLanguage, currentLanguage, previousAutonym, currentAutonym;
+		let previousLanguage, currentLanguage, previousAutonym, currentAutonym;
 
 		if ( !userCanChangeLanguage() ) {
 			return;
@@ -529,10 +529,10 @@
 	}
 
 	function initIme() {
-		var imeSelector = mw.config.get( 'wgULSImeSelectors' ).join( ', ' );
+		const imeSelector = mw.config.get( 'wgULSImeSelectors' ).join( ', ' );
 
 		$( document.body ).on( 'focus.imeinit', imeSelector, function () {
-			var $input = $( this );
+			const $input = $( this );
 			$( document.body ).off( '.imeinit' );
 			mw.loader.using( 'ext.uls.ime', () => {
 				mw.ime.setup();
@@ -549,12 +549,12 @@
 		// If the ULS button is also a checkbox, we can
 		// conclude that it's using the checkbox hack.
 		$( document ).on( 'input', 'input.mw-interlanguage-selector[type="checkbox"]', ( ev ) => {
-			var elem = ev.currentTarget;
+			const elem = ev.currentTarget;
 			elem.checked = false;
 		} );
 
 		$( document ).on( 'keydown', 'input.mw-interlanguage-selector[type="checkbox"]', ( ev ) => {
-			var elem = ev.currentTarget;
+			const elem = ev.currentTarget;
 			if ( ev.key !== 'Enter' ) {
 				return;
 			}
@@ -571,7 +571,7 @@
 	 * @param {jQuery.Event} ev
 	 */
 	function loadContentLanguageSelector( ev ) {
-		var $target = $( ev.currentTarget );
+		const $target = $( ev.currentTarget );
 
 		// Avoid reinitializing ULS multiple times for an element
 		if ( $target.attr( 'data-uls-loaded' ) ) {
@@ -582,7 +582,7 @@
 		ev.preventDefault();
 
 		mw.loader.using( [ 'ext.uls.mediawiki', '@wikimedia/codex' ] ).then( () => {
-			var parent, languageNodes, standalone, uls;
+			let parent, languageNodes, standalone, uls;
 
 			parent = document.querySelectorAll( '.mw-portlet-lang, #p-lang' )[ 0 ];
 			languageNodes = parent ? parent.querySelectorAll( '.interlanguage-link-target' ) : [];
@@ -644,16 +644,16 @@
 	 * This method adds this button inside the dropdown.
 	 */
 	function addLanguageSettingsToNonContentPages() {
-		var $languageBtn = $( '#p-lang-btn' );
-		var clickHandler = function ( event ) {
+		const $languageBtn = $( '#p-lang-btn' );
+		const clickHandler = function ( event ) {
 			event.stopPropagation();
 			mw.loader.using( languageSettingsModules ).then( () => {
 				$( event.target ).languagesettings( {
 					autoOpen: true,
 					onPosition: function () {
-						var offset = $languageBtn.offset();
-						var top = offset.top + $languageBtn.outerHeight();
-						var right = $( window ).width() - offset.left - $languageBtn.outerWidth();
+						const offset = $languageBtn.offset();
+						const top = offset.top + $languageBtn.outerHeight();
+						const right = $( window ).width() - offset.left - $languageBtn.outerWidth();
 						return { top: top, right: right };
 					}
 				} );
@@ -664,14 +664,14 @@
 		$languageBtn.one( 'mouseover', () => {
 			mw.loader.using( [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-interactions', 'ext.uls.messages' ] )
 				.done( () => {
-					var actionButton = new ActionsMenuItem(
+					const actionButton = new ActionsMenuItem(
 						'settings',
 						$.i18n( 'ext-uls-actions-menu-language-settings-item-label' ),
 						clickHandler,
 						null
 					).render();
 					actionButton.$element.addClass( 'empty-language-selector__language-settings-button' );
-					var $emptyLanguageSelectorBody = $( '.mw-portlet-empty-language-selector-body' );
+					const $emptyLanguageSelectorBody = $( '.mw-portlet-empty-language-selector-body' );
 					$emptyLanguageSelectorBody.after( actionButton.$element );
 				} );
 		} );
@@ -712,7 +712,7 @@
 
 		// First init secondary to avoid initing the interlanguage entry point multiple times
 		initSecondaryEntryPoints();
-		var position = mw.config.get( 'wgULSPosition' );
+		const position = mw.config.get( 'wgULSPosition' );
 		if ( position === 'interlanguage' ) {
 			initInterlanguageEntryPoint();
 		} else {
@@ -720,9 +720,9 @@
 		}
 
 		// whether to load compact language links
-		var compact = mw.config.get( 'wgULSisCompactLinksEnabled' );
+		const compact = mw.config.get( 'wgULSisCompactLinksEnabled' );
 		// whether to show the omni box or not
-		var languageInHeader = mw.config.get( 'wgVector2022LanguageInHeader' );
+		const languageInHeader = mw.config.get( 'wgVector2022LanguageInHeader' );
 
 		if ( compact || languageInHeader ) {
 			// Init compact languages OR omni selector using the mw-interlanguage-selector class

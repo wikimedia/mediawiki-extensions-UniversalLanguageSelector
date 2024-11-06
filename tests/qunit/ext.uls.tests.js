@@ -34,7 +34,7 @@
 	} );
 
 	QUnit.test( 'Common languages', ( assert ) => {
-		var i, foundTagalog, languagesInPH;
+		let i, foundTagalog, languagesInPH;
 
 		// Bug 49847
 		foundTagalog = false;

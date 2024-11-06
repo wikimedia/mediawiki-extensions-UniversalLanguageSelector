@@ -21,7 +21,7 @@
 ( function () {
 	'use strict';
 
-	var ULSPreferences, instance;
+	let ULSPreferences, instance;
 
 	ULSPreferences = function () {
 		// This violates coding conventions for localstorage:
@@ -76,7 +76,7 @@
 		 * @param {Function} callback
 		 */
 		save: function ( callback ) {
-			var self = this;
+			const self = this;
 
 			callback = callback || function () {};
 			if ( this.isNamed ) {

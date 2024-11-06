@@ -1,7 +1,7 @@
 ( function () {
 	'use strict';
 
-	var ActionsMenuItem = require( './ext.uls.actions.menu.item.js' );
+	const ActionsMenuItem = require( './ext.uls.actions.menu.item.js' );
 
 	function ActionsMenu( options ) {
 		this.options = options;
@@ -71,7 +71,7 @@
 					actionItem.href
 				);
 			}
-			var actionButton = actionItem.render();
+			const actionButton = actionItem.render();
 			this.$template.find( '.uls-language-action-items' ).prepend(
 				actionButton.$element
 			);

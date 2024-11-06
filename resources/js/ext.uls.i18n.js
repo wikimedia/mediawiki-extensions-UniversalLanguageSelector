@@ -48,7 +48,7 @@
 	 * @return {jQuery.Promise}
 	 */
 	mw.uls.loadLocalization = function ( locale, messages ) {
-		var i18n = $.i18n();
+		const i18n = $.i18n();
 
 		i18n.locale = locale;
 		if ( messages ) {

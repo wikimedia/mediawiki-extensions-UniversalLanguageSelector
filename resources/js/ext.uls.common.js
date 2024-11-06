@@ -51,7 +51,7 @@
 	 * @return {jQuery.Promise}
 	 */
 	mw.uls.setLanguage = function ( language ) {
-		var api = new mw.Api();
+		const api = new mw.Api();
 
 		function changeLanguageAnon() {
 			if ( mw.config.get( 'wgULSAnonCanChangeLanguage' ) ) {
@@ -81,7 +81,7 @@
 				return false;
 			}
 		} ).then( ( hasGlobalPreference ) => {
-			var apiModule;
+			let apiModule;
 
 			if ( hasGlobalPreference ) {
 				apiModule = 'globalpreferenceoverrides';
@@ -131,10 +131,10 @@
 	 * @return {Object} that maps language codes to the corresponding DOM elements
 	 */
 	mw.uls.getInterlanguageListFromNodes = function ( nodes ) {
-		var interlanguageList = {};
+		const interlanguageList = {};
 
 		Array.prototype.forEach.call( nodes, ( el ) => {
-			var langCode = mw.uls.convertMediaWikiLanguageCodeToULS( el.lang );
+			const langCode = mw.uls.convertMediaWikiLanguageCodeToULS( el.lang );
 			interlanguageList[ langCode ] = el;
 		} );
 
@@ -142,7 +142,7 @@
 	};
 
 	mw.uls.getPreviousLanguages = function () {
-		var previousLanguages = [];
+		const previousLanguages = [];
 
 		try {
 			previousLanguages.push.apply(
@@ -161,7 +161,7 @@
 	 * @since 2016.05
 	 */
 	mw.uls.addPreviousLanguage = function ( language ) {
-		var languages = mw.uls.getPreviousLanguages(),
+		const languages = mw.uls.getPreviousLanguages(),
 			index = languages.indexOf( language );
 
 		// Avoid duplicates
@@ -208,7 +208,7 @@
 	 * @return {Array} List of language codes without duplicates.
 	 */
 	mw.uls.getFrequentLanguageList = function ( countryCode ) {
-		var i, j, lang,
+		let i, j, lang,
 			ret = [],
 			lists = [
 				[

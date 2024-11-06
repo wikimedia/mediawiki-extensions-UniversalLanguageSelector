@@ -12,7 +12,7 @@
 	};
 
 	ActionsMenuItemsRegistry.prototype.getItems = function () {
-		var registry = this.registry;
+		const registry = this.registry;
 		return Object.keys( registry ).map( ( key ) => registry[ key ] );
 	};
 

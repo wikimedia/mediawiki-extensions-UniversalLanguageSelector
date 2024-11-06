@@ -20,7 +20,7 @@
 ( function () {
 	'use strict';
 
-	var getULSPreferences = require( 'ext.uls.preferences' ),
+	let getULSPreferences = require( 'ext.uls.preferences' ),
 		ulsPreferences = getULSPreferences();
 
 	mw.webfonts = mw.webfonts || {};
@@ -65,7 +65,7 @@
 
 	mw.webfonts.setup = function () {
 		// Initialize webfonts
-		var mediawikiFontRepository = $.webfonts.repository;
+		const mediawikiFontRepository = $.webfonts.repository;
 
 		mediawikiFontRepository.base = mw.config.get( 'wgULSFontRepositoryBasePath' );
 
@@ -83,7 +83,7 @@
 			 * @return {string|null}
 			 */
 			fontSelector: function ( repository, language, classes ) {
-				var font, defaultFont;
+				let font, defaultFont;
 
 				if ( !language ) {
 					return null;
@@ -107,7 +107,7 @@
 			},
 
 			exclude: ( function () {
-				var excludes = mw.config.get( 'wgULSNoWebfontsSelectors' ).join( ', ' );
+				let excludes = mw.config.get( 'wgULSNoWebfontsSelectors' ).join( ', ' );
 
 				if ( mw.user.options.get( 'editfont' ) !== 'default' ) {
 					// Exclude textboxes from webfonts if the user has edit area font option
@@ -118,7 +118,7 @@
 				return excludes;
 			}() ),
 			overridableFontFamilies: ( function () {
-				var headingFont = $( 'h1' ).css( 'font-family' );
+				const headingFont = $( 'h1' ).css( 'font-family' );
 				return headingFont ? [ headingFont ] : [];
 			}() )
 		} );

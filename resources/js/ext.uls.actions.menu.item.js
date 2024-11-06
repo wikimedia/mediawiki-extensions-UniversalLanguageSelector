@@ -1,5 +1,5 @@
 ( function () {
-	var ActionsMenuItem = function ( icon, text, handler, href ) {
+	const ActionsMenuItem = function ( icon, text, handler, href ) {
 		this.icon = icon;
 		this.text = text;
 		this.handler = handler;
@@ -10,7 +10,7 @@
 	 * @return {OO.ui.ButtonWidget}
 	 */
 	ActionsMenuItem.prototype.render = function () {
-		var actionButtonOptions = {
+		const actionButtonOptions = {
 			framed: false,
 			icon: this.icon,
 			label: this.text,
@@ -22,7 +22,7 @@
 			actionButtonOptions.href = this.href;
 		}
 
-		var actionButton = new OO.ui.ButtonWidget( actionButtonOptions );
+		const actionButton = new OO.ui.ButtonWidget( actionButtonOptions );
 
 		if ( !this.href ) {
 			actionButton.$element.one( 'click', this.handler );

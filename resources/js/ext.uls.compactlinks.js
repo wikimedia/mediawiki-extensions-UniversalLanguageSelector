@@ -20,7 +20,7 @@
 ( function () {
 	'use strict';
 
-	var DEFAULT_LIST_SIZE = 9;
+	const DEFAULT_LIST_SIZE = 9;
 
 	/**
 	 * @param {Array} target
@@ -28,7 +28,7 @@
 	 * @param {string|string[]|undefined} items Language code, or list of language codes
 	 */
 	function addMatchWithoutDuplicate( target, source, items ) {
-		var i;
+		let i;
 		if ( items === undefined ) {
 			return;
 		}
@@ -52,7 +52,7 @@
 	 * @return {string[]|undefined} Language codes
 	 */
 	function getAssistantLanguages() {
-		var assistantLanguages = mw.user.options.get( 'translate-editlangs' );
+		const assistantLanguages = mw.user.options.get( 'translate-editlangs' );
 		if ( !assistantLanguages || assistantLanguages === 'default' ) {
 			return;
 		}
@@ -161,7 +161,7 @@
 	 * Initialize the plugin
 	 */
 	CompactInterlanguageList.prototype.init = function () {
-		var max = this.options.max || DEFAULT_LIST_SIZE;
+		const max = this.options.max || DEFAULT_LIST_SIZE;
 
 		this.listSize = Object.keys( this.interlanguageList ).length;
 
@@ -183,7 +183,7 @@
 	 * Render the compacted interlanguage list and triggers
 	 */
 	CompactInterlanguageList.prototype.render = function () {
-		var language;
+		let language;
 
 		for ( language in this.compactList ) {
 			this.compactList[ language ].parentNode.style.display = '';
@@ -203,7 +203,7 @@
 	 * @return {Object}
 	 */
 	CompactInterlanguageList.prototype.getCompactList = function () {
-		var language, languages, compactLanguages, i, compactedList;
+		let language, languages, compactLanguages, i, compactedList;
 
 		compactedList = {};
 		languages = Object.keys( this.interlanguageList );
@@ -252,7 +252,7 @@
 	 * @return {Array} Compacted array
 	 */
 	CompactInterlanguageList.prototype.compact = function ( languages ) {
-		var i, strategies, found,
+		let i, strategies, found,
 			compactLanguages = [];
 
 		strategies = this.getCompactStrategies();
@@ -283,9 +283,9 @@
 	 * @return {string[]} Language codes
 	 */
 	CompactInterlanguageList.prototype.getLangsInText = function () {
-		var languagesInText = [];
+		const languagesInText = [];
 		Array.prototype.forEach.call( document.querySelectorAll( '#mw-content-text [lang]' ), ( el ) => {
-			var lang = mw.uls.convertMediaWikiLanguageCodeToULS( el.lang );
+			const lang = mw.uls.convertMediaWikiLanguageCodeToULS( el.lang );
 			if ( languagesInText.indexOf( lang ) === -1 ) {
 				languagesInText.push( lang );
 			}
@@ -313,7 +313,7 @@
 	 * The most relevant ones are unhidden in #render.
 	 */
 	CompactInterlanguageList.prototype.hideOriginal = function () {
-		var links = this.listElement.querySelectorAll( '.interlanguage-link' ),
+		let links = this.listElement.querySelectorAll( '.interlanguage-link' ),
 			i = links.length;
 		while ( i-- ) {
 			links[ i ].style.display = 'none';
@@ -326,7 +326,7 @@
 	 * Click handler is setup in ext.uls.interface module.
 	 */
 	CompactInterlanguageList.prototype.addTrigger = function () {
-		var trigger = document.createElement( 'button' );
+		const trigger = document.createElement( 'button' );
 		// TODO: Should we have a different class name where the CLS styles are attached?
 		trigger.className = 'mw-interlanguage-selector cdx-button';
 		trigger.title = mw.message( 'ext-uls-compact-link-info' ).plain();
@@ -358,7 +358,7 @@
 	 *   * addTrigger (1 mw.Message#parser)
 	 */
 	function createCompactList() {
-		var listElement, compactList;
+		let listElement, compactList;
 		listElement = document.querySelector( '.mw-portlet-lang ul, #p-lang ul' );
 		if ( !listElement ) {
 			// Not all namespaces will have a list of languages.

@@ -20,7 +20,7 @@
 ( function () {
 	'use strict';
 
-	var mwImeRulesPath, inputSelector, inputPreferences, ulsIMEPreferences, customHelpLink,
+	let mwImeRulesPath, inputSelector, inputPreferences, ulsIMEPreferences, customHelpLink,
 		getULSPreferences = require( 'ext.uls.preferences' ),
 		languageSettingsModules = [ 'ext.uls.displaysettings', '@wikimedia/codex' ];
 
@@ -33,7 +33,7 @@
 	mw.ime = mw.ime || {};
 
 	mw.ime.getLanguagesWithIME = function () {
-		var language,
+		let language,
 			ulsLanguages = mw.config.get( 'wgULSLanguages' ) || {},
 			availableLanguages = {};
 
@@ -46,7 +46,7 @@
 	};
 
 	mw.ime.getIMELanguageList = function () {
-		var unique = [],
+		let unique = [],
 			imeLanguageList,
 			previousIMELanguages;
 
@@ -123,7 +123,7 @@
 	};
 
 	function imeNotification() {
-		var notificationMsg = ( mw.config.get( 'wgULSPosition' ) === 'personal' ) ?
+		const notificationMsg = ( mw.config.get( 'wgULSPosition' ) === 'personal' ) ?
 				'ext-uls-input-disable-notification-info-personal' :
 				'ext-uls-input-disable-notification-info-interlanguage',
 			$notification = $( '<div>' )
@@ -148,7 +148,7 @@
 
 	// Add a 'more settings' link that takes to input settings of ULS
 	customHelpLink = function () {
-		var $disableInputToolsLink, $moreSettingsLink,
+		let $disableInputToolsLink, $moreSettingsLink,
 			imeselector = this;
 
 		$disableInputToolsLink = $( '<span>' )
@@ -238,7 +238,7 @@
 	 * Binds the event listeners.
 	 */
 	mw.ime.setup = function () {
-		var imeSelectors = mw.config.get( 'wgULSImeSelectors' ).join( ', ' );
+		const imeSelectors = mw.config.get( 'wgULSImeSelectors' ).join( ', ' );
 
 		mw.ime.init();
 		$( document.body ).on( 'focus.ime', imeSelectors, function () {
@@ -254,7 +254,7 @@
 	 * @since 2013.11
 	 */
 	mw.ime.handleFocus = function ( $input ) {
-		var noImeSelectors;
+		let noImeSelectors;
 
 		if ( $input.is( '.noime' ) || $input.data( 'ime' ) ) {
 			// input does not need IME or already applied
@@ -291,12 +291,12 @@
 	 * @since 2013.11
 	 */
 	mw.ime.addIme = function ( $input ) {
-		var imeselector;
+		let imeselector;
 
 		$input.ime( {
 			languages: mw.ime.getIMELanguageList(),
 			languageSelector: function () {
-				var $ulsTrigger;
+				let $ulsTrigger;
 
 				$ulsTrigger = $( '<a>' ).text( '...' )
 					.addClass( 'ime-selector-more-languages selectable-row selectable-row-item' )

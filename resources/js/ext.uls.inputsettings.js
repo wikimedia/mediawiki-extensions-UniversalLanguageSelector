@@ -20,7 +20,7 @@
 ( function () {
 	'use strict';
 
-	var template = '<div class="uls-input-settings">' +
+	const template = '<div class="uls-input-settings">' +
 		// Top "Display settings" title
 		'<div class="row">' +
 		'<div class="twelve columns">' +
@@ -78,7 +78,7 @@
 		 * Render the module into a given target
 		 */
 		render: function () {
-			var $enabledOnly,
+			let $enabledOnly,
 				webfonts = $( document.body ).data( 'webfonts' );
 
 			this.dirty = false;
@@ -113,7 +113,7 @@
 		},
 
 		prepareInputmethods: function ( language ) {
-			var index, inputSettings, $imeListContainer, defaultInputmethod,
+			let index, inputSettings, $imeListContainer, defaultInputmethod,
 				imes, selected, imeId, $imeListTitle;
 
 			imes = $.ime.languages[ language ];
@@ -161,7 +161,7 @@
 		 * @return {Object} jQuery object corresponding to the input method item.
 		 */
 		renderInputmethodOption: function ( imeId, selected ) {
-			var $imeLabel, name, description, $helplink, inputmethod, $inputMethodItem;
+			let $imeLabel, name, description, $helplink, inputmethod, $inputMethodItem;
 
 			if ( imeId !== 'system' && !$.ime.sources[ imeId ] ) {
 				// imeId not known for jquery.ime.
@@ -212,7 +212,7 @@
 				$helplink
 			);
 
-			var $icon = $( '<span>' ).addClass( 'cdx-radio__icon' );
+			const $icon = $( '<span>' ).addClass( 'cdx-radio__icon' );
 			return $( '<div>' )
 				.addClass( 'cdx-radio' )
 				.append( $inputMethodItem, $icon, $imeLabel );
@@ -222,7 +222,7 @@
 		 * Prepare the UI language selector
 		 */
 		prepareLanguages: function () {
-			var inputSettings = this,
+			let inputSettings = this,
 				SUGGESTED_LANGUAGES_NUMBER = 3,
 				selectedImeLanguage = $.ime.preferences.getLanguage(),
 				languagesForButtons, $languages, suggestedLanguages,
@@ -273,7 +273,7 @@
 
 			function buttonHandler( button ) {
 				return function () {
-					var selectedLang = button.data( 'language' );
+					const selectedLang = button.data( 'language' );
 
 					if ( selectedLang !== $.ime.preferences.getLanguage() ) {
 						inputSettings.markDirty();
@@ -318,7 +318,7 @@
 		 * Prepare the more languages button. It is a ULS trigger
 		 */
 		prepareMoreLanguages: function () {
-			var inputSettings = this,
+			let inputSettings = this,
 				$languages, $moreLanguagesButton;
 
 			$languages = this.$template.find( '.uls-ui-languages' );
@@ -332,7 +332,7 @@
 				left: inputSettings.$parent.left,
 				top: inputSettings.$parent.top,
 				onReady: function () {
-					var uls = this,
+					let uls = this,
 						$wrap,
 						$back = $( '<div>' )
 							.addClass( 'uls-icon-back' )
@@ -358,7 +358,7 @@
 					uls.$menu.toggleClass( 'selector-right', inputSettings.$parent.$window.hasClass( 'selector-right' ) );
 				},
 				onVisible: function () {
-					var $parent;
+					let $parent;
 
 					this.$menu.find( '.uls-languagefilter' )
 						.prop( 'placeholder', $.i18n( 'ext-uls-input-settings-ui-language' ) );
@@ -404,7 +404,7 @@
 		},
 
 		prepareToggleButton: function () {
-			var $toggleButton, $toggleButtonDesc;
+			let $toggleButton, $toggleButtonDesc;
 
 			$toggleButton = this.$template.find( '.uls-input-toggle-button' );
 			$toggleButtonDesc = this.$template
@@ -453,7 +453,7 @@
 		 * Register general event listeners
 		 */
 		listen: function () {
-			var inputSettings = this,
+			let inputSettings = this,
 				$imeListContainer;
 
 			$imeListContainer = this.$template.find( '.uls-input-settings-inputmethods-list' );
@@ -528,7 +528,7 @@
 		 * modules.
 		 */
 		apply: function () {
-			var previousIM,
+			let previousIM,
 				inputSettings = this,
 				previousLanguage = inputSettings.savedRegistry.language,
 				currentlyEnabled = $.ime.preferences.isEnabled(),
