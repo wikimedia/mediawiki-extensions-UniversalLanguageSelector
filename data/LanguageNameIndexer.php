@@ -100,6 +100,8 @@ class LanguageNameIndexer extends Maintenance {
 		$specialLanguages = [
 			// Abron / Brong / Bono (T369464)
 			'abr' => [ 'bono', 'brong' ],
+			// Acholi (T376060)
+			'ach' => [ 'leb acoli' ],
 			// Catalan, sometimes searched as "Valencià"
 			'ca' => [ 'valencia' ],
 			// Compatibility with the old name and other Chinese varieties
@@ -114,6 +116,11 @@ class LanguageNameIndexer extends Maintenance {
 			'ka' => [ 'kartuli', 'qartuli' ],
 			// Japanese, the transliteration of the autonym is often used for searching
 			'ja' => [ 'nihongo', 'にほんご' ],
+			// Lango (Uganda; T376054).
+			// The second alias help avoid ambiguity with
+			// other languages named "Lango" and also
+			// with "Langi"
+			'laj' => [ 'leb lango', 'lango, leb' ],
 			// Chiluvale (T368856)
 			'lue' => [ 'luvale, chi-' ],
 			// Shan (T377856)
