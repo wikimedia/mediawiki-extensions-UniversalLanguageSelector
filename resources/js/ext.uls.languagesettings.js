@@ -102,7 +102,6 @@
 		},
 
 		render: function () {
-			const languageSettings = this;
 			let defaultModule = this.options.defaultModule;
 
 			// Get the name of all registered modules and list them in left side menu.
@@ -114,7 +113,7 @@
 				}
 
 				// Call render function on the current setting module.
-				languageSettings.initModule( moduleName, defaultModule === moduleName );
+				this.initModule( moduleName, defaultModule === moduleName );
 			} );
 		},
 
@@ -126,9 +125,8 @@
 		 * @param {boolean} active boolean Make this module active and show by default
 		 */
 		initModule: function ( moduleName, active ) {
-			const languageSettings = this,
-				module = new $.fn.languagesettings.modules[ moduleName ]( languageSettings ),
-				$settingsMenuItems = languageSettings.$window.find( '.settings-menu-items' );
+			const module = new $.fn.languagesettings.modules[ moduleName ]( this ),
+				$settingsMenuItems = this.$window.find( '.settings-menu-items' );
 
 			const $settingsTitle = $( '<div>' )
 				.addClass( 'settings-title' )
@@ -142,7 +140,6 @@
 				// * input-settings-block
 				.addClass( moduleName + '-settings-block menu-section' )
 				.prop( 'id', moduleName + '-panel-trigger' )
-				.data( 'module', module )
 				.append(
 					$settingsTitle,
 					$settingsText
@@ -154,16 +151,14 @@
 
 			$settingsMenuItems.append( $settingsLink );
 
-			$settingsLink.on( 'click', function () {
-				const $this = $( this );
-
-				$this.data( 'module' ).render();
+			$settingsLink.on( 'click', () => {
+				module.render();
 				// eslint-disable-next-line no-jquery/no-sizzle
-				if ( languageSettings.$window.is( ':visible' ) ) {
-					languageSettings.$window.scrollIntoView();
+				if ( this.$window.is( ':visible' ) ) {
+					this.$window.scrollIntoView();
 				}
 				$settingsMenuItems.find( '.menu-section' ).removeClass( 'active' );
-				$this.addClass( 'active' );
+				$settingsLink.addClass( 'active' );
 			} );
 
 			this.modules[ moduleName ] = module;

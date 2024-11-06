@@ -144,8 +144,6 @@
 
 	// Add a 'more settings' link that takes to input settings of ULS
 	const customHelpLink = function () {
-		const imeselector = this;
-
 		const $disableInputToolsLink = $( '<span>' )
 			.addClass( 'uls-ime-disable-link' )
 			.attr( 'data-i18n', 'ext-uls-input-disable' );
@@ -158,17 +156,17 @@
 		mw.loader.using( languageSettingsModules, () => {
 			$moreSettingsLink.languagesettings( {
 				defaultModule: 'input',
-				onClose: function () {
+				onClose: () => {
 					// on close of input settings, keep focus in input area.
-					imeselector.$element.trigger( 'focus' );
+					this.$element.trigger( 'focus' );
 				},
-				top: imeselector.$element.offset().top
+				top: this.$element.offset().top
 			} );
 		} );
 
 		// Hide the menu.
 		$moreSettingsLink.on( 'click', ( e ) => {
-			imeselector.hide();
+			this.hide();
 			e.stopPropagation();
 		} );
 
@@ -176,8 +174,8 @@
 
 		$disableInputToolsLink.on( 'click', ( e ) => {
 			$.ime.preferences.disable();
-			imeselector.hide();
-			imeselector.$imeSetting.hide();
+			this.hide();
+			this.$imeSetting.hide();
 			$.ime.preferences.save( () => {
 				mw.ime.disable();
 				imeNotification();
@@ -188,7 +186,7 @@
 
 		// If the webfonts are loaded, apply webfonts to the selector
 		if ( $.fn.webfonts ) {
-			imeselector.$menu.webfonts();
+			this.$menu.webfonts();
 		}
 
 		return $( '<div>' )

@@ -76,8 +76,6 @@
 		 * @param {Function} callback
 		 */
 		save: function ( callback ) {
-			const self = this;
-
 			callback = callback || function () {};
 			if ( this.isNamed ) {
 				// Registered user. Use MW APIs to change preferences
@@ -85,9 +83,9 @@
 					this.preferenceName,
 					JSON.stringify( this.preferences )
 				).done( () => {
-					callback.call( self, true );
+					callback.call( this, true );
 				} ).fail( () => {
-					callback.call( self, false );
+					callback.call( this, false );
 				} );
 			} else {
 				// Anonymous user. Save preferences in local storage

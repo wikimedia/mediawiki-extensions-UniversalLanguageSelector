@@ -302,26 +302,25 @@
 			$moreLanguagesButton.uls( {
 				onPosition: this.$parent.position.bind( this.$parent ),
 				onReady: function () {
-					const uls = this,
-						$back = $( '<div>' )
-							.addClass( 'uls-icon-back' );
+					const $back = $( '<div>' )
+						.addClass( 'uls-icon-back' );
 
 					$back.on( 'click', () => {
-						uls.hide();
+						this.hide();
 						displaySettings.$parent.show();
 					} );
 
 					const $wrap = $( '<div>' )
 						.addClass( 'uls-search-wrapper-wrapper' );
 
-					uls.$menu.find( '.uls-search-wrapper' ).wrap( $wrap );
-					uls.$menu.find( '.uls-search-wrapper-wrapper' ).prepend( $back );
+					this.$menu.find( '.uls-search-wrapper' ).wrap( $wrap );
+					this.$menu.find( '.uls-search-wrapper-wrapper' ).prepend( $back );
 
 					// Copy callout related classes from parent
 					// eslint-disable-next-line no-jquery/no-class-state
-					uls.$menu.toggleClass( 'selector-left', displaySettings.$parent.$window.hasClass( 'selector-left' ) );
+					this.$menu.toggleClass( 'selector-left', displaySettings.$parent.$window.hasClass( 'selector-left' ) );
 					// eslint-disable-next-line no-jquery/no-class-state
-					uls.$menu.toggleClass( 'selector-right', displaySettings.$parent.$window.hasClass( 'selector-right' ) );
+					this.$menu.toggleClass( 'selector-right', displaySettings.$parent.$window.hasClass( 'selector-right' ) );
 				},
 				onVisible: function () {
 					this.$menu.find( '.uls-languagefilter' )
@@ -370,16 +369,14 @@
 		 * @param {string} language Language code
 		 */
 		preview: function ( language ) {
-			const displaySettings = this;
-
 			// Reset the language and font for the panel.
 			this.$template.attr( 'lang', language )
 				.css( 'font-family', '' );
 			$.i18n().locale = language;
 			mw.uls.loadLocalization( language ).done( () => {
-				displaySettings.i18n();
-				if ( displaySettings.$webfonts ) {
-					displaySettings.$webfonts.refresh();
+				this.i18n();
+				if ( this.$webfonts ) {
+					this.$webfonts.refresh();
 				}
 			} );
 		},

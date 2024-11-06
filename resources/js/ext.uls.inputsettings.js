@@ -130,19 +130,17 @@
 			$imeListTitle.text( $.i18n( 'ext-uls-input-settings-ime-settings',
 				$.uls.data.getAutonym( language ) ) );
 
-			const inputSettings = this;
-
 			const defaultInputmethod = $.ime.preferences.getIM( language ) ||
 				imes.inputmethods[ 0 ];
 
 			for ( const index in imes.inputmethods ) {
 				const imeId = imes.inputmethods[ index ];
 				const selected = defaultInputmethod === imeId;
-				$imeListContainer.append( inputSettings.renderInputmethodOption( imeId,
+				$imeListContainer.append( this.renderInputmethodOption( imeId,
 					selected ) );
 			}
 
-			$imeListContainer.append( inputSettings.renderInputmethodOption( 'system',
+			$imeListContainer.append( this.renderInputmethodOption( 'system',
 				defaultInputmethod === 'system' ) );
 
 			// Added input methods may increase the height of window. Make sure
@@ -326,29 +324,28 @@
 				left: inputSettings.$parent.left,
 				top: inputSettings.$parent.top,
 				onReady: function () {
-					const uls = this,
-						$back = $( '<div>' )
-							.addClass( 'uls-icon-back' )
-							.data( 'i18n', 'ext-uls-back-to-input-settings' )
-							.i18n()
-							.text( ' ' );
+					const $back = $( '<div>' )
+						.addClass( 'uls-icon-back' )
+						.data( 'i18n', 'ext-uls-back-to-input-settings' )
+						.i18n()
+						.text( ' ' );
 
 					$back.on( 'click', () => {
-						uls.hide();
+						this.hide();
 						inputSettings.$parent.show();
 					} );
 
 					const $wrap = $( '<div>' )
 						.addClass( 'uls-search-wrapper-wrapper' );
 
-					uls.$menu.find( '.uls-search-wrapper' ).wrap( $wrap );
-					uls.$menu.find( '.uls-search-wrapper-wrapper' ).prepend( $back );
+					this.$menu.find( '.uls-search-wrapper' ).wrap( $wrap );
+					this.$menu.find( '.uls-search-wrapper-wrapper' ).prepend( $back );
 
 					// Copy callout related classes from parent
 					// eslint-disable-next-line no-jquery/no-class-state
-					uls.$menu.toggleClass( 'selector-left', inputSettings.$parent.$window.hasClass( 'selector-left' ) );
+					this.$menu.toggleClass( 'selector-left', inputSettings.$parent.$window.hasClass( 'selector-left' ) );
 					// eslint-disable-next-line no-jquery/no-class-state
-					uls.$menu.toggleClass( 'selector-right', inputSettings.$parent.$window.hasClass( 'selector-right' ) );
+					this.$menu.toggleClass( 'selector-right', inputSettings.$parent.$window.hasClass( 'selector-right' ) );
 				},
 				onVisible: function () {
 					this.$menu.find( '.uls-languagefilter' )
@@ -442,23 +439,21 @@
 		 * Register general event listeners
 		 */
 		listen: function () {
-			const inputSettings = this;
-
 			const $imeListContainer = this.$template.find( '.uls-input-settings-inputmethods-list' );
 
 			$imeListContainer.on( 'change', 'input:radio[name=ime]:checked', function () {
-				inputSettings.markDirty();
+				this.markDirty();
 				$.ime.preferences.setIM( $( this ).val() );
 			} );
 
-			inputSettings.$template.find( 'button.uls-input-toggle-button' )
+			this.$template.find( 'button.uls-input-toggle-button' )
 				.on( 'click', () => {
-					inputSettings.markDirty();
+					this.markDirty();
 
 					if ( $.ime.preferences.isEnabled() ) {
-						inputSettings.disableInputTools();
+						this.disableInputTools();
 					} else {
-						inputSettings.enableInputTools();
+						this.enableInputTools();
 					}
 				} );
 
@@ -517,41 +512,40 @@
 		 */
 		apply: function () {
 			let previousIM;
-			const inputSettings = this,
-				previousLanguage = inputSettings.savedRegistry.language,
+			const previousLanguage = this.savedRegistry.language,
 				currentlyEnabled = $.ime.preferences.isEnabled(),
 				currentLanguage = $.ime.preferences.getLanguage(),
 				currentIM = $.ime.preferences.getIM( currentLanguage );
 
-			if ( !inputSettings.dirty ) {
+			if ( !this.dirty ) {
 				// No changes to save in this module.
 				return;
 			}
-			inputSettings.$parent.setBusy( true );
+			this.$parent.setBusy( true );
 
 			if ( previousLanguage ) {
-				previousIM = inputSettings.savedRegistry.imes[ previousLanguage ];
+				previousIM = this.savedRegistry.imes[ previousLanguage ];
 			}
 
-			if ( currentLanguage !== inputSettings.savedRegistry.language ||
+			if ( currentLanguage !== this.savedRegistry.language ||
 				currentIM !== previousIM
 			) {
 				mw.hook( 'mw.uls.ime.change' ).fire( currentIM );
 			}
 
-			if ( inputSettings.savedRegistry.enable !== currentlyEnabled ) {
+			if ( this.savedRegistry.enable !== currentlyEnabled ) {
 				mw.hook( currentlyEnabled ? 'mw.uls.ime.enable' : 'mw.uls.ime.disable' )
-					.fire( 'inputsettings' );
+					.fire( 'this' );
 			}
 
 			// Save the preferences
 			$.ime.preferences.save( ( result ) => {
 				// closure for not losing the scope
-				inputSettings.onSave( result );
-				inputSettings.dirty = false;
+				this.onSave( result );
+				this.dirty = false;
 				// Update the back-up preferences for the case of canceling
-				inputSettings.savedRegistry = $.extend( true, {}, $.ime.preferences.registry );
-				inputSettings.$parent.setBusy( false );
+				this.savedRegistry = $.extend( true, {}, $.ime.preferences.registry );
+				this.$parent.setBusy( false );
 			} );
 		},
 
