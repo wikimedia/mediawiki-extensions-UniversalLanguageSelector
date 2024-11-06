@@ -207,14 +207,14 @@
 	 * @param {string} previousAutonym
 	 */
 	function showUndoTooltip( previousLang, previousAutonym ) {
-		let trigger, popup, popupPosition,
-			configPosition = mw.config.get( 'wgULSPosition' ),
+		let popup = null;
+		const configPosition = mw.config.get( 'wgULSPosition' ),
 			triggerSelector = ( configPosition === 'interlanguage' ) ?
 				'.uls-settings-trigger, .mw-interlanguage-selector' :
 				'.uls-trigger';
 
 		// Fallback if no entry point is present
-		trigger = document.querySelector( triggerSelector ) || document.querySelector( '#pt-preferences' );
+		const trigger = document.querySelector( triggerSelector ) || document.querySelector( '#pt-preferences' );
 
 		// Skip tooltip if there is no element to attach the tooltip to.
 		// It will cause errors otherwise.
@@ -242,6 +242,7 @@
 			tipsyTimer = setTimeout( hideTipsy, timeout );
 		}
 
+		let popupPosition;
 		if ( configPosition === 'interlanguage' ) {
 			popupPosition = 'after';
 		} else {
@@ -255,9 +256,8 @@
 			$floatableContainer: $( trigger ),
 			position: popupPosition,
 			$content: ( function () {
-				let messageKey, $link;
 
-				$link = $( '<a>' )
+				const $link = $( '<a>' )
 					.text( previousAutonym )
 					.prop( {
 						href: '',
@@ -280,6 +280,7 @@
 						} );
 					} );
 
+				let messageKey;
 				if ( mw.storage.get( 'uls-gp' ) === '1' ) {
 					messageKey = 'ext-uls-undo-language-tooltip-text-local';
 				} else {
@@ -337,8 +338,7 @@
 		}
 
 		const clickHandler = function ( e ) {
-			let languagesettings = $trigger.data( 'languagesettings' ),
-				languageSettingsOptions;
+			const languagesettings = $trigger.data( 'languagesettings' );
 
 			if ( languagesettings ) {
 				if ( !languagesettings.shown ) {
@@ -349,17 +349,17 @@
 			}
 
 			// Initialize the Language settings window
-			languageSettingsOptions = {
+			const languageSettingsOptions = {
 				defaultModule: 'display',
 				onPosition: function () {
-					let caretRadius, top, left,
-						ulsTriggerHeight = this.$element.height(),
+					const ulsTriggerHeight = this.$element.height(),
 						ulsTriggerWidth = this.$element[ 0 ].offsetWidth,
 						ulsTriggerOffset = this.$element.offset();
 
 					// Same as border width in mixins.less, or near enough
-					caretRadius = 12;
+					const caretRadius = 12;
 
+					let left;
 					if ( ulsTriggerOffset.left > $( window ).width() / 2 ) {
 						left = ulsTriggerOffset.left - this.$window.width() - caretRadius;
 						this.$window.removeClass( 'selector-left' ).addClass( 'selector-right' );
@@ -371,7 +371,7 @@
 					// The top of the dialog is aligned in relation to
 					// the middle of the trigger, so that middle of the
 					// caret aligns with it. 16 is trigger icon height in pixels
-					top = ulsTriggerOffset.top +
+					const top = ulsTriggerOffset.top +
 						( ulsTriggerHeight / 2 ) -
 						( caretRadius + 16 );
 
@@ -394,8 +394,8 @@
 
 	function initPersonalEntryPoint() {
 		const $trigger = $( '.uls-trigger' );
-		let clickHandler;
 
+		let clickHandler;
 		if ( !userCanChangeLanguage() ) {
 			clickHandler = function ( e ) {
 				const languagesettings = $trigger.data( 'languagesettings' );
@@ -439,11 +439,11 @@
 								// the trigger. This code aligns it under the trigger and to the
 								// trigger edge depending on which side of the page the trigger is
 								// It should work automatically both LTR and RTL.
-								let offset, height, width, positionCSS;
-								offset = $trigger.offset();
-								width = $trigger.outerWidth();
-								height = $trigger.outerHeight();
+								const offset = $trigger.offset();
+								const width = $trigger.outerWidth();
+								const height = $trigger.outerHeight();
 
+								let positionCSS;
 								if ( offset.left + ( width / 2 ) > $( window ).width() / 2 ) {
 									// Midpoint of the trigger is on the right side of the viewport.
 									positionCSS = {
@@ -496,16 +496,14 @@
 	}
 
 	function initLanguageChangeUndoTooltip() {
-		let previousLanguage, currentLanguage, previousAutonym, currentAutonym;
-
 		if ( !userCanChangeLanguage() ) {
 			return;
 		}
 
-		previousLanguage = mw.storage.get( 'uls-previous-language-code' );
-		currentLanguage = mw.config.get( 'wgUserLanguage' );
-		previousAutonym = mw.storage.get( 'uls-previous-language-autonym' );
-		currentAutonym = require( '../data.json' ).currentAutonym;
+		const previousLanguage = mw.storage.get( 'uls-previous-language-code' );
+		const currentLanguage = mw.config.get( 'wgUserLanguage' );
+		const previousAutonym = mw.storage.get( 'uls-previous-language-autonym' );
+		const currentAutonym = require( '../data.json' ).currentAutonym;
 
 		// If storage is empty, i.e. first visit, then store the current language
 		// immediately so that we know when it changes.
@@ -582,11 +580,9 @@
 		ev.preventDefault();
 
 		mw.loader.using( [ 'ext.uls.mediawiki', '@wikimedia/codex' ] ).then( () => {
-			let parent, languageNodes, standalone, uls;
-
-			parent = document.querySelectorAll( '.mw-portlet-lang, #p-lang' )[ 0 ];
-			languageNodes = parent ? parent.querySelectorAll( '.interlanguage-link-target' ) : [];
-			standalone = isUsingStandaloneLanguageButton();
+			const parent = document.querySelectorAll( '.mw-portlet-lang, #p-lang' )[ 0 ];
+			const languageNodes = parent ? parent.querySelectorAll( '.interlanguage-link-target' ) : [];
+			const standalone = isUsingStandaloneLanguageButton();
 
 			// Setup click handler for ULS
 			launchULS(
@@ -601,7 +597,7 @@
 			if ( standalone ) {
 				// Provide access to display and input settings if this entry point is the single
 				// point of access to all language settings.
-				uls = $target.data( 'uls' );
+				const uls = $target.data( 'uls' );
 				if ( languageNodes.length ) {
 					addActionsMenuTriggers( uls );
 				} else {

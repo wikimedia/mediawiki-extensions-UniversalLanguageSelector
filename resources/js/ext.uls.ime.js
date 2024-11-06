@@ -20,24 +20,22 @@
 ( function () {
 	'use strict';
 
-	let mwImeRulesPath, inputSelector, inputPreferences, ulsIMEPreferences, customHelpLink,
-		getULSPreferences = require( 'ext.uls.preferences' ),
+	const getULSPreferences = require( 'ext.uls.preferences' ),
 		languageSettingsModules = [ 'ext.uls.displaysettings', '@wikimedia/codex' ];
 
-	mwImeRulesPath = mw.config.get( 'wgExtensionAssetsPath' ) +
+	const mwImeRulesPath = mw.config.get( 'wgExtensionAssetsPath' ) +
 		'/UniversalLanguageSelector/lib/jquery.ime/';
-	inputSelector = 'input:not([type]), input[type=text], input[type=search], textarea, [contenteditable]';
+	const inputSelector = 'input:not([type]), input[type=text], input[type=search], textarea, [contenteditable]';
 
-	inputPreferences = getULSPreferences();
+	let inputPreferences = getULSPreferences();
 
 	mw.ime = mw.ime || {};
 
 	mw.ime.getLanguagesWithIME = function () {
-		let language,
-			ulsLanguages = mw.config.get( 'wgULSLanguages' ) || {},
+		const ulsLanguages = mw.config.get( 'wgULSLanguages' ) || {},
 			availableLanguages = {};
 
-		for ( language in $.ime.languages ) {
+		for ( const language in $.ime.languages ) {
 			availableLanguages[ language ] = ulsLanguages[ language ] ||
 				$.uls.data.getAutonym( language );
 		}
@@ -46,12 +44,10 @@
 	};
 
 	mw.ime.getIMELanguageList = function () {
-		let unique = [],
-			imeLanguageList,
-			previousIMELanguages;
+		const unique = [];
 
-		previousIMELanguages = $.ime.preferences.getPreviousLanguages() || [];
-		imeLanguageList = previousIMELanguages.concat( mw.uls.getFrequentLanguageList() );
+		const previousIMELanguages = $.ime.preferences.getPreviousLanguages() || [];
+		const imeLanguageList = previousIMELanguages.concat( mw.uls.getFrequentLanguageList() );
 
 		imeLanguageList.forEach( ( lang ) => {
 			if ( unique.indexOf( lang ) === -1 ) {
@@ -62,7 +58,7 @@
 		return unique.slice( 0, 6 );
 	};
 
-	ulsIMEPreferences = {
+	const ulsIMEPreferences = {
 
 		save: function ( callback ) {
 			if ( !this.registry.isDirty ) {
@@ -147,15 +143,14 @@
 	}
 
 	// Add a 'more settings' link that takes to input settings of ULS
-	customHelpLink = function () {
-		let $disableInputToolsLink, $moreSettingsLink,
-			imeselector = this;
+	const customHelpLink = function () {
+		const imeselector = this;
 
-		$disableInputToolsLink = $( '<span>' )
+		const $disableInputToolsLink = $( '<span>' )
 			.addClass( 'uls-ime-disable-link' )
 			.attr( 'data-i18n', 'ext-uls-input-disable' );
 
-		$moreSettingsLink = $( '<span>' )
+		const $moreSettingsLink = $( '<span>' )
 			.addClass( 'uls-ime-more-settings-link' );
 
 		// Apparently we depend on some styles which are loaded with
@@ -254,14 +249,12 @@
 	 * @since 2013.11
 	 */
 	mw.ime.handleFocus = function ( $input ) {
-		let noImeSelectors;
-
 		if ( $input.is( '.noime' ) || $input.data( 'ime' ) ) {
 			// input does not need IME or already applied
 			return;
 		}
 
-		noImeSelectors = mw.config.get( 'wgULSNoImeSelectors' ).join( ', ' );
+		const noImeSelectors = mw.config.get( 'wgULSNoImeSelectors' ).join( ', ' );
 		if ( noImeSelectors.length && $input.is( noImeSelectors ) ) {
 			$input.addClass( 'noime' );
 
@@ -291,14 +284,10 @@
 	 * @since 2013.11
 	 */
 	mw.ime.addIme = function ( $input ) {
-		let imeselector;
-
 		$input.ime( {
 			languages: mw.ime.getIMELanguageList(),
 			languageSelector: function () {
-				let $ulsTrigger;
-
-				$ulsTrigger = $( '<a>' ).text( '...' )
+				const $ulsTrigger = $( '<a>' ).text( '...' )
 					.addClass( 'ime-selector-more-languages selectable-row selectable-row-item' )
 					.attr( {
 						title: $.i18n( 'ext-uls-input-settings-more-languages-tooltip' )
@@ -330,7 +319,7 @@
 		} );
 
 		// Some fields may be uninitialized
-		imeselector = $input.data( 'imeselector' );
+		const imeselector = $input.data( 'imeselector' );
 		if ( imeselector ) {
 			imeselector.selectLanguage( imeselector.decideLanguage() );
 			imeselector.$element.on( 'setim.ime', ( event, inputMethod ) => {

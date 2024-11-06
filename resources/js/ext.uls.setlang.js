@@ -123,10 +123,9 @@
 	}
 
 	$( () => {
-		let setLangCode = mw.config.get( 'wgULSSetLangCode' ),
+		const setLangCode = mw.config.get( 'wgULSSetLangCode' ),
 			setLangName = mw.config.get( 'wgULSSetLangName' ),
-			currentLangCode = mw.config.get( 'wgULSCurrentLangCode' ),
-			$ulsDialog, ulsSetLangDialog;
+			currentLangCode = mw.config.get( 'wgULSCurrentLangCode' );
 
 		if ( currentLangCode === setLangCode ) {
 			removeSetLangFromHistory();
@@ -134,8 +133,8 @@
 		}
 
 		// Setup and show the dialog
-		$ulsDialog = createSetLangDialog( setLangName, setLangCode );
-		ulsSetLangDialog = new mw.uls.Dialog( {
+		const $ulsDialog = createSetLangDialog( setLangName, setLangCode );
+		const ulsSetLangDialog = new mw.uls.Dialog( {
 			container: $ulsDialog,
 			hasOverlay: true,
 			afterClose: removeSetLangFromHistory

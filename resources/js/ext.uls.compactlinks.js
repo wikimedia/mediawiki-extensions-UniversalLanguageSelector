@@ -183,9 +183,7 @@
 	 * Render the compacted interlanguage list and triggers
 	 */
 	CompactInterlanguageList.prototype.render = function () {
-		let language;
-
-		for ( language in this.compactList ) {
+		for ( const language in this.compactList ) {
 			this.compactList[ language ].parentNode.style.display = '';
 		}
 		// If there is an interlanguage selector in the page already
@@ -203,14 +201,12 @@
 	 * @return {Object}
 	 */
 	CompactInterlanguageList.prototype.getCompactList = function () {
-		let language, languages, compactLanguages, i, compactedList;
+		const compactedList = {};
+		const languages = Object.keys( this.interlanguageList );
+		const compactLanguages = this.compact( languages );
 
-		compactedList = {};
-		languages = Object.keys( this.interlanguageList );
-		compactLanguages = this.compact( languages );
-
-		for ( i = 0; i < compactLanguages.length; i++ ) {
-			language = compactLanguages[ i ];
+		for ( let i = 0; i < compactLanguages.length; i++ ) {
+			const language = compactLanguages[ i ];
 			compactedList[ language ] = this.interlanguageList[ language ];
 		}
 
@@ -252,12 +248,11 @@
 	 * @return {Array} Compacted array
 	 */
 	CompactInterlanguageList.prototype.compact = function ( languages ) {
-		let i, strategies, found,
-			compactLanguages = [];
+		let compactLanguages = [];
 
-		strategies = this.getCompactStrategies();
-		for ( i = 0; i < strategies.length; i++ ) {
-			found = strategies[ i ]( languages );
+		const strategies = this.getCompactStrategies();
+		for ( let i = 0; i < strategies.length; i++ ) {
+			const found = strategies[ i ]( languages );
 			// Add language codes from 'found' that are also in 'languages'
 			// to 'compactLanguages' (if not already in there).
 			addMatchWithoutDuplicate( compactLanguages, languages, found );
@@ -313,8 +308,8 @@
 	 * The most relevant ones are unhidden in #render.
 	 */
 	CompactInterlanguageList.prototype.hideOriginal = function () {
-		let links = this.listElement.querySelectorAll( '.interlanguage-link' ),
-			i = links.length;
+		const links = this.listElement.querySelectorAll( '.interlanguage-link' );
+		let i = links.length;
 		while ( i-- ) {
 			links[ i ].style.display = 'none';
 		}
@@ -358,13 +353,12 @@
 	 *   * addTrigger (1 mw.Message#parser)
 	 */
 	function createCompactList() {
-		let listElement, compactList;
-		listElement = document.querySelector( '.mw-portlet-lang ul, #p-lang ul' );
+		const listElement = document.querySelector( '.mw-portlet-lang ul, #p-lang ul' );
 		if ( !listElement ) {
 			// Not all namespaces will have a list of languages.
 			return;
 		}
-		compactList = new CompactInterlanguageList( listElement );
+		const compactList = new CompactInterlanguageList( listElement );
 		compactList.init();
 
 	}

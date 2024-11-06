@@ -181,18 +181,15 @@
 		 * Prepare the UI language selector
 		 */
 		prepareLanguages: function () {
-			let $loginCta,
-				displaySettings = this,
+			const displaySettings = this,
 				SUGGESTED_LANGUAGES_NUMBER = 3,
-				anonsAllowed = mw.config.get( 'wgULSAnonCanChangeLanguage' ),
-				languagesForButtons, $languages, suggestedLanguages,
-				lang, i, language, $button, autonym;
+				anonsAllowed = mw.config.get( 'wgULSAnonCanChangeLanguage' );
 
 			// Don't let anonymous users change interface language
 			if ( !anonsAllowed && !mw.user.isNamed() ) {
-				$loginCta = $( '<p>' )
+				const $loginCta = $( '<p>' )
 					.attr( 'id', 'uls-display-settings-anon-log-in-cta' );
-				autonym = $.uls.data.getAutonym( this.contentLanguage );
+				const autonym = $.uls.data.getAutonym( this.contentLanguage );
 
 				this.$template.find( '.uls-display-settings-language-tab' )
 					.empty()
@@ -223,14 +220,14 @@
 				return;
 			}
 
-			$languages = this.$template.find( 'div.uls-ui-languages' );
-			suggestedLanguages = this.frequentLanguageList()
+			const $languages = this.$template.find( 'div.uls-ui-languages' );
+			const suggestedLanguages = this.frequentLanguageList()
 				// Common world languages, for the case that there are
 				// too few suggested languages
 				.concat( [ 'en', 'zh-hans', 'zh-hant', 'fr' ] );
 
 			// Content language is always on the first button
-			languagesForButtons = [ this.contentLanguage ];
+			const languagesForButtons = [ this.contentLanguage ];
 
 			// This is needed when drawing the panel for the second time
 			// after selecting a different language
@@ -241,7 +238,7 @@
 				languagesForButtons.push( this.uiLanguage );
 			}
 
-			for ( lang in suggestedLanguages ) {
+			for ( const lang in suggestedLanguages ) {
 				// Skip already found languages
 				if ( languagesForButtons.indexOf( suggestedLanguages[ lang ] ) > -1 ) {
 					continue;
@@ -267,9 +264,9 @@
 			}
 
 			// Add the buttons for the most likely languages
-			for ( i = 0; i < SUGGESTED_LANGUAGES_NUMBER; i++ ) {
-				language = languagesForButtons[ i ];
-				$button = $( '<button>' )
+			for ( let i = 0; i < SUGGESTED_LANGUAGES_NUMBER; i++ ) {
+				const language = languagesForButtons[ i ];
+				const $button = $( '<button>' )
 					.addClass( 'cdx-button uls-language-button autonym' )
 					.text( $.uls.data.getAutonym( language ) )
 					.prop( {
@@ -293,11 +290,10 @@
 		 * Prepare the more languages button. It is a ULS trigger
 		 */
 		prepareMoreLanguages: function () {
-			let $languages, $moreLanguagesButton,
-				displaySettings = this;
+			const displaySettings = this;
 
-			$languages = this.$template.find( 'div.uls-ui-languages' );
-			$moreLanguagesButton = $( '<button>' )
+			const $languages = this.$template.find( 'div.uls-ui-languages' );
+			const $moreLanguagesButton = $( '<button>' )
 				.prop( 'class', 'uls-more-languages' )
 				.addClass( 'cdx-button' ).text( '...' );
 
@@ -306,8 +302,7 @@
 			$moreLanguagesButton.uls( {
 				onPosition: this.$parent.position.bind( this.$parent ),
 				onReady: function () {
-					let $wrap,
-						uls = this,
+					const uls = this,
 						$back = $( '<div>' )
 							.addClass( 'uls-icon-back' );
 
@@ -316,7 +311,7 @@
 						displaySettings.$parent.show();
 					} );
 
-					$wrap = $( '<div>' )
+					const $wrap = $( '<div>' )
 						.addClass( 'uls-search-wrapper-wrapper' );
 
 					uls.$menu.find( '.uls-search-wrapper' ).wrap( $wrap );
@@ -422,12 +417,10 @@
 		 * @param {string} target 'ui' or 'content'
 		 */
 		prepareFontSelector: function ( target ) {
-			let language, fonts, $fontSelector, savedFont,
-				$systemFont, $fontLabel, $fontsSection;
-
 			// Get the language code from the right property -
 			// uiLanguage or contentLanguage
-			language = this[ target + 'Language' ];
+			const language = this[ target + 'Language' ];
+			let fonts;
 			if ( this.isWebFontsEnabled() ) {
 				fonts = this.$webfonts.list( language );
 			} else {
@@ -437,7 +430,7 @@
 			// Possible classes:
 			// uls-ui-fonts
 			// uls-content-fonts
-			$fontsSection = this.$template.find( 'div.uls-' + target + '-fonts' );
+			const $fontsSection = this.$template.find( 'div.uls-' + target + '-fonts' );
 
 			// The section may be visible from the previous time
 			// the user opened the dialog, so we need to hide it.
@@ -450,18 +443,16 @@
 			// Possible ids:
 			// uls-ui-font-selector
 			// uls-content-font-selector
-			$fontSelector = this.$template.find( '#' + target + '-font-selector' );
+			const $fontSelector = this.$template.find( '#' + target + '-font-selector' );
 
 			// Remove all current fonts
 			$fontSelector.find( 'option' ).remove();
 
 			// Get the saved font using the fontSelector defined in mw.webfonts.setup
-			savedFont = this.$webfonts.getFont( language );
+			const savedFont = this.$webfonts.getFont( language );
 			fonts.forEach( ( font ) => {
-				let $fontOption;
-
 				if ( font !== 'system' ) {
-					$fontOption = $( '<option>' ).attr( 'value', font ).text( font );
+					const $fontOption = $( '<option>' ).attr( 'value', font ).text( font );
 					$fontSelector.append( $fontOption );
 					$fontOption.prop( 'selected', savedFont === font );
 				}
@@ -471,7 +462,7 @@
 
 			// Using attr() instead of data() because jquery.i18n doesn't
 			// currently see latter.
-			$systemFont = $( '<option>' )
+			const $systemFont = $( '<option>' )
 				.val( 'system' )
 				.attr( 'data-i18n', 'ext-uls-webfonts-system-font' );
 			$fontSelector.append( $systemFont );
@@ -480,7 +471,7 @@
 			// Possible ids:
 			// uls-ui-font-selector-label
 			// uls-content-font-selector-label
-			$fontLabel = this.$template.find( '#' + target + '-font-selector-label' );
+			const $fontLabel = this.$template.find( '#' + target + '-font-selector-label' );
 			$fontLabel.empty().append( $( '<strong>' ) );
 
 			// Possible messages:
@@ -659,20 +650,19 @@
 			this.$parent.setBusy( true );
 			// Save the preferences
 			mw.webfonts.preferences.save( ( result ) => {
-				let newWebfontsEnable, oldWebfontsEnable, webfontsEvent,
-					newRegistry = mw.webfonts.preferences.registry,
+				const newRegistry = mw.webfonts.preferences.registry,
 					oldRegistry = this.savedRegistry.registry,
 					newFonts = newRegistry.fonts || {},
 					oldFonts = oldRegistry.fonts || {};
 
-				newWebfontsEnable = newRegistry.webfontsEnabled;
-				oldWebfontsEnable = oldRegistry.webfontsEnabled;
+				const newWebfontsEnable = newRegistry.webfontsEnabled;
+				let oldWebfontsEnable = oldRegistry.webfontsEnabled;
 				if ( oldWebfontsEnable === undefined ) {
 					oldWebfontsEnable = mw.config.get( 'wgULSWebfontsEnabled' );
 				}
 
 				if ( newWebfontsEnable !== oldWebfontsEnable ) {
-					webfontsEvent = newWebfontsEnable ?
+					const webfontsEvent = newWebfontsEnable ?
 						'mw.uls.webfonts.enable' :
 						'mw.uls.webfonts.disable';
 					mw.hook( webfontsEvent ).fire( 'displaysettings' );

@@ -34,13 +34,11 @@
 	} );
 
 	QUnit.test( 'Common languages', ( assert ) => {
-		let i, foundTagalog, languagesInPH;
-
 		// Bug 49847
-		foundTagalog = false;
-		languagesInPH = mw.uls.getFrequentLanguageList( 'PH' );
+		let foundTagalog = false;
+		const languagesInPH = mw.uls.getFrequentLanguageList( 'PH' );
 
-		for ( i = 0; i < languagesInPH.length; i++ ) {
+		for ( let i = 0; i < languagesInPH.length; i++ ) {
 			if ( $.uls.data.isRedirect( languagesInPH[ i ] ) === 'tl' ||
 				languagesInPH[ i ] === 'tl'
 			) {

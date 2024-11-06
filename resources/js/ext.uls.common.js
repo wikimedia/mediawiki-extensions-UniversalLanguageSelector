@@ -208,8 +208,7 @@
 	 * @return {Array} List of language codes without duplicates.
 	 */
 	mw.uls.getFrequentLanguageList = function ( countryCode ) {
-		let i, j, lang,
-			ret = [],
+		const ret = [],
 			lists = [
 				[
 					mw.config.get( 'wgUserLanguage' ),
@@ -225,9 +224,9 @@
 			lists.push( $.uls.data.getLanguagesInTerritory( countryCode ) );
 		}
 
-		for ( i = 0; i < lists.length; i++ ) {
-			for ( j = 0; j < lists[ i ].length; j++ ) {
-				lang = lists[ i ][ j ];
+		for ( let i = 0; i < lists.length; i++ ) {
+			for ( let j = 0; j < lists[ i ].length; j++ ) {
+				const lang = lists[ i ][ j ];
 				// Make flat, make unique, and ignore unknown/unsupported languages
 				if ( ret.indexOf( lang ) === -1 && $.uls.data.getAutonym( lang ) !== lang ) {
 					ret.push( lang );

@@ -78,13 +78,12 @@
 		 * Render the module into a given target
 		 */
 		render: function () {
-			let $enabledOnly,
-				webfonts = $( document.body ).data( 'webfonts' );
+			const webfonts = $( document.body ).data( 'webfonts' );
 
 			this.dirty = false;
 			this.$parent.$settingsPanel.empty();
 			this.$parent.$settingsPanel.append( this.$template );
-			$enabledOnly = this.$template.find( '.enabled-only' );
+			const $enabledOnly = this.$template.find( '.enabled-only' );
 			if ( $.ime.preferences.isEnabled() ) {
 				$enabledOnly.removeClass( 'hide' );
 			} else {
@@ -113,13 +112,10 @@
 		},
 
 		prepareInputmethods: function ( language ) {
-			let index, inputSettings, $imeListContainer, defaultInputmethod,
-				imes, selected, imeId, $imeListTitle;
+			const imes = $.ime.languages[ language ];
 
-			imes = $.ime.languages[ language ];
-
-			$imeListTitle = this.$template.find( '.uls-input-settings-imes-title' );
-			$imeListContainer = this.$template.find( '.uls-input-settings-inputmethods-list' );
+			const $imeListTitle = this.$template.find( '.uls-input-settings-imes-title' );
+			const $imeListContainer = this.$template.find( '.uls-input-settings-inputmethods-list' );
 
 			$imeListContainer.empty();
 
@@ -134,13 +130,14 @@
 			$imeListTitle.text( $.i18n( 'ext-uls-input-settings-ime-settings',
 				$.uls.data.getAutonym( language ) ) );
 
-			inputSettings = this;
+			const inputSettings = this;
 
-			defaultInputmethod = $.ime.preferences.getIM( language ) || imes.inputmethods[ 0 ];
+			const defaultInputmethod = $.ime.preferences.getIM( language ) ||
+				imes.inputmethods[ 0 ];
 
-			for ( index in imes.inputmethods ) {
-				imeId = imes.inputmethods[ index ];
-				selected = defaultInputmethod === imeId;
+			for ( const index in imes.inputmethods ) {
+				const imeId = imes.inputmethods[ index ];
+				const selected = defaultInputmethod === imeId;
 				$imeListContainer.append( inputSettings.renderInputmethodOption( imeId,
 					selected ) );
 			}
@@ -161,17 +158,15 @@
 		 * @return {Object} jQuery object corresponding to the input method item.
 		 */
 		renderInputmethodOption: function ( imeId, selected ) {
-			let $imeLabel, name, description, $helplink, inputmethod, $inputMethodItem;
-
 			if ( imeId !== 'system' && !$.ime.sources[ imeId ] ) {
 				// imeId not known for jquery.ime.
 				// It is very rare, but still validate it.
 				return $();
 			}
 
-			$imeLabel = $( '<label>' ).attr( 'for', imeId ).addClass( 'cdx-radio__label' );
+			const $imeLabel = $( '<label>' ).attr( 'for', imeId ).addClass( 'cdx-radio__label' );
 
-			$inputMethodItem = $( '<input>' ).attr( {
+			const $inputMethodItem = $( '<input>' ).attr( {
 				type: 'radio',
 				class: 'cdx-radio__input',
 				name: 'ime',
@@ -180,6 +175,7 @@
 			} )
 				.prop( 'checked', selected );
 
+			let name, description, inputmethod, $helplink;
 			if ( imeId === 'system' ) {
 				name = $.i18n( 'ext-uls-disable-input-method' );
 				description = '';
@@ -222,22 +218,21 @@
 		 * Prepare the UI language selector
 		 */
 		prepareLanguages: function () {
-			let inputSettings = this,
-				SUGGESTED_LANGUAGES_NUMBER = 3,
-				selectedImeLanguage = $.ime.preferences.getLanguage(),
-				languagesForButtons, $languages, suggestedLanguages,
-				lang, i, language, $button, $caret;
+			const inputSettings = this,
+				SUGGESTED_LANGUAGES_NUMBER = 3;
 
-			$languages = this.$template.find( '.uls-ui-languages' );
+			let selectedImeLanguage = $.ime.preferences.getLanguage();
 
-			suggestedLanguages = this.frequentLanguageList()
+			const $languages = this.$template.find( '.uls-ui-languages' );
+
+			const suggestedLanguages = this.frequentLanguageList()
 				// Common world languages, for the case that there are
 				// too few suggested languages
 				.concat( [ 'en', 'zh', 'fr' ] );
 
 			// Content language is always on the first button
 
-			languagesForButtons = [ this.contentLanguage ];
+			const languagesForButtons = [ this.contentLanguage ];
 
 			// This is needed when drawing the panel for the second time
 			// after selecting a different language
@@ -257,7 +252,7 @@
 				languagesForButtons.push( this.uiLanguage );
 			}
 
-			for ( lang in suggestedLanguages ) {
+			for ( const lang in suggestedLanguages ) {
 				// Skip already found languages
 				if ( languagesForButtons.indexOf( suggestedLanguages[ lang ] ) > -1 ) {
 					continue;
@@ -289,9 +284,9 @@
 			// In case no preference exist for IME, selected language is contentLanguage
 			selectedImeLanguage = selectedImeLanguage || this.contentLanguage;
 			// Add the buttons for the most likely languages
-			for ( i = 0; i < SUGGESTED_LANGUAGES_NUMBER; i++ ) {
-				language = languagesForButtons[ i ];
-				$button = $( '<button>' )
+			for ( let i = 0; i < SUGGESTED_LANGUAGES_NUMBER; i++ ) {
+				const language = languagesForButtons[ i ];
+				const $button = $( '<button>' )
 					.addClass( 'cdx-button uls-language-button autonym' )
 					.text( $.uls.data.getAutonym( language ) )
 					.prop( {
@@ -300,7 +295,7 @@
 					} );
 
 				$button.data( 'language', language );
-				$caret = $( '<span>' ).addClass( 'uls-input-settings-caret' );
+				const $caret = $( '<span>' ).addClass( 'uls-input-settings-caret' );
 
 				$languages.append( $button, $caret );
 
@@ -318,11 +313,10 @@
 		 * Prepare the more languages button. It is a ULS trigger
 		 */
 		prepareMoreLanguages: function () {
-			let inputSettings = this,
-				$languages, $moreLanguagesButton;
+			const inputSettings = this;
 
-			$languages = this.$template.find( '.uls-ui-languages' );
-			$moreLanguagesButton = $( '<button>' )
+			const $languages = this.$template.find( '.uls-ui-languages' );
+			const $moreLanguagesButton = $( '<button>' )
 				.prop( 'class', 'uls-more-languages' )
 				.addClass( 'cdx-button' ).text( '...' );
 
@@ -332,8 +326,7 @@
 				left: inputSettings.$parent.left,
 				top: inputSettings.$parent.top,
 				onReady: function () {
-					let uls = this,
-						$wrap,
+					const uls = this,
 						$back = $( '<div>' )
 							.addClass( 'uls-icon-back' )
 							.data( 'i18n', 'ext-uls-back-to-input-settings' )
@@ -345,7 +338,7 @@
 						inputSettings.$parent.show();
 					} );
 
-					$wrap = $( '<div>' )
+					const $wrap = $( '<div>' )
 						.addClass( 'uls-search-wrapper-wrapper' );
 
 					uls.$menu.find( '.uls-search-wrapper' ).wrap( $wrap );
@@ -358,8 +351,6 @@
 					uls.$menu.toggleClass( 'selector-right', inputSettings.$parent.$window.hasClass( 'selector-right' ) );
 				},
 				onVisible: function () {
-					let $parent;
-
 					this.$menu.find( '.uls-languagefilter' )
 						.prop( 'placeholder', $.i18n( 'ext-uls-input-settings-ui-language' ) );
 
@@ -370,7 +361,7 @@
 						return;
 					}
 
-					$parent = $( '#language-settings-dialog' );
+					const $parent = $( '#language-settings-dialog' );
 
 					// Re-position the element according to the window that called it
 					if ( parseInt( $parent.css( 'left' ), 10 ) ) {
@@ -404,10 +395,8 @@
 		},
 
 		prepareToggleButton: function () {
-			let $toggleButton, $toggleButtonDesc;
-
-			$toggleButton = this.$template.find( '.uls-input-toggle-button' );
-			$toggleButtonDesc = this.$template
+			const $toggleButton = this.$template.find( '.uls-input-toggle-button' );
+			const $toggleButtonDesc = this.$template
 				.find( '.uls-input-settings-disable-info' );
 
 			if ( $.ime.preferences.isEnabled() ) {
@@ -453,10 +442,9 @@
 		 * Register general event listeners
 		 */
 		listen: function () {
-			let inputSettings = this,
-				$imeListContainer;
+			const inputSettings = this;
 
-			$imeListContainer = this.$template.find( '.uls-input-settings-inputmethods-list' );
+			const $imeListContainer = this.$template.find( '.uls-input-settings-inputmethods-list' );
 
 			$imeListContainer.on( 'change', 'input:radio[name=ime]:checked', function () {
 				inputSettings.markDirty();
@@ -528,8 +516,8 @@
 		 * modules.
 		 */
 		apply: function () {
-			let previousIM,
-				inputSettings = this,
+			let previousIM;
+			const inputSettings = this,
 				previousLanguage = inputSettings.savedRegistry.language,
 				currentlyEnabled = $.ime.preferences.isEnabled(),
 				currentLanguage = $.ime.preferences.getLanguage(),

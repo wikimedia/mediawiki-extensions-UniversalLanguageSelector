@@ -21,9 +21,9 @@
 ( function () {
 	'use strict';
 
-	let ULSPreferences, instance;
+	let instance;
 
-	ULSPreferences = function () {
+	const ULSPreferences = function () {
 		// This violates coding conventions for localstorage:
 		// https://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript#Keys
 		this.preferenceName = 'uls-preferences';

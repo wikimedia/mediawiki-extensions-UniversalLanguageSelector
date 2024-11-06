@@ -24,9 +24,9 @@
 	'use strict';
 
 	const ULSDialog = function ( options ) {
-		let $dialog = options.container,
+		let $overlay;
+		const $dialog = options.container,
 			hasOverlay = options.hasOverlay,
-			$overlay,
 			// Source: https://github.com/ghosh/Micromodal/blob/master/lib/src/index.js#L4
 			FOCUSABLE_NODES = [
 				'a[href]',
@@ -71,8 +71,7 @@
 		}
 
 		function maintainFocus( event ) {
-			let $focusableNodes = getFocusableNodes(),
-				focusedItemIndex;
+			const $focusableNodes = getFocusableNodes();
 
 			if ( !hasOverlay ) {
 				// overlay is not present, so let tabbing flow as normal.
@@ -88,7 +87,7 @@
 			if ( !isElementInDialog( document.activeElement ) ) {
 				focusFirstNodeOrOverlay( $focusableNodes );
 			} else {
-				focusedItemIndex = $focusableNodes.index( document.activeElement );
+				const focusedItemIndex = $focusableNodes.index( document.activeElement );
 
 				if ( event.shiftKey && focusedItemIndex === 0 ) {
 					$focusableNodes.get( -1 ).focus();

@@ -20,8 +20,8 @@
 ( function () {
 	'use strict';
 
-	let getULSPreferences = require( 'ext.uls.preferences' ),
-		ulsPreferences = getULSPreferences();
+	const getULSPreferences = require( 'ext.uls.preferences' );
+	let ulsPreferences = getULSPreferences();
 
 	mw.webfonts = mw.webfonts || {};
 	mw.webfonts.preferences = {
@@ -83,13 +83,11 @@
 			 * @return {string|null}
 			 */
 			fontSelector: function ( repository, language, classes ) {
-				let font, defaultFont;
-
 				if ( !language ) {
 					return null;
 				}
 
-				defaultFont = repository.defaultFont( language );
+				const defaultFont = repository.defaultFont( language );
 
 				if ( classes && classes.indexOf( 'autonym' ) >= 0 ) {
 					// Do not load font for showing autonym.
@@ -97,7 +95,7 @@
 				}
 
 				// If the user has a font preference, apply it always.
-				font = mw.webfonts.preferences.getFont( language ) || defaultFont;
+				const font = mw.webfonts.preferences.getFont( language ) || defaultFont;
 				if ( !font || font === 'system' ) {
 					// Avoid setting 'system' as a font in css
 					return null;

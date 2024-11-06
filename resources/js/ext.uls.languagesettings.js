@@ -20,31 +20,29 @@
 ( function () {
 	'use strict';
 
-	let closeRow, settingsMenu, settingsPanel, windowTemplate, panelsRow, buttonsRow;
-
-	closeRow = '<div class="row">' +
+	const closeRow = '<div class="row">' +
 		'<div class="uls-language-settings-close-block eight columns offset-by-four"><span id="languagesettings-close" class="uls-icon-close"></span></div>' +
 		'</div>';
-	settingsMenu = '<div class="four columns languagesettings-menu">' +
+	const settingsMenu = '<div class="four columns languagesettings-menu">' +
 		'<h1 data-i18n="ext-uls-language-settings-title"></h1>' +
 		'<div class="settings-menu-items">' +
 		'</div>' +
 		'</div>';
-	settingsPanel = '<div id="languagesettings-settings-panel" class="eight columns">' +
+	const settingsPanel = '<div id="languagesettings-settings-panel" class="eight columns">' +
 		'</div>';
 	// Apply and Cancel buttons
-	buttonsRow = '<div class="row collapse language-settings-buttons">' +
+	const buttonsRow = '<div class="row collapse language-settings-buttons">' +
 		'<div class="twelve columns">' +
 		'<button class="cdx-button uls-settings-cancel" data-i18n="ext-uls-language-settings-cancel"></button>' +
 		'<button class="cdx-button cdx-button--type-primary cdx-button--action-progressive active uls-settings-apply" data-i18n="ext-uls-language-settings-apply" disabled></button>' +
 		'</div>' +
 		'</div>' +
 		'</div>';
-	panelsRow = '<div class="row" id="languagesettings-panels">' +
+	const panelsRow = '<div class="row" id="languagesettings-panels">' +
 		settingsMenu +
 		settingsPanel +
 		'</div>';
-	windowTemplate = '<div style="display: block;" id="language-settings-dialog" class="language-settings-dialog grid uls-menu uls-wide notheme skin-invert">' +
+	const windowTemplate = '<div style="display: block;" id="language-settings-dialog" class="language-settings-dialog grid uls-menu uls-wide notheme skin-invert">' +
 		closeRow +
 		panelsRow +
 		buttonsRow +
@@ -104,13 +102,12 @@
 		},
 
 		render: function () {
-			let modules,
-				languageSettings = this,
-				defaultModule = this.options.defaultModule;
+			const languageSettings = this;
+			let defaultModule = this.options.defaultModule;
 
 			// Get the name of all registered modules and list them in left side menu.
 			// Sort the modules based on id
-			modules = Object.keys( $.fn.languagesettings.modules ).sort();
+			const modules = Object.keys( $.fn.languagesettings.modules ).sort();
 			modules.forEach( ( moduleName ) => {
 				if ( !defaultModule ) {
 					defaultModule = moduleName;
@@ -129,18 +126,17 @@
 		 * @param {boolean} active boolean Make this module active and show by default
 		 */
 		initModule: function ( moduleName, active ) {
-			let $settingsTitle, $settingsText, $settingsLink,
-				languageSettings = this,
+			const languageSettings = this,
 				module = new $.fn.languagesettings.modules[ moduleName ]( languageSettings ),
 				$settingsMenuItems = languageSettings.$window.find( '.settings-menu-items' );
 
-			$settingsTitle = $( '<div>' )
+			const $settingsTitle = $( '<div>' )
 				.addClass( 'settings-title' )
 				.attr( 'data-i18n', module.nameI18n );
-			$settingsText = $( '<span>' )
+			const $settingsText = $( '<span>' )
 				.addClass( 'settings-text' )
 				.attr( 'data-i18n', module.descriptionI18n );
-			$settingsLink = $( '<button>' )
+			const $settingsLink = $( '<button>' )
 				// The following classes are used here:
 				// * display-settings-block
 				// * input-settings-block
@@ -300,9 +296,9 @@
 
 	$.fn.languagesettings = function ( option ) {
 		return this.each( function () {
-			let $this = $( this ),
-				data = $this.data( 'languagesettings' ),
+			const $this = $( this ),
 				options = typeof option === 'object' && option;
+			let data = $this.data( 'languagesettings' );
 
 			if ( !data ) {
 				$this.data( 'languagesettings', ( data = new LanguageSettings( this, options ) ) );

@@ -20,8 +20,7 @@
 ( function () {
 	'use strict';
 
-	let geo,
-		cacheAge = 60 * 60 * 8, // 8 hours
+	const cacheAge = 60 * 60 * 8, // 8 hours
 		service = mw.config.get( 'wgULSGeoService' );
 
 	// This is not supposed to happen. For sanity prefer existing value.
@@ -32,7 +31,7 @@
 	// Using cache for speed and to reduce load on the third-party service.
 	// Using cookies over localStorage because cookies support automatic expiring.
 	// This cookie is not currently read server-side.
-	geo = mw.cookie.get( 'ULSGeo' );
+	const geo = mw.cookie.get( 'ULSGeo' );
 	if ( geo ) {
 		try {
 			window.Geo = JSON.parse( geo );
