@@ -125,26 +125,26 @@
 		 */
 		setupWebFonts: function () {
 			var d = $.Deferred();
-			mw.loader.using( [ 'ext.uls.webfonts.repository', '@wikimedia/codex' ] ).then( function () {
+			mw.loader.using( [ 'ext.uls.webfonts.repository', '@wikimedia/codex' ] ).then( () => {
 				if ( this.isWebFontsEnabled ) {
 					mw.webfonts.setup();
 				}
 
 				// Allow the webfonts library to finish loading (hack)
-				setTimeout( function () {
+				setTimeout( () => {
 					this.$webfonts = $( document.body ).data( 'webfonts' );
 					d.resolve();
-				}.bind( this ), 1 );
-			}.bind( this ) );
+				}, 1 );
+			} );
 			return d.promise();
 		},
 		/**
 		 * Render the module into a given target
 		 */
 		render: function () {
-			this.setupWebFonts().then( function () {
+			this.setupWebFonts().then( () => {
 				this.renderAfterDependenciesLoaded();
-			}.bind( this ) );
+			} );
 		},
 		/**
 		 * Render the module into a given target after all
@@ -208,10 +208,10 @@
 					);
 
 				new mw.Api().parse( $.i18n( 'ext-uls-display-settings-anon-log-in-cta' ) )
-					.done( function ( parsedCta ) {
+					.done( ( parsedCta ) => {
 						// The parsed CTA is HTML
 						$loginCta.html( parsedCta );
-						$loginCta.find( 'a' ).on( 'click', function () {
+						$loginCta.find( 'a' ).on( 'click', () => {
 							// If EventLogging is installed and enabled for ULS, give it a
 							// chance to log this event. There is no promise provided and in
 							// most browsers this will use the Beacon API in the background.
@@ -311,7 +311,7 @@
 						$back = $( '<div>' )
 							.addClass( 'uls-icon-back' );
 
-					$back.on( 'click', function () {
+					$back.on( 'click', () => {
 						uls.hide();
 						displaySettings.$parent.show();
 					} );
@@ -363,7 +363,7 @@
 				}
 			} );
 
-			$moreLanguagesButton.on( 'click', function () {
+			$moreLanguagesButton.on( 'click', () => {
 				displaySettings.$parent.hide();
 				mw.hook( 'mw.uls.interface.morelanguages' ).fire();
 			} );
@@ -381,7 +381,7 @@
 			this.$template.attr( 'lang', language )
 				.css( 'font-family', '' );
 			$.i18n().locale = language;
-			mw.uls.loadLocalization( language ).done( function () {
+			mw.uls.loadLocalization( language ).done( () => {
 				displaySettings.i18n();
 				if ( displaySettings.$webfonts ) {
 					displaySettings.$webfonts.refresh();
@@ -457,7 +457,7 @@
 
 			// Get the saved font using the fontSelector defined in mw.webfonts.setup
 			savedFont = this.$webfonts.getFont( language );
-			fonts.forEach( function ( font ) {
+			fonts.forEach( ( font ) => {
 				var $fontOption;
 
 				if ( font !== 'system' ) {
@@ -544,7 +544,7 @@
 				displaySettings.markDirty();
 
 				if ( this.checked ) {
-					displaySettings.setupWebFonts().then( function () {
+					displaySettings.setupWebFonts().then( () => {
 						mw.webfonts.preferences.enable();
 
 						displaySettings.prepareContentFonts();
@@ -606,7 +606,7 @@
 				displaySettings.$parent.position();
 				$tabButtons.removeClass( 'uls-cdx-button-pressed' );
 				$button.addClass( 'uls-cdx-button-pressed' );
-			} ).on( 'mousedown', function ( event ) {
+			} ).on( 'mousedown', ( event ) => {
 				// Avoid taking focus, to avoid bad looking focus styles
 				event.preventDefault();
 			} );
@@ -658,7 +658,7 @@
 
 			this.$parent.setBusy( true );
 			// Save the preferences
-			mw.webfonts.preferences.save( function ( result ) {
+			mw.webfonts.preferences.save( ( result ) => {
 				var newWebfontsEnable, oldWebfontsEnable, webfontsEvent,
 					newRegistry = mw.webfonts.preferences.registry,
 					oldRegistry = this.savedRegistry.registry,
@@ -696,7 +696,7 @@
 				// Update the back-up preferences for the case of canceling
 				this.savedRegistry = $.extend( true, {}, mw.webfonts.preferences );
 				this.$parent.setBusy( false );
-			}.bind( this ) );
+			} );
 		},
 
 		/**

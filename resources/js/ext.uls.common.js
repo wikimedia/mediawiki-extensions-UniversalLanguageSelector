@@ -39,7 +39,7 @@
 	 * @param {string} language Language code.
 	 */
 	mw.uls.changeLanguage = function ( language ) {
-		mw.uls.setLanguage( language ).then( function () {
+		mw.uls.setLanguage( language ).then( () => {
 			location.reload();
 		} );
 	};
@@ -72,7 +72,7 @@
 			action: 'query',
 			meta: 'globalpreferences',
 			gprprop: 'preferences'
-		} ).then( function ( res ) {
+		} ).then( ( res ) => {
 			// Check whether global preferences are in use. If they are not, `res.query` is
 			// an empty object. `res` will also contain warnings about unknown parameters.
 			try {
@@ -80,7 +80,7 @@
 			} catch ( e ) {
 				return false;
 			}
-		} ).then( function ( hasGlobalPreference ) {
+		} ).then( ( hasGlobalPreference ) => {
 			var apiModule;
 
 			if ( hasGlobalPreference ) {
@@ -96,11 +96,11 @@
 				optionname: 'language',
 				optionvalue: language
 			} );
-		} ).catch( function () {
+		} ).catch(
 			// Setting the option failed. Maybe the user has logged off.
 			// Continue like anonymous user and set cookie.
-			return changeLanguageAnon();
-		} );
+			() => changeLanguageAnon()
+		);
 	};
 
 	mw.uls.setPreviousLanguages = function ( previousLanguages ) {
@@ -133,7 +133,7 @@
 	mw.uls.getInterlanguageListFromNodes = function ( nodes ) {
 		var interlanguageList = {};
 
-		Array.prototype.forEach.call( nodes, function ( el ) {
+		Array.prototype.forEach.call( nodes, ( el ) => {
 			var langCode = mw.uls.convertMediaWikiLanguageCodeToULS( el.lang );
 			interlanguageList[ langCode ] = el;
 		} );

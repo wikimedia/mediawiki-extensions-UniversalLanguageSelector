@@ -6,9 +6,11 @@
 	function ActionsMenu( options ) {
 		this.options = options;
 		this.$template = $( ActionsMenu.template );
-		this.actionItems = options.actions.map( function ( action ) {
-			return new ActionsMenuItem( action.icon, action.text, action.handler, action.href );
-		} );
+		this.actionItems = options.actions.map(
+			( action ) => new ActionsMenuItem(
+				action.icon, action.text, action.handler, action.href
+			)
+		);
 		this.rendered = false;
 		this.shown = false;
 	}
@@ -32,18 +34,18 @@
 				this.$template.show();
 				return;
 			}
-			this.actionItems.forEach( function ( actionItem ) {
+			this.actionItems.forEach( ( actionItem ) => {
 				this.renderAction( actionItem );
-			}.bind( this ) );
+			} );
 
 			this.i18n();
 			$( document.body ).append( this.$template );
 			this.$template.css( this.position() );
 			this.$template.show();
-			this.$template.find( '.uls-language-actions-close' ).on( 'click', function ( event ) {
+			this.$template.find( '.uls-language-actions-close' ).on( 'click', ( event ) => {
 				event.stopPropagation();
 				this.close();
-			}.bind( this ) );
+			} );
 
 			$( document.body ).on( 'click', this.cancel.bind( this ) );
 

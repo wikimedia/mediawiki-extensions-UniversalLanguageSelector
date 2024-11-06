@@ -53,7 +53,7 @@
 		previousIMELanguages = $.ime.preferences.getPreviousLanguages() || [];
 		imeLanguageList = previousIMELanguages.concat( mw.uls.getFrequentLanguageList() );
 
-		imeLanguageList.forEach( function ( lang ) {
+		imeLanguageList.forEach( ( lang ) => {
 			if ( unique.indexOf( lang ) === -1 ) {
 				unique.push( lang );
 			}
@@ -134,9 +134,9 @@
 					$( '<div>' )
 						.addClass( 'link' )
 						.attr( 'data-i18n', 'ext-uls-input-disable-notification-undo' )
-						.on( 'click', function () {
+						.on( 'click', () => {
 							$.ime.preferences.enable();
-							$.ime.preferences.save( function () {
+							$.ime.preferences.save( () => {
 								mw.ime.setup();
 							} );
 						} ),
@@ -160,7 +160,7 @@
 
 		// Apparently we depend on some styles which are loaded with
 		// these modules. This needs refactoring.
-		mw.loader.using( languageSettingsModules, function () {
+		mw.loader.using( languageSettingsModules, () => {
 			$moreSettingsLink.languagesettings( {
 				defaultModule: 'input',
 				onClose: function () {
@@ -172,18 +172,18 @@
 		} );
 
 		// Hide the menu.
-		$moreSettingsLink.on( 'click', function ( e ) {
+		$moreSettingsLink.on( 'click', ( e ) => {
 			imeselector.hide();
 			e.stopPropagation();
 		} );
 
 		$disableInputToolsLink.i18n();
 
-		$disableInputToolsLink.on( 'click', function ( e ) {
+		$disableInputToolsLink.on( 'click', ( e ) => {
 			$.ime.preferences.disable();
 			imeselector.hide();
 			imeselector.$imeSetting.hide();
-			$.ime.preferences.save( function () {
+			$.ime.preferences.save( () => {
 				mw.ime.disable();
 				imeNotification();
 				mw.hook( 'mw.uls.ime.disable' ).fire( 'menu' );
@@ -274,7 +274,7 @@
 
 		if ( $input.is( '[contenteditable]' ) && !window.rangy ) {
 			// For supporting content editable divs we need rangy library
-			mw.loader.using( 'rangy.core', function () {
+			mw.loader.using( 'rangy.core', () => {
 				mw.ime.addIme( $input );
 			} );
 
@@ -323,7 +323,7 @@
 						title: $.i18n( 'ext-uls-ime-help' )
 					} )
 					.addClass( 'ime-perime-help' )
-					.on( 'click', function ( event ) {
+					.on( 'click', ( event ) => {
 						event.stopPropagation();
 					} );
 			}
@@ -333,7 +333,7 @@
 		imeselector = $input.data( 'imeselector' );
 		if ( imeselector ) {
 			imeselector.selectLanguage( imeselector.decideLanguage() );
-			imeselector.$element.on( 'setim.ime', function ( event, inputMethod ) {
+			imeselector.$element.on( 'setim.ime', ( event, inputMethod ) => {
 				mw.hook( 'mw.uls.ime.change' ).fire( inputMethod );
 			} );
 		}

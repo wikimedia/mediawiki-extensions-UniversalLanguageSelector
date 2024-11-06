@@ -84,9 +84,9 @@
 				new mw.Api().saveOption(
 					this.preferenceName,
 					JSON.stringify( this.preferences )
-				).done( function () {
+				).done( () => {
 					callback.call( self, true );
-				} ).fail( function () {
+				} ).fail( () => {
 					callback.call( self, false );
 				} );
 			} else {

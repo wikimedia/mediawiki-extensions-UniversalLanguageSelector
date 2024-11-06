@@ -89,13 +89,13 @@
 			$( document.documentElement ).on( 'click', this.hide.bind( this ) );
 
 			// ... but when clicked on window do not hide.
-			this.$window.on( 'click', function ( event ) {
+			this.$window.on( 'click', ( event ) => {
 				event.stopPropagation();
 			} );
 
 			// Map Escape to same action as the close button. This is keyup (and not keydown)
 			// because ULS also listens to keyup and we need to stop propagation.
-			this.$window.on( 'keyup', function ( event ) {
+			this.$window.on( 'keyup', ( event ) => {
 				if ( event.which === 27 ) {
 					event.stopPropagation();
 					mw.hook( 'mw.uls.settings.cancel' ).fire();
@@ -111,7 +111,7 @@
 			// Get the name of all registered modules and list them in left side menu.
 			// Sort the modules based on id
 			modules = Object.keys( $.fn.languagesettings.modules ).sort();
-			modules.forEach( function ( moduleName ) {
+			modules.forEach( ( moduleName ) => {
 				if ( !defaultModule ) {
 					defaultModule = moduleName;
 				}

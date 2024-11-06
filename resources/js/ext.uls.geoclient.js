@@ -40,7 +40,7 @@
 		} catch ( e ) {}
 	}
 
-	$.getJSON( service ).done( function ( data ) {
+	$.getJSON( service ).done( ( data ) => {
 		window.Geo = data;
 		mw.cookie.set( 'ULSGeo', JSON.stringify( data ), cacheAge );
 	} );

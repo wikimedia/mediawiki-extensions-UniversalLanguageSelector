@@ -13,9 +13,7 @@
 
 	ActionsMenuItemsRegistry.prototype.getItems = function () {
 		var registry = this.registry;
-		return Object.keys( registry ).map( function ( key ) {
-			return registry[ key ];
-		} );
+		return Object.keys( registry ).map( ( key ) => registry[ key ] );
 	};
 
 	/**

@@ -84,9 +84,9 @@
 			action: 'ulssetlang',
 			languagecode: langCode,
 			formatversion: 2
-		} ).done( function () {
+		} ).done( () => {
 			location.replace( currentUrlWithoutSetLang() );
-		} ).fail( function ( code, result ) {
+		} ).fail( ( code, result ) => {
 			var apiErrorInfo = result.error && result.error.info ||
 				mw.msg( 'ext-uls-setlang-unknown-error' );
 			mw.notify(
@@ -110,19 +110,19 @@
 	}
 
 	function addSetLangDialogEvents( ulsDialog ) {
-		$acceptBtn.on( 'click', function () {
+		$acceptBtn.on( 'click', () => {
 			toggleLoading( $acceptBtn, true );
-			updateLanguage( mw.config.get( 'wgULSSetLangCode' ) ).fail( function () {
+			updateLanguage( mw.config.get( 'wgULSSetLangCode' ) ).fail( () => {
 				toggleLoading( $acceptBtn, false );
 			} );
 		} );
 
-		$cancelBtn.on( 'click', function () {
+		$cancelBtn.on( 'click', () => {
 			ulsDialog.close();
 		} );
 	}
 
-	$( function () {
+	$( () => {
 		var setLangCode = mw.config.get( 'wgULSSetLangCode' ),
 			setLangName = mw.config.get( 'wgULSSetLangName' ),
 			currentLangCode = mw.config.get( 'wgULSCurrentLangCode' ),

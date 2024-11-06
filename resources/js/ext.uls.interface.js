@@ -42,7 +42,7 @@
 	 * @param {Object} uls
 	 */
 	function openLanguageSettings( $element, onCloseHandler, uls ) {
-		mw.loader.using( languageSettingsModules ).then( function () {
+		mw.loader.using( languageSettingsModules ).then( () => {
 			$element.languagesettings( {
 				defaultModule: 'display',
 				onClose: onCloseHandler,
@@ -95,9 +95,9 @@
 		}
 
 		// Action menu items need OOUI widgets. Load them and register trigger event handler.
-		mw.loader.using( [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-interactions' ] ).done( function () {
+		mw.loader.using( [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-interactions' ] ).done( () => {
 			var $actionsList = $( '<ul>' ).addClass( 'uls-language-action-items' );
-			actionItemsRegistry.getItems().forEach( function ( actionItem ) {
+			actionItemsRegistry.getItems().forEach( ( actionItem ) => {
 				var actionButton = new ActionsMenuItem(
 					actionItem.icon,
 					actionItem.text,
@@ -136,7 +136,7 @@
 		$ulsSettingsBlock.addClass( 'uls-settings-block--vector-2022' );
 
 		var $languageSettingsMenuButton = createMenuButton( 'uls-language-settings-button' );
-		$languageSettingsMenuButton.one( 'click', function () {
+		$languageSettingsMenuButton.one( 'click', () => {
 			openLanguageSettings( $languageSettingsMenuButton, uls.show.bind( uls ), uls );
 		} );
 		$ulsSettingsBlock.append( $languageSettingsMenuButton );
@@ -170,8 +170,8 @@
 			$ulsSettingsBlock.prepend( $addLanguagesMenuButton );
 
 			// Action menu items need OOUI widgets. Load them and register trigger event handler.
-			mw.loader.using( [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-interactions' ] ).done( function () {
-				$addLanguagesMenuButton.on( 'click', function () {
+			mw.loader.using( [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-interactions' ] ).done( () => {
+				$addLanguagesMenuButton.on( 'click', () => {
 					addLanguagesMenuDialog = addLanguagesMenuDialog || new ActionsMenu( {
 						actions: actionItemsRegistry.getItems(),
 						onPosition: uls.position.bind( uls ),
@@ -233,9 +233,9 @@
 			popup.toggleClipping( false );
 
 			// if the mouse is over the tooltip, do not hide
-			$( '.uls-tipsy' ).on( 'mouseover', function () {
+			$( '.uls-tipsy' ).on( 'mouseover', () => {
 				clearTimeout( tipsyTimer );
-			} ).on( 'mouseout', function () {
+			} ).on( 'mouseout', () => {
 				tipsyTimer = setTimeout( hideTipsy, timeout );
 			} ).on( 'click', hideTipsy );
 
@@ -269,13 +269,13 @@
 						// T130390: must use attr
 						dir: 'auto'
 					} )
-					.on( 'click', function ( event ) {
+					.on( 'click', ( event ) => {
 						event.preventDefault();
 
 						// Track if event logging is enabled
 						mw.hook( 'mw.uls.language.revert' ).fire();
 
-						mw.loader.using( [ 'ext.uls.common' ] ).then( function () {
+						mw.loader.using( [ 'ext.uls.common' ] ).then( () => {
 							mw.uls.changeLanguage( event.target.lang );
 						} );
 					} );
@@ -295,13 +295,13 @@
 		popup.$element.appendTo( document.body );
 
 		// The interlanguage position needs some time to settle down
-		setTimeout( function () {
+		setTimeout( () => {
 			// Show the tipsy tooltip on page load.
 			showTipsy( 6000 );
 		}, 700 );
 
 		// manually show the tooltip
-		$( trigger ).on( 'mouseover', function () {
+		$( trigger ).on( 'mouseover', () => {
 			// show only if the ULS panel is not shown
 			// eslint-disable-next-line no-jquery/no-sizzle
 			if ( !$( '.uls-menu:visible' ).length ) {
@@ -311,9 +311,9 @@
 	}
 
 	function initSecondaryEntryPoints() {
-		$( '.uls-settings-trigger' ).one( 'click', function ( e ) {
+		$( '.uls-settings-trigger' ).one( 'click', ( e ) => {
 			e.preventDefault();
-			mw.loader.using( languageSettingsModules, function () {
+			mw.loader.using( languageSettingsModules, () => {
 				$( e.target ).languagesettings();
 				$( e.target ).trigger( 'click' );
 			} );
@@ -382,7 +382,7 @@
 				}
 			};
 
-			mw.loader.using( languageSettingsModules, function () {
+			mw.loader.using( languageSettingsModules, () => {
 				$trigger.languagesettings( languageSettingsOptions ).trigger( 'click' );
 			} );
 
@@ -407,7 +407,7 @@
 						mw.hook( 'mw.uls.settings.open' ).fire( 'personal' );
 					}
 				} else {
-					mw.loader.using( languageSettingsModules, function () {
+					mw.loader.using( languageSettingsModules, () => {
 						$trigger.languagesettings( { autoOpen: true } );
 						mw.hook( 'mw.uls.settings.open' ).fire( 'personal' );
 					} );
@@ -428,7 +428,7 @@
 						mw.hook( 'mw.uls.settings.open' ).fire( 'personal' );
 					}
 				} else {
-					mw.loader.using( 'ext.uls.mediawiki', function () {
+					mw.loader.using( 'ext.uls.mediawiki', () => {
 						$trigger.uls( {
 							quickList: function () {
 								return mw.uls.getFrequentLanguageList();
@@ -480,7 +480,7 @@
 
 						// Allow styles to apply first and position to work by
 						// delaying the activation after them.
-						setTimeout( function () {
+						setTimeout( () => {
 							$trigger.trigger( 'click', eventParams );
 						}, 0 );
 					} );
@@ -490,7 +490,7 @@
 
 		$trigger.on( 'click', clickHandler );
 		// Optimization: Prefetch the Resource loader modules for ULS on mouseover
-		$trigger.one( 'mouseover', function () {
+		$trigger.one( 'mouseover', () => {
 			mw.loader.load( languageSettingsModules );
 		} );
 	}
@@ -516,13 +516,13 @@
 		}
 
 		if ( previousLanguage !== currentLanguage ) {
-			mw.loader.using( 'oojs-ui-core' ).done( function () {
+			mw.loader.using( 'oojs-ui-core' ).done( () => {
 				showUndoTooltip( previousLanguage, previousAutonym );
 			} );
 			mw.storage.set( 'uls-previous-language-code', currentLanguage );
 			mw.storage.set( 'uls-previous-language-autonym', currentAutonym );
 			// Store this language in a list of frequently used languages
-			mw.loader.using( [ 'ext.uls.common' ] ).then( function () {
+			mw.loader.using( [ 'ext.uls.common' ] ).then( () => {
 				mw.uls.addPreviousLanguage( currentLanguage );
 			} );
 		}
@@ -534,7 +534,7 @@
 		$( document.body ).on( 'focus.imeinit', imeSelector, function () {
 			var $input = $( this );
 			$( document.body ).off( '.imeinit' );
-			mw.loader.using( 'ext.uls.ime', function () {
+			mw.loader.using( 'ext.uls.ime', () => {
 				mw.ime.setup();
 				mw.ime.handleFocus( $input );
 			} );
@@ -548,12 +548,12 @@
 	function handleCheckboxSelector() {
 		// If the ULS button is also a checkbox, we can
 		// conclude that it's using the checkbox hack.
-		$( document ).on( 'input', 'input.mw-interlanguage-selector[type="checkbox"]', function ( ev ) {
+		$( document ).on( 'input', 'input.mw-interlanguage-selector[type="checkbox"]', ( ev ) => {
 			var elem = ev.currentTarget;
 			elem.checked = false;
 		} );
 
-		$( document ).on( 'keydown', 'input.mw-interlanguage-selector[type="checkbox"]', function ( ev ) {
+		$( document ).on( 'keydown', 'input.mw-interlanguage-selector[type="checkbox"]', ( ev ) => {
 			var elem = ev.currentTarget;
 			if ( ev.key !== 'Enter' ) {
 				return;
@@ -581,7 +581,7 @@
 
 		ev.preventDefault();
 
-		mw.loader.using( [ 'ext.uls.mediawiki', '@wikimedia/codex' ] ).then( function () {
+		mw.loader.using( [ 'ext.uls.mediawiki', '@wikimedia/codex' ] ).then( () => {
 			var parent, languageNodes, standalone, uls;
 
 			parent = document.querySelectorAll( '.mw-portlet-lang, #p-lang' )[ 0 ];
@@ -647,7 +647,7 @@
 		var $languageBtn = $( '#p-lang-btn' );
 		var clickHandler = function ( event ) {
 			event.stopPropagation();
-			mw.loader.using( languageSettingsModules ).then( function () {
+			mw.loader.using( languageSettingsModules ).then( () => {
 				$( event.target ).languagesettings( {
 					autoOpen: true,
 					onPosition: function () {
@@ -661,9 +661,9 @@
 		};
 		// the first time the language button is clicked inside a non-content page,
 		// we should add the "Open language settings" button inside the dropdown
-		$languageBtn.one( 'mouseover', function () {
+		$languageBtn.one( 'mouseover', () => {
 			mw.loader.using( [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-interactions', 'ext.uls.messages' ] )
-				.done( function () {
+				.done( () => {
 					var actionButton = new ActionsMenuItem(
 						'settings',
 						$.i18n( 'ext-uls-actions-menu-language-settings-item-label' ),

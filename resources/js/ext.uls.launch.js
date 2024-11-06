@@ -12,9 +12,7 @@ var commonInterlanguageList = null;
 function filterForCommonLanguagesForUser( languageCodes ) {
 	if ( commonInterlanguageList === null ) {
 		commonInterlanguageList = mw.uls.getFrequentLanguageList()
-			.filter( function ( language ) {
-				return languageCodes.indexOf( language ) >= 0;
-			} );
+			.filter( ( language ) => languageCodes.indexOf( language ) >= 0 );
 	}
 
 	return commonInterlanguageList;
@@ -26,7 +24,7 @@ function filterForCommonLanguagesForUser( languageCodes ) {
  */
 function languageObjectTextContent( languagesObject ) {
 	var newLanguageObject = {};
-	Object.keys( languagesObject ).forEach( function ( langCode ) {
+	Object.keys( languagesObject ).forEach( ( langCode ) => {
 		newLanguageObject[ langCode ] = languagesObject[ langCode ].textContent;
 	} );
 	return newLanguageObject;

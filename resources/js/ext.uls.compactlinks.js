@@ -190,9 +190,9 @@
 		}
 		// If there is an interlanguage selector in the page already
 		// there is no need to add a trigger and Codex styles (T353850).
-		mw.loader.using( '@wikimedia/codex' ).then( function () {
+		mw.loader.using( '@wikimedia/codex' ).then( () => {
 			this.addTrigger();
-		}.bind( this ) );
+		} );
 
 		mw.hook( 'mw.uls.compactlinks.initialized' ).fire( true );
 	};
@@ -284,7 +284,7 @@
 	 */
 	CompactInterlanguageList.prototype.getLangsInText = function () {
 		var languagesInText = [];
-		Array.prototype.forEach.call( document.querySelectorAll( '#mw-content-text [lang]' ), function ( el ) {
+		Array.prototype.forEach.call( document.querySelectorAll( '#mw-content-text [lang]' ), ( el ) => {
 			var lang = mw.uls.convertMediaWikiLanguageCodeToULS( el.lang );
 			if ( languagesInText.indexOf( lang ) === -1 ) {
 				languagesInText.push( lang );
@@ -303,9 +303,7 @@
 	CompactInterlanguageList.prototype.getLangsWithBadges = function () {
 		return Array.prototype.map.call(
 			this.listElement.querySelectorAll( '[class*="badge"] a.interlanguage-link-target' ),
-			function ( el ) {
-				return mw.uls.convertMediaWikiLanguageCodeToULS( el.lang );
-			}
+			( el ) => mw.uls.convertMediaWikiLanguageCodeToULS( el.lang )
 		);
 	};
 

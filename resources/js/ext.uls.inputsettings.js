@@ -340,7 +340,7 @@
 							.i18n()
 							.text( ' ' );
 
-					$back.on( 'click', function () {
+					$back.on( 'click', () => {
 						uls.hide();
 						inputSettings.$parent.show();
 					} );
@@ -397,7 +397,7 @@
 				ulsPurpose: 'input-settings'
 			} );
 
-			$moreLanguagesButton.on( 'click', function () {
+			$moreLanguagesButton.on( 'click', () => {
 				inputSettings.$parent.hide();
 				mw.hook( 'mw.uls.ime.morelanguages' ).fire();
 			} );
@@ -464,7 +464,7 @@
 			} );
 
 			inputSettings.$template.find( 'button.uls-input-toggle-button' )
-				.on( 'click', function () {
+				.on( 'click', () => {
 					inputSettings.markDirty();
 
 					if ( $.ime.preferences.isEnabled() ) {
@@ -557,7 +557,7 @@
 			}
 
 			// Save the preferences
-			$.ime.preferences.save( function ( result ) {
+			$.ime.preferences.save( ( result ) => {
 				// closure for not losing the scope
 				inputSettings.onSave( result );
 				inputSettings.dirty = false;

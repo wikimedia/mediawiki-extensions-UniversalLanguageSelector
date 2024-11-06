@@ -126,17 +126,17 @@
 		// Execute after task queue is processed so that the rendering is complete.
 		// This is important because webfonts behavior depends on the font-family
 		// property values set by stylesheets.
-		setTimeout( function () {
+		setTimeout( () => {
 			$( document.body ).webfonts();
 		}, 0 );
 	};
 
-	$( function () {
+	$( () => {
 		mw.webfonts.preferences.load();
 
 		if ( mw.webfonts.preferences.isEnabled() ) {
 			// Queue to next idle period to optimize loading.
-			mw.requestIdleCallback( function () {
+			mw.requestIdleCallback( () => {
 				mw.loader.using( 'ext.uls.webfonts.repository' ).then( mw.webfonts.setup );
 			} );
 		}

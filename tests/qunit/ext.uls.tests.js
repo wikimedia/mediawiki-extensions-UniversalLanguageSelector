@@ -22,18 +22,18 @@
 
 	QUnit.module( 'ext.uls', QUnit.newMwEnvironment() );
 
-	QUnit.test( 'Initial check', function ( assert ) {
+	QUnit.test( 'Initial check', ( assert ) => {
 		assert.strictEqual( typeof $.fn.uls, 'function', '$.fn.uls is defined' );
 	} );
 
-	QUnit.test( 'Custom langdb', function ( assert ) {
+	QUnit.test( 'Custom langdb', ( assert ) => {
 		// This is a custom non-standard language code used in MW.
 		// If it's not defined, then, for example,
 		// its direction cannot be acquired using the langdb utils.
 		assert.strictEqual( $.uls.data.getDir( 'als' ), 'ltr', 'The direction of custom MW language als is ltr.' );
 	} );
 
-	QUnit.test( 'Common languages', function ( assert ) {
+	QUnit.test( 'Common languages', ( assert ) => {
 		var i, foundTagalog, languagesInPH;
 
 		// Bug 49847
