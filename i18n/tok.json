@@ -3,7 +3,8 @@
 		"authors": [
 			"LesVisages",
 			"Robin van der Vliet",
-			"Tbodt"
+			"Tbodt",
+			"Tamzin"
 		]
 	},
 	"uls-plang-title-languages": "toki",
@@ -21,5 +22,6 @@
 	"ext-uls-webfonts-select-for": "toki $1 la o wile e nasin sitelen",
 	"ext-uls-input-settings-title": "nasin sitelen",
 	"ext-uls-input-settings-title-short": "sitelen",
-	"jquery-ime-other-languages": "toki ante"
+	"jquery-ime-other-languages": "toki ante",
+	"ext-uls-compact-link-count": "ante"
 }
