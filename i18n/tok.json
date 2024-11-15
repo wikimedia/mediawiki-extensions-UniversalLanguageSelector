@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			".hecko",
 			"LesVisages",
 			"Robin van der Vliet",
 			"Tamzin",
@@ -23,5 +24,5 @@
 	"ext-uls-input-settings-title": "nasin sitelen",
 	"ext-uls-input-settings-title-short": "sitelen",
 	"jquery-ime-other-languages": "toki ante",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|toki ante $1}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|toki ante $1 kin}}"
 }
