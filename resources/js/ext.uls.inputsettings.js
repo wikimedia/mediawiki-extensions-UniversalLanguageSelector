@@ -441,9 +441,9 @@
 		listen: function () {
 			const $imeListContainer = this.$template.find( '.uls-input-settings-inputmethods-list' );
 
-			$imeListContainer.on( 'change', 'input:radio[name=ime]:checked', function () {
+			$imeListContainer.on( 'change', 'input:radio[name=ime]:checked', ( event ) => {
 				this.markDirty();
-				$.ime.preferences.setIM( $( this ).val() );
+				$.ime.preferences.setIM( event.target.value );
 			} );
 
 			this.$template.find( 'button.uls-input-toggle-button' )
