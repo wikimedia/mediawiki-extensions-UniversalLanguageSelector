@@ -4,7 +4,9 @@
 			"LesVisages",
 			"Robin van der Vliet",
 			"Tbodt",
-			"Tamzin"
+			"Tamzin",
+			".hecko",
+			"Juwan"
 		]
 	},
 	"uls-plang-title-languages": "toki",
@@ -23,5 +25,5 @@
 	"ext-uls-input-settings-title": "nasin sitelen",
 	"ext-uls-input-settings-title-short": "sitelen",
 	"jquery-ime-other-languages": "toki ante",
-	"ext-uls-compact-link-count": "ante"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|toki ante $1}}"
 }
