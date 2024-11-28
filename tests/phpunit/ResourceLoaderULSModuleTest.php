@@ -2,7 +2,9 @@
 
 namespace UniversalLanguageSelector\Tests;
 
+use MediaWiki\Request\FauxRequest;
 use MediaWiki\ResourceLoader\Context;
+use MediaWiki\ResourceLoader\ResourceLoader;
 use UniversalLanguageSelector\ResourceLoaderULSModule;
 
 /**
@@ -16,9 +18,9 @@ class ResourceLoaderULSModuleTest extends \PHPUnit\Framework\TestCase {
 	public function testAllReturnValues() {
 		$instance = new ResourceLoaderULSModule();
 
-		$context = $this->createMock( Context::class );
-		$context->method( 'getLanguage' )
-			->willReturn( 'en' );
+		$context = new Context( $this->createMock( ResourceLoader::class ),
+			new FauxRequest( [ 'lang' => 'en' ] )
+		);
 
 		$script = $instance->getScript( $context );
 		$this->assertStringStartsWith( 'mw.config.set({"wgULSLanguages":{"', $script );

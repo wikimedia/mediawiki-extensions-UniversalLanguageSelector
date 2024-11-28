@@ -25,7 +25,6 @@ use MediaWiki\Languages\LanguageNameUtils;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\ResourceLoader\Context;
 use MediaWiki\ResourceLoader\Module;
-use MediaWiki\ResourceLoader\ResourceLoader;
 
 /**
  * ResourceLoader module for UniversalLanguageSelector
@@ -53,7 +52,9 @@ class ResourceLoaderULSModule extends Module {
 	 */
 	public function getScript( Context $context ) {
 		$languageCode = $context->getLanguage();
-		return ResourceLoader::makeConfigSetScript( $this->getData( $languageCode ) );
+		return 'mw.config.set('
+			. $context->encodeJson( $this->getData( $languageCode ) )
+			. ');';
 	}
 
 	/**
