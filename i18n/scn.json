@@ -4,7 +4,8 @@
 			"Ajeje Brazorf",
 			"Gmelfi",
 			"Pippinu",
-			"Xð"
+			"Xð",
+			"GianAntonucci"
 		]
 	},
 	"uls-plang-title-languages": "Lingui",
@@ -51,7 +52,7 @@
 	"ext-uls-input-disable-notification-undo": "Annulla",
 	"ext-uls-input-disable-notification-info-personal": "È pussibbili attivari quannegghiè li strummenta di scrittura a pàrtiri dê mpustazzioni dâ lingua.",
 	"ext-uls-input-disable-notification-info-interlanguage": "È pussibbili attivari quannegghiè li strummenta di scrittura a pàrtiri dê mpustazzioni dâ lingua, vicinu a l'alencu dê lingui.",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|N'àutra|Àutri $1}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Una|$1}} cchiù assai",
 	"prefs-languages": "Lingui",
 	"ext-uls-setlang-unknown-error": "Erruri scanusciutu",
 	"ext-uls-setlang-heading": "Cancia la lingua dâ ntirfaccia?",

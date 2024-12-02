@@ -3,14 +3,17 @@
 		"authors": [
 			"Hwangjy9",
 			"Ykhwong",
-			"Dr1t jg"
+			"Dr1t jg",
+			"Suleiman the Magnificent Television"
 		]
 	},
 	"apihelp-languagesearch-description": "임의의 스크립트에서 언어 이름을 검색합니다.",
 	"apihelp-languagesearch-summary": "임의의 스크립트에서 언어 이름을 검색합니다.",
 	"apihelp-languagesearch-param-search": "검색 문자열입니다.",
+	"apihelp-languagesearch-param-typos": "검색항목에 허용된 표기오류의 수",
 	"apihelp-languagesearch-example-1": "\"Te\"로 검색",
 	"apihelp-languagesearch-example-2": "\"ഫി\"로 검색",
+	"apihelp-languagesearch-example-3": "\"ഫി\"를 검색해 오타 1개 허용",
 	"apihelp-ulslocalization-description": "주어진 언어로 ULS의 지역화를 가져옵니다.",
 	"apihelp-ulslocalization-summary": "주어진 언어로 ULS의 지역화를 가져옵니다.",
 	"apihelp-ulslocalization-param-language": "언어 코드입니다.",
