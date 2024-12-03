@@ -9,6 +9,7 @@
 			"Olli",
 			"Pxos",
 			"Pyscowicz",
+			"Samoasambia",
 			"Stryn",
 			"Yupik"
 		]
@@ -67,7 +68,7 @@
 	"ext-uls-compact-link-count": "$1 {{PLURAL:$1|muu kieli|muuta kieltä}}",
 	"ext-uls-compact-link-info": "Kaikki kielet (alkuperäinen valinta sinun ja muiden yleisistä valinnoista)",
 	"prefs-languages": "Kielet",
-	"ext-uls-compact-language-links-preference": "Käytä [[$1|kompaktia kielilistaa]], joka näyttää sinulle tärkeimmät kielet.",
+	"ext-uls-compact-language-links-preference": "Käytä [[$1|kompaktia kielilistaa]], joka näyttää sinulle tärkeimmät kielet",
 	"ext-uls-compact-no-results": "Tämä sivu ei ole saatavilla etsimälläsi kielellä.",
 	"ext-uls-setlang-error": "Ensisijaisen kielen päivityksessä tapahtui virhe. Virhe: $1",
 	"ext-uls-setlang-unknown-error": "Tuntematon virhe",

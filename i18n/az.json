@@ -63,7 +63,7 @@
 	"ext-uls-compact-link-count": "Daha {{PLURAL:$1|1 dil|$1 dil}}",
 	"ext-uls-compact-link-info": "Bütün dillər (sizin və başqalarının ümumi seçimlərindən ilk seçim)",
 	"prefs-languages": "Dillər",
-	"ext-uls-compact-language-links-preference": "Yalnız özünüzə maraqlı olan [[$1|yığcam dil siyahısını]] istifadə etmək.",
+	"ext-uls-compact-language-links-preference": "Yalnız özünüzə maraqlı olan [[$1|yığcam dil siyahısı]] istifadə et",
 	"ext-uls-compact-no-results": "Bu səhifə axtardığınız dildə mövcud deyil.",
 	"ext-uls-setlang-error": "Seçdiyiniz dili yeniləyərkən xəta baş verdi: $1",
 	"ext-uls-setlang-unknown-error": "Naməlum xəta",

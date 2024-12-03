@@ -70,7 +70,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Nog één|Nog $1}}",
 	"ext-uls-compact-link-info": "Alle talen (eerste selectie op basis van keuzes van u en anderen)",
 	"prefs-languages": "Talen",
-	"ext-uls-compact-language-links-preference": "Een [[$1|compacte talenlijst]] gebruiken, met voor u relevante talen.",
+	"ext-uls-compact-language-links-preference": "Een [[$1|compacte talenlijst]] gebruiken, met voor u relevante talen",
 	"ext-uls-compact-no-results": "Deze pagina is niet beschikbaar in de taal waarin u zocht.",
 	"ext-uls-setlang-error": "Er is een fout opgetreden tijdens het bijwerken van de voorkeurstaal. Fout: $1",
 	"ext-uls-setlang-unknown-error": "Er is een onbekende fout opgetreden",
