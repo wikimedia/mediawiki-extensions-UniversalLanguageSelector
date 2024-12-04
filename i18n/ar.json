@@ -70,7 +70,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|بقية الوصلات: $1}}",
 	"ext-uls-compact-link-info": "كل اللغات (الاختيار الابتدائي من الاختيارات الشائعة بواسطتك وبواسطة آخرين)",
 	"prefs-languages": "اللغات",
-	"ext-uls-compact-language-links-preference": "استخدم [[$1|قائمة اللغات المدمجة]]، لعرض اللغات المتعلقة بك.",
+	"ext-uls-compact-language-links-preference": "استخدم [[$1|قائمة اللغات المدمجة]]، لعرض اللغات المتعلقة بك",
 	"ext-uls-compact-no-results": "هذه الصفحة غير متاحة في اللغة التي بحثت بها.",
 	"ext-uls-setlang-error": "حدث خطأ أثناء تحديث لغتك المفضلة، الخطأ: $1",
 	"ext-uls-setlang-unknown-error": "خطأ غير معروف",
