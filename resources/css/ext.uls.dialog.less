@@ -3,35 +3,33 @@
 
 .uls-dialog {
 	position: fixed;
-	z-index: 500;
+	z-index: @z-index-overlay;
 	display: none;
 	background-color: @background-color-base;
-	border: @border-width-base @border-style-base @border-color-subtle;
-	border-color: rgba( 0, 0, 0, 0.2 );
-	box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.2 );
+	border: @border-subtle;
+	box-shadow: @box-shadow-drop-xx-large;
 	background-clip: padding-box;
 	width: @uls-dialog-width;
 	top: 30%;
 	left: 50%;
 	margin-left: -( @uls-dialog-width / 2 );
 	margin-top: -40px;
-	padding: 16px;
+	padding: @spacing-100;
 
-	@media screen and ( max-width: 599px ) {
-		width: 100%;
+	@media screen and ( max-width: @max-width-breakpoint-mobile ) {
+		width: @size-full;
 		left: 0;
-		margin-left: 0;
+		margin-left: @spacing-0;
 		box-sizing: border-box;
 	}
 }
 
 .uls-overlay {
-	height: 100vh;
-	width: 100vw;
-	background-color: #54595d;
-	opacity: 0.87;
+	height: @size-viewport-height-full;
+	width: @size-viewport-width-full;
+	background: @background-color-backdrop-dark;
 	display: none;
-	z-index: 300;
+	z-index: @z-index-overlay-backdrop;
 	position: fixed;
 	top: 0;
 }
