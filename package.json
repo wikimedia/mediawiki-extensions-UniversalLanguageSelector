@@ -2,12 +2,10 @@
 	"name": "UniversalLanguageSelector",
 	"private": true,
 	"scripts": {
-		"build-lib": "./scripts/build.sh",
 		"minify:svg": "svgo --config=.svgo.config.js --quiet --recursive --folder resources/images/",
 		"test": "grunt test"
 	},
 	"devDependencies": {
-		"@wikimedia/codex-design-tokens": "1.17.0",
 		"eslint-config-wikimedia": "0.28.2",
 		"grunt": "1.6.1",
 		"grunt-banana-checker": "0.13.0",
