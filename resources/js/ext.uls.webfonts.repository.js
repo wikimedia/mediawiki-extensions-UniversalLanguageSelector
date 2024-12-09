@@ -23,6 +23,7 @@
 		],
 		"ar": [
 			"system",
+			"NotoSansArabic",
 			"Amiri"
 		],
 		"arb": [
@@ -702,6 +703,16 @@
 		},
 		"NotoNastaliqUrdu Bold": {
 			"woff2": "NotoNastaliqUrdu/NotoNastaliqUrdu-Bold.woff2?a8aac"
+		},
+		"NotoSansArabic": {
+			"woff2": "NotoSansArabic/NotoSansArabic-Regular.woff2?5518b",
+			"variants": {
+				"bold": "NotoSansArabic bold"
+			}
+		},
+		"NotoSansArabic bold": {
+			"fontweight": "bold",
+			"woff2": "NotoSansArabic/NotoSansArabic-Bold.woff2?3809f"
 		},
 		"NotoSansSundanese Regular": {
 			"woff2": "NotoSansSundanese/NotoSansSundanese-Regular.woff2?97973"
