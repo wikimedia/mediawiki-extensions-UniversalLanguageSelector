@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Diskdance",
+			"GuoPC",
 			"Li3939108",
 			"Liuxinyu970226",
 			"Shirayuki",
@@ -70,7 +71,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|还有$1种语言}}",
 	"ext-uls-compact-link-info": "所有语言（来自您和其他人共同选择的初始选项）",
 	"prefs-languages": "语言",
-	"ext-uls-compact-language-links-preference": "使用[[$1|紧凑的语言列表]]，该列表包含与您相关的语言。",
+	"ext-uls-compact-language-links-preference": "使用[[$1|紧凑的语言列表]]，该列表包含与您相关的语言",
 	"ext-uls-compact-no-results": "此页面未以您搜索的语言提供。",
 	"ext-uls-setlang-error": "更新您的首选语言时出错。错误：$1",
 	"ext-uls-setlang-unknown-error": "未知错误",
