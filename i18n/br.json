@@ -62,7 +62,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Unan|$1}} ouzhpenn",
 	"ext-uls-compact-link-info": "An holl yezhoù (dibab kentañ eus dibaboù boutin ganeoc’h ha re all)",
 	"prefs-languages": "Yezhoù",
-	"ext-uls-compact-language-links-preference": "Ober gant ur [[$1|roll yezhoù fetis]], gant yezhoù dereat evidoc’h.",
+	"ext-uls-compact-language-links-preference": "Ober gant ur [[$1|roll yezhoù fetis]], gant yezhoù dereat evidoc’h",
 	"ext-uls-compact-no-results": "N’eus ket eus ar bajenn-mañ er yezh ho peus klasket.",
 	"ext-uls-setlang-error": "Ur fazi e oa e-kerzh nevesaat ho yezh karetañ. Fazi: $1",
 	"ext-uls-setlang-unknown-error": "Fazi dianav",
