@@ -61,7 +61,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Ett|$1}} til",
 	"ext-uls-compact-link-info": "Alle språk (innledende utvalg fra felles valg av deg og andre)",
 	"prefs-languages": "Språk",
-	"ext-uls-compact-language-links-preference": "Bruk [[$1|kompakte språklenker]] med språk som er relevante for deg.",
+	"ext-uls-compact-language-links-preference": "Bruk [[$1|kompakte språklenker]] med språk som er relevante for deg",
 	"ext-uls-compact-no-results": "Denne siden er ikke tilgjengelig på språket du søkte på.",
 	"ext-uls-setlang-error": "En feil oppsto under oppdatering av ditt foretrukne språk. Feil: $1",
 	"ext-uls-setlang-unknown-error": "Ukjent feil",
