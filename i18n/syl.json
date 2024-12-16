@@ -20,6 +20,10 @@
 	"ext-uls-display-settings-font-settings": "ꠚꠘ꠆ꠐꠞ ꠌꠦꠐꠤꠋ",
 	"ext-uls-webfonts-settings-info-link": "ꠀꠞꠅ ꠔꠁꠔ꠆ꠔ",
 	"ext-uls-ime-help": "ꠇꠤꠟꠣꠘ ꠛꠦꠛꠀꠞ",
+	"jquery-ime-other-languages": "ꠀꠞ ꠜꠣꠡꠣꠁꠘ",
 	"jquery-ime-help": "ꠡꠣꠁꠎ꠆ꠎ",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|ꠀꠞꠧꠇꠐꠣ|$1 ꠀꠞꠧ}}"
+	"ext-uls-input-disable-notification-undo": "ꠚꠤꠞꠔ",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ꠀꠞꠧꠇꠐꠣ|$1 ꠀꠞꠧ}}",
+	"prefs-languages": "ꠜꠣꠡꠣꠁꠘ",
+	"ext-uls-empty-state-header": "ꠀꠛꠅ ꠇꠘꠥ ꠜꠣꠡꠣꠄ ꠘꠣꠄ"
 }
