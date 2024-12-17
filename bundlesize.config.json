@@ -10,5 +10,9 @@
 	{
 		"resourceModule": "ext.uls.pt",
 		"maxSize": "0.5 kB"
+	},
+	{
+		"resourceModule": "ext.uls.compactlinks",
+		"maxSize": "2.1 kB"
 	}
 ]
