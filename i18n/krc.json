@@ -60,7 +60,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Энтда бир|Дагъыда $1}}",
 	"ext-uls-compact-link-info": "Бютеу тилле (сизни эмда башхаланы ортакъ сайлауларындан биринчи сайлау)",
 	"prefs-languages": "Тилле",
-	"ext-uls-compact-language-links-preference": "Къуру сеннге келишген [[$1|тил тизмени]] хайырлан.",
+	"ext-uls-compact-language-links-preference": "Къуру сеннге келишген [[$1|тил тизмени]] хайырлан",
 	"ext-uls-compact-no-results": "Бу бет, сиз излеген тилде джокъду.",
 	"ext-uls-setlang-error": "Сиз сайлагъан тил джангыртылгъан заманда халат болду. Халат:$1",
 	"ext-uls-setlang-unknown-error": "Билинмеген халат",
