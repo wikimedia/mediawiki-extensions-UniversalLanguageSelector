@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"EbelleMarcel"
+			"EbelleMarcel",
+			"Olivier Moukodi"
 		]
 	},
 	"uls-plang-title-languages": "Bwambo",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|mō̱|$1 pe̱te̱}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Ewɔ|$1 yá pényá}}"
 }

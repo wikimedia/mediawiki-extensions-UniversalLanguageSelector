@@ -63,7 +63,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1| ਇੱਕ ਹੋਰ | $1 ਹੋਰ}}",
 	"ext-uls-compact-link-info": "ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ (ਤੁਹਾਡੇ ਅਤੇ ਹੋਰਾਂ ਵੱਲੋਂ ਆਮ ਚੋਣਾਂ ਵਿੱਚੋਂ ਸ਼ੁਰੂਆਤੀ ਚੋਣ)",
 	"prefs-languages": "ਭਾਸ਼ਾਵਾਂ",
-	"ext-uls-compact-language-links-preference": "ਤੁਹਾਡੇ ਨਾਲ ਸੰਬੰਧਿਤ ਭਾਸ਼ਾਵਾਂ ਦੇ ਨਾਲ, ਇੱਕ [[$1|ਸੰਕੁਚਿਤ ਭਾਸ਼ਾ ਸੂਚੀ]] ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+	"ext-uls-compact-language-links-preference": "ਤੁਹਾਡੇ ਨਾਲ ਸੰਬੰਧਿਤ ਭਾਸ਼ਾਵਾਂ ਦੀ, ਇੱਕ [[$1|ਸੰਘਣੀ ਭਾਸ਼ਾ ਸੂਚੀ]] ਦੀ ਵਰਤੋਂ ਕਰੋ।",
 	"ext-uls-compact-no-results": "ਇਹ ਸਫ਼ਾ ਉਸ ਭਾਸ਼ਾ ਵਿੱਚ ਉਪਲਬਧ ਨਹੀਂ ਹੈ ਜਿਸ ਦੀ ਤੁਸੀਂ ਭਾਲ ਕੀਤੀ ਸੀ।",
 	"ext-uls-setlang-error": "ਤੁਹਾਡੀ ਪਸੰਦੀਦਾ ਭਾਸ਼ਾ ਨੂੰ ਅੱਪਡੇਟ ਕਰਨ ਦੌਰਾਨ ਇੱਕ ਤਰੁੱਟੀ ਆਈ ਸੀ। ਤਰੁੱਟੀ: $1",
 	"ext-uls-setlang-unknown-error": "ਅਗਿਆਤ ਤਰੁੱਟੀ",
