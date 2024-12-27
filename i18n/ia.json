@@ -58,7 +58,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Un altere|$1 alteres}}",
 	"ext-uls-compact-link-info": "Tote le linguas (selection initial de linguas frequentemente seligite per te e alteres)",
 	"prefs-languages": "Linguas",
-	"ext-uls-compact-language-links-preference": "Usar un [[$1|lista compacte de linguas]] con le linguas relevante pro te.",
+	"ext-uls-compact-language-links-preference": "Usar un [[$1|lista compacte de linguas]] con le linguas relevante pro te",
 	"ext-uls-compact-no-results": "Iste pagina non es disponibile in le lingua que tu cerca.",
 	"ext-uls-setlang-error": "Un error ha occurrite durante le actualisation de tu lingua preferite. Error: $1",
 	"ext-uls-setlang-unknown-error": "Error incognite",
