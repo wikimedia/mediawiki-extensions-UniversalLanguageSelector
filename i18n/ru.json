@@ -74,7 +74,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Ещё $1}}",
 	"ext-uls-compact-link-info": "Все языки (изначальная выборка — это языки, которые чаще всего использовались вами и другими)",
 	"prefs-languages": "Языки",
-	"ext-uls-compact-language-links-preference": "Использовать [[$1|компактный список языков]] с подходящими вам языками.",
+	"ext-uls-compact-language-links-preference": "Использовать [[$1|компактный список языков]] с подходящими вам языками",
 	"ext-uls-compact-no-results": "Эта страница недоступна на выбранном вами языке.",
 	"ext-uls-setlang-error": "При обновлении предпочитаемого языка произошла ошибка. Сообщение: $1",
 	"ext-uls-setlang-unknown-error": "Неизвестная ошибка",
