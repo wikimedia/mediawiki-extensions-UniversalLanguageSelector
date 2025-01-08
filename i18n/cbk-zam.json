@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Aristorkle",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Maga Lenguaje"
+	"uls-plang-title-languages": "Maga lenguaje",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Uno más|$1 más}}"
 }
