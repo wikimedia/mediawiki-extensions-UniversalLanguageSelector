@@ -106,6 +106,8 @@ class LanguageNameIndexer extends Maintenance {
 			'ca' => [ 'valencia' ],
 			// Compatibility with the old name and other Chinese varieties
 			'cdo' => [ 'chinese min dong' ],
+			// Alternate names for Anufo in linguistic literature
+			'cko' => [ 'chakosi', 'chokosi', 'tchokossi' ],
 			// Older name, see T375891
 			'dtp' => [ 'bundu-liwan, dusun' ],
 			// Spanish, the transliteration of the autonym is often used for searching
