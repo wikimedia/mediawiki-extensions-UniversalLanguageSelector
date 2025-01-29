@@ -67,7 +67,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Ще $1}}",
 	"ext-uls-compact-link-info": "Усі мови (початковий вибір з поширених виборів Вами та іншими)",
 	"prefs-languages": "Мови",
-	"ext-uls-compact-language-links-preference": "Використовувати [[$1|компактний список мов]], з мовами, що є релевантними для Вас.",
+	"ext-uls-compact-language-links-preference": "Використовувати [[$1|компактний список мов]], з мовами, що є релевантними для вас.",
 	"ext-uls-compact-no-results": "Ця сторінка недоступна тією мовою, якою Ви проводили пошук.",
 	"ext-uls-setlang-error": "Сталася помилка при оновленні мови, якій ви віддаєте перевагу. Помилка: $1",
 	"ext-uls-setlang-unknown-error": "Невідома помилка",
