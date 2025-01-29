@@ -5,5 +5,5 @@
 		]
 	},
 	"uls-plang-title-languages": "Mineenere",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Undi|$1 indi}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|-ndi|$1 -ndi}}"
 }

@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Valentine Badu"
+			"Valentine Badu",
+			"Yaw tuba"
 		]
 	},
 	"uls-plang-title-languages": "Neɛ",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Dɔɔnwo $1|Dɔɔnwo $1}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|dɔɔnwo|$1 dɔɔnwo}}"
 }
