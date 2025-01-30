@@ -12,6 +12,7 @@
 			"Shirayuki",
 			"Sujiniku",
 			"Takot",
+			"Waki285",
 			"にょきにょき"
 		]
 	},
@@ -69,7 +70,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|他 $1 言語}}",
 	"ext-uls-compact-link-info": "すべての言語 (共通の選択肢からご自分ほか利用者が選んだ第1候補)",
 	"prefs-languages": "言語",
-	"ext-uls-compact-language-links-preference": "[[$1|折りたたんだコンパクトな言語間リンク]]を使い、自分に関係のあるもののみ表示。",
+	"ext-uls-compact-language-links-preference": "[[$1|折りたたんだコンパクトな言語間リンク]]を使い、自分に関係のあるもののみ表示",
 	"ext-uls-compact-no-results": "このページは、検索した言語版にはありません。",
 	"ext-uls-setlang-error": "言語の個人設定の更新中にエラーが発生しました。エラー: $1",
 	"ext-uls-setlang-unknown-error": "不明なエラー",
