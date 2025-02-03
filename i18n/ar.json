@@ -13,7 +13,8 @@
 			"زكريا",
 			"محمد أحمد عبد الفتاح",
 			"FShbib",
-			"Mohanad"
+			"Mohanad",
+			"XIDME"
 		]
 	},
 	"uls-desc": "يمنح المستخدم عدة طرق لاختيار لغة، وضبط إعدادات اللغة",
@@ -31,7 +32,7 @@
 	"ext-uls-display-settings-desc": "حدد اللغة المستخدمة للقوائم والخطوط.",
 	"ext-uls-language-settings-title": "إعدادات اللغة",
 	"ext-uls-language-settings-apply": "طبق الإعدادات",
-	"ext-uls-language-settings-cancel": "ألغ",
+	"ext-uls-language-settings-cancel": "إلغاء",
 	"ext-uls-language-buttons-help": "غير لغة القوائم. لن تتغير لغة المحتوى.",
 	"ext-uls-display-settings-font-settings": "إعدادات الخط",
 	"ext-uls-display-settings-ui-language": "لغة العرض",

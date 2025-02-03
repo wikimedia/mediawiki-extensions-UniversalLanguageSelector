@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Exec8"
+		]
+	},
+	"uls-plang-title-languages": "Saray lenguahe",
+	"ext-uls-compact-link-count": "{{PLURAL:$1| Sakey ni| $1 ni}}"
+}
