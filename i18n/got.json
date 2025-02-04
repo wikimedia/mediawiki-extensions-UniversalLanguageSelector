@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Iketsi",
-			"Xð"
+			"Xð",
+			"Gothicspeaker"
 		]
 	},
 	"uls-plang-title-languages": "𐍂𐌰𐌶𐌳𐍉𐍃",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|𐌽𐌰𐌿𐌷 𐌰𐌹𐌽|$1 𐌼𐌰𐌹𐍃}}",
 	"prefs-languages": "𐍂𐌰𐌶𐌳𐍉𐍃"
 }
