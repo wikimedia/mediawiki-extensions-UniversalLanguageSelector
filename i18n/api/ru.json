@@ -16,5 +16,8 @@
 	"apihelp-ulslocalization-summary": "Получить локализацию ULS на указанном языке.",
 	"apihelp-ulslocalization-param-language": "Код языка.",
 	"apihelp-ulslocalization-example-1": "Получить тамильскую локализацию",
-	"apihelp-ulslocalization-example-2": "Получить локализацию на хинди"
+	"apihelp-ulslocalization-example-2": "Получить локализацию на хинди",
+	"apihelp-ulssetlang-summary": "Обновить избранный пользователем язык интерфейса.",
+	"apihelp-ulssetlang-param-languagecode": "Код избранного языка.",
+	"apierror-ulssetlang-anon-notallowed": "Анонимным пользователям не разрешено менять язык интерфейса."
 }
