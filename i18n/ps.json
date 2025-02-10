@@ -57,8 +57,16 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "تاسې د ننوتلو اوزارونه هر وخت، د ژبې لړليک څنگ ته، د ژب-امستنو څخه چارنولی شی.",
 	"ext-uls-language-settings-applying": "غوښتنه کيږی...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|يوه بله ژبه|$1 نورې ژبي}}",
+	"ext-uls-compact-link-info": "ټولې ژبې (ستاسو او نورو لخوا د عامو انتخابونو څخه لومړنۍ انتخاب)",
 	"prefs-languages": "ژبې",
+	"ext-uls-compact-no-results": "دا مخ په هغه ژبه کې نشته چې تاسو يې لټون کړی.",
+	"ext-uls-setlang-unknown-error": "ناجوته ستونزه",
+	"ext-uls-setlang-accept": "بدلون ومنئ",
+	"ext-uls-setlang-loading": "غوښتنه کيږی...",
+	"ext-uls-setlang-cancel": "مه يې بدلوئ",
 	"ext-uls-actions-menu-language-settings-item-label": "د ژبې سیټینګ خلاصول",
+	"ext-uls-empty-state-header": "تر اوسه پورې ژبې نشته",
+	"ext-uls-empty-state-desc": "اوس مهال هیڅ کوم ژبې نشته",
 	"ext-uls-empty-state-header-actions-available": "تر اوسه هیڅ ژبه نسته؟ بله ژبه ورګډه کړئ",
 	"ext-uls-empty-state-desc-actions-available": "همدغه مالومات په نورو ژبو کي چمتو کړئ"
 }
