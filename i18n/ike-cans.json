@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"MysticVoyager"
 		]
 	},
-	"uls-plang-title-languages": "ᐅᖃᕐᕕᐅᑎᔪᑦ"
+	"uls-plang-title-languages": "ᐅᖃᕐᕕᐅᑎᔪᑦ",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ᐊᑕᐅᓯᒃᑲᓐᓂᖅ|$1 ᓱᓕᒃᑲᓐᓂᖅ}}"
 }
