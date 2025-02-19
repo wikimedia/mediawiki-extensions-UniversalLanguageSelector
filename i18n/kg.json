@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"BOKOBA VEROLY"
 		]
 	},
-	"uls-plang-title-languages": "Ndinga"
+	"uls-plang-title-languages": "Ndinga",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|One more|$1 more}}"
 }
