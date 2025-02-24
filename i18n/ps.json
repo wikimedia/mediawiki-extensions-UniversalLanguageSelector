@@ -4,7 +4,8 @@
 			"Ahmed-Najib-Biabani-Ibrahimkhel",
 			"Amjad Khan",
 			"Baloch Khan",
-			"Af420"
+			"Af420",
+			"شاه زمان پټان"
 		]
 	},
 	"uls-plang-title-languages": "ژبې",
@@ -66,7 +67,7 @@
 	"ext-uls-setlang-cancel": "مه يې بدلوئ",
 	"ext-uls-actions-menu-language-settings-item-label": "د ژبې سیټینګ خلاصول",
 	"ext-uls-empty-state-header": "تر اوسه پورې ژبې نشته",
-	"ext-uls-empty-state-desc": "اوس مهال هیڅ کوم ژبې نشته",
+	"ext-uls-empty-state-desc": "اوسمهال هېڅ ژبې نشته",
 	"ext-uls-empty-state-header-actions-available": "تر اوسه هیڅ ژبه نسته؟ بله ژبه ورګډه کړئ",
 	"ext-uls-empty-state-desc-actions-available": "همدغه مالومات په نورو ژبو کي چمتو کړئ"
 }
