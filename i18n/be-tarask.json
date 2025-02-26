@@ -60,6 +60,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Яшчэ $1}}",
 	"ext-uls-compact-link-info": "Усе мовы (пачатковая выбарка паводле частых Вашых і іншых запытаў)",
 	"prefs-languages": "Мовы",
-	"ext-uls-compact-language-links-preference": "Ужываць [[$1|кампактны сьпіс моваў]] з прыдатнымі для вас мовамі.",
+	"ext-uls-compact-language-links-preference": "Ужываць [[$1|кампактны сьпіс моваў]] з прыдатнымі для вас мовамі",
 	"ext-uls-compact-no-results": "Гэтая старонка не даступная на мове, якой вы шукалі."
 }
