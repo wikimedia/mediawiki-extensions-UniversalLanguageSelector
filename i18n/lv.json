@@ -60,7 +60,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Vēl $1}}",
 	"ext-uls-compact-link-info": "Visas valodas (sākotnējā izlase no biežākajām tavām un citu izvēlēm)",
 	"prefs-languages": "Valodas",
-	"ext-uls-compact-language-links-preference": "Izmantot [[$1|kompakto valodu sarakstu]] ar tev atbilstošajām valodām.",
+	"ext-uls-compact-language-links-preference": "Izmantot [[$1|kompakto valodu sarakstu]] ar tev atbilstošajām valodām",
 	"ext-uls-compact-no-results": "Šī lapa nav pieejama tevis atrastajā valodā.",
 	"ext-uls-setlang-error": "Iestatot tavu izvēlēto valodu, notika kļūda: $1",
 	"ext-uls-setlang-unknown-error": "Nezināma kļūda",
