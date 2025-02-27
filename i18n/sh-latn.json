@@ -10,9 +10,17 @@
 	"uls-desc": "Daje korisniku nekoliko načina da izabere jezik i da prilagodi postavke jezika",
 	"uls-plang-title-languages": "Jezici",
 	"ext-uls-select-language-settings-icon-tooltip": "Postavke jezika",
+	"ext-uls-display-settings-desc": "Postavite jezik menija i fontova.",
 	"ext-uls-language-settings-title": "Postavke jezika",
 	"ext-uls-language-settings-cancel": "Otkaži",
 	"jquery-ime-other-languages": "Drugi jezici",
+	"ext-uls-input-enable": "Uključi alatke za unos",
+	"ext-uls-input-disable-info": "Alatke za unos su isključene.",
 	"ext-uls-compact-link-count": "Još {{PLURAL:$1|1=jedan|$1}}",
-	"ext-uls-add-languages-button-label": "Dodaj jezike"
+	"ext-uls-compact-no-results": "Stranica nije dostupna na jeziku koji tražite.",
+	"ext-uls-actions-menu-language-settings-item-label": "Promijenite postavke jezika",
+	"ext-uls-empty-state-header": "Nema drugih jezika",
+	"ext-uls-empty-state-desc": "Trenutno nema dostupnih jezika.",
+	"ext-uls-empty-state-desc-actions-available": " Omogućite dostupnost stranice na više jezika.",
+	"ext-uls-add-languages-button-label": "Dodajte jezike"
 }
