@@ -1,7 +1,7 @@
 {
 	"name": "UniversalLanguageSelector",
 	"namemsg": "uls-extensionname",
-	"version": "2024-07-16",
+	"version": "2025-03-15",
 	"author": [
 		"Alolita Sharma",
 		"Amir Aharoni",
@@ -18,7 +18,7 @@
 	"descriptionmsg": "uls-desc",
 	"license-name": "GPL-2.0-or-later OR MIT",
 	"requires": {
-		"MediaWiki": ">= 1.42.0"
+		"MediaWiki": ">= 1.43.0"
 	},
 	"Hooks": {
 		"BeforePageDisplay": "main",
