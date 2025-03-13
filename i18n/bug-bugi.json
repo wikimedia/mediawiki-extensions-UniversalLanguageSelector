@@ -1,6 +1,9 @@
 {
 	"@metadata": {
-		"authors": []
+		"authors": [
+			"Rdwnnr"
+		]
 	},
-	"uls-plang-title-languages": "ᨅᨔ"
+	"uls-plang-title-languages": "ᨅᨔ",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|ᨌᨙᨉᨗ ᨄᨙᨆᨛ|$1 ᨄᨙᨆᨛ}}"
 }
