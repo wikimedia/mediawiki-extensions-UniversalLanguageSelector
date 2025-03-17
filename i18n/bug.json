@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xð"
+			"Xð",
+			"Rdwnnr"
 		]
 	},
-	"uls-plang-title-languages": "ᨅᨔ"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Céddi pémeng|$1 pémeng}}"
 }
