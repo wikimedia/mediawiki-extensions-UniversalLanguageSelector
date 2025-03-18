@@ -13,7 +13,7 @@
 	"apihelp-languagesearch-example-2": "Procurar \"ഫി\"",
 	"apihelp-languagesearch-example-3": "Procurar \"ഫി\", permitindo un erro ortográfico",
 	"apihelp-ulslocalization-summary": "Obter a localización do ULS na lingua dada.",
-	"apihelp-ulslocalization-param-language": "Código da lingua.",
+	"apihelp-ulslocalization-param-language": "Código de lingua.",
 	"apihelp-ulslocalization-example-1": "Obter a localización en támil",
 	"apihelp-ulslocalization-example-2": "Obter a localización en hindi",
 	"apihelp-ulssetlang-summary": "Actualiza a lingua da interface preferida do usuario.",

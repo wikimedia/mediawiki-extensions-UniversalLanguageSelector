@@ -4,13 +4,14 @@
 			"Brad Jorsch",
 			"Liuxinyu970226",
 			"Nemo bis",
-			"Siebrand"
+			"Siebrand",
+			"Amire80"
 		]
 	},
 	"apihelp-languagesearch-summary": "{{doc-apihelp-summary|languagesearch}}",
 	"apihelp-languagesearch-param-search": "The \"search string\" is the string that the user asks to search for, in looking for a language name.\n\n{{doc-apihelp-param|languagesearch|search}}\n{{Identical|Search string}}",
 	"apihelp-languagesearch-param-typos": "{{doc-apihelp-param|languagesearch|typos}}",
-	"apihelp-languagesearch-example-1": "Label of a command which produces a search by \"te\". Translate as imperative or noun as most suitable for your language.\n----\n{{doc-apihelp-example|languagesearch}}",
+	"apihelp-languagesearch-example-1": "Label of a command which produces a search by \"te\". \"Search\" is an action.\n----\n{{doc-apihelp-example|languagesearch}}",
 	"apihelp-languagesearch-example-2": "Label of an example command which produces a search. Translate as appropriate to your language.\n----\n{{doc-apihelp-example|languagesearch}}",
 	"apihelp-languagesearch-example-3": "Description of a function where the user can find an available language by providing a name to search for.\n----\n{{doc-apihelp-example|languagesearch}}",
 	"apihelp-ulslocalization-summary": "{{doc-apihelp-summary|ulslocalization}}",
