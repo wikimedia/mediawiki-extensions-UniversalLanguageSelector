@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Fierodelveneto",
-			"GatoSelvadego"
+			"GatoSelvadego",
+			"Candalua"
 		]
 	},
 	"uls-desc": "Fornise ai utenti difarenti modi de sełesionar na lengua e de sistemar łe inpostasion de ła lengua",
@@ -54,5 +55,6 @@
 	"ext-uls-input-disable-notification-info-personal": "Xe posibiłe ativar in calsiasi momento i strumenti de scritura da łe inpostasion de ła lengua.",
 	"ext-uls-input-disable-notification-info-interlanguage": "Xe posibiłe ativar in calsiasi momento i strumenti de scritura da łe inpostasion de ła lengua, visin a ła vacheta de łe lengue.",
 	"ext-uls-language-settings-applying": "Drio aplicar...",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Uno piassè|$1 piassè}}",
 	"ext-uls-compact-language-links-preference": "Dòpara na [[$1|lista scursada de łéngue]], co łe łéngue da ti prefarie."
 }
