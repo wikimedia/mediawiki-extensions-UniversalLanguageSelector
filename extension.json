@@ -1,416 +1,416 @@
 {
-	"name": "UniversalLanguageSelector",
-	"namemsg": "uls-extensionname",
-	"version": "2025-03-15",
-	"author": [
-		"Alolita Sharma",
-		"Amir Aharoni",
-		"Arun Ganesh",
-		"Brandon Harris",
-		"Kartik Mistry",
-		"Niharika Kohli",
-		"Niklas Laxström",
-		"Pau Giner",
-		"Santhosh Thottingal",
-		"Siebrand Mazeland"
-	],
-	"url": "https://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector",
-	"descriptionmsg": "uls-desc",
-	"license-name": "GPL-2.0-or-later OR MIT",
-	"requires": {
-		"MediaWiki": ">= 1.43.0"
-	},
-	"Hooks": {
-		"BeforePageDisplay": "main",
-		"GetBetaFeaturePreferences": "main",
-		"GetPreferences": "main",
-		"MakeGlobalVariablesScript": "main",
-		"ResourceLoaderGetConfigVars": "main",
-		"SkinAfterPortlet": "main",
-		"SkinTemplateNavigation::Universal": "main",
-		"UserGetLanguageObject": "main"
-	},
-	"HookHandlers": {
-		"main": {
-			"class": "UniversalLanguageSelector\\Hooks",
-			"services": [
-				"MainConfig",
-				"UserOptionsLookup",
-				"StatsdDataFactory",
-				"LanguageNameUtils"
-			]
-		}
-	},
-	"APIModules": {
-		"languagesearch": "UniversalLanguageSelector\\Api\\ApiLanguageSearch",
-		"ulslocalization": {
-			"class": "UniversalLanguageSelector\\Api\\ApiULSLocalization",
-			"services": [
-				"LanguageNameUtils"
-			]
-		},
-		"ulssetlang": {
-			"class": "UniversalLanguageSelector\\Api\\ApiULSSetLanguage",
-			"services": [
-				"UserOptionsManager",
-				"LanguageNameUtils"
-			]
-		}
-	},
-	"MessagesDirs": {
-		"UniversalLanguageSelector": [
-			"i18n",
-			"i18n/api"
-		]
-	},
-	"AutoloadClasses": {
-		"LanguageNameSearch": "data/LanguageNameSearch.php",
-		"LanguageNameSearchData": "data/LanguageNameSearchData.php"
-	},
-	"AutoloadNamespaces": {
-		"UniversalLanguageSelector\\": "includes/"
-	},
-	"DefaultUserOptions": {
-		"uls-preferences": "",
-		"compact-language-links": true
-	},
-	"config": {
-		"ULSGeoService": {
-			"description": "ULS can use a geolocation service to suggest languages based on the country the user is vising from. If set to an URL it will query that service which must return an object which has key \"country_code\" or \"country\". For example https://api.ipstack.com/check?access_key=yourkey&fields=country_code. Setting this to false will prevent built-in geolocation from being used. You can also provide your own geolocation by assigning such object to window.Geo.",
-			"value": false
-		},
-		"ULSEnable": {
-			"description": "Enable language selection, compact language links, input methods and webfonts for everyone, unless the behavior is overridden by the configuration variables below. Even if false the classes and resource loader modules are registered for the use of other extensions. Language changing via cookie or setlang query parameter is not possible.",
-			"value": true
-		},
-		"ULSAnonCanChangeLanguage": {
-			"description": "Allow anonymous users to change language with cookie and setlang query parameter. Do not use if you are caching anonymous page views without taking cookies into account. Does not have any effect if $wgULSEnable is set to false. @since 2013.04",
-			"value": true
-		},
-		"ULSLanguageDetection": {
-			"description": "Try to use preferred interface language for anonymous users. Do not use if you are caching anonymous page views without taking Accept-Language into account. Does not have any effect if $wgULSEnable is set to false.",
-			"value": true
-		},
-		"ULSIMEEnabled": {
-			"description": "Enable the input methods feature for all users by default. Can be controlled by the user.",
-			"value": true
-		},
-		"ULSWebfontsEnabled": {
-			"description": "Enable the webfonts feature for all users by default. Can be controlled by the user. @since 2014.02",
-			"value": true
-		},
-		"ULSPosition": {
-			"description": "The location and the form of the language selection trigger.  The possible values are: (a) \"personal\"- as a link near the username or the log in link in the personal toolbar (default). (b) \"interlanguage\": as an icon near the header of the list of interlanguage  links in the sidebar.",
-			"value": "personal"
-		},
-		"ULSImeSelectors": {
-			"description": "Array of jQuery selectors of elements on which IME should be enabled. @since 2013.11",
-			"value": [
-				"input:not([type])",
-				"input[type=text]",
-				"input[type=search]",
-				"textarea",
-				"[contenteditable]"
-			]
-		},
-		"ULSNoImeSelectors": {
-			"description": "Array of jQuery selectors of elements on which IME must not be enabled. @since 2013.07",
-			"value": [
-				"#wpCaptchaWord",
-				".ace_text-input",
-				".ve-ce-surface-paste",
-				".ve-ce-surface-clipboardHandler",
-				".ve-ce-surface-readOnly [contenteditable]"
-			]
-		},
-		"ULSNoWebfontsSelectors": {
-			"description": "Array of jQuery selectors of elements on which webfonts must not be applied. By default exclude elements with .autonym because that style set font as Autonym @since 2013.09",
-			"value": [
-				"#p-lang li.interlanguage-link > a"
-			]
-		},
-		"ULSFontRepositoryBasePath": {
-			"description": "Base path of ULS font repository. If not set, will be set to 'UniversalLanguageSelector/data/fontrepo/fonts/', relative to $wgExtensionAssetsPath. @since 2013.10",
-			"value": false
-		},
-		"ULSCompactLanguageLinksBetaFeature": {
-			"description": "Set compact interlanguage links as beta feature or not. If set false, compact interlanguage links will be available by default to all users.",
-			"value": false
-		}
-	},
-	"callback": "UniversalLanguageSelector\\Hooks::setVersionConstant",
-	"ResourceFileModulePaths": {
-		"localBasePath": "resources",
-		"remoteExtPath": "UniversalLanguageSelector/resources"
-	},
-	"ResourceModules": {
-		"ext.uls.common": {
-			"scripts": [
-				"js/ext.uls.common.js"
-			],
-			"styles": "css/ext.uls.less",
-			"skinStyles": {
-				"monobook": "css/ext.uls-monobook.css",
-				"vector": "css/ext.uls-vector.less",
-				"vector-2022": "css/ext.uls-vector.less"
-			},
-			"dependencies": [
-				"jquery.uls.data",
-				"mediawiki.api",
-				"mediawiki.cookie",
-				"mediawiki.storage",
-				"mediawiki.user"
-			]
-		},
-		"ext.uls.compactlinks": {
-			"packageFiles": [
-				"js/ext.uls.compactlinks.js"
-			],
-			"styles": "css/ext.uls.compactlinks.less",
-			"dependencies": [
-				"mediawiki.jqueryMsg",
-				"mediawiki.language",
-				"ext.uls.common"
-			],
-			"messages": [
-				"ext-uls-compact-link-count",
-				"ext-uls-compact-link-info",
-				"ext-uls-compact-no-results"
-			]
-		},
-		"ext.uls.ime": {
-			"scripts": "js/ext.uls.ime.js",
-			"dependencies": [
-				"ext.uls.common",
-				"ext.uls.preferences",
-				"ext.uls.mediawiki",
-				"ext.uls.messages",
-				"jquery.ime"
-			],
-			"messages": [
-				"uls-ime-helppage"
-			]
-		},
-		"ext.uls.displaysettings": {
-			"scripts": [
-				"js/ext.uls.inputsettings.js",
-				"js/ext.uls.displaysettings.js"
-			],
-			"styles": [
-				"css/ext.uls.inputsettings.less",
-				"css/ext.uls.displaysettings.less"
-			],
-			"dependencies": [
-				"ext.uls.ime",
-				"jquery.ime",
-				"ext.uls.languagesettings",
-				"ext.uls.mediawiki",
-				"ext.uls.webfonts",
-				"mediawiki.api",
-				"mediawiki.user"
-			]
-		},
-		"ext.uls.geoclient": {
-			"scripts": "js/ext.uls.geoclient.js",
-			"dependencies": [
-				"mediawiki.cookie"
-			]
-		},
-		"ext.uls.i18n": {
-			"scripts": "js/ext.uls.i18n.js",
-			"dependencies": [
-				"jquery.i18n",
-				"mediawiki.util"
-			]
-		},
-		"ext.uls.interface": {
-			"packageFiles": [
-				"js/ext.uls.interface.js",
-				"js/ext.uls.launch.js",
-				"js/ext.uls.actions.menu.js",
-				"js/ext.uls.actions.menu.item.js",
-				"js/ext.uls.actions.menu.items.registry.js",
-				{
-					"name": "data.json",
-					"callback": "UniversalLanguageSelector\\Hooks::getModuleData",
-					"versionCallback": "UniversalLanguageSelector\\Hooks::getModuleDataSummary"
-				}
-			],
-			"styles": [
-				"css/ext.uls.interface.less",
-				"css/ext.uls.actions.menu.less"
-			],
-			"dependencies": [
-				"mediawiki.jqueryMsg",
-				"mediawiki.storage",
-				"mediawiki.user",
-				"ext.uls.webfonts",
-				"oojs"
-			],
-			"messages": [
-				"uls-plang-title-languages",
-				"ext-uls-select-language-settings-icon-tooltip",
-				"ext-uls-undo-language-tooltip-text",
-				"ext-uls-undo-language-tooltip-text-local",
-				"ext-uls-actions-menu-language-settings-item-label",
-				"ext-uls-add-languages-button-label",
-				"ext-uls-empty-state-header",
-				"ext-uls-empty-state-desc",
-				"ext-uls-empty-state-header-actions-available",
-				"ext-uls-empty-state-desc-actions-available"
-			]
-		},
-		"ext.uls.interlanguage": {
-			"styles": "css/ext.uls.interlanguage.less"
-		},
-		"ext.uls.languagenames": {
-			"class": "UniversalLanguageSelector\\ResourceLoaderULSModule"
-		},
-		"ext.uls.languagesettings": {
-			"scripts": "js/ext.uls.languagesettings.js",
-			"styles": "css/ext.uls.languagesettings.less",
-			"dependencies": [
-				"ext.uls.messages",
-				"ext.uls.preferences",
-				"jquery.uls.grid"
-			]
-		},
-		"ext.uls.mediawiki": {
-			"scripts": "js/ext.uls.mediawiki.js",
-			"dependencies": [
-				"ext.uls.common",
-				"ext.uls.languagenames",
-				"ext.uls.messages",
-				"jquery.uls",
-				"ext.uls.webfonts",
-				"jquery.uls.grid",
-				"mediawiki.util"
-			]
-		},
-		"ext.uls.messages": {
-			"class": "UniversalLanguageSelector\\ResourceLoaderULSJsonMessageModule",
-			"dependencies": "ext.uls.i18n"
-		},
-		"ext.uls.preferences": {
-			"scripts": "js/ext.uls.preferences.js",
-			"dependencies": [
-				"mediawiki.api",
-				"mediawiki.user",
-				"mediawiki.storage"
-			]
-		},
-		"ext.uls.preferencespage": {
-			"styles": "css/ext.uls.preferencespage.less"
-		},
-		"ext.uls.pt": {
-			"styles": "css/ext.uls.pt.less",
-			"skinStyles": {
-				"default": [
-					"css/ext.uls.pt.less",
-					"css/ext.uls.pt-default.less"
-				],
-				"vector": [
-					"css/ext.uls.pt-vector.less"
-				],
-				"monobook": [
-					"css/ext.uls.pt.less",
-					"css/ext.uls.pt-default.less",
-					"css/ext.uls.pt-monobook.less"
-				]
-			}
-		},
-		"ext.uls.setlang": {
-			"styles": [
-				"css/ext.uls.dialog.less",
-				"css/ext.uls.setlang.less"
-			],
-			"scripts": [
-				"js/ext.uls.dialog.js",
-				"js/ext.uls.setlang.js"
-			],
-			"dependencies": [
-				"mediawiki.api",
-				"mediawiki.jqueryMsg",
-				"@wikimedia/codex",
-				"web2017-polyfills"
-			],
-			"messages": [
-				"ext-uls-setlang-error",
-				"ext-uls-setlang-unknown-error",
-				"ext-uls-setlang-heading",
-				"ext-uls-setlang-message",
-				"ext-uls-setlang-accept",
-				"ext-uls-setlang-cancel",
-				"ext-uls-setlang-loading"
-			]
-		},
-		"ext.uls.webfonts": {
-			"scripts": "js/ext.uls.webfonts.js",
-			"dependencies": [
-				"ext.uls.preferences",
-				"jquery.client"
-			]
-		},
-		"ext.uls.webfonts.repository": {
-			"scripts": [
-				"../lib/jquery.webfonts/src/jquery.webfonts.js",
-				"js/ext.uls.webfonts.repository.js"
-			]
-		},
-		"jquery.ime": {
-			"scripts": "jquery.ime/jquery.ime.js",
-			"styles": "jquery.ime/css/jquery.ime.css",
-			"localBasePath": "lib",
-			"remoteExtPath": "UniversalLanguageSelector/lib"
-		},
-		"jquery.uls": {
-			"scripts": [
-				"jquery.uls/src/jquery.uls.core.js",
-				"jquery.uls/src/jquery.uls.lcd.js",
-				"jquery.uls/src/jquery.uls.languagefilter.js"
-			],
-			"styles": [
-				"jquery.uls/css/jquery.uls.css",
-				"jquery.uls/css/jquery.uls.lcd.css"
-			],
-			"dependencies": [
-				"jquery.i18n",
-				"jquery.uls.data",
-				"jquery.uls.grid"
-			],
-			"localBasePath": "lib",
-			"remoteExtPath": "UniversalLanguageSelector/lib"
-		},
-		"jquery.uls.data": {
-			"scripts": [
-				"jquery.uls/src/jquery.uls.data.js",
-				"jquery.uls/src/jquery.uls.data.utils.js"
-			],
-			"localBasePath": "lib",
-			"remoteExtPath": "UniversalLanguageSelector/lib"
-		},
-		"jquery.uls.grid": {
-			"styles": "jquery.uls/css/jquery.uls.grid.css",
-			"localBasePath": "lib",
-			"remoteExtPath": "UniversalLanguageSelector/lib"
-		},
-		"rangy.core": {
-			"scripts": "rangy/rangy-core.js",
-			"localBasePath": "lib",
-			"remoteExtPath": "UniversalLanguageSelector/lib"
-		}
-	},
-	"QUnitTestModule": {
-		"localBasePath": "tests/qunit",
-		"remoteExtPath": "UniversalLanguageSelector/tests/qunit",
-		"scripts": [
-			"ext.uls.tests.js"
-		],
-		"dependencies": [
-			"jquery.uls",
-			"ext.uls.common",
-			"ext.uls.preferences"
-		]
-	},
-	"manifest_version": 2
+    "name": "UniversalLanguageSelector",
+    "namemsg": "uls-extensionname",
+    "version": "2025-03-15 [https://www.mediawiki.org/wiki/MLEB MLEB 2025.03]",
+    "author": [
+        "Alolita Sharma",
+        "Amir Aharoni",
+        "Arun Ganesh",
+        "Brandon Harris",
+        "Kartik Mistry",
+        "Niharika Kohli",
+        "Niklas Laxström",
+        "Pau Giner",
+        "Santhosh Thottingal",
+        "Siebrand Mazeland"
+    ],
+    "url": "https://www.mediawiki.org/wiki/Extension:UniversalLanguageSelector",
+    "descriptionmsg": "uls-desc",
+    "license-name": "GPL-2.0-or-later OR MIT",
+    "requires": {
+        "MediaWiki": ">= 1.43.0"
+    },
+    "Hooks": {
+        "BeforePageDisplay": "main",
+        "GetBetaFeaturePreferences": "main",
+        "GetPreferences": "main",
+        "MakeGlobalVariablesScript": "main",
+        "ResourceLoaderGetConfigVars": "main",
+        "SkinAfterPortlet": "main",
+        "SkinTemplateNavigation::Universal": "main",
+        "UserGetLanguageObject": "main"
+    },
+    "HookHandlers": {
+        "main": {
+            "class": "UniversalLanguageSelector\\Hooks",
+            "services": [
+                "MainConfig",
+                "UserOptionsLookup",
+                "StatsdDataFactory",
+                "LanguageNameUtils"
+            ]
+        }
+    },
+    "APIModules": {
+        "languagesearch": "UniversalLanguageSelector\\Api\\ApiLanguageSearch",
+        "ulslocalization": {
+            "class": "UniversalLanguageSelector\\Api\\ApiULSLocalization",
+            "services": [
+                "LanguageNameUtils"
+            ]
+        },
+        "ulssetlang": {
+            "class": "UniversalLanguageSelector\\Api\\ApiULSSetLanguage",
+            "services": [
+                "UserOptionsManager",
+                "LanguageNameUtils"
+            ]
+        }
+    },
+    "MessagesDirs": {
+        "UniversalLanguageSelector": [
+            "i18n",
+            "i18n/api"
+        ]
+    },
+    "AutoloadClasses": {
+        "LanguageNameSearch": "data/LanguageNameSearch.php",
+        "LanguageNameSearchData": "data/LanguageNameSearchData.php"
+    },
+    "AutoloadNamespaces": {
+        "UniversalLanguageSelector\\": "includes/"
+    },
+    "DefaultUserOptions": {
+        "uls-preferences": "",
+        "compact-language-links": true
+    },
+    "config": {
+        "ULSGeoService": {
+            "description": "ULS can use a geolocation service to suggest languages based on the country the user is vising from. If set to an URL it will query that service which must return an object which has key \"country_code\" or \"country\". For example https://api.ipstack.com/check?access_key=yourkey&fields=country_code. Setting this to false will prevent built-in geolocation from being used. You can also provide your own geolocation by assigning such object to window.Geo.",
+            "value": false
+        },
+        "ULSEnable": {
+            "description": "Enable language selection, compact language links, input methods and webfonts for everyone, unless the behavior is overridden by the configuration variables below. Even if false the classes and resource loader modules are registered for the use of other extensions. Language changing via cookie or setlang query parameter is not possible.",
+            "value": true
+        },
+        "ULSAnonCanChangeLanguage": {
+            "description": "Allow anonymous users to change language with cookie and setlang query parameter. Do not use if you are caching anonymous page views without taking cookies into account. Does not have any effect if $wgULSEnable is set to false. @since 2013.04",
+            "value": true
+        },
+        "ULSLanguageDetection": {
+            "description": "Try to use preferred interface language for anonymous users. Do not use if you are caching anonymous page views without taking Accept-Language into account. Does not have any effect if $wgULSEnable is set to false.",
+            "value": true
+        },
+        "ULSIMEEnabled": {
+            "description": "Enable the input methods feature for all users by default. Can be controlled by the user.",
+            "value": true
+        },
+        "ULSWebfontsEnabled": {
+            "description": "Enable the webfonts feature for all users by default. Can be controlled by the user. @since 2014.02",
+            "value": true
+        },
+        "ULSPosition": {
+            "description": "The location and the form of the language selection trigger.  The possible values are: (a) \"personal\"- as a link near the username or the log in link in the personal toolbar (default). (b) \"interlanguage\": as an icon near the header of the list of interlanguage  links in the sidebar.",
+            "value": "personal"
+        },
+        "ULSImeSelectors": {
+            "description": "Array of jQuery selectors of elements on which IME should be enabled. @since 2013.11",
+            "value": [
+                "input:not([type])",
+                "input[type=text]",
+                "input[type=search]",
+                "textarea",
+                "[contenteditable]"
+            ]
+        },
+        "ULSNoImeSelectors": {
+            "description": "Array of jQuery selectors of elements on which IME must not be enabled. @since 2013.07",
+            "value": [
+                "#wpCaptchaWord",
+                ".ace_text-input",
+                ".ve-ce-surface-paste",
+                ".ve-ce-surface-clipboardHandler",
+                ".ve-ce-surface-readOnly [contenteditable]"
+            ]
+        },
+        "ULSNoWebfontsSelectors": {
+            "description": "Array of jQuery selectors of elements on which webfonts must not be applied. By default exclude elements with .autonym because that style set font as Autonym @since 2013.09",
+            "value": [
+                "#p-lang li.interlanguage-link > a"
+            ]
+        },
+        "ULSFontRepositoryBasePath": {
+            "description": "Base path of ULS font repository. If not set, will be set to 'UniversalLanguageSelector/data/fontrepo/fonts/', relative to $wgExtensionAssetsPath. @since 2013.10",
+            "value": false
+        },
+        "ULSCompactLanguageLinksBetaFeature": {
+            "description": "Set compact interlanguage links as beta feature or not. If set false, compact interlanguage links will be available by default to all users.",
+            "value": false
+        }
+    },
+    "callback": "UniversalLanguageSelector\\Hooks::setVersionConstant",
+    "ResourceFileModulePaths": {
+        "localBasePath": "resources",
+        "remoteExtPath": "UniversalLanguageSelector/resources"
+    },
+    "ResourceModules": {
+        "ext.uls.common": {
+            "scripts": [
+                "js/ext.uls.common.js"
+            ],
+            "styles": "css/ext.uls.less",
+            "skinStyles": {
+                "monobook": "css/ext.uls-monobook.css",
+                "vector": "css/ext.uls-vector.less",
+                "vector-2022": "css/ext.uls-vector.less"
+            },
+            "dependencies": [
+                "jquery.uls.data",
+                "mediawiki.api",
+                "mediawiki.cookie",
+                "mediawiki.storage",
+                "mediawiki.user"
+            ]
+        },
+        "ext.uls.compactlinks": {
+            "packageFiles": [
+                "js/ext.uls.compactlinks.js"
+            ],
+            "styles": "css/ext.uls.compactlinks.less",
+            "dependencies": [
+                "mediawiki.jqueryMsg",
+                "mediawiki.language",
+                "ext.uls.common"
+            ],
+            "messages": [
+                "ext-uls-compact-link-count",
+                "ext-uls-compact-link-info",
+                "ext-uls-compact-no-results"
+            ]
+        },
+        "ext.uls.ime": {
+            "scripts": "js/ext.uls.ime.js",
+            "dependencies": [
+                "ext.uls.common",
+                "ext.uls.preferences",
+                "ext.uls.mediawiki",
+                "ext.uls.messages",
+                "jquery.ime"
+            ],
+            "messages": [
+                "uls-ime-helppage"
+            ]
+        },
+        "ext.uls.displaysettings": {
+            "scripts": [
+                "js/ext.uls.inputsettings.js",
+                "js/ext.uls.displaysettings.js"
+            ],
+            "styles": [
+                "css/ext.uls.inputsettings.less",
+                "css/ext.uls.displaysettings.less"
+            ],
+            "dependencies": [
+                "ext.uls.ime",
+                "jquery.ime",
+                "ext.uls.languagesettings",
+                "ext.uls.mediawiki",
+                "ext.uls.webfonts",
+                "mediawiki.api",
+                "mediawiki.user"
+            ]
+        },
+        "ext.uls.geoclient": {
+            "scripts": "js/ext.uls.geoclient.js",
+            "dependencies": [
+                "mediawiki.cookie"
+            ]
+        },
+        "ext.uls.i18n": {
+            "scripts": "js/ext.uls.i18n.js",
+            "dependencies": [
+                "jquery.i18n",
+                "mediawiki.util"
+            ]
+        },
+        "ext.uls.interface": {
+            "packageFiles": [
+                "js/ext.uls.interface.js",
+                "js/ext.uls.launch.js",
+                "js/ext.uls.actions.menu.js",
+                "js/ext.uls.actions.menu.item.js",
+                "js/ext.uls.actions.menu.items.registry.js",
+                {
+                    "name": "data.json",
+                    "callback": "UniversalLanguageSelector\\Hooks::getModuleData",
+                    "versionCallback": "UniversalLanguageSelector\\Hooks::getModuleDataSummary"
+                }
+            ],
+            "styles": [
+                "css/ext.uls.interface.less",
+                "css/ext.uls.actions.menu.less"
+            ],
+            "dependencies": [
+                "mediawiki.jqueryMsg",
+                "mediawiki.storage",
+                "mediawiki.user",
+                "ext.uls.webfonts",
+                "oojs"
+            ],
+            "messages": [
+                "uls-plang-title-languages",
+                "ext-uls-select-language-settings-icon-tooltip",
+                "ext-uls-undo-language-tooltip-text",
+                "ext-uls-undo-language-tooltip-text-local",
+                "ext-uls-actions-menu-language-settings-item-label",
+                "ext-uls-add-languages-button-label",
+                "ext-uls-empty-state-header",
+                "ext-uls-empty-state-desc",
+                "ext-uls-empty-state-header-actions-available",
+                "ext-uls-empty-state-desc-actions-available"
+            ]
+        },
+        "ext.uls.interlanguage": {
+            "styles": "css/ext.uls.interlanguage.less"
+        },
+        "ext.uls.languagenames": {
+            "class": "UniversalLanguageSelector\\ResourceLoaderULSModule"
+        },
+        "ext.uls.languagesettings": {
+            "scripts": "js/ext.uls.languagesettings.js",
+            "styles": "css/ext.uls.languagesettings.less",
+            "dependencies": [
+                "ext.uls.messages",
+                "ext.uls.preferences",
+                "jquery.uls.grid"
+            ]
+        },
+        "ext.uls.mediawiki": {
+            "scripts": "js/ext.uls.mediawiki.js",
+            "dependencies": [
+                "ext.uls.common",
+                "ext.uls.languagenames",
+                "ext.uls.messages",
+                "jquery.uls",
+                "ext.uls.webfonts",
+                "jquery.uls.grid",
+                "mediawiki.util"
+            ]
+        },
+        "ext.uls.messages": {
+            "class": "UniversalLanguageSelector\\ResourceLoaderULSJsonMessageModule",
+            "dependencies": "ext.uls.i18n"
+        },
+        "ext.uls.preferences": {
+            "scripts": "js/ext.uls.preferences.js",
+            "dependencies": [
+                "mediawiki.api",
+                "mediawiki.user",
+                "mediawiki.storage"
+            ]
+        },
+        "ext.uls.preferencespage": {
+            "styles": "css/ext.uls.preferencespage.less"
+        },
+        "ext.uls.pt": {
+            "styles": "css/ext.uls.pt.less",
+            "skinStyles": {
+                "default": [
+                    "css/ext.uls.pt.less",
+                    "css/ext.uls.pt-default.less"
+                ],
+                "vector": [
+                    "css/ext.uls.pt-vector.less"
+                ],
+                "monobook": [
+                    "css/ext.uls.pt.less",
+                    "css/ext.uls.pt-default.less",
+                    "css/ext.uls.pt-monobook.less"
+                ]
+            }
+        },
+        "ext.uls.setlang": {
+            "styles": [
+                "css/ext.uls.dialog.less",
+                "css/ext.uls.setlang.less"
+            ],
+            "scripts": [
+                "js/ext.uls.dialog.js",
+                "js/ext.uls.setlang.js"
+            ],
+            "dependencies": [
+                "mediawiki.api",
+                "mediawiki.jqueryMsg",
+                "@wikimedia/codex",
+                "web2017-polyfills"
+            ],
+            "messages": [
+                "ext-uls-setlang-error",
+                "ext-uls-setlang-unknown-error",
+                "ext-uls-setlang-heading",
+                "ext-uls-setlang-message",
+                "ext-uls-setlang-accept",
+                "ext-uls-setlang-cancel",
+                "ext-uls-setlang-loading"
+            ]
+        },
+        "ext.uls.webfonts": {
+            "scripts": "js/ext.uls.webfonts.js",
+            "dependencies": [
+                "ext.uls.preferences",
+                "jquery.client"
+            ]
+        },
+        "ext.uls.webfonts.repository": {
+            "scripts": [
+                "../lib/jquery.webfonts/src/jquery.webfonts.js",
+                "js/ext.uls.webfonts.repository.js"
+            ]
+        },
+        "jquery.ime": {
+            "scripts": "jquery.ime/jquery.ime.js",
+            "styles": "jquery.ime/css/jquery.ime.css",
+            "localBasePath": "lib",
+            "remoteExtPath": "UniversalLanguageSelector/lib"
+        },
+        "jquery.uls": {
+            "scripts": [
+                "jquery.uls/src/jquery.uls.core.js",
+                "jquery.uls/src/jquery.uls.lcd.js",
+                "jquery.uls/src/jquery.uls.languagefilter.js"
+            ],
+            "styles": [
+                "jquery.uls/css/jquery.uls.css",
+                "jquery.uls/css/jquery.uls.lcd.css"
+            ],
+            "dependencies": [
+                "jquery.i18n",
+                "jquery.uls.data",
+                "jquery.uls.grid"
+            ],
+            "localBasePath": "lib",
+            "remoteExtPath": "UniversalLanguageSelector/lib"
+        },
+        "jquery.uls.data": {
+            "scripts": [
+                "jquery.uls/src/jquery.uls.data.js",
+                "jquery.uls/src/jquery.uls.data.utils.js"
+            ],
+            "localBasePath": "lib",
+            "remoteExtPath": "UniversalLanguageSelector/lib"
+        },
+        "jquery.uls.grid": {
+            "styles": "jquery.uls/css/jquery.uls.grid.css",
+            "localBasePath": "lib",
+            "remoteExtPath": "UniversalLanguageSelector/lib"
+        },
+        "rangy.core": {
+            "scripts": "rangy/rangy-core.js",
+            "localBasePath": "lib",
+            "remoteExtPath": "UniversalLanguageSelector/lib"
+        }
+    },
+    "QUnitTestModule": {
+        "localBasePath": "tests/qunit",
+        "remoteExtPath": "UniversalLanguageSelector/tests/qunit",
+        "scripts": [
+            "ext.uls.tests.js"
+        ],
+        "dependencies": [
+            "jquery.uls",
+            "ext.uls.common",
+            "ext.uls.preferences"
+        ]
+    },
+    "manifest_version": 2
 }
