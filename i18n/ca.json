@@ -68,5 +68,6 @@
 	"ext-uls-setlang-loading": "S’està aplicant…",
 	"ext-uls-actions-menu-language-settings-item-label": "Preferències de llengua",
 	"ext-uls-empty-state-header": "Cap altra llengua",
-	"ext-uls-empty-state-desc": "No hi ha cap altra llengua disponible per ara"
+	"ext-uls-empty-state-desc": "No hi ha cap altra llengua disponible per ara",
+	"ext-uls-add-languages-button-label": "Afegiu llengües"
 }
