@@ -7,6 +7,7 @@
 			"RiceCracker12"
 		]
 	},
+	"uls-extensionname": "Tùy chọn ngôn ngữ phổ biến",
 	"uls-desc": "Cung cấp cho người dùng một số cách để chọn ngôn ngữ và điều chỉnh tùy chọn ngôn ngữ",
 	"uls-plang-title-languages": "Ngôn ngữ",
 	"ext-uls-select-language-settings-icon-tooltip": "Tùy chọn ngôn ngữ",
@@ -70,8 +71,10 @@
 	"ext-uls-setlang-accept": "Chấp nhận thay đổi",
 	"ext-uls-setlang-loading": "Đang áp dụng…",
 	"ext-uls-setlang-cancel": "Đừng thay đổi",
+	"ext-uls-actions-menu-language-settings-item-label": "Mở tùy chọn ngôn ngữ",
 	"ext-uls-empty-state-header": "Chưa có ngôn ngữ nào",
 	"ext-uls-empty-state-desc": "Hiện không có ngôn ngữ nào có sẵn",
 	"ext-uls-empty-state-header-actions-available": "Chưa có ngôn ngữ nào. Thêm một ngôn ngữ mới?",
-	"ext-uls-empty-state-desc-actions-available": "Làm nội dung này có sẵn trong nhiều ngôn ngữ hơn."
+	"ext-uls-empty-state-desc-actions-available": "Làm nội dung này có sẵn trong nhiều ngôn ngữ hơn.",
+	"ext-uls-add-languages-button-label": "Thêm ngôn ngữ"
 }
