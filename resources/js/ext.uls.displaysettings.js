@@ -240,7 +240,7 @@
 
 			for ( const lang in suggestedLanguages ) {
 				// Skip already found languages
-				if ( languagesForButtons.indexOf( suggestedLanguages[ lang ] ) > -1 ) {
+				if ( languagesForButtons.includes( suggestedLanguages[ lang ] ) ) {
 					continue;
 				}
 

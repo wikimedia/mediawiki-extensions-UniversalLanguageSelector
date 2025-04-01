@@ -36,8 +36,8 @@
 		for ( i = 0; i < items.length; i++ ) {
 			if (
 				// Only add if unique and matches source
-				target.indexOf( items[ i ] ) === -1 &&
-				source.indexOf( items[ i ] ) !== -1
+				!target.includes( items[ i ] ) &&
+				source.includes( items[ i ] )
 			) {
 				target.push( items[ i ] );
 			}
@@ -281,7 +281,7 @@
 		const languagesInText = [];
 		Array.prototype.forEach.call( document.querySelectorAll( '#mw-content-text [lang]' ), ( el ) => {
 			const lang = mw.uls.convertMediaWikiLanguageCodeToULS( el.lang );
-			if ( languagesInText.indexOf( lang ) === -1 ) {
+			if ( !languagesInText.includes( lang ) ) {
 				languagesInText.push( lang );
 			}
 		} );

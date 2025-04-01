@@ -50,7 +50,7 @@
 		const imeLanguageList = previousIMELanguages.concat( mw.uls.getFrequentLanguageList() );
 
 		imeLanguageList.forEach( ( lang ) => {
-			if ( unique.indexOf( lang ) === -1 ) {
+			if ( !unique.includes( lang ) ) {
 				unique.push( lang );
 			}
 		} );

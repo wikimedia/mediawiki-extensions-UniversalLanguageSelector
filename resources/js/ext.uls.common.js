@@ -228,7 +228,7 @@
 			for ( let j = 0; j < lists[ i ].length; j++ ) {
 				const lang = lists[ i ][ j ];
 				// Make flat, make unique, and ignore unknown/unsupported languages
-				if ( ret.indexOf( lang ) === -1 && $.uls.data.getAutonym( lang ) !== lang ) {
+				if ( !ret.includes( lang ) && $.uls.data.getAutonym( lang ) !== lang ) {
 					ret.push( lang );
 				}
 			}

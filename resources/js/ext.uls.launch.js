@@ -2,7 +2,6 @@
  * Setup code for content language selector dialog
  */
 
-/* eslint-disable no-implicit-globals */
 let commonInterlanguageList = null;
 
 /**
@@ -12,7 +11,7 @@ let commonInterlanguageList = null;
 function filterForCommonLanguagesForUser( languageCodes ) {
 	if ( commonInterlanguageList === null ) {
 		commonInterlanguageList = mw.uls.getFrequentLanguageList()
-			.filter( ( language ) => languageCodes.indexOf( language ) >= 0 );
+			.filter( ( language ) => languageCodes.includes( language ) );
 	}
 
 	return commonInterlanguageList;
