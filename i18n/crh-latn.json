@@ -1,12 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"Don Alessandro",
 			"TayfunEt.",
 			"Xð",
 			"Zolgoyo"
 		]
 	},
 	"uls-plang-title-languages": "Tiller",
+	"ext-uls-language-settings-preferences-link": "Daa çoq til sazlamaları",
 	"ext-uls-display-settings-language-tab": "Til",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|bir dane daa|$1 daa}}",
 	"prefs-languages": "Tiller"
