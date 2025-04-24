@@ -7,8 +7,8 @@
 
 namespace UniversalLanguageSelector;
 
-use FormatJson;
-use Maintenance;
+use MediaWiki\Json\FormatJson;
+use MediaWiki\Maintenance\Maintenance;
 
 // Standard boilerplate to define $IP
 if ( getenv( 'MW_INSTALL_PATH' ) !== false ) {

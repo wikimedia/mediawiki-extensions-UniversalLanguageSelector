@@ -20,11 +20,11 @@
 
 namespace UniversalLanguageSelector\Api;
 
-use ApiBase;
-use ApiMain;
-use DeferredUpdates;
+use MediaWiki\Api\ApiBase;
+use MediaWiki\Api\ApiMain;
+use MediaWiki\Deferred\DeferredUpdates;
 use MediaWiki\Languages\LanguageNameUtils;
-use MediaWiki\User\UserOptionsManager;
+use MediaWiki\User\Options\UserOptionsManager;
 use Wikimedia\ParamValidator\ParamValidator;
 
 /**

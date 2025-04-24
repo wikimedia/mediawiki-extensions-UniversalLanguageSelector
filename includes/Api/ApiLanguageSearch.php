@@ -20,8 +20,8 @@
 
 namespace UniversalLanguageSelector\Api;
 
-use ApiBase;
 use LanguageNameSearch;
+use MediaWiki\Api\ApiBase;
 use Wikimedia\ParamValidator\ParamValidator;
 
 /**

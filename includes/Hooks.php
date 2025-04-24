@@ -20,29 +20,29 @@
 
 namespace UniversalLanguageSelector;
 
-use ExtensionRegistry;
-use IBufferingStatsdDataFactory;
-use IContextSource;
-use LanguageCode;
 use MediaWiki\Babel\Babel;
 use MediaWiki\Config\Config;
+use MediaWiki\Context\IContextSource;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\BetaFeatures\BetaFeatures;
-use MediaWiki\Hook\BeforePageDisplayHook;
-use MediaWiki\Hook\MakeGlobalVariablesScriptHook;
 use MediaWiki\Hook\UserGetLanguageObjectHook;
 use MediaWiki\Html\Html;
+use MediaWiki\Language\LanguageCode;
 use MediaWiki\Languages\LanguageNameUtils;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Output\Hook\BeforePageDisplayHook;
+use MediaWiki\Output\Hook\MakeGlobalVariablesScriptHook;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Preferences\Hook\GetPreferencesHook;
+use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\ResourceLoader\Context;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderGetConfigVarsHook;
 use MediaWiki\Skins\Hook\SkinAfterPortletHook;
+use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
-use MediaWiki\User\UserOptionsLookup;
-use RequestContext;
 use Skin;
 use SkinTemplate;
+use Wikimedia\Stats\IBufferingStatsdDataFactory;
 
 /**
  * @phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName

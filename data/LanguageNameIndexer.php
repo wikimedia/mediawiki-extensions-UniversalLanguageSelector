@@ -27,6 +27,7 @@ require_once "$IP/maintenance/Maintenance.php";
 use MediaWiki\Extension\CLDR\LanguageNames;
 use MediaWiki\Languages\LanguageNameUtils;
 use MediaWiki\MainConfigNames;
+use MediaWiki\Maintenance\Maintenance;
 
 class LanguageNameIndexer extends Maintenance {
 	public function __construct() {
