@@ -58,7 +58,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|ješče jedin|ješče $1}}",
 	"ext-uls-compact-link-info": "Vse jezyky (prvonačelny izbor iz jezykov često izbiranyh vami i drugymi)",
 	"prefs-languages": "Jezyky",
-	"ext-uls-compact-language-links-preference": "Upotrěbjati [[$1|kompaktny spisok jezykov]] s važnymi za vas jezykami.",
+	"ext-uls-compact-language-links-preference": "Upotrěbjati [[$1|kompaktny spisok jezykov]] s važnymi za vas jezykami",
 	"ext-uls-compact-no-results": "Tuta stranica ne jest dostupna na poiskanom vami jezyku.",
 	"ext-uls-setlang-error": "Došlo do pogrěšky pri obnovjenju vašego prědpočitajemogo jezyka. Pogrěška: $1",
 	"ext-uls-setlang-unknown-error": "Neznajema pogrěška",
