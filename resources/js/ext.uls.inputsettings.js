@@ -162,8 +162,6 @@
 				return $();
 			}
 
-			const $imeLabel = $( '<label>' ).attr( 'for', imeId ).addClass( 'cdx-radio__label' );
-
 			const $inputMethodItem = $( '<input>' ).attr( {
 				type: 'radio',
 				class: 'cdx-radio__input',
@@ -196,20 +194,37 @@
 				}
 			}
 
-			$imeLabel.append(
-				$( '<strong>' )
-					.addClass( 'uls-input-settings-name' )
-					.text( name + ' ' ),
-				$( '<span>' )
-					.addClass( 'uls-input-settings-description' )
-					.text( description ),
-				$helplink
-			);
-
 			const $icon = $( '<span>' ).addClass( 'cdx-radio__icon' );
+
+			const $imeLabelText = $( '<span>' )
+				.addClass( 'cdx-label__label__text' )
+				.append(
+					$( '<strong>' )
+						.addClass( 'uls-input-settings-name' )
+						.text( name + ' ' ),
+					$( '<span>' )
+						.addClass( 'uls-input-settings-description' )
+						.text( description ),
+					$helplink
+				);
+
+			const $imeLabelTag = $( '<label>' )
+				.attr( 'for', imeId )
+				.addClass( 'cdx-label__label' )
+				.append( $imeLabelText );
+
+			const $imeLabel = $( '<div>' )
+				.addClass( 'cdx-label cdx-radio__label' )
+				.append( $imeLabelTag );
+
+			// Wrap input, icon, and label inside the wrapper for Flexbox.
+			const $inputWrapper = $( '<div>' )
+				.addClass( 'cdx-radio__wrapper' )
+				.append( $inputMethodItem, $icon, $imeLabel );
+
 			return $( '<div>' )
 				.addClass( 'cdx-radio' )
-				.append( $inputMethodItem, $icon, $imeLabel );
+				.append( $inputWrapper );
 		},
 
 		/**
