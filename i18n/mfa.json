@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mirlim"
+		]
+	},
+	"uls-plang-title-languages": "Bahaso",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|So lagi|$1 lagi}}"
+}
