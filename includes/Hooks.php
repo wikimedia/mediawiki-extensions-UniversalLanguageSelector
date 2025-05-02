@@ -150,18 +150,6 @@ class Hooks implements
 	}
 
 	/**
-	 * Adds Codex styles in a way that is compatible with MLEB.
-	 *
-	 * @param OutputPage $out
-	 */
-	private function loadCodexStyles( OutputPage $out ) {
-		// Only needed for skins that do not load Codex.
-		if ( !in_array( $out->getSkin()->getSkinName(), [ 'minerva', 'vector-2022' ] ) ) {
-			$out->addModuleStyles( 'codex-search-styles' );
-		}
-	}
-
-	/**
 	 * @param OutputPage $out
 	 * @param Skin $skin
 	 * Hook: BeforePageDisplay
@@ -184,8 +172,6 @@ class Hooks implements
 
 		if ( !$override && $isCompactLinksEnabled ) {
 			$out->addModules( 'ext.uls.compactlinks' );
-			// Add styles for the default button in the page.
-			$this->loadCodexStyles( $out );
 		}
 
 		if ( is_string( $this->config->get( 'ULSGeoService' ) ) ) {
@@ -195,7 +181,6 @@ class Hooks implements
 		if ( $this->isEnabled() ) {
 			// Enable UI language selection for the user.
 			$out->addModules( 'ext.uls.interface' );
-			$this->loadCodexStyles( $out );
 
 			$title = $out->getTitle();
 			$isMissingPage = !$title || !$title->exists();

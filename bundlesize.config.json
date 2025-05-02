@@ -5,7 +5,7 @@
 	},
 	{
 		"resourceModule": "ext.uls.interface",
-		"maxSize": "6.1 kB"
+		"maxSize": "10 kB"
 	},
 	{
 		"resourceModule": "ext.uls.pt",
@@ -13,6 +13,6 @@
 	},
 	{
 		"resourceModule": "ext.uls.compactlinks",
-		"maxSize": "2.1 kB"
+		"maxSize": "4.8 kB"
 	}
 ]

@@ -163,6 +163,9 @@
 			]
 		},
 		"ext.uls.compactlinks": {
+			"class": "MediaWiki\\ResourceLoader\\CodexModule",
+			"codexComponents": [ "CdxButton", "CdxRadio" ],
+			"codexStyleOnly": true,
 			"packageFiles": [
 				"js/ext.uls.compactlinks.js"
 			],
@@ -192,6 +195,9 @@
 			]
 		},
 		"ext.uls.displaysettings": {
+			"class": "MediaWiki\\ResourceLoader\\CodexModule",
+			"codexComponents": [ "CdxButton", "CdxRadio" ],
+			"codexStyleOnly": true,
 			"scripts": [
 				"js/ext.uls.inputsettings.js",
 				"js/ext.uls.displaysettings.js"
@@ -224,6 +230,8 @@
 			]
 		},
 		"ext.uls.interface": {
+			"class": "MediaWiki\\ResourceLoader\\CodexModule",
+			"codexComponents": [ "CdxButton" ],
 			"packageFiles": [
 				"js/ext.uls.interface.js",
 				"js/ext.uls.launch.js",
