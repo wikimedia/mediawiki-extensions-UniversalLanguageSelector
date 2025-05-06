@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"!!asa,njgh"
+		]
+	},
+	"uls-plang-title-languages": "omaLaka",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Omwe oindji|$1 oindji}}"
+}
