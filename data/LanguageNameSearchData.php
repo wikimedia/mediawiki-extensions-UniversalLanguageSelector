@@ -11419,7 +11419,7 @@ class LanguageNameSearchData {
 				'hmonščina' => 'hmn',
 				'hmoob dawb' => 'mww-latn',
 				'hmōng' => 'hmn',
-				'ho' => 'hoc',
+				'ho' => 'hoc-latn',
 				'ho (latin script)' => 'hoc-latn',
 				'ho dili' => 'hoc',
 				'hoka' => 'xog',
