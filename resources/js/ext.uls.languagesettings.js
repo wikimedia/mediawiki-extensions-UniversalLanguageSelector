@@ -42,7 +42,9 @@
 		settingsMenu +
 		settingsPanel +
 		'</div>';
-	const windowTemplate = '<div style="display: block;" id="language-settings-dialog" class="language-settings-dialog grid uls-menu uls-wide notheme skin-invert">' +
+	// Note that the `no-font-mode-scale` class is a temporary workaround to prevent Codex
+	// components in the dialog from scaling with text size in Vector 2022; do not use it elsewhere.
+	const windowTemplate = '<div style="display: block;" id="language-settings-dialog" class="language-settings-dialog grid uls-menu uls-wide notheme no-font-mode-scale skin-invert">' +
 		closeRow +
 		panelsRow +
 		buttonsRow +
