@@ -230,7 +230,7 @@
 			let tipsyTimer = 0;
 
 			popup.toggle( true );
-			popup.toggleClipping( false );
+			popup.toggleClipping( true );
 
 			// if the mouse is over the tooltip, do not hide
 			$( '.uls-tipsy' ).on( 'mouseover', () => {
