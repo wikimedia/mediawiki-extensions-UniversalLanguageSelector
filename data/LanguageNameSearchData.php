@@ -25816,6 +25816,7 @@ class LanguageNameSearchData {
 				'punjabi (gurmukhi-skrift)' => 'pa-guru',
 				'punjabi western' => 'pnb',
 				'punjábi' => 'pa',
+				'punu qhichwa' => 'qxp',
 				'punutapi' => 'pa',
 				'punxhabisht' => 'pa',
 				'punyabi simi' => 'pa',
@@ -26399,6 +26400,7 @@ class LanguageNameSearchData {
 				'qendror — tamazajtisht e atlasit qendror' => 'tzm',
 				'qendrore — kurdishte qendrore' => 'ckb',
 				'qendrore — oxhibuaishte qendrore' => 'ojc',
+				'qhichwa — punu qhichwa' => 'qxp',
 				'qichwa — anqash qichwa' => 'qwh',
 				'quechua — asụsụ quechua' => 'qu',
 				'quechua — huaylas ancash quechua' => 'qwh',
@@ -27214,6 +27216,7 @@ class LanguageNameSearchData {
 				'samarėjų aramių' => 'sam',
 				'samarština' => 'sam',
 				'sambala' => 'ksb',
+				'sambalpuri' => 'spv',
 				'samburisht' => 'saq',
 				'samburu' => 'saq',
 				'samburu dili' => 'saq',
@@ -46494,10 +46497,7 @@ class LanguageNameSearchData {
 		],
 		1123 => [
 			'prefix' => [
-				'𑣙𑣉𑣉 𑣎𑣋𑣜' => 'hoc',
-			],
-			'infix' => [
-				'𑣎𑣋𑣜 — 𑣙𑣉𑣉 𑣎𑣋𑣜' => 'hoc',
+				'𑣙𑣉𑣉' => 'hoc',
 			],
 		],
 		1127 => [
