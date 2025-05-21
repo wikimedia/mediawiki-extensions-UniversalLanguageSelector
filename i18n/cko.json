@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Salifu Ramatu"
+			"Salifu Ramatu",
+			"Biema"
 		]
 	},
-	"uls-plang-title-languages": "Aniem"
+	"uls-plang-title-languages": "Aniem",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|dɔŋgu kun|$1 dɔŋgu }}"
 }
