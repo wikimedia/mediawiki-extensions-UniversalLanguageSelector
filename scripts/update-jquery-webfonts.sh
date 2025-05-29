@@ -4,7 +4,7 @@ BASEDIR=$(dirname "$0")
 BASEDIR="$BASEDIR/.."
 
 DEST="$BASEDIR/lib/jquery.webfonts"
-CLONEDIR="$BASEDIR/vendor/jquery.wefonts"
+CLONEDIR="$BASEDIR/vendor/jquery.webfonts"
 
 UPSTREAM="https://github.com/wikimedia/jquery.webfonts.git"
 
