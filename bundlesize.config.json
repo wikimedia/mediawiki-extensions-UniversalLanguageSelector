@@ -14,5 +14,21 @@
 	{
 		"resourceModule": "ext.uls.compactlinks",
 		"maxSize": "4.8 kB"
+	},
+	{
+		"resourceModule": "ext.uls.webfonts",
+		"maxSize": "0.8 kB"
+	},
+	{
+		"resourceModule": "ext.uls.preferences",
+		"maxSize": "0.5 kB"
+	},
+	{
+		"resourceModule": "jquery.uls.data",
+		"maxSize": "16.7 kB"
+	},
+	{
+		"resourceModule": "ext.uls.common",
+		"maxSize": "1.9 kB"
 	}
 ]

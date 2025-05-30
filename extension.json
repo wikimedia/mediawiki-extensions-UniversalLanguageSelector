@@ -232,6 +232,7 @@
 		"ext.uls.interface": {
 			"class": "MediaWiki\\ResourceLoader\\CodexModule",
 			"codexComponents": [ "CdxButton" ],
+			"codexStyleOnly": true,
 			"packageFiles": [
 				"js/ext.uls.interface.js",
 				"js/ext.uls.launch.js",
