@@ -5,20 +5,21 @@
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
 			"Felipe L. Ewald",
-			"Fúlvio"
+			"Fúlvio",
+			"EGobi"
 		]
 	},
-	"apihelp-languagesearch-summary": "Procure nomes de idiomas em qualquer script.",
-	"apihelp-languagesearch-param-search": "Pesquisar string.",
-	"apihelp-languagesearch-param-typos": "Número de erros ortográficos permitidos na cadeia de pesquisa.",
-	"apihelp-languagesearch-example-1": "Pesquisar por \"Te\"",
-	"apihelp-languagesearch-example-2": "Pesquisar por \"ഫി\"",
-	"apihelp-languagesearch-example-3": "Pesquisar por \"ഫി\", permitindo um erro ortográfico",
-	"apihelp-ulslocalization-summary": "Obtenha a localização do ULS no idioma indicado.",
+	"apihelp-languagesearch-summary": "Procurar nomes de idiomas em qualquer escrita.",
+	"apihelp-languagesearch-param-search": "Cadeia de caracteres a ser pesquisada.",
+	"apihelp-languagesearch-param-typos": "Número de erros ortográficos permitidos na cadeia de caracteres a ser pesquisada.",
+	"apihelp-languagesearch-example-1": "Pesquisar “Te”",
+	"apihelp-languagesearch-example-2": "Pesquisar “ഫി”",
+	"apihelp-languagesearch-example-3": "Pesquisar “ഫി”, permitindo um erro ortográfico",
+	"apihelp-ulslocalization-summary": "Obter a localização do Seletor de Idiomas Universal (ULS) no idioma fornecido.",
 	"apihelp-ulslocalization-param-language": "Código do idioma.",
-	"apihelp-ulslocalization-example-1": "Obter localização Tamil",
-	"apihelp-ulslocalization-example-2": "Obter localização Hindi",
-	"apihelp-ulssetlang-summary": "Atualize o idioma de interface preferido do usuário.",
+	"apihelp-ulslocalization-example-1": "Obter localização em tamil",
+	"apihelp-ulslocalization-example-2": "Obter localização em hindi",
+	"apihelp-ulssetlang-summary": "Atualizar o idioma de interface preferido do usuário.",
 	"apihelp-ulssetlang-param-languagecode": "O código do idioma preferido.",
 	"apierror-ulssetlang-anon-notallowed": "Usuários anônimos não têm permissão para alterar o idioma da interface."
 }
