@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sauit"
+		]
+	},
+	"uls-plang-title-languages": "Тыллар",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Өссүө $1}}"
+}
