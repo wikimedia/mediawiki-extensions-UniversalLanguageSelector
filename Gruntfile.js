@@ -19,7 +19,8 @@ module.exports = function ( grunt ) {
 		},
 		stylelint: {
 			options: {
-				customSyntax: 'postcss-less'
+				customSyntax: 'postcss-less',
+				cache: true
 			},
 			src: [
 				'**/*.css',
