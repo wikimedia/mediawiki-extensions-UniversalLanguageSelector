@@ -8,7 +8,8 @@
 			"Ponor",
 			"Roberta F.",
 			"SpeedyGonsales",
-			"Xð"
+			"Xð",
+			"Hijerovit"
 		]
 	},
 	"uls-desc": "Omogućuje suradniku nekoliko načina odabira jezika i postavljanja jezičnih postavki",
@@ -27,7 +28,7 @@
 	"ext-uls-language-settings-title": "Jezične postavke",
 	"ext-uls-language-settings-apply": "Primijeni postavke",
 	"ext-uls-language-settings-cancel": "Odustani",
-	"ext-uls-language-buttons-help": "Promijenite jezik izbornika. Jezik sadržaja ne će biti promijenjen.",
+	"ext-uls-language-buttons-help": "Promijenite jezik izbornika. Jezik sadržaja neće biti promijenjen.",
 	"ext-uls-display-settings-font-settings": "Postavke fonta (ili fontova)",
 	"ext-uls-display-settings-ui-language": "Prikaži jezik",
 	"ext-uls-display-settings-anon-label": "Prikaži jezik:",
