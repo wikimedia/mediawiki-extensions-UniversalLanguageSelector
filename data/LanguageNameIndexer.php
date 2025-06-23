@@ -109,6 +109,8 @@ class LanguageNameIndexer extends Maintenance {
 			'cdo' => [ 'chinese min dong' ],
 			// Alternate names for Anufo in linguistic literature
 			'cko' => [ 'chakosi', 'chokosi', 'tchokossi' ],
+			// Dolgan (T395396)
+			'dlg' => [ 'һака' ],
 			// Older name, see T375891
 			'dtp' => [ 'bundu-liwan, dusun' ],
 			// Spanish, the transliteration of the autonym is often used for searching
