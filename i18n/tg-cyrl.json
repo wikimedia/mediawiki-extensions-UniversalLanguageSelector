@@ -3,10 +3,19 @@
 		"authors": [
 			"ToJack",
 			"Xð",
-			"ZulfiqorF"
+			"ZulfiqorF",
+			"Farorud"
 		]
 	},
 	"uls-plang-title-languages": "Забонҳо",
+	"ext-uls-select-language-settings-icon-tooltip": "Танзимоти забонӣ",
+	"ext-uls-undo-language-tooltip-text": "Забон аз $1 тағйир дода шуд",
 	"ext-uls-display-settings-language-tab": "Забон",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|тои дигар|$1 бештар\n}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|тои дигар|$1 бештар\n}}",
+	"ext-uls-setlang-accept": "Пазируфтани тағйирот",
+	"ext-uls-setlang-loading": "Дар ҳоли қабул...",
+	"ext-uls-setlang-cancel": "Тағйир надиҳед",
+	"ext-uls-actions-menu-language-settings-item-label": "Кушодани танзимоти забон",
+	"ext-uls-empty-state-header": "Забонҳо ҳоло нестанд",
+	"ext-uls-add-languages-button-label": "Иловаи забонҳо"
 }
