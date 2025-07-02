@@ -5,6 +5,7 @@
 			"NoiX180"
 		]
 	},
+	"uls-extensionname": "Pamilih&shy;Basa&shy;Universal",
 	"uls-desc": "Ngicain sang anganggé makudang cara antuk milih basa miwah nyesuaiyang setélan basa",
 	"uls-plang-title-languages": "Basa",
 	"ext-uls-select-language-settings-icon-tooltip": "Setélan basa",
@@ -59,7 +60,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Asiki malih|$1 malih}}",
 	"ext-uls-compact-link-info": "Samian basa (pilihan pamabah masal saking pilihan umum olih Ida miwah sané liyanan)",
 	"prefs-languages": "Basa",
-	"ext-uls-compact-language-links-preference": "Anggén [[$1|lis basa cutet]], antuk basa-basa sané patut sareng Ida.",
+	"ext-uls-compact-language-links-preference": "Anggén [[$1|lis basa cutet]], antuk basa-basa sané patut sareng ragané",
 	"ext-uls-compact-no-results": "Kaca puniki nénten kasedia ring basa sané Ida rereh.",
 	"ext-uls-setlang-error": "Wénten galat rikala nganyarin basa pilihan Ida. Galat: $1",
 	"ext-uls-setlang-unknown-error": "Galat sané durung kauningin",
@@ -72,5 +73,6 @@
 	"ext-uls-empty-state-header": "Durung wénten basa",
 	"ext-uls-empty-state-desc": "Ten wénten basa sané kasedia antuk sané mangkin",
 	"ext-uls-empty-state-header-actions-available": "Durung wénten basa. Wewehin sané anyar?",
-	"ext-uls-empty-state-desc-actions-available": "Dadosang kontén puniki kasedia ring langkung basa."
+	"ext-uls-empty-state-desc-actions-available": "Dadosang kontén puniki kasedia ring langkung basa.",
+	"ext-uls-add-languages-button-label": "Weweh basa"
 }
