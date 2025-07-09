@@ -9,5 +9,6 @@
 	"ext-uls-display-settings-language-tab": "語言",
 	"ext-uls-language-settings-cancel": "取消",
 	"jquery-ime-help": "說明",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|猶有$1種語言}}",
 	"prefs-languages": "語言"
 }

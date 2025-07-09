@@ -11,7 +11,8 @@
 			"Máté",
 			"R-Joe",
 			"Tacsipacsi",
-			"Tgr"
+			"Tgr",
+			"Urbalazs"
 		]
 	},
 	"uls-desc": "Többféle módot kínál a felhasználónak nyelv kiválasztására és a nyelvi beállítások módosítására",
@@ -29,7 +30,7 @@
 	"ext-uls-display-settings-desc": "A menükben és a betűkészlet kiválasztásához használt nyelv megadása",
 	"ext-uls-language-settings-title": "Nyelvi beállítások",
 	"ext-uls-language-settings-apply": "Beállítások alkalmazása",
-	"ext-uls-language-settings-cancel": "Mégsem",
+	"ext-uls-language-settings-cancel": "Mégse",
 	"ext-uls-language-buttons-help": "Menük nyelvének módosítása. A tartalom nyelve nem fog változni.",
 	"ext-uls-display-settings-font-settings": "Betűtípus beállítások",
 	"ext-uls-display-settings-ui-language": "Megjelenítési nyelv",
