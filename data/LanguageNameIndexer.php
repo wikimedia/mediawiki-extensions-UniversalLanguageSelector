@@ -103,6 +103,8 @@ class LanguageNameIndexer extends Maintenance {
 			'abr' => [ 'bono', 'brong' ],
 			// Acholi (T376060)
 			'ach' => [ 'leb acoli' ],
+			// Hadhrami Arabic (T397355)
+			'ayh' => [ 'حضرمية' ],
 			// Catalan, sometimes searched as "Valencià"
 			'ca' => [ 'valencia' ],
 			// Compatibility with the old name and other Chinese varieties
