@@ -4,6 +4,11 @@
 			"Winston Sung"
 		]
 	},
-	"uls-plang-title-languages": "Gú-giân",
-	"ext-uls-compact-link-count": "Kî-thaⁿ $1 ê"
+	"uls-plang-title-languages": "Gí-giân",
+	"ext-uls-select-language-settings-icon-tooltip": "Gí-giân siat-tēng",
+	"ext-uls-display-settings-language-tab": "Gí-giân",
+	"ext-uls-language-settings-title": "Gí-giân siat-tēng",
+	"jquery-ime-help": "Soat-bêng",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Iáu-ū $1 chióng gí-giân}}",
+	"prefs-languages": "Gí-giân"
 }

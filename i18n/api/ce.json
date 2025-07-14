@@ -7,5 +7,10 @@
 	"apihelp-languagesearch-param-search": "Лахаран могӀа.",
 	"apihelp-languagesearch-example-1": "Лахар «Te»",
 	"apihelp-languagesearch-example-2": "Лахар «ഫി»",
-	"apihelp-ulslocalization-param-language": "Меттан код."
+	"apihelp-ulslocalization-param-language": "Меттан код.",
+	"apihelp-ulslocalization-example-1": "Тамилийн локализаци схьаэца",
+	"apihelp-ulslocalization-example-2": "ХӀиндин локализаци схьаэца",
+	"apihelp-ulssetlang-summary": "Декъашхочо хаьржина интерфейсан мотт карлабаккхар.",
+	"apihelp-ulssetlang-param-languagecode": "Хаьржина меттан код.",
+	"apierror-ulssetlang-anon-notallowed": "Анониман декъашхойн бакъо йац интерфейсан мотт хийца."
 }
