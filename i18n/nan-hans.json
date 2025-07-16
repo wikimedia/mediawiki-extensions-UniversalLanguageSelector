@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"SupaplexTW"
+			"SupaplexTW",
+			"Winston Sung"
 		]
 	},
 	"uls-plang-title-languages": "语言",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|犹有 $1 语言}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|猶有$1種语言}}"
 }

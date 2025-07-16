@@ -69,6 +69,7 @@
 	"ext-uls-setlang-loading": "Adree a aplicà...",
 	"ext-uls-setlang-cancel": "Modifica minga",
 	"ext-uls-actions-menu-language-settings-item-label": "Derva impostazzion de la lengua",
+	"ext-uls-empty-state-desc": "Per intanta a gh'è minga de lengov disponibil",
 	"ext-uls-empty-state-header-actions-available": "An'mò nanca ona lengua. Sgionteghen voeuna noeuva?",
 	"ext-uls-empty-state-desc-actions-available": "Rend el contegnud disponibil in alter lengov."
 }
