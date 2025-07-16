@@ -3,9 +3,10 @@
 		"authors": [
 			"Habila Dachollom",
 			"Kambai Akau",
-			"Rwang PS"
+			"Rwang PS",
+			"Sarah Niya Danbwarang"
 		]
 	},
-	"uls-plang-title-languages": "Becen",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Gwinin bwak|$1 bwak}}"
+	"uls-plang-title-languages": "Balem",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Gwining gbak$1 gbak}}"
 }
