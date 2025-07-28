@@ -4,5 +4,6 @@
 			"NikolasKHF"
 		]
 	},
-	"uls-plang-title-languages": "Base"
+	"uls-plang-title-languages": "Base",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Sekéq malik|$1 malik}}"
 }
