@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Songhay"
+		]
+	},
+	"uls-plang-title-languages": "Senney",
+	"ext-uls-compact-link-count": "{{PLURAL:$1| ka tonton|$1 ka tonton}}"
+}
