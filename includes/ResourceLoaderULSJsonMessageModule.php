@@ -20,7 +20,6 @@ class ResourceLoaderULSJsonMessageModule extends Module {
 	/**
 	 * Part of the ResourceLoader module interface.
 	 * Declares the core ext.uls.i18n module as a dependency.
-	 * @suppress PhanParamSignatureRealMismatchParamType, UnusedSuppression -- T308443
 	 * @param Context|null $context
 	 * @return string[] Module names.
 	 */
@@ -28,9 +27,6 @@ class ResourceLoaderULSJsonMessageModule extends Module {
 		return [ 'ext.uls.i18n' ];
 	}
 
-	/**
-	 * @suppress PhanParamSignatureRealMismatchParamType, UnusedSuppression -- T308443
-	 */
 	public function getDefinitionSummary( Context $context ): array {
 		$code = $context->getLanguage();
 		$fileHashes = array_map(
@@ -48,7 +44,6 @@ class ResourceLoaderULSJsonMessageModule extends Module {
 	/**
 	 * Get the message strings for the current UI language. Uses
 	 * mw.uls.loadLocalization to register them on the frontend.
-	 * @suppress PhanParamSignatureRealMismatchParamType, UnusedSuppression -- T308443
 	 * @param Context $context
 	 * @return string JavaScript code.
 	 */
