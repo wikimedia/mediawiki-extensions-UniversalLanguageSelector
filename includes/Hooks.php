@@ -56,34 +56,12 @@ class Hooks implements
 	SkinAfterPortletHook
 {
 
-	/** @var Config */
-	private $config;
-
-	/** @var UserOptionsLookup */
-	private $userOptionsLookup;
-
-	/** @var IBufferingStatsdDataFactory */
-	private $statsdDataFactory;
-
-	/** @var LanguageNameUtils */
-	private $languageNameUtils;
-
-	/**
-	 * @param Config $config
-	 * @param UserOptionsLookup $userOptionsLookup
-	 * @param IBufferingStatsdDataFactory $statsdDataFactory
-	 * @param LanguageNameUtils $languageNameUtils
-	 */
 	public function __construct(
-		Config $config,
-		UserOptionsLookup $userOptionsLookup,
-		IBufferingStatsdDataFactory $statsdDataFactory,
-		LanguageNameUtils $languageNameUtils
+		private readonly Config $config,
+		private readonly UserOptionsLookup $userOptionsLookup,
+		private readonly IBufferingStatsdDataFactory $statsdDataFactory,
+		private readonly LanguageNameUtils $languageNameUtils,
 	) {
-		$this->config = $config;
-		$this->userOptionsLookup = $userOptionsLookup;
-		$this->statsdDataFactory = $statsdDataFactory;
-		$this->languageNameUtils = $languageNameUtils;
 	}
 
 	public static function setVersionConstant() {

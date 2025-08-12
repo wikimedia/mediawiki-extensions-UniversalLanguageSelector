@@ -11,18 +11,10 @@ use MediaWiki\Output\OutputPage;
  * @since 2016.04
  */
 class FontRepoCompiler {
-	/** @var string */
-	protected $fsPath;
-	/** @var string */
-	protected $webPath;
-
-	/**
-	 * @param string $fsPath
-	 * @param string $webPath
-	 */
-	public function __construct( $fsPath, $webPath ) {
-		$this->fsPath = $fsPath;
-		$this->webPath = $webPath;
+	public function __construct(
+		private readonly string $fsPath,
+		private readonly string $webPath,
+	) {
 	}
 
 	/**

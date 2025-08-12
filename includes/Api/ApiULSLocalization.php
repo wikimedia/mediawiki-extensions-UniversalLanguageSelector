@@ -31,15 +31,12 @@ use Wikimedia\ParamValidator\ParamValidator;
  * @ingroup API
  */
 class ApiULSLocalization extends ApiBase {
-	private LanguageNameUtils $languageNameUtils;
-
 	public function __construct(
 		ApiMain $main,
 		string $action,
-		LanguageNameUtils $languageNameUtils
+		private readonly LanguageNameUtils $languageNameUtils,
 	) {
 		parent::__construct( $main, $action );
-		$this->languageNameUtils = $languageNameUtils;
 	}
 
 	/**

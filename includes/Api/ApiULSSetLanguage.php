@@ -31,18 +31,13 @@ use Wikimedia\ParamValidator\ParamValidator;
  * @ingroup API
  */
 class ApiULSSetLanguage extends ApiBase {
-	private UserOptionsManager $userOptionsManager;
-	private LanguageNameUtils $languageNameUtils;
-
 	public function __construct(
 		ApiMain $main,
 		string $action,
-		UserOptionsManager $userOptionsManager,
-		LanguageNameUtils $languageNameUtils
+		private readonly UserOptionsManager $userOptionsManager,
+		private readonly LanguageNameUtils $languageNameUtils,
 	) {
 		parent::__construct( $main, $action );
-		$this->userOptionsManager = $userOptionsManager;
-		$this->languageNameUtils = $languageNameUtils;
 	}
 
 	/**
