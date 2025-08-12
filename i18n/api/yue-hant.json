@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"JeffreyKim"
+			"JeffreyKim",
+			"Ktchankt"
 		]
 	},
 	"apihelp-languagesearch-summary": "喺任何指令碼入面搵語言名稱。",
@@ -16,5 +17,5 @@
 	"apihelp-ulslocalization-example-2": "攞到印地語嘅本地化",
 	"apihelp-ulssetlang-summary": "更新用戶偏好嘅介面語言。",
 	"apihelp-ulssetlang-param-languagecode": "首選嘅語言代碼。",
-	"apierror-ulssetlang-anon-notallowed": "匿名使用者唔可以更改介面語言。"
+	"apierror-ulssetlang-anon-notallowed": "匿名用戶唔可以改介面語言。"
 }
