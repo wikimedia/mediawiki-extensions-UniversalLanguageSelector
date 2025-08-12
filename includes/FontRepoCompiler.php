@@ -17,10 +17,7 @@ class FontRepoCompiler {
 	) {
 	}
 
-	/**
-	 * @return array
-	 */
-	public function getRepository() {
+	public function getRepository(): array {
 		$files = $this->getFilesFromPath( $this->fsPath );
 
 		$fonts = [];
@@ -51,7 +48,7 @@ class FontRepoCompiler {
 	 * @param string $fspath
 	 * @return array|false
 	 */
-	public function getFilesFromPath( $fspath ) {
+	public function getFilesFromPath( string $fspath ) {
 		return glob( "$fspath/*/font.ini" );
 	}
 
@@ -59,15 +56,11 @@ class FontRepoCompiler {
 	 * @param string $filepath
 	 * @return array|false
 	 */
-	public function parseFile( $filepath ) {
+	public function parseFile( string $filepath ) {
 		return parse_ini_file( $filepath, true );
 	}
 
-	/**
-	 * @param array $font
-	 * @return array
-	 */
-	public function getLanguages( array $font ) {
+	public function getLanguages( array $font ): array {
 		if ( !isset( $font['languages'] ) ) {
 			return [];
 		}
@@ -78,12 +71,11 @@ class FontRepoCompiler {
 		return $languages;
 	}
 
-	/**
-	 * @param array &$languages
-	 * @param array $fontLanguages
-	 * @param string $fontname
-	 */
-	public function appendLanguages( &$languages, $fontLanguages, $fontname ) {
+	public function appendLanguages(
+		array &$languages,
+		array $fontLanguages,
+		string $fontname,
+	): void {
 		foreach ( $fontLanguages as $rcode ) {
 			$code = str_replace( '*', '', $rcode );
 
@@ -102,12 +94,10 @@ class FontRepoCompiler {
 		}
 	}
 
-	/**
-	 * @param array $font
-	 * @param string $fontpath
-	 * @return array
-	 */
-	public function getFontInfo( $font, $fontpath ) {
+	public function getFontInfo(
+		array $font,
+		string $fontpath,
+	): array {
 		$info = [];
 		$fontdir = basename( $fontpath );
 

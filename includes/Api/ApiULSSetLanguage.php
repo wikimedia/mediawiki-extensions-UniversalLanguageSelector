@@ -43,7 +43,7 @@ class ApiULSSetLanguage extends ApiBase {
 	/**
 	 * @inheritDoc
 	 */
-	public function execute() {
+	public function execute(): void {
 		$request = $this->getRequest();
 		if ( !$request->wasPosted() ) {
 			$this->dieWithError( [ 'apierror-mustbeposted', $request->getText( 'action' ) ] );
@@ -84,7 +84,7 @@ class ApiULSSetLanguage extends ApiBase {
 	/**
 	 * @inheritDoc
 	 */
-	public function getAllowedParams() {
+	public function getAllowedParams(): array {
 		return [
 			'languagecode' => [
 				ParamValidator::PARAM_REQUIRED => true,
@@ -95,7 +95,7 @@ class ApiULSSetLanguage extends ApiBase {
 	/**
 	 * @inheritDoc
 	 */
-	public function isInternal() {
+	public function isInternal(): bool {
 		// Try to scare people away from using this externally
 		return true;
 	}
@@ -103,7 +103,7 @@ class ApiULSSetLanguage extends ApiBase {
 	/**
 	 * @inheritDoc
 	 */
-	public function needsToken() {
+	public function needsToken(): string {
 		return 'csrf';
 	}
 }

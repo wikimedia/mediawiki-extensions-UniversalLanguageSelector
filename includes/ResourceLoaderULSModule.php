@@ -32,11 +32,8 @@ use MediaWiki\ResourceLoader\Module;
 class ResourceLoaderULSModule extends Module {
 	/**
 	 * Get all the dynamic data for the content language to an array.
-	 *
-	 * @param string $languageCode
-	 * @return array
 	 */
-	private function getData( $languageCode ) {
+	private function getData( string $languageCode ): array {
 		$vars = [];
 		$vars['wgULSLanguages'] = MediaWikiServices::getInstance()->getLanguageNameUtils()->getLanguageNames(
 			$languageCode,
@@ -50,7 +47,7 @@ class ResourceLoaderULSModule extends Module {
 	 * @param Context $context
 	 * @return string JavaScript code
 	 */
-	public function getScript( Context $context ) {
+	public function getScript( Context $context ): string {
 		$languageCode = $context->getLanguage();
 		return 'mw.config.set('
 			. $context->encodeJson( $this->getData( $languageCode ) )
@@ -60,7 +57,7 @@ class ResourceLoaderULSModule extends Module {
 	/**
 	 * @return bool
 	 */
-	public function enableModuleContentVersion() {
+	public function enableModuleContentVersion(): bool {
 		return true;
 	}
 }

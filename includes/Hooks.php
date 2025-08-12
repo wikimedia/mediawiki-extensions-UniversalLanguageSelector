@@ -71,7 +71,6 @@ class Hooks implements
 	/**
 	 * Whether user visible ULS features are enabled (language changing, input methods, web
 	 * fonts, language change undo tooltip).
-	 * @return bool
 	 */
 	private function isEnabled(): bool {
 		return (bool)$this->config->get( 'ULSEnable' );
@@ -79,9 +78,6 @@ class Hooks implements
 
 	/**
 	 * Checks whether language is in header.
-	 *
-	 * @param Skin $skin
-	 * @return bool
 	 */
 	private function isLanguageInHeader( Skin $skin ): bool {
 		$languageInHeaderConfig = $skin->getConfig()->get( 'VectorLanguageInHeader' );
@@ -91,12 +87,8 @@ class Hooks implements
 
 	/**
 	 * Whether ULS Compact interlanguage links enabled
-	 *
-	 * @param User $user
-	 * @param Skin $skin
-	 * @return bool
 	 */
-	private function isCompactLinksEnabled( User $user, Skin $skin ) {
+	private function isCompactLinksEnabled( User $user, Skin $skin ): bool {
 		// Whether any user visible features are enabled
 		if ( !$this->config->get( 'ULSEnable' ) ) {
 			return false;
@@ -187,8 +179,6 @@ class Hooks implements
 	/**
 	 * Handle setlang query parameter; and decide if the setlang related scripts
 	 * have to be loaded.
-	 * @param OutputPage $out
-	 * @return void
 	 */
 	protected function handleSetLang( OutputPage $out ): void {
 		$languageToSet = $this->getSetLang( $out );
@@ -234,7 +224,7 @@ class Hooks implements
 	private function addPersonalBarTrigger(
 		array &$personal_urls,
 		SkinTemplate $context
-	) {
+	): array {
 		if ( $this->config->get( 'ULSPosition' ) !== 'personal' ) {
 			return $personal_urls;
 		}
@@ -266,7 +256,7 @@ class Hooks implements
 	 * @return string MediaWiki internal language code or empty string if there's no matched
 	 *  language code
 	 */
-	protected function getDefaultLanguage( array $preferred ) {
+	protected function getDefaultLanguage( array $preferred ): string {
 		/** @var array supported List of Supported languages by MediaWiki internal language codes */
 		$supported = $this->languageNameUtils
 			->getLanguageNames( LanguageNameUtils::AUTONYMS, LanguageNameUtils::SUPPORTED );
@@ -531,10 +521,6 @@ class Hooks implements
 		}
 	}
 
-	/**
-	 * @param OutputPage $out
-	 * @return string|null
-	 */
 	private function getSetLang( OutputPage $out ): ?string {
 		$setLangCode = $out->getRequest()->getRawVal( 'setlang' );
 		if ( $setLangCode && $this->languageNameUtils->isSupportedLanguage( $setLangCode ) ) {
@@ -544,11 +530,6 @@ class Hooks implements
 		return null;
 	}
 
-	/**
-	 * @param Context $context
-	 * @param Config $config
-	 * @return array
-	 */
 	public static function getModuleData( Context $context, Config $config ): array {
 		$languageNameUtils = MediaWikiServices::getInstance()->getLanguageNameUtils();
 		return [
@@ -556,11 +537,6 @@ class Hooks implements
 		];
 	}
 
-	/**
-	 * @param Context $context
-	 * @param Config $config
-	 * @return array
-	 */
 	public static function getModuleDataSummary( Context $context, Config $config ): array {
 		return [
 			'currentAutonym' => $context->getLanguage(),

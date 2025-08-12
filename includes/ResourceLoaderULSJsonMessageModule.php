@@ -24,16 +24,14 @@ class ResourceLoaderULSJsonMessageModule extends Module {
 	 * @param Context|null $context
 	 * @return string[] Module names.
 	 */
-	public function getDependencies( ?Context $context = null ) {
+	public function getDependencies( ?Context $context = null ): array {
 		return [ 'ext.uls.i18n' ];
 	}
 
 	/**
 	 * @suppress PhanParamSignatureRealMismatchParamType, UnusedSuppression -- T308443
-	 * @param Context $context
-	 * @return array
 	 */
-	public function getDefinitionSummary( Context $context ) {
+	public function getDefinitionSummary( Context $context ): array {
 		$code = $context->getLanguage();
 		$fileHashes = array_map(
 			[ __CLASS__, 'safeFileHash' ],
@@ -54,7 +52,7 @@ class ResourceLoaderULSJsonMessageModule extends Module {
 	 * @param Context $context
 	 * @return string JavaScript code.
 	 */
-	public function getScript( Context $context ) {
+	public function getScript( Context $context ): string {
 		$code = $context->getLanguage();
 		$params = [ $code, ULSJsonMessageLoader::getMessages( $code ) ];
 

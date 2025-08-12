@@ -43,7 +43,7 @@ class ApiLanguageSearch extends ApiBase {
 	/**
 	 * @inheritDoc
 	 */
-	public function getAllowedParams() {
+	public function getAllowedParams(): array {
 		return [
 			'search' => [
 				ParamValidator::PARAM_REQUIRED => true
@@ -59,7 +59,7 @@ class ApiLanguageSearch extends ApiBase {
 	/**
 	 * @inheritDoc
 	 */
-	protected function getExamplesMessages() {
+	protected function getExamplesMessages(): array {
 		return [
 			'action=languagesearch&search=Te'
 				=> 'apihelp-languagesearch-example-1',
@@ -73,7 +73,7 @@ class ApiLanguageSearch extends ApiBase {
 	/**
 	 * @inheritDoc
 	 */
-	public function getHelpUrls() {
+	public function getHelpUrls(): string {
 		return 'https://www.mediawiki.org/wiki/Special:MyLanguage/API:Languagesearch';
 	}
 }

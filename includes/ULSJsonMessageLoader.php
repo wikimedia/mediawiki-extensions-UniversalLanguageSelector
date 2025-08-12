@@ -30,7 +30,7 @@ class ULSJsonMessageLoader {
 	 * @param string $language Language code.
 	 * @return string[]
 	 */
-	public static function getFilenames( string $language ) {
+	public static function getFilenames( string $language ): array {
 		$filenames = [];
 
 		$languages = MediaWikiServices::getInstance()->getLanguageFallback()->getAll( $language );
@@ -58,7 +58,7 @@ class ULSJsonMessageLoader {
 	 * @param string $language Language code.
 	 * @return array
 	 */
-	public static function getMessages( string $language ) {
+	public static function getMessages( string $language ): array {
 		$contents = [];
 
 		foreach ( self::getFilenames( $language ) as $filename ) {
@@ -73,7 +73,7 @@ class ULSJsonMessageLoader {
 	 * @param string $filename Directory of the json file.
 	 * @return array
 	 */
-	protected static function loadI18nFile( $filename ) {
+	protected static function loadI18nFile( string $filename ): array {
 		$contents = file_get_contents( $filename );
 
 		return json_decode( $contents, true );
