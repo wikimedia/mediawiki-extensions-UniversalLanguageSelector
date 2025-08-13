@@ -6,7 +6,8 @@
 			"Metalhead64",
 			"Se4598",
 			"Tiin",
-			"*surak*"
+			"*surak*",
+			"Inkowik"
 		]
 	},
 	"uls-desc": "Bietet verschiedene Möglichkeiten, eine Sprache auszuwählen sowie Spracheinstellungen anzupassen",
@@ -63,7 +64,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Eine weitere|$1 weitere}}",
 	"ext-uls-compact-link-info": "Alle Sprachen (erste Auswahl der häufigen Auswahlen von dir und anderen)",
 	"prefs-languages": "Sprachen",
-	"ext-uls-compact-language-links-preference": "eine [[$1|kompakte Sprachliste]] mit für dich relevanten Sprachen verwenden",
+	"ext-uls-compact-language-links-preference": "[[$1|Kompakte Sprachliste]] mit für dich relevanten Sprachen verwenden",
 	"ext-uls-compact-no-results": "Diese Seite ist nicht in der gewünschten Sprache verfügbar.",
 	"ext-uls-setlang-error": "Es gab einen Fehler, als deine bevorzugte Sprache gespeichert werden sollte. Fehler: $1",
 	"ext-uls-setlang-unknown-error": "Unbekannter Fehler",
