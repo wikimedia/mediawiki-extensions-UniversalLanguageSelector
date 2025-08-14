@@ -5,7 +5,7 @@
 			"Ktchankt"
 		]
 	},
-	"apihelp-languagesearch-summary": "喺任何指令碼入面搵語言名稱。",
+	"apihelp-languagesearch-summary": "喺任何指令碼入面搵語言名。",
 	"apihelp-languagesearch-param-search": "搵字串。",
 	"apihelp-languagesearch-param-typos": "喺搵字串嗰陣允許嘅串字錯誤數量。",
 	"apihelp-languagesearch-example-1": "搵\"Te\"",
