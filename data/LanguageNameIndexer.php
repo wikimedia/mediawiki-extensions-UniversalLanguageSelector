@@ -119,10 +119,12 @@ class LanguageNameIndexer extends Maintenance {
 			'es' => [ 'castellano' ],
 			// Armenian, the transliteration of the autonym is often used for searching
 			'hy' => [ 'hayeren' ],
-			// Georgian, the transliteration of the autonym is often used for searching
-			'ka' => [ 'kartuli', 'qartuli' ],
 			// Japanese, the transliteration of the autonym is often used for searching
 			'ja' => [ 'nihongo', 'にほんご' ],
+			// Javanese (T393746)
+			'jv-java' => [ 'jawa hanacaraka' ],
+			// Georgian, the transliteration of the autonym is often used for searching
+			'ka' => [ 'kartuli', 'qartuli' ],
 			// Lango (Uganda; T376054).
 			// The second alias help avoid ambiguity with
 			// other languages named "Lango" and also
