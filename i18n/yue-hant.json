@@ -8,7 +8,8 @@
 			"Moon0319",
 			"Shinjiman",
 			"Xð",
-			"JeffreyKim"
+			"JeffreyKim",
+			"Yueman"
 		]
 	},
 	"uls-desc": "畀用家唔同方法去揀語言同調整語言設定",
@@ -34,7 +35,7 @@
 	"ext-uls-display-settings-anon-same-as-content": "$1 （同內容一樣）",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|簽到]]去改選單嘅語言。",
 	"ext-uls-webfonts-settings-title": "有需要嗰陣下載字體",
-	"ext-uls-webfonts-settings-info": "自動下載缺失嘅字體同埋容許去揀偏好嘅字體。",
+	"ext-uls-webfonts-settings-info": "自動下載缺失嘅字體同埋俾人去揀喜好嘅字體。",
 	"ext-uls-webfonts-settings-info-link": "知多啲",
 	"ext-uls-webfonts-select-for": "為 $1 揀字體",
 	"ext-uls-webfonts-select-for-ui-info": "用戶界面嘅字體",
@@ -52,7 +53,7 @@
 	"ext-uls-input-settings-more-languages-tooltip": "多啲語言",
 	"jquery-ime-other-languages": "第啲語言",
 	"jquery-ime-disable-text": "用原生鍵盤",
-	"jquery-ime-help": "求助",
+	"jquery-ime-help": "幫手",
 	"ext-uls-input-disable": "停用輸入架撐",
 	"ext-uls-input-enable": "啟用輸入架撐",
 	"ext-uls-input-disable-info": "輸入架撐停用咗。",
@@ -62,7 +63,7 @@
 	"ext-uls-input-disable-notification-info-personal": "你可以隨時去語言設定度啟用輸入架撐。",
 	"ext-uls-input-disable-notification-info-interlanguage": "你可以隨時去語言清單側邊嘅語言設定度啟用輸入架撐。",
 	"ext-uls-language-settings-applying": "套用緊...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|One more|仲有$1種}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|仲有$1種話}}",
 	"ext-uls-compact-link-info": "所有語言（你同其他人共同選擇嘅初始選項）",
 	"prefs-languages": "語言",
 	"ext-uls-compact-language-links-preference": "用[[$1|簡潔語言清單]]，只顯示同你有關嘅語言。",
