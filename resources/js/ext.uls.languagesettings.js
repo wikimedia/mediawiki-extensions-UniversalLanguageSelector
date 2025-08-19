@@ -34,7 +34,7 @@
 	const buttonsRow = '<div class="row collapse language-settings-buttons">' +
 		'<div class="twelve columns">' +
 		'<button class="cdx-button uls-settings-cancel" data-i18n="ext-uls-language-settings-cancel"></button>' +
-		'<button class="cdx-button cdx-button--type-primary cdx-button--action-progressive active uls-settings-apply" data-i18n="ext-uls-language-settings-apply" disabled></button>' +
+		'<button class="cdx-button cdx-button--weight-primary cdx-button--action-progressive active uls-settings-apply" data-i18n="ext-uls-language-settings-apply" disabled></button>' +
 		'</div>' +
 		'</div>' +
 		'</div>';

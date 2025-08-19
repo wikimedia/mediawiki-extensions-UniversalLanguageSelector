@@ -46,7 +46,7 @@
 			.text( mw.msg( 'ext-uls-setlang-cancel' ) );
 
 		$acceptBtn = $( '<button>' )
-			.addClass( 'cdx-button cdx-button--type-primary cdx-button--action-progressive active uls-setlang-apply' )
+			.addClass( 'cdx-button cdx-button--weight-primary cdx-button--action-progressive active uls-setlang-apply' )
 			.text( mw.msg( 'ext-uls-setlang-accept' ) );
 
 		return $( '<div>' )

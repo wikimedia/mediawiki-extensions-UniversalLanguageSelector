@@ -40,7 +40,7 @@
 		'<div class="uls-ui-languages twelve columns"></div>' +
 		'</div>' +
 
-		// Web IMEs enabling chechbox with label
+		// Web IMEs enabling checkbox with label
 		'<div class="row enabled-only">' +
 		'<div class="twelve columns">' +
 		'<div class="uls-input-settings-inputmethods-list">' +
@@ -54,7 +54,7 @@
 		'<div class="row">' +
 		'<div class="twelve columns uls-input-settings-disable-info"></div>' +
 		'<div class="ten columns uls-input-settings-toggle">' +
-		'<button class="cdx-button cdx-button--type-primary cdx-button--action-progressive active uls-input-toggle-button"></button>' +
+		'<button class="cdx-button cdx-button--weight-primary cdx-button--action-progressive active uls-input-toggle-button"></button>' +
 		'</div>' +
 		'</div>';
 
