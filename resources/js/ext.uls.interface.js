@@ -95,7 +95,7 @@
 		}
 
 		// Action menu items need OOUI widgets. Load them and register trigger event handler.
-		mw.loader.using( [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-interactions' ] ).done( () => {
+		mw.loader.using( [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-interactions' ] ).then( () => {
 			const $actionsList = $( '<ul>' ).addClass( 'uls-language-action-items' );
 			actionItemsRegistry.getItems().forEach( ( actionItem ) => {
 				const actionButton = new ActionsMenuItem(
@@ -170,7 +170,7 @@
 			$ulsSettingsBlock.prepend( $addLanguagesMenuButton );
 
 			// Action menu items need OOUI widgets. Load them and register trigger event handler.
-			mw.loader.using( [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-interactions' ] ).done( () => {
+			mw.loader.using( [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-interactions' ] ).then( () => {
 				$addLanguagesMenuButton.on( 'click', () => {
 					addLanguagesMenuDialog = addLanguagesMenuDialog || new ActionsMenu( {
 						actions: actionItemsRegistry.getItems(),
@@ -514,7 +514,7 @@
 		}
 
 		if ( previousLanguage !== currentLanguage ) {
-			mw.loader.using( 'oojs-ui-core' ).done( () => {
+			mw.loader.using( 'oojs-ui-core' ).then( () => {
 				showUndoTooltip( previousLanguage, previousAutonym );
 			} );
 			mw.storage.set( 'uls-previous-language-code', currentLanguage );
@@ -688,7 +688,7 @@
 		// we should add the "Open language settings" button inside the dropdown
 		$languageBtn.one( 'mouseover', () => {
 			mw.loader.using( [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-interactions', 'ext.uls.messages' ] )
-				.done( () => {
+				.then( () => {
 					const actionButton = new ActionsMenuItem(
 						'settings',
 						$.i18n( 'ext-uls-actions-menu-language-settings-item-label' ),

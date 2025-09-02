@@ -82,11 +82,14 @@
 				new mw.Api().saveOption(
 					this.preferenceName,
 					JSON.stringify( this.preferences )
-				).done( () => {
-					callback.call( this, true );
-				} ).fail( () => {
-					callback.call( this, false );
-				} );
+				).then(
+					() => {
+						callback.call( this, true );
+					},
+					() => {
+						callback.call( this, false );
+					}
+				);
 			} else {
 				// Anonymous user. Save preferences in local storage
 				mw.storage.setObject( this.preferenceName, this.preferences );

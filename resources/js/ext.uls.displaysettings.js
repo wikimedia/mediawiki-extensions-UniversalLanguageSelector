@@ -205,7 +205,7 @@
 					);
 
 				new mw.Api().parse( $.i18n( 'ext-uls-display-settings-anon-log-in-cta' ) )
-					.done( ( parsedCta ) => {
+					.then( ( parsedCta ) => {
 						// The parsed CTA is HTML
 						$loginCta.html( parsedCta );
 						$loginCta.find( 'a' ).on( 'click', () => {
@@ -373,7 +373,7 @@
 			this.$template.attr( 'lang', language )
 				.css( 'font-family', '' );
 			$.i18n().locale = language;
-			mw.uls.loadLocalization( language ).done( () => {
+			mw.uls.loadLocalization( language ).then( () => {
 				this.i18n();
 				if ( this.$webfonts ) {
 					this.$webfonts.refresh();

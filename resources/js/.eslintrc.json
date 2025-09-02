@@ -6,7 +6,6 @@
 		"wikimedia/mediawiki"
 	],
 	"rules": {
-		"no-jquery/no-global-selector": "off",
-		"no-jquery/no-done-fail": "warn"
+		"no-jquery/no-global-selector": "off"
 	}
 }
