@@ -10,7 +10,7 @@
 			"Vodnokon4e"
 		]
 	},
-	"uls-desc": "Предоставя на потребителя няколко начина за избор на език и за промяна на езиковите настройки",
+	"uls-desc": "Дава на потребителя няколко начина за избор на език и за промяна на езиковите настройки",
 	"uls-plang-title-languages": "Езици",
 	"ext-uls-select-language-settings-icon-tooltip": "Езикови настройки",
 	"ext-uls-undo-language-tooltip-text": "Предишен език: $1",
@@ -66,9 +66,17 @@
 	"prefs-languages": "Езици",
 	"ext-uls-compact-language-links-preference": "Използване на [[$1|компактен списък на езиците]], имащи отношение към вас.",
 	"ext-uls-compact-no-results": "Тази страница не е налична на избрания от вас език.",
+	"ext-uls-setlang-error": "Възникна грешка при актуализирането на предпочитания от Вас език. Грешка: $1",
+	"ext-uls-setlang-unknown-error": "Непозната грешка",
+	"ext-uls-setlang-message": "Препратката, която последвахте, изисква интерфейсът да бъде показан в <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "Промяна на езика на интерфейса?",
+	"ext-uls-setlang-accept": "Приемане на промяната",
+	"ext-uls-setlang-loading": "Прилагане...",
+	"ext-uls-setlang-cancel": "Без промяна",
 	"ext-uls-actions-menu-language-settings-item-label": "Отваряне на езиковите настройки",
 	"ext-uls-empty-state-header": "Все още няма езици",
 	"ext-uls-empty-state-desc": "Засега няма налични езици",
 	"ext-uls-empty-state-header-actions-available": "Все още няма езици. Добавяне на нов?",
-	"ext-uls-empty-state-desc-actions-available": "Направете съдържанието достъпно на повече езици."
+	"ext-uls-empty-state-desc-actions-available": "Направете съдържанието достъпно на повече езици.",
+	"ext-uls-add-languages-button-label": "Добавяне на езици"
 }
