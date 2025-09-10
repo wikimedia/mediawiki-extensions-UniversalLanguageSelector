@@ -59,5 +59,6 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|مزید $1 زبانیں}}",
 	"ext-uls-compact-link-info": "تمام زبانیں (آپ اور دیگر صارفین کی مشترکہ پسند کا انتخاب)",
 	"prefs-languages": "زبانیں",
-	"ext-uls-compact-language-links-preference": "محض اپنے آپ سے متعلق [[$1|زبان کی پیوستہ فہرست]] استعمال کریں۔"
+	"ext-uls-compact-language-links-preference": "محض اپنے آپ سے متعلق [[$1|زبان کی پیوستہ فہرست]] استعمال کریں۔",
+	"ext-uls-add-languages-button-label": "زبانیں شامل کریں"
 }
