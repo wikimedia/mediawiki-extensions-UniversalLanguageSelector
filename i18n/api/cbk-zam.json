@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Noooote"
+		]
+	},
+	"apihelp-languagesearch-summary": "Busca para na maga nombre de lenguaje na masquin cosa script.",
+	"apihelp-languagesearch-param-search": "Busca string.",
+	"apihelp-languagesearch-param-typos": "Numero del maga error na deletreada el permitido na sesrch string",
+	"apihelp-languagesearch-example-1": "Busca \"Te\"",
+	"apihelp-languagesearch-example-2": "Busca \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Busca \"ഫി\", permiti un typo",
+	"apihelp-ulslocalization-summary": "Saca el localizacion del ULS na lenguaje que ya manda.",
+	"apihelp-ulslocalization-param-language": "Codigo de lenguaje.",
+	"apihelp-ulslocalization-example-1": "Saca localizacion de Tamil",
+	"apihelp-ulslocalization-example-2": "Saca localizacion de Hindi",
+	"apihelp-ulssetlang-summary": "Hace update con el preferido lenguaje del interface del user",
+	"apihelp-ulssetlang-param-languagecode": "El codigo de lenguaje preferido.",
+	"apierror-ulssetlang-anon-notallowed": "Maga users anonimo hende permitido para cambia con el lenguaje de interface."
+}
