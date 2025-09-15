@@ -28,13 +28,21 @@ use MediaWiki\Extension\CLDR\LanguageNames;
 use MediaWiki\Languages\LanguageNameUtils;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Maintenance\Maintenance;
+use MediaWiki\Registration\ExtensionRegistry;
 
 class LanguageNameIndexer extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->addDescription( 'Script to create language names index.' );
 		$this->requireExtension( 'UniversalLanguageSelector' );
-		$this->requireExtension( 'CLDR' );
+
+		$extensionRegistry = ExtensionRegistry::getInstance();
+		if ( !(
+			$extensionRegistry->isLoaded( 'cldr' )
+			|| $extensionRegistry->isLoaded( 'CLDR' )
+		) ) {
+			$this->requireExtension( 'cldr' );
+		}
 	}
 
 	public function execute() {
