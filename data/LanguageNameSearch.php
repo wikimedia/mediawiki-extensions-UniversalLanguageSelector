@@ -1,11 +1,6 @@
 <?php
 
-use MediaWiki\Languages\LanguageNameUtils;
-use MediaWiki\MediaWikiServices;
-
 /**
- * Cross-Language Language name search
- *
  * Copyright (C) 2012 Alolita Sharma, Amir Aharoni, Arun Ganesh, Brandon Harris,
  * Niklas Laxström, Pau Giner, Santhosh Thottingal, Siebrand Mazeland and other
  * contributors. See CREDITS for a list.
@@ -17,6 +12,14 @@ use MediaWiki\MediaWikiServices;
  * header is left intact. See files GPL-LICENSE and MIT-LICENSE for details.
  *
  * @file
+ */
+
+use MediaWiki\Languages\LanguageNameUtils;
+use MediaWiki\MediaWikiServices;
+
+/**
+ * Cross-Language Language name search
+ *
  * @ingroup Extensions
  * @license GPL-2.0-or-later
  * @license MIT
