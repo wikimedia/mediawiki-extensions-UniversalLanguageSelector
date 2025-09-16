@@ -4,6 +4,7 @@
 			".hecko",
 			"Juwan",
 			"LesVisages",
+			"Ne",
 			"Robin van der Vliet",
 			"Tamzin",
 			"Tbodt"
@@ -24,6 +25,8 @@
 	"ext-uls-webfonts-select-for": "toki $1 la o wile e nasin sitelen",
 	"ext-uls-input-settings-title": "nasin sitelen",
 	"ext-uls-input-settings-title-short": "sitelen",
+	"ext-uls-input-settings-desc": "sina sitelen ala sitelen lon toki ante?",
 	"jquery-ime-other-languages": "toki ante",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|toki ante $1}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|toki ante $1}}",
+	"ext-uls-add-languages-button-label": "o pana e toki"
 }
