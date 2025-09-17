@@ -25,6 +25,7 @@ use MediaWiki\Config\Config;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\BetaFeatures\BetaFeatures;
+use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\Hook\UserGetLanguageObjectHook;
 use MediaWiki\Html\Html;
 use MediaWiki\Language\LanguageCode;
@@ -44,11 +45,9 @@ use Skin;
 use SkinTemplate;
 use Wikimedia\Stats\IBufferingStatsdDataFactory;
 
-/**
- * @phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
- */
 class Hooks implements
 	BeforePageDisplayHook,
+	SkinTemplateNavigation__UniversalHook,
 	UserGetLanguageObjectHook,
 	ResourceLoaderGetConfigVarsHook,
 	MakeGlobalVariablesScriptHook,
@@ -202,7 +201,7 @@ class Hooks implements
 	 * @param SkinTemplate $skin
 	 * @param array &$links
 	 */
-	public function onSkinTemplateNavigation__Universal( SkinTemplate $skin, array &$links ) {
+	public function onSkinTemplateNavigation__Universal( $skin, &$links ): void {
 		// In modern skins which separate out the user menu,
 		// e.g. Vector. (T282196)
 		// this should appear in the `user-interface-preferences` menu.
