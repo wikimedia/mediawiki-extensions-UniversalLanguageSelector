@@ -15,7 +15,8 @@
 			"زكريا",
 			"محمد أحمد عبد الفتاح",
 			"XIDME",
-			"Mdktb"
+			"Mdktb",
+			"Mohammed Qays"
 		]
 	},
 	"uls-desc": "يمنح المستخدم عدة طرق لاختيار لغة، وضبط إعدادات اللغة",
@@ -69,7 +70,7 @@
 	"ext-uls-input-disable-notification-info-personal": "بوسعك تشغيل أدوات الإدخال في أي وقت في إعدادات اللغة.",
 	"ext-uls-input-disable-notification-info-interlanguage": "بوسعك تشغيل  أدوات الإدخال في أي وقت في إعدادات اللغة الموجودة بجانب قائمة اللغات.",
 	"ext-uls-language-settings-applying": "تطبيق...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|بقية الوصلات: $1}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|واحدة أخرى|$1 أخرى}}",
 	"ext-uls-compact-link-info": "كل اللغات (الاختيار الابتدائي من الاختيارات الشائعة بواسطتك وبواسطة آخرين)",
 	"prefs-languages": "اللغات",
 	"ext-uls-compact-language-links-preference": "استخدم [[$1|قائمة اللغات المدمجة]]، لعرض اللغات المتعلقة بك.",
