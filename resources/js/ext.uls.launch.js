@@ -50,10 +50,10 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 			mw.uls.addPreviousLanguage( language );
 
 			// Switch the current tab to the new language, unless it was
-			// {Ctrl,Shift,Command} activation on a link
+			// {Alt,Ctrl,Shift,Command} activation on a link
 			if (
 				event.target instanceof HTMLAnchorElement &&
-				( event.metaKey || event.shiftKey || event.ctrlKey )
+				( event.altKey || event.metaKey || event.shiftKey || event.ctrlKey )
 			) {
 				return;
 			}
@@ -132,6 +132,7 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 		},
 		languages: languageObjectTextContent( languagesObject ),
 		ulsPurpose: 'compact-language-links',
+		clickShouldClose: false,
 		// Show common languages
 		quickList: filterForCommonLanguagesForUser(
 			Object.keys( languagesObject )
