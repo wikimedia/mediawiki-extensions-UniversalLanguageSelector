@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"ITZQing"
+		]
+	},
+	"uls-plang-title-languages": "Jezici",
+	"ext-uls-compact-link-count": "Još {{PLURAL:$1|1=jedan|$1}}"
+}
