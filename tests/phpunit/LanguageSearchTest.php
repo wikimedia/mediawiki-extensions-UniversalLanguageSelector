@@ -29,7 +29,6 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 	 * @dataProvider searchDataProvider
 	 */
 	public function testSearch( $searchKey, $expected ) {
-		$this->markTestSkipped( 'T231755' );
 		$actual = LanguageNameSearch::search( $searchKey, 1, 'en' );
 		// This is for better error messages
 		$this->assertEquals( $expected, $actual );
@@ -95,7 +94,9 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 			[ 'punja', [
 				// Presence of CLDR extension affects the results
 				'pa' => class_exists( LanguageNames::class ) ? 'punjabi' : 'punjaabi sennii',
-				'pa-guru' => 'punjabi (gurmukhi-skrift)',
+				'pa-guru' => class_exists( LanguageNames::class ) ?
+					'punjabi (gurmukhi script)' :
+					'punjabi (gurmukhi-skrift)',
 				'pnb' => 'punjabi western'
 			]
 			],
