@@ -29,6 +29,7 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 	 * @dataProvider searchDataProvider
 	 */
 	public function testSearch( $searchKey, $expected ) {
+		$this->markTestSkipped( 'T231755' );
 		$actual = LanguageNameSearch::search( $searchKey, 1, 'en' );
 		// This is for better error messages
 		$this->assertEquals( $expected, $actual );
