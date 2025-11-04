@@ -23,4 +23,14 @@ $cfg['exclude_analysis_directory_list'] = array_merge(
 	]
 );
 
+// TODO: Remove after MLEB 2026.01 remove
+$cfg['exclude_file_list'] = array_merge(
+	$cfg['exclude_file_list'],
+	[
+		'data/LanguageNameIndexer.php',
+		'data/LanguageNameSearch.php',
+		'data/LanguageNameSearchData.php',
+	]
+);
+
 return $cfg;

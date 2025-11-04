@@ -21,6 +21,7 @@
 		"MediaWiki": ">= 1.44.0"
 	},
 	"Hooks": {
+		"ApiMain::moduleManager": "main",
 		"BeforePageDisplay": "main",
 		"GetBetaFeaturePreferences": "main",
 		"GetPreferences": "main",
@@ -42,7 +43,6 @@
 		}
 	},
 	"APIModules": {
-		"languagesearch": "UniversalLanguageSelector\\Api\\ApiLanguageSearch",
 		"ulslocalization": {
 			"class": "UniversalLanguageSelector\\Api\\ApiULSLocalization",
 			"services": [

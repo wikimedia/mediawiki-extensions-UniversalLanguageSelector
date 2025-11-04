@@ -25,7 +25,7 @@ if ( $IP === false ) {
 require_once "$IP/maintenance/Maintenance.php";
 
 use MediaWiki\Extension\CLDR\LanguageNames;
-use MediaWiki\Languages\LanguageNameUtils;
+use MediaWiki\Language\LanguageNameUtils;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Maintenance\Maintenance;
 use MediaWiki\Registration\ExtensionRegistry;
@@ -83,6 +83,7 @@ class LanguageNameIndexer extends Maintenance {
 				$words = preg_split( '/[\s]+/u', $basicForm, -1, PREG_SPLIT_NO_EMPTY );
 
 				foreach ( $words as $index => $word ) {
+					// @phan-suppress-next-line PhanUndeclaredClassMethod
 					$bucket = LanguageNameSearch::getIndex( $word );
 
 					$type = 'prefix';
@@ -187,6 +188,7 @@ class LanguageNameIndexer extends Maintenance {
 
 		foreach ( $specialLanguages as $targetLanguage => $translations ) {
 			foreach ( $translations as $translation ) {
+				// @phan-suppress-next-line PhanUndeclaredClassMethod
 				$bucket = LanguageNameSearch::getIndex( $translation );
 				$buckets[$bucket]['prefix'][$translation] = $targetLanguage;
 			}

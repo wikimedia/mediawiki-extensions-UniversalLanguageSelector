@@ -26,6 +26,7 @@ use Wikimedia\ParamValidator\ParamValidator;
 
 /**
  * @ingroup API
+ * @deprecated Use the core LanguageNameSearch service instead
  */
 class ApiLanguageSearch extends ApiBase {
 	/**
@@ -35,6 +36,7 @@ class ApiLanguageSearch extends ApiBase {
 		$params = $this->extractRequestParams();
 		$search = $params['search'];
 		$typos = $params['typos'];
+		// @phan-suppress-next-line PhanUndeclaredClassMethod
 		$searches = LanguageNameSearch::search( $search, $typos, $this->getLanguage()->getCode() );
 		$result = $this->getResult();
 		$result->addValue( null, $this->getModuleName(), $searches );
