@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cwlin0416",
+			"Kly",
+			"Liuxinyu970226",
+			"Waihorace",
+			"Winston Sung"
+		]
+	},
+	"apihelp-languagesearch-summary": "在任何字母裡搜尋語言名稱。",
+	"apihelp-languagesearch-param-search": "搜尋字串。",
+	"apihelp-languagesearch-param-typos": "允許於搜尋字串中的拼寫錯誤數量。",
+	"apihelp-languagesearch-example-1": "搜尋 \"Te\"",
+	"apihelp-languagesearch-example-2": "搜尋 \"ഫി\"",
+	"apihelp-languagesearch-example-3": "搜尋 \"ഫി\"，可允許一個錯字"
+}

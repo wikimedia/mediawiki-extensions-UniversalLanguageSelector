@@ -60,7 +60,8 @@
 	"MessagesDirs": {
 		"UniversalLanguageSelector": [
 			"i18n",
-			"i18n/api"
+			"i18n/api",
+			"i18n/api/languagesearch"
 		]
 	},
 	"AutoloadClasses": {

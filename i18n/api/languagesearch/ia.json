@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"apihelp-languagesearch-summary": "Cercar nomines de lingua in non importa qual systema de scriptura.",
+	"apihelp-languagesearch-param-search": "Le texto a cercar.",
+	"apihelp-languagesearch-param-typos": "Numero de errores orthographic permittite in le texto a cercar.",
+	"apihelp-languagesearch-example-1": "Cercar \"Te\"",
+	"apihelp-languagesearch-example-2": "Cercar \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Cercar \"ഫി\", permittente un error orthographic"
+}

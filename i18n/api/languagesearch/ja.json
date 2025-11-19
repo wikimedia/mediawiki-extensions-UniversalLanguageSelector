@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Omotecho",
+			"Otokoume",
+			"Sujiniku"
+		]
+	},
+	"apihelp-languagesearch-summary": "任意のスクリプトで言語名を検索。",
+	"apihelp-languagesearch-param-search": "検索文字列。",
+	"apihelp-languagesearch-param-typos": "検索文字列で受容される間違った文字表記の数。",
+	"apihelp-languagesearch-example-1": "「Te」を検索",
+	"apihelp-languagesearch-example-2": "「ഫി」を検索",
+	"apihelp-languagesearch-example-3": "「ഫി」を検索、誤字は1つ以内"
+}

@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ahonc",
+			"Piramidion",
+			"Ата"
+		]
+	},
+	"apihelp-languagesearch-summary": "Пошук назв мов у будь-якому написанні.",
+	"apihelp-languagesearch-param-search": "Рядок пошуку.",
+	"apihelp-languagesearch-param-typos": "Кількість орфографічних помилок, дозволених у рядку пошуку.",
+	"apihelp-languagesearch-example-1": "Пошук «Te»",
+	"apihelp-languagesearch-example-2": "Пошук «ഫി»",
+	"apihelp-languagesearch-example-3": "Пошук «ഫി», допускається одна помилка"
+}

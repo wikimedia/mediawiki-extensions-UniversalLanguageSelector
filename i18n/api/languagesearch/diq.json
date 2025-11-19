@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"1917 Ekim Devrimi",
+			"Kumkumuk",
+			"Mirzali",
+			"Orbot707"
+		]
+	},
+	"apihelp-languagesearch-summary": "Yew dosyaya kodi miyan de nameyê zıwanan cı geyre.",
+	"apihelp-languagesearch-param-search": "Rêza cıgeyrayışi.",
+	"apihelp-languagesearch-param-typos": "Amora cerğkerdena ratenanê xetayanê imla",
+	"apihelp-languagesearch-example-1": "\"Te\" de bıvin",
+	"apihelp-languagesearch-example-2": "\"ഫി\" de bıvin",
+	"apihelp-languagesearch-example-3": "Qandé „ഫി“, inlanrê mısade bıgi"
+}

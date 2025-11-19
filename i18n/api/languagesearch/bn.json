@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aftabuzzaman",
+			"Nasir8891",
+			"Tanayb",
+			"আফতাবুজ্জামান"
+		]
+	},
+	"apihelp-languagesearch-summary": "যে কোনো লিপিতে ভাষার নাম অনুসন্ধান করুন।",
+	"apihelp-languagesearch-param-search": "বাক্য অনুসন্ধান।",
+	"apihelp-languagesearch-param-typos": "বাক্য অনুসন্ধানে গ্রহনযোগ্য বানান ভুলের সংখ্যা ।",
+	"apihelp-languagesearch-example-1": "\"Te\" এর জন্য অনুসন্ধান",
+	"apihelp-languagesearch-example-2": "\"ഫി\" এর জন্য অনুসন্ধান",
+	"apihelp-languagesearch-example-3": "\"ഫി\" এর জন্য অনুসন্ধান, একটি বানান ভুল গ্রহনযোগ্য"
+}

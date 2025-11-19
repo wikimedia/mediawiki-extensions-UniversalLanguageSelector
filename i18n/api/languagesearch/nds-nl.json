@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Servien"
+		]
+	},
+	"apihelp-languagesearch-param-search": "Zeukterm.",
+	"apihelp-languagesearch-param-typos": "Antal toe-eleuten spelfouten in de zeukterm.",
+	"apihelp-languagesearch-example-1": "Zeuken naor \"Te\"",
+	"apihelp-languagesearch-example-2": "Zeuken naor \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Zeuken naor \"ഫി\", één spelfout toe-estaon"
+}

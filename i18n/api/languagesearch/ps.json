@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ahmed-Najib-Biabani-Ibrahimkhel",
+			"شاه زمان پټان"
+		]
+	},
+	"apihelp-languagesearch-summary": "په هر سکريپټ کې د ژبې نومونه پلټل.",
+	"apihelp-languagesearch-param-search": "لړۍ پلټل",
+	"apihelp-languagesearch-param-typos": "د املايي تېروتنو شمېر چې په لټون‌ لړ کې ورته پرېښولی ورکړل شوی.",
+	"apihelp-languagesearch-example-1": "\"Te\" پلټل",
+	"apihelp-languagesearch-example-2": "\"ഫി\" پلټل",
+	"apihelp-languagesearch-example-3": "\"ഫി\" پلټل، چې يو ټايپو ته پرېښولی ورکوي"
+}

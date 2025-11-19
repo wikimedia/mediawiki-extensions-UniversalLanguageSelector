@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Elisardojm",
+			"Iváns",
+			"Toliño"
+		]
+	},
+	"apihelp-languagesearch-summary": "Procurar nomes de lingua en calquera script.",
+	"apihelp-languagesearch-param-search": "Cadea de procura.",
+	"apihelp-languagesearch-param-typos": "Número de erros ortográficos permitidos na cadea de procura.",
+	"apihelp-languagesearch-example-1": "Procurar \"Te\"",
+	"apihelp-languagesearch-example-2": "Procurar \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Procurar \"ഫി\", permitindo un erro ortográfico"
+}

@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps",
+			"Msz2001"
+		]
+	},
+	"apihelp-languagesearch-summary": "Szukaj nazw języków zapisywanych dowolnym pismem.",
+	"apihelp-languagesearch-param-search": "Wyszukaj tekst.",
+	"apihelp-languagesearch-param-typos": "Dozwolona liczba literówek w wyszukiwanym ciągu.",
+	"apihelp-languagesearch-example-1": "Wyszukaj „Te”",
+	"apihelp-languagesearch-example-2": "Wyszukaj „ഫി”",
+	"apihelp-languagesearch-example-3": "Wyszukaj „ഫി”, dopuszczalna jedna literówka"
+}

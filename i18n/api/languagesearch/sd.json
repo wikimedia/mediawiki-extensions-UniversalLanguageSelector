@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mehtab ahmed",
+			"Sindhu"
+		]
+	},
+	"apihelp-languagesearch-param-search": "ڳولا تار.",
+	"apihelp-languagesearch-param-typos": "ڳولا تار ۾ ھجي جي غلطين جو اجازت ڏنل انگ.",
+	"apihelp-languagesearch-example-1": "\"Te\" لاءِ ڳوليو",
+	"apihelp-languagesearch-example-2": "\"ഫി\" لاءِ ڳوليو"
+}

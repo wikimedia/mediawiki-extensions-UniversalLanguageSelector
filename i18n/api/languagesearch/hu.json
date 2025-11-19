@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"BanKris",
+			"Csega",
+			"Tacsipacsi"
+		]
+	},
+	"apihelp-languagesearch-summary": "Nyelvnevek keresése bármilyen írásrendszerrel.",
+	"apihelp-languagesearch-param-search": "A keresőkifejezés.",
+	"apihelp-languagesearch-param-typos": "A keresőkifejezésben megengedett elgépelések száma.",
+	"apihelp-languagesearch-example-1": "Keresés a „Te” kifejezésre",
+	"apihelp-languagesearch-example-2": "Keresés „ഫി” kifejezésre",
+	"apihelp-languagesearch-example-3": "Keresés „ഫി” kifejezésre, egy elgépelést megengedve"
+}

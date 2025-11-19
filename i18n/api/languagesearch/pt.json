@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu",
+			"Mansil alfalb"
+		]
+	},
+	"apihelp-languagesearch-summary": "Pesquisar por nomes de idioma em qualquer comando (''script'').",
+	"apihelp-languagesearch-param-search": "Texto da pesquisa.",
+	"apihelp-languagesearch-param-typos": "Número de erros ortográficos permitidos to texto da pesquisa.",
+	"apihelp-languagesearch-example-1": "Pesquisar \"Te\"",
+	"apihelp-languagesearch-example-2": "Pesquisar \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Pesquisar \"ഫി\", permitindo um erro ortográfico"
+}

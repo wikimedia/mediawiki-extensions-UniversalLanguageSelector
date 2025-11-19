@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mehran",
+			"Reza1615"
+		]
+	},
+	"apihelp-languagesearch-param-search": "جستجوی رشته.",
+	"apihelp-languagesearch-param-typos": "تعداد غلطهای املایی مجاز در جستجوی متن.",
+	"apihelp-languagesearch-example-1": "جستجوی \"Te\"",
+	"apihelp-languagesearch-example-2": "جستجوی ഫി\"",
+	"apihelp-languagesearch-example-3": "جستجوی ഫി\"، اجازه برای یک خطای نوشتاری"
+}

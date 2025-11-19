@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"J. 'mach' wust"
+		]
+	},
+	"apihelp-languagesearch-param-search": "Zeichefolg für d Suechi",
+	"apihelp-languagesearch-param-typos": "Azahl müglechi Abwychigen ir Schrybig vor Zeichefolg für d Suechi.",
+	"apihelp-languagesearch-example-1": "Nach «Te» sueche",
+	"apihelp-languagesearch-example-2": "Nach «ഫി» sueche",
+	"apihelp-languagesearch-example-3": "Nach «ഫി» sueche, mit eire müglechen Abwychig ir Schrybig"
+}

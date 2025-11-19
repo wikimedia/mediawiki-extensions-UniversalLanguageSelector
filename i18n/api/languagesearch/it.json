@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16",
+			"F. Cosoleto",
+			"Macofe"
+		]
+	},
+	"apihelp-languagesearch-example-1": "Cerca \"Te\"",
+	"apihelp-languagesearch-example-2": "Cerca \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Cerca \"ഫി\", consentendo un errore di battitura"
+}

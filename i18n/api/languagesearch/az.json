@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nemoralis"
+		]
+	},
+	"apihelp-languagesearch-summary": "İstənilən skriptdə dil adlarını axtar.",
+	"apihelp-languagesearch-param-search": "Axtarış sətri.",
+	"apihelp-languagesearch-param-typos": "Axtarış sətirində icazə verilən orfoqrafik səhvlərin sayı.",
+	"apihelp-languagesearch-example-1": "\"Te\" axtar",
+	"apihelp-languagesearch-example-2": "\"ഫി\" axtar",
+	"apihelp-languagesearch-example-3": "Bir yazı səhvinə icazə verilən \"ഫി\" axtar"
+}

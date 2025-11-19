@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"apihelp-languagesearch-summary": "Search for language names in any script.",
+	"apihelp-languagesearch-param-search": "Search string.",
+	"apihelp-languagesearch-param-typos": "Number of spelling mistakes allowed in the search string.",
+	"apihelp-languagesearch-example-1": "Search for \"Te\"",
+	"apihelp-languagesearch-example-2": "Search for \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Search for \"ഫി\""
+}

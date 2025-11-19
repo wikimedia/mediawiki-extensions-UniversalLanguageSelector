@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Muhammad Shuaib"
+		]
+	},
+	"apihelp-languagesearch-summary": "کسی بھی رسم الخط میں زبان کے ناموں کو تلاش کرتا ہے۔",
+	"apihelp-languagesearch-param-search": "تلاش کا جملہ",
+	"apihelp-languagesearch-param-typos": "تلاش کے جملے میں ہجے کی غلطیوں کی تعداد۔",
+	"apihelp-languagesearch-example-1": "تلاش برائے «Te»",
+	"apihelp-languagesearch-example-2": "تلاش برائے «ഫി»",
+	"apihelp-languagesearch-example-3": "تلاش برائے «ഫി» اور ایک غلطی کی اجازت دیں"
+}

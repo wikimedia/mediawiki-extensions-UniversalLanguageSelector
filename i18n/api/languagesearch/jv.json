@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"NoiX180"
+		]
+	},
+	"apihelp-languagesearch-param-search": "Golèk roncèn.",
+	"apihelp-languagesearch-param-typos": "Gunggung salah éja sing diidinaké ing roncèn golèkan.",
+	"apihelp-languagesearch-example-1": "Golèk \"Te\"",
+	"apihelp-languagesearch-example-2": "Golèk \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Golèk \"ഫി\", idinaké tipo siji"
+}

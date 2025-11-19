@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"GunChleoc"
+		]
+	},
+	"apihelp-languagesearch-param-search": "Sreang an luirg.",
+	"apihelp-languagesearch-param-typos": "Àireamh dhe mhearachdan litreachaidh a tha ceadaichte san t-sreang luirg.",
+	"apihelp-languagesearch-example-1": "Lorg \"Te\"",
+	"apihelp-languagesearch-example-2": "Lorg \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Lorg \"ഫി\" le aon mhearachd sgrìobhaidh ceadaichte"
+}

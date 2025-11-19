@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pikne"
+		]
+	},
+	"apihelp-languagesearch-param-search": "Otsisõne.",
+	"apihelp-languagesearch-param-typos": "Lubatud tähevigade arv otsisõnes.",
+	"apihelp-languagesearch-example-1": "Otsi sõnet \"Te\"",
+	"apihelp-languagesearch-example-2": "Otsi sõnet \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Otsi sõnet \"ഫി\", lubatud üks täheviga"
+}

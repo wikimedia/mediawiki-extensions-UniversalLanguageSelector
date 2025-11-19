@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Awangba Mangang"
+		]
+	},
+	"apihelp-languagesearch-summary": "ꯂꯣꯟ ꯃꯃꯤꯡꯁꯤꯡ ꯃꯌꯦꯛ ꯑꯃꯥꯍꯦꯛꯇꯒꯤ ꯗ ꯊꯤꯕꯥ ꯫",
+	"apihelp-languagesearch-param-search": "ꯊꯤꯅꯕ ꯃꯔꯤ ꯫",
+	"apihelp-languagesearch-param-typos": "ꯊꯤꯅꯕ ꯃꯔꯤꯗ(ꯂꯪ) ꯗ ꯁꯣꯏꯕ ꯌꯥꯕ ꯋꯥꯆꯨꯝ ꯃꯁꯤꯡ ꯫",
+	"apihelp-languagesearch-example-1": "\"Te\" ꯒꯤ ꯊꯤꯕꯥ",
+	"apihelp-languagesearch-example-2": " \"ഫി\" ꯒꯤ ꯊꯤꯕꯥ",
+	"apihelp-languagesearch-example-3": "\"ഫി\" ꯒꯤ ꯊꯤꯕꯥ, allowing one typo"
+}

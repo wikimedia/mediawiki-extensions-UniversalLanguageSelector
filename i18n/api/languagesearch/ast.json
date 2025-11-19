@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"apihelp-languagesearch-summary": "Buscar nomes de llingua en cualquier alfabetu.",
+	"apihelp-languagesearch-param-search": "Buscar cadena.",
+	"apihelp-languagesearch-param-typos": "Númberu d'errores ortográficos permitíos na cadena de gueta.",
+	"apihelp-languagesearch-example-1": "Buscar \"Te\"",
+	"apihelp-languagesearch-example-2": "Buscar \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Buscar \"ഫി\", permitiendo un fallu d'ortografía"
+}

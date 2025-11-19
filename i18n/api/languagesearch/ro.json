@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"NGC 54",
+			"Paloi Sciurala"
+		]
+	},
+	"apihelp-languagesearch-summary": "Căutați după nume de limbi în orice script.",
+	"apihelp-languagesearch-param-search": "Șir de căutare.",
+	"apihelp-languagesearch-param-typos": "Numărul de greșeli de scriere permise în șirul de căutare.",
+	"apihelp-languagesearch-example-1": "Căutați după „Te”",
+	"apihelp-languagesearch-example-2": "Căutați după „ഫി”",
+	"apihelp-languagesearch-example-3": "Căutați după „ഫി”, permițând o greșeală de scriere"
+}

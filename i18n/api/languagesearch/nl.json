@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Elroy",
+			"Goefie",
+			"HanV",
+			"Macofe",
+			"McDutchie",
+			"Robin van der Vliet",
+			"Siebrand",
+			"Sjoerddebruin"
+		]
+	},
+	"apihelp-languagesearch-summary": "Zoeken naar namen van talen in elk script",
+	"apihelp-languagesearch-param-search": "Zoekterm.",
+	"apihelp-languagesearch-param-typos": "Aantal toegestane spelfouten in de te zoeken tekst.",
+	"apihelp-languagesearch-example-1": "Zoeken naar \"Te\"",
+	"apihelp-languagesearch-example-2": "Zoeken naar \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Zoeken naar “ഫി”, waarbij één typfout mogelijk is"
+}

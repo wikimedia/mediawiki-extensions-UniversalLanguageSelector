@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arystanbek"
+		]
+	},
+	"apihelp-languagesearch-param-search": "Іздеу жолы.",
+	"apihelp-languagesearch-param-typos": "Іздеу жолында дұрыс жазу ережесін бұзуына рұқсат етілген саны",
+	"apihelp-languagesearch-example-1": "«Te» үшін іздеу",
+	"apihelp-languagesearch-example-2": "«ഫി» үшін іздеу"
+}

@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Red Winged Duck",
+			"Renessaince"
+		]
+	},
+	"apihelp-languagesearch-summary": "Пошук назваў моваў любым альфабэтам.",
+	"apihelp-languagesearch-param-search": "Радок пошуку.",
+	"apihelp-languagesearch-param-typos": "Колькасьць памылак артаграфіі, дазволеных у радку пошуку.",
+	"apihelp-languagesearch-example-1": "Шукаць «Te»",
+	"apihelp-languagesearch-example-2": "Шукаць «ഫി»",
+	"apihelp-languagesearch-example-3": "Шукаць «ഫി», дапушчальная адна памылка"
+}

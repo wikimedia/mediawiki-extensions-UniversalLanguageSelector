@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"V.narsikar"
+		]
+	},
+	"apihelp-languagesearch-param-search": "शोध सूत्र.",
+	"apihelp-languagesearch-param-typos": "शोध सूत्रात परवानगी दिलेली स्पेलिंग चूकांची संख्या.",
+	"apihelp-languagesearch-example-1": "\"Te\" साठी शोधा",
+	"apihelp-languagesearch-example-2": "\"ഫി\" साठी शोधा",
+	"apihelp-languagesearch-example-3": "\"ഫി\" साठी शोधा, एक चूक क्षम्य"
+}

@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lam-ang"
+		]
+	},
+	"apihelp-languagesearch-param-search": "Kuerdas ti panagbiruk.",
+	"apihelp-languagesearch-param-typos": "Bilang dagiti kamali ti panangiletra a maipalubos iti kuerdas ti panagbiruk.",
+	"apihelp-languagesearch-example-1": "Agbiruk para iti \"Te\"",
+	"apihelp-languagesearch-example-2": "Agbiruk para iti \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Agbiruk para iti \"ഫി\", a mangipalubos iti maysa a kamali"
+}

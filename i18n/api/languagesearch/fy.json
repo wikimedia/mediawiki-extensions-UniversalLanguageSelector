@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"PiefPafPier",
+			"Robin van der Vliet"
+		]
+	},
+	"apihelp-languagesearch-summary": "Taalnammen sykjen yn elts skrift.",
+	"apihelp-languagesearch-param-search": "Sykterm.",
+	"apihelp-languagesearch-param-typos": "Tal fan tastiene staveringsflaters yn in sykterm.",
+	"apihelp-languagesearch-example-1": "Sykje nei \"Te\"",
+	"apihelp-languagesearch-example-2": "Sykje nei \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Sykje nei \"ഫി\", ien typflater tasteand"
+}

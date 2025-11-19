@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Benel",
+			"Bunukwiki"
+		]
+	},
+	"apihelp-languagesearch-param-search": "mikilim sulisulitan.",
+	"apihelp-languagesearch-param-typos": "mahasa ilabu nu kilim sasulitan a pasasuala tu sulit mungangaw nikayadah.",
+	"apihelp-languagesearch-example-1": "kilim tu \"Te\"",
+	"apihelp-languagesearch-example-2": "kilim tu \"ഫി\""
+}

@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64",
+			"ThisCarthing",
+			"Tiin"
+		]
+	},
+	"apihelp-languagesearch-summary": "Sucht nach Sprachnamen in einem beliebigen Skript.",
+	"apihelp-languagesearch-param-search": "Such-Zeichenfolge.",
+	"apihelp-languagesearch-param-typos": "Anzahl der erlaubten Rechtschreibfehler in der Sucheingabe.",
+	"apihelp-languagesearch-example-1": "Sucht nach „Te“",
+	"apihelp-languagesearch-example-2": "Sucht nach „ഫി“",
+	"apihelp-languagesearch-example-3": "Sucht nach „ഫി“, erlaubt einen Tippfehler"
+}

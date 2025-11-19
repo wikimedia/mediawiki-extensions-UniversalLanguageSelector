@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dianakc",
+			"EGobi",
+			"Eduardo Addad de Oliveira",
+			"Eduardoaddad",
+			"Felipe L. Ewald",
+			"Fúlvio"
+		]
+	},
+	"apihelp-languagesearch-summary": "Procurar nomes de idiomas em qualquer escrita.",
+	"apihelp-languagesearch-param-search": "Cadeia de caracteres a ser pesquisada.",
+	"apihelp-languagesearch-param-typos": "Número de erros ortográficos permitidos na cadeia de caracteres a ser pesquisada.",
+	"apihelp-languagesearch-example-1": "Pesquisar “Te”",
+	"apihelp-languagesearch-example-2": "Pesquisar “ഫി”",
+	"apihelp-languagesearch-example-3": "Pesquisar “ഫി”, permitindo um erro ortográfico"
+}

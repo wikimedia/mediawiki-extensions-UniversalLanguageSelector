@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lokal Profil",
+			"Tölvuforritari",
+			"WikiPhoenix"
+		]
+	},
+	"apihelp-languagesearch-summary": "Sök efter språknamn i valfritt skriftsystem.",
+	"apihelp-languagesearch-param-search": "Söksträng.",
+	"apihelp-languagesearch-param-typos": "Antalet felstavningar som tillåts i söksträngen.",
+	"apihelp-languagesearch-example-1": "Sök efter \"Te\"",
+	"apihelp-languagesearch-example-2": "Sök efter \"ഫി\"",
+	"apihelp-languagesearch-example-3": "Sök efter \"ഫി\", tillåter ett stavfel"
+}

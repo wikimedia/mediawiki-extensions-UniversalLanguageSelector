@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dr1t jg",
+			"Hwangjy9",
+			"Suleiman the Magnificent Television",
+			"Ykhwong"
+		]
+	},
+	"apihelp-languagesearch-summary": "임의의 스크립트에서 언어 이름을 검색합니다.",
+	"apihelp-languagesearch-param-search": "검색 문자열입니다.",
+	"apihelp-languagesearch-param-typos": "검색항목에 허용된 표기오류의 수",
+	"apihelp-languagesearch-example-1": "\"Te\"로 검색",
+	"apihelp-languagesearch-example-2": "\"ഫി\"로 검색",
+	"apihelp-languagesearch-example-3": "\"ഫി\"를 검색해 오타 1개 허용"
+}
