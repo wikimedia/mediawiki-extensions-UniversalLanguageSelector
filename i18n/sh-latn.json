@@ -18,6 +18,7 @@
 	"ext-uls-input-enable": "Uključi alatke za unos",
 	"ext-uls-input-disable-info": "Alatke za unos su isključene.",
 	"ext-uls-compact-link-count": "Još {{PLURAL:$1|1=jedan|$1}}",
+	"ext-uls-compact-language-links-preference": "[[$1|Sažeta lista jezika]], s jezicima koji su vama važni",
 	"ext-uls-compact-no-results": "Stranica nije dostupna na jeziku koji tražite.",
 	"ext-uls-actions-menu-language-settings-item-label": "Promijenite postavke jezika",
 	"ext-uls-empty-state-header": "Nema drugih jezika",
