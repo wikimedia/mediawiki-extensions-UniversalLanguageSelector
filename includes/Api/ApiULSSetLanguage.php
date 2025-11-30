@@ -73,11 +73,10 @@ class ApiULSSetLanguage extends ApiBase {
 			$this->dieWithError( [ 'apierror-ulssetlang-anon-notallowed' ] );
 		}
 
-		$updateUser = $user->getInstanceForUpdate();
-		$this->userOptionsManager->setOption( $updateUser, 'language', $languageCode );
+		$this->userOptionsManager->setOption( $user, 'language', $languageCode );
 		// Sync the DB on post-send
-		DeferredUpdates::addCallableUpdate( static function () use ( $updateUser ) {
-			$updateUser->saveSettings();
+		DeferredUpdates::addCallableUpdate( function () use ( $user ) {
+			$this->userOptionsManager->saveOptions( $user );
 		} );
 	}
 
