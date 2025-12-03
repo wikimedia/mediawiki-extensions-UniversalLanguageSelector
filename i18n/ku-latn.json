@@ -8,12 +8,12 @@
 			"Guherto"
 		]
 	},
-	"uls-desc": "Çend rê dide bikarhêneran ku zimanekî hilbijêrin û mîhengên zimanî biguherînin",
+	"uls-desc": "Çend rê dide bikarhêneran ku zimanekî hilbijêrin û eyarên zimanî biguherînin",
 	"uls-plang-title-languages": "Ziman",
 	"ext-uls-select-language-settings-icon-tooltip": "Eyarên ziman",
 	"ext-uls-undo-language-tooltip-text": "Ziman ji $1 hat guhartin",
 	"ext-uls-undo-language-tooltip-text-local": "Ziman têne ji bo vê wîkiyê hatiye guhartin. Ji bo guhartina zimanên hemû wîkiyan here [[Special:GlobalPreferences|tercîhên global]]",
-	"ext-uls-language-settings-preferences-link": "Zêdetir mîhengên zimanî",
+	"ext-uls-language-settings-preferences-link": "Zêdetir eyarên zimanî",
 	"uls-betafeature-label": "Girêdanên zimanî yên kompakt",
 	"uls-betafeature-desc": "Guhartoyeke kurt a lîsteya zimanan nîşan bide, tenê bi zimanên ku ji te re têkildartir in.",
 	"ext-uls-display-settings-title": "Eyarên ekranê",
