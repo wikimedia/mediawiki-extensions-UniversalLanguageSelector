@@ -70,9 +70,9 @@
 	"ext-uls-setlang-loading": "Baitalabume bi...",
 	"ext-uls-setlang-cancel": "Kūbulirakū",
 	"ext-uls-actions-menu-language-settings-item-label": "Gisun -i sindabun be neire",
-	"ext-uls-empty-state-header": "Kemuni gūwa gisun akū",
+	"ext-uls-empty-state-header": "Kemuni gūwa gisun -i ban akū",
 	"ext-uls-empty-state-desc": "Kemuni baitalaci ojoro gūwa gisun -i ban akū",
-	"ext-uls-empty-state-header-actions-available": "Kemuni gūwa gisun akū. Ice gisun be nonggireo?",
+	"ext-uls-empty-state-header-actions-available": "Kemuni gūwa gisun -i ban akū. Gūwa gisun -i ban be nonggibuki sembio?",
 	"ext-uls-empty-state-desc-actions-available": "Ineku baktambun de elei labdu gisun -i ban be nonggibure.",
 	"ext-uls-add-languages-button-label": "Gisun be nonggibure"
 }
