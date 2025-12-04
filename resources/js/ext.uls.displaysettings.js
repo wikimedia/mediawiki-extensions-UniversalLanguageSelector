@@ -91,8 +91,8 @@
 		'<input type="checkbox" id="webfonts-enable-checkbox" class="cdx-checkbox__input" />' +
 		'<span class="cdx-checkbox__icon"></span>' +
 		'<label class="checkbox cdx-checkbox__label" for="webfonts-enable-checkbox" >' +
-		'<strong data-i18n="ext-uls-webfonts-settings-title"></strong> ' +
-		'<span data-i18n="ext-uls-webfonts-settings-info"></span> ' +
+		'<strong data-i18n="ext-uls-webfonts-settings-title"></strong>&nbsp;' +
+		'<span data-i18n="ext-uls-webfonts-settings-info"></span>&nbsp;' +
 		'<a target="_blank" href="https://www.mediawiki.org/wiki/Universal_Language_Selector/WebFonts" data-i18n="ext-uls-webfonts-settings-info-link"></a>' +
 		'</label>' +
 		'</div>' +
