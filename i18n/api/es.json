@@ -5,11 +5,6 @@
 			"Macofe"
 		]
 	},
-	"apihelp-languagesearch-param-search": "Buscar cadena.",
-	"apihelp-languagesearch-param-typos": "Número de faltas de ortografía permitidas en la cadena de búsqueda.",
-	"apihelp-languagesearch-example-1": "Buscar \"Te\"",
-	"apihelp-languagesearch-example-2": "Buscar \"ഫി\"",
-	"apihelp-languagesearch-example-3": "Buscar \"ഫി\", permitiendo un error tipográfico",
 	"apihelp-ulslocalization-param-language": "Código de idioma.",
 	"apihelp-ulslocalization-example-1": "Recuperar la traducción al tamil",
 	"apihelp-ulslocalization-example-2": "Recuperar la traducción al hindi",

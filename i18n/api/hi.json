@@ -5,12 +5,6 @@
 			"Sfic"
 		]
 	},
-	"apihelp-languagesearch-summary": "किसी भी लिपि में भाषा का नाम खोजें।",
-	"apihelp-languagesearch-param-search": "खोजने के लिए स्ट्रिंग।",
-	"apihelp-languagesearch-param-typos": "खोज के स्ट्रिंग में वर्तनी त्रुटियों की अनुमोदित संख्या।",
-	"apihelp-languagesearch-example-1": "\"Te\" खोजें",
-	"apihelp-languagesearch-example-2": "\"ഫി\" खोजें",
-	"apihelp-languagesearch-example-3": "\"ഫി\" खोजें, जिसमें एक वर्तनी है",
 	"apihelp-ulslocalization-summary": "निर्दिष्ट भाषा में ULS का स्थानीयकरण प्राप्त करें।",
 	"apihelp-ulslocalization-param-language": "भाषा कोड।",
 	"apihelp-ulslocalization-example-1": "तमिल स्थानीयकरण पाएँ",

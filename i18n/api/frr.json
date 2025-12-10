@@ -4,11 +4,6 @@
 			"Murma174"
 		]
 	},
-	"apihelp-languagesearch-param-search": "Tekst trochschük.",
-	"apihelp-languagesearch-param-typos": "Taal faan skriiwfeelern uun det schük-wurd.",
-	"apihelp-languagesearch-example-1": "Schük \"Te\"",
-	"apihelp-languagesearch-example-2": "Schük \"ഫി\"",
-	"apihelp-languagesearch-example-3": "Schük \"ഫി\", uk mä ään skriiwfeeler",
 	"apihelp-ulslocalization-param-language": "Spriak-tekst",
 	"apihelp-ulslocalization-example-1": "Haale det auersaatang uun Tamil",
 	"apihelp-ulslocalization-example-2": "Haale det auersaatang uun Hindi"

@@ -2,8 +2,5 @@
 	"@metadata": {
 		"authors": []
 	},
-	"apihelp-languagesearch-summary": "Pretražite jezike na bilo kom pismu.",
-	"apihelp-languagesearch-param-search": "Tekst za pretragu.",
-	"apihelp-languagesearch-param-typos": "Broj dozvoljenih grešaka u kucanju.",
 	"apihelp-ulslocalization-param-language": "Jezički kod."
 }

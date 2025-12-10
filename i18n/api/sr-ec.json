@@ -6,8 +6,5 @@
 			"Prevodim"
 		]
 	},
-	"apihelp-languagesearch-summary": "Претражите језике на било ком писму.",
-	"apihelp-languagesearch-param-search": "Текст за претрагу.",
-	"apihelp-languagesearch-param-typos": "Број дозвољених грешака у куцању.",
 	"apihelp-ulslocalization-param-language": "Језички код."
 }

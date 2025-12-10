@@ -4,12 +4,6 @@
 			"Kjeanclaude"
 		]
 	},
-	"apihelp-languagesearch-summary": "Kounndè aniein douman moun nga bé wo ndè mma klouaa noun.",
-	"apihelp-languagesearch-param-search": "Liké nga bé kounndè i noun ndè mma.",
-	"apihelp-languagesearch-param-typos": "Ndè mma nga bé sa to fouan sou moun, bé klouaa bé nouan nga bé kplin sou kè ô tran liké nga bé kounndè i noun ndè mma moun bé noun.",
-	"apihelp-languagesearch-example-1": "Kounndè \"Te\"",
-	"apihelp-languagesearch-example-2": "Kounndè \"ഫി\"",
-	"apihelp-languagesearch-example-3": "Kounndè \"ഫി\", bé kloua pkli'n satofouanlè koungba sou",
 	"apihelp-ulslocalization-summary": "Kounndè ULS nvlé noun tranwlè i aniein nga bé fa man ni noun.",
 	"apihelp-ulslocalization-param-language": "Aniein i codi.",
 	"apihelp-ulslocalization-example-1": "Kounndè Tamil nvlé noun tranwlè",

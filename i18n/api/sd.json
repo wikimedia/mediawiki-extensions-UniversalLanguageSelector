@@ -5,10 +5,6 @@
 			"Sindhu"
 		]
 	},
-	"apihelp-languagesearch-param-search": "ڳولا تار.",
-	"apihelp-languagesearch-param-typos": "ڳولا تار ۾ ھجي جي غلطين جو اجازت ڏنل انگ.",
-	"apihelp-languagesearch-example-1": "\"Te\" لاءِ ڳوليو",
-	"apihelp-languagesearch-example-2": "\"ഫി\" لاءِ ڳوليو",
 	"apihelp-ulslocalization-param-language": "ٻوليءَ جو ڪوڊ",
 	"apihelp-ulslocalization-example-1": "تامل مقامڪاري وٺو",
 	"apihelp-ulslocalization-example-2": "ھندي مقامڪاري وٺو"

@@ -4,11 +4,6 @@
 			"GunChleoc"
 		]
 	},
-	"apihelp-languagesearch-param-search": "Sreang an luirg.",
-	"apihelp-languagesearch-param-typos": "Àireamh dhe mhearachdan litreachaidh a tha ceadaichte san t-sreang luirg.",
-	"apihelp-languagesearch-example-1": "Lorg \"Te\"",
-	"apihelp-languagesearch-example-2": "Lorg \"ഫി\"",
-	"apihelp-languagesearch-example-3": "Lorg \"ഫി\" le aon mhearachd sgrìobhaidh ceadaichte",
 	"apihelp-ulslocalization-param-language": "Còd a' chànain.",
 	"apihelp-ulslocalization-example-1": "Faigh ionadaileadh na Taimilis",
 	"apihelp-ulslocalization-example-2": "Faigh ionadaileadh na Hindis"

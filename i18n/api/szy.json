@@ -5,10 +5,6 @@
 			"Bunukwiki"
 		]
 	},
-	"apihelp-languagesearch-param-search": "mikilim sulisulitan.",
-	"apihelp-languagesearch-param-typos": "mahasa ilabu nu kilim sasulitan a pasasuala tu sulit mungangaw nikayadah.",
-	"apihelp-languagesearch-example-1": "kilim tu \"Te\"",
-	"apihelp-languagesearch-example-2": "kilim tu \"ഫി\"",
 	"apihelp-ulslocalization-param-language": "kamu a kodo.",
 	"apihelp-ulslocalization-example-1": "maala kamu nu Taymil sanuniyazu’en",
 	"apihelp-ulslocalization-example-2": "maala kamu nu intu sanuniyazu’en"
