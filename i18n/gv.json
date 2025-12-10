@@ -2,14 +2,16 @@
 	"@metadata": {
 		"authors": [
 			"Danielquayle",
-			"Xð"
+			"Xð",
+			"MacTire02"
 		]
 	},
 	"uls-plang-title-languages": "Çhengaghyn",
-	"ext-uls-select-language-settings-icon-tooltip": "Soieaghyn çhengey",
-	"ext-uls-undo-language-tooltip-text": "Çhengey caghlaait voish $1",
+	"ext-uls-select-language-settings-icon-tooltip": "Soiaghyn çhengey",
+	"ext-uls-undo-language-tooltip-text": "Çhengey caghlaait veih $1",
 	"ext-uls-display-settings-language-tab": "Çhengey",
 	"ext-uls-display-settings-fonts-tab": "Aghtyn clouscreeu",
-	"ext-uls-display-settings-title-short": "Taishbyney",
-	"ext-uls-language-settings-title": "Soieaghyn çhengey"
+	"ext-uls-display-settings-title-short": "Taishbyn",
+	"ext-uls-language-settings-title": "Soiaghyn çhengey",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Fer elley|$1 elley}}"
 }
