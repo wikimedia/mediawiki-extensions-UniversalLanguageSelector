@@ -5,5 +5,5 @@
 		]
 	},
 	"uls-plang-title-languages": "ꦧꦱ",
-	"ext-uls-compact-link-count": "$1ꦭꦶꦪꦤꦺ"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|$1ꦭꦶꦪꦤꦺ}}"
 }
