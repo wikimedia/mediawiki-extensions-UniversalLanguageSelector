@@ -62,7 +62,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Satu lagi|$1 lagi}}",
 	"ext-uls-compact-link-info": "Semua bahasa (pilihan awal berdasarkan oleh pilihan umum oleh anda dan orang lain)",
 	"prefs-languages": "Bahasa",
-	"ext-uls-compact-language-links-preference": "Guna [[$1|senarai padat bahasa]] yang mempunyai bahasa-bahasa yang berkaitan dengan anda.",
+	"ext-uls-compact-language-links-preference": "Guna [[$1|senarai padat bahasa]] yang mempunyai bahasa-bahasa yang berkaitan dengan anda",
 	"ext-uls-compact-no-results": "Laman ini tidak tersedia dalam bahasa yang anda cari",
 	"ext-uls-setlang-error": "Terdapat ralat semasa mengemas kini bahasa pilihan anda. Ralat: $1",
 	"ext-uls-setlang-unknown-error": "Ralat tidak diketahui",
