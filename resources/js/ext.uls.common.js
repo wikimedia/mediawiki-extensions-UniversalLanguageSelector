@@ -104,12 +104,10 @@
 	};
 
 	mw.uls.setPreviousLanguages = function ( previousLanguages ) {
-		try {
-			localStorage.setItem(
-				mw.uls.previousLanguagesStorageKey,
-				JSON.stringify( previousLanguages.slice( 0, 9 ) )
-			);
-		} catch ( e ) {}
+		mw.storage.setObject(
+			mw.uls.previousLanguagesStorageKey,
+			previousLanguages.slice( 0, 9 )
+		);
 	};
 
 	/**
@@ -142,16 +140,7 @@
 	};
 
 	mw.uls.getPreviousLanguages = function () {
-		const previousLanguages = [];
-
-		try {
-			previousLanguages.push.apply(
-				previousLanguages,
-				JSON.parse( localStorage.getItem( mw.uls.previousLanguagesStorageKey ) )
-			);
-		} catch ( e ) {}
-
-		return previousLanguages.slice( 0, 9 );
+		return mw.storage.getObject( mw.uls.previousLanguagesStorageKey ) || [];
 	};
 
 	/**
