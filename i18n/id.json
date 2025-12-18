@@ -10,7 +10,8 @@
 			"Veracious",
 			"William Surya Permana",
 			"Xð",
-			"පසිඳු කාවින්ද"
+			"පසිඳු කාවින්ද",
+			"Penyuwangi"
 		]
 	},
 	"uls-desc": "Memberikan pengguna beberapa cara untuk memilih bahasa dan menyesuaikan pengaturan bahasa",
@@ -56,13 +57,13 @@
 	"jquery-ime-disable-text": "Gunakan papan ketik standar",
 	"jquery-ime-help": "Bantuan",
 	"ext-uls-input-disable": "Nonaktifkan perkakas input",
-	"ext-uls-input-enable": "Aktifkan perkakas input",
+	"ext-uls-input-enable": "Nyalakan perkakas input",
 	"ext-uls-input-disable-info": "Perkakas input nonaktif.",
 	"ext-uls-input-settings-noime": "Tidak tersedia metode input untuk bahasa ini.",
 	"ext-uls-input-disable-notification": "Perkakas input dinonaktifkan",
 	"ext-uls-input-disable-notification-undo": "Batal",
 	"ext-uls-input-disable-notification-info-personal": "Anda dapat mengaktifkan perkakas input kapan pun dari pengaturan bahasa.",
-	"ext-uls-input-disable-notification-info-interlanguage": "Anda dapat mengaktifkan perkakas input kapan pun dari pengaturan bahasa di sebelah daftar bahasa.",
+	"ext-uls-input-disable-notification-info-interlanguage": "Anda dapat menyalakan perkakas masukan kapan pun dari pengaturan bahasa di sebelah daftar bahasa.",
 	"ext-uls-language-settings-applying": "Menerapkan...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Satu lagi|$1 lagi}}",
 	"ext-uls-compact-link-info": "Semua bahasa (pilihan awal berasal dari pilihan umum oleh Anda dan orang lain)",
