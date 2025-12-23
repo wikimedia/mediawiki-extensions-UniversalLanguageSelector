@@ -34,7 +34,7 @@
 	"ext-uls-language-settings-cancel": "Annuleren",
 	"ext-uls-language-buttons-help": "Wijzig de taal van de menu's. De taal van de inhoud wordt niet gewijzigd.",
 	"ext-uls-display-settings-font-settings": "Lettertype-instellingen",
-	"ext-uls-display-settings-ui-language": "Taal voor weergave",
+	"ext-uls-display-settings-ui-language": "Weergavetaal",
 	"ext-uls-display-settings-anon-label": "Taal voor weergave:",
 	"ext-uls-display-settings-anon-same-as-content": "$1 (zelfde als inhoud)",
 	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Meld u aan]] om een andere taal voor menu's te kiezen.",
