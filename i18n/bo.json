@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Pecha-Tsewang",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "སྐད་རིགས།"
+	"uls-plang-title-languages": "སྐད་རིགས།",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|མང་བ།|$1 མང་བ།}}"
 }
