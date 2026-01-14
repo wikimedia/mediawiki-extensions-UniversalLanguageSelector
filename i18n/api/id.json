@@ -5,7 +5,11 @@
 			"William Surya Permana"
 		]
 	},
+	"apihelp-ulslocalization-summary": "Dapatkan lokalisasi ULS dalam bahasa yang diberikan.",
 	"apihelp-ulslocalization-param-language": "Kode bahasa.",
 	"apihelp-ulslocalization-example-1": "Dapatkan lokalisasi Tamil",
-	"apihelp-ulslocalization-example-2": "Dapatkan lokalisasi Hindi"
+	"apihelp-ulslocalization-example-2": "Dapatkan lokalisasi Hindi",
+	"apihelp-ulssetlang-summary": "Perbarui bahasa antarmuka pilihan pengguna.",
+	"apihelp-ulssetlang-param-languagecode": "Kode bahasa pilihan.",
+	"apierror-ulssetlang-anon-notallowed": "Pengguna anonim tidak diperbolehkan mengubah bahasa antarmuka."
 }
