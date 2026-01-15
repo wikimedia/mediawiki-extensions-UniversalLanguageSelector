@@ -68,7 +68,7 @@
 	"ext-uls-input-disable-notification-info-personal": "你可隨時在語言設定中開啟輸入工具。",
 	"ext-uls-input-disable-notification-info-interlanguage": "你可隨時在語言清單旁的語言設定中開啟輸入工具。",
 	"ext-uls-language-settings-applying": "套用中...",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|還有 $1 種語言}}",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|還有$1種語言}}",
 	"ext-uls-compact-link-info": "所有語言（來自您和其他人共同選擇的初始選項）",
 	"prefs-languages": "語言",
 	"ext-uls-compact-language-links-preference": "使用[[$1|較簡潔的語言清單]]，包括與您相關的語言",
