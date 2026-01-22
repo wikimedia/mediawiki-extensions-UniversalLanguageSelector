@@ -579,9 +579,38 @@
 
 		ev.preventDefault();
 
+		if ( shouldLoadUlsRewrite() ) {
+			mw.loader.using( [ 'ext.uls.mediawiki', 'ext.uls.rewrite' ] ).then( () => {
+				const languageNodes = getLanguageNodes();
+				const { createUniversalLanguageSelector } = require( 'ext.uls.rewrite' );
+				const { h } = require( 'vue' );
+
+				const mountPoint = document.createElement( 'div' );
+				document.body.appendChild( mountPoint );
+
+				const app = createUniversalLanguageSelector( {
+					triggerElement: ev.currentTarget,
+					selectableLanguages: mw.uls.getInterlanguageListFromNodes( languageNodes ),
+					onSelect: ( language ) => {
+						window.location.assign( language.value.href );
+					},
+					slots: {
+						'language-item': ( { item } ) => h( 'a', { href: item.href }, item.text )
+					}
+				} );
+
+				const mountedVm = app.mount( mountPoint );
+				$target.on( 'click', ( event ) => {
+					event.preventDefault();
+					event.stopPropagation();
+					mountedVm.toggle();
+				} );
+			} );
+			return;
+		}
+
 		mw.loader.using( [ 'ext.uls.mediawiki', '@wikimedia/codex' ] ).then( () => {
-			const parent = document.querySelectorAll( '.mw-portlet-lang, #p-lang' )[ 0 ];
-			const languageNodes = parent ? parent.querySelectorAll( '.interlanguage-link-target' ) : [];
+			const languageNodes = getLanguageNodes();
 			const standalone = isUsingStandaloneLanguageButton();
 
 			// Setup click handler for ULS
@@ -727,6 +756,36 @@
 			$( '.mw-interlanguage-selector' ).removeClass( 'mw-interlanguage-selector' );
 			document.body.classList.add( 'mw-interlanguage-selector-disabled' );
 		}
+	}
+
+	function shouldLoadUlsRewrite() {
+		if ( mw.config.get( 'wgULSisRewriteEnabled' ) !== true ) {
+			return false;
+		}
+
+		// Currently only compatible with Vector 2022.
+		if ( mw.config.get( 'skin' ) !== 'vector-2022' ) {
+			return false;
+		}
+
+		const languageNodes = getLanguageNodes();
+		if ( languageNodes.length === 0 ) {
+			// TODO: Add support for empty state in the rewrite version
+			// and remove this check.
+			return false;
+		}
+
+		return true;
+	}
+
+	let languageNodesCache = null;
+	function getLanguageNodes() {
+		if ( languageNodesCache === null ) {
+			const parent = document.querySelectorAll( '.mw-portlet-lang, #p-lang' )[ 0 ];
+			languageNodesCache = parent ? parent.querySelectorAll( '.interlanguage-link-target' ) : [];
+		}
+
+		return languageNodesCache;
 	}
 
 	// Early execute of init

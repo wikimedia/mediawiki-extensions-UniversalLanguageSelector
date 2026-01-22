@@ -79,5 +79,10 @@
 	"ext-uls-empty-state-desc": "No languages are available for now",
 	"ext-uls-empty-state-header-actions-available": "No languages yet. Add a new one?",
 	"ext-uls-empty-state-desc-actions-available": " Make the content available in more languages.",
-	"ext-uls-add-languages-button-label": "Add languages"
+	"ext-uls-add-languages-button-label": "Add languages",
+	"ext-uls-language-title": "Languages",
+	"ext-uls-placeholder-search": "Search languages",
+	"ext-uls-close-button-label": "Close",
+	"ext-uls-rewrite-label": "Universal Language Selector rewrite",
+	"ext-uls-rewrite-description": "A rewrite of the Universal Language Selector (ULS), designed to modernize the user experience and reduce technical debt through simplified architecture."
 }

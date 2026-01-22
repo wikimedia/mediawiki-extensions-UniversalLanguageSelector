@@ -178,6 +178,13 @@ class Hooks implements
 			// if current page doesn't exist or if it's a talk page, we should use a different layout inside ULS
 			// according to T316559. Add JS config variable here, to let frontend know, when this is the case
 			$config[ 'wgULSisLanguageSelectorEmpty' ] = $isMissingPage || $title->isTalkPage();
+
+			if (
+				!ExtensionRegistry::getInstance()->isLoaded( 'BetaFeatures' )
+				|| \MediaWiki\Extension\BetaFeatures\BetaFeatures::isFeatureEnabled( $out->getUser(), 'uls-rewrite' )
+			) {
+				$config[ 'wgULSisRewriteEnabled' ] = true;
+			}
 		}
 
 		// This is added here, and not in onResourceLoaderGetConfigVars to allow skins and extensions
@@ -496,6 +503,23 @@ class Hooks implements
 					'https://www.mediawiki.org/wiki/Talk:Universal_Language_Selector/Compact_Language_Links',
 			];
 		}
+
+		// Enable ULS rewrite beta feature
+		$extensionAssetsPath = $this->config->get( 'ExtensionAssetsPath' );
+		$imagesDir = "$extensionAssetsPath/UniversalLanguageSelector/resources/images";
+		$prefs['uls-rewrite'] = [
+			'label-message' => 'ext-uls-rewrite-label',
+			'desc-message' => 'ext-uls-rewrite-description',
+			'screenshot' => [
+				// TODO: Change these icons
+				'ltr' => "$imagesDir/uls-rewrite-ltr.png",
+				'rtl' => "$imagesDir/uls-rewrite-rtl.png",
+			],
+			'info-link' => 'https://www.mediawiki.org/wiki/Wikimedia_Language_and_Product_Localization/ULS_Rewrite',
+			'discussion-link' =>
+				// phpcs:ignore Generic.Files.LineLength.TooLong
+				'https://www.mediawiki.org/w/index.php?title=Talk:Wikimedia_Language_and_Product_Localization/ULS_Rewrite',
+		];
 	}
 
 	/**

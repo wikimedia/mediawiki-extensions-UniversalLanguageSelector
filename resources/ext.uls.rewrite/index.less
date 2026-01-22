@@ -1,0 +1,125 @@
+@import 'mediawiki.skin.variables.less';
+
+.uls-rewrite {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: @z-index-overlay;
+	background-color: @background-color-base;
+	display: flex;
+	flex-direction: column;
+	color: @color-base;
+	font-size: @font-size-medium;
+
+	.uls-rewrite__header {
+		background-color: @background-color-base;
+
+		.cdx-search-input {
+			input[ type='search' ] {
+				padding-top: @spacing-50;
+				padding-bottom: @spacing-50;
+				padding-inline-end: @spacing-100;
+				/** Don't set padding-inline-start to avoid overriding codex values that are used to align the icon properly */
+				max-height: none;
+			}
+		}
+
+		.cdx-text-input {
+			min-width: auto;
+		}
+
+		.uls-rewrite__header__mobile {
+			padding: @spacing-75 @spacing-100;
+			font-weight: bold;
+			display: flex;
+			align-items: center;
+			border-bottom: @border-width-base solid @border-color-subtle;
+			box-shadow: @box-shadow-small-bottom;
+
+			span {
+				flex-grow: 1;
+			}
+		}
+	}
+
+	.uls-rewrite__body {
+		padding: @spacing-50 @spacing-75;
+		overflow-y: auto;
+		flex-grow: 1;
+
+		.uls-rewrite__body__language-list {
+			margin: 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+
+		.uls-rewrite__language-item {
+			list-style: none;
+			padding: @spacing-50 @spacing-50 @spacing-50 @spacing-200;
+			cursor: pointer;
+			margin-bottom: 0;
+
+			a {
+				text-decoration: none;
+			}
+
+			&.uls-rewrite__language-item--highlighted,
+			&.uls-rewrite__language-item--selected {
+				background-color: @background-color-interactive-subtle--hover;
+			}
+		}
+	}
+
+	@media ( min-width: 768px ) {
+		// Reset from Fixed Full Screen to Absolute/Popup
+		position: absolute;
+		top: auto;
+		left: auto;
+		right: auto;
+		bottom: auto;
+		border: @border-width-base solid @border-color-subtle;
+		box-shadow: @box-shadow-drop-medium;
+		border-radius: @border-radius-base;
+		max-height: 312px;
+
+		// --- Density: Low (0-9) ---
+		// Inherits 1 column from mobile default.
+		&.uls-rewrite--density-low {
+			width: 220px;
+		}
+
+		// --- Density: Medium (10-29) ---
+		&.uls-rewrite--density-medium {
+			width: 380px;
+
+			.uls-rewrite__body__language-list {
+				grid-template-columns: repeat( 2, 1fr );
+			}
+		}
+
+		// --- Density: High (30+) ---
+		&.uls-rewrite--density-high {
+			width: 540px;
+
+			.uls-rewrite__body__language-list {
+				grid-template-columns: repeat( 3, 1fr );
+
+				.uls-rewrite__language-item {
+					&:nth-child( 15n + 1 ),
+					&:nth-child( 15n + 2 ),
+					&:nth-child( 15n + 3 ) {
+						margin-top: @spacing-150;
+					}
+
+					// Reset the very first row (items 1, 2, 3) so they don't have a gap at the top
+					&:nth-child( -n+3 ) {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+	}
+}

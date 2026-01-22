@@ -1,3 +1,5 @@
 /vendor/
 /lib/
 ext.uls.webfonts.repository.js
+resources/ext.uls.rewrite/lib/
+resources/ext.uls.rewrite/dist/

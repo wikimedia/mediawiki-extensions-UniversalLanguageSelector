@@ -3,17 +3,24 @@
 	"private": true,
 	"scripts": {
 		"minify:svg": "svgo --config=.svgo.config.js --quiet --recursive --folder resources/images/",
-		"test": "grunt test"
+		"test": "grunt test",
+		"build:rewrite": "rollup -c"
 	},
 	"devDependencies": {
+		"@rollup/plugin-node-resolve": "15.0.1",
 		"eslint-config-wikimedia": "0.32.3",
 		"grunt": "1.6.1",
 		"grunt-banana-checker": "0.13.0",
 		"grunt-eslint": "24.3.0",
 		"grunt-stylelint": "0.20.1",
+		"rollup": "3.20.2",
 		"sfnt2woff": "^1.0.1",
 		"stylelint-config-wikimedia": "0.18.0",
-		"svgo": "3.3.3"
+		"svgo": "3.3.3",
+		"vue": "3.5.17"
+	},
+	"dependencies": {
+		"@floating-ui/vue": "1.0.6"
 	},
 	"eslintIgnore": [
 		"lib/**",

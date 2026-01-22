@@ -1,0 +1,14 @@
+{
+	"root": true,
+	"env": {
+		"browser": true,
+		"commonjs": true
+	},
+	"extends": [
+		"wikimedia/client",
+		"wikimedia/mediawiki"
+	],
+	"rules": {
+		"n/no-missing-require": "off"
+	}
+}

@@ -408,6 +408,43 @@
 			"scripts": "rangy/rangy-core.js",
 			"localBasePath": "lib",
 			"remoteExtPath": "UniversalLanguageSelector/lib"
+		},
+		"ext.uls.rewrite": {
+			"class": "MediaWiki\\ResourceLoader\\CodexModule",
+			"codexComponents": [
+				"CdxSearchInput",
+				"CdxButton",
+				"CdxIcon",
+				"CdxProgressBar"
+			],
+			"packageFiles": [
+				"ext.uls.rewrite/index.js",
+				"ext.uls.rewrite/UniversalLanguageSelector.vue",
+				"ext.uls.rewrite/dist/floating-ui.js",
+				"ext.uls.rewrite/useKeyboardNavigation.js",
+				"ext.uls.rewrite/useClickOutside.js",
+				{
+					"name": "icons.json",
+					"callback": "MediaWiki\\ResourceLoader\\CodexModule::getIcons",
+					"callbackParam": [
+						"cdxIconClose"
+					]
+				}
+
+			],
+			"styles": [
+				"ext.uls.rewrite/index.less"
+			],
+			"messages": [
+				"ext-uls-placeholder-search",
+				"ext-uls-language-title",
+				"ext-uls-compact-no-results",
+				"ext-uls-close-button-label"
+			],
+			"dependencies": [
+				"vue",
+				"mediawiki.languageselector"
+			]
 		}
 	},
 	"QUnitTestModule": {
