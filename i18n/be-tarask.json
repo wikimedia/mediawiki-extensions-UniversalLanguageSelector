@@ -3,6 +3,7 @@
 		"authors": [
 			"Red Winged Duck",
 			"Renessaince",
+			"Ucukor",
 			"Wizardist"
 		]
 	},
@@ -42,7 +43,7 @@
 	"ext-uls-input-settings-ime-settings": "Мэтады ўводу для мовы $1",
 	"ext-uls-input-settings-ui-language": "Мова ўводу",
 	"ext-uls-back-to-input-settings": "Вярнуцца да наладаў уводу",
-	"ext-uls-ime-help": "Як карыстацца",
+	"ext-uls-ime-help": "Як ужываць",
 	"ext-uls-disable-input-method": "Ужываць сыстэмную клявіятуру",
 	"ext-uls-input-settings-more-languages-tooltip": "Болей моваў",
 	"jquery-ime-other-languages": "Іншыя мовы",
