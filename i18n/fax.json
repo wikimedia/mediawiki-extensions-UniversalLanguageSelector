@@ -4,5 +4,6 @@
 			"Caro de Segeda"
 		]
 	},
-	"uls-plang-title-languages": "Lénguas"
+	"uls-plang-title-languages": "Lénguas",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Un máis|$1 máis}}"
 }
