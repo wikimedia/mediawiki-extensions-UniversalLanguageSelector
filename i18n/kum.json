@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Кумнац"
+		]
+	},
+	"uls-plang-title-languages": "Тиллер",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Бир дагъы да|$1 дагъы да}}"
+}
