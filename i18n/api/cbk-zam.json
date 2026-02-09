@@ -8,7 +8,7 @@
 	"apihelp-ulslocalization-param-language": "Codigo de lenguaje.",
 	"apihelp-ulslocalization-example-1": "Saca localizacion de Tamil",
 	"apihelp-ulslocalization-example-2": "Saca localizacion de Hindi",
-	"apihelp-ulssetlang-summary": "Hace update con el preferido lenguaje del interface del user",
+	"apihelp-ulssetlang-summary": "Hace update con el preferido lenguaje na interfaz del usuario.",
 	"apihelp-ulssetlang-param-languagecode": "El codigo de lenguaje preferido.",
-	"apierror-ulssetlang-anon-notallowed": "Maga users anonimo hende permitido para cambia con el lenguaje de interface."
+	"apierror-ulssetlang-anon-notallowed": "Maga users anonimo hende permitido para cambia con el lenguaje de interfaz."
 }
