@@ -16,9 +16,18 @@
 					<cdx-icon :icon="cdxIconClose"></cdx-icon>
 				</cdx-button>
 			</div>
-			<div>
+			<div class="uls-rewrite__search-wrapper">
+				<cdx-search-input
+					v-if="autocompleteSuggestion"
+					class="uls-rewrite__search-ghost"
+					:model-value="searchQuery + autocompleteSuggestion"
+					disabled
+					tabindex="-1"
+					aria-hidden="true"
+				></cdx-search-input>
 				<cdx-search-input
 					ref="searchInputRef"
+					class="uls-rewrite__search-active"
 					:model-value="searchQuery"
 					:placeholder="placeholder || $i18n( 'ext-uls-placeholder-search' )"
 					@update:model-value="search"
@@ -26,6 +35,8 @@
 					@keydown.up.stop.prevent="prev"
 					@keydown.enter.stop.prevent="onEnter"
 					@keydown.esc.prevent="$emit( 'close' )"
+					@keydown.tab.prevent="onKeyTab"
+					@keydown.right="onKeyRight"
 				></cdx-search-input>
 			</div>
 			<cdx-progress-bar
@@ -76,6 +87,7 @@ const { defineComponent, toRefs, ref, computed, watch, nextTick, onMounted } = r
 const { useLanguageSelector } = require( 'mediawiki.languageselector' );
 const useKeyboardNavigation = require( './useKeyboardNavigation.js' );
 const useClickOutside = require( './useClickOutside.js' );
+const useTypeahead = require( './useTypeahead.js' );
 const { useFloating, offset, flip, shift, autoUpdate } = require( './dist/floating-ui.js' );
 const { CdxSearchInput, CdxButton, CdxIcon, CdxProgressBar } = require( '../codex.js' );
 const { cdxIconClose } = require( '../icons.json' );
@@ -206,16 +218,19 @@ module.exports = exports = defineComponent( {
 			emit( 'select', { code: languageCode, value: languageValue } );
 		};
 
+		const { autocompleteSuggestion, getAcceptedSuggestion } =
+			useTypeahead( searchQuery, languagesToDisplay, languages );
+
 		const onEnter = () => {
-			// If the search value is a known language, select it
-			if ( searchQuery.value && languagesToDisplay.value.includes( searchQuery.value ) ) {
-				select( searchQuery.value, languages.value[ searchQuery.value ] );
+			if ( autocompleteSuggestion.value || ( highlightedItem.value ) ) {
+				const code = highlightedItem.value || languagesToDisplay.value[ 0 ];
+				select( code, languages.value[ code ] );
 				return;
 			}
 
-			// If there is an actively selected language, select it
-			if ( highlightedItem.value ) {
-				select( highlightedItem.value, languages.value[ highlightedItem.value ] );
+			// If the search value is a known language, select it
+			if ( searchQuery.value && languagesToDisplay.value.includes( searchQuery.value ) ) {
+				select( searchQuery.value, languages.value[ searchQuery.value ] );
 				return;
 			}
 
@@ -223,6 +238,24 @@ module.exports = exports = defineComponent( {
 			if ( searchResults.value.length === 1 ) {
 				select( searchResults.value[ 0 ], languages.value[ searchResults.value[ 0 ] ] );
 				return;
+			}
+		};
+
+		const onKeyTab = () => {
+			const suggestion = getAcceptedSuggestion();
+			if ( suggestion ) {
+				searchQuery.value = suggestion;
+			}
+		};
+
+		const onKeyRight = ( e ) => {
+			const input = e.target;
+			// Only autocomplete if the cursor is at the end of the current text
+			if ( autocompleteSuggestion.value && input.selectionStart === searchQuery.value.length ) {
+				const suggestion = getAcceptedSuggestion();
+				if ( suggestion ) {
+					searchQuery.value = suggestion;
+				}
 			}
 		};
 
@@ -268,6 +301,7 @@ module.exports = exports = defineComponent( {
 			searchQuery,
 			search,
 			isSearching,
+			autocompleteSuggestion,
 			selectedValues,
 
 			// Appearance & Layout
@@ -280,6 +314,8 @@ module.exports = exports = defineComponent( {
 			next,
 			prev,
 			onEnter,
+			onKeyTab,
+			onKeyRight,
 			setHighlightedItem,
 
 			// General Actions

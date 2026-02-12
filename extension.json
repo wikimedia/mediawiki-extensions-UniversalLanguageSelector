@@ -423,6 +423,7 @@
 				"ext.uls.rewrite/dist/floating-ui.js",
 				"ext.uls.rewrite/useKeyboardNavigation.js",
 				"ext.uls.rewrite/useClickOutside.js",
+				"ext.uls.rewrite/useTypeahead.js",
 				{
 					"name": "icons.json",
 					"callback": "MediaWiki\\ResourceLoader\\CodexModule::getIcons",

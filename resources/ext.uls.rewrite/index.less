@@ -16,18 +16,38 @@
 	.uls-rewrite__header {
 		background-color: @background-color-base;
 
-		.cdx-search-input {
-			input[ type='search' ] {
-				padding-top: @spacing-50;
-				padding-bottom: @spacing-50;
-				padding-inline-end: @spacing-100;
-				/** Don't set padding-inline-start to avoid overriding codex values that are used to align the icon properly */
-				max-height: none;
-			}
-		}
+		.uls-rewrite__search-wrapper {
+			position: relative;
 
-		.cdx-text-input {
-			min-width: auto;
+			.cdx-search-input {
+				width: 100%;
+
+				input[ type='search' ] {
+					padding-top: @spacing-50;
+					padding-bottom: @spacing-50;
+					padding-inline-end: @spacing-100;
+					/** Don't set padding-inline-start to avoid overriding codex values that are used to align the icon properly */
+					max-height: none;
+					background-color: transparent;
+				}
+			}
+
+			.cdx-text-input {
+				min-width: auto;
+			}
+
+			.uls-rewrite__search-ghost {
+				position: absolute;
+				top: 0;
+				left: 0;
+				pointer-events: none;
+				z-index: 1;
+			}
+
+			.uls-rewrite__search-active {
+				position: relative;
+				z-index: 2;
+			}
 		}
 
 		.uls-rewrite__header__mobile {

@@ -29,7 +29,7 @@ function useKeyboardNavigation( languages, visible, onHighlight ) {
 		highlightedIndex.value--;
 
 		if ( highlightedIndex.value < 0 ) {
-			highlightedIndex.value = 0;
+			highlightedIndex.value = languages.value.length - 1;
 		}
 
 		onHighlight();
@@ -57,7 +57,7 @@ function useKeyboardNavigation( languages, visible, onHighlight ) {
 		highlightedIndex.value = -1;
 	};
 
-	watch( visible, async ( isVisible ) => {
+	watch( visible, ( isVisible ) => {
 		if ( !isVisible ) {
 			highlightedIndex.value = -1;
 		}
