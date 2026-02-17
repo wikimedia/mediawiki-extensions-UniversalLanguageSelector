@@ -424,6 +424,8 @@
 				"ext.uls.rewrite/useKeyboardNavigation.js",
 				"ext.uls.rewrite/useClickOutside.js",
 				"ext.uls.rewrite/useTypeahead.js",
+				"ext.uls.rewrite/useLanguageHistory.js",
+				"ext.uls.rewrite/useSuggestedLanguages.js",
 				{
 					"name": "icons.json",
 					"callback": "MediaWiki\\ResourceLoader\\CodexModule::getIcons",
@@ -440,11 +442,14 @@
 				"ext-uls-placeholder-search",
 				"ext-uls-language-title",
 				"ext-uls-compact-no-results",
-				"ext-uls-close-button-label"
+				"ext-uls-close-button-label",
+				"ext-uls-suggested-languages-title",
+				"ext-uls-all-languages-title"
 			],
 			"dependencies": [
 				"vue",
-				"mediawiki.languageselector"
+				"mediawiki.languageselector",
+				"mediawiki.storage"
 			]
 		}
 	},

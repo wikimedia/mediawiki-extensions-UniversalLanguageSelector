@@ -9,6 +9,10 @@
 		"wikimedia/mediawiki"
 	],
 	"rules": {
-		"n/no-missing-require": "off"
+		"n/no-missing-require": "off",
+		"n/no-unsupported-features/node-builtins": "off"
+	},
+	"globals": {
+		"navigator": "readonly"
 	}
 }

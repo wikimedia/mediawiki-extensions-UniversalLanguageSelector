@@ -67,6 +67,7 @@ function useKeyboardNavigation( languages, visible, onHighlight ) {
 		next,
 		prev,
 		highlightedItem,
+		highlightedIndex,
 		setHighlightedItem,
 		highlightFirst,
 		clearHighlightedItem

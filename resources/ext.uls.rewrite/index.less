@@ -69,6 +69,14 @@
 		overflow-y: auto;
 		flex-grow: 1;
 
+		.uls-rewrite__section-title {
+			font-weight: bold;
+			color: @color-subtle;
+			padding: @spacing-50;
+			margin: 0;
+			font-size: @font-size-medium;
+		}
+
 		.uls-rewrite__body__language-list {
 			margin: 0;
 			padding: 0;
@@ -115,7 +123,7 @@
 		&.uls-rewrite--density-medium {
 			width: 380px;
 
-			.uls-rewrite__body__language-list {
+			.uls-rewrite__section--suggested .uls-rewrite__body__language-list {
 				grid-template-columns: repeat( 2, 1fr );
 			}
 		}
@@ -123,7 +131,9 @@
 		// --- Density: High (30+) ---
 		&.uls-rewrite--density-high {
 			width: 540px;
-
+			// density-high and medium have the same section structure, so we need to
+			// repeat the selector here
+			// stylelint-disable-next-line no-descending-specificity
 			.uls-rewrite__body__language-list {
 				grid-template-columns: repeat( 3, 1fr );
 

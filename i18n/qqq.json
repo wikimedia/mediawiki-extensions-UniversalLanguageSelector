@@ -88,5 +88,7 @@
 	"ext-uls-placeholder-search": "Placeholder text shown in the search input in the language selector",
 	"ext-uls-close-button-label": "Aria label for the close button in the language selector on mobile",
 	"ext-uls-rewrite-label": "ULS rewrite beta feature label.",
-	"ext-uls-rewrite-description": "ULS rewrite beta feature description."
+	"ext-uls-rewrite-description": "ULS rewrite beta feature description.",
+	"ext-uls-suggested-languages-title": "Title for the suggested languages section in the language selector",
+	"ext-uls-all-languages-title": "Title for the all languages section in the language selector"
 }

@@ -84,5 +84,7 @@
 	"ext-uls-placeholder-search": "Search languages",
 	"ext-uls-close-button-label": "Close",
 	"ext-uls-rewrite-label": "Universal Language Selector rewrite",
-	"ext-uls-rewrite-description": "A rewrite of the Universal Language Selector (ULS), designed to modernize the user experience and reduce technical debt through simplified architecture."
+	"ext-uls-rewrite-description": "A rewrite of the Universal Language Selector (ULS), designed to modernize the user experience and reduce technical debt through simplified architecture.",
+	"ext-uls-suggested-languages-title": "Suggested",
+	"ext-uls-all-languages-title": "All languages"
 }
