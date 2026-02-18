@@ -35,7 +35,7 @@
 					@keydown.up.stop.prevent="prev"
 					@keydown.enter.stop.prevent="onEnter"
 					@keydown.esc.prevent="$emit( 'close' )"
-					@keydown.tab.prevent="onKeyTab"
+					@keydown.tab="onKeyTab"
 					@keydown.right="onKeyRight"
 				></cdx-search-input>
 			</div>
@@ -46,30 +46,27 @@
 			></cdx-progress-bar>
 		</div>
 		<div ref="keyboardNavigationContainer" class="uls-rewrite__body">
+			<!-- Search Results -->
 			<ul
 				v-if="searchQuery && languagesToDisplay.length > 0"
 				class="uls-rewrite__body__language-list"
 				role="listbox"
 			>
-				<li
+				<language-item
 					v-for="( languageCode, index ) in languagesToDisplay"
 					:key="languageCode"
-					:lang="languageCode"
-					class="uls-rewrite__language-item"
-					:class="{
-						'uls-rewrite__language-item--highlighted': highlightedIndex === index,
-						'uls-rewrite__language-item--selected':
-							selectedValues.includes( languageCode )
-					}"
-					:aria-selected="selectedValues.includes( languageCode )"
-					role="option"
-					@click="select( languageCode, languages[languageCode] )"
+					:ref="( el ) => setItemRef( el, languageCode )"
+					:code="languageCode"
+					:name="languages[languageCode]"
+					:is-highlighted="highlightedIndex === index"
+					:is-selected="selectedValuesSet.has( languageCode )"
+					@select="select"
 					@mousemove="setHighlightedIndex( index )"
 				>
-					<slot name="language-item" :item="languages[languageCode]">
-						{{ languages[languageCode] }}
-					</slot>
-				</li>
+					<template #default="slotProps">
+						<slot name="language-item" :item="slotProps.item"></slot>
+					</template>
+				</language-item>
 			</ul>
 
 			<!-- Suggested and All Languages -->
@@ -82,24 +79,21 @@
 						{{ $i18n( 'ext-uls-suggested-languages-title' ) }}
 					</h3>
 					<ul class="uls-rewrite__body__language-list" role="listbox">
-						<li
+						<language-item
 							v-for="( languageCode, index ) in suggestedLanguagesToDisplay"
 							:key="languageCode"
-							:lang="languageCode"
-							class="uls-rewrite__language-item"
-							:class="{
-								'uls-rewrite__language-item--highlighted': highlightedIndex === index,
-								'uls-rewrite__language-item--selected': selectedValues.includes( languageCode )
-							}"
-							:aria-selected="selectedValues.includes( languageCode )"
-							role="option"
-							@click="select( languageCode, languages[languageCode] )"
-							@mouseover="setHighlightedIndex( index )"
+							:ref="( el ) => setItemRef( el, languageCode )"
+							:code="languageCode"
+							:name="languages[languageCode]"
+							:is-highlighted="highlightedIndex === index"
+							:is-selected="selectedValuesSet.has( languageCode )"
+							@select="select"
+							@mousemove="setHighlightedIndex( index )"
 						>
-							<slot name="language-item" :item="languages[languageCode]">
-								{{ languages[languageCode] }}
-							</slot>
-						</li>
+							<template #default="slotProps">
+								<slot name="language-item" :item="slotProps.item"></slot>
+							</template>
+						</language-item>
 					</ul>
 				</div>
 
@@ -111,25 +105,21 @@
 						{{ $i18n( 'ext-uls-all-languages-title' ) }}
 					</h3>
 					<ul class="uls-rewrite__body__language-list" role="listbox">
-						<li
+						<language-item
 							v-for="( languageCode, index ) in languagesToDisplay"
 							:key="languageCode"
-							:lang="languageCode"
-							class="uls-rewrite__language-item"
-							:class="{
-								'uls-rewrite__language-item--highlighted':
-									highlightedIndex === ( index + suggestedLanguagesToDisplay.length ),
-								'uls-rewrite__language-item--selected': selectedValues.includes( languageCode )
-							}"
-							:aria-selected="selectedValues.includes( languageCode )"
-							role="option"
-							@click="select( languageCode, languages[languageCode] )"
-							@mouseover="setHighlightedIndex( index + suggestedLanguagesToDisplay.length )"
+							:ref="( el ) => setItemRef( el, languageCode )"
+							:code="languageCode"
+							:name="languages[languageCode]"
+							:is-highlighted="highlightedIndex === ( index + suggestedLanguagesToDisplay.length )"
+							:is-selected="selectedValuesSet.has( languageCode )"
+							@select="select"
+							@mousemove="setHighlightedIndex( index + suggestedLanguagesToDisplay.length )"
 						>
-							<slot name="language-item" :item="languages[languageCode]">
-								{{ languages[languageCode] }}
-							</slot>
-						</li>
+							<template #default="slotProps">
+								<slot name="language-item" :item="slotProps.item"></slot>
+							</template>
+						</language-item>
 					</ul>
 				</div>
 			</div>
@@ -145,20 +135,21 @@
 </template>
 
 <script>
-const { defineComponent, toRefs, ref, computed, watch, nextTick, onMounted } = require( 'vue' );
+const { defineComponent, toRefs, ref, computed, watch, nextTick, onBeforeUpdate } = require( 'vue' );
 const { useLanguageSelector } = require( 'mediawiki.languageselector' );
-const useKeyboardNavigation = require( './useKeyboardNavigation.js' );
-const useClickOutside = require( './useClickOutside.js' );
-const useTypeahead = require( './useTypeahead.js' );
-const useLanguageHistory = require( './useLanguageHistory.js' );
-const useSuggestedLanguages = require( './useSuggestedLanguages.js' );
+const LanguageItem = require( './LanguageItem.vue' );
+const useKeyboardNavigation = require( './composables/useKeyboardNavigation.js' );
+const useClickOutside = require( './composables/useClickOutside.js' );
+const useTypeahead = require( './composables/useTypeahead.js' );
+const useLanguageHistory = require( './composables/useLanguageHistory.js' );
+const useSuggestedLanguages = require( './composables/useSuggestedLanguages.js' );
 const { useFloating, offset, flip, shift, autoUpdate } = require( './dist/floating-ui.js' );
 const { CdxSearchInput, CdxButton, CdxIcon, CdxProgressBar } = require( '../codex.js' );
 const { cdxIconClose } = require( '../icons.json' );
 
 module.exports = exports = defineComponent( {
 	name: 'UniversalLanguageSelector',
-	components: { CdxSearchInput, CdxButton, CdxIcon, CdxProgressBar },
+	components: { CdxSearchInput, CdxButton, CdxIcon, CdxProgressBar, LanguageItem },
 	props: {
 		// eslint-disable-next-line vue/no-unused-properties
 		triggerElement: {
@@ -194,6 +185,10 @@ module.exports = exports = defineComponent( {
 		suggestedLanguages: {
 			type: Array,
 			default: null
+		},
+		isMobile: {
+			type: Boolean,
+			default: false
 		}
 	},
 	emits: [ 'close', 'select' ],
@@ -208,7 +203,7 @@ module.exports = exports = defineComponent( {
 		const menuRef = ref( null );
 		const searchInputRef = ref( null );
 		const keyboardNavigationContainer = ref( null );
-		const isMobile = !!mw.config.get( 'wgMFMode' );
+		const itemRefs = ref( new Map() );
 
 		const {
 			languages,
@@ -226,39 +221,32 @@ module.exports = exports = defineComponent( {
 			true
 		);
 
-		const { floatingStyles: rawFloatingStyles } = useFloating( triggerElement, menuRef, {
-			placement: 'bottom-end',
-			middleware: [
-				// Add some spacing between trigger and menu
-				offset( 8 ),
-				flip(),
-				shift()
-			],
-			whileElementsMounted: isMobile ? undefined : autoUpdate
-		} );
+		const selectedValuesSet = computed( () => new Set( selectedValues.value ) );
 
-		const floatingStyles = computed( () => {
-			if ( isMobile ) {
-				return {};
-			}
-
-			return rawFloatingStyles.value;
-		} );
+		const floatingStyles = props.isMobile ?
+			ref( {} ) :
+			useFloating( triggerElement, menuRef, {
+				placement: 'bottom-end',
+				middleware: [ offset( 8 ), flip(), shift() ],
+				whileElementsMounted: autoUpdate
+			} ).floatingStyles;
 
 		const languagesToDisplay =
 			computed( () => ( searchQuery.value && searchQuery.value.trim().length > 0 ) ?
-				searchResults.value : Object.keys( languages.value ) );
+				searchResults.value : Object.keys( languages.value )
+			);
 
 		const languageCodes = computed( () => Object.keys( languages.value ) );
 
 		const densityClass = computed( () => {
-			if ( languageCodes.value.length < DENSITY_LOW_THRESHOLD ) {
+			const count = languageCodes.value.length;
+			if ( count < DENSITY_LOW_THRESHOLD ) {
 				return 'uls-rewrite--density-low';
-			} else if ( languageCodes.value.length < DENSITY_MEDIUM_THRESHOLD ) {
-				return 'uls-rewrite--density-medium';
-			} else {
-				return 'uls-rewrite--density-high';
 			}
+			if ( count < DENSITY_MEDIUM_THRESHOLD ) {
+				return 'uls-rewrite--density-medium';
+			}
+			return 'uls-rewrite--density-high';
 		} );
 
 		const scrollHighlightedIntoView = async () => {
@@ -278,7 +266,9 @@ module.exports = exports = defineComponent( {
 
 		const { addLanguageToHistory, previousLanguages } = useLanguageHistory();
 		const { getSuggestedLanguages } = useSuggestedLanguages();
-		const defaultSuggestedLanguages = getSuggestedLanguages( languageCodes, previousLanguages );
+
+		const defaultSuggestedLanguages =
+			computed( () => getSuggestedLanguages( languageCodes, previousLanguages ).value );
 
 		const suggestedLanguagesToDisplay = computed( () => {
 			if ( props.hideSuggestedLanguages || searchQuery.value ) {
@@ -307,9 +297,22 @@ module.exports = exports = defineComponent( {
 			setHighlightedItem,
 			highlightFirst,
 			clearHighlightedItem
-		} = useKeyboardNavigation( languagesToDisplay, visible, scrollHighlightedIntoView );
+		} = useKeyboardNavigation( combinedLanguages, visible, scrollHighlightedIntoView );
 
 		useClickOutside( menuRef, visible, document, () => emit( 'close' ) );
+
+		const { autocompleteSuggestion, getAcceptedSuggestion } =
+			useTypeahead( searchQuery, languagesToDisplay, languages );
+
+		const setItemRef = ( el, code ) => {
+			if ( el ) {
+				itemRefs.value.set( code, el.$el || el );
+			}
+		};
+
+		onBeforeUpdate( () => {
+			itemRefs.value.clear();
+		} );
 
 		const select = ( languageCode, languageValue ) => {
 			setHighlightedItem( languageCode );
@@ -317,28 +320,26 @@ module.exports = exports = defineComponent( {
 			emit( 'select', { code: languageCode, value: languageValue } );
 		};
 
-		const {
-			autocompleteSuggestion,
-			getAcceptedSuggestion
-		} = useTypeahead( searchQuery, languagesToDisplay, languages );
-
 		const onEnter = () => {
-			if ( autocompleteSuggestion.value || ( highlightedItem.value ) ) {
-				const code = highlightedItem.value || combinedLanguages.value[ 0 ];
-				select( code, languages.value[ code ] );
+			if ( highlightedItem.value ) {
+				select( highlightedItem.value, languages.value[ highlightedItem.value ] );
 				return;
 			}
 
-			// If the search value is a known language, select it
-			if ( searchQuery.value && combinedLanguages.value.includes( searchQuery.value ) ) {
+			if ( autocompleteSuggestion.value && combinedLanguages.value.length > 0 ) {
+				const firstItemCode = combinedLanguages.value[ 0 ];
+				select( firstItemCode, languages.value[ firstItemCode ] );
+				return;
+			}
+
+			if ( searchQuery.value && languages.value[ searchQuery.value ] ) {
 				select( searchQuery.value, languages.value[ searchQuery.value ] );
 				return;
 			}
 
-			// If there is only one search result, select it
 			if ( searchResults.value.length === 1 ) {
-				select( searchResults.value[ 0 ], languages.value[ searchResults.value[ 0 ] ] );
-				return;
+				const code = searchResults.value[ 0 ];
+				select( code, languages.value[ code ] );
 			}
 		};
 
@@ -346,9 +347,10 @@ module.exports = exports = defineComponent( {
 			highlightedIndex.value = index;
 		};
 
-		const onKeyTab = () => {
+		const onKeyTab = ( e ) => {
 			const suggestion = getAcceptedSuggestion();
 			if ( suggestion ) {
+				e.preventDefault();
 				searchQuery.value = suggestion;
 			}
 		};
@@ -356,7 +358,10 @@ module.exports = exports = defineComponent( {
 		const onKeyRight = ( e ) => {
 			const input = e.target;
 			// Only autocomplete if the cursor is at the end of the current text
-			if ( autocompleteSuggestion.value && input.selectionStart === searchQuery.value.length ) {
+			if (
+				autocompleteSuggestion.value &&
+				input.selectionStart === searchQuery.value.length
+			) {
 				const suggestion = getAcceptedSuggestion();
 				if ( suggestion ) {
 					e.preventDefault();
@@ -365,17 +370,16 @@ module.exports = exports = defineComponent( {
 			}
 		};
 
-		onMounted( async () => {
-			if ( visible.value ) {
-				await nextTick();
+		const focusInput = async () => {
+			await nextTick();
+			if ( searchInputRef.value ) {
 				searchInputRef.value.focus();
 			}
-		} );
+		};
 
 		watch( visible, async ( isVisible ) => {
 			if ( isVisible ) {
-				await nextTick();
-				searchInputRef.value.focus();
+				await focusInput();
 			} else {
 				clearSearchQuery();
 			}
@@ -400,6 +404,7 @@ module.exports = exports = defineComponent( {
 			menuRef,
 			searchInputRef,
 			keyboardNavigationContainer,
+			setItemRef,
 
 			// Search & Data Source
 			languages,
@@ -409,12 +414,11 @@ module.exports = exports = defineComponent( {
 			search,
 			isSearching,
 			autocompleteSuggestion,
-			selectedValues,
+			selectedValuesSet,
 
 			// Appearance & Layout
 			floatingStyles,
 			densityClass,
-			isMobile,
 
 			// Keyboard Navigation
 			highlightedIndex,

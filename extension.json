@@ -420,12 +420,13 @@
 			"packageFiles": [
 				"ext.uls.rewrite/index.js",
 				"ext.uls.rewrite/UniversalLanguageSelector.vue",
+				"ext.uls.rewrite/LanguageItem.vue",
 				"ext.uls.rewrite/dist/floating-ui.js",
-				"ext.uls.rewrite/useKeyboardNavigation.js",
-				"ext.uls.rewrite/useClickOutside.js",
-				"ext.uls.rewrite/useTypeahead.js",
-				"ext.uls.rewrite/useLanguageHistory.js",
-				"ext.uls.rewrite/useSuggestedLanguages.js",
+				"ext.uls.rewrite/composables/useKeyboardNavigation.js",
+				"ext.uls.rewrite/composables/useClickOutside.js",
+				"ext.uls.rewrite/composables/useTypeahead.js",
+				"ext.uls.rewrite/composables/useLanguageHistory.js",
+				"ext.uls.rewrite/composables/useSuggestedLanguages.js",
 				{
 					"name": "icons.json",
 					"callback": "MediaWiki\\ResourceLoader\\CodexModule::getIcons",
