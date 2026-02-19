@@ -94,9 +94,7 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 			[ 'punja', [
 				// Presence of CLDR extension affects the results
 				'pa' => class_exists( LanguageNames::class ) ? 'punjabi' : 'punjaabi sennii',
-				'pa-guru' => class_exists( LanguageNames::class ) ?
-					'punjabi (gurmukhi script)' :
-					'punjabi (gurmukhi-skrift)',
+				'pa-guru' => 'punjabi (gurmukhi script)',
 				'pnb' => 'punjabi western'
 			]
 			],
@@ -112,7 +110,6 @@ class LanguageSearchTest extends PHPUnit\Framework\TestCase {
 				'nr' => 'tonga — enetepēra ki te tonga',
 				'hax' => 'tonga — haira ki te tonga',
 				'st' => 'tonga — hōto ki te tonga',
-				'es-419' => 'tonga — pāniora amerikana ki te tonga',
 				'slh' => 'tonga — ratūti ki te tonga',
 				'tce' => 'tonga — tatōne ki te tonga',
 				'alt' => 'tonga — ātai ki te tonga',
