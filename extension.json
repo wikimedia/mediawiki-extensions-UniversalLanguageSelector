@@ -137,6 +137,10 @@
 		"ULSCompactLanguageLinksBetaFeature": {
 			"description": "Set compact interlanguage links as beta feature or not. If set false, compact interlanguage links will be available by default to all users.",
 			"value": false
+		},
+		"ULSCompactLinksPrepend": {
+			"description": "Show these language links on top of the rest in compact language links feature",
+			"value": []
 		}
 	},
 	"callback": "UniversalLanguageSelector\\Hooks::setVersionConstant",

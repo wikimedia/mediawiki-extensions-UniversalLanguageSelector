@@ -390,6 +390,7 @@ class Hooks implements
 		$vars['wgULSNoImeSelectors'] = $config->get( 'ULSNoImeSelectors' );
 		$vars['wgULSNoWebfontsSelectors'] = $config->get( 'ULSNoWebfontsSelectors' );
 		$vars['wgULSDisplaySettingsInInterlanguage'] = $skinConfig['ULSDisplaySettingsInInterlanguage'] ?? false;
+		$vars['wgULSCompactLinksPrepend'] = $config->get( 'ULSCompactLinksPrepend' ) ?? [];
 
 		if ( is_string( $config->get( 'ULSFontRepositoryBasePath' ) ) ) {
 			$vars['wgULSFontRepositoryBasePath'] = $config->get( 'ULSFontRepositoryBasePath' );
