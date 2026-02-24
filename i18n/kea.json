@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Letra.berdi",
 			"Waldyrious"
 		]
 	},
-	"uls-plang-title-languages": "Línguas",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|Más un|Más $1}}"
+	"uls-plang-title-languages": "Lingas",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Más un|$1 más}}"
 }
