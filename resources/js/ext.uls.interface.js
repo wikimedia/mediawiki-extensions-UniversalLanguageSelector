@@ -768,13 +768,6 @@
 			return false;
 		}
 
-		const languageNodes = getLanguageNodes();
-		if ( languageNodes.length === 0 ) {
-			// TODO: Add support for empty state in the rewrite version
-			// and remove this check.
-			return false;
-		}
-
 		return true;
 	}
 

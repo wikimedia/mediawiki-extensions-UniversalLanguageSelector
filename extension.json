@@ -449,7 +449,13 @@
 				"ext-uls-compact-no-results",
 				"ext-uls-close-button-label",
 				"ext-uls-suggested-languages-title",
-				"ext-uls-all-languages-title"
+				"ext-uls-all-languages-title",
+				"ext-uls-no-languages-title",
+				"ext-uls-no-languages-description",
+				"ext-uls-invalid-language-search-title",
+				"ext-uls-invalid-language-search-description",
+				"ext-uls-unsupported-language-title",
+				"ext-uls-unsupported-language-description"
 			],
 			"dependencies": [
 				"vue",

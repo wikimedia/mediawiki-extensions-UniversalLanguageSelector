@@ -90,5 +90,11 @@
 	"ext-uls-rewrite-label": "ULS rewrite beta feature label.",
 	"ext-uls-rewrite-description": "ULS rewrite beta feature description.",
 	"ext-uls-suggested-languages-title": "Title for the suggested languages section in the language selector",
-	"ext-uls-all-languages-title": "Title for the all languages section in the language selector"
+	"ext-uls-all-languages-title": "Title for the all languages section in the language selector",
+	"ext-uls-no-languages-title": "Title for the empty state in the language selector when there are no languages to show",
+	"ext-uls-no-languages-description": "Description for the empty state in the language selector when there are no languages to show",
+	"ext-uls-invalid-language-search-title": "Title for the empty state in the language selector when the search query is an invalid language",
+	"ext-uls-invalid-language-search-description": "Description for the empty state in the language selector when the search query is an invalid language",
+	"ext-uls-unsupported-language-title": "Title for the empty state in the language selector when the search query is a language that is not supported yet",
+	"ext-uls-unsupported-language-description": "Description for the empty state in the language selector when the search query is a language that is not supported yet"
 }

@@ -124,12 +124,25 @@
 				</div>
 			</div>
 
-			<div
-				v-if="languagesToDisplay.length === 0 && searchQuery && !isSearching"
-				class="uls-rewrite__no-results"
-			>
-				{{ $i18n( 'ext-uls-compact-no-results' ) }}
-			</div>
+			<template v-if="languagesToDisplay.length === 0">
+				<div v-if="searchQuery && !isSearching" class="uls-rewrite__no-results">
+					<template v-if="hasSearchHits">
+						<!-- Valid language was searched for, but no results were found -->
+						<h3>{{ $i18n( 'ext-uls-unsupported-language-title' ) }}</h3>
+						<p>{{ $i18n( 'ext-uls-unsupported-language-description' ) }}</p>
+					</template>
+					<template v-else>
+						<!-- No valid search query was entered -->
+						<h3>{{ $i18n( 'ext-uls-invalid-language-search-title' ) }}</h3>
+						<p>{{ $i18n( 'ext-uls-invalid-language-search-description' ) }}</p>
+					</template>
+				</div>
+				<div v-else-if="!isSearching" class="uls-rewrite__no-languages">
+					<!-- No language items -->
+					<h3>{{ $i18n( 'ext-uls-no-languages-title' ) }}</h3>
+					<p>{{ $i18n( 'ext-uls-no-languages-description' ) }}</p>
+				</div>
+			</template>
 		</div>
 	</div>
 </template>
@@ -209,6 +222,7 @@ module.exports = exports = defineComponent( {
 			languages,
 			search,
 			searchQuery,
+			searchQueryHits,
 			searchResults,
 			clearSearchQuery,
 			isSearching,
@@ -235,6 +249,8 @@ module.exports = exports = defineComponent( {
 			computed( () => ( searchQuery.value && searchQuery.value.trim().length > 0 ) ?
 				searchResults.value : Object.keys( languages.value )
 			);
+
+		const hasSearchHits = computed( () => Object.keys( searchQueryHits.value ).length > 0 );
 
 		const languageCodes = computed( () => Object.keys( languages.value ) );
 
@@ -411,6 +427,7 @@ module.exports = exports = defineComponent( {
 			suggestedLanguagesToDisplay,
 			languagesToDisplay,
 			searchQuery,
+			hasSearchHits,
 			search,
 			isSearching,
 			autocompleteSuggestion,
