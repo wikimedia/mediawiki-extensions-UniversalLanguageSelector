@@ -31,6 +31,7 @@ use MediaWiki\Hook\UserGetLanguageObjectHook;
 use MediaWiki\Html\Html;
 use MediaWiki\Language\LanguageCode;
 use MediaWiki\Languages\LanguageNameUtils;
+use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\Hook\BeforePageDisplayHook;
 use MediaWiki\Output\Hook\MakeGlobalVariablesScriptHook;
@@ -119,8 +120,8 @@ class Hooks implements
 			return !$this->isLanguageInHeader( $skin );
 		}
 		if ( $this->config->get( 'ULSCompactLanguageLinksBetaFeature' ) === true &&
-			$this->config->get( 'InterwikiMagic' ) === true &&
-			$this->config->get( 'HideInterlanguageLinks' ) === false &&
+			$this->config->get( MainConfigNames::InterwikiMagic ) === true &&
+			$this->config->get( MainConfigNames::HideInterlanguageLinks ) === false &&
 			ExtensionRegistry::getInstance()->isLoaded( 'BetaFeatures' ) &&
 			BetaFeatures::isFeatureEnabled( $user, 'uls-compact-links' )
 		) {
@@ -386,7 +387,7 @@ class Hooks implements
 		if ( is_string( $config->get( 'ULSFontRepositoryBasePath' ) ) ) {
 			$vars['wgULSFontRepositoryBasePath'] = $config->get( 'ULSFontRepositoryBasePath' );
 		} else {
-			$vars['wgULSFontRepositoryBasePath'] = $config->get( 'ExtensionAssetsPath' ) .
+			$vars['wgULSFontRepositoryBasePath'] = $config->get( MainConfigNames::ExtensionAssetsPath ) .
 				'/UniversalLanguageSelector/data/fontrepo/fonts/';
 		}
 
@@ -476,10 +477,10 @@ class Hooks implements
 	 */
 	public function onGetBetaFeaturePreferences( $user, array &$prefs ) {
 		if ( $this->config->get( 'ULSCompactLanguageLinksBetaFeature' ) === true &&
-			$this->config->get( 'InterwikiMagic' ) === true &&
-			$this->config->get( 'HideInterlanguageLinks' ) === false
+			$this->config->get( MainConfigNames::InterwikiMagic ) === true &&
+			$this->config->get( MainConfigNames::HideInterlanguageLinks ) === false
 		) {
-			$extensionAssetsPath = $this->config->get( 'ExtensionAssetsPath' );
+			$extensionAssetsPath = $this->config->get( MainConfigNames::ExtensionAssetsPath );
 			$imagesDir = "$extensionAssetsPath/UniversalLanguageSelector/resources/images";
 			$prefs['uls-compact-links'] = [
 				'label-message' => 'uls-betafeature-label',
