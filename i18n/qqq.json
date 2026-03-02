@@ -96,5 +96,7 @@
 	"ext-uls-invalid-language-search-title": "Title for the empty state in the language selector when the search query is an invalid language",
 	"ext-uls-invalid-language-search-description": "Description for the empty state in the language selector when the search query is an invalid language",
 	"ext-uls-unsupported-language-title": "Title for the empty state in the language selector when the search query is a language that is not supported yet",
-	"ext-uls-unsupported-language-description": "Description for the empty state in the language selector when the search query is a language that is not supported yet"
+	"ext-uls-unsupported-language-description": "Description for the empty state in the language selector when the search query is a language that is not supported yet",
+	"ext-uls-open-language-settings": "Label for the button that opens the language settings inside the quick actions menu of the language selector.",
+	"ext-uls-open-quick-actions": "Label for the button that opens the quick actions menu of the language selector."
 }

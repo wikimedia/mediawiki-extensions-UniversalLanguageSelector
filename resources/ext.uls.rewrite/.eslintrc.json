@@ -13,6 +13,7 @@
 		"n/no-unsupported-features/node-builtins": "off"
 	},
 	"globals": {
-		"navigator": "readonly"
+		"navigator": "readonly",
+		"$": "readonly"
 	}
 }

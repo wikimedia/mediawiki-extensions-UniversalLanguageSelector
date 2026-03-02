@@ -92,5 +92,7 @@
 	"ext-uls-invalid-language-search-title": "Language not recognized",
 	"ext-uls-invalid-language-search-description": "Please check the spelling. You can search languages by name or ISO code.",
 	"ext-uls-unsupported-language-title": "Language not available",
-	"ext-uls-unsupported-language-description": "The language you are looking for is not available."
+	"ext-uls-unsupported-language-description": "The language you are looking for is not available.",
+	"ext-uls-open-language-settings": "Open language settings",
+	"ext-uls-open-quick-actions": "Show quick actions"
 }

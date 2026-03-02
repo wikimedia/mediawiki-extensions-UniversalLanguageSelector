@@ -144,6 +144,15 @@
 				</div>
 			</template>
 		</div>
+		<quick-action-trigger
+			v-if="quickActions && quickActions.length > 0"
+			:quick-actions="quickActions"
+			:languages="languagesToDisplay"
+			:suggestions="suggestedLanguagesToDisplay"
+			:search-query="searchQuery"
+			:search-query-hits="searchQueryHits"
+		>
+		</quick-action-trigger>
 	</div>
 </template>
 
@@ -151,6 +160,7 @@
 const { defineComponent, toRefs, ref, computed, watch, nextTick, onBeforeUpdate, onMounted, onUnmounted } = require( 'vue' );
 const { useLanguageSelector } = require( 'mediawiki.languageselector' );
 const LanguageItem = require( './LanguageItem.vue' );
+const QuickActionTrigger = require( './entrypoints/QuickActionTrigger.vue' );
 const useKeyboardNavigation = require( './composables/useKeyboardNavigation.js' );
 const useClickOutside = require( './composables/useClickOutside.js' );
 const useTypeahead = require( './composables/useTypeahead.js' );
@@ -159,10 +169,18 @@ const useSuggestedLanguages = require( './composables/useSuggestedLanguages.js' 
 const { useFloating, offset, flip, shift, autoUpdate } = require( './dist/floating-ui.js' );
 const { CdxSearchInput, CdxButton, CdxIcon, CdxProgressBar } = require( '../codex.js' );
 const { cdxIconClose } = require( '../icons.json' );
+const EntrypointRegistry = require( 'ext.uls.rewrite.entrypoints' );
 
 module.exports = exports = defineComponent( {
 	name: 'UniversalLanguageSelector',
-	components: { CdxSearchInput, CdxButton, CdxIcon, CdxProgressBar, LanguageItem },
+	components: {
+		CdxSearchInput,
+		CdxButton,
+		CdxIcon,
+		CdxProgressBar,
+		LanguageItem,
+		QuickActionTrigger
+	},
 	props: {
 		// eslint-disable-next-line vue/no-unused-properties
 		triggerElement: {
@@ -428,8 +446,15 @@ module.exports = exports = defineComponent( {
 			viewportWidth.value = window.innerWidth;
 		}, RESIZE_DEBOUNCE_DELAY_MS );
 
-		onMounted( () => {
+		const quickActions = EntrypointRegistry.getRegisteredEntrypoints( 'quick-actions' );
+
+		onMounted( async () => {
 			window.addEventListener( 'resize', updateViewportWidth );
+
+			await nextTick();
+			// Lock the registry to ensure that further entrypoints cannot be added.
+			// Trying to add entrypoints now will cause errors to be thrown.
+			EntrypointRegistry.lock();
 		} );
 
 		onUnmounted( () => {
@@ -453,6 +478,7 @@ module.exports = exports = defineComponent( {
 			isSearching,
 			autocompleteSuggestion,
 			selectedValuesSet,
+			searchQueryHits,
 
 			// Appearance & Layout
 			floatingStyles,
@@ -472,7 +498,10 @@ module.exports = exports = defineComponent( {
 			select,
 
 			// Assets
-			cdxIconClose
+			cdxIconClose,
+
+			// Entrypoints
+			quickActions
 		};
 	}
 } );

@@ -580,7 +580,7 @@
 		ev.preventDefault();
 
 		if ( shouldLoadUlsRewrite() ) {
-			mw.loader.using( [ 'ext.uls.mediawiki', 'ext.uls.rewrite' ] ).then( () => {
+			mw.loader.using( [ 'ext.uls.mediawiki', 'ext.uls.rewrite.languagesettings', 'ext.uls.rewrite' ] ).then( () => {
 				const languageNodes = getLanguageNodes();
 				const { createUniversalLanguageSelector } = require( 'ext.uls.rewrite' );
 				const { h } = require( 'vue' );

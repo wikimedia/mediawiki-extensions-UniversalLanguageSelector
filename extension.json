@@ -424,6 +424,7 @@
 			"packageFiles": [
 				"ext.uls.rewrite/index.js",
 				"ext.uls.rewrite/UniversalLanguageSelector.vue",
+				"ext.uls.rewrite/entrypoints/QuickActionTrigger.vue",
 				"ext.uls.rewrite/LanguageItem.vue",
 				"ext.uls.rewrite/dist/floating-ui.js",
 				"ext.uls.rewrite/composables/useKeyboardNavigation.js",
@@ -435,10 +436,10 @@
 					"name": "icons.json",
 					"callback": "MediaWiki\\ResourceLoader\\CodexModule::getIcons",
 					"callbackParam": [
+						"cdxIconEllipsis",
 						"cdxIconClose"
 					]
 				}
-
 			],
 			"styles": [
 				"ext.uls.rewrite/index.less"
@@ -455,13 +456,37 @@
 				"ext-uls-invalid-language-search-title",
 				"ext-uls-invalid-language-search-description",
 				"ext-uls-unsupported-language-title",
-				"ext-uls-unsupported-language-description"
+				"ext-uls-unsupported-language-description",
+				"ext-uls-open-quick-actions"
 			],
 			"dependencies": [
 				"vue",
 				"mediawiki.languageselector",
-				"mediawiki.storage"
+				"mediawiki.storage",
+				"ext.uls.rewrite.entrypoints"
 			]
+		},
+		"ext.uls.rewrite.languagesettings": {
+			"packageFiles": [
+				"ext.uls.rewrite/LanguageSettings.vue",
+				{
+					"name": "icons.json",
+					"callback": "MediaWiki\\ResourceLoader\\CodexModule::getIcons",
+					"callbackParam": [
+						"cdxIconSettings"
+					]
+				}
+			],
+			"messages": [
+				"ext-uls-open-language-settings"
+			],
+			"dependencies": [
+				"vue",
+				"ext.uls.rewrite.entrypoints"
+			]
+		},
+		"ext.uls.rewrite.entrypoints": {
+			"packageFiles": "ext.uls.rewrite/EntrypointRegistry.js"
 		}
 	},
 	"QUnitTestModule": {
