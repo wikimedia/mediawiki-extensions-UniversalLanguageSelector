@@ -7,7 +7,8 @@
 			"Tomato Cream",
 			"Tīgelika",
 			"Xð",
-			"ZlyiLev"
+			"ZlyiLev",
+			"Ucukor"
 		]
 	},
 	"uls-desc": "Дае ўдзельніку некалькі спосабаў выбраць мову і змяніць моўныя налады",
@@ -25,7 +26,7 @@
 	"ext-uls-display-settings-desc": "Мова меню і шрыфтаў",
 	"ext-uls-language-settings-title": "Налады мовы",
 	"ext-uls-language-settings-apply": "Ужыць налады",
-	"ext-uls-language-settings-cancel": "Адмена",
+	"ext-uls-language-settings-cancel": "Скасаваць",
 	"ext-uls-language-buttons-help": "Змяніць мову меню. Мова змесціва не будзе закранутая",
 	"ext-uls-display-settings-font-settings": "Шрыфтавыя налады",
 	"ext-uls-display-settings-ui-language": "Мова адлюстравання",

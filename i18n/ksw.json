@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Jaeminlovetaejoon",
-			"SawJaemin"
+			"SawJaemin",
+			"SawEKP"
 		]
 	},
+	"uls-plang-title-languages": "ကျိာ်",
 	"ext-uls-select-language-settings-icon-tooltip": "ကျိာ် စဲတ့ၢ်",
 	"ext-uls-undo-language-tooltip-text": "$1ကျိာ် မ့ၢ်ကျိာ်လၢညါတကျိာ်",
 	"ext-uls-language-settings-preferences-link": "ကျိာ် စဲတ့ၢ်တဖၣ် အါထီၣ်",
