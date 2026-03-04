@@ -759,16 +759,8 @@
 	}
 
 	function shouldLoadUlsRewrite() {
-		if ( mw.config.get( 'wgULSisRewriteEnabled' ) !== true ) {
-			return false;
-		}
-
-		// Currently only compatible with Vector 2022.
-		if ( mw.config.get( 'skin' ) !== 'vector-2022' ) {
-			return false;
-		}
-
-		return true;
+		return !!mw.config.get( 'wgULSisRewriteEnabled' ) &&
+			mw.config.get( 'skin' ) === 'vector-2022';
 	}
 
 	let languageNodesCache = null;
