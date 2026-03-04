@@ -23,6 +23,7 @@ function createUniversalLanguageSelector( config ) {
 	const {
 		triggerElement,
 		selectableLanguages,
+		selected,
 		placeholder,
 		onClose,
 		onSelect,
@@ -35,7 +36,8 @@ function createUniversalLanguageSelector( config ) {
 		data() {
 			return {
 				visible: true,
-				isMobile: isMobile
+				isMobile: isMobile,
+				currentSelected: selected || []
 			};
 		},
 		methods: {
@@ -53,6 +55,7 @@ function createUniversalLanguageSelector( config ) {
 				}
 			},
 			select( language ) {
+				this.currentSelected = [ language.code ];
 				this.visible = false;
 				if ( onSelect ) {
 					onSelect( language );
@@ -69,6 +72,7 @@ function createUniversalLanguageSelector( config ) {
 				visible: this.visible,
 				placeholder: placeholder,
 				selectableLanguages: selectableLanguages,
+				selected: this.currentSelected,
 				onClose: this.close,
 				onSelect: this.select,
 				isMobile: useMobileLayout
