@@ -40,8 +40,8 @@ module.exports = function useSuggestedSourceLanguages() {
 	).map( primaryLanguageSubtag );
 
 	const getSuggestedLanguages =
-		( validLanguageCodes, previousLanguages ) => computed( () => {
-			const suggestedLanguages = [
+		( previousLanguages, validLanguageCodes ) => computed( () => {
+			const possibleSuggestedLanguages = [
 				...previousLanguages.value,
 				// User's current interface language
 				mw.config.get( 'wgUserLanguage' ),
@@ -53,9 +53,15 @@ module.exports = function useSuggestedSourceLanguages() {
 				// language-data library is included.
 			];
 
-			// Filter out duplicate or invalid languages
+			// Filter out duplicates and empty values
+			const suggestedLanguages = [ ...new Set( possibleSuggestedLanguages ) ].filter( Boolean );
+
+			if ( !validLanguageCodes || !validLanguageCodes.value ) {
+				return suggestedLanguages;
+			}
+
 			const validLanguageCodesSet = new Set( validLanguageCodes.value );
-			return [ ...new Set( suggestedLanguages ) ].filter(
+			return suggestedLanguages.filter(
 				( language ) => validLanguageCodesSet.has( language )
 			);
 		} );

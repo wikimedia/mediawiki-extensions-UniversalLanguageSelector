@@ -89,6 +89,7 @@
 	"ext-uls-all-languages-title": "All languages",
 	"ext-uls-no-languages-title": "No languages yet",
 	"ext-uls-no-languages-description": "No languages are available for now.",
+	"ext-uls-no-languages-entrypoint-description": "You can translate this page. It’s an easy way to create content in your language.",
 	"ext-uls-invalid-language-search-title": "Language not recognized",
 	"ext-uls-invalid-language-search-description": "Please check the spelling. You can search languages by name or ISO code.",
 	"ext-uls-unsupported-language-title": "Language not available",

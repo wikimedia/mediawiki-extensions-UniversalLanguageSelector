@@ -140,7 +140,16 @@
 				<div v-else-if="!isSearching" class="uls-rewrite__no-languages">
 					<!-- No language items -->
 					<h3>{{ $i18n( 'ext-uls-no-languages-title' ) }}</h3>
-					<p>{{ $i18n( 'ext-uls-no-languages-description' ) }}</p>
+					<template v-if="emptyLanguageListActions && emptyLanguageListActions.length !== 0">
+						<empty-list-entrypoint
+							:empty-list-actions="emptyLanguageListActions"
+							:suggestions="possibleSuggestedLanguages"
+							:languages="[]"
+						></empty-list-entrypoint>
+					</template>
+					<p v-else>
+						{{ $i18n( 'ext-uls-no-languages-description' ) }}
+					</p>
 				</div>
 			</template>
 		</div>
@@ -161,6 +170,7 @@ const { defineComponent, toRefs, ref, computed, watch, nextTick, onBeforeUpdate,
 const { useLanguageSelector } = require( 'mediawiki.languageselector' );
 const LanguageItem = require( './LanguageItem.vue' );
 const QuickActionTrigger = require( './entrypoints/QuickActionTrigger.vue' );
+const EmptyListEntrypoint = require( './entrypoints/EmptyListEntrypoint.vue' );
 const useKeyboardNavigation = require( './composables/useKeyboardNavigation.js' );
 const useClickOutside = require( './composables/useClickOutside.js' );
 const useTypeahead = require( './composables/useTypeahead.js' );
@@ -179,7 +189,8 @@ module.exports = exports = defineComponent( {
 		CdxIcon,
 		CdxProgressBar,
 		LanguageItem,
-		QuickActionTrigger
+		QuickActionTrigger,
+		EmptyListEntrypoint
 	},
 	props: {
 		// eslint-disable-next-line vue/no-unused-properties
@@ -303,7 +314,7 @@ module.exports = exports = defineComponent( {
 		const { getSuggestedLanguages } = useSuggestedLanguages();
 
 		const defaultSuggestedLanguages =
-			computed( () => getSuggestedLanguages( languageCodes, previousLanguages ).value );
+			computed( () => getSuggestedLanguages( previousLanguages, languageCodes ).value );
 
 		const suggestedLanguagesToDisplay = computed( () => {
 			if ( props.hideSuggestedLanguages || searchQuery.value ) {
@@ -446,7 +457,9 @@ module.exports = exports = defineComponent( {
 			viewportWidth.value = window.innerWidth;
 		}, RESIZE_DEBOUNCE_DELAY_MS );
 
+		const possibleSuggestedLanguages = getSuggestedLanguages( previousLanguages );
 		const quickActions = EntrypointRegistry.getRegisteredEntrypoints( 'quick-actions' );
+		const emptyLanguageListActions = EntrypointRegistry.getRegisteredEntrypoints( 'empty-list' );
 
 		onMounted( async () => {
 			window.addEventListener( 'resize', updateViewportWidth );
@@ -501,7 +514,9 @@ module.exports = exports = defineComponent( {
 			cdxIconClose,
 
 			// Entrypoints
-			quickActions
+			quickActions,
+			emptyLanguageListActions,
+			possibleSuggestedLanguages
 		};
 	}
 } );
