@@ -148,7 +148,7 @@
 </template>
 
 <script>
-const { defineComponent, toRefs, ref, computed, watch, nextTick, onBeforeUpdate } = require( 'vue' );
+const { defineComponent, toRefs, ref, computed, watch, nextTick, onBeforeUpdate, onMounted, onUnmounted } = require( 'vue' );
 const { useLanguageSelector } = require( 'mediawiki.languageselector' );
 const LanguageItem = require( './LanguageItem.vue' );
 const useKeyboardNavigation = require( './composables/useKeyboardNavigation.js' );
@@ -198,10 +198,6 @@ module.exports = exports = defineComponent( {
 		suggestedLanguages: {
 			type: Array,
 			default: null
-		},
-		isMobile: {
-			type: Boolean,
-			default: false
 		}
 	},
 	emits: [ 'close', 'select' ],
@@ -210,6 +206,8 @@ module.exports = exports = defineComponent( {
 		const DENSITY_LOW_THRESHOLD = 10;
 		const DENSITY_MEDIUM_THRESHOLD = 30;
 		const SUGGESTED_LANGUAGES_COUNT = 6;
+		const MOBILE_WIDTH_THRESHOLD = 768;
+		const RESIZE_DEBOUNCE_DELAY_MS = 100;
 
 		const { selectableLanguages, selected, triggerElement, visible } = toRefs( props );
 
@@ -217,6 +215,9 @@ module.exports = exports = defineComponent( {
 		const searchInputRef = ref( null );
 		const keyboardNavigationContainer = ref( null );
 		const itemRefs = ref( new Map() );
+
+		const viewportWidth = ref( window.innerWidth );
+		const isMobile = computed( () => viewportWidth.value < MOBILE_WIDTH_THRESHOLD );
 
 		const {
 			languages,
@@ -237,7 +238,7 @@ module.exports = exports = defineComponent( {
 
 		const selectedValuesSet = computed( () => new Set( selectedValues.value ) );
 
-		const floatingStyles = props.isMobile ?
+		const floatingStyles = isMobile.value ?
 			ref( {} ) :
 			useFloating( triggerElement, menuRef, {
 				placement: 'bottom-end',
@@ -415,6 +416,26 @@ module.exports = exports = defineComponent( {
 			}
 		}, { immediate: true } );
 
+		const debounce = ( fn, delay ) => {
+			let timeoutId;
+			return ( ...args ) => {
+				clearTimeout( timeoutId );
+				timeoutId = setTimeout( () => fn( ...args ), delay );
+			};
+		};
+
+		const updateViewportWidth = debounce( () => {
+			viewportWidth.value = window.innerWidth;
+		}, RESIZE_DEBOUNCE_DELAY_MS );
+
+		onMounted( () => {
+			window.addEventListener( 'resize', updateViewportWidth );
+		} );
+
+		onUnmounted( () => {
+			window.removeEventListener( 'resize', updateViewportWidth );
+		} );
+
 		return {
 			// Template Refs
 			menuRef,
@@ -436,6 +457,7 @@ module.exports = exports = defineComponent( {
 			// Appearance & Layout
 			floatingStyles,
 			densityClass,
+			isMobile,
 
 			// Keyboard Navigation
 			highlightedIndex,

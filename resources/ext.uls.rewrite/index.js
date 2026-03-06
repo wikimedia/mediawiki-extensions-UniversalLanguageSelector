@@ -15,8 +15,6 @@ const UniversalLanguageSelector = require( './UniversalLanguageSelector.vue' );
  * @param {Function} [config.onSelect] (Optional) Callback function to execute when a language is
  * selected. Receives the selected language code and value as arguments.
  * @param {Object} [config.slots] (Optional) Vue slots to customize the ULS content
- * @param {boolean} [config.isMobile] (Optional) Whether to render the mobile version of the ULS.
- * By default, it checks the MediaWiki configuration for mobile mode.
  * @return {Object} The Vue application instance.
  */
 function createUniversalLanguageSelector( config ) {
@@ -27,8 +25,7 @@ function createUniversalLanguageSelector( config ) {
 		placeholder,
 		onClose,
 		onSelect,
-		slots,
-		isMobile
+		slots
 	} = config;
 
 	return Vue.createMwApp( {
@@ -36,7 +33,6 @@ function createUniversalLanguageSelector( config ) {
 		data() {
 			return {
 				visible: true,
-				isMobile: isMobile,
 				currentSelected: selected || []
 			};
 		},
@@ -63,10 +59,6 @@ function createUniversalLanguageSelector( config ) {
 			}
 		},
 		render() {
-			const useMobileLayout = this.isMobile !== undefined ?
-				this.isMobile :
-				( typeof mw !== 'undefined' && !!mw.config.get( 'wgMFMode' ) );
-
 			return h( UniversalLanguageSelector, {
 				triggerElement: triggerElement,
 				visible: this.visible,
@@ -74,8 +66,7 @@ function createUniversalLanguageSelector( config ) {
 				selectableLanguages: selectableLanguages,
 				selected: this.currentSelected,
 				onClose: this.close,
-				onSelect: this.select,
-				isMobile: useMobileLayout
+				onSelect: this.select
 			}, slots );
 		}
 	} );
