@@ -6,9 +6,15 @@ const { computed, Ref } = require( 'vue' );
  * @param {Ref<string>} searchQuery
  * @param {Ref<Array>} languagesToDisplay Array of language codes
  * @param {Ref<Object>} languages Map of code to string or object {text: string}
+ * @param {Ref<Object>} searchQueryHits Map of code to matching label
  * @return {Object}
  */
-module.exports = function useTypeahead( searchQuery, languagesToDisplay, languages ) {
+module.exports = function useTypeahead(
+	searchQuery,
+	languagesToDisplay,
+	languages,
+	searchQueryHits
+) {
 	const getLanguageLabel = ( code ) => {
 		const lang = languages.value[ code ];
 		if ( !lang ) {
@@ -17,38 +23,53 @@ module.exports = function useTypeahead( searchQuery, languagesToDisplay, languag
 		return typeof lang === 'object' ? lang.text : lang;
 	};
 
-	const autocompleteSuggestion = computed( () => {
+	const fullSuggestionText = computed( () => {
 		const query = searchQuery.value && searchQuery.value.trim();
-
-		if ( !query || languagesToDisplay.value.length === 0 ) {
+		if ( !query || !languagesToDisplay.value.length ) {
 			return '';
 		}
 
-		// Find the first match in the current filtered list
 		const firstMatchCode = languagesToDisplay.value[ 0 ];
 		const firstMatchLabel = getLanguageLabel( firstMatchCode );
 
-		// Scenario A: Query matches the start of the Label (e.g., "Hind" -> "i")
+		// Scenario A: Query matches the Label
 		if ( firstMatchLabel.toLowerCase().startsWith( query.toLowerCase() ) ) {
-			return firstMatchLabel.slice( query.length );
+			return firstMatchLabel;
 		}
 
-		// Scenario B: Query matches the Code (e.g., "hi" -> " - Hindi")
+		// Scenario B: Query matches the Code (e.g., "hi" -> "hi — Hindi")
 		if ( firstMatchCode.startsWith( query ) ) {
-			const remainingCode = firstMatchCode.slice( query.length );
-			return `${ remainingCode } — ${ firstMatchLabel }`;
+			return `${ firstMatchCode } — ${ firstMatchLabel }`;
+		}
+
+		// Scenario C: Query matches a hit in searchQueryHits
+		const hitLabel = searchQueryHits &&
+			searchQueryHits.value &&
+			searchQueryHits.value[ firstMatchCode ];
+		if (
+			hitLabel &&
+			hitLabel.toLowerCase().startsWith( query.toLowerCase() )
+		) {
+			return hitLabel;
 		}
 
 		return '';
 	} );
 
-	const getAcceptedSuggestion = () => {
-		if ( autocompleteSuggestion.value ) {
-			const firstMatchCode = languagesToDisplay.value[ 0 ];
-			return getLanguageLabel( firstMatchCode );
+	// Visually append only the remainder of the suggestion to the input
+	const autocompleteSuggestion = computed( () => {
+		const fullText = fullSuggestionText.value;
+		const query = searchQuery.value && searchQuery.value.trim();
+
+		if ( fullText && query ) {
+			return fullText.slice( query.length );
 		}
-		return null;
-	};
+
+		return '';
+	} );
+
+	// Return the entire suggestion when the user hits Tab/Enter
+	const getAcceptedSuggestion = () => fullSuggestionText.value || null;
 
 	return {
 		autocompleteSuggestion,

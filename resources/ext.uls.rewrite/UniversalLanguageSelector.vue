@@ -318,7 +318,7 @@ module.exports = exports = defineComponent( {
 		useClickOutside( menuRef, visible, document, () => emit( 'close' ) );
 
 		const { autocompleteSuggestion, getAcceptedSuggestion } =
-			useTypeahead( searchQuery, languagesToDisplay, languages );
+			useTypeahead( searchQuery, languagesToDisplay, languages, searchQueryHits );
 
 		const setItemRef = ( el, code ) => {
 			if ( el ) {
