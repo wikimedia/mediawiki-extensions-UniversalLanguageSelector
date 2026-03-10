@@ -78,5 +78,10 @@
 	"ext-uls-empty-state-desc": "Zurzeit sind keine Sprachen verfügbar",
 	"ext-uls-empty-state-header-actions-available": "Noch keine Sprachen. Eine neue Sprache hinzufügen?",
 	"ext-uls-empty-state-desc-actions-available": "Bereitstellung der Inhalte in mehreren Sprachen.",
-	"ext-uls-add-languages-button-label": "Sprachen hinzufügen"
+	"ext-uls-add-languages-button-label": "Sprachen hinzufügen",
+	"ext-uls-language-title": "Sprachen",
+	"ext-uls-placeholder-search": "Sprache suchen",
+	"ext-uls-close-button-label": "Schließen",
+	"ext-uls-rewrite-label": "Überarbeitung der universellen Sprachauswahl",
+	"ext-uls-rewrite-description": "Eine Neuentwicklung des Universal Language Selector (ULS), die darauf abzielt, die Benutzererfahrung zu modernisieren und technische Altlasten durch eine vereinfachte Architektur zu reduzieren."
 }

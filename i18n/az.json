@@ -77,5 +77,10 @@
 	"ext-uls-empty-state-desc": "Hələlik heç bir dil mövcud deyil",
 	"ext-uls-empty-state-header-actions-available": "Hələ heç bir dil yoxdur. Yenisi əlavə edilsin?",
 	"ext-uls-empty-state-desc-actions-available": "Bu məqaləni daha çox dildə əlçatan edin.",
-	"ext-uls-add-languages-button-label": "Dil əlavə et"
+	"ext-uls-add-languages-button-label": "Dil əlavə et",
+	"ext-uls-language-title": "Dillər",
+	"ext-uls-placeholder-search": "Dillərdə axtar",
+	"ext-uls-close-button-label": "Bağla",
+	"ext-uls-rewrite-label": "Universal Dil Seçicisinin yenidən yazılması",
+	"ext-uls-rewrite-description": "Sadələşdirilmiş arxitektura vasitəsilə istifadəçi təcrübəsini modernləşdirmək və texniki yükü azaltmaq üçün hazırlanmış Universal Dil Seçicisinin (ULS) yenidən yazılması."
 }

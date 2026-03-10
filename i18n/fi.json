@@ -82,5 +82,10 @@
 	"ext-uls-empty-state-desc": "Kieliä ei ole tällä hetkellä saatavilla",
 	"ext-uls-empty-state-header-actions-available": "Ei vielä kieliä. Lisätäänkö uusi?",
 	"ext-uls-empty-state-desc-actions-available": "Tuo sisältö saataville muille kielille.",
-	"ext-uls-add-languages-button-label": "Lisää kieliä"
+	"ext-uls-add-languages-button-label": "Lisää kieliä",
+	"ext-uls-language-title": "Kielet",
+	"ext-uls-placeholder-search": "Hae kieliä",
+	"ext-uls-close-button-label": "Sulje",
+	"ext-uls-rewrite-label": "Uusittu yleinen kielenvalitsin",
+	"ext-uls-rewrite-description": "Uusittu yleinen kielenvalitsin (Universal Language Selector, ULS) on suunniteltu käyttäjäkokemuksen modernisoimiseksi ja teknisen velan vähentämiseksi yksinkertaistetun arkkitehtuurin avulla."
 }

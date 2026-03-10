@@ -10,6 +10,7 @@
 			"Toliño"
 		]
 	},
+	"uls-extensionname": "Selector&shy;universal&shy;de&shy;linguas",
 	"uls-desc": "Dá ao usuario varios xeitos de seleccionar unha lingua e de axustar as preferencias da mesma",
 	"uls-plang-title-languages": "Linguas",
 	"ext-uls-select-language-settings-icon-tooltip": "Opcións de lingua",
@@ -78,5 +79,10 @@
 	"ext-uls-empty-state-desc": "Non hai linguas dispoñibles polo momento",
 	"ext-uls-empty-state-header-actions-available": "Aínda non hai linguas. Queres engadir unha nova?",
 	"ext-uls-empty-state-desc-actions-available": "Fai que o contido estea dispoñible en máis linguas.",
-	"ext-uls-add-languages-button-label": "Engadir linguas"
+	"ext-uls-add-languages-button-label": "Engadir linguas",
+	"ext-uls-language-title": "Linguas",
+	"ext-uls-placeholder-search": "Procurar linguas",
+	"ext-uls-close-button-label": "Pechar",
+	"ext-uls-rewrite-label": "Reescritura do selector universal de linguas",
+	"ext-uls-rewrite-description": "Unha reescritura do selector universal de linguas (ULS), deseñada para modernizar a experiencia de usuario e reducir a débeda técnica mediante unha arquitectura simplificada."
 }

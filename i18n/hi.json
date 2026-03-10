@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Abijeet Patro",
 			"Goelujjwal",
 			"Saurmandal",
 			"Sfic",
@@ -35,7 +36,7 @@
 	"ext-uls-webfonts-settings-info": "जो फ़ॉण्ट मौजूद नहीं हैं उसे स्वचालित रूप से डाउनलोड करें और पसंद अनुसार फ़ॉण्ट चुनने का विकल्प दें।",
 	"ext-uls-webfonts-settings-info-link": "अधिक जानकारी",
 	"ext-uls-webfonts-select-for": "$1 के लिए फ़ॉण्ट चुनें",
-	"ext-uls-webfonts-select-for-ui-info": "सदस्य इंटरफ़ेस के लिए प्रयुक्त फ़ॉण्ट",
+	"ext-uls-webfonts-select-for-ui-info": "सदस्य अंतरफलक के लिए प्रयुक्त फ़ॉण्ट",
 	"ext-uls-webfonts-select-for-content-info": "सामग्री के लिए प्रयुक्त फ़ॉण्ट",
 	"ext-uls-webfonts-system-font": "सिस्टम फ़ॉण्ट",
 	"ext-uls-back-to-display-settings": "प्रदर्शन सेटिंग्स में वापस जाएँ",
@@ -63,12 +64,12 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|एक और भाषा|$1 और भाषाएँ}}",
 	"ext-uls-compact-link-info": "सभी भाषाएँ (आप और दूसरे सदस्यों के बीच साँझित विकल्पों से लिया गया शुरुआती चयन)",
 	"prefs-languages": "भाषाएँ",
-	"ext-uls-compact-language-links-preference": "सिर्फ उन भाषाओं के साथ एक [[$1|संक्षिप्त भाषा सूची]] का प्रयोग करें जो आपसे संबद्ध हों।",
+	"ext-uls-compact-language-links-preference": "आपके लिए प्रासंगिक भाषाओं वाली [[$1|संक्षिप्त भाषा सूची]] का उपयोग करें",
 	"ext-uls-compact-no-results": "यह पृष्ठ उस भाषा में उपलब्ध नहीं है जिसे आपने खोजा था।",
 	"ext-uls-setlang-error": "आपके पसंदीदा भाषा को अपडेट करते समय त्रुटि आई। त्रुटि: $1",
 	"ext-uls-setlang-unknown-error": "अज्ञात त्रुटि",
-	"ext-uls-setlang-message": "जिस कड़ी से आप यहाँ आए हैं उसने इंटरफ़ेस को <strong>$1 ($2)</strong> में दिखाने का अनुरोध किया है",
-	"ext-uls-setlang-heading": "इंटरफ़ेस की भाषा बदलें?",
+	"ext-uls-setlang-message": "जिस कड़ी से आप यहाँ आए हैं उसने अंतरफलक को <strong>$1 ($2)</strong> में दिखाने का अनुरोध किया है",
+	"ext-uls-setlang-heading": "अंतरफलक की भाषा बदलें?",
 	"ext-uls-setlang-accept": "बदलाव स्वीकार करें",
 	"ext-uls-setlang-loading": "लागू हो रहा है...",
 	"ext-uls-setlang-cancel": "न बदलें",
@@ -76,5 +77,11 @@
 	"ext-uls-empty-state-header": "अभी तक कोई भाषा नहीं है",
 	"ext-uls-empty-state-desc": "इस समय कोई भाषा उपलब्ध नहीं है",
 	"ext-uls-empty-state-header-actions-available": "अभी तक कोई भाषा नहीं है। एक नई भाषा जोड़ें?",
-	"ext-uls-empty-state-desc-actions-available": "सामग्री को अधिक भाषाओं में उपलब्ध कराएँ।"
+	"ext-uls-empty-state-desc-actions-available": "सामग्री को अधिक भाषाओं में उपलब्ध कराएँ।",
+	"ext-uls-add-languages-button-label": "भाषाएँ जोड़ें",
+	"ext-uls-language-title": "भाषाएँ",
+	"ext-uls-placeholder-search": "भाषाएँ खोजें",
+	"ext-uls-close-button-label": "बंद करें",
+	"ext-uls-rewrite-label": "सार्वभौमिक भाषा चयनकर्ता पुनर्लेखन",
+	"ext-uls-rewrite-description": "सदस्य अनुभव को आधुनिक बनाने और सरलीकृत वास्तुकला के माध्यम से तकनीकी खामियों को कम करने के लिए डिज़ाइन किया गया, सार्वभौमिक भाषा चयनकर्ता (ULS) का पुनर्लेखन।"
 }
