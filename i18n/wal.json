@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ella Lachow"
+			"Ella Lachow",
+			"Malaalaa"
 		]
 	},
 	"uls-desc": "Go'ettiyaagee doonaanne doonaa giigissiyoosaa dooranawu daro ogeta immees.",
@@ -19,7 +20,7 @@
 	"ext-uls-display-settings-desc": "Patettaassinne xuufiya qottatussi maaddiya doonaa kessa.",
 	"ext-uls-language-settings-title": "Doonaa giigissota",
 	"ext-uls-language-settings-apply": "Giigissota go'etta",
-	"ext-uls-language-settings-cancel": "Qucca",
+	"ext-uls-language-settings-cancel": "Agga",
 	"ext-uls-language-buttons-help": "Paatettatu doonaa laamma. Oyqettaa doonay boshettenna.",
 	"ext-uls-display-settings-font-settings": "Xuufiya qottaa giigissota",
 	"ext-uls-display-settings-ui-language": "Besettaa doonaa",
@@ -45,7 +46,7 @@
 	"ext-uls-input-settings-more-languages-tooltip": "Aaro doonata",
 	"jquery-ime-other-languages": "Hara doonata",
 	"jquery-ime-disable-text": "So xaafiyo saleedaa go'etta",
-	"jquery-ime-help": "Maaduwaa",
+	"jquery-ime-help": "Maaduwa",
 	"ext-uls-input-disable": "Gelissiyo buqurata ootissoppa",
 	"ext-uls-input-enable": "Gelissiyo buqurata ootissa",
 	"ext-uls-input-disable-info": "Gelissiyo buqurati oottokkona.",
@@ -64,13 +65,13 @@
 	"ext-uls-setlang-unknown-error": "Erettibeenna balaa",
 	"ext-uls-setlang-message": "Ne kaallada oychido gattiyaagee issippe oottiyoogaa bessiyoy <strong>$1 ($2)</strong>",
 	"ext-uls-setlang-heading": "Issippe oottiyo doonaa laammanee?",
-	"ext-uls-setlang-accept": "Laamiyaa ekka",
+	"ext-uls-setlang-accept": "Laamiya ekka",
 	"ext-uls-setlang-loading": "Shiishiiddi de'ees...",
 	"ext-uls-setlang-cancel": "Laammoppa",
 	"ext-uls-actions-menu-language-settings-item-label": "Doonaa giigissota dooya",
 	"ext-uls-empty-state-header": "Hanno gaakkanawu doonati baawa",
 	"ext-uls-empty-state-desc": "Ha'issi ayba doonatikka de'okkona",
-	"ext-uls-empty-state-header-actions-available": "Hanno gaakkanawu doonati baawa. Ooratta gujjutee?",
-	"ext-uls-empty-state-desc-actions-available": "Oyqettay cora doonatun de'ana mala ootta.",
+	"ext-uls-empty-state-header-actions-available": "Hanno gaakkanawu doonati baawa. Ooratta gujjuutee?",
+	"ext-uls-empty-state-desc-actions-available": "Xuufee cora doonatun de'ana mala ootta.",
 	"ext-uls-add-languages-button-label": "Doonata gujja"
 }
