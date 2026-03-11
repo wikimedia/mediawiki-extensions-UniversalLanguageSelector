@@ -76,5 +76,9 @@
 	"ext-uls-empty-state-desc": "Non sono disponibili lingue per ora",
 	"ext-uls-empty-state-header-actions-available": "Ancora nessuna lingua. Aggiungerne una nuova?",
 	"ext-uls-empty-state-desc-actions-available": "Rendi il contenuto disponibile in più lingue.",
-	"ext-uls-add-languages-button-label": "Aggiungi lingue"
+	"ext-uls-add-languages-button-label": "Aggiungi lingue",
+	"ext-uls-language-title": "Lingue",
+	"ext-uls-placeholder-search": "Cerca lingue",
+	"ext-uls-close-button-label": "Chiudi",
+	"ext-uls-rewrite-label": "Riscrittura del selettore di lingua universale"
 }

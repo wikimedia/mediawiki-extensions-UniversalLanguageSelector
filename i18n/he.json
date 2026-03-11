@@ -4,6 +4,7 @@
 		"authors": [
 			"Amire80",
 			"Guycn2",
+			"YaronSh",
 			"Yona b"
 		]
 	},
@@ -75,5 +76,9 @@
 	"ext-uls-empty-state-desc": "אין שפות זמינות כעת",
 	"ext-uls-empty-state-header-actions-available": "עדיין אין שפות. להוסיף אחת חדשה?",
 	"ext-uls-empty-state-desc-actions-available": "לגרום לתוכן להיות זמין ביותר שפות.",
-	"ext-uls-add-languages-button-label": "הוספת שפות"
+	"ext-uls-add-languages-button-label": "הוספת שפות",
+	"ext-uls-language-title": "שפות",
+	"ext-uls-placeholder-search": "חיפוש שפות",
+	"ext-uls-close-button-label": "סגירה",
+	"ext-uls-rewrite-label": "שכתוב בורר השפות האוניברסלי"
 }

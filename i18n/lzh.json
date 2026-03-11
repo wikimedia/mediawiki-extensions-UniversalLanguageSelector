@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Davidzdh",
 			"Itsmine",
 			"Jason924tw",
 			"Xð",
@@ -9,6 +10,8 @@
 	},
 	"uls-plang-title-languages": "語言",
 	"ext-uls-display-settings-language-tab": "語",
+	"ext-uls-language-settings-cancel": "罷",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|尚有$1}}",
-	"ext-uls-compact-link-info": "外文"
+	"ext-uls-compact-link-info": "外文",
+	"ext-uls-all-languages-title": "九譯"
 }

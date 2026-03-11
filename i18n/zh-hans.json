@@ -85,5 +85,10 @@
 	"ext-uls-empty-state-desc": "目前尚无其他语言版本可用",
 	"ext-uls-empty-state-header-actions-available": "尚无其他语言。添加新语言？",
 	"ext-uls-empty-state-desc-actions-available": "为该内容添加更多语言版本。",
-	"ext-uls-add-languages-button-label": "添加语言"
+	"ext-uls-add-languages-button-label": "添加语言",
+	"ext-uls-language-title": "语言",
+	"ext-uls-placeholder-search": "搜索语言",
+	"ext-uls-close-button-label": "关闭",
+	"ext-uls-rewrite-label": "通用语言选择器重写",
+	"ext-uls-rewrite-description": "通用语言选择器（ULS）的重写，旨在通过简化架构来现代化用户体验并减少技术债务。"
 }

@@ -83,5 +83,13 @@
 	"ext-uls-placeholder-search": "Sprache suchen",
 	"ext-uls-close-button-label": "Schließen",
 	"ext-uls-rewrite-label": "Überarbeitung der universellen Sprachauswahl",
-	"ext-uls-rewrite-description": "Eine Neuentwicklung des Universal Language Selector (ULS), die darauf abzielt, die Benutzererfahrung zu modernisieren und technische Altlasten durch eine vereinfachte Architektur zu reduzieren."
+	"ext-uls-rewrite-description": "Eine Neuentwicklung des Universal Language Selector (ULS), die darauf abzielt, die Benutzererfahrung zu modernisieren und technische Altlasten durch eine vereinfachte Architektur zu reduzieren.",
+	"ext-uls-suggested-languages-title": "Vorgeschlagen",
+	"ext-uls-all-languages-title": "Alle Sprachen",
+	"ext-uls-no-languages-title": "Bisher keine Sprachen",
+	"ext-uls-no-languages-description": "Derzeit sind keine Sprachen verfügbar.",
+	"ext-uls-invalid-language-search-title": "Sprache nicht erkannt",
+	"ext-uls-invalid-language-search-description": "Bitte überprüfe die Rechtschreibung. Du kannst nach Sprachen anhand des Namens oder des ISO-Codes suchen.",
+	"ext-uls-unsupported-language-title": "Sprache nicht verfügbar.",
+	"ext-uls-unsupported-language-description": "Die gesuchte Sprache ist nicht verfügbar."
 }

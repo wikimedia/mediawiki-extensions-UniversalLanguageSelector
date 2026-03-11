@@ -83,5 +83,8 @@
 	"ext-uls-placeholder-search": "भाषाएँ खोजें",
 	"ext-uls-close-button-label": "बंद करें",
 	"ext-uls-rewrite-label": "सार्वभौमिक भाषा चयनकर्ता पुनर्लेखन",
-	"ext-uls-rewrite-description": "सदस्य अनुभव को आधुनिक बनाने और सरलीकृत वास्तुकला के माध्यम से तकनीकी खामियों को कम करने के लिए डिज़ाइन किया गया, सार्वभौमिक भाषा चयनकर्ता (ULS) का पुनर्लेखन।"
+	"ext-uls-rewrite-description": "सदस्य अनुभव को आधुनिक बनाने और सरलीकृत वास्तुकला के माध्यम से तकनीकी खामियों को कम करने के लिए डिज़ाइन किया गया, सार्वभौमिक भाषा चयनकर्ता (ULS) का पुनर्लेखन।",
+	"ext-uls-suggested-languages-title": "सुझावित",
+	"ext-uls-all-languages-title": "सभी भाषाएँ",
+	"ext-uls-unsupported-language-description": "जो भाषा आप खोज रहे हैं वह उपलब्ध नहीं है।"
 }

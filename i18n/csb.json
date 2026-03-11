@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Orbitminis",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Jãzëczi"
+	"uls-plang-title-languages": "Jãzëczi",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Jeden wiãcy|$1 wiãcy}}"
 }

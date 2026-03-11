@@ -84,5 +84,7 @@
 	"ext-uls-placeholder-search": "Procurar linguas",
 	"ext-uls-close-button-label": "Pechar",
 	"ext-uls-rewrite-label": "Reescritura do selector universal de linguas",
-	"ext-uls-rewrite-description": "Unha reescritura do selector universal de linguas (ULS), deseñada para modernizar a experiencia de usuario e reducir a débeda técnica mediante unha arquitectura simplificada."
+	"ext-uls-rewrite-description": "Unha reescritura do selector universal de linguas (ULS), deseñada para modernizar a experiencia de usuario e reducir a débeda técnica mediante unha arquitectura simplificada.",
+	"ext-uls-suggested-languages-title": "Suxeridas",
+	"ext-uls-all-languages-title": "Todas as linguas"
 }

@@ -87,5 +87,7 @@
 	"ext-uls-placeholder-search": "Hae kieliä",
 	"ext-uls-close-button-label": "Sulje",
 	"ext-uls-rewrite-label": "Uusittu yleinen kielenvalitsin",
-	"ext-uls-rewrite-description": "Uusittu yleinen kielenvalitsin (Universal Language Selector, ULS) on suunniteltu käyttäjäkokemuksen modernisoimiseksi ja teknisen velan vähentämiseksi yksinkertaistetun arkkitehtuurin avulla."
+	"ext-uls-rewrite-description": "Uusittu yleinen kielenvalitsin (Universal Language Selector, ULS) on suunniteltu käyttäjäkokemuksen modernisoimiseksi ja teknisen velan vähentämiseksi yksinkertaistetun arkkitehtuurin avulla.",
+	"ext-uls-suggested-languages-title": "Ehdotettu",
+	"ext-uls-all-languages-title": "Kaikki kielet"
 }

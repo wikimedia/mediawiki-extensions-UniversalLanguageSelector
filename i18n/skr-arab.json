@@ -44,5 +44,9 @@
 	"ext-uls-actions-menu-language-settings-item-label": "زبان ترتیباں کھولو",
 	"ext-uls-empty-state-header": "اڄݨ کوئی زباناں کائنی",
 	"ext-uls-empty-state-desc": "ہݨ کیتے کوئی زباناں دستیاب کائنی",
-	"ext-uls-add-languages-button-label": "زباناں شامل کرو"
+	"ext-uls-add-languages-button-label": "زباناں شامل کرو",
+	"ext-uls-language-title": "زباناں",
+	"ext-uls-placeholder-search": "زباناں ڳولو",
+	"ext-uls-close-button-label": "بند کرو",
+	"ext-uls-all-languages-title": "ساریاں زباناں"
 }
