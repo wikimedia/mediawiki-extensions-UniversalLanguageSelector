@@ -4,5 +4,6 @@
 			"Tuwewanzi"
 		]
 	},
-	"uls-plang-title-languages": "Iyápi"
+	"uls-plang-title-languages": "Iyápi",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|Saƞm waƞží|Saƞm $1}}"
 }
