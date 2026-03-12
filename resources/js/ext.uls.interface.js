@@ -423,6 +423,36 @@
 
 				e.preventDefault();
 
+				if ( shouldLoadUlsRewrite() ) {
+					if ( $trigger.attr( 'data-uls-loaded' ) ) {
+						return;
+					}
+					$trigger.attr( 'data-uls-loaded', true );
+
+					mw.loader.using( [ 'ext.uls.mediawiki', 'ext.uls.rewrite', 'ext.uls.rewrite.languagesettings' ] ).then( () => {
+						const { createUniversalLanguageSelector } = require( 'ext.uls.rewrite' );
+
+						const mountPoint = document.createElement( 'div' );
+						document.body.appendChild( mountPoint );
+
+						const app = createUniversalLanguageSelector( {
+							triggerElement: e.currentTarget,
+							selectableLanguages: $.uls.data.getAutonyms(),
+							selected: [ mw.config.get( 'wgUserLanguage' ) ],
+							onSelect: ( language ) => {
+								mw.uls.changeLanguage( language.code );
+							}
+						} );
+						const mountedVm = app.mount( mountPoint );
+						$trigger.on( 'click', ( event ) => {
+							event.preventDefault();
+							event.stopPropagation();
+							mountedVm.toggle();
+						} );
+					} );
+					return;
+				}
+
 				if ( uls ) {
 					if ( !uls.shown ) {
 						mw.hook( 'mw.uls.settings.open' ).fire( 'personal' );
