@@ -86,5 +86,11 @@
 	"ext-uls-rewrite-label": "Reescritura do selector universal de linguas",
 	"ext-uls-rewrite-description": "Unha reescritura do selector universal de linguas (ULS), deseñada para modernizar a experiencia de usuario e reducir a débeda técnica mediante unha arquitectura simplificada.",
 	"ext-uls-suggested-languages-title": "Suxeridas",
-	"ext-uls-all-languages-title": "Todas as linguas"
+	"ext-uls-all-languages-title": "Todas as linguas",
+	"ext-uls-no-languages-title": "Aínda non hai linguas",
+	"ext-uls-no-languages-description": "Non hai linguas dispoñibles polo momento.",
+	"ext-uls-invalid-language-search-title": "Lingua non recoñecida",
+	"ext-uls-invalid-language-search-description": "Revisa o que escribiches. Podes buscar linguas por nome ou por código ISO.",
+	"ext-uls-unsupported-language-title": "Lingua non dispoñible",
+	"ext-uls-unsupported-language-description": "A lingua que buscas non está dispoñible."
 }

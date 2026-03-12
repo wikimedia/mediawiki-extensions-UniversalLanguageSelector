@@ -76,5 +76,8 @@
 	"ext-uls-language-title": "Sproochen",
 	"ext-uls-placeholder-search": "Sproochen duerchsichen",
 	"ext-uls-close-button-label": "Zoumaachen",
-	"ext-uls-all-languages-title": "All Sproochen"
+	"ext-uls-all-languages-title": "All Sproochen",
+	"ext-uls-no-languages-title": "Nach keng Sproochen",
+	"ext-uls-invalid-language-search-title": "Sprooch net erkannt",
+	"ext-uls-unsupported-language-title": "Sprooch net disponibel"
 }

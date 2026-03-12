@@ -89,5 +89,11 @@
 	"ext-uls-rewrite-label": "Uusittu yleinen kielenvalitsin",
 	"ext-uls-rewrite-description": "Uusittu yleinen kielenvalitsin (Universal Language Selector, ULS) on suunniteltu käyttäjäkokemuksen modernisoimiseksi ja teknisen velan vähentämiseksi yksinkertaistetun arkkitehtuurin avulla.",
 	"ext-uls-suggested-languages-title": "Ehdotettu",
-	"ext-uls-all-languages-title": "Kaikki kielet"
+	"ext-uls-all-languages-title": "Kaikki kielet",
+	"ext-uls-no-languages-title": "Ei vielä kieliä",
+	"ext-uls-no-languages-description": "Kieliä ei ole tällä hetkellä saatavilla.",
+	"ext-uls-invalid-language-search-title": "Kieltä ei tunnistettu",
+	"ext-uls-invalid-language-search-description": "Tarkista oikeinkirjoitus. Voit hakea kieliä niiden nimillä tai ISO-koodeilla.",
+	"ext-uls-unsupported-language-title": "Kieli ei ole saatavilla",
+	"ext-uls-unsupported-language-description": "Hakemasi kieli ei ole saatavilla."
 }

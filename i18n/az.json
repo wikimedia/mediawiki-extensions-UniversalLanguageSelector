@@ -84,5 +84,11 @@
 	"ext-uls-rewrite-label": "Universal Dil Seçicisinin yenidən yazılması",
 	"ext-uls-rewrite-description": "Sadələşdirilmiş arxitektura vasitəsilə istifadəçi təcrübəsini modernləşdirmək və texniki yükü azaltmaq üçün hazırlanmış Universal Dil Seçicisinin (ULS) yenidən yazılması.",
 	"ext-uls-suggested-languages-title": "Tövsiyə olunan",
-	"ext-uls-all-languages-title": "Bütün dillər"
+	"ext-uls-all-languages-title": "Bütün dillər",
+	"ext-uls-no-languages-title": "Hələ heç bir dil yoxdur",
+	"ext-uls-no-languages-description": "Hələlik heç bir dil mövcud deyil.",
+	"ext-uls-invalid-language-search-title": "Dil tanınmır",
+	"ext-uls-invalid-language-search-description": "Zəhmət olmasa, yazılışını yoxlayın. Dilləri ad və ya ISO kodu ilə axtara bilərsiniz.",
+	"ext-uls-unsupported-language-title": "Dil mövcud deyil",
+	"ext-uls-unsupported-language-description": "Axtardığınız dil mövcud deyil."
 }

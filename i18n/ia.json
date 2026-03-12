@@ -77,5 +77,10 @@
 	"ext-uls-placeholder-search": "Cercar linguas",
 	"ext-uls-close-button-label": "Clauder",
 	"ext-uls-rewrite-label": "Rescriptura del Selector Universal de Linguas",
-	"ext-uls-rewrite-description": "Un redesigno del Selector Universal de Linguas (ULS, Universal Language Selector), concipite pro modernisar le experientia del usator e reducer le obsolescentia technic per medio de un architectura simplificate."
+	"ext-uls-rewrite-description": "Un redesigno del Selector Universal de Linguas (ULS, Universal Language Selector), concipite pro modernisar le experientia del usator e reducer le obsolescentia technic per medio de un architectura simplificate.",
+	"ext-uls-suggested-languages-title": "Suggerite",
+	"ext-uls-all-languages-title": "Tote le linguas",
+	"ext-uls-no-languages-title": "Necun lingua ancora",
+	"ext-uls-no-languages-description": "Necun lingua es disponibile pro le momento.",
+	"ext-uls-invalid-language-search-title": "Lingua non recognoscite"
 }

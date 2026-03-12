@@ -80,5 +80,11 @@
 	"ext-uls-language-title": "Lingue",
 	"ext-uls-placeholder-search": "Cerca lingue",
 	"ext-uls-close-button-label": "Chiudi",
-	"ext-uls-rewrite-label": "Riscrittura del selettore di lingua universale"
+	"ext-uls-rewrite-label": "Riscrittura del selettore di lingua universale",
+	"ext-uls-all-languages-title": "Tutte le lingue",
+	"ext-uls-no-languages-title": "Ancora nessuna lingua",
+	"ext-uls-no-languages-description": "Non sono disponibili lingue per ora.",
+	"ext-uls-invalid-language-search-title": "Lingua non riconosciuta",
+	"ext-uls-unsupported-language-title": "Lingua non disponibile",
+	"ext-uls-unsupported-language-description": "La lingua che stai cercando non è disponibile."
 }

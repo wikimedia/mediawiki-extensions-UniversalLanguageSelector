@@ -80,5 +80,14 @@
 	"ext-uls-language-title": "שפות",
 	"ext-uls-placeholder-search": "חיפוש שפות",
 	"ext-uls-close-button-label": "סגירה",
-	"ext-uls-rewrite-label": "שכתוב בורר השפות האוניברסלי"
+	"ext-uls-rewrite-label": "שכתוב בורר השפות האוניברסלי",
+	"ext-uls-rewrite-description": "גרסה חדשה של בורר השפות האוניברסלי (ULS), שנועדה לחדש את חוויית המשתמש ולהפחית את החוב הטכני באמצעות ארכיטקטורה פשוטה יותר.",
+	"ext-uls-suggested-languages-title": "מוצעות",
+	"ext-uls-all-languages-title": "כל השפות",
+	"ext-uls-no-languages-title": "עדיין אין שפות",
+	"ext-uls-no-languages-description": "אין שפות זמינות כעת.",
+	"ext-uls-invalid-language-search-title": "שפה לא מזוהה",
+	"ext-uls-invalid-language-search-description": "נא לבדוק את האיות. ניתן לחפש שפות לפי שם או לפי קוד ISO.",
+	"ext-uls-unsupported-language-title": "השפה אינה זמינה",
+	"ext-uls-unsupported-language-description": "השפה שחיפשת אינה זמינה."
 }

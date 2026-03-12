@@ -89,7 +89,7 @@
 	"ext-uls-close-button-label": "Aria label for the close button in the language selector on mobile",
 	"ext-uls-rewrite-label": "ULS rewrite beta feature label.",
 	"ext-uls-rewrite-description": "ULS rewrite beta feature description.",
-	"ext-uls-suggested-languages-title": "Title for the suggested languages section in the language selector",
+	"ext-uls-suggested-languages-title": "Title for the suggested languages section in the language selector. An adjective that describes languages.",
 	"ext-uls-all-languages-title": "Title for the all languages section in the language selector",
 	"ext-uls-no-languages-title": "Title for the empty state in the language selector when there are no languages to show",
 	"ext-uls-no-languages-description": "Description for the empty state in the language selector when there are no languages to show",

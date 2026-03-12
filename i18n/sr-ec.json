@@ -82,5 +82,8 @@
 	"ext-uls-add-languages-button-label": "Додај језике",
 	"ext-uls-language-title": "Језици",
 	"ext-uls-placeholder-search": "Претрага језика",
-	"ext-uls-close-button-label": "Затвори"
+	"ext-uls-close-button-label": "Затвори",
+	"ext-uls-all-languages-title": "Сви језици",
+	"ext-uls-no-languages-title": "Нема других језика",
+	"ext-uls-unsupported-language-title": "Језик није доступан"
 }
