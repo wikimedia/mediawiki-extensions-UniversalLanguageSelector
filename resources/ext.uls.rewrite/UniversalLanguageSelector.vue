@@ -129,7 +129,18 @@
 					<template v-if="hasSearchHits">
 						<!-- Valid language was searched for, but no results were found -->
 						<h3>{{ $i18n( 'ext-uls-unsupported-language-title' ) }}</h3>
-						<p>{{ $i18n( 'ext-uls-unsupported-language-description' ) }}</p>
+						<template v-if="emptySearchActions && emptySearchActions.length !== 0">
+							<empty-search-entrypoint
+								:empty-search-actions="emptySearchActions"
+								:languages="languages"
+								:suggestions="suggestedLanguages"
+								:search-query="searchQuery"
+								:search-query-hits="searchQueryHits"
+							></empty-search-entrypoint>
+						</template>
+						<p v-else>
+							{{ $i18n( 'ext-uls-unsupported-language-description' ) }}
+						</p>
 					</template>
 					<template v-else>
 						<!-- No valid search query was entered -->
@@ -171,6 +182,7 @@ const { useLanguageSelector } = require( 'mediawiki.languageselector' );
 const LanguageItem = require( './LanguageItem.vue' );
 const QuickActionTrigger = require( './entrypoints/QuickActionTrigger.vue' );
 const EmptyListEntrypoint = require( './entrypoints/EmptyListEntrypoint.vue' );
+const EmptySearchEntrypoint = require( './entrypoints/EmptySearchEntrypoint.vue' );
 const useKeyboardNavigation = require( './composables/useKeyboardNavigation.js' );
 const useClickOutside = require( './composables/useClickOutside.js' );
 const useTypeahead = require( './composables/useTypeahead.js' );
@@ -190,7 +202,8 @@ module.exports = exports = defineComponent( {
 		CdxProgressBar,
 		LanguageItem,
 		QuickActionTrigger,
-		EmptyListEntrypoint
+		EmptyListEntrypoint,
+		EmptySearchEntrypoint
 	},
 	props: {
 		// eslint-disable-next-line vue/no-unused-properties
@@ -460,6 +473,7 @@ module.exports = exports = defineComponent( {
 		const possibleSuggestedLanguages = getSuggestedLanguages( previousLanguages );
 		const quickActions = EntrypointRegistry.getRegisteredEntrypoints( 'quick-actions' );
 		const emptyLanguageListActions = EntrypointRegistry.getRegisteredEntrypoints( 'empty-list' );
+		const emptySearchActions = EntrypointRegistry.getRegisteredEntrypoints( 'empty-search' );
 
 		onMounted( async () => {
 			window.addEventListener( 'resize', updateViewportWidth );
@@ -516,7 +530,8 @@ module.exports = exports = defineComponent( {
 			// Entrypoints
 			quickActions,
 			emptyLanguageListActions,
-			possibleSuggestedLanguages
+			possibleSuggestedLanguages,
+			emptySearchActions
 		};
 	}
 } );

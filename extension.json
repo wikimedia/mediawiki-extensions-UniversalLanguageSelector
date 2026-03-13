@@ -426,6 +426,7 @@
 				"ext.uls.rewrite/UniversalLanguageSelector.vue",
 				"ext.uls.rewrite/entrypoints/QuickActionTrigger.vue",
 				"ext.uls.rewrite/entrypoints/EmptyListEntrypoint.vue",
+				"ext.uls.rewrite/entrypoints/EmptySearchEntrypoint.vue",
 				"ext.uls.rewrite/LanguageItem.vue",
 				"ext.uls.rewrite/dist/floating-ui.js",
 				"ext.uls.rewrite/composables/useKeyboardNavigation.js",
