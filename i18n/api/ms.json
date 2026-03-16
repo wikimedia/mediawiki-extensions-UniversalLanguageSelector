@@ -5,6 +5,10 @@
 			"Hakimi97"
 		]
 	},
+	"apihelp-ulslocalization-summary": "Dapatkan penyetempatan ULS dalam bahasa yang diberikan.",
+	"apihelp-ulslocalization-param-language": "Kod bahasa.",
+	"apihelp-ulslocalization-example-1": "Dapatkan penyetempatan bahasa Tamil",
+	"apihelp-ulslocalization-example-2": "Dapatkan penyetempatan bahasa Hindi",
 	"apihelp-ulssetlang-summary": "Kemaskini bahasa antara muka pilihan pengguna.",
 	"apihelp-ulssetlang-param-languagecode": "Kod bahasa pilihan.",
 	"apierror-ulssetlang-anon-notallowed": "Pengguna awanama tidak dibenarkan menukar bahasa antara muka."

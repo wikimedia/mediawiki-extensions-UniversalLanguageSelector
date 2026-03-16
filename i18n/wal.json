@@ -73,5 +73,14 @@
 	"ext-uls-empty-state-desc": "Ha'issi ayba doonatikka de'okkona",
 	"ext-uls-empty-state-header-actions-available": "Hanno gaakkanawu doonati baawa. Ooratta gujjuutee?",
 	"ext-uls-empty-state-desc-actions-available": "Xuufee cora doonatun de'ana mala ootta.",
-	"ext-uls-add-languages-button-label": "Doonata gujja"
+	"ext-uls-add-languages-button-label": "Doonata gujja",
+	"ext-uls-language-title": "Doonata",
+	"ext-uls-placeholder-search": "Doonata koyya",
+	"ext-uls-close-button-label": "Gordda",
+	"ext-uls-all-languages-title": "Ubba doonata",
+	"ext-uls-no-languages-title": "Hanno gaakkanawu doonati baawa",
+	"ext-uls-no-languages-description": "Ha'issi ayba doonatikka de'okkona.",
+	"ext-uls-invalid-language-search-title": "Doonay aahuwn erettibeenna",
+	"ext-uls-unsupported-language-title": "Doonay baawa",
+	"ext-uls-unsupported-language-description": "Ne koyyaydda de'iyo doonay de'enna"
 }

@@ -76,5 +76,18 @@
 	"ext-uls-empty-state-desc": "Tiada bahasa tersedia buat masa ini",
 	"ext-uls-empty-state-header-actions-available": "Belum ada bahasa. Tambah yang baru?",
 	"ext-uls-empty-state-desc-actions-available": "Jadikan kandungan tersedia dalam lebih banyak bahasa.",
-	"ext-uls-add-languages-button-label": "Tambahkan bahasa"
+	"ext-uls-add-languages-button-label": "Tambahkan bahasa",
+	"ext-uls-language-title": "Bahasa",
+	"ext-uls-placeholder-search": "Cari bahasa",
+	"ext-uls-close-button-label": "Tutup",
+	"ext-uls-rewrite-label": "Penulisan semula Pemilih Bahasa Universal",
+	"ext-uls-rewrite-description": "Penulisan semula Pemilih Bahasa Universal (ULS), yang direka untuk memodenkan pengalaman pengguna dan mengurangkan hutang teknikal melalui seni bina yang dipermudahkan.",
+	"ext-uls-suggested-languages-title": "Disarankan",
+	"ext-uls-all-languages-title": "Semua bahasa",
+	"ext-uls-no-languages-title": "Tiada bahasa lagi",
+	"ext-uls-no-languages-description": "Tiada bahasa yang tersedia buat masa ini.",
+	"ext-uls-invalid-language-search-title": "Bahasa tidak dikenali",
+	"ext-uls-invalid-language-search-description": "Sila semak ejaan. Anda boleh mencari bahasa mengikut nama atau kod ISO.",
+	"ext-uls-unsupported-language-title": "Bahasa tidak tersedia",
+	"ext-uls-unsupported-language-description": "Bahasa yang anda cari tidak tersedia."
 }

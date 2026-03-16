@@ -13,6 +13,7 @@
 			"NemesisIII",
 			"Pols12",
 			"Sherbrooke",
+			"Sik666",
 			"The RedBurn",
 			"Thibaut120094",
 			"Trizek (WMF)",
@@ -93,5 +94,18 @@
 	"ext-uls-empty-state-desc": "Aucune langue n’est disponible pour le moment",
 	"ext-uls-empty-state-header-actions-available": "Pas encore de langues. En ajouter une nouvelle ?",
 	"ext-uls-empty-state-desc-actions-available": "Rendre le contenu disponible dans plus de langues.",
-	"ext-uls-add-languages-button-label": "Ajouter des langues"
+	"ext-uls-add-languages-button-label": "Ajouter des langues",
+	"ext-uls-language-title": "Langues",
+	"ext-uls-placeholder-search": "Rechercher parmi les langues",
+	"ext-uls-close-button-label": "Fermer",
+	"ext-uls-rewrite-label": "Réécriture du Sélecteur de Langue Universel",
+	"ext-uls-rewrite-description": "Une réécriture du Sélecteur de Langue Universel (SLU) conçue pour moderniser l’expérience utilisateur et la partie technique grâce à une architecture simplifiée.",
+	"ext-uls-suggested-languages-title": "Suggestions",
+	"ext-uls-all-languages-title": "Toutes les langues",
+	"ext-uls-no-languages-title": "Aucune langue sélectionnée",
+	"ext-uls-no-languages-description": "Aucune langue n’est actuellement disponible.",
+	"ext-uls-invalid-language-search-title": "Langue non reconnue",
+	"ext-uls-invalid-language-search-description": "Veuillez vérifier l’orthographe. Vous pouvez chercher une langue par son nom ou son code ISO.",
+	"ext-uls-unsupported-language-title": "Langue non disponible",
+	"ext-uls-unsupported-language-description": "La langue que vous cherchez n’est pas disponible pour le moment."
 }

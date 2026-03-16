@@ -86,6 +86,7 @@
 	"ext-uls-suggested-languages-title": "Предложено",
 	"ext-uls-all-languages-title": "Сви језици",
 	"ext-uls-no-languages-title": "Нема других језика",
+	"ext-uls-no-languages-description": "За сада нема доступних језика.",
 	"ext-uls-invalid-language-search-title": "Језик није препознат",
 	"ext-uls-unsupported-language-title": "Језик није доступан"
 }

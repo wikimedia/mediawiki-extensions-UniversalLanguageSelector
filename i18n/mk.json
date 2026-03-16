@@ -73,5 +73,18 @@
 	"ext-uls-empty-state-desc": "Засега нема достапни јазици",
 	"ext-uls-empty-state-header-actions-available": "Сè уште нема јазици. Сакате да додадете нов?",
 	"ext-uls-empty-state-desc-actions-available": "Направете ја содржината достапна на повеќе јазици.",
-	"ext-uls-add-languages-button-label": "Додај јазици"
+	"ext-uls-add-languages-button-label": "Додај јазици",
+	"ext-uls-language-title": "Јазици",
+	"ext-uls-placeholder-search": "Пребарај јазици",
+	"ext-uls-close-button-label": "Затвори",
+	"ext-uls-rewrite-label": "Препишување врз Универзалниот избирач на јазици",
+	"ext-uls-rewrite-description": "Преработка на Универзалниот избирач на јазици (ULS) со цел осовременување на корисничкото искуство и намалување на техничкиот долг преку упростена архитектура.",
+	"ext-uls-suggested-languages-title": "Предложени",
+	"ext-uls-all-languages-title": "Сите јазици",
+	"ext-uls-no-languages-title": "Сè уште нема јазици",
+	"ext-uls-no-languages-description": "Засега нема достапни јазици.",
+	"ext-uls-invalid-language-search-title": "Јазикот не е препознаен",
+	"ext-uls-invalid-language-search-description": "Проверете дали сте напишале правилно. Можете да пребарувате јазици по име или ISO-код.",
+	"ext-uls-unsupported-language-title": "Јазикот не е достапен",
+	"ext-uls-unsupported-language-description": "Јазикот што го барате не е достапен."
 }

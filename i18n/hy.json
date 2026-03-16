@@ -65,5 +65,9 @@
 	"ext-uls-empty-state-header": "Լեզուներ դեռ չկան",
 	"ext-uls-empty-state-desc": "Տվյալ պահին մատչելի լեզուներ չկան",
 	"ext-uls-empty-state-header-actions-available": "Լեզուներ դեռ չկան։ Ավելացնե՞լ։",
-	"ext-uls-add-languages-button-label": "Ավելացնել լեզուներ"
+	"ext-uls-add-languages-button-label": "Ավելացնել լեզուներ",
+	"ext-uls-language-title": "Լեզուներ",
+	"ext-uls-placeholder-search": "Որոնել լեզուներ",
+	"ext-uls-close-button-label": "Փակել",
+	"ext-uls-all-languages-title": "Բոլոր լեզուները"
 }
