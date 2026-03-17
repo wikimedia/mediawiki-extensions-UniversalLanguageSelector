@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Waldyrious",
-			"Letra.berdi"
+			"Letra.berdi",
+			"GrogeXaKaba"
 		]
 	},
 	"uls-plang-title-languages": "Lingas",
@@ -53,5 +54,5 @@
 	"ext-uls-setlang-accept": "Seta alterason",
 	"ext-uls-actions-menu-language-settings-item-label": "Bri kunfigurasons di linga",
 	"ext-uls-empty-state-desc-actions-available": "Dispunibiliza kuntiúdu na otus linga.",
-	"ext-uls-add-languages-button-label": "Disona lingas"
+	"ext-uls-add-languages-button-label": "Kirsenta lingas"
 }
