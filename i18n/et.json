@@ -3,7 +3,8 @@
 		"authors": [
 			"Avjoska",
 			"Castellum",
-			"Pikne"
+			"Pikne",
+			"Rivoz"
 		]
 	},
 	"uls-desc": "Võimaldab kasutajal mitmel viisil keelt valida ja keelesätteid kohandada.",
@@ -74,5 +75,12 @@
 	"ext-uls-empty-state-desc": "Praegu pole ühtegi keelt saadaval.",
 	"ext-uls-empty-state-header-actions-available": "Keeli pole veel. Kas lisad ühe?",
 	"ext-uls-empty-state-desc-actions-available": "Tee sisu kättesaadavaks rohkemates keeltes.",
-	"ext-uls-add-languages-button-label": "Lisa keeled"
+	"ext-uls-add-languages-button-label": "Lisa keeled",
+	"ext-uls-language-title": "Keeled",
+	"ext-uls-placeholder-search": "Otsi keeli",
+	"ext-uls-close-button-label": "Sulge",
+	"ext-uls-suggested-languages-title": "Soovitatud",
+	"ext-uls-all-languages-title": "Kõik keeled",
+	"ext-uls-no-languages-title": "Keeli pole veel",
+	"ext-uls-invalid-language-search-title": "Keelt ei tuvastatud"
 }
