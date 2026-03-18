@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Waldyrious",
-			"Letra.berdi"
+			"Letra.berdi",
+			"GrogeXaKaba"
 		]
 	},
 	"uls-plang-title-languages": "Lingas",
@@ -20,7 +21,7 @@
 	"ext-uls-display-settings-font-settings": "Difinisons di tipu di létra",
 	"ext-uls-webfonts-settings-info-link": "Más nfurmason",
 	"ext-uls-webfonts-select-for": "Skodji tipu di létra pa $1",
-	"ext-uls-webfonts-select-for-ui-info": "Tipu di létra uzadu pa interfasi di uzuári",
+	"ext-uls-webfonts-select-for-ui-info": "Tipu di létra uzadu pa nterfási di uzuári",
 	"ext-uls-webfonts-select-for-content-info": "Tipu di létra uzadu pa kuntiúdu",
 	"ext-uls-webfonts-system-font": "Tipu di létra di sistéma",
 	"ext-uls-back-to-display-settings": "Bolta pa kunfigurason di izibison",
@@ -50,9 +51,9 @@
 	"ext-uls-compact-no-results": "Es pájina ka sta dispunívi na linga ma bu skodji.",
 	"ext-uls-setlang-error": "Okori un éru na atualizason di bu linga prifiridu. Éru: $1",
 	"ext-uls-setlang-unknown-error": "Éru diskunxedu",
-	"ext-uls-setlang-heading": "Altera linga di interfasi?",
+	"ext-uls-setlang-heading": "Altera linga di nterfási?",
 	"ext-uls-setlang-accept": "Seta alterason",
 	"ext-uls-actions-menu-language-settings-item-label": "Bri kunfigurasons di linga",
 	"ext-uls-empty-state-desc-actions-available": "Dispunibiliza kuntiúdu na otus linga.",
-	"ext-uls-add-languages-button-label": "Disona lingas"
+	"ext-uls-add-languages-button-label": "Kirsenta lingas"
 }
