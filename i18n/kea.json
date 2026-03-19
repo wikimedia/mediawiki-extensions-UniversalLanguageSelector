@@ -19,6 +19,10 @@
 	"ext-uls-language-settings-apply": "Aplika kunfigurasons",
 	"ext-uls-language-settings-cancel": "Kansela",
 	"ext-uls-display-settings-font-settings": "Difinisons di tipu di létra",
+	"ext-uls-display-settings-ui-language": "Linga di izibison",
+	"ext-uls-display-settings-anon-label": "Linga di izibison:",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (mésmu di kuntiúdu)",
+	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Kuneta]] pa skodji un linga diferenti pa painél.",
 	"ext-uls-webfonts-settings-info-link": "Más nfurmason",
 	"ext-uls-webfonts-select-for": "Skodji tipu di létra pa $1",
 	"ext-uls-webfonts-select-for-ui-info": "Tipu di létra uzadu pa nterfási di uzuári",
@@ -55,5 +59,7 @@
 	"ext-uls-setlang-accept": "Seta alterason",
 	"ext-uls-actions-menu-language-settings-item-label": "Bri kunfigurasons di linga",
 	"ext-uls-empty-state-desc-actions-available": "Dispunibiliza kuntiúdu na otus linga.",
-	"ext-uls-add-languages-button-label": "Kirsenta lingas"
+	"ext-uls-add-languages-button-label": "Kirsenta lingas",
+	"ext-uls-language-title": "Lingas",
+	"ext-uls-all-languages-title": "Tudu linga"
 }
