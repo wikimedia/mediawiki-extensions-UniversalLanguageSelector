@@ -88,7 +88,7 @@
 	"ext-uls-no-languages-title": "Ancora nessuna lingua",
 	"ext-uls-no-languages-description": "Non sono disponibili lingue per ora.",
 	"ext-uls-invalid-language-search-title": "Lingua non riconosciuta",
-	"ext-uls-invalid-language-search-description": "Si prega di controllare l'ortografia. È possibile cercare le lingue per nome o codice ISO.",
+	"ext-uls-invalid-language-search-description": "Controlla l'ortografia. È possibile cercare le lingue per nome o codice ISO.",
 	"ext-uls-unsupported-language-title": "Lingua non disponibile",
 	"ext-uls-unsupported-language-description": "La lingua che stai cercando non è disponibile."
 }
