@@ -441,7 +441,8 @@
 							selected: [ mw.config.get( 'wgUserLanguage' ) ],
 							onSelect: ( language ) => {
 								mw.uls.changeLanguage( language.code );
-							}
+							},
+							mode: 'interface'
 						} );
 						const mountedVm = app.mount( mountPoint );
 						$trigger.on( 'click', ( event ) => {
@@ -624,6 +625,7 @@
 					onSelect: ( language ) => {
 						window.location.assign( language.value.href );
 					},
+					mode: 'content',
 					slots: {
 						'language-item': ( { item } ) => h( 'a', { href: item.href }, item.text )
 					}

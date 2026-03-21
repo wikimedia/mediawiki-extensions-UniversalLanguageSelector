@@ -14,6 +14,7 @@ const UniversalLanguageSelector = require( './UniversalLanguageSelector.vue' );
  * @param {Function} [config.onClose] (Optional) Callback function to execute when the ULS is closed
  * @param {Function} [config.onSelect] (Optional) Callback function to execute when a language is
  * selected. Receives the selected language code and value as arguments.
+ * @param {string} config.mode The mode for ULS, either 'interface' or 'content'.
  * @param {Object} [config.slots] (Optional) Vue slots to customize the ULS content
  * @return {Object} The Vue application instance.
  */
@@ -25,6 +26,7 @@ function createUniversalLanguageSelector( config ) {
 		placeholder,
 		onClose,
 		onSelect,
+		mode,
 		slots
 	} = config;
 
@@ -65,6 +67,7 @@ function createUniversalLanguageSelector( config ) {
 				placeholder: placeholder,
 				selectableLanguages: selectableLanguages,
 				selected: this.currentSelected,
+				mode: mode,
 				onClose: this.close,
 				onSelect: this.select
 			}, slots );

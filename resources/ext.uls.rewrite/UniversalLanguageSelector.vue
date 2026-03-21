@@ -240,6 +240,14 @@ module.exports = exports = defineComponent( {
 		suggestedLanguages: {
 			type: Array,
 			default: null
+		},
+		// ULS can be used in different contexts, which may require different sets of quick
+		// actions and entrypoints. The mode prop allows the parent component to specify the
+		// context in which ULS is being used, so that the appropriate entrypoints can be rendered.
+		mode: {
+			type: String,
+			required: true,
+			validator: ( value ) => [ 'interface', 'content' ].includes( value )
 		}
 	},
 	emits: [ 'close', 'select' ],
@@ -471,9 +479,9 @@ module.exports = exports = defineComponent( {
 		}, RESIZE_DEBOUNCE_DELAY_MS );
 
 		const possibleSuggestedLanguages = getSuggestedLanguages( previousLanguages );
-		const quickActions = EntrypointRegistry.getRegisteredEntrypoints( 'quick-actions' );
-		const emptyLanguageListActions = EntrypointRegistry.getRegisteredEntrypoints( 'empty-list' );
-		const emptySearchActions = EntrypointRegistry.getRegisteredEntrypoints( 'empty-search' );
+		const quickActions = EntrypointRegistry.getRegisteredEntrypoints( 'quick-actions', props.mode );
+		const emptyLanguageListActions = EntrypointRegistry.getRegisteredEntrypoints( 'empty-list', props.mode );
+		const emptySearchActions = EntrypointRegistry.getRegisteredEntrypoints( 'empty-search', props.mode );
 
 		onMounted( async () => {
 			window.addEventListener( 'resize', updateViewportWidth );

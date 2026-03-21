@@ -10,11 +10,16 @@
 const EntrypointRegistry = function () {
 	let isLocked = false;
 
+	const createTypeRegistry = () => ( {
+		interface: [],
+		content: []
+	} );
+
 	const registry = {
-		'missing-languages': [],
-		'quick-actions': [],
-		'empty-search': [],
-		'empty-list': []
+		'missing-languages': createTypeRegistry(),
+		'quick-actions': createTypeRegistry(),
+		'empty-search': createTypeRegistry(),
+		'empty-list': createTypeRegistry()
 	};
 
 	/**
@@ -30,13 +35,22 @@ const EntrypointRegistry = function () {
 	 *
 	 * @param {string} type
 	 * @param {EntryPoint} entryPoint
+	 * @param {Array<string>|string} modes Modes for which this entry point should be
+	 * registered. Valid values: 'interface', 'content'.
 	 * @throws {Error} If the registry is locked (ULS already mounted).
 	 */
-	const register = ( type, entryPoint ) => {
+	const register = ( type, entryPoint, modes ) => {
 		if ( isLocked ) {
 			throw new Error(
 				`[ULS EntrypointRegistry] Too late! Extension "${ entryPoint.id }"
 				tried to register after ULS was mounted. `
+			);
+		}
+
+		if ( !modes || ( Array.isArray( modes ) && modes.length === 0 ) ) {
+			throw new Error(
+				`[ULS EntrypointRegistry] Entry point "${ entryPoint.id }" in "${ type }"
+				must specify at least one mode.`
 			);
 		}
 
@@ -59,10 +73,33 @@ const EntrypointRegistry = function () {
 			);
 		}
 
-		registry[ type ].push( entryPoint );
+		const modesArray = Array.isArray( modes ) ? modes : [ modes ];
+
+		modesArray.forEach( ( mode ) => {
+			if ( !registry[ type ][ mode ] ) {
+				throw new Error(
+					`[ULS EntrypointRegistry] Invalid mode "${ mode }" for entry point "${ entryPoint.id }".`
+				);
+			}
+
+			registry[ type ][ mode ].push( entryPoint );
+		} );
 	};
 
-	const getRegisteredEntrypoints = ( type ) => registry[ type ] || [];
+	/**
+	 * Get registered entry points for a given type and mode.
+	 *
+	 * @param {string} type
+	 * @param {string} mode
+	 * @return {Array<EntryPoint>}
+	 */
+	const getRegisteredEntrypoints = ( type, mode ) => {
+		if ( !registry[ type ] || !registry[ type ][ mode ] ) {
+			return [];
+		}
+
+		return registry[ type ][ mode ];
+	};
 
 	return {
 		lock,

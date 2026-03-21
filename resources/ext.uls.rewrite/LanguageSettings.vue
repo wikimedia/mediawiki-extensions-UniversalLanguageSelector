@@ -23,7 +23,7 @@ try {
 				} );
 			}
 		} )
-	} );
+	}, [ 'interface', 'content' ] );
 } catch ( e ) {
 	// If the entry point registry is not available, we can safely ignore the error
 	// since it only means that the quick action won't be registered.
