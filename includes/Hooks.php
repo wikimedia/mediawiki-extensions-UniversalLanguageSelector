@@ -77,6 +77,15 @@ class Hooks implements
 	}
 
 	/**
+	 * Checks whether language is in the main menu.
+	 */
+	private function isLanguageInMainMenu( Skin $skin ): bool {
+		$languageInHeaderConfig = $skin->getConfig()->get( 'VectorLanguageInMainMenu' );
+		$userStatus = $skin->getUser()->isAnon() ? 'logged_out' : 'logged_in';
+		return $languageInHeaderConfig[ $userStatus ] ?? true;
+	}
+
+	/**
 	 * Checks whether language is in header.
 	 */
 	private function isLanguageInHeader( Skin $skin ): bool {
@@ -95,7 +104,8 @@ class Hooks implements
 		}
 		// Compact links should be disabled in Vector 2022 skin,
 		// when the language button is displayed at the top of the content
-		if ( $skin->getSkinName() === 'vector-2022' ) {
+		// unless it is duplicated in the main menu (as is the case on Russian WP)
+		if ( $skin->getSkinName() === 'vector-2022' && !$this->isLanguageInMainMenu( $skin ) ) {
 			return !$this->isLanguageInHeader( $skin );
 		}
 		if ( $this->config->get( 'ULSCompactLanguageLinksBetaFeature' ) === true &&
