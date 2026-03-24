@@ -92,8 +92,11 @@
 	"ext-uls-all-languages-title": "Kaikki kielet",
 	"ext-uls-no-languages-title": "Ei vielä kieliä",
 	"ext-uls-no-languages-description": "Kieliä ei ole tällä hetkellä saatavilla.",
+	"ext-uls-no-languages-entrypoint-description": "Voit kääntää tämän sivun. Se on helppo tapa luoda sisältöä omalla kielelläsi.",
 	"ext-uls-invalid-language-search-title": "Kieltä ei tunnistettu",
 	"ext-uls-invalid-language-search-description": "Tarkista oikeinkirjoitus. Voit hakea kieliä niiden nimillä tai ISO-koodeilla.",
 	"ext-uls-unsupported-language-title": "Kieli ei ole saatavilla",
-	"ext-uls-unsupported-language-description": "Hakemasi kieli ei ole saatavilla."
+	"ext-uls-unsupported-language-description": "Hakemasi kieli ei ole saatavilla.",
+	"ext-uls-open-language-settings": "Avaa kieliasetukset",
+	"ext-uls-open-quick-actions": "Näytä pikatoiminnot"
 }

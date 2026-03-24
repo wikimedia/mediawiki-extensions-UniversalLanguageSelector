@@ -86,5 +86,7 @@
 	"ext-uls-language-title": "언어",
 	"ext-uls-placeholder-search": "언어 검색",
 	"ext-uls-close-button-label": "닫기",
+	"ext-uls-rewrite-label": "범용 언어 선택기 재개발판",
+	"ext-uls-rewrite-description": "단순화된 구조를 통해 사용자 경험을 현대화하고 기술 부채를 줄이도록 설계된 범용 언어 선택기(ULS) 재개발판입니다.",
 	"ext-uls-all-languages-title": "모든 언어"
 }

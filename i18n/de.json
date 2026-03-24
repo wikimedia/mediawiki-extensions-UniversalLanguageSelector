@@ -88,8 +88,11 @@
 	"ext-uls-all-languages-title": "Alle Sprachen",
 	"ext-uls-no-languages-title": "Bisher keine Sprachen",
 	"ext-uls-no-languages-description": "Derzeit sind keine Sprachen verfügbar.",
+	"ext-uls-no-languages-entrypoint-description": "Du kannst diese Seite übersetzen. Das ist ein einfacher Weg, um Inhalte in deiner Sprache zu erstellen.",
 	"ext-uls-invalid-language-search-title": "Sprache nicht erkannt",
 	"ext-uls-invalid-language-search-description": "Bitte überprüfe die Rechtschreibung. Du kannst nach Sprachen anhand des Namens oder des ISO-Codes suchen.",
 	"ext-uls-unsupported-language-title": "Sprache nicht verfügbar.",
-	"ext-uls-unsupported-language-description": "Die gesuchte Sprache ist nicht verfügbar."
+	"ext-uls-unsupported-language-description": "Die gesuchte Sprache ist nicht verfügbar.",
+	"ext-uls-open-language-settings": "Spracheinstellungen öffnen",
+	"ext-uls-open-quick-actions": "Schnellaktionen anzeigen"
 }

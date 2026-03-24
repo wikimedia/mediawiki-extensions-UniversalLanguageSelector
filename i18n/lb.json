@@ -76,8 +76,12 @@
 	"ext-uls-language-title": "Sproochen",
 	"ext-uls-placeholder-search": "Sproochen duerchsichen",
 	"ext-uls-close-button-label": "Zoumaachen",
+	"ext-uls-suggested-languages-title": "Virgeschloen",
 	"ext-uls-all-languages-title": "All Sproochen",
 	"ext-uls-no-languages-title": "Nach keng Sproochen",
+	"ext-uls-no-languages-entrypoint-description": "Dir kënnt dës Säit iwwersetzen. Dat ass eng einfach Manéier fir Inhalt an Ärer Sprooch ze schafen.",
 	"ext-uls-invalid-language-search-title": "Sprooch net erkannt",
-	"ext-uls-unsupported-language-title": "Sprooch net disponibel"
+	"ext-uls-unsupported-language-title": "Sprooch net disponibel",
+	"ext-uls-open-language-settings": "Sproochastellungen opmaachen",
+	"ext-uls-open-quick-actions": "Schnellaktioune weisen"
 }

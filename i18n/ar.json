@@ -16,6 +16,7 @@
 			"ترجمان05",
 			"ديفيد",
 			"زكريا",
+			"علاء",
 			"محمد أحمد عبد الفتاح"
 		]
 	},
@@ -87,5 +88,7 @@
 	"ext-uls-empty-state-desc": "لا توجد لغات متاحة حاليًا",
 	"ext-uls-empty-state-header-actions-available": "لا لغات أخرى حتى الآن. أضف وصلة لغة جديدة؟",
 	"ext-uls-empty-state-desc-actions-available": "اجعل المحتوى متاحًا بلغاتٍ أكثر.",
-	"ext-uls-add-languages-button-label": "أضف لغات"
+	"ext-uls-add-languages-button-label": "أضف لغات",
+	"ext-uls-rewrite-label": "إعادة كتابة مُحدِّد اللغة العالمي",
+	"ext-uls-rewrite-description": "إعادة كتابة مُحدِّد اللغة العالمي (ULS)، مصممة لتحديث تجربة المستخدم وتقليل التعقيدات التقنية من خلال بنية مبسطة."
 }

@@ -89,8 +89,11 @@
 	"ext-uls-all-languages-title": "Todas as linguas",
 	"ext-uls-no-languages-title": "Aínda non hai linguas",
 	"ext-uls-no-languages-description": "Non hai linguas dispoñibles polo momento.",
+	"ext-uls-no-languages-entrypoint-description": "Podes traducir esta páxina. É un xeito sinxelo de creares contido na túa lingua.",
 	"ext-uls-invalid-language-search-title": "Lingua non recoñecida",
 	"ext-uls-invalid-language-search-description": "Revisa o que escribiches. Podes buscar linguas por nome ou por código ISO.",
 	"ext-uls-unsupported-language-title": "Lingua non dispoñible",
-	"ext-uls-unsupported-language-description": "A lingua que buscas non está dispoñible."
+	"ext-uls-unsupported-language-description": "A lingua que buscas non está dispoñible.",
+	"ext-uls-open-language-settings": "Abrir as opcións de lingua",
+	"ext-uls-open-quick-actions": "Mostrar as accións rápidas"
 }

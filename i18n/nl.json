@@ -84,5 +84,6 @@
 	"ext-uls-empty-state-desc": "Op dit moment zijn er geen talen beschikbaar",
 	"ext-uls-empty-state-header-actions-available": "Geen talen beschikbaar. Een nieuwe toevoegen?",
 	"ext-uls-empty-state-desc-actions-available": "Maak deze inhoud beschikbaar in meer talen.",
-	"ext-uls-add-languages-button-label": "Talen toevoegen"
+	"ext-uls-add-languages-button-label": "Talen toevoegen",
+	"ext-uls-open-quick-actions": "Snelhandelingen weergeven"
 }
