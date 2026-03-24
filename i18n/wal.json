@@ -8,7 +8,7 @@
 	"uls-desc": "Go'ettiyaagee doonaanne doonaa giigissiyoosaa dooranawu daro ogeta immees.",
 	"uls-plang-title-languages": "Doonata",
 	"ext-uls-select-language-settings-icon-tooltip": "Doonaa giigissota",
-	"ext-uls-undo-language-tooltip-text": "Doonay laamettis hagaappe $1",
+	"ext-uls-undo-language-tooltip-text": "Doonay $1ppe laamettiis",
 	"ext-uls-undo-language-tooltip-text-local": "Ha wiikiyaassi doonay laamettis. Ubba wiikketussi doonaa laammanawu [[Special:GlobalPreferences|salo gufantto doorota]] Ane xeella .",
 	"ext-uls-language-settings-preferences-link": "Aaro doonaa giigissota",
 	"uls-betafeature-label": "Issippe shiiqida doonaa gattiyaageta",
@@ -71,7 +71,7 @@
 	"ext-uls-actions-menu-language-settings-item-label": "Doonaa giigissota dooya",
 	"ext-uls-empty-state-header": "Hanno gaakkanawu doonati baawa",
 	"ext-uls-empty-state-desc": "Ha'issi ayba doonatikka de'okkona",
-	"ext-uls-empty-state-header-actions-available": "Hanno gaakkanawu doonati baawa. Ooratta gujjuutee?",
+	"ext-uls-empty-state-header-actions-available": "Hanno gaakkanawu doonati baawa. Oorattaa gujjuutee?",
 	"ext-uls-empty-state-desc-actions-available": "Xuufee cora doonatun de'ana mala ootta.",
 	"ext-uls-add-languages-button-label": "Doonata gujja"
 }
