@@ -87,6 +87,9 @@
 	"ext-uls-all-languages-title": "Сви језици",
 	"ext-uls-no-languages-title": "Нема других језика",
 	"ext-uls-no-languages-description": "За сада нема доступних језика.",
+	"ext-uls-no-languages-entrypoint-description": "Можете превести ову страницу. То је прост начин да створите садржај на свом језику.",
 	"ext-uls-invalid-language-search-title": "Језик није препознат",
-	"ext-uls-unsupported-language-title": "Језик није доступан"
+	"ext-uls-unsupported-language-title": "Језик није доступан",
+	"ext-uls-open-language-settings": "Језичке поставке",
+	"ext-uls-open-quick-actions": "Прикажи брзе радње"
 }

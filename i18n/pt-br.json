@@ -84,5 +84,21 @@
 	"ext-uls-empty-state-desc": "Nenhum idioma está disponível no momento",
 	"ext-uls-empty-state-header-actions-available": "Ainda não há idiomas. Quer adicionar um novo?",
 	"ext-uls-empty-state-desc-actions-available": " Disponibilizar o conteúdo em mais idiomas.",
-	"ext-uls-add-languages-button-label": "Adicionar idiomas"
+	"ext-uls-add-languages-button-label": "Adicionar idiomas",
+	"ext-uls-language-title": "Idiomas",
+	"ext-uls-placeholder-search": "Pesquisar idiomas",
+	"ext-uls-close-button-label": "Fechar",
+	"ext-uls-rewrite-label": "Reescrita do seletor universal de idiomas",
+	"ext-uls-rewrite-description": "Uma reformulação do Seletor de Idioma Universal (ULS), projetada para modernizar a experiência do usuário e reduzir a dívida técnica por meio de uma arquitetura simplificada.",
+	"ext-uls-suggested-languages-title": "Recomendado",
+	"ext-uls-all-languages-title": "Todos os idiomas",
+	"ext-uls-no-languages-title": "Ainda não há idiomas",
+	"ext-uls-no-languages-description": "Por enquanto, não há idiomas disponíveis.",
+	"ext-uls-no-languages-entrypoint-description": "Você pode traduzir esta página. É uma maneira fácil de criar conteúdo no seu idioma.",
+	"ext-uls-invalid-language-search-title": "Idioma não reconhecido",
+	"ext-uls-invalid-language-search-description": "Verifique a ortografia. Você pode pesquisar idiomas pelo nome ou pelo código ISO.",
+	"ext-uls-unsupported-language-title": "Idioma não disponível",
+	"ext-uls-unsupported-language-description": "O idioma que procura não está disponível.",
+	"ext-uls-open-language-settings": "Abrir configurações de idioma",
+	"ext-uls-open-quick-actions": "Mostrar ações rápidas"
 }

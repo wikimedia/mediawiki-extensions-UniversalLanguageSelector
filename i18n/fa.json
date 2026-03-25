@@ -85,5 +85,7 @@
 	"ext-uls-empty-state-desc": "زبانی در حال حاضر موجود نیست",
 	"ext-uls-empty-state-header-actions-available": "هنوز زبانی موجود نیست. می‌خواهید یک جدید بیافزایید؟",
 	"ext-uls-empty-state-desc-actions-available": "محتوا را به زبان‌های بیشتری در دسترس قرار دهید.",
-	"ext-uls-add-languages-button-label": "افزودن زبان‌ها"
+	"ext-uls-add-languages-button-label": "افزودن زبان‌ها",
+	"ext-uls-rewrite-label": "بازنویسی انتخابگر زبان همگانی",
+	"ext-uls-rewrite-description": "بازنویسی «انتخابگر زبان همگانی» (ULS) که با هدف نوسازی تجربهٔ کاربری و کاهش بدهی فنی از طریق ساده‌سازی معماری طراحی شده است."
 }
