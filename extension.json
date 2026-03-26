@@ -424,9 +424,12 @@
 			"packageFiles": [
 				"ext.uls.rewrite/index.js",
 				"ext.uls.rewrite/UniversalLanguageSelector.vue",
+				"ext.uls.rewrite/LanguageSelectorPanelHeader.vue",
 				"ext.uls.rewrite/entrypoints/QuickActionTrigger.vue",
 				"ext.uls.rewrite/entrypoints/EmptyListEntrypoint.vue",
 				"ext.uls.rewrite/entrypoints/EmptySearchEntrypoint.vue",
+				"ext.uls.rewrite/entrypoints/MissingLanguagesEntrypoint.vue",
+				"ext.uls.rewrite/entrypoints/MissingLanguagesPanel.vue",
 				"ext.uls.rewrite/LanguageItem.vue",
 				"ext.uls.rewrite/dist/floating-ui.js",
 				"ext.uls.rewrite/composables/useKeyboardNavigation.js",
@@ -439,7 +442,9 @@
 					"callback": "MediaWiki\\ResourceLoader\\CodexModule::getIcons",
 					"callbackParam": [
 						"cdxIconEllipsis",
-						"cdxIconClose"
+						"cdxIconClose",
+						"cdxIconNext",
+						"cdxIconArrowPrevious"
 					]
 				}
 			],
@@ -460,10 +465,16 @@
 				"ext-uls-invalid-language-search-description",
 				"ext-uls-unsupported-language-title",
 				"ext-uls-unsupported-language-description",
-				"ext-uls-open-quick-actions"
+				"ext-uls-open-language-selector",
+				"ext-uls-open-quick-actions",
+				"ext-uls-missing-languages-label",
+				"ext-uls-missing-languages-label-more",
+				"ext-uls-missing-languages-panel-title",
+				"ext-uls-missing-languages-panel-description"
 			],
 			"dependencies": [
 				"vue",
+				"mediawiki.language",
 				"mediawiki.languageselector",
 				"mediawiki.storage",
 				"ext.uls.rewrite.entrypoints"

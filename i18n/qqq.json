@@ -99,5 +99,10 @@
 	"ext-uls-unsupported-language-title": "Title for the empty state in the language selector when the search query is a language that is not supported yet",
 	"ext-uls-unsupported-language-description": "Description for the empty state in the language selector when the search query is a language that is not supported yet",
 	"ext-uls-open-language-settings": "Label for the button that opens the language settings inside the quick actions menu of the language selector.",
-	"ext-uls-open-quick-actions": "Label for the button that opens the quick actions menu of the language selector."
+	"ext-uls-open-language-selector": "Label for the back button in the panel headers to return to the main language selector view.",
+	"ext-uls-open-quick-actions": "Label for the button that opens the quick actions menu of the language selector.",
+	"ext-uls-missing-languages-label": "Label for the entrypoint when missing languages are available. $1 is a localized list of up to 2 language names (e.g. \"Hindi\" or \"Hindi and Odia\").",
+	"ext-uls-missing-languages-label-more": "Label for the entrypoint when more than 2 missing languages are available. $1 and $2 are the names of the first two languages. (e.g. \"Missing in Hindi, Odia and more\")",
+	"ext-uls-missing-languages-panel-title": "Title for the panel that suggests translating the current page.",
+	"ext-uls-missing-languages-panel-description": "Description for the panel that suggests translating the current page."
 }

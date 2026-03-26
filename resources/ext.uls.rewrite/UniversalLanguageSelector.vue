@@ -4,168 +4,193 @@
 		ref="menuRef"
 		class="uls-rewrite"
 		:style="floatingStyles"
-		:class="[ densityClass, { 'uls-rewrite--mobile': isMobile } ]"
+		:class="[ densityClass, { 'uls-rewrite--mobile': isMobile, 'uls-rewrite--panel': currentView !== 'main' } ]"
 	>
 		<div class="uls-rewrite__header">
-			<div v-if="isMobile" class="uls-rewrite__header__mobile">
-				<span>{{ $i18n( 'ext-uls-language-title' ) }}</span>
-				<cdx-button
-					weight="quiet"
-					:aria-label="$i18n( 'ext-uls-close-button-label' )"
-					@click="$emit( 'close' )">
-					<cdx-icon :icon="cdxIconClose"></cdx-icon>
-				</cdx-button>
-			</div>
-			<div class="uls-rewrite__search-wrapper">
-				<cdx-search-input
-					v-if="autocompleteSuggestion"
-					class="uls-rewrite__search-ghost"
-					:model-value="searchQuery + autocompleteSuggestion"
-					disabled
-					tabindex="-1"
-					aria-hidden="true"
-				></cdx-search-input>
-				<cdx-search-input
-					ref="searchInputRef"
-					class="uls-rewrite__search-active"
-					:model-value="searchQuery"
-					:placeholder="placeholder || $i18n( 'ext-uls-placeholder-search' )"
-					@update:model-value="search"
-					@keydown.down.stop.prevent="next"
-					@keydown.up.stop.prevent="prev"
-					@keydown.enter.stop.prevent="onEnter"
-					@keydown.esc.prevent="$emit( 'close' )"
-					@keydown.tab="onKeyTab"
-					@keydown.right="onKeyRight"
-				></cdx-search-input>
-			</div>
-			<cdx-progress-bar
-				v-if="isSearching"
-				inline
-				class="uls-rewrite__progress"
-			></cdx-progress-bar>
+			<template v-if="currentView === 'main'">
+				<div v-if="isMobile" class="uls-rewrite__header__mobile">
+					<span>{{ $i18n( 'ext-uls-language-title' ) }}</span>
+					<cdx-button
+						weight="quiet"
+						:aria-label="$i18n( 'ext-uls-close-button-label' )"
+						@click.stop="$emit( 'close' )">
+						<cdx-icon :icon="cdxIconClose"></cdx-icon>
+					</cdx-button>
+				</div>
+				<div class="uls-rewrite__search-wrapper">
+					<cdx-search-input
+						v-if="autocompleteSuggestion"
+						class="uls-rewrite__search-ghost"
+						:model-value="searchQuery + autocompleteSuggestion"
+						disabled
+						tabindex="-1"
+						aria-hidden="true"
+					></cdx-search-input>
+					<cdx-search-input
+						ref="searchInputRef"
+						class="uls-rewrite__search-active"
+						:model-value="searchQuery"
+						:placeholder="placeholder || $i18n( 'ext-uls-placeholder-search' )"
+						@update:model-value="search"
+						@keydown.down.stop.prevent="next"
+						@keydown.up.stop.prevent="prev"
+						@keydown.enter.stop.prevent="onEnter"
+						@keydown.esc.prevent="$emit( 'close' )"
+						@keydown.tab="onKeyTab"
+						@keydown.right="onKeyRight"
+					></cdx-search-input>
+				</div>
+				<cdx-progress-bar
+					v-if="isSearching"
+					inline
+					class="uls-rewrite__progress"
+				></cdx-progress-bar>
+				<missing-languages-entrypoint
+					v-if="!isSearching && !searchQuery && missingLanguagesActions.length !== 0"
+					:missing-languages-actions="missingLanguagesActions"
+					:languages="languages"
+					:suggestions="possibleSuggestedLanguages"
+					@click="showMissingLanguagesPanel"
+				>
+				</missing-languages-entrypoint>
+			</template>
+			<language-selector-panel-header
+				v-else-if="currentView === 'missing-languages'"
+				:title="$i18n( 'ext-uls-missing-languages-panel-title' )"
+				:is-mobile="isMobile"
+				@back="showLanguageSelector"
+				@close="$emit( 'close' )"
+			></language-selector-panel-header>
 		</div>
 		<div ref="keyboardNavigationContainer" class="uls-rewrite__body">
-			<!-- Search Results -->
-			<ul
-				v-if="searchQuery && languagesToDisplay.length > 0"
-				class="uls-rewrite__body__language-list"
-				role="listbox"
-			>
-				<language-item
-					v-for="( languageCode, index ) in languagesToDisplay"
-					:key="languageCode"
-					:ref="( el ) => setItemRef( el, languageCode )"
-					:code="languageCode"
-					:name="languages[languageCode]"
-					:is-highlighted="highlightedIndex === index"
-					:is-selected="selectedValuesSet.has( languageCode )"
-					@select="select"
-					@mousemove="setHighlightedIndex( index )"
+			<template v-if="currentView === 'main'">
+				<!-- Search Results -->
+				<ul
+					v-if="searchQuery && languagesToDisplay.length > 0"
+					class="uls-rewrite__body__language-list"
+					role="listbox"
 				>
-					<template #default="slotProps">
-						<slot name="language-item" :item="slotProps.item"></slot>
-					</template>
-				</language-item>
-			</ul>
-
-			<!-- Suggested and All Languages -->
-			<div v-else-if="!searchQuery && languagesToDisplay.length > 0">
-				<div
-					v-if="suggestedLanguagesToDisplay.length > 0"
-					class="uls-rewrite__section uls-rewrite__section--suggested"
-				>
-					<h3 class="uls-rewrite__section-title">
-						{{ $i18n( 'ext-uls-suggested-languages-title' ) }}
-					</h3>
-					<ul class="uls-rewrite__body__language-list" role="listbox">
-						<language-item
-							v-for="( languageCode, index ) in suggestedLanguagesToDisplay"
-							:key="languageCode"
-							:ref="( el ) => setItemRef( el, languageCode )"
-							:code="languageCode"
-							:name="languages[languageCode]"
-							:is-highlighted="highlightedIndex === index"
-							:is-selected="selectedValuesSet.has( languageCode )"
-							@select="select"
-							@mousemove="setHighlightedIndex( index )"
-						>
-							<template #default="slotProps">
-								<slot name="language-item" :item="slotProps.item"></slot>
-							</template>
-						</language-item>
-					</ul>
-				</div>
-
-				<div class="uls-rewrite__section uls-rewrite__section--all">
-					<h3
-						v-if="suggestedLanguagesToDisplay.length > 0"
-						class="uls-rewrite__section-title"
+					<language-item
+						v-for="( languageCode, index ) in languagesToDisplay"
+						:key="languageCode"
+						:ref="( el ) => setItemRef( el, languageCode )"
+						:code="languageCode"
+						:name="languages[languageCode]"
+						:is-highlighted="highlightedIndex === index"
+						:is-selected="selectedValuesSet.has( languageCode )"
+						@select="select"
+						@mousemove="setHighlightedIndex( index )"
 					>
-						{{ $i18n( 'ext-uls-all-languages-title' ) }}
-					</h3>
-					<ul class="uls-rewrite__body__language-list" role="listbox">
-						<language-item
-							v-for="( languageCode, index ) in languagesToDisplay"
-							:key="languageCode"
-							:ref="( el ) => setItemRef( el, languageCode )"
-							:code="languageCode"
-							:name="languages[languageCode]"
-							:is-highlighted="highlightedIndex === ( index + suggestedLanguagesToDisplay.length )"
-							:is-selected="selectedValuesSet.has( languageCode )"
-							@select="select"
-							@mousemove="setHighlightedIndex( index + suggestedLanguagesToDisplay.length )"
-						>
-							<template #default="slotProps">
-								<slot name="language-item" :item="slotProps.item"></slot>
-							</template>
-						</language-item>
-					</ul>
-				</div>
-			</div>
+						<template #default="slotProps">
+							<slot name="language-item" :item="slotProps.item"></slot>
+						</template>
+					</language-item>
+				</ul>
 
-			<template v-if="languagesToDisplay.length === 0">
-				<div v-if="searchQuery && !isSearching" class="uls-rewrite__no-results">
-					<template v-if="hasSearchHits">
-						<!-- Valid language was searched for, but no results were found -->
-						<h3>{{ $i18n( 'ext-uls-unsupported-language-title' ) }}</h3>
-						<template v-if="emptySearchActions && emptySearchActions.length !== 0">
-							<empty-search-entrypoint
-								:empty-search-actions="emptySearchActions"
-								:languages="languages"
-								:suggestions="suggestedLanguages"
-								:search-query="searchQuery"
-								:search-query-hits="searchQueryHits"
-							></empty-search-entrypoint>
+				<!-- Suggested and All Languages -->
+				<div v-else-if="!searchQuery && languagesToDisplay.length > 0">
+					<div
+						v-if="suggestedLanguagesToDisplay.length > 0"
+						class="uls-rewrite__section uls-rewrite__section--suggested"
+					>
+						<h3 class="uls-rewrite__section-title">
+							{{ $i18n( 'ext-uls-suggested-languages-title' ) }}
+						</h3>
+						<ul class="uls-rewrite__body__language-list" role="listbox">
+							<language-item
+								v-for="( languageCode, index ) in suggestedLanguagesToDisplay"
+								:key="languageCode"
+								:ref="( el ) => setItemRef( el, languageCode )"
+								:code="languageCode"
+								:name="languages[languageCode]"
+								:is-highlighted="highlightedIndex === index"
+								:is-selected="selectedValuesSet.has( languageCode )"
+								@select="select"
+								@mousemove="setHighlightedIndex( index )"
+							>
+								<template #default="slotProps">
+									<slot name="language-item" :item="slotProps.item"></slot>
+								</template>
+							</language-item>
+						</ul>
+					</div>
+
+					<div class="uls-rewrite__section uls-rewrite__section--all">
+						<h3
+							v-if="suggestedLanguagesToDisplay.length > 0"
+							class="uls-rewrite__section-title"
+						>
+							{{ $i18n( 'ext-uls-all-languages-title' ) }}
+						</h3>
+						<ul class="uls-rewrite__body__language-list" role="listbox">
+							<language-item
+								v-for="( languageCode, index ) in languagesToDisplay"
+								:key="languageCode"
+								:ref="( el ) => setItemRef( el, languageCode )"
+								:code="languageCode"
+								:name="languages[languageCode]"
+								:is-highlighted="highlightedIndex === ( index + suggestedLanguagesToDisplay.length )"
+								:is-selected="selectedValuesSet.has( languageCode )"
+								@select="select"
+								@mousemove="setHighlightedIndex( index + suggestedLanguagesToDisplay.length )"
+							>
+								<template #default="slotProps">
+									<slot name="language-item" :item="slotProps.item"></slot>
+								</template>
+							</language-item>
+						</ul>
+					</div>
+				</div>
+
+				<template v-if="languagesToDisplay.length === 0">
+					<div v-if="searchQuery && !isSearching" class="uls-rewrite__no-results">
+						<template v-if="hasSearchHits">
+							<!-- Valid language was searched for, but no results were found -->
+							<h3>{{ $i18n( 'ext-uls-unsupported-language-title' ) }}</h3>
+							<template v-if="emptySearchActions && emptySearchActions.length !== 0">
+								<empty-search-entrypoint
+									:empty-search-actions="emptySearchActions"
+									:languages="languages"
+									:suggestions="suggestedLanguages"
+									:search-query="searchQuery"
+									:search-query-hits="searchQueryHits"
+								></empty-search-entrypoint>
+							</template>
+							<p v-else>
+								{{ $i18n( 'ext-uls-unsupported-language-description' ) }}
+							</p>
+						</template>
+						<template v-else>
+							<!-- No valid search query was entered -->
+							<h3>{{ $i18n( 'ext-uls-invalid-language-search-title' ) }}</h3>
+							<p>{{ $i18n( 'ext-uls-invalid-language-search-description' ) }}</p>
+						</template>
+					</div>
+					<div v-else-if="!isSearching" class="uls-rewrite__no-languages">
+						<!-- No language items -->
+						<h3>{{ $i18n( 'ext-uls-no-languages-title' ) }}</h3>
+						<template v-if="emptyLanguageListActions && emptyLanguageListActions.length !== 0">
+							<empty-list-entrypoint
+								:empty-list-actions="emptyLanguageListActions"
+								:suggestions="possibleSuggestedLanguages"
+								:languages="[]"
+							></empty-list-entrypoint>
 						</template>
 						<p v-else>
-							{{ $i18n( 'ext-uls-unsupported-language-description' ) }}
+							{{ $i18n( 'ext-uls-no-languages-description' ) }}
 						</p>
-					</template>
-					<template v-else>
-						<!-- No valid search query was entered -->
-						<h3>{{ $i18n( 'ext-uls-invalid-language-search-title' ) }}</h3>
-						<p>{{ $i18n( 'ext-uls-invalid-language-search-description' ) }}</p>
-					</template>
-				</div>
-				<div v-else-if="!isSearching" class="uls-rewrite__no-languages">
-					<!-- No language items -->
-					<h3>{{ $i18n( 'ext-uls-no-languages-title' ) }}</h3>
-					<template v-if="emptyLanguageListActions && emptyLanguageListActions.length !== 0">
-						<empty-list-entrypoint
-							:empty-list-actions="emptyLanguageListActions"
-							:suggestions="possibleSuggestedLanguages"
-							:languages="[]"
-						></empty-list-entrypoint>
-					</template>
-					<p v-else>
-						{{ $i18n( 'ext-uls-no-languages-description' ) }}
-					</p>
-				</div>
+					</div>
+				</template>
 			</template>
+			<missing-languages-panel
+				v-else-if="currentView === 'missing-languages'"
+				:missing-languages-actions="missingLanguagesActions"
+				:languages="languages"
+				:suggestions="possibleSuggestedLanguages"
+			></missing-languages-panel>
 		</div>
 		<quick-action-trigger
-			v-if="quickActions && quickActions.length > 0"
+			v-if="quickActions && quickActions.length > 0 && currentView === 'main'"
 			:quick-actions="quickActions"
 			:languages="languagesToDisplay"
 			:suggestions="suggestedLanguagesToDisplay"
@@ -183,6 +208,9 @@ const LanguageItem = require( './LanguageItem.vue' );
 const QuickActionTrigger = require( './entrypoints/QuickActionTrigger.vue' );
 const EmptyListEntrypoint = require( './entrypoints/EmptyListEntrypoint.vue' );
 const EmptySearchEntrypoint = require( './entrypoints/EmptySearchEntrypoint.vue' );
+const MissingLanguagesEntrypoint = require( './entrypoints/MissingLanguagesEntrypoint.vue' );
+const MissingLanguagesPanel = require( './entrypoints/MissingLanguagesPanel.vue' );
+const LanguageSelectorPanelHeader = require( './LanguageSelectorPanelHeader.vue' );
 const useKeyboardNavigation = require( './composables/useKeyboardNavigation.js' );
 const useClickOutside = require( './composables/useClickOutside.js' );
 const useTypeahead = require( './composables/useTypeahead.js' );
@@ -203,7 +231,10 @@ module.exports = exports = defineComponent( {
 		LanguageItem,
 		QuickActionTrigger,
 		EmptyListEntrypoint,
-		EmptySearchEntrypoint
+		EmptySearchEntrypoint,
+		MissingLanguagesEntrypoint,
+		MissingLanguagesPanel,
+		LanguageSelectorPanelHeader
 	},
 	props: {
 		// eslint-disable-next-line vue/no-unused-properties
@@ -265,6 +296,16 @@ module.exports = exports = defineComponent( {
 		const searchInputRef = ref( null );
 		const keyboardNavigationContainer = ref( null );
 		const itemRefs = ref( new Map() );
+
+		const currentView = ref( 'main' );
+
+		const showMissingLanguagesPanel = () => {
+			currentView.value = 'missing-languages';
+		};
+
+		const showLanguageSelector = () => {
+			currentView.value = 'main';
+		};
 
 		const viewportWidth = ref( window.innerWidth );
 		const isMobile = computed( () => viewportWidth.value < MOBILE_WIDTH_THRESHOLD );
@@ -448,6 +489,7 @@ module.exports = exports = defineComponent( {
 			if ( isVisible ) {
 				await focusInput();
 			} else {
+				currentView.value = 'main';
 				clearSearchQuery();
 			}
 		} );
@@ -482,6 +524,7 @@ module.exports = exports = defineComponent( {
 		const quickActions = EntrypointRegistry.getRegisteredEntrypoints( 'quick-actions', props.mode );
 		const emptyLanguageListActions = EntrypointRegistry.getRegisteredEntrypoints( 'empty-list', props.mode );
 		const emptySearchActions = EntrypointRegistry.getRegisteredEntrypoints( 'empty-search', props.mode );
+		const missingLanguagesActions = EntrypointRegistry.getRegisteredEntrypoints( 'missing-languages', props.mode );
 
 		onMounted( async () => {
 			window.addEventListener( 'resize', updateViewportWidth );
@@ -539,7 +582,13 @@ module.exports = exports = defineComponent( {
 			quickActions,
 			emptyLanguageListActions,
 			possibleSuggestedLanguages,
-			emptySearchActions
+			emptySearchActions,
+			missingLanguagesActions,
+
+			// View management
+			currentView,
+			showMissingLanguagesPanel,
+			showLanguageSelector
 		};
 	}
 } );

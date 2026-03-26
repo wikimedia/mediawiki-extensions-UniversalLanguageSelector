@@ -95,5 +95,10 @@
 	"ext-uls-unsupported-language-title": "Language not available",
 	"ext-uls-unsupported-language-description": "The language you are looking for is not available.",
 	"ext-uls-open-language-settings": "Open language settings",
-	"ext-uls-open-quick-actions": "Show quick actions"
+	"ext-uls-open-language-selector": "Back to language selector",
+	"ext-uls-open-quick-actions": "Show quick actions",
+	"ext-uls-missing-languages-label": "Missing in <strong>$1</strong>",
+	"ext-uls-missing-languages-label-more": "Missing in <strong>$1</strong>, <strong>$2</strong> and more",
+	"ext-uls-missing-languages-panel-title": "Translate this page",
+	"ext-uls-missing-languages-panel-description": "This page is missing in some languages you may know. You can translate it."
 }
