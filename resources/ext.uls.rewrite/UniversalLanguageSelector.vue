@@ -49,7 +49,7 @@
 					v-if="!isSearching && !searchQuery && missingLanguagesActions.length !== 0"
 					:missing-languages-actions="missingLanguagesActions"
 					:languages="languages"
-					:suggestions="possibleSuggestedLanguages"
+					:suggestions="userLanguageSuggestions"
 					@click="showMissingLanguagesPanel"
 				>
 				</missing-languages-entrypoint>
@@ -65,27 +65,19 @@
 		<div ref="keyboardNavigationContainer" class="uls-rewrite__body">
 			<template v-if="currentView === 'main'">
 				<!-- Search Results -->
-				<ul
+				<language-list
 					v-if="searchQuery && languagesToDisplay.length > 0"
-					class="uls-rewrite__body__language-list"
-					role="listbox"
+					:language-codes="languagesToDisplay"
+					:languages="languages"
+					:highlighted-index="highlightedIndex"
+					:selected-values-set="selectedValuesSet"
+					@select="select"
+					@highlight="setHighlightedIndex"
 				>
-					<language-item
-						v-for="( languageCode, index ) in languagesToDisplay"
-						:key="languageCode"
-						:ref="( el ) => setItemRef( el, languageCode )"
-						:code="languageCode"
-						:name="languages[languageCode]"
-						:is-highlighted="highlightedIndex === index"
-						:is-selected="selectedValuesSet.has( languageCode )"
-						@select="select"
-						@mousemove="setHighlightedIndex( index )"
-					>
-						<template #default="slotProps">
-							<slot name="language-item" :item="slotProps.item"></slot>
-						</template>
-					</language-item>
-				</ul>
+					<template #language-item="slotProps">
+						<slot name="language-item" :item="slotProps.item"></slot>
+					</template>
+				</language-list>
 
 				<!-- Suggested and All Languages -->
 				<div v-else-if="!searchQuery && languagesToDisplay.length > 0">
@@ -96,23 +88,18 @@
 						<h3 class="uls-rewrite__section-title">
 							{{ $i18n( 'ext-uls-suggested-languages-title' ) }}
 						</h3>
-						<ul class="uls-rewrite__body__language-list" role="listbox">
-							<language-item
-								v-for="( languageCode, index ) in suggestedLanguagesToDisplay"
-								:key="languageCode"
-								:ref="( el ) => setItemRef( el, languageCode )"
-								:code="languageCode"
-								:name="languages[languageCode]"
-								:is-highlighted="highlightedIndex === index"
-								:is-selected="selectedValuesSet.has( languageCode )"
-								@select="select"
-								@mousemove="setHighlightedIndex( index )"
-							>
-								<template #default="slotProps">
-									<slot name="language-item" :item="slotProps.item"></slot>
-								</template>
-							</language-item>
-						</ul>
+						<language-list
+							:language-codes="suggestedLanguagesToDisplay"
+							:languages="languages"
+							:highlighted-index="highlightedIndex"
+							:selected-values-set="selectedValuesSet"
+							@select="select"
+							@highlight="setHighlightedIndex"
+						>
+							<template #language-item="slotProps">
+								<slot name="language-item" :item="slotProps.item"></slot>
+							</template>
+						</language-list>
 					</div>
 
 					<div class="uls-rewrite__section uls-rewrite__section--all">
@@ -122,23 +109,19 @@
 						>
 							{{ $i18n( 'ext-uls-all-languages-title' ) }}
 						</h3>
-						<ul class="uls-rewrite__body__language-list" role="listbox">
-							<language-item
-								v-for="( languageCode, index ) in languagesToDisplay"
-								:key="languageCode"
-								:ref="( el ) => setItemRef( el, languageCode )"
-								:code="languageCode"
-								:name="languages[languageCode]"
-								:is-highlighted="highlightedIndex === ( index + suggestedLanguagesToDisplay.length )"
-								:is-selected="selectedValuesSet.has( languageCode )"
-								@select="select"
-								@mousemove="setHighlightedIndex( index + suggestedLanguagesToDisplay.length )"
-							>
-								<template #default="slotProps">
-									<slot name="language-item" :item="slotProps.item"></slot>
-								</template>
-							</language-item>
-						</ul>
+						<language-list
+							:language-codes="languagesToDisplay"
+							:languages="languages"
+							:highlighted-index="highlightedIndex"
+							:index-offset="suggestedLanguagesToDisplay.length"
+							:selected-values-set="selectedValuesSet"
+							@select="select"
+							@highlight="setHighlightedIndex"
+						>
+							<template #language-item="slotProps">
+								<slot name="language-item" :item="slotProps.item"></slot>
+							</template>
+						</language-list>
 					</div>
 				</div>
 
@@ -147,15 +130,14 @@
 						<template v-if="hasSearchHits">
 							<!-- Valid language was searched for, but no results were found -->
 							<h3>{{ $i18n( 'ext-uls-unsupported-language-title' ) }}</h3>
-							<template v-if="emptySearchActions && emptySearchActions.length !== 0">
-								<empty-search-entrypoint
-									:empty-search-actions="emptySearchActions"
-									:languages="languages"
-									:suggestions="suggestedLanguages"
-									:search-query="searchQuery"
-									:search-query-hits="searchQueryHits"
-								></empty-search-entrypoint>
-							</template>
+							<empty-search-entrypoint
+								v-if="emptySearchActions.length !== 0"
+								:empty-search-actions="emptySearchActions"
+								:languages="languages"
+								:suggestions="suggestedLanguages"
+								:search-query="searchQuery"
+								:search-query-hits="searchQueryHits"
+							></empty-search-entrypoint>
 							<p v-else>
 								{{ $i18n( 'ext-uls-unsupported-language-description' ) }}
 							</p>
@@ -169,13 +151,12 @@
 					<div v-else-if="!isSearching" class="uls-rewrite__no-languages">
 						<!-- No language items -->
 						<h3>{{ $i18n( 'ext-uls-no-languages-title' ) }}</h3>
-						<template v-if="emptyLanguageListActions && emptyLanguageListActions.length !== 0">
-							<empty-list-entrypoint
-								:empty-list-actions="emptyLanguageListActions"
-								:suggestions="possibleSuggestedLanguages"
-								:languages="[]"
-							></empty-list-entrypoint>
-						</template>
+						<empty-list-entrypoint
+							v-if="emptyLanguageListActions.length !== 0"
+							:empty-list-actions="emptyLanguageListActions"
+							:suggestions="userLanguageSuggestions"
+							:languages="[]"
+						></empty-list-entrypoint>
 						<p v-else>
 							{{ $i18n( 'ext-uls-no-languages-description' ) }}
 						</p>
@@ -186,11 +167,11 @@
 				v-else-if="currentView === 'missing-languages'"
 				:missing-languages-actions="missingLanguagesActions"
 				:languages="languages"
-				:suggestions="possibleSuggestedLanguages"
+				:suggestions="userLanguageSuggestions"
 			></missing-languages-panel>
 		</div>
 		<quick-action-trigger
-			v-if="quickActions && quickActions.length > 0 && currentView === 'main'"
+			v-if="quickActions.length > 0 && currentView === 'main'"
 			:quick-actions="quickActions"
 			:languages="languagesToDisplay"
 			:suggestions="suggestedLanguagesToDisplay"
@@ -202,9 +183,9 @@
 </template>
 
 <script>
-const { defineComponent, toRefs, ref, computed, watch, nextTick, onBeforeUpdate, onMounted, onUnmounted } = require( 'vue' );
+const { defineComponent, toRefs, ref, computed, watch, nextTick, onMounted, onUnmounted } = require( 'vue' );
 const { useLanguageSelector } = require( 'mediawiki.languageselector' );
-const LanguageItem = require( './LanguageItem.vue' );
+const LanguageList = require( './LanguageList.vue' );
 const QuickActionTrigger = require( './entrypoints/QuickActionTrigger.vue' );
 const EmptyListEntrypoint = require( './entrypoints/EmptyListEntrypoint.vue' );
 const EmptySearchEntrypoint = require( './entrypoints/EmptySearchEntrypoint.vue' );
@@ -216,10 +197,10 @@ const useClickOutside = require( './composables/useClickOutside.js' );
 const useTypeahead = require( './composables/useTypeahead.js' );
 const useLanguageHistory = require( './composables/useLanguageHistory.js' );
 const useSuggestedLanguages = require( './composables/useSuggestedLanguages.js' );
+const useEntrypoints = require( './composables/useEntrypoints.js' );
 const { useFloating, offset, flip, shift, autoUpdate } = require( './dist/floating-ui.js' );
 const { CdxSearchInput, CdxButton, CdxIcon, CdxProgressBar } = require( '../codex.js' );
 const { cdxIconClose } = require( '../icons.json' );
-const EntrypointRegistry = require( 'ext.uls.rewrite.entrypoints' );
 
 module.exports = exports = defineComponent( {
 	name: 'UniversalLanguageSelector',
@@ -228,7 +209,7 @@ module.exports = exports = defineComponent( {
 		CdxButton,
 		CdxIcon,
 		CdxProgressBar,
-		LanguageItem,
+		LanguageList,
 		QuickActionTrigger,
 		EmptyListEntrypoint,
 		EmptySearchEntrypoint,
@@ -295,7 +276,6 @@ module.exports = exports = defineComponent( {
 		const menuRef = ref( null );
 		const searchInputRef = ref( null );
 		const keyboardNavigationContainer = ref( null );
-		const itemRefs = ref( new Map() );
 
 		const currentView = ref( 'main' );
 
@@ -375,8 +355,8 @@ module.exports = exports = defineComponent( {
 		const { addLanguageToHistory, previousLanguages } = useLanguageHistory();
 		const { getSuggestedLanguages } = useSuggestedLanguages();
 
-		const defaultSuggestedLanguages =
-			computed( () => getSuggestedLanguages( previousLanguages, languageCodes ).value );
+		// Language suggestions present in the language selector
+		const availableLanguageSuggestions = getSuggestedLanguages( previousLanguages, languageCodes );
 
 		const suggestedLanguagesToDisplay = computed( () => {
 			if ( props.hideSuggestedLanguages || searchQuery.value ) {
@@ -391,7 +371,7 @@ module.exports = exports = defineComponent( {
 				return [];
 			}
 
-			return defaultSuggestedLanguages.value.slice( 0, SUGGESTED_LANGUAGES_COUNT );
+			return availableLanguageSuggestions.value.slice( 0, SUGGESTED_LANGUAGES_COUNT );
 		} );
 
 		const combinedLanguages =
@@ -411,16 +391,6 @@ module.exports = exports = defineComponent( {
 
 		const { autocompleteSuggestion, getAcceptedSuggestion } =
 			useTypeahead( searchQuery, languagesToDisplay, languages, searchQueryHits );
-
-		const setItemRef = ( el, code ) => {
-			if ( el ) {
-				itemRefs.value.set( code, el.$el || el );
-			}
-		};
-
-		onBeforeUpdate( () => {
-			itemRefs.value.clear();
-		} );
 
 		const select = ( languageCode, languageValue ) => {
 			setHighlightedItem( languageCode );
@@ -520,19 +490,18 @@ module.exports = exports = defineComponent( {
 			viewportWidth.value = window.innerWidth;
 		}, RESIZE_DEBOUNCE_DELAY_MS );
 
-		const possibleSuggestedLanguages = getSuggestedLanguages( previousLanguages );
-		const quickActions = EntrypointRegistry.getRegisteredEntrypoints( 'quick-actions', props.mode );
-		const emptyLanguageListActions = EntrypointRegistry.getRegisteredEntrypoints( 'empty-list', props.mode );
-		const emptySearchActions = EntrypointRegistry.getRegisteredEntrypoints( 'empty-search', props.mode );
-		const missingLanguagesActions = EntrypointRegistry.getRegisteredEntrypoints( 'missing-languages', props.mode );
+		const {
+			quickActions,
+			emptyLanguageListActions,
+			emptySearchActions,
+			missingLanguagesActions
+		} = useEntrypoints( props.mode );
+
+		// Language suggestions for the user, irrespective of what's available in the selector
+		const userLanguageSuggestions = getSuggestedLanguages( previousLanguages );
 
 		onMounted( async () => {
 			window.addEventListener( 'resize', updateViewportWidth );
-
-			await nextTick();
-			// Lock the registry to ensure that further entrypoints cannot be added.
-			// Trying to add entrypoints now will cause errors to be thrown.
-			EntrypointRegistry.lock();
 		} );
 
 		onUnmounted( () => {
@@ -544,7 +513,6 @@ module.exports = exports = defineComponent( {
 			menuRef,
 			searchInputRef,
 			keyboardNavigationContainer,
-			setItemRef,
 
 			// Search & Data Source
 			languages,
@@ -581,7 +549,7 @@ module.exports = exports = defineComponent( {
 			// Entrypoints
 			quickActions,
 			emptyLanguageListActions,
-			possibleSuggestedLanguages,
+			userLanguageSuggestions,
 			emptySearchActions,
 			missingLanguagesActions,
 

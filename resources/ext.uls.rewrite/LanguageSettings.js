@@ -1,9 +1,5 @@
-<template>
-	<span></span>
-</template>
+'use strict';
 
-<script>
-const { defineComponent } = require( 'vue' );
 const EntrypointRegistry = require( 'ext.uls.rewrite.entrypoints' );
 const { cdxIconSettings } = require( '../icons.json' );
 
@@ -28,8 +24,3 @@ try {
 	// If the entry point registry is not available, we can safely ignore the error
 	// since it only means that the quick action won't be registered.
 }
-
-module.exports = defineComponent( {
-	name: 'LanguageSettings'
-} );
-</script>

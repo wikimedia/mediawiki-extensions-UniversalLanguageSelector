@@ -7,8 +7,8 @@
 		>
 			<cdx-button
 				v-if="action.handler"
-				@click="action.handler"
 				weight="quiet"
+				@click="action.handler"
 			>
 				<cdx-icon v-if="action.icon" :icon="action.icon"></cdx-icon>
 				{{ action.label }}
