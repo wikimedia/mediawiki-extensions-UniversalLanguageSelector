@@ -6,6 +6,7 @@
 			"GrogeXaKaba"
 		]
 	},
+	"uls-desc": "Ta feresi pa uzuári divérsus manera di skodji un linga i di ndjusta kunfigurasons di linga",
 	"uls-plang-title-languages": "Lingas",
 	"ext-uls-select-language-settings-icon-tooltip": "Kunfigurasons di linga",
 	"ext-uls-undo-language-tooltip-text": "Linga alteradu di $1",
@@ -15,10 +16,16 @@
 	"ext-uls-display-settings-language-tab": "Linga",
 	"ext-uls-display-settings-fonts-tab": "Tipu di létra",
 	"ext-uls-display-settings-title-short": "Mustra",
+	"ext-uls-display-settings-desc": "Difini linga uzadu na painél i tipu di létra.",
 	"ext-uls-language-settings-title": "Kunfigurasons di linga",
 	"ext-uls-language-settings-apply": "Aplika kunfigurasons",
 	"ext-uls-language-settings-cancel": "Kansela",
+	"ext-uls-language-buttons-help": "Altera linga di painél. Es ason ka ta altera linga di kuntiúdu.",
 	"ext-uls-display-settings-font-settings": "Difinisons di tipu di létra",
+	"ext-uls-display-settings-ui-language": "Linga di izibison",
+	"ext-uls-display-settings-anon-label": "Linga di izibison:",
+	"ext-uls-display-settings-anon-same-as-content": "$1 (mésmu di kuntiúdu)",
+	"ext-uls-display-settings-anon-log-in-cta": "[[Special:UserLogin|Kuneta]] pa skodji un linga diferenti pa painél.",
 	"ext-uls-webfonts-settings-info-link": "Más nfurmason",
 	"ext-uls-webfonts-select-for": "Skodji tipu di létra pa $1",
 	"ext-uls-webfonts-select-for-ui-info": "Tipu di létra uzadu pa nterfási di uzuári",
@@ -54,6 +61,9 @@
 	"ext-uls-setlang-heading": "Altera linga di nterfási?",
 	"ext-uls-setlang-accept": "Seta alterason",
 	"ext-uls-actions-menu-language-settings-item-label": "Bri kunfigurasons di linga",
+	"ext-uls-empty-state-header": "Niun linga ka sta dispunívi",
+	"ext-uls-empty-state-desc": "Niun linga ka sta dispunívu na es mumentu",
+	"ext-uls-empty-state-header-actions-available": "Niun linga ka sta dispunívi. Bu kre kirsenta un nobu?",
 	"ext-uls-empty-state-desc-actions-available": "Dispunibiliza kuntiúdu na otus linga.",
 	"ext-uls-add-languages-button-label": "Kirsenta lingas"
 }
