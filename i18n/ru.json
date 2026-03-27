@@ -8,6 +8,7 @@
 			"Kaganer",
 			"Kareyac",
 			"Mailman",
+			"Mitte27",
 			"Mix Gerder",
 			"Mouse21",
 			"NBS",
@@ -88,5 +89,19 @@
 	"ext-uls-empty-state-desc": "На данный момент нет доступных языков",
 	"ext-uls-empty-state-header-actions-available": "Языков пока нет. Добавить новый?",
 	"ext-uls-empty-state-desc-actions-available": "Сделайте контент доступным на большем количестве языков.",
-	"ext-uls-add-languages-button-label": "Добавить языки"
+	"ext-uls-add-languages-button-label": "Добавить языки",
+	"ext-uls-language-title": "Языки",
+	"ext-uls-placeholder-search": "Поиск языка",
+	"ext-uls-close-button-label": "Закрыть",
+	"ext-uls-rewrite-label": "Переработанный универсальный выбор языков",
+	"ext-uls-rewrite-description": "Переработанный универсальный выбор языков (ULS), чтобы сделать интерфейс современнее и упростить внутреннюю структуру, уменьшив накопленные технические проблемы.",
+	"ext-uls-all-languages-title": "Все языки",
+	"ext-uls-no-languages-title": "Языков пока нет",
+	"ext-uls-no-languages-description": "На данный момент нет доступных языков.",
+	"ext-uls-no-languages-entrypoint-description": "Вы можете перевести эту страницу. Это простой способ создавать контент на нужном языке.",
+	"ext-uls-invalid-language-search-title": "Язык не распознан",
+	"ext-uls-invalid-language-search-description": "Проверьте правильность написания. Вы можете искать языки по названию или по ISO-коду.",
+	"ext-uls-unsupported-language-title": "Язык отсутствует",
+	"ext-uls-unsupported-language-description": "Язык, который вы ищете, недоступен.",
+	"ext-uls-open-language-settings": "Открыть языковые настройки"
 }
