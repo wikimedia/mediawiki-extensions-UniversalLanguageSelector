@@ -89,6 +89,13 @@
 	"ext-uls-empty-state-header-actions-available": "لا لغات أخرى حتى الآن. أضف وصلة لغة جديدة؟",
 	"ext-uls-empty-state-desc-actions-available": "اجعل المحتوى متاحًا بلغاتٍ أكثر.",
 	"ext-uls-add-languages-button-label": "أضف لغات",
+	"ext-uls-language-title": "اللغات",
+	"ext-uls-placeholder-search": "بحث في اللغات",
+	"ext-uls-close-button-label": "أغلق",
 	"ext-uls-rewrite-label": "إعادة كتابة مُحدِّد اللغة العالمي",
-	"ext-uls-rewrite-description": "إعادة كتابة مُحدِّد اللغة العالمي (ULS)، مصممة لتحديث تجربة المستخدم وتقليل التعقيدات التقنية من خلال بنية مبسطة."
+	"ext-uls-rewrite-description": "إعادة كتابة مُحدِّد اللغة العالمي (ULS)، مصممة لتحديث تجربة المستخدم وتقليل التعقيدات التقنية من خلال بنية مبسطة.",
+	"ext-uls-suggested-languages-title": "مقترح",
+	"ext-uls-all-languages-title": "كل اللغات",
+	"ext-uls-unsupported-language-title": "اللغات غير متوفرة",
+	"ext-uls-open-quick-actions": "أظهر الإجراءات السريعة"
 }

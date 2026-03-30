@@ -79,8 +79,14 @@
 	"ext-uls-language-title": "Keeled",
 	"ext-uls-placeholder-search": "Otsi keeli",
 	"ext-uls-close-button-label": "Sulge",
+	"ext-uls-rewrite-label": "Uus universaalne keelevalik",
+	"ext-uls-rewrite-description": "Universaalse keelevaliku (ULS) ümber kirjutatud versioon. See pakub tänapäevasemat kasutajakogemust ja tänu lihtsamale arhitektuurile leevendab see tehnilist mahajäämust.",
 	"ext-uls-suggested-languages-title": "Soovitatud",
 	"ext-uls-all-languages-title": "Kõik keeled",
 	"ext-uls-no-languages-title": "Keeli pole veel",
-	"ext-uls-invalid-language-search-title": "Keelt ei tuvastatud"
+	"ext-uls-no-languages-description": "Ühtegi keelt pole praegu saadaval.",
+	"ext-uls-invalid-language-search-title": "Keelt ei tuvastatud",
+	"ext-uls-invalid-language-search-description": "Palun kontrolli kirjapilti. Saad keeli otsida nimetuse või ISO koodi järgi.",
+	"ext-uls-unsupported-language-title": "Keel pole saadaval",
+	"ext-uls-unsupported-language-description": "Otsitav keel pole saadaval."
 }

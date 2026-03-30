@@ -68,5 +68,9 @@
 	"ext-uls-actions-menu-language-settings-item-label": "భాషా అమరికలను తెరువు",
 	"ext-uls-empty-state-header": "ఇతర భాషల లింకులు లేవు",
 	"ext-uls-empty-state-header-actions-available": "ఇతర భాషల లింకులు లేవు. కొత్త లింకొకటి చేరుస్తారా?",
-	"ext-uls-empty-state-desc-actions-available": " ఈ పేజీ లోని సమాచారాన్ని మరిన్ని భాషల్లో అందించండి."
+	"ext-uls-empty-state-desc-actions-available": " ఈ పేజీ లోని సమాచారాన్ని మరిన్ని భాషల్లో అందించండి.",
+	"ext-uls-language-title": "భాషలు",
+	"ext-uls-close-button-label": "మూసివేయి",
+	"ext-uls-all-languages-title": "అన్ని భాషలు",
+	"ext-uls-unsupported-language-title": "భాష అందుబాటులో లేదు"
 }
