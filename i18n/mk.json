@@ -83,8 +83,11 @@
 	"ext-uls-all-languages-title": "Сите јазици",
 	"ext-uls-no-languages-title": "Сè уште нема јазици",
 	"ext-uls-no-languages-description": "Засега нема достапни јазици.",
+	"ext-uls-no-languages-entrypoint-description": "Можете да ја преведете страницава. Ова е лесен начин да создавате содржини на вашиот јазик.",
 	"ext-uls-invalid-language-search-title": "Јазикот не е препознаен",
 	"ext-uls-invalid-language-search-description": "Проверете дали сте напишале правилно. Можете да пребарувате јазици по име или ISO-код.",
 	"ext-uls-unsupported-language-title": "Јазикот не е достапен",
-	"ext-uls-unsupported-language-description": "Јазикот што го барате не е достапен."
+	"ext-uls-unsupported-language-description": "Јазикот што го барате не е достапен.",
+	"ext-uls-open-language-settings": "Отвори јазични поставки",
+	"ext-uls-open-quick-actions": "Прикажи брзи дејства"
 }

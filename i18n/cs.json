@@ -11,6 +11,7 @@
 			"Mormegil"
 		]
 	},
+	"uls-extensionname": "Univerzální výběr jazyka",
 	"uls-desc": "Nabízí uživateli několik způsobů volby jazyka a úpravy jazykových nastavení",
 	"uls-plang-title-languages": "Jazyky",
 	"ext-uls-select-language-settings-icon-tooltip": "Jazyková nastavení",
@@ -66,7 +67,7 @@
 	"ext-uls-compact-link-info": "Všechny jazyky (počáteční výběr ze společných voleb vás a ostatních)",
 	"prefs-languages": "Jazyky",
 	"ext-uls-compact-language-links-preference": "Používat [[$1|kompaktní seznam jazyků]] pouze s jazyky pro vás relevantními",
-	"ext-uls-compact-no-results": "Tato stránka není dostupná v jazyce, který jste hledal/a.",
+	"ext-uls-compact-no-results": "Tato stránka není dostupná v jazyce, který jste hledali.",
 	"ext-uls-setlang-error": "Při aktualizaci vašeho preferovaného jazyka došlo k chybě. Chyba: $1",
 	"ext-uls-setlang-unknown-error": "Neznámá chyba",
 	"ext-uls-setlang-message": "Odkaz, který jste následovali, vynutil zobrazení rozhraní v jazyce <strong>$1 ($2)</strong>",
@@ -79,5 +80,21 @@
 	"ext-uls-empty-state-desc": "Momentálně nejsou k dispozici žádné jazyky",
 	"ext-uls-empty-state-header-actions-available": "Zatím žádné jazyky. Přidat nový?",
 	"ext-uls-empty-state-desc-actions-available": "Zpřístupněte obsah ve více jazycích.",
-	"ext-uls-add-languages-button-label": "Přidat jazyky"
+	"ext-uls-add-languages-button-label": "Přidat jazyky",
+	"ext-uls-language-title": "Jazyky",
+	"ext-uls-placeholder-search": "Hledání jazyků",
+	"ext-uls-close-button-label": "Zavřít",
+	"ext-uls-rewrite-label": "Přepis Univerzálního výběru jazyka",
+	"ext-uls-rewrite-description": "Přepis Univerzálního výběru jazyka (ULS) s cílem modernizovat uživatelské prostředí a omezit technický dluh díky zjednodušené architektuře.",
+	"ext-uls-suggested-languages-title": "Navrhované",
+	"ext-uls-all-languages-title": "Všechny jazyky",
+	"ext-uls-no-languages-title": "Zatím žádné jazyky",
+	"ext-uls-no-languages-description": "Momentálně nejsou k dispozici žádné jazyky.",
+	"ext-uls-no-languages-entrypoint-description": "Tuto stránku můžete přeložit. Je to snadný způsob, jak vytvářet obsah ve vašem jazyce.",
+	"ext-uls-invalid-language-search-title": "Jazyk nebyl rozpoznán",
+	"ext-uls-invalid-language-search-description": "Zkontrolujte prosím překlepy. Jazyky lze vyhledávat podle názvu nebo kódu ISO.",
+	"ext-uls-unsupported-language-title": "Jazyk není dostupný",
+	"ext-uls-unsupported-language-description": "Jazyk, který hledáte, není dostupný.",
+	"ext-uls-open-language-settings": "Otevřít jazyková nastavení",
+	"ext-uls-open-quick-actions": "Zobrazit rychlé akce"
 }
