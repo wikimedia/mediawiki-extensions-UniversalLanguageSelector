@@ -100,5 +100,6 @@
 	"ext-uls-missing-languages-label": "Missing in <strong>$1</strong>",
 	"ext-uls-missing-languages-label-more": "Missing in <strong>$1</strong>, <strong>$2</strong> and more",
 	"ext-uls-missing-languages-panel-title": "Translate this page",
-	"ext-uls-missing-languages-panel-description": "This page is missing in some languages you may know. You can translate it."
+	"ext-uls-missing-languages-panel-description": "This page is missing in some languages you may know. You can translate it.",
+	"ext-uls-quick-actions-panel-title": "Quick actions"
 }

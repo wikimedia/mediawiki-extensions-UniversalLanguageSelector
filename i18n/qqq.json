@@ -104,5 +104,6 @@
 	"ext-uls-missing-languages-label": "Label for the entrypoint when missing languages are available. $1 is a localized list of up to 2 language names (e.g. \"Hindi\" or \"Hindi and Odia\").",
 	"ext-uls-missing-languages-label-more": "Label for the entrypoint when more than 2 missing languages are available. $1 and $2 are the names of the first two languages. (e.g. \"Missing in Hindi, Odia and more\")",
 	"ext-uls-missing-languages-panel-title": "Title for the panel that suggests translating the current page.",
-	"ext-uls-missing-languages-panel-description": "Description for the panel that suggests translating the current page."
+	"ext-uls-missing-languages-panel-description": "Description for the panel that suggests translating the current page.",
+	"ext-uls-quick-actions-panel-title": "Title for the panel that displays quick actions in the language selector rewrite."
 }

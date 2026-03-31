@@ -61,6 +61,13 @@
 				@back="showLanguageSelector"
 				@close="$emit( 'close' )"
 			></language-selector-panel-header>
+			<language-selector-panel-header
+				v-else-if="currentView === 'quick-actions'"
+				:title="$i18n( 'ext-uls-quick-actions-panel-title' )"
+				:is-mobile="isMobile"
+				@back="showLanguageSelector"
+				@close="$emit( 'close' )"
+			></language-selector-panel-header>
 		</div>
 		<div ref="keyboardNavigationContainer" class="uls-rewrite__body">
 			<template v-if="currentView === 'main'">
@@ -169,6 +176,10 @@
 				:languages="languages"
 				:suggestions="userLanguageSuggestions"
 			></missing-languages-panel>
+			<quick-actions-panel
+				v-else-if="currentView === 'quick-actions'"
+				:quick-actions-entrypoints="quickActionsEntrypoints"
+			></quick-actions-panel>
 		</div>
 		<quick-action-trigger
 			v-if="quickActions.length > 0 && currentView === 'main'"
@@ -177,6 +188,7 @@
 			:suggestions="suggestedLanguagesToDisplay"
 			:search-query="searchQuery"
 			:search-query-hits="searchQueryHits"
+			@trigger="showQuickActionsPanel"
 		>
 		</quick-action-trigger>
 	</div>
@@ -191,6 +203,7 @@ const EmptyListEntrypoint = require( './entrypoints/EmptyListEntrypoint.vue' );
 const EmptySearchEntrypoint = require( './entrypoints/EmptySearchEntrypoint.vue' );
 const MissingLanguagesEntrypoint = require( './entrypoints/MissingLanguagesEntrypoint.vue' );
 const MissingLanguagesPanel = require( './entrypoints/MissingLanguagesPanel.vue' );
+const QuickActionsPanel = require( './entrypoints/QuickActionsPanel.vue' );
 const LanguageSelectorPanelHeader = require( './LanguageSelectorPanelHeader.vue' );
 const useKeyboardNavigation = require( './composables/useKeyboardNavigation.js' );
 const useClickOutside = require( './composables/useClickOutside.js' );
@@ -215,6 +228,7 @@ module.exports = exports = defineComponent( {
 		EmptySearchEntrypoint,
 		MissingLanguagesEntrypoint,
 		MissingLanguagesPanel,
+		QuickActionsPanel,
 		LanguageSelectorPanelHeader
 	},
 	props: {
@@ -278,9 +292,15 @@ module.exports = exports = defineComponent( {
 		const keyboardNavigationContainer = ref( null );
 
 		const currentView = ref( 'main' );
+		const quickActionsEntrypoints = ref( [] );
 
 		const showMissingLanguagesPanel = () => {
 			currentView.value = 'missing-languages';
+		};
+
+		const showQuickActionsPanel = ( entrypoints ) => {
+			quickActionsEntrypoints.value = entrypoints;
+			currentView.value = 'quick-actions';
 		};
 
 		const showLanguageSelector = () => {
@@ -548,6 +568,7 @@ module.exports = exports = defineComponent( {
 
 			// Entrypoints
 			quickActions,
+			quickActionsEntrypoints,
 			emptyLanguageListActions,
 			userLanguageSuggestions,
 			emptySearchActions,
@@ -556,6 +577,7 @@ module.exports = exports = defineComponent( {
 			// View management
 			currentView,
 			showMissingLanguagesPanel,
+			showQuickActionsPanel,
 			showLanguageSelector
 		};
 	}

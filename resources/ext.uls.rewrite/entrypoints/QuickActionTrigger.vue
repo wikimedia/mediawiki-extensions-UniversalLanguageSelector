@@ -12,7 +12,7 @@
 			v-else
 			class="uls-quick-action-trigger cdx-button cdx-button--weight-quiet cdx-button--icon-only"
 			:aria-label="actionToDisplay.label"
-			@click="actionToDisplay.handler"
+			@click.stop="actionToDisplay.handler"
 		>
 			<cdx-icon :icon="actionToDisplay.icon"></cdx-icon>
 		</cdx-button>
@@ -22,7 +22,7 @@
 		class="uls-quick-action-trigger"
 		weight="quiet"
 		:aria-label="actionToDisplay.label"
-		@click="onTriggerClick"
+		@click.stop="onTriggerClick"
 	>
 		<cdx-icon :icon="actionToDisplay.icon"></cdx-icon>
 	</cdx-button>
@@ -98,8 +98,7 @@ module.exports = defineComponent( {
 			}
 
 			if ( !isSingleAction.value ) {
-				// TODO: Display the list of actions in a separate panel.
-				emit( 'trigger', null );
+				emit( 'trigger', quickActionEntrypoints.value );
 			}
 		};
 

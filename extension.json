@@ -430,6 +430,7 @@
 				"ext.uls.rewrite/entrypoints/EmptySearchEntrypoint.vue",
 				"ext.uls.rewrite/entrypoints/MissingLanguagesEntrypoint.vue",
 				"ext.uls.rewrite/entrypoints/MissingLanguagesPanel.vue",
+				"ext.uls.rewrite/entrypoints/QuickActionsPanel.vue",
 				"ext.uls.rewrite/LanguageList.vue",
 				"ext.uls.rewrite/LanguageItem.vue",
 				"ext.uls.rewrite/dist/floating-ui.js",
@@ -472,7 +473,8 @@
 				"ext-uls-missing-languages-label",
 				"ext-uls-missing-languages-label-more",
 				"ext-uls-missing-languages-panel-title",
-				"ext-uls-missing-languages-panel-description"
+				"ext-uls-missing-languages-panel-description",
+				"ext-uls-quick-actions-panel-title"
 			],
 			"dependencies": [
 				"vue",
