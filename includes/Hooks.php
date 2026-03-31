@@ -398,12 +398,6 @@ class Hooks implements
 			$vars['wgULSFontRepositoryBasePath'] = $config->get( MainConfigNames::ExtensionAssetsPath ) .
 				'/UniversalLanguageSelector/data/fontrepo/fonts/';
 		}
-
-		if ( $config->has( 'InterwikiSortingSortPrepend' ) &&
-			$config->get( 'InterwikiSortingSortPrepend' ) !== []
-		) {
-			$vars['wgULSCompactLinksPrepend'] = $config->get( 'InterwikiSortingSortPrepend' );
-		}
 	}
 
 	/**
