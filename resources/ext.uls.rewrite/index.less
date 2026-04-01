@@ -105,6 +105,9 @@
 			padding: @spacing-50 @spacing-50 @spacing-50 @spacing-200;
 			cursor: pointer;
 			margin-bottom: 0;
+			overflow-wrap: break-word;
+			white-space: normal;
+			min-width: 0;
 
 			a {
 				text-decoration: none;
@@ -137,12 +140,12 @@
 		// --- Density: Low (0-9) ---
 		// Inherits 1 column from mobile default.
 		&.uls-rewrite--density-low {
-			width: 220px;
+			width: 240px;
 		}
 
 		// --- Density: Medium (10-29) ---
 		&.uls-rewrite--density-medium {
-			width: 380px;
+			width: 400px;
 
 			.uls-rewrite__section--suggested .uls-rewrite__body__language-list {
 				grid-template-columns: repeat( 2, 1fr );
@@ -151,7 +154,7 @@
 
 		// --- Density: High (30+) ---
 		&.uls-rewrite--density-high {
-			width: 540px;
+			width: 560px;
 			// density-high and medium have the same section structure, so we need to
 			// repeat the selector here
 			// stylelint-disable-next-line no-descending-specificity
