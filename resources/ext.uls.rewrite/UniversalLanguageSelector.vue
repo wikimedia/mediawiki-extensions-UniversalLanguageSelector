@@ -76,6 +76,7 @@
 					v-if="searchQuery && languagesToDisplay.length > 0"
 					:language-codes="languagesToDisplay"
 					:languages="languages"
+					:lang="displayLanguageCode"
 					:highlighted-index="highlightedIndex"
 					:selected-values-set="selectedValuesSet"
 					@select="select"
@@ -98,6 +99,7 @@
 						<language-list
 							:language-codes="suggestedLanguagesToDisplay"
 							:languages="languages"
+							:lang="displayLanguageCode"
 							:highlighted-index="highlightedIndex"
 							:selected-values-set="selectedValuesSet"
 							@select="select"
@@ -119,6 +121,7 @@
 						<language-list
 							:language-codes="languagesToDisplay"
 							:languages="languages"
+							:lang="displayLanguageCode"
 							:highlighted-index="highlightedIndex"
 							:index-offset="suggestedLanguagesToDisplay.length"
 							:selected-values-set="selectedValuesSet"
@@ -267,6 +270,10 @@ module.exports = exports = defineComponent( {
 			type: Array,
 			default: null
 		},
+		displayLanguageCode: {
+			type: String,
+			default: ''
+		},
 		// ULS can be used in different contexts, which may require different sets of quick
 		// actions and entrypoints. The mode prop allows the parent component to specify the
 		// context in which ULS is being used, so that the appropriate entrypoints can be rendered.
@@ -366,7 +373,7 @@ module.exports = exports = defineComponent( {
 
 			const languageItem = keyboardNavigationContainer.value
 				// eslint-disable-next-line no-use-before-define
-				.querySelectorAll( `.uls-rewrite__language-item[lang="${ highlightedItem.value }"]` )[ 0 ];
+				.querySelectorAll( `.uls-rewrite__language-item[data-language-code="${ highlightedItem.value }"]` )[ 0 ];
 			if ( languageItem ) {
 				languageItem.scrollIntoView( { block: 'nearest' } );
 			}

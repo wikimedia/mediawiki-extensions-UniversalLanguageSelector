@@ -1,10 +1,15 @@
 <template>
-	<ul class="uls-rewrite__body__language-list" role="listbox">
+	<ul
+		class="uls-rewrite__body__language-list"
+		role="listbox"
+		:lang="lang || null"
+	>
 		<language-item
 			v-for="( languageCode, index ) in languageCodes"
 			:key="languageCode"
 			:code="languageCode"
 			:name="languages[languageCode]"
+			:lang="lang"
 			:is-highlighted="highlightedIndex === ( index + indexOffset )"
 			:is-selected="selectedValuesSet.has( languageCode )"
 			@select="( ...args ) => $emit( 'select', ...args )"
@@ -34,6 +39,10 @@ module.exports = defineComponent( {
 		languages: {
 			type: Object,
 			required: true
+		},
+		lang: {
+			type: String,
+			default: ''
 		},
 		highlightedIndex: {
 			type: Number,

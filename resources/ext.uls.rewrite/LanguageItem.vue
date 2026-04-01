@@ -1,6 +1,7 @@
 <template>
 	<li
-		:lang="code"
+		:lang="!lang ? code : null"
+		:data-language-code="code"
 		class="uls-rewrite__language-item"
 		:class="{
 			'uls-rewrite__language-item--highlighted': isHighlighted,
@@ -31,6 +32,10 @@ module.exports = exports = defineComponent( {
 		name: {
 			type: [ String, Object ],
 			required: true
+		},
+		lang: {
+			type: String,
+			default: ''
 		},
 		isHighlighted: {
 			type: Boolean,
