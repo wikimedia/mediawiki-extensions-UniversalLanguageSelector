@@ -1,29 +1,70 @@
-/** Registry for managing ULS Entry Points. */
+/**
+ * Registry for managing ULS (Universal Language Selector) Entry Points.
+ *
+ * This registry allows different components or extensions to register themselves
+ * as entry points in various types of the ULS interface (e.g., quick actions,
+ * missing languages, empty search results). Entry points can be registered
+ * for specific modes (interface or content).
+ */
 
 /**
  * @typedef {Object} EntryPoint
- * @property {string} id
- * @property {function(Object):boolean} shouldShow
- * @property {function(Object):(Object|Array<Object>)} getConfig
+ * @property {string} id Unique identifier for the entry point.
+ * @property {function(Object):boolean} shouldShow Function that returns true if the entry
+ *  point should be displayed. It receives the ULS state/props as an argument.
+ * @property {function(Object):(Object|Array<Object>)} getConfig Function that returns the
+ *  configuration for the entry point (e.g., label, icon, handler).
  */
+
+/**
+ * Constants for the entry point types.
+ *
+ * @enum {string}
+ */
+const ENTRYPOINT_TYPE = Object.freeze( {
+	/**
+	 * Type for entry points related to missing content languages.
+	 * Only available in 'content' mode.
+	 */
+	MISSING_CONTENT_LANGUAGES: 'missing-content-languages',
+	/** Type for quick actions at the bottom of the language selector. */
+	QUICK_ACTIONS: 'quick-actions',
+	/** Type for entry points shown when no search results are found. */
+	EMPTY_SEARCH: 'empty-search',
+	/** Type for entry points shown when the language list is empty. */
+	EMPTY_LIST: 'empty-list'
+} );
+
+/**
+ * Constants for the ULS modes.
+ *
+ * @enum {string}
+ */
+const ULS_MODE = Object.freeze( {
+	/** Mode used when ULS is for content language selection. */
+	CONTENT: 'content',
+	/** Mode used when ULS is for interface language selection. */
+	INTERFACE: 'interface'
+} );
 
 const EntrypointRegistry = function () {
 	let isLocked = false;
 
-	const createTypeRegistry = () => ( {
-		interface: [],
-		content: []
-	} );
+	const allModes = Object.values( ULS_MODE );
 
-	const registry = {
-		'missing-languages': createTypeRegistry(),
-		'quick-actions': createTypeRegistry(),
-		'empty-search': createTypeRegistry(),
-		'empty-list': createTypeRegistry()
+	/** @type {Object<string, string[]>} */
+	const allowedModesByType = {
+		[ ENTRYPOINT_TYPE.MISSING_CONTENT_LANGUAGES ]: [ ULS_MODE.CONTENT ],
+		[ ENTRYPOINT_TYPE.QUICK_ACTIONS ]: allModes,
+		[ ENTRYPOINT_TYPE.EMPTY_SEARCH ]: allModes,
+		[ ENTRYPOINT_TYPE.EMPTY_LIST ]: allModes
 	};
 
+	/** @type {Object<string, Object<string, EntryPoint[]>>} */
+	const registry = {};
+
 	/**
-	 * Locks the registry.
+	 * Locks the registry to prevent further registrations.
 	 * To be called by the ULS component when it mounts.
 	 */
 	const lock = () => {
@@ -33,11 +74,21 @@ const EntrypointRegistry = function () {
 	/**
 	 * Register a new entry point.
 	 *
-	 * @param {string} type
+	 * @example
+	 * EntrypointRegistry.register(
+	 *   EntrypointRegistry.ENTRYPOINT_TYPE.QUICK_ACTIONS,
+	 *   { id: 'my-action', shouldShow: () => true, getConfig: () => ({ ... }) },
+	 *   [ EntrypointRegistry.ULS_MODE.CONTENT ]
+	 * );
+	 *
+	 * @param {string} type Type for which this entry point should be registered.
+	 *  Use the EntrypointRegistry.ENTRYPOINT_TYPE constant for this.
 	 * @param {EntryPoint} entryPoint
 	 * @param {Array<string>|string} modes Modes for which this entry point should be
-	 * registered. Valid values: 'interface', 'content'.
+	 * registered. Use the EntrypointRegistry.ULS_MODE constants.
 	 * @throws {Error} If the registry is locked (ULS already mounted).
+	 * @throws {Error} If type or mode is invalid.
+	 * @throws {Error} If a mode is not supported by the specified type.
 	 */
 	const register = ( type, entryPoint, modes ) => {
 		if ( isLocked ) {
@@ -60,7 +111,7 @@ const EntrypointRegistry = function () {
 			);
 		}
 
-		if ( !registry[ type ] ) {
+		if ( !allowedModesByType[ type ] ) {
 			throw new Error(
 				`[ULS EntrypointRegistry] Invalid type "${ type }" for entry point "${ entryPoint.id }".`
 			);
@@ -76,10 +127,18 @@ const EntrypointRegistry = function () {
 		const modesArray = Array.isArray( modes ) ? modes : [ modes ];
 
 		modesArray.forEach( ( mode ) => {
-			if ( !registry[ type ][ mode ] ) {
+			if ( !allowedModesByType[ type ].includes( mode ) ) {
 				throw new Error(
-					`[ULS EntrypointRegistry] Invalid mode "${ mode }" for entry point "${ entryPoint.id }".`
+					`[ULS EntrypointRegistry] Mode "${ mode }" is not supported for type "${ type }" (entry point "${ entryPoint.id }").`
 				);
+			}
+
+			if ( !registry[ type ] ) {
+				registry[ type ] = {};
+			}
+
+			if ( !registry[ type ][ mode ] ) {
+				registry[ type ][ mode ] = [];
 			}
 
 			registry[ type ][ mode ].push( entryPoint );
@@ -89,8 +148,8 @@ const EntrypointRegistry = function () {
 	/**
 	 * Get registered entry points for a given type and mode.
 	 *
-	 * @param {string} type
-	 * @param {string} mode
+	 * @param {string} type Use EntrypointRegistry.ENTRYPOINT_TYPE.
+	 * @param {string} mode Use EntrypointRegistry.ULS_MODE.
 	 * @return {Array<EntryPoint>}
 	 */
 	const getRegisteredEntrypoints = ( type, mode ) => {
@@ -104,7 +163,9 @@ const EntrypointRegistry = function () {
 	return {
 		lock,
 		register,
-		getRegisteredEntrypoints
+		getRegisteredEntrypoints,
+		ENTRYPOINT_TYPE,
+		ULS_MODE
 	};
 };
 

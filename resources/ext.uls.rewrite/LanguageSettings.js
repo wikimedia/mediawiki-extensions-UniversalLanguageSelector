@@ -1,10 +1,11 @@
 'use strict';
 
 const EntrypointRegistry = require( 'ext.uls.rewrite.entrypoints' );
+const { ENTRYPOINT_TYPE, ULS_MODE } = EntrypointRegistry;
 const { cdxIconSettings } = require( '../icons.json' );
 
 try {
-	EntrypointRegistry.register( 'quick-actions', {
+	EntrypointRegistry.register( ENTRYPOINT_TYPE.QUICK_ACTIONS, {
 		id: 'language-settings',
 		shouldShow: () => true,
 		getConfig: () => ( {
@@ -19,7 +20,7 @@ try {
 				} );
 			}
 		} )
-	}, [ 'interface', 'content' ] );
+	}, [ ULS_MODE.INTERFACE, ULS_MODE.CONTENT ] );
 } catch ( e ) {
 	// If the entry point registry is not available, we can safely ignore the error
 	// since it only means that the quick action won't be registered.

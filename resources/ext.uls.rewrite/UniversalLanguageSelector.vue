@@ -55,7 +55,7 @@
 				</missing-languages-entrypoint>
 			</template>
 			<language-selector-panel-header
-				v-else-if="currentView === 'missing-languages'"
+				v-else-if="currentView === 'missing-content-languages'"
 				:title="$i18n( 'ext-uls-missing-languages-panel-title' )"
 				:is-mobile="isMobile"
 				@back="showLanguageSelector"
@@ -174,7 +174,7 @@
 				</template>
 			</template>
 			<missing-languages-panel
-				v-else-if="currentView === 'missing-languages'"
+				v-else-if="currentView === 'missing-content-languages'"
 				:missing-languages-actions="missingLanguagesActions"
 				:languages="languages"
 				:suggestions="userLanguageSuggestions"
@@ -208,6 +208,8 @@ const MissingLanguagesEntrypoint = require( './entrypoints/MissingLanguagesEntry
 const MissingLanguagesPanel = require( './entrypoints/MissingLanguagesPanel.vue' );
 const QuickActionsPanel = require( './entrypoints/QuickActionsPanel.vue' );
 const LanguageSelectorPanelHeader = require( './LanguageSelectorPanelHeader.vue' );
+const EntrypointRegistry = require( 'ext.uls.rewrite.entrypoints' );
+const { ULS_MODE } = EntrypointRegistry;
 const useKeyboardNavigation = require( './composables/useKeyboardNavigation.js' );
 const useClickOutside = require( './composables/useClickOutside.js' );
 const useTypeahead = require( './composables/useTypeahead.js' );
@@ -280,7 +282,7 @@ module.exports = exports = defineComponent( {
 		mode: {
 			type: String,
 			required: true,
-			validator: ( value ) => [ 'interface', 'content' ].includes( value )
+			validator: ( value ) => Object.values( ULS_MODE ).includes( value )
 		}
 	},
 	emits: [ 'close', 'select' ],
@@ -302,7 +304,7 @@ module.exports = exports = defineComponent( {
 		const quickActionsEntrypoints = ref( [] );
 
 		const showMissingLanguagesPanel = () => {
-			currentView.value = 'missing-languages';
+			currentView.value = 'missing-content-languages';
 		};
 
 		const showQuickActionsPanel = ( entrypoints ) => {

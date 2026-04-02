@@ -2,6 +2,7 @@
 
 const { onMounted, nextTick } = require( 'vue' );
 const EntrypointRegistry = require( 'ext.uls.rewrite.entrypoints' );
+const { ENTRYPOINT_TYPE } = EntrypointRegistry;
 
 /**
  * Composable for managing ULS entrypoints.
@@ -10,13 +11,13 @@ const EntrypointRegistry = require( 'ext.uls.rewrite.entrypoints' );
  * @return {Object} Object containing registered entrypoints.
  */
 module.exports = function useEntrypoints( mode ) {
-	const quickActions = EntrypointRegistry.getRegisteredEntrypoints( 'quick-actions', mode );
+	const quickActions = EntrypointRegistry.getRegisteredEntrypoints( ENTRYPOINT_TYPE.QUICK_ACTIONS, mode );
 	const emptyLanguageListActions =
-		EntrypointRegistry.getRegisteredEntrypoints( 'empty-list', mode );
+		EntrypointRegistry.getRegisteredEntrypoints( ENTRYPOINT_TYPE.EMPTY_LIST, mode );
 	const emptySearchActions =
-		EntrypointRegistry.getRegisteredEntrypoints( 'empty-search', mode );
+		EntrypointRegistry.getRegisteredEntrypoints( ENTRYPOINT_TYPE.EMPTY_SEARCH, mode );
 	const missingLanguagesActions =
-		EntrypointRegistry.getRegisteredEntrypoints( 'missing-languages', mode );
+		EntrypointRegistry.getRegisteredEntrypoints( ENTRYPOINT_TYPE.MISSING_CONTENT_LANGUAGES, mode );
 
 	onMounted( async () => {
 		await nextTick();
