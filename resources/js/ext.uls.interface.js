@@ -795,6 +795,10 @@
 			mw.config.get( 'skin' ) === 'vector-2022';
 	}
 
+	if ( !mw.uls.shouldLoadUlsRewrite ) {
+		mw.uls.shouldLoadUlsRewrite = shouldLoadUlsRewrite;
+	}
+
 	let languageNodesCache = null;
 	function getLanguageNodes() {
 		if ( languageNodesCache === null ) {
