@@ -77,5 +77,21 @@
 	"ext-uls-empty-state-desc": "اوسمهال هیڅ ژبې نشته",
 	"ext-uls-empty-state-header-actions-available": "تر اوسه هیڅ ژبه نشته؟ بله ژبه ورگډه کړي؟",
 	"ext-uls-empty-state-desc-actions-available": "منځپانگه په نورو ژبو چمتو کړئ.",
-	"ext-uls-add-languages-button-label": "ژبې ورگډول"
+	"ext-uls-add-languages-button-label": "ژبې ورگډول",
+	"ext-uls-language-title": "ژبې",
+	"ext-uls-placeholder-search": "ژبې پلټل",
+	"ext-uls-close-button-label": "تړل",
+	"ext-uls-rewrite-label": "د ټوليزې ژبې ټاکونکي بياليکل",
+	"ext-uls-rewrite-description": "د ټوليزې ژبې ټاکونکي (ټ‌ژ‌ټ) بياليکنه، چې د کارن تجربې وسمهالولو او ساده جوړښت له لارې تخنيکي پور کمولو لپاره سکښتل شوې.",
+	"ext-uls-suggested-languages-title": "وړانديزشوی",
+	"ext-uls-all-languages-title": "ټولې ژبې",
+	"ext-uls-no-languages-title": "تر اوسه پورې هېڅ ژبې نشته",
+	"ext-uls-no-languages-description": "وس‌مهال هېڅ ژبه شتون نه لري.",
+	"ext-uls-no-languages-entrypoint-description": "تاسو دا مخ ژباړلی شئ. دا ستاسو په ژبه کې د منځپانگې جوړولو يوه اسانه لار ده.",
+	"ext-uls-invalid-language-search-title": "ژبه ونه پېژندل شوه",
+	"ext-uls-invalid-language-search-description": "مهرباني وکړئ املا يې وگورئ. تاسو کولی شئ د نوم يا آی‌اېس‌او کوډ له مخې ژبې وپلټئ.",
+	"ext-uls-unsupported-language-title": "ژبه د لاسرسي وړ نه ده",
+	"ext-uls-unsupported-language-description": "هغه ژبه چې تاسو يې په لټه کې ياست دلاسرسي وړ نه ده.",
+	"ext-uls-open-language-settings": "ژب‌اوڼنې پرانېستل",
+	"ext-uls-open-quick-actions": "چټک چارې ښودل"
 }

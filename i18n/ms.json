@@ -86,8 +86,11 @@
 	"ext-uls-all-languages-title": "Semua bahasa",
 	"ext-uls-no-languages-title": "Tiada bahasa lagi",
 	"ext-uls-no-languages-description": "Tiada bahasa yang tersedia buat masa ini.",
+	"ext-uls-no-languages-entrypoint-description": "Anda boleh terjemah laman ini. Ia merupakan suatu cara yang mudah untuk cipta kandungan dalam bahasa anda.",
 	"ext-uls-invalid-language-search-title": "Bahasa tidak dikenali",
 	"ext-uls-invalid-language-search-description": "Sila semak ejaan. Anda boleh mencari bahasa mengikut nama atau kod ISO.",
 	"ext-uls-unsupported-language-title": "Bahasa tidak tersedia",
-	"ext-uls-unsupported-language-description": "Bahasa yang anda cari tidak tersedia."
+	"ext-uls-unsupported-language-description": "Bahasa yang anda cari tidak tersedia.",
+	"ext-uls-open-language-settings": "Buka tetapan bahasa",
+	"ext-uls-open-quick-actions": "Tunjukkan tindakan pantas"
 }
