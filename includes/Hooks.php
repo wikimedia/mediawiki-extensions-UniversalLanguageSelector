@@ -20,7 +20,6 @@
 
 namespace UniversalLanguageSelector;
 
-use MediaWiki\Api\Hook\ApiMain__moduleManagerHook;
 use MediaWiki\Babel\Babel;
 use MediaWiki\Config\Config;
 use MediaWiki\Context\IContextSource;
@@ -45,11 +44,9 @@ use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
 use Skin;
 use SkinTemplate;
-use UniversalLanguageSelector\Api\ApiLanguageSearch;
 use Wikimedia\Stats\IBufferingStatsdDataFactory;
 
 class Hooks implements
-	ApiMain__moduleManagerHook,
 	BeforePageDisplayHook,
 	SkinTemplateNavigation__UniversalHook,
 	UserGetLanguageObjectHook,
@@ -69,24 +66,6 @@ class Hooks implements
 
 	public static function setVersionConstant() {
 		define( 'ULS_VERSION', '2020-07-20' );
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	public function onApiMain__moduleManager( $moduleManager ) {
-		// Only register the languagesearch API if it's not already registered by core
-		// `languagesearch` api will be available with MW 1.46
-		// TODO: Remove after MLEB 2026.01 remove
-		if ( !$moduleManager->isDefined( 'languagesearch', 'action' ) ) {
-			$moduleManager->addModule(
-				'languagesearch',
-				'action',
-				[
-					'class' => ApiLanguageSearch::class,
-				]
-			);
-		}
 	}
 
 	/**

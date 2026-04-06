@@ -21,7 +21,6 @@
 		"MediaWiki": ">= 1.44.0"
 	},
 	"Hooks": {
-		"ApiMain::moduleManager": "main",
 		"BeforePageDisplay": "main",
 		"GetBetaFeaturePreferences": "main",
 		"GetPreferences": "main",
@@ -63,10 +62,6 @@
 			"i18n/api",
 			"i18n/api/languagesearch"
 		]
-	},
-	"AutoloadClasses": {
-		"LanguageNameSearch": "data/LanguageNameSearch.php",
-		"LanguageNameSearchData": "data/LanguageNameSearchData.php"
 	},
 	"AutoloadNamespaces": {
 		"UniversalLanguageSelector\\": "includes/"
