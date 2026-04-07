@@ -14,7 +14,7 @@
 	"uls-plang-title-languages": "भाषाएँ",
 	"ext-uls-select-language-settings-icon-tooltip": "भाषा सेटिंग्स",
 	"ext-uls-undo-language-tooltip-text": "भाषा $1 से बदली गई",
-	"ext-uls-undo-language-tooltip-text-local": "इस विकि के लिए भाषा बदली गई। सभी विकियों के लिए भाषा बदलने के लिए अपनी [[Special:GlobalPreferences|ग्लोबल वरीयताएँ]] देखें।",
+	"ext-uls-undo-language-tooltip-text-local": "इस विकि के लिए भाषा बदली गई। सभी विकियों के लिए भाषा बदलने के लिए अपनी [[Special:GlobalPreferences|वैश्विक वरीयताएँ]] देखें।",
 	"ext-uls-language-settings-preferences-link": "अधिक भाषा सेटिंग्स",
 	"uls-betafeature-label": "संक्षिप्त भाषा कड़ियाँ",
 	"uls-betafeature-desc": "एक संक्षिप्त भाषा सूची दिखाएँ, सिर्फ उन भाषाओं के साथ जो आपसे संबद्ध हों।",
