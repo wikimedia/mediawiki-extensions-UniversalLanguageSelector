@@ -4,10 +4,10 @@
 		ref="menuRef"
 		class="uls-rewrite"
 		:style="floatingStyles"
-		:class="[ densityClass, { 'uls-rewrite--mobile': isMobile, 'uls-rewrite--panel': currentView !== 'main' } ]"
+		:class="[ densityClass, { 'uls-rewrite--mobile': isMobile, 'uls-rewrite--panel': currentView !== VIEW.MAIN } ]"
 	>
 		<div class="uls-rewrite__header">
-			<template v-if="currentView === 'main'">
+			<template v-if="currentView === VIEW.MAIN">
 				<div v-if="isMobile" class="uls-rewrite__header__mobile">
 					<span>{{ $i18n( 'ext-uls-language-title' ) }}</span>
 					<cdx-button
@@ -55,14 +55,14 @@
 				</missing-languages-entrypoint>
 			</template>
 			<language-selector-panel-header
-				v-else-if="currentView === 'missing-content-languages'"
+				v-else-if="currentView === VIEW.MISSING_CONTENT_LANGUAGES"
 				:title="$i18n( 'ext-uls-missing-languages-panel-title' )"
 				:is-mobile="isMobile"
 				@back="showLanguageSelector"
 				@close="$emit( 'close' )"
 			></language-selector-panel-header>
 			<language-selector-panel-header
-				v-else-if="currentView === 'quick-actions'"
+				v-else-if="currentView === VIEW.QUICK_ACTIONS"
 				:title="$i18n( 'ext-uls-quick-actions-panel-title' )"
 				:is-mobile="isMobile"
 				@back="showLanguageSelector"
@@ -70,7 +70,7 @@
 			></language-selector-panel-header>
 		</div>
 		<div ref="keyboardNavigationContainer" class="uls-rewrite__body">
-			<template v-if="currentView === 'main'">
+			<template v-if="currentView === VIEW.MAIN">
 				<!-- Search Results -->
 				<language-list
 					v-if="searchQuery && languagesToDisplay.length > 0"
@@ -174,18 +174,18 @@
 				</template>
 			</template>
 			<missing-languages-panel
-				v-else-if="currentView === 'missing-content-languages'"
+				v-else-if="currentView === VIEW.MISSING_CONTENT_LANGUAGES"
 				:missing-languages-actions="missingLanguagesActions"
 				:languages="languages"
 				:suggestions="userLanguageSuggestions"
 			></missing-languages-panel>
 			<quick-actions-panel
-				v-else-if="currentView === 'quick-actions'"
+				v-else-if="currentView === VIEW.QUICK_ACTIONS"
 				:quick-actions-entrypoints="quickActionsEntrypoints"
 			></quick-actions-panel>
 		</div>
 		<quick-action-trigger
-			v-if="quickActions.length > 0 && currentView === 'main'"
+			v-if="quickActions.length > 0 && currentView === VIEW.MAIN"
 			:quick-actions="quickActions"
 			:languages="languagesToDisplay"
 			:suggestions="suggestedLanguagesToDisplay"
@@ -219,6 +219,12 @@ const useEntrypoints = require( './composables/useEntrypoints.js' );
 const { useFloating, offset, flip, shift, autoUpdate } = require( './dist/floating-ui.js' );
 const { CdxSearchInput, CdxButton, CdxIcon, CdxProgressBar } = require( '../codex.js' );
 const { cdxIconClose } = require( '../icons.json' );
+
+const VIEW = Object.freeze( {
+	MAIN: 'main',
+	MISSING_CONTENT_LANGUAGES: 'missing-content-languages',
+	QUICK_ACTIONS: 'quick-actions'
+} );
 
 module.exports = exports = defineComponent( {
 	name: 'UniversalLanguageSelector',
@@ -300,20 +306,20 @@ module.exports = exports = defineComponent( {
 		const searchInputRef = ref( null );
 		const keyboardNavigationContainer = ref( null );
 
-		const currentView = ref( 'main' );
+		const currentView = ref( VIEW.MAIN );
 		const quickActionsEntrypoints = ref( [] );
 
 		const showMissingLanguagesPanel = () => {
-			currentView.value = 'missing-content-languages';
+			currentView.value = VIEW.MISSING_CONTENT_LANGUAGES;
 		};
 
 		const showQuickActionsPanel = ( entrypoints ) => {
 			quickActionsEntrypoints.value = entrypoints;
-			currentView.value = 'quick-actions';
+			currentView.value = VIEW.QUICK_ACTIONS;
 		};
 
 		const showLanguageSelector = () => {
-			currentView.value = 'main';
+			currentView.value = VIEW.MAIN;
 		};
 
 		const viewportWidth = ref( window.innerWidth );
@@ -488,7 +494,7 @@ module.exports = exports = defineComponent( {
 			if ( isVisible ) {
 				await focusInput();
 			} else {
-				currentView.value = 'main';
+				currentView.value = VIEW.MAIN;
 				clearSearchQuery();
 			}
 		} );
@@ -584,6 +590,7 @@ module.exports = exports = defineComponent( {
 			missingLanguagesActions,
 
 			// View management
+			VIEW,
 			currentView,
 			showMissingLanguagesPanel,
 			showQuickActionsPanel,
