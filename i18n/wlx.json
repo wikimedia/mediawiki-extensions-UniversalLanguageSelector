@@ -1,10 +1,27 @@
 {
 	"@metadata": {
 		"authors": [
+			"Muhaideen Faiz Brichini",
 			"Umar Asiya",
 			"Zakaria Tunsung"
 		]
 	},
 	"uls-plang-title-languages": "Kɔkɔɛ",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|paahi boŋyeni|$1 paahi}}"
+	"ext-uls-select-language-settings-icon-tooltip": "Tire sɛgɩhɩbʋ",
+	"ext-uls-language-settings-preferences-link": "Ti Jɩmaa Sɛgɩhɩbʋ",
+	"ext-uls-display-settings-language-tab": "Tire",
+	"ext-uls-language-settings-apply": "Ɩŋ Sɛgɩhɩbʋ",
+	"ext-uls-webfonts-settings-info-link": "Duohi Jɩmaa",
+	"ext-uls-input-disable-notification-undo": "Ta La Ɩ",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|paahi boŋyeni|$1 paahi}}",
+	"ext-uls-setlang-accept": "Sagɩ Tɛgɩraa",
+	"ext-uls-actions-menu-language-settings-item-label": "Yuo Tire Sɛgɩhɩbʋ",
+	"ext-uls-add-languages-button-label": "Paahɩ Tire",
+	"ext-uls-language-title": "Tiɛ",
+	"ext-uls-placeholder-search": "Bɔ Tiɛ",
+	"ext-uls-close-button-label": "Pagɩ",
+	"ext-uls-all-languages-title": "Tiɛ Jaa",
+	"ext-uls-no-languages-title": "Tire Chɩbe Sene",
+	"ext-uls-no-languages-description": "Tiɛ Jaa Naŋ Ba Bi Be Sene",
+	"ext-uls-invalid-language-search-title": "Tire Ŋa Chɩbe"
 }

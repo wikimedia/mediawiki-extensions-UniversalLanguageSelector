@@ -3,6 +3,7 @@
 		"authors": [
 			"Geraki",
 			"Glavkos",
+			"Jimkats",
 			"P20kios",
 			"Protnet",
 			"Sofia Chiali"
@@ -76,5 +77,6 @@
 	"ext-uls-empty-state-desc": "Δεν υπάρχουν ακόμη διαθέσιμες γλώσσες",
 	"ext-uls-empty-state-header-actions-available": "Δεν υπάρχουν ακόμη γλώσσες. Προσθήκη νέας;",
 	"ext-uls-empty-state-desc-actions-available": "κάντε το περιεχόμενο διαθέσιμο σε περισσότερες γλώσσες",
-	"ext-uls-add-languages-button-label": "Προσθέστε γλώσσες"
+	"ext-uls-add-languages-button-label": "Προσθέστε γλώσσες",
+	"ext-uls-open-language-settings": "Άνοιγμα ρυθμίσεων γλώσσας"
 }
