@@ -79,6 +79,7 @@
 					:lang="displayLanguageCode"
 					:highlighted-index="highlightedIndex"
 					:selected-values-set="selectedValuesSet"
+					:language-annotations="languageAnnotations"
 					@select="select"
 					@highlight="setHighlightedIndex"
 				>
@@ -102,6 +103,7 @@
 							:lang="displayLanguageCode"
 							:highlighted-index="highlightedIndex"
 							:selected-values-set="selectedValuesSet"
+							:language-annotations="languageAnnotations"
 							@select="select"
 							@highlight="setHighlightedIndex"
 						>
@@ -125,6 +127,7 @@
 							:highlighted-index="highlightedIndex"
 							:index-offset="suggestedLanguagesToDisplay.length"
 							:selected-values-set="selectedValuesSet"
+							:language-annotations="languageAnnotations"
 							@select="select"
 							@highlight="setHighlightedIndex"
 						>
@@ -281,6 +284,10 @@ module.exports = exports = defineComponent( {
 		displayLanguageCode: {
 			type: String,
 			default: ''
+		},
+		languageAnnotations: {
+			type: Object,
+			default: () => ( {} )
 		},
 		// ULS can be used in different contexts, which may require different sets of quick
 		// actions and entrypoints. The mode prop allows the parent component to specify the

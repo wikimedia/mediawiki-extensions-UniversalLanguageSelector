@@ -613,6 +613,7 @@
 		if ( shouldLoadUlsRewrite() ) {
 			mw.loader.using( [ 'ext.uls.mediawiki', 'ext.uls.rewrite.languagesettings', 'ext.uls.rewrite' ] ).then( () => {
 				const languageNodes = getLanguageNodes();
+				const languageAnnotations = getLanguageAnnotations( languageNodes );
 				const { createUniversalLanguageSelector } = require( 'ext.uls.rewrite' );
 				const { h } = require( 'vue' );
 
@@ -622,6 +623,7 @@
 				const app = createUniversalLanguageSelector( {
 					triggerElement: ev.currentTarget,
 					selectableLanguages: mw.uls.getInterlanguageListFromNodes( languageNodes ),
+					languageAnnotations: languageAnnotations,
 					onSelect: ( language ) => {
 						window.location.assign( language.value.href );
 					},
@@ -807,6 +809,19 @@
 		}
 
 		return languageNodesCache;
+	}
+
+	function getLanguageAnnotations( languageNodes ) {
+		const annotations = {};
+
+		Array.prototype.forEach.call( languageNodes, ( node ) => {
+			const lang = node.lang;
+			if ( lang ) {
+				annotations[ lang ] = Array.from( node.parentElement.classList );
+			}
+		} );
+
+		return annotations;
 	}
 
 	// Early execute of init

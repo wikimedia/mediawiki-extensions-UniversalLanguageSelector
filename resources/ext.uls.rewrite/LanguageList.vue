@@ -12,6 +12,7 @@
 			:lang="lang"
 			:is-highlighted="highlightedIndex === ( index + indexOffset )"
 			:is-selected="selectedValuesSet.has( languageCode )"
+			:custom-classes="languageAnnotations[ languageCode ]"
 			@select="( ...args ) => $emit( 'select', ...args )"
 			@mousemove="$emit( 'highlight', index + indexOffset )"
 		>
@@ -55,6 +56,10 @@ module.exports = defineComponent( {
 		selectedValuesSet: {
 			type: Object, // Set
 			required: true
+		},
+		languageAnnotations: {
+			type: Object,
+			default: () => ( {} )
 		}
 	},
 	emits: [ 'select', 'highlight' ]

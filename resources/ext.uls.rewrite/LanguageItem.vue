@@ -3,10 +3,13 @@
 		:lang="!lang ? code : null"
 		:data-language-code="code"
 		class="uls-rewrite__language-item"
-		:class="{
-			'uls-rewrite__language-item--highlighted': isHighlighted,
-			'uls-rewrite__language-item--selected': isSelected
-		}"
+		:class="[
+			{
+				'uls-rewrite__language-item--highlighted': isHighlighted,
+				'uls-rewrite__language-item--selected': isSelected
+			},
+			customClasses
+		]"
 		:aria-selected="isSelected"
 		role="option"
 		tabindex="-1"
@@ -44,6 +47,10 @@ module.exports = exports = defineComponent( {
 		isSelected: {
 			type: Boolean,
 			default: false
+		},
+		customClasses: {
+			type: [ String, Array, Object ],
+			default: () => ( [] )
 		}
 	},
 	emits: [ 'select', 'hover' ]
