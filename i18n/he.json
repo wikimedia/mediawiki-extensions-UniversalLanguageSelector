@@ -5,7 +5,8 @@
 			"Amire80",
 			"Guycn2",
 			"YaronSh",
-			"Yona b"
+			"Yona b",
+			"ערן"
 		]
 	},
 	"uls-desc": "נותן למשתמשים כמה דרכים לבחור שפה ולכוונן את הגדרות השפה",
@@ -89,5 +90,10 @@
 	"ext-uls-invalid-language-search-title": "שפה לא מזוהה",
 	"ext-uls-invalid-language-search-description": "נא לבדוק את האיות. ניתן לחפש שפות לפי שם או לפי קוד ISO.",
 	"ext-uls-unsupported-language-title": "השפה אינה זמינה",
-	"ext-uls-unsupported-language-description": "השפה שחיפשת אינה זמינה."
+	"ext-uls-unsupported-language-description": "השפה שחיפשת אינה זמינה.",
+	"ext-uls-open-language-settings": "פתיחת הגדרות שפה",
+	"ext-uls-open-language-selector": "חזרה לבורר השפות",
+	"ext-uls-open-quick-actions": "הצג פעולות מהירות",
+	"ext-uls-missing-languages-panel-title": "תרגום דף זה",
+	"ext-uls-missing-languages-panel-description": "דף זה חסר בכמה שפות שייתכן שאתם יודעים. ניתן לתרגם אותו."
 }

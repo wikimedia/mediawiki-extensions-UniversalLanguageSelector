@@ -5,6 +5,7 @@
 			"Hijerovit",
 			"Ivi104",
 			"MaGa",
+			"Mnalis",
 			"Neptune, the Mystic",
 			"Ponor",
 			"Roberta F.",
@@ -88,11 +89,16 @@
 	"ext-uls-all-languages-title": "Svi jezici",
 	"ext-uls-no-languages-title": "Bez poveznica na druge jezike",
 	"ext-uls-no-languages-description": "Drugi jezici trenutačno nisu dostupni.",
-	"ext-uls-no-languages-entrypoint-description": "Možete prevesti ovu stranicu. To je najlakši način stvaranja sadržaja na Vašemu jeziku.",
+	"ext-uls-no-languages-entrypoint-description": "Možete prevesti ovu stranicu. Tako najlakše možete stvarati sadržaj na svojem jeziku.",
 	"ext-uls-invalid-language-search-title": "Jezik nije prepoznat",
-	"ext-uls-invalid-language-search-description": "Molimo provjerite upisano. Jezike možete pretraživati po imenu ili po ISO kodu.",
+	"ext-uls-invalid-language-search-description": "Provjerite upisano. Jezike možete pretraživati po imenu ili po ISO kodu.",
 	"ext-uls-unsupported-language-title": "Jezik nije dostupan",
 	"ext-uls-unsupported-language-description": "Jezik koji tražite nije dostupan.",
 	"ext-uls-open-language-settings": "Otvori jezične postavke",
-	"ext-uls-open-quick-actions": "Prikaži brze radnje"
+	"ext-uls-open-language-selector": "Natrag na odabir jezika",
+	"ext-uls-open-quick-actions": "Prikaži brze radnje",
+	"ext-uls-missing-languages-label": "Nedostaje u <strong>$1</strong>",
+	"ext-uls-missing-languages-label-more": "Nestaje u <strong>$1</strong>, <strong>$2</strong>, i drugima",
+	"ext-uls-missing-languages-panel-title": "Prevedi ovu stranicu",
+	"ext-uls-missing-languages-panel-description": "Ova stranica nedostaje na nekim jezicima koje možda znate. Možete je prevesti."
 }

@@ -94,5 +94,10 @@
 	"ext-uls-unsupported-language-title": "Sprache nicht verfügbar.",
 	"ext-uls-unsupported-language-description": "Die gesuchte Sprache ist nicht verfügbar.",
 	"ext-uls-open-language-settings": "Spracheinstellungen öffnen",
-	"ext-uls-open-quick-actions": "Schnellaktionen anzeigen"
+	"ext-uls-open-language-selector": "Zurück zur Sprachauswahl",
+	"ext-uls-open-quick-actions": "Schnellaktionen anzeigen",
+	"ext-uls-missing-languages-label": "Fehlend in <strong>$1</strong>",
+	"ext-uls-missing-languages-label-more": "Fehlend in <strong>$1</strong>, <strong>$2</strong> und weiteren",
+	"ext-uls-missing-languages-panel-title": "Diese Seite übersetzen",
+	"ext-uls-missing-languages-panel-description": "Diese Seite fehlt in einigen Sprachen, die du vielleicht beherrschst. Du kannst sie übersetzen."
 }

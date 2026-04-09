@@ -93,5 +93,6 @@
 	"ext-uls-unsupported-language-title": "Lingua non disponibile",
 	"ext-uls-unsupported-language-description": "La lingua che stai cercando non è disponibile.",
 	"ext-uls-open-language-settings": "Apri impostazioni della lingua",
-	"ext-uls-open-quick-actions": "Mostra azioni rapide"
+	"ext-uls-open-quick-actions": "Mostra azioni rapide",
+	"ext-uls-missing-languages-panel-title": "Traduci questa pagina"
 }

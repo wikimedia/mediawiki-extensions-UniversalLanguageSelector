@@ -15,7 +15,7 @@
 	"ext-uls-language-settings-preferences-link": "Méi Sproochastellungen",
 	"uls-betafeature-label": "Kompakt Sproochlinken",
 	"uls-betafeature-desc": "Méi eng kuerz Versioun vun der Lëscht vun de Sprooche weisen, mat just deene Sproochen déi fir Iech méi relevant sinn.",
-	"ext-uls-display-settings-title": "Astellunge weisen",
+	"ext-uls-display-settings-title": "Affichageastellungen",
 	"ext-uls-display-settings-language-tab": "Sprooch",
 	"ext-uls-display-settings-fonts-tab": "Schrëftaarten",
 	"ext-uls-display-settings-title-short": "Weisen",
@@ -36,7 +36,7 @@
 	"ext-uls-webfonts-select-for-ui-info": "Schrëft déi fir de Benotzer-Interface benotzt gëtt",
 	"ext-uls-webfonts-select-for-content-info": "Schrëft déi fir den Inhalt benotzt gëtt",
 	"ext-uls-webfonts-system-font": "System-Schrëftform",
-	"ext-uls-back-to-display-settings": "Zréck op d'Astellunge vum Weisen",
+	"ext-uls-back-to-display-settings": "Zeréck op d'Affichageastellungen",
 	"ext-uls-input-settings-title": "Input-Astellungen",
 	"ext-uls-input-settings-title-short": "Input",
 	"ext-uls-input-settings-desc": "An enger anerer Sprooch schreiwen?",
@@ -83,5 +83,10 @@
 	"ext-uls-invalid-language-search-title": "Sprooch net erkannt",
 	"ext-uls-unsupported-language-title": "Sprooch net disponibel",
 	"ext-uls-open-language-settings": "Sproochastellungen opmaachen",
-	"ext-uls-open-quick-actions": "Schnellaktioune weisen"
+	"ext-uls-open-language-selector": "Zeréck bei d'Sproochauswiel",
+	"ext-uls-open-quick-actions": "Schnellaktioune weisen",
+	"ext-uls-missing-languages-label": "Feelt op <strong>$1</strong>",
+	"ext-uls-missing-languages-label-more": "Feelt op <strong>$1</strong>, <strong>$2</strong> an nach méi",
+	"ext-uls-missing-languages-panel-title": "Dës Säit iwwersetzen",
+	"ext-uls-missing-languages-panel-description": "Dës Säit feelt op e puer Sproochen, déi Dir eventuell kënnt. Dir kënnt se iwwersetzen."
 }

@@ -91,5 +91,8 @@
 	"ext-uls-invalid-language-search-title": "Језик није препознат",
 	"ext-uls-unsupported-language-title": "Језик није доступан",
 	"ext-uls-open-language-settings": "Језичке поставке",
-	"ext-uls-open-quick-actions": "Прикажи брзе радње"
+	"ext-uls-open-language-selector": "Назад на избор језика",
+	"ext-uls-open-quick-actions": "Прикажи брзе радње",
+	"ext-uls-missing-languages-label": "Недостаје на <strong>$1</strong>",
+	"ext-uls-missing-languages-panel-title": "Преведите ову страницу"
 }

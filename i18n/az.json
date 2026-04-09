@@ -93,5 +93,10 @@
 	"ext-uls-unsupported-language-title": "Dil mövcud deyil",
 	"ext-uls-unsupported-language-description": "Axtardığınız dil mövcud deyil.",
 	"ext-uls-open-language-settings": "Dil parametrlərini aç",
-	"ext-uls-open-quick-actions": "Sürətli hərəkətləri göstər"
+	"ext-uls-open-language-selector": "Dil seçicisinə qayıt",
+	"ext-uls-open-quick-actions": "Sürətli hərəkətləri göstər",
+	"ext-uls-missing-languages-label": "<strong>$1</strong> dilində yoxdur",
+	"ext-uls-missing-languages-label-more": "<strong>$1</strong>, <strong>$2</strong> və daha çox dildə yoxdur",
+	"ext-uls-missing-languages-panel-title": "Bu səhifəni tərcümə et",
+	"ext-uls-missing-languages-panel-description": "Bu səhifə biləcəyiniz bəzi dillərdə mövcud deyil. Onu tərcümə edə bilərsiniz."
 }
