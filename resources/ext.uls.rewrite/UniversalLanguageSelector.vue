@@ -46,8 +46,8 @@
 					class="uls-rewrite__progress"
 				></cdx-progress-bar>
 				<missing-languages-entrypoint
-					v-if="!isSearching && !searchQuery && missingLanguagesActions.length !== 0"
-					:missing-languages-actions="missingLanguagesActions"
+					v-if="!isSearching && !searchQuery && missingLanguageEntrypoints.length !== 0"
+					:entrypoints="missingLanguageEntrypoints"
 					:languages="languages"
 					:suggestions="userLanguageSuggestions"
 					@click="showMissingLanguagesPanel"
@@ -144,8 +144,8 @@
 							<!-- Valid language was searched for, but no results were found -->
 							<h3>{{ $i18n( 'ext-uls-unsupported-language-title' ) }}</h3>
 							<empty-search-entrypoint
-								v-if="emptySearchActions.length !== 0"
-								:empty-search-actions="emptySearchActions"
+								v-if="emptySearchEntrypoints.length !== 0"
+								:entrypoints="emptySearchEntrypoints"
 								:languages="languages"
 								:suggestions="suggestedLanguages"
 								:search-query="searchQuery"
@@ -165,8 +165,8 @@
 						<!-- No language items -->
 						<h3>{{ $i18n( 'ext-uls-no-languages-title' ) }}</h3>
 						<empty-list-entrypoint
-							v-if="emptyLanguageListActions.length !== 0"
-							:empty-list-actions="emptyLanguageListActions"
+							v-if="emptyLanguageListEntrypoints.length !== 0"
+							:entrypoints="emptyLanguageListEntrypoints"
 							:suggestions="userLanguageSuggestions"
 							:languages="[]"
 						></empty-list-entrypoint>
@@ -178,18 +178,18 @@
 			</template>
 			<missing-languages-panel
 				v-else-if="currentView === VIEW.MISSING_CONTENT_LANGUAGES"
-				:missing-languages-actions="missingLanguagesActions"
+				:entrypoints="missingLanguageEntrypoints"
 				:languages="languages"
 				:suggestions="userLanguageSuggestions"
 			></missing-languages-panel>
 			<quick-actions-panel
 				v-else-if="currentView === VIEW.QUICK_ACTIONS"
-				:quick-actions-entrypoints="quickActionsEntrypoints"
+				:actions="quickActions"
 			></quick-actions-panel>
 		</div>
 		<quick-action-trigger
-			v-if="quickActions.length > 0 && currentView === VIEW.MAIN"
-			:quick-actions="quickActions"
+			v-if="quickActionEntrypoints.length > 0 && currentView === VIEW.MAIN"
+			:entrypoints="quickActionEntrypoints"
 			:languages="languagesToDisplay"
 			:suggestions="suggestedLanguagesToDisplay"
 			:search-query="searchQuery"
@@ -314,14 +314,14 @@ module.exports = exports = defineComponent( {
 		const keyboardNavigationContainer = ref( null );
 
 		const currentView = ref( VIEW.MAIN );
-		const quickActionsEntrypoints = ref( [] );
+		const quickActions = ref( [] );
 
 		const showMissingLanguagesPanel = () => {
 			currentView.value = VIEW.MISSING_CONTENT_LANGUAGES;
 		};
 
-		const showQuickActionsPanel = ( entrypoints ) => {
-			quickActionsEntrypoints.value = entrypoints;
+		const showQuickActionsPanel = ( actions ) => {
+			quickActions.value = actions;
 			currentView.value = VIEW.QUICK_ACTIONS;
 		};
 
@@ -533,10 +533,10 @@ module.exports = exports = defineComponent( {
 		}, RESIZE_DEBOUNCE_DELAY_MS );
 
 		const {
-			quickActions,
-			emptyLanguageListActions,
-			emptySearchActions,
-			missingLanguagesActions
+			quickActionEntrypoints,
+			emptyLanguageListEntrypoints,
+			emptySearchEntrypoints,
+			missingLanguageEntrypoints
 		} = useEntrypoints( props.mode );
 
 		// Language suggestions for the user, irrespective of what's available in the selector
@@ -589,12 +589,12 @@ module.exports = exports = defineComponent( {
 			cdxIconClose,
 
 			// Entrypoints
+			quickActionEntrypoints,
 			quickActions,
-			quickActionsEntrypoints,
-			emptyLanguageListActions,
+			emptyLanguageListEntrypoints,
 			userLanguageSuggestions,
-			emptySearchActions,
-			missingLanguagesActions,
+			emptySearchEntrypoints,
+			missingLanguageEntrypoints,
 
 			// View management
 			VIEW,

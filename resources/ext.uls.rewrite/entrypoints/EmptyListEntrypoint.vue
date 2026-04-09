@@ -2,7 +2,7 @@
 	<div>
 		<p>{{ $i18n( 'ext-uls-no-languages-entrypoint-description' ) }}</p>
 		<span
-			v-for="( action, index ) in emptyListEntrypoints"
+			v-for="( action, index ) in actions"
 			:key="index"
 		>
 			<cdx-button
@@ -36,7 +36,7 @@ module.exports = defineComponent( {
 		CdxIcon
 	},
 	props: {
-		emptyListActions: {
+		entrypoints: {
 			type: Array,
 			required: true
 		},
@@ -58,15 +58,16 @@ module.exports = defineComponent( {
 		// 1. Filter relevant actions based on shouldShow method.
 		// 2. Get their config.
 		// 3. Validate the config & flatten the array.
-		const emptyListEntrypoints = computed( () => props.emptyListActions
+		const actions = computed( () => props.entrypoints
 			.filter( ( entryPoint ) => entryPoint.shouldShow( context.value ) )
 			.map( ( entryPoint ) => entryPoint.getConfig( context.value ) )
-			.filter( ( config ) => config !== null && ( Array.isArray( config ) ? config.length > 0 : true ) )
+			.filter( ( config ) => config !== null &&
+				( Array.isArray( config ) ? config.length > 0 : true ) )
 			.reduce( ( acc, val ) => acc.concat( val ), [] )
 		);
 
 		return {
-			emptyListEntrypoints
+			actions
 		};
 	}
 } );

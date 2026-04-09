@@ -5,7 +5,7 @@
 		</p>
 		<div class="uls-rewrite__missing-languages-panel__actions">
 			<a
-				v-for="( action, index ) in missingLanguagesEntrypoints"
+				v-for="( action, index ) in actions"
 				:key="index"
 				:href="action.url"
 				class="cdx-button
@@ -35,7 +35,7 @@ module.exports = defineComponent( {
 		CdxIcon
 	},
 	props: {
-		missingLanguagesActions: {
+		entrypoints: {
 			type: Array,
 			required: true
 		},
@@ -59,7 +59,7 @@ module.exports = defineComponent( {
 			missingLanguages: missingLanguagesCodes.value
 		} ) );
 
-		const missingLanguagesEntrypoints = computed( () => props.missingLanguagesActions
+		const actions = computed( () => props.entrypoints
 			.filter( ( entryPoint ) => entryPoint.shouldShow( context.value ) )
 			.map( ( entryPoint ) => entryPoint.getConfig( context.value ) )
 			.filter( ( config ) => config !== null &&
@@ -69,7 +69,7 @@ module.exports = defineComponent( {
 		);
 
 		return {
-			missingLanguagesEntrypoints
+			actions
 		};
 	}
 } );

@@ -11,12 +11,13 @@ const { ENTRYPOINT_TYPE } = EntrypointRegistry;
  * @return {Object} Object containing registered entrypoints.
  */
 module.exports = function useEntrypoints( mode ) {
-	const quickActions = EntrypointRegistry.getRegisteredEntrypoints( ENTRYPOINT_TYPE.QUICK_ACTIONS, mode );
-	const emptyLanguageListActions =
+	const quickActionEntrypoints =
+		EntrypointRegistry.getRegisteredEntrypoints( ENTRYPOINT_TYPE.QUICK_ACTIONS, mode );
+	const emptyLanguageListEntrypoints =
 		EntrypointRegistry.getRegisteredEntrypoints( ENTRYPOINT_TYPE.EMPTY_LIST, mode );
-	const emptySearchActions =
+	const emptySearchEntrypoints =
 		EntrypointRegistry.getRegisteredEntrypoints( ENTRYPOINT_TYPE.EMPTY_SEARCH, mode );
-	const missingLanguagesActions =
+	const missingLanguageEntrypoints =
 		EntrypointRegistry.getRegisteredEntrypoints( ENTRYPOINT_TYPE.MISSING_CONTENT_LANGUAGES, mode );
 
 	onMounted( async () => {
@@ -27,9 +28,9 @@ module.exports = function useEntrypoints( mode ) {
 	} );
 
 	return {
-		quickActions,
-		emptyLanguageListActions,
-		emptySearchActions,
-		missingLanguagesActions
+		quickActionEntrypoints,
+		emptyLanguageListEntrypoints,
+		emptySearchEntrypoints,
+		missingLanguageEntrypoints
 	};
 };

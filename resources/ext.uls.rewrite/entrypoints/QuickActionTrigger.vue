@@ -40,7 +40,7 @@ module.exports = defineComponent( {
 		CdxIcon
 	},
 	props: {
-		quickActions: {
+		entrypoints: {
 			type: Array,
 			required: true
 		},
@@ -70,20 +70,21 @@ module.exports = defineComponent( {
 			searchQueryHits: props.searchQueryHits
 		} ) );
 
-		const quickActionEntrypoints = computed( () => props.quickActions
+		const actions = computed( () => props.entrypoints
 			.filter( ( entryPoint ) => entryPoint.shouldShow( context.value ) )
 			.map( ( entryPoint ) => entryPoint.getConfig( context.value ) )
-			.filter( ( config ) => config !== null && ( Array.isArray( config ) ? config.length > 0 : true ) )
+			.filter( ( config ) => config !== null &&
+				( Array.isArray( config ) ? config.length > 0 : true ) )
 			.reduce( ( acc, val ) => acc.concat( val ), [] ) );
 
-		const isSingleAction = computed( () => quickActionEntrypoints.value.length === 1 );
+		const isSingleAction = computed( () => actions.value.length === 1 );
 
 		const actionToDisplay = computed( () => {
-			if ( quickActionEntrypoints.value.length === 0 ) {
+			if ( actions.value.length === 0 ) {
 				return null;
 			}
-			if ( quickActionEntrypoints.value.length === 1 ) {
-				return quickActionEntrypoints.value[ 0 ];
+			if ( actions.value.length === 1 ) {
+				return actions.value[ 0 ];
 			}
 
 			return {
@@ -98,7 +99,7 @@ module.exports = defineComponent( {
 			}
 
 			if ( !isSingleAction.value ) {
-				emit( 'trigger', quickActionEntrypoints.value );
+				emit( 'trigger', actions.value );
 			}
 		};
 

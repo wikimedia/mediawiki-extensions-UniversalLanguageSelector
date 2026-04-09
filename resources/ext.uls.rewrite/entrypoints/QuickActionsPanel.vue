@@ -1,7 +1,7 @@
 <template>
 	<div class="uls-rewrite__quick-actions-panel">
 		<div
-			v-for="( action, index ) in quickActionsEntrypoints"
+			v-for="( action, index ) in actions"
 			:key="index"
 			class="uls-rewrite__quick-actions-panel__action"
 		>
@@ -45,7 +45,7 @@ module.exports = defineComponent( {
 		CdxIcon
 	},
 	props: {
-		quickActionsEntrypoints: {
+		actions: {
 			type: Array,
 			required: true
 		}

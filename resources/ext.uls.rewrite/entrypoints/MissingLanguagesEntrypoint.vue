@@ -23,7 +23,7 @@ module.exports = defineComponent( {
 		CdxIcon
 	},
 	props: {
-		missingLanguagesActions: {
+		entrypoints: {
 			type: Array,
 			required: true
 		},
@@ -69,7 +69,7 @@ module.exports = defineComponent( {
 		} ) );
 
 		// Filter relevant actions based on shouldShow method.
-		const showEntrypoint = computed( () => props.missingLanguagesActions
+		const showEntrypoint = computed( () => props.entrypoints
 			.some( ( entryPoint ) => entryPoint.shouldShow( context.value ) )
 		);
 
