@@ -45,14 +45,6 @@
 					inline
 					class="uls-rewrite__progress"
 				></cdx-progress-bar>
-				<missing-languages-entrypoint
-					v-if="!isSearching && !searchQuery && missingLanguageEntrypoints.length !== 0"
-					:entrypoints="missingLanguageEntrypoints"
-					:languages="languages"
-					:suggestions="userLanguageSuggestions"
-					@click="showMissingLanguagesPanel"
-				>
-				</missing-languages-entrypoint>
 			</template>
 			<language-selector-panel-header
 				v-else-if="currentView === VIEW.MISSING_CONTENT_LANGUAGES"
@@ -71,6 +63,14 @@
 		</div>
 		<div ref="keyboardNavigationContainer" class="uls-rewrite__body">
 			<template v-if="currentView === VIEW.MAIN">
+				<missing-languages-entrypoint
+					v-if="!isSearching && !searchQuery && missingLanguageEntrypoints.length !== 0"
+					:entrypoints="missingLanguageEntrypoints"
+					:languages="languages"
+					:suggestions="userLanguageSuggestions"
+					@click="showMissingLanguagesPanel"
+				>
+				</missing-languages-entrypoint>
 				<!-- Search Results -->
 				<language-list
 					v-if="searchQuery && languagesToDisplay.length > 0"

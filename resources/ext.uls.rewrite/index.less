@@ -1,5 +1,7 @@
 @import 'mediawiki.skin.variables.less';
 
+@uls-rewrite-body-padding: @spacing-50 @spacing-100;
+
 .uls-rewrite {
 	position: fixed;
 	top: 0;
@@ -84,10 +86,20 @@
 				flex-grow: 1;
 			}
 		}
+	}
+
+	.uls-rewrite__body {
+		padding: @uls-rewrite-body-padding;
+		overflow-y: auto;
+		flex-grow: 1;
 
 		.uls-rewrite__missing-languages {
 			background-color: @background-color-interactive-subtle;
-			padding: @spacing-50 @spacing-100;
+			padding: @uls-rewrite-body-padding;
+			/** To make it span the entire width of the body **/
+			margin-inline: -@spacing-100;
+			margin-top: -@spacing-50;
+			margin-bottom: @spacing-50;
 			color: @color-subtle;
 			display: flex;
 			align-items: center;
@@ -110,12 +122,6 @@
 				margin-inline-start: @spacing-50;
 			}
 		}
-	}
-
-	.uls-rewrite__body {
-		padding: @spacing-50 @spacing-75;
-		overflow-y: auto;
-		flex-grow: 1;
 
 		.uls-rewrite__section-title {
 			font-weight: bold;
@@ -174,8 +180,10 @@
 		}
 	}
 
-	.uls-rewrite__quick-actions-panel__action {
-		margin-bottom: @spacing-75;
+	.uls-rewrite__quick-actions-panel {
+		&__action {
+			margin-bottom: @spacing-75;
+		}
 	}
 
 	@media ( min-width: 768px ) {
