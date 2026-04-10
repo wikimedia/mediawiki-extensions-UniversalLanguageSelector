@@ -99,5 +99,6 @@
 	"ext-uls-missing-languages-label": "Fehlend in <strong>$1</strong>",
 	"ext-uls-missing-languages-label-more": "Fehlend in <strong>$1</strong>, <strong>$2</strong> und weiteren",
 	"ext-uls-missing-languages-panel-title": "Diese Seite übersetzen",
-	"ext-uls-missing-languages-panel-description": "Diese Seite fehlt in einigen Sprachen, die du vielleicht beherrschst. Du kannst sie übersetzen."
+	"ext-uls-missing-languages-panel-description": "Diese Seite fehlt in einigen Sprachen, die du vielleicht beherrschst. Du kannst sie übersetzen.",
+	"ext-uls-quick-actions-panel-title": "Schnelle Aktionen"
 }

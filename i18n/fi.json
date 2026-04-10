@@ -98,5 +98,11 @@
 	"ext-uls-unsupported-language-title": "Kieli ei ole saatavilla",
 	"ext-uls-unsupported-language-description": "Hakemasi kieli ei ole saatavilla.",
 	"ext-uls-open-language-settings": "Avaa kieliasetukset",
-	"ext-uls-open-quick-actions": "Näytä pikatoiminnot"
+	"ext-uls-open-language-selector": "Palaa kielenvalitsimeen",
+	"ext-uls-open-quick-actions": "Näytä pikatoiminnot",
+	"ext-uls-missing-languages-label": "Puuttuu kielellä <strong>$1</strong>",
+	"ext-uls-missing-languages-label-more": "Puuttuu kielellä <strong>$1</strong>, <strong>$2</strong> ja muilla kielillä",
+	"ext-uls-missing-languages-panel-title": "Käännä tämä sivu",
+	"ext-uls-missing-languages-panel-description": "Tämä sivu puuttuu joillain kielistä, joita saatat osata. Voit kääntää sen.",
+	"ext-uls-quick-actions-panel-title": "Pikatoiminnot"
 }

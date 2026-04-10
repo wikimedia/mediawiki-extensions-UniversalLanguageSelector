@@ -100,5 +100,11 @@
 	"ext-uls-unsupported-language-title": "Taal niet beschikbaar",
 	"ext-uls-unsupported-language-description": "De taal die u zoekt is niet beschikbaar.",
 	"ext-uls-open-language-settings": "Taalinstellingen openen",
-	"ext-uls-open-quick-actions": "Snelhandelingen weergeven"
+	"ext-uls-open-language-selector": "Terug naar de taalkiezer",
+	"ext-uls-open-quick-actions": "Snelhandelingen weergeven",
+	"ext-uls-missing-languages-label": "Ontbrekend in <strong>$1</strong>",
+	"ext-uls-missing-languages-label-more": "Ontbrekend in <strong>$1</strong>, <strong>$2</strong> en meer.",
+	"ext-uls-missing-languages-panel-title": "Deze pagina vertalen",
+	"ext-uls-missing-languages-panel-description": "Deze pagina ontbreekt mogelijk in enkele talen die u spreekt. U kunt hem vertalen.",
+	"ext-uls-quick-actions-panel-title": "Snelle handelingen"
 }

@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Bennylin",
+			"Budhiastawa",
 			"Daud I.F. Argana",
 			"Farras",
 			"Gombang",
@@ -82,5 +83,11 @@
 	"ext-uls-empty-state-desc": "Tidak ada bahasa yang tersedia untuk saat ini",
 	"ext-uls-empty-state-header-actions-available": "Belum ada bahasa. Tambahkan yang baru?",
 	"ext-uls-empty-state-desc-actions-available": "Jadikan konten ini tersedia dalam lebih banyak bahasa.",
-	"ext-uls-add-languages-button-label": "Tambah bahasa"
+	"ext-uls-add-languages-button-label": "Tambah bahasa",
+	"ext-uls-open-language-selector": "Kembali ke pemilih bahasa",
+	"ext-uls-missing-languages-label": "Tidak tersedia dalam bahasa <strong>$1</strong>",
+	"ext-uls-missing-languages-label-more": "Tidak tersedia dalam bahasa <strong>$1</strong> , <strong>$2</strong> , dan lainnya",
+	"ext-uls-missing-languages-panel-title": "Terjemahkan halaman ini",
+	"ext-uls-missing-languages-panel-description": "Halaman ini tidak tersedia dalam beberapa bahasa yang mungkin Anda ketahui. Anda dapat menerjemahkannya.",
+	"ext-uls-quick-actions-panel-title": "Tindakan cepat"
 }

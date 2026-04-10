@@ -99,5 +99,7 @@
 	"ext-uls-open-quick-actions": "Mostrar as accións rápidas",
 	"ext-uls-missing-languages-label": "Falta en <strong>$1</strong>",
 	"ext-uls-missing-languages-label-more": "Falta en <strong>$1</strong>, <strong>$2</strong> e outras linguas",
-	"ext-uls-missing-languages-panel-title": "Traducir esta páxina"
+	"ext-uls-missing-languages-panel-title": "Traducir esta páxina",
+	"ext-uls-missing-languages-panel-description": "Esta páxina non está dispoñible nalgunha das linguas que coñeces. Podes traducila.",
+	"ext-uls-quick-actions-panel-title": "Accións rápidas"
 }

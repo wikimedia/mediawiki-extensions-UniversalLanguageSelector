@@ -88,8 +88,16 @@
 	"ext-uls-all-languages-title": "सभी भाषाएँ",
 	"ext-uls-no-languages-title": "अभी तक कोई भाषा नहीं है",
 	"ext-uls-no-languages-description": "इस समय कोई भाषा उपलब्ध नहीं है।",
+	"ext-uls-no-languages-entrypoint-description": "आप इस पृष्ठ को अनुवादित कर सकते हैं। यह आपकी भाषा में सामग्री निर्मित करने का एक आसान तरीका है।",
 	"ext-uls-invalid-language-search-title": "भाषा पहचानी नहीं गई",
 	"ext-uls-invalid-language-search-description": "कृपया वर्तनी की जाँच करें। आप भाषाओं को नाम या ISO कोड से खोज सकते हैं।",
 	"ext-uls-unsupported-language-title": "भाषा उपलब्ध नहीं है",
-	"ext-uls-unsupported-language-description": "जो भाषा आप खोज रहे हैं वह उपलब्ध नहीं है।"
+	"ext-uls-unsupported-language-description": "जो भाषा आप खोज रहे हैं वह उपलब्ध नहीं है।",
+	"ext-uls-open-language-settings": "भाषा सेटिंग्स खोलें",
+	"ext-uls-open-language-selector": "भाषा चयनकर्ता पर वापस जाएँ",
+	"ext-uls-open-quick-actions": "त्वरित क्रियाएँ दिखाएँ",
+	"ext-uls-missing-languages-label": "<strong>$1</strong> में अनुपलब्ध",
+	"ext-uls-missing-languages-label-more": "<strong>$1</strong>, <strong>$2</strong> और अधिक में अनुपलब्ध",
+	"ext-uls-missing-languages-panel-title": "इस पृष्ठ को अनुवादित करें",
+	"ext-uls-missing-languages-panel-description": "यह पृष्ठ कुछ ऐसी भाषाओं में अनुपलब्ध है जो शायद आपको ज्ञात हों। आप इसे अनुवादित कर सकते हैं।"
 }

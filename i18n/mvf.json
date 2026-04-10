@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Anand.orkhon",
 			"Enkhsaihan2005",
 			"Wikibilig"
 		]
 	},
 	"uls-plang-title-languages": "ᠬᠡᠯᠡ",
-	"ext-uls-compact-link-count": "{{PLURAL:$1|1 ᢈᠡᠯᠡ ᠪᠡᠷ|$1 ᢈᠡᠯᠡ ᠪᠡᠷ}}"
+	"ext-uls-compact-link-count": "{{PLURAL:$1|1 ᠬᠡᠯᠡ ᠪᠡᠷ|$1 ᠬᠡᠯᠡ ᠪᠡᠷ}}"
 }

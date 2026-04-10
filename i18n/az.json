@@ -98,5 +98,6 @@
 	"ext-uls-missing-languages-label": "<strong>$1</strong> dilində yoxdur",
 	"ext-uls-missing-languages-label-more": "<strong>$1</strong>, <strong>$2</strong> və daha çox dildə yoxdur",
 	"ext-uls-missing-languages-panel-title": "Bu səhifəni tərcümə et",
-	"ext-uls-missing-languages-panel-description": "Bu səhifə biləcəyiniz bəzi dillərdə mövcud deyil. Onu tərcümə edə bilərsiniz."
+	"ext-uls-missing-languages-panel-description": "Bu səhifə biləcəyiniz bəzi dillərdə mövcud deyil. Onu tərcümə edə bilərsiniz.",
+	"ext-uls-quick-actions-panel-title": "Sürətli hərəkətlər"
 }
