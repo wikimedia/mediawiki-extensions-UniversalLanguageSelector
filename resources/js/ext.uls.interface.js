@@ -629,7 +629,11 @@
 					},
 					mode: 'content',
 					slots: {
-						'language-item': ( { item } ) => h( 'a', { href: item.href }, item.text )
+						'language-item': ( { item, annotations } ) => h( 'a', {
+							href: item.href,
+							hreflang: annotations.hreflang,
+							title: annotations.linkTitle
+						}, item.text )
 					}
 				} );
 
@@ -817,7 +821,11 @@
 		Array.prototype.forEach.call( languageNodes, ( node ) => {
 			const lang = node.lang;
 			if ( lang ) {
-				annotations[ lang ] = Array.from( node.parentElement.classList );
+				annotations[ lang ] = {
+					classes: Array.from( node.parentElement.classList ),
+					hreflang: node.hreflang,
+					linkTitle: node.title
+				};
 			}
 		} );
 

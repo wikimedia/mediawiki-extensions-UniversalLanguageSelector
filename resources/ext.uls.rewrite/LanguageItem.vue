@@ -8,7 +8,7 @@
 				'uls-rewrite__language-item--highlighted': isHighlighted,
 				'uls-rewrite__language-item--selected': isSelected
 			},
-			customClasses
+			annotations.classes
 		]"
 		:aria-selected="isSelected"
 		role="option"
@@ -16,7 +16,7 @@
 		@click="$emit( 'select', code, name )"
 		@mouseenter="$emit( 'hover' )"
 	>
-		<slot :item="name">
+		<slot :item="name" :annotations="annotations">
 			{{ name }}
 		</slot>
 	</li>
@@ -48,9 +48,9 @@ module.exports = exports = defineComponent( {
 			type: Boolean,
 			default: false
 		},
-		customClasses: {
-			type: [ String, Array, Object ],
-			default: () => ( [] )
+		annotations: {
+			type: Object,
+			default: () => ( { classes: [] } )
 		}
 	},
 	emits: [ 'select', 'hover' ]

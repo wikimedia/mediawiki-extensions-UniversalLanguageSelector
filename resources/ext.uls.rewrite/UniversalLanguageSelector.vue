@@ -84,7 +84,11 @@
 					@highlight="setHighlightedIndex"
 				>
 					<template #language-item="slotProps">
-						<slot name="language-item" :item="slotProps.item"></slot>
+						<slot
+							name="language-item"
+							:item="slotProps.item"
+							:annotations="slotProps.annotations"
+						></slot>
 					</template>
 				</language-list>
 
@@ -108,7 +112,11 @@
 							@highlight="setHighlightedIndex"
 						>
 							<template #language-item="slotProps">
-								<slot name="language-item" :item="slotProps.item"></slot>
+								<slot
+									name="language-item"
+									:item="slotProps.item"
+									:annotations="slotProps.annotations"
+								></slot>
 							</template>
 						</language-list>
 					</div>
@@ -132,7 +140,11 @@
 							@highlight="setHighlightedIndex"
 						>
 							<template #language-item="slotProps">
-								<slot name="language-item" :item="slotProps.item"></slot>
+								<slot
+									name="language-item"
+									:item="slotProps.item"
+									:annotations="slotProps.annotations"
+								></slot>
 							</template>
 						</language-list>
 					</div>

@@ -12,12 +12,16 @@
 			:lang="lang"
 			:is-highlighted="highlightedIndex === ( index + indexOffset )"
 			:is-selected="selectedValuesSet.has( languageCode )"
-			:custom-classes="languageAnnotations[ languageCode ]"
+			:annotations="languageAnnotations[ languageCode ]"
 			@select="( ...args ) => $emit( 'select', ...args )"
 			@mousemove="$emit( 'highlight', index + indexOffset )"
 		>
 			<template #default="slotProps">
-				<slot name="language-item" :item="slotProps.item"></slot>
+				<slot
+					name="language-item"
+					:item="slotProps.item"
+					:annotations="slotProps.annotations"
+				></slot>
 			</template>
 		</language-item>
 	</ul>
