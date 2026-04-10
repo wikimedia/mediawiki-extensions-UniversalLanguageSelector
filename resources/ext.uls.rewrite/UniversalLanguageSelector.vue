@@ -504,7 +504,7 @@ module.exports = exports = defineComponent( {
 				currentView.value = VIEW.MAIN;
 				clearSearchQuery();
 			}
-		} );
+		}, { immediate: true } );
 
 		watch( languagesToDisplay, ( newLanguages ) => {
 			if ( newLanguages.length === 0 ) {
