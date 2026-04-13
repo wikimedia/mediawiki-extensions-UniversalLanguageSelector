@@ -99,5 +99,6 @@
 	"ext-uls-missing-languages-label": "<strong>$1</strong> में अनुपलब्ध",
 	"ext-uls-missing-languages-label-more": "<strong>$1</strong>, <strong>$2</strong> और अधिक में अनुपलब्ध",
 	"ext-uls-missing-languages-panel-title": "इस पृष्ठ को अनुवादित करें",
-	"ext-uls-missing-languages-panel-description": "यह पृष्ठ कुछ ऐसी भाषाओं में अनुपलब्ध है जो शायद आपको ज्ञात हों। आप इसे अनुवादित कर सकते हैं।"
+	"ext-uls-missing-languages-panel-description": "यह पृष्ठ कुछ ऐसी भाषाओं में अनुपलब्ध है जो शायद आपको ज्ञात हों। आप इसे अनुवादित कर सकते हैं।",
+	"ext-uls-quick-actions-panel-title": "त्वरित क्रियाएँ"
 }

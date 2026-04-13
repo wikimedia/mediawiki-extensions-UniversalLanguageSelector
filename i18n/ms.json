@@ -97,5 +97,6 @@
 	"ext-uls-missing-languages-label": "Hilang dalam <strong>$1</strong>",
 	"ext-uls-missing-languages-label-more": "Hilang dalam <strong>$1</strong>, <strong>$2</strong> dan lain-lain",
 	"ext-uls-missing-languages-panel-title": "Terjemahkan laman ini",
-	"ext-uls-missing-languages-panel-description": "Laman ini tidak wujud dalam beberapa bahasa yang mungkin anda tahu. Anda boleh menterjemahkannya."
+	"ext-uls-missing-languages-panel-description": "Laman ini tidak wujud dalam beberapa bahasa yang mungkin anda tahu. Anda boleh menterjemahkannya.",
+	"ext-uls-quick-actions-panel-title": "Tindakan pantas"
 }

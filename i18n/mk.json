@@ -89,5 +89,11 @@
 	"ext-uls-unsupported-language-title": "Јазикот не е достапен",
 	"ext-uls-unsupported-language-description": "Јазикот што го барате не е достапен.",
 	"ext-uls-open-language-settings": "Отвори јазични поставки",
-	"ext-uls-open-quick-actions": "Прикажи брзи дејства"
+	"ext-uls-open-language-selector": "Назад на избирачот на јазик",
+	"ext-uls-open-quick-actions": "Прикажи брзи дејства",
+	"ext-uls-missing-languages-label": "Недостасува на <strong>$1</strong>",
+	"ext-uls-missing-languages-label-more": "Недостасува на <strong>$1</strong>, <strong>$2</strong> и други",
+	"ext-uls-missing-languages-panel-title": "Преведете ја оваа страница",
+	"ext-uls-missing-languages-panel-description": "На оваа страница ѝ недостасуваа некои јазици што можеби ги владеете. Можете да ја преведете.",
+	"ext-uls-quick-actions-panel-title": "Брзи дејства"
 }

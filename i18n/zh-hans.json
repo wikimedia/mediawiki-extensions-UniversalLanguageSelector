@@ -97,6 +97,10 @@
 	"ext-uls-all-languages-title": "所有语言",
 	"ext-uls-no-languages-title": "尚无其他语言",
 	"ext-uls-no-languages-description": "目前尚无其他语言版本可用。",
+	"ext-uls-no-languages-entrypoint-description": "您可以翻译此页面。这是用您的语言创建内容的简便方法。",
 	"ext-uls-unsupported-language-title": "语言不可用",
-	"ext-uls-unsupported-language-description": "您要查找的语言不可用。"
+	"ext-uls-unsupported-language-description": "您要查找的语言不可用。",
+	"ext-uls-open-language-settings": "打开语言设置",
+	"ext-uls-open-language-selector": "返回语言选择器",
+	"ext-uls-missing-languages-panel-title": "翻译此页面"
 }
