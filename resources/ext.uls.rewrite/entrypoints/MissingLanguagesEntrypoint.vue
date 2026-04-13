@@ -1,8 +1,8 @@
 <template>
 	<div
-		v-if="showEntrypoint"
+		v-if="actions.length > 0"
 		class="uls-rewrite__missing-languages"
-		@click.stop="$emit( 'click' )"
+		@click.stop="$emit( 'click', actions )"
 	>
 		<span
 			v-i18n-html="labelContent"
@@ -38,7 +38,6 @@ module.exports = defineComponent( {
 	},
 	emits: [ 'click' ],
 	setup( props ) {
-		const maxMissingLanguagesToDisplay = 4;
 		const missingLanguagesCodes = computed( () => props.suggestions
 			.filter( ( code ) => !props.languages[ code ] )
 		);
@@ -48,12 +47,9 @@ module.exports = defineComponent( {
 			.filter( Boolean )
 		);
 
-		const missingLanguagesNamesToDisplay =
-			computed( () => missingLanguagesNames.value.slice( 0, maxMissingLanguagesToDisplay ) );
-
 		const labelContent = computed( () => {
 			const count = missingLanguagesNames.value.length;
-			const names = missingLanguagesNamesToDisplay.value;
+			const names = missingLanguagesNames.value;
 
 			if ( count > 2 ) {
 				return mw.message( 'ext-uls-missing-languages-label-more', names[ 0 ], names[ 1 ] );
@@ -68,15 +64,18 @@ module.exports = defineComponent( {
 			missingLanguages: missingLanguagesCodes.value
 		} ) );
 
-		// Filter relevant actions based on shouldShow method.
-		const showEntrypoint = computed( () => props.entrypoints
-			.some( ( entryPoint ) => entryPoint.shouldShow( context.value ) )
+		const actions = computed( () => props.entrypoints
+			.filter( ( entryPoint ) => entryPoint.shouldShow( context.value ) )
+			.map( ( entryPoint ) => entryPoint.getConfig( context.value ) )
+			.filter( ( config ) => config !== null &&
+				( Array.isArray( config ) ? config.length > 0 : true ) )
+			.reduce( ( acc, val ) => acc.concat( val ), [] )
 		);
 
 		return {
-			showEntrypoint,
 			labelContent,
-			cdxIconNext
+			cdxIconNext,
+			actions
 		};
 	}
 } );

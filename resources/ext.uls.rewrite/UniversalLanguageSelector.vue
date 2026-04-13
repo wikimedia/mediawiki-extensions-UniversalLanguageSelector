@@ -178,9 +178,7 @@
 			</template>
 			<missing-languages-panel
 				v-else-if="currentView === VIEW.MISSING_CONTENT_LANGUAGES"
-				:entrypoints="missingLanguageEntrypoints"
-				:languages="languages"
-				:suggestions="userLanguageSuggestions"
+				:actions="missingLanguagesActions"
 			></missing-languages-panel>
 			<quick-actions-panel
 				v-else-if="currentView === VIEW.QUICK_ACTIONS"
@@ -315,8 +313,10 @@ module.exports = exports = defineComponent( {
 
 		const currentView = ref( VIEW.MAIN );
 		const quickActions = ref( [] );
+		const missingLanguagesActions = ref( [] );
 
-		const showMissingLanguagesPanel = () => {
+		const showMissingLanguagesPanel = ( actions ) => {
+			missingLanguagesActions.value = actions;
 			currentView.value = VIEW.MISSING_CONTENT_LANGUAGES;
 		};
 
@@ -591,6 +591,7 @@ module.exports = exports = defineComponent( {
 			// Entrypoints
 			quickActionEntrypoints,
 			quickActions,
+			missingLanguagesActions,
 			emptyLanguageListEntrypoints,
 			userLanguageSuggestions,
 			emptySearchEntrypoints,
