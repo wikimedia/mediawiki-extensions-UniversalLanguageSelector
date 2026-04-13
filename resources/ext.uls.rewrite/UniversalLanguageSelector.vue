@@ -77,9 +77,10 @@
 					:language-codes="languagesToDisplay"
 					:languages="languages"
 					:lang="displayLanguageCode"
+					:dir="displayLanguageDir"
 					:highlighted-index="highlightedIndex"
 					:selected-values-set="selectedValuesSet"
-					:language-annotations="languageAnnotations"
+					:language-annotations="computedLanguageAnnotations"
 					@select="select"
 					@highlight="setHighlightedIndex"
 				>
@@ -105,9 +106,10 @@
 							:language-codes="suggestedLanguagesToDisplay"
 							:languages="languages"
 							:lang="displayLanguageCode"
+							:dir="displayLanguageDir"
 							:highlighted-index="highlightedIndex"
 							:selected-values-set="selectedValuesSet"
-							:language-annotations="languageAnnotations"
+							:language-annotations="computedLanguageAnnotations"
 							@select="select"
 							@highlight="setHighlightedIndex"
 						>
@@ -132,10 +134,11 @@
 							:language-codes="languagesToDisplay"
 							:languages="languages"
 							:lang="displayLanguageCode"
+							:dir="displayLanguageDir"
 							:highlighted-index="highlightedIndex"
 							:index-offset="suggestedLanguagesToDisplay.length"
 							:selected-values-set="selectedValuesSet"
-							:language-annotations="languageAnnotations"
+							:language-annotations="computedLanguageAnnotations"
 							@select="select"
 							@highlight="setHighlightedIndex"
 						>
@@ -232,6 +235,7 @@ const useEntrypoints = require( './composables/useEntrypoints.js' );
 const { useFloating, offset, flip, shift, autoUpdate } = require( './dist/floating-ui.js' );
 const { CdxSearchInput, CdxButton, CdxIcon, CdxProgressBar } = require( '../codex.js' );
 const { cdxIconClose } = require( '../icons.json' );
+const languageData = require( '../language-data.json' );
 
 const VIEW = Object.freeze( {
 	MAIN: 'main',
@@ -390,6 +394,22 @@ module.exports = exports = defineComponent( {
 			}
 			return 'uls-rewrite--density-high';
 		} );
+
+		const computedLanguageAnnotations = computed( () => {
+			const annotations = {};
+			for ( const code in languageData ) {
+				annotations[ code ] = Object.assign(
+					{},
+					props.languageAnnotations[ code ],
+					{ dir: languageData[ code ] }
+				);
+			}
+			return annotations;
+		} );
+
+		const displayLanguageDir = computed( () => (
+			props.displayLanguageCode ? languageData[ props.displayLanguageCode ] : null
+		) );
 
 		const scrollHighlightedIntoView = async () => {
 			await nextTick();
@@ -579,6 +599,8 @@ module.exports = exports = defineComponent( {
 			autocompleteSuggestion,
 			selectedValuesSet,
 			searchQueryHits,
+			computedLanguageAnnotations,
+			displayLanguageDir,
 
 			// Appearance & Layout
 			floatingStyles,

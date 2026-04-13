@@ -3,6 +3,7 @@
 		class="uls-rewrite__body__language-list"
 		role="listbox"
 		:lang="lang || null"
+		:dir="dir || null"
 	>
 		<language-item
 			v-for="( languageCode, index ) in languageCodes"
@@ -46,6 +47,10 @@ module.exports = defineComponent( {
 			required: true
 		},
 		lang: {
+			type: String,
+			default: ''
+		},
+		dir: {
 			type: String,
 			default: ''
 		},

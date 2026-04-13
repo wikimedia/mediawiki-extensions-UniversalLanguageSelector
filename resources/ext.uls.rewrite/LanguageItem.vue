@@ -1,6 +1,7 @@
 <template>
 	<li
 		:lang="!lang ? code : null"
+		:dir="!lang ? annotations.dir : null"
 		:data-language-code="code"
 		class="uls-rewrite__language-item"
 		:class="[

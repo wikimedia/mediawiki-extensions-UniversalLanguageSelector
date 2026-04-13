@@ -44,6 +44,7 @@ use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
 use Skin;
 use SkinTemplate;
+use Wikimedia\LanguageData\LanguageUtil;
 use Wikimedia\Stats\IBufferingStatsdDataFactory;
 
 class Hooks implements
@@ -572,4 +573,19 @@ class Hooks implements
 		];
 	}
 
+	public static function getLanguageData( Context $context, Config $config ): array {
+		$languageDataInstance = LanguageUtil::get();
+		$allLanguageData = $languageDataInstance->getLanguages();
+		$output = [];
+		foreach ( $allLanguageData as $languageCode => $languageData ) {
+			$output[$languageCode] = $languageDataInstance->getDir( $languageCode );
+		}
+
+		return $output;
+	}
+
+	public static function getLanguageDataSummary(): array {
+		$languageDataInstance = LanguageUtil::get();
+		return [ $languageDataInstance->getVersion() ];
+	}
 }

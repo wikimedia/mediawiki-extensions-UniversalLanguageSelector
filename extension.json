@@ -444,6 +444,11 @@
 						"cdxIconNext",
 						"cdxIconArrowPrevious"
 					]
+				},
+				{
+					"name": "language-data.json",
+					"callback": "UniversalLanguageSelector\\Hooks::getLanguageData",
+					"versionCallback": "UniversalLanguageSelector\\Hooks::getLanguageDataSummary"
 				}
 			],
 			"styles": [
