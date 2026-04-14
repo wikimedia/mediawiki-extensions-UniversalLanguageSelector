@@ -96,6 +96,19 @@
 	"ext-uls-rewrite-description": "إعادة كتابة مُحدِّد اللغة العالمي (ULS)، مصممة لتحديث تجربة المستخدم وتقليل التعقيدات التقنية من خلال بنية مبسطة.",
 	"ext-uls-suggested-languages-title": "مقترح",
 	"ext-uls-all-languages-title": "كل اللغات",
+	"ext-uls-no-languages-title": "لا توجد لغات حتى الآن",
+	"ext-uls-no-languages-description": "لا تتوفر أي لغات في الوقت الحالي.",
+	"ext-uls-no-languages-entrypoint-description": "يمكنك ترجمة هذه الصفحة. إنها طريقة سهلة لإنشاء محتوى بلغتك.",
+	"ext-uls-invalid-language-search-title": "اللغة غير معترف بها",
+	"ext-uls-invalid-language-search-description": "يرجى التحقق من الإملاء. يمكنك البحث عن اللغات بالاسم أو رمز ISO.",
 	"ext-uls-unsupported-language-title": "اللغات غير متوفرة",
-	"ext-uls-open-quick-actions": "أظهر الإجراءات السريعة"
+	"ext-uls-unsupported-language-description": "اللغة التي تبحث عنها غير متوفرة.",
+	"ext-uls-open-language-settings": "إعدادات اللغة المفتوحة",
+	"ext-uls-open-language-selector": "العودة إلى مُحدد اللغة",
+	"ext-uls-open-quick-actions": "أظهر الإجراءات السريعة",
+	"ext-uls-missing-languages-label": "مفقود في <strong>$1</strong>",
+	"ext-uls-missing-languages-label-more": "مفقود في <strong>$1</strong> ، <strong>$2</strong> ، وأكثر",
+	"ext-uls-missing-languages-panel-title": "ترجمة هذه الصفحة",
+	"ext-uls-missing-languages-panel-description": "هذه الصفحة غير متوفرة ببعض اللغات التي قد تعرفها. يمكنك ترجمتها.",
+	"ext-uls-quick-actions-panel-title": "إجراءات سريعة"
 }

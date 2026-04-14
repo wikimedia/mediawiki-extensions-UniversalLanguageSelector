@@ -100,5 +100,9 @@
 	"ext-uls-unsupported-language-title": "Idioma não disponível",
 	"ext-uls-unsupported-language-description": "O idioma que procura não está disponível.",
 	"ext-uls-open-language-settings": "Abrir configurações de idioma",
-	"ext-uls-open-quick-actions": "Mostrar ações rápidas"
+	"ext-uls-open-language-selector": "Voltar ao seletor de idioma",
+	"ext-uls-open-quick-actions": "Mostrar ações rápidas",
+	"ext-uls-missing-languages-panel-title": "Traduzir esta página",
+	"ext-uls-missing-languages-panel-description": "Esta página não está disponível em alguns idiomas que você talvez conheça. Você pode traduzi-la.",
+	"ext-uls-quick-actions-panel-title": "Ações rápidas"
 }
