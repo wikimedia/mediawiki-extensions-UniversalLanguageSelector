@@ -235,7 +235,7 @@ const useEntrypoints = require( './composables/useEntrypoints.js' );
 const { useFloating, offset, flip, shift, autoUpdate } = require( './dist/floating-ui.js' );
 const { CdxSearchInput, CdxButton, CdxIcon, CdxProgressBar } = require( '../codex.js' );
 const { cdxIconClose } = require( '../icons.json' );
-const languageData = require( '../language-data.json' );
+const languageData = require( '../language-data.json' ).languages;
 
 const VIEW = Object.freeze( {
 	MAIN: 'main',

@@ -1,6 +1,8 @@
 'use strict';
 
-const { computed, ComputedRef } = require( 'vue' );
+const { computed } = require( 'vue' );
+const useCountryCode = require( './useCountryCode.js' );
+const languageData = require( '../../language-data.json' );
 
 /**
  * Normalizes a BCP 47 language tag to its primary language subtag
@@ -16,9 +18,8 @@ function primaryLanguageSubtag( languageCode ) {
 /**
  * Returns an array of suggested language codes
  * based on a list of criteria. Based on mw.uls.getFrequentLanguageList
- * NOTE: Suggested language codes based on user territory is not supported
  *
- * @return {function(ComputedRef<string[]>):ComputedRef<string[]>}
+ * @return {Object}
  */
 module.exports = function useSuggestedSourceLanguages() {
 	/**
@@ -39,8 +40,13 @@ module.exports = function useSuggestedSourceLanguages() {
 		[]
 	).map( primaryLanguageSubtag );
 
+	const { getCountryCode } = useCountryCode();
+
 	const getSuggestedLanguages =
 		( previousLanguages, validLanguageCodes ) => computed( () => {
+			const countryCode = getCountryCode();
+			const territoryLanguages = ( countryCode && languageData.territories[ countryCode ] ) || [];
+
 			const possibleSuggestedLanguages = [
 				...previousLanguages.value,
 				// User's current interface language
@@ -48,9 +54,9 @@ module.exports = function useSuggestedSourceLanguages() {
 				// Current wiki's content language
 				mw.config.get( 'wgContentLanguage' ),
 				browserLanguage,
-				...acceptLanguages
-				// TODO: Get suggested languages based on user territory when
-				// language-data library is included.
+				...acceptLanguages,
+				// Languages spoken in the user's territory
+				...territoryLanguages
 			];
 
 			// Filter out duplicates and empty values

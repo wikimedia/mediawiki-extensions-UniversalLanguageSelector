@@ -433,6 +433,7 @@
 				"ext.uls.rewrite/composables/useClickOutside.js",
 				"ext.uls.rewrite/composables/useTypeahead.js",
 				"ext.uls.rewrite/composables/useLanguageHistory.js",
+				"ext.uls.rewrite/composables/useCountryCode.js",
 				"ext.uls.rewrite/composables/useSuggestedLanguages.js",
 				"ext.uls.rewrite/composables/useEntrypoints.js",
 				{
