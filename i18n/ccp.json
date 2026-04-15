@@ -72,5 +72,6 @@
 	"ext-uls-empty-state-desc": "𑄃𑄬𑄏𑄧𑄥𑄧𑄁 𑄇𑄧𑄚𑄧 𑄞𑄌𑄴𑄳𑄦𑄚𑄨 𑄃𑄧𑄊𑄪𑄢𑄴 𑄚𑄧 𑄦𑄧𑄠𑄴",
 	"ext-uls-empty-state-header-actions-available": "𑄃𑄬𑄏𑄧𑄥𑄧𑄁 𑄇𑄧𑄚𑄧 𑄞𑄌𑄴 𑄚𑄬𑄭𑅁 𑄚𑄱 𑄃𑄬𑄇𑄴𑄳𑄦𑄚𑄴 𑄡𑄮𑄇𑄴 𑄉𑄧𑄢𑄨𑄝𑄬𑅃",
 	"ext-uls-empty-state-desc-actions-available": "𑄇𑄧𑄚𑄴𑄑𑄬𑄚𑄴𑄑𑄴 𑄃𑄢𑄧 𑄞𑄌𑄴𑄳𑄦𑄚𑄨𑄖𑄴 𑄃𑄧𑄊𑄪𑄢𑄴 𑄉𑄧𑄢𑄴𑅁",
-	"ext-uls-add-languages-button-label": "𑄞𑄌𑄴𑄳𑄦𑄚𑄨 𑄡𑄮𑄇𑄴 𑄉𑄧𑄢𑄴"
+	"ext-uls-add-languages-button-label": "𑄞𑄌𑄴𑄳𑄦𑄚𑄨 𑄡𑄮𑄇𑄴 𑄉𑄧𑄢𑄴",
+	"ext-uls-missing-languages-panel-title": "𑄆𑄄 𑄛𑄘𑄉𑄚𑄴 𑄞𑄌𑄴 𑄝𑄧𑄘𑄧𑄣𑄴 𑄉𑄧𑄢𑄴"
 }

@@ -87,6 +87,7 @@
 	"ext-uls-all-languages-title": "כל השפות",
 	"ext-uls-no-languages-title": "עדיין אין שפות",
 	"ext-uls-no-languages-description": "אין שפות זמינות כעת.",
+	"ext-uls-no-languages-entrypoint-description": "{{GENDER:|אתה יכול|את יכולה}} לתרגם את הדף הזה. זאת דרך קלה ליצור תוכן בשפה שלך.",
 	"ext-uls-invalid-language-search-title": "שפה לא מזוהה",
 	"ext-uls-invalid-language-search-description": "נא לבדוק את האיות. ניתן לחפש שפות לפי שם או לפי קוד ISO.",
 	"ext-uls-unsupported-language-title": "השפה אינה זמינה",
@@ -94,6 +95,9 @@
 	"ext-uls-open-language-settings": "פתיחת הגדרות שפה",
 	"ext-uls-open-language-selector": "חזרה לבורר השפות",
 	"ext-uls-open-quick-actions": "הצג פעולות מהירות",
-	"ext-uls-missing-languages-panel-title": "תרגום דף זה",
-	"ext-uls-missing-languages-panel-description": "דף זה חסר בכמה שפות שייתכן שאתם יודעים. ניתן לתרגם אותו."
+	"ext-uls-missing-languages-label": "חסר ב<strong>$1</strong>",
+	"ext-uls-missing-languages-label-more": "חסר בשפות <strong>$1</strong>, <strong>$2</strong> ועוד",
+	"ext-uls-missing-languages-panel-title": "תרגום הדף הזה",
+	"ext-uls-missing-languages-panel-description": "הדף הזה חסר בכמה שפות {{GENDER:|שאתה אולי יודע. אתה יכול|שאת אולי יודעת. את יכולה}} לתרגם אותו.",
+	"ext-uls-quick-actions-panel-title": "פעולות מהירות"
 }
