@@ -338,6 +338,7 @@
 			$moreLanguagesButton.uls( {
 				left: inputSettings.$parent.left,
 				top: inputSettings.$parent.top,
+				onPosition: this.$parent.position.bind( this.$parent ),
 				onReady: function () {
 					const $back = $( '<div>' )
 						.addClass( 'uls-icon-back' )
