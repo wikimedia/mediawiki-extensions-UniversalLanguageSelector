@@ -62,7 +62,7 @@
 	"ext-uls-input-disable-notification-info-interlanguage": "आप किसी भी समय भाषा सूची के साथ स्थित भाषा सेटिंग्स में से इनपुट उपकरण सक्षम कर सकते हैं।",
 	"ext-uls-language-settings-applying": "लागू हो रहा है...",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|एक और भाषा|$1 और भाषाएँ}}",
-	"ext-uls-compact-link-info": "सभी भाषाएँ (आप और दूसरे सदस्यों के बीच साँझित विकल्पों से लिया गया शुरुआती चयन)",
+	"ext-uls-compact-link-info": "सभी भाषाएँ (आप और दूसरे सदस्यों के बीच साझा विकल्पों से लिया गया शुरुआती चयन)",
 	"prefs-languages": "भाषाएँ",
 	"ext-uls-compact-language-links-preference": "आपके लिए प्रासंगिक भाषाओं वाली [[$1|संक्षिप्त भाषा सूची]] का उपयोग करें",
 	"ext-uls-compact-no-results": "यह पृष्ठ उस भाषा में उपलब्ध नहीं है जिसे आपने खोजा था।",
