@@ -398,6 +398,10 @@
 			"East Syriac Adiabene",
 			"SertoUrhoy"
 		],
+		"syl": [
+			"system",
+			"NotoSansSylotiNagri Regular"
+		],
 		"tcn": [
 			"BabelStoneTibetanSlim"
 		],
@@ -701,6 +705,9 @@
 		},
 		"NotoSansSundanese Regular": {
 			"woff2": "NotoSansSundanese/NotoSansSundanese-Regular.woff2?97973"
+		},
+		"NotoSansSylotiNagri Regular": {
+			"woff2": "NotoSansSylotiNagri/NotoSansSylotiNagri-Regular.woff2?65203"
 		},
 		"Nuosu SIL": {
 			"woff2": "NuosuSIL/NuosuSIL.woff2?223bb"
