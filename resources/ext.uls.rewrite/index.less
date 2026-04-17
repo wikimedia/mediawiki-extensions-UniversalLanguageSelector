@@ -1,6 +1,12 @@
 @import 'mediawiki.skin.variables.less';
 
 @uls-rewrite-body-padding: @spacing-50 @spacing-100;
+// The Codex search input padding is: @spacing-50 + @spacing-50 + @size-icon-medium .
+// The ULS body already has @spacing-100 (16px) left padding.
+// We subtract the body padding from the search input padding to align them perfectly.
+@uls-rewrite-language-item-padding-start: calc( @spacing-50 + @spacing-50 + @size-icon-medium - @spacing-100 );
+@uls-rewrite-language-item-padding: @spacing-50 @spacing-50 @spacing-50 @uls-rewrite-language-item-padding-start;
+@uls-rewrite-missing-languages-padding-start: calc( @spacing-50 + @spacing-50 + @size-icon-medium );
 
 // Layout & Dimensions
 @uls-rewrite-max-height: 312px;
@@ -114,7 +120,7 @@
 
 		.uls-rewrite__missing-languages {
 			background-color: @background-color-interactive-subtle;
-			padding: @uls-rewrite-body-padding;
+			padding: @spacing-50 @spacing-100 @spacing-50 @uls-rewrite-missing-languages-padding-start;
 			/** To make it span the entire width of the body **/
 			margin-inline: -@spacing-100;
 			margin-top: -@spacing-50;
@@ -145,14 +151,14 @@
 		.uls-rewrite__section-title {
 			font-weight: bold;
 			color: @color-subtle;
-			padding: @spacing-50;
+			padding: @uls-rewrite-language-item-padding;
 			margin: 0;
 			font-size: @font-size-medium;
 		}
 
 		.uls-rewrite__no-results,
 		.uls-rewrite__no-languages {
-			padding: @spacing-50;
+			padding: @uls-rewrite-language-item-padding;
 
 			h3 {
 				font-size: @font-size-large;
@@ -169,7 +175,7 @@
 
 		.uls-rewrite__language-item {
 			list-style: none;
-			padding: @spacing-50 @spacing-50 @spacing-50 @spacing-200;
+			padding: @uls-rewrite-language-item-padding;
 			cursor: pointer;
 			margin-bottom: 0;
 			overflow-wrap: break-word;
