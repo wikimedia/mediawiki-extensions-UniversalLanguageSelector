@@ -93,5 +93,11 @@
 	"ext-uls-unsupported-language-title": "ژبه د لاسرسي وړ نه ده",
 	"ext-uls-unsupported-language-description": "هغه ژبه چې تاسو يې په لټه کې ياست دلاسرسي وړ نه ده.",
 	"ext-uls-open-language-settings": "ژب‌اوڼنې پرانېستل",
-	"ext-uls-open-quick-actions": "چټک چارې ښودل"
+	"ext-uls-open-language-selector": "بېرته ژبې پاکوونکي ته",
+	"ext-uls-open-quick-actions": "چټک چارې ښودل",
+	"ext-uls-missing-languages-label": "<strong>$1</strong> کې نشته",
+	"ext-uls-missing-languages-label-more": "په <strong>$1</strong>،\n<strong>$2</strong> او نورو کې نشته",
+	"ext-uls-missing-languages-panel-title": "دا مخ ژباړل",
+	"ext-uls-missing-languages-panel-description": "دا مخ په ځينو ژبو کې چې تاسو پرې پوهېږئ، نشته. تاسو کولی شئ دا په څو دقیقو کې راوژباړئ.",
+	"ext-uls-quick-actions-panel-title": "چټکې چارې"
 }
