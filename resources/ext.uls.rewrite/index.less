@@ -2,6 +2,25 @@
 
 @uls-rewrite-body-padding: @spacing-50 @spacing-100;
 
+// Layout & Dimensions
+@uls-rewrite-max-height: 312px;
+@uls-rewrite-width-low: 240px;
+@uls-rewrite-width-medium: 400px;
+@uls-rewrite-width-high: 560px;
+
+// Breakpoints
+@uls-rewrite-breakpoint-tablet: 768px;
+@uls-rewrite-breakpoint-mobile: ( @uls-rewrite-breakpoint-tablet - 1px );
+
+// Z-indexes
+@uls-rewrite-z-index-search-ghost: 1;
+@uls-rewrite-z-index-search-active: 2;
+
+// Grid configuration
+@uls-rewrite-medium-density-columns: 2;
+@uls-rewrite-high-density-columns: 3;
+@uls-rewrite-high-density-group-size: 15; // 5 rows of 3 columns
+
 .uls-rewrite {
 	position: fixed;
 	top: 0;
@@ -49,12 +68,12 @@
 				top: 0;
 				left: 0;
 				pointer-events: none;
-				z-index: 1;
+				z-index: @uls-rewrite-z-index-search-ghost;
 			}
 
 			.uls-rewrite__search-active {
 				position: relative;
-				z-index: 2;
+				z-index: @uls-rewrite-z-index-search-active;
 			}
 		}
 
@@ -77,7 +96,7 @@
 			padding: @spacing-25 @spacing-50;
 			border-bottom: @border-width-base solid @border-color-subtle;
 
-			@media ( max-width: 767px ) {
+			@media ( max-width: @uls-rewrite-breakpoint-mobile ) {
 				padding: @spacing-75 @spacing-100;
 			}
 
@@ -186,7 +205,7 @@
 		}
 	}
 
-	@media ( min-width: 768px ) {
+	@media ( min-width: @uls-rewrite-breakpoint-tablet ) {
 		// Reset from Fixed Full Screen to Absolute/Popup
 		position: absolute;
 		top: auto;
@@ -196,41 +215,41 @@
 		border: @border-width-base solid @border-color-subtle;
 		box-shadow: @box-shadow-drop-medium;
 		border-radius: @border-radius-base;
-		max-height: 312px;
+		max-height: @uls-rewrite-max-height;
 
 		// --- Density: Low (0-9) ---
 		// Inherits 1 column from mobile default.
 		&.uls-rewrite--density-low {
-			width: 240px;
+			width: @uls-rewrite-width-low;
 		}
 
 		// --- Density: Medium (10-29) ---
 		&.uls-rewrite--density-medium {
-			width: 400px;
+			width: @uls-rewrite-width-medium;
 
 			.uls-rewrite__section--suggested .uls-rewrite__body__language-list {
-				grid-template-columns: repeat( 2, 1fr );
+				grid-template-columns: repeat( @uls-rewrite-medium-density-columns, 1fr );
 			}
 		}
 
 		// --- Density: High (30+) ---
 		&.uls-rewrite--density-high {
-			width: 560px;
+			width: @uls-rewrite-width-high;
 			// density-high and medium have the same section structure, so we need to
 			// repeat the selector here
 			// stylelint-disable-next-line no-descending-specificity
 			.uls-rewrite__body__language-list {
-				grid-template-columns: repeat( 3, 1fr );
+				grid-template-columns: repeat( @uls-rewrite-high-density-columns, 1fr );
 
 				.uls-rewrite__language-item {
-					&:nth-child( 15n + 1 ),
-					&:nth-child( 15n + 2 ),
-					&:nth-child( 15n + 3 ) {
+					&:nth-child( @{uls-rewrite-high-density-group-size}n + 1 ),
+					&:nth-child( @{uls-rewrite-high-density-group-size}n + 2 ),
+					&:nth-child( @{uls-rewrite-high-density-group-size}n + 3 ) {
 						margin-top: @spacing-150;
 					}
 
 					// Reset the very first row (items 1, 2, 3) so they don't have a gap at the top
-					&:nth-child( -n+3 ) {
+					&:nth-child( -n+@{uls-rewrite-high-density-columns} ) {
 						margin-top: 0;
 					}
 				}
