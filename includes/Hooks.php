@@ -39,11 +39,11 @@ use MediaWiki\Preferences\Hook\GetPreferencesHook;
 use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\ResourceLoader\Context;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderGetConfigVarsHook;
+use MediaWiki\Skin\Skin;
+use MediaWiki\Skin\SkinTemplate;
 use MediaWiki\Skins\Hook\SkinAfterPortletHook;
 use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
-use Skin;
-use SkinTemplate;
 use Wikimedia\LanguageData\LanguageUtil;
 use Wikimedia\Stats\IBufferingStatsdDataFactory;
 
