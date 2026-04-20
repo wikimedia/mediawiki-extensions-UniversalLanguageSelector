@@ -10,7 +10,7 @@
 	"uls-desc": "Ta dale con el usuario otro-otro maga clase de manera para escoge un lenguaje y para ajusta con el configuraciones de lenguaje",
 	"uls-plang-title-languages": "Maga lenguaje",
 	"ext-uls-select-language-settings-icon-tooltip": "Configuraciones del lenguaje",
-	"ext-uls-undo-language-tooltip-text": "Lenguaje ya cambia desde $1",
+	"ext-uls-undo-language-tooltip-text": "Ya cambia el lenguaje na $1",
 	"ext-uls-undo-language-tooltip-text-local": "El lenguaje na este wiki ya cambia. Chequea con el de tuyo [[Special:GlobalPreferences|maga preferencia global]] para cambia lenguaje para na todo'l maga wiki.",
 	"ext-uls-language-settings-preferences-link": "Mas de configuraciones de lenguaje",
 	"uls-betafeature-label": "Lista de maga lenguaje comprimido",
@@ -75,5 +75,8 @@
 	"ext-uls-empty-state-desc": "No hay pa lenguaje el available en este tiempo",
 	"ext-uls-empty-state-header-actions-available": "No hay pa maga lenguaje. Aumenta nuevo?",
 	"ext-uls-empty-state-desc-actions-available": " Hace con el contenido que available na mucho pa lenguaje.",
-	"ext-uls-add-languages-button-label": "Aumenta maga lenguaje"
+	"ext-uls-add-languages-button-label": "Aumenta maga lenguaje",
+	"ext-uls-language-title": "Maga lenguaje",
+	"ext-uls-placeholder-search": "Busca lenguaje",
+	"ext-uls-close-button-label": "Cerra"
 }
