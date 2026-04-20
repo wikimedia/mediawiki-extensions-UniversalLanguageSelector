@@ -181,6 +181,7 @@
 			overflow-wrap: break-word;
 			white-space: normal;
 			min-width: 0;
+			display: flex;
 
 			a {
 				text-decoration: none;
@@ -262,4 +263,10 @@
 			}
 		}
 	}
+}
+
+/* Fix for icons in ULS rewrite when directionality is mixed */
+html[ dir='ltr' ] .uls-rewrite .uls-rewrite__language-item[ dir='rtl' ],
+html[ dir='rtl' ] .uls-rewrite .uls-rewrite__language-item[ dir='ltr' ] {
+	flex-direction: row-reverse;
 }
