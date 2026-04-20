@@ -617,7 +617,7 @@
 				[ 'ext.uls.mediawiki', 'ext.uls.rewrite.languagesettings', 'ext.uls.rewrite' ];
 			mw.loader.using( modulesToLoad ).then( () => {
 				const languageNodes = getLanguageNodes();
-				const languageAnnotations = getLanguageAnnotations( languageNodes );
+				const languageAnnotations = getLanguageAnnotations( languageNodes, isMinerva );
 				const { createUniversalLanguageSelector } = require( 'ext.uls.rewrite' );
 				const { h } = require( 'vue' );
 
@@ -813,8 +813,24 @@
 		return languageNodesCache;
 	}
 
-	function getLanguageAnnotations( languageNodes ) {
+	function getLanguageAnnotations( languageNodes, includeDescriptions ) {
 		const annotations = {};
+
+		let titleAttribute = 'data-title';
+		if ( includeDescriptions ) {
+			const firstLanguageNode = languageNodes[ 0 ];
+			// FIXME: Ugly, brittle check to determine if we should use title or data-title attribute.
+			// We use title if its page translation, and data-title if its anything else.
+			if ( firstLanguageNode ) {
+				const isPageTranslation = firstLanguageNode
+					.parentElement
+					.classList
+					.contains( 'interwiki-pagetranslation' );
+				if ( isPageTranslation ) {
+					titleAttribute = 'title';
+				}
+			}
+		}
 
 		Array.prototype.forEach.call( languageNodes, ( node ) => {
 			const lang = node.lang;
@@ -824,6 +840,10 @@
 					hreflang: node.hreflang,
 					linkTitle: node.title
 				};
+
+				if ( includeDescriptions ) {
+					annotations[ lang ].description = node.getAttribute( titleAttribute ) || '';
+				}
 			}
 		} );
 

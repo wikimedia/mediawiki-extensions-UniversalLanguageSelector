@@ -182,9 +182,11 @@
 			white-space: normal;
 			min-width: 0;
 			display: flex;
+			flex-wrap: wrap;
 
 			a {
 				text-decoration: none;
+				flex-grow: 1;
 			}
 
 			&.uls-rewrite__language-item--selected {
@@ -195,6 +197,14 @@
 
 			&.uls-rewrite__language-item--highlighted {
 				background-color: @background-color-interactive-subtle--hover;
+			}
+
+			&--description {
+				display: block;
+				color: @color-subtle;
+				flex-basis: 100%;
+				order: 1;
+				font-size: @font-size-small;
 			}
 		}
 	}

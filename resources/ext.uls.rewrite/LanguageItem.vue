@@ -20,6 +20,9 @@
 		<slot :item="name" :annotations="annotations">
 			{{ name }}
 		</slot>
+		<span v-if="annotations.description" class="uls-rewrite__language-item--description">
+			<bdi>{{ annotations.description }}</bdi>
+		</span>
 	</li>
 </template>
 
