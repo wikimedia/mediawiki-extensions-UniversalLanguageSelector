@@ -2,7 +2,7 @@
 	<div class="uls-rewrite__header__panel" @click.stop>
 		<cdx-button
 			weight="quiet"
-			:aria-label="$i18n( 'ext-uls-open-language-selector' )"
+			:aria-label="$i18n( 'ext-uls-open-language-selector' ).text()"
 			@click="$emit( 'back' )"
 		>
 			<cdx-icon :icon="cdxIconArrowPrevious"></cdx-icon>
@@ -13,7 +13,7 @@
 		<cdx-button
 			v-if="isMobile"
 			weight="quiet"
-			:aria-label="$i18n( 'ext-uls-close-button-label' )"
+			:aria-label="$i18n( 'ext-uls-close-button-label' ).text()"
 			@click="$emit( 'close' )">
 			<cdx-icon :icon="cdxIconClose"></cdx-icon>
 		</cdx-button>

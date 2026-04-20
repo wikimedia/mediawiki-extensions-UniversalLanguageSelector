@@ -12,7 +12,7 @@
 					<span>{{ $i18n( 'ext-uls-language-title' ) }}</span>
 					<cdx-button
 						weight="quiet"
-						:aria-label="$i18n( 'ext-uls-close-button-label' )"
+						:aria-label="$i18n( 'ext-uls-close-button-label' ).text()"
 						@click.stop="$emit( 'close' )">
 						<cdx-icon :icon="cdxIconClose"></cdx-icon>
 					</cdx-button>
@@ -30,7 +30,7 @@
 						ref="searchInputRef"
 						class="uls-rewrite__search-active"
 						:model-value="searchQuery"
-						:placeholder="placeholder || $i18n( 'ext-uls-placeholder-search' )"
+						:placeholder="placeholder || $i18n( 'ext-uls-placeholder-search' ).text()"
 						@update:model-value="search"
 						@keydown.down.stop.prevent="next"
 						@keydown.up.stop.prevent="prev"
@@ -48,14 +48,14 @@
 			</template>
 			<language-selector-panel-header
 				v-else-if="currentView === VIEW.MISSING_CONTENT_LANGUAGES"
-				:title="$i18n( 'ext-uls-missing-languages-panel-title' )"
+				:title="$i18n( 'ext-uls-missing-languages-panel-title' ).text()"
 				:is-mobile="isMobile"
 				@back="showLanguageSelector"
 				@close="$emit( 'close' )"
 			></language-selector-panel-header>
 			<language-selector-panel-header
 				v-else-if="currentView === VIEW.QUICK_ACTIONS"
-				:title="$i18n( 'ext-uls-quick-actions-panel-title' )"
+				:title="$i18n( 'ext-uls-quick-actions-panel-title' ).text()"
 				:is-mobile="isMobile"
 				@back="showLanguageSelector"
 				@close="$emit( 'close' )"
