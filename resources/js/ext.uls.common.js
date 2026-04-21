@@ -225,13 +225,4 @@
 
 		return ret;
 	};
-
-	/**
-	 * Checks if ULS rewrite should be loaded
-	 *
-	 * @return {boolean}
-	 */
-	mw.uls.shouldLoadUlsRewrite = function () {
-		return !!mw.config.get( 'wgULSLanguageSelectorV2Enabled' );
-	};
 }() );
