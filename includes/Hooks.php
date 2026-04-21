@@ -131,6 +131,25 @@ class Hooks implements
 	}
 
 	/**
+	 * Whether the new language selector is enabled.
+	 *
+	 * @param User $user
+	 * @param Skin $skin
+	 * @return bool
+	 */
+	private function isLanguageSelectorV2Enabled( User $user, Skin $skin ): bool {
+		$isRewriteEnabled = $this->config->get( 'ULSLanguageSelectorV2Enabled' ) ||
+			(
+				ExtensionRegistry::getInstance()->isLoaded( 'BetaFeatures' ) &&
+				\MediaWiki\Extension\BetaFeatures\BetaFeatures::isFeatureEnabled(
+					$user, 'uls-rewrite'
+				)
+			);
+
+		return $isRewriteEnabled && $skin->getSkinName() === 'vector-2022';
+	}
+
+	/**
 	 * @param OutputPage $out
 	 * @param Skin $skin
 	 * Hook: BeforePageDisplay
@@ -169,12 +188,10 @@ class Hooks implements
 			// according to T316559. Add JS config variable here, to let frontend know, when this is the case
 			$config[ 'wgULSisLanguageSelectorEmpty' ] = $isMissingPage || $title->isTalkPage();
 
-			if (
-				!ExtensionRegistry::getInstance()->isLoaded( 'BetaFeatures' )
-				|| \MediaWiki\Extension\BetaFeatures\BetaFeatures::isFeatureEnabled( $out->getUser(), 'uls-rewrite' )
-			) {
-				$config[ 'wgULSisRewriteEnabled' ] = true;
-			}
+			$config[ 'wgULSLanguageSelectorV2Enabled' ] = $this->isLanguageSelectorV2Enabled(
+				$out->getUser(),
+				$skin
+			);
 		}
 
 		// This is added here, and not in onResourceLoaderGetConfigVars to allow skins and extensions
@@ -487,6 +504,10 @@ class Hooks implements
 				'discussion-link' =>
 					'https://www.mediawiki.org/wiki/Talk:Universal_Language_Selector/Compact_Language_Links',
 			];
+		}
+
+		if ( $this->config->get( 'ULSLanguageSelectorV2Enabled' ) ) {
+			return;
 		}
 
 		// Enable ULS rewrite beta feature

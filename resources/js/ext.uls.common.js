@@ -232,7 +232,6 @@
 	 * @return {boolean}
 	 */
 	mw.uls.shouldLoadUlsRewrite = function () {
-		return !!mw.config.get( 'wgULSisRewriteEnabled' ) &&
-			mw.config.get( 'skin' ) === 'vector-2022';
+		return !!mw.config.get( 'wgULSLanguageSelectorV2Enabled' );
 	};
 }() );

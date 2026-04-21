@@ -136,6 +136,10 @@
 		"ULSCompactLinksPrepend": {
 			"description": "Show these language links on top of the rest in compact language links feature",
 			"value": []
+		},
+		"ULSLanguageSelectorV2Enabled": {
+			"description": "Whether the new language selector is enabled for all users. If true, the beta feature is no longer available.",
+			"value": false
 		}
 	},
 	"callback": "UniversalLanguageSelector\\Hooks::setVersionConstant",

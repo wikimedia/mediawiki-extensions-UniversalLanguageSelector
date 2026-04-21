@@ -423,7 +423,7 @@
 
 				e.preventDefault();
 
-				if ( shouldLoadUlsRewrite() ) {
+				if ( mw.config.get( 'wgULSLanguageSelectorV2Enabled' ) ) {
 					if ( $trigger.attr( 'data-uls-loaded' ) ) {
 						return;
 					}
@@ -610,7 +610,7 @@
 
 		ev.preventDefault();
 
-		if ( shouldLoadUlsRewrite() ) {
+		if ( mw.config.get( 'wgULSLanguageSelectorV2Enabled' ) ) {
 			mw.loader.using( [ 'ext.uls.mediawiki', 'ext.uls.rewrite.languagesettings', 'ext.uls.rewrite' ] ).then( () => {
 				const languageNodes = getLanguageNodes();
 				const languageAnnotations = getLanguageAnnotations( languageNodes );
@@ -794,15 +794,6 @@
 			$( '.mw-interlanguage-selector' ).removeClass( 'mw-interlanguage-selector' );
 			document.body.classList.add( 'mw-interlanguage-selector-disabled' );
 		}
-	}
-
-	function shouldLoadUlsRewrite() {
-		return !!mw.config.get( 'wgULSisRewriteEnabled' ) &&
-			mw.config.get( 'skin' ) === 'vector-2022';
-	}
-
-	if ( !mw.uls.shouldLoadUlsRewrite ) {
-		mw.uls.shouldLoadUlsRewrite = shouldLoadUlsRewrite;
 	}
 
 	let languageNodesCache = null;
