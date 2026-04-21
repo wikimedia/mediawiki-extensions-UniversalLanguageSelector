@@ -5,6 +5,7 @@
 		class="uls-rewrite"
 		:style="floatingStyles"
 		:class="[ densityClass, { 'uls-rewrite--mobile': isMobile, 'uls-rewrite--panel': currentView !== VIEW.MAIN } ]"
+		@mouseleave="clearHighlightedItem"
 	>
 		<div class="uls-rewrite__header">
 			<template v-if="currentView === VIEW.MAIN">
@@ -61,7 +62,10 @@
 				@close="$emit( 'close' )"
 			></language-selector-panel-header>
 		</div>
-		<div ref="keyboardNavigationContainer" class="uls-rewrite__body">
+		<div
+			ref="keyboardNavigationContainer"
+			class="uls-rewrite__body"
+		>
 			<template v-if="currentView === VIEW.MAIN">
 				<missing-languages-entrypoint
 					v-if="!isSearching && !searchQuery && missingLanguageEntrypoints.length !== 0"
@@ -615,6 +619,7 @@ module.exports = exports = defineComponent( {
 			onKeyTab,
 			onKeyRight,
 			setHighlightedIndex,
+			clearHighlightedItem,
 
 			// General Actions
 			select,
