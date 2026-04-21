@@ -314,6 +314,12 @@ module.exports = exports = defineComponent( {
 			type: String,
 			required: true,
 			validator: ( value ) => Object.values( ULS_MODE ).includes( value )
+		},
+		floatingOptions: {
+			type: Object,
+			default: () => ( {
+				placement: 'bottom-end'
+			} )
 		}
 	},
 	emits: [ 'close', 'select' ],
@@ -373,11 +379,10 @@ module.exports = exports = defineComponent( {
 
 		const floatingStyles = isMobile.value ?
 			ref( {} ) :
-			useFloating( triggerElement, menuRef, {
-				placement: 'bottom-end',
+			useFloating( triggerElement, menuRef, Object.assign( {
 				middleware: [ offset( 8 ), flip(), shift() ],
 				whileElementsMounted: autoUpdate
-			} ).floatingStyles;
+			}, props.floatingOptions ) ).floatingStyles;
 
 		const languagesToDisplay =
 			computed( () => ( searchQuery.value && searchQuery.value.trim().length > 0 ) ?
