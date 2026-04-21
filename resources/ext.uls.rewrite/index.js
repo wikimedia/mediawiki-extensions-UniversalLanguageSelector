@@ -57,11 +57,13 @@ function createUniversalLanguageSelector( config ) {
 				}
 			},
 			select( language ) {
-				this.currentSelected = [ language.code ];
 				this.visible = false;
 				if ( onSelect ) {
 					onSelect( language );
 				}
+			},
+			updateSelected( newSelected ) {
+				this.currentSelected = newSelected;
 			}
 		},
 		render() {

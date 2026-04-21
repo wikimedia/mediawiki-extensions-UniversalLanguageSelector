@@ -57,10 +57,8 @@ function useKeyboardNavigation( languages, visible, onHighlight ) {
 		highlightedIndex.value = -1;
 	};
 
-	watch( visible, ( isVisible ) => {
-		if ( !isVisible ) {
-			highlightedIndex.value = -1;
-		}
+	watch( visible, () => {
+		highlightedIndex.value = -1;
 	} );
 
 	return {
