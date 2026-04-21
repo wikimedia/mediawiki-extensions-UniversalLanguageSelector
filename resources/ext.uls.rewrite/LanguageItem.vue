@@ -14,7 +14,7 @@
 		:aria-selected="isSelected"
 		role="option"
 		tabindex="-1"
-		@click="$emit( 'select', code, name )"
+		@click.exact.prevent="$emit( 'select', code, name )"
 		@mouseenter="$emit( 'hover' )"
 	>
 		<slot :item="name" :annotations="annotations">
