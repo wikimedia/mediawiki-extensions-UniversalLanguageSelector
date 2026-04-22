@@ -146,7 +146,7 @@ class Hooks implements
 				)
 			);
 
-		return $isRewriteEnabled && $skin->getSkinName() === 'vector-2022';
+		return $isRewriteEnabled && ( in_array( $skin->getSkinName(), [ 'vector-2022', 'minerva' ] ) );
 	}
 
 	/**
@@ -155,15 +155,24 @@ class Hooks implements
 	 * Hook: BeforePageDisplay
 	 */
 	public function onBeforePageDisplay( $out, $skin ): void {
-		$unsupportedSkins = [ 'minerva', 'apioutput' ];
-		if ( in_array( $skin->getSkinName(), $unsupportedSkins, true ) ) {
+		$skinName = $skin->getSkinName();
+		if ( $skinName === 'apioutput' ) {
 			return;
 		}
+
+		if ( $skinName === 'minerva' ) {
+			if ( $this->isEnabled() ) {
+				$out->addJsConfigVars( $this->enableCoreFeatures( $out, [], $skin ) );
+			}
+
+			return;
+		}
+
 		// Soft dependency to Wikibase client. Don't enable CLL if links are managed manually.
 		$excludedLinks = $out->getProperty( 'noexternallanglinks' );
 		$override = is_array( $excludedLinks ) && in_array( '*', $excludedLinks, true );
 		$isCompactLinksEnabled = $this->isCompactLinksEnabled( $out->getUser(), $skin );
-		$isVector2022LanguageInHeader = $skin->getSkinName() === 'vector-2022' && $this->isLanguageInHeader( $skin );
+		$isVector2022LanguageInHeader = $skinName === 'vector-2022' && $this->isLanguageInHeader( $skin );
 		$config = [
 			'wgULSPosition' => $this->config->get( 'ULSPosition' ),
 			'wgULSisCompactLinksEnabled' => $isCompactLinksEnabled,
@@ -179,19 +188,7 @@ class Hooks implements
 		}
 
 		if ( $this->isEnabled() ) {
-			// Enable UI language selection for the user.
-			$out->addModules( 'ext.uls.interface' );
-
-			$title = $out->getTitle();
-			$isMissingPage = !$title || !$title->exists();
-			// if current page doesn't exist or if it's a talk page, we should use a different layout inside ULS
-			// according to T316559. Add JS config variable here, to let frontend know, when this is the case
-			$config[ 'wgULSisLanguageSelectorEmpty' ] = $isMissingPage || $title->isTalkPage();
-
-			$config[ 'wgULSLanguageSelectorV2Enabled' ] = $this->isLanguageSelectorV2Enabled(
-				$out->getUser(),
-				$skin
-			);
+			$config = $this->enableCoreFeatures( $out, $config, $skin );
 		}
 
 		// This is added here, and not in onResourceLoaderGetConfigVars to allow skins and extensions
@@ -612,5 +609,24 @@ class Hooks implements
 	public static function getLanguageDataSummary(): array {
 		$languageDataInstance = LanguageUtil::get();
 		return [ $languageDataInstance->getVersion() ];
+	}
+
+	/** @return array Modified configuration data */
+	private function enableCoreFeatures( OutputPage $out, array $config, Skin $skin ): array {
+		$enabledLanguageSelectorV2 = $this->isLanguageSelectorV2Enabled( $out->getUser(), $skin );
+
+		if ( $skin->getSkinName() !== 'minerva' || $enabledLanguageSelectorV2 ) {
+			// If the ULS rewrite is disabled, don't add the 'ext.uls.interface' module for Minerva,
+			$out->addModules( 'ext.uls.interface' );
+		}
+
+		$title = $out->getTitle();
+		$isMissingPage = !$title || !$title->exists();
+		// if the current page doesn't exist or if it's a talk page, we should use a different layout inside ULS
+		// according to T316559. Add JS config variable here, to let frontend know, when this is the case
+		$config['wgULSisLanguageSelectorEmpty'] = $isMissingPage || $title->isTalkPage();
+		$config['wgULSLanguageSelectorV2Enabled'] = $enabledLanguageSelectorV2;
+
+		return $config;
 	}
 }

@@ -611,7 +611,11 @@
 		ev.preventDefault();
 
 		if ( mw.config.get( 'wgULSLanguageSelectorV2Enabled' ) ) {
-			mw.loader.using( [ 'ext.uls.mediawiki', 'ext.uls.rewrite.languagesettings', 'ext.uls.rewrite' ] ).then( () => {
+			const isMinerva = mw.config.get( 'skin' ) === 'minerva';
+			const modulesToLoad = isMinerva ?
+				[ 'ext.uls.mediawiki', 'ext.uls.rewrite' ] :
+				[ 'ext.uls.mediawiki', 'ext.uls.rewrite.languagesettings', 'ext.uls.rewrite' ];
+			mw.loader.using( modulesToLoad ).then( () => {
 				const languageNodes = getLanguageNodes();
 				const languageAnnotations = getLanguageAnnotations( languageNodes );
 				const { createUniversalLanguageSelector } = require( 'ext.uls.rewrite' );
@@ -786,8 +790,11 @@
 		const compact = mw.config.get( 'wgULSisCompactLinksEnabled' );
 		// whether to show the omni box or not
 		const languageInHeader = mw.config.get( 'wgVector2022LanguageInHeader' );
+		// show on Minerva if its ULS rewrite
+		const isV2LanguageSelectorOnMinerva = mw.config.get( 'skin' ) === 'minerva' &&
+			mw.config.get( 'wgULSLanguageSelectorV2Enabled' );
 
-		if ( compact || languageInHeader ) {
+		if ( compact || languageInHeader || isV2LanguageSelectorOnMinerva ) {
 			// Init compact languages OR omni selector using the mw-interlanguage-selector class
 			initContentLanguageSelectorClickHandler();
 		} else {
