@@ -30,5 +30,9 @@
 	{
 		"resourceModule": "ext.uls.common",
 		"maxSize": "2.1 kB"
+	},
+	{
+		"resourceModule": "ext.uls.rewrite.entrypoints",
+		"maxSize": "2.4 kB"
 	}
 ]
