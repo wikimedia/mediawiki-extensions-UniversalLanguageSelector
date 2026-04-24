@@ -3,9 +3,13 @@
 		v-show="visible"
 		ref="menuRef"
 		class="uls-rewrite"
+		role="dialog"
+		:aria-modal="isMobile ? 'true' : 'false'"
+		:aria-label="$i18n( 'ext-uls-language-title' ).text()"
 		:style="floatingStyles"
 		:class="[ densityClass, { 'uls-rewrite--mobile': isMobile, 'uls-rewrite--panel': currentView !== VIEW.MAIN } ]"
 		@mouseleave="clearHighlightedItem"
+		@keydown.esc.prevent.stop="$emit( 'close' )"
 	>
 		<div class="uls-rewrite__header">
 			<template v-if="currentView === VIEW.MAIN">
@@ -36,7 +40,6 @@
 						@keydown.down.stop.prevent="next"
 						@keydown.up.stop.prevent="prev"
 						@keydown.enter.stop.prevent="onEnter"
-						@keydown.esc.prevent="$emit( 'close' )"
 						@keydown.tab="onKeyTab"
 						@keydown.right="onKeyRight"
 					></cdx-search-input>
@@ -546,6 +549,20 @@ module.exports = exports = defineComponent( {
 				clearSearchQuery();
 			}
 		}, { immediate: true } );
+
+		watch( currentView, async ( newView ) => {
+			await nextTick();
+			if ( newView === VIEW.MAIN ) {
+				await focusInput();
+			} else if ( menuRef.value ) {
+				const focusableElements = menuRef.value.querySelectorAll(
+					'button, [href], [tabindex]:not([tabindex="-1"])'
+				);
+				if ( focusableElements.length > 0 ) {
+					focusableElements[ 0 ].focus();
+				}
+			}
+		} );
 
 		watch( languagesToDisplay, ( newLanguages ) => {
 			if ( newLanguages.length === 0 ) {
