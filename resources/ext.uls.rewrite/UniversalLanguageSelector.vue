@@ -219,7 +219,7 @@
 
 <script>
 const { defineComponent, toRefs, ref, computed, watch, nextTick, onMounted, onUnmounted } = require( 'vue' );
-const { useLanguageSelector } = require( 'mediawiki.languageselector' );
+const { useLanguageSelector } = require( 'mediawiki.languageselector.core' );
 const LanguageList = require( './LanguageList.vue' );
 const QuickActionTrigger = require( './entrypoints/QuickActionTrigger.vue' );
 const EmptyListEntrypoint = require( './entrypoints/EmptyListEntrypoint.vue' );

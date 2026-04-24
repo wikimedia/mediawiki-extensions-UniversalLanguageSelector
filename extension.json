@@ -484,7 +484,7 @@
 			"dependencies": [
 				"vue",
 				"mediawiki.language",
-				"mediawiki.languageselector",
+				"mediawiki.languageselector.core",
 				"mediawiki.storage",
 				"ext.uls.rewrite.entrypoints"
 			]
