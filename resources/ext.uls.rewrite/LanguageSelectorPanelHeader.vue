@@ -7,7 +7,7 @@
 		>
 			<cdx-icon :icon="cdxIconArrowPrevious"></cdx-icon>
 		</cdx-button>
-		<span class="uls-rewrite__header__panel-title">
+		<span ref="titleRef" class="uls-rewrite__header__panel-title" tabindex="-1">
 			{{ title }}
 		</span>
 		<cdx-button
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-const { defineComponent } = require( 'vue' );
+const { defineComponent, ref } = require( 'vue' );
 const { CdxButton, CdxIcon } = require( '../codex.js' );
 const { cdxIconArrowPrevious, cdxIconClose } = require( '../icons.json' );
 
@@ -43,9 +43,20 @@ module.exports = defineComponent( {
 	},
 	emits: [ 'back', 'close' ],
 	setup() {
+		const titleRef = ref( null );
+
+		const focusTitle = () => {
+			if ( titleRef.value ) {
+				titleRef.value.focus();
+			}
+		};
+
 		return {
 			cdxIconArrowPrevious,
-			cdxIconClose
+			cdxIconClose,
+			titleRef,
+			// eslint-disable-next-line vue/no-unused-properties
+			focusTitle
 		};
 	}
 } );

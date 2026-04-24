@@ -5,7 +5,7 @@
 		class="uls-rewrite"
 		role="dialog"
 		:aria-modal="isMobile ? 'true' : 'false'"
-		:aria-label="$i18n( 'ext-uls-language-title' ).text()"
+		:aria-label="dialogAriaLabel"
 		:style="floatingStyles"
 		:class="[ densityClass, { 'uls-rewrite--mobile': isMobile, 'uls-rewrite--panel': currentView !== VIEW.MAIN } ]"
 		@mouseleave="clearHighlightedItem"
@@ -52,6 +52,7 @@
 			</template>
 			<language-selector-panel-header
 				v-else-if="currentView === VIEW.MISSING_CONTENT_LANGUAGES"
+				ref="panelHeaderRef"
 				:title="$i18n( 'ext-uls-missing-languages-panel-title' ).text()"
 				:is-mobile="isMobile"
 				@back="showLanguageSelector"
@@ -59,6 +60,7 @@
 			></language-selector-panel-header>
 			<language-selector-panel-header
 				v-else-if="currentView === VIEW.QUICK_ACTIONS"
+				ref="panelHeaderRef"
 				:title="$i18n( 'ext-uls-quick-actions-panel-title' ).text()"
 				:is-mobile="isMobile"
 				@back="showLanguageSelector"
@@ -339,6 +341,7 @@ module.exports = exports = defineComponent( {
 		const menuRef = ref( null );
 		const searchInputRef = ref( null );
 		const keyboardNavigationContainer = ref( null );
+		const panelHeaderRef = ref( null );
 
 		const currentView = ref( VIEW.MAIN );
 		const quickActions = ref( [] );
@@ -360,6 +363,17 @@ module.exports = exports = defineComponent( {
 
 		const viewportWidth = ref( window.innerWidth );
 		const isMobile = computed( () => viewportWidth.value < MOBILE_WIDTH_THRESHOLD );
+
+		const dialogAriaLabel = computed( () => {
+			switch ( currentView.value ) {
+				case VIEW.MISSING_CONTENT_LANGUAGES:
+					return mw.msg( 'ext-uls-missing-languages-panel-title' );
+				case VIEW.QUICK_ACTIONS:
+					return mw.msg( 'ext-uls-quick-actions-panel-title' );
+				default:
+					return mw.msg( 'ext-uls-language-title' );
+			}
+		} );
 
 		const {
 			languages,
@@ -554,13 +568,8 @@ module.exports = exports = defineComponent( {
 			await nextTick();
 			if ( newView === VIEW.MAIN ) {
 				await focusInput();
-			} else if ( menuRef.value ) {
-				const focusableElements = menuRef.value.querySelectorAll(
-					'button, [href], [tabindex]:not([tabindex="-1"])'
-				);
-				if ( focusableElements.length > 0 ) {
-					focusableElements[ 0 ].focus();
-				}
+			} else if ( panelHeaderRef.value ) {
+				panelHeaderRef.value.focusTitle();
 			}
 		} );
 
@@ -613,6 +622,7 @@ module.exports = exports = defineComponent( {
 			menuRef,
 			searchInputRef,
 			keyboardNavigationContainer,
+			panelHeaderRef,
 
 			// Search & Data Source
 			languages,
@@ -632,6 +642,7 @@ module.exports = exports = defineComponent( {
 			floatingStyles,
 			densityClass,
 			isMobile,
+			dialogAriaLabel,
 
 			// Keyboard Navigation
 			highlightedIndex,
