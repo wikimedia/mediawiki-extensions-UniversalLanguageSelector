@@ -594,21 +594,23 @@ class Hooks implements
 	public static function getLanguageData( Context $context, Config $config ): array {
 		$languageDataInstance = LanguageUtil::get();
 		$allLanguageData = $languageDataInstance->getLanguages();
-		$languages = [];
+		$rtlLanguages = [];
 
 		foreach ( $allLanguageData as $languageCode => $languageData ) {
-			$languages[$languageCode] = $languageDataInstance->getDir( $languageCode );
+			if ( $languageDataInstance->getDir( $languageCode ) === 'rtl' ) {
+				$rtlLanguages[] = $languageCode;
+			}
 		}
 
 		return [
-			'languages' => $languages,
+			'rtlLanguages' => $rtlLanguages,
 			'territories' => $languageDataInstance->getTerritoriesWithLanguages(),
 		];
 	}
 
 	public static function getLanguageDataSummary(): array {
 		$languageDataInstance = LanguageUtil::get();
-		return [ $languageDataInstance->getVersion() ];
+		return [ $languageDataInstance->getVersion(), 'v2' ];
 	}
 
 	/** @return array Modified configuration data */

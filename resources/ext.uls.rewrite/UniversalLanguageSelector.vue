@@ -244,7 +244,8 @@ const useEntrypoints = require( './composables/useEntrypoints.js' );
 const { useFloating, offset, flip, shift, autoUpdate } = require( './dist/floating-ui.js' );
 const { CdxSearchInput, CdxButton, CdxIcon, CdxProgressBar } = require( '../codex.js' );
 const { cdxIconClose } = require( '../icons.json' );
-const languageData = require( '../language-data.json' ).languages;
+const languageData = require( '../language-data.json' );
+const rtlLanguages = new Set( languageData.rtlLanguages );
 
 const VIEW = Object.freeze( {
 	MAIN: 'main',
@@ -421,20 +422,10 @@ module.exports = exports = defineComponent( {
 			return 'uls-rewrite--density-high';
 		} );
 
-		const computedLanguageAnnotations = computed( () => {
-			const annotations = {};
-			for ( const code in languageData ) {
-				annotations[ code ] = Object.assign(
-					{},
-					props.languageAnnotations[ code ],
-					{ dir: languageData[ code ] }
-				);
-			}
-			return annotations;
-		} );
-
 		const displayLanguageDir = computed( () => (
-			props.displayLanguageCode ? languageData[ props.displayLanguageCode ] : null
+			props.displayLanguageCode ?
+				( rtlLanguages.has( props.displayLanguageCode ) ? 'rtl' : 'ltr' ) :
+				null
 		) );
 
 		const scrollHighlightedIntoView = async () => {
@@ -476,6 +467,18 @@ module.exports = exports = defineComponent( {
 
 		const combinedLanguages =
 			computed( () => [ ...suggestedLanguagesToDisplay.value, ...languagesToDisplay.value ] );
+
+		const computedLanguageAnnotations = computed( () => {
+			const annotations = {};
+			for ( const code of combinedLanguages.value ) {
+				annotations[ code ] = Object.assign(
+					{},
+					props.languageAnnotations[ code ],
+					{ dir: rtlLanguages.has( code ) ? 'rtl' : 'ltr' }
+				);
+			}
+			return annotations;
+		} );
 
 		const {
 			next,
