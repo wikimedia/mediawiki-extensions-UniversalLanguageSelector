@@ -47,126 +47,101 @@ const ULS_MODE = Object.freeze( {
 	INTERFACE: 'interface'
 } );
 
-const EntrypointRegistry = function () {
-	let isLocked = false;
+let isLocked = false;
+/** @type {Object<string, Object<string, EntryPoint[]>>} */
+const registry = {};
 
-	const allModes = Object.values( ULS_MODE );
-
-	/** @type {Object<string, string[]>} */
-	const allowedModesByType = {
-		[ ENTRYPOINT_TYPE.MISSING_CONTENT_LANGUAGES ]: [ ULS_MODE.CONTENT ],
-		[ ENTRYPOINT_TYPE.QUICK_ACTIONS ]: allModes,
-		[ ENTRYPOINT_TYPE.EMPTY_SEARCH ]: allModes,
-		[ ENTRYPOINT_TYPE.EMPTY_LIST ]: allModes
-	};
-
-	/** @type {Object<string, Object<string, EntryPoint[]>>} */
-	const registry = {};
-
-	/**
-	 * Locks the registry to prevent further registrations.
-	 * To be called by the ULS component when it mounts.
-	 */
-	const lock = () => {
-		isLocked = true;
-	};
-
-	/**
-	 * Register a new entry point.
-	 *
-	 * @example
-	 * EntrypointRegistry.register(
-	 *   EntrypointRegistry.ENTRYPOINT_TYPE.QUICK_ACTIONS,
-	 *   { id: 'my-action', shouldShow: () => true, getConfig: () => ({ ... }) },
-	 *   [ EntrypointRegistry.ULS_MODE.CONTENT ]
-	 * );
-	 *
-	 * @param {string} type Type for which this entry point should be registered.
-	 *  Use the EntrypointRegistry.ENTRYPOINT_TYPE constant for this.
-	 * @param {EntryPoint} entryPoint
-	 * @param {Array<string>|string} modes Modes for which this entry point should be
-	 * registered. Use the EntrypointRegistry.ULS_MODE constants.
-	 * @throws {Error} If the registry is locked (ULS already mounted).
-	 * @throws {Error} If type or mode is invalid.
-	 * @throws {Error} If a mode is not supported by the specified type.
-	 */
-	const register = ( type, entryPoint, modes ) => {
-		if ( isLocked ) {
-			throw new Error(
-				`[ULS EntrypointRegistry] Too late! Extension "${ entryPoint.id }"
-				tried to register after ULS was mounted. `
-			);
-		}
-
-		if ( !modes || ( Array.isArray( modes ) && modes.length === 0 ) ) {
-			throw new Error(
-				`[ULS EntrypointRegistry] Entry point "${ entryPoint.id }" in "${ type }"
-				must specify at least one mode.`
-			);
-		}
-
-		if ( !entryPoint.id || typeof entryPoint.id !== 'string' ) {
-			throw new Error(
-				`[ULS EntrypointRegistry] Entry point in "${ type }" missing valid 'id'. Should be a non-empty string.`
-			);
-		}
-
-		if ( !allowedModesByType[ type ] ) {
-			throw new Error(
-				`[ULS EntrypointRegistry] Invalid type "${ type }" for entry point "${ entryPoint.id }".`
-			);
-		}
-
-		if ( typeof entryPoint.shouldShow !== 'function' || typeof entryPoint.getConfig !== 'function' ) {
-			throw new Error(
-				`[ULS EntrypointRegistry] Entry point "${ entryPoint.id }" in "${ type }"
-				must have 'shouldShow' and 'getConfig' methods.`
-			);
-		}
-
-		const modesArray = Array.isArray( modes ) ? modes : [ modes ];
-
-		modesArray.forEach( ( mode ) => {
-			if ( !allowedModesByType[ type ].includes( mode ) ) {
-				throw new Error(
-					`[ULS EntrypointRegistry] Mode "${ mode }" is not supported for type "${ type }" (entry point "${ entryPoint.id }").`
-				);
-			}
-
-			if ( !registry[ type ] ) {
-				registry[ type ] = {};
-			}
-
-			if ( !registry[ type ][ mode ] ) {
-				registry[ type ][ mode ] = [];
-			}
-
-			registry[ type ][ mode ].push( entryPoint );
-		} );
-	};
-
-	/**
-	 * Get registered entry points for a given type and mode.
-	 *
-	 * @param {string} type Use EntrypointRegistry.ENTRYPOINT_TYPE.
-	 * @param {string} mode Use EntrypointRegistry.ULS_MODE.
-	 * @return {Array<EntryPoint>}
-	 */
-	const getRegisteredEntrypoints = ( type, mode ) => {
-		if ( !registry[ type ] || !registry[ type ][ mode ] ) {
-			return [];
-		}
-
-		return registry[ type ][ mode ];
-	};
-
-	return {
-		lock,
-		register,
-		getRegisteredEntrypoints,
-		ENTRYPOINT_TYPE,
-		ULS_MODE
-	};
+/**
+ * @param {string} msg
+ * @throws {Error}
+ */
+const fail = ( msg ) => {
+	throw new Error( `[ULS EntrypointRegistry] ${ msg }` );
 };
 
-module.exports = new EntrypointRegistry();
+/**
+ * Locks the registry to prevent further registrations.
+ * To be called by the ULS component when it mounts.
+ */
+const lock = () => {
+	isLocked = true;
+};
+
+const allTypes = Object.values( ENTRYPOINT_TYPE );
+const allModes = Object.values( ULS_MODE );
+
+/**
+ * Register a new entry point.
+ *
+ * @example
+ * EntrypointRegistry.register(
+ *   EntrypointRegistry.ENTRYPOINT_TYPE.QUICK_ACTIONS,
+ *   { id: 'my-action', shouldShow: () => true, getConfig: () => ({ ... }) },
+ *   [ EntrypointRegistry.ULS_MODE.CONTENT ]
+ * );
+ *
+ * @param {string} type Type for which this entry point should be registered.
+ *  Use the EntrypointRegistry.ENTRYPOINT_TYPE constant for this.
+ * @param {EntryPoint} entryPoint
+ * @param {Array<string>|string} modes Modes for which this entry point should be
+ * registered. Use the EntrypointRegistry.ULS_MODE constants.
+ * @throws {Error} If the registry is locked (ULS already mounted).
+ * @throws {Error} If type or mode is invalid.
+ * @throws {Error} If a mode is not supported by the specified type.
+ */
+const register = ( type, entryPoint, modes ) => {
+	if ( isLocked ) {
+		fail( `Too late! ID: "${ entryPoint.id }" tried to register after ULS was mounted` );
+	}
+
+	const modesArray = [].concat( modes || [] );
+	if ( !modesArray.length ) {
+		fail( `ID: "${ entryPoint.id }" must specify mode` );
+	}
+
+	if ( !entryPoint.id || typeof entryPoint.id !== 'string' ) {
+		fail( `Entry point in "${ type }" missing valid 'id'. Should be non-empty string` );
+	}
+
+	if ( typeof entryPoint.shouldShow !== 'function' || typeof entryPoint.getConfig !== 'function' ) {
+		fail( `ID "${ entryPoint.id }" must have 'shouldShow' and 'getConfig' methods` );
+	}
+
+	if ( !allTypes.includes( type ) ) {
+		fail( `Invalid entrypoint type: "${ type }" (ID "${ entryPoint.id }").` );
+	}
+
+	// For missing content language, only content mode is supported.
+	const allowedModes = type === ENTRYPOINT_TYPE.MISSING_CONTENT_LANGUAGES ?
+		[ ULS_MODE.CONTENT ] :
+		allModes;
+
+	modesArray.forEach( ( mode ) => {
+		if ( !allowedModes.includes( mode ) ) {
+			fail( `Mode "${ mode }" not supported for type "${ type }" (ID "${ entryPoint.id }").` );
+		}
+
+		registry[ type ] = registry[ type ] || {};
+		registry[ type ][ mode ] = registry[ type ][ mode ] || [];
+		registry[ type ][ mode ].push( entryPoint );
+	} );
+};
+
+/**
+ * Get registered entry points for a given type and mode.
+ *
+ * @param {string} type Use EntrypointRegistry.ENTRYPOINT_TYPE.
+ * @param {string} mode Use EntrypointRegistry.ULS_MODE.
+ * @return {Array<EntryPoint>}
+ */
+const getRegisteredEntrypoints = ( type, mode ) => (
+	registry[ type ] && registry[ type ][ mode ]
+) || [];
+
+module.exports = {
+	lock,
+	register,
+	getRegisteredEntrypoints,
+	ENTRYPOINT_TYPE,
+	ULS_MODE
+};

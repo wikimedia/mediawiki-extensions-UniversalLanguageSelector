@@ -33,6 +33,6 @@
 	},
 	{
 		"resourceModule": "ext.uls.rewrite.entrypoints",
-		"maxSize": "2.4 kB"
+		"maxSize": "1.9 kB"
 	}
 ]
