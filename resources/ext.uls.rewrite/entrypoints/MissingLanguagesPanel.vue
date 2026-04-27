@@ -4,34 +4,52 @@
 			{{ $i18n( 'ext-uls-missing-languages-panel-description' ) }}
 		</p>
 		<div class="uls-rewrite__missing-languages-panel__actions">
-			<a
+			<template
 				v-for="( action, index ) in limitedActions"
 				:key="index"
-				:href="action.url"
-				class="cdx-button
-					cdx-button--fake-button
-					cdx-button--fake-button--enabled
-					cdx-button--action-progressive
-					cdx-button--weight-quiet"
 			>
-				<cdx-icon
-					v-if="action.icon"
-					:icon="action.icon"
-					size="small"
-				></cdx-icon>
-				{{ action.label }}
-			</a>
+				<a
+					v-if="action.url"
+					:href="action.url"
+					class="cdx-button
+						cdx-button--fake-button
+						cdx-button--fake-button--enabled
+						cdx-button--action-progressive
+						cdx-button--weight-quiet"
+				>
+					<cdx-icon
+						v-if="action.icon"
+						:icon="action.icon"
+						size="small"
+					></cdx-icon>
+					{{ action.label }}
+				</a>
+				<cdx-button
+					v-else
+					weight="quiet"
+					action="progressive"
+					@click="action.handler"
+				>
+					<cdx-icon
+						v-if="action.icon"
+						:icon="action.icon"
+						size="small"
+					></cdx-icon>
+					{{ action.label }}
+				</cdx-button>
+			</template>
 		</div>
 	</div>
 </template>
 
 <script>
 const { defineComponent, computed } = require( 'vue' );
-const { CdxIcon } = require( '../../codex.js' );
+const { CdxButton, CdxIcon } = require( '../../codex.js' );
 
 module.exports = defineComponent( {
 	name: 'MissingLanguagesPanel',
 	components: {
+		CdxButton,
 		CdxIcon
 	},
 	props: {
