@@ -455,6 +455,10 @@ class Hooks implements
 			'type' => 'api',
 		];
 
+		$preferences['mw-preferred-languages'] = [
+			'type' => 'api',
+		];
+
 		// A link shown for accessing ULS language settings from preferences screen
 		$preferences['languagesettings'] = [
 			'type' => 'info',
@@ -635,5 +639,19 @@ class Hooks implements
 		$config['wgULSLanguageSelectorV2Enabled'] = $enabledLanguageSelectorV2;
 
 		return $config;
+	}
+
+	/**
+	 * Callback for resource loader module for ext.uls.preferredlanguages
+	 * @param Context $context
+	 * @return array
+	 */
+	public static function getSupportedLanguages( Context $context ): array {
+		$services = MediaWikiServices::getInstance();
+		return $services->getLanguageNameUtils()
+			->getLanguageNames(
+				$context->getLanguage(),
+				LanguageNameUtils::SUPPORTED
+			);
 	}
 }

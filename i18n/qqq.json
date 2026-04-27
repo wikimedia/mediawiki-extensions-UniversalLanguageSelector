@@ -105,5 +105,13 @@
 	"ext-uls-missing-languages-label-more": "Label for the entrypoint when more than 2 missing languages are available. $1 and $2 are the names of the first two languages. (e.g. \"Missing in Hindi, Odia and more\")",
 	"ext-uls-missing-languages-panel-title": "Title for the panel that suggests translating the current page.",
 	"ext-uls-missing-languages-panel-description": "Description for the panel that suggests translating the current page.",
-	"ext-uls-quick-actions-panel-title": "Title for the panel that displays quick actions in the language selector rewrite."
+	"ext-uls-quick-actions-panel-title": "Title for the panel that displays quick actions in the language selector rewrite.",
+	"ext-uls-preferred-languages-title": "Title for preferred languages settings in language settings tab and dialog",
+	"ext-uls-preferred-languages-desc": "Description for preferred languages settings in language settings tab",
+	"ext-uls-preferred-languages-label": "Label for preferred languages in language settings dialog",
+	"ext-uls-preferred-languages-help": "Help text for preferred languages in language settings dialog. Parameters:\n* $1 - the maximum number of languages that can be pinned.",
+	"ext-uls-preferred-languages-input-placeholder": "Placeholder text for preferred langauge selector in language settings dialog",
+	"ext-uls-preferred-languages-status": "Status message showing how many languages are selected out of the total allowed limit. Parameters:\n* $1 - number of selected languages\n* $2 - maximum allowed number",
+	"ext-uls-preferred-languages-limit-reached": "Message shown when the preferred languages limit is reached.",
+	"ext-uls-preferred-languages-save-error": "Error message shown when saving the preferred languages for the current user fails."
 }

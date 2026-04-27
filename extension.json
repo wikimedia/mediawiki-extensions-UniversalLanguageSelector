@@ -20,6 +20,13 @@
 	"requires": {
 		"MediaWiki": ">= 1.44.0"
 	},
+	"attributes": {
+		"GlobalPreferences": {
+			"AutoPrefs": [
+				"mw-preferred-languages"
+			]
+		}
+	},
 	"Hooks": {
 		"BeforePageDisplay": "main",
 		"GetBetaFeaturePreferences": "main",
@@ -68,7 +75,8 @@
 	},
 	"DefaultUserOptions": {
 		"uls-preferences": "",
-		"compact-language-links": true
+		"compact-language-links": true,
+		"mw-preferred-languages": ""
 	},
 	"config": {
 		"ULSGeoService": {
@@ -286,6 +294,38 @@
 				"ext.uls.messages",
 				"ext.uls.preferences",
 				"jquery.uls.grid"
+			]
+		},
+		"ext.uls.preferredlanguages": {
+			"class": "MediaWiki\\ResourceLoader\\CodexModule",
+			"codexComponents": [
+				"CdxField"
+			],
+			"packageFiles": [
+				"js/ext.uls.preferredlanguages.js",
+				"ext.uls.rewrite/PreferredLanguagesTab.vue",
+				{
+					"name": "supportedLanguages.json",
+					"callback": "UniversalLanguageSelector\\Hooks::getSupportedLanguages"
+				}
+			],
+			"styles": [
+				"ext.uls.rewrite/preferred-languages-tab.less"
+			],
+			"messages": [
+				"ext-uls-preferred-languages-title",
+				"ext-uls-preferred-languages-desc",
+				"ext-uls-preferred-languages-label",
+				"ext-uls-preferred-languages-help",
+				"ext-uls-preferred-languages-input-placeholder",
+				"ext-uls-preferred-languages-status",
+				"ext-uls-preferred-languages-limit-reached",
+				"ext-uls-preferred-languages-save-error"
+			],
+			"dependencies": [
+				"ext.uls.languagesettings",
+				"vue",
+				"mediawiki.languageselector.lookup"
 			]
 		},
 		"ext.uls.mediawiki": {

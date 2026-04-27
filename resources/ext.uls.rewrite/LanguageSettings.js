@@ -16,7 +16,7 @@ try {
 				// and use it here instead of the old one.
 				const $target = $( event.target );
 				const $ulsContainer = $target.parents( '.uls-rewrite' );
-				mw.loader.using( 'ext.uls.displaysettings' ).then( () => {
+				mw.loader.using( [ 'ext.uls.displaysettings', 'ext.uls.preferredlanguages' ] ).then( () => {
 					const ulsContainerOffsetTop = $ulsContainer.offset().top;
 					$target.languagesettings( {
 						autoOpen: true,

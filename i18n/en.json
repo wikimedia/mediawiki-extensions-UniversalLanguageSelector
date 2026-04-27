@@ -101,5 +101,13 @@
 	"ext-uls-missing-languages-label-more": "Missing in <strong>$1</strong>, <strong>$2</strong> and more",
 	"ext-uls-missing-languages-panel-title": "Translate this page",
 	"ext-uls-missing-languages-panel-description": "This page is missing in some languages you may know. You can translate it.",
-	"ext-uls-quick-actions-panel-title": "Quick actions"
+	"ext-uls-quick-actions-panel-title": "Quick actions",
+	"ext-uls-preferred-languages-title": "Preferred languages",
+	"ext-uls-preferred-languages-desc": "Shown first in language menus.",
+	"ext-uls-preferred-languages-label": "Add a language",
+	"ext-uls-preferred-languages-help": "Pin up to $1 {{PLURAL:$1|language|languages}}. {{PLURAL:$1|It appears|They appear}} first when you switch languages on any article.",
+	"ext-uls-preferred-languages-input-placeholder": "Search languages",
+	"ext-uls-preferred-languages-status": "<strong>$1</strong> {{PLURAL:$1|of}} <strong>$2</strong> {{PLURAL:$2|selected}}",
+	"ext-uls-preferred-languages-limit-reached": "Remove one to add another",
+	"ext-uls-preferred-languages-save-error": "There was an error while saving your preferred languages."
 }
