@@ -4,6 +4,7 @@
 			"Diskdance",
 			"GuoPC",
 			"Kelly Hsueh",
+			"Lakejason0",
 			"Li3939108",
 			"Liuxinyu970226",
 			"Pawsdt",
@@ -98,9 +99,16 @@
 	"ext-uls-no-languages-title": "尚无其他语言",
 	"ext-uls-no-languages-description": "目前尚无其他语言版本可用。",
 	"ext-uls-no-languages-entrypoint-description": "您可以翻译此页面。这是用您的语言创建内容的简便方法。",
+	"ext-uls-invalid-language-search-title": "无法识别语言",
+	"ext-uls-invalid-language-search-description": "请检查拼写。您可以按名称或ISO代码来搜索语言。",
 	"ext-uls-unsupported-language-title": "语言不可用",
 	"ext-uls-unsupported-language-description": "您要查找的语言不可用。",
 	"ext-uls-open-language-settings": "打开语言设置",
 	"ext-uls-open-language-selector": "返回语言选择器",
-	"ext-uls-missing-languages-panel-title": "翻译此页面"
+	"ext-uls-open-quick-actions": "显示快捷操作",
+	"ext-uls-missing-languages-label": "尚无<strong>$1</strong>版本",
+	"ext-uls-missing-languages-label-more": "尚无<strong>$1</strong>、<strong>$2</strong>以及更多语言的版本",
+	"ext-uls-missing-languages-panel-title": "翻译此页面",
+	"ext-uls-missing-languages-panel-description": "您有可能掌握的几种语言中缺少对应的页面。不妨抽些时间翻译一下。",
+	"ext-uls-quick-actions-panel-title": "快捷操作"
 }

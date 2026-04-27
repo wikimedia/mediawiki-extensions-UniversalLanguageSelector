@@ -6,6 +6,7 @@
 			"GamemOfAnime",
 			"Ihojose",
 			"Joanmp17",
+			"JorgeElias2302",
 			"Kookoriko",
 			"Larjona",
 			"Macofe",
@@ -86,7 +87,10 @@
 	"ext-uls-empty-state-header-actions-available": "Aún no hay idiomas. Agregar uno nuevo?",
 	"ext-uls-empty-state-desc-actions-available": " Haz que el contenido esté disponible en más idiomas.",
 	"ext-uls-add-languages-button-label": "Añadir idiomas",
+	"ext-uls-language-title": "Idiomas",
+	"ext-uls-placeholder-search": "Buscar idiomas",
 	"ext-uls-no-languages-entrypoint-description": "Puedes traducir esta página. Es una manera fácil de crear contenido en tu idioma.",
 	"ext-uls-open-language-settings": "Abrir opciones de idioma",
-	"ext-uls-open-quick-actions": "Mostrar acciones rápidas"
+	"ext-uls-open-quick-actions": "Mostrar acciones rápidas",
+	"ext-uls-missing-languages-panel-title": "Traducir esta página"
 }

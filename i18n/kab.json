@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"ButterflyOfFire",
 			"K Messaoudi",
 			"Xð"
 		]
@@ -12,5 +13,6 @@
 	"ext-uls-setlang-heading": "Beddel agrudem n tutlayt?",
 	"ext-uls-setlang-accept": "Qbel abeddel",
 	"ext-uls-setlang-loading": "Asnes...",
-	"ext-uls-setlang-cancel": "Ur ttbeddil ara"
+	"ext-uls-setlang-cancel": "Ur ttbeddil ara",
+	"ext-uls-missing-languages-panel-title": "Suqel asebter-a"
 }
