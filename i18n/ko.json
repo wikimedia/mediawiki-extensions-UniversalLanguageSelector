@@ -11,7 +11,8 @@
 			"Revi",
 			"SeoJeongHo",
 			"Ykhwong",
-			"아라"
+			"아라",
+			"Tensama0415"
 		]
 	},
 	"uls-desc": "사용자에게 언어를 선택하고 언어 설정을 바꾸는 몇 가지 방법을 제공합니다",
@@ -68,7 +69,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|한 개 더 보기|$1개 더 보기}}",
 	"ext-uls-compact-link-info": "모든 언어 (사용자 및 다른 사용자들의 공통 선택 항목 중 초기 선택 항목)",
 	"prefs-languages": "언어",
-	"ext-uls-compact-language-links-preference": "사용자와 관련 있는 언어로 [[$1|간소화된 언어 목록]]을 사용합니다.",
+	"ext-uls-compact-language-links-preference": "사용자와 관련 있는 언어로 [[$1|간소화된 언어 목록]]을 사용합니다",
 	"ext-uls-compact-no-results": "이 문서는 검색된 언어로 읽을 수 없습니다.",
 	"ext-uls-setlang-error": "선호하는 언어를 업데이트하는 중 오류가 발생했습니다. 오류: $1",
 	"ext-uls-setlang-unknown-error": "알 수 없는 오류",
