@@ -88,5 +88,6 @@
 	"ext-uls-unsupported-language-title": "Lingua non disponibile",
 	"ext-uls-unsupported-language-description": "Le lingua que tu cerca non es disponibile.",
 	"ext-uls-open-language-settings": "Aperir parametros de lingua",
+	"ext-uls-open-language-selector": "Retornar al selector de linguas",
 	"ext-uls-open-quick-actions": "Monstrar actiones rapide"
 }
