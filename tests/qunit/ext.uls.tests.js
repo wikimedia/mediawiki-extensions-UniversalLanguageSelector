@@ -33,6 +33,28 @@
 		assert.strictEqual( $.uls.data.getDir( 'als' ), 'ltr', 'The direction of custom MW language als is ltr.' );
 	} );
 
+	QUnit.test( 'BCP 47 redirects for non-standard MW codes (T391575)', ( assert ) => {
+		const cases = [
+			[ 'jv-x-bms', 'map-bms', 'Basa Banyumasan' ],
+			[ 'nap-x-tara', 'roa-tara', 'Tarandíne' ],
+			[ 'nrf', 'nrm', 'Nouormand' ],
+			[ 'ro-cyrl-md', 'mo', 'Moldovan' ]
+		];
+
+		cases.forEach( ( [ bcp47, mwCode, name ] ) => {
+			assert.strictEqual(
+				$.uls.data.isRedirect( bcp47 ),
+				mwCode,
+				bcp47 + ' redirects to ' + mwCode + ' (' + name + ')'
+			);
+			assert.strictEqual(
+				mw.uls.convertMediaWikiLanguageCodeToULS( bcp47 ),
+				mwCode,
+				'convertMediaWikiLanguageCodeToULS resolves ' + bcp47
+			);
+		} );
+	} );
+
 	QUnit.test( 'Common languages', ( assert ) => {
 		// Bug 49847
 		let foundTagalog = false;

@@ -30,6 +30,17 @@
 	 */
 	$.uls.data.addLanguage( 'als', { target: 'gsw' } );
 
+	/*
+	 * MediaWiki core maps several non-standard wiki language codes to
+	 * standard BCP 47 codes in HTML lang= attributes (T391575).
+	 * ULS needs redirects for these so that languages are not silently
+	 * dropped from the interlanguage list.
+	 */
+	$.uls.data.addLanguage( 'jv-x-bms', { target: 'map-bms' } );
+	$.uls.data.addLanguage( 'nap-x-tara', { target: 'roa-tara' } );
+	$.uls.data.addLanguage( 'nrf', { target: 'nrm' } );
+	$.uls.data.addLanguage( 'ro-cyrl-md', { target: 'mo' } );
+
 	mw.uls = mw.uls || {};
 	mw.uls.previousLanguagesStorageKey = 'uls-previous-languages';
 
