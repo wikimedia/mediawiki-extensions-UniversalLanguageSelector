@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
-	"apihelp-ulslocalization-param-language": "Sproochcode."
+	"apihelp-ulslocalization-param-language": "Sproochcode.",
+	"apihelp-ulssetlang-param-languagecode": "De preferéierte Sproochcode."
 }
