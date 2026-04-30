@@ -148,6 +148,70 @@ mw.loader.using( [ 'ext.uls.rewrite' ] ).then( () => {
 ```
 
 ---
+### Language Item Markers
+
+The language selector supports adding markers (icons, badges, progress dots) to language items through CSS. Items support both start and end markers simultaneously without text shift or wrap-around.
+
+Markers are placed in fixed-width gutters (20px by default) on either side of the language name and description.
+
+Feel free to add an appropriate `margin-top` to align the marker with the text baseline.
+
+#### 1. Markers at the Start (e.g. Featured Article stars)
+
+Use the `::before` pseudo-element.
+
+Example for a custom start marker:
+```css
+.uls-rewrite__language-item.my-badge::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-image: url( path/to/icon.svg );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /* Optional: add margin-top if the icon isn't perfectly balanced with text baseline */
+}
+```
+
+#### 2. Markers at the End (e.g. Translate progress dots)
+
+Use the `::after` pseudo-element.
+
+Example:
+```css
+.uls-rewrite__language-item.my-extension-progress::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: green;
+    border-radius: 50%;
+}
+```
+
+#### 3. Both Markers
+
+You can combine both markers on a single item.
+
+Example:
+```css
+.uls-rewrite__language-item.featured-and-incomplete::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-image: url( path/to/star.svg );
+    background-size: contain;
+}
+
+.uls-rewrite__language-item.featured-and-incomplete::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: orange;
+    border-radius: 50%;
+}
+```
+---
 ## Entry points and extensibility
 
 The `UniversalLanguageSelector` component is extensible through the `EntrypointRegistry`. This allows other extensions to register custom actions or information panels within the ULS interface.

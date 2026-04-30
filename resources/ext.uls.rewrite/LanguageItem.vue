@@ -17,9 +17,11 @@
 		@click.exact.prevent="$emit( 'select', code, name )"
 		@mouseenter="$emit( 'hover' )"
 	>
-		<slot :item="name" :annotations="annotations">
-			{{ name }}
-		</slot>
+		<span class="uls-rewrite__language-item-title">
+			<slot :item="name" :annotations="annotations">
+				{{ name }}
+			</slot>
+		</span>
 		<span v-if="annotations.description" class="uls-rewrite__language-item--description">
 			<bdi>{{ annotations.description }}</bdi>
 		</span>

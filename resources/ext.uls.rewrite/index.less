@@ -1,10 +1,11 @@
 @import 'mediawiki.skin.variables.less';
 
-@uls-rewrite-body-padding: @spacing-50 @spacing-100;
+@uls-rewrite-horizontal-padding: @spacing-75;
+@uls-rewrite-body-padding: @spacing-50 @uls-rewrite-horizontal-padding;
 // The Codex search input padding is: @spacing-50 + @spacing-50 + @size-icon-medium .
-// The ULS body already has @spacing-100 (16px) left padding.
+// The ULS body already has horizontal padding.
 // We subtract the body padding from the search input padding to align them perfectly.
-@uls-rewrite-language-item-padding-start: calc( @spacing-50 + @spacing-50 + @size-icon-medium - @spacing-100 );
+@uls-rewrite-language-item-padding-start: calc( @spacing-50 + @spacing-50 + @size-icon-medium - @uls-rewrite-horizontal-padding );
 @uls-rewrite-language-item-padding: @spacing-50 @spacing-50 @spacing-50 @uls-rewrite-language-item-padding-start;
 @uls-rewrite-missing-languages-padding-start: calc( @spacing-50 + @spacing-50 + @size-icon-medium );
 
@@ -58,7 +59,7 @@
 				input[ type='search' ] {
 					padding-top: @spacing-50;
 					padding-bottom: @spacing-50;
-					padding-inline-end: @spacing-100;
+					padding-inline-end: @uls-rewrite-horizontal-padding;
 					/** Don't set padding-inline-start to avoid overriding codex values that are used to align the icon properly */
 					max-height: none;
 					background-color: transparent;
@@ -84,7 +85,7 @@
 		}
 
 		.uls-rewrite__header__mobile {
-			padding: @spacing-75 @spacing-100;
+			padding: @spacing-75 @uls-rewrite-horizontal-padding;
 			font-weight: bold;
 			display: flex;
 			align-items: center;
@@ -103,7 +104,7 @@
 			border-bottom: @border-width-base solid @border-color-subtle;
 
 			@media ( max-width: @uls-rewrite-breakpoint-mobile ) {
-				padding: @spacing-75 @spacing-100;
+				padding: @spacing-75 @uls-rewrite-horizontal-padding;
 			}
 
 			&-title {
@@ -120,9 +121,9 @@
 
 		.uls-rewrite__missing-languages {
 			background-color: @background-color-interactive-subtle;
-			padding: @spacing-50 @spacing-100 @spacing-50 @uls-rewrite-missing-languages-padding-start;
+			padding: @spacing-50 @uls-rewrite-horizontal-padding @spacing-50 @uls-rewrite-missing-languages-padding-start;
 			/** To make it span the entire width of the body **/
-			margin-inline: -@spacing-100;
+			margin-inline: -@uls-rewrite-horizontal-padding;
 			margin-top: -@spacing-50;
 			margin-bottom: @spacing-50;
 			color: @color-subtle;
@@ -174,19 +175,62 @@
 		}
 
 		.uls-rewrite__language-item {
-			list-style: none;
-			padding: @uls-rewrite-language-item-padding;
+			display: grid;
+			grid-template-columns: [start] @uls-rewrite-language-item-padding-start [content] 1fr [end] 24px;
+			grid-template-rows: auto auto;
+			padding: @spacing-50 0;
 			cursor: pointer;
 			margin-bottom: 0;
 			overflow-wrap: break-word;
 			white-space: normal;
 			min-width: 0;
-			display: flex;
-			flex-wrap: wrap;
+			list-style: none;
+			align-items: start;
+			direction: inherit;
+
+			// Ensure all direct element children go to the content column by default.
+			// This prevents multiple slot elements from spilling into marker gutters.
+			& > * {
+				grid-column: content;
+				grid-row: 1;
+			}
+
+			&[ dir='rtl' ] {
+				& > *,
+				&::before,
+				&::after {
+					direction: rtl;
+				}
+			}
+
+			&[ dir='ltr' ] {
+				& > *,
+				&::before,
+				&::after {
+					direction: ltr;
+				}
+			}
+
+			&::before {
+				grid-column: start;
+				grid-row: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				place-self: center;
+			}
+
+			&::after {
+				grid-column: end;
+				grid-row: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				place-self: center;
+			}
 
 			a {
 				text-decoration: none;
-				flex-grow: 1;
 			}
 
 			&.uls-rewrite__language-item--selected {
@@ -200,10 +244,10 @@
 			}
 
 			&--description {
+				grid-column: content;
+				grid-row: 2;
 				display: block;
 				color: @color-subtle;
-				flex-basis: 100%;
-				order: 1;
 				font-size: @font-size-small;
 			}
 		}
@@ -273,10 +317,4 @@
 			}
 		}
 	}
-}
-
-/* Fix for icons in ULS rewrite when directionality is mixed */
-html[ dir='ltr' ] .uls-rewrite .uls-rewrite__language-item[ dir='rtl' ],
-html[ dir='rtl' ] .uls-rewrite .uls-rewrite__language-item[ dir='ltr' ] {
-	flex-direction: row-reverse;
 }
