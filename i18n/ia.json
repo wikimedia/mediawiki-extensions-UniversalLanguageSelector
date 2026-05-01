@@ -89,5 +89,10 @@
 	"ext-uls-unsupported-language-description": "Le lingua que tu cerca non es disponibile.",
 	"ext-uls-open-language-settings": "Aperir parametros de lingua",
 	"ext-uls-open-language-selector": "Retornar al selector de linguas",
-	"ext-uls-open-quick-actions": "Monstrar actiones rapide"
+	"ext-uls-open-quick-actions": "Monstrar actiones rapide",
+	"ext-uls-missing-languages-label": "Mancante in <strong>$1</strong>",
+	"ext-uls-missing-languages-label-more": "Mancante in <strong>$1</strong>, <strong>$2</strong> e alteres",
+	"ext-uls-missing-languages-panel-title": "Traducer iste pagina",
+	"ext-uls-missing-languages-panel-description": "Iste pagina manca in certe linguas que tu forsan cognosce. Tu pote traducer lo.",
+	"ext-uls-quick-actions-panel-title": "Actiones rapide"
 }
