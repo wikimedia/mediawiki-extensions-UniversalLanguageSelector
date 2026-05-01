@@ -135,10 +135,11 @@ class Hooks implements
 	 *
 	 * @param User $user
 	 * @param Skin $skin
+	 * @param Config $config
 	 * @return bool
 	 */
-	private function isLanguageSelectorV2Enabled( User $user, Skin $skin ): bool {
-		$isRewriteEnabled = $this->config->get( 'ULSLanguageSelectorV2Enabled' ) ||
+	public static function isLanguageSelectorV2Enabled( User $user, Skin $skin, Config $config ): bool {
+		$isRewriteEnabled = $config->get( 'ULSLanguageSelectorV2Enabled' ) ||
 			(
 				ExtensionRegistry::getInstance()->isLoaded( 'BetaFeatures' ) &&
 				\MediaWiki\Extension\BetaFeatures\BetaFeatures::isFeatureEnabled(
@@ -615,7 +616,11 @@ class Hooks implements
 
 	/** @return array Modified configuration data */
 	private function enableCoreFeatures( OutputPage $out, array $config, Skin $skin ): array {
-		$enabledLanguageSelectorV2 = $this->isLanguageSelectorV2Enabled( $out->getUser(), $skin );
+		$enabledLanguageSelectorV2 = self::isLanguageSelectorV2Enabled(
+			$out->getUser(),
+			$skin,
+			$this->config
+		);
 
 		if ( $skin->getSkinName() !== 'minerva' || $enabledLanguageSelectorV2 ) {
 			// If the ULS rewrite is disabled, don't add the 'ext.uls.interface' module for Minerva,
