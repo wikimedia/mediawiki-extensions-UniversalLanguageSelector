@@ -124,7 +124,7 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 				.text( element.textContent );
 
 			// This code is to support badges used in Wikimedia
-			// eslint-disable-next-line mediawiki/class-doc
+
 			$languageLink.parent().addClass( element.parentNode.className );
 		},
 		onCancel: function () {

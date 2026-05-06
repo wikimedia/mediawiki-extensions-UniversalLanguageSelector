@@ -7,7 +7,10 @@
 		>
 			<cdx-icon :icon="cdxIconArrowPrevious"></cdx-icon>
 		</cdx-button>
-		<span ref="titleRef" class="uls-rewrite__header__panel-title" tabindex="-1">
+		<span
+			ref="titleRef"
+			class="uls-rewrite__header__panel-title"
+			tabindex="-1">
 			{{ title }}
 		</span>
 		<cdx-button
