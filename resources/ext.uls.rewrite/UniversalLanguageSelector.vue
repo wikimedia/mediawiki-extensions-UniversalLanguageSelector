@@ -437,7 +437,7 @@ module.exports = exports = defineComponent( {
 
 			const languageItem = keyboardNavigationContainer.value
 				// eslint-disable-next-line no-use-before-define
-				.querySelectorAll( `.uls-rewrite__language-item[data-language-code="${ highlightedItem.value }"]` )[ 0 ];
+				.querySelectorAll( '.uls-rewrite__language-item' )[ highlightedIndex.value ];
 			if ( languageItem ) {
 				languageItem.scrollIntoView( { block: 'nearest' } );
 			}
