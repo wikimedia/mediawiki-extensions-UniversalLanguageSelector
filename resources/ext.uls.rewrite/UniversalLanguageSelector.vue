@@ -109,7 +109,7 @@
 						class="uls-rewrite__section uls-rewrite__section--suggested"
 					>
 						<h3 class="uls-rewrite__section-title">
-							{{ $i18n( 'ext-uls-suggested-languages-title' ) }}
+							{{ $i18n( 'ext-uls-suggested-languages-title', suggestedLanguagesToDisplay.length ) }}
 						</h3>
 						<language-list
 							:language-codes="suggestedLanguagesToDisplay"
@@ -137,7 +137,7 @@
 							v-if="suggestedLanguagesToDisplay.length > 0"
 							class="uls-rewrite__section-title"
 						>
-							{{ $i18n( 'ext-uls-all-languages-title' ) }}
+							{{ $i18n( 'ext-uls-all-languages-title', languagesToDisplay.length ) }}
 						</h3>
 						<language-list
 							:language-codes="languagesToDisplay"
