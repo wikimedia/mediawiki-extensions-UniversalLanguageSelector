@@ -98,7 +98,8 @@
 	"ext-uls-open-language-selector": "Natrag na odabir jezika",
 	"ext-uls-open-quick-actions": "Prikaži brze radnje",
 	"ext-uls-missing-languages-label": "Nedostaje u <strong>$1</strong>",
-	"ext-uls-missing-languages-label-more": "Nestaje u <strong>$1</strong>, <strong>$2</strong>, i drugima",
+	"ext-uls-missing-languages-label-more": "Nedostaje u <strong>$1</strong>, <strong>$2</strong> i drugima",
 	"ext-uls-missing-languages-panel-title": "Prevedi ovu stranicu",
-	"ext-uls-missing-languages-panel-description": "Ova stranica nedostaje na nekim jezicima koje možda znate. Možete je prevesti."
+	"ext-uls-missing-languages-panel-description": "Ova stranica nedostaje na jezicima koje možda znate. Možete je prevesti.",
+	"ext-uls-quick-actions-panel-title": "Brze radnje"
 }
