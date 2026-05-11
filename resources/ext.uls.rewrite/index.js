@@ -19,6 +19,7 @@ const UniversalLanguageSelector = require( './UniversalLanguageSelector.vue' );
  * @param {string} config.mode The mode for ULS, either 'interface' or 'content'.
  * @param {Object} [config.floatingOptions] (Optional) Floating UI configuration overrides (e.g. { placement: 'bottom-start' })
  * @param {Object} [config.slots] (Optional) Vue slots to customize the ULS content
+ * @param {boolean} [config.visible] (Optional) Whether the ULS should be visible initially. Defaults to true.
  * @return {Object} The Vue application instance.
  */
 function createUniversalLanguageSelector( config ) {
@@ -33,14 +34,15 @@ function createUniversalLanguageSelector( config ) {
 		onSelect,
 		mode,
 		floatingOptions,
-		slots
+		slots,
+		visible
 	} = config;
 
 	return Vue.createMwApp( {
 		name: 'UniversalLanguageSelectorWrapper',
 		data() {
 			return {
-				visible: true,
+				visible: visible !== undefined ? visible : true,
 				currentSelected: selected || []
 			};
 		},
