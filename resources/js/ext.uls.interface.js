@@ -637,7 +637,8 @@
 						'language-item': ( { item, annotations } ) => h( 'a', {
 							href: item.href,
 							hreflang: annotations.hreflang,
-							title: annotations.linkTitle
+							title: annotations.linkTitle,
+							tabindex: -1
 						}, item.text )
 					}
 				} );

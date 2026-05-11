@@ -175,6 +175,7 @@
 		}
 
 		.uls-rewrite__language-item {
+			position: relative;
 			display: grid;
 			grid-template-columns: [start] @uls-rewrite-language-item-padding-start [content] 1fr [end] 24px;
 			grid-template-rows: auto auto;
@@ -231,6 +232,18 @@
 
 			a {
 				text-decoration: none;
+
+				// When an anchor tag is used in the slot, make it fill the whole item
+				// so that modifier-based clicks (e.g. Ctrl+Click) work as expected.
+				// See: https://css-tricks.com/links-inside-of-larger-clickable-areas/
+				&::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+				}
 			}
 
 			&.uls-rewrite__language-item--selected {
