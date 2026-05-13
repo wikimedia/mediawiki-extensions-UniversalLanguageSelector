@@ -297,6 +297,10 @@ module.exports = exports = defineComponent( {
 			type: String,
 			default: null
 		},
+		hideActiveLanguages: {
+			type: Boolean,
+			default: false
+		},
 		hideSuggestedLanguages: {
 			type: Boolean,
 			default: false
@@ -400,9 +404,17 @@ module.exports = exports = defineComponent( {
 		}, props.floatingOptions ) ).floatingStyles;
 
 		const languagesToDisplay =
-			computed( () => ( searchQuery.value && searchQuery.value.trim().length > 0 ) ?
-				searchResults.value : Object.keys( languages.value )
-			);
+			computed( () => {
+				let result = ( searchQuery.value && searchQuery.value.trim().length > 0 ) ?
+					searchResults.value : Object.keys( languages.value );
+
+				if ( props.hideActiveLanguages ) {
+					const selectedSet = new Set( selectedValues.value );
+					result = result.filter( ( code ) => !selectedSet.has( code ) );
+				}
+
+				return result;
+			} );
 
 		const hasSearchHits = computed( () => Object.keys( searchQueryHits.value ).length > 0 );
 
@@ -451,15 +463,22 @@ module.exports = exports = defineComponent( {
 				return [];
 			}
 
+			let result;
+
 			if ( props.suggestedLanguages ) {
-				return props.suggestedLanguages.slice( 0, SUGGESTED_LANGUAGES_COUNT );
+				result = props.suggestedLanguages;
+			} else if ( languageCodes.value.length < DENSITY_LOW_THRESHOLD ) {
+				result = [];
+			} else {
+				result = availableLanguageSuggestions.value;
 			}
 
-			if ( languageCodes.value.length < DENSITY_LOW_THRESHOLD ) {
-				return [];
+			if ( props.hideActiveLanguages ) {
+				const selectedSet = new Set( selectedValues.value );
+				result = result.filter( ( code ) => !selectedSet.has( code ) );
 			}
 
-			return availableLanguageSuggestions.value.slice( 0, SUGGESTED_LANGUAGES_COUNT );
+			return result.slice( 0, SUGGESTED_LANGUAGES_COUNT );
 		} );
 
 		const combinedLanguages =

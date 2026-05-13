@@ -617,7 +617,9 @@
 				[ 'ext.uls.mediawiki', 'ext.uls.rewrite.languagesettings', 'ext.uls.rewrite' ];
 			mw.loader.using( modulesToLoad ).then( () => {
 				const languageNodes = getLanguageNodes();
-				const languageAnnotations = getLanguageAnnotations( languageNodes, isMinerva );
+				const languageNodesInjected = injectCurrentLanguage( Array.from( languageNodes ) );
+				const hideActiveLanguages = languageNodesInjected.length !== languageNodes.length;
+				const languageAnnotations = getLanguageAnnotations( languageNodesInjected, isMinerva );
 				const { createUniversalLanguageSelector } = require( 'ext.uls.rewrite' );
 				const { h } = require( 'vue' );
 
@@ -626,8 +628,13 @@
 
 				const app = createUniversalLanguageSelector( {
 					triggerElement: ev.currentTarget,
-					selectableLanguages: mw.uls.getInterlanguageListFromNodes( languageNodes ),
+					selectableLanguages: mw.uls.getInterlanguageListFromNodes( languageNodesInjected ),
 					languageAnnotations: languageAnnotations,
+					selected: [
+						mw.config.get( 'wgPageContentLanguage' ) ||
+						mw.config.get( 'wgContentLanguage' )
+					],
+					hideActiveLanguages: hideActiveLanguages,
 					onSelect: ( language ) => {
 						window.location.assign( language.value.href );
 					},
@@ -813,6 +820,35 @@
 		}
 
 		return languageNodesCache;
+	}
+
+	/**
+	 * Injects a synthetic node for the current wiki language into the list of language nodes
+	 * and ensures the list remains sorted by autonym.
+	 *
+	 * @param {Array} nodes
+	 * @return {Array}
+	 */
+	function injectCurrentLanguage( nodes ) {
+		const contentLang = mw.config.get( 'wgPageContentLanguage' ) || mw.config.get( 'wgContentLanguage' );
+
+		if ( contentLang && !nodes.some( ( el ) => el.lang === contentLang ) ) {
+			const syntheticNode = document.createElement( 'a' );
+			syntheticNode.lang = contentLang;
+			syntheticNode.href = location.href;
+			syntheticNode.textContent = require( '../data.json' ).currentAutonym;
+			syntheticNode.setAttribute( 'data-title', mw.config.get( 'wgTitle' ) );
+
+			// Ensure it has a parent for class lookups in getLanguageAnnotations
+			const parent = document.createElement( 'li' );
+			parent.className = 'interlanguage-link interwiki-' + contentLang;
+			parent.appendChild( syntheticNode );
+
+			nodes.push( syntheticNode );
+			// We don't bother sorting the list since we hide the selected language.
+		}
+
+		return nodes;
 	}
 
 	function getLanguageAnnotations( languageNodes, includeDescriptions ) {

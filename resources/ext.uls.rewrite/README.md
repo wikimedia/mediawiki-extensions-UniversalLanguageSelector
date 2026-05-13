@@ -39,8 +39,10 @@ mw.loader.using( [ 'ext.uls.rewrite' ] ).then( () => {
 | `visible` | `boolean` | `false` | Whether the selector is visible.                                                                                       |
 | `selectableLanguages` | `Object` | `null` | Map of language codes to autonyms. If `null`, the initial list will be empty, and languages will only appear once searched for. |
 | `selected` | `Array` | `[]` | List of currently selected language codes.                                                                             |
-| `placeholder` | `string` | `null` | Placeholder text for the search input.                                                                                 |
-| `searchApiUrl` | `string` | `null` | Optional API URL for server-side language search.                                                                      |
+| `placeholder` | `string` | `null` | Placeholder text for the search input. |
+| `hideActiveLanguages`| `boolean` | `false` | Whether to hide current active languages from the list. |
+| `searchApiUrl` | `string` | `null` | Optional API URL for server-side language search. |
+
 | `hideSuggestedLanguages`| `boolean` | `false` | Whether to hide the suggested languages section.                                                                       |
 | `suggestedLanguages` | `Array` | `null` | List of language codes to show as suggestions.                                                                         |
 | `displayLanguageCode` | `string` | `''` | Language code for the selector's items.                                                                                |
@@ -117,6 +119,7 @@ The `createUniversalLanguageSelector` function accepts a `config` object with th
 *   `placeholder`: (Optional) Search input placeholder.
 *   `displayLanguageCode`: (Optional) Language code for the selector's items.
 *   `languageAnnotations`: (Optional) Annotations (CSS classes) for language items.
+*   `hideActiveLanguages`: (Optional) Whether to hide current active languages from the list.
 *   `onSelect`: (Optional) Callback function when a language is selected.
 *   `onClose`: (Optional) Callback function when the ULS is closed.
 *   `floatingOptions`: (Optional) Floating UI configuration.

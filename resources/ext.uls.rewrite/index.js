@@ -13,6 +13,7 @@ const UniversalLanguageSelector = require( './UniversalLanguageSelector.vue' );
  * @param {string} [config.placeholder] (Optional) Placeholder text in the search input
  * @param {string} [config.displayLanguageCode] (Optional) Language code for the selector's items. Defaults to the autonym of the language item
  * @param {Object} [config.languageAnnotations] (Optional) Annotations (CSS classes) for language items, keyed by language code.
+ * @param {boolean} [config.hideActiveLanguages] (Optional) Whether to hide current active languages from the list.
  * @param {Function} [config.onClose] (Optional) Callback function to execute when the ULS is closed
  * @param {Function} [config.onSelect] (Optional) Callback function to execute when a language is
  * selected. Receives the selected language code and value as arguments.
@@ -30,6 +31,7 @@ function createUniversalLanguageSelector( config ) {
 		placeholder,
 		displayLanguageCode,
 		languageAnnotations,
+		hideActiveLanguages,
 		onClose,
 		onSelect,
 		mode,
@@ -78,6 +80,7 @@ function createUniversalLanguageSelector( config ) {
 				displayLanguageCode: displayLanguageCode,
 				languageAnnotations: languageAnnotations,
 				selectableLanguages: selectableLanguages,
+				hideActiveLanguages: hideActiveLanguages,
 				selected: this.currentSelected,
 				mode: mode,
 				floatingOptions: floatingOptions,
