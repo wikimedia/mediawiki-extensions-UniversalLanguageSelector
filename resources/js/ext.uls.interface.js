@@ -632,6 +632,7 @@
 						window.location.assign( language.value.href );
 					},
 					mode: 'content',
+					floatingOptions: isMinerva ? { placement: 'bottom-start' } : undefined,
 					slots: {
 						'language-item': ( { item, annotations } ) => h( 'a', {
 							href: item.href,
