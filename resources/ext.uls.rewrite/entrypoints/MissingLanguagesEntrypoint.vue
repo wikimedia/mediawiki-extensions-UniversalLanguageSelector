@@ -47,17 +47,6 @@ module.exports = defineComponent( {
 			.filter( Boolean )
 		);
 
-		const labelContent = computed( () => {
-			const count = missingLanguagesNames.value.length;
-			const names = missingLanguagesNames.value;
-
-			if ( count > 2 ) {
-				return mw.message( 'ext-uls-missing-languages-label-more', names[ 0 ], names[ 1 ] );
-			}
-
-			return mw.message( 'ext-uls-missing-languages-label', mw.language.listToText( names ) );
-		} );
-
 		const context = computed( () => ( {
 			languages: props.languages,
 			suggestions: props.suggestions,
@@ -71,6 +60,35 @@ module.exports = defineComponent( {
 				( Array.isArray( config ) ? config.length > 0 : true ) )
 			.reduce( ( acc, val ) => acc.concat( val ), [] )
 		);
+
+		/**
+		 * @param {string[]} names
+		 * @return {mw.Message}
+		 */
+		const getLabelContent = ( names ) => {
+			const count = names.length;
+
+			if ( count > 2 ) {
+				return mw.message( 'ext-uls-missing-languages-label-more', names[ 0 ], names[ 1 ] );
+			}
+
+			return mw.message( 'ext-uls-missing-languages-label', mw.language.listToText( names ) );
+		};
+
+		const labelContent = computed( () => {
+			const actionLabels = actions.value.reduce( ( acc, action ) => {
+				if ( action.label ) {
+					return acc.concat( action.label );
+				}
+				return acc;
+			}, [] );
+
+			if ( actionLabels.length > 0 ) {
+				return getLabelContent( actionLabels );
+			}
+
+			return getLabelContent( missingLanguagesNames.value );
+		} );
 
 		return {
 			labelContent,
