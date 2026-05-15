@@ -44,7 +44,6 @@ mw.loader.using( [ 'ext.uls.rewrite' ] ).then( () => {
 | `searchApiUrl` | `string` | `null` | Optional API URL for server-side language search. |
 
 | `hideSuggestedLanguages`| `boolean` | `false` | Whether to hide the suggested languages section.                                                                       |
-| `suggestedLanguages` | `Array` | `null` | List of language codes to show as suggestions.                                                                         |
 | `displayLanguageCode` | `string` | `''` | Language code for the selector's items.                                                                                |
 | `languageAnnotations` | `Object` | `{}` | Annotations for language items, keyed by language code. See [Language annotations](#language-annotations) for details. |
 | `mode` | `string` | **Required** | The mode for ULS: `'interface'` or `'content'`.                                                                        |

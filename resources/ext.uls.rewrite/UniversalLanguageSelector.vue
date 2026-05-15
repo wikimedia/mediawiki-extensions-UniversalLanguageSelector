@@ -171,7 +171,7 @@
 								v-if="emptySearchEntrypoints.length !== 0"
 								:entrypoints="emptySearchEntrypoints"
 								:languages="languages"
-								:suggestions="suggestedLanguages"
+								:suggestions="userLanguageSuggestions"
 								:search-query="searchQuery"
 								:search-query-hits="searchQueryHits"
 							></empty-search-entrypoint>
@@ -304,10 +304,6 @@ module.exports = exports = defineComponent( {
 		hideSuggestedLanguages: {
 			type: Boolean,
 			default: false
-		},
-		suggestedLanguages: {
-			type: Array,
-			default: null
 		},
 		displayLanguageCode: {
 			type: String,
@@ -465,9 +461,7 @@ module.exports = exports = defineComponent( {
 
 			let result;
 
-			if ( props.suggestedLanguages ) {
-				result = props.suggestedLanguages;
-			} else if ( languageCodes.value.length < DENSITY_LOW_THRESHOLD ) {
+			if ( languageCodes.value.length < DENSITY_LOW_THRESHOLD ) {
 				result = [];
 			} else {
 				result = availableLanguageSuggestions.value;
