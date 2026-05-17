@@ -6,7 +6,7 @@
 		role="dialog"
 		:aria-modal="isMobile ? 'true' : 'false'"
 		:aria-label="dialogAriaLabel"
-		:style="floatingStyles"
+		:style="isMobile ? null : floatingStyles"
 		:class="[ densityClass, { 'uls-rewrite--mobile': isMobile, 'uls-rewrite--panel': currentView !== VIEW.MAIN } ]"
 		@mouseleave="clearHighlightedItem"
 		@keydown.esc.prevent.stop="$emit( 'close' )"
@@ -335,7 +335,6 @@ module.exports = exports = defineComponent( {
 		const DENSITY_MEDIUM_THRESHOLD = 30;
 		const SUGGESTED_LANGUAGES_COUNT = 6;
 		const MOBILE_WIDTH_THRESHOLD = 768;
-		const RESIZE_DEBOUNCE_DELAY_MS = 100;
 
 		const { selectableLanguages, selected, triggerElement, visible } = toRefs( props );
 
@@ -395,12 +394,10 @@ module.exports = exports = defineComponent( {
 
 		const selectedValuesSet = computed( () => new Set( selectedValues.value ) );
 
-		const floatingStyles = isMobile.value ?
-			ref( {} ) :
-			useFloating( triggerElement, menuRef, Object.assign( {
-				middleware: [ offset( 8 ), flip(), shift() ],
-				whileElementsMounted: autoUpdate
-			}, props.floatingOptions ) ).floatingStyles;
+		const floatingStyles = useFloating( triggerElement, menuRef, Object.assign( {
+			middleware: [ offset( 8 ), flip(), shift() ],
+			whileElementsMounted: autoUpdate
+		}, props.floatingOptions ) ).floatingStyles;
 
 		const languagesToDisplay =
 			computed( () => ( searchQuery.value && searchQuery.value.trim().length > 0 ) ?
@@ -590,17 +587,9 @@ module.exports = exports = defineComponent( {
 			}
 		}, { immediate: true } );
 
-		const debounce = ( fn, delay ) => {
-			let timeoutId;
-			return ( ...args ) => {
-				clearTimeout( timeoutId );
-				timeoutId = setTimeout( () => fn( ...args ), delay );
-			};
-		};
-
-		const updateViewportWidth = debounce( () => {
+		const updateViewportWidth = () => {
 			viewportWidth.value = window.innerWidth;
-		}, RESIZE_DEBOUNCE_DELAY_MS );
+		};
 
 		const {
 			quickActionEntrypoints,
