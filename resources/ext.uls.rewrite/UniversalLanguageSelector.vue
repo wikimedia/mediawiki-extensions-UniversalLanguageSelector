@@ -89,6 +89,7 @@
 					:dir="displayLanguageDir"
 					:highlighted-index="highlightedIndex"
 					:selected-values-set="selectedValuesSet"
+					:unavailable-languages-set="unavailableLanguagesSet"
 					:language-annotations="computedLanguageAnnotations"
 					@select="select"
 					@highlight="setHighlightedIndex"
@@ -98,6 +99,7 @@
 							name="language-item"
 							:item="slotProps.item"
 							:annotations="slotProps.annotations"
+							:is-available="slotProps.isAvailable"
 						></slot>
 					</template>
 				</language-list>
@@ -105,19 +107,20 @@
 				<!-- Suggested and All Languages -->
 				<div v-else-if="!searchQuery && languagesToDisplay.length > 0">
 					<div
-						v-if="suggestedLanguagesToDisplay.length > 0"
+						v-if="highlightedLanguages.length > 0"
 						class="uls-rewrite__section uls-rewrite__section--suggested"
 					>
 						<h3 class="uls-rewrite__section-title">
-							{{ $i18n( 'ext-uls-suggested-languages-title', suggestedLanguagesToDisplay.length ) }}
+							{{ highlightedLanguagesTitle }}
 						</h3>
 						<language-list
-							:language-codes="suggestedLanguagesToDisplay"
+							:language-codes="highlightedLanguages"
 							:languages="languages"
 							:lang="displayLanguageCode"
 							:dir="displayLanguageDir"
 							:highlighted-index="highlightedIndex"
 							:selected-values-set="selectedValuesSet"
+							:unavailable-languages-set="unavailableLanguagesSet"
 							:language-annotations="computedLanguageAnnotations"
 							@select="select"
 							@highlight="setHighlightedIndex"
@@ -127,6 +130,7 @@
 									name="language-item"
 									:item="slotProps.item"
 									:annotations="slotProps.annotations"
+									:is-available="slotProps.isAvailable"
 								></slot>
 							</template>
 						</language-list>
@@ -134,7 +138,7 @@
 
 					<div class="uls-rewrite__section uls-rewrite__section--all">
 						<h3
-							v-if="suggestedLanguagesToDisplay.length > 0"
+							v-if="highlightedLanguages.length > 0"
 							class="uls-rewrite__section-title"
 						>
 							{{ $i18n( 'ext-uls-all-languages-title', languagesToDisplay.length ) }}
@@ -145,8 +149,9 @@
 							:lang="displayLanguageCode"
 							:dir="displayLanguageDir"
 							:highlighted-index="highlightedIndex"
-							:index-offset="suggestedLanguagesToDisplay.length"
+							:index-offset="highlightedLanguages.length"
 							:selected-values-set="selectedValuesSet"
+							:unavailable-languages-set="unavailableLanguagesSet"
 							:language-annotations="computedLanguageAnnotations"
 							@select="select"
 							@highlight="setHighlightedIndex"
@@ -156,6 +161,7 @@
 									name="language-item"
 									:item="slotProps.item"
 									:annotations="slotProps.annotations"
+									:is-available="slotProps.isAvailable"
 								></slot>
 							</template>
 						</language-list>
@@ -240,6 +246,7 @@ const useClickOutside = require( './composables/useClickOutside.js' );
 const useTypeahead = require( './composables/useTypeahead.js' );
 const useLanguageHistory = require( './composables/useLanguageHistory.js' );
 const useSuggestedLanguages = require( './composables/useSuggestedLanguages.js' );
+const usePreferredLanguages = require( './composables/usePreferredLanguages.js' );
 const useEntrypoints = require( './composables/useEntrypoints.js' );
 const { useFloating, offset, flip, shift, autoUpdate } = require( './dist/floating-ui.js' );
 const { CdxSearchInput, CdxButton, CdxIcon, CdxProgressBar } = require( '../codex.js' );
@@ -450,19 +457,34 @@ module.exports = exports = defineComponent( {
 
 		const { addLanguageToHistory, previousLanguages } = useLanguageHistory();
 		const { getSuggestedLanguages } = useSuggestedLanguages();
+		const { preferredLanguages } = usePreferredLanguages();
 
 		// Language suggestions present in the language selector
 		const availableLanguageSuggestions = getSuggestedLanguages( previousLanguages, languageCodes );
 
-		const suggestedLanguagesToDisplay = computed( () => {
+		const unavailableLanguagesSet = computed( () => {
+			const set = new Set();
+			const validLanguageCodesSet = new Set( languageCodes.value );
+			for ( const code of preferredLanguages.value ) {
+				if ( !validLanguageCodesSet.has( code ) ) {
+					set.add( code );
+				}
+			}
+			return set;
+		} );
+
+		const highlightedLanguages = computed( () => {
 			if ( props.hideSuggestedLanguages || searchQuery.value ) {
 				return [];
 			}
 
-			let result;
-
 			if ( languageCodes.value.length < DENSITY_LOW_THRESHOLD ) {
-				result = [];
+				return [];
+			}
+
+			let result;
+			if ( preferredLanguages.value.length > 0 ) {
+				result = preferredLanguages.value;
 			} else {
 				result = availableLanguageSuggestions.value;
 			}
@@ -475,8 +497,15 @@ module.exports = exports = defineComponent( {
 			return result.slice( 0, SUGGESTED_LANGUAGES_COUNT );
 		} );
 
+		const highlightedLanguagesTitle = computed( () => {
+			const key = preferredLanguages.value.length > 0 ?
+				'ext-uls-preferred-languages-title' :
+				'ext-uls-suggested-languages-title';
+			return mw.msg( key, highlightedLanguages.value.length );
+		} );
+
 		const combinedLanguages =
-			computed( () => [ ...suggestedLanguagesToDisplay.value, ...languagesToDisplay.value ] );
+			computed( () => [ ...highlightedLanguages.value, ...languagesToDisplay.value ] );
 
 		const computedLanguageAnnotations = computed( () => {
 			const annotations = {};
@@ -506,6 +535,9 @@ module.exports = exports = defineComponent( {
 			useTypeahead( searchQuery, languagesToDisplay, languages, searchQueryHits );
 
 		const select = ( languageCode, languageValue ) => {
+			if ( unavailableLanguagesSet.value.has( languageCode ) ) {
+				return;
+			}
 			setHighlightedItem( languageCode );
 			addLanguageToHistory( languageCode );
 			emit( 'select', { code: languageCode, value: languageValue } );
@@ -631,7 +663,8 @@ module.exports = exports = defineComponent( {
 
 			// Search & Data Source
 			languages,
-			suggestedLanguagesToDisplay,
+			highlightedLanguages,
+			highlightedLanguagesTitle,
 			languagesToDisplay,
 			searchQuery,
 			hasSearchHits,
@@ -639,6 +672,7 @@ module.exports = exports = defineComponent( {
 			isSearching,
 			autocompleteSuggestion,
 			selectedValuesSet,
+			unavailableLanguagesSet,
 			searchQueryHits,
 			computedLanguageAnnotations,
 			displayLanguageDir,

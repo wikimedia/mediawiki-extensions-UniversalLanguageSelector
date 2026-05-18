@@ -27,7 +27,7 @@
 	let preferredLanguages = getLanguages();
 
 	function PreferredLanguagesSettings( $parent ) {
-		this.nameI18n = 'ext-uls-preferred-languages-title';
+		this.nameI18n = 'ext-uls-preferred-languages-settings-title';
 		this.descriptionI18n = 'ext-uls-preferred-languages-desc';
 		this.$parent = $parent;
 		this.dirty = false;

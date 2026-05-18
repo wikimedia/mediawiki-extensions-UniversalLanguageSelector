@@ -60,7 +60,7 @@ mw.loader.using( [ 'ext.uls.rewrite' ] ).then( () => {
 
 | Slot Name | Props | Description |
 |-----------|-------|-------------|
-| `language-item` | `{ item: string, annotations: Object }` | Customizes the rendering of each language item in the list. |
+| `language-item` | `{ item: string|Object, annotations: Object, isAvailable: boolean }` | Customizes the rendering of each language item in the list. |
 
 ### The `mode` prop
 
@@ -95,8 +95,8 @@ Example of passing custom data to a slot:
 }
 
 // In your Vue template
-<template #language-item="{ item, annotations }">
-    <span>{{ item }}</span>
+<template #language-item="{ item, annotations, isAvailable }">
+    <span :class="{ 'is-unavailable': !isAvailable }">{{ item }}</span>
     <span v-if="annotations.customStatus" class="badge">
         {{ annotations.customStatus }}
     </span>

@@ -1,6 +1,6 @@
 <template>
 	<div class="uls-rewrite_preferred-languages">
-		<h3>{{ $i18n( 'ext-uls-preferred-languages-title' ).text() }}</h3>
+		<h3>{{ $i18n( 'ext-uls-preferred-languages-settings-title' ).text() }}</h3>
 		<h4>{{ $i18n( 'ext-uls-preferred-languages-label' ).text() }}</h4>
 		<p>{{ $i18n( 'ext-uls-preferred-languages-help', MAX_LANGUAGES ).text() }}</p>
 		<cdx-field class="uls-rewrite_preferred-languages-field">

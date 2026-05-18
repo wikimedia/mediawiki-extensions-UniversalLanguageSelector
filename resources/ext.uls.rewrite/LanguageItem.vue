@@ -7,19 +7,20 @@
 		:class="[
 			{
 				'uls-rewrite__language-item--highlighted': isHighlighted,
-				'uls-rewrite__language-item--selected': isSelected
+				'uls-rewrite__language-item--selected': isSelected,
+				'uls-rewrite__language-item--unavailable': !isAvailable
 			},
 			annotations.classes
 		]"
 		:aria-selected="isSelected"
 		role="option"
 		tabindex="-1"
-		@click.exact.prevent="$emit( 'select', code, name )"
+		@click.exact.prevent="select"
 		@mouseenter="$emit( 'hover' )"
 	>
 		<span class="uls-rewrite__language-item-title">
-			<slot :item="name" :annotations="annotations">
-				{{ name }}
+			<slot :item="displayName" :annotations="annotations" :is-available="isAvailable">
+				{{ displayName }}
 			</slot>
 		</span>
 		<span v-if="annotations.description" class="uls-rewrite__language-item--description">
@@ -29,7 +30,7 @@
 </template>
 
 <script>
-const { defineComponent } = require( 'vue' );
+const { defineComponent, computed } = require( 'vue' );
 
 module.exports = exports = defineComponent( {
 	name: 'LanguageItem',
@@ -40,7 +41,7 @@ module.exports = exports = defineComponent( {
 		},
 		name: {
 			type: [ String, Object ],
-			required: true
+			required: false
 		},
 		lang: {
 			type: String,
@@ -54,11 +55,35 @@ module.exports = exports = defineComponent( {
 			type: Boolean,
 			default: false
 		},
+		unavailableLanguagesSet: {
+			type: Object, // Set
+			default: () => new Set()
+		},
 		annotations: {
 			type: Object,
 			default: () => ( { classes: [] } )
 		}
 	},
-	emits: [ 'select', 'hover' ]
+	emits: [ 'select', 'hover' ],
+	setup( props, { emit } ) {
+		const isAvailable = computed( () => !props.unavailableLanguagesSet.has( props.code ) );
+
+		const displayName = computed( () => props.name ||
+			$.uls.data.getAutonym( props.code ) ||
+			props.code
+		);
+
+		const select = () => {
+			if ( isAvailable.value ) {
+				emit( 'select', props.code, displayName.value );
+			}
+		};
+
+		return {
+			select,
+			isAvailable,
+			displayName
+		};
+	}
 } );
 </script>

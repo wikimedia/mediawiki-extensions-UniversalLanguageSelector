@@ -13,6 +13,7 @@
 			:lang="lang"
 			:is-highlighted="highlightedIndex === ( index + indexOffset )"
 			:is-selected="selectedValuesSet.has( languageCode )"
+			:unavailable-languages-set="unavailableLanguagesSet"
 			:annotations="languageAnnotations[ languageCode ]"
 			@select="( ...args ) => $emit( 'select', ...args )"
 			@mousemove="$emit( 'highlight', index + indexOffset )"
@@ -22,6 +23,7 @@
 					name="language-item"
 					:item="slotProps.item"
 					:annotations="slotProps.annotations"
+					:is-available="slotProps.isAvailable"
 				></slot>
 			</template>
 		</language-item>
@@ -65,6 +67,10 @@ module.exports = defineComponent( {
 		selectedValuesSet: {
 			type: Object, // Set
 			required: true
+		},
+		unavailableLanguagesSet: {
+			type: Object, // Set
+			default: () => new Set()
 		},
 		languageAnnotations: {
 			type: Object,
