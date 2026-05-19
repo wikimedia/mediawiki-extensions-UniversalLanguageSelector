@@ -308,10 +308,6 @@ module.exports = exports = defineComponent( {
 			type: Boolean,
 			default: false
 		},
-		hideSuggestedLanguages: {
-			type: Boolean,
-			default: false
-		},
 		displayLanguageCode: {
 			type: String,
 			default: ''
@@ -474,7 +470,7 @@ module.exports = exports = defineComponent( {
 		} );
 
 		const highlightedLanguages = computed( () => {
-			if ( props.hideSuggestedLanguages || searchQuery.value ) {
+			if ( searchQuery.value ) {
 				return [];
 			}
 

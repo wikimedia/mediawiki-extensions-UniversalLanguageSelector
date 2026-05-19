@@ -42,9 +42,7 @@ mw.loader.using( [ 'ext.uls.rewrite' ] ).then( () => {
 | `placeholder` | `string` | `null` | Placeholder text for the search input. |
 | `hideActiveLanguages`| `boolean` | `false` | Whether to hide current active languages from the list. |
 | `searchApiUrl` | `string` | `null` | Optional API URL for server-side language search. |
-
-| `hideSuggestedLanguages`| `boolean` | `false` | Whether to hide the suggested languages section.                                                                       |
-| `displayLanguageCode` | `string` | `''` | Language code for the selector's items.                                                                                |
+| `displayLanguageCode` | `string` | `''` | Language code for the selector's items. |
 | `languageAnnotations` | `Object` | `{}` | Annotations for language items, keyed by language code. See [Language annotations](#language-annotations) for details. |
 | `mode` | `string` | **Required** | The mode for ULS: `'interface'` or `'content'`.                                                                        |
 | `floatingOptions` | `Object` | `{ placement: 'bottom-end' }` | Overrides for Floating UI configuration.                                                                               |
