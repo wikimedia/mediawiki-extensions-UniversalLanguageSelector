@@ -1,31 +1,34 @@
 <template>
-	<template v-if="isSingleAction">
-		<a
-			v-if="actionToDisplay.url"
-			:href="actionToDisplay.url"
-			class="uls-quick-action-trigger cdx-button cdx-button--weight-quiet cdx-button--icon-only"
-			:aria-label="actionToDisplay.label"
-		>
-			<cdx-icon :icon="actionToDisplay.icon"></cdx-icon>
-		</a>
+	<div v-if="actionToDisplay" class="uls-quick-action-trigger">
+		<template v-if="isSingleAction">
+			<a
+				v-if="actionToDisplay.url"
+				:href="actionToDisplay.url"
+				class="cdx-button cdx-button--weight-quiet cdx-button--icon-only"
+				:aria-label="actionToDisplay.label"
+			>
+				<cdx-icon :icon="actionToDisplay.icon"></cdx-icon>
+			</a>
+			<cdx-button
+				v-else
+				weight="quiet"
+				icon-only
+				:aria-label="actionToDisplay.label"
+				@click.stop="actionToDisplay.handler"
+			>
+				<cdx-icon :icon="actionToDisplay.icon"></cdx-icon>
+			</cdx-button>
+		</template>
 		<cdx-button
 			v-else
-			class="uls-quick-action-trigger cdx-button cdx-button--weight-quiet cdx-button--icon-only"
+			weight="quiet"
+			icon-only
 			:aria-label="actionToDisplay.label"
-			@click.stop="actionToDisplay.handler"
+			@click.stop="onTriggerClick"
 		>
 			<cdx-icon :icon="actionToDisplay.icon"></cdx-icon>
 		</cdx-button>
-	</template>
-	<cdx-button
-		v-else-if="actionToDisplay"
-		class="uls-quick-action-trigger"
-		weight="quiet"
-		:aria-label="actionToDisplay.label"
-		@click.stop="onTriggerClick"
-	>
-		<cdx-icon :icon="actionToDisplay.icon"></cdx-icon>
-	</cdx-button>
+	</div>
 </template>
 
 <script>

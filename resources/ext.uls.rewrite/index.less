@@ -8,6 +8,7 @@
 @uls-rewrite-language-item-padding-start: calc( @spacing-50 + @spacing-50 + @size-icon-medium - @uls-rewrite-horizontal-padding );
 @uls-rewrite-language-item-padding: @spacing-50 @spacing-50 @spacing-50 @uls-rewrite-language-item-padding-start;
 @uls-rewrite-missing-languages-padding-start: calc( @spacing-50 + @spacing-50 + @size-icon-medium );
+@uls-rewrite-quick-actions-trigger-clearance: @spacing-150;
 
 // Layout & Dimensions
 @uls-rewrite-max-height: 312px;
@@ -44,7 +45,7 @@
 	.uls-quick-action-trigger {
 		position: absolute;
 		bottom: @spacing-25;
-		right: @spacing-25;
+		inset-inline-end: @spacing-25;
 	}
 
 	.uls-rewrite__header {
@@ -153,6 +154,7 @@
 			font-weight: bold;
 			color: @color-subtle;
 			padding: @uls-rewrite-language-item-padding;
+			padding-inline-end: @uls-rewrite-quick-actions-trigger-clearance;
 			margin: 0;
 			font-size: @font-size-medium;
 		}
@@ -160,6 +162,7 @@
 		.uls-rewrite__no-results,
 		.uls-rewrite__no-languages {
 			padding: @uls-rewrite-language-item-padding;
+			padding-inline-end: @uls-rewrite-quick-actions-trigger-clearance;
 
 			h3 {
 				font-size: @font-size-large;
@@ -170,6 +173,7 @@
 		.uls-rewrite__body__language-list {
 			margin: 0;
 			padding: 0;
+			padding-inline-end: @uls-rewrite-quick-actions-trigger-clearance;
 			display: grid;
 			grid-template-columns: 1fr;
 		}

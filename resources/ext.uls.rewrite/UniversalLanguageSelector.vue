@@ -93,6 +93,7 @@
 					:language-annotations="computedLanguageAnnotations"
 					@select="select"
 					@highlight="setHighlightedIndex"
+					@mouseleave="clearHighlightedItem"
 				>
 					<template #language-item="slotProps">
 						<slot
@@ -124,6 +125,7 @@
 							:language-annotations="computedLanguageAnnotations"
 							@select="select"
 							@highlight="setHighlightedIndex"
+							@mouseleave="clearHighlightedItem"
 						>
 							<template #language-item="slotProps">
 								<slot
@@ -155,6 +157,7 @@
 							:language-annotations="computedLanguageAnnotations"
 							@select="select"
 							@highlight="setHighlightedIndex"
+							@mouseleave="clearHighlightedItem"
 						>
 							<template #language-item="slotProps">
 								<slot
