@@ -101,10 +101,10 @@
 	"ext-uls-unsupported-language-description": "찾으시는 언어는 사용할 수 없습니다.",
 	"ext-uls-open-language-settings": "언어 설정 열기",
 	"ext-uls-open-language-selector": "언어 선택으로 돌아가기",
-	"ext-uls-open-quick-actions": "빠른 실행 보기",
+	"ext-uls-open-quick-actions": "빠른 작업 보기",
 	"ext-uls-missing-languages-label": "<strong>$1</strong> 존재하지 않음",
 	"ext-uls-missing-languages-label-more": "<strong>$1</strong>, <strong>$2</strong> 등 존재하지 않음",
 	"ext-uls-missing-languages-panel-title": "이 문서 번역하기",
 	"ext-uls-missing-languages-panel-description": "이 문서는 당신이 알 법한 일부 언어로는 존재하지 않습니다. 몇 분만에 번역할 수 있습니다.",
-	"ext-uls-quick-actions-panel-title": "빠른 동작"
+	"ext-uls-quick-actions-panel-title": "빠른 작업"
 }
