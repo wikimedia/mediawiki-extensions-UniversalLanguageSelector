@@ -44,6 +44,10 @@ module.exports = defineComponent( {
 			type: Array,
 			required: true
 		},
+		preferredLanguages: {
+			type: Array,
+			default: () => []
+		},
 		languages: {
 			type: Array,
 			required: true
@@ -52,6 +56,7 @@ module.exports = defineComponent( {
 	setup( props ) {
 		const context = computed( () => ( {
 			suggestions: props.suggestions,
+			preferredLanguages: props.preferredLanguages,
 			languages: props.languages
 		} ) );
 

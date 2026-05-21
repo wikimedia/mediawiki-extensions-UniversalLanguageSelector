@@ -87,6 +87,7 @@ The `context` object passed to `shouldShow` and `getConfig` provides state infor
 
 *   `languages`: (Array) List of language codes currently displayed in the selector.
 *   `suggestions`: (Array) List of suggested language codes.
+*   `preferredLanguages`: (Array) List of language codes preferred by the user.
 *   `searchQuery`: (string) The current text in the search input.
 *   `searchQueryHits`: (Object) A map where keys are language codes and values are details about how the search query matched that language (e.g., matching name, code, or alias).
 
@@ -94,12 +95,14 @@ The `context` object passed to `shouldShow` and `getConfig` provides state infor
 
 *   `languages`: (Object) A map of all selectable language codes to their autonyms.
 *   `suggestions`: (Array) List of suggested language codes for the user.
-*   `missingLanguages`: (Array) List of language codes that are in `suggestions` but are not available in the current `languages` map.
+*   `preferredLanguages`: (Array) List of language codes preferred by the user.
+*   `missingLanguages`: (Array) List of language codes that are in `preferredLanguages` (or `suggestions` if no preferred languages are set) but are not available in the current `languages` map.
 
 ### `EMPTY_LIST`
 
 *   `languages`: (Array) An empty array (as the list is empty).
 *   `suggestions`: (Array) List of suggested language codes for the user.
+*   `preferredLanguages`: (Array) List of language codes preferred by the user.
 
 ---
 

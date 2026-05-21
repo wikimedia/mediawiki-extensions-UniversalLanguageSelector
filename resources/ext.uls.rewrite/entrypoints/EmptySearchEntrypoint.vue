@@ -48,6 +48,10 @@ module.exports = defineComponent( {
 			type: Array,
 			default: () => []
 		},
+		preferredLanguages: {
+			type: Array,
+			default: () => []
+		},
 		searchQuery: {
 			type: String,
 			default: null
@@ -61,6 +65,7 @@ module.exports = defineComponent( {
 		const context = computed( () => ( {
 			languages: props.languages,
 			suggestions: props.suggestions,
+			preferredLanguages: props.preferredLanguages,
 			searchQuery: props.searchQuery,
 			searchQueryHits: props.searchQueryHits
 		} ) );

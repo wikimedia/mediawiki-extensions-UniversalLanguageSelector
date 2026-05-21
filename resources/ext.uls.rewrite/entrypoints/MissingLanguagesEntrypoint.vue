@@ -34,13 +34,21 @@ module.exports = defineComponent( {
 		suggestions: {
 			type: Array,
 			default: () => []
+		},
+		preferredLanguages: {
+			type: Array,
+			default: () => []
 		}
 	},
 	emits: [ 'click' ],
 	setup( props ) {
-		const missingLanguagesCodes = computed( () => props.suggestions
-			.filter( ( code ) => !props.languages[ code ] )
-		);
+		const missingLanguagesCodes = computed( () => {
+			const source = props.preferredLanguages.length > 0 ?
+				props.preferredLanguages :
+				props.suggestions;
+
+			return source.filter( ( code ) => !props.languages[ code ] );
+		} );
 
 		const missingLanguagesNames = computed( () => missingLanguagesCodes.value
 			.map( ( code ) => $.uls.data.getAutonym( code ) )
@@ -50,6 +58,7 @@ module.exports = defineComponent( {
 		const context = computed( () => ( {
 			languages: props.languages,
 			suggestions: props.suggestions,
+			preferredLanguages: props.preferredLanguages,
 			missingLanguages: missingLanguagesCodes.value
 		} ) );
 

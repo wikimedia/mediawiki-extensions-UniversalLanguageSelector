@@ -77,6 +77,7 @@
 					:entrypoints="missingLanguageEntrypoints"
 					:languages="languages"
 					:suggestions="userLanguageSuggestions"
+					:preferred-languages="preferredLanguages"
 					@click="showMissingLanguagesPanel"
 				>
 				</missing-languages-entrypoint>
@@ -181,6 +182,7 @@
 								:entrypoints="emptySearchEntrypoints"
 								:languages="languages"
 								:suggestions="userLanguageSuggestions"
+								:preferred-languages="preferredLanguages"
 								:search-query="searchQuery"
 								:search-query-hits="searchQueryHits"
 							></empty-search-entrypoint>
@@ -201,6 +203,7 @@
 							v-if="emptyLanguageListEntrypoints.length !== 0"
 							:entrypoints="emptyLanguageListEntrypoints"
 							:suggestions="userLanguageSuggestions"
+							:preferred-languages="preferredLanguages"
 							:languages="[]"
 						></empty-list-entrypoint>
 						<p v-else>
@@ -222,7 +225,8 @@
 			v-if="quickActionEntrypoints.length > 0 && currentView === VIEW.MAIN"
 			:entrypoints="quickActionEntrypoints"
 			:languages="languagesToDisplay"
-			:suggestions="suggestedLanguagesToDisplay"
+			:suggestions="userLanguageSuggestions"
+			:preferred-languages="preferredLanguages"
 			:search-query="searchQuery"
 			:search-query-hits="searchQueryHits"
 			@trigger="showQuickActionsPanel"
