@@ -97,5 +97,14 @@
 	"ext-uls-missing-languages-label-more": "Mangler på <strong>$1</strong>, <strong>$2</strong> og andre språk",
 	"ext-uls-missing-languages-panel-title": "Oversett denne siden",
 	"ext-uls-missing-languages-panel-description": "Denne siden mangler på noen språk du kanskje kan. Du kan oversette den.",
-	"ext-uls-quick-actions-panel-title": "Raske handlinger"
+	"ext-uls-quick-actions-panel-title": "Raske handlinger",
+	"ext-uls-preferred-languages-title": "{{PLURAL:$1|Foretrukket|Foretrukne}} språk",
+	"ext-uls-preferred-languages-settings-title": "Foretrukne språk",
+	"ext-uls-preferred-languages-desc": "Vises først i språkmenyer.",
+	"ext-uls-preferred-languages-label": "Legg til et språk",
+	"ext-uls-preferred-languages-help": "Fest inntil $1 {{PLURAL:$1|språk}}. {{PLURAL:$1|Det|De}} vises først i lista når du bytter språk.",
+	"ext-uls-preferred-languages-input-placeholder": "Søk blant språk",
+	"ext-uls-preferred-languages-status": "<strong>$1</strong> {{PLURAL:$1|av}} <strong>$2</strong> {{PLURAL:$2|valgt}}",
+	"ext-uls-preferred-languages-limit-reached": "Fjern et for å legge til et annet",
+	"ext-uls-preferred-languages-save-error": "En feil oppsto under lagring av foretrukne språk."
 }

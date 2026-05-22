@@ -98,5 +98,14 @@
 	"ext-uls-missing-languages-label-more": "Belum terdapat dalam <strong>$1</strong>, <strong>$2</strong> dan lain-lain",
 	"ext-uls-missing-languages-panel-title": "Terjemahkan laman ini",
 	"ext-uls-missing-languages-panel-description": "Laman ini tidak wujud dalam beberapa bahasa yang mungkin anda tahu. Anda boleh menterjemahkannya.",
-	"ext-uls-quick-actions-panel-title": "Tindakan pantas"
+	"ext-uls-quick-actions-panel-title": "Tindakan pantas",
+	"ext-uls-preferred-languages-title": "{{PLURAL:$1|Bahasa}} pilihan",
+	"ext-uls-preferred-languages-settings-title": "Bahasa pilihan",
+	"ext-uls-preferred-languages-desc": "Ditunjukkan dahulu dalam menu bahasa.",
+	"ext-uls-preferred-languages-label": "Tambahkan bahasa",
+	"ext-uls-preferred-languages-help": "Paling banyak pin $1 {{PLURAL:$1|bahasa}}. {{PLURAL:$1|Bahasa pilihan anda|Bahasa-bahasa pilihan anda}} akan muncul dahulu apabila anda menukar bahasa pada mana-mana rencana.",
+	"ext-uls-preferred-languages-input-placeholder": "Cari bahasa",
+	"ext-uls-preferred-languages-status": "<strong>$1</strong> {{PLURAL:$1|daripada}} <strong>$2</strong> {{PLURAL:$2|terpilih}}",
+	"ext-uls-preferred-languages-limit-reached": "Buang satu untuk tambah lagi satu",
+	"ext-uls-preferred-languages-save-error": "Terdapat ralat semasa menyimpan bahasa pilihan anda."
 }

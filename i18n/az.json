@@ -99,5 +99,14 @@
 	"ext-uls-missing-languages-label-more": "<strong>$1</strong>, <strong>$2</strong> və daha çox dildə yoxdur",
 	"ext-uls-missing-languages-panel-title": "Bu səhifəni tərcümə et",
 	"ext-uls-missing-languages-panel-description": "Bu səhifə biləcəyiniz bəzi dillərdə mövcud deyil. Onu tərcümə edə bilərsiniz.",
-	"ext-uls-quick-actions-panel-title": "Sürətli hərəkətlər"
+	"ext-uls-quick-actions-panel-title": "Sürətli hərəkətlər",
+	"ext-uls-preferred-languages-title": "Üstünlük verilən {{PLURAL:$1|dil|dillər}}",
+	"ext-uls-preferred-languages-settings-title": "Üstünlük verilən dillər",
+	"ext-uls-preferred-languages-desc": "Dillər menyusunda ilk göstərilir.",
+	"ext-uls-preferred-languages-label": "Dil əlavə et",
+	"ext-uls-preferred-languages-help": "$1 {{PLURAL:$1|dil}}ə qədər sancaqlaya bilərsiniz. {{PLURAL:$1|Onlar}} istənilən məqalədə dilləri dəyişdirdiyiniz zaman birinci görünəcək.",
+	"ext-uls-preferred-languages-input-placeholder": "Dili axtar",
+	"ext-uls-preferred-languages-status": "{{PLURAL:$2|Seçilmiş}} <strong>$2</strong> dildən <strong>$1</strong>",
+	"ext-uls-preferred-languages-limit-reached": "Birini çıxarıb başqa birini əlavə et",
+	"ext-uls-preferred-languages-save-error": "Üstünlük verilən dili yadda saxlayarkən xəta baş verdi"
 }

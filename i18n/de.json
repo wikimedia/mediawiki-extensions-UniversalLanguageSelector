@@ -100,5 +100,14 @@
 	"ext-uls-missing-languages-label-more": "Fehlend in <strong>$1</strong>, <strong>$2</strong> und weiteren",
 	"ext-uls-missing-languages-panel-title": "Diese Seite übersetzen",
 	"ext-uls-missing-languages-panel-description": "Diese Seite fehlt in einigen Sprachen, die du vielleicht beherrschst. Du kannst sie übersetzen.",
-	"ext-uls-quick-actions-panel-title": "Schnelle Aktionen"
+	"ext-uls-quick-actions-panel-title": "Schnelle Aktionen",
+	"ext-uls-preferred-languages-title": "Bevorzugte {{PLURAL:$1|Sprache|Sprachen}}",
+	"ext-uls-preferred-languages-settings-title": "Bevorzugte Sprachen",
+	"ext-uls-preferred-languages-desc": "Wird zuerst in den Sprachmenüs angezeigt.",
+	"ext-uls-preferred-languages-label": "Eine Sprache hinzufügen",
+	"ext-uls-preferred-languages-help": "Setze bis zu $1 {{PLURAL:$1|Sprache|Sprachen}}. {{PLURAL:$1|Es erscheint|Sie erscheinen}} zuerst, wenn du die Sprache in einem beliebigen Artikel wechselst.",
+	"ext-uls-preferred-languages-input-placeholder": "Sprache suchen",
+	"ext-uls-preferred-languages-status": "<strong>$1</strong> {{PLURAL:$1|von}} <strong>$2</strong> {{PLURAL:$2|ausgewählt}}",
+	"ext-uls-preferred-languages-limit-reached": "Eine entfernen und eine andere hinzufügen",
+	"ext-uls-preferred-languages-save-error": "Es gab einen Fehler beim Speichern deiner bevorzugten Sprachen."
 }
