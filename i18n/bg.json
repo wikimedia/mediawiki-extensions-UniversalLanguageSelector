@@ -78,5 +78,7 @@
 	"ext-uls-empty-state-desc": "Засега няма налични езици",
 	"ext-uls-empty-state-header-actions-available": "Все още няма езици. Добавяне на нов?",
 	"ext-uls-empty-state-desc-actions-available": "Направете съдържанието достъпно на повече езици.",
-	"ext-uls-add-languages-button-label": "Добавяне на езици"
+	"ext-uls-add-languages-button-label": "Добавяне на езици",
+	"ext-uls-rewrite-label": "Пренаписване на Универсалния избор на езици",
+	"ext-uls-rewrite-description": "Пренаписване на Универсалния избор на езици (ULS), проектирано да модернизира потребителското изживяване и да намали техническия дълг чрез опростена архитектура."
 }
