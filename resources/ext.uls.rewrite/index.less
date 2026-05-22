@@ -192,28 +192,14 @@
 			list-style: none;
 			align-items: start;
 			direction: inherit;
+			text-align: start;
 
 			// Ensure all direct element children go to the content column by default.
 			// This prevents multiple slot elements from spilling into marker gutters.
 			& > * {
 				grid-column: content;
 				grid-row: 1;
-			}
-
-			&[ dir='rtl' ] {
-				& > *,
-				&::before,
-				&::after {
-					direction: rtl;
-				}
-			}
-
-			&[ dir='ltr' ] {
-				& > *,
-				&::before,
-				&::after {
-					direction: ltr;
-				}
+				text-align: match-parent;
 			}
 
 			&::before {

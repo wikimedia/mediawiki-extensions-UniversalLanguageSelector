@@ -1,7 +1,6 @@
 <template>
 	<li
 		:lang="!lang ? code : null"
-		:dir="!lang ? annotations.dir : null"
 		:data-language-code="code"
 		class="uls-rewrite__language-item"
 		:class="[
@@ -18,13 +17,20 @@
 		@click.exact.prevent="select"
 		@mouseenter="$emit( 'hover' )"
 	>
-		<span class="uls-rewrite__language-item-title">
+		<span
+			class="uls-rewrite__language-item-title"
+			:dir="!lang ? annotations.dir : null"
+		>
 			<slot :item="displayName" :annotations="annotations" :is-available="isAvailable">
 				{{ displayName }}
 			</slot>
 		</span>
-		<span v-if="annotations.description" class="uls-rewrite__language-item--description">
-			<bdi>{{ annotations.description }}</bdi>
+		<span
+			v-if="annotations.description"
+			class="uls-rewrite__language-item--description"
+			:dir="!lang ? annotations.dir : null"
+		>
+			{{ annotations.description }}
 		</span>
 	</li>
 </template>
