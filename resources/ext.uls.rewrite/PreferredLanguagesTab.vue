@@ -17,6 +17,7 @@
 				:selected="selectedLanguages"
 				:search-api-url="searchApiUrl"
 				:placeholder="placeholder"
+				:menu-config="menuConfig"
 				@update:selected="onUpdateSelected"
 			></multiselect-lookup-language-selector>
 		</cdx-field>
@@ -29,6 +30,9 @@ const { MultiselectLookupLanguageSelector } = require( 'mediawiki.languageselect
 const { CdxField } = require( '../codex.js' );
 const supportedLanguages = require( '../supportedLanguages.json' );
 const MAX_LANGUAGES = 10;
+const menuConfig = {
+	visibleItemLimit: 10
+};
 
 module.exports = exports = defineComponent( {
 	name: 'PreferredLanguagesTab',
@@ -73,7 +77,8 @@ module.exports = exports = defineComponent( {
 			limitReached,
 			statusMessage,
 			onUpdateSelected,
-			MAX_LANGUAGES
+			MAX_LANGUAGES,
+			menuConfig
 		};
 	}
 } );
