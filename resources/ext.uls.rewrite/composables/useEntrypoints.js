@@ -18,7 +18,10 @@ module.exports = function useEntrypoints( mode ) {
 	const emptySearchEntrypoints =
 		EntrypointRegistry.getRegisteredEntrypoints( ENTRYPOINT_TYPE.EMPTY_SEARCH, mode );
 	const missingLanguageEntrypoints =
-		EntrypointRegistry.getRegisteredEntrypoints( ENTRYPOINT_TYPE.MISSING_CONTENT_LANGUAGES, mode );
+		EntrypointRegistry.getRegisteredEntrypoints(
+			ENTRYPOINT_TYPE.MISSING_CONTENT_LANGUAGES,
+			mode
+		);
 
 	onMounted( async () => {
 		await nextTick();

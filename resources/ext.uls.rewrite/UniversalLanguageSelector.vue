@@ -7,7 +7,10 @@
 		:aria-modal="isMobile ? 'true' : 'false'"
 		:aria-label="dialogAriaLabel"
 		:style="isMobile ? null : floatingStyles"
-		:class="[ densityClass, { 'uls-rewrite--mobile': isMobile, 'uls-rewrite--panel': currentView !== VIEW.MAIN } ]"
+		:class="[
+			densityClass,
+			{ 'uls-rewrite--mobile': isMobile, 'uls-rewrite--panel': currentView !== VIEW.MAIN }
+		]"
 		@mouseleave="clearHighlightedItem"
 		@keydown.esc.prevent.stop="$emit( 'close' )"
 	>
@@ -463,7 +466,8 @@ module.exports = exports = defineComponent( {
 		const { preferredLanguages } = usePreferredLanguages();
 
 		// Language suggestions present in the language selector
-		const availableLanguageSuggestions = getSuggestedLanguages( previousLanguages, languageCodes );
+		const availableLanguageSuggestions =
+			getSuggestedLanguages( previousLanguages, languageCodes );
 
 		const unavailableLanguagesSet = computed( () => {
 			const set = new Set();
@@ -501,10 +505,11 @@ module.exports = exports = defineComponent( {
 		} );
 
 		const highlightedLanguagesTitle = computed( () => {
-			const key = preferredLanguages.value.length > 0 ?
-				'ext-uls-preferred-languages-title' :
-				'ext-uls-suggested-languages-title';
-			return mw.msg( key, highlightedLanguages.value.length );
+			if ( preferredLanguages.value.length > 0 ) {
+				return mw.msg( 'ext-uls-preferred-languages-title', highlightedLanguages.value.length );
+			}
+
+			return mw.msg( 'ext-uls-suggested-languages-title', highlightedLanguages.value.length );
 		} );
 
 		const combinedLanguages =
@@ -710,6 +715,9 @@ module.exports = exports = defineComponent( {
 			userLanguageSuggestions,
 			emptySearchEntrypoints,
 			missingLanguageEntrypoints,
+
+			// Preferred languages
+			preferredLanguages,
 
 			// View management
 			VIEW,

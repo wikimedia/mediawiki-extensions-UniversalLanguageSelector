@@ -45,7 +45,8 @@ module.exports = function useSuggestedSourceLanguages() {
 	const getSuggestedLanguages =
 		( previousLanguages, validLanguageCodes ) => computed( () => {
 			const countryCode = getCountryCode();
-			const territoryLanguages = ( countryCode && languageData.territories[ countryCode ] ) || [];
+			const territoryLanguages =
+				( countryCode && languageData.territories[ countryCode ] ) || [];
 
 			const possibleSuggestedLanguages = [
 				...previousLanguages.value,
@@ -60,7 +61,8 @@ module.exports = function useSuggestedSourceLanguages() {
 			];
 
 			// Filter out duplicates and empty values
-			const suggestedLanguages = [ ...new Set( possibleSuggestedLanguages ) ].filter( Boolean );
+			const suggestedLanguages = [ ...new Set( possibleSuggestedLanguages ) ]
+				.filter( Boolean );
 
 			if ( !validLanguageCodes || !validLanguageCodes.value ) {
 				return suggestedLanguages;

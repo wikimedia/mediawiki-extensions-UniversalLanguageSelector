@@ -11,16 +11,22 @@ const UniversalLanguageSelector = require( './UniversalLanguageSelector.vue' );
  * @param {Object} config.triggerElement Element that triggers the ULS to open/close
  * @param {Object} config.selectableLanguages (Optional) List of languages that can be selected.
  * @param {string} [config.placeholder] (Optional) Placeholder text in the search input
- * @param {string} [config.displayLanguageCode] (Optional) Language code for the selector's items. Defaults to the autonym of the language item
- * @param {Object} [config.languageAnnotations] (Optional) Annotations (CSS classes) for language items, keyed by language code.
- * @param {boolean} [config.hideActiveLanguages] (Optional) Whether to hide current active languages from the list.
- * @param {Function} [config.onClose] (Optional) Callback function to execute when the ULS is closed
+ * @param {string} [config.displayLanguageCode] (Optional) Language code for the selector's
+ * items. Defaults to the autonym of the language item
+ * @param {Object} [config.languageAnnotations] (Optional) Annotations (CSS classes) for
+ * language items, keyed by language code.
+ * @param {boolean} [config.hideActiveLanguages] (Optional) Whether to hide current active
+ * languages from the list.
+ * @param {Function} [config.onClose] (Optional) Callback function to execute when the ULS
+ * is closed
  * @param {Function} [config.onSelect] (Optional) Callback function to execute when a language is
  * selected. Receives the selected language code and value as arguments.
  * @param {string} config.mode The mode for ULS, either 'interface' or 'content'.
- * @param {Object} [config.floatingOptions] (Optional) Floating UI configuration overrides (e.g. { placement: 'bottom-start' })
+ * @param {Object} [config.floatingOptions] (Optional) Floating UI configuration overrides
+ * (e.g. { placement: 'bottom-start' })
  * @param {Object} [config.slots] (Optional) Vue slots to customize the ULS content
- * @param {boolean} [config.visible] (Optional) Whether the ULS should be visible initially. Defaults to true.
+ * @param {boolean} [config.visible] (Optional) Whether the ULS should be visible initially.
+ * Defaults to true.
  * @return {Object} The Vue application instance.
  */
 function createUniversalLanguageSelector( config ) {

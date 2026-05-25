@@ -21,7 +21,11 @@
 			class="uls-rewrite__language-item-title"
 			:dir="!lang ? annotations.dir : null"
 		>
-			<slot :item="displayName" :annotations="annotations" :is-available="isAvailable">
+			<slot
+				:item="displayName"
+				:annotations="annotations"
+				:is-available="isAvailable"
+			>
 				{{ displayName }}
 			</slot>
 		</span>
@@ -47,7 +51,8 @@ module.exports = exports = defineComponent( {
 		},
 		name: {
 			type: [ String, Object ],
-			required: false
+			required: false,
+			default: ''
 		},
 		lang: {
 			type: String,

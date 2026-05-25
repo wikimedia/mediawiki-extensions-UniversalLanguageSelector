@@ -60,8 +60,9 @@ module.exports = defineComponent( {
 	},
 	setup( props ) {
 		const maxMissingLanguagesToDisplay = 4;
-		const limitedActions = computed( () => props.actions.slice( 0, maxMissingLanguagesToDisplay ) );
-
+		const limitedActions = computed(
+			() => props.actions.slice( 0, maxMissingLanguagesToDisplay )
+		);
 		return {
 			limitedActions
 		};

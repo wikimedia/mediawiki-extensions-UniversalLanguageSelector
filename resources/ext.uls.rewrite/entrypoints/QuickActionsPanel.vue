@@ -8,7 +8,8 @@
 			<a
 				v-if="action.url"
 				:href="action.url"
-				class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--action-progressive cdx-button--weight-quiet"
+				class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled
+					cdx-button--action-progressive cdx-button--weight-quiet"
 			>
 				<cdx-icon
 					v-if="action.icon"
