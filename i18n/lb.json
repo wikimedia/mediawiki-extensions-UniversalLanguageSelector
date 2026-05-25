@@ -97,5 +97,14 @@
 	"ext-uls-missing-languages-label-more": "Feelt op <strong>$1</strong>, <strong>$2</strong> an nach méi",
 	"ext-uls-missing-languages-panel-title": "Dës Säit iwwersetzen",
 	"ext-uls-missing-languages-panel-description": "Dës Säit feelt op e puer Sproochen, déi Dir eventuell kënnt. Dir kënnt se iwwersetzen.",
-	"ext-uls-quick-actions-panel-title": "Séier Aktiounen"
+	"ext-uls-quick-actions-panel-title": "Séier Aktiounen",
+	"ext-uls-preferred-languages-title": "Preferéiert {{PLURAL:$1|Sprooch|Sproochen}}",
+	"ext-uls-preferred-languages-settings-title": "Preferéiert Sproochen",
+	"ext-uls-preferred-languages-desc": "Gëtt a Sproochmenüen als éischt ugewisen.",
+	"ext-uls-preferred-languages-label": "Eng Sprooch derbäisetzen",
+	"ext-uls-preferred-languages-help": "Fixéiert bis zu $1 {{PLURAL:$1|Sprooch|Sproochen}}. {{PLURAL:$1|Se gëtt|Se ginn}} als éischt ugewisen, wann Dir d'Sprooch fir iergendeen Artikel wiesselt.",
+	"ext-uls-preferred-languages-input-placeholder": "Sprooche sichen",
+	"ext-uls-preferred-languages-status": "<strong>$1</strong> {{PLURAL:$2|vun|vu(n)}} <strong>$2</strong> {{PLURAL:$2|ausgewielt}}",
+	"ext-uls-preferred-languages-limit-reached": "Huelt eng ewech fir eng aner derbäizesetzen",
+	"ext-uls-preferred-languages-save-error": "Beim Späichere vun Äre preferéierte Sproochen ass e Feeler geschitt."
 }

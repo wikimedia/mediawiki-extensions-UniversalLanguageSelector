@@ -98,5 +98,7 @@
 	"ext-uls-quick-actions-panel-title": "Azioni rapide",
 	"ext-uls-preferred-languages-title": "{{PLURAL:$1|Lingua preferita|Lingue preferite}}",
 	"ext-uls-preferred-languages-settings-title": "Lingue preferite",
-	"ext-uls-preferred-languages-label": "Aggiungi una lingua"
+	"ext-uls-preferred-languages-label": "Aggiungi una lingua",
+	"ext-uls-preferred-languages-input-placeholder": "Cerca lingue",
+	"ext-uls-preferred-languages-status": "<strong>$1</strong> {{PLURAL:$1|di}} <strong>$2</strong> {{PLURAL:$2|selezionata|selezionate}}"
 }

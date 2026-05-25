@@ -104,5 +104,14 @@
 	"ext-uls-missing-languages-label-more": "Puuttuu kielellä <strong>$1</strong>, <strong>$2</strong> ja muilla kielillä",
 	"ext-uls-missing-languages-panel-title": "Käännä tämä sivu",
 	"ext-uls-missing-languages-panel-description": "Tämä sivu puuttuu joillain kielistä, joita saatat osata. Voit kääntää sen.",
-	"ext-uls-quick-actions-panel-title": "Pikatoiminnot"
+	"ext-uls-quick-actions-panel-title": "Pikatoiminnot",
+	"ext-uls-preferred-languages-title": "{{PLURAL:$1|Ensisijainen kieli|Ensisijaiset kielet}}",
+	"ext-uls-preferred-languages-settings-title": "Ensisijaiset kielet",
+	"ext-uls-preferred-languages-desc": "Näytetään ensimmäisenä kielivalikoissa.",
+	"ext-uls-preferred-languages-label": "Lisää kieli",
+	"ext-uls-preferred-languages-help": "Kiinnitä enintään $1 {{PLURAL:$1|kieli|kieltä}}. {{PLURAL:$1|Se näkyy|Ne näkyvät}} ensimmäisenä, kun vaihdat kieltä missä tahansa artikkelissa.",
+	"ext-uls-preferred-languages-input-placeholder": "Hae kieliä",
+	"ext-uls-preferred-languages-status": "<strong>$1</strong> {{PLURAL:$1|/}} <strong>$2</strong> {{PLURAL:$2|valittu}}",
+	"ext-uls-preferred-languages-limit-reached": "Poista yksi lisätäksesi toisen",
+	"ext-uls-preferred-languages-save-error": "Ensisijaisten kielten tallennuksessa tapahtui virhe."
 }

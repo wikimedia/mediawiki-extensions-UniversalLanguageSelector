@@ -79,8 +79,8 @@
 	"ext-uls-close-button-label": "Затвори",
 	"ext-uls-rewrite-label": "Препишување врз Универзалниот избирач на јазици",
 	"ext-uls-rewrite-description": "Преработка на Универзалниот избирач на јазици (ULS) со цел осовременување на корисничкото искуство и намалување на техничкиот долг преку упростена архитектура.",
-	"ext-uls-suggested-languages-title": "Предложени",
-	"ext-uls-all-languages-title": "Сите јазици",
+	"ext-uls-suggested-languages-title": "{{PLURAL:$1|Предложен јазик|Предложени јазици}}",
+	"ext-uls-all-languages-title": "{{PLURAL:$1|Сите јазици}}",
 	"ext-uls-no-languages-title": "Сè уште нема јазици",
 	"ext-uls-no-languages-description": "Засега нема достапни јазици.",
 	"ext-uls-no-languages-entrypoint-description": "Можете да ја преведете страницава. Ова е лесен начин да создавате содржини на вашиот јазик.",
@@ -95,5 +95,14 @@
 	"ext-uls-missing-languages-label-more": "Недостасува на <strong>$1</strong>, <strong>$2</strong> и други",
 	"ext-uls-missing-languages-panel-title": "Преведете ја оваа страница",
 	"ext-uls-missing-languages-panel-description": "На оваа страница ѝ недостасуваа некои јазици што можеби ги владеете. Можете да ја преведете.",
-	"ext-uls-quick-actions-panel-title": "Брзи дејства"
+	"ext-uls-quick-actions-panel-title": "Брзи дејства",
+	"ext-uls-preferred-languages-title": "{{PLURAL:$1|Претпочитан јазик|Претпочитани јазици}}",
+	"ext-uls-preferred-languages-settings-title": "Претпочитани јазици",
+	"ext-uls-preferred-languages-desc": "Се прикажува најпрво во јазичните менија.",
+	"ext-uls-preferred-languages-label": "Додај јазик",
+	"ext-uls-preferred-languages-help": "Закачете до $1 {{PLURAL:$1|јазик|јазици}}. {{PLURAL:$1|Се појавува најпрво|Се појавуваат најпрви}} кога ќе смените јазик на било која статија.",
+	"ext-uls-preferred-languages-input-placeholder": "Пребарај јазици",
+	"ext-uls-preferred-languages-status": "{{PLURAL:$2|Избран|Избрани}} <strong>$1</strong> {{PLURAL:$1|од}} <strong>$2</strong>",
+	"ext-uls-preferred-languages-limit-reached": "Отстранете едно за да додадете друго",
+	"ext-uls-preferred-languages-save-error": "Се јави грешка при зачувувањето на претпочитаниот јазик."
 }

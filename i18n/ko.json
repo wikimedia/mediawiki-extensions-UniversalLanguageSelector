@@ -111,6 +111,9 @@
 	"ext-uls-preferred-languages-settings-title": "주로 사용하는 언어",
 	"ext-uls-preferred-languages-desc": "언어 메뉴에서 먼저 표시됩니다.",
 	"ext-uls-preferred-languages-label": "언어 추가",
+	"ext-uls-preferred-languages-help": "최대 $1개 {{PLURAL:$1|언어}}까지 고정할 수 있습니다. 어떤 문서에서든 언어를 전환할 때 {{PLURAL:$1|먼저 나타나게 됩니다}}.",
 	"ext-uls-preferred-languages-input-placeholder": "언어 검색",
+	"ext-uls-preferred-languages-status": "<strong>$2</strong> {{PLURAL:$1|/}} <strong>$1</strong> {{PLURAL:$2|선택됨}}",
+	"ext-uls-preferred-languages-limit-reached": "추가하려면 먼저 다른걸 제거하세요",
 	"ext-uls-preferred-languages-save-error": "주로 사용하는 언어를 저장하는 중 오류가 발생했습니다."
 }

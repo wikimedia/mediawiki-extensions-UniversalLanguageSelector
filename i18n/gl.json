@@ -101,5 +101,14 @@
 	"ext-uls-missing-languages-label-more": "Falta en <strong>$1</strong>, <strong>$2</strong> e outras linguas",
 	"ext-uls-missing-languages-panel-title": "Traducir esta páxina",
 	"ext-uls-missing-languages-panel-description": "Esta páxina non está dispoñible nalgunha das linguas que coñeces. Podes traducila.",
-	"ext-uls-quick-actions-panel-title": "Accións rápidas"
+	"ext-uls-quick-actions-panel-title": "Accións rápidas",
+	"ext-uls-preferred-languages-title": "{{PLURAL:$1|Lingua preferida|Linguas preferidas}}",
+	"ext-uls-preferred-languages-settings-title": "Linguas preferidas",
+	"ext-uls-preferred-languages-desc": "Móstranse primeiro nos menús de lingua.",
+	"ext-uls-preferred-languages-label": "Engadir unha lingua",
+	"ext-uls-preferred-languages-help": "Fixa {{PLURAL:$1|unha lingua|ata $1 linguas}}. {{PLURAL:$1|Móstrase|Móstranse}} primeiro cando cambias de lingua en calquera artigo.",
+	"ext-uls-preferred-languages-input-placeholder": "Procurar linguas",
+	"ext-uls-preferred-languages-status": "<strong>$1</strong> {{PLURAL:$1|seleccionada|seleccionadas}} {{PLURAL:$2|de}} <strong>$2</strong>",
+	"ext-uls-preferred-languages-limit-reached": "Elimina unha para engadires outra",
+	"ext-uls-preferred-languages-save-error": "Produciuse un erro ao gardar as túas linguas preferidas."
 }

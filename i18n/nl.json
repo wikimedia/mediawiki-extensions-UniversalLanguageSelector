@@ -4,6 +4,7 @@
 			"Arent",
 			"Dinosaur918",
 			"Elroy",
+			"ItsNyoty",
 			"Macofe",
 			"Mainframe98",
 			"Mar(c)",
@@ -102,9 +103,18 @@
 	"ext-uls-open-language-settings": "Taalinstellingen openen",
 	"ext-uls-open-language-selector": "Terug naar de taalkiezer",
 	"ext-uls-open-quick-actions": "Snelhandelingen weergeven",
-	"ext-uls-missing-languages-label": "Ontbrekend in <strong>$1</strong>",
+	"ext-uls-missing-languages-label": "Ontbrekend in het <strong>$1</strong>",
 	"ext-uls-missing-languages-label-more": "Ontbrekend in <strong>$1</strong>, <strong>$2</strong> en meer.",
 	"ext-uls-missing-languages-panel-title": "Deze pagina vertalen",
 	"ext-uls-missing-languages-panel-description": "Deze pagina ontbreekt mogelijk in enkele talen die u spreekt. U kunt hem vertalen.",
-	"ext-uls-quick-actions-panel-title": "Snelle handelingen"
+	"ext-uls-quick-actions-panel-title": "Snelle handelingen",
+	"ext-uls-preferred-languages-title": "{{PLURAL:$1|Voorkeurstaal|Voorkeurstalen}}",
+	"ext-uls-preferred-languages-settings-title": "Voorkeurstalen",
+	"ext-uls-preferred-languages-desc": "Wordt als eerste weergegeven in de taalmenu's.",
+	"ext-uls-preferred-languages-label": "Taal toevoegen",
+	"ext-uls-preferred-languages-help": "Zet maximaal $1 {{PLURAL:$1|taal|talen}} vast. {{PLURAL:$1|Deze wordt|Ze worden}} als eerste weergegeven als u de taal op een pagina wijzigt.",
+	"ext-uls-preferred-languages-input-placeholder": "Talen zoeken",
+	"ext-uls-preferred-languages-status": "<strong>$1</strong> {{PLURAL:$1|van}} <strong>$2</strong> {{PLURAL:$2|geselecteerd}}",
+	"ext-uls-preferred-languages-limit-reached": "Verwijder er één om er een andere voor in de plaats te zetten.",
+	"ext-uls-preferred-languages-save-error": "Er is een fout opgetreden tijdens het opslaan van uw voorkeurstalen."
 }

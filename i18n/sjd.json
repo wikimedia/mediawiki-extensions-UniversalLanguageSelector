@@ -53,5 +53,6 @@
 	"ext-uls-empty-state-desc": "Адтҍ евла кӣл воа̄лшэм гуэйкэ",
 	"ext-uls-empty-state-header-actions-available": "Кӣл вя̄л евла. Та̄так-гэ о̄д лажьхэ?",
 	"ext-uls-add-languages-button-label": "Лажьхэ кӣлэтҍ",
-	"ext-uls-placeholder-search": "О̄дзэ кӣл"
+	"ext-uls-placeholder-search": "О̄дзэ кӣл",
+	"ext-uls-suggested-languages-title": "Этткма {{PLURAL:$1|кӣлл|кӣл}}"
 }
