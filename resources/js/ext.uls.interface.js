@@ -620,6 +620,17 @@
 				const languageNodesInjected = injectCurrentLanguage( Array.from( languageNodes ) );
 				const hideActiveLanguages = languageNodesInjected.length !== languageNodes.length;
 				const languageAnnotations = getLanguageAnnotations( languageNodesInjected, isMinerva );
+				const variantNodes = Array.from( getVariantNodes() );
+				const pageContentLanguage = mw.config.get( 'wgPageContentLanguage' ) ||
+					mw.config.get( 'wgContentLanguage' );
+				const variantsByLanguage = {};
+				const variantAnnotationsByLanguage = {};
+				if ( variantNodes.length > 0 && pageContentLanguage ) {
+					variantsByLanguage[ pageContentLanguage ] =
+						mw.uls.getInterlanguageListFromNodes( variantNodes );
+					variantAnnotationsByLanguage[ pageContentLanguage ] =
+						getLanguageAnnotations( variantNodes, isMinerva );
+				}
 				const { createUniversalLanguageSelector } = require( 'ext.uls.rewrite' );
 				const { h } = require( 'vue' );
 
@@ -630,10 +641,9 @@
 					triggerElement: ev.currentTarget,
 					selectableLanguages: mw.uls.getInterlanguageListFromNodes( languageNodesInjected ),
 					languageAnnotations: languageAnnotations,
-					selected: [
-						mw.config.get( 'wgPageContentLanguage' ) ||
-						mw.config.get( 'wgContentLanguage' )
-					],
+					variantsByLanguage: variantsByLanguage,
+					variantAnnotationsByLanguage: variantAnnotationsByLanguage,
+					selected: [ pageContentLanguage ],
 					hideActiveLanguages: hideActiveLanguages,
 					onSelect: ( language ) => {
 						window.location.assign( language.value.href );
@@ -828,6 +838,10 @@
 		}
 
 		return languageNodesCache;
+	}
+
+	function getVariantNodes() {
+		return document.querySelectorAll( '#p-variants li a' );
 	}
 
 	/**

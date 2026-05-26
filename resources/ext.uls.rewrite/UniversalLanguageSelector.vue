@@ -109,18 +109,18 @@
 					</template>
 				</language-list>
 
-				<!-- Suggested and All Languages -->
+				<!-- Variants, Suggested and All Languages -->
 				<div v-else-if="!searchQuery && languagesToDisplay.length > 0">
 					<div
-						v-if="highlightedLanguages.length > 0"
-						class="uls-rewrite__section uls-rewrite__section--suggested"
+						v-if="visibleVariantCodes.length > 0"
+						class="uls-rewrite__section uls-rewrite__section--variants"
 					>
 						<h3 class="uls-rewrite__section-title">
-							{{ highlightedLanguagesTitle }}
+							{{ variantsTitle }}
 						</h3>
 						<language-list
-							:language-codes="highlightedLanguages"
-							:languages="languages"
+							:language-codes="visibleVariantCodes"
+							:languages="currentVariants"
 							:lang="displayLanguageCode"
 							:dir="displayLanguageDir"
 							:highlighted-index="highlightedIndex"
@@ -142,9 +142,41 @@
 						</language-list>
 					</div>
 
+					<div
+						v-if="highlightedLanguages.length > 0"
+						class="uls-rewrite__section uls-rewrite__section--suggested"
+					>
+						<h3 class="uls-rewrite__section-title">
+							{{ highlightedLanguagesTitle }}
+						</h3>
+						<language-list
+							:language-codes="highlightedLanguages"
+							:languages="languages"
+							:lang="displayLanguageCode"
+							:dir="displayLanguageDir"
+							:highlighted-index="highlightedIndex"
+							:index-offset="visibleVariantCodes.length"
+							:selected-values-set="selectedValuesSet"
+							:unavailable-languages-set="unavailableLanguagesSet"
+							:language-annotations="computedLanguageAnnotations"
+							@select="select"
+							@highlight="setHighlightedIndex"
+							@mouseleave="clearHighlightedItem"
+						>
+							<template #language-item="slotProps">
+								<slot
+									name="language-item"
+									:item="slotProps.item"
+									:annotations="slotProps.annotations"
+									:is-available="slotProps.isAvailable"
+								></slot>
+							</template>
+						</language-list>
+					</div>
+
 					<div class="uls-rewrite__section uls-rewrite__section--all">
 						<h3
-							v-if="highlightedLanguages.length > 0"
+							v-if="highlightedLanguages.length > 0 || visibleVariantCodes.length > 0"
 							class="uls-rewrite__section-title"
 						>
 							{{ $i18n( 'ext-uls-all-languages-title', languagesToDisplay.length ) }}
@@ -155,7 +187,7 @@
 							:lang="displayLanguageCode"
 							:dir="displayLanguageDir"
 							:highlighted-index="highlightedIndex"
-							:index-offset="highlightedLanguages.length"
+							:index-offset="visibleVariantCodes.length + highlightedLanguages.length"
 							:selected-values-set="selectedValuesSet"
 							:unavailable-languages-set="unavailableLanguagesSet"
 							:language-annotations="computedLanguageAnnotations"
@@ -326,6 +358,19 @@ module.exports = exports = defineComponent( {
 			type: Object,
 			default: () => ( {} )
 		},
+		// Map of base language code -> { variantCode: value }. When the user clicks a
+		// language that has an entry here, the click does not navigate; instead the
+		// "Variants" section at the top of the selector renders those variants for
+		// the user to pick from. Clicking the same base language a second time falls
+		// through to a normal navigation (to the default variant).
+		variantsByLanguage: {
+			type: Object,
+			default: () => ( {} )
+		},
+		variantAnnotationsByLanguage: {
+			type: Object,
+			default: () => ( {} )
+		},
 		// ULS can be used in different contexts, which may require different sets of quick
 		// actions and entrypoints. The mode prop allows the parent component to specify the
 		// context in which ULS is being used, so that the appropriate entrypoints can be rendered.
@@ -407,6 +452,46 @@ module.exports = exports = defineComponent( {
 		);
 
 		const selectedValuesSet = computed( () => new Set( selectedValues.value ) );
+
+		// The "Variants" section always reflects the currently selected language
+		// (typically the page's content language). After the user picks a different
+		// language, the selector closes and the page navigates; on the next page,
+		// `selected` will reflect that new language and the variants for it will be
+		// shown when the selector is reopened.
+		const variantLanguageCode = computed( () => {
+			const current = selected.value;
+			if ( Array.isArray( current ) ) {
+				return current[ 0 ] || null;
+			}
+			return current || null;
+		} );
+
+		const currentVariants = computed( () => {
+			const code = variantLanguageCode.value;
+			if ( !code ) {
+				return {};
+			}
+			return props.variantsByLanguage[ code ] || {};
+		} );
+
+		const currentVariantAnnotations = computed( () => {
+			const code = variantLanguageCode.value;
+			if ( !code ) {
+				return {};
+			}
+			return props.variantAnnotationsByLanguage[ code ] || {};
+		} );
+
+		const currentVariantCodes = computed( () => Object.keys( currentVariants.value ) );
+
+		const variantsTitle = computed( () => {
+			const code = variantLanguageCode.value;
+			if ( !code ) {
+				return '';
+			}
+			const autonym = $.uls.data.getAutonym( code ) || code;
+			return mw.msg( 'ext-uls-variants-title', autonym );
+		} );
 
 		const { floatingStyles, isPositioned } = useFloating( triggerElement, menuRef, Object.assign( {
 			middleware: [ offset( 8 ), flip(), shift() ],
@@ -516,15 +601,26 @@ module.exports = exports = defineComponent( {
 			return mw.msg( 'ext-uls-suggested-languages-title', highlightedLanguages.value.length );
 		} );
 
+		// Variants are only shown when there is no active search query
+		const visibleVariantCodes = computed(
+			() => ( searchQuery.value ? [] : currentVariantCodes.value )
+		);
+
 		const combinedLanguages =
-			computed( () => [ ...highlightedLanguages.value, ...languagesToDisplay.value ] );
+			computed( () => [
+				...visibleVariantCodes.value,
+				...highlightedLanguages.value,
+				...languagesToDisplay.value
+			] );
 
 		const computedLanguageAnnotations = computed( () => {
 			const annotations = {};
+			const variantAnnotations = currentVariantAnnotations.value;
 			for ( const code of combinedLanguages.value ) {
 				annotations[ code ] = Object.assign(
 					{},
 					props.languageAnnotations[ code ],
+					variantAnnotations[ code ],
 					{ dir: rtlLanguages.has( code ) ? 'rtl' : 'ltr' }
 				);
 			}
@@ -555,15 +651,21 @@ module.exports = exports = defineComponent( {
 			emit( 'select', { code: languageCode, value: languageValue } );
 		};
 
+		// Lookup that falls back to currently rendered variants so keyboard navigation
+		// resolves codes that live in the variants section as well as the main list.
+		const getLanguageValue = ( code ) => (
+			languages.value[ code ] || currentVariants.value[ code ]
+		);
+
 		const onEnter = () => {
 			if ( highlightedItem.value ) {
-				select( highlightedItem.value, languages.value[ highlightedItem.value ] );
+				select( highlightedItem.value, getLanguageValue( highlightedItem.value ) );
 				return;
 			}
 
 			if ( autocompleteSuggestion.value && combinedLanguages.value.length > 0 ) {
 				const firstItemCode = combinedLanguages.value[ 0 ];
-				select( firstItemCode, languages.value[ firstItemCode ] );
+				select( firstItemCode, getLanguageValue( firstItemCode ) );
 				return;
 			}
 
@@ -690,6 +792,9 @@ module.exports = exports = defineComponent( {
 			highlightedLanguages,
 			highlightedLanguagesTitle,
 			languagesToDisplay,
+			currentVariants,
+			visibleVariantCodes,
+			variantsTitle,
 			searchQuery,
 			hasSearchHits,
 			search,

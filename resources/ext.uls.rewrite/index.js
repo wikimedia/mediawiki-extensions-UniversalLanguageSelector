@@ -15,6 +15,13 @@ const UniversalLanguageSelector = require( './UniversalLanguageSelector.vue' );
  * items. Defaults to the autonym of the language item
  * @param {Object} [config.languageAnnotations] (Optional) Annotations (CSS classes) for
  * language items, keyed by language code.
+ * @param {Object} [config.variantsByLanguage] (Optional) Language converter variants keyed
+ * by base language code. Each entry maps to a {variantCode: value} object (typically
+ * DOM <a> elements). When the selected language has variants in this map, a "Variants"
+ * section appears at the top of the selector listing those variants.
+ * @param {Object} [config.variantAnnotationsByLanguage] (Optional) Annotations for
+ * variant items, keyed by base language code then by variant code, matching the shape
+ * of variantsByLanguage.
  * @param {boolean} [config.hideActiveLanguages] (Optional) Whether to hide current active
  * languages from the list.
  * @param {Function} [config.onClose] (Optional) Callback function to execute when the ULS
@@ -37,6 +44,8 @@ function createUniversalLanguageSelector( config ) {
 		placeholder,
 		displayLanguageCode,
 		languageAnnotations,
+		variantsByLanguage,
+		variantAnnotationsByLanguage,
 		hideActiveLanguages,
 		onClose,
 		onSelect,
@@ -86,6 +95,8 @@ function createUniversalLanguageSelector( config ) {
 				displayLanguageCode: displayLanguageCode,
 				languageAnnotations: languageAnnotations,
 				selectableLanguages: selectableLanguages,
+				variantsByLanguage: variantsByLanguage,
+				variantAnnotationsByLanguage: variantAnnotationsByLanguage,
 				hideActiveLanguages: hideActiveLanguages,
 				selected: this.currentSelected,
 				mode: mode,
