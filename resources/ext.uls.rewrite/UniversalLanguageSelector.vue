@@ -112,85 +112,27 @@
 				<!-- Variants, Suggested and All Languages -->
 				<div v-else-if="!searchQuery && languagesToDisplay.length > 0">
 					<div
-						v-if="visibleVariantCodes.length > 0"
-						class="uls-rewrite__section uls-rewrite__section--variants"
+						v-for="section in mainSections"
+						:key="section.key"
+						class="uls-rewrite__section"
+						:class="section.modifierClass"
 					>
-						<h3 class="uls-rewrite__section-title">
-							{{ variantsTitle }}
-						</h3>
-						<language-list
-							:language-codes="visibleVariantCodes"
-							:languages="currentVariants"
-							:lang="displayLanguageCode"
-							:dir="displayLanguageDir"
-							:highlighted-index="highlightedIndex"
-							:selected-values-set="selectedValuesSet"
-							:unavailable-languages-set="unavailableLanguagesSet"
-							:language-annotations="variantSectionAnnotations"
-							@select="select"
-							@highlight="setHighlightedIndex"
-							@mouseleave="clearHighlightedItem"
-						>
-							<template #language-item="slotProps">
-								<slot
-									name="language-item"
-									:item="slotProps.item"
-									:annotations="slotProps.annotations"
-									:is-available="slotProps.isAvailable"
-								></slot>
-							</template>
-						</language-list>
-					</div>
-
-					<div
-						v-if="highlightedLanguages.length > 0"
-						class="uls-rewrite__section uls-rewrite__section--suggested"
-					>
-						<h3 class="uls-rewrite__section-title">
-							{{ highlightedLanguagesTitle }}
-						</h3>
-						<language-list
-							:language-codes="highlightedLanguages"
-							:languages="languages"
-							:lang="displayLanguageCode"
-							:dir="displayLanguageDir"
-							:highlighted-index="highlightedIndex"
-							:index-offset="visibleVariantCodes.length"
-							:selected-values-set="selectedValuesSet"
-							:unavailable-languages-set="unavailableLanguagesSet"
-							:language-annotations="baseAnnotations"
-							@select="select"
-							@highlight="setHighlightedIndex"
-							@mouseleave="clearHighlightedItem"
-						>
-							<template #language-item="slotProps">
-								<slot
-									name="language-item"
-									:item="slotProps.item"
-									:annotations="slotProps.annotations"
-									:is-available="slotProps.isAvailable"
-								></slot>
-							</template>
-						</language-list>
-					</div>
-
-					<div class="uls-rewrite__section uls-rewrite__section--all">
 						<h3
-							v-if="highlightedLanguages.length > 0 || visibleVariantCodes.length > 0"
+							v-if="section.title"
 							class="uls-rewrite__section-title"
 						>
-							{{ $i18n( 'ext-uls-all-languages-title', languagesToDisplay.length ) }}
+							{{ section.title }}
 						</h3>
 						<language-list
-							:language-codes="languagesToDisplay"
-							:languages="languages"
+							:language-codes="section.codes"
+							:languages="section.languages"
 							:lang="displayLanguageCode"
 							:dir="displayLanguageDir"
 							:highlighted-index="highlightedIndex"
-							:index-offset="visibleVariantCodes.length + highlightedLanguages.length"
+							:index-offset="section.indexOffset"
 							:selected-values-set="selectedValuesSet"
 							:unavailable-languages-set="unavailableLanguagesSet"
-							:language-annotations="baseAnnotations"
+							:language-annotations="section.annotations"
 							@select="select"
 							@highlight="setHighlightedIndex"
 							@mouseleave="clearHighlightedItem"
@@ -493,10 +435,14 @@ module.exports = exports = defineComponent( {
 			return mw.msg( 'ext-uls-variants-title', autonym );
 		} );
 
-		const { floatingStyles, isPositioned } = useFloating( triggerElement, menuRef, Object.assign( {
-			middleware: [ offset( 8 ), flip(), shift() ],
-			whileElementsMounted: autoUpdate
-		}, props.floatingOptions ) );
+		const { floatingStyles, isPositioned } = useFloating(
+			triggerElement,
+			menuRef,
+			Object.assign( {
+				middleware: [ offset( 8 ), flip(), shift() ],
+				whileElementsMounted: autoUpdate
+			}, props.floatingOptions )
+		);
 
 		const languagesToDisplay =
 			computed( () => {
@@ -606,13 +552,6 @@ module.exports = exports = defineComponent( {
 			() => ( searchQuery.value ? [] : currentVariantCodes.value )
 		);
 
-		const combinedLanguages =
-			computed( () => [
-				...visibleVariantCodes.value,
-				...highlightedLanguages.value,
-				...languagesToDisplay.value
-			] );
-
 		// Annotations for items in the main, suggested, and search-results sections.
 		const baseAnnotations = computed( () => {
 			const annotations = {};
@@ -646,6 +585,66 @@ module.exports = exports = defineComponent( {
 			}
 			return annotations;
 		} );
+
+		// Declarative description of the main-view sections (variants, suggested,
+		// all). The template renders these in order, and combinedLanguages is
+		// derived from the same array so keyboard navigation and DOM order stay
+		// in sync. indexOffset is accumulated here instead of computed in the
+		// template.
+		const mainSections = computed( () => {
+			const sections = [];
+			let cursor = 0;
+
+			if ( visibleVariantCodes.value.length > 0 ) {
+				sections.push( {
+					key: 'variants',
+					modifierClass: 'uls-rewrite__section--variants',
+					title: variantsTitle.value,
+					codes: visibleVariantCodes.value,
+					languages: currentVariants.value,
+					annotations: variantSectionAnnotations.value,
+					indexOffset: cursor
+				} );
+				cursor += visibleVariantCodes.value.length;
+			}
+
+			if ( highlightedLanguages.value.length > 0 ) {
+				sections.push( {
+					key: 'suggested',
+					modifierClass: 'uls-rewrite__section--suggested',
+					title: highlightedLanguagesTitle.value,
+					codes: highlightedLanguages.value,
+					languages: languages.value,
+					annotations: baseAnnotations.value,
+					indexOffset: cursor
+				} );
+				cursor += highlightedLanguages.value.length;
+			}
+
+			sections.push( {
+				key: 'all',
+				modifierClass: 'uls-rewrite__section--all',
+				// Only show the "All languages" title when at least one other
+				// section is present above it.
+				title: sections.length > 0 ?
+					mw.msg( 'ext-uls-all-languages-title', languagesToDisplay.value.length ) :
+					null,
+				codes: languagesToDisplay.value,
+				languages: languages.value,
+				annotations: baseAnnotations.value,
+				indexOffset: cursor
+			} );
+
+			return sections;
+		} );
+
+		// Flat list of codes in render order; keyboard navigation walks this.
+		const combinedLanguages = computed(
+			() => mainSections.value.reduce(
+				( codes, section ) => codes.concat( section.codes ),
+				[]
+			)
+		);
 
 		const {
 			next,
@@ -809,12 +808,8 @@ module.exports = exports = defineComponent( {
 
 			// Search & Data Source
 			languages,
-			highlightedLanguages,
-			highlightedLanguagesTitle,
 			languagesToDisplay,
-			currentVariants,
-			visibleVariantCodes,
-			variantsTitle,
+			mainSections,
 			searchQuery,
 			hasSearchHits,
 			search,
@@ -824,7 +819,6 @@ module.exports = exports = defineComponent( {
 			unavailableLanguagesSet,
 			searchQueryHits,
 			baseAnnotations,
-			variantSectionAnnotations,
 			displayLanguageDir,
 
 			// Appearance & Layout
