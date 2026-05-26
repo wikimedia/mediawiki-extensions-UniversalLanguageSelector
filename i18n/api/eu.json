@@ -10,6 +10,11 @@
 	"apihelp-languagesearch-example-1": "Bilatu \"Te\"",
 	"apihelp-languagesearch-example-2": "Bilatu \"ഫി\"",
 	"apihelp-languagesearch-example-3": "Bilatu \"ഫി\", akats bat baimenduz",
+	"apihelp-ulslocalization-summary": "ULSaren lokalizazioa zuk nahi duzun hizkuntzan lortu.",
 	"apihelp-ulslocalization-param-language": "Hizkuntza-kodea.",
+	"apihelp-ulslocalization-example-1": "Lortu tamilerazko lokalizazioa",
+	"apihelp-ulslocalization-example-2": "Lortu hindizko lokalizazioa",
+	"apihelp-ulssetlang-summary": "Erabiltzailearen interfazearen hizkuntza hobetsia eguneratu.",
+	"apihelp-ulssetlang-param-languagecode": "Nahiago duzun hizkuntza kodea.",
 	"apierror-ulssetlang-anon-notallowed": "Erabiltzaile anonimoek ezin dute interfazearen hizkuntza aldatu."
 }

@@ -9,6 +9,7 @@
 	"uls-plang-title-languages": "Språk",
 	"ext-uls-select-language-settings-icon-tooltip": "Språkinnstillingar",
 	"ext-uls-undo-language-tooltip-text": "Språk endra frå $1",
+	"ext-uls-undo-language-tooltip-text-local": "Språket vart endra for denne wikien. Sjekk dei [[Special:GlobalPreferences|globale innstillingane]] dine for å endra språk på alle wikiar.",
 	"ext-uls-language-settings-preferences-link": "Fleire språkinnstillingar",
 	"uls-betafeature-label": "Kompakte språklenkjer",
 	"uls-betafeature-desc": "Vis ein kortare versjon av språklista, med berre dei språka som er mest relevante for deg.",
@@ -59,5 +60,18 @@
 	"ext-uls-compact-link-info": "Alle språk (utvalet i mergen er basert på vanlege val av deg og andre)",
 	"prefs-languages": "Språk",
 	"ext-uls-compact-language-links-preference": "Bruk ei [[$1|kompakt språkliste]] med språk som er relevante for deg.",
-	"ext-uls-compact-no-results": "Denne sida er ikkje tilgjengeleg på språket du søkte etter."
+	"ext-uls-compact-no-results": "Denne sida er ikkje tilgjengeleg på språket du søkte etter.",
+	"ext-uls-setlang-error": "Ein feil oppstod under oppdatering av dei føretrekte språka dine. Feil: $1",
+	"ext-uls-setlang-unknown-error": "Ukjend feil",
+	"ext-uls-setlang-message": "Lenkja du fylgde ba om at grensesnittet visast på <strong>$1 ($2)</strong>",
+	"ext-uls-setlang-heading": "Endra grensesnittspråk?",
+	"ext-uls-setlang-accept": "Godta endring",
+	"ext-uls-setlang-loading": "Tek i bruk …",
+	"ext-uls-setlang-cancel": "Ikkje endra",
+	"ext-uls-actions-menu-language-settings-item-label": "Opne språkinnstillingar",
+	"ext-uls-empty-state-header": "Ingen språk enno",
+	"ext-uls-empty-state-desc": "Ingen språk er tilgjengelege nett no",
+	"ext-uls-empty-state-header-actions-available": "Ingen språk enno. Vil du leggja til eitt?",
+	"ext-uls-empty-state-desc-actions-available": "Gjer innhaldet tilgjengeleg på fleire språk.",
+	"ext-uls-add-languages-button-label": "Legg til språk"
 }

@@ -12,7 +12,8 @@
 			"SeoJeongHo",
 			"Ykhwong",
 			"아라",
-			"Tensama0415"
+			"Tensama0415",
+			"解浪"
 		]
 	},
 	"uls-desc": "사용자에게 언어를 선택하고 언어 설정을 바꾸는 몇 가지 방법을 제공합니다",
@@ -38,7 +39,7 @@
 	"ext-uls-display-settings-anon-same-as-content": "$1 (내용과 같음)",
 	"ext-uls-display-settings-anon-log-in-cta": "메뉴의 다른 언어를 선택하려면 [[Special:UserLogin|로그인]]하세요.",
 	"ext-uls-webfonts-settings-title": "필요할 때 글꼴 내려받기",
-	"ext-uls-webfonts-settings-info": "없는 글꼴을 자동으로 내려받고 선호하는 글꼴을 선택할 수 있도록 허용합니다.",
+	"ext-uls-webfonts-settings-info": "없는 글꼴을 자동으로 내려받고 주로 사용하는 글꼴을 선택할 수 있도록 허용합니다.",
 	"ext-uls-webfonts-settings-info-link": "자세한 정보",
 	"ext-uls-webfonts-select-for": "$1에 사용할 글꼴 선택",
 	"ext-uls-webfonts-select-for-ui-info": "사용자 인터페이스에 사용할 글꼴",
@@ -71,7 +72,7 @@
 	"prefs-languages": "언어",
 	"ext-uls-compact-language-links-preference": "사용자와 관련 있는 언어로 [[$1|간소화된 언어 목록]]을 사용합니다.",
 	"ext-uls-compact-no-results": "이 문서는 검색된 언어로 읽을 수 없습니다.",
-	"ext-uls-setlang-error": "선호하는 언어를 업데이트하는 중 오류가 발생했습니다. 오류: $1",
+	"ext-uls-setlang-error": "주로 사용하는 언어를 업데이트하는 중 오류가 발생했습니다. 오류: $1",
 	"ext-uls-setlang-unknown-error": "알 수 없는 오류",
 	"ext-uls-setlang-message": "당신이 따라온 링크가 인터페이스를 <strong>$1 ($2)</strong>로 표시하도록 요청했습니다",
 	"ext-uls-setlang-heading": "인터페이스 언어를 변경하시겠습니까?",
