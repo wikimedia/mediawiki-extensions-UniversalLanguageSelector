@@ -13,7 +13,7 @@
 			:lang="lang"
 			:is-highlighted="highlightedIndex === ( index + indexOffset )"
 			:is-selected="selectedValuesSet.has( languageCode )"
-			:unavailable-languages-set="unavailableLanguagesSet"
+			:is-unavailable="unavailableLanguagesSet.has( languageCode )"
 			:annotations="languageAnnotations[ languageCode ]"
 			@select="( ...args ) => $emit( 'select', ...args )"
 			@mousemove="$emit( 'highlight', index + indexOffset )"

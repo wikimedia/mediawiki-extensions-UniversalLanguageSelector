@@ -7,7 +7,7 @@
 			{
 				'uls-rewrite__language-item--highlighted': isHighlighted,
 				'uls-rewrite__language-item--selected': isSelected,
-				'uls-rewrite__language-item--unavailable': !isAvailable
+				'uls-rewrite__language-item--unavailable': isUnavailable
 			},
 			annotations.classes
 		]"
@@ -24,7 +24,7 @@
 			<slot
 				:item="displayName"
 				:annotations="annotations"
-				:is-available="isAvailable"
+				:is-available="!isUnavailable"
 			>
 				{{ displayName }}
 			</slot>
@@ -66,9 +66,9 @@ module.exports = exports = defineComponent( {
 			type: Boolean,
 			default: false
 		},
-		unavailableLanguagesSet: {
-			type: Object, // Set
-			default: () => new Set()
+		isUnavailable: {
+			type: Boolean,
+			default: false
 		},
 		annotations: {
 			type: Object,
@@ -77,22 +77,19 @@ module.exports = exports = defineComponent( {
 	},
 	emits: [ 'select', 'hover' ],
 	setup( props, { emit } ) {
-		const isAvailable = computed( () => !props.unavailableLanguagesSet.has( props.code ) );
-
 		const displayName = computed( () => props.name ||
 			$.uls.data.getAutonym( props.code ) ||
 			props.code
 		);
 
 		const select = () => {
-			if ( isAvailable.value ) {
+			if ( !props.isUnavailable ) {
 				emit( 'select', props.code, displayName.value );
 			}
 		};
 
 		return {
 			select,
-			isAvailable,
 			displayName
 		};
 	}
