@@ -407,10 +407,10 @@ module.exports = exports = defineComponent( {
 
 		const selectedValuesSet = computed( () => new Set( selectedValues.value ) );
 
-		const floatingStyles = useFloating( triggerElement, menuRef, Object.assign( {
+		const { floatingStyles, isPositioned } = useFloating( triggerElement, menuRef, Object.assign( {
 			middleware: [ offset( 8 ), flip(), shift() ],
 			whileElementsMounted: autoUpdate
-		}, props.floatingOptions ) ).floatingStyles;
+		}, props.floatingOptions ) );
 
 		const languagesToDisplay =
 			computed( () => {
@@ -602,10 +602,22 @@ module.exports = exports = defineComponent( {
 		};
 
 		const focusInput = async () => {
-			await nextTick();
-			if ( searchInputRef.value ) {
-				searchInputRef.value.focus();
+			// Wait for Floating UI to apply real coordinates before focusing.
+			// Without this, the popup is still at its initial { top: 0, left: 0 }
+			// when .focus() runs on first open, and the browser scrolls the
+			// viewport to the top of the document to reveal it. T426954.
+			if ( !isPositioned.value ) {
+				await new Promise( ( resolve ) => {
+					const stop = watch( isPositioned, ( value ) => {
+						if ( value ) {
+							stop();
+							resolve();
+						}
+					} );
+				} );
 			}
+			await nextTick();
+			searchInputRef.value.focus();
 		};
 
 		watch( visible, async ( isVisible ) => {
