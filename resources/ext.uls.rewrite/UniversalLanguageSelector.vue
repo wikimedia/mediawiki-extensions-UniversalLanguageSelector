@@ -94,7 +94,7 @@
 					:highlighted-index="highlightedIndex"
 					:selected-values-set="selectedValuesSet"
 					:unavailable-languages-set="unavailableLanguagesSet"
-					:language-annotations="computedLanguageAnnotations"
+					:language-annotations="baseAnnotations"
 					@select="select"
 					@highlight="setHighlightedIndex"
 					@mouseleave="clearHighlightedItem"
@@ -126,7 +126,7 @@
 							:highlighted-index="highlightedIndex"
 							:selected-values-set="selectedValuesSet"
 							:unavailable-languages-set="unavailableLanguagesSet"
-							:language-annotations="computedLanguageAnnotations"
+							:language-annotations="variantSectionAnnotations"
 							@select="select"
 							@highlight="setHighlightedIndex"
 							@mouseleave="clearHighlightedItem"
@@ -158,7 +158,7 @@
 							:index-offset="visibleVariantCodes.length"
 							:selected-values-set="selectedValuesSet"
 							:unavailable-languages-set="unavailableLanguagesSet"
-							:language-annotations="computedLanguageAnnotations"
+							:language-annotations="baseAnnotations"
 							@select="select"
 							@highlight="setHighlightedIndex"
 							@mouseleave="clearHighlightedItem"
@@ -190,7 +190,7 @@
 							:index-offset="visibleVariantCodes.length + highlightedLanguages.length"
 							:selected-values-set="selectedValuesSet"
 							:unavailable-languages-set="unavailableLanguagesSet"
-							:language-annotations="computedLanguageAnnotations"
+							:language-annotations="baseAnnotations"
 							@select="select"
 							@highlight="setHighlightedIndex"
 							@mouseleave="clearHighlightedItem"
@@ -613,10 +613,30 @@ module.exports = exports = defineComponent( {
 				...languagesToDisplay.value
 			] );
 
-		const computedLanguageAnnotations = computed( () => {
+		// Annotations for items in the main, suggested, and search-results sections.
+		const baseAnnotations = computed( () => {
+			const annotations = {};
+			const codes = new Set( languageCodes.value );
+			for ( const code of highlightedLanguages.value ) {
+				codes.add( code );
+			}
+			for ( const code of codes ) {
+				annotations[ code ] = Object.assign(
+					{},
+					props.languageAnnotations[ code ],
+					{ dir: rtlLanguages.has( code ) ? 'rtl' : 'ltr' }
+				);
+			}
+			return annotations;
+		} );
+
+		// Annotations for the variants section. Variant codes are not in the main
+		// language list, so they need their own map that also merges per-variant
+		// annotations.
+		const variantSectionAnnotations = computed( () => {
 			const annotations = {};
 			const variantAnnotations = currentVariantAnnotations.value;
-			for ( const code of combinedLanguages.value ) {
+			for ( const code of currentVariantCodes.value ) {
 				annotations[ code ] = Object.assign(
 					{},
 					props.languageAnnotations[ code ],
@@ -803,7 +823,8 @@ module.exports = exports = defineComponent( {
 			selectedValuesSet,
 			unavailableLanguagesSet,
 			searchQueryHits,
-			computedLanguageAnnotations,
+			baseAnnotations,
+			variantSectionAnnotations,
 			displayLanguageDir,
 
 			// Appearance & Layout
