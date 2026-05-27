@@ -5,37 +5,20 @@
 			v-for="( action, index ) in actions"
 			:key="index"
 		>
-			<cdx-button
-				v-if="action.handler"
-				weight="quiet"
-				@click="action.handler"
-			>
-				<cdx-icon v-if="action.icon" :icon="action.icon"></cdx-icon>
-				{{ action.label }}
-			</cdx-button>
-			<a
-				v-else-if="action.url"
-				:href="action.url"
-				class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled
-					cdx-button--action-progressive cdx-button--weight-quiet"
-			>
-				<cdx-icon v-if="action.icon" :icon="action.icon"></cdx-icon>
-				{{ action.label }}
-			</a>
+			<entrypoint-action-button :action="action"></entrypoint-action-button>
 		</span>
 	</div>
 </template>
 
 <script>
 const { defineComponent, computed } = require( 'vue' );
-const { CdxButton, CdxIcon } = require( '../../codex.js' );
 const useEntrypointActions = require( '../composables/useEntrypointActions.js' );
+const EntrypointActionButton = require( './EntrypointActionButton.vue' );
 
 module.exports = defineComponent( {
 	name: 'EmptyListEntrypoint',
 	components: {
-		CdxButton,
-		CdxIcon
+		EntrypointActionButton
 	},
 	props: {
 		entrypoints: {

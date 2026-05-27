@@ -470,6 +470,7 @@
 				"ext.uls.rewrite/entrypoints/MissingLanguagesEntrypoint.vue",
 				"ext.uls.rewrite/entrypoints/MissingLanguagesPanel.vue",
 				"ext.uls.rewrite/entrypoints/QuickActionsPanel.vue",
+				"ext.uls.rewrite/entrypoints/EntrypointActionButton.vue",
 				"ext.uls.rewrite/LanguageList.vue",
 				"ext.uls.rewrite/LanguageItem.vue",
 				"ext.uls.rewrite/dist/floating-ui.js",

@@ -4,53 +4,24 @@
 			{{ $i18n( 'ext-uls-missing-languages-panel-description' ) }}
 		</p>
 		<div class="uls-rewrite__missing-languages-panel__actions">
-			<template
+			<entrypoint-action-button
 				v-for="( action, index ) in limitedActions"
 				:key="index"
-			>
-				<a
-					v-if="action.url"
-					:href="action.url"
-					class="cdx-button
-						cdx-button--fake-button
-						cdx-button--fake-button--enabled
-						cdx-button--action-progressive
-						cdx-button--weight-quiet"
-				>
-					<cdx-icon
-						v-if="action.icon"
-						:icon="action.icon"
-						size="small"
-					></cdx-icon>
-					{{ action.label }}
-				</a>
-				<cdx-button
-					v-else
-					weight="quiet"
-					action="progressive"
-					@click="action.handler"
-				>
-					<cdx-icon
-						v-if="action.icon"
-						:icon="action.icon"
-						size="small"
-					></cdx-icon>
-					{{ action.label }}
-				</cdx-button>
-			</template>
+				:action="action"
+				icon-size="small"
+			></entrypoint-action-button>
 		</div>
 	</div>
 </template>
 
 <script>
 const { defineComponent, computed } = require( 'vue' );
-const { CdxButton, CdxIcon } = require( '../../codex.js' );
+const EntrypointActionButton = require( './EntrypointActionButton.vue' );
 
 module.exports = defineComponent( {
 	name: 'MissingLanguagesPanel',
 	components: {
-		CdxButton,
-		CdxIcon
+		EntrypointActionButton
 	},
 	props: {
 		actions: {
