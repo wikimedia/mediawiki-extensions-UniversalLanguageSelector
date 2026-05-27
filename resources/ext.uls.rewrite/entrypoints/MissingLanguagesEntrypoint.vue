@@ -16,6 +16,7 @@
 const { defineComponent, computed } = require( 'vue' );
 const { CdxIcon } = require( '../../codex.js' );
 const { cdxIconNext } = require( '../../icons.json' );
+const useEntrypointActions = require( '../composables/useEntrypointActions.js' );
 
 module.exports = defineComponent( {
 	name: 'MissingLanguagesEntrypoint',
@@ -62,13 +63,7 @@ module.exports = defineComponent( {
 			missingLanguages: missingLanguagesCodes.value
 		} ) );
 
-		const actions = computed( () => props.entrypoints
-			.filter( ( entryPoint ) => entryPoint.shouldShow( context.value ) )
-			.map( ( entryPoint ) => entryPoint.getConfig( context.value ) )
-			.filter( ( config ) => config !== null &&
-				( Array.isArray( config ) ? config.length > 0 : true ) )
-			.reduce( ( acc, val ) => acc.concat( val ), [] )
-		);
+		const actions = useEntrypointActions( props.entrypoints, context );
 
 		/**
 		 * @param {string[]} names

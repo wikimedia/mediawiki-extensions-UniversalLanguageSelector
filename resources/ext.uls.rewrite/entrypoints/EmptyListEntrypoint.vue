@@ -29,6 +29,7 @@
 <script>
 const { defineComponent, computed } = require( 'vue' );
 const { CdxButton, CdxIcon } = require( '../../codex.js' );
+const useEntrypointActions = require( '../composables/useEntrypointActions.js' );
 
 module.exports = defineComponent( {
 	name: 'EmptyListEntrypoint',
@@ -61,16 +62,7 @@ module.exports = defineComponent( {
 			languages: props.languages
 		} ) );
 
-		// 1. Filter relevant actions based on shouldShow method.
-		// 2. Get their config.
-		// 3. Validate the config & flatten the array.
-		const actions = computed( () => props.entrypoints
-			.filter( ( entryPoint ) => entryPoint.shouldShow( context.value ) )
-			.map( ( entryPoint ) => entryPoint.getConfig( context.value ) )
-			.filter( ( config ) => config !== null &&
-				( Array.isArray( config ) ? config.length > 0 : true ) )
-			.reduce( ( acc, val ) => acc.concat( val ), [] )
-		);
+		const actions = useEntrypointActions( props.entrypoints, context );
 
 		return {
 			actions

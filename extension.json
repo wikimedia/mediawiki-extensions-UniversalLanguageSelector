@@ -480,6 +480,7 @@
 				"ext.uls.rewrite/composables/useCountryCode.js",
 				"ext.uls.rewrite/composables/useSuggestedLanguages.js",
 				"ext.uls.rewrite/composables/useEntrypoints.js",
+				"ext.uls.rewrite/composables/useEntrypointActions.js",
 				"ext.uls.rewrite/composables/usePreferredLanguages.js",
 				{
 					"name": "icons.json",

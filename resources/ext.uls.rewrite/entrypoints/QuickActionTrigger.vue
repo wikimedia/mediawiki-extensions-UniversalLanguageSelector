@@ -35,6 +35,7 @@
 const { defineComponent, computed } = require( 'vue' );
 const { CdxButton, CdxIcon } = require( '../../codex.js' );
 const { cdxIconEllipsis } = require( '../../icons.json' );
+const useEntrypointActions = require( '../composables/useEntrypointActions.js' );
 
 module.exports = defineComponent( {
 	name: 'QuickActionTrigger',
@@ -78,12 +79,7 @@ module.exports = defineComponent( {
 			searchQueryHits: props.searchQueryHits
 		} ) );
 
-		const actions = computed( () => props.entrypoints
-			.filter( ( entryPoint ) => entryPoint.shouldShow( context.value ) )
-			.map( ( entryPoint ) => entryPoint.getConfig( context.value ) )
-			.filter( ( config ) => config !== null &&
-				( Array.isArray( config ) ? config.length > 0 : true ) )
-			.reduce( ( acc, val ) => acc.concat( val ), [] ) );
+		const actions = useEntrypointActions( props.entrypoints, context );
 
 		const isSingleAction = computed( () => actions.value.length === 1 );
 
