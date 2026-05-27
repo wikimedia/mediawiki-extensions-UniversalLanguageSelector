@@ -105,5 +105,14 @@
 	"ext-uls-missing-languages-label-more": "Відсутньо мовами: <strong>$1</strong>, <strong>$2</strong> та інші",
 	"ext-uls-missing-languages-panel-title": "Перекласти цю сторінку",
 	"ext-uls-missing-languages-panel-description": "Ця сторінка відсутня деякими мовами, які Ви можете знати. Ви можете перекласти її.",
-	"ext-uls-quick-actions-panel-title": "Швидкі дії"
+	"ext-uls-quick-actions-panel-title": "Швидкі дії",
+	"ext-uls-preferred-languages-title": "{{PLURAL:$1|Бажана мова|Бажані мови|Бажаних мов}}",
+	"ext-uls-preferred-languages-settings-title": "Бажані мови",
+	"ext-uls-preferred-languages-desc": "Відображатимуться першими у мовному меню.",
+	"ext-uls-preferred-languages-label": "Додати мову",
+	"ext-uls-preferred-languages-help": "Прикріпіть до $1 {{PLURAL:$1|мови|мов}}. {{PLURAL:$1|Вона з'явиться першою|Вони з'являться першими}}, коли Ви перемикатимете мови у будь-якій статті.",
+	"ext-uls-preferred-languages-input-placeholder": "Шукати мови",
+	"ext-uls-preferred-languages-status": "<strong>$1</strong> {{PLURAL:$1|з}} <strong>$2</strong> {{PLURAL:$2|обрано}}",
+	"ext-uls-preferred-languages-limit-reached": "Вилучіть одну, щоб додати іншу",
+	"ext-uls-preferred-languages-save-error": "Сталася помилка при збереженні Ваших бажаних мов."
 }

@@ -105,5 +105,8 @@
 	"ext-uls-invalid-language-search-description": "Проверьте правильность написания. Вы можете искать языки по названию или по ISO-коду.",
 	"ext-uls-unsupported-language-title": "Язык отсутствует",
 	"ext-uls-unsupported-language-description": "Язык, который вы ищете, недоступен.",
-	"ext-uls-open-language-settings": "Открыть языковые настройки"
+	"ext-uls-open-language-settings": "Открыть языковые настройки",
+	"ext-uls-preferred-languages-title": "{{PLURAL:$1|Предпочитаемый язык|Предпочитаемые языки}}",
+	"ext-uls-preferred-languages-settings-title": "Предпочитаемые языки",
+	"ext-uls-preferred-languages-label": "Добавить язык"
 }
