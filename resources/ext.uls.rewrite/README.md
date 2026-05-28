@@ -5,6 +5,7 @@ The `UniversalLanguageSelector` (ULS) component is a Vue-based interface for sel
 It is part of the UniversalLanguageSelector extension and is designed to work with the Codex design system.
 
 ## Contents
+* [Module map](#module-map)
 * [Vue.js usage](#vuejs-usage)
     * [Props](#props)
     * [Events](#events)
@@ -14,7 +15,24 @@ It is part of the UniversalLanguageSelector extension and is designed to work wi
 * [JavaScript usage (The "Just JS" approach)](#javascript-usage-the-just-js-approach)
     * [Configuration](#configuration)
     * [Example](#example)
+    * [Instance methods](#instance-methods)
+* [Responsive behavior](#responsive-behavior)
+* [Keyboard interactions](#keyboard-interactions)
+* [Positioning (Floating UI)](#positioning-floating-ui)
+* [Styling and CSS namespace](#styling-and-css-namespace)
+    * [Language Item Markers](#language-item-markers)
 * [Entry points and extensibility](#entry-points-and-extensibility)
+
+## Module map
+
+This directory contributes four ResourceLoader modules. They are intentionally split so that callers only load what they need:
+
+| Module | Defined in | Contents | When to depend on it |
+|--------|------------|----------|----------------------|
+| `ext.uls.rewrite` | `extension.json` | The Vue component, the `createUniversalLanguageSelector` factory, the Codex components used by the UI, language data, icons, and the bundled Floating UI. | When you actually need to mount the language selector. Pulls in Vue + Codex, so it's the heaviest of the bunch. |
+| `ext.uls.rewrite.entrypoints` | `EntrypointRegistry.js` | The standalone entry-point registry only (`ENTRYPOINT_TYPE`, `ULS_MODE`, `register`, `getRegisteredEntrypoints`, `lock`). | When your extension needs to **register** an entry point. It has no Vue / Codex dependencies, so it can be loaded very early during page setup (before ULS mounts and locks the registry). |
+| `ext.uls.rewrite.languagesettings` | `LanguageSettings.js` | Registers the "Language settings" quick action that opens the legacy ULS settings dialog. | Loaded by the host page so that the settings action is available out of the box. Depends only on `ext.uls.rewrite.entrypoints`; the legacy settings dialog is loaded lazily via `mw.loader.using` when the action is invoked. |
+| `ext.uls.preferredlanguages` | (defined elsewhere in `extension.json`) | Bundles `PreferredLanguagesTab.vue`, which renders the unified `LanguageSelector` component (from `mediawiki.languageselector.lookup`) in multi-select mode. Used by the Preferences page. Lives in this directory but is **not** part of the `ext.uls.rewrite` module. | When rendering the "Preferred languages" tab on Special:Preferences. |
 
 ## Vue.js usage
 
@@ -39,10 +57,10 @@ mw.loader.using( [ 'ext.uls.rewrite' ] ).then( () => {
 | `visible` | `boolean` | `false` | Whether the selector is visible.                                                                                       |
 | `selectableLanguages` | `Object` | `null` | Map of language codes to autonyms. If `null`, the initial list will be empty, and languages will only appear once searched for. |
 | `selected` | `Array` | `[]` | List of currently selected language codes.                                                                             |
-| `placeholder` | `string` | `null` | Placeholder text for the search input. |
+| `placeholder` | `string` | `null` | Placeholder text for the search input. When `null`, falls back to the localized `ext-uls-placeholder-search` message. |
 | `hideActiveLanguages`| `boolean` | `false` | Whether to hide current active languages from the suggested and all-languages lists. This does not hide languages from the preferred languages list. |
 | `searchApiUrl` | `string` | `null` | Optional API URL for server-side language search. |
-| `displayLanguageCode` | `string` | `''` | Language code for the selector's items. |
+| `displayLanguageCode` | `string` | `''` | Language code used to render language item labels. When empty, items are rendered using each language's autonym. |
 | `languageAnnotations` | `Object` | `{}` | Annotations for language items, keyed by language code. See [Language annotations](#language-annotations) for details. |
 | `mode` | `string` | **Required** | The mode for ULS: `'interface'` or `'content'`.                                                                        |
 | `floatingOptions` | `Object` | `{ placement: 'bottom-end' }` | Overrides for Floating UI configuration.                                                                               |
@@ -112,15 +130,16 @@ The `createUniversalLanguageSelector` function accepts a `config` object with th
 *   `triggerElement`: (Required) Element that triggers the ULS.
 *   `mode`: (Required) Either `'interface'` or `'content'`.
 *   `selectableLanguages`: (Optional) Map of language codes to autonyms.
-*   `selected`: (Optional) Array of selected language codes.
-*   `placeholder`: (Optional) Search input placeholder.
-*   `displayLanguageCode`: (Optional) Language code for the selector's items.
-*   `languageAnnotations`: (Optional) Annotations (CSS classes) for language items.
+*   `selected`: (Optional) Array of selected language codes. The wrapper tracks this internally; mutate it from outside via the `updateSelected()` instance method (see below).
+*   `visible`: (Optional) Whether the ULS should be visible on mount. Defaults to `true`. Note that this differs from the underlying `visible` prop, which defaults to `false` — the factory opens the selector immediately so that the typical "create and show" call site stays a one-liner.
+*   `placeholder`: (Optional) Search input placeholder. When omitted, falls back to the localized `ext-uls-placeholder-search` message.
+*   `displayLanguageCode`: (Optional) Language code used to render language item labels. Defaults to each language's autonym.
+*   `languageAnnotations`: (Optional) Annotations (CSS classes, descriptions, custom data) for language items, keyed by language code.
 *   `hideActiveLanguages`: (Optional) Whether to hide current active languages from the suggested and all-languages lists (does not hide from preferred languages).
-*   `onSelect`: (Optional) Callback function when a language is selected.
+*   `onSelect`: (Optional) Callback function when a language is selected. Receives `{ code, value }`.
 *   `onClose`: (Optional) Callback function when the ULS is closed.
-*   `floatingOptions`: (Optional) Floating UI configuration.
-*   `slots`: (Optional) Vue slots to customize the ULS content.
+*   `floatingOptions`: (Optional) Floating UI configuration overrides (e.g. `{ placement: 'bottom-start' }`). See [Positioning (Floating UI)](#positioning-floating-ui).
+*   `slots`: (Optional) Vue slots to customize the ULS content (e.g. a `language-item` render function).
 
 ### Example
 
@@ -141,13 +160,68 @@ mw.loader.using( [ 'ext.uls.rewrite' ] ).then( () => {
 
     const ulsVm = app.mount( mountPoint );
 
-    // You can control the ULS using the VM methods:
-    ulsVm.toggle(); // Toggles the visibility of the selector.
-    ulsVm.close();  // Closes the selector and triggers the onClose callback.
+    // You can control the ULS using the VM methods — see "Instance methods" below.
+    ulsVm.toggle();
 } );
 ```
 
+### Instance methods
+
+The object returned by `app.mount( … )` exposes the following methods:
+
+| Method | Description |
+|--------|-------------|
+| `toggle()` | Toggles the visibility of the selector. If currently visible, it will be closed (and `onClose` fired); otherwise it is shown. |
+| `close()` | Closes the selector and triggers the `onClose` callback. |
+| `select( language )` | Programmatically dispatches a selection. Closes the selector and invokes the `onSelect` callback with the given `language` object (`{ code, value }`). Useful when an external UI element should behave as if the user had picked a language from the list. |
+| `updateSelected( newSelected )` | Replaces the wrapper's tracked list of selected language codes. Call this after the parent application's selection state changes so that features such as `hideActiveLanguages` and the "active language" highlight stay in sync. |
+
 ---
+## Responsive behavior
+
+The selector adapts to the viewport width. When `window.innerWidth` is below `768px`, the component switches to a mobile layout:
+
+*   The popup is rendered as a full-screen modal (`aria-modal="true"`) instead of being positioned relative to the trigger element.
+*   A header with a title and a close button is shown above the search input.
+*   Floating UI positioning is bypassed in this mode.
+
+The viewport width is observed via a `resize` listener, so the layout will switch on the fly if the window crosses the threshold while the selector is open.
+
+## Keyboard interactions
+
+The selector ships with full keyboard support out of the box:
+
+| Key | Action |
+|-----|--------|
+| `↑` / `↓` | Move the highlight up/down through the visible language list. The highlighted item is auto-scrolled into view. |
+| `Enter` | Select the currently highlighted item. If nothing is highlighted but an autocomplete suggestion is showing, the first list item is selected. If the search query exactly matches a known language code, that language is selected. If only a single search result remains, it is selected. |
+| `Esc` | Close the selector (emits the `close` event / triggers the `onClose` callback). |
+| `Tab` or `→` | Accept the ghosted autocomplete suggestion, replacing the search input contents with the completed language name. `→` only accepts when the cursor is at the end of the input. |
+
+## Positioning (Floating UI)
+
+The popup is positioned with a copy of [Floating UI](https://floating-ui.com/) bundled at `dist/floating-ui.js` (the file is shipped with the module to avoid runtime dependencies on an external package).
+
+By default, the component uses these middleware:
+
+*   `offset( 8 )` — 8px gap between the trigger element and the popup.
+*   `flip()` — flips the popup to the opposite side when there is not enough room in the configured placement.
+*   `shift()` — shifts the popup along the main axis to keep it inside the viewport.
+
+The default placement is `'bottom-end'`. Pass `floatingOptions` to override placement or merge additional Floating UI configuration:
+
+```javascript
+floatingOptions: {
+    placement: 'bottom-start'
+}
+```
+
+Note that positioning is only applied in desktop mode; on mobile the popup is rendered as a full-screen modal (see [Responsive behavior](#responsive-behavior)).
+
+## Styling and CSS namespace
+
+Although the component itself is named `UniversalLanguageSelector`, every CSS class it emits uses the **`uls-rewrite`** BEM prefix (e.g. `.uls-rewrite`, `.uls-rewrite__header`, `.uls-rewrite__language-item`, `.uls-rewrite--mobile`). Use this prefix when writing site- or extension-level overrides, and prefer extending existing modifiers (e.g. the auto-applied density modifiers `uls-rewrite--density-low|medium|high`) over targeting deep selectors.
+
 ### Language Item Markers
 
 The language selector supports adding markers (icons, badges, progress dots) to language items through CSS. Items support both start and end markers simultaneously without text shift or wrap-around.
