@@ -63,7 +63,7 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Μία ακόμη|$1 ακόμη}}",
 	"ext-uls-compact-link-info": "Όλες οι γλώσσες (αρχική επιλογή από απλές επιλογές από εσάς και άλλους)",
 	"prefs-languages": "Γλώσσες",
-	"ext-uls-compact-language-links-preference": "Χρησιμοποιήστε ένα [[$1|compact language list]], με γλώσσες σχετικές με εσάς.",
+	"ext-uls-compact-language-links-preference": "Χρησιμοποιήστε μια [[$1|συμπυκνωμένη λίστα γλωσσών]], με γλώσσες σχετικές με εσάς",
 	"ext-uls-compact-no-results": "Αυτή η σελίδα δεν είναι διαθέσιμη στην γλώσσα που αναζητήσατε.",
 	"ext-uls-setlang-error": "Παρουσιάστηκε σφάλμα κατά την ενημέρωση της γλώσσας που προτιμάτε. Σφάλμα: $1",
 	"ext-uls-setlang-unknown-error": "Άγνωστο σφάλμα",

@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"AhmedG612"
+		]
+	},
+	"apihelp-ulslocalization-summary": "Hel tarjumaadda ULS ee luqadda la bixiyay.",
+	"apihelp-ulslocalization-param-language": "Koodhka luqadda",
+	"apihelp-ulslocalization-example-1": "Hel tarjumaadda Tamil-ka",
+	"apihelp-ulslocalization-example-2": "Hel tarjumaadda Hindi-ga",
+	"apihelp-ulssetlang-summary": "Cusboonaysii luqadda is dhexgalka ee uu doorbidayo isticmaaluhu.",
+	"apihelp-ulssetlang-param-languagecode": "Koodhka luqadda ee la doorbiday",
+	"apierror-ulssetlang-anon-notallowed": "Isticmaalayaasha aan la aqoonsan looma oggola inay beddelaan luqadda is dhexgalka."
+}
