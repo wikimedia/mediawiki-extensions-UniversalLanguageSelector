@@ -347,6 +347,7 @@ module.exports = exports = defineComponent( {
 		const DENSITY_LOW_THRESHOLD = 10;
 		const DENSITY_MEDIUM_THRESHOLD = 30;
 		const SUGGESTED_LANGUAGES_COUNT = 6;
+		const PREFERRED_LANGUAGES_COUNT = 10;
 		const MOBILE_WIDTH_THRESHOLD = 768;
 
 		const { selectableLanguages, selected, triggerElement, visible } = toRefs( props );
@@ -490,8 +491,11 @@ module.exports = exports = defineComponent( {
 			}
 
 			let result;
+			let limit = SUGGESTED_LANGUAGES_COUNT;
 			if ( preferredLanguages.value.length > 0 ) {
 				result = preferredLanguages.value;
+				// Max allowed preferred languages
+				limit = PREFERRED_LANGUAGES_COUNT;
 			} else {
 				result = availableLanguageSuggestions.value;
 			}
@@ -501,7 +505,7 @@ module.exports = exports = defineComponent( {
 				result = result.filter( ( code ) => !selectedSet.has( code ) );
 			}
 
-			return result.slice( 0, SUGGESTED_LANGUAGES_COUNT );
+			return result.slice( 0, limit );
 		} );
 
 		const highlightedLanguagesTitle = computed( () => {
