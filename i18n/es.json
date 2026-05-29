@@ -15,7 +15,8 @@
 			"Ovruni",
 			"Pginer",
 			"Rodney Araujo",
-			"Vivaelcelta"
+			"Vivaelcelta",
+			"Danielyepezgarces"
 		]
 	},
 	"uls-desc": "Ofrece al usuario varias formas para seleccionar un idioma y ajustar su configuración",
@@ -92,5 +93,6 @@
 	"ext-uls-no-languages-entrypoint-description": "Puedes traducir esta página. Es una manera fácil de crear contenido en tu idioma.",
 	"ext-uls-open-language-settings": "Abrir opciones de idioma",
 	"ext-uls-open-quick-actions": "Mostrar acciones rápidas",
-	"ext-uls-missing-languages-panel-title": "Traducir esta página"
+	"ext-uls-missing-languages-panel-title": "Traducir esta página",
+	"ext-uls-missing-languages-panel-description": "Esta página no está disponible en algunos idiomas que usted puede conocer. Puedes traducirlo."
 }

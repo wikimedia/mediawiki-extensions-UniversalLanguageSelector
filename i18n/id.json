@@ -12,7 +12,8 @@
 			"Veracious",
 			"William Surya Permana",
 			"Xð",
-			"පසිඳු කාවින්ද"
+			"පසිඳු කාවින්ද",
+			"Bayahiu"
 		]
 	},
 	"uls-desc": "Memberikan pengguna beberapa cara untuk memilih bahasa dan menyesuaikan pengaturan bahasa",
@@ -80,7 +81,7 @@
 	"ext-uls-setlang-cancel": "Jangan ubah",
 	"ext-uls-actions-menu-language-settings-item-label": "Buka setelah bahasa",
 	"ext-uls-empty-state-header": "Belum ada bahasa",
-	"ext-uls-empty-state-desc": "Tidak ada bahasa yang tersedia untuk saat ini",
+	"ext-uls-empty-state-desc": "Belum ada bahasa yang tersedia untuk sekarang",
 	"ext-uls-empty-state-header-actions-available": "Belum ada bahasa. Tambahkan yang baru?",
 	"ext-uls-empty-state-desc-actions-available": "Jadikan konten ini tersedia dalam lebih banyak bahasa.",
 	"ext-uls-add-languages-button-label": "Tambah bahasa",

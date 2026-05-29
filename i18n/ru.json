@@ -18,7 +18,8 @@
 			"ShinePhantom",
 			"Stjn",
 			"Vlad5250",
-			"Умар"
+			"Умар",
+			"Merrahtar"
 		]
 	},
 	"uls-desc": "Даёт пользователю несколько способов выбрать язык и произвести установки языка",
@@ -103,5 +104,12 @@
 	"ext-uls-invalid-language-search-description": "Проверьте правильность написания. Вы можете искать языки по названию или по ISO-коду.",
 	"ext-uls-unsupported-language-title": "Язык отсутствует",
 	"ext-uls-unsupported-language-description": "Язык, который вы ищете, недоступен.",
-	"ext-uls-open-language-settings": "Открыть языковые настройки"
+	"ext-uls-open-language-settings": "Открыть языковые настройки",
+	"ext-uls-open-language-selector": "Вернуться к выбору языка",
+	"ext-uls-open-quick-actions": "Показать быстрые действия",
+	"ext-uls-missing-languages-label": "Отсутствует на <strong>$1</strong>",
+	"ext-uls-missing-languages-label-more": "Отсутствует на <strong>$1</strong>, <strong>$2</strong> и др.",
+	"ext-uls-missing-languages-panel-title": "Перевести эту страницу",
+	"ext-uls-missing-languages-panel-description": "Эта страница отсутствует на некоторых языках, которые вы, возможно, знаете. Вы можете перевести её.",
+	"ext-uls-quick-actions-panel-title": "Быстрые действия"
 }
