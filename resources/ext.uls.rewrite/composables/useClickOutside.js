@@ -1,6 +1,6 @@
 'use strict';
 
-const { watch, onMounted, onBeforeUnmount } = require( 'vue' );
+const { watch, onBeforeUnmount } = require( 'vue' );
 
 /**
  * Composable to detect clicks outside a specified element.
@@ -24,13 +24,7 @@ function useClickOutside( elementRef, visibleRef, document, callback ) {
 		} else {
 			document.removeEventListener( 'click', onClickOutside );
 		}
-	} );
-
-	onMounted( () => {
-		if ( visibleRef.value ) {
-			document.addEventListener( 'click', onClickOutside );
-		}
-	} );
+	}, { immediate: true } );
 
 	onBeforeUnmount( () => {
 		document.removeEventListener( 'click', onClickOutside );

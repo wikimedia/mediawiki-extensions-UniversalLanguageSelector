@@ -738,12 +738,7 @@ module.exports = exports = defineComponent( {
 			// viewport to the top of the document to reveal it. T426954.
 			if ( !isPositioned.value ) {
 				await new Promise( ( resolve ) => {
-					const stop = watch( isPositioned, ( value ) => {
-						if ( value ) {
-							stop();
-							resolve();
-						}
-					} );
+					watch( isPositioned, () => resolve(), { once: true } );
 				} );
 			}
 			await nextTick();
