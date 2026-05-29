@@ -362,8 +362,13 @@ module.exports = exports = defineComponent( {
 			currentView.value = VIEW.MAIN;
 		};
 
-		const viewportWidth = ref( window.innerWidth );
-		const isMobile = computed( () => viewportWidth.value < MOBILE_WIDTH_THRESHOLD );
+		const mobileMediaQuery = window.matchMedia(
+			`(max-width: ${ MOBILE_WIDTH_THRESHOLD - 1 }px)`
+		);
+		const isMobile = ref( mobileMediaQuery.matches );
+		const onBreakpointChange = ( event ) => {
+			isMobile.value = event.matches;
+		};
 
 		const dialogAriaLabel = computed( () => {
 			switch ( currentView.value ) {
@@ -777,10 +782,6 @@ module.exports = exports = defineComponent( {
 			}
 		}, { immediate: true } );
 
-		const updateViewportWidth = () => {
-			viewportWidth.value = window.innerWidth;
-		};
-
 		const {
 			quickActionEntrypoints,
 			emptyLanguageListEntrypoints,
@@ -791,12 +792,22 @@ module.exports = exports = defineComponent( {
 		// Language suggestions for the user, irrespective of what's available in the selector
 		const userLanguageSuggestions = getSuggestedLanguages( previousLanguages );
 
-		onMounted( async () => {
-			window.addEventListener( 'resize', updateViewportWidth );
+		onMounted( () => {
+			// Safari < 14 lacks addEventListener on MediaQueryList and only
+			// supports the deprecated addListener API.
+			if ( mobileMediaQuery.addEventListener ) {
+				mobileMediaQuery.addEventListener( 'change', onBreakpointChange );
+			} else {
+				mobileMediaQuery.addListener( onBreakpointChange );
+			}
 		} );
 
 		onUnmounted( () => {
-			window.removeEventListener( 'resize', updateViewportWidth );
+			if ( mobileMediaQuery.removeEventListener ) {
+				mobileMediaQuery.removeEventListener( 'change', onBreakpointChange );
+			} else {
+				mobileMediaQuery.removeListener( onBreakpointChange );
+			}
 		} );
 
 		return {
