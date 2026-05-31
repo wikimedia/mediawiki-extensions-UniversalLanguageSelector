@@ -893,7 +893,7 @@
 		}
 
 		Array.prototype.forEach.call( languageNodes, ( node ) => {
-			const lang = node.lang;
+			const lang = mw.uls.convertMediaWikiLanguageCodeToULS( node.lang );
 			if ( lang ) {
 				annotations[ lang ] = {
 					classes: Array.from( node.parentElement.classList ),
