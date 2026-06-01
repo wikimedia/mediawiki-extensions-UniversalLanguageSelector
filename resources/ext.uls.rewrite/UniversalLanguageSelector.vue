@@ -146,6 +146,14 @@
 								></slot>
 							</template>
 						</language-list>
+						<!-- Reserve height for rows not yet progressively rendered so
+						the scrollbar stays stable while the list fills in. -->
+						<div
+							v-if="section.reservedHeight > 0"
+							class="uls-rewrite__list-reserve"
+							:style="{ height: section.reservedHeight + 'px' }"
+							aria-hidden="true"
+						></div>
 					</div>
 				</div>
 
@@ -232,6 +240,7 @@ const useLanguageHistory = require( './composables/useLanguageHistory.js' );
 const useSuggestedLanguages = require( './composables/useSuggestedLanguages.js' );
 const usePreferredLanguages = require( './composables/usePreferredLanguages.js' );
 const useEntrypoints = require( './composables/useEntrypoints.js' );
+const useProgressiveRender = require( './composables/useProgressiveRender.js' );
 const { useFloating, offset, flip, shift, autoUpdate } = require( './dist/floating-ui.js' );
 const { CdxSearchInput, CdxButton, CdxIcon, CdxProgressBar } = require( '../codex.js' );
 const { cdxIconClose } = require( '../icons.json' );
@@ -462,6 +471,30 @@ module.exports = exports = defineComponent( {
 				return result;
 			} );
 
+		// Progressive rendering of the large unfiltered "all languages" list:
+		// render a screenful immediately, then fill in the rest over subsequent
+		// frames so opening paints quickly. Small lists render in full at once.
+		const { renderLimit, growTo } = useProgressiveRender();
+
+		// Measured height of a rendered row, used to reserve space for rows not
+		// yet progressively rendered. Seeded with a rough estimate (px) until
+		// the first row is measured on mount.
+		const rowHeight = ref( 40 );
+
+		const visibleAllCodes = computed( () => {
+			const all = languagesToDisplay.value;
+			if ( searchQuery.value || all.length <= renderLimit.value ) {
+				return all;
+			}
+			return all.slice( 0, renderLimit.value );
+		} );
+
+		watch( [ languagesToDisplay, searchQuery ], () => {
+			if ( !searchQuery.value ) {
+				growTo( languagesToDisplay.value.length );
+			}
+		}, { immediate: true } );
+
 		const hasSearchHits = computed( () => Object.keys( searchQueryHits.value ).length > 0 );
 
 		const languageCodes = computed( () => Object.keys( languages.value ) );
@@ -630,14 +663,21 @@ module.exports = exports = defineComponent( {
 				key: 'all',
 				modifierClass: 'uls-rewrite__section--all',
 				// Only show the "All languages" title when at least one other
-				// section is present above it.
+				// section is present above it. The count reflects the full list,
+				// not the progressively-rendered subset.
 				title: sections.length > 0 ?
 					mw.msg( 'ext-uls-all-languages-title', languagesToDisplay.value.length ) :
 					null,
-				codes: languagesToDisplay.value,
+				codes: visibleAllCodes.value,
 				languages: languages.value,
 				annotations: baseAnnotations.value,
-				indexOffset: cursor
+				indexOffset: cursor,
+				// Height to reserve for the rows still being progressively
+				// rendered, so the scrollbar does not shrink as they fill in.
+				// visibleAllCodes is always a prefix of the full list, so the
+				// difference is never negative.
+				reservedHeight: ( languagesToDisplay.value.length - visibleAllCodes.value.length ) *
+					rowHeight.value
 			} );
 
 			return sections;
@@ -794,6 +834,17 @@ module.exports = exports = defineComponent( {
 				mobileMediaQuery.addEventListener( 'change', onBreakpointChange );
 			} else {
 				mobileMediaQuery.addListener( onBreakpointChange );
+			}
+
+			// Measure a real row so reserved-height for not-yet-rendered rows
+			// matches actual layout, keeping the scrollbar stable as the list
+			// fills in.
+			if ( keyboardNavigationContainer.value ) {
+				const firstItem = keyboardNavigationContainer.value
+					.querySelector( '.uls-rewrite__language-item' );
+				if ( firstItem && firstItem.offsetHeight ) {
+					rowHeight.value = firstItem.offsetHeight;
+				}
 			}
 		} );
 

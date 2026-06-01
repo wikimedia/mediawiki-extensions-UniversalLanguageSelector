@@ -482,6 +482,7 @@
 				"ext.uls.rewrite/composables/useEntrypoints.js",
 				"ext.uls.rewrite/composables/useEntrypointActions.js",
 				"ext.uls.rewrite/composables/usePreferredLanguages.js",
+				"ext.uls.rewrite/composables/useProgressiveRender.js",
 				{
 					"name": "icons.json",
 					"callback": "MediaWiki\\ResourceLoader\\CodexModule::getIcons",
