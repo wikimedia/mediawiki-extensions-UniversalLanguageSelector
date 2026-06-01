@@ -26,6 +26,25 @@
 	require( './ext.uls.actions.menu.items.registry.js' );
 
 	/**
+	 * Warm the lazy-loaded ULS rewrite (V2) modules so the selector opens
+	 * without a network round-trip on click. No-ops when V2 is disabled.
+	 *
+	 * @return {string[]} The list of modules.
+	 */
+	function prefetchRewriteModules() {
+		const isMinerva = mw.config.get( 'skin' ) === 'minerva';
+		const modules = isMinerva ?
+			[ 'ext.uls.mediawiki', 'ext.uls.rewrite' ] :
+			[ 'ext.uls.mediawiki', 'ext.uls.rewrite.languagesettings', 'ext.uls.rewrite' ];
+
+		if ( mw.config.get( 'wgULSLanguageSelectorV2Enabled' ) ) {
+			mw.loader.load( modules );
+		}
+
+		return modules;
+	}
+
+	/**
 	 * For Vector, check if the language button id exists.
 	 * For other skins, check wgULSDisplaySettingsInInterlanguage for the current skin.
 	 *
@@ -429,7 +448,7 @@
 					}
 					$trigger.attr( 'data-uls-loaded', true );
 
-					mw.loader.using( [ 'ext.uls.mediawiki', 'ext.uls.rewrite', 'ext.uls.rewrite.languagesettings' ] ).then( () => {
+					mw.loader.using( prefetchRewriteModules() ).then( () => {
 						const { createUniversalLanguageSelector } = require( 'ext.uls.rewrite' );
 
 						const mountPoint = document.createElement( 'div' );
@@ -520,9 +539,14 @@
 		}
 
 		$trigger.on( 'click', clickHandler );
-		// Optimization: Prefetch the Resource loader modules for ULS on mouseover
-		$trigger.one( 'mouseover', () => {
-			mw.loader.load( languageSettingsModules );
+		// Optimization: Prefetch the ResourceLoader modules for ULS on hover/focus
+		// so the selector opens without a network round-trip on click.
+		$trigger.one( 'pointerenter focus', () => {
+			if ( mw.config.get( 'wgULSLanguageSelectorV2Enabled' ) && userCanChangeLanguage() ) {
+				prefetchRewriteModules();
+			} else {
+				mw.loader.load( languageSettingsModules );
+			}
 		} );
 	}
 
@@ -612,10 +636,7 @@
 
 		if ( mw.config.get( 'wgULSLanguageSelectorV2Enabled' ) ) {
 			const isMinerva = mw.config.get( 'skin' ) === 'minerva';
-			const modulesToLoad = isMinerva ?
-				[ 'ext.uls.mediawiki', 'ext.uls.rewrite' ] :
-				[ 'ext.uls.mediawiki', 'ext.uls.rewrite.languagesettings', 'ext.uls.rewrite' ];
-			mw.loader.using( modulesToLoad ).then( () => {
+			mw.loader.using( prefetchRewriteModules() ).then( () => {
 				const languageNodes = getLanguageNodes();
 				const languageNodesInjected = injectCurrentLanguage( Array.from( languageNodes ) );
 				const hideActiveLanguages = languageNodesInjected.length !== languageNodes.length;
@@ -718,13 +739,21 @@
 		// FIXME: In Timeless ULS is embedded in a menu which stops event propagation
 		if ( $( '.sidebar-inner' ).length ) {
 			$( '.sidebar-inner #p-lang' )
-				.one( 'click', '.mw-interlanguage-selector', loadContentLanguageSelector );
+				.one( 'click', '.mw-interlanguage-selector', loadContentLanguageSelector )
+				.one( 'pointerenter focus', '.mw-interlanguage-selector', prefetchRewriteModules );
 		} else {
 			// This button may be created by the new Vector skin, or ext.uls.compactlinks module
 			// if there are many languages. Warning: Both this module and ext.uls.compactlinks
 			// module may run simultaneously. Using event delegation to avoid race conditions where
 			// the trigger may be created after this code.
 			$( document ).on( 'click', '.mw-interlanguage-selector', loadContentLanguageSelector );
+			// Prefetch the rewrite modules on hover/focus so the selector
+			// opens instantly on click. Delegated to handle triggers created later.
+			$( document ).one(
+				'pointerenter focus',
+				'.mw-interlanguage-selector',
+				prefetchRewriteModules
+			);
 			// Special handling for checkbox hack.
 			handleCheckboxSelector();
 		}
