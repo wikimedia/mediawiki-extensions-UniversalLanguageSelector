@@ -5,40 +5,58 @@
 		:lang="lang || null"
 		:dir="dir || null"
 	>
-		<language-item
-			v-for="( languageCode, index ) in languageCodes"
-			:key="languageCode"
-			:code="languageCode"
-			:name="languages[languageCode]"
-			:lang="lang"
-			:is-highlighted="highlightedIndex === ( index + indexOffset )"
-			:is-selected="selectedValuesSet.has( languageCode )"
-			:is-unavailable="unavailableLanguagesSet.has( languageCode )"
-			:annotations="languageAnnotations[ languageCode ]"
-			@select="( ...args ) => $emit( 'select', ...args )"
+		<li
+			v-for="( code, index ) in languageCodes"
+			:key="code"
+			:lang="!lang ? code : null"
+			:data-language-code="code"
+			class="uls-rewrite__language-item"
+			:class="[
+				{
+					'uls-rewrite__language-item--highlighted': isHighlighted( index ),
+					'uls-rewrite__language-item--selected': selectedValuesSet.has( code ),
+					'uls-rewrite__language-item--unavailable': unavailableLanguagesSet.has( code )
+				},
+				annotationsByCode[ code ].classes
+			]"
+			:aria-selected="selectedValuesSet.has( code )"
+			role="option"
+			tabindex="-1"
+			@click.exact.prevent="select( code )"
 			@mousemove="$emit( 'highlight', index + indexOffset )"
 		>
-			<template #default="slotProps">
+			<span
+				class="uls-rewrite__language-item-title"
+				:dir="!lang ? annotationsByCode[ code ].dir : null"
+			>
 				<slot
 					name="language-item"
-					:item="slotProps.item"
-					:annotations="slotProps.annotations"
-					:is-available="slotProps.isAvailable"
-				></slot>
-			</template>
-		</language-item>
+					:item="displayNames[ code ]"
+					:annotations="annotationsByCode[ code ]"
+					:is-available="!unavailableLanguagesSet.has( code )"
+				>
+					{{ displayNames[ code ] }}
+				</slot>
+			</span>
+			<span
+				v-if="annotationsByCode[ code ].description"
+				class="uls-rewrite__language-item--description"
+				:dir="!lang ? annotationsByCode[ code ].dir : null"
+			>
+				{{ annotationsByCode[ code ].description }}
+			</span>
+		</li>
 	</ul>
 </template>
 
 <script>
-const { defineComponent } = require( 'vue' );
-const LanguageItem = require( './LanguageItem.vue' );
+const { defineComponent, computed } = require( 'vue' );
+
+// Shared empty object so codes without annotations don't allocate per render.
+const EMPTY_ANNOTATIONS = Object.freeze( {} );
 
 module.exports = defineComponent( {
 	name: 'LanguageList',
-	components: {
-		LanguageItem
-	},
 	props: {
 		languageCodes: {
 			type: Array,
@@ -77,6 +95,45 @@ module.exports = defineComponent( {
 			default: () => ( {} )
 		}
 	},
-	emits: [ 'select', 'highlight' ]
+	emits: [ 'select', 'highlight' ],
+	setup( props, { emit } ) {
+		// Resolve display names once for the whole list instead of in a
+		// per-item computed. Falls back to the autonym, then the code itself.
+		const displayNames = computed( () => {
+			const map = {};
+			for ( const code of props.languageCodes ) {
+				map[ code ] = props.languages[ code ] ||
+					$.uls.data.getAutonym( code ) ||
+					code;
+			}
+			return map;
+		} );
+
+		// Resolve each code's annotations once per data change, mirroring
+		// displayNames, instead of calling a helper repeatedly per row.
+		const annotationsByCode = computed( () => {
+			const map = {};
+			for ( const code of props.languageCodes ) {
+				map[ code ] = props.languageAnnotations[ code ] || EMPTY_ANNOTATIONS;
+			}
+			return map;
+		} );
+
+		const isHighlighted = ( index ) => props.highlightedIndex === ( index + props.indexOffset );
+
+		const select = ( code ) => {
+			if ( props.unavailableLanguagesSet.has( code ) ) {
+				return;
+			}
+			emit( 'select', code, displayNames.value[ code ] );
+		};
+
+		return {
+			displayNames,
+			annotationsByCode,
+			isHighlighted,
+			select
+		};
+	}
 } );
 </script>

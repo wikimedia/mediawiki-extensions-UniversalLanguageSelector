@@ -472,7 +472,6 @@
 				"ext.uls.rewrite/entrypoints/QuickActionsPanel.vue",
 				"ext.uls.rewrite/entrypoints/EntrypointActionButton.vue",
 				"ext.uls.rewrite/LanguageList.vue",
-				"ext.uls.rewrite/LanguageItem.vue",
 				"ext.uls.rewrite/dist/floating-ui.js",
 				"ext.uls.rewrite/composables/useKeyboardNavigation.js",
 				"ext.uls.rewrite/composables/useClickOutside.js",
