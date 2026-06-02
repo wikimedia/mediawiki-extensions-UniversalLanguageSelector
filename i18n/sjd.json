@@ -56,8 +56,10 @@
 	"ext-uls-language-title": "Кӣл",
 	"ext-uls-placeholder-search": "О̄дзэ кӣл",
 	"ext-uls-suggested-languages-title": "Этткма {{PLURAL:$1|кӣлл|кӣл}}",
+	"ext-uls-unsupported-language-title": "Кӣлл элля",
+	"ext-uls-missing-languages-label-more": "Элля <strong>$1</strong>, <strong>$2</strong> я мудта кӣлэнҍ",
 	"ext-uls-missing-languages-panel-title": "Ёарксэ тэнн лыст",
-	"ext-uls-preferred-languages-title": "Та̄һтэм {{PLURAL:$1|кӣлл|кӣл|кӣл}}",
+	"ext-uls-preferred-languages-title": "Та̄һтэм {{PLURAL:$1|кӣлл|кӣл}}",
 	"ext-uls-preferred-languages-settings-title": "Та̄һтэм кӣл",
 	"ext-uls-preferred-languages-label": "Лажьхэ кӣл"
 }

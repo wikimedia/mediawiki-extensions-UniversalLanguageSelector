@@ -85,6 +85,7 @@
 	"ext-uls-rewrite-description": "Sadələşdirilmiş arxitektura vasitəsilə istifadəçi təcrübəsini modernləşdirmək və texniki yükü azaltmaq üçün hazırlanmış Universal Dil Seçicisinin (ULS) yenidən yazılması.",
 	"ext-uls-suggested-languages-title": "Tövsiyə olunan {{PLURAL:$1|dil|dillər}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Bütün dillər}}",
+	"ext-uls-variants-title": "$1 üçün variantlar",
 	"ext-uls-no-languages-title": "Hələ heç bir dil yoxdur",
 	"ext-uls-no-languages-description": "Hələlik heç bir dil mövcud deyil.",
 	"ext-uls-no-languages-entrypoint-description": "Bu səhifəni tərcümə edə bilərsiniz. Bu, öz dilinizdə məzmun yaratmağın asan yoludur.",

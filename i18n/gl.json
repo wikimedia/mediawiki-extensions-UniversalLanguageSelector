@@ -87,6 +87,7 @@
 	"ext-uls-rewrite-description": "Unha reescritura do selector universal de linguas (ULS), deseñada para modernizar a experiencia de usuario e reducir a débeda técnica mediante unha arquitectura simplificada.",
 	"ext-uls-suggested-languages-title": "{{PLURAL:$1|Lingua suxerida|Linguas suxeridas}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Todas as linguas}}",
+	"ext-uls-variants-title": "Variantes do $1",
 	"ext-uls-no-languages-title": "Aínda non hai linguas",
 	"ext-uls-no-languages-description": "Non hai linguas dispoñibles polo momento.",
 	"ext-uls-no-languages-entrypoint-description": "Podes traducir esta páxina. É un xeito sinxelo de creares contido na túa lingua.",

@@ -83,6 +83,7 @@
 	"ext-uls-rewrite-description": "Eng Neientwécklung vum Universal Language Selector (ULS), déi mam Zil entwéckelt gouf, fir d'Benotzererfarung ze moderniséieren an d'technesch Scholden duerch eng vereinfacht Architektur ze reduzéieren.",
 	"ext-uls-suggested-languages-title": "Virgeschloe {{PLURAL:$1|Sprooch|Sproochen}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|All Sproochen}}",
+	"ext-uls-variants-title": "Variante fir $1",
 	"ext-uls-no-languages-title": "Nach keng Sproochen",
 	"ext-uls-no-languages-description": "Et sinn den Ament keng Sproochen disponibel.",
 	"ext-uls-no-languages-entrypoint-description": "Dir kënnt dës Säit iwwersetzen. Dat ass eng einfach Manéier fir Inhalt an Ärer Sprooch ze schafen.",

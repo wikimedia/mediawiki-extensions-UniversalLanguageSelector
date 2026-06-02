@@ -83,6 +83,7 @@
 	"ext-uls-rewrite-description": "Dib-u-qorid lagu sameeyay Xulaha Luqadda Caalamiga ah (ULS), oo loogu talagalay in lagu casriyeeyo khibradda isticmaalaha loona yareeyo culayska farsamo iyadoo la adeegsanayo qaab-dhismeed fudud.",
 	"ext-uls-suggested-languages-title": "La soo jeediyay {{PLURAL:$1|luqad|luqado}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Dhammaan luqadaha}}",
+	"ext-uls-variants-title": "Kala duwanaanshaha $1",
 	"ext-uls-no-languages-title": "Weli ma jiraan luqado",
 	"ext-uls-no-languages-description": "Hadda ma jiraan luqado la heli karo.",
 	"ext-uls-no-languages-entrypoint-description": "Waxaad tarjumi kartaa boggan. Waa hab fudud oo lagu abuuro nuxur luqaddaada.",
@@ -97,5 +98,14 @@
 	"ext-uls-missing-languages-label-more": "Ka maqan <strong>$1</strong>, <strong>$2</strong> iyo kuwo kale",
 	"ext-uls-missing-languages-panel-title": "Turjum boggan",
 	"ext-uls-missing-languages-panel-description": "Boggan wuxuu ka maqan yahay qaar ka mid ah luqadaha aad taqaan. Waad tarjumi kartaa.",
-	"ext-uls-quick-actions-panel-title": "Falalka degdegga ah"
+	"ext-uls-quick-actions-panel-title": "Falalka degdegga ah",
+	"ext-uls-preferred-languages-title": "Luuqadda la doorbiday {{PLURAL:$1|luuqad|luuqado}}",
+	"ext-uls-preferred-languages-settings-title": "Luuqadaha la doorbiday",
+	"ext-uls-preferred-languages-desc": "Waxaa lagu soo bandhigaa marka hore liisaska luuqadaha.",
+	"ext-uls-preferred-languages-label": "Ku dar luuqad",
+	"ext-uls-preferred-languages-help": "Ku dheji ilaa $1 {{PLURAL:$1|luuqad|luuqado}}. {{PLURAL:$1|Waxay soo muuqataa|Waxay soo muuqdaan}} marka hore marka aad luuqad ka beddesho maqaal kasta.",
+	"ext-uls-preferred-languages-input-placeholder": "Raadi luuqado",
+	"ext-uls-preferred-languages-status": "<strong>$1</strong> {{PLURAL:$1|kan}} <strong>$2</strong> {{PLURAL:$2|la doortay}}",
+	"ext-uls-preferred-languages-limit-reached": "Ka saar mid si aad mid kale ugu darto",
+	"ext-uls-preferred-languages-save-error": "Khalad ayaa dhacay intii la kaydinayay luuqadahaaga la doorbiday."
 }

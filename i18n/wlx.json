@@ -3,6 +3,7 @@
 		"authors": [
 			"Muhaideen Faiz Brichini",
 			"Umar Asiya",
+			"Uthman salma",
 			"Zakaria Tunsung"
 		]
 	},
@@ -20,7 +21,7 @@
 	"ext-uls-language-title": "Tiɛ",
 	"ext-uls-placeholder-search": "Bɔ Tiɛ",
 	"ext-uls-close-button-label": "Pagɩ",
-	"ext-uls-all-languages-title": "Tiɛ Jaa",
+	"ext-uls-all-languages-title": "{{PLURAL:$1|kokoε Jaa}}",
 	"ext-uls-no-languages-title": "Tire Chɩbe Sene",
 	"ext-uls-no-languages-description": "Tiɛ Jaa Naŋ Ba Bi Be Sene",
 	"ext-uls-invalid-language-search-title": "Tire Ŋa Chɩbe"
