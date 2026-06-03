@@ -23,7 +23,7 @@
 			role="option"
 			tabindex="-1"
 			@click.exact.prevent="select( code )"
-			@mousemove="$emit( 'highlight', index + indexOffset )"
+			@mouseenter="$emit( 'highlight', index + indexOffset )"
 		>
 			<span
 				class="uls-rewrite__language-item-title"
