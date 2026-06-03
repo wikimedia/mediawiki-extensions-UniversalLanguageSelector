@@ -710,7 +710,10 @@ module.exports = exports = defineComponent( {
 			clearHighlightedItem
 		} = useKeyboardNavigation( combinedLanguages, visible, scrollHighlightedIntoView );
 
-		useClickOutside( menuRef, visible, document, () => emit( 'close' ) );
+		// Clicking outside only closes the panel on desktop.
+		// On mobile, the panel is fullscreen and has its own close button.
+		const isClickOutsideActive = computed( () => visible.value && !isMobile.value );
+		useClickOutside( menuRef, isClickOutsideActive, document, () => emit( 'close' ) );
 
 		const { autocompleteSuggestion, getAcceptedSuggestion } =
 			useTypeahead( searchQuery, languagesToDisplay, languages, searchQueryHits );

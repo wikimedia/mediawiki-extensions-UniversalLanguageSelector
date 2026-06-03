@@ -6,11 +6,11 @@ const { watch, onBeforeUnmount } = require( 'vue' );
  * Composable to detect clicks outside a specified element.
  *
  * @param {Object} elementRef Ref to element to detect clicks outside of.
- * @param {Object} visibleRef Indicates if the element is visible.
+ * @param {Object} activeRef Whether the listener should be activated.
  * @param {Document} document The document object to attach event listeners to.
  * @param {Function} callback Function to call when a click outside occurs.
  */
-function useClickOutside( elementRef, visibleRef, document, callback ) {
+function useClickOutside( elementRef, activeRef, document, callback ) {
 	const onClickOutside = ( event ) => {
 		const isClickOnElement = elementRef.value && elementRef.value.contains( event.target );
 		if ( !isClickOnElement ) {
@@ -18,8 +18,8 @@ function useClickOutside( elementRef, visibleRef, document, callback ) {
 		}
 	};
 
-	watch( visibleRef, ( isVisible ) => {
-		if ( isVisible ) {
+	watch( activeRef, ( isActive ) => {
+		if ( isActive ) {
 			document.addEventListener( 'click', onClickOutside );
 		} else {
 			document.removeEventListener( 'click', onClickOutside );
