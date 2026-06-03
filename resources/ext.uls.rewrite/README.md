@@ -40,7 +40,7 @@ mw.loader.using( [ 'ext.uls.rewrite' ] ).then( () => {
 | `selectableLanguages` | `Object` | `null` | Map of language codes to autonyms. If `null`, the initial list will be empty, and languages will only appear once searched for. |
 | `selected` | `Array` | `[]` | List of currently selected language codes.                                                                             |
 | `placeholder` | `string` | `null` | Placeholder text for the search input. |
-| `hideActiveLanguages`| `boolean` | `false` | Whether to hide current active languages from the list. |
+| `hideActiveLanguages`| `boolean` | `false` | Whether to hide current active languages from the suggested and all-languages lists. This does not hide languages from the preferred languages list. |
 | `searchApiUrl` | `string` | `null` | Optional API URL for server-side language search. |
 | `displayLanguageCode` | `string` | `''` | Language code for the selector's items. |
 | `languageAnnotations` | `Object` | `{}` | Annotations for language items, keyed by language code. See [Language annotations](#language-annotations) for details. |
@@ -116,7 +116,7 @@ The `createUniversalLanguageSelector` function accepts a `config` object with th
 *   `placeholder`: (Optional) Search input placeholder.
 *   `displayLanguageCode`: (Optional) Language code for the selector's items.
 *   `languageAnnotations`: (Optional) Annotations (CSS classes) for language items.
-*   `hideActiveLanguages`: (Optional) Whether to hide current active languages from the list.
+*   `hideActiveLanguages`: (Optional) Whether to hide current active languages from the suggested and all-languages lists (does not hide from preferred languages).
 *   `onSelect`: (Optional) Callback function when a language is selected.
 *   `onClose`: (Optional) Callback function when the ULS is closed.
 *   `floatingOptions`: (Optional) Floating UI configuration.

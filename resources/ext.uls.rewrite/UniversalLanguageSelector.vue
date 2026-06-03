@@ -567,11 +567,11 @@ module.exports = exports = defineComponent( {
 				limit = PREFERRED_LANGUAGES_COUNT;
 			} else {
 				result = availableLanguageSuggestions.value;
-			}
 
-			if ( props.hideActiveLanguages ) {
-				const selectedSet = new Set( selectedValues.value );
-				result = result.filter( ( code ) => !selectedSet.has( code ) );
+				if ( props.hideActiveLanguages ) {
+					const selectedSet = new Set( selectedValues.value );
+					result = result.filter( ( code ) => !selectedSet.has( code ) );
+				}
 			}
 
 			return result.slice( 0, limit );
