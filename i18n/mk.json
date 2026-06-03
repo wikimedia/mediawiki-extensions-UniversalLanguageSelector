@@ -81,6 +81,7 @@
 	"ext-uls-rewrite-description": "Преработка на Универзалниот избирач на јазици (ULS) со цел осовременување на корисничкото искуство и намалување на техничкиот долг преку упростена архитектура.",
 	"ext-uls-suggested-languages-title": "{{PLURAL:$1|Предложен јазик|Предложени јазици}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Сите јазици}}",
+	"ext-uls-variants-title": "Варијанти за $1",
 	"ext-uls-no-languages-title": "Сè уште нема јазици",
 	"ext-uls-no-languages-description": "Засега нема достапни јазици.",
 	"ext-uls-no-languages-entrypoint-description": "Можете да ја преведете страницава. Ова е лесен начин да создавате содржини на вашиот јазик.",

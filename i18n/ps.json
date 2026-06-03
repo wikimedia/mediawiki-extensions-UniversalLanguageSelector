@@ -85,6 +85,7 @@
 	"ext-uls-rewrite-description": "د ټوليزې ژبې ټاکونکي (ټ‌ژ‌ټ) بياليکنه، چې د کارن تجربې وسمهالولو او ساده جوړښت له لارې تخنيکي پور کمولو لپاره سکښتل شوې.",
 	"ext-uls-suggested-languages-title": "وړانديزشوې {{PLURAL:$1|ژبه|ژبې}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|ټولې ژبې}}",
+	"ext-uls-variants-title": "د $1 بلبڼې",
 	"ext-uls-no-languages-title": "تر اوسه پورې هېڅ ژبې نشته",
 	"ext-uls-no-languages-description": "وس‌مهال هېڅ ژبه شتون نه لري.",
 	"ext-uls-no-languages-entrypoint-description": "تاسو دا مخ ژباړلی شئ. دا ستاسو په ژبه کې د منځپانگې جوړولو يوه اسانه لار ده.",

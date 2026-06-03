@@ -97,6 +97,7 @@
 	"ext-uls-rewrite-description": "通用语言选择器（ULS）的重写，旨在通过简化架构来现代化用户体验并减少技术债务。",
 	"ext-uls-suggested-languages-title": "建议的{{PLURAL:$1|语言}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|所有语言}}",
+	"ext-uls-variants-title": "$1的变体语言",
 	"ext-uls-no-languages-title": "尚无其他语言",
 	"ext-uls-no-languages-description": "目前尚无其他语言版本可用。",
 	"ext-uls-no-languages-entrypoint-description": "您可以翻译此页面。这是用您的语言创建内容的简便方法。",
