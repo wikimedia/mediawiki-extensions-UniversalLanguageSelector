@@ -590,14 +590,23 @@ module.exports = exports = defineComponent( {
 			() => ( searchQuery.value ? [] : currentVariantCodes.value )
 		);
 
-		// Annotations for items in the main, suggested, and search-results sections.
+		// Annotations for the main "All languages" list.
 		const baseAnnotations = computed( () => {
 			const annotations = {};
-			const codes = new Set( languageCodes.value );
-			for ( const code of highlightedLanguages.value ) {
-				codes.add( code );
+			for ( const code of languageCodes.value ) {
+				annotations[ code ] = Object.assign(
+					{},
+					props.languageAnnotations[ code ],
+					{ dir: rtlLanguages.has( code ) ? 'rtl' : 'ltr' }
+				);
 			}
-			for ( const code of codes ) {
+			return annotations;
+		} );
+
+		// Annotations for the suggested/preferred languages section.
+		const highlightedAnnotations = computed( () => {
+			const annotations = {};
+			for ( const code of highlightedLanguages.value ) {
 				annotations[ code ] = Object.assign(
 					{},
 					props.languageAnnotations[ code ],
@@ -653,7 +662,7 @@ module.exports = exports = defineComponent( {
 					title: highlightedLanguagesTitle.value,
 					codes: highlightedLanguages.value,
 					languages: languages.value,
-					annotations: baseAnnotations.value,
+					annotations: highlightedAnnotations.value,
 					indexOffset: cursor
 				} );
 				cursor += highlightedLanguages.value.length;
