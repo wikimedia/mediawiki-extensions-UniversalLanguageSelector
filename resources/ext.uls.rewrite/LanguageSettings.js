@@ -4,10 +4,20 @@ const EntrypointRegistry = require( 'ext.uls.rewrite.entrypoints' );
 const { ENTRYPOINT_TYPE, ULS_MODE } = EntrypointRegistry;
 const { cdxIconSettings } = require( '../icons.json' );
 
+const MODULES = [ 'ext.uls.displaysettings', 'ext.uls.preferredlanguages' ];
+
+let prefetched = false;
+
 try {
 	EntrypointRegistry.register( ENTRYPOINT_TYPE.QUICK_ACTIONS, {
 		id: 'language-settings',
-		shouldShow: () => true,
+		shouldShow: () => {
+			if ( !prefetched ) {
+				mw.loader.load( MODULES );
+				prefetched = true;
+			}
+			return true;
+		},
 		getConfig: () => ( {
 			label: mw.msg( 'ext-uls-open-language-settings' ),
 			icon: cdxIconSettings,
@@ -16,7 +26,7 @@ try {
 				// and use it here instead of the old one.
 				const $target = $( event.target );
 				const $ulsContainer = $target.parents( '.uls-rewrite' );
-				mw.loader.using( [ 'ext.uls.displaysettings', 'ext.uls.preferredlanguages' ] ).then( () => {
+				mw.loader.using( MODULES ).then( () => {
 					const ulsContainerOffsetTop = $ulsContainer.offset().top;
 					$target.languagesettings( {
 						autoOpen: true,
