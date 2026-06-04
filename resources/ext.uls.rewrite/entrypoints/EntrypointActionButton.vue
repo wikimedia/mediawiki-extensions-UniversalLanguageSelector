@@ -3,7 +3,8 @@
 		v-if="action.url"
 		:href="action.url"
 		class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled
-			cdx-button--action-progressive cdx-button--weight-quiet"
+			cdx-button--action-progressive cdx-button--weight-quiet
+			uls-rewrite__entrypoint-action-button"
 	>
 		<cdx-icon
 			v-if="action.icon"
@@ -16,6 +17,7 @@
 		v-else
 		weight="quiet"
 		action="progressive"
+		class="uls-rewrite__entrypoint-action-button"
 		@click="action.handler"
 	>
 		<cdx-icon
