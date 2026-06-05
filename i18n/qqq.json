@@ -10,6 +10,7 @@
 			"Raymond",
 			"Shirayuki",
 			"Siebrand",
+			"Stjn",
 			"Umherirrender"
 		]
 	},
@@ -85,7 +86,7 @@
 	"ext-uls-empty-state-desc-actions-available": "Description text shown in languages selector when there are no languages to select, but selector provides ways to create new.",
 	"ext-uls-add-languages-button-label": "Label of the button",
 	"ext-uls-language-title": "Title of the language selector displayed on narrow screens",
-	"ext-uls-placeholder-search": "Placeholder text shown in the search input in the language selector",
+	"ext-uls-placeholder-search": "Placeholder text shown in the search input in the language selector\n\n{{Identical|Search languages}}",
 	"ext-uls-close-button-label": "Aria label for the close button in the language selector on mobile",
 	"ext-uls-rewrite-label": "ULS rewrite beta feature label.",
 	"ext-uls-rewrite-description": "ULS rewrite beta feature description.",
