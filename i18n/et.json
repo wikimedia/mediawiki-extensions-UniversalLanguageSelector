@@ -88,5 +88,7 @@
 	"ext-uls-invalid-language-search-title": "Keelt ei tuvastatud",
 	"ext-uls-invalid-language-search-description": "Palun kontrolli kirjapilti. Saad keeli otsida nimetuse või ISO koodi järgi.",
 	"ext-uls-unsupported-language-title": "Keel pole saadaval",
-	"ext-uls-unsupported-language-description": "Otsitav keel pole saadaval."
+	"ext-uls-unsupported-language-description": "Otsitav keel pole saadaval.",
+	"ext-uls-open-language-settings": "Ava keelesätted",
+	"ext-uls-quick-actions-panel-title": "Kiirtoimingud"
 }

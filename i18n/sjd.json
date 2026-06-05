@@ -55,5 +55,7 @@
 	"ext-uls-add-languages-button-label": "Лажьхэ кӣлэтҍ",
 	"ext-uls-language-title": "Кӣл",
 	"ext-uls-placeholder-search": "О̄дзэ кӣл",
+	"ext-uls-unsupported-language-title": "Кӣлл элля",
+	"ext-uls-missing-languages-label-more": "Элля <strong>$1</strong>, <strong>$2</strong> я мудта кӣлэнҍ",
 	"ext-uls-missing-languages-panel-title": "Ёарксэ тэнн лыст"
 }
