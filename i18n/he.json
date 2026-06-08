@@ -4,6 +4,7 @@
 		"authors": [
 			"Amire80",
 			"Guycn2",
+			"IKhitron",
 			"YaronSh",
 			"Yona b",
 			"ערן"
@@ -85,6 +86,7 @@
 	"ext-uls-rewrite-description": "גרסה חדשה של בורר השפות האוניברסלי (ULS), שנועדה לחדש את חוויית המשתמש ולהפחית את החוב הטכני באמצעות ארכיטקטורה פשוטה יותר.",
 	"ext-uls-suggested-languages-title": "מוצעות",
 	"ext-uls-all-languages-title": "כל השפות",
+	"ext-uls-variants-title": "אפשרויות עבור $1",
 	"ext-uls-no-languages-title": "עדיין אין שפות",
 	"ext-uls-no-languages-description": "אין שפות זמינות כעת.",
 	"ext-uls-no-languages-entrypoint-description": "{{GENDER:|אתה יכול|את יכולה}} לתרגם את הדף הזה. זאת דרך קלה ליצור תוכן בשפה שלך.",
@@ -99,5 +101,14 @@
 	"ext-uls-missing-languages-label-more": "חסר בשפות <strong>$1</strong>, <strong>$2</strong> ועוד",
 	"ext-uls-missing-languages-panel-title": "תרגום הדף הזה",
 	"ext-uls-missing-languages-panel-description": "הדף הזה חסר בכמה שפות {{GENDER:|שאתה אולי יודע. אתה יכול|שאת אולי יודעת. את יכולה}} לתרגם אותו.",
-	"ext-uls-quick-actions-panel-title": "פעולות מהירות"
+	"ext-uls-quick-actions-panel-title": "פעולות מהירות",
+	"ext-uls-preferred-languages-title": "{{PLURAL:$1|שפה מועדפת|שפות מועדפות}}",
+	"ext-uls-preferred-languages-settings-title": "שפות מועדפות",
+	"ext-uls-preferred-languages-desc": "מוצג בראש תפריט השפות.",
+	"ext-uls-preferred-languages-label": "הוספת שפה",
+	"ext-uls-preferred-languages-help": "הצמדת עד {{PLURAL:$1|שפה אחת|$1 שפות}}. {{PLURAL:$1|היא תופיע|הן יופיעו}} בראש במעבר בין השפות של הערך.",
+	"ext-uls-preferred-languages-input-placeholder": "חיפוש שפה",
+	"ext-uls-preferred-languages-status": "{{PLURAL:$2|נבחרה|נבחרו}} <strong>$1</strong> {{PLURAL:$1|מתוך}} <strong>$2</strong>",
+	"ext-uls-preferred-languages-limit-reached": "יש להסיר אחת כדי להוסיף אחרת במקומה",
+	"ext-uls-preferred-languages-save-error": "אירעה שגיאה בעת שמירת השפות המועדפות עליך."
 }

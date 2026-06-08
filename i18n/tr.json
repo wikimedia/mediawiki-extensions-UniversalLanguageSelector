@@ -4,6 +4,7 @@
 			"BaRaN6161 TURK",
 			"By erdo can",
 			"Emperyan",
+			"HakanIST",
 			"Hedda",
 			"Incelemeelemani",
 			"Joseph",
@@ -83,5 +84,6 @@
 	"ext-uls-empty-state-desc": "Şu anda hiçbir dil mevcut değil",
 	"ext-uls-empty-state-header-actions-available": "Henüz hiçbir dil yok. Yeni bir tane ekle?",
 	"ext-uls-empty-state-desc-actions-available": "İçeriği daha fazla dilde kullanılabilir hale getirin.",
-	"ext-uls-add-languages-button-label": "Dil ekle"
+	"ext-uls-add-languages-button-label": "Dil ekle",
+	"ext-uls-close-button-label": "Kapat"
 }
