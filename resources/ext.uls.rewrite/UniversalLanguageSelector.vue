@@ -499,17 +499,6 @@ module.exports = exports = defineComponent( {
 
 		const languageCodes = computed( () => Object.keys( languages.value ) );
 
-		const densityClass = computed( () => {
-			const count = languageCodes.value.length;
-			if ( count < DENSITY_LOW_THRESHOLD ) {
-				return 'uls-rewrite--density-low';
-			}
-			if ( count < DENSITY_MEDIUM_THRESHOLD ) {
-				return 'uls-rewrite--density-medium';
-			}
-			return 'uls-rewrite--density-high';
-		} );
-
 		const displayLanguageDir = computed( () => (
 			props.displayLanguageCode ?
 				( rtlLanguages.has( props.displayLanguageCode ) ? 'rtl' : 'ltr' ) :
@@ -555,10 +544,6 @@ module.exports = exports = defineComponent( {
 				return [];
 			}
 
-			if ( languageCodes.value.length < DENSITY_LOW_THRESHOLD ) {
-				return [];
-			}
-
 			let result;
 			let limit = SUGGESTED_LANGUAGES_COUNT;
 			if ( preferredLanguages.value.length > 0 ) {
@@ -566,6 +551,9 @@ module.exports = exports = defineComponent( {
 				// Max allowed preferred languages
 				limit = PREFERRED_LANGUAGES_COUNT;
 			} else {
+				if ( languageCodes.value.length < DENSITY_LOW_THRESHOLD ) {
+					return [];
+				}
 				result = availableLanguageSuggestions.value;
 
 				if ( props.hideActiveLanguages ) {
@@ -575,6 +563,21 @@ module.exports = exports = defineComponent( {
 			}
 
 			return result.slice( 0, limit );
+		} );
+
+		const densityClass = computed( () => {
+			const count = languageCodes.value.length;
+
+			if ( count < DENSITY_LOW_THRESHOLD ) {
+				// With preferred languages, use the 2-column layout even with few languages
+				return preferredLanguages.value.length > 0 ?
+					'uls-rewrite--density-medium' :
+					'uls-rewrite--density-low';
+			}
+			if ( count < DENSITY_MEDIUM_THRESHOLD ) {
+				return 'uls-rewrite--density-medium';
+			}
+			return 'uls-rewrite--density-high';
 		} );
 
 		const highlightedLanguagesTitle = computed( () => {
