@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Maor X",
 			"Menachem.Moreira",
 			"WikiiiTranslator"
 		]
 	},
-	"uls-plang-title-languages": "Lenguas",
+	"uls-plang-title-languages": "Linguas",
 	"ext-uls-display-settings-language-tab": "Lengua",
 	"ext-uls-ime-help": "Komo se uza",
 	"jquery-ime-other-languages": "Otras lenguas",
