@@ -12,21 +12,22 @@
 					</span>
 				</div>
 			</template>
-			<multiselect-lookup-language-selector
+			<language-selector
+				:is-multiple="true"
 				:selectable-languages="selectableLanguages"
 				:selected="selectedLanguages"
 				:search-api-url="searchApiUrl"
 				:placeholder="placeholder"
 				:menu-config="menuConfig"
 				@update:selected="onUpdateSelected"
-			></multiselect-lookup-language-selector>
+			></language-selector>
 		</cdx-field>
 	</div>
 </template>
 
 <script>
 const { defineComponent, ref, computed } = require( 'vue' );
-const { MultiselectLookupLanguageSelector } = require( 'mediawiki.languageselector.lookup' );
+const { LanguageSelector } = require( 'mediawiki.languageselector.lookup' );
 const { CdxField } = require( '../codex.js' );
 const supportedLanguages = require( '../supportedLanguages.json' );
 const MAX_LANGUAGES = 10;
@@ -37,7 +38,7 @@ const menuConfig = {
 module.exports = exports = defineComponent( {
 	name: 'PreferredLanguagesTab',
 	components: {
-		MultiselectLookupLanguageSelector,
+		LanguageSelector,
 		CdxField
 	},
 	props: {
