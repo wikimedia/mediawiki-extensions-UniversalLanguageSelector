@@ -70,7 +70,11 @@
 
 			this.$parent.setBusy( true );
 
-			new mw.Api().saveOption( PREFERENCE_NAME, JSON.stringify( this.selectedLanguages ) )
+			new mw.Api().saveOption(
+				PREFERENCE_NAME,
+				JSON.stringify( this.selectedLanguages ),
+				{ global: 'create' }
+			)
 				.then( () => {
 					preferredLanguages = this.selectedLanguages;
 					mw.user.options.set( PREFERENCE_NAME, JSON.stringify( preferredLanguages ) );
