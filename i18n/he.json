@@ -106,9 +106,9 @@
 	"ext-uls-preferred-languages-settings-title": "שפות מועדפות",
 	"ext-uls-preferred-languages-desc": "מוצג בראש תפריט השפות.",
 	"ext-uls-preferred-languages-label": "הוספת שפה",
-	"ext-uls-preferred-languages-help": "הצמדת עד {{PLURAL:$1|שפה אחת|$1 שפות}}. {{PLURAL:$1|היא תופיע|הן יופיעו}} בראש במעבר בין השפות של הערך.",
+	"ext-uls-preferred-languages-help": "ניתן להצמיד עד {{PLURAL:$1|שפה אחת|$1 שפות}}. {{PLURAL:$1|היא תופיע|הן יופיעו}} בראש במעבר בין השפות של הערך.",
 	"ext-uls-preferred-languages-input-placeholder": "חיפוש שפה",
 	"ext-uls-preferred-languages-status": "{{PLURAL:$2|נבחרה|נבחרו}} <strong>$1</strong> {{PLURAL:$1|מתוך}} <strong>$2</strong>",
 	"ext-uls-preferred-languages-limit-reached": "יש להסיר אחת כדי להוסיף אחרת במקומה",
-	"ext-uls-preferred-languages-save-error": "אירעה שגיאה בעת שמירת השפות המועדפות עליך."
+	"ext-uls-preferred-languages-save-error": "אירעה שגיאה בעת שמירת השפות המועדפות שלך."
 }

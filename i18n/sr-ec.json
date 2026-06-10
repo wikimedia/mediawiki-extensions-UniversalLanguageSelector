@@ -97,5 +97,8 @@
 	"ext-uls-open-quick-actions": "Прикажи брзе радње",
 	"ext-uls-missing-languages-label": "Недостаје на <strong>$1</strong>",
 	"ext-uls-missing-languages-panel-title": "Преведите ову страницу",
+	"ext-uls-preferred-languages-title": "Преферирани {{PLURAL:$1|језик|језици}}",
+	"ext-uls-preferred-languages-settings-title": "Преферирани језици",
+	"ext-uls-preferred-languages-label": "Додај језик",
 	"ext-uls-preferred-languages-input-placeholder": "Претрага језика"
 }
