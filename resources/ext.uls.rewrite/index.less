@@ -191,7 +191,9 @@
 		.uls-rewrite__body__language-list {
 			margin: 0;
 			padding: 0;
-			padding-inline-end: @uls-rewrite-quick-actions-trigger-clearance;
+			// Margin, not padding: keeps the clearance strip outside the list box so the
+			// cursor leaving an item fires the list's mouseleave and clears the highlight.
+			margin-inline-end: @uls-rewrite-quick-actions-trigger-clearance;
 			display: grid;
 			grid-template-columns: 1fr;
 		}

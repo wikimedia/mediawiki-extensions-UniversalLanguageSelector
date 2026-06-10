@@ -99,6 +99,12 @@
 					@highlight="setHighlightedIndex"
 					@mouseleave="clearHighlightedItem"
 				>
+					<!--
+					mouseleave on the list, not the item: a per-item mouseleave would fire
+					during keyboard nav when the list scrolls items under a stationary cursor,
+					fighting the keyboard highlight. The list's inline-end margin makes the
+					clearance strip clear the highlight too.
+				-->
 					<template #language-item="slotProps">
 						<slot
 							name="language-item"
