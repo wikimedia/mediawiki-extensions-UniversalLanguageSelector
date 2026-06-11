@@ -51,6 +51,12 @@ the tooltip that appears after the interface language change.
 
 Fired when the user clicks the Log in link in Display settings.
 
+## mw.uls.preferredlanguages.save
+
+Fired when the user saves their preferred languages in the settings panel.
+Not fired if the preferred languages are saved anywhere else.
+Sends an array of preferred language codes as an argument.
+
 ## mw.uls.settings.apply
 
 Fired when the user applies the changed settings.

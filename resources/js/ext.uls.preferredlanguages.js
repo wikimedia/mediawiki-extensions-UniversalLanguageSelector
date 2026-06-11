@@ -80,6 +80,7 @@
 					mw.user.options.set( PREFERENCE_NAME, JSON.stringify( preferredLanguages ) );
 					this.dirty = false;
 					this.$parent.hide();
+					mw.hook( 'mw.uls.preferredlanguages.save' ).fire( preferredLanguages );
 				} )
 				.catch( ( error ) => {
 					mw.log.error( 'Error saving preferred languages:', error );

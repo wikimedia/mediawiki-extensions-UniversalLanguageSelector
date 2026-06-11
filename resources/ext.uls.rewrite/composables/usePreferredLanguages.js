@@ -18,9 +18,22 @@ function loadPreferredLanguages() {
 	return Array.isArray( parsed ) ? parsed : [];
 }
 
-module.exports = function usePreferredLanguages() {
-	const preferredLanguages = ref( loadPreferredLanguages() );
+const preferredLanguages = ref( loadPreferredLanguages() );
 
+/**
+ * Refresh the preferred languages
+ *
+ * @param {string[]} [data] Updated preferred languages. If not provided,
+ *  reloads from mw.user.options.
+ */
+function refresh( data ) {
+	preferredLanguages.value = data || loadPreferredLanguages();
+}
+
+// Listen for updates from the settings panel
+mw.hook( 'mw.uls.preferredlanguages.save' ).add( refresh );
+
+module.exports = function usePreferredLanguages() {
 	return {
 		preferredLanguages
 	};
