@@ -7,6 +7,8 @@ const { cdxIconSettings } = require( '../icons.json' );
 const MODULES = [ 'ext.uls.displaysettings', 'ext.uls.preferredlanguages' ];
 
 let prefetched = false;
+// Stable anchor the dialog binds to.
+let $settingsAnchor = null;
 
 try {
 	EntrypointRegistry.register( ENTRYPOINT_TYPE.QUICK_ACTIONS, {
@@ -24,24 +26,32 @@ try {
 			handler: ( event ) => {
 				// TODO: Rebuild the existing language settings dialog using Vue,
 				// and use it here instead of the old one.
-				const $target = $( event.target );
-				const $ulsContainer = $target.parents( '.uls-rewrite' );
+				const $ulsContainer = $( event.target ).parents( '.uls-rewrite' );
 				mw.loader.using( MODULES ).then( () => {
 					const ulsContainerOffsetTop = $ulsContainer.offset().top;
-					$target.languagesettings( {
-						autoOpen: true,
-						onPosition: function () {
-							return {
-								top: ulsContainerOffsetTop,
-								// Position the dialog in the center.
-								left: '50%',
-								transform: 'translateX(-50%)',
-								// If the width is too small, make it as wide as needed,
-								// because we transform it later.
-								width: 'max-content'
-							};
-						}
-					} );
+					const onPosition = function () {
+						return {
+							top: ulsContainerOffsetTop,
+							// Position the dialog in the center.
+							left: '50%',
+							transform: 'translateX(-50%)',
+							// If the width is too small, make it as wide as needed,
+							// because we transform it later.
+							width: 'max-content'
+						};
+					};
+
+					if ( !$settingsAnchor ) {
+						$settingsAnchor = $( '<div>' ).appendTo( document.body );
+						$settingsAnchor.languagesettings( { autoOpen: true, onPosition } );
+						return;
+					}
+
+					// Reuse the existing instance, refreshing the position for the
+					// current ULS container.
+					const settings = $settingsAnchor.data( 'languagesettings' );
+					settings.options.onPosition = onPosition;
+					settings.show();
 				} );
 			}
 		} )
