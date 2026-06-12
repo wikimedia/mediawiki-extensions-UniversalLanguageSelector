@@ -92,7 +92,7 @@
 	"ext-uls-empty-state-desc-actions-available": "Сделайте контент доступным на большем количестве языков.",
 	"ext-uls-add-languages-button-label": "Добавить языки",
 	"ext-uls-language-title": "Языки",
-	"ext-uls-placeholder-search": "Поиск языка",
+	"ext-uls-placeholder-search": "Найти язык",
 	"ext-uls-close-button-label": "Закрыть",
 	"ext-uls-rewrite-label": "Переработанный универсальный выбор языков",
 	"ext-uls-rewrite-description": "Переработанная версия универсального селектора языка (ULS), призванная модернизировать пользовательский интерфейс и за счет упрощенной архитектуры.",

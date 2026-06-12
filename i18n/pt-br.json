@@ -102,6 +102,8 @@
 	"ext-uls-open-language-settings": "Abrir configurações de idioma",
 	"ext-uls-open-language-selector": "Voltar ao seletor de idioma",
 	"ext-uls-open-quick-actions": "Mostrar ações rápidas",
+	"ext-uls-missing-languages-label": "Ausente em <strong>$1</strong>",
+	"ext-uls-missing-languages-label-more": "Ausente em <strong>$1</strong>, <strong>$2</strong> e mais",
 	"ext-uls-missing-languages-panel-title": "Traduzir esta página",
 	"ext-uls-missing-languages-panel-description": "Esta página não está disponível em alguns idiomas que você talvez conheça. Você pode traduzi-la.",
 	"ext-uls-quick-actions-panel-title": "Ações rápidas"
