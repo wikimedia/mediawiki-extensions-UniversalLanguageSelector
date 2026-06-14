@@ -464,10 +464,47 @@ module.exports = exports = defineComponent( {
 			}, props.floatingOptions )
 		);
 
+		/**
+		 * Get the display name for a language code.
+		 *
+		 * @param {string} code
+		 * @return {string}
+		 */
+		const getLanguageName = ( code ) => {
+			const val = languages.value[ code ];
+			if ( !val ) {
+				return $.uls.data.getAutonym( code ) || code;
+			}
+			if ( typeof val === 'string' ) {
+				return val;
+			}
+			return val.text || $.uls.data.getAutonym( code ) || code;
+		};
+
+		const sortedAllCodes = computed( () => {
+			let collator;
+			try {
+				collator = new Intl.Collator( props.displayLanguageCode || undefined );
+			} catch ( e ) {
+				// Fallback to default locale if displayLanguageCode is not a valid BCP 47 tag.
+				// MediaWiki language codes such as 'simple' or 'test' are not always valid.
+				collator = new Intl.Collator();
+			}
+
+			return Object.keys( languages.value )
+				.map( ( code ) => ( {
+					code,
+					name: getLanguageName( code )
+				} ) )
+				.sort( ( a, b ) => collator.compare( a.name, b.name ) )
+				.map( ( item ) => item.code );
+		} );
+
 		const languagesToDisplay =
 			computed( () => {
-				let result = ( searchQuery.value && searchQuery.value.trim().length > 0 ) ?
-					searchResults.value : Object.keys( languages.value );
+				const isSearchingActive = searchQuery.value && searchQuery.value.trim().length > 0;
+				let result = isSearchingActive ?
+					searchResults.value : sortedAllCodes.value;
 
 				if ( props.hideActiveLanguages ) {
 					const selectedSet = new Set( selectedValues.value );
