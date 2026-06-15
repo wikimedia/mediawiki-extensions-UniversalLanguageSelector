@@ -25,6 +25,9 @@
 		ActionsMenuItem = require( './ext.uls.actions.menu.item.js' );
 	require( './ext.uls.actions.menu.items.registry.js' );
 
+	// Whether the ULS V2 (rewrite) selector is enabled for this page.
+	const isULSV2Enabled = mw.config.get( 'wgULSLanguageSelectorV2Enabled' );
+
 	/**
 	 * Warm the lazy-loaded ULS rewrite (V2) modules so the selector opens
 	 * without a network round-trip on click. No-ops when V2 is disabled.
@@ -37,7 +40,7 @@
 			[ 'ext.uls.mediawiki', 'ext.uls.rewrite' ] :
 			[ 'ext.uls.mediawiki', 'ext.uls.rewrite.languagesettings', 'ext.uls.rewrite' ];
 
-		if ( mw.config.get( 'wgULSLanguageSelectorV2Enabled' ) ) {
+		if ( isULSV2Enabled ) {
 			mw.loader.load( modules );
 		}
 
@@ -411,6 +414,117 @@
 		$trigger.on( 'click', clickHandler );
 	}
 
+	// Mobile-only route for the fullscreen content language selector. This route only
+	// applies to ULS V2 (see isULSV2Enabled guards below);
+	const LANGUAGES_ROUTE = '#/languages';
+
+	// Keep in sync with MOBILE_WIDTH_THRESHOLD (768) in UniversalLanguageSelector.vue.
+	function isMobileViewport() {
+		return window.matchMedia( '(max-width: 767px)' ).matches;
+	}
+
+	// The route controller, created when the content selector is first loaded.
+	let languageRoute = null;
+
+	// Navigating to the route before the selector has loaded: lazy-load and open via the trigger.
+	function openContentSelectorFromRoute() {
+		if (
+			isULSV2Enabled &&
+			!languageRoute &&
+			isMobileViewport() &&
+			location.hash === LANGUAGES_ROUTE
+		) {
+			const $trigger = $( '.mw-interlanguage-selector' );
+			if ( !$trigger.length && mw.config.get( 'skin' ) === 'minerva' ) {
+				// HACK: On Minerva, the mw-interlanguage-selector class maybe added a little late.
+				// Try again if the trigger is not found.
+				setTimeout( openContentSelectorFromRoute, 500 );
+				return;
+			}
+			$trigger.first().trigger( 'click' );
+		}
+	}
+
+	/**
+	 * Create a controller that keeps the fullscreen mobile content selector in sync
+	 * with the URL hash: deep-linkable, and closeable with the browser back button.
+	 *
+	 * @return {Object} Controller exposing attach(), markNavigating(),
+	 *   onVisibleChange() and onRouteChange().
+	 */
+	function createLanguageRoute() {
+		// The mounted selector instance, attached after mount.
+		let vm = null;
+		// Whether a selection is navigating the page away, so closing skips the
+		// history cleanup that would otherwise race the navigation.
+		let navigatingAway = false;
+		let isMobile = false;
+
+		return {
+			attach( instance ) {
+				vm = instance;
+			},
+			markNavigating() {
+				navigatingAway = true;
+			},
+			// Component visibility -> URL. Mobile only.
+			onVisibleChange( isVisible, mobile ) {
+				isMobile = mobile;
+				if ( !isMobile ) {
+					return;
+				}
+				if ( isVisible ) {
+					// Tag the entry so closing pops it rather than stripping a hash the
+					// user deep-linked to. pushState fires no hashchange, so opening
+					// never loops back through onRouteChange.
+					if ( location.hash !== LANGUAGES_ROUTE ) {
+						history.pushState( { ulsRoute: true }, '', LANGUAGES_ROUTE );
+					}
+				} else if ( !navigatingAway && location.hash === LANGUAGES_ROUTE ) {
+					if ( history.state && history.state.ulsRoute ) {
+						history.back();
+					} else {
+						history.replaceState(
+							null, '', location.pathname + location.search
+						);
+					}
+				}
+			},
+			// URL -> component visibility, for back/forward and manual hash edits.
+			// Gated on the component's reported mobile state (see onVisibleChange).
+			onRouteChange() {
+				if ( !vm || !isMobile ) {
+					return;
+				}
+				const shouldBeVisible = location.hash === LANGUAGES_ROUTE;
+				if ( vm.visible !== shouldBeVisible ) {
+					vm[ shouldBeVisible ? 'open' : 'close' ]();
+				}
+			}
+		};
+	}
+
+	// URL -> selector. Once mounted, the controller drives open/close (gating on the
+	// component's own mobile state); before that, bootstrap the lazy-loaded module.
+	function syncSelectorToRoute() {
+		if ( languageRoute ) {
+			languageRoute.onRouteChange();
+		} else {
+			openContentSelectorFromRoute();
+		}
+	}
+
+	if ( isULSV2Enabled ) {
+		window.addEventListener( 'hashchange', syncSelectorToRoute );
+
+		// Re-sync on bfcache restore to reopen it.
+		window.addEventListener( 'pageshow', ( event ) => {
+			if ( event.persisted ) {
+				syncSelectorToRoute();
+			}
+		} );
+	}
+
 	function initPersonalEntryPoint() {
 		const $trigger = $( '.uls-trigger' );
 
@@ -442,7 +556,7 @@
 
 				e.preventDefault();
 
-				if ( mw.config.get( 'wgULSLanguageSelectorV2Enabled' ) ) {
+				if ( isULSV2Enabled ) {
 					if ( $trigger.attr( 'data-uls-loaded' ) ) {
 						return;
 					}
@@ -542,7 +656,7 @@
 		// Optimization: Prefetch the ResourceLoader modules for ULS on hover/focus
 		// so the selector opens without a network round-trip on click.
 		$trigger.one( 'pointerenter focus', () => {
-			if ( mw.config.get( 'wgULSLanguageSelectorV2Enabled' ) && userCanChangeLanguage() ) {
+			if ( isULSV2Enabled && userCanChangeLanguage() ) {
 				prefetchRewriteModules();
 			} else {
 				mw.loader.load( languageSettingsModules );
@@ -634,7 +748,7 @@
 
 		ev.preventDefault();
 
-		if ( mw.config.get( 'wgULSLanguageSelectorV2Enabled' ) ) {
+		if ( isULSV2Enabled ) {
 			const isMinerva = mw.config.get( 'skin' ) === 'minerva';
 			mw.loader.using( prefetchRewriteModules() ).then( () => {
 				const languageNodes = getLanguageNodes();
@@ -658,6 +772,8 @@
 				const mountPoint = document.createElement( 'div' );
 				document.body.appendChild( mountPoint );
 
+				languageRoute = createLanguageRoute();
+
 				const app = createUniversalLanguageSelector( {
 					triggerElement: ev.currentTarget,
 					selectableLanguages: mw.uls.getInterlanguageListFromNodes( languageNodesInjected ),
@@ -667,10 +783,12 @@
 					selected: [ pageContentLanguage ],
 					hideActiveLanguages: hideActiveLanguages,
 					onSelect: ( language ) => {
+						languageRoute.markNavigating();
 						window.location.assign( language.value.href );
 					},
 					mode: 'content',
 					floatingOptions: isMinerva ? { placement: 'bottom-start' } : undefined,
+					onVisibleChange: languageRoute.onVisibleChange,
 					slots: {
 						'language-item': ( { item, annotations, isAvailable } ) => {
 							if ( isAvailable ) {
@@ -690,6 +808,7 @@
 				} );
 
 				const mountedVm = app.mount( mountPoint );
+				languageRoute.attach( mountedVm );
 				$target.on( 'click', ( event ) => {
 					event.preventDefault();
 					event.stopPropagation();
@@ -848,7 +967,7 @@
 		const languageInHeader = mw.config.get( 'wgVector2022LanguageInHeader' );
 		// show on Minerva if its ULS rewrite
 		const isV2LanguageSelectorOnMinerva = mw.config.get( 'skin' ) === 'minerva' &&
-			mw.config.get( 'wgULSLanguageSelectorV2Enabled' );
+			isULSV2Enabled;
 
 		if ( compact || languageInHeader || isV2LanguageSelectorOnMinerva ) {
 			// Init compact languages OR omni selector using the mw-interlanguage-selector class
@@ -857,6 +976,9 @@
 			$( '.mw-interlanguage-selector' ).removeClass( 'mw-interlanguage-selector' );
 			document.body.classList.add( 'mw-interlanguage-selector-disabled' );
 		}
+
+		// Open the fullscreen selector when deep-linked to its route on mobile.
+		openContentSelectorFromRoute();
 	}
 
 	let languageNodesCache = null;
