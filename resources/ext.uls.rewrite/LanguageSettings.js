@@ -34,10 +34,7 @@ try {
 							top: ulsContainerOffsetTop,
 							// Position the dialog in the center.
 							left: '50%',
-							transform: 'translateX(-50%)',
-							// If the width is too small, make it as wide as needed,
-							// because we transform it later.
-							width: 'max-content'
+							transform: 'translateX(-50%)'
 						};
 					};
 
