@@ -130,6 +130,12 @@
 		.cdx-icon {
 			flex-shrink: 0;
 		}
+
+		// Increase specificity to override the unnecessary padding added by Codex.
+		// See: https://github.com/wikimedia/design-codex/blob/d4656038d94974fb2dec7550dbe8de46490cddff/packages/codex/src/themes/mixins/public/link.less#L73
+		span.cdx-icon.cdx-icon {
+			padding-left: 0;
+		}
 	}
 
 	.uls-rewrite__body {
