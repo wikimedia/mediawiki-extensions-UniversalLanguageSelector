@@ -448,6 +448,11 @@
 					}
 					$trigger.attr( 'data-uls-loaded', true );
 
+					// Capture the trigger synchronously: `e.currentTarget` is only
+					// valid during event dispatch and may be reset (e.g. to `document`
+					// by a later delegated click handler) by the time this async
+					// callback runs, which breaks floating-ui positioning.
+					const triggerElement = e.currentTarget;
 					mw.loader.using( prefetchRewriteModules() ).then( () => {
 						const { createUniversalLanguageSelector } = require( 'ext.uls.rewrite' );
 
@@ -455,7 +460,7 @@
 						document.body.appendChild( mountPoint );
 
 						const app = createUniversalLanguageSelector( {
-							triggerElement: e.currentTarget,
+							triggerElement: triggerElement,
 							selectableLanguages: $.uls.data.getAutonyms(),
 							selected: [ mw.config.get( 'wgUserLanguage' ) ],
 							onSelect: ( language ) => {
@@ -659,7 +664,10 @@
 				document.body.appendChild( mountPoint );
 
 				const app = createUniversalLanguageSelector( {
-					triggerElement: ev.currentTarget,
+					// `$target` was captured synchronously above; `ev.currentTarget`
+					// is unreliable here as this runs after a later delegated click
+					// handler (e.g. Score's) may have reset it to `document`.
+					triggerElement: $target[ 0 ],
 					selectableLanguages: mw.uls.getInterlanguageListFromNodes( languageNodesInjected ),
 					languageAnnotations: languageAnnotations,
 					variantsByLanguage: variantsByLanguage,
