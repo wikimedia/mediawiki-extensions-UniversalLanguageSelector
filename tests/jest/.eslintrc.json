@@ -1,0 +1,19 @@
+{
+	"root": true,
+	"extends": [
+		"wikimedia/client/common",
+		"wikimedia/language/es2022",
+		"wikimedia/mediawiki"
+	],
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"env": {
+		"jest": true,
+		"node": true
+	},
+	"rules": {
+		"max-len": "off",
+		"no-underscore-dangle": "off"
+	}
+}

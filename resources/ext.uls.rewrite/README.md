@@ -297,3 +297,25 @@ Common entry point types include:
 *   `EMPTY_LIST`: Shown when the language list is empty.
 
 For detailed documentation on how to register and use entry points, please refer to the [Entry points documentation](docs/Entrypoints.md).
+
+---
+## Testing
+
+The ULS rewrite code is covered by Jest unit tests.
+
+### Running the tests
+
+To run the entire extension test suite, including Grunt linters and Jest tests:
+```bash
+npm test
+```
+
+To run only the Jest unit tests:
+```bash
+npm run jest
+```
+
+To run a specific test suite (e.g., progressive render tests):
+```bash
+npm run jest -- tests/jest/composables/useProgressiveRender.test.js
+```
