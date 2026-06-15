@@ -70,11 +70,14 @@ function createUniversalLanguageSelector( config ) {
 					onClose();
 				}
 			},
+			open() {
+				this.visible = true;
+			},
 			toggle() {
 				if ( this.visible ) {
 					this.close();
 				} else {
-					this.visible = true;
+					this.open();
 				}
 			},
 			select( language ) {
@@ -85,6 +88,11 @@ function createUniversalLanguageSelector( config ) {
 			},
 			updateSelected( newSelected ) {
 				this.currentSelected = newSelected;
+			},
+			onVisibleChange( isVisible, isMobile ) {
+				if ( config.onVisibleChange ) {
+					config.onVisibleChange( isVisible, isMobile );
+				}
 			}
 		},
 		render() {
@@ -102,7 +110,8 @@ function createUniversalLanguageSelector( config ) {
 				mode: mode,
 				floatingOptions: floatingOptions,
 				onClose: this.close,
-				onSelect: this.select
+				onSelect: this.select,
+				onVisibleChange: this.onVisibleChange
 			}, slots );
 		}
 	} );

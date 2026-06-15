@@ -343,7 +343,7 @@ module.exports = exports = defineComponent( {
 			} )
 		}
 	},
-	emits: [ 'close', 'select' ],
+	emits: [ 'close', 'select', 'visible-change' ],
 	setup( props, { emit } ) {
 		const DEBOUNCE_DELAY_MS = 300;
 		const DENSITY_LOW_THRESHOLD = 10;
@@ -389,7 +389,6 @@ module.exports = exports = defineComponent( {
 
 		const onBreakpointChange = ( event ) => {
 			isMobile.value = event.matches;
-			toggleBodyScrollLock( visible.value && isMobile.value );
 		};
 
 		const dialogAriaLabel = computed( () => {
@@ -861,8 +860,9 @@ module.exports = exports = defineComponent( {
 			searchInputRef.value.focus();
 		};
 
-		watch( visible, async ( isVisible ) => {
-			toggleBodyScrollLock( isVisible && isMobile.value );
+		watch( [ visible, isMobile ], async ( [ isVisible, mobile ] ) => {
+			emit( 'visible-change', isVisible, mobile );
+			toggleBodyScrollLock( isVisible && mobile );
 			if ( isVisible ) {
 				await focusInput();
 			} else {
