@@ -381,8 +381,13 @@ module.exports = exports = defineComponent( {
 			`(max-width: ${ MOBILE_WIDTH_THRESHOLD - 1 }px)`
 		);
 		const isMobile = ref( mobileMediaQuery.matches );
+		const toggleBodyScrollLock = ( isLocked ) => {
+			document.body.classList.toggle( 'uls-rewrite-no-scroll', isLocked );
+		};
+
 		const onBreakpointChange = ( event ) => {
 			isMobile.value = event.matches;
+			toggleBodyScrollLock( visible.value && isMobile.value );
 		};
 
 		const dialogAriaLabel = computed( () => {
@@ -844,6 +849,7 @@ module.exports = exports = defineComponent( {
 		};
 
 		watch( visible, async ( isVisible ) => {
+			toggleBodyScrollLock( isVisible && isMobile.value );
 			if ( isVisible ) {
 				await focusInput();
 			} else {
@@ -912,6 +918,7 @@ module.exports = exports = defineComponent( {
 			} else {
 				mobileMediaQuery.removeListener( onBreakpointChange );
 			}
+			toggleBodyScrollLock( false );
 		} );
 
 		return {
