@@ -116,7 +116,7 @@
 				</language-list>
 
 				<!-- Variants, Suggested and All Languages -->
-				<div v-else-if="!searchQuery && languagesToDisplay.length > 0">
+				<div v-else-if="!searchQuery && hasDisplayableContent">
 					<div
 						v-for="section in mainSections"
 						:key="section.key"
@@ -163,7 +163,7 @@
 					</div>
 				</div>
 
-				<template v-if="languagesToDisplay.length === 0">
+				<template v-if="!hasDisplayableContent">
 					<div v-if="searchQuery && !isSearching" class="uls-rewrite__no-results">
 						<template v-if="hasSearchHits">
 							<!-- Valid language was searched for, but no results were found -->
@@ -641,6 +641,12 @@ module.exports = exports = defineComponent( {
 			() => ( searchQuery.value ? [] : currentVariantCodes.value )
 		);
 
+		// Whether the main view has anything to render: either languages or
+		// variants.
+		const hasDisplayableContent = computed(
+			() => languagesToDisplay.value.length > 0 || visibleVariantCodes.value.length > 0
+		);
+
 		// Annotations for the main "All languages" list.
 		const baseAnnotations = computed( () => {
 			const annotations = {};
@@ -719,26 +725,31 @@ module.exports = exports = defineComponent( {
 				cursor += highlightedLanguages.value.length;
 			}
 
-			sections.push( {
-				key: 'all',
-				modifierClass: 'uls-rewrite__section--all',
-				// Only show the "All languages" title when at least one other
-				// section is present above it. The count reflects the full list,
-				// not the progressively-rendered subset.
-				title: sections.length > 0 ?
-					mw.msg( 'ext-uls-all-languages-title', languagesToDisplay.value.length ) :
-					null,
-				codes: visibleAllCodes.value,
-				languages: languages.value,
-				annotations: baseAnnotations.value,
-				indexOffset: cursor,
-				// Height to reserve for the rows still being progressively
-				// rendered, so the scrollbar does not shrink as they fill in.
-				// visibleAllCodes is always a prefix of the full list, so the
-				// difference is never negative.
-				reservedHeight: ( languagesToDisplay.value.length - visibleAllCodes.value.length ) *
-					rowHeight.value
-			} );
+			// Skip the "All languages" section entirely when there are no
+			// languages (e.g. variants-only view), so it does not render a
+			// stray empty section with an "All languages (0)" title.
+			if ( visibleAllCodes.value.length > 0 ) {
+				sections.push( {
+					key: 'all',
+					modifierClass: 'uls-rewrite__section--all',
+					// Only show the "All languages" title when at least one other
+					// section is present above it. The count reflects the full list,
+					// not the progressively-rendered subset.
+					title: sections.length > 0 ?
+						mw.msg( 'ext-uls-all-languages-title', languagesToDisplay.value.length ) :
+						null,
+					codes: visibleAllCodes.value,
+					languages: languages.value,
+					annotations: baseAnnotations.value,
+					indexOffset: cursor,
+					// Height to reserve for the rows still being progressively
+					// rendered, so the scrollbar does not shrink as they fill in.
+					// visibleAllCodes is always a prefix of the full list, so the
+					// difference is never negative.
+					reservedHeight: ( languagesToDisplay.value.length -
+						visibleAllCodes.value.length ) * rowHeight.value
+				} );
+			}
 
 			return sections;
 		} );
@@ -932,6 +943,7 @@ module.exports = exports = defineComponent( {
 			languages,
 			languagesToDisplay,
 			mainSections,
+			hasDisplayableContent,
 			searchQuery,
 			hasSearchHits,
 			search,
