@@ -382,6 +382,8 @@ module.exports = exports = defineComponent( {
 		);
 		const isMobile = ref( mobileMediaQuery.matches );
 		const toggleBodyScrollLock = ( isLocked ) => {
+			// Lock <html> too; the top-level scrollbar lives there, not on <body>.
+			document.documentElement.classList.toggle( 'uls-rewrite-no-scroll', isLocked );
 			document.body.classList.toggle( 'uls-rewrite-no-scroll', isLocked );
 		};
 
