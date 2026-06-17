@@ -20,8 +20,7 @@ module.exports = {
 		'icons.json$': '@wikimedia/codex-icons',
 		'mediawiki.codex.typeaheadSearch': '@wikimedia/codex',
 		'\\bcodex\\.js$': '@wikimedia/codex',
-		'\\blanguage-data\\.json$': '<rootDir>/tests/jest/mocks/language-data.js',
-		'^@wikimedia/language-data$': '<rootDir>/../../vendor/wikimedia/language-data/data/language-data.json',
+		'\\blanguage-data\\.json$': '<rootDir>/tests/jest/mocks/language-data.json',
 		'^ext\\.uls\\.rewrite\\.entrypoints$': '<rootDir>/resources/ext.uls.rewrite/EntrypointRegistry.js',
 		'^mediawiki\\.languageselector\\.core$': '<rootDir>/../../resources/src/mediawiki.languageselector/core.js',
 		'^mediawiki\\.languageselector\\.lookup$': '<rootDir>/../../resources/src/mediawiki.languageselector/lookup.js'
