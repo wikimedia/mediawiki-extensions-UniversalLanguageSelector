@@ -25,7 +25,8 @@
 			"Yodaspirine",
 			"Yzelf",
 			"Aquasen",
-			"Balise42"
+			"Balise42",
+			"SleaY"
 		]
 	},
 	"uls-desc": "Donne à l’utilisateur plusieurs manières de sélectionner une langue et d’ajuster ses paramètres de langue",
@@ -109,5 +110,9 @@
 	"ext-uls-invalid-language-search-title": "Langue non reconnue",
 	"ext-uls-invalid-language-search-description": "Veuillez vérifier l’orthographe. Vous pouvez chercher une langue par son nom ou son code ISO.",
 	"ext-uls-unsupported-language-title": "Langue non disponible",
-	"ext-uls-unsupported-language-description": "La langue que vous cherchez n’est pas disponible pour le moment."
+	"ext-uls-unsupported-language-description": "La langue que vous cherchez n’est pas disponible pour le moment.",
+	"ext-uls-open-language-settings": "Ouvrir les paramètres de langue",
+	"ext-uls-open-language-selector": "Retour au sélecteur de langue",
+	"ext-uls-open-quick-actions": "Afficher les actions rapides",
+	"ext-uls-quick-actions-panel-title": "Actions rapides"
 }
