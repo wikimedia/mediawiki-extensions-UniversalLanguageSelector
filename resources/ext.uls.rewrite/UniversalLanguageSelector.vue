@@ -54,17 +54,9 @@
 				></cdx-progress-bar>
 			</template>
 			<language-selector-panel-header
-				v-else-if="currentView === VIEW.MISSING_CONTENT_LANGUAGES"
+				v-else
 				ref="panelHeaderRef"
-				:title="$i18n( 'ext-uls-missing-languages-panel-title' ).text()"
-				:is-mobile="isMobile"
-				@back="showLanguageSelector"
-				@close="$emit( 'close' )"
-			></language-selector-panel-header>
-			<language-selector-panel-header
-				v-else-if="currentView === VIEW.QUICK_ACTIONS"
-				ref="panelHeaderRef"
-				:title="$i18n( 'ext-uls-quick-actions-panel-title' ).text()"
+				:title="panelTitle"
 				:is-mobile="isMobile"
 				@back="showLanguageSelector"
 				@close="$emit( 'close' )"
@@ -391,16 +383,24 @@ module.exports = exports = defineComponent( {
 			isMobile.value = event.matches;
 		};
 
-		const dialogAriaLabel = computed( () => {
+		// Panel title for the non-main views. Empty for the main view, which has
+		// no panel header.
+		const panelTitle = computed( () => {
 			switch ( currentView.value ) {
 				case VIEW.MISSING_CONTENT_LANGUAGES:
 					return mw.msg( 'ext-uls-missing-languages-panel-title' );
 				case VIEW.QUICK_ACTIONS:
 					return mw.msg( 'ext-uls-quick-actions-panel-title' );
 				default:
-					return mw.msg( 'ext-uls-language-title' );
+					return '';
 			}
 		} );
+
+		// The dialog's aria-label mirrors the panel title, falling back to the
+		// language-selector title on the main view.
+		const dialogAriaLabel = computed(
+			() => panelTitle.value || mw.msg( 'ext-uls-language-title' )
+		);
 
 		const {
 			languages,
@@ -962,6 +962,7 @@ module.exports = exports = defineComponent( {
 			densityClass,
 			isMobile,
 			dialogAriaLabel,
+			panelTitle,
 
 			// Keyboard Navigation
 			highlightedIndex,
