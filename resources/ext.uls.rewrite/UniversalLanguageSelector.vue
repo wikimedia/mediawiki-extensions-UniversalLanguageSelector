@@ -76,39 +76,11 @@
 					@click="showMissingLanguagesPanel"
 				>
 				</missing-languages-entrypoint>
-				<!-- Search Results -->
-				<language-list
-					v-if="searchQuery && languagesToDisplay.length > 0"
-					:language-codes="languagesToDisplay"
-					:languages="languages"
-					:lang="displayLanguageCode"
-					:dir="displayLanguageDir"
-					:highlighted-index="highlightedIndex"
-					:selected-values-set="selectedValuesSet"
-					:unavailable-languages-set="unavailableLanguagesSet"
-					:language-annotations="baseAnnotations"
-					@select="select"
-					@highlight="setHighlightedIndex"
-					@mouseleave="clearHighlightedItem"
-				>
-					<!--
-					mouseleave on the list, not the item: a per-item mouseleave would fire
-					during keyboard nav when the list scrolls items under a stationary cursor,
-					fighting the keyboard highlight. The list's inline-end margin makes the
-					clearance strip clear the highlight too.
-				-->
-					<template #language-item="slotProps">
-						<slot
-							name="language-item"
-							:item="slotProps.item"
-							:annotations="slotProps.annotations"
-							:is-available="slotProps.isAvailable"
-						></slot>
-					</template>
-				</language-list>
 
-				<!-- Variants, Suggested and All Languages -->
-				<div v-else-if="!searchQuery && hasDisplayableContent">
+				<!-- Search results, variants, suggested and all languages. During
+				search, mainSections collapses to a single "all" section holding the
+				search results, so this one render path covers both cases. -->
+				<div v-if="hasDisplayableContent">
 					<div
 						v-for="section in mainSections"
 						:key="section.key"
@@ -135,6 +107,12 @@
 							@highlight="setHighlightedIndex"
 							@mouseleave="clearHighlightedItem"
 						>
+							<!--
+							mouseleave on the list, not the item: a per-item mouseleave would
+							fire during keyboard nav when the list scrolls items under a
+							stationary cursor, fighting the keyboard highlight. The list's
+							inline-end margin makes the clearance strip clear the highlight too.
+						-->
 							<template #language-item="slotProps">
 								<slot
 									name="language-item"
@@ -155,7 +133,7 @@
 					</div>
 				</div>
 
-				<template v-if="!hasDisplayableContent">
+				<template v-else>
 					<div v-if="searchQuery && !isSearching" class="uls-rewrite__no-results">
 						<template v-if="hasSearchHits">
 							<!-- Valid language was searched for, but no results were found -->
@@ -954,7 +932,6 @@ module.exports = exports = defineComponent( {
 			selectedValuesSet,
 			unavailableLanguagesSet,
 			searchQueryHits,
-			baseAnnotations,
 			displayLanguageDir,
 
 			// Appearance & Layout
