@@ -626,48 +626,40 @@ module.exports = exports = defineComponent( {
 			() => languagesToDisplay.value.length > 0 || visibleVariantCodes.value.length > 0
 		);
 
-		// Annotations for the main "All languages" list.
-		const baseAnnotations = computed( () => {
+		// Build a code -> annotation map, merging the caller-provided base
+		// annotations with the resolved direction. extraByCode optionally layers
+		// per-code annotations on top of the base (used by the variants section).
+		// Object.assign ignores undefined/null sources, so a missing extra layer
+		// is a no-op.
+		const buildAnnotations = ( codes, extraByCode ) => {
 			const annotations = {};
-			for ( const code of languageCodes.value ) {
+			for ( const code of codes ) {
 				annotations[ code ] = Object.assign(
 					{},
 					props.languageAnnotations[ code ],
+					extraByCode && extraByCode[ code ],
 					{ dir: rtlLanguages.has( code ) ? 'rtl' : 'ltr' }
 				);
 			}
 			return annotations;
-		} );
+		};
+
+		// Annotations for the main "All languages" list.
+		const baseAnnotations = computed(
+			() => buildAnnotations( languageCodes.value )
+		);
 
 		// Annotations for the suggested/preferred languages section.
-		const highlightedAnnotations = computed( () => {
-			const annotations = {};
-			for ( const code of highlightedLanguages.value ) {
-				annotations[ code ] = Object.assign(
-					{},
-					props.languageAnnotations[ code ],
-					{ dir: rtlLanguages.has( code ) ? 'rtl' : 'ltr' }
-				);
-			}
-			return annotations;
-		} );
+		const highlightedAnnotations = computed(
+			() => buildAnnotations( highlightedLanguages.value )
+		);
 
 		// Annotations for the variants section. Variant codes are not in the main
 		// language list, so they need their own map that also merges per-variant
 		// annotations.
-		const variantSectionAnnotations = computed( () => {
-			const annotations = {};
-			const variantAnnotations = currentVariantAnnotations.value;
-			for ( const code of currentVariantCodes.value ) {
-				annotations[ code ] = Object.assign(
-					{},
-					props.languageAnnotations[ code ],
-					variantAnnotations[ code ],
-					{ dir: rtlLanguages.has( code ) ? 'rtl' : 'ltr' }
-				);
-			}
-			return annotations;
-		} );
+		const variantSectionAnnotations = computed(
+			() => buildAnnotations( currentVariantCodes.value, currentVariantAnnotations.value )
+		);
 
 		// Declarative description of the main-view sections (variants, suggested,
 		// all). The template renders these in order, and combinedLanguages is
