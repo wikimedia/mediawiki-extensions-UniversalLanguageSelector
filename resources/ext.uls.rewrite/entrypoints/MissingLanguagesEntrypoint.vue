@@ -70,13 +70,13 @@ module.exports = defineComponent( {
 		 * @return {mw.Message}
 		 */
 		const getLabelContent = ( names ) => {
-			const count = names.length;
-
-			if ( count > 2 ) {
+			// The banner always invites translating "and more" languages, since
+			// content is missing in other languages beyond the named ones too.
+			if ( names.length >= 2 ) {
 				return mw.message( 'ext-uls-missing-languages-label-more', names[ 0 ], names[ 1 ] );
 			}
 
-			return mw.message( 'ext-uls-missing-languages-label', mw.language.listToText( names ) );
+			return mw.message( 'ext-uls-missing-languages-label', names[ 0 ] );
 		};
 
 		const labelContent = computed( () => {
