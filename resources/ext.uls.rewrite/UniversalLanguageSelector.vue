@@ -816,6 +816,25 @@ module.exports = exports = defineComponent( {
 			}
 		};
 
+		// The IME icon uses document coordinates but the popup moves via a CSS
+		// transform, so recompute the icon to track the popup when it moves.
+		const repositionImeSelector = async () => {
+			// Wait for the new transform to be applied before measuring offset().
+			await nextTick();
+			const input = menuRef.value &&
+				menuRef.value.querySelector( '.uls-rewrite__search-active input' );
+			const imeSelector = input && $( input ).data( 'imeselector' );
+			if ( imeSelector ) {
+				imeSelector.position();
+			}
+		};
+
+		watch( floatingStyles, () => {
+			if ( visible.value ) {
+				repositionImeSelector();
+			}
+		} );
+
 		const focusInput = async () => {
 			// Wait for Floating UI to apply real coordinates before focusing.
 			// Without this, the popup is still at its initial { top: 0, left: 0 }
