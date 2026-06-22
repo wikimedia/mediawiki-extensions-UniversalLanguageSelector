@@ -63,6 +63,7 @@
 		this.$applyButton = this.$window.find( '.uls-settings-apply' );
 		this.init();
 		this.listen();
+		this.bindTrigger( element );
 
 		if ( options.autoOpen ) {
 			this.show();
@@ -77,10 +78,9 @@
 			this.hide();
 		},
 
-		// Register all event listeners to the ULS language settings here.
+		// Register the window-level event listeners. These bind once, since a
+		// single dialog window is shared across all triggers.
 		listen: function () {
-			this.$element.on( 'click', this.click.bind( this ) );
-
 			this.$window.find( '#languagesettings-close, button.uls-settings-cancel' )
 				.on( 'click', mw.hook( 'mw.uls.settings.cancel' ).fire.bind( this ) );
 			this.$applyButton
@@ -101,6 +101,35 @@
 					mw.hook( 'mw.uls.settings.cancel' ).fire();
 				}
 			} );
+		},
+
+		// Wire a trigger element to the shared dialog. Each trigger keeps its
+		// own options so its click restores the right context.
+		bindTrigger: function ( element ) {
+			$( element )
+				.data( 'languagesettings-options', this.options )
+				.off( 'click.languagesettings' )
+				.on( 'click.languagesettings', this.click.bind( this ) );
+		},
+
+		/**
+		 * Rebind the shared dialog to a new trigger and apply that caller's
+		 * options. The window template hardcodes id="language-settings-dialog",
+		 * so a single instance is reused instead of appending duplicate windows.
+		 *
+		 * @param {HTMLElement} element The trigger element
+		 * @param {Object} options Options for this caller
+		 */
+		bind: function ( element, options ) {
+			this.$element = $( element );
+			this.options = Object.assign( {}, $.fn.languagesettings.defaults, options );
+			this.top = this.options.top;
+			this.left = this.options.left;
+			this.bindTrigger( element );
+
+			if ( this.options.autoOpen ) {
+				this.show();
+			}
 		},
 
 		render: function () {
@@ -197,9 +226,17 @@
 			// Close other modal windows which listen to click events outside them
 			$( document.documentElement ).trigger( 'click' );
 			this.i18n();
-			// Every time we show this window, make sure the current
-			// settings panels is up-to-date. So just click on active menu item.
-			this.$window.find( '.settings-menu-items > .active' ).trigger( 'click' );
+			// Make sure the right settings panel is shown: prefer this caller's
+			// default module, falling back to the currently active one.
+			const $menuItems = this.$window.find( '.settings-menu-items' );
+			let $target = this.options.defaultModule ?
+				$menuItems.find( '#' + this.options.defaultModule + '-panel-trigger' ) :
+				$();
+			if ( !$target.length ) {
+				$target = $menuItems.children( '.active' );
+			}
+			$menuItems.children( '.menu-section' ).removeClass( 'active' );
+			$target.addClass( 'active' ).trigger( 'click' );
 
 			this.shown = true;
 			this.$window.show();
@@ -275,6 +312,16 @@
 			e.stopPropagation();
 			e.preventDefault();
 
+			// Restore the options bound to the clicked trigger so position and
+			// default module match the caller that owns it.
+			const options = $( e.currentTarget ).data( 'languagesettings-options' );
+			if ( options ) {
+				this.$element = $( e.currentTarget );
+				this.options = options;
+				this.top = options.top;
+				this.left = options.left;
+			}
+
 			if ( this.shown ) {
 				this.hide();
 			} else {
@@ -291,18 +338,28 @@
 		}
 	};
 
+	// A single shared dialog instance. The window template hardcodes
+	// id="language-settings-dialog", so only one may exist per page.
+	let instance = null;
+
 	$.fn.languagesettings = function ( option ) {
 		return this.each( function () {
 			const $this = $( this ),
 				options = typeof option === 'object' && option;
-			let data = $this.data( 'languagesettings' );
 
-			if ( !data ) {
-				$this.data( 'languagesettings', ( data = new LanguageSettings( this, options ) ) );
+			if ( !instance ) {
+				instance = new LanguageSettings( this, options || {} );
+			} else if ( options ) {
+				// Reuse the single shared dialog, rebinding it to this trigger.
+				instance.bind( this, options );
 			}
 
+			// Expose the shared instance via element data for callers that
+			// inspect it (e.g. to check `shown`).
+			$this.data( 'languagesettings', instance );
+
 			if ( typeof option === 'string' ) {
-				data[ option ]();
+				instance[ option ]();
 			}
 		} );
 	};

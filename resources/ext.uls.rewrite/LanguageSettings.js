@@ -40,15 +40,9 @@ try {
 
 					if ( !$settingsAnchor ) {
 						$settingsAnchor = $( '<div>' ).appendTo( document.body );
-						$settingsAnchor.languagesettings( { autoOpen: true, onPosition } );
-						return;
 					}
 
-					// Reuse the existing instance, refreshing the position for the
-					// current ULS container.
-					const settings = $settingsAnchor.data( 'languagesettings' );
-					settings.options.onPosition = onPosition;
-					settings.show();
+					$settingsAnchor.languagesettings( { autoOpen: true, onPosition } );
 				} );
 			}
 		} )
