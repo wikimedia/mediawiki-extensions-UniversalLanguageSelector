@@ -934,8 +934,15 @@
 			addLanguageSettingsToNonContentPages();
 		}
 
-		initLanguageChangeUndoTooltip();
-		initIme();
+		// show on Minerva if its ULS rewrite
+		const isV2LanguageSelectorOnMinerva = mw.config.get( 'skin' ) === 'minerva' &&
+			isULSV2Enabled;
+
+		if ( !isV2LanguageSelectorOnMinerva ) {
+			// Don't display ime on Minerva skin.
+			initIme();
+			initLanguageChangeUndoTooltip();
+		}
 
 		// There are three basic components of ULS interface:
 		// - language selection for interface
@@ -973,9 +980,6 @@
 		const compact = mw.config.get( 'wgULSisCompactLinksEnabled' );
 		// whether to show the omni box or not
 		const languageInHeader = mw.config.get( 'wgVector2022LanguageInHeader' );
-		// show on Minerva if its ULS rewrite
-		const isV2LanguageSelectorOnMinerva = mw.config.get( 'skin' ) === 'minerva' &&
-			isULSV2Enabled;
 
 		if ( compact || languageInHeader || isV2LanguageSelectorOnMinerva ) {
 			// Init compact languages OR omni selector using the mw-interlanguage-selector class
