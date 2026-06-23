@@ -2,9 +2,10 @@
 	<a
 		v-if="action.url"
 		:href="action.url"
+		:aria-label="action.ariaLabel || null"
 		class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled
-			cdx-button--action-progressive cdx-button--weight-quiet
-			uls-rewrite__entrypoint-action-button"
+			cdx-button--weight-quiet uls-rewrite__entrypoint-action-button"
+		:class="`cdx-button--action-${ buttonAction }`"
 	>
 		<cdx-icon
 			v-if="action.icon"
@@ -16,7 +17,8 @@
 	<cdx-button
 		v-else
 		weight="quiet"
-		action="progressive"
+		:action="buttonAction"
+		:aria-label="action.ariaLabel || null"
 		class="uls-rewrite__entrypoint-action-button"
 		@click="action.handler"
 	>
@@ -45,7 +47,7 @@ module.exports = defineComponent( {
 		CdxIcon
 	},
 	props: {
-		// An entrypoint action config: { label, icon?, url?, handler? }.
+		// An entrypoint action config: { label, icon?, url?, handler?, ariaLabel? }.
 		action: {
 			type: Object,
 			required: true
@@ -53,6 +55,11 @@ module.exports = defineComponent( {
 		iconSize: {
 			type: String,
 			default: 'medium'
+		},
+		// Codex button action type ('default', 'progressive', 'destructive').
+		buttonAction: {
+			type: String,
+			default: 'progressive'
 		}
 	}
 } );
