@@ -11,8 +11,8 @@ let prefetched = false;
 let $settingsAnchor = null;
 
 try {
-	EntrypointRegistry.register( ENTRYPOINT_TYPE.QUICK_ACTIONS, {
-		id: 'language-settings',
+	const quickActionRegistration = {
+		id: 'language-settings-quick-action',
 		shouldShow: () => {
 			if ( !prefetched ) {
 				mw.loader.load( MODULES );
@@ -46,7 +46,21 @@ try {
 				} );
 			}
 		} )
-	}, [ ULS_MODE.INTERFACE, ULS_MODE.CONTENT ] );
+	};
+
+	EntrypointRegistry.register(
+		ENTRYPOINT_TYPE.QUICK_ACTIONS,
+		quickActionRegistration,
+		[ ULS_MODE.INTERFACE, ULS_MODE.CONTENT ]
+	);
+
+	const emptyListRegistration = Object.assign( {}, quickActionRegistration );
+	emptyListRegistration.id = 'language-settings-empty-list';
+	EntrypointRegistry.register(
+		ENTRYPOINT_TYPE.EMPTY_LIST,
+		emptyListRegistration,
+		[ ULS_MODE.CONTENT ]
+	);
 } catch ( e ) {
 	// If the entry point registry is not available, we can safely ignore the error
 	// since it only means that the quick action won't be registered.
