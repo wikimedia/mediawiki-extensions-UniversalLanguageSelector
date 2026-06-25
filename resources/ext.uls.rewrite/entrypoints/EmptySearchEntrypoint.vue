@@ -1,12 +1,13 @@
 <template>
 	<div>
 		<p>{{ $i18n( 'ext-uls-empty-search-entrypoint-description' ) }}</p>
-		<span
-			v-for="( action, index ) in actions"
-			:key="index"
-		>
-			<entrypoint-action-button :action="action"></entrypoint-action-button>
-		</span>
+		<div class="uls-rewrite__empty-search-entrypoint__actions">
+			<entrypoint-action-button
+				v-for="( action, index ) in actions"
+				:key="index"
+				:action="action"
+			></entrypoint-action-button>
+		</div>
 	</div>
 </template>
 
