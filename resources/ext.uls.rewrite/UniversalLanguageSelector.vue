@@ -183,7 +183,7 @@
 			></quick-actions-panel>
 		</div>
 		<quick-action-trigger
-			v-if="quickActionEntrypoints.length > 0 && currentView === VIEW.MAIN"
+			v-if="quickActionEntrypoints.length > 0 && currentView === VIEW.MAIN && hasDisplayableContent && !searchQuery"
 			:entrypoints="quickActionEntrypoints"
 			:languages="languagesToDisplay"
 			:suggestions="userLanguageSuggestions"
