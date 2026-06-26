@@ -215,7 +215,7 @@
 </template>
 
 <script>
-const { defineComponent, toRefs, ref, computed, watch, nextTick, onMounted, onUnmounted, useId } = require( 'vue' );
+const { defineComponent, toRefs, ref, computed, watch, nextTick, onMounted, onUnmounted, provide, useId } = require( 'vue' );
 const { useLanguageSelector } = require( 'mediawiki.languageselector.core' );
 const LanguageList = require( './LanguageList.vue' );
 const QuickActionTrigger = require( './entrypoints/QuickActionTrigger.vue' );
@@ -227,6 +227,7 @@ const QuickActionsPanel = require( './entrypoints/QuickActionsPanel.vue' );
 const LanguageSelectorPanelHeader = require( './LanguageSelectorPanelHeader.vue' );
 const EntrypointRegistry = require( 'ext.uls.rewrite.entrypoints' );
 const { ULS_MODE } = EntrypointRegistry;
+const { CLOSE_SELECTOR_KEY } = require( './composables/useEntrypointActions.js' );
 const useKeyboardNavigation = require( './composables/useKeyboardNavigation.js' );
 const useClickOutside = require( './composables/useClickOutside.js' );
 const useFocusTrap = require( './composables/useFocusTrap.js' );
@@ -342,6 +343,10 @@ module.exports = exports = defineComponent( {
 		const MOBILE_WIDTH_THRESHOLD = 768;
 
 		const { selectableLanguages, selected, triggerElement, visible } = toRefs( props );
+
+		// Let entrypoint actions close the selector before acting (e.g. before
+		// opening the language settings dialog). Consumed via useEntrypointActions.
+		provide( CLOSE_SELECTOR_KEY, () => emit( 'close' ) );
 
 		const menuRef = ref( null );
 		const searchInputRef = ref( null );

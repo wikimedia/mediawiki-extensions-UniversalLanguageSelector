@@ -81,7 +81,13 @@ EntrypointRegistry.register(
 
 ## The context object
 
-The `context` object passed to `shouldShow` and `getConfig` provides state information from the ULS interface. Its contents vary depending on the entry point type:
+The `context` object passed to `shouldShow` and `getConfig` provides state information from the ULS interface.
+
+Regardless of the entry point type, the context contains:
+
+*   `close`: (Function) Closes the language selector. Call it from an action's `handler` before opening another dialog (for example, the language settings dialog), so the selector does not stay open underneath. It is absent when the entry point is rendered outside a language selector that provides it, so check before calling.
+
+The remaining contents vary depending on the entry point type:
 
 ### `QUICK_ACTIONS` and `EMPTY_SEARCH`
 
