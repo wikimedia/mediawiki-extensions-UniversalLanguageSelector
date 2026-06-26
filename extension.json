@@ -536,9 +536,9 @@
 				"ext.uls.rewrite.entrypoints"
 			]
 		},
-		"ext.uls.rewrite.languagesettings": {
+		"ext.uls.rewrite.languagesettings.entrypoint": {
 			"packageFiles": [
-				"ext.uls.rewrite/LanguageSettings.js",
+				"ext.uls.rewrite/LanguageSettingsEntrypoint.js",
 				{
 					"name": "icons.json",
 					"callback": "MediaWiki\\ResourceLoader\\CodexModule::getIcons",

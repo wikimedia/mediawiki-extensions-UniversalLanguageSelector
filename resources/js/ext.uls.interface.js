@@ -38,7 +38,7 @@
 		const isMinerva = mw.config.get( 'skin' ) === 'minerva';
 		const modules = isMinerva ?
 			[ 'ext.uls.mediawiki', 'ext.uls.rewrite' ] :
-			[ 'ext.uls.mediawiki', 'ext.uls.rewrite.languagesettings', 'ext.uls.rewrite' ];
+			[ 'ext.uls.mediawiki', 'ext.uls.rewrite.languagesettings.entrypoint', 'ext.uls.rewrite' ];
 
 		if ( isULSV2Enabled ) {
 			mw.loader.load( modules );
