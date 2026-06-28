@@ -1021,7 +1021,7 @@
 			const syntheticNode = document.createElement( 'a' );
 			syntheticNode.lang = contentLang;
 			syntheticNode.href = location.href;
-			syntheticNode.textContent = require( '../data.json' ).currentAutonym;
+			syntheticNode.textContent = $.uls.data.getAutonym( contentLang );
 			syntheticNode.setAttribute( 'data-title', mw.config.get( 'wgTitle' ) );
 
 			// Ensure it has a parent for class lookups in getLanguageAnnotations
