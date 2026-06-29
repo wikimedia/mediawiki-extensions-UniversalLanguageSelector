@@ -1,12 +1,15 @@
 <template>
 	<ul
+		:id="listboxId || null"
 		class="uls-rewrite__body__language-list"
 		role="listbox"
+		:aria-label="listboxLabel || null"
 		:lang="lang || null"
 		:dir="dir || null"
 	>
 		<li
 			v-for="( code, index ) in languageCodes"
+			:id="optionId( index )"
 			:key="code"
 			:lang="!lang ? code : null"
 			:data-language-code="code"
@@ -82,6 +85,22 @@ module.exports = defineComponent( {
 			type: Number,
 			default: 0
 		},
+		// Base id for option ids. Each option's id is derived from this plus its
+		// global index, Used by the combobox input for aria-activedescendant.
+		idPrefix: {
+			type: String,
+			default: ''
+		},
+		// Id for this section's listbox, referenced by the input's aria-controls.
+		listboxId: {
+			type: String,
+			default: ''
+		},
+		// Accessible name for the listbox
+		listboxLabel: {
+			type: String,
+			default: ''
+		},
 		selectedValuesSet: {
 			type: Object, // Set
 			required: true
@@ -121,6 +140,10 @@ module.exports = defineComponent( {
 
 		const isHighlighted = ( index ) => props.highlightedIndex === ( index + props.indexOffset );
 
+		const optionId = ( index ) => props.idPrefix ?
+			`${ props.idPrefix }-option-${ index + props.indexOffset }` :
+			null;
+
 		const select = ( code ) => {
 			if ( props.unavailableLanguagesSet.has( code ) ) {
 				return;
@@ -132,6 +155,7 @@ module.exports = defineComponent( {
 			displayNames,
 			annotationsByCode,
 			isHighlighted,
+			optionId,
 			select
 		};
 	}

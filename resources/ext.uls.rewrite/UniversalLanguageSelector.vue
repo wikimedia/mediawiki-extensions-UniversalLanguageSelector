@@ -103,6 +103,9 @@
 							:selected-values-set="selectedValuesSet"
 							:unavailable-languages-set="unavailableLanguagesSet"
 							:language-annotations="section.annotations"
+							:id-prefix="baseId"
+							:listbox-id="sectionListboxId( section.key )"
+							:listbox-label="section.title || listboxFallbackLabel"
 							@select="select"
 							@highlight="setHighlightedIndex"
 							@mouseleave="clearHighlightedItem"
@@ -197,7 +200,7 @@
 </template>
 
 <script>
-const { defineComponent, toRefs, ref, computed, watch, nextTick, onMounted, onUnmounted } = require( 'vue' );
+const { defineComponent, toRefs, ref, computed, watch, nextTick, onMounted, onUnmounted, useId } = require( 'vue' );
 const { useLanguageSelector } = require( 'mediawiki.languageselector.core' );
 const LanguageList = require( './LanguageList.vue' );
 const QuickActionTrigger = require( './entrypoints/QuickActionTrigger.vue' );
@@ -328,6 +331,13 @@ module.exports = exports = defineComponent( {
 		const searchInputRef = ref( null );
 		const keyboardNavigationContainer = ref( null );
 		const panelHeaderRef = ref( null );
+
+		// Stable id base for the combobox/listbox ARIA wiring.
+		const baseId = useId();
+		// Per-section listbox id; the input's aria-controls lists these.
+		const sectionListboxId = ( key ) => `${ baseId }-listbox-${ key }`;
+		// Fallback listbox name for a section with no visible heading.
+		const listboxFallbackLabel = mw.msg( 'ext-uls-language-title' );
 
 		const currentView = ref( VIEW.MAIN );
 		const quickActions = ref( [] );
@@ -929,6 +939,11 @@ module.exports = exports = defineComponent( {
 			searchInputRef,
 			keyboardNavigationContainer,
 			panelHeaderRef,
+
+			// ARIA wiring
+			baseId,
+			sectionListboxId,
+			listboxFallbackLabel,
 
 			// Search & Data Source
 			languages,
