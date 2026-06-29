@@ -33,6 +33,7 @@ module.exports = {
 		'<rootDir>/tests/jest/**/*.test.js'
 	],
 	transform: {
-		'^.+\\.vue$': '@vue/vue3-jest'
+		'^.+\\.vue$': '@vue/vue3-jest',
+		'^.+\\.js$': 'babel-jest'
 	}
 };

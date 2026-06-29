@@ -40,7 +40,7 @@ const { CdxButton, CdxIcon } = require( '../../codex.js' );
  * link styled as a quiet progressive button; otherwise it is a quiet
  * progressive button that invokes `handler` on click.
  */
-module.exports = defineComponent( {
+module.exports = exports = defineComponent( {
 	name: 'EntrypointActionButton',
 	components: {
 		CdxButton,
