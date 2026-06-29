@@ -41,6 +41,7 @@
 						aria-autocomplete="list"
 						:aria-expanded="hasDisplayableContent"
 						:aria-controls="listboxIds"
+						:aria-activedescendant="activeOptionId"
 						:model-value="searchQuery"
 						:placeholder="placeholder || $i18n( 'ext-uls-placeholder-search' ).text()"
 						@update:model-value="search"
@@ -765,6 +766,15 @@ module.exports = exports = defineComponent( {
 			clearHighlightedItem
 		} = useKeyboardNavigation( combinedLanguages, visible, scrollHighlightedIntoView );
 
+		// Id of the highlighted option, mirrored into the input's
+		// aria-activedescendant so screen readers track the highlight without
+		// focus leaving the input. Null when nothing is highlighted.
+		const activeOptionId = computed(
+			() => highlightedIndex.value >= 0 ?
+				`${ baseId }-option-${ highlightedIndex.value }` :
+				null
+		);
+
 		// Clicking outside only closes the panel on desktop.
 		// On mobile, the panel is fullscreen and has its own close button.
 		const isClickOutsideActive = computed( () => visible.value && !isMobile.value );
@@ -957,6 +967,7 @@ module.exports = exports = defineComponent( {
 			sectionListboxId,
 			listboxFallbackLabel,
 			listboxIds,
+			activeOptionId,
 
 			// Search & Data Source
 			languages,
