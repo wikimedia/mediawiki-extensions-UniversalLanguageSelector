@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<p>{{ $i18n( 'ext-uls-no-languages-entrypoint-description' ) }}</p>
+		<p>{{ $i18n( 'ext-uls-empty-state-entrypoint-description' ) }}</p>
 		<div class="uls-rewrite__empty-list-entrypoint__actions">
 			<entrypoint-action-button
 				v-for="( action, index ) in actions"
