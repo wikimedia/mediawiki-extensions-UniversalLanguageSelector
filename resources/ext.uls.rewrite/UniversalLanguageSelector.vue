@@ -37,6 +37,10 @@
 					<cdx-search-input
 						ref="searchInputRef"
 						class="uls-rewrite__search-active"
+						role="combobox"
+						aria-autocomplete="list"
+						:aria-expanded="hasDisplayableContent"
+						:aria-controls="listboxIds"
 						:model-value="searchQuery"
 						:placeholder="placeholder || $i18n( 'ext-uls-placeholder-search' ).text()"
 						@update:model-value="search"
@@ -735,6 +739,14 @@ module.exports = exports = defineComponent( {
 			return sections;
 		} );
 
+		// Space-separated ids of the rendered section listboxes, for the
+		// combobox input's aria-controls. Empty when nothing is shown.
+		const listboxIds = computed(
+			() => mainSections.value
+				.map( ( section ) => sectionListboxId( section.key ) )
+				.join( ' ' ) || null
+		);
+
 		// Flat list of codes in render order; keyboard navigation walks this.
 		const combinedLanguages = computed(
 			() => mainSections.value.reduce(
@@ -944,6 +956,7 @@ module.exports = exports = defineComponent( {
 			baseId,
 			sectionListboxId,
 			listboxFallbackLabel,
+			listboxIds,
 
 			// Search & Data Source
 			languages,
