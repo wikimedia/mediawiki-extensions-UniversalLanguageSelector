@@ -513,7 +513,7 @@
 				"ext-uls-variants-title",
 				"ext-uls-no-languages-title",
 				"ext-uls-no-languages-description",
-				"ext-uls-no-languages-entrypoint-description",
+				"ext-uls-empty-state-entrypoint-description",
 				"ext-uls-invalid-language-search-title",
 				"ext-uls-invalid-language-search-description",
 				"ext-uls-unsupported-language-title",

@@ -97,7 +97,7 @@
 	"ext-uls-variants-title": "Title for the language converter variants section in the language selector. Shown above the language list when the currently selected language has variants (e.g. zh-cn, zh-hk for Chinese).\n\nParameters:\n* $1 - the autonym of the base language whose variants are listed (e.g. \"English\", \"中文\")",
 	"ext-uls-no-languages-title": "Title for the empty state in the language selector when there are no languages to show",
 	"ext-uls-no-languages-description": "Description for the empty state in the language selector when there are no languages to show",
-	"ext-uls-no-languages-entrypoint-description": "Description for the empty state in the language selector when there are no languages to show, but there are entry points related to translation.",
+	"ext-uls-empty-state-entrypoint-description": "Description for the empty state in the language selector when there are no languages to show, but there are entry points related to translation.",
 	"ext-uls-invalid-language-search-title": "Title for the empty state in the language selector when the search query is an invalid language",
 	"ext-uls-invalid-language-search-description": "Description for the empty state in the language selector when the search query is an invalid language",
 	"ext-uls-unsupported-language-title": "Title for the empty state in the language selector when the search query is a language that is not supported yet",
