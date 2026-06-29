@@ -57,6 +57,14 @@
 					inline
 					class="uls-rewrite__progress"
 				></cdx-progress-bar>
+				<!-- Screen-reader-only announcement of the search result count. -->
+				<div
+					class="uls-rewrite__sr-only"
+					role="status"
+					aria-live="polite"
+				>
+					{{ searchStatus }}
+				</div>
 			</template>
 			<language-selector-panel-header
 				v-else
@@ -756,6 +764,22 @@ module.exports = exports = defineComponent( {
 			)
 		);
 
+		// Screen-reader-only announcement of the search result count.
+		const searchStatus = ref( '' );
+		watch( [ isSearching, searchQuery, combinedLanguages ], () => {
+			if ( !searchQuery.value ) {
+				searchStatus.value = '';
+				return;
+			}
+			if ( isSearching.value ) {
+				return;
+			}
+			const count = combinedLanguages.value.length;
+			searchStatus.value = count === 0 ?
+				mw.msg( 'ext-uls-search-results-none' ) :
+				mw.msg( 'ext-uls-search-results-count', count );
+		} );
+
 		const {
 			next,
 			prev,
@@ -968,6 +992,7 @@ module.exports = exports = defineComponent( {
 			listboxFallbackLabel,
 			listboxIds,
 			activeOptionId,
+			searchStatus,
 
 			// Search & Data Source
 			languages,

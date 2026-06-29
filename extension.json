@@ -508,6 +508,8 @@
 				"ext-uls-close-button-label",
 				"ext-uls-suggested-languages-title",
 				"ext-uls-all-languages-title",
+				"ext-uls-search-results-count",
+				"ext-uls-search-results-none",
 				"ext-uls-variants-title",
 				"ext-uls-no-languages-title",
 				"ext-uls-no-languages-description",
