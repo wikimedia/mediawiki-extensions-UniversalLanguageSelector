@@ -17,7 +17,7 @@
 const { defineComponent } = require( 'vue' );
 const EntrypointActionButton = require( './EntrypointActionButton.vue' );
 
-module.exports = defineComponent( {
+module.exports = exports = defineComponent( {
 	name: 'QuickActionsPanel',
 	components: {
 		EntrypointActionButton
