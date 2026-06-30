@@ -16,7 +16,7 @@ const { defineComponent, computed } = require( 'vue' );
 const useEntrypointActions = require( '../composables/useEntrypointActions.js' );
 const EntrypointActionButton = require( './EntrypointActionButton.vue' );
 
-module.exports = defineComponent( {
+module.exports = exports = defineComponent( {
 	name: 'EmptyListEntrypoint',
 	components: {
 		EntrypointActionButton
