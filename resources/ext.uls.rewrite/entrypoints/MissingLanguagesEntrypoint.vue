@@ -18,7 +18,7 @@ const { CdxIcon } = require( '../../codex.js' );
 const { cdxIconNext } = require( '../../icons.json' );
 const useEntrypointActions = require( '../composables/useEntrypointActions.js' );
 
-module.exports = defineComponent( {
+module.exports = exports = defineComponent( {
 	name: 'MissingLanguagesEntrypoint',
 	components: {
 		CdxIcon
