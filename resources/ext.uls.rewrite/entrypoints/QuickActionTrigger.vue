@@ -37,7 +37,7 @@ const { CdxButton, CdxIcon } = require( '../../codex.js' );
 const { cdxIconEllipsis } = require( '../../icons.json' );
 const useEntrypointActions = require( '../composables/useEntrypointActions.js' );
 
-module.exports = defineComponent( {
+module.exports = exports = defineComponent( {
 	name: 'QuickActionTrigger',
 	components: {
 		CdxButton,
