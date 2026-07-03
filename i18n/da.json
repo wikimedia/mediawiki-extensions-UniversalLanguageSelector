@@ -81,5 +81,22 @@
 	"ext-uls-empty-state-desc": "Ingen sprog er tilgængelige i øjeblikket",
 	"ext-uls-empty-state-header-actions-available": "Ingen sprog endnu. Vil du tilføje et ny?",
 	"ext-uls-empty-state-desc-actions-available": "Gør indholdet tilgængeligt på flere sprog.",
-	"ext-uls-add-languages-button-label": "Tilføj sprog"
+	"ext-uls-add-languages-button-label": "Tilføj sprog",
+	"ext-uls-language-title": "Sprog",
+	"ext-uls-placeholder-search": "Søg sprog",
+	"ext-uls-close-button-label": "Luk",
+	"ext-uls-rewrite-label": "Omskrivning af universel sprogvælger",
+	"ext-uls-rewrite-description": "En omskrivning af Universal Language Selector (ULS), designet til at modernisere brugeroplevelsen og reducere teknisk gæld gennem forenklet arkitektur.",
+	"ext-uls-no-languages-title": "Ingen sprog endnu",
+	"ext-uls-no-languages-description": "Der er ingen tilgængelige sprog i øjeblikket.",
+	"ext-uls-invalid-language-search-title": "Sproget genkendes ikke",
+	"ext-uls-invalid-language-search-description": "Tjek venligst stavningen. Du kan søge efter sprog efter navn eller ISO-kode.",
+	"ext-uls-unsupported-language-title": "Sprog ikke tilgængeligt",
+	"ext-uls-unsupported-language-description": "Det sprog, du leder efter, er ikke tilgængeligt.",
+	"ext-uls-open-language-settings": "Åbn sprogindstillinger",
+	"ext-uls-open-language-selector": "Tilbage til sprogvælgeren",
+	"ext-uls-open-quick-actions": "Vis hurtige handlinger",
+	"ext-uls-missing-languages-panel-title": "Oversæt denne side",
+	"ext-uls-missing-languages-panel-description": "Denne side mangler på nogle sprog, du måske kender. Du kan oversætte den.",
+	"ext-uls-quick-actions-panel-title": "Hurtige handlinger"
 }
