@@ -57,6 +57,18 @@ describe( 'MissingLanguagesEntrypoint', () => {
 		}
 	} );
 
+	it( 'renders as a native button and emits click with the actions', async () => {
+		const wrapper = shallowMount( MissingLanguagesEntrypoint, mountOptions() );
+		const root = wrapper.find( 'button.uls-rewrite__missing-languages' );
+
+		expect( root.exists() ).toBe( true );
+		expect( root.attributes( 'type' ) ).toBe( 'button' );
+
+		await root.trigger( 'click' );
+		expect( wrapper.emitted( 'click' ) ).toHaveLength( 1 );
+		expect( wrapper.emitted( 'click' )[ 0 ][ 0 ] ).toEqual( [ mockAction ] );
+	} );
+
 	it( 'renders single language missing message when one suggestion is missing', () => {
 		const wrapper = shallowMount( MissingLanguagesEntrypoint, mountOptions( {
 			suggestions: [ 'en', 'fr' ], // en present, fr missing

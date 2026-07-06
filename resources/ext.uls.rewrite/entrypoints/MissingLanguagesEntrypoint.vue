@@ -1,6 +1,7 @@
 <template>
-	<div
+	<button
 		v-if="actions.length > 0"
+		type="button"
 		class="uls-rewrite__missing-languages"
 		@click.stop="$emit( 'click', actions )"
 	>
@@ -9,7 +10,7 @@
 			class="uls-rewrite__missing-languages__label"
 		></span>
 		<cdx-icon :icon="cdxIconNext" size="small"></cdx-icon>
-	</div>
+	</button>
 </template>
 
 <script>

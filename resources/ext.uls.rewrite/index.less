@@ -145,11 +145,21 @@
 		flex-grow: 1;
 
 		.uls-rewrite__missing-languages {
+			// Reset the native <button> styling; the element is a button for
+			// keyboard and screen reader access but looks like a banner.
+			appearance: none;
+			border: 0;
+			font: inherit;
+			text-align: start;
 			background-color: @background-color-interactive-subtle;
 			padding-block: @spacing-75;
 			padding-inline: @uls-rewrite-missing-languages-padding-start @uls-rewrite-horizontal-padding;
 			/** To make it span the entire width of the body **/
 			margin-inline: -@uls-rewrite-horizontal-padding;
+			// A button's auto width shrinks to fit its content instead of
+			// stretching like the div this used to be, so span the body
+			// (100%) plus the negative margins explicitly.
+			width: calc( 100% + ( 2 * @uls-rewrite-horizontal-padding ) );
 			margin-top: -@spacing-50;
 			margin-bottom: @spacing-50;
 			color: @color-subtle;
