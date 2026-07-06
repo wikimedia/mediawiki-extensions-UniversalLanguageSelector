@@ -475,6 +475,7 @@
 				"ext.uls.rewrite/dist/floating-ui.js",
 				"ext.uls.rewrite/composables/useKeyboardNavigation.js",
 				"ext.uls.rewrite/composables/useClickOutside.js",
+				"ext.uls.rewrite/composables/useFocusTrap.js",
 				"ext.uls.rewrite/composables/useTypeahead.js",
 				"ext.uls.rewrite/composables/useLanguageHistory.js",
 				"ext.uls.rewrite/composables/useCountryCode.js",

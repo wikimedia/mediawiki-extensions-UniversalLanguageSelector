@@ -227,6 +227,7 @@ const EntrypointRegistry = require( 'ext.uls.rewrite.entrypoints' );
 const { ULS_MODE } = EntrypointRegistry;
 const useKeyboardNavigation = require( './composables/useKeyboardNavigation.js' );
 const useClickOutside = require( './composables/useClickOutside.js' );
+const useFocusTrap = require( './composables/useFocusTrap.js' );
 const useTypeahead = require( './composables/useTypeahead.js' );
 const useLanguageHistory = require( './composables/useLanguageHistory.js' );
 const useSuggestedLanguages = require( './composables/useSuggestedLanguages.js' );
@@ -809,6 +810,11 @@ module.exports = exports = defineComponent( {
 		const isClickOutsideActive = computed( () => visible.value && !isMobile.value );
 		useClickOutside( menuRef, isClickOutsideActive, document, () => emit( 'close' ) );
 
+		// On mobile the selector is a fullscreen modal (aria-modal="true"), but
+		// the page behind it is still in the DOM: keep Tab focus inside.
+		const isFocusTrapActive = computed( () => visible.value && isMobile.value );
+		useFocusTrap( menuRef, isFocusTrapActive, document );
+
 		const { autocompleteSuggestion, getAcceptedSuggestion } =
 			useTypeahead( searchQuery, languagesToDisplay, languages, searchQueryHits );
 
@@ -855,6 +861,11 @@ module.exports = exports = defineComponent( {
 		};
 
 		const onKeyTab = ( e ) => {
+			// The mobile focus trap may already have consumed this Tab press
+			// to wrap focus; don't also accept the typeahead suggestion.
+			if ( e.defaultPrevented ) {
+				return;
+			}
 			const suggestion = getAcceptedSuggestion();
 			if ( suggestion ) {
 				e.preventDefault();
@@ -910,7 +921,25 @@ module.exports = exports = defineComponent( {
 			searchInputRef.value.focus();
 		};
 
-		watch( [ visible, isMobile ], async ( [ isVisible, mobile ] ) => {
+		// Return focus to the trigger when the selector closes, per the modal
+		// dialog pattern — but only when focus is still inside the selector (or
+		// already lost to <body>). When the user closes it by clicking another
+		// focusable control, that control keeps focus.
+		const restoreFocusToTrigger = () => {
+			const active = document.activeElement;
+			const isFocusLost = !active || active === document.body;
+			const isFocusInside = menuRef.value && menuRef.value.contains( active );
+			if ( !isFocusLost && !isFocusInside ) {
+				return;
+			}
+
+			const trigger = triggerElement.value;
+			if ( trigger && typeof trigger.focus === 'function' ) {
+				trigger.focus();
+			}
+		};
+
+		watch( [ visible, isMobile ], async ( [ isVisible, mobile ], oldValues ) => {
 			emit( 'visible-change', isVisible, mobile );
 			toggleBodyScrollLock( isVisible && mobile );
 			if ( isVisible ) {
@@ -918,6 +947,11 @@ module.exports = exports = defineComponent( {
 			} else {
 				currentView.value = VIEW.MAIN;
 				clearSearchQuery();
+				// Skip the immediate call on mount: the selector was never
+				// open, so there is no focus to give back.
+				if ( oldValues && oldValues[ 0 ] ) {
+					restoreFocusToTrigger();
+				}
 			}
 		}, { immediate: true } );
 
