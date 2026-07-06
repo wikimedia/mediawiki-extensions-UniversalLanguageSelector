@@ -23,6 +23,7 @@
 				annotationsByCode[ code ].classes
 			]"
 			:aria-selected="selectedValuesSet.has( code )"
+			:aria-disabled="unavailableLanguagesSet.has( code ) ? 'true' : null"
 			role="option"
 			tabindex="-1"
 			@click.exact.prevent="select( code )"
