@@ -1,18 +1,10 @@
 'use strict';
 
-const Vue = require( 'vue' );
-Vue.createMwApp = Vue.createMwApp || Vue.createApp;
 const { mount } = require( '@vue/test-utils' );
 const QuickActionTrigger = require( '../../../resources/ext.uls.rewrite/entrypoints/QuickActionTrigger.vue' );
 const { CdxButton, CdxIcon } = require( '../../../resources/ext.uls.rewrite/codex.js' );
 
 describe( 'QuickActionTrigger', () => {
-	beforeAll( () => {
-		global.mw = {
-			msg: jest.fn( ( key ) => key )
-		};
-	} );
-
 	it( 'renders nothing when actions list is empty', () => {
 		const wrapper = mount( QuickActionTrigger, {
 			props: {
@@ -83,6 +75,28 @@ describe( 'QuickActionTrigger', () => {
 
 			await button.trigger( 'click' );
 			expect( handler ).toHaveBeenCalledTimes( 1 );
+		} );
+
+		it( 'renders the real Codex button so prop regressions are caught', () => {
+			const action = { label: 'Settings', handler: jest.fn(), icon: 'settings' };
+			const mockEntrypoint = {
+				shouldShow: () => true,
+				getConfig: () => action
+			};
+
+			const wrapper = mount( QuickActionTrigger, {
+				props: {
+					entrypoints: [ mockEntrypoint ]
+				}
+			} );
+
+			// The real CdxButton consumes the weight prop and maps it to a
+			// class; a module-level stub would leak it as a raw HTML
+			// attribute and silently stop testing Codex prop handling.
+			const button = wrapper.find( 'button' );
+			expect( button.classes() ).toContain( 'cdx-button' );
+			expect( button.classes() ).toContain( 'cdx-button--weight-quiet' );
+			expect( button.attributes( 'weight' ) ).toBeUndefined();
 		} );
 	} );
 

@@ -1,7 +1,5 @@
 'use strict';
 
-const Vue = require( 'vue' );
-Vue.createMwApp = Vue.createMwApp || Vue.createApp;
 const { shallowMount } = require( '@vue/test-utils' );
 const QuickActionsPanel = require( '../../../resources/ext.uls.rewrite/entrypoints/QuickActionsPanel.vue' );
 const EntrypointActionButton = require( '../../../resources/ext.uls.rewrite/entrypoints/EntrypointActionButton.vue' );

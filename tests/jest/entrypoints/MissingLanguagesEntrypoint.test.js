@@ -1,7 +1,5 @@
 'use strict';
 
-const Vue = require( 'vue' );
-Vue.createMwApp = Vue.createMwApp || Vue.createApp;
 const { shallowMount } = require( '@vue/test-utils' );
 const MissingLanguagesEntrypoint = require( '../../../resources/ext.uls.rewrite/entrypoints/MissingLanguagesEntrypoint.vue' );
 
@@ -13,25 +11,17 @@ describe( 'MissingLanguagesEntrypoint', () => {
 	};
 
 	beforeAll( () => {
-		// Mock jQuery ULS autonym database helper
-		global.$ = {
-			uls: {
-				data: {
-					getAutonym: jest.fn( ( code ) => {
-						const autonyms = { fr: 'français', es: 'español', de: 'Deutsch' };
-						return autonyms[ code ] || code;
-					} )
-				}
-			}
-		};
+		// Return real autonyms instead of the shared mock's key echo
+		global.$.uls.data.getAutonym.mockImplementation( ( code ) => {
+			const autonyms = { fr: 'français', es: 'español', de: 'Deutsch' };
+			return autonyms[ code ] || code;
+		} );
 
-		// Mock mw.message to serialize keys and arguments for assertion
-		global.mw = {
-			message: jest.fn( ( key, ...params ) => ( {
-				text: () => params.length ? `${ key }:[${ params.join( ',' ) }]` : key,
-				parse: () => params.length ? `${ key }:[${ params.join( ',' ) }]` : key
-			} ) )
-		};
+		// Serialize keys and arguments for assertion
+		mw.message.mockImplementation( ( key, ...params ) => ( {
+			text: () => params.length ? `${ key }:[${ params.join( ',' ) }]` : key,
+			parse: () => params.length ? `${ key }:[${ params.join( ',' ) }]` : key
+		} ) );
 	} );
 
 	const mockEntrypointNoLabel = {

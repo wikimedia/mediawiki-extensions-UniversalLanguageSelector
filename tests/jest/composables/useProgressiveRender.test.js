@@ -11,16 +11,14 @@ jest.mock( 'vue', () => {
 	} );
 } );
 
-// Mock MediaWiki global
+// Override the shared requestIdleCallback mock (which runs callbacks
+// synchronously) with a capturing one, so tests can step it manually
 let scheduledCallback = null;
 let scheduledOptions = null;
-global.mw = {
-	requestIdleCallback: jest.fn( ( cb, options ) => {
-		// capture the callback and options passed by schedule()
-		scheduledCallback = cb;
-		scheduledOptions = options;
-	} )
-};
+mw.requestIdleCallback = jest.fn( ( cb, options ) => {
+	scheduledCallback = cb;
+	scheduledOptions = options;
+} );
 
 const useProgressiveRender = require( '../../../resources/ext.uls.rewrite/composables/useProgressiveRender.js' );
 

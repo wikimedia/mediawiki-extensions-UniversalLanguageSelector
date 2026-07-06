@@ -18,22 +18,19 @@ jest.mock( '../mocks/language-data.json', () => ( {
 	territories: mockTerritories
 } ) );
 
-global.mw = {
-	config: {
-		get: jest.fn( ( key ) => {
-			if ( key === 'wgUserLanguage' ) {
-				return USER_LANG;
-			}
-			if ( key === 'wgContentLanguage' ) {
-				return CONTENT_LANG;
-			}
-			if ( key === 'wgULSAcceptLanguageList' ) {
-				return [ ACCEPT_LANG_FULL ];
-			}
-			return null;
-		} )
+// Override only the config values this spec depends on
+mw.config.get.mockImplementation( ( key ) => {
+	if ( key === 'wgUserLanguage' ) {
+		return USER_LANG;
 	}
-};
+	if ( key === 'wgContentLanguage' ) {
+		return CONTENT_LANG;
+	}
+	if ( key === 'wgULSAcceptLanguageList' ) {
+		return [ ACCEPT_LANG_FULL ];
+	}
+	return null;
+} );
 
 Object.defineProperty( window.navigator, 'language', {
 	value: BROWSER_LANG_FULL,

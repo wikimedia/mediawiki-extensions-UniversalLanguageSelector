@@ -1,7 +1,5 @@
 'use strict';
 
-const Vue = require( 'vue' );
-Vue.createMwApp = Vue.createMwApp || Vue.createApp;
 const { mount } = require( '@vue/test-utils' );
 
 // Mock the child component to keep tests lightweight and completely isolated

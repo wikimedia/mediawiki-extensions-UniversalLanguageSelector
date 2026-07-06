@@ -1,13 +1,5 @@
 'use strict';
 
-// Mock minimum globals before requiring the composable
-global.mw = {
-	storage: {
-		get: jest.fn(),
-		set: jest.fn()
-	}
-};
-
 const useLanguageHistory = require( '../../../resources/ext.uls.rewrite/composables/useLanguageHistory.js' );
 
 describe( 'useLanguageHistory', () => {
