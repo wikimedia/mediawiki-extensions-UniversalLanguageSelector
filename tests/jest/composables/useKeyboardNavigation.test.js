@@ -94,6 +94,93 @@ describe( 'useKeyboardNavigation', () => {
 		} );
 	} );
 
+	describe( 'nextPage()', () => {
+		it( 'jumps forward by pageSize and clamps at the end without wrapping', () => {
+			const { next, nextPage, highlightedIndex } = useKeyboardNavigation(
+				languages,
+				visible,
+				onHighlight,
+				2
+			);
+
+			next(); // highlight 'en' (index 0)
+			expect( highlightedIndex.value ).toBe( 0 );
+
+			nextPage(); // 0 + 2 -> 'es' (index 2)
+			expect( highlightedIndex.value ).toBe( 2 );
+			expect( onHighlight ).toHaveBeenCalledTimes( 2 );
+
+			// Already at the last item: clamps, does not wrap
+			nextPage();
+			expect( highlightedIndex.value ).toBe( 2 );
+			expect( onHighlight ).toHaveBeenCalledTimes( 3 );
+		} );
+
+		it( 'moves from no highlight to the end of the first page', () => {
+			const { nextPage, highlightedIndex } = useKeyboardNavigation(
+				languages,
+				visible,
+				onHighlight,
+				2
+			);
+
+			nextPage(); // -1 + 2 -> 'fr' (index 1)
+			expect( highlightedIndex.value ).toBe( 1 );
+			expect( onHighlight ).toHaveBeenCalledTimes( 1 );
+		} );
+
+		it( 'does nothing if language list is empty', () => {
+			languages.value = [];
+			const { nextPage, highlightedIndex } = useKeyboardNavigation(
+				languages,
+				visible,
+				onHighlight,
+				2
+			);
+
+			nextPage();
+			expect( highlightedIndex.value ).toBe( -1 );
+			expect( onHighlight ).not.toHaveBeenCalled();
+		} );
+	} );
+
+	describe( 'prevPage()', () => {
+		it( 'jumps back by pageSize and clamps at the start without wrapping', () => {
+			const { setHighlightedItem, prevPage, highlightedIndex } = useKeyboardNavigation(
+				languages,
+				visible,
+				onHighlight,
+				2
+			);
+
+			setHighlightedItem( 'es' ); // index 2
+			expect( highlightedIndex.value ).toBe( 2 );
+
+			prevPage(); // 2 - 2 -> 'en' (index 0)
+			expect( highlightedIndex.value ).toBe( 0 );
+			expect( onHighlight ).toHaveBeenCalledTimes( 2 );
+
+			// Already at the first item: clamps, does not wrap
+			prevPage();
+			expect( highlightedIndex.value ).toBe( 0 );
+			expect( onHighlight ).toHaveBeenCalledTimes( 3 );
+		} );
+
+		it( 'does nothing if language list is empty', () => {
+			languages.value = [];
+			const { prevPage, highlightedIndex } = useKeyboardNavigation(
+				languages,
+				visible,
+				onHighlight,
+				2
+			);
+
+			prevPage();
+			expect( highlightedIndex.value ).toBe( -1 );
+			expect( onHighlight ).not.toHaveBeenCalled();
+		} );
+	} );
+
 	describe( 'highlightFirst()', () => {
 		it( 'does nothing if language list is empty', () => {
 			languages.value = [];

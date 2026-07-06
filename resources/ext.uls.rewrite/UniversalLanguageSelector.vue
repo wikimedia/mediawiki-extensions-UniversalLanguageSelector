@@ -47,6 +47,8 @@
 						@update:model-value="search"
 						@keydown.down.stop.prevent="next"
 						@keydown.up.stop.prevent="prev"
+						@keydown.page-down.stop.prevent="nextPage"
+						@keydown.page-up.stop.prevent="prevPage"
 						@keydown.enter.stop.prevent="onEnter"
 						@keydown.tab="onKeyTab"
 						@keydown.right="onKeyRight"
@@ -789,6 +791,8 @@ module.exports = exports = defineComponent( {
 		const {
 			next,
 			prev,
+			nextPage,
+			prevPage,
 			highlightedItem,
 			highlightedIndex,
 			setHighlightedItem,
@@ -1059,6 +1063,8 @@ module.exports = exports = defineComponent( {
 			highlightedIndex,
 			next,
 			prev,
+			nextPage,
+			prevPage,
 			onEnter,
 			onKeyTab,
 			onKeyRight,

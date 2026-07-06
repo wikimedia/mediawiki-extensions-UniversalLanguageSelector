@@ -8,9 +8,10 @@ const { ref, watch, computed, Ref } = require( 'vue' );
  * @param {Ref} languages
  * @param {Ref} visible
  * @param {Function} onHighlight called when the highlight changes.
- * @return {Object} next, prev, selectedItem, setCurrentSelection
+ * @param {number} [pageSize] how many items PageUp/PageDown jump by.
+ * @return {Object} next, prev, nextPage, prevPage, selectedItem, setCurrentSelection
  */
-function useKeyboardNavigation( languages, visible, onHighlight ) {
+function useKeyboardNavigation( languages, visible, onHighlight, pageSize = 10 ) {
 	const highlightedIndex = ref( -1 );
 
 	const highlightedItem = computed( () => highlightedIndex.value >= 0 ? languages.value[ highlightedIndex.value ] : '' );
@@ -31,6 +32,31 @@ function useKeyboardNavigation( languages, visible, onHighlight ) {
 		if ( highlightedIndex.value < 0 ) {
 			highlightedIndex.value = languages.value.length - 1;
 		}
+
+		onHighlight();
+	};
+
+	// Page jumps clamp at the list edges instead of wrapping, matching the
+	// usual listbox behaviour for PageDown/PageUp.
+	const nextPage = () => {
+		if ( languages.value.length === 0 ) {
+			return;
+		}
+
+		highlightedIndex.value = Math.min(
+			highlightedIndex.value + pageSize,
+			languages.value.length - 1
+		);
+
+		onHighlight();
+	};
+
+	const prevPage = () => {
+		if ( languages.value.length === 0 ) {
+			return;
+		}
+
+		highlightedIndex.value = Math.max( highlightedIndex.value - pageSize, 0 );
 
 		onHighlight();
 	};
@@ -64,6 +90,8 @@ function useKeyboardNavigation( languages, visible, onHighlight ) {
 	return {
 		next,
 		prev,
+		nextPage,
+		prevPage,
 		highlightedItem,
 		highlightedIndex,
 		setHighlightedItem,
