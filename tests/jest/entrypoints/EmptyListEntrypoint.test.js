@@ -24,7 +24,9 @@ describe( 'EmptyListEntrypoint', () => {
 				}
 			},
 			props: {
-				entrypoints: [ mockEntrypoint ]
+				entrypoints: [ mockEntrypoint ],
+				suggestions: [],
+				languages: []
 			}
 		} );
 
@@ -52,7 +54,9 @@ describe( 'EmptyListEntrypoint', () => {
 				}
 			},
 			props: {
-				entrypoints: [ mockEntrypointHidden ]
+				entrypoints: [ mockEntrypointHidden ],
+				suggestions: [],
+				languages: []
 			}
 		} );
 
