@@ -617,6 +617,11 @@ module.exports = exports = defineComponent( {
 
 		const densityClass = computed( () => {
 			const count = languageCodes.value.length;
+			// When there are no languages, use the medium width to allow spacing
+			// for entrypoints and no languages message.
+			if ( count === 0 ) {
+				return 'uls-rewrite--density-medium';
+			}
 
 			if ( count < DENSITY_LOW_THRESHOLD ) {
 				// With preferred languages, use the 2-column layout even with few languages
