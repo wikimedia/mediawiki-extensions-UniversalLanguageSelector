@@ -60,5 +60,11 @@
 	"ext-uls-compact-link-info": "تمام زبانیں (آپ اور دیگر صارفین کی مشترکہ پسند کا انتخاب)",
 	"prefs-languages": "زبانیں",
 	"ext-uls-compact-language-links-preference": "محض اپنے آپ سے متعلق [[$1|زبان کی پیوستہ فہرست]] استعمال کریں۔",
-	"ext-uls-add-languages-button-label": "زبانیں شامل کریں"
+	"ext-uls-add-languages-button-label": "زبانیں شامل کریں",
+	"ext-uls-language-title": "زبانیں",
+	"ext-uls-placeholder-search": "زبان تلاش کریں",
+	"ext-uls-close-button-label": "بند کریں",
+	"ext-uls-suggested-languages-title": "مجوزہ {{PLURAL:$1|زبان|زبانیں}}",
+	"ext-uls-preferred-languages-label": "زبان شامل کریں",
+	"ext-uls-preferred-languages-input-placeholder": "زبانیں تلاش کریں"
 }

@@ -90,7 +90,7 @@
 	"ext-uls-all-languages-title": "所有語言",
 	"ext-uls-no-languages-title": "未有語言住",
 	"ext-uls-no-languages-description": "而家未有語言",
-	"ext-uls-no-languages-entrypoint-description": "你可以翻譯呢個頁面，呢個係一個用你嘅語言創建內容嘅簡單方法。",
+	"ext-uls-empty-state-entrypoint-description": "你可以翻譯呢個頁面，呢個係一個用你嘅語言創建內容嘅簡單方法。",
 	"ext-uls-invalid-language-search-title": "認唔到呢個話",
 	"ext-uls-invalid-language-search-description": "請檢查吓有冇寫錯字。你可以用名或者 ISO 代碼嚟搵語言。",
 	"ext-uls-unsupported-language-title": "語言唔可用",
@@ -98,8 +98,7 @@
 	"ext-uls-open-language-settings": "開語言設定",
 	"ext-uls-open-language-selector": "返去語言選擇器",
 	"ext-uls-open-quick-actions": "顯示快速操作",
-	"ext-uls-missing-languages-label": "喺$1入面搵唔到",
-	"ext-uls-missing-languages-label-more": "喺$1、$2同埋其他語言入面都搵唔到",
+	"ext-uls-missing-languages-label-multiple": "喺$1、$2同埋其他語言入面都搵唔到",
 	"ext-uls-missing-languages-panel-title": "翻譯呢一頁",
 	"ext-uls-missing-languages-panel-description": "呢個頁面喺你可能識嘅某啲語言入面唔見咗。你可以翻譯得佢！",
 	"ext-uls-quick-actions-panel-title": "快速操作"

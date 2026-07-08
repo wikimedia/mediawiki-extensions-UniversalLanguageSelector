@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Fredrick Kafuka",
 			"Lloffiwr",
 			"Muddyb",
 			"Muddyb Blast Producer",
@@ -74,5 +75,6 @@
 	"ext-uls-empty-state-header": "Hakuna lugha bado",
 	"ext-uls-empty-state-desc": "Hakuna lugha zinazopatikana kwa sasa",
 	"ext-uls-empty-state-header-actions-available": "Hakuna lugha bado. Ungependa kuongeza mpya?",
-	"ext-uls-empty-state-desc-actions-available": "Fanya maudhui yaliyomo yapatikane katika lugha zaidi."
+	"ext-uls-empty-state-desc-actions-available": "Fanya maudhui yaliyomo yapatikane katika lugha zaidi.",
+	"ext-uls-search-results-none": "Hakuna lugha zilizopatikana"
 }

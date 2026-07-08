@@ -87,7 +87,7 @@
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Hizkuntza guztiak}}",
 	"ext-uls-no-languages-title": "Oraindik ez dago hizkuntzarik",
 	"ext-uls-no-languages-description": "Momentuz ez dago hizkuntzarik erabilgarri.",
-	"ext-uls-no-languages-entrypoint-description": "Orrialde hau itzuli dezakezu. Modu erraza da zure hizkuntzak edukia sortzeko.",
+	"ext-uls-empty-state-entrypoint-description": "Orrialde hau itzuli dezakezu. Modu erraza da zure hizkuntzak edukia sortzeko.",
 	"ext-uls-invalid-language-search-title": "Hizkuntza ez da ezagutzen",
 	"ext-uls-invalid-language-search-description": "Mesedez, egiaztatu ortografia. Hizkuntzak izenaren edo ISO kodearen arabera bila ditzakezu.",
 	"ext-uls-unsupported-language-title": "Hizkuntza ez dago eskuragarri",
@@ -95,8 +95,7 @@
 	"ext-uls-open-language-settings": "Hizkuntza hobespenak ireki",
 	"ext-uls-open-language-selector": "Hizkuntza hautatzailera itzuli",
 	"ext-uls-open-quick-actions": "Erakutsi ekintza azkarrak",
-	"ext-uls-missing-languages-label": "Honako hizkuntzan ez dago: <strong>$1</strong>",
-	"ext-uls-missing-languages-label-more": "<strong>$1</strong>, <strong>$2</strong> eta gehiagotan falta da",
+	"ext-uls-missing-languages-label-multiple": "<strong>$1</strong>, <strong>$2</strong> eta gehiagotan falta da",
 	"ext-uls-missing-languages-panel-title": "Itzuli orri hau",
 	"ext-uls-missing-languages-panel-description": "Orrialde hau ezagutu ditzakezun hizkuntza batzuetan falta da. Itzul ditzakezu.",
 	"ext-uls-quick-actions-panel-title": "Ekintza azkarrak"

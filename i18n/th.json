@@ -87,7 +87,7 @@
 	"ext-uls-all-languages-title": "{{PLURAL:$1|ภาษาทั้งหมด}}",
 	"ext-uls-no-languages-title": "ยังไม่มีภาษาให้เลือก",
 	"ext-uls-no-languages-description": "ยังไม่มีภาษาอื่นพร้อมใช้งานในขณะนี้",
-	"ext-uls-no-languages-entrypoint-description": "คุณสามารถแปลหน้านี้เพื่อให้พร้อมอ่านในภาษาของคุณได้ง่าย ๆ",
+	"ext-uls-empty-state-entrypoint-description": "คุณสามารถแปลหน้านี้เพื่อให้พร้อมอ่านในภาษาของคุณได้ง่าย ๆ",
 	"ext-uls-invalid-language-search-title": "ไม่รู้จักภาษานี้",
 	"ext-uls-invalid-language-search-description": "โปรดตรวจสอบการสะกด หรือค้นหาโดยใช้ชื่อหรือรหัส ISO ของภาษา",
 	"ext-uls-unsupported-language-title": "ภาษาไม่พร้อมใช้งาน",
@@ -95,8 +95,7 @@
 	"ext-uls-open-language-settings": "เปิดการตั้งค่าภาษา",
 	"ext-uls-open-language-selector": "กลับไปที่ตัวเลือกภาษา",
 	"ext-uls-open-quick-actions": "แสดงเมนูด่วน",
-	"ext-uls-missing-languages-label": "ยังไม่มีในภาษา <strong>$1</strong>",
-	"ext-uls-missing-languages-label-more": "ยังไม่มีในภาษา <strong>$1</strong> <strong>$2</strong> และอีกมาก",
+	"ext-uls-missing-languages-label-multiple": "ยังไม่มีในภาษา <strong>$1</strong> <strong>$2</strong> และอีกมาก",
 	"ext-uls-missing-languages-panel-title": "แปลหน้านี้",
 	"ext-uls-missing-languages-panel-description": "หน้านี้ยังไม่มีในภาษาที่คุณอาจรู้จัก คุณสามารถเลือกแปลเองได้",
 	"ext-uls-quick-actions-panel-title": "เมนูด่วน"

@@ -114,8 +114,11 @@
 	"ext-uls-open-language-settings": "Ouvrir les paramètres de langue",
 	"ext-uls-open-language-selector": "Retour au sélecteur de langue",
 	"ext-uls-open-quick-actions": "Afficher les actions rapides",
+	"ext-uls-missing-languages-panel-title": "Traduire cette page",
+	"ext-uls-missing-languages-panel-description": "Cette page est manquante dans certaines langues que vous connaissez. Vous pouvez la traduire.",
 	"ext-uls-quick-actions-panel-title": "Actions rapides",
 	"ext-uls-preferred-languages-title": "{{PLURAL:$1|Langue|Langues}} préférée{{PLURAL:$1||s}}",
 	"ext-uls-preferred-languages-settings-title": "Langues préférées",
+	"ext-uls-preferred-languages-desc": "Affiché en premier dans les menus de langue.",
 	"ext-uls-preferred-languages-label": "Ajouter une langue"
 }

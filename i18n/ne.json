@@ -3,6 +3,7 @@
 		"authors": [
 			"Bada Kaji",
 			"NehalDaveND",
+			"Pratik11",
 			"Xð",
 			"पर्वत सुबेदी",
 			"बडा काजी",
@@ -59,5 +60,7 @@
 	"ext-uls-empty-state-desc": "अहिलेको लागि कुनै भाषाहरू उपलब्ध छैनन्",
 	"ext-uls-empty-state-header-actions-available": "अझै कुनै भाषा छैन। एउटा नयाँ थप्नुहोस्?",
 	"ext-uls-empty-state-desc-actions-available": "थप भाषाहरूमा सामग्री उपलब्ध गराउनुहोस्।",
-	"ext-uls-add-languages-button-label": "भाषाहरू थप्नुहोस्"
+	"ext-uls-add-languages-button-label": "भाषाहरू थप्नुहोस्",
+	"ext-uls-search-results-none": "कुनै भाषा भेटिएन।",
+	"ext-uls-missing-languages-label-single": "<span>$1</span> र थपमा छुटेको छ"
 }
