@@ -462,7 +462,7 @@ module.exports = exports = defineComponent( {
 		const currentVariantCodes = computed( () => Object.keys( currentVariants.value ) );
 
 		const variantsTitle = computed( () => {
-			const code = variantLanguageCode.value;
+			const code = variantLanguageCode.value.split( '-' )[ 0 ];
 			if ( !code ) {
 				return '';
 			}
