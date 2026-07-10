@@ -59,7 +59,7 @@ const { defineComponent, computed } = require( 'vue' );
 // Shared empty object so codes without annotations don't allocate per render.
 const EMPTY_ANNOTATIONS = Object.freeze( {} );
 
-module.exports = defineComponent( {
+module.exports = exports = defineComponent( {
 	name: 'LanguageList',
 	props: {
 		languageCodes: {
