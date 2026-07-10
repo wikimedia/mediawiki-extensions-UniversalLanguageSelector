@@ -76,5 +76,11 @@
 	"ext-uls-empty-state-desc": "N’eo yezh ebet hegerz evit poent",
 	"ext-uls-empty-state-header-actions-available": "Yezh ebet c’hoazh. Ouzhpennañ unan nevez?",
 	"ext-uls-empty-state-desc-actions-available": "Lakaat an endalc’h hegerz e muioc’h yezhoù.",
-	"ext-uls-add-languages-button-label": "Ouzhpennañ yezhoù"
+	"ext-uls-add-languages-button-label": "Ouzhpennañ yezhoù",
+	"ext-uls-language-title": "Yezhoù",
+	"ext-uls-placeholder-search": "Klask yezhoù",
+	"ext-uls-close-button-label": "Serriñ",
+	"ext-uls-no-languages-title": "Yezh ebet c’hoazh",
+	"ext-uls-no-languages-description": "N’eus yezh ebet hegerz evit poent",
+	"ext-uls-quick-actions-panel-title": "Oberoù prim"
 }

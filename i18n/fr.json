@@ -114,5 +114,7 @@
 	"ext-uls-open-language-settings": "Ouvrir les paramètres de langue",
 	"ext-uls-open-language-selector": "Retour au sélecteur de langue",
 	"ext-uls-open-quick-actions": "Afficher les actions rapides",
+	"ext-uls-missing-languages-panel-title": "Traduire cette page",
+	"ext-uls-missing-languages-panel-description": "Cette page est manquante dans certaines langues que vous connaissez. Vous pouvez la traduire.",
 	"ext-uls-quick-actions-panel-title": "Actions rapides"
 }

@@ -72,5 +72,22 @@
 	"ext-uls-empty-state-desc": "Tutčas nemaje dostupnyh jezykov",
 	"ext-uls-empty-state-header-actions-available": "Ješče nemaje jezykov. Dodati li novy?",
 	"ext-uls-empty-state-desc-actions-available": "Sdělati sodržanje dostupnym na veče jezykah.",
-	"ext-uls-add-languages-button-label": "Dodati jezyky"
+	"ext-uls-add-languages-button-label": "Dodati jezyky",
+	"ext-uls-language-title": "Jezyky",
+	"ext-uls-placeholder-search": "Poiskanje jezykov",
+	"ext-uls-close-button-label": "Zatvoriti",
+	"ext-uls-rewrite-label": "Prěrabotany Universalnogo izbiratelja jezykov",
+	"ext-uls-rewrite-description": "Prěrabotana versija Universalnogo izbiratelja jezykov (ULS), projektovana za modernizaciju koristničskogo prěživanja i sniženja tehničnogo dolga posrědstvom uproščenoj arhitektury.",
+	"ext-uls-no-languages-title": "Ješče nemaje jezykov",
+	"ext-uls-no-languages-description": "Tutčas nemaje dostupnyh jezykov.",
+	"ext-uls-invalid-language-search-title": "Jezyk ne razpoznany",
+	"ext-uls-invalid-language-search-description": "Prosimo, prověrite napisanje. Vy možete iskati jezyky po nazvě ili po ISO-kodu.",
+	"ext-uls-unsupported-language-title": "Jezyk nedostupny",
+	"ext-uls-unsupported-language-description": "Jezyk, ktory iščete, jest nedostupny.",
+	"ext-uls-open-language-settings": "Otvoriti jezyčne nastavjenja",
+	"ext-uls-open-language-selector": "Povrat do izbiratelja jezyka",
+	"ext-uls-open-quick-actions": "Pokazati bystre dějanja",
+	"ext-uls-missing-languages-panel-title": "Prěvesti tutu stranicu",
+	"ext-uls-missing-languages-panel-description": "Tuta stranica jest odsutna na někojih jezykah, ktore vy možete znati. Vy možete ju prěvesti.",
+	"ext-uls-quick-actions-panel-title": "Bystre dějanja"
 }

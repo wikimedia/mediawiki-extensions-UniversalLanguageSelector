@@ -96,5 +96,9 @@
 	"ext-uls-unsupported-language-title": "Jazyk není dostupný",
 	"ext-uls-unsupported-language-description": "Jazyk, který hledáte, není dostupný.",
 	"ext-uls-open-language-settings": "Otevřít jazyková nastavení",
-	"ext-uls-open-quick-actions": "Zobrazit rychlé akce"
+	"ext-uls-open-language-selector": "Zpět k výběru jazyka",
+	"ext-uls-open-quick-actions": "Zobrazit rychlé akce",
+	"ext-uls-missing-languages-panel-title": "Přeložit tuto stránku",
+	"ext-uls-missing-languages-panel-description": "Tato stránka chybí v některých jazycích, které možná znáte. Můžete ji přeložit.",
+	"ext-uls-quick-actions-panel-title": "Rychlé akce"
 }

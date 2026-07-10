@@ -10,6 +10,7 @@
 			"আফতাবুজ্জামান"
 		]
 	},
+	"uls-extensionname": "ইউনিভার্সাল&shy;ল্যাংগুয়েজ&shy;সিলেক্টর",
 	"uls-desc": "ব্যবহারকারীকে ভাষা নির্বাচন এবং ভাষা সম্পর্কিত সেটিং সমন্বয়ের বিভিন্ন উপায় দেয়",
 	"uls-plang-title-languages": "ভাষা",
 	"ext-uls-select-language-settings-icon-tooltip": "ভাষা সেটিং",
@@ -82,6 +83,7 @@
 	"ext-uls-language-title": "ভাষা",
 	"ext-uls-placeholder-search": "ভাষা অনুসন্ধান করুন",
 	"ext-uls-close-button-label": "বন্ধ করুন",
+	"ext-uls-rewrite-label": "ইউনিভার্সাল ল্যাংগুয়েজ সিলেক্টর পুনর্লিখন",
 	"ext-uls-suggested-languages-title": "পরামর্শকৃত",
 	"ext-uls-all-languages-title": "সকল ভাষা",
 	"ext-uls-no-languages-title": "কোনও ভাষা নেই",
@@ -89,5 +91,11 @@
 	"ext-uls-invalid-language-search-title": "ভাষা শনাক্ত করা যায়নি",
 	"ext-uls-invalid-language-search-description": "অনুগ্রহ করে বানানটি পরীক্ষা করুন। আপনি নাম বা আইএসও কোড দ্বারাও ভাষা অনুসন্ধান করতে পারেন।",
 	"ext-uls-unsupported-language-title": "ভাষা উপলব্ধ নয়",
-	"ext-uls-unsupported-language-description": "আপনি যে ভাষাটি খুঁজছেন তা উপলব্ধ নেই।"
+	"ext-uls-unsupported-language-description": "আপনি যে ভাষাটি খুঁজছেন তা উপলব্ধ নেই।",
+	"ext-uls-open-language-settings": "ভাষা সেটিং খুলুন",
+	"ext-uls-open-language-selector": "ভাষা নির্বাচকে ফিরে যান",
+	"ext-uls-open-quick-actions": "দ্রুত পদক্ষেপগুলি দেখান",
+	"ext-uls-missing-languages-panel-title": "এই পাতাটি অনুবাদ করুন",
+	"ext-uls-missing-languages-panel-description": "এই পাতাটি আপনার জানা কিছু ভাষায় অনুপস্থিত। আপনি এটি অনুবাদ করতে পারেন।",
+	"ext-uls-quick-actions-panel-title": "দ্রুত পদক্ষেপ"
 }

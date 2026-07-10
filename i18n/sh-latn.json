@@ -24,5 +24,10 @@
 	"ext-uls-empty-state-header": "Nema drugih jezika",
 	"ext-uls-empty-state-desc": "Nema dostupnih jezika.",
 	"ext-uls-empty-state-desc-actions-available": " Omogućite dostupnost stranice na više jezika.",
-	"ext-uls-add-languages-button-label": "Dodajte jezike"
+	"ext-uls-add-languages-button-label": "Dodajte jezike",
+	"ext-uls-placeholder-search": "Pretražite jezike",
+	"ext-uls-invalid-language-search-title": "Jezik nije prepoznat",
+	"ext-uls-open-language-settings": "Otvori jezičke postavke",
+	"ext-uls-missing-languages-panel-title": "Prevođenje stranice",
+	"ext-uls-missing-languages-panel-description": "Stranica nedostaje na jezicima koje možda znate. Možete je prevesti."
 }
