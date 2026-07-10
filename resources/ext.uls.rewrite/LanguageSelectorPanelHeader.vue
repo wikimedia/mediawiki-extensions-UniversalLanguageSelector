@@ -28,7 +28,7 @@ const { defineComponent, ref } = require( 'vue' );
 const { CdxButton, CdxIcon } = require( '../codex.js' );
 const { cdxIconArrowPrevious, cdxIconClose } = require( '../icons.json' );
 
-module.exports = defineComponent( {
+module.exports = exports = defineComponent( {
 	name: 'LanguageSelectorPanelHeader',
 	components: {
 		CdxButton,
