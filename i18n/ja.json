@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Afaz",
+			"Ant176",
 			"Fryed-peach",
 			"Kkairri",
 			"Kusurija",
@@ -84,5 +85,17 @@
 	"ext-uls-empty-state-desc": "現在は利用できる他言語がまだありません",
 	"ext-uls-empty-state-header-actions-available": "他言語版はまだありません。追加しますか？",
 	"ext-uls-empty-state-desc-actions-available": " 多くの言語でコンテンツが読めるようになります。",
-	"ext-uls-add-languages-button-label": "言語を追加"
+	"ext-uls-add-languages-button-label": "言語を追加",
+	"ext-uls-language-title": "言語",
+	"ext-uls-placeholder-search": "言語を検索",
+	"ext-uls-close-button-label": "閉じる",
+	"ext-uls-suggested-languages-title": "提案された{{PLURAL:$1|言語}}",
+	"ext-uls-all-languages-title": "{{PLURAL:$1|すべての言語}}",
+	"ext-uls-invalid-language-search-title": "無効な言語です",
+	"ext-uls-invalid-language-search-description": "スペルを確認してください。言語は名前またはISOコードで検索できます。",
+	"ext-uls-preferred-languages-title": "優先{{PLURAL:$1|言語}}",
+	"ext-uls-preferred-languages-settings-title": "優先言語",
+	"ext-uls-preferred-languages-desc": "言語メニューで最初に表示されます。",
+	"ext-uls-preferred-languages-label": "言語を追加",
+	"ext-uls-preferred-languages-input-placeholder": "言語を検索"
 }
