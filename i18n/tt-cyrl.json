@@ -3,6 +3,7 @@
 		"authors": [
 			"Don Alessandro",
 			"Ерней",
+			"Ильгиз",
 			"Ильнар"
 		]
 	},
@@ -57,5 +58,9 @@
 	"ext-uls-language-settings-applying": "Куллану бара…",
 	"ext-uls-compact-link-count": "Башка {{PLURAL:$1|телдә|$1 телдә}}",
 	"prefs-languages": "Телләр",
-	"ext-uls-compact-language-links-preference": "Сезгә туры килә торган [[$1|телләр җыйнак исемлеге]] куллану."
+	"ext-uls-compact-language-links-preference": "Сезгә туры килә торган [[$1|телләр җыйнак исемлеге]] куллану.",
+	"ext-uls-empty-state-header": "Әлегә телләр юк",
+	"ext-uls-empty-state-header-actions-available": "Әлегә телләр юк. Яңасын өстәргәме?",
+	"ext-uls-no-languages-title": "Әлегә телләр юк",
+	"ext-uls-empty-state-entrypoint-description": "Сез бу битне тәрҗемә итә аласыз. Телегездә яңа контент булдыру өчен бу яхшы ысул."
 }

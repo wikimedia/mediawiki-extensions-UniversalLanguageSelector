@@ -97,5 +97,6 @@
 	"ext-uls-preferred-languages-settings-title": "優先言語",
 	"ext-uls-preferred-languages-desc": "言語メニューで最初に表示されます。",
 	"ext-uls-preferred-languages-label": "言語を追加",
+	"ext-uls-preferred-languages-help": "最大$1{{PLURAL:$1|言語}}をピン留めします。{{PLURAL:$1|これは|これらは}}記事の言語を切り替える際に優先的に表示されます。",
 	"ext-uls-preferred-languages-input-placeholder": "言語を検索"
 }

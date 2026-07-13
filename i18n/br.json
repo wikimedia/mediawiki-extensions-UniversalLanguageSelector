@@ -80,9 +80,14 @@
 	"ext-uls-language-title": "Yezhoù",
 	"ext-uls-placeholder-search": "Klask yezhoù",
 	"ext-uls-close-button-label": "Serriñ",
+	"ext-uls-suggested-languages-title": "Kinniget {{PLURAL:$1|yezh}}",
+	"ext-uls-all-languages-title": "{{PLURAL:$1|An holl yezhoù}}",
+	"ext-uls-search-results-count": "{{PLURAL:$1|$1 yezh}} kavet",
+	"ext-uls-search-results-none": "N'eus bet kavet yezh ebet",
 	"ext-uls-no-languages-title": "Yezh ebet c’hoazh",
 	"ext-uls-no-languages-description": "N’eus yezh ebet hegerz evit poent",
 	"ext-uls-quick-actions-panel-title": "Oberoù prim",
+	"ext-uls-preferred-languages-settings-title": "Yezhoù gwellañ karet",
 	"ext-uls-preferred-languages-label": "Ouzhpennañ ur yezh",
 	"ext-uls-preferred-languages-input-placeholder": "Klask yezhoù"
 }
