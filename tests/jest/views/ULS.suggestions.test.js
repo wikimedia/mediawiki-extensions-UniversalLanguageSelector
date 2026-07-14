@@ -1,15 +1,7 @@
 'use strict';
 
-const { createWrapper } = require( '../mocks/uls-test-helpers.js' );
+const { createWrapper, generateLanguages } = require( '../mocks/uls-test-helpers.js' );
 const usePreferredLanguages = require( '../../../resources/ext.uls.rewrite/composables/usePreferredLanguages.js' );
-
-const generateLanguages = ( count ) => {
-	const result = {};
-	for ( let i = 0; i < count; i++ ) {
-		result[ `la${ i }` ] = `Language ${ i }`;
-	}
-	return result;
-};
 
 describe( 'UniversalLanguageSelector - suggestions and preferred languages', () => {
 	let wrapper;
@@ -63,7 +55,7 @@ describe( 'UniversalLanguageSelector - suggestions and preferred languages', () 
 		} );
 
 		it( 'does not render suggestions section during an active search query', async () => {
-			preferredLanguages.value = [ 'lang-0' ];
+			preferredLanguages.value = [ 'lang0' ];
 
 			wrapper = createWrapper( {
 				visible: true,
@@ -83,7 +75,7 @@ describe( 'UniversalLanguageSelector - suggestions and preferred languages', () 
 		it( 'shows only the maximum limit of suggested languages (6)', () => {
 			jest.spyOn( mw.config, 'get' ).mockImplementation( ( key ) => {
 				if ( key === 'wgULSAcceptLanguageList' ) {
-					return [ 'la0', 'la1', 'la2', 'la3', 'la4', 'la5', 'la6', 'la7' ];
+					return [ 'lang0', 'lang1', 'lang2', 'lang3', 'lang4', 'lang5', 'lang6', 'lang7' ];
 				}
 				return 'en';
 			} );
@@ -100,14 +92,14 @@ describe( 'UniversalLanguageSelector - suggestions and preferred languages', () 
 			expect( languageList.exists() ).toBe( true );
 			expect( languageList.props( 'languageCodes' ) ).toHaveLength( 6 );
 			expect( languageList.props( 'languageCodes' ) ).toEqual(
-				[ 'la0', 'la1', 'la2', 'la3', 'la4', 'la5' ]
+				[ 'lang0', 'lang1', 'lang2', 'lang3', 'lang4', 'lang5' ]
 			);
 		} );
 	} );
 
 	describe( 'preferred', () => {
 		it( 'renders preferred languages when it is present', () => {
-			preferredLanguages.value = [ 'lang-0', 'lang-1' ];
+			preferredLanguages.value = [ 'lang0', 'lang1' ];
 
 			wrapper = createWrapper( {
 				visible: true,
@@ -122,12 +114,12 @@ describe( 'UniversalLanguageSelector - suggestions and preferred languages', () 
 
 			const languageList = section.findComponent( { name: 'LanguageList' } );
 			expect( languageList.exists() ).toBe( true );
-			expect( languageList.props( 'languageCodes' ) ).toEqual( [ 'lang-0', 'lang-1' ] );
+			expect( languageList.props( 'languageCodes' ) ).toEqual( [ 'lang0', 'lang1' ] );
 		} );
 
 		it( 'includes unavailable preferred languages and flags them as unavailable', () => {
-			// 'la0' and 'la1' exist in the selectable set, 'zz' does not.
-			preferredLanguages.value = [ 'la0', 'zz', 'la1' ];
+			// 'lang0' and 'lang1' exist in the selectable set, 'zz' does not.
+			preferredLanguages.value = [ 'lang0', 'zz', 'lang1' ];
 
 			wrapper = createWrapper( {
 				visible: true,
@@ -141,20 +133,20 @@ describe( 'UniversalLanguageSelector - suggestions and preferred languages', () 
 			expect( languageList.exists() ).toBe( true );
 
 			// Unavailable languages are still rendered in the list...
-			expect( languageList.props( 'languageCodes' ) ).toEqual( [ 'la0', 'zz', 'la1' ] );
+			expect( languageList.props( 'languageCodes' ) ).toEqual( [ 'lang0', 'zz', 'lang1' ] );
 
 			// ...but flagged as unavailable so they render disabled.
 			const unavailableLanguagesSet = languageList.props( 'unavailableLanguagesSet' );
 			expect( unavailableLanguagesSet.has( 'zz' ) ).toBe( true );
-			expect( unavailableLanguagesSet.has( 'la0' ) ).toBe( false );
-			expect( unavailableLanguagesSet.has( 'la1' ) ).toBe( false );
+			expect( unavailableLanguagesSet.has( 'lang0' ) ).toBe( false );
+			expect( unavailableLanguagesSet.has( 'lang1' ) ).toBe( false );
 		} );
 
 		it( 'shows only the maximum limit of preferred languages (10)', () => {
 			preferredLanguages.value = [
-				'la0', 'la1', 'la2', 'la3', 'la4',
-				'la5', 'la6', 'la7', 'la8', 'la9',
-				'la10', 'la11'
+				'lang0', 'lang1', 'lang2', 'lang3', 'lang4',
+				'lang5', 'lang6', 'lang7', 'lang8', 'lang9',
+				'lang10', 'lang11'
 			];
 
 			wrapper = createWrapper( {
@@ -169,8 +161,8 @@ describe( 'UniversalLanguageSelector - suggestions and preferred languages', () 
 			expect( languageList.exists() ).toBe( true );
 			expect( languageList.props( 'languageCodes' ) ).toHaveLength( 10 );
 			expect( languageList.props( 'languageCodes' ) ).toEqual( [
-				'la0', 'la1', 'la2', 'la3', 'la4',
-				'la5', 'la6', 'la7', 'la8', 'la9'
+				'lang0', 'lang1', 'lang2', 'lang3', 'lang4',
+				'lang5', 'lang6', 'lang7', 'lang8', 'lang9'
 			] );
 		} );
 	} );

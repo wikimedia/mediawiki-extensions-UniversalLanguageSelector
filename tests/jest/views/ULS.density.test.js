@@ -1,15 +1,7 @@
 'use strict';
 
-const { createWrapper } = require( '../mocks/uls-test-helpers.js' );
+const { createWrapper, generateLanguages } = require( '../mocks/uls-test-helpers.js' );
 const usePreferredLanguages = require( '../../../resources/ext.uls.rewrite/composables/usePreferredLanguages.js' );
-
-const generateLanguages = ( count ) => {
-	const result = {};
-	for ( let i = 0; i < count; i++ ) {
-		result[ `lang-${ i }` ] = `Language ${ i }`;
-	}
-	return result;
-};
 
 describe( 'UniversalLanguageSelector - density column', () => {
 	let wrapper;
@@ -36,7 +28,7 @@ describe( 'UniversalLanguageSelector - density column', () => {
 	} );
 
 	it( 'applies medium density class when language count is less than 10 but preferred languages are present', () => {
-		preferredLanguages.value = [ 'lang-0' ];
+		preferredLanguages.value = [ 'lang0' ];
 
 		wrapper = createWrapper( {
 			visible: true,

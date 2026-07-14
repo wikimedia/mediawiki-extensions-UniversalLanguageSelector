@@ -17,6 +17,14 @@ function setMobileMode( isMobile ) {
 	} ) );
 }
 
+const generateLanguages = ( count ) => {
+	const result = {};
+	for ( let i = 0; i < count; i++ ) {
+		result[ `lang${ i }` ] = `Language ${ i }`;
+	}
+	return result;
+};
+
 const createWrapper = ( props = {}, options = {} ) => {
 	const UniversalLanguageSelector = require( '../../../resources/ext.uls.rewrite/UniversalLanguageSelector.vue' );
 	const trigger = document.createElement( 'button' );
@@ -50,5 +58,6 @@ const createWrapper = ( props = {}, options = {} ) => {
 module.exports = {
 	mockApiGet,
 	setMobileMode,
-	createWrapper
+	createWrapper,
+	generateLanguages
 };
