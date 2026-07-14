@@ -33,7 +33,7 @@
 	"ext-uls-webfonts-settings-info": "Automatico man download maga font que ta falta y permiti escoge con el maga font preferido",
 	"ext-uls-webfonts-settings-info-link": "Mas de informacion",
 	"ext-uls-webfonts-select-for": "Escoge font para na $1",
-	"ext-uls-webfonts-select-for-ui-info": "Font ta usa para na interfaz de usuario",
+	"ext-uls-webfonts-select-for-ui-info": "el tipo de letra que ta usa para na interfaz de usador",
 	"ext-uls-webfonts-select-for-content-info": "Font usao para na contenido",
 	"ext-uls-webfonts-system-font": "Font del sistema",
 	"ext-uls-back-to-display-settings": "Vira na configuracion del display",

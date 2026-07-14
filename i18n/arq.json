@@ -6,5 +6,6 @@
 		]
 	},
 	"uls-desc": "يجيب للمستخدم بزاف الطرق لتخيار لوغه، و تستاف باراميترات اللوغه",
-	"uls-plang-title-languages": "لوغات"
+	"uls-plang-title-languages": "لوغات",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|نزيدو وحدة|نزيدو $1 وحدوخرين}}"
 }
