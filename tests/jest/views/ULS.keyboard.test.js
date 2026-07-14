@@ -1,6 +1,7 @@
 'use strict';
 
 const { createWrapper, generateLanguages } = require( '../mocks/uls-test-helpers.js' );
+const { activeSearchResults } = require( 'mediawiki.languageselector.core' );
 
 describe( 'UniversalLanguageSelector - keyboard navigation', () => {
 	let wrapper;
@@ -89,5 +90,78 @@ describe( 'UniversalLanguageSelector - keyboard navigation', () => {
 		// Keydown page-up -> jumps back and clamps to the first item (index 0)
 		await activeInput.trigger( 'keydown.page-up' );
 		expect( wrapper.vm.highlightedIndex ).toBe( 0 );
+	} );
+} );
+
+describe( 'UniversalLanguageSelector - keyboard tab, right, esc', () => {
+	let wrapper;
+
+	afterEach( () => {
+		if ( wrapper ) {
+			wrapper.unmount();
+			wrapper = null;
+		}
+		activeSearchResults.value = [];
+	} );
+
+	it( 'fills typeahead suggestion into search query on tab key press', async () => {
+		wrapper = createWrapper( {
+			visible: true,
+			selectableLanguages: {
+				en: 'English',
+				fr: 'Français'
+			}
+		} );
+
+		activeSearchResults.value = [ 'en' ];
+
+		const activeInput = wrapper.findAllComponents( { name: 'CdxSearchInput' } )
+			.find( ( c ) => c.classes().includes( 'uls-rewrite__search-active' ) );
+
+		await activeInput.find( 'input' ).setValue( 'Eng' );
+
+		await activeInput.trigger( 'keydown.tab' );
+
+		expect( wrapper.vm.searchQuery ).toBe( 'English' );
+	} );
+
+	it( 'fills typeahead suggestion into search query on right arrow key press when cursor is at the end', async () => {
+		wrapper = createWrapper( {
+			visible: true,
+			selectableLanguages: {
+				en: 'English',
+				fr: 'Français'
+			}
+		} );
+
+		activeSearchResults.value = [ 'en' ];
+
+		const activeInput = wrapper.findAllComponents( { name: 'CdxSearchInput' } )
+			.find( ( c ) => c.classes().includes( 'uls-rewrite__search-active' ) );
+
+		const inputEl = activeInput.find( 'input' ).element;
+		await activeInput.find( 'input' ).setValue( 'Eng' );
+		inputEl.selectionStart = 3;
+
+		await activeInput.trigger( 'keydown.right' );
+
+		expect( wrapper.vm.searchQuery ).toBe( 'English' );
+	} );
+
+	it( 'emits the close event when escape key is pressed inside the search input', async () => {
+		wrapper = createWrapper( {
+			onClose: async () => {
+				await wrapper.setProps( { visible: false } );
+			}
+		} );
+
+		const activeInput = wrapper.findAllComponents( { name: 'CdxSearchInput' } )
+			.find( ( c ) => c.classes().includes( 'uls-rewrite__search-active' ) );
+
+		await activeInput.trigger( 'keydown.esc' );
+
+		expect( wrapper.emitted( 'close' ) ).toBeTruthy();
+		expect( wrapper.emitted( 'close' ) ).toHaveLength( 1 );
+		expect( wrapper.find( '.uls-rewrite' ).isVisible() ).toBe( false );
 	} );
 } );

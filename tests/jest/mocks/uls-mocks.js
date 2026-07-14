@@ -11,10 +11,12 @@ const { ref, computed, defineComponent } = require( 'vue' );
 // clearSearchQuery() resets state synchronously; only the network fetch is
 // omitted — tests drive result state by writing to searchResults /
 // searchQueryHits directly.
+const activeSearchResults = ref( [] );
+
 function useLanguageSelector( selectableLanguages, selected ) {
 	const searchQuery = ref( '' );
 	const searchQueryHits = ref( {} );
-	const searchResults = ref( [] );
+	const searchResults = activeSearchResults;
 	const isSearching = ref( false );
 
 	const resetSearch = () => {
@@ -54,5 +56,6 @@ module.exports = {
 	useLanguageSelector,
 	LanguageSelector,
 	getLookupLanguageSelector: jest.fn(),
-	getMultiselectLookupLanguageSelector: jest.fn()
+	getMultiselectLookupLanguageSelector: jest.fn(),
+	activeSearchResults
 };
