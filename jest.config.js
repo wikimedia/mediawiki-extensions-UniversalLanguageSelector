@@ -7,6 +7,10 @@ module.exports = {
 	collectCoverageFrom: [
 		'resources/ext.uls.rewrite/**/*.{js,vue}'
 	],
+	coveragePathIgnorePatterns: [
+		'/resources/ext.uls.rewrite/lib/',
+		'/resources/ext.uls.rewrite/dist/'
+	],
 	coverageProvider: 'v8',
 	coverageReporters: [
 		'text'
