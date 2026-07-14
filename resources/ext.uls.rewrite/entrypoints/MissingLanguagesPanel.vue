@@ -23,7 +23,7 @@ const EntrypointActionButton = require( './EntrypointActionButton.vue' );
 // Per the design, surface at most two suggested languages in the panel.
 const MAX_MISSING_LANGUAGES_TO_DISPLAY = 2;
 
-module.exports = defineComponent( {
+module.exports = exports = defineComponent( {
 	name: 'MissingLanguagesPanel',
 	components: {
 		EntrypointActionButton
