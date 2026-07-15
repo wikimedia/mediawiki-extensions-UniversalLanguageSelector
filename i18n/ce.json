@@ -6,7 +6,8 @@
 			"Умар"
 		]
 	},
-	"uls-desc": "Декъашхойн таро хуьлуьйту масийтта кепара мотт харжа а, мотт дIахIотто а",
+	"uls-extensionname": "Дуьненайукъара&shyметтанийн&shyселектор",
+	"uls-desc": "Декъашхойн таро хуьлуьйту масийтта кепара мотт харжа а, мотт дӀахӀотто а",
 	"uls-plang-title-languages": "Меттанаш",
 	"ext-uls-select-language-settings-icon-tooltip": "Мотт дIахIоттор",
 	"ext-uls-undo-language-tooltip-text": "Хьалхара мотт: $1",
