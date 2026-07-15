@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Robertsky",
 			"Xð"
 		]
 	},
-	"uls-plang-title-languages": "Lian sira"
+	"uls-plang-title-languages": "Lian sira",
+	"ext-uls-compact-link-count": "{{PLURAL:$1| Ida tan| $1 tan}}"
 }
