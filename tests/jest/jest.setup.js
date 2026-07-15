@@ -78,7 +78,10 @@ global.mw = {
 		options: { get: jest.fn() }
 	},
 	storage: { get: jest.fn(), set: jest.fn() },
-	hook: jest.fn( () => ( { add: jest.fn(), fire: jest.fn() } ) )
+	hook: jest.fn( () => ( { add: jest.fn(), fire: jest.fn() } ) ),
+	util: {
+		wikiScript: jest.fn( ( name ) => `/wiki/${ name }.php` )
+	}
 };
 
 global.$ = jest.fn( () => ( { data: jest.fn() } ) );

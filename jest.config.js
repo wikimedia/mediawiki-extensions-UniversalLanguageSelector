@@ -26,6 +26,7 @@ module.exports = {
 		'mediawiki.codex.typeaheadSearch': '@wikimedia/codex',
 		'\\bcodex\\.js$': '@wikimedia/codex',
 		'\\blanguage-data\\.json$': '<rootDir>/tests/jest/mocks/language-data.json',
+		'\\bsupportedLanguages\\.json$': '<rootDir>/tests/jest/mocks/supported-languages.json',
 		'^ext\\.uls\\.rewrite\\.entrypoints$': '<rootDir>/resources/ext.uls.rewrite/EntrypointRegistry.js',
 		'^mediawiki\\.languageselector\\.core$': '<rootDir>/tests/jest/mocks/uls-mocks.js',
 		'^mediawiki\\.languageselector\\.lookup$': '<rootDir>/tests/jest/mocks/uls-mocks.js'
