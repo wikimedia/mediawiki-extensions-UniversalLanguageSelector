@@ -94,4 +94,7 @@ Object.defineProperty( window, 'matchMedia', {
 	value: jest.fn()
 } );
 
+// Mock scrollIntoView which is missing in JSDOM
+Element.prototype.scrollIntoView = jest.fn();
+
 setMobileMode( false );

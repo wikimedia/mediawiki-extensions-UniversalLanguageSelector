@@ -7,11 +7,6 @@ describe( 'UniversalLanguageSelector - selection', () => {
 	let wrapper;
 	const { preferredLanguages } = usePreferredLanguages();
 
-	beforeAll( () => {
-		// Mock scrollIntoView which is missing in JSDOM
-		Element.prototype.scrollIntoView = jest.fn();
-	} );
-
 	afterEach( () => {
 		if ( wrapper ) {
 			wrapper.unmount();
