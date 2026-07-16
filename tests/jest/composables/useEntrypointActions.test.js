@@ -3,6 +3,15 @@
 const { ref } = require( 'vue' );
 const useEntrypointActions = require( '../../../resources/ext.uls.rewrite/composables/useEntrypointActions.js' );
 
+// useEntrypointActions is used inside setup() in production; mock inject()
+// to avoid the warning when calling it directly.
+jest.mock( 'vue', () => {
+	const original = jest.requireActual( 'vue' );
+	return Object.assign( {}, original, {
+		inject: jest.fn( ( key, defaultValue ) => defaultValue )
+	} );
+} );
+
 describe( 'useEntrypointActions', () => {
 	it( 'shouldShow(context) is called and getConfig(context) is collected', () => {
 		const context = ref( { show: true, value: 'A' } );
