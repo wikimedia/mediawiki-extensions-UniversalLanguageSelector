@@ -165,3 +165,97 @@ describe( 'UniversalLanguageSelector - keyboard tab, right, esc', () => {
 		expect( wrapper.find( '.uls-rewrite' ).isVisible() ).toBe( false );
 	} );
 } );
+
+describe( 'UniversalLanguageSelector - enter key fallbacks', () => {
+	let wrapper;
+
+	afterEach( () => {
+		if ( wrapper ) {
+			wrapper.unmount();
+			wrapper = null;
+		}
+		activeSearchResults.value = [];
+	} );
+
+	const getActiveInput = () => wrapper.findAllComponents( { name: 'CdxSearchInput' } )
+		.find( ( c ) => c.classes().includes( 'uls-rewrite__search-active' ) );
+
+	// Searching auto-highlights the first result; leaving the list with the
+	// mouse clears it again, which is what exposes the fallback paths.
+	const clearHighlight = async () => {
+		expect( wrapper.vm.highlightedIndex ).toBe( 0 );
+		await wrapper.get( '.uls-rewrite' ).trigger( 'mouseleave' );
+		expect( wrapper.vm.highlightedIndex ).toBe( -1 );
+	};
+
+	it( 'selects the first result on enter when there is an autocomplete suggestion and no highlight', async () => {
+		wrapper = createWrapper( {
+			selectableLanguages: { en: 'English', fr: 'Français' }
+		} );
+
+		activeSearchResults.value = [ 'en' ];
+		const activeInput = getActiveInput();
+		await activeInput.find( 'input' ).setValue( 'Eng' );
+		await clearHighlight();
+
+		await activeInput.trigger( 'keydown.enter' );
+
+		expect( wrapper.emitted( 'select' ) ).toHaveLength( 1 );
+		expect( wrapper.emitted( 'select' )[ 0 ][ 0 ] ).toEqual( {
+			code: 'en',
+			value: 'English'
+		} );
+	} );
+
+	it( 'selects the language on enter when the query is an exact language code', async () => {
+		wrapper = createWrapper( {
+			selectableLanguages: { en: 'English', fr: 'Français' }
+		} );
+
+		// No search results: the query itself matches a known code.
+		const activeInput = getActiveInput();
+		await activeInput.find( 'input' ).setValue( 'fr' );
+
+		await activeInput.trigger( 'keydown.enter' );
+
+		expect( wrapper.emitted( 'select' ) ).toHaveLength( 1 );
+		expect( wrapper.emitted( 'select' )[ 0 ][ 0 ] ).toEqual( {
+			code: 'fr',
+			value: 'Français'
+		} );
+	} );
+
+	it( 'selects the single search result on enter when there is no highlight or suggestion', async () => {
+		wrapper = createWrapper( {
+			selectableLanguages: { en: 'English', fr: 'Français' }
+		} );
+
+		// 'french' is not a prefix of 'Français' or 'fr', so there is no
+		// typeahead suggestion; only the single-result fallback applies.
+		activeSearchResults.value = [ 'fr' ];
+		const activeInput = getActiveInput();
+		await activeInput.find( 'input' ).setValue( 'french' );
+		await clearHighlight();
+
+		await activeInput.trigger( 'keydown.enter' );
+
+		expect( wrapper.emitted( 'select' ) ).toHaveLength( 1 );
+		expect( wrapper.emitted( 'select' )[ 0 ][ 0 ] ).toEqual( {
+			code: 'fr',
+			value: 'Français'
+		} );
+	} );
+
+	it( 'does not emit select on enter when nothing matches', async () => {
+		wrapper = createWrapper( {
+			selectableLanguages: { en: 'English', fr: 'Français' }
+		} );
+
+		const activeInput = getActiveInput();
+		await activeInput.find( 'input' ).setValue( 'xyz' );
+
+		await activeInput.trigger( 'keydown.enter' );
+
+		expect( wrapper.emitted( 'select' ) ).toBeUndefined();
+	} );
+} );

@@ -91,4 +91,59 @@ describe( 'UniversalLanguageSelector - close behaviour', () => {
 		expect( wrapper.emitted().close ).toBeUndefined();
 		expect( wrapper.find( '.uls-rewrite' ).isVisible() ).toBe( true );
 	} );
+
+	it( 'emits visible-change on mount and when visibility changes', async () => {
+		wrapper = createWrapper();
+
+		expect( wrapper.emitted( 'visible-change' )[ 0 ] ).toEqual( [ true, false ] );
+
+		await wrapper.setProps( { visible: false } );
+
+		expect( wrapper.emitted( 'visible-change' )[ 1 ] ).toEqual( [ false, false ] );
+	} );
+
+	it( 'clears the search query and returns to the main view when hidden', async () => {
+		// Real panel header: switching views calls its focusTitle() method,
+		// which the default stub does not have.
+		wrapper = createWrapper( {}, {
+			global: { stubs: { LanguageSelectorPanelHeader: false } }
+		} );
+
+		await wrapper.get( '.uls-rewrite__search-active' ).setValue( 'xyz' );
+		wrapper.vm.showQuickActionsPanel( [] );
+		await nextTick();
+		expect( wrapper.vm.currentView ).toBe( 'quick-actions' );
+
+		await wrapper.setProps( { visible: false } );
+
+		expect( wrapper.vm.searchQuery ).toBe( '' );
+		expect( wrapper.vm.currentView ).toBe( 'main' );
+	} );
+
+	it( 'restores focus to the trigger element when hidden', async () => {
+		const trigger = document.createElement( 'button' );
+		const focusSpy = jest.spyOn( trigger, 'focus' );
+		wrapper = createWrapper( { triggerElement: trigger } );
+		await nextTick();
+
+		await wrapper.setProps( { visible: false } );
+
+		expect( focusSpy ).toHaveBeenCalled();
+	} );
+
+	it( 'does not steal focus when another control holds focus on close', async () => {
+		const trigger = document.createElement( 'button' );
+		const focusSpy = jest.spyOn( trigger, 'focus' );
+		const outsideButton = document.createElement( 'button' );
+		document.body.appendChild( outsideButton );
+
+		wrapper = createWrapper( { triggerElement: trigger } );
+		await nextTick();
+		outsideButton.focus();
+
+		await wrapper.setProps( { visible: false } );
+
+		expect( focusSpy ).not.toHaveBeenCalled();
+		outsideButton.remove();
+	} );
 } );
