@@ -3,7 +3,8 @@
 		"authors": [
 			"Don Alessandro",
 			"Ерней",
-			"Ильнар"
+			"Ильнар",
+			"Ильгиз"
 		]
 	},
 	"uls-plang-title-languages": "Телләр",
@@ -57,5 +58,8 @@
 	"ext-uls-language-settings-applying": "Куллану бара…",
 	"ext-uls-compact-link-count": "Башка {{PLURAL:$1|телдә|$1 телдә}}",
 	"prefs-languages": "Телләр",
-	"ext-uls-compact-language-links-preference": "Сезгә туры килә торган [[$1|телләр җыйнак исемлеге]] куллану."
+	"ext-uls-compact-language-links-preference": "Сезгә туры килә торган [[$1|телләр җыйнак исемлеге]] куллану.",
+	"ext-uls-empty-state-header": "Әлегә телләр юк",
+	"ext-uls-empty-state-header-actions-available": "Әлегә телләр юк. Яңасын өстәргәме?",
+	"ext-uls-no-languages-title": "Әлегә телләр юк"
 }

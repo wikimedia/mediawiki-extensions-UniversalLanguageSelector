@@ -90,5 +90,7 @@
 	"ext-uls-unsupported-language-title": "Keel pole saadaval",
 	"ext-uls-unsupported-language-description": "Otsitav keel pole saadaval.",
 	"ext-uls-open-language-settings": "Ava keelesätted",
+	"ext-uls-missing-languages-panel-title": "Tõlgi see lehekülg",
+	"ext-uls-missing-languages-panel-description": "See lehekülg puudub mõnes keeles, mida võid osata. Saad selle tõlkida.",
 	"ext-uls-quick-actions-panel-title": "Kiirtoimingud"
 }
