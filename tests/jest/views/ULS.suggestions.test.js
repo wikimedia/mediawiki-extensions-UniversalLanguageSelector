@@ -166,4 +166,30 @@ describe( 'UniversalLanguageSelector - suggestions and preferred languages', () 
 			] );
 		} );
 	} );
+
+	describe( 'all-languages section title', () => {
+		it( 'shows the title when another section renders above it', () => {
+			preferredLanguages.value = [ 'lang0' ];
+
+			wrapper = createWrapper( {
+				visible: true,
+				selectableLanguages: generateLanguages( 5 )
+			} );
+
+			const title = wrapper.find( '.uls-rewrite__section--all .uls-rewrite__section-title' );
+			expect( title.exists() ).toBe( true );
+			expect( title.text() ).toBe( 'ext-uls-all-languages-title' );
+		} );
+
+		it( 'hides the title when the all-languages section is the only one', () => {
+			wrapper = createWrapper( {
+				visible: true,
+				selectableLanguages: generateLanguages( 5 )
+			} );
+
+			const section = wrapper.find( '.uls-rewrite__section--all' );
+			expect( section.exists() ).toBe( true );
+			expect( section.find( '.uls-rewrite__section-title' ).exists() ).toBe( false );
+		} );
+	} );
 } );
