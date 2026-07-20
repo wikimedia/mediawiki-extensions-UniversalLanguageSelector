@@ -131,4 +131,34 @@ describe( 'useFocusTrap', () => {
 
 		expect( event.defaultPrevented ).toBe( false );
 	} );
+
+	it( 'does nothing when containerRef.value is null', () => {
+		const TestComponentNullContainer = defineComponent( {
+			setup() {
+				const containerRef = ref( null );
+				useFocusTrap( containerRef, ref( true ), document );
+				return () => h( 'div' );
+			}
+		} );
+		wrapper = mount( TestComponentNullContainer, { attachTo: document.body } );
+
+		const event = pressTab();
+
+		expect( event.defaultPrevented ).toBe( false );
+	} );
+
+	it( 'prevents default when container has no focusable elements', () => {
+		const TestEmptyContainerComponent = defineComponent( {
+			setup() {
+				const containerRef = ref( null );
+				useFocusTrap( containerRef, ref( true ), document );
+				return () => h( 'div', { ref: containerRef }, [ 'No focusable elements here' ] );
+			}
+		} );
+		wrapper = mount( TestEmptyContainerComponent, { attachTo: document.body } );
+
+		const event = pressTab();
+
+		expect( event.defaultPrevented ).toBe( true );
+	} );
 } );
