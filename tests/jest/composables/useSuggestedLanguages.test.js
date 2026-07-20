@@ -18,29 +18,6 @@ jest.mock( '../mocks/language-data.json', () => ( {
 	territories: mockTerritories
 } ) );
 
-// Override only the config values this spec depends on
-mw.config.get.mockImplementation( ( key ) => {
-	if ( key === 'wgUserLanguage' ) {
-		return USER_LANG;
-	}
-	if ( key === 'wgContentLanguage' ) {
-		return CONTENT_LANG;
-	}
-	if ( key === 'wgULSAcceptLanguageList' ) {
-		return [ ACCEPT_LANG_FULL ];
-	}
-	return null;
-} );
-
-Object.defineProperty( window.navigator, 'language', {
-	value: BROWSER_LANG_FULL,
-	configurable: true
-} );
-Object.defineProperty( window.navigator, 'languages', {
-	value: [ BROWSER_LANG_FULL, 'it-IT' ],
-	configurable: true
-} );
-
 const { ref } = require( 'vue' );
 const useSuggestedLanguages = require( '../../../resources/ext.uls.rewrite/composables/useSuggestedLanguages.js' );
 
@@ -48,6 +25,27 @@ describe( 'useSuggestedLanguages', () => {
 	beforeEach( () => {
 		jest.clearAllMocks();
 		window.Geo = { country: 'US' };
+		mw.config.get.mockImplementation( ( key ) => {
+			if ( key === 'wgUserLanguage' ) {
+				return USER_LANG;
+			}
+			if ( key === 'wgContentLanguage' ) {
+				return CONTENT_LANG;
+			}
+			if ( key === 'wgULSAcceptLanguageList' ) {
+				return [ ACCEPT_LANG_FULL ];
+			}
+			return null;
+		} );
+
+		Object.defineProperty( window.navigator, 'language', {
+			value: BROWSER_LANG_FULL,
+			configurable: true
+		} );
+		Object.defineProperty( window.navigator, 'languages', {
+			value: [ BROWSER_LANG_FULL, 'it-IT' ],
+			configurable: true
+		} );
 	} );
 
 	afterEach( () => {
@@ -103,5 +101,54 @@ describe( 'useSuggestedLanguages', () => {
 		expect( suggested.value ).not.toContain( BROWSER_LANG );
 		expect( suggested.value ).not.toContain( ACCEPT_LANG );
 		expect( suggested.value ).not.toContain( TERRITORY_LANG );
+	} );
+
+	it( 'handles falsy navigator.language', () => {
+		Object.defineProperty( window.navigator, 'language', {
+			value: '',
+			configurable: true
+		} );
+
+		const previousLanguages = ref( [ PREVIOUS_LANG ] );
+		const { getSuggestedLanguages } = useSuggestedLanguages();
+
+		const suggested = getSuggestedLanguages( previousLanguages );
+
+		expect( suggested.value ).toEqual( [
+			PREVIOUS_LANG,
+			USER_LANG,
+			CONTENT_LANG,
+			ACCEPT_LANG,
+			TERRITORY_LANG
+		] );
+	} );
+
+	it( 'falls back to empty array when wgULSAcceptLanguageList and navigator.languages are both falsy', () => {
+		mw.config.get.mockImplementation( ( key ) => {
+			if ( key === 'wgUserLanguage' ) {
+				return USER_LANG;
+			}
+			if ( key === 'wgContentLanguage' ) {
+				return CONTENT_LANG;
+			}
+			return null;
+		} );
+		Object.defineProperty( window.navigator, 'languages', {
+			value: '',
+			configurable: true
+		} );
+
+		const previousLanguages = ref( [ PREVIOUS_LANG ] );
+		const { getSuggestedLanguages } = useSuggestedLanguages();
+
+		const suggested = getSuggestedLanguages( previousLanguages );
+
+		expect( suggested.value ).toEqual( [
+			PREVIOUS_LANG,
+			USER_LANG,
+			CONTENT_LANG,
+			BROWSER_LANG,
+			TERRITORY_LANG
+		] );
 	} );
 } );
