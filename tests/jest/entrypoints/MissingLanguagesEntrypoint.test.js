@@ -88,4 +88,18 @@ describe( 'MissingLanguagesEntrypoint', () => {
 		// Should use preferredLanguages ('es' -> español)
 		expect( label.text() ).toBe( 'ext-uls-missing-languages-label-single:[español]' );
 	} );
+
+	it( 'uses default prop factories when no props are given', () => {
+		const wrapper = shallowMount( MissingLanguagesEntrypoint, {
+			global: {
+				directives: {
+					'i18n-html': () => {}
+				}
+			},
+			props: {
+				entrypoints: [ mockEntrypoint ]
+			}
+		} );
+		expect( wrapper.exists() ).toBe( true );
+	} );
 } );
