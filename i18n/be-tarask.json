@@ -62,5 +62,16 @@
 	"ext-uls-compact-link-info": "Усе мовы (пачатковая выбарка паводле частых Вашых і іншых запытаў)",
 	"prefs-languages": "Мовы",
 	"ext-uls-compact-language-links-preference": "Ужываць [[$1|кампактны сьпіс моваў]] з прыдатнымі для вас мовамі",
-	"ext-uls-compact-no-results": "Гэтая старонка не даступная на мове, якой вы шукалі."
+	"ext-uls-compact-no-results": "Гэтая старонка не даступная на мове, якой вы шукалі.",
+	"ext-uls-placeholder-search": "Шукаць мовы",
+	"ext-uls-suggested-languages-title": "{{PLURAL:$1|Прапанаваная мова|Прапанаваныя мовы}}",
+	"ext-uls-all-languages-title": "{{PLURAL:$1|Усе мовы}}",
+	"ext-uls-preferred-languages-title": "{{PLURAL:$1|Пераважная мова|Пераважныя мовы}}",
+	"ext-uls-preferred-languages-settings-title": "Пераважныя мовы",
+	"ext-uls-preferred-languages-desc": "Будуць паказвацца першымі ў мэню моваў.",
+	"ext-uls-preferred-languages-label": "Дадаць мову",
+	"ext-uls-preferred-languages-help": "Замацуйце да $1 {{PLURAL:$1|мовы|моваў}}. {{PLURAL:$1|Яна зьявіцца першай|Яны зьявяцца першымі}}, калі вы будзеце зьмяняць мову любога артыкула.",
+	"ext-uls-preferred-languages-input-placeholder": "Шукаць мовы",
+	"ext-uls-preferred-languages-status": "<strong>$1</strong> {{PLURAL:$1|з}} <strong>$2</strong> {{PLURAL:$2|абраная|абраныя}}",
+	"ext-uls-preferred-languages-limit-reached": "Выдаліце адну, каб дадаць іншую"
 }
