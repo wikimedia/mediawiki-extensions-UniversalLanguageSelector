@@ -2,17 +2,6 @@
 
 const { mount } = require( '@vue/test-utils' );
 
-// Mock the child component to keep tests lightweight and completely isolated
-jest.mock( '../../resources/ext.uls.rewrite/UniversalLanguageSelector.vue', () => ( {
-	name: 'UniversalLanguageSelector',
-	template: '<div><slot></slot></div>',
-	props: [
-		'visible'
-		// more props here
-	],
-	emits: [ 'close', 'select' ]
-} ) );
-
 const { createUniversalLanguageSelector } = require( '../../resources/ext.uls.rewrite/index.js' );
 
 describe( 'createUniversalLanguageSelector wrapper', () => {
@@ -115,5 +104,26 @@ describe( 'createUniversalLanguageSelector wrapper', () => {
 		await wrapper.vm.$nextTick();
 		expect( wrapper.vm.visible ).toBe( true );
 		expect( child.props( 'visible' ) ).toBe( true );
+	} );
+
+	it( 'updates currentSelected on updateSelected() method call', async () => {
+		const app = createUniversalLanguageSelector( config );
+		const wrapper = mount( app._component );
+
+		wrapper.vm.updateSelected( [ 'es' ] );
+		await wrapper.vm.$nextTick();
+
+		expect( wrapper.vm.currentSelected ).toEqual( [ 'es' ] );
+	} );
+
+	it( 'calls config.onVisibleChange when visibility changes via close()', async () => {
+		config.onVisibleChange = jest.fn();
+		const app = createUniversalLanguageSelector( config );
+		const wrapper = mount( app._component );
+
+		wrapper.vm.close();
+		await wrapper.vm.$nextTick();
+
+		expect( config.onVisibleChange ).toHaveBeenCalledWith( false, false );
 	} );
 } );
