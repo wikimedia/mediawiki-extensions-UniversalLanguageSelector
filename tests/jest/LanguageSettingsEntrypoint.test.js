@@ -140,4 +140,22 @@ describe( 'LanguageSettingsEntrypoint', () => {
 		expect( divCalls ).toHaveLength( 1 );
 		expect( anchor.languagesettings ).toHaveBeenCalledTimes( 2 );
 	} );
+
+	it( 'ignores registration error and does not register entrypoints if loaded after EntrypointRegistry is locked', () => {
+		EntrypointRegistry.lock();
+
+		expect( () => {
+			loadEntrypoint();
+		} ).not.toThrow();
+
+		const { QUICK_ACTIONS, EMPTY_LIST } = EntrypointRegistry.ENTRYPOINT_TYPE;
+		const { INTERFACE, CONTENT } = EntrypointRegistry.ULS_MODE;
+
+		[ INTERFACE, CONTENT ].forEach( ( mode ) => {
+			const entries = EntrypointRegistry.getRegisteredEntrypoints( QUICK_ACTIONS, mode );
+			expect( entries ).toEqual( [] );
+		} );
+
+		expect( EntrypointRegistry.getRegisteredEntrypoints( EMPTY_LIST, CONTENT ) ).toEqual( [] );
+	} );
 } );
