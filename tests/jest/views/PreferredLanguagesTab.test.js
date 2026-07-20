@@ -64,4 +64,22 @@ describe( 'PreferredLanguagesTab', () => {
 		expect( wrapper.emitted( 'change' ) ).toBeTruthy();
 		expect( wrapper.emitted( 'change' )[ 0 ][ 0 ] ).toEqual( [ 'en', 'fr', 'es' ] );
 	} );
+
+	it( 'does not update selection or emit change event when selected list exceeds limit', async () => {
+		wrapper = createWrapper( {
+			initialLanguages: [ 'en' ]
+		} );
+
+		const lookup = wrapper.findComponent( LanguageSelector );
+		await lookup.vm.$emit( 'update:selected', [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11' ] );
+
+		expect( wrapper.vm.selectedLanguages ).toEqual( [ 'en' ] );
+		expect( wrapper.emitted( 'change' ) ).toBeFalsy();
+	} );
+
+	it( 'uses default prop factory when initialLanguages prop is undefined', () => {
+		wrapper = createWrapper( { initialLanguages: undefined } );
+
+		expect( wrapper.vm.selectedLanguages ).toEqual( [] );
+	} );
 } );
