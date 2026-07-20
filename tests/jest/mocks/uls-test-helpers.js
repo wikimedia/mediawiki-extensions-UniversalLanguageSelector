@@ -1,6 +1,6 @@
 'use strict';
 
-const { shallowMount } = require( '@vue/test-utils' );
+const { mount } = require( '@vue/test-utils' );
 
 const mockApiGet = jest.fn();
 
@@ -31,7 +31,9 @@ const createWrapper = ( props = {}, options = {} ) => {
 	// Split the global mount options out so caller-supplied options merge
 	// with the defaults instead of replacing them wholesale.
 	const { global: globalOptions = {}, ...restOptions } = options;
-	return shallowMount( UniversalLanguageSelector, {
+	// Shallow by default; pass { shallow: false } for a full mount.
+	return mount( UniversalLanguageSelector, {
+		shallow: true,
 		global: {
 			...globalOptions,
 			mocks: {
