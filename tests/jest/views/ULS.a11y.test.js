@@ -82,4 +82,23 @@ describe( 'UniversalLanguageSelector - accessibility', () => {
 
 		expect( await axe( wrapper.element, axeOptions ) ).toHaveNoViolations();
 	} );
+
+	it( 'assigns option element ids and annotations to language list items', async () => {
+		wrapper = createFullWrapper( {
+			selectableLanguages: { en: 'English', fr: 'Français' },
+			languageAnnotations: {
+				en: { description: 'English description' }
+			}
+		} );
+
+		const enOption = wrapper.find( 'li[data-language-code="en"]' );
+		expect( enOption.exists() ).toBe( true );
+		expect( enOption.attributes( 'id' ) ).toMatch( /-option-0$/ );
+
+		const enDesc = wrapper.find( '[data-language-code="en"] .uls-rewrite__language-item--description' );
+		expect( enDesc.exists() ).toBe( true );
+		expect( enDesc.text() ).toBe( 'English description' );
+
+		expect( await axe( wrapper.element, axeOptions ) ).toHaveNoViolations();
+	} );
 } );

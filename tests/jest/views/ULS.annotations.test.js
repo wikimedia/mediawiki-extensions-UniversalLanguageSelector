@@ -15,6 +15,7 @@ describe( 'UniversalLanguageSelector - annotations', () => {
 			wrapper.unmount();
 			wrapper = null;
 		}
+		jest.restoreAllMocks();
 	} );
 
 	it( 'assigns correct direction (ltr/rtl) to native language items when displayLanguageCode is not provided', () => {
@@ -160,5 +161,34 @@ describe( 'UniversalLanguageSelector - annotations', () => {
 		const badge = wrapper.find( '.custom-badge' );
 		expect( badge.exists() ).toBe( true );
 		expect( badge.text() ).toBe( 'English - Beta' );
+	} );
+
+	it( 'falls back to autonym or code when language name is missing from languages prop', () => {
+		jest.spyOn( global.$.uls.data, 'getAutonym' ).mockImplementation( ( code ) => {
+			if ( code === 'haw' ) {
+				return 'Hawaii';
+			}
+			return '';
+		} );
+
+		wrapper = createWrapper( {
+			visible: true,
+			selectableLanguages: {
+				haw: '',
+				unknown: ''
+			}
+		}, {
+			global: {
+				stubs: {
+					LanguageList: false
+				}
+			}
+		} );
+
+		const hawItem = wrapper.find( '[data-language-code="haw"] .uls-rewrite__language-item-title' );
+		expect( hawItem.text() ).toBe( 'Hawaii' );
+
+		const unknownItem = wrapper.find( '[data-language-code="unknown"] .uls-rewrite__language-item-title' );
+		expect( unknownItem.text() ).toBe( 'unknown' );
 	} );
 } );
