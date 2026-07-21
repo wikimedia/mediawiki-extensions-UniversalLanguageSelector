@@ -107,7 +107,7 @@ describe( 'UniversalLanguageSelector - selection', () => {
 		expect( wrapper.emitted().select[ 0 ] ).toEqual( [ { code: 'fr', value: 'Français' } ] );
 	} );
 
-	it( 'does not emit select event when clicking an unavailable language code from the preferred list', async () => {
+	it( 'does not emit select event when clicking or selecting an unavailable language code', async () => {
 		// Set fr as preferred but not available in selectableLanguages
 		preferredLanguages.value = [ 'fr' ];
 
@@ -129,7 +129,10 @@ describe( 'UniversalLanguageSelector - selection', () => {
 		expect( item.exists() ).toBe( true );
 
 		await item.trigger( 'click' );
+		expect( wrapper.emitted().select ).toBeUndefined();
 
+		// Direct call to trigger UniversalLanguageSelector select() guard
+		wrapper.vm.select( 'fr', 'Français' );
 		expect( wrapper.emitted().select ).toBeUndefined();
 	} );
 } );
