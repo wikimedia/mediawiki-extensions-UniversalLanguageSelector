@@ -125,6 +125,30 @@ describe( 'UniversalLanguageSelector - keyboard tab, right, esc', () => {
 		expect( wrapper.vm.searchQuery ).toBe( 'English' );
 	} );
 
+	it( 'does not fill typeahead suggestion on tab key press if event was already defaultPrevented', async () => {
+		wrapper = createWrapper( {
+			visible: true,
+			selectableLanguages: {
+				en: 'English',
+				fr: 'Français'
+			}
+		} );
+
+		activeSearchResults.value = [ 'en' ];
+
+		const activeInput = wrapper.findAllComponents( { name: 'CdxSearchInput' } )
+			.find( ( c ) => c.classes().includes( 'uls-rewrite__search-active' ) );
+
+		await activeInput.find( 'input' ).setValue( 'Eng' );
+
+		const event = new KeyboardEvent( 'keydown', { key: 'Tab', bubbles: true, cancelable: true } );
+		event.preventDefault();
+
+		await activeInput.find( 'input' ).element.dispatchEvent( event );
+
+		expect( wrapper.vm.searchQuery ).toBe( 'Eng' );
+	} );
+
 	it( 'fills typeahead suggestion into search query on right arrow key press when cursor is at the end', async () => {
 		wrapper = createWrapper( {
 			visible: true,
