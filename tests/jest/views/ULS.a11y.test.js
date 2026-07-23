@@ -2,6 +2,7 @@
 
 const { axe, toHaveNoViolations } = require( 'jest-axe' );
 const { createWrapper, setMobileMode } = require( '../mocks/uls-test-helpers.js' );
+const { activeSearchResults } = require( 'mediawiki.languageselector.core' );
 
 expect.extend( toHaveNoViolations );
 
@@ -21,6 +22,7 @@ describe( 'UniversalLanguageSelector - accessibility', () => {
 			wrapper.unmount();
 			wrapper = null;
 		}
+		activeSearchResults.value = [];
 	} );
 
 	it( 'has no axe violations on desktop', async () => {
@@ -100,5 +102,43 @@ describe( 'UniversalLanguageSelector - accessibility', () => {
 		expect( enDesc.text() ).toBe( 'English description' );
 
 		expect( await axe( wrapper.element, axeOptions ) ).toHaveNoViolations();
+	} );
+
+	it( 'updates searchStatus for screen reader announcements only after search is done', async () => {
+		wrapper = createFullWrapper( {
+			selectableLanguages: { en: 'English', fr: 'Français' }
+		} );
+
+		// 1. Initial state (no search query): searchStatus should be empty
+		expect( wrapper.vm.searchStatus ).toBe( '' );
+
+		// 2. Set search query and mark isSearching = true (simulating API search in progress)
+		wrapper.vm.isSearching = true;
+		activeSearchResults.value = [ 'fr' ];
+		await wrapper.find( 'input' ).setValue( 'fr' );
+
+		// The watcher should have executed but returned early because isSearching is true
+		expect( wrapper.vm.searchStatus ).toBe( '' );
+
+		// 3. Mark isSearching = false (simulating API search completion)
+		wrapper.vm.isSearching = false;
+		await wrapper.vm.$nextTick();
+
+		// The watcher should execute and update searchStatus to the results count
+		expect( wrapper.vm.searchStatus ).toBe( 'ext-uls-search-results-count' );
+
+		// 4. Test when search returns no results
+		wrapper.vm.isSearching = true;
+		activeSearchResults.value = [];
+		await wrapper.find( 'input' ).setValue( 'xyz' );
+
+		// The status should remain unchanged until isSearching is false
+		expect( wrapper.vm.searchStatus ).toBe( 'ext-uls-search-results-count' );
+
+		wrapper.vm.isSearching = false;
+		await wrapper.vm.$nextTick();
+
+		// The watcher should execute and update searchStatus to "no results"
+		expect( wrapper.vm.searchStatus ).toBe( 'ext-uls-search-results-none' );
 	} );
 } );
