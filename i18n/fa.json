@@ -13,6 +13,7 @@
 			"Mahan",
 			"Mehran",
 			"Mjbmr",
+			"Mohammad ebz",
 			"Mojtabakd",
 			"Reza1615"
 		]
@@ -86,6 +87,29 @@
 	"ext-uls-empty-state-header-actions-available": "هنوز زبانی موجود نیست. می‌خواهید یک جدید بیافزایید؟",
 	"ext-uls-empty-state-desc-actions-available": "محتوا را به زبان‌های بیشتری در دسترس قرار دهید.",
 	"ext-uls-add-languages-button-label": "افزودن زبان‌ها",
+	"ext-uls-language-title": "زبان‌ها",
+	"ext-uls-placeholder-search": "جستجوی زبان‌ها",
+	"ext-uls-close-button-label": "بستن",
 	"ext-uls-rewrite-label": "بازنویسی انتخابگر زبان همگانی",
-	"ext-uls-rewrite-description": "بازنویسی «انتخابگر زبان همگانی» (ULS) که با هدف نوسازی تجربهٔ کاربری و کاهش بدهی فنی از طریق ساده‌سازی معماری طراحی شده است."
+	"ext-uls-rewrite-description": "بازنویسی «انتخابگر زبان همگانی» (ULS) که با هدف نوسازی تجربهٔ کاربری و کاهش بدهی فنی از طریق ساده‌سازی معماری طراحی شده است.",
+	"ext-uls-suggested-languages-title": "{{PLURAL:$1|زبان|زبان‌های}} ترجیحی",
+	"ext-uls-all-languages-title": "{{PLURAL:$1|تمام زبان‌ها}}",
+	"ext-uls-search-results-count": "{{PLURAL:$1|زبان}} یافت شد",
+	"ext-uls-search-results-none": "هیچ زبانی یافت نشد",
+	"ext-uls-no-languages-title": "هنوز هیج زبانی موجود نیست",
+	"ext-uls-no-languages-description": "فعلاً هیچ زبانی در دسترس نیست.",
+	"ext-uls-empty-state-entrypoint-description": "شما می‌توانید این صفحه را ترجمه کنید. این یک راه آسان برای ایجاد محتوا به زبان خودتان است.",
+	"ext-uls-open-language-settings": "گشودن تنظیمات زبان",
+	"ext-uls-open-quick-actions": "نمایش اقدامات سریع",
+	"ext-uls-missing-languages-label-single": "به <strong>$1</strong> و زبان‌های بیشتر ناموجود است",
+	"ext-uls-missing-languages-label-multiple": "به <strong>$1</strong>، <strong>$2</strong> و زبان‌های بیشتر ناموجود است",
+	"ext-uls-missing-languages-panel-title": "ترجمهٔ این صفحه",
+	"ext-uls-missing-languages-panel-description": "این صفحه در برخی از زبان‌هایی که ممکن است بدانید وجود ندارد. می‌توانید آن را ترجمه کنید.",
+	"ext-uls-quick-actions-panel-title": "اقدامات سریع",
+	"ext-uls-preferred-languages-settings-title": "زبان‌های ترجیحی",
+	"ext-uls-preferred-languages-desc": "در ابتدای منوهای زبان نمایش داده می‌شود.",
+	"ext-uls-preferred-languages-label": "افزودن یک  زبان",
+	"ext-uls-preferred-languages-input-placeholder": "جستجوی زبان‌ها",
+	"ext-uls-preferred-languages-limit-reached": "یکی را حذف کنید تا دیگری را اضافه کنید",
+	"ext-uls-preferred-languages-save-error": "هنگام ذخیره زبان‌های ترجیحی شما خطایی رخ داد."
 }
