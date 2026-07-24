@@ -14,7 +14,8 @@
 			"Mehran",
 			"Mjbmr",
 			"Mojtabakd",
-			"Reza1615"
+			"Reza1615",
+			"Mohammad ebz"
 		]
 	},
 	"uls-desc": "به کاربر راه‌های مختلفی برای انتخاب زبان و تنظیم تنظیمات زبان  می‌دهد",
@@ -86,6 +87,16 @@
 	"ext-uls-empty-state-header-actions-available": "هنوز زبانی موجود نیست. می‌خواهید یک جدید بیافزایید؟",
 	"ext-uls-empty-state-desc-actions-available": "محتوا را به زبان‌های بیشتری در دسترس قرار دهید.",
 	"ext-uls-add-languages-button-label": "افزودن زبان‌ها",
+	"ext-uls-language-title": "زبان‌ها",
+	"ext-uls-placeholder-search": "جستجوی زبان‌ها",
+	"ext-uls-close-button-label": "بستن",
 	"ext-uls-rewrite-label": "بازنویسی انتخابگر زبان همگانی",
-	"ext-uls-rewrite-description": "بازنویسی «انتخابگر زبان همگانی» (ULS) که با هدف نوسازی تجربهٔ کاربری و کاهش بدهی فنی از طریق ساده‌سازی معماری طراحی شده است."
+	"ext-uls-rewrite-description": "بازنویسی «انتخابگر زبان همگانی» (ULS) که با هدف نوسازی تجربهٔ کاربری و کاهش بدهی فنی از طریق ساده‌سازی معماری طراحی شده است.",
+	"ext-uls-no-languages-title": "هنوز هیج زبانی موجود نیست",
+	"ext-uls-no-languages-description": "فعلاً هیچ زبانی در دسترس نیست.",
+	"ext-uls-open-language-settings": "گشودن تنظیمات زبان",
+	"ext-uls-open-quick-actions": "نمایش اقدامات سریع",
+	"ext-uls-missing-languages-panel-title": "ترجمهٔ این صفحه",
+	"ext-uls-missing-languages-panel-description": "این صفحه در برخی از زبان‌هایی که ممکن است بدانید وجود ندارد. می‌توانید آن را ترجمه کنید.",
+	"ext-uls-quick-actions-panel-title": "اقدامات سریع"
 }
