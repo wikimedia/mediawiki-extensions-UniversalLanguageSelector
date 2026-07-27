@@ -126,7 +126,7 @@
 		setupWebFonts: function () {
 			const d = $.Deferred();
 			mw.loader.using( [ 'ext.uls.webfonts.repository', '@wikimedia/codex' ] ).then( () => {
-				if ( this.isWebFontsEnabled ) {
+				if ( this.isWebFontsEnabled() ) {
 					mw.webfonts.setup();
 				}
 
