@@ -74,4 +74,21 @@
 			'Tagalog is one of the languages presented to users in the Philippines.'
 		);
 	} );
+
+	QUnit.test( 'Deduplicate redirect codes', ( assert ) => {
+		const previousLanguages = mw.storage.getObject( mw.uls.previousLanguagesStorageKey ) || [];
+		// 'als' is a MediaWiki-specific redirect to 'gsw', registered by the
+		// addLanguage() call at the top of ext.uls.common.js, so a list holding
+		// both codes must collapse to a single Alemannic entry.
+		mw.storage.setObject( mw.uls.previousLanguagesStorageKey, [ 'gsw', 'als' ] );
+
+		const result = mw.uls.getFrequentLanguageList();
+		mw.storage.setObject( mw.uls.previousLanguagesStorageKey, previousLanguages );
+
+		const alemannic = result.filter(
+			( lang ) => ( $.uls.data.isRedirect( lang ) || lang ) === 'gsw'
+		);
+
+		assert.deepEqual( alemannic, [ 'gsw' ], 'Alemannic appears once, under its canonical code' );
+	} );
 }() );

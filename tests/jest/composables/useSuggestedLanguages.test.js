@@ -50,6 +50,7 @@ describe( 'useSuggestedLanguages', () => {
 
 	afterEach( () => {
 		delete window.Geo;
+		global.$.uls.data.isRedirect.mockImplementation( () => false );
 	} );
 
 	it( 'returns the list of suggested languages', () => {
@@ -150,5 +151,17 @@ describe( 'useSuggestedLanguages', () => {
 			BROWSER_LANG,
 			TERRITORY_LANG
 		] );
+	} );
+
+	it( 'resolves redirect codes before deduplication', () => {
+		global.$.uls.data.isRedirect.mockImplementation( ( code ) => code === 'az-arab' ? 'azb' : false );
+
+		const previousLanguages = ref( [ 'azb', 'az-arab' ] );
+		const { getSuggestedLanguages } = useSuggestedLanguages();
+		const suggested = getSuggestedLanguages( previousLanguages );
+
+		const azbCount = suggested.value.filter( ( lang ) => lang === 'azb' ).length;
+		expect( azbCount ).toBe( 1 );
+		expect( suggested.value ).not.toContain( 'az-arab' );
 	} );
 } );

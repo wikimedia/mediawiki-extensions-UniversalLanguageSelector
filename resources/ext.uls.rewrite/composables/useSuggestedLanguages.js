@@ -60,9 +60,13 @@ module.exports = function useSuggestedSourceLanguages() {
 				...territoryLanguages
 			];
 
+			// Resolve redirects so duplicate codes collapse before deduping.
+			const resolveRedirect = ( code ) => $.uls.data.isRedirect( code ) || code;
+
 			// Filter out duplicates and empty values
-			const suggestedLanguages = [ ...new Set( possibleSuggestedLanguages ) ]
-				.filter( Boolean );
+			const suggestedLanguages = [ ...new Set(
+				possibleSuggestedLanguages.filter( Boolean ).map( resolveRedirect )
+			) ];
 
 			if ( !validLanguageCodes || !validLanguageCodes.value ) {
 				return suggestedLanguages;

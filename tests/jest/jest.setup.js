@@ -87,7 +87,8 @@ global.mw = {
 global.$ = jest.fn( () => ( { data: jest.fn() } ) );
 global.$.uls = {
 	data: {
-		getAutonym: jest.fn( ( code ) => code )
+		getAutonym: jest.fn( ( code ) => code ),
+		isRedirect: jest.fn( () => false )
 	}
 };
 

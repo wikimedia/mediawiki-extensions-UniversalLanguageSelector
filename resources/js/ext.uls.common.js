@@ -226,7 +226,11 @@
 
 		for ( let i = 0; i < lists.length; i++ ) {
 			for ( let j = 0; j < lists[ i ].length; j++ ) {
-				const lang = lists[ i ][ j ];
+				if ( !lists[ i ][ j ] ) {
+					continue;
+				}
+				// Resolve redirects so a language isn't listed under two codes.
+				const lang = mw.uls.convertMediaWikiLanguageCodeToULS( lists[ i ][ j ] );
 				// Make flat, make unique, and ignore unknown/unsupported languages
 				if ( !ret.includes( lang ) && $.uls.data.getAutonym( lang ) !== lang ) {
 					ret.push( lang );
