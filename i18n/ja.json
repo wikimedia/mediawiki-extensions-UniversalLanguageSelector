@@ -14,7 +14,8 @@
 			"Takot",
 			"Waki285",
 			"にょきにょき",
-			"Ant176"
+			"Ant176",
+			"Kokage si"
 		]
 	},
 	"uls-desc": "言語を選択するため/言語設定を調整するための、いくつかの方法を利用者に提供する",
@@ -89,6 +90,16 @@
 	"ext-uls-language-title": "言語",
 	"ext-uls-placeholder-search": "言語を検索",
 	"ext-uls-close-button-label": "閉じる",
+	"ext-uls-no-languages-title": "他言語版はありません",
+	"ext-uls-no-languages-description": "現状利用可能な言語はありません。",
 	"ext-uls-invalid-language-search-title": "無効な言語です",
-	"ext-uls-invalid-language-search-description": "スペルを確認してください。言語は名前またはISOコードで検索できます。"
+	"ext-uls-invalid-language-search-description": "スペルを確認してください。言語は名前またはISOコードで検索できます。",
+	"ext-uls-unsupported-language-title": "言語が利用できません",
+	"ext-uls-unsupported-language-description": "お探しの言語は利用できません。",
+	"ext-uls-open-language-settings": "言語設定を開く",
+	"ext-uls-open-language-selector": "言語セレクターに戻る",
+	"ext-uls-open-quick-actions": "クイック操作を表示",
+	"ext-uls-missing-languages-panel-title": "このページを翻訳",
+	"ext-uls-missing-languages-panel-description": "このページはあなたが知っているかもしれない一部の言語にまだありません。翻訳してみましょう。",
+	"ext-uls-quick-actions-panel-title": "クイック操作"
 }
