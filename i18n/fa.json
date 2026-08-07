@@ -106,6 +106,7 @@
 	"ext-uls-missing-languages-panel-title": "ترجمهٔ این صفحه",
 	"ext-uls-missing-languages-panel-description": "این صفحه در برخی از زبان‌هایی که ممکن است بدانید وجود ندارد. می‌توانید آن را ترجمه کنید.",
 	"ext-uls-quick-actions-panel-title": "اقدامات سریع",
+	"ext-uls-preferred-languages-title": "{{PLURAL:$1|زبان}} ترجیحی",
 	"ext-uls-preferred-languages-settings-title": "زبان‌های ترجیحی",
 	"ext-uls-preferred-languages-desc": "در ابتدای منوهای زبان نمایش داده می‌شود.",
 	"ext-uls-preferred-languages-label": "افزودن یک  زبان",
