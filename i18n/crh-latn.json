@@ -63,5 +63,10 @@
 	"ext-uls-empty-state-desc": "Şimdilik qoşula bilecek iç bir til yoq",
 	"ext-uls-empty-state-header-actions-available": "Alâ daa iç bir til yoq. Yañı bir dane qoşayıqmı?",
 	"ext-uls-empty-state-desc-actions-available": "Bu maqaleni daa çoq tilde oqulıp olsun.",
-	"ext-uls-add-languages-button-label": "Til qoş"
+	"ext-uls-add-languages-button-label": "Til qoş",
+	"ext-uls-placeholder-search": "Bir til qıdır",
+	"ext-uls-suggested-languages-title": "Teklif etilgen {{PLURAL:$1|til|tiller}}",
+	"ext-uls-variants-title": "$1 içün variantlar",
+	"ext-uls-missing-languages-label-single": "<strong>$1</strong> ve başqa tillerde eksik",
+	"ext-uls-preferred-languages-input-placeholder": "Bir til qıdır"
 }
