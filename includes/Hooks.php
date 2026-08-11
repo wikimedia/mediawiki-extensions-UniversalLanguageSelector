@@ -133,21 +133,25 @@ class Hooks implements
 	/**
 	 * Whether the new language selector is enabled.
 	 *
-	 * @param User $user
-	 * @param Skin $skin
-	 * @param Config $config
+	 * @param Skin|User $skin
+	 * @param Config|Skin|null $config
+	 * @param Config|null $oldConfig Only used with the old signature
 	 * @return bool
 	 */
-	public static function isLanguageSelectorV2Enabled( User $user, Skin $skin, Config $config ): bool {
-		$isRewriteEnabled = $config->get( 'ULSLanguageSelectorV2Enabled' ) ||
-			(
-				ExtensionRegistry::getInstance()->isLoaded( 'BetaFeatures' ) &&
-				\MediaWiki\Extension\BetaFeatures\BetaFeatures::isFeatureEnabled(
-					$user, 'uls-rewrite'
-				)
-			);
-
-		return $isRewriteEnabled && ( in_array( $skin->getSkinName(), [ 'vector-2022', 'minerva' ] ) );
+	public static function isLanguageSelectorV2Enabled( $skin, $config = null, $oldConfig = null ): bool {
+		// Back-compat: old callers pass ( User, Skin, Config ). Remove once
+		// ContentTranslation and WikimediaBadges use the new signature.
+		if ( !$skin instanceof Skin ) {
+			$skin = $config;
+			$config = $oldConfig;
+		}
+		'@phan-var Skin $skin';
+		'@phan-var Config $config';
+		return in_array(
+			$skin->getSkinName(),
+			$config->get( 'ULSLanguageSelectorV2SupportedSkins' ),
+			true
+		);
 	}
 
 	/**
@@ -507,27 +511,6 @@ class Hooks implements
 					'https://www.mediawiki.org/wiki/Talk:Universal_Language_Selector/Compact_Language_Links',
 			];
 		}
-
-		if ( $this->config->get( 'ULSLanguageSelectorV2Enabled' ) ) {
-			return;
-		}
-
-		// Enable ULS rewrite beta feature
-		$extensionAssetsPath = $this->config->get( 'ExtensionAssetsPath' );
-		$imagesDir = "$extensionAssetsPath/UniversalLanguageSelector/resources/images";
-		$prefs['uls-rewrite'] = [
-			'label-message' => 'ext-uls-rewrite-label',
-			'desc-message' => 'ext-uls-rewrite-description',
-			'screenshot' => [
-				// TODO: Change these icons
-				'ltr' => "$imagesDir/uls-rewrite-ltr.png",
-				'rtl' => "$imagesDir/uls-rewrite-rtl.png",
-			],
-			'info-link' => 'https://www.mediawiki.org/wiki/Wikimedia_Language_and_Product_Localization/ULS_Rewrite',
-			'discussion-link' =>
-				// phpcs:ignore Generic.Files.LineLength.TooLong
-				'https://www.mediawiki.org/w/index.php?title=Talk:Wikimedia_Language_and_Product_Localization/ULS_Rewrite',
-		];
 	}
 
 	/**
@@ -620,11 +603,7 @@ class Hooks implements
 
 	/** @return array Modified configuration data */
 	private function enableCoreFeatures( OutputPage $out, array $config, Skin $skin ): array {
-		$enabledLanguageSelectorV2 = self::isLanguageSelectorV2Enabled(
-			$out->getUser(),
-			$skin,
-			$this->config
-		);
+		$enabledLanguageSelectorV2 = self::isLanguageSelectorV2Enabled( $skin, $this->config );
 
 		if ( $skin->getSkinName() !== 'minerva' || $enabledLanguageSelectorV2 ) {
 			// If the ULS rewrite is disabled, don't add the 'ext.uls.interface' module for Minerva,

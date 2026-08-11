@@ -145,9 +145,12 @@
 			"description": "Show these language links on top of the rest in compact language links feature",
 			"value": []
 		},
-		"ULSLanguageSelectorV2Enabled": {
-			"description": "Whether the new language selector is enabled for all users. If true, the beta feature is no longer available.",
-			"value": false
+		"ULSLanguageSelectorV2SupportedSkins": {
+			"description": "Skins on which the new language selector is used. On any other skin the old language selector is used. Set to an empty array to disable the new language selector everywhere.",
+			"value": [
+				"minerva",
+				"vector-2022"
+			]
 		}
 	},
 	"callback": "UniversalLanguageSelector\\Hooks::setVersionConstant",

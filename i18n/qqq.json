@@ -88,8 +88,6 @@
 	"ext-uls-language-title": "Title of the language selector displayed on narrow screens",
 	"ext-uls-placeholder-search": "Placeholder text shown in the search input in the language selector\n\n{{Identical|Search languages}}",
 	"ext-uls-close-button-label": "Aria label for the close button in the language selector on mobile",
-	"ext-uls-rewrite-label": "ULS rewrite beta feature label.",
-	"ext-uls-rewrite-description": "ULS rewrite beta feature description.",
 	"ext-uls-suggested-languages-title": "Title for the suggested languages section in the language selector.\n\nParameters:\n* $1 - number of displayed suggested languages",
 	"ext-uls-all-languages-title": "Title for the all languages section in the language selector\n\nParameters:\n* $1 – number of displayed languages",
 	"ext-uls-search-results-count": "Screen-reader-only announcement of how many languages match the search query. Not shown visually.\n\nParameters:\n* $1 - number of matching languages",
