@@ -816,8 +816,9 @@ module.exports = exports = defineComponent( {
 
 		// Clicking outside only closes the panel on desktop.
 		// On mobile, the panel is fullscreen and has its own close button.
+		// Trigger clicks are ignored: the trigger's own handler toggles/re-anchors.
 		const isClickOutsideActive = computed( () => visible.value && !isMobile.value );
-		useClickOutside( menuRef, isClickOutsideActive, document, () => emit( 'close' ) );
+		useClickOutside( menuRef, isClickOutsideActive, document, () => emit( 'close' ), triggerElement );
 
 		// On mobile the selector is a fullscreen modal (aria-modal="true"), but
 		// the page behind it is still in the DOM: keep Tab focus inside.

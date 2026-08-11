@@ -506,6 +506,9 @@
 			"styles": [
 				"ext.uls.rewrite/index.less"
 			],
+			"skinStyles": {
+				"vector-2022": "ext.uls.rewrite/vector-2022.less"
+			},
 			"messages": [
 				"ext-uls-placeholder-search",
 				"ext-uls-language-title",

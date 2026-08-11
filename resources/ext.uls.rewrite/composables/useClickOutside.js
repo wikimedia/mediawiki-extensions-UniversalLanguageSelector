@@ -9,11 +9,15 @@ const { watch, onBeforeUnmount } = require( 'vue' );
  * @param {Object} activeRef Whether the listener should be activated.
  * @param {Document} document The document object to attach event listeners to.
  * @param {Function} callback Function to call when a click outside occurs.
+ * @param {Object} [ignoreRef] Ref to an element whose clicks are ignored,
+ * e.g. a trigger with its own toggle handler.
  */
-function useClickOutside( elementRef, activeRef, document, callback ) {
+function useClickOutside( elementRef, activeRef, document, callback, ignoreRef ) {
 	const onClickOutside = ( event ) => {
 		const isClickOnElement = elementRef.value && elementRef.value.contains( event.target );
-		if ( !isClickOnElement ) {
+		const isClickOnIgnored = ignoreRef && ignoreRef.value &&
+			ignoreRef.value.contains( event.target );
+		if ( !isClickOnElement && !isClickOnIgnored ) {
 			callback();
 		}
 	};

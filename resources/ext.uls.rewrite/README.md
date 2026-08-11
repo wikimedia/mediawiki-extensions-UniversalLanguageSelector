@@ -174,6 +174,7 @@ The object returned by `app.mount( … )` exposes the following methods:
 | `toggle()` | Toggles the visibility of the selector. If currently visible, it will be closed (and `onClose` fired); otherwise it is shown. |
 | `close()` | Closes the selector and triggers the `onClose` callback. |
 | `select( language )` | Programmatically dispatches a selection. Closes the selector and invokes the `onSelect` callback with the given `language` object (`{ code, value }`). Useful when an external UI element should behave as if the user had picked a language from the list. |
+| `setTriggerElement( element )` | Re-anchors the selector to another trigger element, repositioning it if it is already open. Use it when a page has several triggers for the same selector, such as the Vector 2022 sticky header language button. Ignores falsy values. |
 | `updateSelected( newSelected )` | Replaces the wrapper's tracked list of selected language codes. Call this after the parent application's selection state changes so that features such as `hideActiveLanguages` and the "active language" highlight stay in sync. |
 
 ---

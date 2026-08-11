@@ -426,6 +426,11 @@
 	// The route controller, created when the content selector is first loaded.
 	let languageRoute = null;
 
+	// The single mounted content selector, shared by every trigger on the page. T431596
+	let contentSelectorVm = null;
+	// Memoized lazy-load of the selector; reset on failure so a click can retry.
+	let contentSelectorLoadPromise = null;
+
 	// Navigating to the route before the selector has loaded: lazy-load and open via the trigger.
 	function openContentSelectorFromRoute() {
 		if (
@@ -749,13 +754,29 @@
 		if ( $target.attr( 'data-uls-loaded' ) ) {
 			return;
 		}
-		$target.attr( 'data-uls-loaded', true );
 
 		ev.preventDefault();
 
 		if ( isULSV2Enabled ) {
+			if ( contentSelectorVm ) {
+				// Same trigger toggles; another trigger re-anchors and keeps it open. T431596
+				if ( contentSelectorVm.currentTriggerElement === $target[ 0 ] ) {
+					contentSelectorVm.toggle();
+				} else {
+					contentSelectorVm.setTriggerElement( $target[ 0 ] );
+					contentSelectorVm.open();
+				}
+				return;
+			}
+			if ( contentSelectorLoadPromise ) {
+				// Clicked while the selector is loading: this trigger takes over on mount.
+				contentSelectorLoadPromise.then(
+					() => contentSelectorVm.setTriggerElement( $target[ 0 ] )
+				);
+				return;
+			}
 			const isMinerva = mw.config.get( 'skin' ) === 'minerva';
-			mw.loader.using( prefetchRewriteModules() ).then( () => {
+			contentSelectorLoadPromise = mw.loader.using( prefetchRewriteModules() ).then( () => {
 				const languageNodes = getLanguageNodes();
 				const languageNodesInjected = injectCurrentLanguage( Array.from( languageNodes ) );
 				const hideActiveLanguages = languageNodesInjected.length !== languageNodes.length;
@@ -815,16 +836,17 @@
 					}
 				} );
 
-				const mountedVm = app.mount( mountPoint );
-				languageRoute.attach( mountedVm );
-				$target.on( 'click', ( event ) => {
-					event.preventDefault();
-					event.stopPropagation();
-					mountedVm.toggle();
-				} );
+				contentSelectorVm = app.mount( mountPoint );
+				languageRoute.attach( contentSelectorVm );
+			} );
+			// Reset on failure so a later click retries instead of doing nothing.
+			contentSelectorLoadPromise.catch( () => {
+				contentSelectorLoadPromise = null;
 			} );
 			return;
 		}
+
+		$target.attr( 'data-uls-loaded', true );
 
 		mw.loader.using( [ 'ext.uls.mediawiki', '@wikimedia/codex' ] ).then( () => {
 			const languageNodes = getLanguageNodes();
@@ -866,7 +888,7 @@
 		// FIXME: In Timeless ULS is embedded in a menu which stops event propagation
 		if ( $( '.sidebar-inner' ).length ) {
 			$( '.sidebar-inner #p-lang' )
-				.one( 'click', '.mw-interlanguage-selector', loadContentLanguageSelector )
+				.on( 'click', '.mw-interlanguage-selector', loadContentLanguageSelector )
 				.one( 'pointerenter focus', '.mw-interlanguage-selector', prefetchRewriteModules );
 		} else {
 			// This button may be created by the new Vector skin, or ext.uls.compactlinks module

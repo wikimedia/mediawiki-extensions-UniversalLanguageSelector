@@ -60,7 +60,8 @@ function createUniversalLanguageSelector( config ) {
 		data() {
 			return {
 				visible: visible !== undefined ? visible : true,
-				currentSelected: selected || []
+				currentSelected: selected || [],
+				currentTriggerElement: triggerElement
 			};
 		},
 		methods: {
@@ -86,6 +87,12 @@ function createUniversalLanguageSelector( config ) {
 					onSelect( language );
 				}
 			},
+			// Re-anchor to another trigger, e.g. the Vector 2022 sticky header button.
+			setTriggerElement( element ) {
+				if ( element ) {
+					this.currentTriggerElement = element;
+				}
+			},
 			updateSelected( newSelected ) {
 				this.currentSelected = newSelected;
 			},
@@ -97,7 +104,7 @@ function createUniversalLanguageSelector( config ) {
 		},
 		render() {
 			return h( UniversalLanguageSelector, {
-				triggerElement: triggerElement,
+				triggerElement: this.currentTriggerElement,
 				visible: this.visible,
 				placeholder: placeholder,
 				displayLanguageCode: displayLanguageCode,

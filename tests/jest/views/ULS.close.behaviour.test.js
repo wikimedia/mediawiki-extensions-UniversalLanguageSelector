@@ -92,6 +92,26 @@ describe( 'UniversalLanguageSelector - close behaviour', () => {
 		expect( wrapper.find( '.uls-rewrite' ).isVisible() ).toBe( true );
 	} );
 
+	it( 'does not emit the close event when clicking the trigger element', async () => {
+		// The trigger's own click handler toggles or re-anchors the selector;
+		// the click-outside handler must leave those clicks alone.
+		const trigger = document.createElement( 'button' );
+		document.body.appendChild( trigger );
+		wrapper = createWrapper( { triggerElement: trigger }, { attachTo: document.body } );
+
+		const clickEvent = new MouseEvent( 'click', {
+			bubbles: true,
+			cancelable: true
+		} );
+		trigger.dispatchEvent( clickEvent );
+
+		await nextTick();
+
+		expect( wrapper.emitted().close ).toBeUndefined();
+		expect( wrapper.find( '.uls-rewrite' ).isVisible() ).toBe( true );
+		trigger.remove();
+	} );
+
 	it( 'emits visible-change on mount and when visibility changes', async () => {
 		wrapper = createWrapper();
 

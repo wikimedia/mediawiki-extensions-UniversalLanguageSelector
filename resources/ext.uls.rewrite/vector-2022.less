@@ -1,0 +1,9 @@
+@import 'mediawiki.skin.variables.less';
+
+// Keep in sync with @uls-rewrite-breakpoint-tablet in index.less.
+@media ( min-width: 768px ) {
+	.uls-rewrite {
+		// Render below Vector 2022's sticky header (@z-index-header). T431596
+		z-index: @z-index-stacking-2;
+	}
+}

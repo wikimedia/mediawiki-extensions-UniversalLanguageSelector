@@ -106,6 +106,31 @@ describe( 'createUniversalLanguageSelector wrapper', () => {
 		expect( child.props( 'visible' ) ).toBe( true );
 	} );
 
+	it( 're-anchors the selector on setTriggerElement() method call', async () => {
+		const app = createUniversalLanguageSelector( config );
+		const wrapper = mount( app._component );
+		const child = wrapper.findComponent( { name: 'UniversalLanguageSelector' } );
+
+		expect( child.props( 'triggerElement' ) ).toBe( config.triggerElement );
+
+		const stickyTrigger = document.createElement( 'button' );
+		wrapper.vm.setTriggerElement( stickyTrigger );
+		await wrapper.vm.$nextTick();
+
+		expect( child.props( 'triggerElement' ) ).toBe( stickyTrigger );
+	} );
+
+	it( 'keeps the current trigger when setTriggerElement() gets no element', async () => {
+		const app = createUniversalLanguageSelector( config );
+		const wrapper = mount( app._component );
+		const child = wrapper.findComponent( { name: 'UniversalLanguageSelector' } );
+
+		wrapper.vm.setTriggerElement( undefined );
+		await wrapper.vm.$nextTick();
+
+		expect( child.props( 'triggerElement' ) ).toBe( config.triggerElement );
+	} );
+
 	it( 'updates currentSelected on updateSelected() method call', async () => {
 		const app = createUniversalLanguageSelector( config );
 		const wrapper = mount( app._component );
