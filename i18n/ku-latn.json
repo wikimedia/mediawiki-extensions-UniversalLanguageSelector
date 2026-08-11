@@ -75,5 +75,6 @@
 	"ext-uls-empty-state-header": "Hîn ti ziman tine",
 	"ext-uls-empty-state-desc": "Vêga ti ziman nehatiye lêzêdekirin",
 	"ext-uls-empty-state-header-actions-available": "Ti ziman tine. Yekî nû lê zêde bike?",
-	"ext-uls-empty-state-desc-actions-available": "Naverokê bi zêdetir zimanan berdest bikin."
+	"ext-uls-empty-state-desc-actions-available": "Naverokê bi zêdetir zimanan berdest bikin.",
+	"ext-uls-add-languages-button-label": "Ziman lê zêde bike"
 }
