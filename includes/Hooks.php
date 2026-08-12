@@ -133,20 +133,11 @@ class Hooks implements
 	/**
 	 * Whether the new language selector is enabled.
 	 *
-	 * @param Skin|User $skin
-	 * @param Config|Skin|null $config
-	 * @param Config|null $oldConfig Only used with the old signature
+	 * @param Skin $skin
+	 * @param Config $config
 	 * @return bool
 	 */
-	public static function isLanguageSelectorV2Enabled( $skin, $config = null, $oldConfig = null ): bool {
-		// Back-compat: old callers pass ( User, Skin, Config ). Remove once
-		// ContentTranslation and WikimediaBadges use the new signature.
-		if ( !$skin instanceof Skin ) {
-			$skin = $config;
-			$config = $oldConfig;
-		}
-		'@phan-var Skin $skin';
-		'@phan-var Config $config';
+	public static function isLanguageSelectorV2Enabled( Skin $skin, Config $config ): bool {
 		return in_array(
 			$skin->getSkinName(),
 			$config->get( 'ULSLanguageSelectorV2SupportedSkins' ),
