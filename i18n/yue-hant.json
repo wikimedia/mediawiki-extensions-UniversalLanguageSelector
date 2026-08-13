@@ -84,8 +84,6 @@
 	"ext-uls-language-title": "語言",
 	"ext-uls-placeholder-search": "搵語言",
 	"ext-uls-close-button-label": "閂",
-	"ext-uls-rewrite-label": "通用語言選擇器嘅重構版本",
-	"ext-uls-rewrite-description": "通用語言選擇器嘅重構版本，主要係透過簡化架構嚟令用戶體驗現代化，並減少埋技術債。",
 	"ext-uls-suggested-languages-title": "建議",
 	"ext-uls-all-languages-title": "所有語言",
 	"ext-uls-no-languages-title": "未有語言住",

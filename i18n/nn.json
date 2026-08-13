@@ -77,8 +77,6 @@
 	"ext-uls-language-title": "Språk",
 	"ext-uls-placeholder-search": "Søk blant språk",
 	"ext-uls-close-button-label": "Lukk",
-	"ext-uls-rewrite-label": "Omskriving av den universelle språkveljaren",
-	"ext-uls-rewrite-description": "Ei omskriving av den universelle språkveljaren (ULS), designa for å modernisera brukaropplevinga og minske teknologisk gjeld gjennom forenkla arkitektur.",
 	"ext-uls-suggested-languages-title": "{{PLURAL:$1|Føreslege|Føreslegne}} språk",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Alle språk}}",
 	"ext-uls-no-languages-title": "Ingen språk enno",

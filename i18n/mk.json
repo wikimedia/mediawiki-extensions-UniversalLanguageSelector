@@ -77,8 +77,6 @@
 	"ext-uls-language-title": "Јазици",
 	"ext-uls-placeholder-search": "Пребарај јазици",
 	"ext-uls-close-button-label": "Затвори",
-	"ext-uls-rewrite-label": "Препишување врз Универзалниот избирач на јазици",
-	"ext-uls-rewrite-description": "Преработка на Универзалниот избирач на јазици (ULS) со цел осовременување на корисничкото искуство и намалување на техничкиот долг преку упростена архитектура.",
 	"ext-uls-suggested-languages-title": "{{PLURAL:$1|Предложен јазик|Предложени јазици}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Сите јазици}}",
 	"ext-uls-search-results-count": "Пронајдов {{PLURAL:$1|$1 јазик|$1 јазици}}",

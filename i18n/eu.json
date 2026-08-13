@@ -81,8 +81,6 @@
 	"ext-uls-language-title": "Hizkuntzak",
 	"ext-uls-placeholder-search": "Hizkuntzak bilatu",
 	"ext-uls-close-button-label": "Itxi",
-	"ext-uls-rewrite-label": "Hizkuntzaren Hautatzaile Unibertsalaren berridazketa",
-	"ext-uls-rewrite-description": "Hiezkuntza Hautatzaile Unibetsalaren berridazketa bat, erabiltzailearen esperientzia modernizatzeko eta arkitektura sinplifikatu baten bidez zor teknikoa murrizteko diseinatua.",
 	"ext-uls-suggested-languages-title": "Iradokitako {{PLURAL:$1|hizkuntza|hizkuntzak}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Hizkuntza guztiak}}",
 	"ext-uls-no-languages-title": "Oraindik ez dago hizkuntzarik",

@@ -84,8 +84,6 @@
 	"ext-uls-language-title": "Jazyky",
 	"ext-uls-placeholder-search": "Hledání jazyků",
 	"ext-uls-close-button-label": "Zavřít",
-	"ext-uls-rewrite-label": "Přepis Univerzálního výběru jazyka",
-	"ext-uls-rewrite-description": "Přepis Univerzálního výběru jazyka (ULS) s cílem modernizovat uživatelské prostředí a omezit technický dluh díky zjednodušené architektuře.",
 	"ext-uls-suggested-languages-title": "{{PLURAL:$1|Navrhovaný jazyk|Navrhované jazyky}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Všechny jazyky}}",
 	"ext-uls-search-results-count": "{{PLURAL:$1|Nalezen $1 jazyk|Nalezeny $1 jazyky|Nalezeno $1 jazyků}}",

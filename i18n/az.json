@@ -81,8 +81,6 @@
 	"ext-uls-language-title": "Dillər",
 	"ext-uls-placeholder-search": "Dillərdə axtar",
 	"ext-uls-close-button-label": "Bağla",
-	"ext-uls-rewrite-label": "Universal Dil Seçicisinin yenidən yazılması",
-	"ext-uls-rewrite-description": "Sadələşdirilmiş arxitektura vasitəsilə istifadəçi təcrübəsini modernləşdirmək və texniki yükü azaltmaq üçün hazırlanmış Universal Dil Seçicisinin (ULS) yenidən yazılması.",
 	"ext-uls-suggested-languages-title": "Tövsiyə olunan {{PLURAL:$1|dil|dillər}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Bütün dillər}}",
 	"ext-uls-search-results-count": "{{PLURAL:$1|$1 dil}} tapıldı",

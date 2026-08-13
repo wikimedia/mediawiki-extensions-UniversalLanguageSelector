@@ -92,8 +92,6 @@
 	"ext-uls-language-title": "Idiomas",
 	"ext-uls-placeholder-search": "Buscar idiomas",
 	"ext-uls-close-button-label": "Cerrar",
-	"ext-uls-rewrite-label": "Reescritura del selector de idioma universal",
-	"ext-uls-rewrite-description": "Un rediseño del Selector de Idioma Universal (ULS, por sus siglas en inglés), creado para modernizar la experiencia de los usuario y reducir la deuda técnica mediante una arquitectura simplificada.",
 	"ext-uls-suggested-languages-title": "{{PLURAL:$1|Idioma|Idiomas}} sugerido(s)",
 	"ext-uls-all-languages-title": "{{PLURAL:$1| Todos los idiomas}}",
 	"ext-uls-search-results-count": "{{PLURAL:$1| $1 idioma| $1 idiomas}} encontrado(s)",

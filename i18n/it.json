@@ -89,8 +89,6 @@
 	"ext-uls-language-title": "Lingue",
 	"ext-uls-placeholder-search": "Cerca lingue",
 	"ext-uls-close-button-label": "Chiudi",
-	"ext-uls-rewrite-label": "Riscrittura del selettore di lingua universale",
-	"ext-uls-rewrite-description": "Una riscrittura del Selettore Universale della Lingua (ULS), progettata per modernizzare l'esperienza utente e ridurre il debito tecnico attraverso un'architettura semplificata.",
 	"ext-uls-suggested-languages-title": "{{PLURAL:$1|Lingua suggerita|Lingue suggerite}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Tutte le lingue}}",
 	"ext-uls-search-results-count": "{{PLURAL:$1|$1 lingua trovata|$1 lingue trovate}}",

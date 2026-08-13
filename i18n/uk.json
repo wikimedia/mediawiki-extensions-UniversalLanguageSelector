@@ -87,8 +87,6 @@
 	"ext-uls-language-title": "Мови",
 	"ext-uls-placeholder-search": "Шукати мови",
 	"ext-uls-close-button-label": "Закрити",
-	"ext-uls-rewrite-label": "Переписування Універсального перемикача мови",
-	"ext-uls-rewrite-description": "Переписування Універсального перемикача мови (ULS) розроблено з метою оновлення користувацького досвіду та зменшення технічного боргу завдяки спрощеній архітектурі.",
 	"ext-uls-suggested-languages-title": "{{PLURAL:$1|Запропонована мова|Запропоновані мови}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Усі мови}}",
 	"ext-uls-search-results-count": "Знайдено {{PLURAL:$1|$1 мову|$1 мови|$1 мов}}",

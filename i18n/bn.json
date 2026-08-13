@@ -83,7 +83,6 @@
 	"ext-uls-language-title": "ভাষা",
 	"ext-uls-placeholder-search": "ভাষা অনুসন্ধান করুন",
 	"ext-uls-close-button-label": "বন্ধ করুন",
-	"ext-uls-rewrite-label": "ইউনিভার্সাল ল্যাংগুয়েজ সিলেক্টর পুনর্লিখন",
 	"ext-uls-suggested-languages-title": "পরামর্শকৃত {{PLURAL:$1|ভাষা}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|সকল ভাষা}}",
 	"ext-uls-search-results-count": "{{PLURAL:$1|$1টি ভাষা}} পাওয়া গিয়েছে",

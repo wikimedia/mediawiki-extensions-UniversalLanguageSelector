@@ -89,8 +89,6 @@
 	"ext-uls-language-title": "Talen",
 	"ext-uls-placeholder-search": "Talen zoeken",
 	"ext-uls-close-button-label": "Sluiten",
-	"ext-uls-rewrite-label": "Herziening van de universele taalkiezer",
-	"ext-uls-rewrite-description": "Een herziening van de Universal Language Selector (ULS), ontworpen om de gebruikerservaring te moderniseren en de technische schuld te verminderen door middel van een vereenvoudigde architectuur.",
 	"ext-uls-suggested-languages-title": "Voorgestelde {{PLURAL:$1|taal|talen}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Alle talen}}",
 	"ext-uls-search-results-count": "$1 {{PLURAL:$1|taal|talen}} gevonden",

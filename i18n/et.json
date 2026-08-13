@@ -79,8 +79,6 @@
 	"ext-uls-language-title": "Keeled",
 	"ext-uls-placeholder-search": "Otsi keeli",
 	"ext-uls-close-button-label": "Sulge",
-	"ext-uls-rewrite-label": "Uus universaalne keelevalik",
-	"ext-uls-rewrite-description": "Universaalse keelevaliku (ULS) ümber kirjutatud versioon. See pakub tänapäevasemat kasutajakogemust ja tänu lihtsamale arhitektuurile leevendab see tehnilist mahajäämust.",
 	"ext-uls-suggested-languages-title": "Soovitatud {{PLURAL:$1|keel|keeled}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Kõik keeled}}",
 	"ext-uls-no-languages-title": "Keeli pole veel",

@@ -81,8 +81,6 @@
 	"ext-uls-language-title": "ภาษา",
 	"ext-uls-placeholder-search": "ค้นหาภาษา",
 	"ext-uls-close-button-label": "ปิด",
-	"ext-uls-rewrite-label": "เครื่องมือสลับภาษารอบโลกเขียนใหม่",
-	"ext-uls-rewrite-description": "เครื่องมือเลือกภาษารอบโลกที่เขียนใหม่หมด มีการปรับหน้าตาใหม่ให้ร่วมสมัยมากขึ้นและลดหนี้ทางเทคนิคจากการลดความซับซ้อนของสถาปัตยกรรมภายใน",
 	"ext-uls-suggested-languages-title": "{{PLURAL:$1|ภาษา}}ที่แนะนำ",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|ภาษาทั้งหมด}}",
 	"ext-uls-no-languages-title": "ยังไม่มีภาษาให้เลือก",

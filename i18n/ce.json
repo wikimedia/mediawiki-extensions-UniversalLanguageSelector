@@ -79,8 +79,6 @@
 	"ext-uls-language-title": "Меттанаш",
 	"ext-uls-placeholder-search": "Мотт лахар",
 	"ext-uls-close-button-label": "ДӀачӀагӀа",
-	"ext-uls-rewrite-label": "Йухакечдина универсалан меттан харжам.",
-	"ext-uls-rewrite-description": "Меттан универсалан селекторан (ULS) йухакечйина кеп, интерфейс хӀокху заманан кепе йаккха лерина йолу аттачу архитектурин чоьтах.",
 	"ext-uls-suggested-languages-title": "Кховдийна {{PLURAL:$1|мотт|меттанаш}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Берриге меттанаш}}",
 	"ext-uls-search-results-count": "{{PLURAL:$1|$1 мотт}}",

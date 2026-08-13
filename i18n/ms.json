@@ -80,8 +80,6 @@
 	"ext-uls-language-title": "Bahasa",
 	"ext-uls-placeholder-search": "Cari bahasa",
 	"ext-uls-close-button-label": "Tutup",
-	"ext-uls-rewrite-label": "Penulisan semula Pemilih Bahasa Universal",
-	"ext-uls-rewrite-description": "Penulisan semula Pemilih Bahasa Universal (ULS), yang direka untuk memodenkan pengalaman pengguna dan mengurangkan hutang teknikal melalui seni bina yang dipermudahkan.",
 	"ext-uls-suggested-languages-title": "{{PLURAL:$1|Bahasa}} cadangan",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Semua bahasa}}",
 	"ext-uls-search-results-count": "{{PLURAL:$1|$1 bahasa}} ditemui",

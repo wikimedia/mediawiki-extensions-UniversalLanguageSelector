@@ -79,8 +79,6 @@
 	"ext-uls-language-title": "Sproochen",
 	"ext-uls-placeholder-search": "Sproochen duerchsichen",
 	"ext-uls-close-button-label": "Zoumaachen",
-	"ext-uls-rewrite-label": "Neientwécklung vum Universal Language Selector",
-	"ext-uls-rewrite-description": "Eng Neientwécklung vum Universal Language Selector (ULS), déi mam Zil entwéckelt gouf, fir d'Benotzererfarung ze moderniséieren an d'technesch Scholden duerch eng vereinfacht Architektur ze reduzéieren.",
 	"ext-uls-suggested-languages-title": "Virgeschloe {{PLURAL:$1|Sprooch|Sproochen}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|All Sproochen}}",
 	"ext-uls-search-results-count": "{{PLURAL:$1|$1 Sprooch|$1 Sprooche}} fonnt",

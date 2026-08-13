@@ -81,8 +81,6 @@
 	"ext-uls-language-title": "Γλώσσες",
 	"ext-uls-placeholder-search": "Αναζήτηση γλωσσών",
 	"ext-uls-close-button-label": "Κλείσιμο",
-	"ext-uls-rewrite-label": "Επαναγραφή του Universal Language Selector",
-	"ext-uls-rewrite-description": "Μια επανεγγραφή του Universal Language Selector (ULS), σχεδιασμένη για να εκσυγχρονίσει την εμπειρία χρήστη και να μειώσει το τεχνικό χρέος μέσω απλοποιημένης αρχιτεκτονικής.",
 	"ext-uls-suggested-languages-title": "{{PLURAL:$1|Προτεινόμενη γλώσσα|Προτεινόμενες γλώσσες}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1| Όλες οι γλώσσες}}",
 	"ext-uls-no-languages-title": "Δεν υπάρχουν ακόμη γλώσσες",

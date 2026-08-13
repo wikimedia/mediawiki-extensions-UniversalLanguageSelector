@@ -92,8 +92,6 @@
 	"ext-uls-language-title": "اللغات",
 	"ext-uls-placeholder-search": "بحث في اللغات",
 	"ext-uls-close-button-label": "أغلق",
-	"ext-uls-rewrite-label": "إعادة كتابة مُحدِّد اللغة العالمي",
-	"ext-uls-rewrite-description": "إعادة كتابة مُحدِّد اللغة العالمي (ULS)، مصممة لتحديث تجربة المستخدم وتقليل التعقيدات التقنية من خلال بنية مبسطة.",
 	"ext-uls-suggested-languages-title": "مقترح {{PLURAL:$1|لغة|لغات}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|جميع اللغات}}",
 	"ext-uls-search-results-none": "لم يتم العثور على أي لغات",

@@ -94,8 +94,6 @@
 	"ext-uls-language-title": "Языки",
 	"ext-uls-placeholder-search": "Найти язык",
 	"ext-uls-close-button-label": "Закрыть",
-	"ext-uls-rewrite-label": "Переработанный универсальный выбор языков",
-	"ext-uls-rewrite-description": "Переработанная версия универсального селектора языка (ULS), призванная модернизировать пользовательский интерфейс и за счет упрощенной архитектуры.",
 	"ext-uls-suggested-languages-title": "{{PLURAL:$1|Предложенный язык|Предложенные языки}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Все языки}}",
 	"ext-uls-no-languages-title": "Языков пока нет",

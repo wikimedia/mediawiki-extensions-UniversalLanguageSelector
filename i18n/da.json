@@ -85,8 +85,6 @@
 	"ext-uls-language-title": "Sprog",
 	"ext-uls-placeholder-search": "Søg sprog",
 	"ext-uls-close-button-label": "Luk",
-	"ext-uls-rewrite-label": "Omskrivning af universel sprogvælger",
-	"ext-uls-rewrite-description": "En omskrivning af Universal Language Selector (ULS), designet til at modernisere brugeroplevelsen og reducere teknisk gæld gennem forenklet arkitektur.",
 	"ext-uls-suggested-languages-title": "Foreslået {{PLURAL:$1|sprog}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Alle sprog}}",
 	"ext-uls-search-results-count": "{{PLURAL:$1|$1 sprog}} fundet",

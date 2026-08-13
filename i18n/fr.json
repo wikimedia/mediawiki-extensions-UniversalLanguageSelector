@@ -101,8 +101,6 @@
 	"ext-uls-language-title": "Langues",
 	"ext-uls-placeholder-search": "Rechercher parmi les langues",
 	"ext-uls-close-button-label": "Fermer",
-	"ext-uls-rewrite-label": "Réécriture du Sélecteur de Langue Universel",
-	"ext-uls-rewrite-description": "Une réécriture du Sélecteur de Langue Universel (SLU) conçue pour moderniser l’expérience utilisateur et la partie technique grâce à une architecture simplifiée.",
 	"ext-uls-suggested-languages-title": "{{PLURAL:$1|Langue suggérée|Langues suggérées}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Toutes les langues}}",
 	"ext-uls-no-languages-title": "Aucune langue sélectionnée",

@@ -83,8 +83,6 @@
 	"ext-uls-language-title": "Språk",
 	"ext-uls-placeholder-search": "Sök språk",
 	"ext-uls-close-button-label": "Stäng",
-	"ext-uls-rewrite-label": "Omskrivning av Universal Language Selector",
-	"ext-uls-rewrite-description": "En omskrivning av Universal Language Selector (ULS), utformad för att modernisera användarupplevelsen och minska tekniska föroreningar genom förenklad arkitektur.",
 	"ext-uls-suggested-languages-title": "Föreslagen",
 	"ext-uls-all-languages-title": "Alla språk",
 	"ext-uls-no-languages-title": "Inga språk ännu",

@@ -90,8 +90,6 @@
 	"ext-uls-language-title": "زبان‌ها",
 	"ext-uls-placeholder-search": "جستجوی زبان‌ها",
 	"ext-uls-close-button-label": "بستن",
-	"ext-uls-rewrite-label": "بازنویسی انتخابگر زبان همگانی",
-	"ext-uls-rewrite-description": "بازنویسی «انتخابگر زبان همگانی» (ULS) که با هدف نوسازی تجربهٔ کاربری و کاهش بدهی فنی از طریق ساده‌سازی معماری طراحی شده است.",
 	"ext-uls-suggested-languages-title": "{{PLURAL:$1|زبان|زبان‌های}} ترجیحی",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|تمام زبان‌ها}}",
 	"ext-uls-search-results-count": "{{PLURAL:$1|زبان}} یافت شد",

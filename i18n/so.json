@@ -79,8 +79,6 @@
 	"ext-uls-language-title": "Luqado",
 	"ext-uls-placeholder-search": "Raadi luqado",
 	"ext-uls-close-button-label": "Xir",
-	"ext-uls-rewrite-label": "Dib u qorista Xulaha Luqadda Caalamiga ah",
-	"ext-uls-rewrite-description": "Dib-u-qorid lagu sameeyay Xulaha Luqadda Caalamiga ah (ULS), oo loogu talagalay in lagu casriyeeyo khibradda isticmaalaha loona yareeyo culayska farsamo iyadoo la adeegsanayo qaab-dhismeed fudud.",
 	"ext-uls-suggested-languages-title": "La soo jeediyay {{PLURAL:$1|luqad|luqado}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Dhammaan luqadaha}}",
 	"ext-uls-search-results-count": "Waxaa la helay {{PLURAL:$1|$1 luqad|$1 luqadood}}",

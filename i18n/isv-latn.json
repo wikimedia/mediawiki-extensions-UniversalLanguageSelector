@@ -76,8 +76,6 @@
 	"ext-uls-language-title": "Jezyky",
 	"ext-uls-placeholder-search": "Poiskanje jezykov",
 	"ext-uls-close-button-label": "Zatvoriti",
-	"ext-uls-rewrite-label": "Prěrabotany Universalnogo izbiratelja jezykov",
-	"ext-uls-rewrite-description": "Prěrabotana versija Universalnogo izbiratelja jezykov (ULS), projektovana za modernizaciju koristničskogo prěživanja i sniženja tehničnogo dolga posrědstvom uproščenoj arhitektury.",
 	"ext-uls-suggested-languages-title": "{{PLURAL:$1|Prědloženy jezyk|Prědložene jezyky}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Vse jezyky}}",
 	"ext-uls-search-results-count": "{{PLURAL:$1|Najden jest $1 jezyk|Najdeni sut $1 jezyky|Najdenyh jest $1 jezykov}}",
