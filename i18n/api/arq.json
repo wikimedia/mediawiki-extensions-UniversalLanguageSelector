@@ -1,8 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Oldstoneage"
+			"Oldstoneage",
+			"Bachounda"
 		]
 	},
-	"apihelp-ulslocalization-param-language": "كود تاع اللوغة."
+	"apihelp-ulslocalization-summary": "جيب الترجمه ديال ULS في اللغة المعطاة.",
+	"apihelp-ulslocalization-param-language": "كود تاع اللوغة.",
+	"apihelp-ulslocalization-example-1": "جيب الترجمه بالتاميلية",
+	"apihelp-ulslocalization-example-2": "جيب الترجمه بالهندية",
+	"apihelp-ulssetlang-summary": "حدّث اللغة المفضلة للواجهة عند المستخدم.",
+	"apihelp-ulssetlang-param-languagecode": "رمز اللغة المفضلة.",
+	"apierror-ulssetlang-anon-notallowed": "المستخدمين المجهولين ما يسمحلهمش يبدلو لغة الواجهة."
 }
