@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ar choler",
 			"Fohanno",
 			"Fulup",
 			"Huñvreüs",
@@ -84,10 +85,29 @@
 	"ext-uls-all-languages-title": "{{PLURAL:$1|An holl yezhoù}}",
 	"ext-uls-search-results-count": "{{PLURAL:$1|$1 yezh}} kavet",
 	"ext-uls-search-results-none": "N'eus bet kavet yezh ebet",
+	"ext-uls-variants-title": "Adstummoù evit $1",
 	"ext-uls-no-languages-title": "Yezh ebet c’hoazh",
 	"ext-uls-no-languages-description": "N’eus yezh ebet hegerz evit poent",
+	"ext-uls-empty-state-entrypoint-description": "Gallout a rit treiñ ar bajenn-mañ. Un doare aes eo da aozañ endalc’had nevez en ho yezh.",
+	"ext-uls-invalid-language-search-title": "Yezh dianav",
+	"ext-uls-invalid-language-search-description": "Gwiriit ar reizhskrivadur. Gallout a rit klask yezhoù dre o anv pe dre o c'hod ISO.",
+	"ext-uls-unsupported-language-title": "Yezh dihegerz.",
+	"ext-uls-unsupported-language-description": "Dihegerz eo ar yezh emaoc'h o klask.",
+	"ext-uls-open-language-settings": "Digeriñ dibarzhioù ar yezh",
+	"ext-uls-open-language-selector": "Distro da ziuzer ar yezhoù",
+	"ext-uls-open-quick-actions": "Diskouez an oberoù prim",
+	"ext-uls-missing-languages-label-single": "Diank e <strong>$1</strong> ha yezhoù all",
+	"ext-uls-missing-languages-label-multiple": "Diank e <strong>$1</strong>, <strong>$2</strong> ha yezhoù all",
+	"ext-uls-missing-languages-panel-title": "Treuzyezhañ ar bajenn-mañ",
+	"ext-uls-missing-languages-panel-description": "Diank eo ar bajenn-mañ e yezhoù a anavezit marteze. He zreuzyezhañ a c'hallit ober.",
 	"ext-uls-quick-actions-panel-title": "Oberoù prim",
+	"ext-uls-preferred-languages-title": "{{PLURAL:$1|Yezh|Yezhoù}} gwellañ-karet",
 	"ext-uls-preferred-languages-settings-title": "Yezhoù gwellañ karet",
+	"ext-uls-preferred-languages-desc": "Diskouezet da gentañ e meuziadoù ar yezhoù.",
 	"ext-uls-preferred-languages-label": "Ouzhpennañ ur yezh",
-	"ext-uls-preferred-languages-input-placeholder": "Klask yezhoù"
+	"ext-uls-preferred-languages-help": "Spilhennit betek $1 {{PLURAL:$1|yezh}}. {{PLURAL:$1|Dont a ra|Dont a reont}} da gentañ war wel pa zibabit ur yezh all evit forzh pe bennad.",
+	"ext-uls-preferred-languages-input-placeholder": "Klask yezhoù",
+	"ext-uls-preferred-languages-status": "<strong>$1</strong> {{PLURAL:$2|diuzet}} {{PLURAL:$1|diwar}} <strong>$2</strong>",
+	"ext-uls-preferred-languages-limit-reached": "Dilemel unan evit ouzhpennañ unan all",
+	"ext-uls-preferred-languages-save-error": "Ur fazi zo bet en ur enrollañ ho yezhoù gwellañ-karet."
 }
