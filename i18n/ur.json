@@ -59,9 +59,14 @@
 	"ext-uls-compact-link-count": "{{PLURAL:$1|مزید $1 زبانیں}}",
 	"ext-uls-compact-link-info": "تمام زبانیں (آپ اور دیگر صارفین کی مشترکہ پسند کا انتخاب)",
 	"prefs-languages": "زبانیں",
-	"ext-uls-compact-language-links-preference": "محض اپنے آپ سے متعلق [[$1|زبان کی پیوستہ فہرست]] استعمال کریں۔",
+	"ext-uls-compact-language-links-preference": "محض اپنے آپ سے متعلق [[$1|زبان کی پیوستہ فہرست]] استعمال کریں",
 	"ext-uls-add-languages-button-label": "زبانیں شامل کریں",
 	"ext-uls-language-title": "زبانیں",
 	"ext-uls-placeholder-search": "زبان تلاش کریں",
-	"ext-uls-close-button-label": "بند کریں"
+	"ext-uls-close-button-label": "بند کریں",
+	"ext-uls-no-languages-title": "ابھی تک کوئی زبان نہیں ہے",
+	"ext-uls-no-languages-description": "فی الحال کوئی زبان دستیاب نہیں ہے",
+	"ext-uls-unsupported-language-title": "زبان دستیاب نہیں",
+	"ext-uls-unsupported-language-description": "آپ جو زبان تلاش کر رہے ہیں وہ دستیاب نہیں ہے۔",
+	"ext-uls-open-language-settings": "زبان کی ترتیبات کھولیں"
 }

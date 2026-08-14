@@ -75,5 +75,12 @@
 	"ext-uls-empty-state-header": "Hîn ti ziman tine",
 	"ext-uls-empty-state-desc": "Vêga ti ziman nehatiye lêzêdekirin",
 	"ext-uls-empty-state-header-actions-available": "Ti ziman tine. Yekî nû lê zêde bike?",
-	"ext-uls-empty-state-desc-actions-available": "Naverokê bi zêdetir zimanan berdest bikin."
+	"ext-uls-empty-state-desc-actions-available": "Naverokê bi zêdetir zimanan berdest bikin.",
+	"ext-uls-add-languages-button-label": "Ziman lê zêde bike",
+	"ext-uls-placeholder-search": "Li zimanan bigere",
+	"ext-uls-close-button-label": "Bigire",
+	"ext-uls-no-languages-title": "Hîn ti ziman tine",
+	"ext-uls-missing-languages-panel-title": "Vê rûpelê tercime bike",
+	"ext-uls-missing-languages-panel-description": "Ev rûpel bi hin zimanên ku tu dizanî ne berdes e. Tu dikarî tercime bikî.",
+	"ext-uls-quick-actions-panel-title": "Aksiyonên bilez"
 }
