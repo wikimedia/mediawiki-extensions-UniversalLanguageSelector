@@ -13,6 +13,26 @@
 @uls-rewrite-missing-languages-padding-start: calc( @spacing-50 + @spacing-50 + @size-icon-medium );
 @uls-rewrite-quick-actions-trigger-clearance: @spacing-150;
 
+// A Codex button reserves @spacing-horizontal-button of padding plus a 1px
+// border (transparent on quiet buttons) before its label, so a row of quiet
+// buttons reads as indented next to plain text. .cdx-mixin-button-layout-flush()
+// pulls the row back by that amount, putting the labels — not the button boxes —
+// on the shared text edge, while the invisible padding keeps the pointer target
+// and the hover and focus backgrounds intact.
+// The state containers must keep at least that much inline-start padding,
+// otherwise the pulled-back row escapes .uls-rewrite__body, whose
+// `overflow-y: auto` makes `overflow-x` compute to `auto` as well.
+// These buttons override Codex's `white-space: nowrap`, so a long label wraps.
+// Codex sets no line-height of its own — `align-items: center` inside the
+// button's min-height places a single-line label, and the cascade supplies the
+// leading — which leaves a wrapped label's height up to whatever line-height
+// the host page passes down. Pin it so a two-line label reads the same
+// everywhere.
+@uls-rewrite-action-button-line-height: @line-height-x-small;
+// Vertical spacing of the states that replace the language list.
+@uls-rewrite-state-title-margin: @spacing-50;
+@uls-rewrite-state-actions-margin: @spacing-100;
+
 // Layout & Dimensions
 @uls-rewrite-max-height: 312px;
 @uls-rewrite-width-low: 240px;
@@ -124,6 +144,7 @@
 
 	.uls-rewrite__entrypoint-action-button {
 		max-width: 100%;
+		line-height: @uls-rewrite-action-button-line-height;
 		white-space: normal;
 		word-break: break-word;
 		text-align: start;
@@ -186,18 +207,54 @@
 			font-size: @uls-rewrite-font-size-medium;
 		}
 
+		// Every state that replaces the language list — the two empty states and
+		// the two sub-panels — shares the body's canonical text edge: the body's
+		// own inline padding plus the offset that lines content up with the search
+		// input's icon, the missing languages banner and every language item label.
 		.uls-rewrite__no-results,
-		.uls-rewrite__no-languages {
+		.uls-rewrite__no-languages,
+		.uls-rewrite__missing-languages-panel,
+		.uls-rewrite__quick-actions-panel {
 			padding-block: @spacing-50;
 			padding-inline: @uls-rewrite-language-item-padding-start @uls-rewrite-quick-actions-trigger-clearance;
 
+			// Set the vertical spacing here rather than inheriting user agent or
+			// skin element defaults, which differ between the overlay and page
+			// content.
 			h3 {
+				margin: 0 0 @uls-rewrite-state-title-margin;
+				padding: 0;
 				font-size: @uls-rewrite-font-size-large;
-				padding-top: 0;
 			}
 
 			p {
-				margin-bottom: @spacing-100;
+				margin: 0;
+				line-height: @line-height-medium;
+			}
+		}
+
+		// Rows of entrypoint actions. The offset goes on the row, not on the
+		// buttons: a negative margin on a flex item would also eat the space
+		// between two adjacent buttons.
+		.uls-rewrite__empty-search-entrypoint__actions,
+		.uls-rewrite__empty-list-entrypoint__actions,
+		.uls-rewrite__missing-languages-panel__actions {
+			.cdx-mixin-button-layout-flush( 'start' );
+			display: flex;
+			flex-wrap: wrap;
+			// Not center: a label that wraps to two lines would otherwise push the
+			// labels of its shorter neighbours down.
+			align-items: flex-start;
+			margin-block-start: @uls-rewrite-state-actions-margin;
+		}
+
+		// The quick actions are a column of blocks, so the offset goes on each
+		// action; there is no inline neighbour for it to interfere with.
+		.uls-rewrite__quick-actions-panel__action {
+			.cdx-mixin-button-layout-flush( 'start' );
+
+			+ .uls-rewrite__quick-actions-panel__action {
+				margin-block-start: @uls-rewrite-state-actions-margin;
 			}
 		}
 
@@ -290,19 +347,6 @@
 				color: @color-subtle;
 				cursor: not-allowed;
 			}
-		}
-	}
-
-	.uls-rewrite__missing-languages-panel {
-		&__description {
-			margin-bottom: @spacing-100;
-			line-height: @line-height-medium;
-		}
-	}
-
-	.uls-rewrite__quick-actions-panel {
-		&__action {
-			margin-bottom: @spacing-75;
 		}
 	}
 
