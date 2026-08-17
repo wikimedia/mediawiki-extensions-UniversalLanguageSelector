@@ -98,7 +98,7 @@
 	"ext-uls-open-quick-actions": "Diskouez an oberoù prim",
 	"ext-uls-missing-languages-label-single": "Diank e <strong>$1</strong> ha yezhoù all",
 	"ext-uls-missing-languages-label-multiple": "Diank e <strong>$1</strong>, <strong>$2</strong> ha yezhoù all",
-	"ext-uls-missing-languages-panel-title": "Treuzyezhañ ar bajenn-mañ",
+	"ext-uls-missing-languages-panel-title": "Treiñ ar bajenn-mañ",
 	"ext-uls-missing-languages-panel-description": "Diank eo ar bajenn-mañ e yezhoù a anavezit marteze. He zreuzyezhañ a c'hallit ober.",
 	"ext-uls-quick-actions-panel-title": "Oberoù prim",
 	"ext-uls-preferred-languages-title": "{{PLURAL:$1|Yezh|Yezhoù}} gwellañ-karet",
