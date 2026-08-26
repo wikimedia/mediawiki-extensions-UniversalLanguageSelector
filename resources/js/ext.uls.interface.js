@@ -439,14 +439,7 @@
 			isMobileViewport() &&
 			location.hash === LANGUAGES_ROUTE
 		) {
-			const $trigger = $( '.mw-interlanguage-selector' );
-			if ( !$trigger.length && mw.config.get( 'skin' ) === 'minerva' ) {
-				// HACK: On Minerva, the mw-interlanguage-selector class maybe added a little late.
-				// Try again if the trigger is not found.
-				setTimeout( openContentSelectorFromRoute, 500 );
-				return;
-			}
-			$trigger.first().trigger( 'click' );
+			$( '.mw-interlanguage-selector' ).first().trigger( 'click' );
 		}
 	}
 
