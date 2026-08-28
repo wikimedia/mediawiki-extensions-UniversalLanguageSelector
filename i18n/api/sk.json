@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"apihelp-ulslocalization-summary": "Získať lokalizáciu ULS v zadanom jazyku.",
+	"apihelp-ulslocalization-param-language": "Kód jazyka.",
+	"apihelp-ulslocalization-example-1": "Získať tamilskú lokalizáciu",
+	"apihelp-ulslocalization-example-2": "Získať hindskú lokalizáciu",
+	"apihelp-ulssetlang-summary": "Aktualizovať používateľom preferovaný jazyk rozhrania.",
+	"apihelp-ulssetlang-param-languagecode": "Kód preferovaného jazyka.",
+	"apierror-ulssetlang-anon-notallowed": "Anonymní používatelia nemôžu meniť jazyk rozhrania."
+}
