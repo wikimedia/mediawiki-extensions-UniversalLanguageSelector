@@ -72,5 +72,11 @@
 	"ext-uls-empty-state-desc": "Nadai jaku ke tesedia ungkup maya tu",
 	"ext-uls-empty-state-header-actions-available": "Bedau bisi jaku. Tambah ke baru?",
 	"ext-uls-empty-state-desc-actions-available": "Nyediaka isi dalam mayuh agi jaku.",
-	"ext-uls-add-languages-button-label": "Tambah jaku"
+	"ext-uls-add-languages-button-label": "Tambah jaku",
+	"ext-uls-language-title": "Jaku",
+	"ext-uls-placeholder-search": "Giga jaku",
+	"ext-uls-no-languages-title": "Bedau bisi jaku",
+	"ext-uls-no-languages-description": "Nadai jaku ke tesedia ungkup maya tu",
+	"ext-uls-invalid-language-search-title": "Jaku enda dikelala",
+	"ext-uls-missing-languages-panel-title": "Salin lambar tu"
 }
