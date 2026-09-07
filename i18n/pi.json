@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"咽頭べさ"
+		]
+	},
+	"uls-plang-title-languages": "भाषा",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|एको अपरो|$1 अधिकानि}}"
+}
