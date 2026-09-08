@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Rdwnnr"
+			"Rdwnnr",
+			"Iripseudocorus"
 		]
 	},
+	"uls-plang-title-languages": "Basa",
 	"ext-uls-compact-link-count": "{{PLURAL:$1|Céddi pémeng|$1 pémeng}}"
 }
