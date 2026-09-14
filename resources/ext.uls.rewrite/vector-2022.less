@@ -3,7 +3,12 @@
 // Keep in sync with @uls-rewrite-breakpoint-tablet in index.less.
 @media ( min-width: 768px ) {
 	.uls-rewrite {
+		// Render above Vector header (.vector-header)
+		z-index: @z-index-stacking-3;
+
 		// Render below Vector 2022's sticky header (@z-index-header). T431596
-		z-index: @z-index-stacking-2;
+		.vector-sticky-header-visible & {
+			z-index: @z-index-stacking-2;
+		}
 	}
 }
