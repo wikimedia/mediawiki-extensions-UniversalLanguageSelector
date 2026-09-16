@@ -18,10 +18,10 @@ beforeEach( () => {
 jest.mock( '../../resources/ext.uls.rewrite/dist/floating-ui.js', () => {
 	const { ref } = require( 'vue' );
 	return {
-		useFloating: () => ( {
+		useFloating: jest.fn( () => ( {
 			floatingStyles: ref( {} ),
 			isPositioned: ref( true )
-		} ),
+		} ) ),
 		offset: jest.fn(),
 		flip: jest.fn(),
 		shift: jest.fn(),

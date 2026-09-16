@@ -470,11 +470,18 @@ module.exports = exports = defineComponent( {
 			return mw.msg( 'ext-uls-variants-title', autonym );
 		} );
 
+		// Floating UI watches reference and floating elements. Passing a reference
+		// that is null while closed or in mobile mode lets whileElementsMounted start
+		// and stop autoUpdate automatically without manual lifecycle management.
+		const floatingReference = computed( () => (
+			visible.value && !isMobile.value ? triggerElement.value : null
+		) );
+
 		const { floatingStyles, isPositioned } = useFloating(
-			triggerElement,
+			floatingReference,
 			menuRef,
 			Object.assign( {
-				middleware: [ offset( 8 ), flip(), shift() ],
+				middleware: [ offset( 8 ), flip(), shift( { padding: 8 } ) ],
 				whileElementsMounted: autoUpdate
 			}, props.floatingOptions )
 		);
