@@ -89,6 +89,16 @@ describe( 'MissingLanguagesEntrypoint', () => {
 		expect( label.text() ).toBe( 'ext-uls-missing-languages-label-single:[español]' );
 	} );
 
+	it( 'does not count a preferred language as missing when it is listed under its ULS redirect (T434167)', () => {
+		global.$.uls.data.isRedirect.mockImplementation( ( code ) => code === 'sr' ? 'sr-cyrl' : false );
+		const wrapper = shallowMount( MissingLanguagesEntrypoint, mountOptions( {
+			preferredLanguages: [ 'sr', 'fr' ],
+			languages: { 'sr-cyrl': 'српски / srpski' }
+		}, mockEntrypointNoLabel ) );
+		const label = wrapper.find( '.uls-rewrite__missing-languages__label' );
+		expect( label.text() ).toBe( 'ext-uls-missing-languages-label-single:[français]' );
+	} );
+
 	it( 'uses default prop factories when no props are given', () => {
 		const wrapper = shallowMount( MissingLanguagesEntrypoint, {
 			global: {

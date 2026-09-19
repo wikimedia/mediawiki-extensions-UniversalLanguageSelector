@@ -49,7 +49,10 @@ module.exports = exports = defineComponent( {
 				props.preferredLanguages :
 				props.suggestions;
 
-			return source.filter( ( code ) => !props.languages[ code ] );
+			// Preferred languages may use a code that redirects to the one in the list (T434167)
+			return source.filter(
+				( code ) => !props.languages[ $.uls.data.isRedirect( code ) || code ]
+			);
 		} );
 
 		const missingLanguagesNames = computed( () => missingLanguagesCodes.value

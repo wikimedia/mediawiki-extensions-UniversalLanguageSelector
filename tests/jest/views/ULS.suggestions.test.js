@@ -142,6 +142,59 @@ describe( 'UniversalLanguageSelector - suggestions and preferred languages', () 
 			expect( unavailableLanguagesSet.has( 'lang1' ) ).toBe( false );
 		} );
 
+		it( 'maps preferred MediaWiki codes onto ULS redirects that exist in languages (T434167)', () => {
+			// Interlanguage list uses ULS codes after redirect resolution (sr → sr-cyrl),
+			// while preferred languages store MediaWiki codes (sr).
+			jest.spyOn( global.$.uls.data, 'isRedirect' ).mockImplementation(
+				( code ) => code === 'sr' ? 'sr-cyrl' : false
+			);
+			preferredLanguages.value = [ 'sr', 'lang0' ];
+
+			const selectableLanguages = generateLanguages( 12 );
+			selectableLanguages[ 'sr-cyrl' ] = 'српски / srpski';
+
+			wrapper = createWrapper( {
+				visible: true,
+				selectableLanguages
+			} );
+
+			const section = wrapper.find( '.uls-rewrite__section--suggested' );
+			expect( section.exists() ).toBe( true );
+
+			const languageList = section.findComponent( { name: 'LanguageList' } );
+			expect( languageList.exists() ).toBe( true );
+			expect( languageList.props( 'languageCodes' ) ).toContain( 'sr-cyrl' );
+			expect( languageList.props( 'languageCodes' ) ).not.toContain( 'sr' );
+			const unavailableLanguagesSet = languageList.props( 'unavailableLanguagesSet' );
+			expect( unavailableLanguagesSet.has( 'sr' ) ).toBe( false );
+			expect( unavailableLanguagesSet.has( 'sr-cyrl' ) ).toBe( false );
+		} );
+
+		it( 'does not map a preferred language onto a different language with a similar code (T434167)', () => {
+			// nds-nl and be-tarask are separate languages from nds and be, not variants of them
+			preferredLanguages.value = [ 'nds-nl', 'be-tarask', 'lang0' ];
+
+			const selectableLanguages = generateLanguages( 12 );
+			selectableLanguages.nds = 'Plattdüütsch';
+			selectableLanguages.be = 'беларуская';
+
+			wrapper = createWrapper( {
+				visible: true,
+				selectableLanguages
+			} );
+
+			const languageList = wrapper.find( '.uls-rewrite__section--suggested' )
+				.findComponent( { name: 'LanguageList' } );
+			expect( languageList.props( 'languageCodes' ) ).toEqual(
+				expect.arrayContaining( [ 'nds-nl', 'be-tarask' ] )
+			);
+			expect( languageList.props( 'languageCodes' ) ).not.toContain( 'nds' );
+			expect( languageList.props( 'languageCodes' ) ).not.toContain( 'be' );
+			const unavailableLanguagesSet = languageList.props( 'unavailableLanguagesSet' );
+			expect( unavailableLanguagesSet.has( 'nds-nl' ) ).toBe( true );
+			expect( unavailableLanguagesSet.has( 'be-tarask' ) ).toBe( true );
+		} );
+
 		it( 'shows only the maximum limit of preferred languages (10)', () => {
 			preferredLanguages.value = [
 				'lang0', 'lang1', 'lang2', 'lang3', 'lang4',

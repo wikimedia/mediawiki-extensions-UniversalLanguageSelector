@@ -600,10 +600,17 @@ module.exports = exports = defineComponent( {
 		const availableLanguageSuggestions =
 			getSuggestedLanguages( previousLanguages, languageCodes );
 
+		// Preferred languages are stored as MediaWiki codes, while the language list uses ULS
+		// codes. Resolve redirects (e.g. "sr" to "sr-cyrl") the same way as for the
+		// suggested languages, so that these languages get their link (T434167).
+		const resolvedPreferredLanguages = computed( () => [ ...new Set(
+			preferredLanguages.value.map( ( code ) => $.uls.data.isRedirect( code ) || code )
+		) ] );
+
 		const unavailableLanguagesSet = computed( () => {
 			const set = new Set();
 			const validLanguageCodesSet = new Set( languageCodes.value );
-			for ( const code of preferredLanguages.value ) {
+			for ( const code of resolvedPreferredLanguages.value ) {
 				if ( !validLanguageCodesSet.has( code ) ) {
 					set.add( code );
 				}
@@ -619,7 +626,7 @@ module.exports = exports = defineComponent( {
 			let result;
 			let limit = SUGGESTED_LANGUAGES_COUNT;
 			if ( preferredLanguages.value.length > 0 ) {
-				result = preferredLanguages.value;
+				result = resolvedPreferredLanguages.value;
 				// Max allowed preferred languages
 				limit = PREFERRED_LANGUAGES_COUNT;
 			} else {
