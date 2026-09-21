@@ -95,7 +95,7 @@
 	"ext-uls-close-button-label": "關閉",
 	"ext-uls-suggested-languages-title": "建議的{{PLURAL:$1|語言}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|所有語言}}",
-	"ext-uls-search-results-count": "找到{{PLURAL:$1|$1種語言}",
+	"ext-uls-search-results-count": "找到{{PLURAL:$1|$1種語言}}",
 	"ext-uls-search-results-none": "沒有找到任何語言",
 	"ext-uls-variants-title": "$1的語言變體",
 	"ext-uls-no-languages-title": "尚無其他語言",
