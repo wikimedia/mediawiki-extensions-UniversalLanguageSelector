@@ -481,7 +481,13 @@ module.exports = exports = defineComponent( {
 			floatingReference,
 			menuRef,
 			Object.assign( {
-				middleware: [ offset( 8 ), flip(), shift( { padding: 8 } ) ],
+				middleware: [
+					offset( 8 ),
+					// Stay below the trigger when neither side fits: overflowing upward
+					// crops the menu off-screen, downward stays reachable by scrolling.
+					flip( { fallbackStrategy: 'initialPlacement' } ),
+					shift( { padding: 8 } )
+				],
 				whileElementsMounted: autoUpdate
 			}, props.floatingOptions )
 		);

@@ -206,7 +206,7 @@ The popup is positioned with a copy of [Floating UI](https://floating-ui.com/) b
 By default, the component uses these middleware:
 
 *   `offset( 8 )` — 8px gap between the trigger element and the popup.
-*   `flip()` — flips the popup to the opposite side when there is not enough room in the configured placement.
+*   `flip()` — flips the popup to the opposite side when there is not enough room in the configured placement. When neither side has room, the popup stays at its configured placement and overflows downward, where it is still reachable by scrolling, instead of overflowing above the viewport where it would be cropped.
 *   `shift()` — shifts the popup along the main axis to keep it inside the viewport.
 
 The default placement is `'bottom-end'`. Pass `floatingOptions` to override placement or merge additional Floating UI configuration:
