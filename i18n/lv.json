@@ -74,5 +74,13 @@
 	"ext-uls-empty-state-desc": "Pagaidām neviena valoda nav pieejama",
 	"ext-uls-empty-state-header-actions-available": "Vēl nav valodu. Vai pievienot jaunu?",
 	"ext-uls-empty-state-desc-actions-available": "Padari saturu pieejamu vairāk valodās.",
-	"ext-uls-add-languages-button-label": "Pievienot valodas"
+	"ext-uls-add-languages-button-label": "Pievienot valodas",
+	"ext-uls-language-title": "Valodas",
+	"ext-uls-placeholder-search": "Meklēt valodas",
+	"ext-uls-close-button-label": "Aizvērt",
+	"ext-uls-unsupported-language-title": "Valoda nav pieejama",
+	"ext-uls-missing-languages-panel-title": "Tulkot šo lapu",
+	"ext-uls-quick-actions-panel-title": "Ātrās darbības",
+	"ext-uls-preferred-languages-label": "Pievienot valodu",
+	"ext-uls-preferred-languages-input-placeholder": "Meklēt valodas"
 }
