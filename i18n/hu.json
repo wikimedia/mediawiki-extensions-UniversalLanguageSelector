@@ -82,5 +82,8 @@
 	"ext-uls-empty-state-desc": "Egyelőre nem állnak rendelkezésre nyelvek",
 	"ext-uls-empty-state-header-actions-available": "Még nincsenek nyelvek. Hozzáadsz egy újat?",
 	"ext-uls-empty-state-desc-actions-available": "Tedd elérhetővé a tartalmat több nyelven.",
-	"ext-uls-add-languages-button-label": "Nyelvek hozzáadása"
+	"ext-uls-add-languages-button-label": "Nyelvek hozzáadása",
+	"ext-uls-placeholder-search": "Nyelvek keresése",
+	"ext-uls-close-button-label": "Bezárás",
+	"ext-uls-missing-languages-panel-title": "A lap fordítása"
 }
