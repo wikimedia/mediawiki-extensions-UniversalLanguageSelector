@@ -4,6 +4,7 @@
 			"Bluetpp",
 			"Max20091",
 			"Minh Nguyen",
+			"Nvdtn19",
 			"RiceCracker12"
 		]
 	},
@@ -76,5 +77,18 @@
 	"ext-uls-empty-state-desc": "Hiện không có ngôn ngữ nào có sẵn",
 	"ext-uls-empty-state-header-actions-available": "Chưa có ngôn ngữ nào. Thêm một ngôn ngữ mới?",
 	"ext-uls-empty-state-desc-actions-available": "Làm nội dung này có sẵn trong nhiều ngôn ngữ hơn.",
-	"ext-uls-add-languages-button-label": "Thêm ngôn ngữ"
+	"ext-uls-add-languages-button-label": "Thêm ngôn ngữ",
+	"ext-uls-language-title": "Ngôn ngữ",
+	"ext-uls-placeholder-search": "Tìm kiếm ngôn ngữ",
+	"ext-uls-close-button-label": "Đóng",
+	"ext-uls-all-languages-title": "{{PLURAL:$1|Tất cả ngôn ngữ}}",
+	"ext-uls-search-results-none": "Không tìm thấy ngôn ngữ",
+	"ext-uls-open-language-settings": "Mở tùy chọn ngôn ngữ",
+	"ext-uls-missing-languages-label-single": "Chưa có trong <strong>$1</strong> và hơn nữa",
+	"ext-uls-missing-languages-label-multiple": "Chưa có trong <strong>$1</strong>, <strong>$2</strong> và hơn nữa",
+	"ext-uls-missing-languages-panel-title": "Dịch trang này",
+	"ext-uls-missing-languages-panel-description": "Trang này chưa có trong một số ngôn ngữ mà bạn có thể biết. Bạn có thể giúp dịch.",
+	"ext-uls-quick-actions-panel-title": "Hành động nhanh",
+	"ext-uls-preferred-languages-label": "Thêm ngôn ngữ",
+	"ext-uls-preferred-languages-input-placeholder": "Tìm kiếm ngôn ngữ"
 }
