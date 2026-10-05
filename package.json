@@ -8,7 +8,7 @@
 	},
 	"devDependencies": {
 		"@rollup/plugin-node-resolve": "15.0.1",
-		"eslint-config-wikimedia": "0.32.3",
+		"eslint-config-wikimedia": "0.32.6",
 		"grunt": "1.6.3",
 		"grunt-banana-checker": "0.13.0",
 		"grunt-eslint": "24.3.0",
