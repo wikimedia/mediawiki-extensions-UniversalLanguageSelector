@@ -98,8 +98,11 @@
 	"ext-uls-quick-actions-panel-title": "त्वरित क्रिया",
 	"ext-uls-preferred-languages-title": "अधिमानित {{PLURAL:$1|भाषा}}",
 	"ext-uls-preferred-languages-settings-title": "अधिमानित भाषा",
+	"ext-uls-preferred-languages-desc": "भाषा मेनू मे पहिले देखावल ।",
 	"ext-uls-preferred-languages-label": "भाषा जोड़थिन",
+	"ext-uls-preferred-languages-help": "$1 {{PLURAL:$1|भाषा}} तक पिन करथिन । जखनि अपने कौनो लेख पर भाषा बदल हथिन त {{PLURAL:$1|ऊ|ऊसभ}} सबसे पहिले लोकतै ।",
 	"ext-uls-preferred-languages-input-placeholder": "भाषा खोजथिन",
+	"ext-uls-preferred-languages-status": "<strong>$2</strong> मे <strong>$1</strong> {{PLURAL:$2|चयनित}}",
 	"ext-uls-preferred-languages-limit-reached": "एकके जोड़ेला दोसरके हटावथिन",
 	"ext-uls-preferred-languages-save-error": "अपनेके अधिमानित भाषाके सहेजैत खनि त्रुटि भेलै ।"
 }
