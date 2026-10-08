@@ -44,7 +44,8 @@
 				"MainConfig",
 				"UserOptionsLookup",
 				"StatsdDataFactory",
-				"LanguageNameUtils"
+				"LanguageNameUtils",
+				"UniversalLanguageSelector.SkinSupport"
 			]
 		}
 	},
@@ -73,6 +74,9 @@
 	"AutoloadNamespaces": {
 		"UniversalLanguageSelector\\": "includes/"
 	},
+	"ServiceWiringFiles": [
+		"includes/ServiceWiring.php"
+	],
 	"DefaultUserOptions": {
 		"uls-preferences": "",
 		"compact-language-links": true,
@@ -254,6 +258,7 @@
 				"js/ext.uls.actions.menu.js",
 				"js/ext.uls.actions.menu.item.js",
 				"js/ext.uls.actions.menu.items.registry.js",
+				"js/ext.uls.skinsupport.js",
 				{
 					"name": "data.json",
 					"callback": "UniversalLanguageSelector\\Hooks::getModuleData",

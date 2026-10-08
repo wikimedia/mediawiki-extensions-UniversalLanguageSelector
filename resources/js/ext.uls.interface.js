@@ -22,7 +22,8 @@
 	const languageSettingsModules = [ 'ext.uls.displaysettings' ],
 		launchULS = require( './ext.uls.launch.js' ),
 		ActionsMenu = require( './ext.uls.actions.menu.js' ),
-		ActionsMenuItem = require( './ext.uls.actions.menu.item.js' );
+		ActionsMenuItem = require( './ext.uls.actions.menu.item.js' ),
+		skinSupport = require( './ext.uls.skinsupport.js' );
 	require( './ext.uls.actions.menu.items.registry.js' );
 
 	// Whether the ULS V2 (rewrite) selector is enabled for this page.
@@ -35,10 +36,9 @@
 	 * @return {string[]} The list of modules.
 	 */
 	function prefetchRewriteModules() {
-		const isMinerva = mw.config.get( 'skin' ) === 'minerva';
-		const modules = isMinerva ?
-			[ 'ext.uls.mediawiki', 'ext.uls.rewrite' ] :
-			[ 'ext.uls.mediawiki', 'ext.uls.rewrite.languagesettings.entrypoint', 'ext.uls.rewrite' ];
+		const modules = skinSupport.hasLanguageSettingsQuickAction() ?
+			[ 'ext.uls.mediawiki', 'ext.uls.rewrite.languagesettings.entrypoint', 'ext.uls.rewrite' ] :
+			[ 'ext.uls.mediawiki', 'ext.uls.rewrite' ];
 
 		if ( isULSV2Enabled ) {
 			mw.loader.load( modules );
@@ -772,12 +772,15 @@
 				);
 				return;
 			}
-			const isMinerva = mw.config.get( 'skin' ) === 'minerva';
+			const includeDescriptions = skinSupport.hasLanguageDescriptions();
+			const floatingPlacement = skinSupport.getFloatingPlacement();
 			contentSelectorLoadPromise = mw.loader.using( prefetchRewriteModules() ).then( () => {
 				const languageNodes = getLanguageNodes();
 				const languageNodesInjected = injectCurrentLanguage( Array.from( languageNodes ) );
 				const hideActiveLanguages = languageNodesInjected.length !== languageNodes.length;
-				const languageAnnotations = getLanguageAnnotations( languageNodesInjected, isMinerva );
+				const languageAnnotations = getLanguageAnnotations(
+					languageNodesInjected, includeDescriptions
+				);
 				const variantNodes = Array.from( getVariantNodes() );
 				const pageContentLanguage = mw.config.get( 'wgPageContentLanguage' ) ||
 					mw.config.get( 'wgContentLanguage' );
@@ -787,7 +790,7 @@
 					variantsByLanguage[ pageContentLanguage ] =
 						mw.uls.getInterlanguageListFromNodes( variantNodes );
 					variantAnnotationsByLanguage[ pageContentLanguage ] =
-						getLanguageAnnotations( variantNodes, isMinerva );
+						getLanguageAnnotations( variantNodes, includeDescriptions );
 				}
 				const { createUniversalLanguageSelector } = require( 'ext.uls.rewrite' );
 				const { h } = require( 'vue' );
@@ -813,7 +816,8 @@
 						window.location.assign( language.value.href );
 					},
 					mode: 'content',
-					floatingOptions: isMinerva ? { placement: 'bottom-start' } : undefined,
+					floatingOptions: floatingPlacement ?
+						{ placement: floatingPlacement } : undefined,
 					onVisibleChange: languageRoute.onVisibleChange,
 					slots: {
 						'language-item': ( { item, annotations, isAvailable } ) => {
@@ -946,8 +950,7 @@
 		} );
 	}
 	function init() {
-		// if it's not Vector skin, nothing to be done here
-		if ( mw.config.get( 'skin' ) === 'vector-2022' && mw.config.get( 'wgULSisLanguageSelectorEmpty' ) ) {
+		if ( skinSupport.hasEmptyLanguageDropdown() ) {
 			// if this is a non-content page, we should add the "Open language settings" button
 			// inside the language dropdown
 			addLanguageSettingsToNonContentPages();
@@ -991,15 +994,7 @@
 			initPersonalEntryPoint();
 		}
 
-		// whether to load compact language links
-		const compact = mw.config.get( 'wgULSisCompactLinksEnabled' );
-		// whether to show the omni box or not
-		const languageInHeader = mw.config.get( 'wgVector2022LanguageInHeader' );
-		// Minerva renders its own trigger, but only for the new selector
-		const isV2LanguageSelectorOnMinerva = mw.config.get( 'skin' ) === 'minerva' &&
-			isULSV2Enabled;
-
-		if ( compact || languageInHeader || isV2LanguageSelectorOnMinerva ) {
+		if ( skinSupport.isContentLanguageSelectorEnabled() ) {
 			// Init compact languages OR omni selector using the mw-interlanguage-selector class
 			initContentLanguageSelectorClickHandler();
 		} else {

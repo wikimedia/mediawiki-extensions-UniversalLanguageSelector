@@ -62,6 +62,7 @@ class Hooks implements
 		private readonly UserOptionsLookup $userOptionsLookup,
 		private readonly IBufferingStatsdDataFactory $statsdDataFactory,
 		private readonly LanguageNameUtils $languageNameUtils,
+		private readonly SkinSupport $skinSupport,
 	) {
 	}
 
@@ -78,24 +79,6 @@ class Hooks implements
 	}
 
 	/**
-	 * Checks whether language is in the main menu.
-	 */
-	private function isLanguageInMainMenu( Skin $skin ): bool {
-		$languageInHeaderConfig = $skin->getConfig()->get( 'VectorLanguageInMainMenu' );
-		$userStatus = $skin->getUser()->isAnon() ? 'logged_out' : 'logged_in';
-		return $languageInHeaderConfig[ $userStatus ] ?? true;
-	}
-
-	/**
-	 * Checks whether language is in header.
-	 */
-	private function isLanguageInHeader( Skin $skin ): bool {
-		$languageInHeaderConfig = $skin->getConfig()->get( 'VectorLanguageInHeader' );
-		$userStatus = $skin->getUser()->isAnon() ? 'logged_out' : 'logged_in';
-		return $languageInHeaderConfig[ $userStatus ] ?? true;
-	}
-
-	/**
 	 * Whether ULS Compact interlanguage links enabled
 	 */
 	private function isCompactLinksEnabled( User $user, Skin $skin ): bool {
@@ -103,11 +86,9 @@ class Hooks implements
 		if ( !$this->config->get( 'ULSEnable' ) ) {
 			return false;
 		}
-		// Compact links should be disabled in Vector 2022 skin,
-		// when the language button is displayed at the top of the content
-		// unless it is duplicated in the main menu (as is the case on Russian WP)
-		if ( $skin->getSkinName() === 'vector-2022' && !$this->isLanguageInMainMenu( $skin ) ) {
-			return !$this->isLanguageInHeader( $skin );
+		$skinOverride = $this->skinSupport->getSkinCompactLinksOverride( $skin );
+		if ( $skinOverride !== null ) {
+			return $skinOverride;
 		}
 		if ( $this->config->get( 'ULSCompactLanguageLinksBetaFeature' ) === true &&
 			$this->config->get( MainConfigNames::InterwikiMagic ) === true &&
@@ -151,12 +132,11 @@ class Hooks implements
 	 * Hook: BeforePageDisplay
 	 */
 	public function onBeforePageDisplay( $out, $skin ): void {
-		$skinName = $skin->getSkinName();
-		if ( $skinName === 'apioutput' ) {
+		if ( $skin->getSkinName() === 'apioutput' ) {
 			return;
 		}
 
-		if ( $skinName === 'minerva' ) {
+		if ( $this->skinSupport->addsOnlyCoreFeatures( $skin ) ) {
 			if ( $this->isEnabled() ) {
 				$out->addJsConfigVars( $this->enableCoreFeatures( $out, [], $skin ) );
 			}
@@ -168,11 +148,10 @@ class Hooks implements
 		$excludedLinks = $out->getProperty( 'noexternallanglinks' );
 		$override = is_array( $excludedLinks ) && in_array( '*', $excludedLinks, true );
 		$isCompactLinksEnabled = $this->isCompactLinksEnabled( $out->getUser(), $skin );
-		$isVector2022LanguageInHeader = $skinName === 'vector-2022' && $this->isLanguageInHeader( $skin );
 		$config = [
 			'wgULSPosition' => $this->config->get( 'ULSPosition' ),
 			'wgULSisCompactLinksEnabled' => $isCompactLinksEnabled,
-			'wgVector2022LanguageInHeader' => $isVector2022LanguageInHeader
+			'wgVector2022LanguageInHeader' => $this->skinSupport->hasHeaderLanguageButton( $skin )
 		];
 
 		if ( !$override && $isCompactLinksEnabled ) {
@@ -440,9 +419,8 @@ class Hooks implements
 	 * @return bool|void True or no return value to continue or false to abort
 	 */
 	public function onGetPreferences( $user, &$preferences ) {
-		// T259037: Does not work well on Minerva
-		$skin = RequestContext::getMain()->getSkin();
-		if ( $skin->getSkinName() === 'minerva' ) {
+		// T259037
+		if ( $this->skinSupport->addsOnlyCoreFeatures( RequestContext::getMain()->getSkin() ) ) {
 			return;
 		}
 
@@ -521,15 +499,9 @@ class Hooks implements
 		}
 
 		$hasLanguages = $skin->getLanguages() !== [];
-		// For Vector 2022, the ULS settings cog is not needed for projects
-		// where a dedicated language button in the header ($wgVectorLanguageInHeader is true).
-		if ( $skin->getSkinName() === 'vector-2022' ) {
-			$languageInHeaderConfig = $skin->getConfig()->get( 'VectorLanguageInHeader' );
-			$languageInHeader = $languageInHeaderConfig[
-				$skin->getUser()->isAnon() ? 'logged_out' : 'logged_in' ] ?? true;
-			if ( $hasLanguages && $languageInHeader ) {
-				return;
-			}
+		// The header language button replaces the cog on pages with languages
+		if ( $hasLanguages && $this->skinSupport->hasHeaderLanguageButton( $skin ) ) {
+			return;
 		}
 
 		if ( !$this->isEnabled() ) {
@@ -596,8 +568,8 @@ class Hooks implements
 	private function enableCoreFeatures( OutputPage $out, array $config, Skin $skin ): array {
 		$enabledLanguageSelectorV2 = self::isLanguageSelectorV2Enabled( $skin, $this->config );
 
-		if ( $skin->getSkinName() !== 'minerva' || $enabledLanguageSelectorV2 ) {
-			// If the ULS rewrite is disabled, don't add the 'ext.uls.interface' module for Minerva,
+		// The old selector does not work on these skins
+		if ( !$this->skinSupport->addsOnlyCoreFeatures( $skin ) || $enabledLanguageSelectorV2 ) {
 			$out->addModules( 'ext.uls.interface' );
 		}
 
