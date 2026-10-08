@@ -27,6 +27,54 @@ interlanguage position, add the following line:
 
 $wgULSPosition = 'interlanguage';
 
+== Skin configuration ==
+A skin can change how ULS works on it by declaring the
+UniversalLanguageSelectorSkinConfig attribute in its skin.json, keyed by skin
+name. All keys are optional. tests/phpunit/integration/SkinConfigTest.php
+checks the values that the loaded skins declare.
+
+"attributes": {
+	"UniversalLanguageSelector": {
+		"SkinConfig": {
+			"myskin": {
+				"CoreFeaturesOnly": false,
+				"Features": {
+					"LanguageDescriptions": false,
+					"LanguageSettingsQuickAction": true
+				},
+				"FloatingPlacement": null,
+				"LanguageInHeaderConfig": null,
+				"LanguageInMainMenuConfig": null,
+				"ULSDisplaySettingsInInterlanguage": false
+			}
+		}
+	}
+}
+
+* CoreFeaturesOnly: ULS adds only its core features. It skips compact language
+  links, its entry points, setlang handling and the user preferences. The skin
+  must render its own content language button. Used by Minerva.
+* Features.LanguageDescriptions: the content language selector shows the page
+  title in each language.
+* Features.LanguageSettingsQuickAction: the content language selector shows the
+  "Language settings" action.
+* FloatingPlacement: where the content language selector opens, relative to
+  its trigger. The default is "bottom-end". ULS passes the value to Floating UI
+  as the "placement" option. For all values, see:
+   https://floating-ui.com/docs/computePosition#placement
+  It has no effect on mobile viewports, where the selector opens full screen.
+* LanguageInHeaderConfig: the name of a setting with "logged_in" and
+  "logged_out" values that says whether the skin shows a language button in
+  the page header. When it does, ULS binds the button and turns off compact
+  language links. When it does not, ULS turns on compact language links.
+  Used by Vector 2022.
+* LanguageInMainMenuConfig: the name of a setting with "logged_in" and
+  "logged_out" values that says whether the languages are also in the main
+  menu. When they are, ULS does not change compact language links, and the
+  wiki config and user preference decide. Used by Vector 2022.
+* ULSDisplaySettingsInInterlanguage: the content language selector also gives
+  access to the display and input settings.
+
 == Developers ==
 The MediaWiki Universal Language Selector project uses jquery.uls:
  https://github.com/wikimedia/jquery.uls

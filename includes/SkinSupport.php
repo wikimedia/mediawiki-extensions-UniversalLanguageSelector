@@ -15,29 +15,43 @@ namespace UniversalLanguageSelector;
 use MediaWiki\Skin\Skin;
 
 class SkinSupport {
+	private const DEFAULT_FEATURES = [
+		'LanguageDescriptions' => false,
+		'LanguageSettingsQuickAction' => true,
+	];
+
 	/**
-	 * Checks whether language is in the main menu.
+	 * @param array $skinConfig The UniversalLanguageSelectorSkinConfig attribute, keyed by skin name
 	 */
-	private function isLanguageInMainMenu( Skin $skin ): bool {
-		$languageInMainMenuConfig = $skin->getConfig()->get( 'VectorLanguageInMainMenu' );
-		$userStatus = $skin->getUser()->isAnon() ? 'logged_out' : 'logged_in';
-		return $languageInMainMenuConfig[ $userStatus ] ?? true;
+	public function __construct(
+		private readonly array $skinConfig,
+	) {
+	}
+
+	private function getSkinConfig( string $skinName ): array {
+		return $this->skinConfig[ $skinName ] ?? [];
 	}
 
 	/**
-	 * Checks whether language is in header.
+	 * Reads the setting that the skin names under $key, for the current user.
+	 *
+	 * @return bool|null Null when the skin does not declare $key
 	 */
-	private function isLanguageInHeader( Skin $skin ): bool {
-		$languageInHeaderConfig = $skin->getConfig()->get( 'VectorLanguageInHeader' );
+	private function getUserStatusSetting( Skin $skin, string $key ): ?bool {
+		$configName = $this->getSkinConfig( $skin->getSkinName() )[ $key ] ?? null;
+		if ( $configName === null ) {
+			return null;
+		}
+		$values = $skin->getConfig()->get( $configName );
 		$userStatus = $skin->getUser()->isAnon() ? 'logged_out' : 'logged_in';
-		return $languageInHeaderConfig[ $userStatus ] ?? true;
+		return (bool)( $values[ $userStatus ] ?? true );
 	}
 
 	/**
 	 * Whether the skin shows a language button in the page header.
 	 */
 	public function hasHeaderLanguageButton( Skin $skin ): bool {
-		return $skin->getSkinName() === 'vector-2022' && $this->isLanguageInHeader( $skin );
+		return $this->getUserStatusSetting( $skin, 'LanguageInHeaderConfig' ) ?? false;
 	}
 
 	/**
@@ -46,17 +60,37 @@ class SkinSupport {
 	 * @return bool|null Null when the skin leaves it to the wiki config and user preference
 	 */
 	public function getSkinCompactLinksOverride( Skin $skin ): ?bool {
+		$isLanguageInHeader = $this->getUserStatusSetting( $skin, 'LanguageInHeaderConfig' );
 		// Unless the languages are also in the main menu (as on Russian WP)
-		if ( $skin->getSkinName() === 'vector-2022' && !$this->isLanguageInMainMenu( $skin ) ) {
-			return !$this->isLanguageInHeader( $skin );
+		if (
+			$isLanguageInHeader === null ||
+			$this->getUserStatusSetting( $skin, 'LanguageInMainMenuConfig' )
+		) {
+			return null;
 		}
-		return null;
+		return !$isLanguageInHeader;
 	}
 
 	/**
 	 * Whether ULS adds only its core features on this skin (T237036).
 	 */
 	public function addsOnlyCoreFeatures( Skin $skin ): bool {
-		return $skin->getSkinName() === 'minerva';
+		return (bool)( $this->getSkinConfig( $skin->getSkinName() )['CoreFeaturesOnly'] ?? false );
+	}
+
+	/**
+	 * Static config vars for the skin, with defaults for the keys it does not declare.
+	 */
+	public function getConfigVars( string $skinName ): array {
+		$skinConfig = $this->getSkinConfig( $skinName );
+		$features = ( $skinConfig['Features'] ?? [] ) + self::DEFAULT_FEATURES;
+		return [
+			'wgULSDisplaySettingsInInterlanguage' => $skinConfig['ULSDisplaySettingsInInterlanguage'] ?? false,
+			'wgULSSkinFeatures' => [
+				'languageDescriptions' => (bool)$features['LanguageDescriptions'],
+				'languageSettingsQuickAction' => (bool)$features['LanguageSettingsQuickAction'],
+			],
+			'wgULSFloatingPlacement' => $skinConfig['FloatingPlacement'] ?? null,
+		];
 	}
 }
