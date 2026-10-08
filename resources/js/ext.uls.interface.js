@@ -423,6 +423,10 @@
 		return window.matchMedia( '(max-width: 767px)' ).matches;
 	}
 
+	function isTouchFirstDevice() {
+		return window.matchMedia( '(pointer: coarse) and (hover: none)' ).matches;
+	}
+
 	// The route controller, created when the content selector is first loaded.
 	let languageRoute = null;
 
@@ -949,12 +953,8 @@
 			addLanguageSettingsToNonContentPages();
 		}
 
-		// show on Minerva if its ULS rewrite
-		const isV2LanguageSelectorOnMinerva = mw.config.get( 'skin' ) === 'minerva' &&
-			isULSV2Enabled;
-
-		if ( !isV2LanguageSelectorOnMinerva ) {
-			// Don't display ime on Minerva skin.
+		// Touch devices have their own on-screen keyboards
+		if ( !isTouchFirstDevice() ) {
 			initIme();
 			initLanguageChangeUndoTooltip();
 		}
@@ -995,6 +995,9 @@
 		const compact = mw.config.get( 'wgULSisCompactLinksEnabled' );
 		// whether to show the omni box or not
 		const languageInHeader = mw.config.get( 'wgVector2022LanguageInHeader' );
+		// Minerva renders its own trigger, but only for the new selector
+		const isV2LanguageSelectorOnMinerva = mw.config.get( 'skin' ) === 'minerva' &&
+			isULSV2Enabled;
 
 		if ( compact || languageInHeader || isV2LanguageSelectorOnMinerva ) {
 			// Init compact languages OR omni selector using the mw-interlanguage-selector class
