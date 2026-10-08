@@ -138,7 +138,9 @@ class Hooks implements
 
 		if ( $this->skinSupport->addsOnlyCoreFeatures( $skin ) ) {
 			if ( $this->isEnabled() ) {
-				$out->addJsConfigVars( $this->enableCoreFeatures( $out, [], $skin ) );
+				// The skin renders its own content language button
+				$config = [ 'wgULSContentLanguageSelectorEnabled' => true ];
+				$out->addJsConfigVars( $this->enableCoreFeatures( $out, $config, $skin ) );
 			}
 
 			return;
@@ -148,10 +150,11 @@ class Hooks implements
 		$excludedLinks = $out->getProperty( 'noexternallanglinks' );
 		$override = is_array( $excludedLinks ) && in_array( '*', $excludedLinks, true );
 		$isCompactLinksEnabled = $this->isCompactLinksEnabled( $out->getUser(), $skin );
+		$hasHeaderLanguageButton = $this->skinSupport->hasHeaderLanguageButton( $skin );
 		$config = [
 			'wgULSPosition' => $this->config->get( 'ULSPosition' ),
 			'wgULSisCompactLinksEnabled' => $isCompactLinksEnabled,
-			'wgVector2022LanguageInHeader' => $this->skinSupport->hasHeaderLanguageButton( $skin )
+			'wgULSContentLanguageSelectorEnabled' => $isCompactLinksEnabled || $hasHeaderLanguageButton,
 		];
 
 		if ( !$override && $isCompactLinksEnabled ) {
@@ -354,9 +357,8 @@ class Hooks implements
 	 * @param Config $config
 	 */
 	public function onResourceLoaderGetConfigVars( array &$vars, $skin, Config $config ): void {
-		$extRegistry = ExtensionRegistry::getInstance();
-		$skinConfig = $extRegistry->getAttribute( 'UniversalLanguageSelectorSkinConfig' )[ $skin ] ?? [];
 		// Place constant stuff here (not depending on request context)
+		$vars += $this->skinSupport->getConfigVars( $skin );
 
 		if ( is_string( $config->get( 'ULSGeoService' ) ) ) {
 			$vars['wgULSGeoService'] = $config->get( 'ULSGeoService' );
@@ -368,7 +370,6 @@ class Hooks implements
 		$vars['wgULSImeSelectors'] = $config->get( 'ULSImeSelectors' );
 		$vars['wgULSNoImeSelectors'] = $config->get( 'ULSNoImeSelectors' );
 		$vars['wgULSNoWebfontsSelectors'] = $config->get( 'ULSNoWebfontsSelectors' );
-		$vars['wgULSDisplaySettingsInInterlanguage'] = $skinConfig['ULSDisplaySettingsInInterlanguage'] ?? false;
 		$vars['wgULSCompactLinksPrepend'] = $config->get( 'ULSCompactLinksPrepend' ) ?? [];
 
 		if ( is_string( $config->get( 'ULSFontRepositoryBasePath' ) ) ) {
@@ -573,11 +574,6 @@ class Hooks implements
 			$out->addModules( 'ext.uls.interface' );
 		}
 
-		$title = $out->getTitle();
-		$isMissingPage = !$title || !$title->exists();
-		// if the current page doesn't exist or if it's a talk page, we should use a different layout inside ULS
-		// according to T316559. Add JS config variable here, to let frontend know, when this is the case
-		$config['wgULSisLanguageSelectorEmpty'] = $isMissingPage || $title->isTalkPage();
 		$config['wgULSLanguageSelectorV2Enabled'] = $enabledLanguageSelectorV2;
 
 		return $config;
