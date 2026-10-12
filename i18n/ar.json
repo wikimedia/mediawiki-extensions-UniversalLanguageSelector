@@ -94,6 +94,7 @@
 	"ext-uls-close-button-label": "أغلق",
 	"ext-uls-suggested-languages-title": "مقترح {{PLURAL:$1|لغة|لغات}}",
 	"ext-uls-all-languages-title": "{{PLURAL:$1|جميع اللغات}}",
+	"ext-uls-search-results-count": "تم العثور على {{PLURAL:$1|$1 لغة|$1 لغات}}",
 	"ext-uls-search-results-none": "لم يتم العثور على أي لغات",
 	"ext-uls-variants-title": "خيارات مقابل $1",
 	"ext-uls-no-languages-title": "لا توجد لغات حتى الآن",
@@ -111,10 +112,12 @@
 	"ext-uls-missing-languages-panel-title": "ترجمة هذه الصفحة",
 	"ext-uls-missing-languages-panel-description": "هذه الصفحة غير متوفرة ببعض اللغات التي قد تعرفها. يمكنك ترجمتها.",
 	"ext-uls-quick-actions-panel-title": "إجراءات سريعة",
+	"ext-uls-preferred-languages-title": "اللغة المفضلة {{PLURAL:$1|لغة|لغات}}",
 	"ext-uls-preferred-languages-settings-title": "اللغات المفضلة",
 	"ext-uls-preferred-languages-desc": "يظهر أولاً في قوائم اللغات.",
 	"ext-uls-preferred-languages-label": "أضف لغة",
 	"ext-uls-preferred-languages-input-placeholder": "لغات البحث",
+	"ext-uls-preferred-languages-status": "<strong>$1</strong> {{PLURAL:$1|من}} <strong>$2</strong> {{PLURAL:$2|مختارة}}",
 	"ext-uls-preferred-languages-limit-reached": "قم بإزالة واحد لإضافة آخر",
 	"ext-uls-preferred-languages-save-error": "حدث خطأ أثناء حفظ لغاتك المفضلة."
 }
