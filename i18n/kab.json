@@ -7,6 +7,7 @@
 		]
 	},
 	"uls-plang-title-languages": "Tutlayin",
+	"ext-uls-compact-link-count": "{{PLURAL:$1|d yiwen nniḍen|$1 nnayeḍ}}",
 	"ext-uls-setlang-error": "Tella-d tuccḍa mi d-yella usmiren n tutlayt i tesmenyifeḍ. Tuccḍa:$1",
 	"ext-uls-setlang-unknown-error": "Tuccḍa ur nettwassen ara",
 	"ext-uls-setlang-message": "Aseɣwen i tḍefreḍ yesra ad yettwasken ugrudem deg <strong>$1 ($2)</strong>",
