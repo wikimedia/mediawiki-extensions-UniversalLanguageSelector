@@ -81,8 +81,15 @@
 	"ext-uls-language-title": "Ngôn ngữ",
 	"ext-uls-placeholder-search": "Tìm kiếm ngôn ngữ",
 	"ext-uls-close-button-label": "Đóng",
+	"ext-uls-no-languages-title": "Chưa có ngôn ngữ nào",
+	"ext-uls-no-languages-description": "Hiện không có ngôn ngữ nào có sẵn",
+	"ext-uls-invalid-language-search-description": "Vui lòng kiểm tra chính tả. Bạn có thể tìm kiếm ngôn ngữ theo tên hoặc mã ISO.",
+	"ext-uls-unsupported-language-title": "Ngôn ngữ không có sẵn",
+	"ext-uls-unsupported-language-description": "Ngôn ngữ bạn đang tìm hiện không có sẵn.",
 	"ext-uls-open-language-settings": "Mở tùy chọn ngôn ngữ",
+	"ext-uls-open-language-selector": "Quay lại trình chọn ngôn ngữ",
+	"ext-uls-open-quick-actions": "Hiển thị các thao tác nhanh",
 	"ext-uls-missing-languages-panel-title": "Dịch trang này",
 	"ext-uls-missing-languages-panel-description": "Trang này chưa có trong một số ngôn ngữ mà bạn có thể biết. Bạn có thể giúp dịch.",
-	"ext-uls-quick-actions-panel-title": "Hành động nhanh"
+	"ext-uls-quick-actions-panel-title": "Thao tác nhanh"
 }
