@@ -116,6 +116,7 @@
 	"ext-uls-preferred-languages-settings-title": "اللغات المفضلة",
 	"ext-uls-preferred-languages-desc": "يظهر أولاً في قوائم اللغات.",
 	"ext-uls-preferred-languages-label": "أضف لغة",
+	"ext-uls-preferred-languages-help": "قم بتثبيت ما يصل إلى $1 {{PLURAL:$1|لغة|لغات}}. {{PLURAL:$1|تظهر}} أولاً عند تغيير اللغة في أي مقال.",
 	"ext-uls-preferred-languages-input-placeholder": "لغات البحث",
 	"ext-uls-preferred-languages-status": "<strong>$1</strong> {{PLURAL:$1|من}} <strong>$2</strong> {{PLURAL:$2|مختارة}}",
 	"ext-uls-preferred-languages-limit-reached": "قم بإزالة واحد لإضافة آخر",
