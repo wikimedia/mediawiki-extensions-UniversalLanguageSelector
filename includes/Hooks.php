@@ -45,7 +45,6 @@ use MediaWiki\Skins\Hook\SkinAfterPortletHook;
 use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
 use Wikimedia\LanguageData\LanguageUtil;
-use Wikimedia\Stats\IBufferingStatsdDataFactory;
 
 class Hooks implements
 	BeforePageDisplayHook,
@@ -60,7 +59,6 @@ class Hooks implements
 	public function __construct(
 		private readonly Config $config,
 		private readonly UserOptionsLookup $userOptionsLookup,
-		private readonly IBufferingStatsdDataFactory $statsdDataFactory,
 		private readonly LanguageNameUtils $languageNameUtils,
 		private readonly SkinSupport $skinSupport,
 	) {
@@ -196,8 +194,6 @@ class Hooks implements
 		if ( !$languageToSet ) {
 			return;
 		}
-
-		$this->statsdDataFactory->increment( 'uls.setlang_used' );
 
 		$user = $out->getUser();
 		if ( !$user->isRegistered() && !$out->getConfig()->get( 'ULSAnonCanChangeLanguage' ) ) {
