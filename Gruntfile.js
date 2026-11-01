@@ -24,6 +24,7 @@ module.exports = function ( grunt ) {
 			src: [
 				'**/*.css',
 				'**/*.less',
+				'**/*.vue',
 				'!lib/**',
 				'!node_modules/**',
 				'!vendor/**'
