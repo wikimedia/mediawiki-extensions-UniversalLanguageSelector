@@ -155,7 +155,7 @@
 	 */
 	function addLanguageSettingsTrigger( uls ) {
 		const $ulsSettingsBlock = uls.$menu.find( '#uls-settings-block' ).eq( 0 );
-		$ulsSettingsBlock.addClass( 'uls-settings-block--vector-2022' );
+		$ulsSettingsBlock.addClass( 'uls-settings-block--with-buttons' );
 
 		const $languageSettingsMenuButton = createMenuButton( 'uls-language-settings-button' );
 		$languageSettingsMenuButton.one( 'click', () => {
