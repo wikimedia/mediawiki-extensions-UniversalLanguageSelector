@@ -18,7 +18,7 @@
 	"descriptionmsg": "uls-desc",
 	"license-name": "GPL-2.0-or-later OR MIT",
 	"requires": {
-		"MediaWiki": ">= 1.44.0"
+		"MediaWiki": ">= 1.47.0"
 	},
 	"attributes": {
 		"GlobalPreferences": {
@@ -182,7 +182,10 @@
 		},
 		"ext.uls.compactlinks": {
 			"class": "MediaWiki\\ResourceLoader\\CodexModule",
-			"codexComponents": [ "CdxButton", "CdxRadio" ],
+			"codexComponents": [
+				"CdxButton",
+				"CdxRadio"
+			],
 			"codexStyleOnly": true,
 			"packageFiles": [
 				"js/ext.uls.compactlinks.js"
@@ -214,7 +217,10 @@
 		},
 		"ext.uls.displaysettings": {
 			"class": "MediaWiki\\ResourceLoader\\CodexModule",
-			"codexComponents": [ "CdxButton", "CdxRadio" ],
+			"codexComponents": [
+				"CdxButton",
+				"CdxRadio"
+			],
 			"codexStyleOnly": true,
 			"scripts": [
 				"js/ext.uls.inputsettings.js",
@@ -249,7 +255,9 @@
 		},
 		"ext.uls.interface": {
 			"class": "MediaWiki\\ResourceLoader\\CodexModule",
-			"codexComponents": [ "CdxButton" ],
+			"codexComponents": [
+				"CdxButton"
+			],
 			"codexStyleOnly": true,
 			"packageFiles": [
 				"js/ext.uls.interface.js",
@@ -391,8 +399,7 @@
 			"dependencies": [
 				"mediawiki.api",
 				"mediawiki.jqueryMsg",
-				"@wikimedia/codex",
-				"web2017-polyfills"
+				"@wikimedia/codex"
 			],
 			"messages": [
 				"ext-uls-setlang-error",
