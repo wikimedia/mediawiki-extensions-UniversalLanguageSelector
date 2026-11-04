@@ -85,6 +85,9 @@
 				width: 100%;
 
 				input[ type='search' ] {
+					// Some skins reset search inputs to content-box (Timeless, through
+					// normalize.css), which makes the field wider than the selector
+					box-sizing: border-box;
 					font-size: @uls-rewrite-font-size-medium;
 					padding-block: @spacing-50;
 					padding-inline-end: @uls-rewrite-horizontal-padding;
