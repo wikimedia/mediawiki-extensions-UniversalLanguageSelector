@@ -11,6 +11,7 @@
 			densityClass,
 			{ 'uls-rewrite--mobile': isMobile, 'uls-rewrite--panel': currentView !== VIEW.MAIN }
 		]"
+		@click.stop
 		@mouseleave="clearHighlightedItem"
 		@keydown.esc.prevent.stop="$emit( 'close' )"
 	>

@@ -73,6 +73,21 @@ describe( 'UniversalLanguageSelector - close behaviour', () => {
 		expect( wrapper.find( '.uls-rewrite' ).isVisible() ).toBe( false );
 	} );
 
+	it( 'does not let a click inside the selector reach the page', async () => {
+		// Skins close their own menus on a click anywhere else on the page. The
+		// selector can be anchored to a button inside such a menu (Timeless,
+		// T439715), so a click inside the selector must not count as outside.
+		wrapper = createWrapper( {}, { attachTo: document.body } );
+		const pageListener = jest.fn();
+		document.addEventListener( 'click', pageListener );
+
+		await wrapper.find( '.uls-rewrite input' ).trigger( 'click' );
+
+		document.removeEventListener( 'click', pageListener );
+		expect( pageListener ).not.toHaveBeenCalled();
+		expect( wrapper.find( '.uls-rewrite' ).isVisible() ).toBe( true );
+	} );
+
 	it( 'does not emit the close event when clicking inside the selector', async () => {
 		wrapper = createWrapper( {}, { attachTo: document.body } );
 
