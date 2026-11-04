@@ -19,8 +19,7 @@
 
 ( function () {
 	'use strict';
-	const languageSettingsModules = [ 'ext.uls.displaysettings' ],
-		launchULS = require( './ext.uls.launch.js' ),
+	const launchULS = require( './ext.uls.launch.js' ),
 		ActionsMenu = require( './ext.uls.actions.menu.js' ),
 		ActionsMenuItem = require( './ext.uls.actions.menu.item.js' ),
 		skinSupport = require( './ext.uls.skinsupport.js' );
@@ -28,6 +27,13 @@
 
 	// Whether the ULS V2 (rewrite) selector is enabled for this page.
 	const isULSV2Enabled = mw.config.get( 'wgULSLanguageSelectorV2Enabled' );
+
+	// Modules for the language settings dialog
+	const languageSettingsModules = [ 'ext.uls.displaysettings' ];
+	// Preferred languages exists with the new selector and named users
+	if ( isULSV2Enabled && mw.user.isNamed() ) {
+		languageSettingsModules.push( 'ext.uls.preferredlanguages' );
+	}
 
 	/**
 	 * Warm the lazy-loaded ULS rewrite (V2) modules so the selector opens
@@ -334,8 +340,17 @@
 	}
 
 	function initSecondaryEntryPoints() {
-		$( '.uls-settings-trigger' ).one( 'click', ( e ) => {
+		const $triggers = $( '.uls-settings-trigger' );
+
+		$triggers.one( 'pointerenter focus', () => {
+			mw.loader.load( languageSettingsModules );
+		} );
+
+		$triggers.one( 'click', ( e ) => {
 			e.preventDefault();
+			// When the modules are prefetched, the dialog opens before this click
+			// reaches the document, where it would close the dialog again
+			e.stopPropagation();
 			mw.loader.using( languageSettingsModules, () => {
 				$( e.target ).languagesettings();
 				$( e.target ).trigger( 'click' );
@@ -411,6 +426,9 @@
 			e.stopPropagation();
 		};
 
+		$trigger.one( 'pointerenter focus', () => {
+			mw.loader.load( languageSettingsModules );
+		} );
 		$trigger.on( 'click', clickHandler );
 	}
 

@@ -4,7 +4,18 @@ const EntrypointRegistry = require( 'ext.uls.rewrite.entrypoints' );
 const { ENTRYPOINT_TYPE, ULS_MODE } = EntrypointRegistry;
 const { cdxIconSettings } = require( '../icons.json' );
 
-const MODULES = [ 'ext.uls.displaysettings', 'ext.uls.preferredlanguages' ];
+/**
+ * Modules for the language settings dialog. Its Preferred languages panel is
+ * only for named users (ext.uls.preferredlanguages.js), so other users do not
+ * load it.
+ *
+ * @return {string[]}
+ */
+function getSettingsModules() {
+	return mw.user.isNamed() ?
+		[ 'ext.uls.displaysettings', 'ext.uls.preferredlanguages' ] :
+		[ 'ext.uls.displaysettings' ];
+}
 
 let prefetched = false;
 // Stable anchor the dialog binds to.
@@ -15,7 +26,7 @@ try {
 		id: 'language-settings-quick-action',
 		shouldShow: () => {
 			if ( !prefetched ) {
-				mw.loader.load( MODULES );
+				mw.loader.load( getSettingsModules() );
 				prefetched = true;
 			}
 			return true;
@@ -27,7 +38,7 @@ try {
 				// TODO: Rebuild the existing language settings dialog using Vue,
 				// and use it here instead of the old one.
 				const $ulsContainer = $( event.target ).parents( '.uls-rewrite' );
-				mw.loader.using( MODULES ).then( () => {
+				mw.loader.using( getSettingsModules() ).then( () => {
 					const ulsContainerOffsetTop = $ulsContainer.offset().top;
 					const onPosition = function () {
 						return {

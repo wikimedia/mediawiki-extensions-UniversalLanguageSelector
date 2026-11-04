@@ -4,6 +4,7 @@ const { nextTick } = require( 'vue' );
 const { cdxIconSettings } = require( '@wikimedia/codex-icons' );
 
 const MODULES = [ 'ext.uls.displaysettings', 'ext.uls.preferredlanguages' ];
+const MODULES_NOT_NAMED = [ 'ext.uls.displaysettings' ];
 
 describe( 'LanguageSettingsEntrypoint', () => {
 	let EntrypointRegistry;
@@ -35,11 +36,13 @@ describe( 'LanguageSettingsEntrypoint', () => {
 			using: jest.fn().mockResolvedValue()
 		};
 		EntrypointRegistry = require( '../../resources/ext.uls.rewrite/EntrypointRegistry.js' );
+		mw.user.isNamed.mockReturnValue( true );
 	} );
 
 	afterEach( () => {
 		global.$ = originalJQuery;
 		delete mw.loader;
+		mw.user.isNamed.mockReturnValue( false );
 	} );
 
 	it( 'registers a quick action for interface and content modes', () => {
@@ -79,6 +82,34 @@ describe( 'LanguageSettingsEntrypoint', () => {
 		expect( entry.shouldShow() ).toBe( true );
 		expect( mw.loader.load ).toHaveBeenCalledTimes( 1 );
 		expect( mw.loader.load ).toHaveBeenCalledWith( MODULES );
+	} );
+
+	it( 'shouldShow does not prefetch the Preferred languages panel for users without a named account', () => {
+		mw.user.isNamed.mockReturnValue( false );
+		loadEntrypoint();
+
+		const [ entry ] = EntrypointRegistry.getRegisteredEntrypoints(
+			EntrypointRegistry.ENTRYPOINT_TYPE.QUICK_ACTIONS,
+			EntrypointRegistry.ULS_MODE.INTERFACE
+		);
+
+		expect( entry.shouldShow() ).toBe( true );
+		expect( mw.loader.load ).toHaveBeenCalledWith( MODULES_NOT_NAMED );
+	} );
+
+	it( 'handler does not load the Preferred languages panel for users without a named account', async () => {
+		mw.user.isNamed.mockReturnValue( false );
+		setupJQueryMock();
+		loadEntrypoint();
+
+		const [ entry ] = EntrypointRegistry.getRegisteredEntrypoints(
+			EntrypointRegistry.ENTRYPOINT_TYPE.QUICK_ACTIONS,
+			EntrypointRegistry.ULS_MODE.INTERFACE
+		);
+		entry.getConfig().handler( { target: {} } );
+		await nextTick();
+
+		expect( mw.loader.using ).toHaveBeenCalledWith( MODULES_NOT_NAMED );
 	} );
 
 	it( 'getConfig returns label, icon and handler', () => {

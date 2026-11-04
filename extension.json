@@ -569,7 +569,8 @@
 				"ext-uls-open-language-settings"
 			],
 			"dependencies": [
-				"ext.uls.rewrite.entrypoints"
+				"ext.uls.rewrite.entrypoints",
+				"mediawiki.user"
 			]
 		},
 		"ext.uls.rewrite.entrypoints": {
