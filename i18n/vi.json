@@ -85,6 +85,7 @@
 	"ext-uls-all-languages-title": "{{PLURAL:$1|Tất cả ngôn ngữ}}",
 	"ext-uls-search-results-count": "Có {{PLURAL:$1|$1 ngôn ngữ}}",
 	"ext-uls-search-results-none": "Không tìm thấy ngôn ngữ",
+	"ext-uls-variants-title": "Biến thể cho $1",
 	"ext-uls-no-languages-title": "Chưa có ngôn ngữ nào",
 	"ext-uls-no-languages-description": "Hiện không có ngôn ngữ nào có sẵn",
 	"ext-uls-empty-state-entrypoint-description": "Bạn có thể dịch trang này. Đây là cách dễ dàng để tạo nội dung bằng ngôn ngữ của bạn.",
@@ -99,6 +100,11 @@
 	"ext-uls-missing-languages-panel-title": "Dịch trang này",
 	"ext-uls-missing-languages-panel-description": "Trang này chưa có trong một số ngôn ngữ mà bạn có thể biết. Bạn có thể giúp dịch.",
 	"ext-uls-quick-actions-panel-title": "Thao tác nhanh",
+	"ext-uls-preferred-languages-title": "{{PLURAL:$1|Ngôn ngữ}} ưu tiên",
+	"ext-uls-preferred-languages-settings-title": "Ngôn ngữ ưu tiên",
+	"ext-uls-preferred-languages-desc": "Hiển thị đầu tiên trong menu ngôn ngữ.",
 	"ext-uls-preferred-languages-label": "Thêm ngôn ngữ",
-	"ext-uls-preferred-languages-input-placeholder": "Tìm kiếm ngôn ngữ"
+	"ext-uls-preferred-languages-help": "Ghim tối đa $1 {{PLURAL:$1|ngôn ngữ}}. {{PLURAL:$1|Ngôn ngữ|Các ngôn ngữ}} này xuất hiện đầu tiên khi bạn chuyển đổi ngôn ngữ trong bất kỳ bài viết nào.",
+	"ext-uls-preferred-languages-input-placeholder": "Tìm kiếm ngôn ngữ",
+	"ext-uls-preferred-languages-status": "{{PLURAL:$2|Đã chọn}} $1 {{PLURAL:$1|trong số}} $2"
 }
