@@ -65,7 +65,7 @@
 	"prefs-languages": "Ngôn ngữ",
 	"ext-uls-compact-language-links-preference": "Sử dụng [[$1|danh sách ngôn ngữ ngắn gọn]] chỉ có các ngôn ngữ quan trọng đối với bạn",
 	"ext-uls-compact-no-results": "Trang này không có sẵn trong ngôn ngữ bạn đang tìm.",
-	"ext-uls-setlang-error": "Đã xảy ra lỗi khi cập nhật ngôn ngữ ưa thích của bạn. Lỗi: $1",
+	"ext-uls-setlang-error": "Đã xảy ra lỗi khi cập nhật ngôn ngữ ưu tiên của bạn. Lỗi: $1",
 	"ext-uls-setlang-unknown-error": "Lỗi không rõ",
 	"ext-uls-setlang-message": "Liên kết bạn nhấp vào đã yêu cầu giao diện được hiển thị bằng <strong>$1 ( $2 )</strong>",
 	"ext-uls-setlang-heading": "Thay đổi ngôn ngữ giao diện?",
@@ -89,6 +89,7 @@
 	"ext-uls-no-languages-title": "Chưa có ngôn ngữ nào",
 	"ext-uls-no-languages-description": "Hiện không có ngôn ngữ nào có sẵn",
 	"ext-uls-empty-state-entrypoint-description": "Bạn có thể dịch trang này. Đây là cách dễ dàng để tạo nội dung bằng ngôn ngữ của bạn.",
+	"ext-uls-invalid-language-search-title": "Không nhận dạng được ngôn ngữ",
 	"ext-uls-invalid-language-search-description": "Vui lòng kiểm tra chính tả. Bạn có thể tìm kiếm ngôn ngữ theo tên hoặc mã ISO.",
 	"ext-uls-unsupported-language-title": "Ngôn ngữ không có sẵn",
 	"ext-uls-unsupported-language-description": "Ngôn ngữ bạn đang tìm hiện không có sẵn.",
@@ -106,5 +107,7 @@
 	"ext-uls-preferred-languages-label": "Thêm ngôn ngữ",
 	"ext-uls-preferred-languages-help": "Ghim tối đa $1 {{PLURAL:$1|ngôn ngữ}}. {{PLURAL:$1|Ngôn ngữ|Các ngôn ngữ}} này xuất hiện đầu tiên khi bạn chuyển đổi ngôn ngữ trong bất kỳ bài viết nào.",
 	"ext-uls-preferred-languages-input-placeholder": "Tìm kiếm ngôn ngữ",
-	"ext-uls-preferred-languages-status": "{{PLURAL:$2|Đã chọn}} $1 {{PLURAL:$1|trong số}} $2"
+	"ext-uls-preferred-languages-status": "{{PLURAL:$2|Đã chọn}} $1 {{PLURAL:$1|trong số}} $2",
+	"ext-uls-preferred-languages-limit-reached": "Xóa một mục để thêm mục khác",
+	"ext-uls-preferred-languages-save-error": "Đã xảy ra lỗi khi lưu ngôn ngữ ưu tiên của bạn."
 }
