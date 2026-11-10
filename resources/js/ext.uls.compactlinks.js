@@ -316,7 +316,10 @@
 	};
 
 	/**
-	 * Add the trigger at the bottom of the language list.
+	 * Add the trigger after the language list.
+	 *
+	 * It is not added inside the list, because a list may only contain
+	 * list items (T280598).
 	 *
 	 * Click handler is setup in ext.uls.interface module.
 	 */
@@ -331,7 +334,7 @@
 			mw.language.convertNumber( this.listSize - this.compactSize )
 		).text();
 
-		this.listElement.appendChild( trigger );
+		this.listElement.after( trigger );
 		this.$trigger = $( trigger );
 	};
 
@@ -346,7 +349,7 @@
 	 *   * getLangsInText (1 querySelectorAll)
 	 *   * hideOriginal (1 querySelectorAll)
 	 * - DOM Writes: 1 + 2N
-	 *   * addTrigger (1 appendChild)
+	 *   * addTrigger (1 Element#after)
 	 *   * hideOriginal (1N Element.style)
 	 *   * render (1N Element.style) // N defaults to 9
 	 * - Misc: 1
