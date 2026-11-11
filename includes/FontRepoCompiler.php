@@ -66,7 +66,7 @@ class FontRepoCompiler {
 		}
 
 		$languages = explode( ',', $font['languages'] );
-		$languages = array_map( 'trim', $languages );
+		$languages = array_map( trim( ... ), $languages );
 
 		return $languages;
 	}

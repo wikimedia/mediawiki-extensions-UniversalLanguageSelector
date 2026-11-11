@@ -30,7 +30,7 @@ class ResourceLoaderULSJsonMessageModule extends Module {
 	public function getDefinitionSummary( Context $context ): array {
 		$code = $context->getLanguage();
 		$fileHashes = array_map(
-			[ __CLASS__, 'safeFileHash' ],
+			self::safeFileHash( ... ),
 			ULSJsonMessageLoader::getFilenames( $code )
 		);
 
