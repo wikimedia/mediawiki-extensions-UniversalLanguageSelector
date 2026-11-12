@@ -155,7 +155,6 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 		};
 		ulsConfig.onPosition = function () {
 			// Compact language links specific positioning with a caret
-			let left;
 			// The panel is positioned carefully so that our pointy triangle,
 			// which is implemented as a square box rotated 45 degrees with
 			// rotation origin in the middle. See the corresponding style file.
@@ -173,14 +172,13 @@ function launchULS( $trigger, languagesObject, forCLS ) {
 			// It needs to match the positioning of the dialog.
 			this.$menu.toggleClass( 'selector-left', !isRight )
 				.toggleClass( 'selector-right', isRight );
-			if ( isRight ) {
-				left = -this.$menu.outerWidth() - triangleWidth;
-			} else {
-				left = width + triangleWidth;
-			}
-
+			// Attach the edge of the menu that is near the trigger. Do not use the
+			// menu width. The menu width is not correct before the menu is fully
+			// rendered, and the menu can become wider after it opens.
+			const windowWidth = $( window ).width();
 			return {
-				left: offset.left + left,
+				left: isRight ? 'auto' : offset.left + width + triangleWidth,
+				right: isRight ? windowWidth - offset.left + triangleWidth : 'auto',
 				// Offset from the middle of the trigger
 				top: offset.top + ( height / 2 ) - 27
 			};
