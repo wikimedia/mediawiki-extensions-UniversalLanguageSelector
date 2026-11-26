@@ -20,7 +20,8 @@ jest.mock( '../../resources/ext.uls.rewrite/dist/floating-ui.js', () => {
 	return {
 		useFloating: jest.fn( () => ( {
 			floatingStyles: ref( {} ),
-			isPositioned: ref( true )
+			isPositioned: ref( true ),
+			placement: ref( 'bottom-end' )
 		} ) ),
 		offset: jest.fn(),
 		flip: jest.fn(),

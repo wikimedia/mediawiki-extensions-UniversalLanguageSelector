@@ -478,20 +478,32 @@ module.exports = exports = defineComponent( {
 			visible.value && !isMobile.value ? triggerElement.value : null
 		) );
 
-		const { floatingStyles, isPositioned } = useFloating(
+		// Placement resolved for the main view, kept while a sub-panel is shown so
+		// the smaller panel opens at the same side of the trigger.
+		const lockedPlacement = ref( null );
+		const floatingOptions = Object.assign( {}, props.floatingOptions );
+		const initialPlacement = floatingOptions.placement || 'bottom-end';
+		delete floatingOptions.placement;
+
+		const { floatingStyles, isPositioned, placement } = useFloating(
 			floatingReference,
 			menuRef,
 			Object.assign( {
-				middleware: [
+				placement: computed( () => lockedPlacement.value || initialPlacement ),
+				middleware: computed( () => [
 					offset( 8 ),
 					// Stay below the trigger when neither side fits: overflowing upward
 					// crops the menu off-screen, downward stays reachable by scrolling.
-					flip( { fallbackStrategy: 'initialPlacement' } ),
+					...( lockedPlacement.value ? [] : [ flip( { fallbackStrategy: 'initialPlacement' } ) ] ),
 					shift( { padding: 8 } )
-				],
+				] ),
 				whileElementsMounted: autoUpdate
-			}, props.floatingOptions )
+			}, floatingOptions )
 		);
+
+		watch( currentView, ( view ) => {
+			lockedPlacement.value = view === VIEW.MAIN ? null : placement.value;
+		} );
 
 		/**
 		 * Get the display name for a language code.
